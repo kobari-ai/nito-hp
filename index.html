@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nito | いいモノが自然に広まる仕組みをつくる</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800;900&family=Noto+Sans+JP:wght@700;900&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --color-bg: #ffffff;
+            --color-text: #1a1a1a;
+            --color-text-light: #666666;
+            --color-primary: #ff9f43;
+            /* Main Orange */
+            --color-primary-deep: #e67e22;
+            /* Deep Orange for emphasis */
+            --color-secondary: #ff8c00;
+            /* Strong Orange */
+            --color-accent: #ff7f50;
+            /* Coral Orange for highlights */
+            --color-card-bg: #fffbf5;
+            /* Very light warm beige/orange for depth */
+            --color-border: #f5f5f5;
+            --width-max: 1200px;
+            --section-gap: 80px;
+
+            /* Fonts */
+            --font-heading-en: 'Montserrat', sans-serif;
+            --font-heading-jp: 'Noto Sans JP', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .logo,
+        .btn-contact,
+        .vision-band {
+            font-family: var(--font-heading-jp);
+        }
+
+        .sec-title {
+            font-family: var(--font-heading-en);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.3s;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--width-max);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin-bottom: var(--section-gap);
+            scroll-margin-top: 100px;
+            /* Header height + buffer */
+        }
+
+        .divider {
+            height: 1px;
+            background-color: var(--color-border);
+            max-width: 800px;
+            margin: 0 auto var(--section-gap);
+        }
+
+        /* Animations Styles */
+        .ani-fade-top {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .ani-fade-bottom {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .ani-show-up {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .animated {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+
+        /* Floating Header */
+        .header-wrapper {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            width: 95%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 30px;
+            border-radius: 50px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--color-text);
+            letter-spacing: 0.1em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .btn-contact {
+            background-color: var(--color-secondary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-contact:hover {
+            background-color: var(--color-primary);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-text);
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 9px; }
+        .hamburger span:nth-child(3) { top: 18px; }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        /* Mobile specific overrides */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+
+        .nav-overlay {
+            position: fixed;
+            top: 20px;
+            left: 5%;
+            width: 90%;
+            max-height: 90vh;
+            background-color: #fff;
+            z-index: 2000;
+            padding: 80px 30px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            overflow-y: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-overlay-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .nav-overlay-backdrop.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-close::before, .nav-close::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background-color: var(--color-text);
+        }
+
+        .nav-close::before { transform: rotate(45deg); }
+        .nav-close::after { transform: rotate(-45deg); }
+
+        .nav-overlay-contact {
+            margin-bottom: 20px;
+        }
+
+        .nav-overlay-contact .btn-contact {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            padding: 16px;
+        }
+
+        .nav-overlay-links {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .nav-overlay-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .nav-overlay-title {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--color-text);
+            font-family: var(--font-heading-jp);
+        }
+
+        .nav-overlay-sublinks {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-left: 0;
+            border-left: none;
+        }
+
+        .nav-overlay-sublinks a {
+            font-size: 15px;
+            color: var(--color-text-light);
+            font-weight: bold;
+        }
+
+        .nav-overlay-single {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--color-text);
+            font-family: var(--font-heading-jp);
+        }
+
+        .nav-overlay-sns {
+            margin-top: auto;
+            display: flex;
+            gap: 16px;
+            padding-top: 40px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: auto;
+            min-height: 80vh; /* Reduced from 85vh to tighten the gap */
+            display: flex;
+            align-items: flex-start;
+            /* Was center */
+            justify-content: flex-start;
+            padding: 180px 0 80px; /* Reduced padding-bottom from 120px to 80px */
+            /* Middle ground between original center and high position */
+            margin: 0;
+            overflow: hidden;
+            background-color: var(--color-bg);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-image: url('hero_bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center right;
+            opacity: 0.15;
+            pointer-events: none;
+            -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            /* Reduced from 800px to keep text within center */
+        }
+
+        .hero-title {
+            font-size: 60px;
+            /* Reduced from 72px */
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 30px;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--color-text-light);
+            margin-top: 40px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                min-height: 450px;
+                padding-top: 100px;
+                padding-bottom: 20px;
+            }
+
+            .hero-title {
+                font-size: 32px;
+                line-height: 1.3;
+                max-width: 90%;
+                /* Wider on mobile for better balance */
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+                margin-top: 24px;
+            }
+
+            .hero-bg {
+                width: 130%;
+                right: -15%;
+                opacity: 0.25;
+            }
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .sec-subtitle {
+            font-size: 18px;
+            font-weight: bold;
+            color: #444;
+            display: block;
+            margin-bottom: 5px;
+            letter-spacing: 0.05em;
+        }
+
+        .sec-title {
+            font-size: 80px;
+            font-weight: 600;
+            background: linear-gradient(to right, var(--color-primary), #ffce6d);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            line-height: 1;
+            margin-bottom: 20px;
+            letter-spacing: normal;
+            text-transform: capitalize;
+            font-family: var(--font-heading-en);
+        }
+
+        /* Color Variation for Member */
+        .section-member .sec-title {
+            color: var(--color-primary);
+        }
+
+        @media (max-width: 768px) {
+            .sec-title {
+                font-size: 60px;
+            }
+            .divider {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Vision Section */
+        .vision-title {
+            font-size: 48px;
+            /* Approx 3.5vw on desktop */
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.4;
+            color: var(--color-text);
+            font-family: var(--font-heading-jp);
+            white-space: nowrap;
+        }
+
+        .vision-desc {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 16px;
+            color: var(--color-text-light);
+            line-height: 2.2;
+        }
+
+        @media (max-width: 768px) {
+            .vision-title {
+                font-size: 28px;
+                white-space: normal;
+                /* Allow wrapping on mobile */
+                margin-bottom: 24px;
+            }
+
+            .vision-desc {
+                font-size: 14px;
+                line-height: 2;
+                text-align: justify;
+                padding: 0 10px;
+                max-width: 600px; /* Unified style */
+            }
+        }
+
+        .vision-band {
+            background-color: var(--color-primary);
+            color: white;
+            text-align: center;
+            padding: 18px 32px;
+            border-radius: 40px;
+            font-size: 22px;
+            font-weight: bold;
+            max-width: 650px;
+            margin: 0 auto 30px;
+            box-shadow: 0 4px 15px rgba(85, 170, 255, 0.3);
+        }
+
+        /* Service Section - 2 Columns */
+        .service-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .service-card {
+            background-color: var(--color-card-bg);
+            padding: 80px 40px;
+            border-radius: 32px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+            border: 1px solid var(--color-border);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            background-color: #fff;
+            border-color: var(--color-primary);
+        }
+
+        .service-card-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            color: var(--color-text);
+            font-family: var(--font-heading-jp);
+        }
+
+        .service-card-desc {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: var(--color-text-light);
+            min-height: 4em;
+        }
+
+        .btn-more {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: white;
+            padding: 14px 48px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-more:hover {
+            background-color: var(--color-primary-deep);
+        }
+
+        @media (max-width: 768px) {
+            .service-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Member Section - Find Style */
+        .member-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .member-item {
+            background: #fff;
+            padding: 50px 40px;
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--color-border);
+            transition: transform 0.3s;
+        }
+
+        .member-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+        }
+
+        .member-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            background-color: var(--color-card-bg);
+            overflow: hidden;
+            border: none;
+        }
+
+        .member-info {
+            font-size: 14px;
+            color: var(--color-text-light);
+        }
+
+        .member-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--color-text);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .member-en-name {
+            font-size: 14px;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+            display: block;
+            font-family: var(--font-heading-en);
+            font-weight: 700;
+        }
+
+        .member-role {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--color-text);
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .member-desc {
+            text-align: left;
+            margin-top: 20px;
+            line-height: 1.8;
+            font-size: 13.5px;
+        }
+
+        @media (max-width: 768px) {
+            .member-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #fdfdfd;
+            padding: 100px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            max-width: var(--width-max);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            flex-shrink: 0;
+        }
+
+        .footer-logo {
+            font-size: 40px;
+            font-weight: bold;
+            display: block;
+            font-family: var(--font-heading);
+            color: #333;
+        }
+
+        .pc-footer-sns {
+            display: flex;
+            gap: 12px;
+        }
+
+        .mobile-footer-sns {
+            display: none; /* Hidden by default on PC */
+        }
+
+        .sns-icon {
+            width: 36px;
+            height: 36px;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .footer-center {
+            display: flex;
+            gap: 60px;
+            padding-top: 10px;
+        }
+
+        .footer-nav-col {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .footer-nav-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .footer-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-nav-links a {
+            color: #cbd5e0;
+            /* 薄いグレー */
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .footer-nav-column-single {
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+            padding-top: 0;
+        }
+
+        .footer-right {
+            flex-shrink: 0;
+            width: 360px;
+        }
+
+        .footer-contact-box {
+            background-color: var(--color-secondary);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: left;
+            text-decoration: none;
+            display: block;
+            transition: transform 0.2s;
+        }
+
+        .footer-contact-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 140, 0, 0.2);
+        }
+
+        .footer-contact-title {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+            font-family: var(--font-heading);
+            letter-spacing: 0.05em;
+        }
+
+        .footer-contact-desc {
+            font-size: 13px;
+            line-height: 1.6;
+            display: block;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-inner {
+                flex-direction: column;
+                gap: 40px;
+                align-items: flex-start; /* Back to left align */
+                text-align: left; /* Back to left align */
+            }
+
+            .footer-left {
+                order: 1; /* Company name first */
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .footer-center {
+                order: 2; /* Navigation second */
+                flex-direction: column;
+                gap: 32px;
+                padding-top: 0;
+            }
+
+            .mobile-footer-sns {
+                order: 3; /* SNS icons third */
+                display: flex !important;
+                justify-content: flex-start;
+                gap: 16px;
+                margin: 0;
+            }
+
+            .footer-right {
+                order: 4; /* Contact button last */
+                width: 100%;
+            }
+
+            .footer-nav-col {
+                align-items: flex-start;
+            }
+
+            .footer-nav-links {
+                align-items: flex-start;
+            }
+
+            @media (max-width: 1024px) {
+                .mobile-footer-sns {
+                    display: flex !important;
+                }
+            }
+
+            .footer-left .pc-footer-sns {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-center {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating Header -->
+    <div class="header-wrapper ani-fade-top">
+        <header>
+            <a href="index.html" class="logo">nito</a>
+            <div class="nav-links">
+                <a href="index.html#about">わたしたちについて</a>
+                <a href="index.html#service">サービス</a>
+                <a href="column.html">コラム</a>
+                <a href="contact.html" class="btn-contact">相談する</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-overlay-backdrop" id="nav-overlay-backdrop"></div>
+    <div class="nav-overlay" id="nav-overlay">
+        <div class="nav-close" id="nav-close"></div>
+        <div class="nav-overlay-contact">
+            <a href="contact.html" class="btn-contact">相談する</a>
+        </div>
+        
+        <div class="nav-overlay-links">
+            <div class="nav-overlay-group">
+                <span class="nav-overlay-title">わたしたちについて</span>
+                <div class="nav-overlay-sublinks">
+                    <a href="index.html#about">ビジョン</a>
+                    <a href="index.html#about">メンバー</a>
+                </div>
+            </div>
+            
+            <div class="nav-overlay-group">
+                <span class="nav-overlay-title">サービス</span>
+                <div class="nav-overlay-sublinks">
+                    <a href="index.html#service">AI検索対策</a>
+                    <a href="index.html#service">ブランド戦略</a>
+                </div>
+            </div>
+            
+            <a href="column.html" class="nav-overlay-single">コラム</a>
+            <a href="privacy.html" class="nav-overlay-single">プライバシーポリシー</a>
+        </div>
+
+
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero ani-show-up">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    いいモノが自然に<br>広まる仕組みをつくる
+                </h1>
+                <p class="hero-subtitle">「生活者」起点で考え、<br>企業の成長を加速させるパートナー</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <!-- Vision Section -->
+        <section id="about" class="section">
+            <div class="section-header ani-show-up">
+                <div class="sec-subtitle">わたしたちについて</div>
+                <h2 class="sec-title">Vision</h2>
+            </div>
+            <div class="vision-content ani-fade-bottom">
+                <h3 class="vision-title">
+                    挑戦する人と会社のインフラになる
+                </h3>
+                <p class="vision-desc">
+                    わたしたちは、単なるマーケティング支援にとどまりません。挑戦する人々や企業の土台（インフラ）となり、優れた価値が適切な経路で、自然な形で世の中に届く未来を目指しています。一つひとつの想いに真摯に寄り添い、確かな技術と戦略でその成長を支えます。
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <!-- Service Section -->
+        <section id="service" class="section section-service">
+            <div class="section-header ani-show-up">
+                <div class="sec-subtitle">お手伝いできること</div>
+                <h2 class="sec-title">Service</h2>
+            </div>
+
+            <div class="service-cards">
+                <!-- Card 1 (Top) -->
+                <div class="service-card ani-fade-bottom">
+                    <h3 class="service-card-title">AI検索対策</h3>
+                    <p class="service-card-desc">
+                        ChatGPTやGeminiなどの対話型AIで検索された時に、<br>AIによって自社がおすすめされる状態を目指します。
+                    </p>
+                    <a href="contact.html" class="btn-more">詳細を見る</a>
+                </div>
+
+                <!-- Card 2 (Bottom) -->
+                <div class="service-card ani-fade-bottom">
+                    <h3 class="service-card-title">ブランド戦略</h3>
+                    <p class="service-card-desc">
+                        顧客に“選ばれる理由”が自然に伝わるように<br>自社の強みや価値を整理し、ブランド設計を行います。
+                    </p>
+                    <a href="contact.html" class="btn-more">詳細を見る</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <!-- Member Section -->
+        <section class="section section-member">
+            <div class="section-header ani-show-up">
+                <div class="sec-subtitle">メンバー</div>
+                <h2 class="sec-title">Member</h2>
+            </div>
+
+            <div class="member-list">
+                <!-- Member 1 -->
+                <div class="member-item ani-fade-bottom">
+                    <div class="member-photo"><img src="profile_okamura.png" alt="岡村 希一" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="member-info">
+                        <span class="member-name">岡村 希一</span>
+                        <span class="member-en-name">Kiichi Okamura</span>
+                        <span class="member-role">代表取締役</span>
+                        <p class="member-desc">
+                            早稲田大学を卒業後、株式会社サイバーエージェントに入社。広告の新規事業開発に携わりながら、新卒採用や育成部門での責任者も務める。トップレベルのマーケターが集まる株式会社刀の選抜型マーケティングプログラムを修了。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="member-item ani-fade-bottom">
+                    <div class="member-photo"><img src="profile_kobayashi.png" alt="小林 稜生" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="member-info">
+                        <span class="member-name">小林 稜生</span>
+                        <span class="member-en-name">Riki Kobayashi</span>
+                        <span class="member-role">共同創業者 / 取締役COO</span>
+                        <p class="member-desc">
+                            横浜国立大学を卒業後、株式会社ベネフィット・ワンに入社。カスタマーサクセスにて契約更新率の改善に努め、ヘルスケア新事業の立ち上げを経験。その後GMO TECH株式会社でCRM部の立ち上げに参画し、ロードマップ作成やヘルススコア設計、NPS計測などを推進。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <a href="index.html" class="footer-logo">nito</a>
+
+            </div>
+
+            <div class="footer-center">
+                <div class="footer-nav-col">
+                    <div class="footer-nav-title">わたしたちについて</div>
+                    <div class="footer-nav-links">
+                        <a href="index.html#about">ビジョン</a>
+                        <a href="#">メンバー</a>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <div class="footer-nav-title">サービス</div>
+                    <div class="footer-nav-links">
+                        <a href="index.html#service">AI検索対策</a>
+                        <a href="index.html#service">ブランド戦略</a>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="column.html" class="footer-nav-title">コラム</a>
+                    <div class="footer-nav-links">
+                        <a href="privacy.html">プライバシーポリシー</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="footer-right">
+                <a href="contact.html" class="footer-contact-box">
+                    <span class="footer-contact-title">相談する</span>
+                    <span class="footer-contact-desc">
+                        マーケティングやその他サービスのご連絡は<br>こちらからお気軽に問い合わせください
+                    </span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Intersection Observer for Animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Target all elements with animation classes
+        const animatedElements = document.querySelectorAll('.ani-fade-top, .ani-fade-bottom, .ani-show-up');
+        animatedElements.forEach(el => observer.observe(el));
+
+        // Header animation immediate (optional, since it's at the top)
+        window.addEventListener('load', () => {
+            document.querySelector('.header-wrapper').classList.add('animated');
+        });
+
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navOverlay = document.getElementById('nav-overlay');
+        const navOverlayBackdrop = document.getElementById('nav-overlay-backdrop');
+        const navClose = document.getElementById('nav-close');
+        const overlayLinks = navOverlay.querySelectorAll('a');
+
+        const toggleMenu = () => {
+            const isActive = navOverlay.classList.toggle('active');
+            navOverlayBackdrop.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        };
+
+        hamburger.addEventListener('click', toggleMenu);
+        navClose.addEventListener('click', toggleMenu);
+        navOverlayBackdrop.addEventListener('click', toggleMenu);
+
+        overlayLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navOverlay.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
