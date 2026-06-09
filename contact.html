@@ -73,8 +73,10 @@
         }
 
         .btn-contact:hover {
+            background: linear-gradient(to right, #ff8c00 55%, #e87e10 72%, #1682b9 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(255,140,0,0.3);
             opacity: 1;
-            background-color: var(--color-primary);
         }
 
         .container {
@@ -156,7 +158,10 @@
         }
 
         .btn-contact:hover {
-            background-color: var(--color-primary);
+            background: linear-gradient(to right, #ff8c00 55%, #e87e10 72%, #1682b9 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(255,140,0,0.3);
+            opacity: 1;
         }
 
         /* Hamburger Menu */
@@ -534,10 +539,23 @@
         /* Footer */
         footer {
             background-color: #fdfdfd;
-            padding: 80px 0;
+            padding: 80px 0 40px;
             border-top: 1px solid #eee;
             margin-top: 100px;
         }
+        .footer-bottom {
+            max-width: var(--width-max);
+            margin: 48px auto 0;
+            padding: 24px 20px 0;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+        }
+        .footer-copy { font-size: 12px; color: #ccc; }
+        .footer-privacy { font-size: 12px; color: #ccc; font-weight: 500; }
+        .footer-privacy:hover { color: #999; opacity: 1; }
 
         .footer-inner {
             display: flex;
@@ -637,13 +655,27 @@
             gap: 16px;
             color: #fff;
             text-decoration: none;
-            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
         }
-
+        .footer-contact-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, #ff8c00 55%, #e87e10 72%, #1682b9 100%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            border-radius: inherit;
+            pointer-events: none;
+        }
         .footer-contact-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 140, 0, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 48px rgba(255, 140, 0, 0.28);
+            opacity: 1;
         }
+        .footer-contact-box:hover::before { opacity: 1; }
+        .footer-contact-box > * { position: relative; z-index: 1; }
 
         .footer-contact-title {
             font-size: 24px;
@@ -756,15 +788,14 @@
                 <span class="nav-overlay-title">わたしたちについて</span>
                 <div class="nav-overlay-sublinks">
                     <a href="index.html#about">ビジョン</a>
-                    <a href="index.html#about">メンバー</a>
+                    <a href="index.html#member">メンバー</a>
                 </div>
             </div>
             
             <div class="nav-overlay-group">
                 <span class="nav-overlay-title">サービス</span>
                 <div class="nav-overlay-sublinks">
-                    <a href="index.html#service">AI検索対策</a>
-                    <a href="index.html#service">ブランド戦略</a>
+                    <a href="https://kobari-ai.github.io/nito-llmo-lp/">AI検索対策</a>
                 </div>
             </div>
             
@@ -875,21 +906,17 @@
                     <div class="footer-nav-title">わたしたちについて</div>
                     <div class="footer-nav-links">
                         <a href="index.html#about">ビジョン</a>
-                        <a href="#">メンバー</a>
+                        <a href="index.html#member">メンバー</a>
                     </div>
                 </div>
                 <div class="footer-nav-col">
                     <div class="footer-nav-title">サービス</div>
                     <div class="footer-nav-links">
-                        <a href="index.html#service">AI検索対策</a>
-                        <a href="index.html#service">ブランド戦略</a>
+                        <a href="https://kobari-ai.github.io/nito-llmo-lp/">AI検索対策</a>
                     </div>
                 </div>
                 <div class="footer-nav-col">
                     <a href="column.html" class="footer-nav-title">コラム</a>
-                    <div class="footer-nav-links">
-                        <a href="privacy.html">プライバシーポリシー</a>
-                    </div>
                 </div>
             </div>
 
