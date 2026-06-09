@@ -169,17 +169,17 @@
         }
 
         .btn-contact {
-            background-color: var(--color-secondary);
+            background: var(--color-secondary);
             color: white;
             padding: 8px 20px;
             border-radius: 30px;
             font-weight: bold;
-            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
             opacity: 1;
         }
 
         .btn-contact:hover {
-            background-color: var(--color-primary);
+            background: linear-gradient(to right, #ff8c00 55%, #e87e10 72%, #1682b9 100%);
             transform: translateY(-3px);
             box-shadow: 0 6px 18px rgba(255,140,0,0.3);
             opacity: 1;
@@ -588,12 +588,12 @@
             border-radius: 50px;
             font-size: 15px;
             font-weight: bold;
-            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
             opacity: 1;
         }
 
         .btn-more:hover {
-            background-color: var(--color-primary-deep);
+            background: linear-gradient(to right, #ff8c00 55%, #e87e10 72%, #1682b9 100%);
             transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(255,140,0,0.28);
             opacity: 1;
@@ -790,13 +790,26 @@
             text-align: left;
             text-decoration: none;
             display: block;
-            transition: transform 0.2s;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
         }
-
+        .footer-contact-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, #ff8c00 55%, #e87e10 72%, #1682b9 100%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            border-radius: inherit;
+            pointer-events: none;
+        }
         .footer-contact-box:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(255, 140, 0, 0.2);
+            box-shadow: 0 20px 48px rgba(255, 140, 0, 0.28);
         }
+        .footer-contact-box:hover::before { opacity: 1; }
+        .footer-contact-box > * { position: relative; z-index: 1; }
 
         .footer-contact-title {
             font-size: 42px;
