@@ -174,11 +174,15 @@
             padding: 8px 20px;
             border-radius: 30px;
             font-weight: bold;
-            transition: transform 0.2s, background-color 0.2s;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s;
+            opacity: 1;
         }
 
         .btn-contact:hover {
             background-color: var(--color-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(255,140,0,0.3);
+            opacity: 1;
         }
 
         /* Hamburger Menu */
@@ -584,11 +588,15 @@
             border-radius: 50px;
             font-size: 15px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s;
+            opacity: 1;
         }
 
         .btn-more:hover {
             background-color: var(--color-primary-deep);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(255,140,0,0.28);
+            opacity: 1;
         }
 
         @media (max-width: 768px) {
