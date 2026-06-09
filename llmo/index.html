@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nito LLMO対策 | 収益につながる、AI検索対策</title>
+    <meta name="description" content="AIをハックするのではなく、事業そのものに向き合う。ChatGPTやGeminiなどのAI検索に選ばれるブランドをつくる、LLMO対策支援サービス。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800;900&family=Noto+Sans+JP:wght@400;700;900&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #ffffff;
+            --color-text: #1a1a1a;
+            --color-text-light: #666666;
+            --color-primary: #ff9f43;
+            --color-primary-deep: #e67e22;
+            --color-secondary: #ff8c00;
+            --color-card-bg: #fffbf5;
+            --color-hero-bg: #fff8f0;
+            --color-border: #f0f0f0;
+            --width-max: 1100px;
+            --section-gap: 100px;
+            --font-heading-en: 'Montserrat', sans-serif;
+            --font-heading-jp: 'Noto Sans JP', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 17px;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.85;
+            letter-spacing: 0.04em;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; transition: opacity 0.3s; }
+        a:hover { opacity: 0.7; }
+        /* ボタン系はopacityではなくtransformで演出 */
+        .btn-fill:hover, .btn-fill-lg:hover, .cta-banner:hover { opacity: 1; }
+
+        .container {
+            max-width: var(--width-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Animations */
+        .ani-show-up {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .ani-fade-bottom {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .ani-slide-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .ani-slide-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .animated {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+
+        /* ── Header ── */
+        .header-wrapper {
+            position: sticky;
+            top: 16px;
+            z-index: 1000;
+            width: 95%;
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 28px;
+            border-radius: 50px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            font-family: var(--font-heading-jp);
+            letter-spacing: 0.08em;
+            color: var(--color-text);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .nav-links a.nav-text { color: var(--color-text); }
+
+        .btn-outline {
+            border: 2px solid var(--color-secondary);
+            color: var(--color-secondary);
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: background-color 0.2s, color 0.2s;
+            font-family: var(--font-heading-jp);
+        }
+        .btn-outline:hover { background-color: var(--color-secondary); color: #fff; opacity: 1; }
+
+        .btn-fill {
+            background: var(--color-secondary);
+            color: #fff;
+            padding: 9px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            font-family: var(--font-heading-jp);
+            opacity: 1;
+        }
+        .btn-fill:hover {
+            background: linear-gradient(to right, #ff8c00 55%, #e87e10 72%, #1682b9 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(255,140,0,0.28);
+            opacity: 1;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 28px;
+            height: 18px;
+            position: relative;
+        }
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--color-text);
+            position: absolute;
+            transition: all 0.3s;
+        }
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 8px; }
+        .hamburger span:nth-child(3) { top: 16px; }
+        .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+        }
+
+        /* Mobile nav */
+        .nav-overlay-backdrop {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.3); z-index: 1999;
+            opacity: 0; visibility: hidden; transition: all 0.3s;
+        }
+        .nav-overlay-backdrop.active { opacity: 1; visibility: visible; }
+
+        .nav-overlay {
+            position: fixed; top: 16px; left: 5%; width: 90%;
+            background: #fff; z-index: 2000;
+            padding: 72px 28px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            opacity: 0; visibility: hidden;
+            transform: translateY(-16px);
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex; flex-direction: column; gap: 32px;
+        }
+        .nav-overlay.active { opacity: 1; visibility: visible; transform: translateY(0); }
+
+        .nav-close {
+            position: absolute; top: 18px; right: 18px;
+            width: 36px; height: 36px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-close::before, .nav-close::after {
+            content: ''; position: absolute;
+            width: 18px; height: 2px; background: var(--color-text);
+        }
+        .nav-close::before { transform: rotate(45deg); }
+        .nav-close::after { transform: rotate(-45deg); }
+
+        .nav-overlay-item {
+            font-size: 18px; font-weight: 900;
+            font-family: var(--font-heading-jp); color: var(--color-text);
+        }
+        .nav-overlay-cta { display: flex; flex-direction: column; gap: 12px; }
+        .nav-overlay-cta a { display: block; text-align: center; font-size: 16px; padding: 14px; }
+
+        /* ── Hero ── */
+        .hero {
+            background-color: var(--color-hero-bg);
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+            min-height: 560px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -150px; right: -150px;
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(255,159,67,0.12) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-secondary);
+            letter-spacing: 0.06em;
+            margin-bottom: 20px;
+            font-family: var(--font-heading-jp);
+        }
+
+        .hero-title {
+            font-size: 80px;
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: var(--color-text);
+            font-family: var(--font-heading-jp);
+            margin-bottom: 40px;
+        }
+
+        .hero-title span { color: var(--color-secondary); }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-cta .btn-fill-lg {
+            background: var(--color-secondary);
+            color: #fff;
+            padding: 18px 48px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: inline-block;
+            opacity: 1;
+        }
+        .hero-cta .btn-fill-lg:hover {
+            background: linear-gradient(to right, #ff8c00 55%, #e87e10 72%, #1682b9 100%);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(255,140,0,0.3);
+            opacity: 1;
+        }
+
+        /* Hero decoration — 放射デザイン（背景が暖色のため少し深めのオレンジで対比） */
+        .hero-rings {
+            position: absolute;
+            right: 18%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 360px;
+            height: 360px;
+            pointer-events: none;
+        }
+        /* 中心点 + 同心円リング */
+        .hero-rings::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 14px; height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 140, 0, 0.90);
+            box-shadow:
+                0 0 0 46px  rgba(255,140,0,0.38),
+                0 0 0 94px  rgba(255,140,0,0.24),
+                0 0 0 154px rgba(255,140,0,0.14);
+        }
+        /* 最外輪 */
+        .hero-rings::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 340px; height: 340px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(255,140,0,0.50);
+        }
+        /* 軌道上のドット */
+        .hero-dot {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,140,0,0.72);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 0 60px;
+                min-height: unset;
+            }
+            .hero-title { font-size: 44px; letter-spacing: -0.01em; }
+            .hero-label { font-size: 16px; margin-bottom: 16px; }
+            .hero-cta { flex-direction: column; }
+            .hero-cta .btn-fill-lg {
+                text-align: center;
+                padding: 18px 0;
+                width: 100%;
+                border-radius: 14px;
+                font-size: 18px;
+            }
+            .hero-rings { display: none; }
+        }
+
+        /* ── Intro ── */
+        .section-intro {
+            padding: 100px 0;
+        }
+
+        .intro-inner {
+            max-width: 760px;
+        }
+
+        .intro-heading {
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--color-text);
+            font-family: var(--font-heading-jp);
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        .intro-lead {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--color-text);
+            font-family: var(--font-heading-jp);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .intro-body {
+            color: var(--color-text-light);
+            font-size: 17px;
+            line-height: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+        @media (max-width: 768px) {
+            .section-intro { padding: 60px 0; }
+            .intro-inner {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .intro-heading {
+                font-size: 24px;
+                line-height: 1.6;
+                margin-bottom: 32px;
+                word-break: keep-all;
+            }
+            /* モバイルでは本文の強制改行を外して自然な折り返しに */
+            .intro-body br { display: none; }
+            .intro-lead { font-size: 18px; margin-bottom: 20px; }
+            .intro-body {
+                font-size: 16px;
+                gap: 20px;
+                line-height: 1.95;
+            }
+        }
+
+        /* ── Feature ── */
+        .section-feature {
+            padding: 100px 0;
+            background-color: #fafafa;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-secondary);
+            font-family: var(--font-heading-en);
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 44px;
+            font-weight: 900;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.3;
+            margin-bottom: 56px;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            padding: 48px 56px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 48px;
+            align-items: center;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 16px 48px rgba(0,0,0,0.07);
+            transform: translateY(-4px);
+        }
+
+        .feature-card-header {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .feature-num {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--color-secondary);
+            font-family: var(--font-heading-en);
+            flex-shrink: 0;
+        }
+
+        .feature-card-title {
+            font-size: 24px;
+            font-weight: 900;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.4;
+        }
+
+        .feature-card-desc {
+            font-size: 16px;
+            color: var(--color-text-light);
+            line-height: 2;
+        }
+
+        .feature-img {
+            background-color: var(--color-card-bg);
+            border-radius: 14px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 13px;
+            font-family: var(--font-heading-en);
+            letter-spacing: 0.1em;
+        }
+
+        .feature-card--reverse {
+            grid-template-columns: 300px 1fr;
+        }
+        .feature-card--reverse .feature-img {
+            order: -1;
+        }
+
+        @media (max-width: 768px) {
+            .section-feature { padding: 64px 0; }
+            .section-title { font-size: 32px; margin-bottom: 36px; }
+            .feature-card,
+            .feature-card--reverse {
+                grid-template-columns: 1fr;
+                padding: 28px 24px;
+                gap: 20px;
+            }
+            .feature-card--reverse .feature-img { order: 0; }
+            .feature-img { height: 160px; }
+            .feature-num { font-size: 20px; }
+            .feature-card-title { font-size: 22px; }
+            .feature-card-desc { font-size: 16px; line-height: 1.85; }
+        }
+
+        /* ── FAQ ── */
+        .section-faq {
+            padding: 100px 0;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-top: 1px solid var(--color-border);
+            max-width: 800px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 0;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            text-align: left;
+            gap: 20px;
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid var(--color-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            color: var(--color-secondary);
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            font-size: 16px;
+            color: var(--color-text-light);
+            line-height: 1.9;
+        }
+
+        .faq-answer-inner { padding-bottom: 28px; }
+
+        .faq-item.open .faq-answer { max-height: 500px; }
+
+        @media (max-width: 768px) {
+            .section-faq { padding: 64px 0; }
+            .faq-question { font-size: 17px; padding: 24px 0; }
+            .faq-answer { font-size: 15px; line-height: 1.9; }
+            .faq-icon { width: 26px; height: 26px; font-size: 18px; }
+        }
+
+        /* ── CTA ── */
+        .section-cta {
+            padding: 60px 0 100px;
+        }
+
+        .cta-banner {
+            background: var(--color-secondary);
+            color: #fff;
+            border-radius: 24px;
+            padding: 72px 72px;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            opacity: 1;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+        }
+        /* グラデーションを疑似要素でフェードイン → フリッカーなし */
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, #ff8c00 55%, #e87e10 72%, #1682b9 100%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            border-radius: inherit;
+            pointer-events: none;
+        }
+        .cta-banner:hover,
+        .cta-banner.animated:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 20px 48px rgba(255,140,0,0.28);
+            opacity: 1;
+        }
+        .cta-banner:hover::before { opacity: 1; }
+        /* コンテンツを疑似要素の上に */
+        .cta-banner-text, .cta-banner-arrow { position: relative; z-index: 1; }
+
+        .cta-banner-text { flex: 1; }
+
+        .cta-banner-label {
+            font-size: 56px;
+            font-weight: 900;
+            letter-spacing: 0.06em;
+            font-family: var(--font-heading-jp);
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .cta-banner-title {
+            font-size: 15px;
+            font-weight: 500;
+            font-family: var(--font-heading-jp);
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        .cta-banner-arrow {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .cta-banner:hover .cta-banner-arrow {
+            background: rgba(255,255,255,0.35);
+            transform: translateX(6px);
+        }
+
+        @media (max-width: 768px) {
+            .section-cta { padding: 40px 0 72px; }
+            .cta-banner {
+                padding: 36px 28px;
+                border-radius: 16px;
+                gap: 20px;
+            }
+            .cta-banner-label { font-size: 36px; }
+            .cta-banner-title { font-size: 13px; }
+            .cta-banner-arrow { width: 44px; height: 44px; font-size: 18px; }
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: #fdfdfd;
+            border-top: 1px solid #eee;
+            padding: 80px 0 40px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            font-size: 32px;
+            font-weight: 900;
+            font-family: var(--font-heading-jp);
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            color: var(--color-text-light);
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 56px;
+        }
+
+        .footer-nav-col { display: flex; flex-direction: column; gap: 16px; }
+
+        .footer-nav-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--color-text);
+        }
+
+        .footer-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-nav-links a {
+            font-size: 14px;
+            color: #bbb;
+            font-weight: 500;
+        }
+
+        .footer-bottom {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .footer-privacy {
+            font-size: 12px;
+            color: #ccc;
+            font-weight: 500;
+        }
+        .footer-privacy:hover { color: #999; opacity: 1; }
+
+        @media (max-width: 768px) {
+            footer { padding: 56px 0 32px; }
+            .footer-inner { flex-direction: column; gap: 40px; }
+            .footer-logo { font-size: 26px; }
+            .footer-nav { flex-direction: row; flex-wrap: wrap; gap: 32px; }
+            .footer-nav-col { gap: 12px; }
+            .footer-bottom { margin-top: 40px; flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header-wrapper ani-show-up">
+        <header>
+            <a href="https://nito-0210.com" class="logo">nito</a>
+            <nav class="nav-links">
+                <a href="https://nito-0210.com" class="nav-text">会社情報</a>
+                <a href="https://nito-0210.com/column.html" class="nav-text">コラム</a>
+                <a href="https://nito-0210.com/contact.html" class="btn-fill">相談する</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </header>
+    </div>
+
+    <div class="nav-overlay-backdrop" id="nav-overlay-backdrop"></div>
+    <div class="nav-overlay" id="nav-overlay">
+        <div class="nav-close" id="nav-close"></div>
+        <div class="nav-overlay-cta">
+            <a href="https://nito-0210.com/contact.html" class="btn-fill">相談する</a>
+        </div>
+        <a href="https://nito-0210.com" class="nav-overlay-item">会社情報</a>
+        <a href="https://nito-0210.com/column.html" class="nav-overlay-item">お知らせ</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero ani-fade-bottom">
+        <div class="hero-rings" aria-hidden="true">
+            <!-- 内軌道 -->
+            <span class="hero-dot" style="width:8px;height:8px;top:32%;left:62%;opacity:0.65;"></span>
+            <span class="hero-dot" style="width:6px;height:6px;top:60%;left:36%;opacity:0.5;"></span>
+            <!-- 中軌道 -->
+            <span class="hero-dot" style="width:9px;height:9px;top:14%;left:54%;opacity:0.45;"></span>
+            <span class="hero-dot" style="width:7px;height:7px;top:55%;right:16%;opacity:0.4;"></span>
+            <span class="hero-dot" style="width:8px;height:8px;bottom:22%;left:24%;opacity:0.38;"></span>
+            <!-- 外軌道 -->
+            <span class="hero-dot" style="width:10px;height:10px;top:8%;right:20%;opacity:0.3;"></span>
+            <span class="hero-dot" style="width:7px;height:7px;bottom:10%;right:28%;opacity:0.25;"></span>
+        </div>
+        <div class="container">
+            <span class="hero-label">収益につながる、AI検索対策なら</span>
+            <h1 class="hero-title">nito <span>LLMO</span>対策</h1>
+            <div class="hero-cta">
+                <a href="https://nito-0210.com/contact.html" class="btn-fill-lg">相談する</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="section-intro">
+        <div class="container">
+            <div class="intro-inner ani-fade-bottom">
+                <h2 class="intro-heading">AIをハックするのではなく、<br>事業そのものに向き合う。</h2>
+                <p class="intro-lead">AIはハックできるほど単純ではありません。</p>
+                <div class="intro-body">
+                    <p>ユーザーの質問意図や背景を理解し、<br>膨大な情報を比較検討し、最適なものを推奨する。<br>まるで全ての領域に精通した1人の人間のように考えます。</p>
+                    <p>だからこそ私たちは、AIではなく事業そのものに向き合います。<br>その事業の強みは何か。どんな文脈で、どのような価値になるのか。</p>
+                    <p>この言語化と常に向き合いながら、適切な形で情報を発信することが、<br>AI時代に選ばれるブランドの必須条件だと考えています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature -->
+    <section class="section-feature">
+        <div class="container">
+            <div class="ani-fade-bottom">
+                <div class="section-label">Feature</div>
+                <h2 class="section-title">特徴</h2>
+            </div>
+            <div class="feature-list">
+                <div class="feature-card ani-slide-left">
+                    <div>
+                        <div class="feature-card-header">
+                            <span class="feature-num">01</span>
+                            <h3 class="feature-card-title">深い事業理解と戦略策定</h3>
+                        </div>
+                        <p class="feature-card-desc">最終的に意思決定するのは、AIの先にいる1人の人間です。AIにどれだけ推奨されても、届く相手がズレていれば収益にはなりません。だから私たちは、事業の強みや独自性を改めて言語化し、「誰にどんな価値を届けるか」の設計から始めます。</p>
+                    </div>
+                    <div class="feature-img">IMAGE</div>
+                </div>
+                <div class="feature-card feature-card--reverse ani-slide-right">
+                    <div>
+                        <div class="feature-card-header">
+                            <span class="feature-num">02</span>
+                            <h3 class="feature-card-title">実行までの推進力</h3>
+                        </div>
+                        <p class="feature-card-desc">どれだけ高度な戦略を描いても、AIや人の目に触れるのは1つひとつの施策です。戦略の意図は、言葉選びや構造の細部に宿ります。だから私たちは、戦略から実行までを一気通貫で推進します。</p>
+                    </div>
+                    <div class="feature-img">IMAGE</div>
+                </div>
+                <div class="feature-card ani-slide-left">
+                    <div>
+                        <div class="feature-card-header">
+                            <span class="feature-num">03</span>
+                            <h3 class="feature-card-title">収益起点での効果測定</h3>
+                        </div>
+                        <p class="feature-card-desc">AIからの言及率はあくまで中間指標。AI検索が実際の収益につながっているかを常にモニタリングし、他指標との関連も分析しながら施策効果を改善し続けます。</p>
+                    </div>
+                    <div class="feature-img">IMAGE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <!-- CTA -->
+    <section class="section-cta" id="cta">
+        <div class="container">
+            <a href="https://nito-0210.com/contact.html" class="cta-banner ani-fade-bottom">
+                <div class="cta-banner-text">
+                    <span class="cta-banner-label">相談する</span>
+                    <p class="cta-banner-title">まずは、事業の話を聞かせてください。</p>
+                </div>
+                <div class="cta-banner-arrow">→</div>
+            </a>
+        </div>
+    </section>
+
+    <section class="section-faq">
+        <div class="container">
+            <div class="ani-fade-bottom">
+                <div class="section-label">FAQ</div>
+                <h2 class="section-title">よくある質問</h2>
+            </div>
+            <div class="faq-list ani-fade-bottom">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>効果が出るまでどのくらいかかりますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">事業・業界・現状によって異なりますが、情報整備フェーズから着手した場合、AI検索での言及頻度に変化が現れるまで概ね2〜4ヶ月が目安です。ただし、LLMOは継続的な情報発信と改善の積み重ねが重要なため、中長期での取り組みを前提としています。</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>どのような企業が対象ですか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">LLMO対策の本質は、企業やサービスの価値を世間に正しく発信する基盤をつくることです。その意味では、業種・業界を問わず全ての企業が取り組む価値があります。<br><br>その中でも特に相性が良いのは、BtoB・SaaS・金融・士業など、意思決定に長い時間がかかったり、高度な専門知識が求められるサービスです。ユーザーが「選ぶ前にAIに相談する」という行動が起きやすい領域ほど、AI検索に選ばれることが直接的な競争優位につながります。</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>既存のSEO施策との違いは何ですか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">SEOは検索エンジンのランキングアルゴリズムに最適化するアプローチですが、LLMOはAIが「信頼できる情報源として認識する」ことを目指します。キーワード密度よりも、情報の正確性・一貫性・権威性が重視されます。既存のコンテンツ資産を活かしながら、AI時代に対応した形に再整備することも可能です。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    <a href="https://nito-0210.com" class="footer-logo">nito</a>
+                    <p class="footer-tagline">いいモノが自然に広まる仕組みをつくる</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="footer-nav-col">
+                        <span class="footer-nav-title">わたしたちについて</span>
+                        <div class="footer-nav-links">
+                            <a href="https://nito-0210.com/#about">ビジョン</a>
+                            <a href="https://nito-0210.com/#member">メンバー</a>
+                        </div>
+                    </div>
+                    <div class="footer-nav-col">
+                        <span class="footer-nav-title">サービス</span>
+                        <div class="footer-nav-links">
+                            <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">AI検索対策</a>
+                        </div>
+                    </div>
+                    <div class="footer-nav-col">
+                        <a href="https://nito-0210.com/column.html" class="footer-nav-title">コラム</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2025 nito Inc. All rights reserved.</p>
+                <a href="https://nito-0210.com/privacy.html" class="footer-privacy">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('animated');
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.ani-show-up, .ani-fade-bottom, .ani-slide-left, .ani-slide-right').forEach(el => observer.observe(el));
+
+        window.addEventListener('load', () => {
+            document.querySelector('.header-wrapper').classList.add('animated');
+        });
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const navOverlay = document.getElementById('nav-overlay');
+        const backdrop = document.getElementById('nav-overlay-backdrop');
+        const navClose = document.getElementById('nav-close');
+
+        const toggleMenu = () => {
+            const open = navOverlay.classList.toggle('active');
+            backdrop.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            document.body.style.overflow = open ? 'hidden' : '';
+        };
+
+        hamburger.addEventListener('click', toggleMenu);
+        navClose.addEventListener('click', toggleMenu);
+        backdrop.addEventListener('click', toggleMenu);
+        navOverlay.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            if (navOverlay.classList.contains('active')) toggleMenu();
+        }));
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    </script>
+</body>
+
+</html>
