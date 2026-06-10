@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" role="img" aria-label="深い事業理解と戦略策定のイメージ">
+  <defs>
+    <linearGradient id="f1-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8f0"/>
+      <stop offset="1" stop-color="#fff1e0"/>
+    </linearGradient>
+    <linearGradient id="f1-lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fff3e2"/>
+    </linearGradient>
+    <linearGradient id="f1-hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd9a8"/>
+      <stop offset="1" stop-color="#ffc77f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="600" height="440" fill="url(#f1-bg)"/>
+
+  <!-- hills -->
+  <path d="M0 440 L0 360 Q120 300 260 340 Q420 386 600 320 L600 440 Z" fill="url(#f1-hill)" opacity="0.55"/>
+  <path d="M0 440 L0 396 Q180 350 340 392 Q480 428 600 384 L600 440 Z" fill="#ffb86b" opacity="0.45"/>
+
+  <!-- winding road: wide in front (bottom), tapering toward the goal flag -->
+  <path d="M268 452 Q248 345 395 300 Q470 275 516 206 Q485 290 405 330 Q330 360 366 436 Z"
+        fill="#ffb86b"/>
+
+  <!-- goal flag -->
+  <g>
+    <circle cx="521" cy="200" r="13" fill="#ffe3c2"/>
+    <rect x="518" y="118" width="6" height="84" rx="3" fill="#e67e22"/>
+    <path d="M524 120 L576 132 L524 146 Z" fill="#ff8c00"/>
+  </g>
+
+  <!-- magnifying glass over the company -->
+  <g>
+    <!-- handle -->
+    <rect x="236" y="270" width="86" height="26" rx="13" fill="#e67e22"
+          transform="rotate(45 236 270)"/>
+    <!-- rim -->
+    <circle cx="180" cy="208" r="104" fill="url(#f1-lens)" stroke="#ff9f43" stroke-width="14"/>
+
+    <!-- inside the lens: building (the business) -->
+    <g>
+      <rect x="132" y="160" width="96" height="96" rx="10" fill="#ffffff" stroke="#ffb86b" stroke-width="4"/>
+      <rect x="148" y="178" width="18" height="18" rx="4" fill="#ffd9a8"/>
+      <rect x="194" y="178" width="18" height="18" rx="4" fill="#ffd9a8"/>
+      <rect x="148" y="208" width="18" height="18" rx="4" fill="#ffd9a8"/>
+      <rect x="194" y="208" width="18" height="18" rx="4" fill="#ffd9a8"/>
+      <rect x="170" y="224" width="20" height="32" rx="4" fill="#ffb86b"/>
+    </g>
+
+    <!-- lens glint -->
+    <path d="M104 156 Q120 128 150 116" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+  </g>
+
+  <!-- sparkles -->
+  <g fill="#ff9f43">
+    <path d="M330 96 L336 112 L352 118 L336 124 L330 140 L324 124 L308 118 L324 112 Z"/>
+    <path d="M398 152 L402 162 L412 166 L402 170 L398 180 L394 170 L384 166 L394 162 Z" opacity="0.8"/>
+    <path d="M64 92 L69 105 L82 110 L69 115 L64 128 L59 115 L46 110 L59 105 Z" opacity="0.7"/>
+    <path d="M480 84 L485 97 L498 102 L485 107 L480 120 L475 107 L462 102 L475 97 Z" opacity="0.75"/>
+  </g>
+</svg>

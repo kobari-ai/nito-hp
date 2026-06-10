@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" role="img" aria-label="実行までの推進力のイメージ">
+  <defs>
+    <linearGradient id="f2-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8f0"/>
+      <stop offset="1" stop-color="#fff1e0"/>
+    </linearGradient>
+    <linearGradient id="f2-hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd9a8"/>
+      <stop offset="1" stop-color="#ffc77f"/>
+    </linearGradient>
+    <linearGradient id="f2-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fff3e2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="600" height="440" fill="url(#f2-bg)"/>
+
+  <!-- hills -->
+  <path d="M0 440 L0 360 Q120 300 260 340 Q420 386 600 320 L600 440 Z" fill="url(#f2-hill)" opacity="0.55"/>
+  <path d="M0 440 L0 396 Q180 350 340 392 Q480 428 600 384 L600 440 Z" fill="#ffb86b" opacity="0.45"/>
+
+  <!-- clouds passed by -->
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="150" cy="150" rx="42" ry="16"/>
+    <ellipse cx="180" cy="138" rx="30" ry="13"/>
+    <ellipse cx="488" cy="330" rx="48" ry="17"/>
+    <ellipse cx="520" cy="318" rx="32" ry="13"/>
+  </g>
+
+  <!-- rocket ascending with strong thrust -->
+  <g transform="translate(370 170) rotate(40)">
+    <!-- big exhaust plume = strong thrust -->
+    <path d="M0 92 Q-34 150 0 224 Q34 150 0 92 Z" fill="#ff8c00"/>
+    <path d="M0 98 Q-20 146 0 192 Q20 146 0 98 Z" fill="#ffb86b"/>
+    <path d="M0 104 Q-10 140 0 164 Q10 140 0 104 Z" fill="#ffe3c2"/>
+    <!-- fins -->
+    <path d="M-26 60 Q-46 84 -34 110 L-12 88 Z" fill="#e67e22"/>
+    <path d="M26 60 Q46 84 34 110 L12 88 Z" fill="#e67e22"/>
+    <!-- body -->
+    <path d="M0 -64 Q34 -22 34 48 Q34 84 0 96 Q-34 84 -34 48 Q-34 -22 0 -64 Z"
+          fill="url(#f2-body)" stroke="#ff9f43" stroke-width="6"/>
+    <!-- window -->
+    <circle cx="0" cy="14" r="17" fill="#ffd9a8" stroke="#e67e22" stroke-width="5"/>
+    <!-- nose stripe -->
+    <path d="M-20 -34 Q0 -56 20 -34 Q12 -44 0 -46 Q-12 -44 -20 -34 Z" fill="#ff9f43"/>
+  </g>
+
+  <!-- blast smoke puffs at the plume base -->
+  <g fill="#ffd9a8">
+    <circle cx="176" cy="354" r="30"/>
+    <circle cx="214" cy="372" r="24"/>
+    <circle cx="148" cy="380" r="22"/>
+    <circle cx="244" cy="350" r="16"/>
+    <circle cx="196" cy="338" r="18" fill="#ffe3c2"/>
+  </g>
+
+  <!-- speed lines along the thrust direction -->
+  <g stroke="#ffb86b" stroke-width="8" stroke-linecap="round" opacity="0.85">
+    <path d="M236 300 L296 240" fill="none"/>
+    <path d="M298 326 L344 280" fill="none"/>
+    <path d="M212 252 L246 218" fill="none"/>
+  </g>
+  <g stroke="#ff9f43" stroke-width="6" stroke-linecap="round" opacity="0.7">
+    <path d="M468 168 L506 130" fill="none"/>
+    <path d="M300 92 L334 58" fill="none"/>
+  </g>
+
+  <!-- sparkles -->
+  <g fill="#ff9f43">
+    <path d="M524 96 L530 112 L546 118 L530 124 L524 140 L518 124 L502 118 L518 112 Z"/>
+    <path d="M252 64 L256 74 L266 78 L256 82 L252 92 L248 82 L238 78 L248 74 Z" opacity="0.8"/>
+    <path d="M70 220 L75 233 L88 238 L75 243 L70 256 L65 243 L52 238 L65 233 Z" opacity="0.7"/>
+  </g>
+</svg>
