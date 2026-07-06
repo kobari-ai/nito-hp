@@ -224,9 +224,6 @@ def main():
     list_tpl = (TEMPLATE_DIR / "list.html").read_text(encoding="utf-8")
 
     md_files = sorted(POSTS_DIR.glob("*.md"))
-    if not md_files:
-        print("posts/*.md がありません。何もしません。")
-        return
 
     posts = []
     errors = []
@@ -265,6 +262,15 @@ def main():
 
     (ROOT / "index.html").write_text(build_list(posts, list_tpl), encoding="utf-8")
     print("✔ media/index.html （一覧）")
+
+    # mdが削除された記事のディレクトリを掃除（非公開化に対応）
+    keep = {p["slug"] for p in posts} | {"_template", "posts", "images"}
+    for d in ROOT.iterdir():
+        if d.is_dir() and d.name not in keep and (d / "index.html").exists():
+            import shutil
+            shutil.rmtree(d)
+            print(f"✘ media/{d.name}/ を削除（対応するmdなし）")
+
     print(f"\n完了: {len(posts)}記事")
 
     if errors:
