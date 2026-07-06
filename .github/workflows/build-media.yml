@@ -1,0 +1,40 @@
+name: Build media articles
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "media/posts/**"
+      - "media/_template/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install markdown
+
+      - name: Build articles
+        run: python3 media/_template/build.py
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add media/
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "build: 記事HTMLを自動生成"
+            git push
+          fi
