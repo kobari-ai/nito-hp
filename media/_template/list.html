@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column | nito - いいモノが自然に広まる仕組みをつくる</title>
+    <meta name="description" content="AI検索対策・ブランド戦略を中心に、いいモノが自然に広まる仕組みづくりのヒントをお届けするnitoのコラムです。">
+    <link rel="canonical" href="https://nito-0210.com/media/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Column | nito">
+    <meta property="og:description" content="AI検索対策・ブランド戦略を中心に、いいモノが自然に広まる仕組みづくりのヒントをお届けするnitoのコラムです。">
+    <meta property="og:url" content="https://nito-0210.com/media/">
+    <link rel="icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo">nito<small>いいモノが自然に広まる仕組みをつくる</small></a>
+            <nav class="gnav">
+                <a href="/index.html#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="list-hero">
+        <p class="list-hero__en">COLUMN</p>
+        <h1 class="list-hero__ttl">コラム</h1>
+        <p class="list-hero__desc">AI検索対策・ブランド戦略を中心に、いいモノが自然に広まる仕組みづくりのヒントをお届けします。</p>
+    </div>
+
+    <nav class="cat-filter">
+{{CATEGORIES}}
+    </nav>
+
+    <main class="post-list">
+{{POSTS}}
+    </main>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo">nito</a>
+        <nav class="f-nav">
+            <a href="/index.html#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+
+    <script>
+    // カテゴリフィルタ（クライアントサイド）
+    document.querySelectorAll('.cat-filter a').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelectorAll('.cat-filter a').forEach(function (b) { b.classList.remove('is-active'); });
+            btn.classList.add('is-active');
+            var cat = btn.dataset.cat;
+            document.querySelectorAll('.post-list .rel-card').forEach(function (card) {
+                card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+            });
+        });
+    });
+    </script>
+</body>
+
+</html>

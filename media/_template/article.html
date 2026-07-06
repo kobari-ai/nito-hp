@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} | nito Column</title>
+    <meta name="description" content="{{DESCRIPTION}}">
+    <link rel="canonical" href="https://nito-0210.com/media/{{SLUG}}/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{TITLE}}">
+    <meta property="og:description" content="{{DESCRIPTION}}">
+    <meta property="og:url" content="https://nito-0210.com/media/{{SLUG}}/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo">nito<small>いいモノが自然に広まる仕組みをつくる</small></a>
+            <nav class="gnav">
+                <a href="/index.html#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>{{TITLE_SHORT}}
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">{{CATEGORY}}</span>
+            <span class="post-date">{{DATE}}</span>
+        </div>
+        <h1 class="post-title">{{TITLE}}</h1>
+
+        {{EYECATCH}}
+
+        <div class="post-content">
+{{LEAD}}
+
+{{TOC}}
+
+{{BODY}}
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('{{AUTHOR_IMAGE}}');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">{{AUTHOR}}</div>
+                <p class="author__bio">{{AUTHOR_BIO}}</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+{{RELATED}}
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo">nito</a>
+        <nav class="f-nav">
+            <a href="/index.html#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
