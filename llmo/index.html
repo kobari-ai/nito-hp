@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nito LLMO対策 | 収益につながる、AI検索対策</title>
+    <title>nito LLMO対策 | 収益につながるAI検索対策</title>
     <meta name="description" content="AIをハックするのではなく、事業そのものに向き合う。ChatGPTやGeminiなどのAI検索に選ばれるブランドをつくる、LLMO対策支援サービス。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -280,45 +280,16 @@
             opacity: 1;
         }
 
-        /* Hero decoration — 放射デザイン（背景が暖色のため少し深めのオレンジで対比） */
-        .hero-rings {
+        /* Hero decoration — トップページと同じ方眼ライン */
+        .hero-grid {
             position: absolute;
-            right: 18%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 360px;
-            height: 360px;
+            inset: 0;
             pointer-events: none;
-        }
-        /* 中心点 + 同心円リング */
-        .hero-rings::before {
-            content: '';
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 14px; height: 14px;
-            border-radius: 50%;
-            background: rgba(255, 140, 0, 0.90);
-            box-shadow:
-                0 0 0 46px  rgba(255,140,0,0.38),
-                0 0 0 94px  rgba(255,140,0,0.24),
-                0 0 0 154px rgba(255,140,0,0.14);
-        }
-        /* 最外輪 */
-        .hero-rings::after {
-            content: '';
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 340px; height: 340px;
-            border-radius: 50%;
-            border: 1.5px solid rgba(255,140,0,0.50);
-        }
-        /* 軌道上のドット */
-        .hero-dot {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255,140,0,0.72);
+            background:
+                linear-gradient(rgba(230,126,34,0.10) 1px, transparent 1px) 0 0 / 100% 130px,
+                linear-gradient(90deg, rgba(230,126,34,0.10) 1px, transparent 1px) 0 0 / 130px 100%;
+            -webkit-mask-image: radial-gradient(ellipse 85% 90% at 75% 30%, black 0%, transparent 72%);
+            mask-image: radial-gradient(ellipse 85% 90% at 75% 30%, black 0%, transparent 72%);
         }
 
         @media (max-width: 768px) {
@@ -336,7 +307,7 @@
                 border-radius: 14px;
                 font-size: 18px;
             }
-            .hero-rings { display: none; }
+            .hero-grid { display: none; }
         }
 
         /* ── Intro ── */
@@ -794,20 +765,9 @@
 
     <!-- Hero -->
     <section class="hero ani-fade-bottom">
-        <div class="hero-rings" aria-hidden="true">
-            <!-- 内軌道 -->
-            <span class="hero-dot" style="width:8px;height:8px;top:32%;left:62%;opacity:0.65;"></span>
-            <span class="hero-dot" style="width:6px;height:6px;top:60%;left:36%;opacity:0.5;"></span>
-            <!-- 中軌道 -->
-            <span class="hero-dot" style="width:9px;height:9px;top:14%;left:54%;opacity:0.45;"></span>
-            <span class="hero-dot" style="width:7px;height:7px;top:55%;right:16%;opacity:0.4;"></span>
-            <span class="hero-dot" style="width:8px;height:8px;bottom:22%;left:24%;opacity:0.38;"></span>
-            <!-- 外軌道 -->
-            <span class="hero-dot" style="width:10px;height:10px;top:8%;right:20%;opacity:0.3;"></span>
-            <span class="hero-dot" style="width:7px;height:7px;bottom:10%;right:28%;opacity:0.25;"></span>
-        </div>
+        <div class="hero-grid" aria-hidden="true"></div>
         <div class="container">
-            <span class="hero-label">収益につながる、AI検索対策なら</span>
+            <span class="hero-label">収益につながるAI検索対策なら</span>
             <h1 class="hero-title">nito <span>LLMO</span>対策</h1>
             <div class="hero-cta">
                 <a href="https://nito-0210.com/contact.html" class="btn-fill-lg">相談する</a>
