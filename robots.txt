@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nito-0210.com/sitemap.xml
