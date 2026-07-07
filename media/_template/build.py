@@ -42,14 +42,16 @@ TEMPLATE_DIR = ROOT / "_template"
 POSTS_DIR = ROOT / "posts"
 
 DEFAULT_AUTHOR = "岡村 希一"
+DEFAULT_AUTHOR_ROLE = "nito代表 / AI検索対策（LLMO）コンサルタント"
 DEFAULT_AUTHOR_BIO = (
-    "nito / マーケティング。「いいモノが自然に広まる仕組み」をテーマに、"
-    "AI検索対策とブランド戦略の領域で企業の成長を支援している。"
+    "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。"
+    "サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、"
+    "「いいモノが自然に広まる仕組みづくり」を支援。"
 )
 DEFAULT_AUTHOR_IMAGE = "/profile_okamura.png"
 
 AUTHORS = {
-    "岡村 希一": {"bio": DEFAULT_AUTHOR_BIO, "image": "/profile_okamura.png"},
+    "岡村 希一": {"role": DEFAULT_AUTHOR_ROLE, "bio": DEFAULT_AUTHOR_BIO, "image": "/profile_okamura.png"},
     # 著者を増やす場合はここに追記
 }
 
@@ -265,6 +267,15 @@ def build_jsonld(post) -> str:
     meta = post["meta"]
     url = f"{SITE}/media/{post['slug']}/"
     publisher = {"@type": "Organization", "name": "nito", "url": f"{SITE}/"}
+    author_name = meta.get("author", DEFAULT_AUTHOR)
+    author_profile = AUTHORS.get(author_name, {"role": DEFAULT_AUTHOR_ROLE, "bio": DEFAULT_AUTHOR_BIO})
+    author_person = {
+        "@type": "Person",
+        "name": author_name,
+        "jobTitle": author_profile.get("role", DEFAULT_AUTHOR_ROLE),
+        "description": author_profile["bio"],
+        "worksFor": publisher,
+    }
 
     article = {
         "@context": "https://schema.org",
@@ -273,7 +284,7 @@ def build_jsonld(post) -> str:
         "description": meta["description"],
         "datePublished": meta["date"],
         "dateModified": meta["date"],
-        "author": publisher,
+        "author": author_person,
         "publisher": publisher,
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
         "articleSection": meta["category"],
@@ -315,7 +326,7 @@ def build_jsonld(post) -> str:
 def build_article(post, posts, template: str) -> str:
     meta = post["meta"]
     author = meta.get("author", DEFAULT_AUTHOR)
-    profile = AUTHORS.get(author, {"bio": DEFAULT_AUTHOR_BIO, "image": DEFAULT_AUTHOR_IMAGE})
+    profile = AUTHORS.get(author, {"role": DEFAULT_AUTHOR_ROLE, "bio": DEFAULT_AUTHOR_BIO, "image": DEFAULT_AUTHOR_IMAGE})
 
     title_short = meta["title"][:20] + ("…" if len(meta["title"]) > 20 else "")
 
@@ -334,6 +345,7 @@ def build_article(post, posts, template: str) -> str:
         "{{RELATED}}": related_cards(post["slug"], posts),
         "{{JSONLD}}": build_jsonld(post),
         "{{AUTHOR}}": html.escape(author),
+        "{{AUTHOR_ROLE}}": html.escape(profile.get("role", DEFAULT_AUTHOR_ROLE)),
         "{{AUTHOR_BIO}}": html.escape(profile["bio"]),
         "{{AUTHOR_IMAGE}}": profile["image"],
     }
