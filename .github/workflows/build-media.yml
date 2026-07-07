@@ -28,13 +28,46 @@ jobs:
         run: python3 media/_template/build.py
 
       - name: Commit generated files
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add media/ index.html
+          git add media/ index.html sitemap.xml
           if git diff --cached --quiet; then
             echo "変更なし"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "build: 記事HTMLを自動生成"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Ping IndexNow (Bing / Yandex)
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          INDEXNOW_KEY: "4b4eb89eaf7b47989654e4d8de3e3c28"
+        run: |
+          python3 - <<'PY'
+          import os, re, json, urllib.request
+          key = os.environ["INDEXNOW_KEY"]
+          host = "nito-0210.com"
+          xml = open("sitemap.xml", encoding="utf-8").read()
+          urls = re.findall(r"<loc>(.*?)</loc>", xml)
+          payload = {
+              "host": host,
+              "key": key,
+              "keyLocation": f"https://{host}/{key}.txt",
+              "urlList": urls,
+          }
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=json.dumps(payload).encode(),
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST",
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  print("IndexNow:", r.status, "submitted", len(urls), "urls")
+          except Exception as e:
+              print("IndexNow ping failed (非致命):", e)
+          PY

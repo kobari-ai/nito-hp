@@ -338,6 +338,30 @@ def update_top_page(posts):
     print(f"✔ index.html （トップのコラム欄: {min(len(posts), 3)}件）")
 
 
+SITE = "https://nito-0210.com"
+# サイトマップに含める固定ページ（トップ・サービス・コラム一覧・問い合わせ・プライバシー）
+STATIC_PAGES = ["/", "/llmo/", "/media/", "/contact.html", "/privacy.html"]
+
+
+def generate_sitemap(posts):
+    """リポジトリ直下に sitemap.xml を生成する（固定ページ＋全記事）。"""
+    root = ROOT.parent
+    today = date.today().isoformat()
+    urls = []
+    for path in STATIC_PAGES:
+        urls.append((f"{SITE}{path}", today))
+    for p in posts:
+        urls.append((f"{SITE}/media/{p['slug']}/", p["meta"]["date"]))
+
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for loc, lastmod in urls:
+        lines.append(f"  <url><loc>{loc}</loc><lastmod>{lastmod}</lastmod></url>")
+    lines.append("</urlset>")
+    (root / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"✔ sitemap.xml （{len(urls)}URL）")
+
+
 def main():
     article_tpl = (TEMPLATE_DIR / "article.html").read_text(encoding="utf-8")
     list_tpl = (TEMPLATE_DIR / "list.html").read_text(encoding="utf-8")
@@ -385,6 +409,7 @@ def main():
     print("✔ media/index.html （一覧）")
 
     update_top_page(posts)
+    generate_sitemap(posts)
 
     # mdが削除された記事のディレクトリを掃除（非公開化に対応）
     keep = {p["slug"] for p in posts} | {"_template", "posts", "images"}
