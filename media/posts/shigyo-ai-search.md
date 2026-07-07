@@ -3,7 +3,7 @@ title: 士業のためのAI検索対策｜AIに「〜なら〇〇」と選ばれ
 date: 2026-07-07
 category: AI検索対策
 description: 税理士・弁護士・社労士などの士業向けに、AI検索対策（LLMO）の考え方と具体策を解説します。なぜ士業こそAIと相性が良いのか、AIに推薦される事務所になるためのポジショニングと施策を実務目線でまとめました。
-cover_tag: 士業向け
+cover_tag: 業種別
 cover_headline: 士業のためのAI検索対策
 cover_sub: AIに選ばれる事務所になる
 ---
