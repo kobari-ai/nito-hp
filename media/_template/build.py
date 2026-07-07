@@ -111,9 +111,10 @@ def expand_blogparts(body_html: str) -> str:
             raise ValueError(f"ブログパーツ blogparts/{name}.html が見つかりません")
         return part.read_text(encoding="utf-8").strip()
 
-    body_html = re.sub(r"<p>\s*\[blogparts:([a-z0-9\-_]+)\]\s*</p>", repl, body_html)
-    body_html = re.sub(r"\[blogparts:([a-z0-9\-_]+)\]", repl, body_html)
-    return body_html
+    # 1パスで置換する（re.subは挿入した内容を再スキャンしないので、
+    # パーツ内に別トークンがあっても二重展開されない）。任意で <p> ラッパを飲み込む。
+    pattern = r"(?:<p>\s*)?\[blogparts:([a-z0-9\-_]+)\](?:\s*</p>)?"
+    return re.sub(pattern, repl, body_html)
 
 
 def add_heading_ids_and_toc(body_html: str):
@@ -167,16 +168,49 @@ def split_lead(body_html: str):
     return body_html[:idx].strip(), body_html[idx:].strip()
 
 
+def cover_texts(meta):
+    """アイキャッチ用の文言。front matterで指定、無ければタイトルにフォールバック。
+    cover_headline: 目立たせる短いフレーズ（タイトルそのままにしない）
+    cover_sub:      補足の一行（任意）
+    cover_tag:      吹き出しタグ（任意・既定はカテゴリ）"""
+    headline = meta.get("cover_headline") or meta["title"]
+    sub = meta.get("cover_sub", "")
+    tag = meta.get("cover_tag") or meta["category"]
+    return headline, sub, tag
+
+
 def eyecatch_html(meta) -> str:
+    """アイキャッチ。image指定があれば写真、なければブランド固定デザイン（文言だけ差し替え）。"""
     img = meta.get("image", "")
     if img:
         return f'<div class="post-eyecatch"><img src="{html.escape(img)}" alt="{html.escape(meta["title"])}"></div>'
-    return '<div class="post-eyecatch">nito Column</div>'
+    headline, sub, tag = cover_texts(meta)
+    sub_html = f'<span class="ec-sub">{html.escape(sub)}</span>' if sub else ""
+    return (
+        '<div class="post-eyecatch post-eyecatch--designed">'
+        '<div class="ec-frame">'
+        f'<span class="ec-tag">{html.escape(tag)}</span>'
+        f'<span class="ec-headline">{html.escape(headline)}</span>'
+        f'{sub_html}'
+        '<span class="ec-brand">nito</span>'
+        "</div></div>"
+    )
 
 
-def thumb_style(meta) -> str:
+def card_thumb(meta, cls="rel-card__thumb") -> str:
+    """カードのサムネイル。image指定があれば写真、なければ固定デザイン（headlineだけ表示）。"""
     img = meta.get("image", "")
-    return f' style="background-image:url(\'{html.escape(img)}\')"' if img else ""
+    if img:
+        return f'<div class="{cls}" style="background-image:url(\'{html.escape(img)}\')"></div>'
+    headline, _sub, tag = cover_texts(meta)
+    return (
+        f'<div class="{cls} card-thumb--designed">'
+        '<div class="ec-frame ec-frame--mini">'
+        f'<span class="ec-tag">{html.escape(tag)}</span>'
+        f'<span class="ec-headline">{html.escape(headline)}</span>'
+        '<span class="ec-brand">nito</span>'
+        "</div></div>"
+    )
 
 
 def related_cards(current_slug, posts) -> str:
@@ -189,10 +223,9 @@ def related_cards(current_slug, posts) -> str:
     cards = []
     for p in picks:
         m = p["meta"]
-        thumb_inner = "" if m.get("image") else "nito Column"
         cards.append(
             f'            <a href="/media/{p["slug"]}/" class="rel-card">\n'
-            f'                <div class="rel-card__thumb"{thumb_style(m)}>{thumb_inner}</div>\n'
+            f'                {card_thumb(m)}\n'
             f'                <div class="rel-card__date">{m["date"].replace("-", ".")}</div>\n'
             f'                <div class="rel-card__ttl">{html.escape(m["title"])}</div>\n'
             "            </a>"
@@ -243,10 +276,9 @@ def build_list(posts, template: str) -> str:
     cards = []
     for p in posts:
         m = p["meta"]
-        thumb_inner = "" if m.get("image") else "nito Column"
         cards.append(
             f'        <a href="/media/{p["slug"]}/" class="rel-card" data-cat="{html.escape(m["category"])}">\n'
-            f'            <div class="rel-card__thumb"{thumb_style(m)}>{thumb_inner}</div>\n'
+            f'            {card_thumb(m)}\n'
             f'            <div class="rel-card__date">{m["date"].replace("-", ".")} ・ {html.escape(m["category"])}</div>\n'
             f'            <div class="rel-card__ttl">{html.escape(m["title"])}</div>\n'
             "        </a>"
