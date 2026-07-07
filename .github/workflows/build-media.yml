@@ -27,12 +27,15 @@ jobs:
       - name: Build articles
         run: python3 media/_template/build.py
 
+      - name: Ensure GA4 on all pages
+        run: python3 media/_template/ensure_ga4.py
+
       - name: Commit generated files
         id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add media/ index.html sitemap.xml
+          git add -A
           if git diff --cached --quiet; then
             echo "変更なし"
             echo "changed=false" >> "$GITHUB_OUTPUT"
