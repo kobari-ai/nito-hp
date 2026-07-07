@@ -86,20 +86,55 @@ def convert_point_blocks(md_text: str) -> str:
     return re.sub(r"^:::point\s*\n(.*?)\n:::\s*$", repl, md_text, flags=re.DOTALL | re.MULTILINE)
 
 
+def convert_takeaways_blocks(md_text: str) -> str:
+    """:::takeaways 〜 ::: を「この記事のポイント」ボックスに変換する（Key Takeaways用）"""
+    def repl(m):
+        inner = markdown.markdown(m.group(1).strip(), extensions=["sane_lists"])
+        return (
+            '<div class="takeaways">'
+            '<div class="takeaways__ttl">この記事のポイント</div>'
+            f'<div class="takeaways__body">{inner}</div>'
+            "</div>"
+        )
+
+    return re.sub(r"^:::takeaways\s*\n(.*?)\n:::\s*$", repl, md_text, flags=re.DOTALL | re.MULTILINE)
+
+
+def expand_blogparts(body_html: str) -> str:
+    """[blogparts:NAME] を _template/blogparts/NAME.html の中身に置換する。
+    共通PRパートを1ファイルで管理し、更新すれば全記事に反映される。
+    markdownが <p>[blogparts:NAME]</p> と段落化するので、その形も受ける。"""
+    def repl(m):
+        name = m.group(1).strip()
+        part = TEMPLATE_DIR / "blogparts" / f"{name}.html"
+        if not part.exists():
+            raise ValueError(f"ブログパーツ blogparts/{name}.html が見つかりません")
+        return part.read_text(encoding="utf-8").strip()
+
+    body_html = re.sub(r"<p>\s*\[blogparts:([a-z0-9\-_]+)\]\s*</p>", repl, body_html)
+    body_html = re.sub(r"\[blogparts:([a-z0-9\-_]+)\]", repl, body_html)
+    return body_html
+
+
 def add_heading_ids_and_toc(body_html: str):
     """h2/h3にid付与し、目次HTMLを生成する"""
     toc_items = []
     counters = {"h2": 0}
+    state = {"in_faq": False}  # FAQ配下のH3は目次に載せない
 
     def repl(m):
         tag, inner = m.group(1), m.group(2)
+        text = re.sub(r"<[^>]+>", "", inner)
         if tag == "h2":
             counters["h2"] += 1
             hid = f"s{counters['h2']}"
-            toc_items.append((2, hid, re.sub(r"<[^>]+>", "", inner)))
+            state["in_faq"] = "よくある質問" in text
+            toc_items.append((2, hid, text))
         else:
-            hid = f"s{counters['h2']}-{sum(1 for t in toc_items if t[0] == 3 and t[1].startswith('s' + str(counters['h2']) + '-')) + 1}"
-            toc_items.append((3, hid, re.sub(r"<[^>]+>", "", inner)))
+            h3n = sum(1 for t in toc_items if t[0] == 3 and t[1].startswith(f"s{counters['h2']}-")) + 1
+            hid = f"s{counters['h2']}-{h3n}"
+            # FAQの質問は目次に出さない（見出しidは付与して本文アンカーは残す）
+            toc_items.append((3, hid, text, state["in_faq"]))
         return f'<{tag} id="{hid}">{inner}</{tag}>'
 
     body_html = re.sub(r"<(h[23])>(.*?)</\1>", repl, body_html, flags=re.DOTALL)
@@ -108,7 +143,11 @@ def add_heading_ids_and_toc(body_html: str):
         return body_html, ""
 
     lis = []
-    for level, hid, text in toc_items:
+    for item in toc_items:
+        level, hid, text = item[0], item[1], item[2]
+        in_faq = item[3] if len(item) > 3 else False
+        if in_faq:
+            continue  # FAQの質問は目次から除外
         cls = ' class="toc-h3"' if level == 3 else ""
         lis.append(f'                    <li{cls}><a href="#{hid}">{text}</a></li>')
     toc_html = (
@@ -282,8 +321,10 @@ def main():
         except ValueError as e:
             errors.append(f"{f.name}: {e}")
             continue
+        body_md = convert_takeaways_blocks(body_md)
         body_md = convert_point_blocks(body_md)
         body_html = markdown.markdown(body_md, extensions=["tables", "sane_lists"])
+        body_html = expand_blogparts(body_html)
         body_html, toc = add_heading_ids_and_toc(body_html)
         lead, body_html = split_lead(body_html)
         posts.append({
