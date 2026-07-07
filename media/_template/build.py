@@ -219,6 +219,54 @@ def build_list(posts, template: str) -> str:
     return out
 
 
+def update_top_page(posts):
+    """トップページの COLUMN マーカー間に最新3記事を挿入する（0件なら空にする）"""
+    top = ROOT.parent / "index.html"
+    if not top.exists():
+        return
+    s = top.read_text(encoding="utf-8")
+    start_mark = "<!-- COLUMN:START 最新記事はbuild.pyが自動挿入（手で編集しない） -->"
+    end_mark = "<!-- COLUMN:END -->"
+    if start_mark not in s or end_mark not in s:
+        return
+
+    if posts:
+        rows = []
+        for p in posts[:3]:
+            m = p["meta"]
+            rows.append(
+                f'                <a href="/media/{p["slug"]}/" class="news-row">\n'
+                f'                    <span class="news-date">{m["date"].replace("-", ".")}</span>\n'
+                f'                    <span class="news-cat">{html.escape(m["category"])}</span>\n'
+                f'                    <span class="news-ttl">{html.escape(m["title"])}</span>\n'
+                '                    <span class="news-arrow">→</span>\n'
+                "                </a>"
+            )
+        section = (
+            '\n    <div class="divider"></div>\n\n'
+            '    <div class="container">\n'
+            '        <!-- Column Section -->\n'
+            '        <section id="column" class="section">\n'
+            '            <div class="section-header ani-show-up">\n'
+            '                <div class="sec-subtitle">コラム</div>\n'
+            '                <h2 class="sec-title">Column</h2>\n'
+            "            </div>\n"
+            '            <div class="news-list ani-fade-bottom">\n'
+            + "\n".join(rows) + "\n"
+            "            </div>\n"
+            '            <p class="news-more"><a href="/media/" class="btn-more">コラム一覧へ</a></p>\n'
+            "        </section>\n"
+            "    </div>\n    "
+        )
+    else:
+        section = "\n    "
+
+    before = s[: s.index(start_mark) + len(start_mark)]
+    after = s[s.index(end_mark):]
+    top.write_text(before + section + after, encoding="utf-8")
+    print(f"✔ index.html （トップのコラム欄: {min(len(posts), 3)}件）")
+
+
 def main():
     article_tpl = (TEMPLATE_DIR / "article.html").read_text(encoding="utf-8")
     list_tpl = (TEMPLATE_DIR / "list.html").read_text(encoding="utf-8")
@@ -262,6 +310,8 @@ def main():
 
     (ROOT / "index.html").write_text(build_list(posts, list_tpl), encoding="utf-8")
     print("✔ media/index.html （一覧）")
+
+    update_top_page(posts)
 
     # mdが削除された記事のディレクトリを掃除（非公開化に対応）
     keep = {p["slug"] for p in posts} | {"_template", "posts", "images"}

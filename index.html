@@ -131,6 +131,87 @@
             transform: translate(0) scale(1) !important;
         }
 
+        .section-header.animated .sec-title {
+            background-position: 0 0;
+        }
+
+        /* CyberACE流: ヒーローのSCROLLサイン */
+        .scroll-sign {
+            position: absolute;
+            bottom: 0;
+            left: 48px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading-en);
+            font-size: 10px;
+            letter-spacing: 0.3em;
+            color: #b5b0a8;
+            writing-mode: vertical-rl;
+        }
+        .scroll-sign::after {
+            content: "";
+            width: 1px;
+            height: 48px;
+            background: #cfc9c0;
+            animation: scrollLine 2.2s ease-in-out infinite;
+            transform-origin: top;
+        }
+        @keyframes scrollLine {
+            0% { transform: scaleY(0); transform-origin: top; }
+            45% { transform: scaleY(1); transform-origin: top; }
+            55% { transform: scaleY(1); transform-origin: bottom; }
+            100% { transform: scaleY(0); transform-origin: bottom; }
+        }
+        @media (max-width: 768px) { .scroll-sign { display: none; } }
+
+        /* CyberACE流: コラムの新着リスト（日付＋タイトルの行） */
+        .news-list { border-top: 1px solid #eee; }
+        .news-row {
+            display: flex;
+            align-items: baseline;
+            gap: 28px;
+            padding: 24px 8px;
+            border-bottom: 1px solid #eee;
+            transition: background-color .25s;
+        }
+        .news-row:hover { background-color: #fffaf3; opacity: 1; }
+        .news-date {
+            font-family: var(--font-heading-en);
+            font-size: 13px;
+            font-weight: 800;
+            color: #999;
+            letter-spacing: .08em;
+            flex-shrink: 0;
+        }
+        .news-cat {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--color-primary-deep);
+            border: 1px solid var(--color-primary);
+            border-radius: 30px;
+            padding: 2px 12px;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        .news-ttl { font-size: 15.5px; font-weight: 700; line-height: 1.7; }
+        .news-row:hover .news-ttl { color: var(--color-primary-deep); }
+        .news-arrow {
+            margin-left: auto;
+            font-family: var(--font-heading-en);
+            color: var(--color-primary);
+            transition: transform .25s;
+            flex-shrink: 0;
+        }
+        .news-row:hover .news-arrow { transform: translateX(6px); }
+        .news-more { margin-top: 28px; text-align: right; }
+        @media (max-width: 600px) {
+            .news-row { flex-wrap: wrap; gap: 10px; }
+            .news-arrow { display: none; }
+        }
+
         /* Floating Header */
         .header-wrapper {
             position: sticky;
@@ -377,14 +458,14 @@
             width: 100%;
             height: 100%;
             z-index: 1;
-            background-image: url('hero_bg.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center right;
-            opacity: 0.15;
+            /* イラストをやめて、うっすら方眼ライン（文字主体のヒーローに） */
+            background:
+                linear-gradient(#ececec 1px, transparent 1px) 0 0 / 100% 140px,
+                linear-gradient(90deg, #ececec 1px, transparent 1px) 0 0 / 140px 100%;
+            opacity: 0.7;
             pointer-events: none;
-            -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-            mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 90% 85% at 75% 15%, black 0%, transparent 72%);
+            mask-image: radial-gradient(ellipse 90% 85% at 75% 15%, black 0%, transparent 72%);
         }
 
         .hero-container {
@@ -394,7 +475,7 @@
         }
 
         .hero-text {
-            max-width: 600px;
+            max-width: 720px;
             /* Reduced from 800px to keep text within center */
         }
 
@@ -462,7 +543,11 @@
         .sec-title {
             font-size: 80px;
             font-weight: 600;
-            background: linear-gradient(to right, var(--color-primary), #ffce6d);
+            /* CyberACE流: スクロールで色が左から流れ込む見出し */
+            background: linear-gradient(to right, var(--color-primary) 0%, #ffce6d 50%, #eeeae4 50.01%, #f2efe9 100%);
+            background-size: 200% 100%;
+            background-position: 100% 0;
+            transition: background-position 1.1s cubic-bezier(.22,1,.36,1) .15s;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -622,11 +707,6 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
             border: 1px solid var(--color-border);
             transition: transform 0.3s;
-        }
-
-        .member-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--color-primary);
         }
 
         .member-photo {
@@ -826,7 +906,7 @@
         .footer-contact-box > * { position: relative; z-index: 1; }
 
         .footer-contact-title {
-            font-size: 42px;
+            font-size: 26px;
             font-weight: bold;
             margin-bottom: 20px;
             display: block;
@@ -961,11 +1041,12 @@
         <div class="container hero-container">
             <div class="hero-text">
                 <h1 class="hero-title">
-                    いいモノが自然に<br>広まる仕組みをつくる
+                    いいモノが<br><span style="color: var(--color-primary-deep);">自然に広まる仕組み</span>をつくる
                 </h1>
                 <p class="hero-subtitle">「生活者」起点で考え、<br>企業の成長を加速させるパートナー</p>
             </div>
         </div>
+        <div class="scroll-sign">SCROLL</div>
     </section>
 
     <div class="divider"></div>
@@ -1051,6 +1132,9 @@
             </div>
         </section>
     </div>
+
+    <!-- COLUMN:START 最新記事はbuild.pyが自動挿入（手で編集しない） -->
+    <!-- COLUMN:END -->
 
     <!-- Footer -->
     <footer>
