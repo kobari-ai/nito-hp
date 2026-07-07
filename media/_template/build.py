@@ -233,6 +233,85 @@ def related_cards(current_slug, posts) -> str:
     return "\n".join(cards)
 
 
+def extract_faq(body_md: str):
+    """本文mdの「## よくある質問」配下の ### Q. 〜 と回答を(質問, 回答)で返す。"""
+    faqs = []
+    lines = body_md.splitlines()
+    in_faq = False
+    q = None
+    ans = []
+    for line in lines:
+        if line.startswith("## "):
+            in_faq = "よくある質問" in line
+            if q:
+                faqs.append((q, " ".join(ans).strip())); q, ans = None, []
+            continue
+        if not in_faq:
+            continue
+        if line.startswith("### "):
+            if q:
+                faqs.append((q, " ".join(ans).strip())); ans = []
+            q = re.sub(r"^###\s*(Q\.?\s*)?", "", line).strip()
+        elif q is not None and line.strip():
+            ans.append(line.strip())
+    if q:
+        faqs.append((q, " ".join(ans).strip()))
+    return [(q, a) for q, a in faqs if q and a]
+
+
+def build_jsonld(post) -> str:
+    """記事ページ用のJSON-LD（Article / FAQPage / BreadcrumbList）を生成する。"""
+    import json as _json
+    meta = post["meta"]
+    url = f"{SITE}/media/{post['slug']}/"
+    publisher = {"@type": "Organization", "name": "nito", "url": f"{SITE}/"}
+
+    article = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": meta["title"],
+        "description": meta["description"],
+        "datePublished": meta["date"],
+        "dateModified": meta["date"],
+        "author": publisher,
+        "publisher": publisher,
+        "mainEntityOfPage": {"@type": "WebPage", "@id": url},
+        "articleSection": meta["category"],
+        "inLanguage": "ja",
+    }
+    if meta.get("image"):
+        article["image"] = meta["image"] if meta["image"].startswith("http") else SITE + meta["image"]
+
+    breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": f"{SITE}/"},
+            {"@type": "ListItem", "position": 2, "name": "コラム", "item": f"{SITE}/media/"},
+            {"@type": "ListItem", "position": 3, "name": meta["title"]},
+        ],
+    }
+
+    blocks = [article, breadcrumb]
+
+    faqs = post.get("faqs") or []
+    if faqs:
+        blocks.append({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type": "Question", "name": q,
+                 "acceptedAnswer": {"@type": "Answer", "text": a}}
+                for q, a in faqs
+            ],
+        })
+
+    return "\n".join(
+        f'<script type="application/ld+json">{_json.dumps(b, ensure_ascii=False)}</script>'
+        for b in blocks
+    )
+
+
 def build_article(post, posts, template: str) -> str:
     meta = post["meta"]
     author = meta.get("author", DEFAULT_AUTHOR)
@@ -253,6 +332,7 @@ def build_article(post, posts, template: str) -> str:
         "{{TOC}}": post["toc"],
         "{{BODY}}": post["body"],
         "{{RELATED}}": related_cards(post["slug"], posts),
+        "{{JSONLD}}": build_jsonld(post),
         "{{AUTHOR}}": html.escape(author),
         "{{AUTHOR_BIO}}": html.escape(profile["bio"]),
         "{{AUTHOR_IMAGE}}": profile["image"],
@@ -377,6 +457,7 @@ def main():
         except ValueError as e:
             errors.append(f"{f.name}: {e}")
             continue
+        faqs = extract_faq(body_md)
         body_md = convert_takeaways_blocks(body_md)
         body_md = convert_point_blocks(body_md)
         body_html = markdown.markdown(body_md, extensions=["tables", "sane_lists"])
@@ -389,6 +470,7 @@ def main():
             "lead": lead,
             "toc": toc,
             "body": body_html,
+            "faqs": faqs,
         })
 
     if errors:
