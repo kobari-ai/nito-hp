@@ -361,7 +361,8 @@ a { color: inherit; text-decoration: none; }
     flex-shrink: 0;
 }
 .author__label { font-size: 11px; color: var(--color-text-thin); margin-bottom: 2px; }
-.author__name { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+.author__name { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+.author__role { font-size: 12px; font-weight: 700; color: var(--color-main); margin-bottom: 8px; }
 .author__bio { font-size: 13px; color: #666; line-height: 1.7; }
 
 /* ===== 関連記事 ===== */
