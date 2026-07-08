@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMOに小手先の戦略は通じない。nitoが実行まで伴走する理由 | nito Column</title>
+    <meta name="description" content="LLMO対策は戦略やレポートだけでは動きません。構造化データを追加しても引用は増えなかったというAhrefsの大規模調査結果と、多くの支援会社が助言止まりになる理由を踏まえ、なぜ実行まで伴走することが成果に直結するのかを解説します。">
+    <link rel="canonical" href="https://nito-0210.com/media/no-quick-fix-llmo/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="LLMOに小手先の戦略は通じない。nitoが実行まで伴走する理由">
+    <meta property="og:description" content="LLMO対策は戦略やレポートだけでは動きません。構造化データを追加しても引用は増えなかったというAhrefsの大規模調査結果と、多くの支援会社が助言止まりになる理由を踏まえ、なぜ実行まで伴走することが成果に直結するのかを解説します。">
+    <meta property="og:url" content="https://nito-0210.com/media/no-quick-fix-llmo/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "LLMOに小手先の戦略は通じない。nitoが実行まで伴走する理由", "description": "LLMO対策は戦略やレポートだけでは動きません。構造化データを追加しても引用は増えなかったというAhrefsの大規模調査結果と、多くの支援会社が助言止まりになる理由を踏まえ、なぜ実行まで伴走することが成果に直結するのかを解説します。", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/no-quick-fix-llmo/"}, "articleSection": "ブランド戦略", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "LLMOに小手先の戦略は通じない。nitoが実行まで伴走する理由"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "構造化データは実装しなくてもいいのですか？", "acceptedAnswer": {"@type": "Answer", "text": "実装自体が害になるわけではありませんが、単体で引用を増やす直接的な効果は確認されていません。優先すべきは、権威性のあるコンテンツと第三者からの言及を積み重ねる地道な実行です。"}}, {"@type": "Question", "name": "戦略だけの支援と、実行まで含む支援はどう見分ければいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "契約書やプランの記載を確認します。「戦略策定」「レポート提出」「助言」といった言葉だけの場合は実行が含まれないことが多く、「記事作成」「外部掲載代行」「モニタリング」まで明記されていれば実行支援に該当します。"}}, {"@type": "Question", "name": "自社に担当者がいれば内製化すべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "担当者がいても、日々のアルゴリズム変化を追い、定量的な計測を継続するのは負担が大きい作業です。まず自社で着手し、手が回らなくなった部分から外部の実行支援を組み合わせる形が現実的です。"}}, {"@type": "Question", "name": "nitoは戦略だけの依頼にも対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "戦略設計から始めることは可能ですが、nitoは実行まで伴走することを前提にした支援を基本にしています。まずは現状の相談からご案内できます。"}}, {"@type": "Question", "name": "実行まで伴走してもらう場合、自社は何もしなくていいですか？", "acceptedAnswer": {"@type": "Answer", "text": "実行の推進は担いますが、事業の意思決定や一次情報の提供など、自社にしか出せない情報のすり合わせは必要です。伴走はあくまで二人三脚で進める前提です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo">nito<small>AI検索時代のブランディング戦略</small></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>LLMOに小手先の戦略は通じない。nit…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">ブランド戦略</span>
+            <span class="post-date">2026.07.07</span>
+        </div>
+        <h1 class="post-title">LLMOに小手先の戦略は通じない。nitoが実行まで伴走する理由</h1>
+
+        <div class="post-eyecatch post-eyecatch--designed"><div class="ec-frame"><span class="ec-tag">nitoの考え方</span><span class="ec-headline">小手先の戦略は通じない</span><span class="ec-sub">nitoが実行まで伴走する理由</span><span class="ec-brand">nito</span></div></div>
+
+        <div class="post-content">
+<p>構造化データを追加すれば引用が増える。FAQをマークアップすれば言及率が上がる。こうした小手先の一手の多くは、実は効果が確認されていません。Ahrefsが600万URLを対象にした調査では、既にAIに引用されているページにJSON-LDを追加しても、<strong>引用数は増えませんでした</strong>。LLMO対策で本当に効くのは、テクニックの追加ではなく、戦略を実行しきる体制です。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>Ahrefsの600万URL調査で、<strong>JSON-LD追加と引用数増加の間に因果関係は確認されなかった</strong>（相関はあったが原因ではない）</li>
+<li>構造化データを持つサイトが引用されやすいのは、<strong>権威性・被リンク・継続的な運用</strong>など他の要因が揃っているため</li>
+<li>LLMO支援の多くは<strong>「助言・戦略設計」までで、実行は依頼側の担当者が担う</strong>契約が一般的</li>
+<li>実行まで含めると<strong>専任担当者の採用・教育コストが年数百万円規模</strong>になり得る</li>
+<li>nitoは戦略設計だけでなく、<strong>記事作成・外部掲載依頼・モニタリングまで自ら推進</strong>し、言及率でなく<strong>「収益」につながる成果</strong>にこだわる</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li><a href="#s1">「構造化データを入れれば引用が増える」は本当か</a></li>
+                    <li><a href="#s2">「やっておけば安心」な施策が、実は効果を生んでいない</a></li>
+                    <li><a href="#s3">なぜ「戦略はあるのに動かない」が起きるのか</a></li>
+                    <li><a href="#s4">内製化のハードルは想像より高い</a></li>
+                    <li><a href="#s5">支援会社の契約範囲によって、費用も成果も変わる</a></li>
+                    <li><a href="#s6">nitoが「実行まで」にこだわる理由</a></li>
+                    <li><a href="#s7">目指すのは「言及率」ではなく「収益」</a></li>
+                    <li><a href="#s8">実行まで伴走するパートナーを選ぶなら</a></li>
+                    <li><a href="#s9">まとめ</a></li>
+                    <li><a href="#s10">よくある質問</a></li>
+                </ol>
+            </nav>
+
+<h2 id="s1">「構造化データを入れれば引用が増える」は本当か</h2>
+<p>LLMO対策の情報を調べると、必ずと言っていいほど「構造化データ（JSON-LD）を実装しましょう」という話が出てきます。しかし、この対策が実際にAIの引用を増やすかどうかは、大規模な検証ではっきりした答えが出ています。</p>
+<p>Ahrefsが600万URLを対象に行った調査では、AIに引用されているページはJSON-LDを実装している割合が、そうでないページの約3倍高いという結果が出ました（出典：<a href="https://www.claudio-novaglio.com/en/blog/seo-ranking/schema-markup-ai-search-ahrefs-study">Ahrefs</a>）。一見「構造化データが効いている」ように見えるデータです。</p>
+<p>しかし、Ahrefsはここで重要な検証をしています。<strong>既にAIに引用されているページに新しくJSON-LDを追加する統制実験を行ったところ、引用数は増えませんでした</strong>。つまり、構造化データを持つページが引用されやすいのは、構造化データそのものが原因ではなく、<strong>構造化データを実装するようなサイトは、権威性のあるコンテンツ、被リンク構築、継続的なメンテナンスなど、他の要素にもきちんと投資しているから</strong>という結果でした。相関はあっても、因果関係ではなかったのです。</p>
+<h2 id="s2">「やっておけば安心」な施策が、実は効果を生んでいない</h2>
+<p>構造化データの実装は、それ単体で引用を増やす直接的なレバーではなく、<strong>他の要素が整っている文脈のもとで初めて意味を持つ、数ある信号の一つ</strong>に過ぎません。llms.txtの設置や、AIクローラー向けのメタタグ調整といった技術対策全般にも、同じことが言えます。</p>
+<p>技術的なチェックリストを埋めるだけでは、成果には直結しません。本当に効くのは、権威性のあるコンテンツを継続的に発信し、第三者からの言及を積み重ねる、地道で時間のかかる実行です。多くの企業がつまずくのは、まさにここです。</p>
+<h2 id="s3">なぜ「戦略はあるのに動かない」が起きるのか</h2>
+<p>LLMO対策のプロジェクトでよく起きるのが、初月に立派な戦略資料とプロンプトリストが完成し、そこから施策が進まないまま数か月が過ぎるパターンです。原因は、多くの支援が<strong>「戦略設計・助言」までを契約範囲とし、実行は依頼企業側の担当者に委ねられる</strong>ことにあります。</p>
+<p>戦略と実行のあいだには、記事を書く、外部メディアに掲載を依頼する、構造化データを実装する、効果を計測して改善するという、地道で工数のかかる作業が挟まります。ここを担う人がいなければ、戦略はドキュメントのまま止まります。</p>
+<h2 id="s4">内製化のハードルは想像より高い</h2>
+<p>「実行は自社でやればいい」と考えても、実際には簡単ではありません。LLMO対策を専任で回すには、担当者の採用・教育コストに加えて、各AIのアルゴリズムが頻繁に更新される中でそれを追い続ける時間コストがかかります。専任担当者を新たに雇う場合、採用・教育コストだけで年数百万円規模になることも珍しくありません。</p>
+<p>さらに、基礎的な対策は自社で着手できても、<strong>複数のプロンプトに対する定量的な計測・効果検証を自社だけで完結させるのは難易度が高い</strong>のが実情です。戦略づくりよりも、地道な実行と計測を回し続ける体制のほうが、実はハードルが高いのです。</p>
+<h2 id="s5">支援会社の契約範囲によって、費用も成果も変わる</h2>
+<p>LLMO支援の費用は、契約に「実行」が含まれるかどうかで大きく変わります。戦略策定やレポート提出、改善の方向性を示す助言に留める契約は比較的費用を抑えられますが、コンテンツの新規制作やリライト、構造化データの実装まで含める場合は、工数が増える分、費用も上がります。実際の費用感は「<a href="/media/llmo-cost/">LLMO対策の費用相場はいくら？</a>」で詳しく解説しています。</p>
+<p>つまり、<strong>同じ「LLMO支援」という言葉でも、戦略助言だけなのか、実行まで請け負うのかで、実質的な支援の中身はまったく違います</strong>。依頼する前に、どこまでを相手がやってくれるのかを確認しないと、「戦略はもらったが、結局自社で実行することになった」という状態に陥ります。</p>
+<h2 id="s6">nitoが「実行まで」にこだわる理由</h2>
+<p>nitoは、戦略設計を納品して終わりにしません。<strong>記事の作成、外部メディアへの掲載依頼、日々のモニタリングまでを自ら推進</strong>します。イメージとしては、社内にLLMO専任の担当者が1人加わるような形に近いものです。</p>
+<p>これは、Ahrefsの調査が示すように、戦略や技術的な小手先だけでは成果が生まれないという前提に立っているからです。良いポジショニングを描いても、それを裏づける記事や第三者からの言及がWeb上に増えなければ、AIの回答は変わりません。<strong>戦略と実行を分離せず、同じチームが一気通貫で担う</strong>ことで、施策が止まらない状態をつくります。</p>
+<h2 id="s7">目指すのは「言及率」ではなく「収益」</h2>
+<p>もう一つ、nitoが大事にしているのが、指標の置き方です。言及率や引用率は定点観測しやすい指標ですが、それ自体が上がっても、問い合わせや売上につながらなければ意味がありません。</p>
+<p>nitoは、AIでの言及率の改善を最終ゴールにせず、<strong>コンバージョン地点で認知経路を確認しながら、「収益」への影響まで見て評価</strong>します。手前の指標で満足せず、事業の数字に責任を持つという姿勢が、戦略だけで終わるコンサルティングとの最大の違いです。実際に収益につながった海外事例は「<a href="/media/fiska-case-study/">リード140件・ROI64倍。海外SaaSのLLMO成功事例</a>」でも紹介しています。効果測定の具体的な考え方は「<a href="/media/ai-search-measurement/">AI検索対策の効果はどう測る？</a>」で詳しく解説しています。</p>
+<h2 id="s8">実行まで伴走するパートナーを選ぶなら</h2>
+<p>戦略資料をもらって終わりにせず、記事作成や外部掲載、モニタリングまで一緒に動いてくれる相手を選ぶことが、LLMO対策を止めないための最初の判断になります。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">戦略や施策リストをつくって終わる支援では、成果になりません。nitoは記事作成・外部メディアへの掲載依頼・モニタリングまで実行し、<strong>まるで社内の担当者のように領域を推進</strong>します。言及率の改善で満足せず、<strong>お客様の売上・収益につながる成果</strong>まで一緒に目指します。</p>
+        <ul class="bp-cta__points">
+            <li>戦略設計から<strong>記事作成・外部掲載・モニタリングまで実行・推進</strong></li>
+            <li>手前の指標で終わらせず、<strong>売上・収益につながる成果</strong>にこだわる</li>
+            <li><strong>誰にどんな価値を届けるか</strong>のポジショニングから設計（小手先のAIハックはしない）</li>
+        </ul>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s9">まとめ</h2>
+<p>LLMO対策が動かない最大の原因は、戦略の質ではなく、<strong>実行を担う体制が無い</strong>ことにあります。構造化データのような、やれば安心に見える施策は、Ahrefsの調査が示す通り単体では効果を生みません。戦略と実行を分けず、記事作成から外部掲載、モニタリングまでを一気通貫で推進できるかどうかが、成果を分けます。</p>
+<p>支援会社を選ぶときは、戦略資料の完成度や技術チェックリストの数だけでなく、「誰が、どこまで実行してくれるのか」を必ず確認しましょう。</p>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">Q. 構造化データは実装しなくてもいいのですか？</h3>
+<p>実装自体が害になるわけではありませんが、単体で引用を増やす直接的な効果は確認されていません。優先すべきは、権威性のあるコンテンツと第三者からの言及を積み重ねる地道な実行です。</p>
+<h3 id="s10-2">Q. 戦略だけの支援と、実行まで含む支援はどう見分ければいいですか？</h3>
+<p>契約書やプランの記載を確認します。「戦略策定」「レポート提出」「助言」といった言葉だけの場合は実行が含まれないことが多く、「記事作成」「外部掲載代行」「モニタリング」まで明記されていれば実行支援に該当します。</p>
+<h3 id="s10-3">Q. 自社に担当者がいれば内製化すべきですか？</h3>
+<p>担当者がいても、日々のアルゴリズム変化を追い、定量的な計測を継続するのは負担が大きい作業です。まず自社で着手し、手が回らなくなった部分から外部の実行支援を組み合わせる形が現実的です。</p>
+<h3 id="s10-4">Q. nitoは戦略だけの依頼にも対応していますか？</h3>
+<p>戦略設計から始めることは可能ですが、nitoは実行まで伴走することを前提にした支援を基本にしています。まずは現状の相談からご案内できます。</p>
+<h3 id="s10-5">Q. 実行まで伴走してもらう場合、自社は何もしなくていいですか？</h3>
+<p>実行の推進は担いますが、事業の意思決定や一次情報の提供など、自社にしか出せない情報のすり合わせは必要です。伴走はあくまで二人三脚で進める前提です。</p>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.png');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表 / AI検索対策（LLMO）コンサルタント</div>
+                <p class="author__bio">AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-chosen-brand/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">ブランド戦略</span><span class="ec-headline">AIに選ばれるブランドのつくり方</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.07</div>
+                <div class="rel-card__ttl">AIに選ばれるブランドのつくり方｜AI検索時代のポジショニング設計</div>
+            </a>
+            <a href="/media/ai-search-first-steps/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">徹底解説</span><span class="ec-headline">AI検索対策は何から始める？</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.07</div>
+                <div class="rel-card__ttl">AI検索対策は何から始める？企業が最初に取り組む5ステップ｜2026年最新版</div>
+            </a>
+            <a href="/media/ai-search-measurement/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">効果測定</span><span class="ec-headline">AI検索対策の効果はどう測る？</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.07</div>
+                <div class="rel-card__ttl">AI検索対策の効果はどう測る？GA4でAI流入を見る方法と指標｜2026年最新版</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo">nito</a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
