@@ -48,10 +48,10 @@ DEFAULT_AUTHOR_BIO = (
     "サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、"
     "「いいモノが自然に広まる仕組みづくり」を支援。"
 )
-DEFAULT_AUTHOR_IMAGE = "/profile_okamura.png"
+DEFAULT_AUTHOR_IMAGE = "/profile_okamura.jpg"
 
 AUTHORS = {
-    "岡村 希一": {"role": DEFAULT_AUTHOR_ROLE, "bio": DEFAULT_AUTHOR_BIO, "image": "/profile_okamura.png"},
+    "岡村 希一": {"role": DEFAULT_AUTHOR_ROLE, "bio": DEFAULT_AUTHOR_BIO, "image": "/profile_okamura.jpg"},
     # 著者を増やす場合はここに追記
 }
 
