@@ -18,15 +18,84 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800;900&family=Noto+Sans+JP:wght@700;900&family=Outfit:wght@700;800&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@700;900&display=swap">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800;900&family=Noto+Sans+JP:wght@700;900&family=Outfit:wght@700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@700;900&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800;900&family=Noto+Sans+JP:wght@700;900&family=Outfit:wght@700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@700;900&display=swap"
             rel="stylesheet">
     </noscript>
+    <style>
+        /* Intro Loader */
+        #nito-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            background: #fff;
+            transition: opacity 0.5s ease;
+        }
+
+        #nito-loader__bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(100deg, #14647d 0%, #3f7f86 35%, #c98a4a 70%, #e67e22 100%);
+            opacity: 0;
+            transform: scale(1.06);
+            animation: nitoEmergeBg 1s ease 0.1s forwards;
+        }
+
+        #nito-loader__logo {
+            position: relative;
+            width: clamp(180px, 32vw, 360px);
+            height: auto;
+            opacity: 0;
+            transform: scale(0.92);
+            filter: blur(10px);
+            animation: nitoEmergeText 0.8s ease 0.4s forwards;
+        }
+
+        #nito-loader.is-hiding {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes nitoEmergeBg {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes nitoEmergeText {
+            to {
+                opacity: 1;
+                transform: scale(1);
+                filter: blur(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #nito-loader__bg {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+
+            #nito-loader__logo {
+                animation: none;
+                opacity: 1;
+                transform: none;
+                filter: none;
+            }
+        }
+    </style>
     <style>
         /* Base Styles */
         :root {
@@ -993,6 +1062,27 @@
 </head>
 
 <body>
+
+    <!-- Intro Loader -->
+    <div id="nito-loader" aria-hidden="true">
+        <div id="nito-loader__bg"></div>
+        <img id="nito-loader__logo" src="nito-logo-white.png" alt="nito">
+    </div>
+    <script>
+        (function () {
+            var loader = document.getElementById('nito-loader');
+            if (!loader) return;
+            if (sessionStorage.getItem('nitoIntroShown')) {
+                loader.style.display = 'none';
+                return;
+            }
+            sessionStorage.setItem('nitoIntroShown', '1');
+            setTimeout(function () {
+                loader.classList.add('is-hiding');
+                setTimeout(function () { loader.remove(); }, 550);
+            }, 1400);
+        })();
+    </script>
 
     <!-- Floating Header -->
     <div class="header-wrapper ani-fade-top">
