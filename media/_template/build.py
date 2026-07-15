@@ -102,28 +102,22 @@ def convert_takeaways_blocks(md_text: str) -> str:
     return re.sub(r"^:::takeaways\s*\n(.*?)\n:::\s*$", repl, md_text, flags=re.DOTALL | re.MULTILINE)
 
 
-def convert_linkcard_blocks(md_text: str, meta_by_slug: dict) -> str:
-    """:::linkcard 〜 ::: を内部リンクの案内カードHTMLに変換する。
-    中身は url: / title: / desc: のkey:value形式（descは省略可）。
-    urlのslugが分かれば、そのページのアイキャッチをサムネイルとして表示する。"""
+def convert_linkcard_blocks(md_text: str) -> str:
+    """:::linkcard 〜 ::: を内部リンクの案内カードHTMLに変換する（テキストのみ、画像は使わない）。
+    中身は url: / title: / desc: のkey:value形式（descは省略可）。"""
     def repl(m):
         fields = {}
         for line in m.group(1).strip().splitlines():
             if ":" in line:
                 key, _, val = line.partition(":")
                 fields[key.strip()] = val.strip()
-        url_raw = fields.get("url", "#")
-        url = html.escape(url_raw)
+        url = html.escape(fields.get("url", "#"))
         title = html.escape(fields.get("title", ""))
         desc = html.escape(fields.get("desc", ""))
         desc_html = f'<div class="in-link-card__desc">{desc}</div>' if desc else ""
-        slug = url_raw.strip("/").split("/")[-1]
-        target_meta = meta_by_slug.get(slug)
-        thumb_html = card_thumb(target_meta, cls="in-link-card__thumb") if target_meta else ""
         return (
             '<div class="in-link-card">'
             f'<a href="{url}">'
-            f'{thumb_html}'
             '<div class="in-link-card__body">'
             '<div class="in-link-card__eyebrow">✓ あわせて読みたい</div>'
             f'<div class="in-link-card__ttl">{title}</div>'
@@ -245,6 +239,7 @@ def card_thumb(meta, cls="rel-card__thumb") -> str:
         '<span class="ec-brand">nito</span>'
         "</div></div>"
     )
+
 
 
 def related_cards(current_slug, posts) -> str:
@@ -492,15 +487,6 @@ def main():
 
     md_files = sorted(POSTS_DIR.glob("*.md"))
 
-    # linkcard用: 全記事のfront matterを先読みしてslug→metaの対応を作る
-    meta_by_slug = {}
-    for f in md_files:
-        try:
-            meta, _ = parse_front_matter(f.read_text(encoding="utf-8"))
-            meta_by_slug[f.stem] = meta
-        except ValueError:
-            continue
-
     posts = []
     errors = []
     for f in md_files:
@@ -513,7 +499,7 @@ def main():
         faqs = extract_faq(body_md)
         body_md = convert_takeaways_blocks(body_md)
         body_md = convert_point_blocks(body_md)
-        body_md = convert_linkcard_blocks(body_md, meta_by_slug)
+        body_md = convert_linkcard_blocks(body_md)
         body_html = markdown.markdown(body_md, extensions=["tables", "sane_lists"])
         body_html = expand_blogparts(body_html)
         body_html, toc = add_heading_ids_and_toc(body_html)
