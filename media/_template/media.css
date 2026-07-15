@@ -386,6 +386,37 @@ a { color: inherit; text-decoration: none; }
 .rel-card__ttl { font-size: 14px; font-weight: 500; line-height: 1.6; }
 .rel-card:hover .rel-card__ttl { color: var(--color-main); }
 
+/* 本文中の内部リンク案内カード */
+.in-link-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    margin: 2em 0;
+    background: var(--color-gray-bg);
+    transition: border-color .2s, background .2s;
+    overflow: hidden;
+}
+.in-link-card a {
+    display: block;
+    padding: 18px 22px;
+    color: inherit;
+    text-decoration: none;
+}
+.in-link-card:hover {
+    border-color: var(--color-main);
+    background: #fff;
+}
+.in-link-card__eyebrow {
+    font-size: 12px; font-weight: 700; color: var(--color-main);
+    margin-bottom: 6px; letter-spacing: .05em;
+}
+.in-link-card__ttl {
+    font-size: 15.5px; font-weight: 700; color: var(--color-text); line-height: 1.5;
+}
+.in-link-card:hover .in-link-card__ttl { color: var(--color-main); }
+.in-link-card__desc {
+    font-size: 13.5px; color: var(--color-text-thin); margin-top: 6px; line-height: 1.6;
+}
+
 /* ===== 一覧ページ ===== */
 .list-hero { max-width: 960px; margin: 0 auto; padding: 48px 24px 8px; text-align: center; }
 .list-hero__en {

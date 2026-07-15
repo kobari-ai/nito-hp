@@ -102,6 +102,31 @@ def convert_takeaways_blocks(md_text: str) -> str:
     return re.sub(r"^:::takeaways\s*\n(.*?)\n:::\s*$", repl, md_text, flags=re.DOTALL | re.MULTILINE)
 
 
+def convert_linkcard_blocks(md_text: str) -> str:
+    """:::linkcard 〜 ::: を内部リンクの案内カードHTMLに変換する。
+    中身は url: / title: / desc: のkey:value形式（descは省略可）。"""
+    def repl(m):
+        fields = {}
+        for line in m.group(1).strip().splitlines():
+            if ":" in line:
+                key, _, val = line.partition(":")
+                fields[key.strip()] = val.strip()
+        url = html.escape(fields.get("url", "#"))
+        title = html.escape(fields.get("title", ""))
+        desc = html.escape(fields.get("desc", ""))
+        desc_html = f'<div class="in-link-card__desc">{desc}</div>' if desc else ""
+        return (
+            '<div class="in-link-card">'
+            f'<a href="{url}">'
+            '<div class="in-link-card__eyebrow">あわせて読みたい</div>'
+            f'<div class="in-link-card__ttl">{title}</div>'
+            f'{desc_html}'
+            "</a></div>"
+        )
+
+    return re.sub(r"^:::linkcard\s*\n(.*?)\n:::\s*$", repl, md_text, flags=re.DOTALL | re.MULTILINE)
+
+
 def expand_blogparts(body_html: str) -> str:
     """[blogparts:NAME] を _template/blogparts/NAME.html の中身に置換する。
     共通PRパートを1ファイルで管理し、更新すれば全記事に反映される。
@@ -472,6 +497,7 @@ def main():
         faqs = extract_faq(body_md)
         body_md = convert_takeaways_blocks(body_md)
         body_md = convert_point_blocks(body_md)
+        body_md = convert_linkcard_blocks(body_md)
         body_html = markdown.markdown(body_md, extensions=["tables", "sane_lists"])
         body_html = expand_blogparts(body_html)
         body_html, toc = add_heading_ids_and_toc(body_html)

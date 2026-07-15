@@ -12,17 +12,17 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI検索対策の効果はどう測る？GA4でAI流入を見る方法と指標｜2026年最新版 | nito Column</title>
+    <title>AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】 | nito Column</title>
     <meta name="description" content="AI検索対策（LLMO）の効果測定を、GA4での具体的な設定手順とあわせて解説します。ChatGPT・Perplexityからの流入を見る正規表現、GA4だけでは測れない理由、言及率とセットで見るコツまで実務目線でまとめました。">
     <link rel="canonical" href="https://nito-0210.com/media/ai-search-measurement/">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="AI検索対策の効果はどう測る？GA4でAI流入を見る方法と指標｜2026年最新版">
+    <meta property="og:title" content="AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】">
     <meta property="og:description" content="AI検索対策（LLMO）の効果測定を、GA4での具体的な設定手順とあわせて解説します。ChatGPT・Perplexityからの流入を見る正規表現、GA4だけでは測れない理由、言及率とセットで見るコツまで実務目線でまとめました。">
     <meta property="og:url" content="https://nito-0210.com/media/ai-search-measurement/">
     <meta property="og:site_name" content="nito Column">
     <link rel="icon" href="/favicon.png">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI検索対策の効果はどう測る？GA4でAI流入を見る方法と指標｜2026年最新版", "description": "AI検索対策（LLMO）の効果測定を、GA4での具体的な設定手順とあわせて解説します。ChatGPT・Perplexityからの流入を見る正規表現、GA4だけでは測れない理由、言及率とセットで見るコツまで実務目線でまとめました。", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-search-measurement/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AI検索対策の効果はどう測る？GA4でAI流入を見る方法と指標｜2026年最新版"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】", "description": "AI検索対策（LLMO）の効果測定を、GA4での具体的な設定手順とあわせて解説します。ChatGPT・Perplexityからの流入を見る正規表現、GA4だけでは測れない理由、言及率とセットで見るコツまで実務目線でまとめました。", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-search-measurement/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTからの流入はGA4でどの参照元になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "主にchatgpt.comです。過去データには旧ドメインのchat.openai.comが残る場合があるため、正規表現には両方を入れておくと安全です。"}}, {"@type": "Question", "name": "GoogleのAI Overviews経由の流入は計測できますか？", "acceptedAnswer": {"@type": "Answer", "text": "現状は分離できません。AI Overviewsからのクリックは通常のGoogle検索（Organic Search）に含まれるため、検索側はSearch Consoleとあわせて見るのが現実的です。"}}, {"@type": "Question", "name": "AI経由の流入がほぼゼロでした。対策する意味はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "あります。まずAIの回答に自社が出ているか（言及率）を確認してください。出ていなければ流入は発生しようがなく、優先すべきはコンテンツ整備とポジショニングの側です。"}}, {"@type": "Question", "name": "GA4の数字が小さくても効果はあると言えますか？", "acceptedAnswer": {"@type": "Answer", "text": "言えます。AI経由はリファラ欠落や指名検索での流入により過小評価されがちで、実際の影響はGA4の数字より大きいのが一般的です。伸び率と言及率をあわせて評価します。"}}, {"@type": "Question", "name": "言及率は何で測ればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "専用ツールもありますが、実際のチャット画面で対象の質問を投げて記録する方法が確実です。回答にゆらぎがあるため、同じ質問を一定間隔で繰り返し、傾向で判断します。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.07.07</span>
         </div>
-        <h1 class="post-title">AI検索対策の効果はどう測る？GA4でAI流入を見る方法と指標｜2026年最新版</h1>
+        <h1 class="post-title">AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】</h1>
 
         <div class="post-eyecatch post-eyecatch--designed"><div class="ec-frame"><span class="ec-tag">効果測定</span><span class="ec-headline">AI検索対策の効果はどう測る？</span><span class="ec-sub">GA4でAI流入を見る方法と指標</span><span class="ec-brand">nito</span></div></div>
 
@@ -173,12 +173,12 @@
             <a href="/media/ai-search-first-steps/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">徹底解説</span><span class="ec-headline">AI検索対策は何から始める？</span><span class="ec-brand">nito</span></div></div>
                 <div class="rel-card__date">2026.07.07</div>
-                <div class="rel-card__ttl">AI検索対策は何から始める？企業が最初に取り組む5ステップ｜2026年最新版</div>
+                <div class="rel-card__ttl">AI検索対策は何から始める？企業が取り組むべき5ステップ【2026年最新版】</div>
             </a>
             <a href="/media/chatgpt-not-appearing/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">課題解決</span><span class="ec-headline">ChatGPTに自社が出てこない</span><span class="ec-brand">nito</span></div></div>
                 <div class="rel-card__date">2026.07.07</div>
-                <div class="rel-card__ttl">ChatGPTに自社が出てこない5つの原因と対策｜AIに推薦される会社になるには</div>
+                <div class="rel-card__ttl">ChatGPTに自社が出てこない5つの原因と対策。AIに推薦される会社になるには</div>
             </a>
             <a href="/media/fiska-case-study/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">事例研究</span><span class="ec-headline">リード140件・ROI64倍</span><span class="ec-brand">nito</span></div></div>
