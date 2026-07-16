@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために | nito Column</title>
+    <meta name="description" content="AI検索対策でよく話題になるllms.txtや構造化データは本当に必要なのか、Google公式の見解や独立した調査をもとに解説します。技術的な設定に時間をかける前に、優先すべきことは何かを実務目線で整理しました。">
+    <link rel="canonical" href="https://nito-0210.com/media/llms-txt-structured-data/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために">
+    <meta property="og:description" content="AI検索対策でよく話題になるllms.txtや構造化データは本当に必要なのか、Google公式の見解や独立した調査をもとに解説します。技術的な設定に時間をかける前に、優先すべきことは何かを実務目線で整理しました。">
+    <meta property="og:url" content="https://nito-0210.com/media/llms-txt-structured-data/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために", "description": "AI検索対策でよく話題になるllms.txtや構造化データは本当に必要なのか、Google公式の見解や独立した調査をもとに解説します。技術的な設定に時間をかける前に、優先すべきことは何かを実務目線で整理しました。", "datePublished": "2026-07-16", "dateModified": "2026-07-16", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/llms-txt-structured-data/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "llms.txtは設置しないほうがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "設置してもマイナスにはなりません。低コストで置けるため、将来のAIエージェント向けの備えとして設置するのは構いません。ただし、設置すればAIに引用されるものではなく、最優先事項ではないと理解しておくことが大切です。"}}, {"@type": "Question", "name": "構造化データは無駄ですか？", "acceptedAnswer": {"@type": "Answer", "text": "無駄ではありません。生成AI検索には必須ではありませんが、検索結果でのリッチな表示につながる場合があり、SEO戦略の一部としては有効です。ただし、土台のコンテンツが整ったうえでの補助と考えます。"}}, {"@type": "Question", "name": "技術的な設定で唯一やるべきことは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "robots.txtの点検です。AIのクローラーを意図せずブロックしていると、そもそも読まれません。これだけは、読まれる前提を整える意味で確認しておく価値があります。"}}, {"@type": "Question", "name": "結局、何に時間をかければいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "明確でよく整理されたコンテンツ、自社にしか出せない一次情報、第三者からの信頼できる言及です。Googleも公式ガイドで、コンテンツの質が最も効くと繰り返し示しています。技術設定よりここに集中するのが近道です。"}}, {"@type": "Question", "name": "なぜ技術的な設定を先にやりたくなるのですか？", "acceptedAnswer": {"@type": "Answer", "text": "分かりやすく、短時間で終わるからです。コンテンツづくりや第三者の言及は地道で時間がかかるため、つい手軽な技術設定に安心を求めがちです。しかし、効果があるのは時間のかかるほうだという点を意識することが重要です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>llms.txtや構造化データは必要？A…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.07.16</span>
+        </div>
+        <h1 class="post-title">llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために</h1>
+
+        <div class="post-eyecatch post-eyecatch--designed"><div class="ec-frame"><span class="ec-tag">徹底解説</span><span class="ec-headline">llms.txtや構造化データは必要？</span><span class="ec-sub">優先順位を間違えないために</span><span class="ec-brand">nito</span></div></div>
+
+        <div class="post-content">
+<p>AI検索対策と聞いて、まずllms.txtや構造化データといった技術的な設定に手をつけようとする人は少なくありません。しかし、<strong>現時点でこれらの効果は公式にも実測でも限定的</strong>です。Googleは公式に「新しい機械可読ファイルを作る必要はない」と明言し、主要なAIのクローラーもllms.txtをほとんど読んでいないことが調査で分かっています。時間をかけるべきは、そこではありません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>llms.txtは、主要なAIクローラーが<strong>ほとんど読んでいない</strong>という調査がある</li>
+<li>Googleは公式に「<strong>新しい機械可読ファイルを作る必要はない</strong>」と明言している</li>
+<li>構造化データも、生成AI検索には<strong>必須ではない</strong>（ただしSEOの補助にはなる）</li>
+<li>AIで実際に紹介されるサイトも、<strong>llms.txt未設置が多い</strong></li>
+<li>優先すべきは、明確なコンテンツ・一次情報・第三者からの言及</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li><a href="#s1">llms.txtとは何か</a></li>
+                    <li><a href="#s2">llms.txtは、実際にはほとんど読まれていない</a></li>
+                    <li><a href="#s3">構造化データは「必須ではないが、補助にはなる」</a></li>
+                    <li><a href="#s4">技術的な設定と、本当に効くことの整理</a></li>
+                    <li><a href="#s5">では、何に時間をかけるべきか</a></li>
+                    <li><a href="#s6">優先順位の設計から伴走するなら</a></li>
+                    <li><a href="#s7">まとめ</a></li>
+                    <li><a href="#s8">よくある質問</a></li>
+                </ol>
+            </nav>
+
+<h2 id="s1">llms.txtとは何か</h2>
+<p>まず、llms.txtが何かを整理します。llms.txtは、2024年にAI向けのガイドファイルとして提唱された、Webサイトのルートに置くMarkdown形式のテキストファイルです。AIに対して、サイトの主要な情報のありかを伝える意図でつくられました。名前がrobots.txtに似ているため、「AI時代に必須の設定」と受け取られることがあります。</p>
+<p>しかし、提唱されてから現在まで、その効果は証明されていません。むしろ、主要なAIのクローラーがllms.txtを読んでいないという調査結果が複数出ています。</p>
+<h2 id="s2">llms.txtは、実際にはほとんど読まれていない</h2>
+<p>具体的に見ていきます。ChatGPTのGPTBot、ClaudeBot、PerplexityBot、Googleのクローラーといった主要なAIのクローラーは、llms.txtを無視して直接HTMLを読みに行く傾向があるとされています。独立した調査でも、ほとんどのサイトのllms.txtは、AIクローラーに読まれていないことが分かっています。</p>
+<p>Google自身も、生成AI検索に表示されるために新しいファイルを作る必要はないと明言しています。</p>
+<blockquote>
+<p>Google 検索（生成 AI 機能を含む）で表示されるようにするために、新たにコンピュータが解読可能なファイルや AI テキスト ファイル、マークアップ、マークダウンを作成する必要はありません。Google 検索自体がそれらを使用しないためです。</p>
+<p>出典：<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索の生成 AI 機能に関する最適化ガイド</a></p>
+</blockquote>
+<p>GoogleのJohn Mueller氏も、llms.txtはAIがどのサイトを参照先に選ぶかの決め手にはなりにくいという趣旨を述べています。実際に、AIで頻繁に紹介されているサイトを見ても、llms.txtを設置していないケースが多いのが実情です。</p>
+<p>つまり、llms.txtは「設置すればAIに引用される」ものではありません。低コストで設置できるため、将来のAIエージェントや開発ツール向けの備えとして置いておくのは構いませんが、AI検索対策の最優先事項ではない、というのが2026年時点の現実的な位置づけです。</p>
+<h2 id="s3">構造化データは「必須ではないが、補助にはなる」</h2>
+<p>もうひとつよく話題になるのが、構造化データ（schema.orgのマークアップ）です。これは、ページの内容をコンピュータが読み取れる形で示す仕組みで、商品情報やFAQ、企業情報などに使われます。</p>
+<p>構造化データについても、Googleは生成AI検索に必須ではないと明言しています。</p>
+<blockquote>
+<p>構造化データに過度に注力する: 生成 AI 検索に構造化データは必須ではありません。また、特別な schema.org のマークアップを追加する必要もありません。ただし、Google 検索のリッチリザルトの対象となる助けとなるため、SEO 戦略全体の一部として引き続き使用することをおすすめします。</p>
+<p>出典：<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索の生成 AI 機能に関する最適化ガイド</a></p>
+</blockquote>
+<p>llms.txtとの違いは、構造化データはSEOの文脈で補助的な意味を持つ点です。検索結果でのリッチな表示につながる場合があり、SEO戦略の一部としては引き続き有効です。ただし、これも「実装すればAIに引用される」直接のレバーではありません。土台のコンテンツが整ったうえでの補助と考えるのが適切です。</p>
+<h2 id="s4">技術的な設定と、本当に効くことの整理</h2>
+<p>ここまでを整理すると、技術的な設定の位置づけが見えてきます。</p>
+<table>
+<thead>
+<tr>
+<th>施策</th>
+<th>AI検索への直接効果</th>
+<th>位置づけ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>llms.txt</td>
+<td>ほぼ確認されていない</td>
+<td>最優先ではない。低コストなら任意で</td>
+</tr>
+<tr>
+<td>構造化データ</td>
+<td>必須ではない</td>
+<td>SEOの補助。土台が整った上で</td>
+</tr>
+<tr>
+<td>robots.txtの点検</td>
+<td>間接的に重要</td>
+<td>クロールを妨げていないかは確認する</td>
+</tr>
+<tr>
+<td>明確で質の高いコンテンツ</td>
+<td>最も効く</td>
+<td>ここに時間をかける</td>
+</tr>
+<tr>
+<td>一次情報・第三者の言及</td>
+<td>最も効く</td>
+<td>ここに時間をかける</td>
+</tr>
+</tbody>
+</table>
+<p>技術ファイルは、やってもマイナスにはなりませんが、そこに時間をかけても引用は増えません。唯一、robots.txtでAIのクローラーを意図せずブロックしていないかの点検だけは、読まれる前提を整える意味で確認しておく価値があります。</p>
+<h2 id="s5">では、何に時間をかけるべきか</h2>
+<p>Googleが公式ガイドで繰り返し示しているのは、技術的な小細工ではなく、コンテンツの質こそが最も効くという一貫した考え方です。</p>
+<blockquote>
+<p>ユニークで魅力的で役立つと感じるコンテンツを作成すれば、このガイドで説明している他のどの提案よりも、生成AI検索でのウェブサイトのプレゼンスを長期的に高める</p>
+<p>出典：<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索の生成 AI 機能に関する最適化ガイド</a></p>
+</blockquote>
+<p>優先すべきは、明確でよく整理されたコンテンツ、自社にしか出せない一次情報、そして第三者からの信頼できる言及です。これらは地道で時間のかかる取り組みですが、AIに引用されるかを本当に左右するのはここです。技術設定に安心を求めるより、中身に力を注ぐほうが、結果的に近道になります。この点は「<a href="/media/no-quick-fix-llmo/">LLMOに小手先の戦略は通じない。nitoが実行まで伴走する理由</a>」でも詳しく扱っています。</p>
+<h2 id="s6">優先順位の設計から伴走するなら</h2>
+<p>技術的な設定は分かりやすく、つい先に手をつけたくなります。しかし、限られたリソースをどこに割くかを見極めないと、効果の薄い作業に時間を使ってしまいます。何を後回しにし、何に集中すべきかの判断は、AI検索の実態を踏まえて行う必要があります。</p>
+<p>nitoは、効果の薄い技術設定に振り回されず、コンテンツの質・一次情報・第三者の言及という、本当に効くところに集中する優先順位の設計から伴走します。やるべきことと後回しでよいことを切り分け、成果につながる取り組みに力を向けられる状態を一緒につくります。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">戦略や施策リストをつくって終わる支援では、成果になりません。nitoは記事作成・外部メディアへの掲載依頼・モニタリングまで実行し、<strong>まるで社内の担当者のように領域を推進</strong>します。言及率の改善で満足せず、<strong>お客様の売上・収益につながる成果</strong>まで一緒に目指します。</p>
+        <ul class="bp-cta__points">
+            <li>戦略設計から<strong>記事作成・外部掲載・モニタリングまで実行・推進</strong></li>
+            <li>手前の指標で終わらせず、<strong>売上・収益につながる成果</strong>にこだわる</li>
+            <li><strong>誰にどんな価値を届けるか</strong>のポジショニングから設計（小手先のAIハックはしない）</li>
+        </ul>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s7">まとめ</h2>
+<p>llms.txtは主要なAIクローラーにほとんど読まれておらず、AI検索対策の最優先事項ではありません。構造化データも生成AI検索には必須ではなく、SEOの補助という位置づけです。<strong>技術的な設定に時間をかける前に、明確なコンテンツ・一次情報・第三者からの言及に力を注ぐ</strong>ほうが、引用されるかを本当に左右します。</p>
+<p>技術ファイルに安心を求めず、中身を積み上げることに集中しましょう。robots.txtでクローラーをブロックしていないかの点検だけは、忘れずに行っておくのがおすすめです。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Q. llms.txtは設置しないほうがいいですか？</h3>
+<p>設置してもマイナスにはなりません。低コストで置けるため、将来のAIエージェント向けの備えとして設置するのは構いません。ただし、設置すればAIに引用されるものではなく、最優先事項ではないと理解しておくことが大切です。</p>
+<h3 id="s8-2">Q. 構造化データは無駄ですか？</h3>
+<p>無駄ではありません。生成AI検索には必須ではありませんが、検索結果でのリッチな表示につながる場合があり、SEO戦略の一部としては有効です。ただし、土台のコンテンツが整ったうえでの補助と考えます。</p>
+<h3 id="s8-3">Q. 技術的な設定で唯一やるべきことは何ですか？</h3>
+<p>robots.txtの点検です。AIのクローラーを意図せずブロックしていると、そもそも読まれません。これだけは、読まれる前提を整える意味で確認しておく価値があります。</p>
+<h3 id="s8-4">Q. 結局、何に時間をかければいいですか？</h3>
+<p>明確でよく整理されたコンテンツ、自社にしか出せない一次情報、第三者からの信頼できる言及です。Googleも公式ガイドで、コンテンツの質が最も効くと繰り返し示しています。技術設定よりここに集中するのが近道です。</p>
+<h3 id="s8-5">Q. なぜ技術的な設定を先にやりたくなるのですか？</h3>
+<p>分かりやすく、短時間で終わるからです。コンテンツづくりや第三者の言及は地道で時間がかかるため、つい手軽な技術設定に安心を求めがちです。しかし、効果があるのは時間のかかるほうだという点を意識することが重要です。</p>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表 / AI検索対策（LLMO）コンサルタント</div>
+                <p class="author__bio">AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-cited-writing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">実践ガイド</span><span class="ec-headline">AIに引用される記事の書き方</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.16</div>
+                <div class="rel-card__ttl">AIに引用される記事の書き方。結論ファースト・一次情報・FAQの使い方</div>
+            </a>
+            <a href="/media/ai-overviews-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">徹底解説</span><span class="ec-headline">AI Overviewsとは？</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.16</div>
+                <div class="rel-card__ttl">AI Overviews（AIによる概要）とは？表示される検索とされない検索</div>
+            </a>
+            <a href="/media/ai-platform-differences/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">徹底比較</span><span class="ec-headline">4つのAIで「出方」はどう違う？</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.16</div>
+                <div class="rel-card__ttl">ChatGPT・Perplexity・Gemini・Google AIモードで「出方」はどう違う？実測で比較</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
