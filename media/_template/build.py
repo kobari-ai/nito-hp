@@ -481,11 +481,47 @@ def generate_sitemap(posts):
     print(f"✔ sitemap.xml （{len(urls)}URL）")
 
 
+# AI感チェック（lint）: WRITING_GUIDEで禁止している表現を機械的に検出する。
+# 「毎回同じ指摘」を防ぐための決定的チェック。ビルド時に必ず全記事をスキャンする。
+AI_TELL_PATTERNS = [
+    (r"——|――|―|─|—", "ダッシュ（——・―など）。読点や句点で文を区切る"),
+    (r"いかがでした", "定型句「いかがでしたか」"),
+    (r"本記事では.{0,12}(解説|紹介|まとめ)しました", "定型句「本記事では〜解説しました」"),
+    (r"理由は明確です", "紋切り型「理由は明確です。」→ 地の文で書き下す"),
+    (r"興味深いのは.{0,20}という点", "紋切り型「興味深いのは〜という点です」"),
+    (r"これが示すのは.{0,20}ということ", "紋切り型「これが示すのは〜ということ」"),
+    (r"[\U0001F300-\U0001FAFF]", "絵文字"),
+]
+
+
+def lint_posts(md_files):
+    """禁止表現を検出して警告を返す。ビルドは止めないが必ず目立たせる。"""
+    warnings = []
+    for f in md_files:
+        text = f.read_text(encoding="utf-8")
+        for lineno, line in enumerate(text.splitlines(), 1):
+            for pat, desc in AI_TELL_PATTERNS:
+                if re.search(pat, line):
+                    snippet = line.strip()[:56]
+                    warnings.append(f"  {f.name}:{lineno}  [{desc}]  {snippet}")
+    return warnings
+
+
 def main():
     article_tpl = (TEMPLATE_DIR / "article.html").read_text(encoding="utf-8")
     list_tpl = (TEMPLATE_DIR / "list.html").read_text(encoding="utf-8")
 
     md_files = sorted(POSTS_DIR.glob("*.md"))
+
+    # AI感チェック（禁止表現の機械検出）
+    lint_warnings = lint_posts(md_files)
+    if lint_warnings:
+        print("=" * 60)
+        print("⚠ AI感チェック: 禁止表現が見つかりました（WRITING_GUIDE参照）")
+        for w in lint_warnings:
+            print(w)
+        print("=" * 60)
+        print("")
 
     posts = []
     errors = []
