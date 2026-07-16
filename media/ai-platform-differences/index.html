@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT・Perplexity・Gemini・Google AIモードで「出方」はどう違う？実測で比較 | nito Column</title>
+    <meta name="description" content="ChatGPT・Perplexity・Gemini・GoogleのAIモードで、同じ質問への回答や引用元の出し方がどう違うかを、実際に計測したデータをもとに解説します。プラットフォームごとの特性を踏まえた、AI検索対策の考え方をまとめました。">
+    <link rel="canonical" href="https://nito-0210.com/media/ai-platform-differences/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ChatGPT・Perplexity・Gemini・Google AIモードで「出方」はどう違う？実測で比較">
+    <meta property="og:description" content="ChatGPT・Perplexity・Gemini・GoogleのAIモードで、同じ質問への回答や引用元の出し方がどう違うかを、実際に計測したデータをもとに解説します。プラットフォームごとの特性を踏まえた、AI検索対策の考え方をまとめました。">
+    <meta property="og:url" content="https://nito-0210.com/media/ai-platform-differences/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT・Perplexity・Gemini・Google AIモードで「出方」はどう違う？実測で比較", "description": "ChatGPT・Perplexity・Gemini・GoogleのAIモードで、同じ質問への回答や引用元の出し方がどう違うかを、実際に計測したデータをもとに解説します。プラットフォームごとの特性を踏まえた、AI検索対策の考え方をまとめました。", "datePublished": "2026-07-16", "dateModified": "2026-07-16", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-platform-differences/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT・Perplexity・Gemini・Google AIモードで「出方」はどう違う？実測で比較"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "どのプラットフォームを最優先すべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "自社の顧客が実際に使っているAIを優先します。BtoBならChatGPT、一般消費者向けならGoogleのAIモードやAI Overviewsの影響が大きい傾向がありますが、業種によって変わるため、自社の見込み客の行動を確認するのが先です。"}}, {"@type": "Question", "name": "Geminiは引用元を出さないなら対策できないのですか？", "acceptedAnswer": {"@type": "Answer", "text": "対策できます。Geminiでは引用よりも、回答文の中でブランド名が言及されることを狙います。第三者からの言及を増やし、AIが自社を候補として認識する状態をつくることが有効です。"}}, {"@type": "Question", "name": "1つのコンテンツで全プラットフォームに対応できますか？", "acceptedAnswer": {"@type": "Answer", "text": "基本の情報設計は共通しますが、質問の種類によって引用されるコンテンツの型が変わります。会社選びの質問には比較記事、情報収集の質問には解説記事、というように、狙う質問に合わせた作り分けが必要です。"}}, {"@type": "Question", "name": "自社がどう引用されているか、どう確認すればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "各プラットフォームで見込み客が入力しそうな質問を実際に打ち込み、自社が出るか、どの文脈で紹介されるかを確認します。Perplexityは引用元が見えやすいため、確認の入口として使いやすいです。"}}, {"@type": "Question", "name": "プラットフォームごとの傾向は今後も変わりますか？", "acceptedAnswer": {"@type": "Answer", "text": "変わります。各AIのアルゴリズムや引用の仕組みは頻繁に更新されるため、一度調べて終わりではなく、定期的に計測して傾向の変化を追う必要があります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>ChatGPT・Perplexity・G…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.07.16</span>
+        </div>
+        <h1 class="post-title">ChatGPT・Perplexity・Gemini・Google AIモードで「出方」はどう違う？実測で比較</h1>
+
+        <div class="post-eyecatch post-eyecatch--designed"><div class="ec-frame"><span class="ec-tag">徹底比較</span><span class="ec-headline">4つのAIで「出方」はどう違う？</span><span class="ec-sub">実測で比較する引用のクセ</span><span class="ec-brand">nito</span></div></div>
+
+        <div class="post-content">
+<p>同じ質問でも、ChatGPT・Perplexity・Gemini・GoogleのAIモードでは、引用する情報源も回答の作り方も大きく異なります。nitoが同じプロンプトを4つのプラットフォームに投げて計測したところ、<strong>引用元をはっきり示すものと、ほとんど示さないものに分かれ、参照する情報源の種類も違いました</strong>。全部を同じ施策で狙うのは効率が悪く、プラットフォームごとの特性を踏まえる必要があります。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>同じ質問でも、<strong>引用元を明示するAIと、ほぼ示さないAIがある</strong></li>
+<li>Perplexityは<strong>多数の情報源をリンク付きで提示</strong>し、引用の透明性が高い</li>
+<li>Geminiは<strong>回答文は返すが、参照元URLを出さないことがある</strong></li>
+<li>ChatGPTとGoogle AIモードは、質問の種類で引用元の傾向が変わる</li>
+<li>4プラットフォームを一律に狙うより、<strong>自社の顧客が使うものから優先する</strong>のが現実的</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li><a href="#s1">同じ質問を4つのAIに投げて計測した</a></li>
+                    <li><a href="#s2">Perplexity：多数の情報源をリンク付きで示す</a></li>
+                    <li><a href="#s3">Gemini：回答は返すが、引用元を出さないことがある</a></li>
+                    <li><a href="#s4">ChatGPTとGoogle AIモード：質問の種類で引用元が変わる</a></li>
+                    <li><a href="#s5">プラットフォーム別の特徴まとめ</a></li>
+                    <li><a href="#s6">全部を一律に狙わなくていい</a></li>
+                    <li><a href="#s7">プラットフォームごとの対策を伴走で進めるなら</a></li>
+                    <li><a href="#s8">まとめ</a></li>
+                    <li><a href="#s9">よくある質問</a></li>
+                </ol>
+            </nav>
+
+<h2 id="s1">同じ質問を4つのAIに投げて計測した</h2>
+<p>AI検索対策を考えるうえで、まず知っておきたいのが「プラットフォームごとに回答の作り方が違う」という事実です。ChatGPTで引用される対策と、Perplexityで引用される対策は、必ずしも同じではありません。</p>
+<p>nitoでは、複数のAIプラットフォームに同じ質問を自動で投げ、回答と引用元を計測する仕組みを自社で運用しています。ここでは、実際に「収益につながるAI検索対策の会社は？」という会社選びの質問を、ChatGPT・Perplexity・Gemini・GoogleのAIモードの4つに投げたときの結果をもとに、各プラットフォームの違いを説明します。</p>
+<h2 id="s2">Perplexity：多数の情報源をリンク付きで示す</h2>
+<p>Perplexityの特徴は、引用元をはっきり見せることです。今回の計測でも、1つの回答に対して10件以上の情報源をリンク付きで提示し、どの記述がどのソースに基づくかを追えるようになっていました。</p>
+<p>Perplexityは検索と回答生成を組み合わせた設計で、回答の根拠を明示することを重視しています。そのため、AI検索対策の効果が見えやすいプラットフォームでもあります。自社が引用されているかどうかを確認しやすく、対策の手応えをつかむ入口として向いています。</p>
+<h2 id="s3">Gemini：回答は返すが、引用元を出さないことがある</h2>
+<p>一方、Geminiは今回の計測で、1,500字を超える回答文を返したものの、<strong>参照元のURLをほとんど提示しませんでした</strong>。回答の中で企業名やサービス名に触れることはあっても、どのサイトを情報源にしたかは追いにくい構造です。</p>
+<p>これはGeminiが劣っているという話ではなく、回答の設計思想が違うということです。引用元が見えにくいぶん、Geminiでは「引用されること」よりも「回答文の中でブランド名が言及されること」を狙う発想が必要になります。この違いは、AIでの露出を「言及」と「引用」に分けて考える重要性ともつながります。この考え方は「<a href="/media/ai-search-first-steps/">AI検索対策は何から始める？企業が取り組むべき5ステップ</a>」でも触れています。</p>
+<h2 id="s4">ChatGPTとGoogle AIモード：質問の種類で引用元が変わる</h2>
+<p>ChatGPTとGoogleのAIモードは、どちらも引用元を提示しますが、<strong>質問の種類によって参照する情報源の傾向が変わる</strong>のが特徴でした。</p>
+<p>会社選びの質問では、両者とも個別企業の公式サイトではなく、「AI検索対策の会社おすすめ〇選」のような第三者の比較・ランキング記事を多く引用していました。一方、「何から取り組めばいいか」といった情報収集系の質問をChatGPTに投げると、Googleの公式ドキュメントや、専門メディアの網羅的な解説記事が引用元になっていました。</p>
+<p>つまり、<strong>同じChatGPTでも、ユーザーが何を聞くかで引用されるコンテンツの種類が変わります</strong>。会社を探す質問なら比較記事、やり方を知りたい質問なら解説記事、というように、狙うべきコンテンツの型が分かれるということです。</p>
+<h2 id="s5">プラットフォーム別の特徴まとめ</h2>
+<p>計測結果を整理すると、次のような違いが見えてきます。</p>
+<table>
+<thead>
+<tr>
+<th>プラットフォーム</th>
+<th>引用元の示し方</th>
+<th>対策で意識すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perplexity</td>
+<td>多数をリンク付きで明示</td>
+<td>引用されやすい情報源になる。効果を確認しやすい</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>回答は返すが引用元は出にくい</td>
+<td>回答文でのブランド言及を狙う</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>質問の種類で引用元が変わる</td>
+<td>会社選びは比較記事、情報収集は解説記事</td>
+</tr>
+<tr>
+<td>Google AIモード</td>
+<td>比較記事を引用しやすい</td>
+<td>第三者メディアでの露出も重要</td>
+</tr>
+</tbody>
+</table>
+<p>この違いを知らずに、どのプラットフォームも同じコンテンツで狙おうとすると、労力の割に成果が出にくくなります。</p>
+<h2 id="s6">全部を一律に狙わなくていい</h2>
+<p>4つのプラットフォームすべてで上位を取るのが理想ですが、リソースが限られるなら、優先順位をつけるべきです。判断の軸はシンプルで、<strong>自社の顧客が実際に使っているAIから優先する</strong>ことです。</p>
+<p>たとえばBtoBで、意思決定者がChatGPTで情報収集する傾向が強いなら、まずChatGPTで引用される解説記事から着手します。一般消費者向けで、GoogleのAIモードやAI Overviewsの影響が大きいなら、そちらで引用されやすい情報設計を優先します。全方位を狙うより、顧客の入口に絞るほうが、限られたリソースで成果を出しやすくなります。</p>
+<h2 id="s7">プラットフォームごとの対策を伴走で進めるなら</h2>
+<p>どのプラットフォームで自社がどう扱われているかを継続的に計測し、その差を踏まえてコンテンツを設計するのは、手作業では負担が大きい領域です。プラットフォームごとに引用元の傾向も変わり続けます。</p>
+<p>nitoは、複数のAIプラットフォームでの言及・引用を計測する仕組みを持ち、その実測データをもとに、自社が優先すべきプラットフォームとコンテンツの型を見極めて実行まで伴走します。感覚ではなく、実際に計測した差分をもとに施策を組み立てます。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">戦略や施策リストをつくって終わる支援では、成果になりません。nitoは記事作成・外部メディアへの掲載依頼・モニタリングまで実行し、<strong>まるで社内の担当者のように領域を推進</strong>します。言及率の改善で満足せず、<strong>お客様の売上・収益につながる成果</strong>まで一緒に目指します。</p>
+        <ul class="bp-cta__points">
+            <li>戦略設計から<strong>記事作成・外部掲載・モニタリングまで実行・推進</strong></li>
+            <li>手前の指標で終わらせず、<strong>売上・収益につながる成果</strong>にこだわる</li>
+            <li><strong>誰にどんな価値を届けるか</strong>のポジショニングから設計（小手先のAIハックはしない）</li>
+        </ul>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s8">まとめ</h2>
+<p>ChatGPT・Perplexity・Gemini・GoogleのAIモードは、引用元の示し方も参照する情報源も異なります。Perplexityは引用を明示し、Geminiは引用元が見えにくく、ChatGPTとGoogle AIモードは質問の種類で引用傾向が変わります。<strong>すべてを同じ施策で狙うのではなく、自社の顧客が使うプラットフォームから優先する</strong>のが現実的です。</p>
+<p>まずは、自社の見込み客がどのAIで情報を集めているかを把握することから始めましょう。</p>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">Q. どのプラットフォームを最優先すべきですか？</h3>
+<p>自社の顧客が実際に使っているAIを優先します。BtoBならChatGPT、一般消費者向けならGoogleのAIモードやAI Overviewsの影響が大きい傾向がありますが、業種によって変わるため、自社の見込み客の行動を確認するのが先です。</p>
+<h3 id="s9-2">Q. Geminiは引用元を出さないなら対策できないのですか？</h3>
+<p>対策できます。Geminiでは引用よりも、回答文の中でブランド名が言及されることを狙います。第三者からの言及を増やし、AIが自社を候補として認識する状態をつくることが有効です。</p>
+<h3 id="s9-3">Q. 1つのコンテンツで全プラットフォームに対応できますか？</h3>
+<p>基本の情報設計は共通しますが、質問の種類によって引用されるコンテンツの型が変わります。会社選びの質問には比較記事、情報収集の質問には解説記事、というように、狙う質問に合わせた作り分けが必要です。</p>
+<h3 id="s9-4">Q. 自社がどう引用されているか、どう確認すればいいですか？</h3>
+<p>各プラットフォームで見込み客が入力しそうな質問を実際に打ち込み、自社が出るか、どの文脈で紹介されるかを確認します。Perplexityは引用元が見えやすいため、確認の入口として使いやすいです。</p>
+<h3 id="s9-5">Q. プラットフォームごとの傾向は今後も変わりますか？</h3>
+<p>変わります。各AIのアルゴリズムや引用の仕組みは頻繁に更新されるため、一度調べて終わりではなく、定期的に計測して傾向の変化を追う必要があります。</p>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表 / AI検索対策（LLMO）コンサルタント</div>
+                <p class="author__bio">AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-traffic-conversion/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">徹底解説</span><span class="ec-headline">AI経由の流入はなぜ成約率が高い？</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.16</div>
+                <div class="rel-card__ttl">AI経由の流入はなぜ成約率が高いのか？検索流入との違いを解説</div>
+            </a>
+            <a href="/media/branded-search-signal/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">効果測定</span><span class="ec-headline">指名検索の増加はAI対策のサイン</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.16</div>
+                <div class="rel-card__ttl">指名検索が増えたらAI検索対策が効いているサインかもしれない</div>
+            </a>
+            <a href="/media/ec-ai-search/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">業種別</span><span class="ec-headline">EC・通販のAI検索対策</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.16</div>
+                <div class="rel-card__ttl">EC・通販のAI検索対策。商品ページとレビューをAIに読ませる3つの型</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

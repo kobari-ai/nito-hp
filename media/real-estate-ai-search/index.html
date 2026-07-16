@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不動産会社のためのAI検索対策。物件検索と相談系で分けて考える | nito Column</title>
+    <meta name="description" content="不動産会社向けにAI検索対策（LLMO）の考え方を解説します。物件を探すクエリと知識・相談系のクエリではAIの出方が違うこと、ローカル検索との役割分担、AIに引用される物件情報の作り方を実務目線でまとめました。">
+    <link rel="canonical" href="https://nito-0210.com/media/real-estate-ai-search/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="不動産会社のためのAI検索対策。物件検索と相談系で分けて考える">
+    <meta property="og:description" content="不動産会社向けにAI検索対策（LLMO）の考え方を解説します。物件を探すクエリと知識・相談系のクエリではAIの出方が違うこと、ローカル検索との役割分担、AIに引用される物件情報の作り方を実務目線でまとめました。">
+    <meta property="og:url" content="https://nito-0210.com/media/real-estate-ai-search/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "不動産会社のためのAI検索対策。物件検索と相談系で分けて考える", "description": "不動産会社向けにAI検索対策（LLMO）の考え方を解説します。物件を探すクエリと知識・相談系のクエリではAIの出方が違うこと、ローカル検索との役割分担、AIに引用される物件情報の作り方を実務目線でまとめました。", "datePublished": "2026-07-16", "dateModified": "2026-07-16", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/real-estate-ai-search/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "不動産会社のためのAI検索対策。物件検索と相談系で分けて考える"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "不動産のAI検索対策では、まず何から始めるべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "相談段階のコンテンツから始めるのが有効です。物件を探すクエリはローカル検索が優先されるため、まずは「相場」「手続き」「費用」といった、AIの回答が前面に出るクエリで引用される記事を整えます。"}}, {"@type": "Question", "name": "物件ページのSEOはもう不要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "不要ではありません。物件ページは、相談系コンテンツやローカル検索で自社を知った人が具体的な物件を見る受け皿として機能します。ただし、AIに引用させる主役は相談段階のコンテンツになります。"}}, {"@type": "Question", "name": "なぜ地域特化の情報がAIに引用されやすいのですか？", "acceptedAnswer": {"@type": "Answer", "text": "不動産は地域性が強く、全国共通の一般論では役に立たないためです。担当エリアの相場動向や地域特有の手続きなど、地元の実務を知る会社だからこそ書ける情報が、AIにとって価値のある一次情報になります。"}}, {"@type": "Question", "name": "検索順位は落ちていないのに問い合わせが減っています。原因は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "AI検索の影響が考えられます。GoogleのAIによる概要が表示されると、順位はそのままでも実際のクリックは減ります。相談系のクエリで自社がAIに引用されず、要約だけで検討が完結している可能性があります。"}}, {"@type": "Question", "name": "MEO（ローカル検索対策）とAI検索対策は両方やるべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "両方が補い合います。物件を探す段階ではローカル検索が、その手前の相談段階ではAI検索が効きます。検討プロセスのどの段階にどちらが効くかを分けて、リソースを配分するのが効率的です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>不動産会社のためのAI検索対策。物件検索…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.07.16</span>
+        </div>
+        <h1 class="post-title">不動産会社のためのAI検索対策。物件検索と相談系で分けて考える</h1>
+
+        <div class="post-eyecatch post-eyecatch--designed"><div class="ec-frame"><span class="ec-tag">業種別</span><span class="ec-headline">不動産会社のAI検索対策</span><span class="ec-sub">物件検索と相談系で分けて考える</span><span class="ec-brand">nito</span></div></div>
+
+        <div class="post-content">
+<p>不動産会社のAI検索対策では、まず「物件を探すクエリ」と「知識・相談系のクエリ」を分けて考える必要があります。<strong>物件検索ではローカル検索（地図・ローカルパック）が優先され、AIの回答は出にくい一方、相談系のクエリではAIの回答が前面に出てきます</strong>。この違いを踏まえないと、力を入れる場所を間違えます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>物件を探すクエリは<strong>ローカル検索が優先</strong>され、AIの回答は出にくい</li>
+<li>「〇〇 相場」「手数料 計算」などの<strong>知識・相談系はAIの回答が前面に出る</strong></li>
+<li>SEO順位が変わっていないのに<strong>問い合わせだけ減る</strong>なら、AI検索の影響を疑う</li>
+<li>AIに引用されるのは、物件情報より<strong>地域・手続き・費用の一次情報</strong></li>
+<li>力を入れるべきは物件ページより、<strong>相談段階のコンテンツ</strong></li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li><a href="#s1">物件検索と相談系でAIの出方はまったく違う</a></li>
+                    <li><a href="#s2">SEO順位は変わっていないのに問い合わせが減る、が起きている</a></li>
+                    <li><a href="#s3">AIに引用されるのは、物件より「地域と手続きの一次情報」</a></li>
+                    <li><a href="#s4">物件ページはAI向けというより、来訪後の受け皿</a></li>
+                    <li><a href="#s5">ローカル検索（MEO）との役割分担を意識する</a></li>
+                    <li><a href="#s6">不動産のAI検索対策を伴走で進めるなら</a></li>
+                    <li><a href="#s7">まとめ</a></li>
+                    <li><a href="#s8">よくある質問</a></li>
+                </ol>
+            </nav>
+
+<h2 id="s1">物件検索と相談系でAIの出方はまったく違う</h2>
+<p>不動産のAI検索対策を考えるうえで、最初に押さえたいのが検索の種類による違いです。ユーザーが不動産に関して検索するとき、大きく2つのパターンがあります。</p>
+<p>1つは、物件そのものを探すクエリです。「渋谷区 賃貸 2LDK」のように、具体的な物件を探す検索では、Googleは地図やローカルパック（地域の店舗・物件が並ぶ枠）を優先して表示し、AIによる概要（AI Overviews）は出にくい傾向があります。ユーザーが求めているのが「実際の物件リスト」であり、AIの要約より一覧のほうが役立つためです。</p>
+<p>もう1つは、知識や相談を求めるクエリです。「不動産仲介手数料の計算方法」「住宅ローン 頭金 相場」「初めての家探し 注意点」といった検索では、AIが回答を前面に出してきます。ここは、AIに引用されるかどうかが問われる領域です。</p>
+<p>つまり、<strong>不動産のAI検索対策は、物件ページを磨くことよりも、相談段階のコンテンツをどう作るかが中心になります</strong>。</p>
+<h2 id="s2">SEO順位は変わっていないのに問い合わせが減る、が起きている</h2>
+<p>現場で起き始めているのが、「検索順位は落ちていないのに、問い合わせや来店だけが減る」という現象です。この背景には、AI検索の広がりがあります。</p>
+<p>GoogleにAIによる概要が表示されると、その下にある検索結果はクリックされにくくなります。日本でも、AI Overviewsが表示されると検索1位のクリック率が大きく下がるという分析が出ています。順位という数字は変わっていなくても、<strong>その順位から実際に流入する量が減っている</strong>わけです。相談系のクエリで自社の記事がAIの回答に引用されず、AIの要約だけで完結してしまうと、サイトにたどり着く前に検討が進んでしまいます。</p>
+<p>順位を追うだけでは、この変化は見えません。問い合わせや来店といった実際の成果が落ちていないかを、あわせて見ておく必要があります。</p>
+<h2 id="s3">AIに引用されるのは、物件より「地域と手続きの一次情報」</h2>
+<p>では、相談系のクエリでAIに引用されるには何が必要でしょうか。効くのは、物件情報そのものよりも、<strong>その会社にしか出せない地域・手続き・費用の一次情報</strong>です。</p>
+<p>不動産は地域性が強く、同じ「相場」でもエリアによって事情がまったく違います。全国どこでも通用する一般論ではなく、「このエリアのこの駅周辺は、この数年でこう変わっている」「この地域特有の手続きの注意点はこれ」といった、地元の実務を知る会社だからこそ書ける情報が、AIにとって価値のある一次情報になります。</p>
+<p>具体的には、次のようなコンテンツが引用されやすくなります。</p>
+<ul>
+<li><strong>地域特化の相場・動向</strong>：担当エリアの価格推移や、地域ごとの特徴を数字とともに</li>
+<li><strong>手続きの実務解説</strong>：契約・住宅ローン・税金など、初めての人がつまずくポイント</li>
+<li><strong>費用のシミュレーション</strong>：仲介手数料や諸費用を、具体例で示す</li>
+<li><strong>よくある質問への回答</strong>：現場で実際に受ける相談を、FAQとして整理する</li>
+</ul>
+<h2 id="s4">物件ページはAI向けというより、来訪後の受け皿</h2>
+<p>物件ページを軽視していいという話ではありません。物件ページは、AIに引用させるためというより、<strong>相談系のコンテンツやローカル検索で自社を知った人が、実際に物件を見に来る受け皿</strong>として機能します。</p>
+<p>役割を分けて考えると整理できます。相談系のコンテンツでAIに引用され、認知の入口をつくる。ローカル検索で地域の物件を探す人に見つけてもらう。そして物件ページで、訪れた人に具体的な選択肢を見せる。この流れ全体を設計することが、不動産のAI検索対策になります。</p>
+<h2 id="s5">ローカル検索（MEO）との役割分担を意識する</h2>
+<p>不動産会社は、これまでもGoogleビジネスプロフィールなどのローカル検索対策（MEO）に取り組んできたはずです。AI検索対策は、これを置き換えるものではなく、補い合う関係です。</p>
+<p>物件を探す段階ではローカル検索が効き、その手前の「どう選べばいいか」「相場はどれくらいか」という相談段階ではAI検索が効きます。<strong>買い手・借り手の検討プロセスの、どの段階にどの施策が効くかを分けて考える</strong>ことで、限られたリソースを無駄なく配分できます。この検討段階ごとの考え方は「<a href="/media/ai-chosen-brand/">AIに選ばれるブランドのつくり方</a>」でも扱っています。</p>
+<h2 id="s6">不動産のAI検索対策を伴走で進めるなら</h2>
+<p>物件を探すクエリと相談系のクエリを見分け、どの段階にどのコンテンツを用意すべきかを設計するのは、不動産の実務とAI検索の両方への理解が必要な作業です。地域特化の一次情報を、AIに引用される形に整えるにも、継続的な手間がかかります。</p>
+<p>nitoは、不動産会社の検討プロセスを踏まえて、相談段階のコンテンツ設計から地域一次情報の整理、効果測定までを伴走します。物件ページの見栄えを整えるだけでなく、その手前でAIに選ばれ、問い合わせにつながる状態を一緒につくります。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">戦略や施策リストをつくって終わる支援では、成果になりません。nitoは記事作成・外部メディアへの掲載依頼・モニタリングまで実行し、<strong>まるで社内の担当者のように領域を推進</strong>します。言及率の改善で満足せず、<strong>お客様の売上・収益につながる成果</strong>まで一緒に目指します。</p>
+        <ul class="bp-cta__points">
+            <li>戦略設計から<strong>記事作成・外部掲載・モニタリングまで実行・推進</strong></li>
+            <li>手前の指標で終わらせず、<strong>売上・収益につながる成果</strong>にこだわる</li>
+            <li><strong>誰にどんな価値を届けるか</strong>のポジショニングから設計（小手先のAIハックはしない）</li>
+        </ul>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s7">まとめ</h2>
+<p>不動産会社のAI検索対策は、物件ページを磨くことよりも、<strong>相談段階のコンテンツをどう作るか</strong>が中心になります。物件を探すクエリはローカル検索が優先され、知識・相談系のクエリはAIの回答が前面に出るという違いを踏まえ、地域・手続き・費用の一次情報でAIに引用される状態を目指します。</p>
+<p>検索順位という数字だけでなく、問い合わせや来店という成果を見ながら、検討段階ごとに施策を配分していきましょう。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Q. 不動産のAI検索対策では、まず何から始めるべきですか？</h3>
+<p>相談段階のコンテンツから始めるのが有効です。物件を探すクエリはローカル検索が優先されるため、まずは「相場」「手続き」「費用」といった、AIの回答が前面に出るクエリで引用される記事を整えます。</p>
+<h3 id="s8-2">Q. 物件ページのSEOはもう不要ですか？</h3>
+<p>不要ではありません。物件ページは、相談系コンテンツやローカル検索で自社を知った人が具体的な物件を見る受け皿として機能します。ただし、AIに引用させる主役は相談段階のコンテンツになります。</p>
+<h3 id="s8-3">Q. なぜ地域特化の情報がAIに引用されやすいのですか？</h3>
+<p>不動産は地域性が強く、全国共通の一般論では役に立たないためです。担当エリアの相場動向や地域特有の手続きなど、地元の実務を知る会社だからこそ書ける情報が、AIにとって価値のある一次情報になります。</p>
+<h3 id="s8-4">Q. 検索順位は落ちていないのに問い合わせが減っています。原因は何ですか？</h3>
+<p>AI検索の影響が考えられます。GoogleのAIによる概要が表示されると、順位はそのままでも実際のクリックは減ります。相談系のクエリで自社がAIに引用されず、要約だけで検討が完結している可能性があります。</p>
+<h3 id="s8-5">Q. MEO（ローカル検索対策）とAI検索対策は両方やるべきですか？</h3>
+<p>両方が補い合います。物件を探す段階ではローカル検索が、その手前の相談段階ではAI検索が効きます。検討プロセスのどの段階にどちらが効くかを分けて、リソースを配分するのが効率的です。</p>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表 / AI検索対策（LLMO）コンサルタント</div>
+                <p class="author__bio">AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-platform-differences/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">徹底比較</span><span class="ec-headline">4つのAIで「出方」はどう違う？</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.16</div>
+                <div class="rel-card__ttl">ChatGPT・Perplexity・Gemini・Google AIモードで「出方」はどう違う？実測で比較</div>
+            </a>
+            <a href="/media/ai-traffic-conversion/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">徹底解説</span><span class="ec-headline">AI経由の流入はなぜ成約率が高い？</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.16</div>
+                <div class="rel-card__ttl">AI経由の流入はなぜ成約率が高いのか？検索流入との違いを解説</div>
+            </a>
+            <a href="/media/branded-search-signal/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--designed"><div class="ec-frame ec-frame--mini"><span class="ec-tag">効果測定</span><span class="ec-headline">指名検索の増加はAI対策のサイン</span><span class="ec-brand">nito</span></div></div>
+                <div class="rel-card__date">2026.07.16</div>
+                <div class="rel-card__ttl">指名検索が増えたらAI検索対策が効いているサインかもしれない</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
