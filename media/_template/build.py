@@ -381,22 +381,44 @@ def build_article(post, posts, template: str) -> str:
     return out
 
 
-def build_list(posts, template: str) -> str:
-    cats = []
-    for p in posts:
-        c = p["meta"]["category"]
-        if c not in cats:
-            cats.append(c)
+# 一覧の業種フィルタ: slug → 業種バケット。未登録の記事は「一般」（概念・ノウハウ）扱い。
+INDUSTRY_MAP = {
+    "real-estate-ai-search": "不動産・建設",
+    "construction-ai-search": "不動産・建設",
+    "ec-ai-search": "EC・通販",
+    "clinic-ai-search": "医療・美容",
+    "beauty-clinic-ai-search": "医療・美容",
+    "restaurant-ai-search": "飲食・宿泊",
+    "hotel-travel-ai-search": "飲食・宿泊",
+    "cram-school-ai-search": "教育",
+    "recruitment-ai-search": "採用・人材",
+    "recruitment-agency-ai-search": "採用・人材",
+    "manufacturing-ai-search": "製造・SaaS",
+    "saas-ai-search": "製造・SaaS",
+    "shigyo-ai-search": "士業・その他",
+    "startup-ai-search": "士業・その他",
+}
+# フィルタボタンの表示順（存在するものだけ出す）
+INDUSTRY_ORDER = [
+    "一般", "不動産・建設", "EC・通販", "医療・美容", "飲食・宿泊",
+    "教育", "採用・人材", "製造・SaaS", "士業・その他",
+]
 
-    cat_links = ['        <a href="#" data-cat="all" class="is-active">すべて</a>']
-    for c in cats:
-        cat_links.append(f'        <a href="#" data-cat="{html.escape(c)}">{html.escape(c)}</a>')
+
+def build_list(posts, template: str) -> str:
+    present = set(INDUSTRY_MAP.get(p["slug"], "一般") for p in posts)
+
+    links = ['        <a href="#" data-ind="all" class="is-active">すべて</a>']
+    for ind in INDUSTRY_ORDER:
+        if ind in present:
+            links.append(f'        <a href="#" data-ind="{html.escape(ind)}">{html.escape(ind)}</a>')
 
     cards = []
     for p in posts:
         m = p["meta"]
+        ind = INDUSTRY_MAP.get(p["slug"], "一般")
         cards.append(
-            f'        <a href="/media/{p["slug"]}/" class="rel-card" data-cat="{html.escape(m["category"])}">\n'
+            f'        <a href="/media/{p["slug"]}/" class="rel-card" data-ind="{html.escape(ind)}">\n'
             f'            {card_thumb(m)}\n'
             f'            <div class="rel-card__date">{m["date"].replace("-", ".")} ・ {html.escape(m["category"])}</div>\n'
             f'            <div class="rel-card__ttl">{html.escape(m["title"])}</div>\n'
@@ -404,7 +426,7 @@ def build_list(posts, template: str) -> str:
         )
 
     out = template
-    out = out.replace("{{CATEGORIES}}", "\n".join(cat_links))
+    out = out.replace("{{CATEGORIES}}", "\n".join(links))
     out = out.replace("{{POSTS}}", "\n".join(cards))
     return out
 

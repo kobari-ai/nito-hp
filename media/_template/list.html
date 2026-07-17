@@ -53,6 +53,10 @@
 {{POSTS}}
     </main>
 
+    <div class="list-more">
+        <button type="button" class="list-more__btn" id="loadMore">もっと見る</button>
+    </div>
+
     <footer class="site-footer">
         <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
         <nav class="f-nav">
@@ -65,18 +69,46 @@
     </footer>
 
     <script>
-    // カテゴリフィルタ（クライアントサイド）
-    document.querySelectorAll('.cat-filter a').forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelectorAll('.cat-filter a').forEach(function (b) { b.classList.remove('is-active'); });
-            btn.classList.add('is-active');
-            var cat = btn.dataset.cat;
-            document.querySelectorAll('.post-list .rel-card').forEach(function (card) {
-                card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    // 業種フィルタ ＋ もっと見る（クライアントサイド）
+    (function () {
+        var STEP = 12;                         // 1回に表示する件数
+        var cards = Array.prototype.slice.call(document.querySelectorAll('.post-list .rel-card'));
+        var filterBtns = Array.prototype.slice.call(document.querySelectorAll('.cat-filter a'));
+        var moreBtn = document.getElementById('loadMore');
+        var currentInd = 'all';
+        var visible = STEP;
+
+        function matched() {
+            return cards.filter(function (c) {
+                return currentInd === 'all' || c.dataset.ind === currentInd;
+            });
+        }
+
+        function render() {
+            var list = matched();
+            cards.forEach(function (c) { c.style.display = 'none'; });
+            list.slice(0, visible).forEach(function (c) { c.style.display = ''; });
+            moreBtn.style.display = (list.length > visible) ? '' : 'none';
+        }
+
+        filterBtns.forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                filterBtns.forEach(function (b) { b.classList.remove('is-active'); });
+                btn.classList.add('is-active');
+                currentInd = btn.dataset.ind;
+                visible = STEP;
+                render();
             });
         });
-    });
+
+        moreBtn.addEventListener('click', function () {
+            visible += STEP;
+            render();
+        });
+
+        render();
+    })();
     </script>
 </body>
 
