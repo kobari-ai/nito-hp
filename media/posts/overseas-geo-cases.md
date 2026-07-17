@@ -4,7 +4,7 @@ date: 2026-07-16
 category: AI検索対策
 description: 海外企業のAI検索対策（GEO/LLMO）の成功事例を、実際の数値とともに5つ紹介します。ChatGPT経由の流入やコンバージョンがどれだけ伸びたか、各社が何をしたのか、そして成果を出した企業に共通するパターンを実務目線で整理しました。
 cover_tag: 海外事例
-cover_headline: 海外のAI検索対策・成功事例5選
+cover_headline: 海外のAI検索対策 事例5選
 cover_sub: 数字で見るGEOの効果と共通点
 ---
 

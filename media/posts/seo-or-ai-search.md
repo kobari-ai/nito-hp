@@ -4,7 +4,7 @@ date: 2026-07-16
 category: AI検索対策
 description: AI検索対策とSEOはどちらを優先すべきかを解説します。二択で考えるのではなく両輪であること、AI検索対策がSEOの土台の上に乗る理由、自社の状況に応じたリソースの配分の考え方を実務目線でまとめました。
 cover_tag: 徹底解説
-cover_headline: AI検索対策とSEO、どちらを優先？
+cover_headline: AI対策とSEOの優先度
 cover_sub: 状況別のリソース配分
 ---
 

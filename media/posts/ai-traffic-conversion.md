@@ -4,7 +4,7 @@ date: 2026-07-16
 category: AI検索対策
 description: ChatGPTなどAI経由の流入は、通常の検索流入より成約率が高いと複数の事例で報告されています。なぜAI経由の訪問者は問い合わせや購入につながりやすいのか、その構造を検索行動の違いから解説します。
 cover_tag: 徹底解説
-cover_headline: AI経由の流入はなぜ成約率が高い？
+cover_headline: AI経由はなぜ成約率が高い？
 cover_sub: 検索流入との違いを解説
 ---
 

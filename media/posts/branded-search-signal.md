@@ -4,7 +4,7 @@ date: 2026-07-16
 category: AI検索対策
 description: AI検索対策の効果は、AI経由の流入数だけでは測れません。社名で検索する指名検索の増加が、実はAIで認知された結果であることも多いのです。GA4に表れにくいAI検索対策の間接効果と、その見つけ方を解説します。
 cover_tag: 効果測定
-cover_headline: 指名検索の増加はAI対策のサイン
+cover_headline: 指名検索はAI対策のサイン
 cover_sub: GA4に表れない間接効果の見つけ方
 ---
 

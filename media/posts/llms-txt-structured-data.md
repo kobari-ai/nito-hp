@@ -4,7 +4,7 @@ date: 2026-07-16
 category: AI検索対策
 description: AI検索対策でよく話題になるllms.txtや構造化データは本当に必要なのか、Google公式の見解や独立した調査をもとに解説します。技術的な設定に時間をかける前に、優先すべきことは何かを実務目線で整理しました。
 cover_tag: 徹底解説
-cover_headline: llms.txtや構造化データは必要？
+cover_headline: llms.txtは必要？
 cover_sub: 優先順位を間違えないために
 ---
 

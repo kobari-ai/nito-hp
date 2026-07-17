@@ -4,7 +4,7 @@ date: 2026-07-07
 category: AI検索対策
 description: ChatGPTやGeminiに自社が出てこない原因を5つに整理し、それぞれの対策を解説します。多くは技術的な問題ではなく、AIが推薦する根拠をWeb上に見つけられていないこと。今日から着手できる打ち手までまとめました。
 cover_tag: 課題解決
-cover_headline: ChatGPTに自社が出てこない
+cover_headline: ChatGPTに出てこない
 cover_sub: 5つの原因と対策
 ---
 

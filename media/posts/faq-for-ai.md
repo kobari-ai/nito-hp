@@ -4,7 +4,7 @@ date: 2026-07-16
 category: AI検索対策
 description: AIに引用されやすいFAQページの作り方を解説します。FAQがAI検索で効く理由、効くFAQと効かないFAQの違い、実際にAIへ投げられる質問の集め方、一次情報で答える書き方まで実務目線でまとめました。
 cover_tag: 実践ガイド
-cover_headline: AIに引用されるFAQの作り方
+cover_headline: AIに引用されるFAQ
 cover_sub: 質問の選び方で差がつく
 ---
 

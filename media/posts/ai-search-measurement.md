@@ -4,7 +4,7 @@ date: 2026-07-07
 category: AI検索対策
 description: AI検索対策（LLMO）の効果測定を、GA4での具体的な設定手順とあわせて解説します。ChatGPT・Perplexityからの流入を見る正規表現、GA4だけでは測れない理由、言及率とセットで見るコツまで実務目線でまとめました。
 cover_tag: 効果測定
-cover_headline: AI検索対策の効果はどう測る？
+cover_headline: AI検索対策の効果測定
 cover_sub: GA4でAI流入を見る方法と指標
 ---
 
