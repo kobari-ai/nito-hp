@@ -85,11 +85,15 @@ a { color: inherit; text-decoration: none; }
 
 /* ===== 固定デザインのアイキャッチ（画像未指定時・文言だけ差し替え） =====
    参考: LANY風フレーム型を nito オレンジで。基本形1パターン。 */
+/* 文字・余白をすべて枠幅連動（cqw）にして、どの画面幅でも画像のように
+   比率を保ったまま拡大縮小させる。1cqw = アイキャッチ枠幅の1%。
+   基準はPC時の枠内幅 約672px（記事幅720px − 左右padding24px）。 */
 .post-eyecatch--designed {
     background:
         linear-gradient(135deg, #ff9f43 0%, #e67e22 55%, #cf6a12 100%);
     position: relative; overflow: hidden;
-    padding: 22px;
+    padding: 3.3cqw;
+    container-type: inline-size;
 }
 /* 内側のフレーム */
 .ec-frame {
@@ -97,49 +101,45 @@ a { color: inherit; text-decoration: none; }
     width: 100%; height: 100%;
     border: 1.5px solid rgba(255,255,255,.55);
     border-radius: 4px;
-    padding: 26px 24px 22px;
+    padding: 3.9cqw 3.6cqw 3.3cqw;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     text-align: center; color: #fff;
 }
 .ec-tag {
     background: var(--color-text); color: #fff;
-    font-size: 14px; font-weight: 700; letter-spacing: .03em;
-    padding: 5px 18px; border-radius: 30px; margin-bottom: 20px;
+    font-size: 2.1cqw; font-weight: 700; letter-spacing: .03em;
+    padding: 0.75cqw 2.7cqw; border-radius: 30px; margin-bottom: 3cqw;
 }
 .ec-headline {
     font-family: var(--font-jp);
-    font-size: 33px; font-weight: 900; line-height: 1.45; letter-spacing: .01em;
-    border-bottom: 3px solid rgba(255,255,255,.85);
-    padding-bottom: 10px;
+    font-size: 4.9cqw; font-weight: 900; line-height: 1.45; letter-spacing: .01em;
+    border-bottom: 0.28cqw solid rgba(255,255,255,.85);
+    padding-bottom: 1.5cqw;
     max-width: 100%;
 }
 .ec-sub {
-    font-size: 18px; font-weight: 700; line-height: 1.6; margin-top: 16px;
+    font-size: 2.7cqw; font-weight: 700; line-height: 1.6; margin-top: 2.4cqw;
     max-width: 92%;
 }
 .ec-brand {
-    font-size: 19px; font-weight: 700; letter-spacing: .1em; margin-top: 20px; opacity: .92;
-}
-@media (max-width: 600px) {
-    .ec-headline { font-size: 23px; }
-    .ec-sub { font-size: 15px; }
-    .ec-frame { padding: 22px 16px; }
+    font-size: 2.85cqw; font-weight: 700; letter-spacing: .1em; margin-top: 3cqw; opacity: .92;
 }
 
-/* カード用の縮小版フレーム */
+/* カード用の縮小版フレーム（こちらも枠幅連動。基準はカード幅 約300px） */
 .card-thumb--designed {
     background: linear-gradient(135deg, #ff9f43 0%, #e67e22 60%, #cf6a12 100%);
-    position: relative; overflow: hidden; padding: 12px;
+    position: relative; overflow: hidden; padding: 4cqw;
+    container-type: inline-size;
 }
 .ec-frame--mini {
-    border-width: 1px; padding: 14px 12px;
+    border-width: 1px; padding: 4.7cqw 4cqw;
 }
-.ec-frame--mini .ec-tag { font-size: 9.5px; padding: 2px 10px; margin-bottom: 8px; }
+.ec-frame--mini .ec-tag { font-size: 3.2cqw; padding: 0.7cqw 3.3cqw; margin-bottom: 2.7cqw; }
 .ec-frame--mini .ec-headline {
-    font-size: 15px; line-height: 1.45; border-bottom-width: 2px; padding-bottom: 5px;
+    font-size: 5cqw; line-height: 1.45; border-bottom-width: 0.7cqw; padding-bottom: 1.7cqw;
     display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
-.ec-frame--mini .ec-brand { font-size: 11px; margin-top: 10px; }
+.ec-frame--mini .ec-brand { font-size: 3.7cqw; margin-top: 3.3cqw; }
 
 .post-content p { margin-bottom: 1.7em; }
 
