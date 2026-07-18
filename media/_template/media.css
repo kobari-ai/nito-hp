@@ -73,7 +73,7 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) { .post-title { font-size: 22px; } }
 
 .post-eyecatch {
-    width: 100%; aspect-ratio: 1.91 / 1; border-radius: 4px;
+    width: 100%; aspect-ratio: 1.91 / 1; min-height: 0; border-radius: 4px;
     background-color: #eceff1;
     background-size: cover; background-position: center;
     display: flex; align-items: center; justify-content: center;
@@ -387,7 +387,7 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) { .related__grid { grid-template-columns: 1fr; } }
 .rel-card { display: block; }
 .rel-card__thumb {
-    aspect-ratio: 1.91/1; border-radius: 4px;
+    aspect-ratio: 1.91/1; min-height: 0; border-radius: 4px;
     background-color: #eceff1; background-size: cover; background-position: center;
     display: flex; align-items: center; justify-content: center;
     color: #b0bec5; font-family: var(--font-en); font-size: 11px; letter-spacing: .15em;
