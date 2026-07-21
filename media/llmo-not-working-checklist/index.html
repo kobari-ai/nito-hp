@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI検索対策を続けても効果が出ない。原因を切り分けるチェックリスト | nito Column</title>
+    <meta name="description" content="AI検索対策（LLMO/AEO）を続けても効果が出ないとき、原因を計測のズレ・時間不足・読まれていない・選ばれていないの順に切り分ける方法を解説します。多くは施策の失敗ではなく計測と時間の問題で、確認の順番と効き始めのサインまで整理します。">
+    <link rel="canonical" href="https://nito-0210.com/media/llmo-not-working-checklist/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AI検索対策を続けても効果が出ない。原因を切り分けるチェックリスト">
+    <meta property="og:description" content="AI検索対策（LLMO/AEO）を続けても効果が出ないとき、原因を計測のズレ・時間不足・読まれていない・選ばれていないの順に切り分ける方法を解説します。多くは施策の失敗ではなく計測と時間の問題で、確認の順番と効き始めのサインまで整理します。">
+    <meta property="og:url" content="https://nito-0210.com/media/llmo-not-working-checklist/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI検索対策を続けても効果が出ない。原因を切り分けるチェックリスト", "description": "AI検索対策（LLMO/AEO）を続けても効果が出ないとき、原因を計測のズレ・時間不足・読まれていない・選ばれていないの順に切り分ける方法を解説します。多くは施策の失敗ではなく計測と時間の問題で、確認の順番と効き始めのサインまで整理します。", "datePublished": "2026-07-21", "dateModified": "2026-07-21", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/llmo-not-working-checklist/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AI検索対策を続けても効果が出ない。原因を切り分けるチェックリスト"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AI検索対策を始めて何か月で効果が出ますか？", "acceptedAnswer": {"@type": "Answer", "text": "数週間から数か月と幅があります。インデックスとAIの再参照に時間差があるため、公開直後に動かないのは通常の状態です。言及率を定点観測しながら続けることが前提になります。"}}, {"@type": "Question", "name": "GA4を見てもAI経由の流入がほとんどありません。失敗ですか？", "acceptedAnswer": {"@type": "Answer", "text": "失敗とは限りません。AIで検討した人の多くは最後に社名を直接検索するため、GA4上は指名検索や直接流入として記録されます。言及率や問い合わせ時のアンケートで補うと、実態が見えてきます。"}}, {"@type": "Question", "name": "記事を増やしているのに引用されません。何が足りませんか？", "acceptedAnswer": {"@type": "Answer", "text": "量より、土台が整っているかを確認してください。技術的に読まれているか、一次情報や具体的な数字があるか、情報が一貫しているか。これらが抜けていると、記事を増やしても候補に入りにくくなります。"}}, {"@type": "Question", "name": "llms.txtや構造化データを入れれば効果は出ますか？", "acceptedAnswer": {"@type": "Answer", "text": "それだけでは出にくいのが実情です。あって困るものではありませんが、引用を左右するのは一次情報の具体性やブランドの一貫性です。技術的な設定を最優先にすると、労力のわりに成果につながりにくくなります。"}}, {"@type": "Question", "name": "効果が出ないとき、施策を変えるべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "すぐに変えないほうがよい場合が多いです。計測のズレや時間不足が原因のことが多く、施策を次々に変えると何が効いたか検証できなくなります。まず原因を4つの順で切り分けてから判断してください。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>AI検索対策を続けても効果が出ない。原因…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.07.21</span>
+        </div>
+        <h1 class="post-title">AI検索対策を続けても効果が出ない。原因を切り分けるチェックリスト</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="効果が出ない原因の切り分け"><defs><linearGradient id="ecg-37015cb6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-37015cb6)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">課題解決</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">効果が出ない原因の切り分け</text><line x1="106.0" y1="327.1" x2="1094.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">続けても伸びない時に見る順番</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>AI検索対策を続けても効果が出ない。そういうとき、原因は施策の中身とは限りません。</p>
+<p>疑う順番があります。計測がずれている、まだ時間が足りない、AIに読まれていない、読まれても選ばれていない。この順で切り分けると、どこで止まっているかが見えてきます。</p>
+<p>多いのは、最初の2つです。計測のズレか、時間不足。<strong>施策そのものが間違っているケースは、意外と多くありません</strong>。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>効果が出ない原因は4つに分けて、上から順に確認する</li>
+<li>最初に疑うのは施策ではなく<strong>計測</strong>で、AI経由の流入はGA4上で指名検索や直接流入に紛れる</li>
+<li>次に疑うのは<strong>時間</strong>。新規記事はインデックスと再参照に数週間かかり、直後は数字が動かない</li>
+<li>それでも動かないなら、技術的に読まれているかと、内容で選ばれているかを順に点検する</li>
+<li>llms.txtや構造化データを最優先にする打ち手は、効果が薄いわりに労力を取られやすい</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li><a href="#s1">効果が出ないときに疑う4つのこと</a></li>
+                    <li><a href="#s2">①計測のズレ</a></li>
+                    <li><a href="#s3">②時間が足りていない</a></li>
+                    <li><a href="#s4">③AIに読まれていない</a></li>
+                    <li><a href="#s5">④内容で選ばれていない</a></li>
+                    <li><a href="#s6">確認の順番とチェック項目</a></li>
+                    <li><a href="#s7">改善が効き始めたサインの見分け方</a></li>
+                    <li><a href="#s8">どのくらいの期間で判断すればいいか</a></li>
+                    <li><a href="#s9">1記事単位ではなく、サイト全体で見る</a></li>
+                    <li><a href="#s10">やりがちだが効果が薄い打ち手</a></li>
+                    <li><a href="#s11">AI検索対策を伴走で進めるなら</a></li>
+                    <li><a href="#s12">まとめ</a></li>
+                    <li><a href="#s13">よくある質問</a></li>
+                </ol>
+            </nav>
+
+<h2 id="s1">効果が出ないときに疑う4つのこと</h2>
+<p>「効果が出ない」とひとまとめにすると、施策を全部作り直す話になりがちです。実際は、成果に至る経路のどこで止まっているかで、打つ手はまったく変わります。</p>
+<p>つまずきは、4つに切り分けられます。上にあるものほど、疑う順番が早く、見落とされやすい原因です。</p>
+<table>
+<thead>
+<tr>
+<th>確認する順番</th>
+<th>つまずき</th>
+<th>主な原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>計測がずれている</td>
+<td>AI経由の流入がGA4で別チャネルに紛れる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>時間が足りない</td>
+<td>インデックス・再参照がまだ済んでいない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>読まれていない</td>
+<td>技術的にAIが内容を取得できない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>選ばれていない</td>
+<td>読まれても引用・推薦に至らない</td>
+</tr>
+</tbody>
+</table>
+<p><strong>多くの「効果が出ない」は、1と2です</strong>。成果は出始めているのに見えていない、あるいはまだ早いだけ。ここから順に潰していきます。</p>
+<h2 id="s2">①計測のズレ</h2>
+<p>最初に疑うのは、施策ではなく計測です。AI検索対策の成果は、そもそもGA4だけでは正しく見えません。</p>
+<p>理由は、ユーザーの動き方にあります。AIで比較・検討した人の多くは、最後に社名を直接検索して流入します。つまり、AIがきっかけで来た人も、GA4上はAI経由ではなく指名検索や直接流入として記録される。</p>
+<p>nitoの支援事例でも、これがはっきり出ました。GA4の直接計測では0.007%だったAI経由のコンバージョンが、問い合わせ時のアンケートで測ると全体の約27%。<strong>GA4だけを見て効果がないと判断するのは、氷山の水面下を見落とすのと同じ</strong>です。</p>
+<p>補い方はシンプルです。</p>
+<ul>
+<li>AIへの質問を定期的に投げ直し、言及率という原因側の指標を記録する</li>
+<li>問い合わせフォームに「AIで知った」という選択肢を足し、直接計測では拾えない経路を見えるようにする</li>
+</ul>
+<div class="in-link-card"><a href="/media/ai-search-measurement/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法</div><div class="in-link-card__desc">GA4だけでは見えないAI経由の流入を、どう補って計測するかを具体的な手順で解説しています。</div></div></a></div>
+<h2 id="s3">②時間が足りていない</h2>
+<p>計測が正しくても数字が動かないなら、次は時間です。公開したばかりの記事は、AIに反映されるまで時間差があります。</p>
+<p>新しいページは、まず検索エンジンにインデックスされ、その後AIが情報を再参照して、ようやく回答に反映されます。この周期は数週間から数か月と幅があります。<strong>公開直後に効果が出ないのは、異常ではなく通常の状態</strong>です。</p>
+<p>Search Consoleで「検出 - インデックス未登録」と表示されるページも、若いサイトでは珍しくありません。多くは、時間の経過とともにクロールされていきます。</p>
+<p>ここで施策を次々に変えると、何が効いたのか検証できなくなります。短期の変動に一喜一憂せず、言及率を定点で追いながら続けることが前提です。</p>
+<h2 id="s4">③AIに読まれていない</h2>
+<p>時間が経っても動かないなら、技術的に読まれているかを点検します。内容以前に、クローラーが本文を取得できていないことがあります。</p>
+<ul>
+<li><strong>JavaScriptでの遅延描画</strong>：本文が後から描画される作りだと、内容が取得されないことがある</li>
+<li><strong>robots.txtでのブロック</strong>：AIのクローラーを意図せず拒否していないか。古いボット名だけ指定していないか</li>
+<li><strong>構造が曖昧なHTML</strong>：見出しと段落の区切りが不明瞭だと、AIが文脈をうまく切れない</li>
+<li><strong>一段落で意味が完結しているか</strong>：その段落だけ切り出しても回答として成立する書き方だと、引用されやすい</li>
+</ul>
+<p>読める状態になっていなければ、どれだけ内容を磨いても届きません。<strong>内容の改善より前に、参照の入口を点検します</strong>。</p>
+<h2 id="s5">④内容で選ばれていない</h2>
+<p>技術的に読まれているのに引用されない。そのときは、内容が選ばれていない段階です。読まれることと選ばれることは別で、ここは中身の勝負になります。</p>
+<p>選ばれない典型は、どこにでもある一般論をまとめただけの内容です。AIは独自のデータや実体験を持つ情報源を評価しやすく、抽象的な自社説明は候補に残りにくい。著者情報や実績、更新日といった信頼の裏付けが薄いと、出典としても選ばれにくくなります。</p>
+<p>質問の種類による向き不向きもあります。会社選びの質問では、個社サイトより第三者の比較記事が優先されやすい。ドメインの力がまだ弱い段階で会社選びの質問だけを狙っても、土俵に立てません。まずは相談やお悩み系の質問で引用される解説記事を、<strong>具体的な一次情報で磨き込むほうが現実的</strong>です。</p>
+<h2 id="s6">確認の順番とチェック項目</h2>
+<p>4つを、確認と対処の形に落とすと次のようになります。上から順に見て、当てはまったところで手を打ちます。</p>
+<ul>
+<li><strong>計測</strong>：GA4だけで判断していないか／言及率を記録しているか／問い合わせ経路に「AIで知った」を用意したか</li>
+<li><strong>時間</strong>：公開から数週間は経ったか／短期の変動で施策を変えていないか／インデックス状況を確認したか</li>
+<li><strong>技術</strong>：本文はJavaScriptに頼らず取得できるか／AIボットをブロックしていないか／見出し構造は明確か</li>
+<li><strong>内容</strong>：一次情報や具体的な数字があるか／著者・実績・更新日を示しているか／狙う質問の種類は身の丈に合っているか</li>
+</ul>
+<p>上から確認すれば、闇雲に施策を足す前に、<strong>止まっている場所を特定できます</strong>。</p>
+<h2 id="s7">改善が効き始めたサインの見分け方</h2>
+<p>効いているかどうかを、問い合わせ数だけで見ていると、判断が遅れます。成果の一歩手前に現れるサインを、先に押さえておきます。</p>
+<ul>
+<li><strong>定点質問での変化</strong>：以前は名前が出なかった質問で、たまに言及されるようになる</li>
+<li><strong>指名検索の増加</strong>：AIで知った人が後から社名を検索し、Search Consoleで社名の表示回数が増える</li>
+<li><strong>フォームの回答</strong>：「AIで知った」を選ぶ人が、ぽつぽつ現れる</li>
+</ul>
+<p>どれも、GA4の流入数が伸びるより前に動くことが多い指標です。最終的な数字だけを待つと手応えを見失うので、<strong>原因側のサインを合わせて見ておきます</strong>。</p>
+<h2 id="s8">どのくらいの期間で判断すればいいか</h2>
+<p>「効果が出ない」と感じるタイミングが、そもそも早すぎることは少なくありません。目安を持っておくと、焦って施策を壊さずにすみます。</p>
+<ul>
+<li><strong>最初の数週間</strong>：インデックスと再参照を待つ期間。数字が動かなくても正常で、施策の是非を評価する段階ではない</li>
+<li><strong>1〜2か月</strong>：言及率や指名検索など、原因側の指標に変化が出始める。最初の確認ポイント</li>
+<li><strong>3か月前後</strong>：問い合わせやコンバージョンといった最終成果が動き始める一つの区切り</li>
+</ul>
+<p>これだけの期間を置いても原因側の指標がまったく動かないなら、そのときは時間ではなく、技術か内容の層を疑う番です。<strong>期間を決めずに毎週数字を眺めて施策を変えるのが、いちばん成果から遠い進め方</strong>になります。</p>
+<h2 id="s9">1記事単位ではなく、サイト全体で見る</h2>
+<p>効果を1記事の順位や流入だけで判断すると、伸びているサインを見落とします。AIは、そのサイトが特定の領域でどれだけまとまった知見を持つかも見ています。</p>
+<p>個別の記事がまだ引用されていなくても、関連するテーマの記事が増え、内部リンクでつながって束になってくると、サイト全体の評価は上がっていきます。ある分野の解説がひととおりそろい、互いに参照し合う構造になっているほど、AIはそのサイトをその領域の信頼できる情報源として扱いやすくなります。</p>
+<p>逆に、単発の記事が脈絡なく並んでいるだけだと、1本ずつの力は弱いままです。数字を測るときは、記事ごとの上下に一喜一憂せず、<strong>狙う領域でサイトがまとまってきているか</strong>、という視点も持っておきます。</p>
+<div class="box-point"><span class="box-point__ttl">POINT</span><div class="box-point__body"><p>効果が出ないときほど、施策を足すより土台に戻るのが近道です。誰に・何が強い会社かが言葉になっているか。その強みを具体的な事実で語れているか。この土台があるほど、一つひとつの施策が効いてきます。</p></div></div>
+<h2 id="s10">やりがちだが効果が薄い打ち手</h2>
+<p>効果が出ないとき、つい手を出しがちで、わりに効かない打ち手もあります。労力を取られる前に整理しておきます。</p>
+<p>代表が、llms.txtや構造化データの設置を最優先に据えることです。あって困るものではありませんが、これだけで引用が増えるわけではありません。Google自身も、生成AI検索に構造化データや専用ファイルは必須でないと明言しています。</p>
+<p>記事の量産だけを進めるのも、土台が整う前だと空振りになりがちです。技術的な設定や物量より、<strong>一次情報の具体化とブランドの一貫性のほうが、結果的にAIから選ばれやすくなります</strong>。</p>
+<h2 id="s11">AI検索対策を伴走で進めるなら</h2>
+<p>nitoは、効果が出ない原因を計測・時間・技術・内容の順で切り分け、どこで止まっているかを特定してから手を打ちます。やみくもに施策を足すのではなく、成果が見えていないだけなのか、土台に穴があるのかを見極めて、実行まで伴走します。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">戦略や施策リストをつくって終わる支援では、成果になりません。nitoは記事作成・外部メディアへの掲載依頼・モニタリングまで実行し、<strong>まるで社内の担当者のように領域を推進</strong>します。言及率の改善で満足せず、<strong>お客様の売上・収益につながる成果</strong>まで一緒に目指します。</p>
+        <ul class="bp-cta__points">
+            <li>戦略設計から<strong>記事作成・外部掲載・モニタリングまで実行・推進</strong></li>
+            <li>手前の指標で終わらせず、<strong>売上・収益につながる成果</strong>にこだわる</li>
+            <li><strong>誰にどんな価値を届けるか</strong>のポジショニングから設計（小手先のAIハックはしない）</li>
+        </ul>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s12">まとめ</h2>
+<p>AI検索対策の効果が出ないときは、施策を作り直す前に原因を切り分けます。まず計測がずれていないか。次に、まだ時間が足りないだけではないか。その2つを潰してから、技術的に読まれているか、内容で選ばれているかを順に点検します。</p>
+<p>多くの場合、成果は出始めているのに見えていないか、まだ早いだけです。焦って施策を変えるより、<strong>計測を正し、時間を待ち、土台の言語化に戻る</strong>。この順番が、遠回りせずに効果へつなげる道になります。</p>
+<h2 id="s13">よくある質問</h2>
+<h3 id="s13-1">Q. AI検索対策を始めて何か月で効果が出ますか？</h3>
+<p>数週間から数か月と幅があります。インデックスとAIの再参照に時間差があるため、公開直後に動かないのは通常の状態です。言及率を定点観測しながら続けることが前提になります。</p>
+<h3 id="s13-2">Q. GA4を見てもAI経由の流入がほとんどありません。失敗ですか？</h3>
+<p>失敗とは限りません。AIで検討した人の多くは最後に社名を直接検索するため、GA4上は指名検索や直接流入として記録されます。言及率や問い合わせ時のアンケートで補うと、実態が見えてきます。</p>
+<h3 id="s13-3">Q. 記事を増やしているのに引用されません。何が足りませんか？</h3>
+<p>量より、土台が整っているかを確認してください。技術的に読まれているか、一次情報や具体的な数字があるか、情報が一貫しているか。これらが抜けていると、記事を増やしても候補に入りにくくなります。</p>
+<h3 id="s13-4">Q. llms.txtや構造化データを入れれば効果は出ますか？</h3>
+<p>それだけでは出にくいのが実情です。あって困るものではありませんが、引用を左右するのは一次情報の具体性やブランドの一貫性です。技術的な設定を最優先にすると、労力のわりに成果につながりにくくなります。</p>
+<h3 id="s13-5">Q. 効果が出ないとき、施策を変えるべきですか？</h3>
+<p>すぐに変えないほうがよい場合が多いです。計測のズレや時間不足が原因のことが多く、施策を次々に変えると何が効いたか検証できなくなります。まず原因を4つの順で切り分けてから判断してください。</p>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表 / AI検索対策（LLMO）コンサルタント</div>
+                <p class="author__bio">AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/competitor-cited-not-us/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="競合は出るのに自社が出ない"><defs><linearGradient id="ecg-4f842291" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4f842291)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">課題解決</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">競合は出るのに自社が出ない</text><line x1="106.0" y1="365.9" x2="1094.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.21</div>
+                <div class="rel-card__ttl">競合はAIに出てくるのに自社が出ない。差はどこにあるのか</div>
+            </a>
+            <a href="/media/llmo-inhouse-vs-outsource/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="内製か外注かの線引き"><defs><linearGradient id="ecg-4f272e0f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4f272e0f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">判断ガイド</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">内製か外注かの線引き</text><line x1="220.0" y1="365.9" x2="980.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.21</div>
+                <div class="rel-card__ttl">AI検索対策は内製と外注どちらがいい？自社でできる範囲と頼るべき範囲</div>
+            </a>
+            <a href="/media/ai-cited-writing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIに引用される記事の書き方"><defs><linearGradient id="ecg-bf4f6f32" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-bf4f6f32)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="125.2" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">実践ガイド</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIに引用される</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">記事の書き方</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.16</div>
+                <div class="rel-card__ttl">AIに引用される記事の書き方。結論ファースト・一次情報・FAQの使い方</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
