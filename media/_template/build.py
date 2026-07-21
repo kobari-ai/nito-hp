@@ -31,6 +31,7 @@ mdファイルの形式:
 
 import hashlib
 import html
+import math
 import re
 import sys
 from datetime import date
@@ -222,20 +223,36 @@ def _ec_text_w(s, fs):
     return sum(_ec_char_w(ch, fs) for ch in s)
 
 
+# 行頭に置きたくない文字（句読点・閉じ括弧・小書き・長音など）
+_KINSOKU_START = set("、。，．・）」』】〉》〕｝）】！？!?：；ーぁぃぅぇぉっゃゅょゎ…")
+
+
 def _ec_wrap(s, fs, max_w):
-    """最大幅max_wで貪欲に折り返す。日本語はどこでも改行可なので単純幅計算でよい。"""
+    """max_w以内でバランス折り返し。まず必要な行数nを決め、各行の幅が均等に
+    なるように分割する（最後の1文字だけ孤立するのを防ぐ）。さらに禁則処理で
+    句読点・閉じ括弧が行頭に来ないよう前行へ送る。"""
+    total = _ec_text_w(s, fs)
+    if total <= max_w or len(s) <= 1:
+        return [s]
+    n = max(2, math.ceil(total / max_w))
+    target = total / n
     lines, cur, cur_w = [], "", 0.0
     for ch in s:
         cw = _ec_char_w(ch, fs)
-        if cur and cur_w + cw > max_w:
+        cur += ch
+        cur_w += cw
+        # 目標幅に達し、かつ残り文字数が残り行数以上あるうちに改行
+        if len(lines) < n - 1 and cur_w >= target:
             lines.append(cur)
-            cur, cur_w = ch, cw
-        else:
-            cur += ch
-            cur_w += cw
+            cur, cur_w = "", 0.0
     if cur:
         lines.append(cur)
-    return lines
+    # 禁則：行頭に来てはいけない文字を前行末へ送る
+    for i in range(1, len(lines)):
+        while lines[i] and lines[i][0] in _KINSOKU_START:
+            lines[i - 1] += lines[i][0]
+            lines[i] = lines[i][1:]
+    return [ln for ln in lines if ln]
 
 
 def eyecatch_svg(headline, sub, tag, uid) -> str:
