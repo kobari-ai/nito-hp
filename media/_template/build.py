@@ -29,6 +29,7 @@ mdファイルの形式:
     :::
 """
 
+import hashlib
 import html
 import re
 import sys
@@ -207,38 +208,136 @@ def cover_texts(meta):
     return headline, sub, tag
 
 
+# ===== アイキャッチSVG生成 =====
+# 画像を用意しなくても、記事タイトル等から 1200x628(1.91:1) のSVGを自動生成する。
+# viewBox固定なので <img>/inline どちらでも比率は絶対に崩れない。
+# 文字はSVG座標系に焼くため、端末幅・文字数に依らず一様に拡大縮小される。
+
+def _ec_char_w(ch, fs):
+    """SVGユーザー単位での概算文字幅。ASCII等の半角は0.6em、全角(CJK/全角記号)は1.0em。"""
+    return fs * (0.6 if ord(ch) < 0x3000 else 1.0)
+
+
+def _ec_text_w(s, fs):
+    return sum(_ec_char_w(ch, fs) for ch in s)
+
+
+def _ec_wrap(s, fs, max_w):
+    """最大幅max_wで貪欲に折り返す。日本語はどこでも改行可なので単純幅計算でよい。"""
+    lines, cur, cur_w = [], "", 0.0
+    for ch in s:
+        cw = _ec_char_w(ch, fs)
+        if cur and cur_w + cw > max_w:
+            lines.append(cur)
+            cur, cur_w = ch, cw
+        else:
+            cur += ch
+            cur_w += cw
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def eyecatch_svg(headline, sub, tag, uid) -> str:
+    """1200x628のブランドアイキャッチSVG（インライン）。sub=""ならサブ文言は描画しない。"""
+    W, H, cx = 1200, 628, 600
+    inner_w = 1000  # 見出しに使える最大幅（枠内padを考慮）
+    # 見出しが2行以内に収まる最大フォントサイズを選ぶ（無理なら最小で3行まで）
+    lines, fs = None, 44
+    for cand in (76, 68, 60, 52, 46):
+        wr = _ec_wrap(headline, cand, inner_w)
+        if len(wr) <= 2:
+            lines, fs = wr, cand
+            break
+    if lines is None:
+        fs = 44
+        lines = _ec_wrap(headline, fs, inner_w)[:3]
+    lh = fs * 1.34
+
+    tag_fs, sub_fs, brand_fs = 27, 34, 34
+    sub_lines = _ec_wrap(sub, sub_fs, 940) if sub else []
+
+    # 縦方向レイアウト（全体を中央寄せ）
+    tb = 54          # タグバッジ高さ
+    g1, g2, g3 = 30, 30, 36
+    pu = 20          # 見出し下線までの余白
+    head_h = len(lines) * lh
+    sub_h = len(sub_lines) * (sub_fs * 1.4)
+    total = tb + g1 + head_h + pu + ((g2 + sub_h) if sub_lines else 0) + g3 + brand_fs
+    y = (H - total) / 2
+
+    p = []
+    gid = f"ecg-{uid}"
+    p.append(f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" role="img" '
+             f'aria-label="{html.escape(headline)}">')
+    p.append(f'<defs><linearGradient id="{gid}" x1="0" y1="0" x2="1" y2="1">'
+             '<stop offset="0" stop-color="#ff9f43"/>'
+             '<stop offset="0.55" stop-color="#e67e22"/>'
+             '<stop offset="1" stop-color="#cf6a12"/></linearGradient></defs>')
+    p.append(f'<rect width="{W}" height="{H}" fill="url(#{gid})"/>')
+    p.append(f'<rect x="40" y="40" width="{W-80}" height="{H-80}" rx="8" fill="none" '
+             'stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/>')
+
+    fam = "'Noto Sans JP',sans-serif"
+    # タグバッジ
+    tw = _ec_text_w(tag, tag_fs) + 56
+    p.append(f'<rect x="{cx - tw/2:.1f}" y="{y:.1f}" width="{tw:.1f}" height="{tb}" '
+             f'rx="{tb/2}" fill="#333333"/>')
+    p.append(f'<text x="{cx}" y="{y + tb/2 + tag_fs*0.35:.1f}" text-anchor="middle" '
+             f'font-family="{fam}" font-weight="700" font-size="{tag_fs}" fill="#ffffff">'
+             f'{html.escape(tag)}</text>')
+    y += tb + g1
+
+    # 見出し
+    longest = 0.0
+    for i, ln in enumerate(lines):
+        by = y + fs * 0.82 + i * lh
+        p.append(f'<text x="{cx}" y="{by:.1f}" text-anchor="middle" font-family="{fam}" '
+                 f'font-weight="700" font-size="{fs}" fill="#ffffff">{html.escape(ln)}</text>')
+        longest = max(longest, _ec_text_w(ln, fs))
+    y += head_h
+    uw = min(longest, inner_w)
+    p.append(f'<line x1="{cx - uw/2:.1f}" y1="{y + 4:.1f}" x2="{cx + uw/2:.1f}" y2="{y + 4:.1f}" '
+             'stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/>')
+    y += pu
+
+    # サブ文言（任意）
+    if sub_lines:
+        y += g2
+        for i, ln in enumerate(sub_lines):
+            by = y + sub_fs * 0.82 + i * (sub_fs * 1.4)
+            p.append(f'<text x="{cx}" y="{by:.1f}" text-anchor="middle" font-family="{fam}" '
+                     f'font-weight="700" font-size="{sub_fs}" fill="#ffffff">{html.escape(ln)}</text>')
+        y += sub_h
+
+    # ブランド
+    y += g3
+    p.append(f'<text x="{cx}" y="{y + brand_fs*0.82:.1f}" text-anchor="middle" font-family="{fam}" '
+             f'font-weight="700" font-size="{brand_fs}" fill="#ffffff" opacity="0.92" '
+             'letter-spacing="3">nito</text>')
+
+    p.append('</svg>')
+    return "".join(p)
+
+
 def eyecatch_html(meta) -> str:
-    """アイキャッチ。image指定があれば写真、なければブランド固定デザイン（文言だけ差し替え）。"""
+    """アイキャッチ。image指定があれば写真、なければブランド固定デザインSVGを自動生成。"""
     img = meta.get("image", "")
     if img:
         return f'<div class="post-eyecatch"><img src="{html.escape(img)}" alt="{html.escape(meta["title"])}"></div>'
     headline, sub, tag = cover_texts(meta)
-    sub_html = f'<span class="ec-sub">{html.escape(sub)}</span>' if sub else ""
-    return (
-        '<div class="post-eyecatch post-eyecatch--designed">'
-        '<div class="ec-frame">'
-        f'<span class="ec-tag">{html.escape(tag)}</span>'
-        f'<span class="ec-headline">{html.escape(headline)}</span>'
-        f'{sub_html}'
-        '<span class="ec-brand">nito</span>'
-        "</div></div>"
-    )
+    uid = hashlib.md5(f"{headline}|{tag}".encode()).hexdigest()[:8]
+    return f'<div class="post-eyecatch post-eyecatch--svg">{eyecatch_svg(headline, sub, tag, uid)}</div>'
 
 
 def card_thumb(meta, cls="rel-card__thumb") -> str:
-    """カードのサムネイル。image指定があれば写真、なければ固定デザイン（headlineだけ表示）。"""
+    """カードのサムネイル。image指定があれば写真、なければ固定デザインSVG（サブ文言なし）。"""
     img = meta.get("image", "")
     if img:
         return f'<div class="{cls}" style="background-image:url(\'{html.escape(img)}\')"></div>'
     headline, _sub, tag = cover_texts(meta)
-    return (
-        f'<div class="{cls} card-thumb--designed">'
-        '<div class="ec-frame ec-frame--mini">'
-        f'<span class="ec-tag">{html.escape(tag)}</span>'
-        f'<span class="ec-headline">{html.escape(headline)}</span>'
-        '<span class="ec-brand">nito</span>'
-        "</div></div>"
-    )
+    uid = hashlib.md5(f"{headline}|{tag}|c".encode()).hexdigest()[:8]
+    return f'<div class="{cls} card-thumb--svg">{eyecatch_svg(headline, "", tag, uid)}</div>'
 
 
 

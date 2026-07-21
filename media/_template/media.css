@@ -83,63 +83,14 @@ a { color: inherit; text-decoration: none; }
 }
 .post-eyecatch img { width: 100%; height: 100%; object-fit: cover; }
 
-/* ===== 固定デザインのアイキャッチ（画像未指定時・文言だけ差し替え） =====
-   参考: LANY風フレーム型を nito オレンジで。基本形1パターン。 */
-.post-eyecatch--designed {
-    background:
-        linear-gradient(135deg, #ff9f43 0%, #e67e22 55%, #cf6a12 100%);
-    position: relative; overflow: hidden;
-    padding: 22px;
+/* ===== 固定デザインのアイキャッチ（画像未指定時・build.pyがSVGを自動生成） =====
+   1200x628(1.91:1)のviewBox固定SVGを埋め込むだけ。端末幅・文字数に依らず
+   比率が崩れず、文字も一様に拡大縮小される。 */
+.post-eyecatch--svg { background: none; padding: 0; }
+.post-eyecatch--svg svg,
+.card-thumb--svg svg {
+    display: block; width: 100%; height: 100%; border-radius: 4px;
 }
-/* 内側のフレーム */
-.ec-frame {
-    position: relative; z-index: 1;
-    width: 100%; height: 100%;
-    border: 1.5px solid rgba(255,255,255,.55);
-    border-radius: 4px;
-    padding: 26px 24px 22px;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    text-align: center; color: #fff;
-}
-.ec-tag {
-    background: var(--color-text); color: #fff;
-    font-size: 14px; font-weight: 700; letter-spacing: .03em;
-    padding: 5px 18px; border-radius: 30px; margin-bottom: 20px;
-}
-.ec-headline {
-    font-family: var(--font-jp);
-    font-size: 33px; font-weight: 900; line-height: 1.45; letter-spacing: .01em;
-    border-bottom: 3px solid rgba(255,255,255,.85);
-    padding-bottom: 10px;
-    max-width: 100%;
-}
-.ec-sub {
-    font-size: 18px; font-weight: 700; line-height: 1.6; margin-top: 16px;
-    max-width: 92%;
-}
-.ec-brand {
-    font-size: 19px; font-weight: 700; letter-spacing: .1em; margin-top: 20px; opacity: .92;
-}
-@media (max-width: 600px) {
-    .ec-headline { font-size: 23px; }
-    .ec-sub { font-size: 15px; }
-    .ec-frame { padding: 22px 16px; }
-}
-
-/* カード用の縮小版フレーム */
-.card-thumb--designed {
-    background: linear-gradient(135deg, #ff9f43 0%, #e67e22 60%, #cf6a12 100%);
-    position: relative; overflow: hidden; padding: 12px;
-}
-.ec-frame--mini {
-    border-width: 1px; padding: 14px 12px;
-}
-.ec-frame--mini .ec-tag { font-size: 9.5px; padding: 2px 10px; margin-bottom: 8px; }
-.ec-frame--mini .ec-headline {
-    font-size: 15px; line-height: 1.45; border-bottom-width: 2px; padding-bottom: 5px;
-    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
-}
-.ec-frame--mini .ec-brand { font-size: 11px; margin-top: 10px; }
 
 .post-content p { margin-bottom: 1.7em; }
 
