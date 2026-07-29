@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMOツールはどう選ぶ？種類別の違いと選定基準 | nito Column</title>
+    <meta name="description" content="LLMOツールは「言及モニタリング」「サイト診断」「流入計測」の3種類に分かれ、目的が違えば選ぶものも変わります。それぞれの違いと選定基準、ツールで測れる範囲と測れない範囲を、4プラットフォームを計測している立場から解説します。">
+    <link rel="canonical" href="https://nito-0210.com/media/llmo-tools/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="LLMOツールはどう選ぶ？種類別の違いと選定基準">
+    <meta property="og:description" content="LLMOツールは「言及モニタリング」「サイト診断」「流入計測」の3種類に分かれ、目的が違えば選ぶものも変わります。それぞれの違いと選定基準、ツールで測れる範囲と測れない範囲を、4プラットフォームを計測している立場から解説します。">
+    <meta property="og:url" content="https://nito-0210.com/media/llmo-tools/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "LLMOツールはどう選ぶ？種類別の違いと選定基準", "description": "LLMOツールは「言及モニタリング」「サイト診断」「流入計測」の3種類に分かれ、目的が違えば選ぶものも変わります。それぞれの違いと選定基準、ツールで測れる範囲と測れない範囲を、4プラットフォームを計測している立場から解説します。", "datePublished": "2026-07-28", "dateModified": "2026-07-28", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/llmo-tools/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "LLMOツールはどう選ぶ？種類別の違いと選定基準"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "LLMOツールは必ず必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "必須ではありません。AIに直接質問して自社が出るか確かめる、GA4とSearch Consoleで流入を見る、という無料の方法である程度は把握できます。継続的に多くの質問を追う段階になって、手作業が追いつかなくなったら検討するとよいでしょう。"}}, {"@type": "Question", "name": "無料のLLMOツールはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "無料診断を提供している会社はありますが、多くは商談の入口です。純粋に無料で使える範囲としては、ChatGPTなどに直接質問する方法と、GA4・Search Consoleでの計測が中心になります。"}}, {"@type": "Question", "name": "どのAIを計測対象にすべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "最低でもChatGPT・Gemini・Perplexityは押さえたいところです。AIごとに引用元の選び方が違うため、1つだけ見ても実態は掴めません。GoogleのAI Overviewsやそのモードも含められると、検索側の動きまで把握できます。"}}, {"@type": "Question", "name": "ツールのスコアが高ければAIに出やすくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "必ずしもそうではありません。診断スコアは一般的なチェック項目に沿った評価で、実際に引用されるかは外部での言及や情報の一貫性にも左右されます。スコアは改善の手がかりとして使い、実際にAIに出るかは別途確認してください。"}}, {"@type": "Question", "name": "ツールでAI経由の売上まで分かりますか？", "acceptedAnswer": {"@type": "Answer", "text": "分かりません。AIで知った人が後日社名で検索して問い合わせる経路は、どのツールにも記録されません。問い合わせフォームに「どこで知ったか」の選択肢を用意して直接聞く方法で補う必要があります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>LLMOツールはどう選ぶ？種類別の違いと…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.07.28</span>
+        </div>
+        <h1 class="post-title">LLMOツールはどう選ぶ？種類別の違いと選定基準</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOツールの選び方"><defs><linearGradient id="ecg-d4b9fb1b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d4b9fb1b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">選び方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOツールの選び方</text><line x1="242.8" y1="327.1" x2="957.2" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">種類別の違いと選定基準</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>LLMOツールを探し始めると、思ったより種類が多くて迷います。「AIでの言及をモニタリングする」と書いてあるものもあれば、「サイトを診断してスコアを出す」もの、「AI経由の流入を計測する」もの。名前は似ていても、測っているものがまるで違います。</p>
+<p>私たちはChatGPT・Gemini・Perplexity・Google AI Modeでの見え方を継続計測しながら支援していますが、ツール選びで大事なのは機能の多さではありません。<strong>自社が今どの段階にいて、何を知りたいのか</strong>で選ぶものが決まります。この記事では、LLMOツールの種類と選定基準を整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>LLMOツールは大きく<strong>言及モニタリング型・サイト診断型・流入計測型</strong>の3種類</li>
+<li>選ぶ基準は機能数ではなく、<strong>自社が今何を知りたいか</strong>（出ているか／直すべきか／成果が出たか）</li>
+<li>言及モニタリング型は<strong>対応AIの数と、質問（プロンプト）を自由に設定できるか</strong>が要</li>
+<li><strong>どのツールも「AI経由の売上」までは追えない</strong>。最後は問い合わせ経路の確認が必要</li>
+<li>有料ツールの前に、<strong>無料でできる範囲</strong>（AIに直接聞く・GA4・Search Console）を試す価値がある</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li><a href="#s1">LLMOツールは大きく3種類ある</a></li>
+                    <li><a href="#s2">① 言及モニタリング型</a></li>
+                    <li><a href="#s3">② サイト診断型</a></li>
+                    <li><a href="#s4">③ 流入計測型</a></li>
+                    <li><a href="#s5">自社に必要なツールの選び方</a></li>
+                    <li><a href="#s6">ツールで測れる範囲と測れない範囲</a></li>
+                    <li><a href="#s7">有料ツールを入れる前に確認したいこと</a></li>
+                    <li><a href="#s8">計測から実行まで伴走するなら</a></li>
+                    <li><a href="#s9">まとめ</a></li>
+                    <li><a href="#s10">よくある質問</a></li>
+                </ol>
+            </nav>
+
+<h2 id="s1">LLMOツールは大きく3種類ある</h2>
+<p>まず全体像です。LLMOツールと呼ばれるものは、測る対象によって3つに分かれます。</p>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>何を測るか</th>
+<th>分かること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>言及モニタリング型</td>
+<td>AIの回答に自社が出てくるか</td>
+<td>露出しているか、競合はどうか</td>
+</tr>
+<tr>
+<td>サイト診断型</td>
+<td>自社サイトの構造や内容</td>
+<td>直すべき箇所はどこか</td>
+</tr>
+<tr>
+<td>流入計測型</td>
+<td>AI経由でサイトに来た人</td>
+<td>成果につながっているか</td>
+</tr>
+</tbody>
+</table>
+<p>この3つは代替関係ではなく、見ている場所が違います。<strong>露出（出ているか）→ 改善点（何を直すか）→ 成果（収益になったか）</strong>という流れの、それぞれ別の地点を担当していると考えると整理しやすくなります。</p>
+<h2 id="s2">① 言及モニタリング型</h2>
+<p>いちばん「LLMOツールらしい」のがこのタイプです。あらかじめ設定した質問をAIに投げ、その回答に自社や競合が登場するかを継続的に記録します。</p>
+<p>見るべきポイントは3つあります。</p>
+<ul>
+<li><strong>対応しているAIの数</strong>：ChatGPTだけでなく、Gemini・Perplexity・Google AI Modeまで見られるか。AIごとに引用元の選び方が違うため、1つだけ見ても実態は掴めません</li>
+<li><strong>質問を自由に設定できるか</strong>：自社の見込み客が実際に使う言葉で質問を登録できるか。汎用的なキーワードしか登録できないものは、実務では物足りなくなります</li>
+<li><strong>引用元のURLまで記録されるか</strong>：自社が出たかだけでなく、AIがどのページを根拠にしたかまで分かると、次の打ち手につながります</li>
+</ul>
+<p>私たちが自社で計測基盤を作ったのも、この3点を満たすものが必要だったからです。特に、<strong>どのページが引用されたかまで追えるかどうか</strong>で、施策の精度が大きく変わります。</p>
+<h2 id="s3">② サイト診断型</h2>
+<p>自社サイトを読み込んで、AIに引用されやすい構造になっているかを点検するタイプです。見出し構造、FAQの有無、記事の書き方などをチェックし、スコアや改善提案を出してくれます。</p>
+<p>便利ですが、注意点もあります。診断結果はあくまで一般的なチェック項目に沿ったもので、<strong>スコアが高い＝AIに出る、ではありません</strong>。実際に引用されるかどうかは、サイトの外での言及や情報の一貫性にも左右されるためです。</p>
+<p>このタイプは、有料ツールを入れなくても自社でかなり代替できます。何をどう点検すればいいかは別記事にまとめました。</p>
+<div class="in-link-card"><a href="/media/llmo-self-check/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">LLMO診断は自分でできる｜自社サイトのセルフチェックリスト</div><div class="in-link-card__desc">有料ツールに申し込む前に、自社で確認できる4観点のチェックリストを解説しています。</div></div></a></div>
+<h2 id="s4">③ 流入計測型</h2>
+<p>AIや検索から実際にサイトへ来た人を計測するタイプです。専用ツールもありますが、<strong>GA4とSearch Consoleで大部分はまかなえます</strong>。追加コストなしで始められるので、まずここから整えるのが現実的です。</p>
+<p>ただし、AI経由の流入計測には構造的な限界があります。AIで検討した人の多くは、最後に社名を直接検索してからサイトに来るため、GA4上は指名検索や直接流入として記録されるからです。私たちの支援事例でも、GA4の直接計測ではAI経由のコンバージョンが0.007%だったのに、問い合わせ時のアンケートで測ると全体の約27%にのぼりました。</p>
+<div class="in-link-card"><a href="/media/ai-search-measurement/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法</div><div class="in-link-card__desc">GA4での具体的な設定手順と、GA4だけでは測れない部分の補い方を解説しています。</div></div></a></div>
+<h2 id="s5">自社に必要なツールの選び方</h2>
+<p>3種類の違いが分かったら、あとは自社の段階に合わせて選びます。判断はシンプルです。</p>
+<ul>
+<li><strong>まだAIに出ているか分からない</strong> → 言及モニタリング型。ただし、まずは無料でAIに直接聞いてみるだけでも現在地は掴めます</li>
+<li><strong>出ていないので直したい</strong> → サイト診断型。ただしセルフチェックでも代替できます</li>
+<li><strong>施策の成果を確かめたい</strong> → 流入計測型。GA4とSearch Consoleから始めます</li>
+</ul>
+<p>順番としては、<strong>露出の把握 → 改善 → 成果確認</strong>です。最初から全部そろえる必要はありません。特に立ち上げ期は、無料でできる範囲を試してから、手が回らない部分だけツールで補うほうが無駄がありません。</p>
+<div class="box-point"><span class="box-point__ttl">POINT</span><div class="box-point__body"><p>ツール選びで失敗しやすいのは、機能の多さで選んでしまうことです。多機能でも、自社の見込み客が使う質問を登録できなければ意味がありません。「何を知りたいか」を先に決めてから、それが測れるものを選んでください。</p></div></div>
+<h2 id="s6">ツールで測れる範囲と測れない範囲</h2>
+<p>正直に言うと、<strong>どのツールを入れてもLLMOの全体像は把握できません</strong>。理由は2つあります。</p>
+<p>ひとつは、AIの回答が常に変動することです。同じ質問でも、聞き方や履歴、モデルの更新で結果が変わります。ある時点のスコアや言及率は目安であって、確定した実力ではありません。だから単発ではなく、定点で傾向を見る必要があります。</p>
+<p>もうひとつは、<strong>AI経由の売上まで追えるツールが存在しない</strong>ことです。AIで知った人が後日社名で検索して問い合わせた場合、その経路はどのツールにも記録されません。ここを埋められるのは、問い合わせフォームに「どこで知ったか」を用意して直接聞く方法だけです。</p>
+<p>つまりツールは、露出と改善点を効率よく把握するための道具であって、成果判定の全部ではありません。<strong>中間指標としてツールを使い、最終的な判断は問い合わせや売上と突き合わせる</strong>。この使い分けができると、ツールの費用対効果が上がります。</p>
+<h2 id="s7">有料ツールを入れる前に確認したいこと</h2>
+<p>ツールの契約を検討する段階で、確認しておきたいことをまとめます。</p>
+<ul>
+<li>自社の見込み客が使う質問を、そのまま登録できるか</li>
+<li>対応AIに、ChatGPT以外（Gemini・Perplexity・Google AI Mode）が含まれるか</li>
+<li>引用元のURLまで記録され、次の改善につながる情報が得られるか</li>
+<li>計測結果を見て、実際に手を動かす人が社内にいるか</li>
+</ul>
+<p>最後の項目が意外と大事です。計測できても、改善を実行する体制がなければ数字を眺めるだけで終わります。ツールを入れる前に、<strong>測った後に誰が何をするか</strong>まで決めておくと無駄になりません。</p>
+<h2 id="s8">計測から実行まで伴走するなら</h2>
+<p>nitoは、ChatGPT・Gemini・Perplexity・Google AI Modeでの言及や引用を自社の計測基盤で定点観測し、その結果をもとに記事制作や外部掲載までを実行しています。計測して終わりではなく、数字が動くところまで担当します。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">nitoは、固定費を抑えた<strong>成果報酬型</strong>で、戦略から記事制作・外部掲載・効果測定までを自ら実行する、収益起点のAI検索対策（LLMO）会社です。言及率の改善で終わらせず、<strong>売上・収益につながる成果</strong>まで一緒に目指します。</p>
+        <ul class="bp-cta__points">
+            <li><strong>成果報酬型の料金体系</strong>：固定費は低く抑え、収益を一緒に目指せる構造に</li>
+            <li><strong>実行支援型</strong>：戦略設計だけでなく、記事制作・外部掲載・モニタリングまで一気通貫で実行</li>
+            <li><strong>自社開発の計測基盤</strong>：施策とAI回答の変化をセットで定点観測し、スピーディにPDCAを回して改善</li>
+        </ul>
+        <p class="bp-cta__lead">実際にあるSaaS企業では、AIでの言及率を10%から45%へ引き上げ、AI経由のコンバージョンを約4倍に改善しました。</p>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s9">まとめ</h2>
+<p>LLMOツールは、言及モニタリング型・サイト診断型・流入計測型の3種類に分かれます。選ぶ基準は機能の多さではなく、自社が今何を知りたいかです。露出を知りたいのか、直すべき箇所を知りたいのか、成果を確かめたいのか。ここが決まれば、必要なツールは絞られます。</p>
+<p>そして、どのツールも万能ではありません。AIの回答は変動し、AI経由の売上まで追えるツールは存在しない。ツールは中間指標を効率よく把握する道具と割り切り、最終判断は問い合わせや売上と合わせて行うのが現実的です。まずは無料でできる範囲から試して、手が足りない部分を補う形で導入を検討してください。</p>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">Q. LLMOツールは必ず必要ですか？</h3>
+<p>必須ではありません。AIに直接質問して自社が出るか確かめる、GA4とSearch Consoleで流入を見る、という無料の方法である程度は把握できます。継続的に多くの質問を追う段階になって、手作業が追いつかなくなったら検討するとよいでしょう。</p>
+<h3 id="s10-2">Q. 無料のLLMOツールはありますか？</h3>
+<p>無料診断を提供している会社はありますが、多くは商談の入口です。純粋に無料で使える範囲としては、ChatGPTなどに直接質問する方法と、GA4・Search Consoleでの計測が中心になります。</p>
+<h3 id="s10-3">Q. どのAIを計測対象にすべきですか？</h3>
+<p>最低でもChatGPT・Gemini・Perplexityは押さえたいところです。AIごとに引用元の選び方が違うため、1つだけ見ても実態は掴めません。GoogleのAI Overviewsやそのモードも含められると、検索側の動きまで把握できます。</p>
+<h3 id="s10-4">Q. ツールのスコアが高ければAIに出やすくなりますか？</h3>
+<p>必ずしもそうではありません。診断スコアは一般的なチェック項目に沿った評価で、実際に引用されるかは外部での言及や情報の一貫性にも左右されます。スコアは改善の手がかりとして使い、実際にAIに出るかは別途確認してください。</p>
+<h3 id="s10-5">Q. ツールでAI経由の売上まで分かりますか？</h3>
+<p>分かりません。AIで知った人が後日社名で検索して問い合わせる経路は、どのツールにも記録されません。問い合わせフォームに「どこで知ったか」の選択肢を用意して直接聞く方法で補う必要があります。</p>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表 / AI検索対策（LLMO）コンサルタント</div>
+                <p class="author__bio">AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/insurance-finance-ai-search/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="保険・金融のAI検索対策"><defs><linearGradient id="ecg-6ad2231b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6ad2231b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">業種別</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">保険・金融のAI検索対策</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.28</div>
+                <div class="rel-card__ttl">保険・金融のAI検索対策。規制下で信頼される情報の出し方</div>
+            </a>
+            <a href="/media/lawyer-ai-search/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="弁護士のAI検索対策"><defs><linearGradient id="ecg-d95748d0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d95748d0)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">業種別</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">弁護士のAI検索対策</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.28</div>
+                <div class="rel-card__ttl">弁護士・法律事務所のAI検索対策。相談前に選ばれるための実務</div>
+            </a>
+            <a href="/media/llmo-wordpress/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WPプラグインは必要？"><defs><linearGradient id="ecg-bb8edc17" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-bb8edc17)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">課題解決</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">WPプラグインは必要？</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.28</div>
+                <div class="rel-card__ttl">LLMO対策にWordPressプラグインは必要？入れる前に確認すること</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

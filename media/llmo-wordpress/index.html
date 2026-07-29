@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMO対策にWordPressプラグインは必要？入れる前に確認すること | nito Column</title>
+    <meta name="description" content="LLMO対策をうたうWordPressプラグインは増えていますが、入れるだけでAIに引用されるわけではありません。プラグインでできること・できないこと、WordPressサイトで先に手をつけるべき設定、入れる前に確認すべき点を解説します。">
+    <link rel="canonical" href="https://nito-0210.com/media/llmo-wordpress/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="LLMO対策にWordPressプラグインは必要？入れる前に確認すること">
+    <meta property="og:description" content="LLMO対策をうたうWordPressプラグインは増えていますが、入れるだけでAIに引用されるわけではありません。プラグインでできること・できないこと、WordPressサイトで先に手をつけるべき設定、入れる前に確認すべき点を解説します。">
+    <meta property="og:url" content="https://nito-0210.com/media/llmo-wordpress/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "LLMO対策にWordPressプラグインは必要？入れる前に確認すること", "description": "LLMO対策をうたうWordPressプラグインは増えていますが、入れるだけでAIに引用されるわけではありません。プラグインでできること・できないこと、WordPressサイトで先に手をつけるべき設定、入れる前に確認すべき点を解説します。", "datePublished": "2026-07-28", "dateModified": "2026-07-28", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/llmo-wordpress/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "LLMO対策にWordPressプラグインは必要？入れる前に確認すること"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "LLMO対策のWordPressプラグインは入れたほうがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "入れて困るものではありませんが、優先度は高くありません。構造化データやllms.txtの自動化は便利ですが、それだけで引用は増えません。先に、本文がテキストとして読める状態か、中身が具体的かを確認してください。"}}, {"@type": "Question", "name": "構造化データを入れればAIに引用されますか？", "acceptedAnswer": {"@type": "Answer", "text": "されるとは限りません。Googleは生成AI検索に構造化データは必須ではないと明言しています。あって困るものではありませんが、独自の情報や外部での言及のほうが引用には効きます。"}}, {"@type": "Question", "name": "llms.txtは設置すべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "設置しても構いませんが、優先度は高くありません。Googleは新たなAIテキストファイルの作成は不要としています。プラグインで自動生成できるなら、他の対策を終えたあとに余力で対応する程度でよいでしょう。"}}, {"@type": "Question", "name": "プラグインを入れたのにAIに出てきません。何が足りませんか？", "acceptedAnswer": {"@type": "Answer", "text": "中身と外部での言及が足りていない可能性が高いです。技術的な設定は読んでもらう準備であって、選ばれる理由にはなりません。自社にしか出せない具体的な情報を増やし、第三者に言及される状態をつくることが必要です。"}}, {"@type": "Question", "name": "WordPress以外のサイトでも同じ考え方ですか？", "acceptedAnswer": {"@type": "Answer", "text": "同じです。CMSが何であれ、本文がテキストとして読めるか、中身が具体的か、外部で語られているかが要点になります。プラグインという形がないだけで、確認すべき内容は変わりません。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>LLMO対策にWordPressプラグイ…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.07.28</span>
+        </div>
+        <h1 class="post-title">LLMO対策にWordPressプラグインは必要？入れる前に確認すること</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WPプラグインは必要？"><defs><linearGradient id="ecg-30c06794" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-30c06794)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">課題解決</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">WPプラグインは必要？</text><line x1="212.4" y1="327.1" x2="987.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">入れる前に確認すること</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>WordPressでサイトを運用していると、LLMO対策をうたうプラグインが目に入ります。構造化データを自動で出力する、llms.txtを生成する、AI向けのメタ情報を追加する。設定するだけで対応できるなら手軽に見えます。</p>
+<p>先に結論を書くと、<strong>プラグインを入れただけでAIに引用されるようにはなりません</strong>。技術的な下準備を効率化する道具ではありますが、AIが引用先を選ぶ理由はもっと手前にあります。この記事では、プラグインでできること・できないことを整理し、WordPressサイトで先に手をつけるべき部分を解説します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>LLMO系プラグインは<strong>技術的な下準備を自動化する道具</strong>で、引用そのものを増やすものではない</li>
+<li>Googleは生成AI検索に<strong>構造化データや専用ファイルは必須ではない</strong>と明言している</li>
+<li>WordPressで先に効くのは、<strong>本文がテキストとして読める状態か</strong>と<strong>中身の具体性</strong></li>
+<li>プラグインを増やすほど表示速度が落ちるため、<strong>入れる前に目的を確認する</strong></li>
+<li>llms.txtは設置しても構わないが、<strong>優先度は高くない</strong></li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li><a href="#s1">LLMO系プラグインは何をしてくれるのか</a></li>
+                    <li><a href="#s2">入れるだけでは引用が増えない理由</a></li>
+                    <li><a href="#s3">WordPressで先に手をつけるべきこと</a></li>
+                    <li><a href="#s4">llms.txtはどうするか</a></li>
+                    <li><a href="#s5">プラグインを入れる前に確認すること</a></li>
+                    <li><a href="#s6">中身の改善まで伴走するなら</a></li>
+                    <li><a href="#s7">まとめ</a></li>
+                    <li><a href="#s8">よくある質問</a></li>
+                </ol>
+            </nav>
+
+<h2 id="s1">LLMO系プラグインは何をしてくれるのか</h2>
+<p>まず、この種のプラグインが実際に何をしているかを整理します。多くは次のような機能を持っています。</p>
+<ul>
+<li>構造化データ（JSON-LD）の自動出力</li>
+<li>llms.txtの生成・設置</li>
+<li>FAQやパンくずなどのマークアップ追加</li>
+<li>AI向けのメタ情報やサイト説明の付与</li>
+</ul>
+<p>どれも、サイトの情報を機械が読み取りやすい形で整えるものです。手作業でやると面倒な部分を自動化してくれる点は、たしかに便利です。</p>
+<p>ただし、ここで押さえておきたいのは、<strong>これらはあくまで「情報の渡し方」を整える作業</strong>だということです。渡す中身そのものを良くしてくれるわけではありません。</p>
+<h2 id="s2">入れるだけでは引用が増えない理由</h2>
+<p>AIが回答の根拠にサイトを選ぶとき、見ているのはマークアップの有無だけではありません。その情報に独自性があるか、誰が書いたか分かるか、外部でも語られているか。こうした要素のほうが大きく影響します。</p>
+<p>Google自身も、生成AI検索の最適化ガイドで次のように述べています。</p>
+<blockquote>
+<p>生成 AI 検索に構造化データは必須ではありません。また、特別な schema.org のマークアップを追加する必要もありません。</p>
+<p>Google 検索（生成 AI 機能を含む）で表示されるようにするために、新たにコンピュータが解読可能なファイルや AI テキスト ファイル、マークアップ、マークダウンを作成する必要はありません。Google 検索自体がそれらを使用しないためです。</p>
+<p>出典：<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索の生成 AI 機能に関する最適化ガイド</a></p>
+</blockquote>
+<p>つまり、プラグインが自動化してくれる部分は、<strong>あって困らないが、それだけで結果が変わるものではない</strong>という位置づけです。実際、構造化データを追加しても引用は増えなかったという調査結果もあります。</p>
+<div class="in-link-card"><a href="/media/no-quick-fix-llmo/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">LLMOに小手先の戦略は通じない。nitoが実行まで伴走する理由</div><div class="in-link-card__desc">構造化データを足しても引用は増えなかったという調査結果を基に、本当に効く取り組みを解説しています。</div></div></a></div>
+<h2 id="s3">WordPressで先に手をつけるべきこと</h2>
+<p>プラグインを探す前に確認したい部分があります。どれもWordPressの管理画面やテーマ側の話で、プラグインでは解決しにくいところです。</p>
+<p><strong>本文がテキストとして読めるか</strong>。サイトを開いて右クリックし、「ページのソースを表示」で本文が入っているか確認します。凝ったテーマやページビルダーを使っていると、本文が後から差し込まれる作りになっていることがあり、AIが読み取れない場合があります。とくにサービスの強みを書いた部分がテキストで入っているかを見てください。</p>
+<p><strong>見出し構造が整理されているか</strong>。h2・h3が意味の区切りとして使われているか。デザイン目的で見出しタグを使っていると、AIが文脈をうまく区切れません。</p>
+<p><strong>中身が具体的か</strong>。実績や事例が数字とともに書かれているか。「高品質」「実績多数」といった言葉だけでは、AIも読み手も判断できません。</p>
+<p><strong>表示速度が落ちていないか</strong>。プラグインを増やすほどサイトは重くなります。LLMO対策のつもりで入れたプラグインが表示速度を下げ、結果的にサイト全体の評価を落とすことがあります。</p>
+<div class="in-link-card"><a href="/media/llmo-self-check/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">LLMO診断は自分でできる｜自社サイトのセルフチェックリスト</div><div class="in-link-card__desc">AIに読まれる状態か、信頼される中身かを確認する4観点のチェックリストです。</div></div></a></div>
+<h2 id="s4">llms.txtはどうするか</h2>
+<p>LLMO系プラグインの機能としてよく見かけるのがllms.txtの生成です。AI向けにサイトの情報をまとめたファイルを設置するもので、対応するプラグインも増えています。</p>
+<p>結論としては、<strong>設置しても構わないが、優先度は高くありません</strong>。上に引用したとおり、Googleは新たなAIテキストファイルを作る必要はないと明言しています。他のAIが将来的に参照する可能性を見込んで、保険として置いておく分には問題ありませんが、これを入れたから引用が増えるという期待はしないほうがよいでしょう。</p>
+<p>プラグインで自動生成できるなら手間はかからないので、<strong>他の対策が終わってから、余力で対応する</strong>くらいの位置づけが妥当です。</p>
+<h2 id="s5">プラグインを入れる前に確認すること</h2>
+<p>それでも導入を検討する場合、次の点を確認してください。</p>
+<ul>
+<li>そのプラグインで<strong>何を自動化したいのか</strong>がはっきりしているか</li>
+<li>既存のSEOプラグインと<strong>機能が重複していないか</strong>（構造化データの二重出力は不具合のもと）</li>
+<li>追加することで<strong>表示速度がどれだけ落ちるか</strong></li>
+<li>導入後に<strong>中身を改善する予定があるか</strong></li>
+</ul>
+<p>最後の項目がいちばん大事です。プラグインは器を整えるものなので、入れた後に中身を良くする動きがないと、何も変わりません。<strong>技術的な設定を済ませたことで対策した気になってしまう</strong>のが、いちばんもったいないパターンです。</p>
+<div class="box-point"><span class="box-point__ttl">POINT</span><div class="box-point__body"><p>プラグインは「AIに読んでもらう準備」を効率化する道具です。読んでもらった先で選ばれるかどうかは、独自の情報があるか、外部で語られているかで決まります。入れることを目的にせず、入れた後に何を書くかまで決めてから導入してください。</p></div></div>
+<h2 id="s6">中身の改善まで伴走するなら</h2>
+<p>nitoは、技術的な設定の確認から、実際に引用される中身づくりまでを一緒に進めています。プラグインを入れたけれど変化がない、という段階からのご相談も受けています。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">nitoは、固定費を抑えた<strong>成果報酬型</strong>で、戦略から記事制作・外部掲載・効果測定までを自ら実行する、収益起点のAI検索対策（LLMO）会社です。言及率の改善で終わらせず、<strong>売上・収益につながる成果</strong>まで一緒に目指します。</p>
+        <ul class="bp-cta__points">
+            <li><strong>成果報酬型の料金体系</strong>：固定費は低く抑え、収益を一緒に目指せる構造に</li>
+            <li><strong>実行支援型</strong>：戦略設計だけでなく、記事制作・外部掲載・モニタリングまで一気通貫で実行</li>
+            <li><strong>自社開発の計測基盤</strong>：施策とAI回答の変化をセットで定点観測し、スピーディにPDCAを回して改善</li>
+        </ul>
+        <p class="bp-cta__lead">実際にあるSaaS企業では、AIでの言及率を10%から45%へ引き上げ、AI経由のコンバージョンを約4倍に改善しました。</p>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s7">まとめ</h2>
+<p>LLMO対策をうたうWordPressプラグインは、構造化データやllms.txtといった技術的な下準備を自動化してくれます。ただし、入れるだけでAIに引用されるようになるわけではありません。Google自身が、生成AI検索に構造化データや専用ファイルは必須でないと明言しています。</p>
+<p>WordPressサイトで先に確認すべきは、本文がテキストとして読める状態か、見出し構造が整理されているか、中身が具体的かどうかです。プラグインは器を整える道具と考え、<strong>入れた後に中身をどう良くするか</strong>まで決めてから導入を検討してください。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Q. LLMO対策のWordPressプラグインは入れたほうがいいですか？</h3>
+<p>入れて困るものではありませんが、優先度は高くありません。構造化データやllms.txtの自動化は便利ですが、それだけで引用は増えません。先に、本文がテキストとして読める状態か、中身が具体的かを確認してください。</p>
+<h3 id="s8-2">Q. 構造化データを入れればAIに引用されますか？</h3>
+<p>されるとは限りません。Googleは生成AI検索に構造化データは必須ではないと明言しています。あって困るものではありませんが、独自の情報や外部での言及のほうが引用には効きます。</p>
+<h3 id="s8-3">Q. llms.txtは設置すべきですか？</h3>
+<p>設置しても構いませんが、優先度は高くありません。Googleは新たなAIテキストファイルの作成は不要としています。プラグインで自動生成できるなら、他の対策を終えたあとに余力で対応する程度でよいでしょう。</p>
+<h3 id="s8-4">Q. プラグインを入れたのにAIに出てきません。何が足りませんか？</h3>
+<p>中身と外部での言及が足りていない可能性が高いです。技術的な設定は読んでもらう準備であって、選ばれる理由にはなりません。自社にしか出せない具体的な情報を増やし、第三者に言及される状態をつくることが必要です。</p>
+<h3 id="s8-5">Q. WordPress以外のサイトでも同じ考え方ですか？</h3>
+<p>同じです。CMSが何であれ、本文がテキストとして読めるか、中身が具体的か、外部で語られているかが要点になります。プラグインという形がないだけで、確認すべき内容は変わりません。</p>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表 / AI検索対策（LLMO）コンサルタント</div>
+                <p class="author__bio">AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/insurance-finance-ai-search/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="保険・金融のAI検索対策"><defs><linearGradient id="ecg-6ad2231b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6ad2231b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">業種別</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">保険・金融のAI検索対策</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.28</div>
+                <div class="rel-card__ttl">保険・金融のAI検索対策。規制下で信頼される情報の出し方</div>
+            </a>
+            <a href="/media/lawyer-ai-search/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="弁護士のAI検索対策"><defs><linearGradient id="ecg-d95748d0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d95748d0)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">業種別</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">弁護士のAI検索対策</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.28</div>
+                <div class="rel-card__ttl">弁護士・法律事務所のAI検索対策。相談前に選ばれるための実務</div>
+            </a>
+            <a href="/media/llmo-tools/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOツールの選び方"><defs><linearGradient id="ecg-f8dc1600" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f8dc1600)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">選び方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOツールの選び方</text><line x1="242.8" y1="365.9" x2="957.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.28</div>
+                <div class="rel-card__ttl">LLMOツールはどう選ぶ？種類別の違いと選定基準</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
