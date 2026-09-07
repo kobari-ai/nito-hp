@@ -1028,19 +1028,28 @@
             setStatus('');
 
             try {
-                await fetch(GAS_WEB_APP_URL, {
+                // Content-Type は text/plain。application/json にすると事前リクエスト(OPTIONS)が
+                // 発生し、GAS はそれに応答しないため送信自体が失敗する。
+                // GAS は Access-Control-Allow-Origin: * を返すので no-cors は不要（付けると
+                // レスポンスが読めず、保存に失敗しても成功表示になってしまう）。
+                const res = await fetch(GAS_WEB_APP_URL, {
                     method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
                     body: JSON.stringify(payload)
                 });
+
+                const result = await res.json().catch(() => ({ ok: false, error: 'invalid response' }));
+                if (!res.ok || !result.ok) {
+                    throw new Error(result.error || ('HTTP ' + res.status));
+                }
 
                 contactForm.reset();
                 document.getElementById('role-other-detail').style.display = 'none';
                 document.getElementById('referral-other-detail').style.display = 'none';
                 setStatus('送信が完了しました。お問い合わせありがとうございます。');
             } catch (error) {
-                setStatus('送信に失敗しました。時間をおいて再度お試しください。', true);
+                console.error('[contact] 送信失敗:', error);
+                setStatus('送信に失敗しました。時間をおいて再度お試しいただくか、お手数ですが直接ご連絡ください。', true);
             } finally {
                 submitButton.disabled = false;
                 submitButton.textContent = '送信する';

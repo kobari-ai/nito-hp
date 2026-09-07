@@ -1,3 +1,27 @@
+/**
+ * 権限承認＆Slack通知の動作確認用。
+ * 末尾に _ を付けない＝GASエディタの実行メニューに表示される。
+ * ここから1回実行して承認すると、UrlFetchApp などの権限が付与される。
+ */
+function runAuthorizationAndTestSlack() {
+  var url = PropertiesService.getScriptProperties().getProperty('SLACK_WEBHOOK_URL');
+  Logger.log('SLACK_WEBHOOK_URL: ' + (url ? '設定あり' : '★未設定'));
+  testNotifySlack_();
+  Logger.log('完了しました。Slackにテスト通知が届いていれば成功です。');
+}
+
+function testNotifySlack_() {
+  notifySlack_({
+    name: 'テスト太郎',
+    company: 'テスト株式会社',
+    email: 'test@example.com',
+    phone: '09012345678',
+    category: 'テスト通知',
+    site_url: 'https://example.com',
+    message: 'これはSlack通知の単体テストです。'
+  });
+}
+
 function doPost(e) {
   try {
     // スプレッドシートIDはURLの /d/ と /edit の間の文字列
@@ -46,13 +70,14 @@ function doPost(e) {
     sheet.appendRow(row);
 
     // 電話番号は数値扱いされると先頭の0が落ちるため、文字列として上書きする（列6＝F）
+    // Slack通知より先に実行する。通知が失敗しても電話番号が壊れないようにするため。
     formatPhoneCellAsText_(sheet, sheet.getLastRow(), payload.phone);
 
-    // Slack 通知（スクリプトのプロパティ SLACK_INCOMING_WEBHOOK_URL が未設定なら何もしない）
+    // Slack通知の失敗でフォーム送信を失敗扱いにしない（保存はすでに完了しているため）
     try {
-      notifySlackIncomingWebhook_(payload);
+      notifySlack_(payload);
     } catch (slackErr) {
-      // シート保存は成功させる（通知失敗でフォーム送信をエラーにしない）
+      console.error('Slack通知に失敗: ' + slackErr);
     }
 
     return ContentService
@@ -91,44 +116,32 @@ function formatPhoneCellAsText_(sheet, row, phone) {
   cell.setValue(phone != null ? String(phone) : "");
 }
 
-/**
- * Incoming Webhook で Slack に通知する。
- * プロジェクトの「スクリプトのプロパティ」に SLACK_INCOMING_WEBHOOK_URL を設定すること。
- * https://api.slack.com/messaging/webhooks
- */
-function notifySlackIncomingWebhook_(payload) {
-  var url = PropertiesService.getScriptProperties().getProperty("SLACK_INCOMING_WEBHOOK_URL");
+function notifySlack_(payload) {
+  // URLはコードに直書きせず「プロジェクトの設定 > スクリプト プロパティ」に置く。
+  // キー名: SLACK_WEBHOOK_URL（未設定なら通知だけスキップし、保存は成功させる）
+  const url = PropertiesService.getScriptProperties().getProperty('SLACK_WEBHOOK_URL');
   if (!url) {
+    console.warn('SLACK_WEBHOOK_URL が未設定のため、Slack通知をスキップしました');
     return;
   }
 
-  var msg =
-    "*お問い合わせが届きました*\n" +
-    "• 氏名: " + (payload.name || "") + "\n" +
-    "• 会社: " + (payload.company || "") + "\n" +
-    "• 部署: " + (payload.department || "") + "\n" +
-    "• メール: " + (payload.email || "") + "\n" +
-    "• 電話: " + (payload.phone != null ? String(payload.phone) : "") + "\n" +
-    "• カテゴリ: " + (payload.category || "") + "\n" +
-    "• 内容: " + truncateForSlack_(payload.message || "", 800);
+  const message =
+    '📩 新しいお問い合わせ\n' +
+    `氏名: ${payload.name || ''}\n` +
+    `会社名: ${payload.company || ''}\n` +
+    `メール: ${payload.email || ''}\n` +
+    `電話番号: ${payload.phone || ''}\n` +
+    `カテゴリ: ${payload.category || ''}\n` +
+    `サイトURL: ${payload.site_url || ''}\n\n` +
+    `▼内容\n${payload.message || ''}`;
 
-  var body = {
-    text: msg,
-    unfurl_links: false,
-    unfurl_media: false
-  };
+  const res = UrlFetchApp.fetch(url, {
+  method: 'post',
+  contentType: 'application/json',
+  payload: JSON.stringify({ text: message }),
+  muteHttpExceptions: true
+});
 
-  UrlFetchApp.fetch(url, {
-    method: "post",
-    contentType: "application/json",
-    payload: JSON.stringify(body),
-    muteHttpExceptions: true
-  });
-}
-
-function truncateForSlack_(text, maxLen) {
-  if (text.length <= maxLen) {
-    return text;
-  }
-  return text.substring(0, maxLen) + "…（省略）";
+Logger.log(res.getResponseCode());
+Logger.log(res.getContentText());
 }
