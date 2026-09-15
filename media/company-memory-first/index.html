@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIエージェントを入れる前に「会社の記憶」を作った話 | nito Column</title>
+    <meta name="description" content="2人の会社でAIに業務を渡す仕組みを5日間作りました。最初に作ったのはエージェントではなく会社の記憶を置く場所です。うまくいったことと、ルールを増やしすぎた失敗まで実際の数字で記録します。">
+    <link rel="canonical" href="https://nito-0210.com/media/company-memory-first/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AIエージェントを入れる前に「会社の記憶」を作った話">
+    <meta property="og:description" content="2人の会社でAIに業務を渡す仕組みを5日間作りました。最初に作ったのはエージェントではなく会社の記憶を置く場所です。うまくいったことと、ルールを増やしすぎた失敗まで実際の数字で記録します。">
+    <meta property="og:url" content="https://nito-0210.com/media/company-memory-first/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIエージェントを入れる前に「会社の記憶」を作った話", "description": "2人の会社でAIに業務を渡す仕組みを5日間作りました。最初に作ったのはエージェントではなく会社の記憶を置く場所です。うまくいったことと、ルールを増やしすぎた失敗まで実際の数字で記録します。", "datePublished": "2026-09-15", "dateModified": "2026-09-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/company-memory-first/"}, "articleSection": "AI導入実践記", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AIエージェントを入れる前に「会社の記憶」を作った話"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ドキュメントツール（Notionなど）ではなくGitを使う理由は何ですか", "acceptedAnswer": {"@type": "Answer", "text": "差分と履歴が残るためです。誰が・いつ・何を変えたかが1行ずつ追えるので、AIが書き換えた内容を後から検証できます。AIに書き戻させる前提なら、履歴が残る場所の方が安全です。"}}, {"@type": "Question", "name": "最初に書くべきなのはどの情報ですか", "acceptedAnswer": {"@type": "Answer", "text": "決定事項です。価格、担当、やらないと決めたこと。実際に運用していて、AIが最もよく聞いてくるのがここでした。組織図や業務フローは後からで構いません。"}}, {"@type": "Question", "name": "100人規模だと情報をどこか1箇所に集める必要がありますか", "acceptedAnswer": {"@type": "Answer", "text": "必要はありません。営業はSalesforce、開発はGitHubのように記憶の入口が分かれているのが普通です。AIがそれぞれを読める状態にして、読んだ結果の解釈だけを1箇所に書き戻す形が現実的です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>AIエージェントを入れる前に「会社の記憶…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI導入実践記</span>
+            <span class="post-date">2026.09.15</span>
+        </div>
+        <h1 class="post-title">AIエージェントを入れる前に「会社の記憶」を作った話</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会社の記憶を先に作る"><defs><linearGradient id="ecg-5bb23694" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5bb23694)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">実践記</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">会社の記憶を先に作る</text><line x1="220.0" y1="327.1" x2="980.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">AI導入でまず詰まったこと</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>2人の会社で、AIに仕事を渡す仕組みを5日間作りました。最初に作ったのはエージェントでもツールでもなく、<strong>会社の記憶を置く場所</strong>です。結論から言うと、これを先に作らないと後の全部が積み上がりません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>AIエージェントより先に、<strong>会社の記憶を置く場所</strong>を作らないと後の全部が積み上がらない</li>
+<li>記憶がないと、新しい会話のたびに価格・担当・顧客との経緯を説明し直すことになる</li>
+<li>効いた設計は3つ。<strong>入口のファイルを150行以内／ルールの総量に上限／生データと解釈を分ける</strong></li>
+<li><strong>ルールは増やすほど弱くなる</strong>。454行まで増やしたら守られない率が上がった</li>
+<li>5日で作業105件、うち<strong>44件は手が回らず落としていたリサーチ</strong>。削減より「やれるようになった」が大きい</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li><a href="#s1">何が起きていたか</a></li>
+                    <li><a href="#s2">作ったもの</a></li>
+                    <li><a href="#s3">結果</a></li>
+                    <li><a href="#s4">うまくいかなかったこと</a></li>
+                    <li><a href="#s5">100人規模だとどう変わるか</a></li>
+                    <li><a href="#s6">最初の1週間で作るなら</a></li>
+                    <li><a href="#s7">AI検索対策を伴走で進めるなら</a></li>
+                    <li><a href="#s8">よくある質問</a></li>
+                </ol>
+            </nav>
+
+<h2 id="s1">何が起きていたか</h2>
+<p>AIに調べ物や下書きを頼むこと自体は、誰でもすぐできます。問題はその次でした。</p>
+<p>うちの場合、最初の数日はこうなっていました。新しい会話を始めるたびに、価格をいくらにしたか、誰が何の担当か、この顧客とは何を決めたか、を毎回説明し直す。前の会話で出た結論は前の会話の中にしかないので、次の会話には存在しない。調べたことも同じで、同じ競合を3回調べました。</p>
+<p>つまり<strong>毎回ゼロから説明して、毎回捨てている</strong>状態です。作業は速くなっているのに、会社としては何も貯まっていない。</p>
+<h2 id="s2">作ったもの</h2>
+<p>GitHubのリポジトリを1つ作って、全部のAIセッションがそこを読んで、そこに書き戻す形にしました。中身は5つに分けています。</p>
+<table>
+<thead>
+<tr>
+<th>置き場</th>
+<th>入れるもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>company/</code></td>
+<td>戦略・目標・決定（何をいつ、なぜ決めたか）</td>
+</tr>
+<tr>
+<td><code>wiki/</code></td>
+<td>1ページ1エンティティ（顧客・人物・競合・概念）</td>
+</tr>
+<tr>
+<td><code>rules/</code></td>
+<td>品質・承認・文体。破ってはいけないもの</td>
+</tr>
+<tr>
+<td><code>streams/</code></td>
+<td>取り込んだ生データ（会議・Slack・メール）。<strong>書き換えない</strong></td>
+</tr>
+<tr>
+<td><code>daily/</code></td>
+<td>日次ノート。今日の状況と次の一手</td>
+</tr>
+</tbody>
+</table>
+<p>設計で効いたのは次の3つでした。</p>
+<p><strong>入口のファイルを150行以内に固定する。</strong> 全セッションが最初に読むファイル（<code>CLAUDE.md</code>）が長くなると、読まれる量が増えるだけで守られる率は下がります。ここには「どこに何があるか」と「破ってはいけないこと」だけを書いて、詳細は各ファイルへのリンクにしました。</p>
+<p><strong>ルールの総量に上限を置く。</strong> 400行と決めて、足すときは必ず1つ退役させます。これがないとルールは一方向に増え続けて、最後は誰も（AIも）読まなくなる。今ちょうど400行で、次に何か足すには何かを消す必要があります。</p>
+<p><strong>生データと解釈を分ける。</strong> 議事録やSlackの取り込みは<code>streams/</code>に入れて、書き換えません。そこから読み取った事実は<code>wiki/</code>のページを<strong>上書き</strong>します。追記していくと矛盾した記述が同居して、どれが最新か分からなくなるためです。</p>
+<h2 id="s3">結果</h2>
+<p>5日で567コミット、415ファイル。作業ログを毎回記録しているので、そこから出た数字がこれです。</p>
+<ul>
+<li>記録した作業 <strong>105件</strong></li>
+<li>そのうちAIが実行した時間の合計 <strong>約35時間</strong></li>
+<li>同じ作業を人がやった場合の想定 <strong>約172時間</strong></li>
+</ul>
+<p>後者は<strong>見積もりであって実測ではありません</strong>。ただ、差の大きさよりも中身のほうが示唆があります。105件のうち<strong>44件がリサーチ</strong>で、これは「やったほうがいいと分かっていたが、2人では手が回らないので落としていた仕事」です。削減というより、<strong>やっていなかったことをやれるようになった</strong>。</p>
+<p>もう少し具体的に言うと、こういうものが毎日自動で回るようになりました。</p>
+<ul>
+<li>Slackの新着を15分ごとに取り込み、<strong>外部とのやり取りで今どちらの手番か</strong>を機械判定する</li>
+<li>毎朝6時に、AI検索（ChatGPT・Gemini・Perplexity・Google AI Mode）での自社と競合の言及を実測してスプレッドシートに記録する</li>
+<li>毎時、X とZennから業務に使えそうな記事を1〜2本だけ選んで、なぜうちに関係あるかを1行つけて置く</li>
+</ul>
+<h2 id="s4">うまくいかなかったこと</h2>
+<p>出せる話だけ書いても参考にならないので、詰まったところも書きます。</p>
+<p><strong>ルールを足しすぎて効かなくなった。</strong> 最初はミスが出るたびにルールを1行足していました。3日で454行になり、そこから守られない率が上がった。上限を決めて退役させる運用にして394行まで落としました。<strong>ルールは増やすほど弱くなります。</strong></p>
+<p><strong>承認なしで社外に出しかけた。</strong> Slackへの投稿を、本文を見せずに2回投稿してしまい、削除しました。今は「送信前に本文を会話に出して、明示のOKをもらう」をルールにしています。AIに渡す範囲を広げるときは、<strong>取り消せる操作と取り消せない操作を分けて考える</strong>必要があります。</p>
+<p><strong>同じ番号を2つのセッションが同時に取った。</strong> チケット番号を、クラウドで動いているセッションとローカルのセッションが同時に採番して衝突しました。複数のAIが並行で書き込む前提の設計になっていなかった。</p>
+<p><strong>「調べたつもり」で間違えた。</strong> データは取れているのに、当日のファイルしか見ていなかったせいで相手からの返信を見落としたことがあります。原因を「ログイン切れ」と診断して、実際はコードのバグだったことも2回。<strong>AIの自己診断は、別の証拠と突き合わせるまで信じないほうがいい。</strong></p>
+<h2 id="s5">100人規模だとどう変わるか</h2>
+<p>2人でこれなので、100人だと前提が2つ変わります。</p>
+<p><strong>1つ目は、記憶の入口が人によって違うこと。</strong> 営業はSalesforce、開発はGitHub、経営はスプレッドシートに記憶がある。どこか1箇所に集める必要はなくて、<strong>AIがそれぞれを読める状態にして、読んだ結果の解釈だけを1箇所に書き戻す</strong>形が現実的です。うちも生データはSlackやGmailに置いたまま、解釈だけをリポジトリに集めています。</p>
+<p><strong>2つ目は、書き戻す人がいなくなること。</strong> 2人だと「気づいた人が直す」で回りますが、人数が増えると誰も直さなくなります。うちは<strong>作業を終えたら該当ページを書き換えることを手順に埋め込んで</strong>、変更を1行ログに残す形にしました。人の善意に頼らず、手順の側に入れるしかないと考えています。</p>
+<h2 id="s6">最初の1週間で作るなら</h2>
+<p>順番だけ書きます。</p>
+<ol>
+<li><strong>リポジトリを1つ作る。</strong> ドキュメントツールでなくGitでよい。差分と履歴が残るほうが重要</li>
+<li><strong>入口のファイルを1枚書く。</strong> 「どこに何があるか」と「破ってはいけないこと」だけ。150行以内</li>
+<li><strong>決定を書く。</strong> 価格、担当、やらないと決めたこと。<strong>AIが一番よく聞いてくるのがここ</strong></li>
+<li><strong>生データの取り込みを1本だけ自動化する。</strong> Slackか議事録。全部やろうとすると止まる</li>
+<li><strong>ルールに上限を決める。</strong> 足すときは必ず1つ消す</li>
+</ol>
+<p>エージェントを作るのはこの後で十分です。<strong>記憶がない状態でエージェントを増やすと、説明のコストが人数分増える</strong>だけになります。</p>
+<h2 id="s7">AI検索対策を伴走で進めるなら</h2>
+<p>社内の記憶をAIが読める形にすると、次に効いてくるのが「外のAIが自社をどう説明するか」です。nitoは、AI検索での自社の見え方を実測しながら、記事とサイトの中身を直すところまで伴走しています。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">nitoは、AI検索（LLMO／AIO）での見え方を計測するだけ・提案するだけで終わらせません。<strong>効く施策に絞って、記事の制作と改善まで実行</strong>します。まず無料診断で、いまの見え方を数字にします。</p>
+        <ul class="bp-cta__points">
+            <li><strong>本当に効く施策を、ピンポイントで</strong>：AI経由の問い合わせ・購入まで毎日追ってきたから、効く施策を切り分けられる</li>
+            <li><strong>提案で終わらせず、実行まで</strong>：記事の制作・既存記事の改善まで手を動かす</li>
+            <li><strong>主要AIでの見え方を毎日計測</strong>：ChatGPT・Geminiなどでの言及・引用を自社基盤で毎日計測し、次に直す場所を数字で決める</li>
+        </ul>
+        <p class="bp-cta__lead">実際にあるSaaS企業では、AIでの言及率を10%から45%へ引き上げ、AI経由のコンバージョンを約4倍に改善しました。</p>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Q. ドキュメントツール（Notionなど）ではなくGitを使う理由は何ですか</h3>
+<p>差分と履歴が残るためです。誰が・いつ・何を変えたかが1行ずつ追えるので、AIが書き換えた内容を後から検証できます。AIに書き戻させる前提なら、履歴が残る場所の方が安全です。</p>
+<h3 id="s8-2">Q. 最初に書くべきなのはどの情報ですか</h3>
+<p>決定事項です。価格、担当、やらないと決めたこと。実際に運用していて、AIが最もよく聞いてくるのがここでした。組織図や業務フローは後からで構いません。</p>
+<h3 id="s8-3">Q. 100人規模だと情報をどこか1箇所に集める必要がありますか</h3>
+<p>必要はありません。営業はSalesforce、開発はGitHubのように記憶の入口が分かれているのが普通です。AIがそれぞれを読める状態にして、読んだ結果の解釈だけを1箇所に書き戻す形が現実的です。</p>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表 / AI検索対策（LLMO）コンサルタント</div>
+                <p class="author__bio">AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/llmo-yomikata-imi/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOの読み方"><defs><linearGradient id="ecg-1e60f08d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1e60f08d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">用語解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOの読み方</text><line x1="356.8" y1="365.9" x2="843.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.12</div>
+                <div class="rel-card__ttl">LLMOの読み方・意味とは。SEOとの違いを一次データより先に確認</div>
+            </a>
+            <a href="/media/what-is-llmo/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOとは？"><defs><linearGradient id="ecg-6597a637" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6597a637)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">基礎解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOとは？</text><line x1="394.8" y1="365.9" x2="805.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.08.13</div>
+                <div class="rel-card__ttl">LLMOとは？SEOとの違いと、AIに推奨されるための対策を解説</div>
+            </a>
+            <a href="/media/ai-comparison-prompt/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="比較で選ばれる条件"><defs><linearGradient id="ecg-b9b70424" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b9b70424)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">比較で選ばれる条件</text><line x1="258.0" y1="365.9" x2="942.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.08.08</div>
+                <div class="rel-card__ttl">AIに「A社とB社どちらがいい？」と聞かれたとき選ばれる条件</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
