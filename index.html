@@ -724,15 +724,15 @@
         /* Service Section - 1 Column */
         .service-cards {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
-            max-width: 800px;
+            max-width: 960px;
             margin: 0 auto;
         }
 
         .service-card {
             background-color: var(--color-card-bg);
-            padding: 80px 40px;
+            padding: 64px 36px;
             border-radius: 32px;
             text-align: center;
             transition: transform 0.3s, background-color 0.3s;
@@ -1141,6 +1141,7 @@
             <div class="nav-overlay-group">
                 <span class="nav-overlay-title">サービス</span>
                 <div class="nav-overlay-sublinks">
+                    <a href="https://nito-0210.com/ai-agent/">AIエージェント構築支援</a>
                     <a href="https://nito-0210.com/llmo/">AI検索対策</a>
                 </div>
             </div>
@@ -1197,7 +1198,15 @@
             </div>
 
             <div class="service-cards">
-                <!-- Card 1 (Top) -->
+                <!-- Card 1 -->
+                <div class="service-card ani-fade-bottom">
+                    <h3 class="service-card-title">AIエージェント構築支援</h3>
+                    <p class="service-card-desc">
+                        自社で動かしているAIの仕組みを御社の業務に移植。<br>業務の棚卸しから設計・構築・定着まで支援します。
+                    </p>
+                    <a href="https://nito-0210.com/ai-agent/" class="btn-more">詳細を見る</a>
+                </div>
+                <!-- Card 2 -->
                 <div class="service-card ani-fade-bottom">
                     <h3 class="service-card-title">AI検索対策</h3>
                     <p class="service-card-desc">
@@ -1304,6 +1313,7 @@
                 <div class="footer-nav-col">
                     <div class="footer-nav-title">サービス</div>
                     <div class="footer-nav-links">
+                        <a href="https://nito-0210.com/ai-agent/">AIエージェント構築支援</a>
                         <a href="https://nito-0210.com/llmo/">AI検索対策</a>
                     </div>
                 </div>

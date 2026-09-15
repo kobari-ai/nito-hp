@@ -597,7 +597,7 @@ def update_top_page(posts):
 
 SITE = "https://nito-0210.com"
 # サイトマップに含める固定ページ（トップ・サービス・コラム一覧・問い合わせ・プライバシー）
-STATIC_PAGES = ["/", "/llmo/", "/media/", "/contact.html", "/privacy.html"]
+STATIC_PAGES = ["/", "/ai-agent/", "/llmo/", "/media/", "/contact.html", "/privacy.html"]
 
 
 def generate_sitemap(posts):

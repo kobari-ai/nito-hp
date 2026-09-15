@@ -12,9 +12,9 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI検索対策（LLMO/AIO）｜月20万円から実行支援まで｜nito</title>
-    <link rel="canonical" href="https://nito-0210.com/llmo/">
-    <meta name="description" content="効く施策に絞るから、月20万円から実行支援まで。ChatGPT・GeminiなどAI回答での言及を毎日計測し、記事の制作・改善まで nito が代行します。AI検索対策（LLMO／AIO）の無料診断から。">
+    <title>AIエージェント構築支援｜業務の棚卸しから設計・構築・定着まで｜nito</title>
+    <link rel="canonical" href="https://nito-0210.com/ai-agent/">
+    <meta name="description" content="社員100名以上の企業向けのAIエージェント構築支援。自社で毎日動かしているAIの仕組みを御社の業務に移植します。無料の業務棚卸しで、AIに任せる範囲と人に残す範囲を切り分けてから、優先度の高い業務から構築します。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
@@ -270,6 +270,7 @@
         }
 
         .hero-title span { color: var(--color-secondary); }
+        .sp-only { display: none; }
 
         .hero-cta {
             display: flex;
@@ -313,7 +314,8 @@
                 padding: 100px 0 60px;
                 min-height: unset;
             }
-            .hero-title { font-size: 44px; letter-spacing: -0.01em; }
+            .hero-title { font-size: 34px; letter-spacing: -0.01em; word-break: keep-all; }
+            .sp-only { display: inline; }
             .hero-sub { font-size: 15px; }
             .hero-label { font-size: 16px; margin-bottom: 16px; }
             .hero-cta { flex-direction: column; }
@@ -789,11 +791,176 @@
             .footer-nav-col { gap: 12px; }
             .footer-bottom { margin-top: 40px; flex-direction: column; gap: 12px; }
         }
+
+        /* ── Flow（提供の流れ） ── */
+        .section-flow { padding: 100px 0; background-color: #fafafa; }
+        .flow-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .flow-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            padding: 40px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .flow-step {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--color-secondary);
+            font-family: var(--font-heading-en);
+        }
+        .flow-step em { font-style: normal; font-size: 28px; letter-spacing: 0; margin-left: 6px; }
+        .flow-title {
+            font-size: 22px;
+            font-weight: 900;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.45;
+        }
+        .flow-tag {
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--color-primary-deep);
+            background: var(--color-card-bg);
+            border: 1px solid #ffe2c2;
+            border-radius: 999px;
+            padding: 4px 12px;
+        }
+        .flow-desc { font-size: 15.5px; color: var(--color-text-light); line-height: 1.95; }
+        .flow-after {
+            margin-top: 28px;
+            background: #fff;
+            border: 1px dashed #e8c9a3;
+            border-radius: 16px;
+            padding: 26px 32px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+        .flow-after-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-primary-deep);
+            white-space: nowrap;
+            letter-spacing: 0.05em;
+        }
+        .flow-after p { font-size: 15.5px; color: var(--color-text-light); line-height: 1.9; }
+        @media (max-width: 768px) {
+            .section-flow { padding: 64px 0; }
+            .flow-list { grid-template-columns: 1fr; gap: 16px; }
+            .flow-card { padding: 28px 24px; }
+            .flow-after { grid-template-columns: 1fr; gap: 8px; padding: 22px 22px; }
+        }
+
+        /* ── Cases（業種ごとの例） ── */
+        .section-industry { padding: 100px 0; }
+        .industry-lead { font-size: 17px; color: var(--color-text-light); line-height: 2; max-width: 760px; margin: -32px 0 40px; }
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .industry-item {
+            background: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 24px 22px;
+        }
+        .industry-name {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-primary-deep);
+            margin-bottom: 10px;
+            letter-spacing: 0.04em;
+        }
+        .industry-work {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-text);
+            line-height: 1.6;
+            font-family: var(--font-heading-jp);
+        }
+        .industry-note { font-size: 13px; color: #aaa; margin-top: 24px; line-height: 1.8; }
+        @media (max-width: 1000px) { .industry-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) {
+            .section-industry { padding: 64px 0; }
+            .industry-lead { margin: -16px 0 28px; font-size: 16px; }
+            .industry-item { padding: 20px 18px; }
+        }
+
+        /* ── Price（価格の型） ── */
+        .section-price { padding: 100px 0; background-color: #fafafa; }
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .price-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            padding: 44px 44px 40px;
+        }
+        .price-kind {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--color-secondary);
+            font-family: var(--font-heading-en);
+            margin-bottom: 10px;
+        }
+        .price-title {
+            font-size: 26px;
+            font-weight: 900;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .price-sub { font-size: 14px; color: var(--color-text-light); margin-bottom: 24px; }
+        .price-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .price-list li {
+            position: relative;
+            padding-left: 22px;
+            font-size: 15.5px;
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+        .price-list li::before {
+            content: "";
+            position: absolute;
+            left: 0; top: 11px;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--color-primary);
+        }
+        .price-note {
+            margin-top: 28px;
+            font-size: 15px;
+            color: var(--color-text-light);
+            line-height: 1.95;
+            max-width: 760px;
+        }
+        @media (max-width: 768px) {
+            .section-price { padding: 64px 0; }
+            .price-grid { grid-template-columns: 1fr; gap: 16px; }
+            .price-card { padding: 28px 24px; }
+            .price-title { font-size: 22px; }
+        }
     </style>
 </head>
 
 <body>
-
     <!-- Header -->
     <div class="header-wrapper ani-show-up">
         <header>
@@ -808,7 +975,6 @@
             </div>
         </header>
     </div>
-
     <div class="nav-overlay-backdrop" id="nav-overlay-backdrop"></div>
     <div class="nav-overlay" id="nav-overlay">
         <div class="nav-close" id="nav-close"></div>
@@ -816,18 +982,19 @@
             <a href="https://nito-0210.com/contact.html" class="btn-fill">相談する</a>
         </div>
         <a href="https://nito-0210.com" class="nav-overlay-item">会社情報</a>
-        <a href="https://nito-0210.com/media/" class="nav-overlay-item">お知らせ</a>
+        <a href="https://nito-0210.com/llmo/" class="nav-overlay-item">AI検索対策</a>
+        <a href="https://nito-0210.com/media/" class="nav-overlay-item">コラム</a>
     </div>
 
     <!-- Hero -->
     <section class="hero ani-fade-bottom">
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="container">
-            <span class="hero-label">月20万円から始められるAI検索対策</span>
-            <h1 class="hero-title">nito <span>LLMO</span>対策</h1>
-            <p class="hero-sub" style="margin-bottom:26px">ChatGPT・GeminiなどのAI回答を毎日モニタリング。<br>AIの言及率を上げる記事制作・運用まで 実行支援します。</p>
+            <span class="hero-label">社員100名以上の企業向け</span>
+            <h1 class="hero-title">nito <span>AIエージェント</span><br class="sp-only">構築支援</h1>
+            <p class="hero-sub" style="margin-bottom:26px">自社で毎日動かしているAIの仕組みを、御社の業務に移植します。<br>業務の棚卸しから設計・構築・定着まで支援します。</p>
             <div class="hero-cta">
-                <a href="https://nito-0210.com/contact.html" class="btn-fill-lg">相談する</a>
+                <a href="https://nito-0210.com/contact.html" class="btn-fill-lg">無料の業務棚卸しを相談する</a>
             </div>
         </div>
     </section>
@@ -836,118 +1003,118 @@
     <section class="section-intro">
         <div class="container">
             <div class="intro-inner ani-fade-bottom">
-                <h2 class="intro-heading">AIをハックするのではなく、<br>事業そのものに向き合う。</h2>
-                <p class="intro-lead">AIはハックできるほど単純ではありません。</p>
+                <h2 class="intro-heading">自分たちで動かしているものを<br>そのまま移植する。</h2>
+                <p class="intro-lead">nitoは、自分たちの業務をAIに任せる仕組みを作って運用している2人の会社です。</p>
                 <div class="intro-body">
-                    <p>ユーザーの質問意図や背景を理解し、<br>膨大な情報を比較検討し、最適なものを推奨する。<br>まるで全ての領域に精通した1人の人間のように考えます。</p>
-                    <p>だからこそ私たちは、AIではなく事業そのものに向き合います。<br>その事業の強みは何か。どんな文脈で、どのような価値になるのか。</p>
-                    <p>この言語化と常に向き合いながら、適切な形で情報を発信することが、<br>AI時代に選ばれるブランドの必須条件だと考えています。</p>
+                    <p>会議の議事録の取り込み、案件ごとの調査、資料や記事の下書き、<br>毎朝の状況整理と夜間の定期処理。社内で毎日AIが動かしています。</p>
+                    <p>提案書を書いて終わりにはしません。<br>自分たちが実際に使っている仕組みを、御社の業務に合わせて組み直します。</p>
+                    <p>動かしている本人が構築するため、何がAIに渡せて何が人に残るかを、<br>想像ではなく実物で判断できます。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Feature -->
-    <section class="section-feature">
+    <!-- Flow -->
+    <section class="section-flow">
         <div class="container">
             <div class="ani-fade-bottom">
-                <div class="section-label">Feature</div>
-                <h2 class="section-title">特徴</h2>
+                <div class="section-label">Flow</div>
+                <h2 class="section-title">進め方</h2>
             </div>
-            <div class="feature-list">
-                <div class="feature-card ani-slide-left">
-                    <div>
-                        <div class="feature-card-header">
-                            <span class="feature-num">01</span>
-                            <h3 class="feature-card-title">本当に効く施策を、ピンポイントで</h3>
-                        </div>
-                        <p class="feature-card-desc">私たちが見てきたのは、AIでの言及率だけではありません。AI経由で実際に問い合わせ・購入に至った方と、そのとき打っていた施策との関係を、毎日の計測で追ってきました。だから「言及率は上がるが売上につながらない施策」と「最後の問い合わせ・購入まで効く施策」を切り分けられます。効く施策に絞るから、実行支援まで含めてこの価格でできます。</p>
-                    </div>
-                    <div class="feature-img"><img src="img/feature-01.jpg" alt="深い事業理解と戦略策定" loading="lazy"></div>
+            <div class="flow-list">
+                <div class="flow-card ani-fade-bottom">
+                    <span class="flow-step">STEP<em>01</em></span>
+                    <h3 class="flow-title">業務の棚卸し</h3>
+                    <span class="flow-tag">無料</span>
+                    <p class="flow-desc">部門ごとに、毎日・毎週くり返している業務を書き出します。日報の転記、問い合わせの一次対応、レポートの作成など、AIに渡しやすい順に並べます。オンライン30分から始められます。</p>
                 </div>
-                <div class="feature-card feature-card--reverse ani-slide-right">
-                    <div>
-                        <div class="feature-card-header">
-                            <span class="feature-num">02</span>
-                            <h3 class="feature-card-title">提案で終わらせず、実行まで</h3>
-                        </div>
-                        <p class="feature-card-desc">戦略設計だけで終わらせません。記事制作、外部メディアへの掲載、モニタリングまでを一気通貫で自ら実行します。戦略の意図は施策の細部に宿るからこそ、施策リストを渡して終わりにせず、まるで社内の担当者のように推進します。</p>
-                    </div>
-                    <div class="feature-img"><img src="img/feature-02.jpg" alt="実行までの推進力" loading="lazy"></div>
+                <div class="flow-card ani-fade-bottom">
+                    <span class="flow-step">STEP<em>02</em></span>
+                    <h3 class="flow-title">任せる範囲と<br>残す範囲の切り分け</h3>
+                    <p class="flow-desc">AIが自動で進めるもの、人が承認してから進めるもの、AIに触らせないもの。この線引きを部門長と決めます。対外送信・契約・支払いは人に残します。nitoの社内も同じ線引きで動いています。</p>
                 </div>
-                <div class="feature-card ani-slide-left">
-                    <div>
-                        <div class="feature-card-header">
-                            <span class="feature-num">03</span>
-                            <h3 class="feature-card-title">主要AIでの見え方を毎日計測</h3>
-                        </div>
-                        <p class="feature-card-desc">ChatGPT・Gemini・Perplexity・Google AI Modeでの言及や引用を、自社開発の計測基盤で定点観測。施策とAI回答の変化をセットで捉え、収益への影響まで見ながら、スピーディにPDCAを回して改善し続けます。</p>
-                    </div>
-                    <div class="feature-img"><img src="img/feature-03.jpg" alt="収益起点での効果測定" loading="lazy"></div>
+                <div class="flow-card ani-fade-bottom">
+                    <span class="flow-step">STEP<em>03</em></span>
+                    <h3 class="flow-title">優先度の高い業務から構築</h3>
+                    <p class="flow-desc">まず1つを最小構成で動かし、修正が減ってから次に広げます。夜間に無人で回る定期処理と、稼働量を毎月確認できる仕組みまで含めて引き渡します。</p>
                 </div>
+            </div>
+            <div class="flow-after ani-fade-bottom">
+                <span class="flow-after-label">引き渡しのあと</span>
+                <p>月1回のミーティングで稼働の実測を見て、次にどの業務をAIに渡すかを決めます。使い方や承認ルールの整備も一緒に進め、AIに詳しい担当者がいなくても使い続けられる状態にします。</p>
             </div>
         </div>
     </section>
 
-    <!-- Case -->
-    <section class="section-case">
+    <!-- Industry -->
+    <section class="section-industry">
         <div class="container">
             <div class="ani-fade-bottom">
-                <div class="section-label">Case</div>
-                <h2 class="section-title">導入事例</h2>
+                <div class="section-label">Examples</div>
+                <h2 class="section-title">AIに渡しやすい業務の例</h2>
+                <p class="industry-lead">毎日発生する転記と報告は、AIに渡しやすい部類です。業種は問いません。棚卸しで出てくることが多い業務を挙げます。</p>
             </div>
-            <div class="case-card ani-fade-bottom">
-                <span class="case-tag">SaaS企業</span>
-                <h3 class="case-headline">取り組み3ヶ月で、AIでの言及率が<em>10% → 45%</em>に。<br>AI経由のコンバージョンは<em>3.8倍</em>に伸長。</h3>
-                <svg class="case-chart" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIでの言及率は10%から45%へ、AI経由のコンバージョンは3.8倍に改善">
-                    <defs>
-                        <linearGradient id="caseBar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="1" stop-color="#e67e22"/></linearGradient>
-                        <marker id="caseArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e67e22"/></marker>
-                    </defs>
-                    <line x1="360" y1="30" x2="360" y2="310" stroke="#eee" stroke-width="1"/>
-                    <text x="180" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#1a1a1a" font-family="'Noto Sans JP',sans-serif">AIでの言及率</text>
-                    <text x="180" y="52" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">取り組み3ヶ月</text>
-                    <text x="180" y="108" text-anchor="middle" font-size="42" font-weight="900" fill="#e67e22" font-family="'Noto Sans JP',sans-serif">4.5<tspan font-size="24">倍</tspan></text>
-                    <line x1="60" y1="290" x2="300" y2="290" stroke="#ddd" stroke-width="1.5"/>
-                    <rect x="98" y="261" width="70" height="29" fill="#dfe4e8" rx="2"/>
-                    <text x="133" y="251" text-anchor="middle" font-size="17" font-weight="700" fill="#666" font-family="'Noto Sans JP',sans-serif">10%</text>
-                    <text x="133" y="308" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">開始時</text>
-                    <rect x="212" y="160" width="70" height="130" fill="url(#caseBar)" rx="2"/>
-                    <text x="247" y="150" text-anchor="middle" font-size="19" font-weight="900" fill="#e67e22" font-family="'Noto Sans JP',sans-serif">45%</text>
-                    <text x="247" y="308" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">3ヶ月後</text>
-                    <line x1="152" y1="252" x2="228" y2="178" stroke="#e67e22" stroke-width="3" marker-end="url(#caseArrow)"/>
-                    <text x="540" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#1a1a1a" font-family="'Noto Sans JP',sans-serif">AI経由のコンバージョン</text>
-                    <text x="540" y="52" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">取り組み3ヶ月</text>
-                    <text x="540" y="108" text-anchor="middle" font-size="42" font-weight="900" fill="#e67e22" font-family="'Noto Sans JP',sans-serif">3.8<tspan font-size="24">倍</tspan></text>
-                    <line x1="420" y1="290" x2="660" y2="290" stroke="#ddd" stroke-width="1.5"/>
-                    <rect x="458" y="256" width="70" height="34" fill="#dfe4e8" rx="2"/>
-                    <text x="493" y="246" text-anchor="middle" font-size="17" font-weight="700" fill="#666" font-family="'Noto Sans JP',sans-serif">1.0</text>
-                    <text x="493" y="308" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">開始時</text>
-                    <rect x="572" y="160" width="70" height="130" fill="url(#caseBar)" rx="2"/>
-                    <text x="607" y="150" text-anchor="middle" font-size="19" font-weight="900" fill="#e67e22" font-family="'Noto Sans JP',sans-serif">3.8</text>
-                    <text x="607" y="308" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">3ヶ月後</text>
-                    <line x1="512" y1="247" x2="588" y2="178" stroke="#e67e22" stroke-width="3" marker-end="url(#caseArrow)"/>
-                </svg>
-                <p class="case-desc">戦略設計から記事制作・外部掲載・モニタリングまでを一気通貫で実行。施策とAI回答の変化をセットで定点観測し、改善を回しました。</p>
-                <p class="case-note">※ AI経由のコンバージョンは、開始時を1.0とした相対値です<br>※ 成果は事業・体制・市場環境により異なります</p>
+            <div class="industry-grid ani-fade-bottom">
+                <div class="industry-item"><span class="industry-name">製造業</span><p class="industry-work">日報・不良品報告・検査記録の入力</p></div>
+                <div class="industry-item"><span class="industry-name">建設業</span><p class="industry-work">日報・現場写真の整理・安全書類の作成</p></div>
+                <div class="industry-item"><span class="industry-name">物流・倉庫</span><p class="industry-work">配送日報・入出庫伝票の転記</p></div>
+                <div class="industry-item"><span class="industry-name">人材紹介</span><p class="industry-work">スカウト文面・求職者対応の定型メール</p></div>
+                <div class="industry-item"><span class="industry-name">不動産管理</span><p class="industry-work">物件問い合わせの一次対応・重要事項説明書の作成</p></div>
+                <div class="industry-item"><span class="industry-name">卸売・商社</span><p class="industry-work">見積・受発注メールの処理</p></div>
+                <div class="industry-item"><span class="industry-name">コールセンター</span><p class="industry-work">応対記録の要約・FAQの更新</p></div>
+                <div class="industry-item"><span class="industry-name">広告代理店</span><p class="industry-work">月次レポートの作成・提案書のたたき台</p></div>
             </div>
+            <p class="industry-note">※ 上に無い業種でも棚卸しから始められます。営業・バックオフィスのどちらからでも入れます。</p>
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Price -->
+    <section class="section-price">
+        <div class="container">
+            <div class="ani-fade-bottom">
+                <div class="section-label">Price</div>
+                <h2 class="section-title">費用の考え方</h2>
+            </div>
+            <div class="price-grid">
+                <div class="price-card ani-fade-bottom">
+                    <div class="price-kind">01 / 一時金</div>
+                    <h3 class="price-title">構築費</h3>
+                    <p class="price-sub">業務の数と連携先の数で見積ります</p>
+                    <ul class="price-list">
+                        <li>要件定義・設計・実装</li>
+                        <li>承認ルールと運用手順の整備</li>
+                        <li>引き渡しと検収後の限定保証</li>
+                    </ul>
+                </div>
+                <div class="price-card ani-fade-bottom">
+                    <div class="price-kind">02 / 月額</div>
+                    <h3 class="price-title">運用アドバイザリー</h3>
+                    <p class="price-sub">月1回のミーティングで次を決めます</p>
+                    <ul class="price-list">
+                        <li>稼働量と例外処理の運用レビュー</li>
+                        <li>次にAIに渡す業務の候補と優先順位</li>
+                        <li>AIモデルの仕様変更への追随と社内展開</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="price-note ani-fade-bottom">成果報酬型ではありません。金額は業務の棚卸しのあとに、対象業務と範囲を確定してから提示します。</p>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="section-cta" id="cta">
         <div class="container">
             <a href="https://nito-0210.com/contact.html" class="cta-banner ani-fade-bottom">
                 <div class="cta-banner-text">
                     <span class="cta-banner-label">相談する</span>
-                    <p class="cta-banner-title">まずは、事業の話を聞かせてください。</p>
+                    <p class="cta-banner-title">いま手で回している業務を、まず聞かせてください。</p>
                 </div>
                 <div class="cta-banner-arrow">→</div>
             </a>
         </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section-faq">
         <div class="container">
             <div class="ani-fade-bottom">
@@ -957,38 +1124,47 @@
             <div class="faq-list ani-fade-bottom">
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>効果が出るまでどのくらいかかりますか？</span>
+                        <span>何から始めればいいですか？</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">事業・業界・現状によって異なりますが、情報整備フェーズから着手した場合、AI検索での言及頻度に変化が現れるまで概ね2〜4ヶ月が目安です。ただし、LLMOは継続的な情報発信と改善の積み重ねが重要なため、中長期での取り組みを前提としています。</div>
+                        <div class="faq-answer-inner">無料の業務棚卸しからです。部門の反復業務を30分ほど伺い、AIに渡しやすい順に並べたものをお返しします。その時点で構築に進むかどうかを決めていただけます。</div>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>どのような企業が対象ですか？</span>
+                        <span>どの部門から入るのがよいですか？</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">LLMO対策の本質は、企業やサービスの価値を世間に正しく発信する基盤をつくることです。その意味では、業種・業界を問わず全ての企業が取り組む価値があります。<br><br>その中でも特に相性が良いのは、BtoB・SaaS・金融・士業など、意思決定に長い時間がかかったり、高度な専門知識が求められるサービスです。ユーザーが「選ぶ前にAIに相談する」という行動が起きやすい領域ほど、AI検索に選ばれることが直接的な競争優位につながります。</div>
+                        <div class="faq-answer-inner">最初はバックオフィスや管理部門の反復業務をおすすめしています。転記・集計・定型文の作成はAIに渡しやすく、結果を確かめやすいためです。1つ動いてから営業や現場の業務に広げます。</div>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>既存のSEO施策との違いは何ですか？</span>
+                        <span>PoCで止まっているものがあります。相談できますか？</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">SEOは検索エンジンのランキングアルゴリズムに最適化するアプローチですが、LLMOはAIが「信頼できる情報源として認識する」ことを目指します。キーワード密度よりも、情報の正確性・一貫性・権威性が重視されます。既存のコンテンツ資産を活かしながら、AI時代に対応した形に再整備することも可能です。</div>
+                        <div class="faq-answer-inner">できます。止まる原因の多くはAIの精度ではなく、任せる範囲が決まっていないことと社内の判断基準がAIに渡っていないことです。棚卸しの段階でこの2つを確認し、動かせる形に組み直します。</div>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>料金体系を教えてください</span>
+                        <span>セキュリティや情報システム部の審査はどうなりますか？</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">月20万円から（計測・改善設計）、記事制作と改善の実行まで含む場合は月35〜40万円からです。まずは無料診断で、いまのAIでの見え方を数字にします。</div>
+                        <div class="faq-answer-inner">AIに触らせない業務とデータの一覧を、部門長・情報システム部と最初に決めます。外部システムへの接続に必要な認証は御社側で発行・保持し、対外送信・契約・支払いなど取り消せない操作は人の承認を通します。</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>費用はどのくらいかかりますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">構築費（一時金）と、月1回のミーティングを含む運用アドバイザリー（月額）の組み合わせです。成果報酬はありません。金額は棚卸しで対象業務と範囲を確定してから提示します。</div>
                     </div>
                 </div>
             </div>
@@ -1014,8 +1190,8 @@
                     <div class="footer-nav-col">
                         <span class="footer-nav-title">サービス</span>
                         <div class="footer-nav-links">
-                            <a href="https://nito-0210.com/ai-agent/">AIエージェント構築支援</a>
-                            <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">AI検索対策</a>
+                            <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">AIエージェント構築支援</a>
+                            <a href="https://nito-0210.com/llmo/">AI検索対策</a>
                         </div>
                     </div>
                     <div class="footer-nav-col">
