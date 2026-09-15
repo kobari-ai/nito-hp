@@ -21,7 +21,7 @@
     <meta property="og:url" content="https://nito-0210.com/media/company-memory-first/">
     <meta property="og:site_name" content="nito Column">
     <link rel="icon" href="/favicon.png">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIエージェントを作る前に会社の記憶を作った話", "description": "社内の業務をAIに渡すとき、いちばん時間を取られるのはAIが動くための環境づくりでした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した3つのことを記録します。", "datePublished": "2026-09-15", "dateModified": "2026-09-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/company-memory-first/"}, "articleSection": "AIエージェント", "inLanguage": "ja"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIエージェントを作る前に会社の記憶を作った話", "description": "社内の業務をAIに渡すとき、いちばん時間を取られるのはAIが動くための環境づくりでした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した3つのことを記録します。", "datePublished": "2026-09-15", "dateModified": "2026-09-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "自社の業務をAIに任せる仕組みを作って運用し、その仕組みを他社に移植する仕事をしています。AI検索対策（LLMO）では、主要AIでの言及を実測しながら記事とサイトを直すところまで伴走します。サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/company-memory-first/"}, "articleSection": "AIエージェント", "inLanguage": "ja"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AIエージェントを作る前に会社の記憶を作った話"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "議事録の取り込みはどこまで自動にできますか", "acceptedAnswer": {"@type": "Answer", "text": "会議の録画から文字起こしを取り、決まったことと宿題をまとめて所定の場所に置くところまで自動にできます。人の判断が要るのはどれを決定として残すかだけなので、そこだけ目を通しています。"}}, {"@type": "Question", "name": "批判役のAIは同じサービスの別会話でもいいですか", "acceptedAnswer": {"@type": "Answer", "text": "構いません。同じ会話の中で批判を続けさせると、直前の自分の案に引きずられます。会話を分けて提案文だけを渡すと効きます。別の会社のAIも混ぜると、視点はもっと散るはずです。"}}, {"@type": "Question", "name": "複数のAIの意見が割れたときはどうしていますか", "acceptedAnswer": {"@type": "Answer", "text": "人が判断します。そのとき、結論が割れたのか根拠が割れたのか確信度が割れたのかを分けて出すようにしています。根拠が割れている場合はたいてい前提の事実確認が抜けています。"}}, {"@type": "Question", "name": "会社の記憶はどのツールに置くのがいいですか", "acceptedAnswer": {"@type": "Answer", "text": "nitoはGitのリポジトリに置いています。差分と履歴が1行ずつ残るので、AIが書き換えた内容を後から検証できるためです。AIに書き戻させる前提なら、履歴が残る場所のほうが安全だと考えています。"}}, {"@type": "Question", "name": "最初に書くべき情報は何ですか", "acceptedAnswer": {"@type": "Answer", "text": "決まっていることです。進行中の案件の状況、顧客との合意事項、社内で使っている言葉の定義。運用していて**AIが一番よく聞いてくるのがここでした。**組織図や業務フローは後回しで構いません。 --- この記事で書いた仕組みを他社の業務に入れる支援は、[AIエージェント構築支援](/ai-agent/)のページに書いています。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,6 +129,8 @@
 <h3 id="s2-2">AI同士に直接やり取りさせる</h3>
 <p><strong>社内でそれぞれ別の端末でAIを使っていると、記憶が端末ごとに割れます。</strong>こちらで作った手順やうまくいったやり方が向こうのAIには存在せず、逆に向こうが持っている資料の作り方をこちらは知らない。同じ会社なのに片方の端末だけが便利になっていってしまいます。</p>
 <p>これを人が橋渡ししようとすると結局また人の手間が増えます。そこでお互いのAIが読み書きする場所を作りました。AI用のメールボックスのようなもので、宛先ごとにファイルが分かれています。こちらのAIが資料の作り方を教えてほしいと書き込むと、向こうのAIが定期的にそこを見て答えを書き戻します。<strong>人が関わったのは最初に見に行く場所を設定した一度だけでした。</strong>いまもそのメールボックスの中でやり取りが続いていて、実際に資料作成の手順がこちらに渡ってきています。</p>
+<p><img alt="AI用のメールボックスの実物。こちらのAIが資料の作り方を依頼し、相手のAIが制約を調べて理由つきで返している" src="/media/images/company-memory-first_mailbox.png" />
+<em>実際のやり取り。上がこちらのAIからの依頼、下が相手のAIからの返答です。相手のAIは定期実行で箱を見に来て、調べて、書き戻します。</em></p>
 <h3 id="s2-3">批判役を別に立てる</h3>
 <p><strong>AIは自分の案を守りません。</strong>ひとつのAIに考えさせてそのまま出させると、こちらが少し押すだけで案を取り下げてしまいます。</p>
 <p>まず、批判だけを担当するAIを別に立てて、提案を人に見せる前にそこへ通すようにしました。提案を書いたAIには批判を書かせません。<strong>同じAIが両方をやると、自分の案に都合のいい批判しか出てこないからです。</strong>次に別の会社のAIにも同じ問いを投げるようにしました。GeminiとCodexに互いの回答を見せずに独立で答えさせ、そのあとどちらが誰の回答か伏せたままお互いを批評させます。どちらの回答か分かると評価が甘くなるため、名前は伏せました。</p>
@@ -145,6 +147,9 @@
 <p>置き場所を作っても、何を残すかが決まっていないと形だけになります。nitoでは5つに分けました。</p>
 <p>戦略と決定、顧客や競合ごとの事実、品質と承認のルール、取り込んだ生データ、日次のノート。このうち<strong>生データだけは書き換えません。</strong>会議の文字起こしやチャットの取り込みはそのまま残し、そこから読み取った事実だけを顧客ごとのページに上書きして最新にします。</p>
 <p>すべてを追記にすると矛盾した記述が同居してしまい、どれが最新か分からなくなります。<strong>生データは追記、解釈は上書き。</strong>この分け方が一番効きました。</p>
+<p>もうひとつ、人からの指摘だけは別に溜めています。どのAIが受けた指摘でも1箇所に集まり、他のAIが作業を始める前に読みます。同じ指摘を別のAIに繰り返さないためです。</p>
+<p><img alt="直近7日の指摘を集めた一覧。どのAIが受けた指摘でも1箇所に出る" src="/media/images/company-memory-first_lessons.png" />
+<em>指摘の一覧。30分ごとに自動で作られ、すべてのAIが作業前に読みます。</em></p>
 <h2 id="s5">今日から始めるなら</h2>
 <p>定例会議をひとつ選んで、議事録の取り込みだけを自動にします。<strong>全部をやろうとすると、たいてい途中で止まってしまいます。</strong></p>
 <p>次に、社内で決まっていることを書き出します。進行中の案件がいまどこまで来ているか、顧客と何を合意しているか、社内でどの言葉をどの意味で使っているか。<strong>AIが一番よく聞いてくるのがここでした。</strong>組織図や業務フローは後回しで構いません。</p>
@@ -168,7 +173,7 @@
         <div class="post-cta">
             <div class="post-cta__label">CONTACT</div>
             <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
             <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
         </div>
 
@@ -177,8 +182,8 @@
             <div>
                 <div class="author__label">この記事を書いた人</div>
                 <div class="author__name">岡村 希一</div>
-                <div class="author__role">nito代表 / AI検索対策（LLMO）コンサルタント</div>
-                <p class="author__bio">AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。</p>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">自社の業務をAIに任せる仕組みを作って運用し、その仕組みを他社に移植する仕事をしています。AI検索対策（LLMO）では、主要AIでの言及を実測しながら記事とサイトを直すところまで伴走します。サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。</p>
             </div>
         </div>
     </main>

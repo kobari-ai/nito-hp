@@ -44,11 +44,11 @@ TEMPLATE_DIR = ROOT / "_template"
 POSTS_DIR = ROOT / "posts"
 
 DEFAULT_AUTHOR = "岡村 希一"
-DEFAULT_AUTHOR_ROLE = "nito代表 / AI検索対策（LLMO）コンサルタント"
+DEFAULT_AUTHOR_ROLE = "nito代表"
 DEFAULT_AUTHOR_BIO = (
-    "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。"
-    "サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、"
-    "「いいモノが自然に広まる仕組みづくり」を支援。"
+    "自社の業務をAIに任せる仕組みを作って運用し、その仕組みを他社に移植する仕事をしています。"
+    "AI検索対策（LLMO）では、主要AIでの言及を実測しながら記事とサイトを直すところまで伴走します。"
+    "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。"
 )
 DEFAULT_AUTHOR_IMAGE = "/profile_okamura.jpg"
 
