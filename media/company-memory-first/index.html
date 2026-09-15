@@ -12,17 +12,17 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIに会社の文脈を持たせたら、会議の宿題を自分から巻き取るようになった | nito Column</title>
+    <title>AIエージェントを作る前に会社の記憶を作った | nito Column</title>
     <meta name="description" content="社内でAIを使い始めて最初に詰まったのは精度ではなく文脈でした。会議で決めたことをAIだけが知らない。指摘するとすぐ引っ込める。この2つを直すためにやった3つのことと、失敗した4つのことを記録します。">
     <link rel="canonical" href="https://nito-0210.com/media/company-memory-first/">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="AIに会社の文脈を持たせたら、会議の宿題を自分から巻き取るようになった">
+    <meta property="og:title" content="AIエージェントを作る前に会社の記憶を作った">
     <meta property="og:description" content="社内でAIを使い始めて最初に詰まったのは精度ではなく文脈でした。会議で決めたことをAIだけが知らない。指摘するとすぐ引っ込める。この2つを直すためにやった3つのことと、失敗した4つのことを記録します。">
     <meta property="og:url" content="https://nito-0210.com/media/company-memory-first/">
     <meta property="og:site_name" content="nito Column">
     <link rel="icon" href="/favicon.png">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIに会社の文脈を持たせたら、会議の宿題を自分から巻き取るようになった", "description": "社内でAIを使い始めて最初に詰まったのは精度ではなく文脈でした。会議で決めたことをAIだけが知らない。指摘するとすぐ引っ込める。この2つを直すためにやった3つのことと、失敗した4つのことを記録します。", "datePublished": "2026-09-15", "dateModified": "2026-09-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/company-memory-first/"}, "articleSection": "AI導入実践記", "inLanguage": "ja"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AIに会社の文脈を持たせたら、会議の宿題を自分から巻き取るようになった"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIエージェントを作る前に会社の記憶を作った", "description": "社内でAIを使い始めて最初に詰まったのは精度ではなく文脈でした。会議で決めたことをAIだけが知らない。指摘するとすぐ引っ込める。この2つを直すためにやった3つのことと、失敗した4つのことを記録します。", "datePublished": "2026-09-15", "dateModified": "2026-09-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/company-memory-first/"}, "articleSection": "AI導入実践記", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AIエージェントを作る前に会社の記憶を作った"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "議事録の取り込みは、どこまで自動にできますか", "acceptedAnswer": {"@type": "Answer", "text": "会議の録画から文字起こしを取り、決まったことと宿題をまとめて所定の場所に置くところまでは自動にできます。人の判断が要るのは、どれを決定として残すかの一点だけ。そこだけ目を通しています。"}}, {"@type": "Question", "name": "批判役のAIは、同じサービスの別会話でもいいですか", "acceptedAnswer": {"@type": "Answer", "text": "構いません。同じ会話の中で「批判して」と続けると、直前の自分の案に引きずられてしまう。会話を分けて、提案文だけを渡すと効きます。別の会社のAIも混ぜると、視点はもっと散るはずです。"}}, {"@type": "Question", "name": "複数のAIの意見が割れたときはどうしていますか", "acceptedAnswer": {"@type": "Answer", "text": "人が判断します。そのとき、結論が割れたのか、根拠が割れたのか、確信度が割れたのかを分けて出すようにしていて、根拠が割れている場合はたいてい前提の事実確認が抜けています。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
     </header>
 
     <nav class="breadcrumb">
-        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>AIに会社の文脈を持たせたら、会議の宿題…
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>AIエージェントを作る前に会社の記憶を作…
     </nav>
 
     <main class="article">
@@ -52,9 +52,9 @@
             <span class="post-cat">AI導入実践記</span>
             <span class="post-date">2026.09.15</span>
         </div>
-        <h1 class="post-title">AIに会社の文脈を持たせたら、会議の宿題を自分から巻き取るようになった</h1>
+        <h1 class="post-title">AIエージェントを作る前に会社の記憶を作った</h1>
 
-        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIに文脈を持たせる"><defs><linearGradient id="ecg-6257804f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6257804f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">実践記</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIに文脈を持たせる</text><line x1="250.4" y1="327.1" x2="949.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">会議の宿題を巻き取るまで</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会社の記憶を先に作る"><defs><linearGradient id="ecg-5bb23694" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5bb23694)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">実践記</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">会社の記憶を先に作る</text><line x1="220.0" y1="327.1" x2="980.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">AI導入で最初に詰まったこと</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
         <div class="post-content">
 <p>社内でAIを使い始めて、しばらく気持ち悪い時期がありました。使えないわけではありません。調べ物は速いし、文章も書けるし、頼んだことはやってくれます。それなのに、出してくる意見がどれも「なんか違うんだよな」で終わる。</p>
@@ -63,44 +63,46 @@
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
-                    <li><a href="#s1">AIの意見が浅かったのは、精度ではなく文脈の問題だった</a></li>
-                    <li><a href="#s2">会議で決めたことを、AIだけが知らなかった</a></li>
-                    <li><a href="#s3">指摘するとすぐ引っ込めるので、検討された案か判断できなかった</a></li>
-                    <li><a href="#s4">議事録をAIに読ませたら、宿題を自分から巻き取るようになった</a></li>
-                    <li><a href="#s5">AI同士を直接やり取りさせないと、片方の端末だけが賢くなる</a></li>
-                    <li><a href="#s6">批判役を分けないと、AIは自分の案を叩けない</a></li>
-                    <li><a href="#s7">失敗したこと</a></li>
-                    <li><a href="#s8">人数が増えると、文脈の入り口が部署ごとに割れる</a></li>
-                    <li><a href="#s9">今日から始めるなら、この3つ</a></li>
-                    <li><a href="#s10">AI検索対策を伴走で進めるなら</a></li>
-                    <li><a href="#s11">よくある質問</a></li>
+                    <li><a href="#s1">課題に感じていたこと</a></li>
+                    <li class="toc-h3"><a href="#s1-1">会議で決めたことをAIだけが知らない</a></li>
+                    <li class="toc-h3"><a href="#s1-2">指摘するとすぐ引っ込める</a></li>
+                    <li><a href="#s2">やったこと</a></li>
+                    <li class="toc-h3"><a href="#s2-1">議事録をAIが必ず読む場所に置く</a></li>
+                    <li class="toc-h3"><a href="#s2-2">AI同士に直接やり取りさせる</a></li>
+                    <li class="toc-h3"><a href="#s2-3">批判役を別に立てる</a></li>
+                    <li><a href="#s3">うまくいかなかったこと</a></li>
+                    <li><a href="#s4">人数が増えたときに変わること</a></li>
+                    <li><a href="#s5">今日から始めるなら</a></li>
+                    <li><a href="#s6">AI検索対策を伴走で進めるなら</a></li>
+                    <li><a href="#s7">よくある質問</a></li>
                 </ol>
             </nav>
 
-<h2 id="s1">AIの意見が浅かったのは、精度ではなく文脈の問題だった</h2>
+<h2 id="s1">課題に感じていたこと</h2>
 <p>最初は、依頼のたびに背景を説明していました。この顧客とは前に何を決めたか。この価格にした理由は何だったか。誰が担当で、何をやらないと決めたか。新しく会話を始めるたびに同じことをもう一度書く。面倒だとは思っていましたが、そういうものだと思っていました。</p>
 <p>問題はその先にありました。</p>
-<h2 id="s2">会議で決めたことを、AIだけが知らなかった</h2>
+<h3 id="s1-1">会議で決めたことをAIだけが知らない</h3>
 <p>会議で「その方向はやめよう」と話した翌日に、AIがその方向の提案を持ってきます。</p>
 <p>こちらは議論を重ねて、やめた理由も温度感も共有できている。でもAIは、その議論が存在しない世界から答えます。だから出てくる案が、悪くはないけれど、今の話とは半歩ずれる。</p>
 <p>ずれていること自体より、ずれに毎回こちらが気づかなければいけないことの方が疲れました。提案を読んで、これは前提が古いなと判断して、そこから説明し直す。この往復が毎回発生します。</p>
-<h2 id="s3">指摘するとすぐ引っ込めるので、検討された案か判断できなかった</h2>
+<h3 id="s1-2">指摘するとすぐ引っ込める</h3>
 <p>もうひとつありました。「いや、そうじゃなくて」と軽く言うと、すぐ納得するんです。</p>
 <p>反論してきません。こちらは思いつきで言っただけなのに、さっきまでの案をあっさり引っ込めて、こちらの言った方向に乗り換えてくる。</p>
 <p>そうなると、最初に出てきた案が何だったのか分からなくなります。ちゃんと検討した結果なのか、それとも、こちらが喜びそうな方向に寄せただけなのか。意見が合っていても、それが検討された意見なのか確かめられない。これは精度の問題ではなくて、構造の問題でした。</p>
 <p>詰まっていたのは、こちらが持っている文脈がAIに届いていないことと、AIの検討が浅いまま通ってしまうこと。この2つです。以下は、それぞれをどう直したかの記録です。</p>
-<h2 id="s4">議事録をAIに読ませたら、宿題を自分から巻き取るようになった</h2>
+<h2 id="s2">やったこと</h2>
+<h3 id="s2-1">議事録をAIが必ず読む場所に置く</h3>
 <p>やったことはシンプルで、議事録を自動で取り込んで、AIが毎回読む場所に置きました。会議の音声から文字起こしを作り、決まったことと宿題を1ファイルに落とす。ここまでを自動にして、AIは作業を始める前に必ずそこを読みます。</p>
 <p>効果はすぐ出ました。会議が終わった時点でAIが内容を把握しているので、次に話しかけたときに説明がいりません。</p>
 <p>予想していなかったのはその次です。会議で出た宿題を、AIの方から「これ、こちらで巻き取りましょうか」と言ってくるようになりました。</p>
 <p>考えてみれば当たり前で、議事録に宿題が書いてあり、AIはそれを読んでいて、自分にできるかどうかも判断できる。だったら手を挙げる、というだけの話です。それでも、こちらが依頼を考えて言葉にする工程がまるごと消えたのは大きかった。指示待ちではなくなった、という感覚に近いです。</p>
-<h2 id="s5">AI同士を直接やり取りさせないと、片方の端末だけが賢くなる</h2>
+<h3 id="s2-2">AI同士に直接やり取りさせる</h3>
 <p>社内でそれぞれ別にAIを使っているうちに、記憶が2つに割れていることに気づきました。</p>
 <p>こちらで作った手順や、うまくいったやり方が、向こうのAIには存在しない。逆も同じで、向こうが持っている資料の作り方をこちらは知らない。同じ会社なのに、片方の端末だけが便利になっていく状態です。</p>
 <p>これを人が橋渡ししようとすると、結局また人の手間になります。「あれ、向こうにも伝えといて」が増えるだけです。</p>
 <p>そこで、お互いのAIが読み書きする場所を作りました。手紙箱と呼んでいます。こちらのAIが「そちらでやっている資料の作り方を、こちらでも再現できる形で置いてもらえますか」と書くと、向こうのAIが定期的にそこを見て、答えを書き戻す。人を経由しません。</p>
 <p>実際いま、その箱の中でやり取りが続いています。人が関わっているのは、最初に「ここを見に行ってください」と設定した一度きりです。</p>
-<h2 id="s6">批判役を分けないと、AIは自分の案を叩けない</h2>
+<h3 id="s2-3">批判役を別に立てる</h3>
 <p>すぐ納得する問題には、人格を分けて対処しました。</p>
 <p>ひとつのAIに考えさせてそのまま出させると、どうしても甘くなります。自分の案を自分で叩けないし、こちらが少し押すと折れる。</p>
 <p>まず、批判だけを担当するAIを別に立てました。提案を人に見せる前に、そこへ通します。提案を書いたAIには批判を書かせません。同じAIが両方やると、自分の案に都合のいい批判しか出てこないからです。</p>
@@ -108,22 +110,22 @@
 <p>判断の扱いも決めました。3つの意見が揃ったら、人に確認を取らずに進めます。ひとつでも割れたら、結論が割れたのか、根拠が割れたのか、確信度が割れたのかを添えて人に上げます。</p>
 <p>これで「すぐ納得する」が構造的に起きにくくなりました。ひとつが折れても、残りは折れません。</p>
 <p>通すのは、価格をいくらにするかとか、どの事業に寄せるかといった、撤回コストの大きい判断だけです。料金がいくらか、その機能があるかといった、調べれば決着する問いには使いません。</p>
-<h2 id="s7">失敗したこと</h2>
+<h2 id="s3">うまくいかなかったこと</h2>
 <p>うまくいった話だけ書いても参考にならないので、詰まったところも書きます。</p>
 <p>ルールを足しすぎました。ミスが出るたびに1行足していたら、3日で454行になり、そこから守られない率が上がりました。長くすると読まれる量が増えるだけで、効かなくなります。上限を400行と決めて、足すときは必ずひとつ消す運用にして戻しました。</p>
 <p>社外に出すものを、承認なしで出しかけました。チャットへの投稿を、本文を見せないまま2回投稿してしまい、削除しています。いまは、送る前に本文を会話に出して明示のOKをもらう形にしました。取り消せる操作と取り消せない操作は、分けて考えないと事故ります。</p>
 <p>AIの自己診断を信じすぎました。「ログインが切れています」と報告してきたので対応したら違った。翌日は「UIが変わったようです」と報告してきて、これも違った。どちらも同じバグでした。それ以来、同じ日の他の実行結果を先に見るようにしています。</p>
 <p>同じ番号を、2つのAIが同時に取りました。別々に動いているセッションが、同じチケット番号を採番して衝突した。複数のAIが並行で書き込む前提の設計になっていませんでした。</p>
-<h2 id="s8">人数が増えると、文脈の入り口が部署ごとに割れる</h2>
+<h2 id="s4">人数が増えたときに変わること</h2>
 <p>いま試しているのは少人数の範囲です。100人規模で同じことをやるなら、変わる点が2つあると思っています。</p>
 <p>ひとつは、文脈の入り口が分かれること。営業の最新は商談メモ、開発の最新はissue、経営の最新は会議にあります。全部を1箇所に集める必要はなくて、AIがそれぞれを読める状態にしたうえで、読んだ結果の解釈だけを1箇所に書き戻す。これが現実的なところだと思います。</p>
 <p>もうひとつは、書き戻す人がいなくなること。少人数なら「気づいた人が直す」で回りますが、人数が増えると誰も直しません。善意に頼るのをやめて、作業手順の側に「終わったら該当ページを書き換える」を埋め込む。いまのところ、それしか思いついていません。</p>
-<h2 id="s9">今日から始めるなら、この3つ</h2>
+<h2 id="s5">今日から始めるなら</h2>
 <p>定例会議をひとつ選んで、議事録の取り込みだけ自動にします。全部やろうとすると、たいてい途中で止まる。</p>
 <p>決めたことを書いておきます。価格、担当、やらないと決めたこと。AIが一番よく聞いてくるのがここでした。組織図や業務フローは後回しで構いません。</p>
 <p>批判役を別に立てます。これは今日からできて、提案を書かせたのとは別の会話を開き、提案文だけを貼って「反論して」と言う。それだけで通る案の質が変わります。</p>
 <p>エージェントを作るのはこの後で十分だと思っています。文脈が揃っていない状態でAIを増やしても、説明する相手が増えるだけなので。</p>
-<h2 id="s10">AI検索対策を伴走で進めるなら</h2>
+<h2 id="s6">AI検索対策を伴走で進めるなら</h2>
 <p>社内の文脈をAIが読める形にすると、次に気になってくるのが、社外のAIが自社をどう説明しているかです。nitoは、AI検索での自社の見え方を実測しながら、記事とサイトの中身を直すところまで伴走しています。</p>
 <!-- 固定PRパート（ブログパーツ）: llmo-cta
      このファイルを更新すると、埋め込んだ全記事に反映される。
@@ -144,12 +146,12 @@
         </div>
     </div>
 </div>
-<h2 id="s11">よくある質問</h2>
-<h3 id="s11-1">Q. 議事録の取り込みは、どこまで自動にできますか</h3>
+<h2 id="s7">よくある質問</h2>
+<h3 id="s7-1">Q. 議事録の取り込みは、どこまで自動にできますか</h3>
 <p>会議の録画から文字起こしを取り、決まったことと宿題をまとめて所定の場所に置くところまでは自動にできます。人の判断が要るのは、どれを決定として残すかの一点だけ。そこだけ目を通しています。</p>
-<h3 id="s11-2">Q. 批判役のAIは、同じサービスの別会話でもいいですか</h3>
+<h3 id="s7-2">Q. 批判役のAIは、同じサービスの別会話でもいいですか</h3>
 <p>構いません。同じ会話の中で「批判して」と続けると、直前の自分の案に引きずられてしまう。会話を分けて、提案文だけを渡すと効きます。別の会社のAIも混ぜると、視点はもっと散るはずです。</p>
-<h3 id="s11-3">Q. 複数のAIの意見が割れたときはどうしていますか</h3>
+<h3 id="s7-3">Q. 複数のAIの意見が割れたときはどうしていますか</h3>
 <p>人が判断します。そのとき、結論が割れたのか、根拠が割れたのか、確信度が割れたのかを分けて出すようにしていて、根拠が割れている場合はたいてい前提の事実確認が抜けています。</p>
         </div>
 
