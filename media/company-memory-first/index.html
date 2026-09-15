@@ -12,17 +12,17 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIエージェントを作る前に会社の記憶を作った | nito Column</title>
-    <meta name="description" content="社内の業務をAIに渡すプロジェクトを進めています。最初に詰まったのは精度ではなく文脈でした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した4つのことを記録します。">
+    <title>AIエージェントを作る前に会社の記憶を作った話 | nito Column</title>
+    <meta name="description" content="社内の業務をAIに渡すとき、いちばん時間を取られるのはAIが動くための環境づくりでした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した4つのことを記録します。">
     <link rel="canonical" href="https://nito-0210.com/media/company-memory-first/">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="AIエージェントを作る前に会社の記憶を作った">
-    <meta property="og:description" content="社内の業務をAIに渡すプロジェクトを進めています。最初に詰まったのは精度ではなく文脈でした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した4つのことを記録します。">
+    <meta property="og:title" content="AIエージェントを作る前に会社の記憶を作った話">
+    <meta property="og:description" content="社内の業務をAIに渡すとき、いちばん時間を取られるのはAIが動くための環境づくりでした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した4つのことを記録します。">
     <meta property="og:url" content="https://nito-0210.com/media/company-memory-first/">
     <meta property="og:site_name" content="nito Column">
     <link rel="icon" href="/favicon.png">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIエージェントを作る前に会社の記憶を作った", "description": "社内の業務をAIに渡すプロジェクトを進めています。最初に詰まったのは精度ではなく文脈でした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した4つのことを記録します。", "datePublished": "2026-09-15", "dateModified": "2026-09-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/company-memory-first/"}, "articleSection": "AIエージェント", "inLanguage": "ja"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AIエージェントを作る前に会社の記憶を作った"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIエージェントを作る前に会社の記憶を作った話", "description": "社内の業務をAIに渡すとき、いちばん時間を取られるのはAIが動くための環境づくりでした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した4つのことを記録します。", "datePublished": "2026-09-15", "dateModified": "2026-09-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表 / AI検索対策（LLMO）コンサルタント", "description": "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、「いいモノが自然に広まる仕組みづくり」を支援。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/company-memory-first/"}, "articleSection": "AIエージェント", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AIエージェントを作る前に会社の記憶を作った話"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "議事録の取り込みはどこまで自動にできますか", "acceptedAnswer": {"@type": "Answer", "text": "会議の録画から文字起こしを取り、決まったことと宿題をまとめて所定の場所に置くところまで自動にできます。人の判断が要るのはどれを決定として残すかだけなので、そこだけ目を通しています。"}}, {"@type": "Question", "name": "批判役のAIは同じサービスの別会話でもいいですか", "acceptedAnswer": {"@type": "Answer", "text": "構いません。同じ会話の中で批判を続けさせると、直前の自分の案に引きずられます。会話を分けて提案文だけを渡すと効きます。別の会社のAIも混ぜると、視点はもっと散るはずです。"}}, {"@type": "Question", "name": "複数のAIの意見が割れたときはどうしていますか", "acceptedAnswer": {"@type": "Answer", "text": "人が判断します。そのとき、結論が割れたのか根拠が割れたのか確信度が割れたのかを分けて出すようにしています。根拠が割れている場合は、たいてい前提の事実確認が抜けています。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,13 +52,14 @@
             <span class="post-cat">AIエージェント</span>
             <span class="post-date">2026.09.15</span>
         </div>
-        <h1 class="post-title">AIエージェントを作る前に会社の記憶を作った</h1>
+        <h1 class="post-title">AIエージェントを作る前に会社の記憶を作った話</h1>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会社の記憶を先に作る"><defs><linearGradient id="ecg-5bb23694" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5bb23694)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">実践記</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">会社の記憶を先に作る</text><line x1="220.0" y1="327.1" x2="980.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">AI導入で最初に詰まったこと</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
         <div class="post-content">
-<p>社内の業務をAIに渡すプロジェクトを進めています。着手から1週間ほどでひと通り形になり、会議の議事録の取り込みから記事の下書きまでAIが回すようになりました。うまくいったことと失敗したことが両方はっきり出たので、ここに残しておきます。</p>
-<p>最初に作ったのはエージェントではなく、会社の記憶を置く場所でした。この記事では、その記憶をAIに持たせるために作った3つの仕組みと、途中で失敗した4つのことを書きます。</p>
+<p>社内の業務をAIに渡すとき、いちばん時間を取られるのはツールの選定でも使い方の習得でもなく、<strong>AIが動くための環境を整えること</strong>でした。</p>
+<p>うちも最初はそこで詰まりました。調べ物も文章も頼めば出てくるのに、返ってくる提案がどれも今の話と噛み合わない。原因は精度ではなく、AIがこちらの文脈を持っていないことでした。</p>
+<p><strong>最初に作ったのはエージェントではなく、会社の記憶を置く場所です。</strong>この記事では、その記憶をAIに持たせるために作った3つの仕組みと、途中で失敗した4つのことを書きます。</p>
 
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
@@ -78,8 +79,7 @@
                     <li class="toc-h3"><a href="#s3-4">番号の衝突</a></li>
                     <li><a href="#s4">人数が増えたときに変わること</a></li>
                     <li><a href="#s5">今日から始めるなら</a></li>
-                    <li><a href="#s6">AI検索対策を伴走で進めるなら</a></li>
-                    <li><a href="#s7">よくある質問</a></li>
+                    <li><a href="#s6">よくある質問</a></li>
                 </ol>
             </nav>
 
@@ -123,33 +123,12 @@
 <p>次に決めたことを書いておきます。価格、担当、やらないと決めたこと。<strong>AIが一番よく聞いてくるのがここでした。</strong>組織図や業務フローは後回しで構いません。</p>
 <p>最後に批判役を別に立てます。これは今日からできます。提案を書かせたのとは別の会話を開き、提案文だけを貼って反論を求めるだけです。<strong>それだけで通る案の質が変わります。</strong></p>
 <p>エージェントを作るのはこの後で十分だと思っています。文脈が揃っていない状態でAIを増やしても、説明する相手が増えるだけでした。</p>
-<h2 id="s6">AI検索対策を伴走で進めるなら</h2>
-<p>社内の文脈をAIが読める形にすると、次に気になってくるのが社外のAIが自社をどう説明しているかです。nitoは、AI検索での自社の見え方を実測しながら記事とサイトの中身を直すところまで伴走しています。</p>
-<!-- 固定PRパート（ブログパーツ）: llmo-cta
-     このファイルを更新すると、埋め込んだ全記事に反映される。
-     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
-<div class="bp-cta">
-    <div class="bp-cta__body">
-        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
-        <p class="bp-cta__lead">nitoは、AI検索（LLMO／AIO）での見え方を計測するだけ・提案するだけで終わらせません。<strong>効く施策に絞って、記事の制作と改善まで実行</strong>します。まず無料診断で、いまの見え方を数字にします。</p>
-        <ul class="bp-cta__points">
-            <li><strong>本当に効く施策を、ピンポイントで</strong>：AI経由の問い合わせ・購入まで毎日追ってきたから、効く施策を切り分けられる</li>
-            <li><strong>提案で終わらせず、実行まで</strong>：記事の制作・既存記事の改善まで手を動かす</li>
-            <li><strong>主要AIでの見え方を毎日計測</strong>：ChatGPT・Geminiなどでの言及・引用を自社基盤で毎日計測し、次に直す場所を数字で決める</li>
-        </ul>
-        <p class="bp-cta__lead">実際にあるSaaS企業では、AIでの言及率を10%から45%へ引き上げ、AI経由のコンバージョンを約4倍に改善しました。</p>
-        <div class="bp-cta__actions">
-            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
-            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
-        </div>
-    </div>
-</div>
-<h2 id="s7">よくある質問</h2>
-<h3 id="s7-1">Q. 議事録の取り込みはどこまで自動にできますか</h3>
+<h2 id="s6">よくある質問</h2>
+<h3 id="s6-1">Q. 議事録の取り込みはどこまで自動にできますか</h3>
 <p>会議の録画から文字起こしを取り、決まったことと宿題をまとめて所定の場所に置くところまで自動にできます。人の判断が要るのはどれを決定として残すかだけなので、そこだけ目を通しています。</p>
-<h3 id="s7-2">Q. 批判役のAIは同じサービスの別会話でもいいですか</h3>
+<h3 id="s6-2">Q. 批判役のAIは同じサービスの別会話でもいいですか</h3>
 <p>構いません。同じ会話の中で批判を続けさせると、直前の自分の案に引きずられます。会話を分けて提案文だけを渡すと効きます。別の会社のAIも混ぜると、視点はもっと散るはずです。</p>
-<h3 id="s7-3">Q. 複数のAIの意見が割れたときはどうしていますか</h3>
+<h3 id="s6-3">Q. 複数のAIの意見が割れたときはどうしていますか</h3>
 <p>人が判断します。そのとき、結論が割れたのか根拠が割れたのか確信度が割れたのかを分けて出すようにしています。根拠が割れている場合は、たいてい前提の事実確認が抜けています。</p>
         </div>
 
