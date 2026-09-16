@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIエージェントを作る前に会社の記憶を作った話 | nito Column</title>
+    <meta name="description" content="社内の業務をAIに渡すとき、いちばん時間を取られるのはAIが動くための環境づくりでした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した3つのことを記録します。">
+    <link rel="canonical" href="https://nito-0210.com/media/company-memory-first/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AIエージェントを作る前に会社の記憶を作った話">
+    <meta property="og:description" content="社内の業務をAIに渡すとき、いちばん時間を取られるのはAIが動くための環境づくりでした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した3つのことを記録します。">
+    <meta property="og:url" content="https://nito-0210.com/media/company-memory-first/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIエージェントを作る前に会社の記憶を作った話", "description": "社内の業務をAIに渡すとき、いちばん時間を取られるのはAIが動くための環境づくりでした。会議で決めたことをAIだけが知らない、指摘するとすぐ引っ込める。この2つを直すために作った3つの仕組みと、失敗した3つのことを記録します。", "datePublished": "2026-09-15", "dateModified": "2026-09-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "自社の業務をAIに任せる仕組みを作って運用し、その仕組みを他社に移植する仕事をしています。AI検索対策（LLMO）では、主要AIでの言及を実測しながら記事とサイトを直すところまで伴走します。サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/company-memory-first/"}, "articleSection": "AIエージェント", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AIエージェントを作る前に会社の記憶を作った話"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "議事録の取り込みはどこまで自動にできますか", "acceptedAnswer": {"@type": "Answer", "text": "会議の録画から文字起こしを取り、決まったことと宿題をまとめて所定の場所に置くところまで自動にできます。人の判断が要るのはどれを決定として残すかだけなので、そこだけ目を通しています。"}}, {"@type": "Question", "name": "批判役のAIは同じサービスの別会話でもいいですか", "acceptedAnswer": {"@type": "Answer", "text": "構いません。同じ会話の中で批判を続けさせると、直前の自分の案に引きずられます。会話を分けて提案文だけを渡すと効きます。別の会社のAIも混ぜると、視点はもっと散るはずです。"}}, {"@type": "Question", "name": "複数のAIの意見が割れたときはどうしていますか", "acceptedAnswer": {"@type": "Answer", "text": "人が判断します。そのとき、結論が割れたのか根拠が割れたのか確信度が割れたのかを分けて出すようにしています。根拠が割れている場合はたいてい前提の事実確認が抜けています。"}}, {"@type": "Question", "name": "会社の記憶はどのツールに置くのがいいですか", "acceptedAnswer": {"@type": "Answer", "text": "nitoはGitのリポジトリに置いています。差分と履歴が1行ずつ残るので、AIが書き換えた内容を後から検証できるためです。AIに書き戻させる前提なら、履歴が残る場所のほうが安全だと考えています。"}}, {"@type": "Question", "name": "最初に書くべき情報は何ですか", "acceptedAnswer": {"@type": "Answer", "text": "決まっていることです。進行中の案件の状況、顧客との合意事項、社内で使っている言葉の定義。運用していて**AIが一番よく聞いてくるのがここでした。**組織図や業務フローは後回しで構いません。 --- この記事で書いた仕組みを他社の業務に入れる支援は、[AIエージェント構築支援](/ai-agent/)のページに書いています。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>AIエージェントを作る前に会社の記憶を作…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AIエージェント</span>
+            <span class="post-date">2026.09.15</span>
+        </div>
+        <h1 class="post-title">AIエージェントを作る前に会社の記憶を作った話</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会社の記憶を先に作る"><defs><linearGradient id="ecg-80a1dee8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-80a1dee8)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="528.8" y="137.3" width="142.4" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">AI導入</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">会社の記憶を先に作る</text><line x1="220.0" y1="327.1" x2="980.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">AI導入で最初に詰まったこと</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>社内の業務をAIに渡すとき、いちばん時間を取られるのはツールの選定でも使い方の習得でもなく、<strong>AIが動くための環境を整えること</strong>でした。</p>
+<p>nitoも最初はそこで詰まりました。調べ物も文章も頼めば出てくるのに、返ってくる提案がどれも今の話と噛み合わない。原因は精度ではなく、AIがこちらの文脈を持っていないことでした。</p>
+<p><strong>最初に作ったのはエージェントではなく、会社の記憶を置く場所です。</strong>この記事ではその記憶をAIに持たせるために作った3つの仕組みと、途中で失敗した3つのことを書きます。</p>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li><a href="#s1">課題に感じていたこと</a></li>
+                    <li class="toc-h3"><a href="#s1-1">会話をまたぐと前提が消える</a></li>
+                    <li class="toc-h3"><a href="#s1-2">依頼の背景を把握していないためアウトプットがずれる</a></li>
+                    <li class="toc-h3"><a href="#s1-3">反論するとすぐに意見を覆す</a></li>
+                    <li><a href="#s2">やったこと</a></li>
+                    <li class="toc-h3"><a href="#s2-1">議事録・Slack・メールを読ませる場所を作る</a></li>
+                    <li class="toc-h3"><a href="#s2-2">AI同士に直接やり取りさせる</a></li>
+                    <li class="toc-h3"><a href="#s2-3">批判役を別に立てる</a></li>
+                    <li><a href="#s3">うまくいかなかったこと</a></li>
+                    <li class="toc-h3"><a href="#s3-1">ルールの増やしすぎ</a></li>
+                    <li class="toc-h3"><a href="#s3-2">承認のすり抜け</a></li>
+                    <li class="toc-h3"><a href="#s3-3">番号の衝突</a></li>
+                    <li><a href="#s4">何を記憶として残すか</a></li>
+                    <li><a href="#s5">今日から始めるなら</a></li>
+                    <li><a href="#s6">よくある質問</a></li>
+                </ol>
+            </nav>
+
+<h2 id="s1">課題に感じていたこと</h2>
+<h3 id="s1-1">会話をまたぐと前提が消える</h3>
+<p><strong>AIは会話をまたいで記憶を持たないため、新しい会話はいつも白紙から始まります。</strong>そのため始めた当初は、この顧客とは前に何を決めたのか、いまどこまで進んでいるのか、何をやらないと決めたのかを、依頼のたびに最新の状況として共有していました。</p>
+<p>この時点では手間が増えるだけなので、まだ対処できます。実際に困ったのは次の2つでした。</p>
+<h3 id="s1-2">依頼の背景を把握していないためアウトプットがずれる</h3>
+<p><strong>AIが見ているのは依頼文に書いた分の背景だけ</strong>で、社内で交わした議論も、そこで変わった方針も渡っていません。</p>
+<p>nitoでも前日の会議でやめると決めた方向の提案が翌日に出てきました。<strong>やっかいなのはずれに毎回こちらが気づかなければいけないことで、</strong>提案を読み、前提が古いと判断し、そこから説明し直す往復が提案のたびに発生していました。</p>
+<h3 id="s1-3">反論するとすぐに意見を覆す</h3>
+<p><strong>AIは相手の意見に寄せるように作られています。</strong>こちらが軽く否定すると、理由を聞き返すこともなく案を取り下げます。</p>
+<p>そうなると、最初の案が検討の結果なのか、こちらが喜びそうな方向に寄せただけなのかを判別できません。<strong>意見が一致しても、それが検討された意見かどうかを確かめる手段がありませんでした。</strong>AIの中で深く検討されていないという問題で、精度ではなく構造の話です。</p>
+<p>問題は2つとも<strong>批判的に考える手順をAIにどう実装するか</strong>に行き着きました。</p>
+<h2 id="s2">やったこと</h2>
+<p>AIに文脈を渡す仕組みを2つと、検討を深くする仕組みを1つ作りました。それぞれどの課題に効いたかを先に整理しておきます。</p>
+<table>
+<thead>
+<tr>
+<th>作ったもの</th>
+<th>効いた課題</th>
+<th>人の手が要る部分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>議事録・Slack・メールを読ませる場所を作る</td>
+<td>依頼の背景を把握していない</td>
+<td>どれを決定として残すかの判断だけ</td>
+</tr>
+<tr>
+<td>AI用のメールボックスで直接やり取りさせる</td>
+<td>端末ごとに記憶が割れる</td>
+<td>最初に見に行く場所を設定した一度だけ</td>
+</tr>
+<tr>
+<td>批判役を別に立てる</td>
+<td>反論するとすぐに意見を覆す</td>
+<td>意見が割れたときの判断</td>
+</tr>
+</tbody>
+</table>
+<h3 id="s2-1">議事録・Slack・メールを読ませる場所を作る</h3>
+<p><strong>必要な情報がどこかにあるだけではAIは読まないため、</strong>読ませる導線まで作って初めて意味が出ます。</p>
+<p>取り込んでいるのは会議の録画から起こした議事録、Slackの新着（スレッドの返信も含む）、メールの3つです。それぞれ自動で所定の場所に落として、AIには作業を始める前に必ずそこを読ませています。Slackは15分ごと、議事録は会議が終わり次第です。</p>
+<p>その結果、次に話しかけたときの説明がいらなくなり、前提の古い提案も出なくなりました。</p>
+<p>これによって、依頼の出し方そのものが変わりました。それまでは会議のあとに宿題を整理して、どれをAIに渡すかを決めて、背景をつけて依頼していました。いまは議事録に宿題が書いてあってAIがそれを読んでいるため、こちらが何も言わなくても次に着手するものをAIが選んで作業に入ります。<strong>こちらが依頼を考えて言葉にする工程がまるごと消えたので、これが一番効きました。</strong></p>
+<h3 id="s2-2">AI同士に直接やり取りさせる</h3>
+<p><strong>社内でそれぞれ別の端末でAIを使っていると、記憶が端末ごとに割れます。</strong>こちらで作った手順やうまくいったやり方が向こうのAIには存在せず、逆に向こうが持っている資料の作り方をこちらは知らない。同じ会社なのに片方の端末だけが便利になっていってしまいます。</p>
+<p>これを人が橋渡ししようとすると結局また人の手間が増えます。そこでお互いのAIが読み書きする場所を作りました。AI用のメールボックスのようなもので、宛先ごとにファイルが分かれています。こちらのAIが資料の作り方を教えてほしいと書き込むと、向こうのAIが定期的にそこを見て答えを書き戻します。<strong>人が関わったのは最初に見に行く場所を設定した一度だけでした。</strong>いまもそのメールボックスの中でやり取りが続いていて、実際に資料作成の手順がこちらに渡ってきています。</p>
+<p><img alt="AI用のメールボックスの実物。こちらのAIが資料の作り方を依頼し、相手のAIが制約を調べて理由つきで返している" src="/media/images/company-memory-first_mailbox.png" />
+<em>実際のやり取り。上がこちらのAIからの依頼、下が相手のAIからの返答です。相手のAIは定期実行で箱を見に来て、調べて、書き戻します。</em></p>
+<h3 id="s2-3">批判役を別に立てる</h3>
+<p><strong>AIは自分の案を守りません。</strong>ひとつのAIに考えさせてそのまま出させると、こちらが少し押すだけで案を取り下げてしまいます。</p>
+<p>まず、批判だけを担当するAIを別に立てて、提案を人に見せる前にそこへ通すようにしました。提案を書いたAIには批判を書かせません。<strong>同じAIが両方をやると、自分の案に都合のいい批判しか出てこないからです。</strong>次に別の会社のAIにも同じ問いを投げるようにしました。GeminiとCodexに互いの回答を見せずに独立で答えさせ、そのあとどちらが誰の回答か伏せたままお互いを批評させます。どちらの回答か分かると評価が甘くなるため、名前は伏せました。</p>
+<p>また、意見の割れ方によってその後の進め方も変えています。<strong>3つの意見が揃ったら人に確認を取らずに進めます。</strong>ひとつでも割れたら、結論が割れたのか根拠が割れたのか確信度が割れたのかを添えて人に上げます。</p>
+<p>通すのは価格をいくらにするかとか、どの事業に寄せるかといった撤回コストの大きい判断だけです。料金がいくらか、その機能があるかといった調べれば決着する問いには使いません。</p>
+<h2 id="s3">うまくいかなかったこと</h2>
+<h3 id="s3-1">ルールの増やしすぎ</h3>
+<p><strong>ミスが出るたびにルールを1行足していたら、3日で454行になりました。</strong>長くしすぎると読まれる量が増えるだけで、ルールが効かなくなってしまいます。そのため上限を400行と決め、<strong>足すときは必ずひとつ消す運用にして戻しました。</strong></p>
+<h3 id="s3-2">承認のすり抜け</h3>
+<p>AIに任せる範囲を広げるとき、どこに線を引くかを決めていませんでした。その結果、本文を見せないままチャットに2回投稿してしまい、削除しています。いまは送る前に本文を会話に出して明示の承認をもらう形にしました。<strong>取り消せる操作と取り消せない操作は、分けて設計しないと事故ります。</strong></p>
+<h3 id="s3-3">番号の衝突</h3>
+<p><strong>複数のAIを同時に動かすと、人間の組織と同じ問題が起きます。</strong>別々に動いているセッションが同じチケット番号を採番してしまい、衝突しました。並行で書き込む前提の設計になっていなかったためです。</p>
+<h2 id="s4">何を記憶として残すか</h2>
+<p>置き場所を作っても、何を残すかが決まっていないと形だけになります。nitoでは5つに分けました。</p>
+<p>戦略と決定、顧客や競合ごとの事実、品質と承認のルール、取り込んだ生データ、日次のノート。このうち<strong>生データだけは書き換えません。</strong>会議の文字起こしやチャットの取り込みはそのまま残し、そこから読み取った事実だけを顧客ごとのページに上書きして最新にします。</p>
+<p>すべてを追記にすると矛盾した記述が同居してしまい、どれが最新か分からなくなります。<strong>生データは追記、解釈は上書き。</strong>この分け方が一番効きました。</p>
+<p>もうひとつ、人からの指摘だけは別に溜めています。どのAIが受けた指摘でも1箇所に集まり、他のAIが作業を始める前に読みます。同じ指摘を別のAIに繰り返さないためです。</p>
+<p><img alt="直近7日の指摘を集めた一覧。どのAIが受けた指摘でも1箇所に出る" src="/media/images/company-memory-first_lessons.png" />
+<em>指摘の一覧。30分ごとに自動で作られ、すべてのAIが作業前に読みます。</em></p>
+<h2 id="s5">今日から始めるなら</h2>
+<p>定例会議をひとつ選んで、議事録の取り込みだけを自動にします。<strong>全部をやろうとすると、たいてい途中で止まってしまいます。</strong></p>
+<p>次に、社内で決まっていることを書き出します。進行中の案件がいまどこまで来ているか、顧客と何を合意しているか、社内でどの言葉をどの意味で使っているか。<strong>AIが一番よく聞いてくるのがここでした。</strong>組織図や業務フローは後回しで構いません。</p>
+<p>最後に、提案を叩く役のAIを別に立てます。これは今日からできることで、提案を書かせたのとは別の会話を開き、提案文だけを貼って反論を求めるだけです。<strong>それだけで通る案の質が変わります。</strong></p>
+<p>エージェントを作るのはこの後で十分だと思っています。文脈が揃っていない状態でAIを増やしても、説明する相手が増えるだけでした。</p>
+<h2 id="s6">よくある質問</h2>
+<h3 id="s6-1">Q. 議事録の取り込みはどこまで自動にできますか</h3>
+<p>会議の録画から文字起こしを取り、決まったことと宿題をまとめて所定の場所に置くところまで自動にできます。人の判断が要るのはどれを決定として残すかだけなので、そこだけ目を通しています。</p>
+<h3 id="s6-2">Q. 批判役のAIは同じサービスの別会話でもいいですか</h3>
+<p>構いません。同じ会話の中で批判を続けさせると、直前の自分の案に引きずられます。会話を分けて提案文だけを渡すと効きます。別の会社のAIも混ぜると、視点はもっと散るはずです。</p>
+<h3 id="s6-3">Q. 複数のAIの意見が割れたときはどうしていますか</h3>
+<p>人が判断します。そのとき、結論が割れたのか根拠が割れたのか確信度が割れたのかを分けて出すようにしています。根拠が割れている場合はたいてい前提の事実確認が抜けています。</p>
+<h3 id="s6-4">Q. 会社の記憶はどのツールに置くのがいいですか</h3>
+<p>nitoはGitのリポジトリに置いています。差分と履歴が1行ずつ残るので、AIが書き換えた内容を後から検証できるためです。AIに書き戻させる前提なら、履歴が残る場所のほうが安全だと考えています。</p>
+<h3 id="s6-5">Q. 最初に書くべき情報は何ですか</h3>
+<p>決まっていることです。進行中の案件の状況、顧客との合意事項、社内で使っている言葉の定義。運用していて<strong>AIが一番よく聞いてくるのがここでした。</strong>組織図や業務フローは後回しで構いません。</p>
+<hr />
+<p>この記事で書いた仕組みを他社の業務に入れる支援は、<a href="/ai-agent/">AIエージェント構築支援</a>のページに書いています。</p>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">自社の業務をAIに任せる仕組みを作って運用し、その仕組みを他社に移植する仕事をしています。AI検索対策（LLMO）では、主要AIでの言及を実測しながら記事とサイトを直すところまで伴走します。サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/llmo-yomikata-imi/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOの読み方"><defs><linearGradient id="ecg-1e60f08d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1e60f08d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">用語解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOの読み方</text><line x1="356.8" y1="365.9" x2="843.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.12</div>
+                <div class="rel-card__ttl">LLMOの読み方・意味とは。SEOとの違いを一次データより先に確認</div>
+            </a>
+            <a href="/media/what-is-llmo/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOとは？"><defs><linearGradient id="ecg-6597a637" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6597a637)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">基礎解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOとは？</text><line x1="394.8" y1="365.9" x2="805.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.08.13</div>
+                <div class="rel-card__ttl">LLMOとは？SEOとの違いと、AIに推奨されるための対策を解説</div>
+            </a>
+            <a href="/media/ai-comparison-prompt/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="比較で選ばれる条件"><defs><linearGradient id="ecg-b9b70424" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b9b70424)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">比較で選ばれる条件</text><line x1="258.0" y1="365.9" x2="942.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.08.08</div>
+                <div class="rel-card__ttl">AIに「A社とB社どちらがいい？」と聞かれたとき選ばれる条件</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
