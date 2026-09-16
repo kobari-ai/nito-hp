@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIエージェント構築支援｜業務の棚卸しから設計・構築・定着まで｜nito</title>
     <link rel="canonical" href="https://nito-0210.com/ai-agent/">
-    <meta name="description" content="自社で毎日動かしているAIの仕組みを、御社の業務に移植するAIエージェント構築支援。無料の業務棚卸しで、AIに任せる範囲と人に残す範囲を切り分けてから、優先度の高い業務から構築します。成果報酬型ではありません。">
+    <meta name="description" content="AI開発企業が社内で使っているのと同じ方式で、nitoは会議・営業・記事・夜間処理を毎日AIに任せています。その仕組みを業務に合わせて組み直すAIエージェント構築支援。無料の業務棚卸しから。成果報酬型ではありません。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
@@ -958,6 +958,8 @@
             .price-title { font-size: 22px; }
         }
 
+        .hero-source { margin-top: 28px; font-size: 12.5px; color: #999; line-height: 1.8; }
+        .hero-source a { color: #999; text-decoration: underline; }
         /* ── Hero facts ── */
         .hero-facts {
             display: flex;
@@ -988,10 +990,6 @@
             border: 1px solid var(--color-border);
             border-radius: 16px;
             padding: 28px 30px;
-            display: grid;
-            grid-template-columns: 40px 1fr;
-            gap: 16px;
-            align-items: start;
         }
         .problem-mark {
             width: 40px; height: 40px; border-radius: 50%;
@@ -1090,18 +1088,12 @@
     <section class="hero ani-fade-bottom">
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="container">
-            <span class="hero-label">自社で毎日動かしている仕組みを、御社の業務に</span>
             <h1 class="hero-title">nito <span>AIエージェント</span><br class="sp-only">構築支援</h1>
-            <p class="hero-sub" style="margin-bottom:26px">自社で毎日動かしているAIの仕組みを、御社の業務に移植します。<br>業務の棚卸しから設計・構築・定着まで支援します。</p>
+            <p class="hero-sub" style="margin-bottom:26px">AI開発企業が社内で使っているのと同じ方式で、nitoは会議・営業・記事・夜間処理を毎日AIに任せています。<br>その仕組みを業務に合わせて組み直し、導入します。</p>
             <div class="hero-cta">
                 <a href="https://nito-0210.com/contact.html" class="btn-fill-lg">無料の業務棚卸しを相談する</a>
             </div>
-            <div class="hero-facts">
-                <div class="hero-fact"><span class="hero-fact-label">業務の棚卸し</span><span class="hero-fact-value">無料</span></div>
-                <div class="hero-fact"><span class="hero-fact-label">初回の相談</span><span class="hero-fact-value">30<small>分・オンライン</small></span></div>
-                <div class="hero-fact"><span class="hero-fact-label">費用</span><span class="hero-fact-value">構築費<small>＋月額</small></span></div>
-                <div class="hero-fact"><span class="hero-fact-label">成果報酬</span><span class="hero-fact-value">なし</span></div>
-            </div>
+            <p class="hero-source">方式の出典: Anthropic「<a href="https://www.anthropic.com/news/how-anthropic-teams-use-claude-code" target="_blank" rel="noopener">How Anthropic teams use Claude Code</a>」（Claude の開発元が公開している社内の使い方）</p>
         </div>
     </section>
 
@@ -1109,40 +1101,27 @@
     <section class="section-problem">
         <div class="container">
             <div class="ani-fade-bottom">
-                <div class="section-label">Problem</div>
                 <h2 class="section-title">こんなところで止まっていませんか</h2>
             </div>
             <div class="problem-grid ani-fade-bottom">
                 <div class="problem-item">
-                    <div class="problem-mark">01</div>
-                    <div>
-                        <h3 class="problem-title">PoCは動いたが業務に組み込めていない</h3>
-                        <p class="problem-desc">試作は動きました。ただ、誰がいつ使い、失敗したら誰が見るかが決まらないまま、本番に進めていません。</p>
-                    </div>
+                    <h3 class="problem-title">人が頼まないとAIが動かない</h3>
+                    <p class="problem-desc">チャットに打ち込んで初めて動くので、日報の集計や議事録の整理のような毎日の仕事は、結局いまも人が思い出して頼んでいます。</p>
                 </div>
                 <div class="problem-item">
-                    <div class="problem-mark">02</div>
-                    <div>
-                        <h3 class="problem-title">毎回会社の前提から説明し直している</h3>
-                        <p class="problem-desc">ChatGPTは使っています。社内の決まりごとや案件の状況をAIが知らないので、依頼のたびに同じ説明を打ち込むことになります。</p>
-                    </div>
+                    <h3 class="problem-title">社内にAIに詳しい担当者がいない</h3>
+                    <p class="problem-desc">ツールの選定や設定を任せられる人がおらず、外部に頼むにも何を頼めばよいか分からないまま時間が過ぎています。</p>
                 </div>
                 <div class="problem-item">
-                    <div class="problem-mark">03</div>
-                    <div>
-                        <h3 class="problem-title">AIに任せてよい範囲を誰も決めていない</h3>
-                        <p class="problem-desc">線引きがないと結局は人が全部を確認することになり、AIが増えても確認の仕事が減りません。</p>
-                    </div>
+                    <h3 class="problem-title">AIが会社の前提を知らない</h3>
+                    <p class="problem-desc">社内の決まりごとや案件の状況をAIが知らないので、依頼のたびに同じ説明を打ち込むところから始まります。</p>
                 </div>
                 <div class="problem-item">
-                    <div class="problem-mark">04</div>
-                    <div>
-                        <h3 class="problem-title">社内にAIに詳しい担当者がいない</h3>
-                        <p class="problem-desc">ツールの選定や設定を任せられる人がおらず、外部に頼むにも何を頼めばよいか分からない状態です。</p>
-                    </div>
+                    <h3 class="problem-title">AIに任せてよい範囲を誰も決めていない</h3>
+                    <p class="problem-desc">線引きがないと結局は人が全部を確認することになり、AIが増えても確認の仕事が減りません。</p>
                 </div>
             </div>
-            <p class="problem-close ani-fade-bottom">4つとも、nitoが自社でAIを使い始めたときに詰まったところです。原因はAIの精度ではなく、<strong>AIが動くための環境が社内になかったこと</strong>でした。その環境を作って運用しているので、同じものを御社に移植できます。</p>
+            <p class="problem-close ani-fade-bottom">4つとも、nitoが自社でAIを使い始めたときに詰まったところです。原因はAIの精度ではなく、<strong>AIが動くための環境が社内になかったこと</strong>でした。AI開発企業が自社向けに公開している環境の作り方があり、nitoはそれで会社を動かしています。</p>
         </div>
     </section>
 
@@ -1150,12 +1129,12 @@
     <section class="section-intro">
         <div class="container">
             <div class="intro-inner ani-fade-bottom">
-                <h2 class="intro-heading">自分たちで動かしているものを<br>御社の業務に組み直す。</h2>
-                <p class="intro-lead">nitoは自分たちの業務をAIに任せる仕組みを作り、2人で運用している会社です。</p>
+                <h2 class="intro-heading">AI開発企業の使い方を<br>会社ごと試している。</h2>
+                <p class="intro-lead">nitoはClaude の開発元が公開している社内の使い方をそのまま採り、会議・営業・記事・夜間処理を毎日AIに任せています。</p>
                 <div class="intro-body">
-                    <p>会議の議事録の取り込み、案件ごとの調査、資料や記事の下書き、<br>毎朝の状況整理と夜間の定期処理。社内で毎日AIが動かしています。</p>
-                    <p>提案書を書いて終わりにはしません。<br>自分たちが実際に使っている仕組みを、御社の業務に合わせて組み直します。</p>
-                    <p>動かしている本人が構築するため、何がAIに渡せて何が人に残るかを、<br>自社で毎日試した結果をもとに判断できます。</p>
+                    <p>会社の決まりごとと案件の状況をAIが毎回読む場所に置き、<br>定期処理は人が頼まなくても朝と夜に動き、取り消せない操作だけ人が承認する。<br>この3つが仕組みの中身です。</p>
+                    <p>提案書を書いて終わりにはせず、自分たちが毎日使っているものを<br>導入先の業務とツールに合わせて組み直します。</p>
+                    <p>動かしている本人が構築するため、何がAIに渡せて何が人に残るかを、<br>毎日試した結果をもとに判断できます。</p>
                 </div>
             </div>
         </div>
@@ -1165,9 +1144,8 @@
     <section class="section-usecase" style="background-color:#fafafa">
         <div class="container">
             <div class="ani-fade-bottom">
-                <div class="section-label">In practice</div>
                 <h2 class="section-title">nitoの社内で動いているもの</h2>
-                <p class="usecase-lead">御社に移植するのは、この仕組みです。それぞれにAIが進める部分と、人がやる部分があります。</p>
+                <p class="usecase-lead">導入するのはこの仕組みです。AIが進める部分と、人がやる部分を分けて書いています。</p>
             </div>
             <div class="usecase-grid ani-fade-bottom">
                 <div class="usecase-item">
@@ -1207,7 +1185,7 @@
                     <p class="usecase-human"><b>人がやること</b>翌朝に一覧を見て決める</p>
                 </div>
             </div>
-            <p class="usecase-note">※ いずれもnitoの社内で実際に稼働しているものです。御社では対象の業務とツールに合わせて組み直します。</p>
+            <p class="usecase-note">※ いずれもnitoの社内で実際に稼働しているものです。導入先では対象の業務とツールに合わせて組み直します。</p>
         </div>
     </section>
 
@@ -1215,24 +1193,23 @@
     <section class="section-flow" style="background-color:#fff">
         <div class="container">
             <div class="ani-fade-bottom">
-                <div class="section-label">Flow</div>
                 <h2 class="section-title">進め方</h2>
             </div>
             <div class="flow-list">
                 <div class="flow-card ani-fade-bottom">
-                    <span class="flow-step">STEP<em>01</em></span>
+                    <span class="flow-step"><em>1</em></span>
                     <h3 class="flow-title">業務の棚卸し</h3>
                     <span class="flow-tag">無料・オンライン30分から</span>
                     <p class="flow-desc">部門ごとに、毎日・毎週くり返している業務を伺って書き出します。AIに渡しやすい順に並べたものをお返しし、その時点で先に進むかを決めていただけます。</p>
                 </div>
                 <div class="flow-card ani-fade-bottom">
-                    <span class="flow-step">STEP<em>02</em></span>
+                    <span class="flow-step"><em>2</em></span>
                     <h3 class="flow-title">任せる範囲と<br>残す範囲の切り分け</h3>
                     <span class="flow-tag">部門長と決める</span>
                     <p class="flow-desc">AIが自動で進めるもの、人が承認してから進めるもの、AIに触らせないもの。この3つの線引きを部門長と決めます。nitoの社内も同じ線引きで動いています。</p>
                 </div>
                 <div class="flow-card ani-fade-bottom">
-                    <span class="flow-step">STEP<em>03</em></span>
+                    <span class="flow-step"><em>3</em></span>
                     <h3 class="flow-title">優先度の高い順に構築</h3>
                     <span class="flow-tag">1つずつ</span>
                     <p class="flow-desc">まず1つを最小構成で動かし、修正が減ってから次に広げます。夜間に無人で回る定期処理と、稼働量を毎月確認できる仕組みまで含めて引き渡します。</p>
@@ -1260,22 +1237,18 @@
     <section class="section-data" style="background-color:#fafafa">
         <div class="container">
             <div class="ani-fade-bottom">
-                <div class="section-label">Data &amp; Control</div>
                 <h2 class="section-title">データと権限の扱い</h2>
             </div>
             <div class="data-grid ani-fade-bottom">
                 <div class="data-item">
-                    <div class="data-num">01</div>
                     <h3 class="data-title">AIに読ませない・書かせないものを最初に決める</h3>
-                    <p class="data-desc">対象外にする業務とデータを部門長・情報システム部と最初に決め、文書にします。nitoの社内でも同じ一覧を持っています。</p>
+                    <p class="data-desc">対象外にする業務とデータを部門長・情報システム部と最初に決めて文書にします。nitoの社内でも同じ一覧を持っています。</p>
                 </div>
                 <div class="data-item">
-                    <div class="data-num">02</div>
-                    <h3 class="data-title">認証は御社が発行して御社が持つ</h3>
-                    <p class="data-desc">外部システムへの接続に必要な認証は御社側で発行・保持します。nitoが預かる形にはしません。</p>
+                    <h3 class="data-title">認証は導入先が発行して持つ</h3>
+                    <p class="data-desc">外部システムへの接続に必要な認証は導入先で発行・保持し、nitoが預かる形にはしません。</p>
                 </div>
                 <div class="data-item">
-                    <div class="data-num">03</div>
                     <h3 class="data-title">取り消せない操作は人の承認を通す</h3>
                     <p class="data-desc">対外送信・契約・支払い・公開・削除は、AIが下書きまで行い、実行は人の承認を通します。nitoの社内も同じ運用です。</p>
                 </div>
@@ -1287,12 +1260,11 @@
     <section class="section-price" style="background-color:#fff">
         <div class="container">
             <div class="ani-fade-bottom">
-                <div class="section-label">Price</div>
                 <h2 class="section-title">費用の考え方</h2>
             </div>
             <div class="price-grid">
                 <div class="price-card ani-fade-bottom" style="background:var(--color-card-bg)">
-                    <div class="price-kind">01 / 一時金</div>
+                    <div class="price-kind">一時金</div>
                     <h3 class="price-title">構築費</h3>
                     <p class="price-sub">業務の数と連携先の数で見積ります</p>
                     <ul class="price-list">
@@ -1302,7 +1274,7 @@
                     </ul>
                 </div>
                 <div class="price-card ani-fade-bottom" style="background:var(--color-card-bg)">
-                    <div class="price-kind">02 / 月額</div>
+                    <div class="price-kind">月額</div>
                     <h3 class="price-title">運用アドバイザリー</h3>
                     <p class="price-sub">月1回のミーティングで次を決めます</p>
                     <ul class="price-list">
@@ -1333,7 +1305,6 @@
     <section class="section-faq">
         <div class="container">
             <div class="ani-fade-bottom">
-                <div class="section-label">FAQ</div>
                 <h2 class="section-title">よくある質問</h2>
             </div>
             <div class="faq-list ani-fade-bottom">
@@ -1357,11 +1328,11 @@
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>PoCで止まっているものがあります。相談できますか？</span>
+                        <span>いまはChatGPTを個人で使っている程度です。相談できますか？</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">できます。止まる原因の多くはAIの精度ではなく、任せる範囲が決まっていないことと社内の判断基準がAIに渡っていないことです。棚卸しの段階でこの2つを確認し、動かせる形に組み直します。</div>
+                        <div class="faq-answer-inner">できます。むしろその段階からのほうが進めやすく、個人で使っていて時間がかかっている作業を棚卸しの入口にします。人が頼まなくても動く定期処理と、会社の前提をAIに持たせる場所を先に作り、そこから業務を1つずつ渡していきます。</div>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1370,7 +1341,7 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">大丈夫です。設計と構築はnitoが行い、御社側に必要なのは業務の説明と、任せる範囲の判断です。引き渡し後は月1回のミーティングで使い方と承認ルールを整え、担当者が替わっても使い続けられる状態にします。</div>
+                        <div class="faq-answer-inner">大丈夫です。設計と構築はnitoが行い、必要なのは業務の説明と、任せる範囲の判断だけです。引き渡し後は月1回のミーティングで使い方と承認ルールを整え、担当者が替わっても使い続けられる状態にします。</div>
                     </div>
                 </div>
                 <div class="faq-item">
