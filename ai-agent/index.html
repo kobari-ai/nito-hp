@@ -12,9 +12,9 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIエージェント構築支援｜業務の棚卸しから設計・構築・定着まで｜nito</title>
+    <title>AIエージェント構築支援｜指示しなくても動くAIを業務に｜nito</title>
     <link rel="canonical" href="https://nito-0210.com/ai-agent/">
-    <meta name="description" content="AI開発企業が社内で使っているのと同じ方式で、nitoは会議・営業・記事・夜間処理を毎日AIに任せています。その仕組みを業務に合わせて組み直すAIエージェント構築支援。無料の業務棚卸しから。成果報酬型ではありません。">
+    <meta name="description" content="指示しなくても動くAIを、御社の業務に入れます。頼んで初めて動くAIではなく、自分で判断して進めるAIをつくります。社内にAIに詳しい人がいなくても、どの業務から始めるかの整理から毎日の運用に乗るまで一緒にやります。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
@@ -252,6 +252,7 @@
         }
 
         .hero-title {
+            max-width: 900px;
             font-size: 80px;
             font-weight: 900;
             line-height: 1.08;
@@ -776,7 +777,7 @@
         .section-flow { padding: 100px 0; background-color: #fafafa; }
         .flow-list {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 24px;
         }
         .flow-card {
@@ -834,6 +835,7 @@
             letter-spacing: 0.05em;
         }
         .flow-after p { font-size: 15.5px; color: var(--color-text-light); line-height: 1.9; }
+        @media (max-width: 1000px) { .flow-list { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) {
             .section-flow { padding: 64px 0; }
             .flow-list { grid-template-columns: 1fr; gap: 16px; }
@@ -971,7 +973,7 @@
 
         /* ── Problem ── */
         .section-problem { padding: 100px 0; background-color: #fafafa; }
-        .problem-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .problem-item {
             background: #fff;
             border: 1px solid var(--color-border);
@@ -1074,12 +1076,11 @@
     <!-- Hero -->
     <section class="hero ani-fade-bottom">
         <div class="container">
-            <h1 class="hero-title">nito <span>AIエージェント</span><br class="sp-only">構築支援</h1>
-            <p class="hero-sub" style="margin-bottom:26px">AI開発企業が社内で使っているのと同じ方式で、nitoは会議・営業・記事・夜間処理を毎日AIに任せています。<br>その仕組みを業務に合わせて組み直し、導入します。</p>
+            <h1 class="hero-title">指示しなくても動くAIを、<span>御社の業務</span>に入れます</h1>
+            <p class="hero-sub" style="margin-bottom:26px">頼んで初めて動くAIではなく、自分で判断して進めるAIをつくります。社内にAIに詳しい人がいなくても、どの業務から始めるかの整理から、毎日の運用に乗るまで一緒にやります。</p>
             <div class="hero-cta">
                 <a href="https://nito-0210.com/contact.html" class="btn-fill-lg">無料の業務棚卸しを相談する</a>
             </div>
-            <p class="hero-source">方式の出典: Anthropic「<a href="https://www.anthropic.com/news/how-anthropic-teams-use-claude-code" target="_blank" rel="noopener">How Anthropic teams use Claude Code</a>」（Claude の開発元が公開している社内の使い方）</p>
         </div>
     </section>
 
@@ -1091,23 +1092,19 @@
             </div>
             <div class="problem-grid ani-fade-bottom">
                 <div class="problem-item">
-                    <h3 class="problem-title">人が頼まないとAIが動かない</h3>
-                    <p class="problem-desc">チャットに打ち込んで初めて動くので、日報の集計や議事録の整理のような毎日の仕事は、結局いまも人が思い出して頼んでいます。</p>
+                    <h3 class="problem-title">指示しないとAIが動かない</h3>
+                    <p class="problem-desc">チャットに打ち込んで初めて動くので、日報の集計や議事録の整理のような毎日の仕事は、結局いまも人が思い出して頼む状態のままです。</p>
                 </div>
                 <div class="problem-item">
-                    <h3 class="problem-title">社内にAIに詳しい担当者がいない</h3>
+                    <h3 class="problem-title">社内にAIに詳しい人がいない</h3>
                     <p class="problem-desc">ツールの選定や設定を任せられる人がおらず、外部に頼むにも何を頼めばよいか分からないまま時間が過ぎています。</p>
                 </div>
-                <div class="problem-item">
+                <div class="problem-item"><!-- 3つ目は希一さん判断待ち（next/commander.md）。仮置き -->
                     <h3 class="problem-title">AIが会社の前提を知らない</h3>
                     <p class="problem-desc">社内の決まりごとや案件の状況をAIが知らないので、依頼のたびに同じ説明を打ち込むところから始まります。</p>
                 </div>
-                <div class="problem-item">
-                    <h3 class="problem-title">AIに任せてよい範囲を誰も決めていない</h3>
-                    <p class="problem-desc">線引きがないと結局は人が全部を確認することになり、AIが増えても確認の仕事が減りません。</p>
-                </div>
             </div>
-            <p class="problem-close ani-fade-bottom">4つとも、nitoが自社でAIを使い始めたときに詰まったところです。原因はAIの精度ではなく、<strong>AIが動くための環境が社内になかったこと</strong>でした。AI開発企業が自社向けに公開している環境の作り方があり、nitoはそれで会社を動かしています。</p>
+            <p class="problem-close ani-fade-bottom">原因はAIの精度ではなく、<strong>AIが動くための環境が社内にないこと</strong>です。その環境を業務の棚卸しから毎日の運用に乗るまで一緒に作ります。</p>
         </div>
     </section>
 
@@ -1126,7 +1123,7 @@
                         </div>
                     </div>
                     <figure class="shot" style="margin:0">
-                        <img src="/media/images/company-memory-first_mailbox.png" alt="nitoの社内で2人のAIがやり取りしているメールボックスの実物">
+                        <img src="/media/images/company-memory-first_mailbox.png" alt="nitoの社内でAI同士がやり取りしているメールボックスの実物">
                         <figcaption>実物: 社内のAI同士が資料の作り方を相談し、制約を調べて理由つきで返している。人が関わったのは最初に置き場所を決めた一度だけです。</figcaption>
                     </figure>
                 </div>
@@ -1210,12 +1207,14 @@
                     <span class="flow-step"><em>3</em></span>
                     <h3 class="flow-title">優先度の高い順に構築</h3>
                     <span class="flow-tag">1つずつ</span>
-                    <p class="flow-desc">まず1つを最小構成で動かし、修正が減ってから次に広げます。夜間に無人で回る定期処理と、稼働量を毎月確認できる仕組みまで含めて引き渡します。</p>
+                    <p class="flow-desc">まず1つを最小構成で動かし、修正が減ってから次に広げます。人が頼まなくても朝と夜に動く定期処理と、稼働量を毎月確認できる仕組みまで含めて引き渡します。</p>
                 </div>
-            </div>
-            <div class="flow-after ani-fade-bottom">
-                <span class="flow-after-label">引き渡しのあと</span>
-                <p>月1回のミーティングで稼働の実測を見て、次にどの業務をAIに渡すかを決めます。使い方や承認ルールの整備も一緒に進め、AIに詳しい担当者がいなくても使い続けられる状態にします。</p>
+                <div class="flow-card ani-fade-bottom">
+                    <span class="flow-step"><em>4</em></span>
+                    <h3 class="flow-title">運用アドバイザリー</h3>
+                    <span class="flow-tag">月1回</span>
+                    <p class="flow-desc">稼働の実測を見て、次にどの業務をAIに渡すかを決めます。使い方や承認ルールの整備も一緒に進め、AIに詳しい担当者がいなくても使い続けられる状態にします。</p>
+                </div>
             </div>
             <div class="types-wrap ani-fade-bottom">
                 <h3 class="types-heading">棚卸しでよく出てくる業務の型</h3>
