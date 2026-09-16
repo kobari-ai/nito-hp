@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # sitemap の lastmod を記事の最終コミット日から取るため（shallow だと全記事が同じ日になる）
 
       - uses: actions/setup-python@v5
         with:

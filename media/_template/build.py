@@ -600,6 +600,22 @@ SITE = "https://nito-0210.com"
 STATIC_PAGES = ["/", "/llmo/", "/media/", "/contact.html", "/privacy.html"]
 
 
+def post_lastmod(p) -> str:
+    """sitemap の lastmod。front matter の date と、md の最終コミット日の新しい方。
+    公開後に直した記事が lastmod 固定のままだと再クロールの優先度が上がらない（2026-09-17 実測:
+    9/13 に直した記事の最終クロールが 8/11 のまま）。git が無い／shallow の場合は date にフォールバック。"""
+    import subprocess
+    d = p["meta"]["date"]
+    try:
+        out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(POSTS_DIR / f"{p['slug']}.md")],
+                             capture_output=True, text=True, timeout=10, cwd=ROOT.parent).stdout.strip()
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", out) and out > d:
+            return out
+    except Exception:
+        pass
+    return d
+
+
 def generate_sitemap(posts):
     """リポジトリ直下に sitemap.xml を生成する（固定ページ＋全記事）。"""
     root = ROOT.parent
@@ -608,7 +624,7 @@ def generate_sitemap(posts):
     for path in STATIC_PAGES:
         urls.append((f"{SITE}{path}", today))
     for p in posts:
-        urls.append((f"{SITE}/media/{p['slug']}/", p["meta"]["date"]))
+        urls.append((f"{SITE}/media/{p['slug']}/", post_lastmod(p)))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
