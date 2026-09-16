@@ -239,14 +239,6 @@
             min-height: 560px;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -150px; right: -150px;
-            width: 700px; height: 700px;
-            background: radial-gradient(circle, rgba(255,159,67,0.12) 0%, transparent 65%);
-            pointer-events: none;
-        }
 
         .hero-sub { color:#4a4a4a; font-size:18px; line-height:1.8; margin:18px 0 0; max-width:720px; font-weight:500; }
         .hero-label {
@@ -297,17 +289,6 @@
             opacity: 1;
         }
 
-        /* Hero decoration — トップページと同じ方眼ライン */
-        .hero-grid {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            background:
-                linear-gradient(rgba(230,126,34,0.10) 1px, transparent 1px) 0 0 / 100% 130px,
-                linear-gradient(90deg, rgba(230,126,34,0.10) 1px, transparent 1px) 0 0 / 130px 100%;
-            -webkit-mask-image: radial-gradient(ellipse 85% 90% at 75% 30%, black 0%, transparent 72%);
-            mask-image: radial-gradient(ellipse 85% 90% at 75% 30%, black 0%, transparent 72%);
-        }
 
         @media (max-width: 768px) {
             .hero {
@@ -326,7 +307,6 @@
                 border-radius: 14px;
                 font-size: 18px;
             }
-            .hero-grid { display: none; }
         }
 
         /* ── Intro ── */
@@ -831,8 +811,8 @@
             color: var(--color-primary-deep);
             background: var(--color-card-bg);
             border: 1px solid #ffe2c2;
-            border-radius: 999px;
-            padding: 4px 12px;
+            border-radius: 4px;
+            padding: 4px 10px;
         }
         .flow-desc { font-size: 15.5px; color: var(--color-text-light); line-height: 1.95; }
         .flow-after {
@@ -960,6 +940,13 @@
 
         .hero-source { margin-top: 28px; font-size: 12.5px; color: #999; line-height: 1.8; }
         .hero-source a { color: #999; text-decoration: underline; }
+        .shot { margin: 40px 0 0; }
+        .shot img { width: 100%; height: auto; display: block; border: 1px solid var(--color-border); border-radius: 8px; }
+        .shot figcaption { font-size: 13px; color: var(--color-text-light); line-height: 1.8; margin-top: 12px; }
+        .intro-inner { max-width: 100%; }
+        .intro-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+        .intro-cols .intro-body br { display: none; }
+        @media (max-width: 900px) { .intro-cols { grid-template-columns: 1fr; gap: 32px; } }
         /* ── Hero facts ── */
         .hero-facts {
             display: flex;
@@ -1086,7 +1073,6 @@
 
     <!-- Hero -->
     <section class="hero ani-fade-bottom">
-        <div class="hero-grid" aria-hidden="true"></div>
         <div class="container">
             <h1 class="hero-title">nito <span>AIエージェント</span><br class="sp-only">構築支援</h1>
             <p class="hero-sub" style="margin-bottom:26px">AI開発企業が社内で使っているのと同じ方式で、nitoは会議・営業・記事・夜間処理を毎日AIに任せています。<br>その仕組みを業務に合わせて組み直し、導入します。</p>
@@ -1130,11 +1116,19 @@
         <div class="container">
             <div class="intro-inner ani-fade-bottom">
                 <h2 class="intro-heading">AI開発企業の使い方を<br>会社ごと試している。</h2>
-                <p class="intro-lead">nitoはClaude の開発元が公開している社内の使い方をそのまま採り、会議・営業・記事・夜間処理を毎日AIに任せています。</p>
-                <div class="intro-body">
-                    <p>会社の決まりごとと案件の状況をAIが毎回読む場所に置き、<br>定期処理は人が頼まなくても朝と夜に動き、取り消せない操作だけ人が承認する。<br>この3つが仕組みの中身です。</p>
-                    <p>提案書を書いて終わりにはせず、自分たちが毎日使っているものを<br>導入先の業務とツールに合わせて組み直します。</p>
-                    <p>動かしている本人が構築するため、何がAIに渡せて何が人に残るかを、<br>毎日試した結果をもとに判断できます。</p>
+                <div class="intro-cols">
+                    <div>
+                        <p class="intro-lead">nitoはClaude の開発元が公開している社内の使い方をそのまま採り、会議・営業・記事・夜間処理を毎日AIに任せています。</p>
+                        <div class="intro-body">
+                            <p>会社の決まりごとと案件の状況をAIが毎回読む場所に置き、定期処理は人が頼まなくても朝と夜に動き、取り消せない操作だけ人が承認する。この3つが仕組みの中身です。</p>
+                            <p>提案書を書いて終わりにはせず、自分たちが毎日使っているものを導入先の業務とツールに合わせて組み直します。</p>
+                            <p>動かしている本人が構築するため、何がAIに渡せて何が人に残るかを、毎日試した結果をもとに判断できます。</p>
+                        </div>
+                    </div>
+                    <figure class="shot" style="margin:0">
+                        <img src="/media/images/company-memory-first_mailbox.png" alt="nitoの社内で2人のAIがやり取りしているメールボックスの実物">
+                        <figcaption>実物: 社内のAI同士が資料の作り方を相談し、制約を調べて理由つきで返している。人が関わったのは最初に置き場所を決めた一度だけです。</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -1185,6 +1179,10 @@
                     <p class="usecase-human"><b>人がやること</b>翌朝に一覧を見て決める</p>
                 </div>
             </div>
+            <figure class="shot ani-fade-bottom">
+                <img src="/media/images/company-memory-first_lessons.png" alt="直近7日の指摘を1箇所に集めた一覧の実物">
+                <figcaption>実物: 人から受けた指摘を30分ごとに1枚に集め、どのAIも作業前に読む。同じ指摘を別のAIが繰り返さないための仕組みです。</figcaption>
+            </figure>
             <p class="usecase-note">※ いずれもnitoの社内で実際に稼働しているものです。導入先では対象の業務とツールに合わせて組み直します。</p>
         </div>
     </section>
