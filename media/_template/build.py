@@ -179,12 +179,18 @@ def add_heading_ids_and_toc(body_html: str):
         in_faq = item[3] if len(item) > 3 else False
         if in_faq:
             continue  # FAQの質問は目次から除外
-        cls = ' class="toc-h3"' if level == 3 else ""
-        lis.append(f'                    <li{cls}><a href="#{hid}">{text}</a></li>')
+        # 番号は id から作る（s3 → 3、s3-2 → 3-2）。上位記事の目次と同じ「1｜」「1-1｜」の形
+        num = hid[1:]
+        cls = "toc-h3" if level == 3 else "toc-h2"
+        lis.append(f'                    <li class="{cls}"><a href="#{hid}"><span class="toc__n">{num}</span>{text}</a></li>')
+    # 長い目次は畳んで「もっと見る」。12行を超えたら畳む（実測: 上位記事は目次を10行前後で折り畳む）
+    long_cls = " toc--long" if len(lis) > 12 else ""
+    more_btn = ('\n                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>'
+                if long_cls else "")
     toc_html = (
-        '            <nav class="toc">\n'
+        f'            <nav class="toc{long_cls}">\n'
         '                <div class="toc__ttl">目次</div>\n'
-        "                <ol>\n" + "\n".join(lis) + "\n                </ol>\n"
+        "                <ol>\n" + "\n".join(lis) + "\n                </ol>" + more_btn + "\n"
         "            </nav>"
     )
     return body_html, toc_html
