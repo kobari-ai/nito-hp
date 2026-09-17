@@ -81,7 +81,7 @@ AIモードは検索から得た情報を整理して見せる機能で、Gemini
 
 Googleアプリを開くと、検索の下に虫眼鏡にキラキラが付いた「AI モード」のアイコンがあります。押した先が専用画面です。ブラウザから使う場合はPCと同じで、`google.com/ai` を開くか検索結果のタブから入ります。
 
-<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/22_sp_aimode.png" alt="スマホのブラウザで開いたAIモードの会話画面。上部のタブ列の左端に「AI モード」があり、質問と回答、出典、下部に「質問する」の入力欄" loading="lazy"><figcaption>スマホのブラウザでのAIモード。検索結果のタブ列の左端「AI モード」から入ると、この画面になる</figcaption></figure>
+<figure class="post-figure post-figure--sp"><img src="/media/images/google-ai-mode-guide/22_sp_aimode.png" alt="スマホのブラウザで開いたAIモードの会話画面。上部のタブ列の左端に「AI モード」があり、質問と回答、出典、下部に「質問する」の入力欄" loading="lazy"><figcaption>スマホのブラウザでのAIモード。検索結果のタブ列の左端「AI モード」から入ると、この画面になる</figcaption></figure>
 
 Googleアプリにアイコンが無いときは、画面左上のフラスコの形をしたアイコン（Search Labs）を開いてください。ここでAIモードの試験運用版をオンにできます。Androidのホーム画面に置くGoogle検索のウィジェットにもAIモードのアイコンがあり、ここからならアプリを開く手間なく1回のタップで入れます。
 
