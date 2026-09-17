@@ -1044,6 +1044,110 @@
             .section-data { padding: 64px 0; }
             .data-grid { grid-template-columns: 1fr; gap: 14px; }
         }
+
+        /* ═══ v3（2026-09-17）flyle/バクラク型: 各パネルに実物、2列3列を混ぜる ═══ */
+        .hero { background: linear-gradient(135deg, #fff3e6 0%, #fffaf5 45%, #fff 100%); padding: 150px 0 80px; }
+        .hero-wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+        .hero-pain { font-size: 15px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.02em; margin-bottom: 18px; }
+        .hero-title { max-width: none; font-size: 46px; line-height: 1.3; margin-bottom: 22px; }
+        .hero-title .line { display: block; white-space: nowrap; color: var(--color-text); }
+        .hero-title .grad { background: linear-gradient(90deg, #ff9f43, #e8590c); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero-do { font-size: 17px; color: #4a4a4a; line-height: 1.9; font-weight: 500; margin-bottom: 30px; }
+        .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-primary { display: inline-block; background: var(--color-secondary); color: #fff; font-weight: 700; font-size: 15px; padding: 16px 28px; border-radius: 8px; }
+        .btn-outline { display: inline-block; border: 2px solid var(--color-text); color: var(--color-text); font-weight: 700; font-size: 15px; padding: 14px 26px; border-radius: 8px; background: #fff; }
+        .hero-visual { position: relative; }
+        /* 画像の枠（実物を差し込むまでのプレースホルダ） */
+        .ph { display: flex; align-items: center; justify-content: center; text-align: center; background: repeating-linear-gradient(45deg, #fff, #fff 10px, #fff6ea 10px, #fff6ea 20px); border: 2px dashed #f0b27a; border-radius: 12px; color: #b9773a; font-size: 13px; line-height: 1.7; padding: 16px; min-height: 160px; margin: 0; }
+        .ph b { display: block; font-size: 14px; margin-bottom: 4px; }
+        .ph--hero { min-height: 400px; box-shadow: 0 24px 60px rgba(230,126,34,0.12); }
+        .shot { margin: 0; }
+        .shot img { width: 100%; height: auto; display: block; border: 1px solid var(--color-border); border-radius: 10px; }
+        .shot figcaption { font-size: 12.5px; color: var(--color-text-light); margin-top: 10px; line-height: 1.7; }
+
+        .section { padding: 96px 0; }
+        .section--gray { background: #fafafa; }
+        .section-head { max-width: 760px; margin-bottom: 44px; }
+        .section-kicker { font-size: 13px; font-weight: 700; color: var(--color-primary-deep); margin-bottom: 10px; }
+        .section-title { font-size: 38px; margin-bottom: 14px; }
+        .section-lead { font-size: 16px; color: var(--color-text-light); line-height: 1.9; }
+
+        /* 課題: 枠なし・罫線 */
+        .problem-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid #e5e5e5; }
+        .problem { padding: 28px 28px 28px 0; border-bottom: 1px solid #e5e5e5; }
+        .problem + .problem { padding-left: 28px; border-left: 1px solid #e5e5e5; }
+        .problem-title { font-size: 20px; font-weight: 900; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; }
+        .problem-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        .problem-close { margin-top: 28px; font-size: 16px; line-height: 2; max-width: 760px; }
+
+        /* 導入するとこう動く: タブ＋大パネル */
+        .tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        .tab { border: 1px solid #ddd; background: #fff; border-radius: 999px; padding: 10px 22px; font-size: 14px; font-weight: 700; color: var(--color-text); cursor: pointer; }
+        .tab.is-active { background: #fff1e3; border-color: #f0b27a; color: var(--color-primary-deep); }
+        .panel { display: none; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 36px; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: center; }
+        .panel.is-active { display: grid; }
+        .panel-title { font-size: 24px; font-weight: 900; font-family: var(--font-heading-jp); line-height: 1.45; margin-bottom: 14px; }
+        .panel-desc { font-size: 15px; color: var(--color-text-light); line-height: 1.95; margin-bottom: 18px; }
+        .panel-kv { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; font-size: 14px; line-height: 1.7; border-top: 1px solid #eee; padding-top: 16px; }
+        .panel-kv dt { color: var(--color-primary-deep); font-weight: 700; white-space: nowrap; }
+        .panel-kv dd { margin: 0; color: var(--color-text); }
+
+        /* 仕組みの中身: ベント型 */
+        .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+        .bento-item { background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+        .bento-item.w3 { grid-column: span 3; } .bento-item.w2 { grid-column: span 2; } .bento-item.w4 { grid-column: span 4; }
+        .bento-title { font-size: 18px; font-weight: 900; font-family: var(--font-heading-jp); line-height: 1.5; }
+        .bento-desc { font-size: 14px; color: var(--color-text-light); line-height: 1.85; }
+        .bento-item .ph { min-height: 150px; }
+
+        /* 進め方: 横4段＋矢印 */
+        .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        .step { background: #fff; border: 1px solid var(--color-border); border-radius: 14px; padding: 22px; position: relative; display: flex; flex-direction: column; gap: 10px; }
+        .step-num { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #fff; background: var(--color-text); border-radius: 4px; padding: 3px 8px; align-self: flex-start; }
+        .step-title { font-size: 18px; font-weight: 900; font-family: var(--font-heading-jp); line-height: 1.45; }
+        .step-tag { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); }
+        .step-desc { font-size: 14px; color: var(--color-text-light); line-height: 1.85; }
+        .step .ph { min-height: 120px; }
+        .step::after { content: "▶"; position: absolute; right: -16px; top: 50%; transform: translateY(-50%); color: #ddd; font-size: 12px; }
+        .step:last-child::after { display: none; }
+
+        /* 理由・データ: 罫線の3列 */
+        .points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .point-num { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.1em; margin-bottom: 10px; }
+        .point-title { font-size: 20px; font-weight: 900; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; padding-top: 14px; border-top: 2px solid var(--color-text); }
+        .point-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+
+        /* 費用 */
+        .price-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .price-col { border-top: 2px solid var(--color-text); padding-top: 18px; }
+        .price-kind { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); margin-bottom: 6px; }
+        .price-title { font-size: 26px; font-weight: 900; font-family: var(--font-heading-jp); margin-bottom: 4px; }
+        .price-sub { font-size: 14px; color: var(--color-text-light); margin-bottom: 16px; }
+        .price-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .price-list li { position: relative; padding-left: 18px; font-size: 15px; line-height: 1.8; }
+        .price-list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 8px; height: 8px; border-radius: 50%; background: var(--color-primary); }
+        .price-note { margin-top: 26px; font-size: 15px; color: var(--color-text-light); line-height: 1.9; }
+
+        @media (max-width: 1000px) {
+            .bento { grid-template-columns: repeat(2, 1fr); } .bento-item.w3, .bento-item.w2, .bento-item.w4 { grid-column: span 1; }
+            .steps { grid-template-columns: repeat(2, 1fr); } .step::after { display: none; }
+        }
+        @media (max-width: 768px) {
+            .hero { padding: 120px 0 56px; }
+            .hero-wrap { grid-template-columns: 1fr; gap: 28px; }
+            .hero-title { font-size: 30px; }
+            .hero-title .line { white-space: normal; }
+            .ph--hero { min-height: 240px; }
+            .section { padding: 60px 0; }
+            .section-title { font-size: 28px; }
+            .problem-list { grid-template-columns: 1fr; }
+            .problem + .problem { padding-left: 0; border-left: none; }
+            .panel { grid-template-columns: 1fr; padding: 22px; }
+            .bento { grid-template-columns: 1fr; }
+            .steps { grid-template-columns: 1fr; }
+            .points { grid-template-columns: 1fr; gap: 24px; }
+            .price-cols { grid-template-columns: 1fr; gap: 28px; }
+        }
     </style>
 </head>
 
@@ -1075,192 +1179,205 @@
 
     <!-- Hero -->
     <section class="hero ani-fade-bottom">
-        <div class="container">
-            <h1 class="hero-title">指示しなくても動くAIを、<span>御社の業務</span>に入れます</h1>
-            <p class="hero-sub" style="margin-bottom:26px">頼んで初めて動くAIではなく、自分で判断して進めるAIをつくります。社内にAIに詳しい人がいなくても、どの業務から始めるかの整理から、毎日の運用に乗るまで一緒にやります。</p>
-            <div class="hero-cta">
-                <a href="https://nito-0210.com/contact.html" class="btn-fill-lg">無料の業務棚卸しを相談する</a>
+        <div class="container hero-wrap">
+            <div>
+                <p class="hero-pain">頼まないと動かないAI。社内に詳しい人がいない。毎回、前提から説明し直し。</p>
+                <h1 class="hero-title"><span class="line"><span class="grad">指示しなくても動くAI</span>を、</span><span class="line">業務に。</span></h1>
+                <p class="hero-do">業務の棚卸しから、任せる範囲の切り分け、構築、毎日の運用に乗るまで。</p>
+                <div class="hero-btns">
+                    <a href="https://nito-0210.com/contact.html" class="btn-primary">無料の業務棚卸しを相談</a>
+                    <a href="#flow" class="btn-outline">進め方を見る</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <figure class="ph ph--hero"><span><b>ここに実物: 毎朝AIが作る「今日の状況」の画面</b>予定・メール・Slackから作った今日の予定と判断待ちの一覧（顧客名は伏せる）</span></figure>
             </div>
         </div>
     </section>
 
     <!-- Problem -->
-    <section class="section-problem">
+    <section class="section section--gray">
         <div class="container">
-            <div class="ani-fade-bottom">
-                <h2 class="section-title">こんなところで止まっていませんか</h2>
+            <div class="section-head ani-fade-bottom">
+                <h2 class="section-title">止まりやすい3つの場所</h2>
             </div>
-            <div class="problem-grid ani-fade-bottom">
-                <div class="problem-item">
-                    <h3 class="problem-title">指示しないとAIが動かない</h3>
+            <div class="problem-list ani-fade-bottom">
+                <div class="problem">
+                    <h3 class="problem-title">指示しないと動かないAI</h3>
                     <p class="problem-desc">チャットに打ち込んで初めて動くので、日報の集計や議事録の整理のような毎日の仕事は、結局いまも人が思い出して頼む状態のままです。</p>
                 </div>
-                <div class="problem-item">
-                    <h3 class="problem-title">社内にAIに詳しい人がいない</h3>
+                <div class="problem">
+                    <h3 class="problem-title">AIに詳しい人が社内にいない</h3>
                     <p class="problem-desc">ツールの選定や設定を任せられる人がおらず、外部に頼むにも何を頼めばよいか分からないまま時間が過ぎています。</p>
                 </div>
-                <div class="problem-item"><!-- 3つ目は希一さん判断待ち（next/commander.md）。仮置き -->
-                    <h3 class="problem-title">AIが会社の前提を知らない</h3>
+                <div class="problem">
+                    <h3 class="problem-title">会社の前提を知らないAI</h3>
                     <p class="problem-desc">社内の決まりごとや案件の状況をAIが知らないので、依頼のたびに同じ説明を打ち込むところから始まります。</p>
                 </div>
             </div>
-            <p class="problem-close ani-fade-bottom">原因はAIの精度ではなく、<strong>AIが動くための環境が社内にないこと</strong>です。その環境を業務の棚卸しから毎日の運用に乗るまで一緒に作ります。</p>
+            <p class="problem-close ani-fade-bottom">どれもAIの性能の問題ではありません。会社の前提を読む場所、決まった時刻に動く仕組み、承認の線引き。この3つが無いと、AIは頼まれたときにしか動けません。</p>
         </div>
     </section>
 
-    <!-- Intro -->
-    <section class="section-intro">
+    <!-- Example -->
+    <section class="section" id="example">
         <div class="container">
-            <div class="intro-inner ani-fade-bottom">
-                <h2 class="intro-heading">AI開発企業の使い方を<br>会社ごと試している。</h2>
-                <div class="intro-cols">
-                    <div>
-                        <p class="intro-lead">nitoはClaude の開発元が公開している社内の使い方をそのまま採り、会議・営業・記事・夜間処理を毎日AIに任せています。</p>
-                        <div class="intro-body">
-                            <p>会社の決まりごとと案件の状況をAIが毎回読む場所に置き、定期処理は人が頼まなくても朝と夜に動き、取り消せない操作だけ人が承認する。この3つが仕組みの中身です。</p>
-                            <p>提案書を書いて終わりにはせず、自分たちが毎日使っているものを導入先の業務とツールに合わせて組み直します。</p>
-                            <p>動かしている本人が構築するため、何がAIに渡せて何が人に残るかを、毎日試した結果をもとに判断できます。</p>
-                        </div>
-                    </div>
-                    <figure class="shot" style="margin:0">
-                        <img src="/media/images/company-memory-first_mailbox.png" alt="nitoの社内でAI同士がやり取りしているメールボックスの実物">
-                        <figcaption>実物: 社内のAI同士が資料の作り方を相談し、制約を調べて理由つきで返している。人が関わったのは最初に置き場所を決めた一度だけです。</figcaption>
-                    </figure>
+            <div class="section-head ani-fade-bottom">
+                <h2 class="section-title">導入するとこう動く</h2>
+                <p class="section-lead">実際に稼働しているAIの画面です。AIが進める部分と、人がやる部分を分けて書いています。</p>
+            </div>
+            <div class="tabs ani-fade-bottom" role="tablist">
+                <button class="tab is-active" data-tab="t1">会議のあと</button>
+                <button class="tab" data-tab="t2">毎朝</button>
+                <button class="tab" data-tab="t3">営業</button>
+                <button class="tab" data-tab="t4">夜間</button>
+            </div>
+            <div class="panel is-active ani-fade-bottom" id="t1">
+                <figure class="ph"><span><b>ここに実物: 議事録の取り込み後に更新された顧客ページ</b>決まったこと・宿題が抜き出され、該当ページが書き換わった差分</span></figure>
+                <div>
+                    <h3 class="panel-title">議事録の取り込みと宿題の抽出</h3>
+                    <p class="panel-desc">会議の文字起こしを1日2回自動で取り込み、決まったことと宿題を抜き出して、関係する顧客・案件のページを最新にするので、次の会議の前には前回の宿題が一覧で出ています。</p>
+                    <dl class="panel-kv"><dt>AIがやる</dt><dd>取り込み・抽出・ページの更新</dd><dt>人がやる</dt><dd>どれを正式な決定として残すか</dd></dl>
+                </div>
+            </div>
+            <div class="panel ani-fade-bottom" id="t2">
+                <figure class="ph"><span><b>ここに実物: 毎朝6時半に作られる「今日の状況」</b>今日の予定・判断待ちの一覧・昨日終わったこと</span></figure>
+                <div>
+                    <h3 class="panel-title">今日の状況と判断待ちの整理</h3>
+                    <p class="panel-desc">予定・メール・Slack・前日の記録を毎朝読み、今日の予定と判断待ちの一覧を1枚にまとめます。人は出社してこの1枚を見て、決めるものだけ決めればよい状態です。</p>
+                    <dl class="panel-kv"><dt>AIがやる</dt><dd>収集・要約・一覧化</dd><dt>人がやる</dt><dd>判断待ちへの回答</dd></dl>
+                </div>
+            </div>
+            <div class="panel ani-fade-bottom" id="t3">
+                <figure class="ph"><span><b>ここに実物: 送る前のアプローチ文面と承認の画面</b>相手ごとに下書きされた文面と「送る／送らない」の確認</span></figure>
+                <div>
+                    <h3 class="panel-title">アプローチ文面の下書きと送信前の承認</h3>
+                    <p class="panel-desc">送る相手の業種と反復業務を調べ、相手ごとに文面を下書きします。過去に送った実物を先に読んでから書くので、型が崩れません。送るかどうかは毎回人が決めます。</p>
+                    <dl class="panel-kv"><dt>AIがやる</dt><dd>調査・下書き</dd><dt>人がやる</dt><dd>送るかどうかの判断と送信</dd></dl>
+                </div>
+            </div>
+            <div class="panel ani-fade-bottom" id="t4">
+                <figure class="ph"><span><b>ここに実物: 夜間処理の実行記録</b>22時以降に無人で実行された処理と、翌朝に回された判断の一覧</span></figure>
+                <div>
+                    <h3 class="panel-title">夜間の無人処理と翌朝への引き継ぎ</h3>
+                    <p class="panel-desc">22時以降に、その日の記録の整理と翌日の準備を無人で実行します。人の判断が要るものは翌朝の一覧に回すので、夜中に誰も見ていなくても止まりません。</p>
+                    <dl class="panel-kv"><dt>AIがやる</dt><dd>記録の整理・翌日の準備</dd><dt>人がやる</dt><dd>翌朝に一覧を見て決める</dd></dl>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Usecase -->
-    <section class="section-usecase" style="background-color:#fafafa">
+    <!-- Mechanism -->
+    <section class="section section--gray">
         <div class="container">
-            <div class="ani-fade-bottom">
-                <h2 class="section-title">nitoの社内で動いているもの</h2>
-                <p class="usecase-lead">導入するのはこの仕組みです。AIが進める部分と、人がやる部分を分けて書いています。</p>
+            <div class="section-head ani-fade-bottom">
+                <h2 class="section-title">仕組みの中身</h2>
+                <p class="section-lead">指示しなくても動くために必要なのは、この5つです。</p>
             </div>
-            <div class="usecase-grid ani-fade-bottom">
-                <div class="usecase-item">
-                    <span class="usecase-cat">会議のあと</span>
-                    <h3 class="usecase-title">議事録の取り込みと宿題の抽出</h3>
-                    <p class="usecase-desc">会議の文字起こしを1日2回自動で取り込み、決まったことと宿題を抜き出して、関係する顧客・案件のページを最新にします。</p>
-                    <p class="usecase-human"><b>人がやること</b>どれを正式な決定として残すか</p>
+            <div class="bento ani-fade-bottom">
+                <div class="bento-item w4">
+                    <h3 class="bento-title">会社の前提をAIが毎回読む場所</h3>
+                    <p class="bento-desc">決まりごと・案件の状況・人から受けた指摘を1箇所に置き、どのAIも作業前に読みます。同じ説明を二度しなくてよくなり、同じ指摘を別のAIが繰り返しません。</p>
+                    <figure class="shot"><img src="/media/images/company-memory-first_lessons.png" alt="人から受けた指摘を1箇所に集めた一覧の実物"><figcaption>実物: 直近7日の指摘を30分ごとに1枚に集めたもの</figcaption></figure>
                 </div>
-                <div class="usecase-item">
-                    <span class="usecase-cat">毎朝</span>
-                    <h3 class="usecase-title">今日の状況と未決事項の整理</h3>
-                    <p class="usecase-desc">予定・メール・Slack・前日の記録を毎朝6時半に読み、今日の予定と判断待ちの一覧を1枚にまとめます。</p>
-                    <p class="usecase-human"><b>人がやること</b>判断待ちへの回答</p>
+                <div class="bento-item w2">
+                    <h3 class="bento-title">決まった時刻に動く定期実行</h3>
+                    <p class="bento-desc">朝と夜に、人が頼まなくても動きます。</p>
+                    <figure class="ph"><span><b>ここに実物: 定期実行の予定一覧</b>06:30／22:00／22:30 と毎時の実行</span></figure>
                 </div>
-                <div class="usecase-item">
-                    <span class="usecase-cat">営業</span>
-                    <h3 class="usecase-title">アプローチ文面の下書き</h3>
-                    <p class="usecase-desc">送る相手の業種と反復業務を調べ、相手ごとに文面を下書きします。過去に送った実物を先に読んでから書きます。</p>
-                    <p class="usecase-human"><b>人がやること</b>送るかどうかの判断と送信</p>
+                <div class="bento-item w2">
+                    <h3 class="bento-title">取り消せない操作だけ人が承認</h3>
+                    <p class="bento-desc">対外送信・契約・支払い・公開・削除は、AIが下書きを作り、人が確認してから実行します。</p>
+                    <figure class="ph"><span><b>ここに実物: 承認を求める画面</b>「送ってよいか」の問いかけと、承認前の下書き</span></figure>
                 </div>
-                <div class="usecase-item">
-                    <span class="usecase-cat">案件</span>
-                    <h3 class="usecase-title">顧客ごとの計測と月次レポート</h3>
-                    <p class="usecase-desc">顧客ごとにAI検索での言及を定点で計測し、変化と次の打ち手をレポートにまとめます。</p>
-                    <p class="usecase-human"><b>人がやること</b>顧客への説明と提案</p>
+                <div class="bento-item w2">
+                    <h3 class="bento-title">失敗した処理の一覧</h3>
+                    <p class="bento-desc">止まった処理は隠さず一覧に出し、翌朝に人が確認できる形です。</p>
+                    <figure class="ph"><span><b>ここに実物: 例外の一覧</b>失敗した処理・原因・次に直す場所</span></figure>
                 </div>
-                <div class="usecase-item">
-                    <span class="usecase-cat">記事・資料</span>
-                    <h3 class="usecase-title">下書きと別AIによる添削</h3>
-                    <p class="usecase-desc">下書きを書いたAIとは別のAIに添削させ、文体の機械チェックを通してから人に回します。</p>
-                    <p class="usecase-human"><b>人がやること</b>最終確認と公開</p>
-                </div>
-                <div class="usecase-item">
-                    <span class="usecase-cat">夜間</span>
-                    <h3 class="usecase-title">無人の定期処理</h3>
-                    <p class="usecase-desc">22時以降に、その日の記録の整理と翌日の準備を無人で実行します。人の判断が要るものは翌朝の一覧に回します。</p>
-                    <p class="usecase-human"><b>人がやること</b>翌朝に一覧を見て決める</p>
+                <div class="bento-item w2">
+                    <h3 class="bento-title">AI同士のやり取り</h3>
+                    <p class="bento-desc">担当の違うAI同士が、人を介さずに依頼と返答をします。</p>
+                    <figure class="shot"><img src="/media/images/company-memory-first_mailbox.png" alt="AI同士がやり取りしているメールボックスの実物"><figcaption>実物: AI同士の依頼と返答の記録</figcaption></figure>
                 </div>
             </div>
-            <figure class="shot ani-fade-bottom">
-                <img src="/media/images/company-memory-first_lessons.png" alt="直近7日の指摘を1箇所に集めた一覧の実物">
-                <figcaption>実物: 人から受けた指摘を30分ごとに1枚に集め、どのAIも作業前に読む。同じ指摘を別のAIが繰り返さないための仕組みです。</figcaption>
-            </figure>
-            <p class="usecase-note">※ いずれもnitoの社内で実際に稼働しているものです。導入先では対象の業務とツールに合わせて組み直します。</p>
         </div>
     </section>
 
     <!-- Flow -->
-    <section class="section-flow" style="background-color:#fff">
+    <section class="section" id="flow">
         <div class="container">
-            <div class="ani-fade-bottom">
+            <div class="section-head ani-fade-bottom">
                 <h2 class="section-title">進め方</h2>
+                <p class="section-lead">無料の棚卸しから始めて、1つずつ。</p>
             </div>
-            <div class="flow-list">
-                <div class="flow-card ani-fade-bottom">
-                    <span class="flow-step"><em>1</em></span>
-                    <h3 class="flow-title">業務の棚卸し</h3>
-                    <span class="flow-tag">無料・オンライン30分から</span>
-                    <p class="flow-desc">部門ごとに、毎日・毎週くり返している業務を伺って書き出します。AIに渡しやすい順に並べたものをお返しし、その時点で先に進むかを決めていただけます。</p>
+            <div class="steps ani-fade-bottom">
+                <div class="step">
+                    <span class="step-num">1</span>
+                    <h3 class="step-title">業務の棚卸し</h3>
+                    <span class="step-tag">無料・オンライン30分から</span>
+                    <p class="step-desc">部門ごとに、毎日・毎週くり返している業務を伺って書き出します。AIに渡しやすい順に並べたものをお返しします。</p>
+                    <figure class="ph"><span><b>ここに実物: 棚卸しの結果シート</b></span></figure>
                 </div>
-                <div class="flow-card ani-fade-bottom">
-                    <span class="flow-step"><em>2</em></span>
-                    <h3 class="flow-title">任せる範囲と<br>残す範囲の切り分け</h3>
-                    <span class="flow-tag">部門長と決める</span>
-                    <p class="flow-desc">AIが自動で進めるもの、人が承認してから進めるもの、AIに触らせないもの。この3つの線引きを部門長と決めます。nitoの社内も同じ線引きで動いています。</p>
+                <div class="step">
+                    <span class="step-num">2</span>
+                    <h3 class="step-title">任せる範囲と残す範囲の切り分け</h3>
+                    <span class="step-tag">部門長と決める</span>
+                    <p class="step-desc">AIが自動で進めるもの、人が承認してから進めるもの、AIに触らせないもの。この3つの線引きが決まるまでは作りません。</p>
+                    <figure class="ph"><span><b>ここに実物: 線引きの表</b>自動／承認／触らせない</span></figure>
                 </div>
-                <div class="flow-card ani-fade-bottom">
-                    <span class="flow-step"><em>3</em></span>
-                    <h3 class="flow-title">優先度の高い順に構築</h3>
-                    <span class="flow-tag">1つずつ</span>
-                    <p class="flow-desc">まず1つを最小構成で動かし、修正が減ってから次に広げます。人が頼まなくても朝と夜に動く定期処理と、稼働量を毎月確認できる仕組みまで含めて引き渡します。</p>
+                <div class="step">
+                    <span class="step-num">3</span>
+                    <h3 class="step-title">優先度の高い順に構築</h3>
+                    <span class="step-tag">1つずつ</span>
+                    <p class="step-desc">まず1つを最小構成で動かし、修正が減ってから次に広げます。定期実行と、稼働量を毎月確認できる仕組みまで含めて引き渡します。</p>
+                    <figure class="ph"><span><b>ここに実物: 最初の1つが動いた画面</b></span></figure>
                 </div>
-                <div class="flow-card ani-fade-bottom">
-                    <span class="flow-step"><em>4</em></span>
-                    <h3 class="flow-title">運用アドバイザリー</h3>
-                    <span class="flow-tag">月1回</span>
-                    <p class="flow-desc">稼働の実測を見て、次にどの業務をAIに渡すかを決めます。使い方や承認ルールの整備も一緒に進め、AIに詳しい担当者がいなくても使い続けられる状態にします。</p>
-                </div>
-            </div>
-            <div class="types-wrap ani-fade-bottom">
-                <h3 class="types-heading">棚卸しでよく出てくる業務の型</h3>
-                <p class="types-lead">業種は問いません。毎日発生する転記と報告はAIに渡しやすい部類で、棚卸しでもこのあたりから出てきます。</p>
-                <div class="types-grid">
-                    <div class="types-item"><span class="types-name">転記・入力</span><p class="types-ex">日報、伝票、検査記録、介護記録</p></div>
-                    <div class="types-item"><span class="types-name">一次対応</span><p class="types-ex">問い合わせ、受発注メール、口コミ返信</p></div>
-                    <div class="types-item"><span class="types-name">要約・記録</span><p class="types-ex">応対記録、議事録、進捗報告</p></div>
-                    <div class="types-item"><span class="types-name">下書き</span><p class="types-ex">スカウト文面、見積書、提案書のたたき台</p></div>
-                    <div class="types-item"><span class="types-name">集計・報告</span><p class="types-ex">月次レポート、シフト、Excelの集計</p></div>
+                <div class="step">
+                    <span class="step-num">4</span>
+                    <h3 class="step-title">運用アドバイザリー</h3>
+                    <span class="step-tag">月1回</span>
+                    <p class="step-desc">稼働の実測を見て、次にどの業務をAIに渡すかを決めます。使い方や承認ルールの整備も、この場で進めます。</p>
+                    <figure class="ph"><span><b>ここに実物: 月次レビューの1枚</b>稼働量・例外・次の候補</span></figure>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Data -->
-    <section class="section-data" style="background-color:#fafafa">
+    <!-- Reasons -->
+    <section class="section section--gray">
         <div class="container">
-            <div class="ani-fade-bottom">
-                <h2 class="section-title">データと権限の扱い</h2>
+            <div class="section-head ani-fade-bottom">
+                <h2 class="section-title">nitoに頼む理由</h2>
             </div>
-            <div class="data-grid ani-fade-bottom">
-                <div class="data-item">
-                    <h3 class="data-title">AIに読ませない・書かせないものを最初に決める</h3>
-                    <p class="data-desc">対象外にする業務とデータを部門長・情報システム部と最初に決めて文書にします。nitoの社内でも同じ一覧を持っています。</p>
+            <div class="points ani-fade-bottom">
+                <div>
+                    <div class="point-num">01</div>
+                    <h3 class="point-title">構築だけでなく実行と運用まで</h3>
+                    <p class="point-desc">提案書や設計書で終わらせず、動く状態での引き渡しです。夜間の定期処理と月次の稼働確認まで含めるので、引き渡した翌日から人が頼まなくても動きます。</p>
                 </div>
-                <div class="data-item">
-                    <h3 class="data-title">認証は導入先が発行して持つ</h3>
-                    <p class="data-desc">外部システムへの接続に必要な認証は導入先で発行・保持し、nitoが預かる形にはしません。</p>
+                <div>
+                    <div class="point-num">02</div>
+                    <h3 class="point-title">データと権限を先に決める</h3>
+                    <p class="point-desc">AIに読ませない・書かせない業務とデータを部門長・情報システム部と最初に文書にします。外部システムの認証は導入先が発行して持ち、nitoは預かりません。</p>
                 </div>
-                <div class="data-item">
-                    <h3 class="data-title">取り消せない操作は人の承認を通す</h3>
-                    <p class="data-desc">対外送信・契約・支払い・公開・削除は、AIが下書きまで行い、実行は人の承認を通します。nitoの社内も同じ運用です。</p>
+                <div>
+                    <div class="point-num">03</div>
+                    <h3 class="point-title">作って終わりにしない月1回の伴走</h3>
+                    <p class="point-desc">引き渡し後は月1回、稼働の実測を見ながら次にAIに渡す業務を決めます。担当者が替わっても使い続けられるよう、使い方と承認ルールを一緒に整えます。</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Price -->
-    <section class="section-price" style="background-color:#fff">
+    <section class="section">
         <div class="container">
-            <div class="ani-fade-bottom">
+            <div class="section-head ani-fade-bottom">
                 <h2 class="section-title">費用の考え方</h2>
             </div>
-            <div class="price-grid">
-                <div class="price-card ani-fade-bottom" style="background:var(--color-card-bg)">
+            <div class="price-cols ani-fade-bottom">
+                <div class="price-col">
                     <div class="price-kind">一時金</div>
                     <h3 class="price-title">構築費</h3>
                     <p class="price-sub">業務の数と連携先の数で見積ります</p>
@@ -1270,7 +1387,7 @@
                         <li>引き渡しと検収後の限定保証</li>
                     </ul>
                 </div>
-                <div class="price-card ani-fade-bottom" style="background:var(--color-card-bg)">
+                <div class="price-col">
                     <div class="price-kind">月額</div>
                     <h3 class="price-title">運用アドバイザリー</h3>
                     <p class="price-sub">月1回のミーティングで次を決めます</p>
@@ -1306,49 +1423,24 @@
             </div>
             <div class="faq-list ani-fade-bottom">
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>何から始めればいいですか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">無料の業務棚卸しからです。部門の反復業務を30分ほど伺い、AIに渡しやすい順に並べたものをお返しします。その時点で構築に進むかどうかを決めていただけます。</div>
-                    </div>
+                    <button class="faq-question"><span>何から始めればいいですか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">無料の業務棚卸しからです。部門の反復業務を30分ほど伺い、AIに渡しやすい順に並べたものをお返しします。その時点で構築に進むかどうかを決めていただけます。</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>どの部門から入るのがよいですか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">最初はバックオフィスや管理部門の反復業務をおすすめしています。転記・集計・定型文の作成はAIに渡しやすく、結果を確かめやすいためです。1つ動いてから営業や現場の業務に広げます。</div>
-                    </div>
+                    <button class="faq-question"><span>どの部門から入るのがよいですか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">最初はバックオフィスや管理部門の反復業務をおすすめしています。転記・集計・定型文の作成はAIに渡しやすく、結果を確かめやすいためです。1つ動いてから営業や現場の業務に広げます。</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>いまはChatGPTを個人で使っている程度です。相談できますか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">できます。むしろその段階からのほうが進めやすく、個人で使っていて時間がかかっている作業を棚卸しの入口にします。人が頼まなくても動く定期処理と、会社の前提をAIに持たせる場所を先に作り、そこから業務を1つずつ渡していきます。</div>
-                    </div>
+                    <button class="faq-question"><span>いまはChatGPTを個人で使っている程度です。相談できますか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">できます。むしろその段階からのほうが進めやすく、個人で使っていて時間がかかっている作業を棚卸しの入口にします。人が頼まなくても動く定期処理と、会社の前提をAIに持たせる場所を先に作り、そこから業務を1つずつ渡していきます。</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>社内にAIに詳しい担当者がいなくても大丈夫ですか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">大丈夫です。設計と構築はnitoが行い、必要なのは業務の説明と、任せる範囲の判断だけです。引き渡し後は月1回のミーティングで使い方と承認ルールを整え、担当者が替わっても使い続けられる状態にします。</div>
-                    </div>
+                    <button class="faq-question"><span>社内にAIに詳しい担当者がいなくても大丈夫ですか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">大丈夫です。設計と構築はnitoが行い、必要なのは業務の説明と、任せる範囲の判断だけです。引き渡し後は月1回のミーティングで使い方と承認ルールを整え、担当者が替わっても使い続けられる状態にします。</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>費用はどのくらいかかりますか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">構築費（一時金）と、月1回のミーティングを含む運用アドバイザリー（月額）の組み合わせです。成果報酬はありません。金額は棚卸しで対象業務と範囲を確定してから提示します。</div>
-                    </div>
+                    <button class="faq-question"><span>費用はどのくらいかかりますか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">構築費と月額の2つです。構築費は業務の数と連携先の数で、月額は月1回のミーティングを含む運用アドバイザリーの内容で決まります。棚卸しで対象業務と範囲が決まった時点でお伝えします。</div></div>
                 </div>
             </div>
         </div>
@@ -1423,6 +1515,12 @@
             if (navOverlay.classList.contains('active')) toggleMenu();
         }));
 
+        // Tabs
+        document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+            document.querySelectorAll('.tab').forEach(x => x.classList.remove('is-active'));
+            document.querySelectorAll('.panel').forEach(x => x.classList.remove('is-active'));
+            t.classList.add('is-active'); document.getElementById(t.dataset.tab).classList.add('is-active');
+        }));
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
