@@ -472,6 +472,17 @@ def build_jsonld(post) -> str:
     )
 
 
+def og_image_url(meta, slug) -> str:
+    """共有時のサムネイル。front matter の image → media/images/og/<slug>.jpg（gen_og.py で生成）→ サイト既定。
+    2026-09-17 まで og:image が無く、Slack/X で共有すると画像なしのカードになっていた。"""
+    if meta.get("image"):
+        img = meta["image"]
+        return img if img.startswith("http") else SITE + img
+    if (ROOT / "images" / "og" / f"{slug}.jpg").exists():
+        return f"{SITE}/media/images/og/{slug}.jpg"
+    return f"{SITE}/media/images/og/_default.jpg"
+
+
 def build_article(post, posts, template: str) -> str:
     meta = post["meta"]
     author = meta.get("author", DEFAULT_AUTHOR)
@@ -497,6 +508,7 @@ def build_article(post, posts, template: str) -> str:
         "{{AUTHOR_ROLE}}": html.escape(profile.get("role", DEFAULT_AUTHOR_ROLE)),
         "{{AUTHOR_BIO}}": html.escape(profile["bio"]),
         "{{AUTHOR_IMAGE}}": profile["image"],
+        "{{OG_IMAGE}}": og_image_url(meta, post["slug"]),
     }
     for key, val in replacements.items():
         out = out.replace(key, val)
