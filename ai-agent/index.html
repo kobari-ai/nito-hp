@@ -1049,8 +1049,9 @@
         .hero { background: linear-gradient(135deg, #fff3e6 0%, #fffaf5 45%, #fff 100%); padding: 150px 0 80px; }
         .hero-wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
         .hero-pain { font-size: 15px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.02em; margin-bottom: 18px; }
-        .hero-title { max-width: none; font-size: 46px; line-height: 1.3; margin-bottom: 22px; }
-        .hero-title .line { display: block; white-space: nowrap; color: var(--color-text); }
+        .hero-title { max-width: none; font-size: 42px; line-height: 1.35; margin-bottom: 22px; letter-spacing: -0.01em; }
+        .hero-title { color: var(--color-text); }
+        .hero-title .line { display: block; color: var(--color-text); white-space: nowrap; }
         .hero-title .grad { background: linear-gradient(90deg, #ff9f43, #e8590c); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .hero-do { font-size: 17px; color: #4a4a4a; line-height: 1.9; font-weight: 500; margin-bottom: 30px; }
         .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
@@ -1135,8 +1136,9 @@
         @media (max-width: 768px) {
             .hero { padding: 120px 0 56px; }
             .hero-wrap { grid-template-columns: 1fr; gap: 28px; }
-            .hero-title { font-size: 30px; }
+            .hero-title { font-size: 28px; }
             .hero-title .line { white-space: normal; }
+
             .ph--hero { min-height: 240px; }
             .section { padding: 60px 0; }
             .section-title { font-size: 28px; }
@@ -1181,9 +1183,8 @@
     <section class="hero ani-fade-bottom">
         <div class="container hero-wrap">
             <div>
-                <p class="hero-pain">頼まないと動かないAI。社内に詳しい人がいない。毎回、前提から説明し直し。</p>
-                <h1 class="hero-title"><span class="line"><span class="grad">指示しなくても動くAI</span>を、</span><span class="line">業務に。</span></h1>
-                <p class="hero-do">業務の棚卸しから、任せる範囲の切り分け、構築、毎日の運用に乗るまで。</p>
+                <h1 class="hero-title"><span class="line"><span class="grad">指示しなくても動くAI</span>が、</span><span class="line">毎日の業務を回す</span></h1>
+                <p class="hero-do">AIが先に動き、人は決めるだけ。業務の棚卸しから毎日の運用に乗るまで、社内にAIに詳しい人がいなくても進められます。</p>
                 <div class="hero-btns">
                     <a href="https://nito-0210.com/contact.html" class="btn-primary">無料の業務棚卸しを相談</a>
                     <a href="#flow" class="btn-outline">進め方を見る</a>
