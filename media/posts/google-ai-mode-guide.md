@@ -51,7 +51,7 @@ AIモードは検索から得た情報を整理して見せる機能で、Gemini
 
 公式ヘルプが案内している入口は3つあり、どの端末でも変わりません。これにAIによる概要から入る経路と、URLで直接開く方法を足した5通りを順に書きます。
 
-<!-- img: 01_pc_top.png | alt: Googleのトップページ。検索ボックスの右端に「AI モード」のボタンがある | caption: PCのトップページ。検索ボックス右端の「AI モード」を押すと専用画面が開く -->
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/01_pc_top.png" alt="Googleのトップページ。検索ボックスの右端に「AI モード」のボタンがある" loading="lazy"><figcaption>PCのトップページ。検索ボックス右端の「AI モード」を押すと専用画面が開く</figcaption></figure>
 
 ### PCで開く
 
@@ -89,7 +89,7 @@ Googleアプリにアイコンが無いときは、画面左上のフラスコ�
 
 公式ヘルプに書かれている入力方法は、テキスト・音声・画像・ファイル・URLの5つです。解説記事の多くはテキストと音声と画像までしか書いていませんが、PDFとURLを渡せる点は公式ヘルプに明記されています。
 
-<!-- img: 05_pc_udm50.png | alt: AIモードの会話画面。上部に質問、その下にAIの回答と出典リンク、下部に「質問する」の入力欄 | caption: AIモードの画面。回答の下に出典リンクが並び、下の入力欄から追加の質問ができる -->
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/05_pc_udm50.png" alt="AIモードの会話画面。上部に質問、その下にAIの回答と出典リンク、下部に「質問する」の入力欄" loading="lazy"><figcaption>AIモードの画面。回答の下に出典リンクが並び、下の入力欄から追加の質問ができる</figcaption></figure>
 
 ### テキストと音声で質問する
 
@@ -163,7 +163,7 @@ Chromeで検索語を途中まで入れて Tab キーを押すと、いつもの
 
 同じ状態をURLで指定するのが `udm=14` です。`https://www.google.com/search?q=キーワード&udm=14` の形で開くと、「ウェブ」タブを選んだのと同じ画面になります。2024年5月から使えるGoogleの正規のパラメータで、2年以上動き続けています。
 
-<!-- img: 03_pc_udm14.png | alt: udm=14を付けた検索結果。AIによる概要は無く「ウェブ検索結果」の見出しの下にリンクが並ぶが、タブ列の左端には「AI モード」が残っている | caption: udm=14 の画面。AIによる概要は消えるが、タブ列の「AI モード」はそのまま残る -->
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/03_pc_udm14.png" alt="udm=14を付けた検索結果。AIによる概要は無く「ウェブ検索結果」の見出しの下にリンクが並ぶが、タブ列の左端には「AI モード」が残っている" loading="lazy"><figcaption>udm=14 の画面。AIによる概要は消えるが、タブ列の「AI モード」はそのまま残る</figcaption></figure>
 
 **実機で試したところ、`udm=14` でAIによる概要は消えましたが、タブ列の「AI モード」はそのまま残っていました。** 上位の解説記事には「AIの要約や広告が排除される」と書かれていますが、消えるのはAIによる概要だけで、AIモードの入口は消えません。AIモードそのものを画面から無くしたい場合は、この章の後半にある `chrome://flags` が必要です。
 
@@ -181,7 +181,7 @@ Chromeで検索語を途中まで入れて Tab キーを押すと、いつもの
 
 検索語の末尾に半角スペースを空けて `-ai` を付けると、AIによる概要が出なくなります。実機でも消えました。
 
-<!-- img: 04_pc_minus_ai.png | alt: 「リフォーム 費用 -ai」の検索結果。AIによる概要は無いが、3位以降のサイトが通常の検索と入れ替わっている | caption: -ai を付けた結果。AIによる概要は消えるが、検索結果の顔ぶれ自体が通常と変わる -->
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/04_pc_minus_ai.png" alt="「リフォーム 費用 -ai」の検索結果。AIによる概要は無いが、3位以降のサイトが通常の検索と入れ替わっている" loading="lazy"><figcaption>-ai を付けた結果。AIによる概要は消えるが、検索結果の顔ぶれ自体が通常と変わる</figcaption></figure>
 
 **ただし `-ai` は検索結果そのものを変えてしまいます。** これは「ai という文字を含むページを除外する」通常のマイナス検索で、AIを消す機能ではありません。「リフォーム 費用」で試すと、`udm=14` では3位以降に ie-miru.jp と suumo.jp が並んだのに対し、`-ai` では rehome-navi.com と sumirin-ht.co.jp に入れ替わりました。上位の解説記事はこの副作用を書いていません。AIによる概要を消したいだけなら、検索結果が変わらない `udm=14` を使ってください。
 
