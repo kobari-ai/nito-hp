@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google AIモードの使い方。切り替え・表示されない・消し方・履歴【2026年9月】 | nito Column</title>
+    <meta name="description" content="Google検索のAIモードの開き方、表示されないときの直し方、消し方、履歴の扱いを、公式ヘルプを一次ソースにして実機で試した結果だけ書きました。上位の解説記事と食い違った点も、そのまま端末別に載せています。">
+    <link rel="canonical" href="https://nito-0210.com/media/google-ai-mode-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Google AIモードの使い方。切り替え・表示されない・消し方・履歴【2026年9月】">
+    <meta property="og:description" content="Google検索のAIモードの開き方、表示されないときの直し方、消し方、履歴の扱いを、公式ヘルプを一次ソースにして実機で試した結果だけ書きました。上位の解説記事と食い違った点も、そのまま端末別に載せています。">
+    <meta property="og:url" content="https://nito-0210.com/media/google-ai-mode-guide/">
+    <meta property="og:site_name" content="nito Column">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Google AIモードの使い方。切り替え・表示されない・消し方・履歴【2026年9月】", "description": "Google検索のAIモードの開き方、表示されないときの直し方、消し方、履歴の扱いを、公式ヘルプを一次ソースにして実機で試した結果だけ書きました。上位の解説記事と食い違った点も、そのまま端末別に載せています。", "datePublished": "2026-09-16", "dateModified": "2026-09-16", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "自社の業務をAIに任せる仕組みを作って運用し、その仕組みを他社に移植する仕事をしています。AI検索対策（LLMO）では、主要AIでの言及を実測しながら記事とサイトを直すところまで伴走します。サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/google-ai-mode-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "Google AIモードの使い方。切り替え・表示されない・消し方・履歴【2026年9月】"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AIモードは無料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "無料です。Googleアカウントにログインしていなくても使えますが、履歴を残して続きから再開するにはログインと検索履歴の設定が必要です。"}}, {"@type": "Question", "name": "iPhoneでAIモードが出ません", "acceptedAnswer": {"@type": "Answer", "text": "Googleアプリを最新版に更新し、それでも出なければSafariで `google.com/ai` を直接開いてください。アプリの画面左上にあるフラスコのアイコン（Search Labs）からAIモードをオンにできる場合もあります。"}}, {"@type": "Question", "name": "AIモードを完全にオフにできますか？", "acceptedAnswer": {"@type": "Answer", "text": "現時点で公式の設定はありません。AIによる概要を消すなら「ウェブ」タブか `udm=14` です。Chromeのアドレスバーに出るAIモードの入口は、以前は `chrome://flags` で消せましたが、2026年9月の Chrome 153 ではその項目が無くなっています。"}}, {"@type": "Question", "name": "会社のGoogleアカウントで使えないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "Google Workspace のアカウントでは、管理者の設定によって一部の機能が使えないことがあります。個人のアカウントに切り替えて試せば切り分けられるはずです。"}}, {"@type": "Question", "name": "AIモードの履歴は他の人に見えますか？", "acceptedAnswer": {"@type": "Answer", "text": "履歴はGoogleアカウントに紐づいて保存されるため、同じアカウントでログインした端末からは見えます。家族や職場で端末やアカウントを共有している場合は、使い終わったら履歴を削除するか、ログアウトした状態で使ってください。"}}, {"@type": "Question", "name": "AIによる概要とAIモードはどちらが正確ですか？", "acceptedAnswer": {"@type": "Answer", "text": "どちらも間違うことがあります。どちらを使う場合も、回答に付いた出典リンクを開いて元の情報を確かめてください。"}}, {"@type": "Question", "name": "同じ質問をしても回答は毎回同じですか？", "acceptedAnswer": {"@type": "Answer", "text": "同じではありません。同じ質問でも回答の内容や出典は毎回変わります。手順や数字を頼りにするときは、複数回聞くか出典で確かめてください。"}}, {"@type": "Question", "name": "自社のサイトをAIモードに引用させる方法はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "引用される側の話はこの記事の範囲を超えるため、[AI Overviewsに引用されるには](/media/cited-by-ai-overviews/)と[AIに引用される記事の書き方](/media/ai-cited-writing/)を参照してください。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>Google AIモードの使い方。切り替…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.16</span>
+        </div>
+        <h1 class="post-title">Google AIモードの使い方。切り替え・表示されない・消し方・履歴【2026年9月】</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google AIモードの使い方"><defs><linearGradient id="ecg-c80adbd3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-c80adbd3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Google AIモードの使い方</text><line x1="128.8" y1="327.1" x2="1071.2" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">切り替え・消し方・履歴を実機で確認</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Google検索のAIモードは2025年9月9日に日本語で提供が始まり、検索ボックスの右に「AI モード」のボタンが付くようになりました。同じ質問を投げてもAIによる概要とは別の画面が開き、会話を続けながら調べられます。</p>
+<p>開き方・出ないときの直し方・消し方・履歴の4つを、Googleの公式ヘルプを一次ソースにしたうえで<strong>2026年9月16日に実機で試して効いた方法だけ</strong>書きます。上位の解説記事に書いてある手順のうち、試すと書いてある通りにならなかったものは、その違いをそのまま載せました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>AIモードの入口は3つ。<strong>トップの「AI モード」ボタン、検索結果のタブ、AIによる概要の最下部</strong></li>
+<li><strong>完全にオフにする公式の設定は無い。</strong> 「ウェブ」タブと <code>udm=14</code> が公式機能で最も安定</li>
+<li><code>udm=14</code> でも<strong>タブ列の「AI モード」は残る</strong>。<code>-ai</code> は<strong>検索結果そのものが別物になる</strong></li>
+<li>表示されないときは、まず <code>google.com/ai</code> を直接開いて切り分ける</li>
+<li><strong>キャッシュ削除とシークレットモードでは消せない</strong></li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Google AIモードとは</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>どのくらい使われているか</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>AIによる概要との違い</a></li>
+                    <li class="toc-h3"><a href="#s1-3"><span class="toc__n">1-3</span>Geminiとの違い</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>AIモードの開き方</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>PCで開く</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>スマホで開く</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>AIによる概要から入る</a></li>
+                    <li class="toc-h3"><a href="#s2-4"><span class="toc__n">2-4</span>毎回AIモードから始めたいとき</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>AIモードでできること</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>テキストと音声で質問する</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>画像・PDF・URLを渡して質問する</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>追加の質問で絞り込む</a></li>
+                    <li class="toc-h3"><a href="#s3-4"><span class="toc__n">3-4</span>質問の書き方</a></li>
+                    <li class="toc-h3"><a href="#s3-5"><span class="toc__n">3-5</span>Search Live と Deep Search</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>AIモードが表示されない・使えないときの直し方</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>最初に試す3つ</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>アカウントが原因のケース</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>利用環境が原因のケース</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>Google側の変更で出ないケース</a></li>
+                    <li class="toc-h3"><a href="#s4-5"><span class="toc__n">4-5</span>アドレスバーの補完がAIモードに飛ぶ</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>AIモードとAIによる概要を消す方法</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>公式機能で消す</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>検索語に -ai を付ける</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>拡張機能で消す</a></li>
+                    <li class="toc-h3"><a href="#s5-4"><span class="toc__n">5-4</span>AIモードの入口ごと消す</a></li>
+                    <li class="toc-h3"><a href="#s5-5"><span class="toc__n">5-5</span>スマホとPixelの場合</a></li>
+                    <li class="toc-h3"><a href="#s5-6"><span class="toc__n">5-6</span>効かない方法</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>AIモードの履歴</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>履歴を見る・続きから再開する</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>履歴が残らない原因</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>履歴を手元に残す</a></li>
+                    <li class="toc-h3"><a href="#s6-4"><span class="toc__n">6-4</span>削除の仕方と削除後に起きること</a></li>
+                    <li class="toc-h3"><a href="#s6-5"><span class="toc__n">6-5</span>通常の検索履歴との違い</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>使う前に知っておく注意点</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>AIモードは何を引用しているか</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>自社がAIモードにどう出ているかを確かめるなら</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Google AIモードとは</h2>
+<p>AIモードは質問の意図をAIが読み取り、複数のサイトを分析してひとつの回答にまとめる検索機能で、Gemini のカスタム版が動いています。1つの質問を複数の小さな検索に分解して同時に調べる「クエリファンアウト」という仕組みが使われており、使う側が1回質問する裏で、AIは何十回も検索しています。</p>
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/09_fig_fanout.png" alt="クエリファンアウトの図。1つの質問が複数の検索に分解され、その結果が出典付きの1つの回答にまとめられる" loading="lazy"><figcaption>AIモードは1つの質問を複数の検索に分解し、結果を1つの回答にまとめて出典を付けて返す</figcaption></figure>
+
+<p>経緯としては2025年3月に試験公開、5月に米国で一般公開、9月9日に日本語で提供が始まりました。利用は無料で、Googleアカウントにログインしていなくても使えます。ただし履歴を残して続きから再開するにはログインが必要です。提供は200以上の国と地域で、公式ヘルプによれば130を超える言語に対応しています。</p>
+<h3 id="s1-1">どのくらい使われているか</h3>
+<p>サイバーエージェント GEOラボの「生成AI / AI Overview ユーザー利用実態調査（2026年8月期）」（2026年9月4日発表。全国15〜69歳の9,278名、調査期間は8月7日〜10日）では、<strong>AIモードの利用率は28.4%で、2026年2月の調査から2.6ポイント増えています。</strong> 10代に限ると48.8%です。同じ調査で、AIモードを含む生成AIを検索の手段として使う人は52.3%、検索エンジンは86.9%でした。</p>
+<table>
+<thead>
+<tr>
+<th>サービス</th>
+<th>利用率（2026年8月）</th>
+<th>前回（2026年2月）比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>30.6%</td>
+<td>+1.5pt</td>
+</tr>
+<tr>
+<td>Google AIモード</td>
+<td>28.4%</td>
+<td>+2.6pt</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>23.2%</td>
+<td>+3.6pt</td>
+</tr>
+</tbody>
+</table>
+<p>出典は<a href="https://www.cyberagent.co.jp/news/detail/id=33787">サイバーエージェントの発表</a>です。提供開始から1年で、ChatGPTと2ポイント差まで来ています。使う人が3割いる一方で、消したい人の検索も多いのが今の状態で、この記事の後半はそのどちらにも答えます。</p>
+<h3 id="s1-2">AIによる概要との違い</h3>
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/10_fig_three.png" alt="スマホの実際の画面3枚。左はAIによる概要が検索結果の上に出た画面、中央はAIモードの会話画面、右はGeminiアプリの画面" loading="lazy"><figcaption>スマホの実際の画面（2026年9月）。左からAIによる概要、AIモード、Gemini。同じ「還元率の高いクレジットカード」で、出る場所と画面が違う</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>比較する点</th>
+<th>AIによる概要</th>
+<th>AIモード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表示される場所</td>
+<td>検索結果の最上部</td>
+<td>専用の画面</td>
+</tr>
+<tr>
+<td>出方</td>
+<td>検索すると自動で出る</td>
+<td>自分で切り替える</td>
+</tr>
+<tr>
+<td>追加の質問</td>
+<td>できない</td>
+<td>できる。前の文脈を覚えている</td>
+</tr>
+<tr>
+<td>向いている場面</td>
+<td>すぐ答えが欲しい</td>
+<td>条件が複雑、比較したい</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AIによる概要は通常の検索に付く要約で、AIモードは会話を続けるための別画面です。</strong> 「AIモードを消したい」と探している人の多くが実際に消したいのはAIによる概要の方で、この2つを取り違えると消し方の章で手順が合いません。AIによる概要の仕組みは<a href="/media/ai-overviews-guide/">AI Overviews（AIによる概要）とは</a>で別に書いています。</p>
+<h3 id="s1-3">Geminiとの違い</h3>
+<table>
+<thead>
+<tr>
+<th>比較する点</th>
+<th>AIモード</th>
+<th>Gemini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>位置づけ</td>
+<td>Google検索の拡張</td>
+<td>作業支援のAI</td>
+</tr>
+<tr>
+<td>得意なこと</td>
+<td>情報収集、比較、手順の整理</td>
+<td>文章の作成、動画や音楽の生成、Gemini Live</td>
+</tr>
+<tr>
+<td>出典の表示</td>
+<td>回答に出典リンクが付く</td>
+<td>検索を使ったときのみ</td>
+</tr>
+</tbody>
+</table>
+<p>AIモードは検索から得た情報を整理して見せる機能で、Geminiは文章や画像を作る作業まで含む汎用のAIです。動画や音楽の生成、リアルタイムの音声対話はGeminiにしかありません。ChatGPTとの違いは<a href="/media/ai-mode-vs-chatgpt/">Google AIモードとChatGPTの違い</a>で扱っています。</p>
+<h2 id="s2">AIモードの開き方</h2>
+<p>公式ヘルプが案内している入口は3つあり、どの端末でも変わりません。これにAIによる概要から入る経路と、URLで直接開く方法を足した5通りを順に書きます。</p>
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/01_pc_top.png" alt="Googleのトップページ。検索ボックスの右端に「AI モード」のボタンがある" loading="lazy"><figcaption>PCのトップページ。検索ボックス右端の「AI モード」を押すと専用画面が開く</figcaption></figure>
+
+<h3 id="s2-1">PCで開く</h3>
+<ol>
+<li><code>google.com/ai</code> を直接開く</li>
+<li><code>google.com</code> の検索ボックスに質問を入れ、右端の「AI モード」を押す</li>
+<li>検索したあと、検索結果の上に並ぶタブの一番左「AI モード」を押す</li>
+</ol>
+<p><strong>迷ったら <code>google.com/ai</code> を直接開くのが一番確実です。</strong> ボタンやタブが見当たらない環境でも、このURLからなら入れます。</p>
+<h3 id="s2-2">スマホで開く</h3>
+<p>Googleアプリを開くと、検索の下に虫眼鏡にキラキラが付いた「AI モード」のアイコンがあります。押した先が専用画面です。ブラウザから使う場合はPCと同じで、<code>google.com/ai</code> を開くか検索結果のタブから入ります。</p>
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/22_sp_aimode.png" alt="スマホのブラウザで開いたAIモードの会話画面。上部のタブ列の左端に「AI モード」があり、質問と回答、出典、下部に「質問する」の入力欄" loading="lazy"><figcaption>スマホのブラウザでのAIモード。検索結果のタブ列の左端「AI モード」から入ると、この画面になる</figcaption></figure>
+
+<p>Googleアプリにアイコンが無いときは、画面左上のフラスコの形をしたアイコン（Search Labs）を開いてください。ここでAIモードの試験運用版をオンにできます。Androidのホーム画面に置くGoogle検索のウィジェットにもAIモードのアイコンがあり、ここからならアプリを開く手間なく1回のタップで入れます。</p>
+<h3 id="s2-3">AIによる概要から入る</h3>
+<p>通常の検索でAIによる概要が出たとき、「もっと見る」を開いて一番下までいくと「AI モードでさらに詳しく」というボタンがあります。ここから入ると、AIによる概要の内容を引き継いだ状態で会話を続けられるのが利点です。</p>
+<p><strong>AIによる概要からAIモードに入ると、履歴が2件に分かれて記録されます。</strong> 最初の検索と、AIモードに移った操作が別のエントリになるため、片方を消しても検索履歴にはもう片方が残ります。片方だけ消して残っていた、という状態を避けたい人は履歴の章を先に読んでください。</p>
+<h3 id="s2-4">毎回AIモードから始めたいとき</h3>
+<p>検索のURLに <code>udm=50</code> を付けると、AIモードの画面が直接開きます。実機で確認したところ、ログインしていない状態でも <code>https://www.google.com/search?q=質問&amp;udm=50</code> でAIモードの会話画面に入れました。Chromeの設定で検索エンジンとして登録しておけば、アドレスバーから打った質問がそのままAIモードで開きます。登録の手順は後の消し方の章で書く <code>udm=14</code> の登録と同じで、URLの末尾を <code>udm=50</code> にするだけです。</p>
+<table>
+<thead>
+<tr>
+<th>入口</th>
+<th>PC</th>
+<th>スマホ</th>
+<th>手数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>google.com/ai</code> を開く</td>
+<td>可</td>
+<td>可</td>
+<td>URLを打つだけ</td>
+</tr>
+<tr>
+<td>検索ボックス右の「AI モード」</td>
+<td>可</td>
+<td>可</td>
+<td>1回押す</td>
+</tr>
+<tr>
+<td>検索結果のタブ</td>
+<td>可</td>
+<td>可</td>
+<td>検索してから1回押す</td>
+</tr>
+<tr>
+<td>AIによる概要の「さらに詳しく」</td>
+<td>可</td>
+<td>可</td>
+<td>概要を開いてから押す</td>
+</tr>
+<tr>
+<td><code>udm=50</code> を検索エンジンに登録</td>
+<td>可</td>
+<td>ブラウザのみ</td>
+<td>最初に1回設定</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3">AIモードでできること</h2>
+<p>公式ヘルプに書かれている入力方法は、テキスト・音声・画像・ファイル・URLの5つです。解説記事の多くはテキストと音声と画像までしか書いていませんが、PDFとURLを渡せる点は公式ヘルプに明記されています。</p>
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/05_pc_udm50.png" alt="AIモードの会話画面。上部に質問、その下にAIの回答と出典リンク、下部に「質問する」の入力欄" loading="lazy"><figcaption>AIモードの画面。回答の下に出典リンクが並び、下の入力欄から追加の質問ができる</figcaption></figure>
+
+<h3 id="s3-1">テキストと音声で質問する</h3>
+<p>画面下の「質問する」バーに文章で入れるのが基本です。単語ではなく「東京で初心者が日帰りで行ける場所を3つ、予算1万円以内で」のように条件を入れた文で聞くと、回答がそのまま使える形で返ってきました。音声で聞きたいときはマイクのアイコンです。</p>
+<h3 id="s3-2">画像・PDF・URLを渡して質問する</h3>
+<p>画像やファイルは「質問する」バーのメニューからアップロードでき、PDFのほか端末のファイルやGoogleドライブのファイルも渡せます。ドラッグ＆ドロップやコピーして貼り付けでも構いません。ウェブページについて聞きたいときはURLを貼り付けて「このページの要点は」と聞けば、そのページを読んだうえでの答えが返ってくる仕組みです。</p>
+<h3 id="s3-3">追加の質問で絞り込む</h3>
+<p>回答が返ってきたら、同じ入力欄に「予算を半分にして」「表で比較して」と続けて入れます。<strong>AIモードは前の文脈を覚えているため、条件を1つずつ足して答えを絞り込めます。</strong> 会話をやり直す必要はありません。</p>
+<h3 id="s3-4">質問の書き方</h3>
+<table>
+<thead>
+<tr>
+<th>目的</th>
+<th>入力の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>比較する</td>
+<td>「電源とWi-Fiがあるカフェを駅から徒歩10分以内で3つ比較して」</td>
+</tr>
+<tr>
+<td>計画する</td>
+<td>「金沢に2泊3日。移動を少なく、雨の日の代案も入れて」</td>
+</tr>
+<tr>
+<td>理解する</td>
+<td>「新NISAのつみたて投資枠と成長投資枠の違いを初心者向けに」</td>
+</tr>
+<tr>
+<td>画像で調べる</td>
+<td>写真を添付して「この植物の名前と室内で育てる注意点」</td>
+</tr>
+</tbody>
+</table>
+<p>比較表を作らせる、手順を番号付きにさせる、といった出力の形を指定する聞き方が、AIモードでは特に通ります。もう1つ効くのは前提を先に渡すことで、「初めて確定申告をする会社員です」「家族4人で予算は月3万円」のように自分の状況を書いてから聞くと、回答がその条件に合わせて絞られます。</p>
+<h3 id="s3-5">Search Live と Deep Search</h3>
+<p>カメラを向けたまま会話できる Search Live と、複雑なリサーチをAIに任せる Deep Search もAIモードの機能です。Search Live は公式ブログで日本での提供開始が案内されています。Deep Search は提供状況が環境によって違うため、自分の画面に出ているかを確認してから使ってください。</p>
+<h2 id="s4">AIモードが表示されない・使えないときの直し方</h2>
+<p>原因を探す前に、<strong>「AI モードという項目自体が無い」のか「項目はあるが押しても動かない」のか</strong>を分けてください。前者はアカウントか提供状況、後者は環境の問題であることが多く、対処が違います。</p>
+<h3 id="s4-1">最初に試す3つ</h3>
+<ol>
+<li><code>google.com/ai</code> を直接開く。ボタンやタブが無くても、ここから入れれば機能自体は使える</li>
+<li>Googleアカウントにログインし、シークレットモードを解除する</li>
+<li>GoogleアプリとChromeを最新版に更新する</li>
+</ol>
+<p>この3つはアカウントや環境を触らずに済むので、先に試す価値があります。解決しない場合に下のアカウントと環境を疑います。</p>
+<h3 id="s4-2">アカウントが原因のケース</h3>
+<p>ログインして使っている場合はアカウントの条件が効きます。<strong>18歳未満のアカウントでは使えません。</strong> Family Link で管理されている端末も制限がかかります。会社や学校の Google Workspace アカウントでは一部の機能が使えないことがあるため、個人のアカウントに切り替えて試してください。複数のアカウントを使っている場合は、今どのアカウントでログインしているかを確認します。Search Labs でAIモードをオフにしていると項目が出ないので、フラスコのアイコンから設定を見ます。</p>
+<h3 id="s4-3">利用環境が原因のケース</h3>
+<p>アプリやブラウザのバージョンが古い、シークレットモードを使っている、JavaScriptを無効にしている、のどれかに当たると表示されません。JavaScript の無効化は解説記事のほとんどが挙げていませんが、広告ブロックの設定で切っている人は確認してください。</p>
+<h3 id="s4-4">Google側の変更で出ないケース</h3>
+<p><strong>急にAIモードが出なくなった場合、端末や設定ではなくGoogle側の変更であることがあります。</strong> 2025年12月ごろのアップデート以降、買い物や場所を探す検索では通常のリンクが優先され、AIモードが出にくくなったという報告が動画で複数出ています。この場合は端末側で直せません。<code>google.com/ai</code> から入れば機能そのものは使えるので、直そうとせずに入口を変えてください。</p>
+<table>
+<thead>
+<tr>
+<th>症状</th>
+<th>主な原因</th>
+<th>対処</th>
+<th>自分で直せるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アイコンやタブが無い</td>
+<td>年齢・Workspace・Search Labs の設定</td>
+<td>個人アカウントで試す、Labs を確認</td>
+<td>直せる</td>
+</tr>
+<tr>
+<td>押しても動かない</td>
+<td>ブラウザが古い、JavaScript が無効</td>
+<td>更新する、設定を戻す</td>
+<td>直せる</td>
+</tr>
+<tr>
+<td>急に消えた</td>
+<td>Google 側の表示変更</td>
+<td><code>google.com/ai</code> から入る</td>
+<td>直せない</td>
+</tr>
+<tr>
+<td>アドレスバーの補完がAIモードに飛ぶ</td>
+<td>Chrome のアドレスバー機能</td>
+<td>2026年9月の Chrome 153 では切る項目が無い</td>
+<td>直せない</td>
+</tr>
+</tbody>
+</table>
+<h3 id="s4-5">アドレスバーの補完がAIモードに飛ぶ</h3>
+<p>Chromeで検索語を途中まで入れて Tab キーを押すと、いつもの検索ではなくAIモードに飛ばされる。2025年12月のChromeの変更以降、この不満が個人の技術ブログで複数書かれています。これはアドレスバーに追加されたAIモードの入口が原因です。2025年12月ごろの記事では <code>chrome://flags</code> の「AI Mode Omnibox entrypoint」を無効にすれば戻せると書かれていますが、<strong>2026年9月17日の Chrome 153 で確認したところ、その項目は無くなっていました</strong>（詳しくは消し方の章）。現時点では Tab の代わりに Enter で検索するか、検索エンジンの登録で回避する形になります。</p>
+<h2 id="s5">AIモードとAIによる概要を消す方法</h2>
+<p>2026年9月時点で、AIモードを完全にオフにする公式の設定はありません。Search Labs の試験運用版はオフにできますが、それをオフにしても検索本体のAIモードは残ります。ここでは方法ごとに、<strong>何が消えて何が残るか、副作用があるか</strong>を実機で確認した結果を書きます。</p>
+<h3 id="s5-1">公式機能で消す</h3>
+<p>検索したあと、上に並ぶタブから「ウェブ」を選びます（見当たらないときは「もっと見る」の中にあります）。これでAIによる概要が消え、リンクだけの一覧に変わりました。</p>
+<p>同じ状態をURLで指定するのが <code>udm=14</code> です。<code>https://www.google.com/search?q=キーワード&amp;udm=14</code> の形で開くと、「ウェブ」タブを選んだのと同じ画面になります。2024年5月から使えるGoogleの正規のパラメータで、2年以上動き続けています。</p>
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/03_pc_udm14.png" alt="udm=14を付けた検索結果。AIによる概要は無く「ウェブ検索結果」の見出しの下にリンクが並ぶが、タブ列の左端には「AI モード」が残っている" loading="lazy"><figcaption>udm=14 の画面。AIによる概要は消えるが、タブ列の「AI モード」はそのまま残る</figcaption></figure>
+
+<p><strong>実機で試したところ、<code>udm=14</code> でAIによる概要は消えましたが、タブ列の「AI モード」はそのまま残っていました。</strong> 上位の解説記事には「AIの要約や広告が排除される」と書かれていますが、消えるのはAIによる概要だけで、AIモードの入口は消えません。AIモードそのものを画面から無くしたい場合は、この章の後半にある <code>chrome://flags</code> が必要です。</p>
+<p>毎回URLを打つのは現実的ではないので、Chromeの検索エンジンに登録します。</p>
+<ol>
+<li>Chrome右上の3点メニューから「設定」を開く</li>
+<li>「検索エンジン」から「検索エンジンとサイト内検索を管理する」を開く</li>
+<li>「サイト内検索」の「追加」を押す</li>
+<li>名前に分かる名前、ショートカットに短い文字、URLに <code>https://www.google.com/search?q=%s&amp;udm=14</code> を入れて保存</li>
+<li>作った検索エンジンの3点メニューから「デフォルトに設定」を選ぶ</li>
+</ol>
+<p>以降はアドレスバーから検索するだけで、AIによる概要が付かない結果になります。</p>
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/07_chrome_search_engines.png" alt="Chrome の設定画面「検索エンジンとサイト内検索を管理する」。既定の検索エンジン一覧の下に「サイト内検索」の追加ボタンがある" loading="lazy"><figcaption>Chrome の「検索エンジンとサイト内検索を管理する」。この画面の「サイト内検索」に udm=14 付きの URL を追加して既定にする</figcaption></figure>
+
+<h3 id="s5-2">検索語に -ai を付ける</h3>
+<p>検索語の末尾に半角スペースを空けて <code>-ai</code> を付けると、AIによる概要が出なくなります。実機でも消えました。</p>
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/04_pc_minus_ai.png" alt="「リフォーム 費用 -ai」の検索結果。AIによる概要は無いが、3位以降のサイトが通常の検索と入れ替わっている" loading="lazy"><figcaption>-ai を付けた結果。AIによる概要は消えるが、検索結果の顔ぶれ自体が通常と変わる</figcaption></figure>
+
+<p><strong>ただし <code>-ai</code> は検索結果そのものを変えてしまいます。</strong> これは「ai という文字を含むページを除外する」通常のマイナス検索で、AIを消す機能ではありません。「リフォーム 費用」で試すと、<code>udm=14</code> では3位以降に ie-miru.jp と suumo.jp が並んだのに対し、<code>-ai</code> では rehome-navi.com と sumirin-ht.co.jp に入れ替わりました。上位の解説記事はこの副作用を書いていません。AIによる概要を消したいだけなら、検索結果が変わらない <code>udm=14</code> を使ってください。</p>
+<h3 id="s5-3">拡張機能で消す</h3>
+<p>Chromeウェブストアで「Hide Google AI Overviews」か「Bye Bye, Google AI」を入れると、AIによる概要の領域が自動で非表示になります。前者は非表示だけに絞ったもの、後者は他の表示要素も整理できる高機能なものです。Edgeでも、設定の「拡張機能」で「他のストアからの拡張機能を許可」をオンにすれば、同じものを入れられます。</p>
+<p>AIモードのボタンそのものを消したい場合は、Stylus という拡張機能でCSSを当てて見た目から消す方法が動画で紹介されています。Stylus はサイトのレイアウトを書き換える汎用の拡張機能で、AIモード専用ではありません。</p>
+<p><strong>拡張機能はどれも、開発者が更新を止めると突然効かなくなります。</strong> まず <code>udm=14</code> を設定し、拡張機能は補助として考えるのが安全です。</p>
+<h3 id="s5-4">AIモードの入口ごと消す</h3>
+<p>Chromeのアドレスバーや検索画面に出るAIモードの入口そのものを消す方法として、2025年12月から2026年8月に書かれた記事は <code>chrome://flags</code> の「AI mode」と「AI Mode Omnibox entrypoint」を「Disabled」にする手順を載せています。</p>
+<p><strong>2026年9月17日に Chrome 153.0.8010.47 で確かめたところ、この2つの項目は存在しませんでした。</strong> <code>chrome://flags/</code> を開いて検索窓に「AI mode」と入れると、出てくるのは次の4つだけです。</p>
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/08_chrome_flags.png" alt="chrome://flags で「AI mode」を検索した画面。AIM 3P entrypoint、Omnibox Dynamic AI Mode Button、NTP Realbox Dynamic AI Mode Button、Omnibox AI Mode Space Does Not Activate の4項目だけが表示されている" loading="lazy"><figcaption>Chrome 153（2026年9月17日）の chrome://flags。記事で紹介されている「AI mode」「AI Mode Omnibox entrypoint」は無い</figcaption></figure>
+
+<ul>
+<li>AIM 3P entrypoint（他社の検索エンジンを使うときのAIモード入口）</li>
+<li>Omnibox Dynamic AI Mode Button（アドレスバーのAIモードボタンの動的な挙動）</li>
+<li>NTP Realbox Dynamic AI Mode Button（新しいタブの検索ボックスのボタンの動的な挙動）</li>
+<li>Omnibox AI Mode Space Does Not Activate（ボタンにフォーカスがあるときスペースキーで起動しない）</li>
+</ul>
+<p>どれもボタンの挙動を変える項目で、入口を消すスイッチではありません。<strong>実験的機能の画面は Chrome の更新で項目が予告なく消えるため、記事に載っている手順が今の画面に無い、ということが実際に起きています。</strong> この4項目を「Disabled」にして入口が消えるかは確かめていません。Chrome のアドレスバーに出る入口は、現時点では設定で消せないものとして扱い、検索エンジンの登録（前述の <code>udm=14</code>）で使わない形にするのが現実的です。</p>
+<h3 id="s5-5">スマホとPixelの場合</h3>
+<p>Androidは検索結果の「ウェブ」タブに切り替えるのが最も簡単です。iPhoneのSafariは検索エンジンのURLを変えられないため、<code>udm=14</code> を付けたURLをブックマークするか、ショートカットアプリで自動付与する形になります。</p>
+<p>Pixelのホーム画面にある検索ウィジェットの「AI モード」アイコンは端末側で消せるものです。Googleアプリを開き、右上のプロフィールアイコンから「設定」、「Pixel サーチボックスをカスタマイズ」と進み、AIモードのスイッチをオフにします。</p>
+<h3 id="s5-6">効かない方法</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>結果</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>キャッシュや検索履歴を削除する</td>
+<td>効かない</td>
+<td>表示の設定ではなく保存データを消すだけ</td>
+</tr>
+<tr>
+<td>シークレットモードで開く</td>
+<td>効かない</td>
+<td>ログイン状態に関係なく表示される</td>
+</tr>
+<tr>
+<td><code>chrome://flags</code> の「AI mode」「AI Mode Omnibox entrypoint」</td>
+<td>項目が無い</td>
+<td>Chrome 153（2026年9月）では削除されている</td>
+</tr>
+<tr>
+<td>古い記事の手順をそのまま試す</td>
+<td>効かないことがある</td>
+<td>2025年以前の手順は画面が変わっている</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2025年以前に書かれた手順は、今の画面と一致しないものがあります。</strong> 記事の更新日と、手順の中の画面の文言が今の自分の画面と同じかを見てから試してください。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>消えるもの</th>
+<th>残るもの</th>
+<th>端末</th>
+<th>恒久か</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「ウェブ」タブ</td>
+<td>AIによる概要</td>
+<td>AIモードのタブ</td>
+<td>PC・スマホ</td>
+<td>都度</td>
+</tr>
+<tr>
+<td><code>udm=14</code> を登録</td>
+<td>AIによる概要</td>
+<td>AIモードのタブ</td>
+<td>PC</td>
+<td>恒久</td>
+</tr>
+<tr>
+<td><code>-ai</code></td>
+<td>AIによる概要</td>
+<td>AIモードのタブ。<strong>検索結果が変わる</strong></td>
+<td>PC・スマホ</td>
+<td>都度</td>
+</tr>
+<tr>
+<td>拡張機能</td>
+<td>AIによる概要（Stylus はボタンも）</td>
+<td>更新停止で復活</td>
+<td>PC</td>
+<td>恒久</td>
+</tr>
+<tr>
+<td><code>chrome://flags</code></td>
+<td>現時点では消せない（項目が無い）</td>
+<td>AIモードの入口も概要も</td>
+<td>PC の Chrome</td>
+<td>使えない</td>
+</tr>
+<tr>
+<td>Search Labs をオフ</td>
+<td>試験運用版</td>
+<td>検索本体のAIモード</td>
+<td>全部</td>
+<td>恒久</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s6">AIモードの履歴</h2>
+<p>AIモードの履歴は検索語ではなく会話のまとまりとして記録されます。通常の検索履歴とは記録される単位も保存場所も違うため、消したつもりで残っていることがあります。</p>
+<h3 id="s6-1">履歴を見る・続きから再開する</h3>
+<p>PCではAIモードの画面の左側にある履歴のアイコンから、アカウントに保存された会話の一覧を開けます。会話を選べばその続きから質問を再開できる仕組みです。<strong>再開できるのはログインしているだけでは足りず、Googleアカウントの検索履歴の設定が有効になっている場合だけです。</strong> ログアウト状態で使った会話は残りません。</p>
+<h3 id="s6-2">履歴が残らない原因</h3>
+<p>ログアウトした状態で使っていた、検索履歴の設定が無効になっている、別のアカウントでログインしている、ブラウザの閲覧履歴データを削除した、の4つのどれかです。AIモードの履歴アイコンを押して一覧が空なら、この4つのどれかに当たっています。</p>
+<h3 id="s6-3">履歴を手元に残す</h3>
+<p>履歴はGoogleのアカウント側に保存されるもので、設定を変えたり別のアカウントで使ったりすると見えなくなります。あとで見返す回答はその場で本文をコピーしてメモに貼るか、スクリーンショットを撮るか、ブラウザの印刷からPDFで保存してください。出典リンクまで残したいならコピーが確実です。</p>
+<h3 id="s6-4">削除の仕方と削除後に起きること</h3>
+<p>履歴アイコンから会話を選んで削除アイコンを押せば、その会話だけが消えました。一覧の上にある「すべて削除」でまとめて消すこともでき、Googleアカウントの「検索履歴」ページからも消せます。</p>
+<p><strong>削除しても、マイアクティビティにはしばらく表示が残ります。</strong> 公式ヘルプによれば24時間以内に自動で削除されますが、待てなければ手動で消してください。もう1つ、AIによる概要から「AI モードでさらに詳しく」で入った会話は履歴が2件に分かれるため、AIモード側で消しても検索履歴側に元の検索が残ります。完全に消すには検索履歴からも削除しなければなりません。</p>
+<h3 id="s6-5">通常の検索履歴との違い</h3>
+<p>通常の検索履歴とAIモードの履歴は、記録の単位も保存場所も削除の影響範囲も別です。</p>
+<table>
+<thead>
+<tr>
+<th>比較する点</th>
+<th>通常の検索履歴</th>
+<th>AIモードの履歴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>記録の単位</td>
+<td>検索語1つずつ</td>
+<td>会話のまとまり</td>
+</tr>
+<tr>
+<td>保存場所</td>
+<td>Googleアカウントの検索履歴</td>
+<td>AIモードの履歴と検索履歴の両方</td>
+</tr>
+<tr>
+<td>削除の影響</td>
+<td>その検索だけ消える</td>
+<td>会話全体が消える。元の検索は残ることがある</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s7">使う前に知っておく注意点</h2>
+<p>公式ヘルプは「他の初期段階のAIプロダクト同様に、正しい結果が得られない場合がある」と明記しています。<strong>回答の下に付く出典リンクを開いて、元のページで確かめてから使ってください。</strong> 医療・法律・金融の内容はAIの回答を最終判断にせず、専門家か公式資料で確認します。</p>
+<p>住所や口座情報、他人の個人情報、社外秘の資料は入力もアップロードもしないでください。入力した内容はGoogleのAI機能の改善に使われることがあります。18歳以上に限られる機能もあり、Search Labs の試験運用版、パーソナルインテリジェンス、Gemini 3 Pro の高度な画像生成がそれに当たります。</p>
+<h2 id="s8">AIモードは何を引用しているか</h2>
+<p>2026年9月16日に、AIモードについての4つの質問をChatGPT・Gemini・Perplexity・Google AIモードに投げ、回答に付いた出典110件を記録しました。4つの質問は使い方・表示されないときの対処・消し方・AIによる概要との違いです。nitoの計測基盤で取ったもので、<strong>4つの質問という小さな範囲の観測です。</strong> 質問の選び方で内訳は変わるため、割合を一般化はしません。</p>
+<table>
+<thead>
+<tr>
+<th>出典</th>
+<th>件数（110件中）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>support.google.com（公式ヘルプ）</td>
+<td>54</td>
+</tr>
+<tr>
+<td>blog.google（公式ブログ）</td>
+<td>11</td>
+</tr>
+<tr>
+<td>youtube.com</td>
+<td>8</td>
+</tr>
+<tr>
+<td>search.google</td>
+<td>5</td>
+</tr>
+<tr>
+<td>企業の解説記事</td>
+<td>各1〜2</td>
+</tr>
+</tbody>
+</table>
+<p>2026年9月16日に4つの質問で確かめた範囲では、<strong>Googleの公式ヘルプとYouTubeの解説動画が、同じ回答の出典欄に並んで出てきました。</strong> 企業の解説記事も混ざりますが、公式のドキュメントと動画が同列で引かれています。読者にとっての意味は単純で、手順の正解は公式ヘルプにあり、解説記事は分かりやすさのために読むもので、最後の確認は回答に付いた出典リンクで済ませるのが早いということです。AIに引用される記事の条件は<a href="/media/cited-by-ai-overviews/">AI Overviewsに引用されるには</a>で扱っています。</p>
+<h2 id="s9">自社がAIモードにどう出ているかを確かめるなら</h2>
+<p>使う側の話に続けて、自社のサービスがAIモードの回答に出ているか、出典に自社サイトが入っているかも、同じ画面で確かめられます。見込み客が使いそうな質問を書き出し、AIモードで実際に聞き、回答の本文に社名が出るかと出典に自社のページがあるかを分けて記録するだけです。出ない原因の切り分けはChatGPTを例に<a href="/media/chatgpt-not-appearing/">ChatGPTに自社が出てこない原因と対策</a>にまとめており、AIモードでも同じ手順が使えます。</p>
+<p>業種別の質問で自社がどう出ているかは、nitoの無料診断でも確認できます。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">nitoは、AI検索（LLMO／AIO）での見え方を計測するだけ・提案するだけで終わらせません。<strong>効く施策に絞って、記事の制作と改善まで実行</strong>します。まず無料診断で、いまの見え方を数字にします。</p>
+        <ul class="bp-cta__points">
+            <li><strong>本当に効く施策を、ピンポイントで</strong>：AI経由の問い合わせ・購入まで毎日追ってきたから、効く施策を切り分けられる</li>
+            <li><strong>提案で終わらせず、実行まで</strong>：記事の制作・既存記事の改善まで手を動かす</li>
+            <li><strong>主要AIでの見え方を毎日計測</strong>：ChatGPT・Geminiなどでの言及・引用を自社基盤で毎日計測し、次に直す場所を数字で決める</li>
+        </ul>
+        <p class="bp-cta__lead">実際にあるSaaS企業では、AIでの言及率を10%から45%へ引き上げ、AI経由のコンバージョンを約4倍に改善しました。</p>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">Q. AIモードは無料ですか？</h3>
+<p>無料です。Googleアカウントにログインしていなくても使えますが、履歴を残して続きから再開するにはログインと検索履歴の設定が必要です。</p>
+<h3 id="s10-2">Q. iPhoneでAIモードが出ません</h3>
+<p>Googleアプリを最新版に更新し、それでも出なければSafariで <code>google.com/ai</code> を直接開いてください。アプリの画面左上にあるフラスコのアイコン（Search Labs）からAIモードをオンにできる場合もあります。</p>
+<h3 id="s10-3">Q. AIモードを完全にオフにできますか？</h3>
+<p>現時点で公式の設定はありません。AIによる概要を消すなら「ウェブ」タブか <code>udm=14</code> です。Chromeのアドレスバーに出るAIモードの入口は、以前は <code>chrome://flags</code> で消せましたが、2026年9月の Chrome 153 ではその項目が無くなっています。</p>
+<h3 id="s10-4">Q. 会社のGoogleアカウントで使えないのはなぜですか？</h3>
+<p>Google Workspace のアカウントでは、管理者の設定によって一部の機能が使えないことがあります。個人のアカウントに切り替えて試せば切り分けられるはずです。</p>
+<h3 id="s10-5">Q. AIモードの履歴は他の人に見えますか？</h3>
+<p>履歴はGoogleアカウントに紐づいて保存されるため、同じアカウントでログインした端末からは見えます。家族や職場で端末やアカウントを共有している場合は、使い終わったら履歴を削除するか、ログアウトした状態で使ってください。</p>
+<h3 id="s10-6">Q. AIによる概要とAIモードはどちらが正確ですか？</h3>
+<p>どちらも間違うことがあります。どちらを使う場合も、回答に付いた出典リンクを開いて元の情報を確かめてください。</p>
+<h3 id="s10-7">Q. 同じ質問をしても回答は毎回同じですか？</h3>
+<p>同じではありません。同じ質問でも回答の内容や出典は毎回変わります。手順や数字を頼りにするときは、複数回聞くか出典で確かめてください。</p>
+<h3 id="s10-8">Q. 自社のサイトをAIモードに引用させる方法はありますか？</h3>
+<p>引用される側の話はこの記事の範囲を超えるため、<a href="/media/cited-by-ai-overviews/">AI Overviewsに引用されるには</a>と<a href="/media/ai-cited-writing/">AIに引用される記事の書き方</a>を参照してください。</p>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">自社の業務をAIに任せる仕組みを作って運用し、その仕組みを他社に移植する仕事をしています。AI検索対策（LLMO）では、主要AIでの言及を実測しながら記事とサイトを直すところまで伴走します。サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/llmo-yomikata-imi/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOの読み方"><defs><linearGradient id="ecg-1e60f08d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1e60f08d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">用語解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOの読み方</text><line x1="356.8" y1="365.9" x2="843.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.12</div>
+                <div class="rel-card__ttl">LLMOの読み方・意味とは。SEOとの違いを一次データより先に確認</div>
+            </a>
+            <a href="/media/what-is-llmo/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOとは？"><defs><linearGradient id="ecg-6597a637" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6597a637)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">基礎解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOとは？</text><line x1="394.8" y1="365.9" x2="805.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.08.13</div>
+                <div class="rel-card__ttl">LLMOとは？SEOとの違いと、AIに推奨されるための対策を解説</div>
+            </a>
+            <a href="/media/ai-comparison-prompt/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="比較で選ばれる条件"><defs><linearGradient id="ecg-b9b70424" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b9b70424)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">比較で選ばれる条件</text><line x1="258.0" y1="365.9" x2="942.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.08.08</div>
+                <div class="rel-card__ttl">AIに「A社とB社どちらがいい？」と聞かれたとき選ばれる条件</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

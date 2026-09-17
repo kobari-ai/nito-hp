@@ -66,27 +66,32 @@
 <li>原因は複数が絡むため、<strong>診断→ポジショニング→実行</strong>の順で潰すのが近道</li>
 </ul></div></div>
 
-            <nav class="toc">
+            <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
-                    <li><a href="#s1">そもそも、なぜChatGPTに出てこないのか</a></li>
-                    <li><a href="#s2">「出てこない」には3つの状態がある</a></li>
-                    <li class="toc-h3"><a href="#s2-1">確認に使う質問の型</a></li>
-                    <li><a href="#s3">ChatGPTに自社が出てこない5つの原因</a></li>
-                    <li class="toc-h3"><a href="#s3-1">原因1｜「何の専門家か」が定まっていない</a></li>
-                    <li class="toc-h3"><a href="#s3-2">原因2｜自社サイトの情報が薄い</a></li>
-                    <li class="toc-h3"><a href="#s3-3">原因3｜AIが読めない構造になっている</a></li>
-                    <li class="toc-h3"><a href="#s3-4">原因4｜第三者に語られていない</a></li>
-                    <li class="toc-h3"><a href="#s3-5">原因5｜そもそもクロールされていない</a></li>
-                    <li><a href="#s4">出てくるようにするための対策</a></li>
-                    <li><a href="#s5">競合は出るのに、自社だけ出てこないのはなぜか</a></li>
-                    <li><a href="#s6">効くのは、小手先の設定より高品質なコンテンツ</a></li>
-                    <li><a href="#s7">原因の根っこは「戦略と実行の両方」にある</a></li>
-                    <li><a href="#s8">AIに推薦される状態まで伴走するなら</a></li>
-                    <li><a href="#s9">まとめ</a></li>
-                    <li><a href="#s10">よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>そもそも、なぜChatGPTに出てこないのか</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>「出てこない」には3つの状態がある</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>確認に使う質問の型</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>ChatGPTに自社が出てこない5つの原因</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>原因1｜「何の専門家か」が定まっていない</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>原因2｜自社サイトの情報が薄い</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>原因3｜AIが読めない構造になっている</a></li>
+                    <li class="toc-h3"><a href="#s3-4"><span class="toc__n">3-4</span>原因4｜第三者に語られていない</a></li>
+                    <li class="toc-h3"><a href="#s3-5"><span class="toc__n">3-5</span>原因5｜そもそもクロールされていない</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>出てくるようにするための対策</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>競合は出るのに、自社だけ出てこないのはなぜか</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>効くのは、小手先の設定より高品質なコンテンツ</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>原因の根っこは「戦略と実行の両方」にある</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>AIに推薦される状態まで伴走するなら</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
                 </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
             </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
 
 <h2 id="s1">そもそも、なぜChatGPTに出てこないのか</h2>
 <p>生成AIは、質問に答えるとき、Web上の情報を検索して「信頼できる根拠」をもとに候補を選びます。自社が出てこないのは、その根拠が見つからないか、見つけても推薦する決め手に欠けているからです。</p>
@@ -260,6 +265,11 @@
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/google-ai-mode-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google AIモードの使い方"><defs><linearGradient id="ecg-bfc9ca43" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-bfc9ca43)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Google AIモードの使い方</text><line x1="128.8" y1="365.9" x2="1071.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.16</div>
+                <div class="rel-card__ttl">Google AIモードの使い方。切り替え・表示されない・消し方・履歴【2026年9月】</div>
+            </a>
             <a href="/media/llmo-yomikata-imi/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOの読み方"><defs><linearGradient id="ecg-1e60f08d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1e60f08d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">用語解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOの読み方</text><line x1="356.8" y1="365.9" x2="843.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.09.12</div>
@@ -269,11 +279,6 @@
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOとは？"><defs><linearGradient id="ecg-6597a637" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6597a637)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">基礎解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOとは？</text><line x1="394.8" y1="365.9" x2="805.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.08.13</div>
                 <div class="rel-card__ttl">LLMOとは？SEOとの違いと、AIに推奨されるための対策を解説</div>
-            </a>
-            <a href="/media/ai-comparison-prompt/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="比較で選ばれる条件"><defs><linearGradient id="ecg-b9b70424" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b9b70424)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">比較で選ばれる条件</text><line x1="258.0" y1="365.9" x2="942.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.08.08</div>
-                <div class="rel-card__ttl">AIに「A社とB社どちらがいい？」と聞かれたとき選ばれる条件</div>
             </a>
         </div>
     </section>
