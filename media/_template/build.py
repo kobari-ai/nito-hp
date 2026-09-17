@@ -703,13 +703,20 @@ def main():
     # 新しい順
     posts.sort(key=lambda p: p["meta"]["date"], reverse=True)
 
+    # CSS のキャッシュ破り: media.css の内容ハッシュを ?v= に付ける。
+    # 2026-09-17 実測: Cloudflare が media.css を max-age=14400 で保持し、テンプレート更新後も
+    # 最大4時間古い CSS が配られた（HTML は新しいのに見た目が変わらない）。URL を変えれば即反映される。
+    css_ver = hashlib.sha1((ROOT / "_template" / "media.css").read_bytes()).hexdigest()[:8]
+    def bust(html_text: str) -> str:
+        return html_text.replace('/media/_template/media.css"', f'/media/_template/media.css?v={css_ver}"')
+
     for p in posts:
         out_dir = ROOT / p["slug"]
         out_dir.mkdir(exist_ok=True)
-        (out_dir / "index.html").write_text(build_article(p, posts, article_tpl), encoding="utf-8")
+        (out_dir / "index.html").write_text(bust(build_article(p, posts, article_tpl)), encoding="utf-8")
         print(f"✔ media/{p['slug']}/index.html")
 
-    (ROOT / "index.html").write_text(build_list(posts, list_tpl), encoding="utf-8")
+    (ROOT / "index.html").write_text(bust(build_list(posts, list_tpl)), encoding="utf-8")
     print("✔ media/index.html （一覧）")
 
     update_top_page(posts)
