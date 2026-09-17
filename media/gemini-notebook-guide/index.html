@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotebookLM（Gemini Notebook）の使い方。無料の上限・できること・ChatGPTとの違い【2026年9月】 | nito Column</title>
+    <meta name="description" content="NotebookLMは2026年7月にGemini Notebookへ名前が変わりました。改名後の実画面で、ノートブックの作り方からStudioの9機能、無料プランの上限、ChatGPTとの違いまで、公式ヘルプを一次ソースにして書いています。">
+    <link rel="canonical" href="https://nito-0210.com/media/gemini-notebook-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="NotebookLM（Gemini Notebook）の使い方。無料の上限・できること・ChatGPTとの違い【2026年9月】">
+    <meta property="og:description" content="NotebookLMは2026年7月にGemini Notebookへ名前が変わりました。改名後の実画面で、ノートブックの作り方からStudioの9機能、無料プランの上限、ChatGPTとの違いまで、公式ヘルプを一次ソースにして書いています。">
+    <meta property="og:url" content="https://nito-0210.com/media/gemini-notebook-guide/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/gemini-notebook-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/gemini-notebook-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "NotebookLM（Gemini Notebook）の使い方。無料の上限・できること・ChatGPTとの違い【2026年9月】", "description": "NotebookLMは2026年7月にGemini Notebookへ名前が変わりました。改名後の実画面で、ノートブックの作り方からStudioの9機能、無料プランの上限、ChatGPTとの違いまで、公式ヘルプを一次ソースにして書いています。", "datePublished": "2026-09-17", "dateModified": "2026-09-17", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "自社の業務をAIに任せる仕組みを作って運用し、その仕組みを他社に移植する仕事をしています。AI検索対策（LLMO）では、主要AIでの言及を実測しながら記事とサイトを直すところまで伴走します。サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/gemini-notebook-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "NotebookLM（Gemini Notebook）の使い方。無料の上限・できること・ChatGPTとの違い【2026年9月】"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "NotebookLMは終了したのですか", "acceptedAnswer": {"@type": "Answer", "text": "終了していません。2026年7月16日にGemini Notebookへ改名しただけで、単体のサービスとして続いています。旧URLを開くと新しいURLに転送され、既存のノートブックもそのまま残ります。"}}, {"@type": "Question", "name": "無料で使えますか", "acceptedAnswer": {"@type": "Answer", "text": "無料です。Googleアカウントでログインすれば、ノートブック100個・1冊にソース50件・チャット1日50回・音声解説1日3本まで使えます。"}}, {"@type": "Question", "name": "日本語で使えますか", "acceptedAnswer": {"@type": "Answer", "text": "日本語で使えます。画面は日本語で、音声解説や動画解説、スライドも日本語で生成できます。対応言語は公式ヘルプで80以上です。"}}, {"@type": "Question", "name": "スマホで使えますか", "acceptedAnswer": {"@type": "Answer", "text": "iOSとAndroidにアプリがあり、ブラウザや他のアプリの共有メニューからPDFやYouTube動画をノートブックに送れます。マインドマップとデータテーブルはパソコン向けの機能で、アプリでは一部の機能に制限がある点だけ注意してください。"}}, {"@type": "Question", "name": "YouTube動画を読み込めますか", "acceptedAnswer": {"@type": "Answer", "text": "字幕付きの公開動画なら読み込めますが、取り込まれるのは字幕のテキストだけで、映像は解析されません。最近アップロードされた動画は取り込めないことがあります。"}}, {"@type": "Question", "name": "入れたデータはAIの学習に使われますか", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプによると、フィードバックを送った場合を除き、ノートブックのファイルとチャット内容は基盤モデルの学習に使われません。仕事用データは会社のGoogle Workspaceアカウントで使うほうが、企業向けのデータ保護が付きます。"}}, {"@type": "Question", "name": "年齢制限はありますか", "acceptedAnswer": {"@type": "Answer", "text": "Googleアカウントで年齢確認を済ませた法定年齢以上の人が使えます。日本では満13歳以上です。18歳未満には厳しめのコンテンツ制限がかかります。"}}, {"@type": "Question", "name": "ノートブックを複製できますか", "acceptedAnswer": {"@type": "Answer", "text": "公式FAQによると、複製機能はまだ提供されていません。削除したメモを復元する機能もありません。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>NotebookLM（Gemini No…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.17</span>
+        </div>
+        <h1 class="post-title">NotebookLM（Gemini Notebook）の使い方。無料の上限・できること・ChatGPTとの違い【2026年9月】</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NotebookLMの使い方"><defs><linearGradient id="ecg-42fed9bf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-42fed9bf)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">NotebookLMの使い方</text><line x1="220.0" y1="327.1" x2="980.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">改名後の画面と無料の上限を公式で確認</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Googleの「NotebookLM」は2026年7月16日に「Gemini Notebook」へ名前が変わりました。利用者は全世界で3,000万人を超え、60万以上の組織が使っています（Google公式ブログ、2026年7月）。名前は変わりましたが単体のツールとして残っており、作ったノートブックもそのまま使えます。</p>
+<p>改名後の画面（2026年9月17日に実機で撮影）を使って、ノートブックの作り方から、ソースに入れられるもの、チャットとStudioの使い方、無料でどこまで使えるか、ChatGPTやGeminiアプリとどう違うかまでを書きます。上限や料金はGoogleの公式ヘルプと料金ページを一次ソースにし、取得日を添えました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>無料で使える。<strong>Googleアカウントがあればインストール不要</strong>で、ノートブック100個・1冊にソース50件・チャット1日50回まで</li>
+<li>回答は<strong>自分が入れたソースの中だけ</strong>から作られ、引用番号を押すと元の箇所に飛べる</li>
+<li>Studioで音声解説・動画解説・スライド・マインドマップなど<strong>9種類の成果物</strong>を作れる</li>
+<li>Studioで作ったスライドは<strong>画像なので文字を直せない</strong>。編集できるpptxはチャットから作る（Pro以上）</li>
+<li>Googleドライブから入れたソースは自動で同期され、手元からアップロードしたファイルは同期されない</li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Gemini Notebook（旧NotebookLM）とは</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>改名で何が変わったか</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>始め方の3ステップ</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>① ノートブックを新規作成する</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>② ソースを追加する</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>③ チャットで質問する</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>ソースに入れられるもの</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>チャットの使い方</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>最初に試す質問の例</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>チャットの設定で答え方を変える</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>資料がゼロのときの始め方</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>回答をメモに残す</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Studioでできること</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>成果物のダウンロードと共有</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>編集できるpptxやxlsxを作る方法</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>無料でどこまで使えるか</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>ChatGPT・Geminiアプリとの違い</a></li>
+                    <li class="toc-h3"><a href="#s8-1"><span class="toc__n">8-1</span>Geminiアプリのノートブックとの違い</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>失敗しやすい点</a></li>
+                    <li class="toc-h3"><a href="#s9-1"><span class="toc__n">9-1</span>ソースの質がそのまま出力の質になる</a></li>
+                    <li class="toc-h3"><a href="#s9-2"><span class="toc__n">9-2</span>要約の向きが逆になることがある</a></li>
+                    <li class="toc-h3"><a href="#s9-3"><span class="toc__n">9-3</span>引用が付かないときがある</a></li>
+                    <li class="toc-h3"><a href="#s9-4"><span class="toc__n">9-4</span>機密資料を入れる前に確認すること</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>自社サイトはGemini Notebookに引用されるのか</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Gemini Notebook（旧NotebookLM）とは</h2>
+<p>Gemini Notebookは、自分でアップロードした資料だけを知識にして質問に答えるGoogleのAIツールです。ChatGPTやGeminiがインターネット全体の知識から答えるのに対して、Gemini Notebookは<strong>ノートブックに入れたPDFやURLの中身しか使いません</strong>。だから資料に書いていないことは答えず、答えるときは必ず引用元を示します。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_00_fig_flow.png" alt="Gemini Notebookの画面構成。左がソース、中央がチャット、右がStudioの3パネル" loading="lazy"><figcaption>画面は左からソース・チャット・Studioの3つのパネルでできている</figcaption></figure>
+
+<p>2023年のGoogle I/Oで「Project Tailwind」として発表され、2024年に日本語で使えるようになりました。2026年7月16日の改名では、Geminiアプリとの相互同期と、各ノートブックにクラウド上の実行環境（コード実行）が付く変更が同時に発表されています。基盤モデルはGeminiで、公式ヘルプによれば80以上の言語に対応しています。</p>
+<h3 id="s1-1">改名で何が変わったか</h3>
+<p>改名後もアクセス先は同じで、<code>notebooklm.google.com</code> を開くと <code>notebook.google.com</code> に転送されます。既存のノートブック・ソース・チャット履歴は残っており、操作方法も変わっていません。変わったのは次の3点です。</p>
+<ul>
+<li>Geminiアプリの左メニューに「ノートブック」が入り、両方で同じノートブックを開ける</li>
+<li>チャット内でリサーチを完了し、レポートとソースをノートブックに取り込める</li>
+<li>Google AI Pro・Ultra のユーザーはチャットからExcel・PowerPoint・PDFなどのファイルを直接作れる（コード実行）</li>
+</ul>
+<h2 id="s2">始め方の3ステップ</h2>
+<p>Gemini Notebookはブラウザで <code>notebook.google.com</code> を開き、Googleアカウントでログインするだけで使えます。iOS・Androidのアプリもあり、共有メニューからPDFやYouTube動画を既存のノートブックに送れます。</p>
+<h3 id="s2-1">① ノートブックを新規作成する</h3>
+<p>トップ画面右上の「新規作成」を押すと空のノートブックが開き、左がソース、中央がチャット、右がStudioという並びになっています。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_01_empty.jpg" alt="Gemini Notebookで新規作成した直後の画面。ソース・チャット・Studioの3パネルが空の状態" loading="lazy"><figcaption>新規作成の直後。ソースを入れるまでチャットは使えない</figcaption></figure>
+
+<h3 id="s2-2">② ソースを追加する</h3>
+<p>「ソースを追加」を押すと、ファイルのアップロード・ウェブサイト（YouTube含む）・Googleドライブ・Playブックス・テキスト貼り付けの5種類から選べます。ウェブのソースを探す検索窓もあり、Fast Research と Deep Research を切り替えられます。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_02_addsource.jpg" alt="ソースを追加するダイアログ。ウェブ検索、ファイルのドロップ、ウェブサイト、ドライブ、Playブックスの選択肢" loading="lazy"><figcaption>ソース追加の画面。URLは改行かスペースで区切ると複数まとめて入れられる</figcaption></figure>
+
+<p>URLを入れる画面には「有料記事はサポートされていません」「YouTubeはテキストの文字起こし部分のみ」と注意書きが出ます。ページの画像や埋め込み動画は取り込まれません。</p>
+<h3 id="s2-3">③ チャットで質問する</h3>
+<p>ソースを入れると、ノートブックのタイトルと絵文字が自動で付き、チャット欄が使えるようになります。試しに内閣府の祝日ページとWikipediaを入れて「国民の祝日は1年に何日ありますか」と聞くと、<strong>回答の各文に引用番号が付いて返ってきました</strong>。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_03_chat_answer.jpg" alt="チャットの回答。年間16日という答えに引用番号1と2が付いている" loading="lazy"><figcaption>回答には引用番号が付く。Proプランでは「Thoughts」を開くと思考過程も見える</figcaption></figure>
+
+<p>引用番号を押すと、その根拠になった箇所がポップアップで出て、左のソースビューアも該当ページに切り替わります。<strong>根拠の箇所が質問に合っているか</strong>を、この画面で確かめるのが基本の使い方です。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_04_citation.jpg" alt="引用番号をクリックすると根拠の箇所がポップアップで表示され、左のパネルにソースが開く" loading="lazy"><figcaption>引用番号を押すと根拠の箇所が開く</figcaption></figure>
+
+<h2 id="s3">ソースに入れられるもの</h2>
+<p>公式ヘルプ（2026年9月17日取得）に載っている対応形式と上限をまとめました。</p>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>対応しているもの</th>
+<th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ファイル</td>
+<td>PDF・Word（docx）・PowerPoint（pptx）・テキスト・Markdown・CSV・ePub</td>
+<td>1ソース50万語・200MBまで。コピープロテクトのPDFは不可</td>
+</tr>
+<tr>
+<td>画像</td>
+<td>jpg・png・webp・heic など</td>
+<td>一部の画像は正常に読めない場合あり</td>
+</tr>
+<tr>
+<td>音声</td>
+<td>MP3・WAV など</td>
+<td>文字起こしして取り込む</td>
+</tr>
+<tr>
+<td>Google</td>
+<td>ドキュメント・スライド（100枚まで）・スプレッドシート（10万トークンまで）</td>
+<td>ドライブ経由は数分ごとに自動同期。脚注とコメントは入らない</td>
+</tr>
+<tr>
+<td>ウェブ</td>
+<td>公開ページのURL</td>
+<td>HTMLのテキストだけ。画像・埋め込み動画は無視</td>
+</tr>
+<tr>
+<td>YouTube</td>
+<td>字幕付きの公開動画</td>
+<td>字幕（自動生成も可）だけを取り込む</td>
+</tr>
+<tr>
+<td>その他</td>
+<td>Playブックスで買った対象の電子書籍、Geminiとのチャット</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>見落としやすいのは同期の違いです。<strong>Googleドライブから入れたソースは元のファイルを直すとノートブック側も更新されます</strong>が、手元からアップロードしたPDFは更新されないので、改訂したら入れ直す必要があります。Excelファイル（xlsx）は直接アップロードできません。Googleスプレッドシートに変換するかCSVで入れる形です。</p>
+<p>5件以上のソースがあると自動でラベルが付き、トピックごとに分類されます。チャットで使うソースは左パネルのチェックボックスで絞れるので、比較したい資料だけにチェックを入れて質問する、という使い方も可能です。</p>
+<h2 id="s4">チャットの使い方</h2>
+<p>チャットの回答はソースの中の情報だけで作られ、公式ヘルプにも「短編小説の結末を書き換えて」のような、ソースに無い内容を作らせる指示には向かないと書かれています。逆に、資料の要約・比較・議事録の整理・FAQ化のように<strong>元の文章がある作業</strong>では引用付きで返ってくるので、裏取りの時間が減ります。</p>
+<h3 id="s4-1">最初に試す質問の例</h3>
+<p>「要約して」だけだと平均的な要約しか返りません。誰向けに何の形で欲しいかを入れた、ソースが1〜3件のときにそのまま使える5つの例です。</p>
+<ul>
+<li>この資料の要点を、前提知識がない人向けに5つの箇条書きで</li>
+<li>AとBの資料で、数字が食い違っている箇所を表にして</li>
+<li>この議事録から決定事項と担当者と期限だけを抜き出して</li>
+<li>この論文の結論と、その根拠になっている実験を1つずつ</li>
+<li>資料に書かれていないことは書かれていないと答えて</li>
+</ul>
+<p>最後の1文はソースに無い内容を補って答える動きを抑えるためのものです。</p>
+<h3 id="s4-2">チャットの設定で答え方を変える</h3>
+<p>チャットパネル右上のスライダーアイコンから、会話のスタイルと回答の長さを変えられます。スタイルは「デフォルト」「学習ガイド」「カスタム」の3つで、カスタムには「博士課程の学生のように回答して」のような役割も書けます。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_05_chat_settings.jpg" alt="チャットを設定の画面。会話スタイル（デフォルト・学習ガイド・カスタム）と回答の長さ（デフォルト・長め・短め）" loading="lazy"><figcaption>会話スタイルと回答の長さは保存され、そのノートブック内で効き続ける</figcaption></figure>
+
+<h3 id="s4-3">資料がゼロのときの始め方</h3>
+<p>手元に資料が無くても、ソースパネルの検索窓にテーマを入れるとウェブから候補を集めてくれます。Deep Research を使うと数十件のURLが一度に集まりますが、個人ブログや古い年のページも混ざるので、<strong>発行元と発行年を見て選んでからインポート</strong>したほうが回答の精度は上がります。YouTubeの解説では「2019年のデータや個人ブログが混ざってやり直した」という失敗例が複数の動画で語られていました。</p>
+<h3 id="s4-4">回答をメモに残す</h3>
+<p>役に立った回答は「メモに保存」でノートブックに固定できます。表や引用番号も元の形式のまま残ります。削除したメモは復元できないので、消す前に確認が要ります。</p>
+<h2 id="s5">Studioでできること</h2>
+<p>右側のStudioパネルは、ソースを別の形に作り替える場所です。2026年9月時点で9種類（データテーブルを含む）の成果物が並んでいます。</p>
+<table>
+<thead>
+<tr>
+<th>成果物</th>
+<th>何ができるか</th>
+<th>使いどころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>音声解説</td>
+<td>2人のAIホストが資料を会話形式で解説する音声</td>
+<td>通勤中に長い資料を耳で消化する</td>
+</tr>
+<tr>
+<td>動画解説</td>
+<td>資料を短い解説動画に</td>
+<td>読まない人への共有</td>
+</tr>
+<tr>
+<td>スライド資料</td>
+<td>詳細型かプレゼンター型を選んで作成。PDF・pptxで出せる</td>
+<td>たたき台の作成</td>
+</tr>
+<tr>
+<td>マインドマップ</td>
+<td>論点を樹形図にして、ノードから深掘り</td>
+<td>全体像の把握</td>
+</tr>
+<tr>
+<td>レポート</td>
+<td>FAQ・学習ガイド・概要説明資料など。Googleドキュメントに書き出せる</td>
+<td>社内共有</td>
+</tr>
+<tr>
+<td>フラッシュカード</td>
+<td>表に問い・裏に答えの暗記カード</td>
+<td>資格勉強</td>
+</tr>
+<tr>
+<td>クイズ</td>
+<td>4択の理解度テスト</td>
+<td>研修</td>
+</tr>
+<tr>
+<td>インフォグラフィック</td>
+<td>要点を1枚の図に</td>
+<td>SNS・資料の挿絵</td>
+</tr>
+<tr>
+<td>データテーブル</td>
+<td>資料の数値を表に。Googleスプレッドシートに書き出せる</td>
+<td>集計の下準備</td>
+</tr>
+</tbody>
+</table>
+<p>各カードを押すとカスタマイズ画面が開き、形式・言語・長さ・使うソースと、指示文を入れられます。指示を書かずに生成すると構成もデザインもお任せになるので、<strong>対象読者と枚数、色を毎回書く</strong>と結果が安定します。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_06_slide_customize.jpg" alt="スライド資料をカスタマイズする画面。詳細なスライドとプレゼンターのスライドの選択、言語、長さ、ソース、指示文の入力欄" loading="lazy"><figcaption>スライドのカスタマイズ画面。対象読者・枚数・色を指示文に書く</figcaption></figure>
+
+<p>「初心者向けに、祝日の日数と経緯を5枚で。白背景で文字は大きめに」と書いて生成したところ、3分ほどでタイトル付きのスライドができました。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_08_slide_output.jpg" alt="Studioで生成されたスライドの1枚目。日本の祝日はなぜこんなに多いのかというタイトル" loading="lazy"><figcaption>生成されたスライド。Studioの出力は画像として作られる</figcaption></figure>
+
+<h3 id="s5-1">成果物のダウンロードと共有</h3>
+<p>Studioに並んだ成果物は、右側のメニューからダウンロードできます。音声解説はMP3、スライドはPDFかpptx、マインドマップはPNG、レポートとデータテーブルはGoogleドキュメントとスプレッドシートへの書き出しです。書き出したドキュメントを編集しても元のノートブックには反映されません。</p>
+<p>ノートブックそのものは右上の「共有」からメールアドレスを指定して渡せます。閲覧者は読むだけ、編集者はソースとメモの追加・削除と再共有ができ、個人のGmailアカウントでは最大50人まで共有できます。チャット画面だけを見せたいときは「チャットビューへのリンクをコピー」を使います。</p>
+<h2 id="s6">編集できるpptxやxlsxを作る方法</h2>
+<p>Studioのスライドやインフォグラフィックは画像として出力されるため、pptxでダウンロードしても文字や図形を直せません。提出直前に「1文字だけ直したい」となって困った、という失敗が解説動画で繰り返し語られています。</p>
+<p>文字を直せるファイルが要るときは、<strong>Studioではなくチャット欄に「.pptxとして作成して」と頼みます</strong>。Google AI Pro と Ultra のユーザーは、チャットでグラフ画像・PDF・Word・Excel・PowerPoint・CSVを生成でき（公式ヘルプ「Google AI Ultra と Google AI Pro の定期購入ユーザー向けの追加機能」）、ノートブックに付いたクラウド上の実行環境がコードを書いてファイルを作ります。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_07_pptx_chat.jpg" alt="チャットで文字を編集できるPowerPointファイルを依頼した結果。Studioパネルにpptxファイルが追加されている" loading="lazy"><figcaption>チャットから作ったpptxはStudioパネルに並ぶ。Pro以上のプランで使える</figcaption></figure>
+
+<p>試した範囲では、3枚のスライドが1分ほどで生成され、Studioパネルにファイルとして並びました。文字は編集できるものの、要素の位置ずれは起きるので、体裁は手元のPowerPointで整える前提で使うものです。この機能は試験運用中で、無料プランでは動きません。</p>
+<h2 id="s7">無料でどこまで使えるか</h2>
+<p>Gemini Notebook は無料で始められ、上限はプランごとに公式ヘルプで公開されています。2026年9月17日に取得した数値です。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>無料（Standard）</th>
+<th>Google AI Plus</th>
+<th>Google AI Pro</th>
+<th>Google AI Ultra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>月額（日本）</td>
+<td>0円</td>
+<td>725円</td>
+<td>2,900円</td>
+<td>14,500円〜</td>
+</tr>
+<tr>
+<td>ノートブック数</td>
+<td>100</td>
+<td>200</td>
+<td>500</td>
+<td>500</td>
+</tr>
+<tr>
+<td>1冊のソース数</td>
+<td>50</td>
+<td>100</td>
+<td>300</td>
+<td>500〜600</td>
+</tr>
+<tr>
+<td>チャット（1日）</td>
+<td>50回</td>
+<td>200回</td>
+<td>500回</td>
+<td>2,500〜5,000回</td>
+</tr>
+<tr>
+<td>音声解説（1日）</td>
+<td>3</td>
+<td>6</td>
+<td>20</td>
+<td>100〜200</td>
+</tr>
+<tr>
+<td>動画解説（1日）</td>
+<td>3</td>
+<td>6</td>
+<td>20</td>
+<td>100〜200</td>
+</tr>
+</tbody>
+</table>
+<p>月額はGeminiのプランページ（<code>gemini.google/jp/subscriptions/</code>）の表示で、Ultraは5倍プラン14,500円と20倍プラン32,000円の2段階です。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_10_help_upgrade.jpg" alt="Gemini Notebookをアップグレードするの公式ヘルプ。プラン別の上限表" loading="lazy"><figcaption>上限表は公式ヘルプ「Gemini Notebook をアップグレードする」に載っている</figcaption></figure>
+
+<p>無料の範囲で足りる人は多いです。<strong>1日50回のチャットと音声解説3本</strong>があれば、勉強や1案件の資料読みには困りません。有料を考える目安は次の3つです。</p>
+<ul>
+<li>1冊に50件以上のソースを入れたい（論文の束、社内規程の全体）</li>
+<li>音声解説や動画解説を1日に何本も作る</li>
+<li>チャットからpptx・xlsx・PDFを直接作りたい（Pro以上）</li>
+</ul>
+<p>2026年6月時点の他の解説記事にはPlusを1,200円と書いたものがありますが、2026年9月17日時点の公式ページでは725円です。料金は変わるので、契約前に公式ページを見てください。</p>
+<figure class="post-figure"><img src="/media/images/gemini-notebook-guide/nb_09_plans.jpg" alt="Google AIプランの公式ページ。Plus 725円、Pro 2,900円と表示" loading="lazy"><figcaption>Geminiのプランページ（2026年9月17日）。Gemini Notebookの上限もここに書かれている</figcaption></figure>
+
+<h2 id="s8">ChatGPT・Geminiアプリとの違い</h2>
+<p>「NotebookLMとChatGPTはどちらが便利か」は検索でもAI検索でもよく聞かれる問いで、手元に資料があるかどうかで答えが変わります。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Gemini Notebook</th>
+<th>ChatGPT・Gemini（通常のチャット）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>回答のもと</td>
+<td>自分が入れたソースだけ</td>
+<td>学習済みの知識＋ウェブ検索</td>
+</tr>
+<tr>
+<td>ソースに無いこと</td>
+<td>答えない</td>
+<td>答える（間違いも混ざる）</td>
+</tr>
+<tr>
+<td>根拠の表示</td>
+<td>引用番号で必ず示す</td>
+<td>検索したときだけリンクが付く</td>
+</tr>
+<tr>
+<td>向いている作業</td>
+<td>長い資料の要約・比較・議事録・教材化</td>
+<td>文章の作成・アイデア出し・コード・最新ニュース</td>
+</tr>
+<tr>
+<td>料金</td>
+<td>無料〜</td>
+<td>無料〜</td>
+</tr>
+</tbody>
+</table>
+<p>ゼロから文章を書かせたい、昨日のニュースを聞きたい、という用途はChatGPTやGeminiです。手元に資料があり、その中身について間違いなく答えてほしいならGemini Notebookです。</p>
+<h3 id="s8-1">Geminiアプリのノートブックとの違い</h3>
+<p>改名後はGeminiアプリの中でも同じノートブックを開けますが、公式ヘルプは根拠づけが違うと明記しています。<strong>Gemini Notebookで開くと回答はソースだけから作られ、Geminiアプリで開くとウェブ検索など他のツールの情報も混ざります</strong>。音声解説やスライドなどStudioの成果物はGeminiアプリからは作れません。同じノートブックでも、正確さを優先する作業はGemini Notebook側で開きます。</p>
+<h2 id="s9">失敗しやすい点</h2>
+<p>解説動画と公式FAQに出てくる失敗をまとめました。</p>
+<h3 id="s9-1">ソースの質がそのまま出力の質になる</h3>
+<p>出力が薄いときは指示文を直すより、ソースを入れ替えたほうが早いです。1つのノートブックに関係ない資料を詰めると回答の焦点がぼやけるので、<strong>1冊1テーマ</strong>が基本です。</p>
+<h3 id="s9-2">要約の向きが逆になることがある</h3>
+<p>数字は合っているのに「増加傾向」が「横ばい」と要約されていた、という報告が解説動画にあります。引用番号が付いていても、重要な提出物は元の箇所を開いて向きを確かめる必要があります。</p>
+<h3 id="s9-3">引用が付かないときがある</h3>
+<p>公式FAQによると、ソースの文章が短すぎると個別の引用は付かず、ドキュメント全体の参照になる仕様です。安全フラグに触れる内容や、質問があいまいなときも回答できないケースとして公式FAQに載っています。</p>
+<h3 id="s9-4">機密資料を入れる前に確認すること</h3>
+<p>ノートブックに追加したファイルとチャット内容は、ユーザーがフィードバックを送った場合を除き基盤モデルの学習に使われないと公式ヘルプに書かれています。ただし個人のGoogleアカウントと会社のWorkspaceアカウントでは規約が違うので、社内資料を入れるときは自社のルールを先に見てください。個人アカウントでの共有は最大50人までで、Googleグループには共有できません。</p>
+<h2 id="s10">自社サイトはGemini Notebookに引用されるのか</h2>
+<p>「Gemini Notebook に自社のページは引用されるのか」という質問を AI検索対策の相談で受けるので、仕組みから説明します。</p>
+<p><strong>Gemini Notebookのチャットはウェブを検索しないので、ここで自社サイトが勝手に引用されることはありません</strong>。引用の対象になるのは利用者がソースとして入れたページだけで、逆に利用者が「ウェブで新しいソースを検索」やDeep Researchで資料を集める場面、そしてGeminiアプリでノートブックを開いた場面ではウェブの情報が入ってきます。</p>
+<p>自社のページがその候補に入るかどうかは、Google検索やGeminiがそのページをどう評価しているかで決まります。本文がHTMLのテキストとして読めること、発行元と発行日が明記されていることは、Gemini Notebookの利用者がソースを選ぶときの判断材料にもなります。AI検索での引用の仕組みは<a href="/media/what-is-llmo/">LLMOとは何か</a>に、Google検索のAIモード側の挙動は<a href="/media/google-ai-mode-guide/">Google AIモードの使い方</a>に書きました。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">nitoは、AI検索（LLMO／AIO）での見え方を計測するだけ・提案するだけで終わらせません。<strong>効く施策に絞って、記事の制作と改善まで実行</strong>します。まず無料診断で、いまの見え方を数字にします。</p>
+        <ul class="bp-cta__points">
+            <li><strong>本当に効く施策を、ピンポイントで</strong>：AI経由の問い合わせ・購入まで毎日追ってきたから、効く施策を切り分けられる</li>
+            <li><strong>提案で終わらせず、実行まで</strong>：記事の制作・既存記事の改善まで手を動かす</li>
+            <li><strong>主要AIでの見え方を毎日計測</strong>：ChatGPT・Geminiなどでの言及・引用を自社基盤で毎日計測し、次に直す場所を数字で決める</li>
+        </ul>
+        <p class="bp-cta__lead">実際にあるSaaS企業では、AIでの言及率を10%から45%へ引き上げ、AI経由のコンバージョンを約4倍に改善しました。</p>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s11">よくある質問</h2>
+<h3 id="s11-1">NotebookLMは終了したのですか</h3>
+<p>終了していません。2026年7月16日にGemini Notebookへ改名しただけで、単体のサービスとして続いています。旧URLを開くと新しいURLに転送され、既存のノートブックもそのまま残ります。</p>
+<h3 id="s11-2">無料で使えますか</h3>
+<p>無料です。Googleアカウントでログインすれば、ノートブック100個・1冊にソース50件・チャット1日50回・音声解説1日3本まで使えます。</p>
+<h3 id="s11-3">日本語で使えますか</h3>
+<p>日本語で使えます。画面は日本語で、音声解説や動画解説、スライドも日本語で生成できます。対応言語は公式ヘルプで80以上です。</p>
+<h3 id="s11-4">スマホで使えますか</h3>
+<p>iOSとAndroidにアプリがあり、ブラウザや他のアプリの共有メニューからPDFやYouTube動画をノートブックに送れます。マインドマップとデータテーブルはパソコン向けの機能で、アプリでは一部の機能に制限がある点だけ注意してください。</p>
+<h3 id="s11-5">YouTube動画を読み込めますか</h3>
+<p>字幕付きの公開動画なら読み込めますが、取り込まれるのは字幕のテキストだけで、映像は解析されません。最近アップロードされた動画は取り込めないことがあります。</p>
+<h3 id="s11-6">入れたデータはAIの学習に使われますか</h3>
+<p>公式ヘルプによると、フィードバックを送った場合を除き、ノートブックのファイルとチャット内容は基盤モデルの学習に使われません。仕事用データは会社のGoogle Workspaceアカウントで使うほうが、企業向けのデータ保護が付きます。</p>
+<h3 id="s11-7">年齢制限はありますか</h3>
+<p>Googleアカウントで年齢確認を済ませた法定年齢以上の人が使えます。日本では満13歳以上です。18歳未満には厳しめのコンテンツ制限がかかります。</p>
+<h3 id="s11-8">ノートブックを複製できますか</h3>
+<p>公式FAQによると、複製機能はまだ提供されていません。削除したメモを復元する機能もありません。</p>
+<h2 id="s12">出典</h2>
+<ul>
+<li>Google ヘルプ「Gemini Notebook でノートブックを作成する」「ノートブックの新しいソースを追加または検索する」「Gemini Notebook でチャットを使用する」「よくある質問」「Gemini Notebook をアップグレードする」「Gemini アプリの Notebooks」（support.google.com/notebooklm、2026年9月17日取得）</li>
+<li>Google 公式ブログ「NotebookLM is now Gemini Notebook」（2026年7月16日）</li>
+<li>Gemini プランページ gemini.google/jp/subscriptions/（2026年9月17日取得）</li>
+<li>画面は2026年9月17日に Google AI Pro のアカウントで撮影</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">自社の業務をAIに任せる仕組みを作って運用し、その仕組みを他社に移植する仕事をしています。AI検索対策（LLMO）では、主要AIでの言及を実測しながら記事とサイトを直すところまで伴走します。サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/gpt-6-astra-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GPT-6 Astraとは"><defs><linearGradient id="ecg-82a5c5fd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-82a5c5fd)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GPT-6 Astraとは</text><line x1="273.2" y1="365.9" x2="926.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.17</div>
+                <div class="rel-card__ttl">GPT-6 Astraとは。ChatGPTで使う方法・プラン別の上限・料金・GPT-5.6との違い【2026年9月】</div>
+            </a>
+            <a href="/media/google-ai-mode-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google AIモードの使い方"><defs><linearGradient id="ecg-bfc9ca43" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-bfc9ca43)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Google AIモードの使い方</text><line x1="128.8" y1="365.9" x2="1071.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.16</div>
+                <div class="rel-card__ttl">Google AIモードの使い方。切り替え・表示されない・消し方・履歴【2026年9月】</div>
+            </a>
+            <a href="/media/llmo-yomikata-imi/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOの読み方"><defs><linearGradient id="ecg-1e60f08d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1e60f08d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">用語解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOの読み方</text><line x1="356.8" y1="365.9" x2="843.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.12</div>
+                <div class="rel-card__ttl">LLMOの読み方・意味とは。SEOとの違いを一次データより先に確認</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
