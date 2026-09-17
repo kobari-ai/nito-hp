@@ -42,7 +42,7 @@ AIモードは質問の意図をAIが読み取り、複数のサイトを分析�
 
 ### AIによる概要との違い
 
-<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/10_fig_three.png" alt="AIによる概要・AIモード・Geminiの位置づけの図。AIによる概要は検索結果の上に自動で出る要約、AIモードはタブを押して会話する画面、Geminiは文章や画像を作るAI" loading="lazy"><figcaption>3つの位置づけ。AIによる概要は検索結果の上に自動で出る、AIモードはタブを押して会話する、Geminiは文章や画像を作る</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/10_fig_three.png" alt="スマホの実際の画面3枚。左はAIによる概要が検索結果の上に出た画面、中央はAIモードの会話画面、右はGeminiアプリの画面" loading="lazy"><figcaption>スマホの実際の画面（2026年9月）。左からAIによる概要、AIモード、Gemini。同じ「還元率の高いクレジットカード」で、出る場所と画面が違う</figcaption></figure>
 
 | 比較する点 | AIによる概要 | AIモード |
 |---|---|---|
@@ -80,6 +80,8 @@ AIモードは検索から得た情報を整理して見せる機能で、Gemini
 ### スマホで開く
 
 Googleアプリを開くと、検索の下に虫眼鏡にキラキラが付いた「AI モード」のアイコンがあります。押した先が専用画面です。ブラウザから使う場合はPCと同じで、`google.com/ai` を開くか検索結果のタブから入ります。
+
+<figure class="post-figure"><img src="/media/images/google-ai-mode-guide/22_sp_aimode.png" alt="スマホのブラウザで開いたAIモードの会話画面。上部のタブ列の左端に「AI モード」があり、質問と回答、出典、下部に「質問する」の入力欄" loading="lazy"><figcaption>スマホのブラウザでのAIモード。検索結果のタブ列の左端「AI モード」から入ると、この画面になる</figcaption></figure>
 
 Googleアプリにアイコンが無いときは、画面左上のフラスコの形をしたアイコン（Search Labs）を開いてください。ここでAIモードの試験運用版をオンにできます。Androidのホーム画面に置くGoogle検索のウィジェットにもAIモードのアイコンがあり、ここからならアプリを開く手間なく1回のタップで入れます。
 
