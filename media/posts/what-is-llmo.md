@@ -8,7 +8,7 @@ cover_headline: LLMOとは？
 cover_sub: SEOとの違いと対策の全体像
 ---
 
-LLMOとは、ChatGPTやGeminiなどの生成AIが回答をつくるとき、自社の情報が引用・推奨されやすいように最適化する取り組みです。Large Language Model Optimization（大規模言語モデル最適化）の略で、AI検索対策とも呼ばれます。
+LLMOとは、ChatGPTやGeminiなどの生成AIが回答をつくるとき、自社の情報が引用・推奨されやすいように最適化する取り組みです。Large Language Model Optimization（大規模言語モデル最適化）の略で、AI検索対策とも呼ばれます。読み方と略語の由来は[LLMOの読み方・意味](/media/llmo-yomikata-imi/)に分けて書きました。
 
 押さえておきたいのは、**LLMOはSEOの置き換えではなく、SEOの上に積む層**だという点です。AIに引用されているページを見ると、検索順位が高いページが多く含まれます。
 
