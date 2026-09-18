@@ -119,16 +119,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 <tr>
 <td>SEOプラグインの機能追加</td>
-<td>Yoast SEO、SEO Framework など</td>
-<td>既存のSEOプラグインがllms.txt生成に対応し始めている</td>
+<td>Yoast SEO、Rank Math、All in One SEO など</td>
+<td>主要なSEOプラグインがllms.txt生成やAI向けメタ情報の追加に対応し始めている</td>
 </tr>
 <tr>
 <td>構造化データ系</td>
 <td>Schema系プラグイン全般</td>
 <td>JSON-LDの自動出力。LLMO専用ではないが基盤になる</td>
 </tr>
+<tr>
+<td>AIクローラー追跡系</td>
+<td>アクセスログ系プラグイン</td>
+<td>ChatGPTやClaudeなどのAIボットが自社サイトに来ているかをログで可視化する</td>
+</tr>
 </tbody>
 </table>
+<p>AIクローラー追跡系は、ここまでの3種類とは目的が異なります。情報の渡し方を整える道具ではなく、<strong>AIが実際に巡回しているかを見るための道具</strong>です。引用されたかどうかまでは分かりませんが、そもそもクロールされていないなら渡し方を整えても意味がないので、状況を把握する用途では使えます。</p>
 <p>すでにYoastなどのSEOプラグインを入れているなら、<strong>新しくLLMO用のプラグインを追加する前に、手元のプラグインが対応していないか確認してください</strong>。同じ機能を持つプラグインを重ねると、構造化データが二重に出力されて不具合の原因になります。</p>
 <p>なお、llms.txtは静的ファイルを手で置くこともできます。記事数が少ないうちは、プラグインを入れるより手書きのファイルを1つ設置するほうが管理は楽です。</p>
 <h2 id="s2">入れるだけでは引用が増えない理由</h2>
