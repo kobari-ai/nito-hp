@@ -139,7 +139,7 @@ Gitも会話で扱えます。「どのファイルを変更しましたか？�
 
 ## 権限モードを切り替える
 
-初心者が一番戸惑うのが「許可しますか？」の確認です。Claude Codeはファイルの書き込みやコマンドの実行のたびに確認を出しますが、これは権限モードで変えられます。セッション中に**Shift+Tab**を押すと、モードが順番に切り替わります。
+初心者が一番戸惑うのが「許可しますか？」の確認です。Claude Codeは権限モードによって、ファイルの書き込みやコマンドの実行の前に確認を出すかどうかが変わります。セッション中に**Shift+Tab**を押すと、モードが順番に切り替わります。
 
 <figure class="post-figure"><img src="/media/images/claude-code-guide/00_fig_modes.png" alt="Claude Codeの権限モード4つ。default（毎回確認）、acceptEdits（編集は自動）、plan（読むだけで計画を出す）、auto（分類器が判断）を並べた図" loading="lazy"><figcaption>Shift+Tabで循環する権限モード。迷ったら既定か計画モード</figcaption></figure>
 
