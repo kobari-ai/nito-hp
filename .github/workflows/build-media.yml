@@ -11,6 +11,11 @@ on:
 permissions:
   contents: write
 
+# 複数 PR を続けてマージしたときにビルドが並走して push が non-fast-forward で落ちるのを防ぐ（2026-09-18・09-19 に4連続失敗）
+concurrency:
+  group: build-media
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -43,6 +48,7 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "build: 記事HTMLを自動生成"
+            git pull --rebase origin main || true
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
