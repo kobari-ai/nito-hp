@@ -1280,6 +1280,43 @@
         .step-title { font-size: 24px; }
         .step-visual { position: relative; z-index: 1; }
         @media (max-width: 900px) { .step-num { font-size: 84px; left: 0; top: 0; } .step-main { padding-top: 30px; } .hero::before { width: 380px; height: 380px; left: -140px; top: -200px; } .hero::after { display: none; } }
+
+        /* ── 2026-09-19 4周目 ── */
+        .hero::before { left: auto; right: -160px; top: -300px; width: 640px; height: 640px; background: #ffb454; opacity: .85; }
+        .hero::after { left: -220px; right: auto; bottom: -440px; width: 560px; height: 560px; background: #ffd9a8; }
+        /* 課題: 線画ピクトグラム */
+        .problem-fig { background: #fff6ec; padding: 26px 0 18px; display: flex; justify-content: center; }
+        .problem-fig svg { width: 150px; height: 110px; }
+        .pict { fill: none; stroke: #e67e22; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+        .pict-soft { fill: none; stroke: #c9c9c9; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+        .pict-fill { fill: #e67e22; }
+        /* 仕組み: スライド型の図 */
+        .slide { background: #fff8f1; border-radius: 12px; padding: 22px 20px; margin-top: auto; }
+        .sl-row { display: flex; align-items: stretch; justify-content: center; gap: 8px; flex-wrap: nowrap; }
+        .sl-row .sl-box { min-width: 0; flex: 1; padding: 10px 8px; font-size: 12.5px; }
+        .sl-row .sl-box small { font-size: 10.5px; }
+        .sl-row .sl-arrow { align-self: center; flex: none; }
+        .sl-col { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+        .sl-box { background: #fff; border: 1.5px solid #e8c9a3; border-radius: 8px; padding: 10px 14px; font-size: 13px; font-weight: 700; color: #1a1a1a; text-align: center; line-height: 1.5; min-width: 92px; }
+        .sl-box small { display: block; font-size: 11px; font-weight: 400; color: #888; margin-top: 2px; }
+        .sl-box.on { background: var(--color-secondary); border-color: var(--color-secondary); color: #fff; }
+        .sl-box.on small { color: #ffe3c6; }
+        .sl-box.off { background: #f3f3f3; border-color: #ddd; color: #888; }
+        .sl-arrow { color: #e67e22; font-size: 18px; font-weight: 700; line-height: 1; }
+        .sl-line { width: 2px; height: 22px; background: #e8c9a3; }
+        .sl-note { font-size: 11.5px; color: #b9773a; text-align: center; margin-top: 12px; }
+        .sl-hub { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; }
+        .sl-hub .sl-col .sl-box { min-width: 120px; }
+        .sl-time { display: flex; align-items: flex-end; justify-content: space-between; gap: 6px; padding: 8px 6px 0; border-bottom: 2px solid #e8c9a3; }
+        .sl-tick { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 11px; color: #888; }
+        .sl-tick b { font-size: 12px; color: #1a1a1a; }
+        .sl-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--color-secondary); margin-bottom: -7px; }
+        .sl-dot.s { width: 8px; height: 8px; background: #e6b27a; margin-bottom: -5px; }
+        /* 進め方: 番号を左の列に */
+        .step { grid-template-columns: 72px 1fr 1fr; gap: 28px; padding: 36px 0; }
+        .step-num { position: static; font-size: 40px; color: var(--color-secondary); line-height: 1; align-self: start; padding-top: 4px; }
+        .step-main { padding-top: 0; padding-left: 0; }
+        @media (max-width: 900px) { .step { grid-template-columns: 56px 1fr; } .step-visual { grid-column: 2; } .step-num { font-size: 32px; } .hero::before { right: -220px; top: -240px; width: 420px; height: 420px; } }
     </style>
 </head>
 
@@ -1343,21 +1380,39 @@
             </div>
             <div class="problem-list">
                 <div class="problem">
-                    <div class="problem-fig"><img src="/media/images/ai-agent/problem1.jpg" alt=""></div>
+                    <div class="problem-fig"><svg viewBox="0 0 150 110" role="img" aria-label="人が打ち込まないとAIが動かない">
+  <path class="pict-soft" d="M10 22 h64 a8 8 0 0 1 8 8 v30 a8 8 0 0 1 -8 8 h-40 l-14 12 v-12 h-10 a8 8 0 0 1 -8 -8 v-30 a8 8 0 0 1 8 -8z"/>
+  <path class="pict" d="M26 44 h20 M26 54 h32"/>
+  <rect class="pict-soft" x="98" y="30" width="42" height="40" rx="10"/>
+  <circle class="pict-fill" cx="112" cy="48" r="3.5"/><circle class="pict-fill" cx="126" cy="48" r="3.5"/>
+  <path class="pict-soft" d="M84 50 h10" stroke-dasharray="3 5"/>
+  <text x="119" y="96" text-anchor="middle" font-size="12" fill="#b9773a" font-family="sans-serif">待機中</text>
+</svg></div>
                     <div class="problem-body">
                         <h3 class="problem-title">チャットで指示しないと動かない</h3>
                         <p class="problem-desc">日報の集計や議事録の整理のような毎日の仕事も、結局人が指示する状態のままになっている。</p>
                     </div>
                 </div>
                 <div class="problem">
-                    <div class="problem-fig"><img src="/media/images/ai-agent/problem2.jpg" alt=""></div>
+                    <div class="problem-fig"><svg viewBox="0 0 150 110" role="img" aria-label="AIに詳しい人がいない">
+  <circle class="pict-soft" cx="40" cy="36" r="13"/><path class="pict-soft" d="M18 82 a22 22 0 0 1 44 0"/>
+  <circle class="pict-soft" cx="110" cy="36" r="13"/><path class="pict-soft" d="M88 82 a22 22 0 0 1 44 0"/>
+  <text x="75" y="64" text-anchor="middle" font-size="40" font-weight="700" fill="#e67e22" font-family="sans-serif">?</text>
+</svg></div>
                     <div class="problem-body">
                         <h3 class="problem-title">AIに詳しい人が社内にいない</h3>
                         <p class="problem-desc">ツール選定や設定を任せられる人がおらず、何から頼めば良いのか分からない。</p>
                     </div>
                 </div>
                 <div class="problem">
-                    <div class="problem-fig"><img src="/media/images/ai-agent/problem3.jpg" alt=""></div>
+                    <div class="problem-fig"><svg viewBox="0 0 150 110" role="img" aria-label="AIが会社の前提を知らない">
+  <path class="pict-soft" d="M18 18 h36 l12 12 v58 h-48z"/><path class="pict-soft" d="M54 18 v12 h12"/>
+  <path class="pict-soft" d="M28 48 h28 M28 60 h20 M28 72 h26"/>
+  <path class="pict" d="M78 54 h14" stroke-dasharray="4 5"/>
+  <path class="pict" d="M92 42 l14 14 M106 42 l-14 14"/>
+  <rect class="pict-soft" x="112" y="34" width="28" height="40" rx="8"/>
+  <circle class="pict-fill" cx="121" cy="52" r="3"/><circle class="pict-fill" cx="131" cy="52" r="3"/>
+</svg></div>
                     <div class="problem-body">
                         <h3 class="problem-title">AIが会社の前提を知らない</h3>
                         <p class="problem-desc">社内の決まりごとや案件の状況をAIが知らないので、期待しているアウトプットとズレる。</p>
@@ -1423,38 +1478,52 @@
                 <div class="bento-item w4">
                     <h3 class="bento-title">会社のデータベース</h3>
                     <p class="bento-desc">会社情報・案件ごとの状況・AIの活用方法などを1箇所にまとめたbrainを作成します。個人ごとに使うAIとは異なり、成功例が全社で共有されるため、改善が積み上がります。</p>
-                    <img class="diagram" src="/media/images/ai-agent/mech1.jpg" alt="" style="border-radius:10px">
+                    <div class="slide">
+                        <div class="sl-hub">
+                            <div class="sl-col"><div class="sl-box">営業<small>担当者</small></div><div class="sl-box">CS<small>担当者</small></div><div class="sl-box">管理部門<small>担当者</small></div></div>
+                            <div class="sl-col"><span class="sl-arrow">⇄</span><div class="sl-box on">会社のデータベース<small>決まりごと・案件の状況・AIの使い方</small></div><span class="sl-arrow">⇄</span></div>
+                            <div class="sl-col"><div class="sl-box">営業AI</div><div class="sl-box">CS AI</div><div class="sl-box">夜間AI</div></div>
+                        </div>
+                        <p class="sl-note">人もAIも同じ1箇所を読む。うまくいった使い方がここに溜まる</p>
+                    </div>
                 </div>
                 <div class="bento-item w2">
                     <h3 class="bento-title">決まった時刻に動く定期実行</h3>
                     <p class="bento-desc">朝は状況の整理、夜は日中に頼まれたタスク。人が頼まなくても、時刻が来れば動き始めます。</p>
-                    <svg class="diagram" viewBox="0 0 300 150" role="img" aria-label="朝と夜に自動で動く図">
-                        <line x1="30" y1="96" x2="270" y2="96" stroke="#ddd" stroke-width="2"/>
-                        <g font-family="sans-serif" font-size="11" fill="#888">
-                            <circle cx="70" cy="96" r="7" fill="#e67e22"/><text x="70" y="122" text-anchor="middle">6:30</text><text x="70" y="78" text-anchor="middle" font-size="11" fill="#555">状況の整理</text>
-                            <circle cx="170" cy="96" r="5" fill="#e6b27a"/><text x="170" y="122" text-anchor="middle">毎時</text><text x="170" y="78" text-anchor="middle" fill="#555">取り込み</text>
-                            <circle cx="245" cy="96" r="7" fill="#e67e22"/><text x="245" y="122" text-anchor="middle">22:00</text><text x="245" y="78" text-anchor="middle" fill="#555">夜間の作業</text>
-                        </g>
-                        <text x="150" y="26" text-anchor="middle" font-size="12" fill="#b9773a" font-family="sans-serif">人の依頼なしで始まる</text>
-                    </svg>
+                    <div class="slide">
+                        <div class="sl-time">
+                            <div class="sl-tick"><b>6:30</b><span>状況の整理</span><span class="sl-dot"></span></div>
+                            <div class="sl-tick"><b>毎時</b><span>取り込み</span><span class="sl-dot s"></span></div>
+                            <div class="sl-tick"><b>22:00</b><span>夜間の作業</span><span class="sl-dot"></span></div>
+                        </div>
+                        <p class="sl-note">人の依頼なしで始まる</p>
+                    </div>
                 </div>
                 <div class="bento-item w3">
                     <h3 class="bento-title">取り消せない操作だけ人が承認</h3>
                     <p class="bento-desc">対外送信・契約・支払い・公開は、AIが下書きを作り、人が確認してから実行します。</p>
-                    <img class="diagram" src="/media/images/ai-agent/mech3.jpg" alt="" style="border-radius:10px">
+                    <div class="slide">
+                        <div class="sl-row">
+                            <div class="sl-box">AIが実行<small>調査・下書き・集計</small></div>
+                            <div class="sl-box on">人が承認<small>送信・契約・支払い・公開</small></div>
+                            <div class="sl-box off">触らせない<small>最初に決めて文書に</small></div>
+                        </div>
+                        <p class="sl-note">3つの線引きを最初に決める</p>
+                    </div>
                 </div>
                 <div class="bento-item w3">
                     <h3 class="bento-title">AIエージェント同士での議論</h3>
                     <p class="bento-desc">作ったAIとは別のAIがアウトプットを添削し、直してから人に回します。</p>
-                    <svg class="diagram" viewBox="0 0 420 140" role="img" aria-label="AI同士で添削してから人に渡す図">
-                        <g font-family="sans-serif">
-                            <rect x="14" y="40" width="108" height="58" rx="8" fill="#fff7ef" stroke="#e8c9a3"/><text x="68" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#e67e22">作るAI</text><text x="68" y="84" text-anchor="middle" font-size="10.5" fill="#b9773a">下書き</text>
-                            <path d="M126 62 L160 62 M160 76 L126 76" stroke="#e67e22" stroke-width="1.5"/><path d="M154 57 L162 62 L154 67" fill="none" stroke="#e67e22" stroke-width="1.5"/><path d="M132 71 L124 76 L132 81" fill="none" stroke="#e67e22" stroke-width="1.5"/>
-                            <rect x="166" y="40" width="108" height="58" rx="8" fill="#fff7ef" stroke="#e8c9a3"/><text x="220" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#e67e22">添削するAI</text><text x="220" y="84" text-anchor="middle" font-size="10.5" fill="#b9773a">指摘・修正</text>
-                            <path d="M280 69 L306 69" stroke="#ccc" stroke-width="1.5"/><path d="M300 64 L308 69 L300 74" fill="none" stroke="#ccc" stroke-width="1.5"/>
-                            <rect x="312" y="40" width="94" height="58" rx="8" fill="#fff" stroke="#ddd"/><text x="359" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#555">人が確認</text>
-                        </g>
-                    </svg>
+                    <div class="slide">
+                        <div class="sl-row">
+                            <div class="sl-box on">作るAI<small>下書き</small></div>
+                            <span class="sl-arrow">⇄</span>
+                            <div class="sl-box on">添削するAI<small>指摘・修正</small></div>
+                            <span class="sl-arrow">→</span>
+                            <div class="sl-box">人が確認</div>
+                        </div>
+                        <p class="sl-note">人に届くのは直した後</p>
+                    </div>
                 </div>
             </div>
         </div>
