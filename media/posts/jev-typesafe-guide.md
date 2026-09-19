@@ -8,9 +8,9 @@ cover_headline: Jev（TypeSafe AI）とは
 cover_sub: 判断だけを返すAIの仕組みと使いどころ
 ---
 
-2026年9月15日、TypeSafe AIが「Jev」というAIモデルを公開しました。**ChatGPTやClaudeのように文章を書くのではなく、渡された状況に対して「どれか」「どの段階か」「本当か」を確率つきで返すだけのモデル**で、同社はこれを「System One モデル」と呼んでいます。公表値は応答70〜500ミリ秒、料金は入力100万トークンあたり$0.042で出力は無料です。
+2026年9月15日、[TypeSafe AI](https://typesafe.ai/)が「Jev」というAIモデルを公開しました。**ChatGPTやClaudeのように文章を書くのではなく、渡された状況に対して「どれか」「どの段階か」「本当か」を確率つきで返すだけのモデル**で、同社はこれを「System One モデル」と呼んでいます。公表値は応答70〜500ミリ秒、料金は入力100万トークンあたり$0.042で出力は無料です。
 
-この記事は公式ドキュメント（docs.typesafe.ai、2026年9月19日取得）を全ページ読んだうえで、仕組みと料金に加えて**公式が認めている苦手なこと**、**LLMの出力を検査する使い方**、**日本語で使うときの注意**まで含めて書きます。
+この記事は[公式ドキュメント](https://docs.typesafe.ai/)（2026年9月19日取得）を全ページ読んだうえで、仕組みと料金に加えて**公式が認めている苦手なこと**、**LLMの出力を検査する使い方**、**日本語で使うときの注意**まで含めて書きます。
 
 :::takeaways
 - Jevは文章を生成しない。**Choice（どれか）・Score（どの段階か）・Noul（本当か）**の3種類の答えを確率つきで返す
@@ -38,11 +38,11 @@ LLMは答えを1トークンずつ順番に生成するため、100トークン�
 
 ### 公開日と開発元
 
-TypeSafe AIはOpenAI出身のDiogo Almeida氏らが率いる企業で、Jevは2026年9月15日に公開されました（heise onlineの報道と公式サイトのニュース）。現在の版は `jev-1.13.0` で、公式ドキュメントには「AIモデルとして初めて公開されたSystem Oneモデル」とあります。
+TypeSafe AIはOpenAI出身のDiogo Almeida氏らが率いる企業で、Jevは2026年9月15日に公開されました（[heise onlineの報道](https://www.heise.de/en/news/AI-model-Jev-to-make-machines-decide-faster-11457071.html)と公式サイトのニュース）。現在の版は `jev-1.13.0` で、公式ドキュメントには「AIモデルとして初めて公開されたSystem Oneモデル」とあります。
 
 ## Jevに投げられる3種類の質問
 
-Jevへの質問は「プリミティブ」と呼ばれ、3種類しかありません。質問ごとにIDと `type` と `instructions`（何を判断するか）を書き、ChoiceとScoreには `criteria`（選択肢や段階）を付けます。
+Jevへの質問は「[プリミティブ](https://docs.typesafe.ai/primitives)」と呼ばれ、3種類しかありません。質問ごとにIDと `type` と `instructions`（何を判断するか）を書き、ChoiceとScoreには `criteria`（選択肢や段階）を付けます。
 
 <figure class="post-figure"><img src="/media/images/jev-typesafe-guide/00_fig_primitives.png" alt="Choice・Score・Noulの3種類の質問と、それぞれが返す値の例" loading="lazy"><figcaption>3種類の質問と返り値（公式ドキュメント「Primitives」から。数値は例）</figcaption></figure>
 
@@ -62,7 +62,7 @@ Jevへの質問は「プリミティブ」と呼ばれ、3種類しかありま�
 
 ## 料金と上限
 
-公式の「Models」ページに載っている、2026年9月19日時点の仕様です。
+公式の「[Models](https://docs.typesafe.ai/models)」ページに載っている、2026年9月19日時点の仕様です。
 
 | 項目 | 公表値 |
 |---|---|
@@ -82,7 +82,7 @@ Jevはファインチューニングもできません。同じ重みが全ア�
 
 ## 公式が挙げている使いどころ
 
-公式の「Use case map」には14の領域が並んでいます。共通するのは**判断を大量に、速く、決まった形で繰り返す**場面だという点です。
+公式の「[Use case map](https://docs.typesafe.ai/concepts/use-case-map)」には14の領域が並んでいます。共通するのは**判断を大量に、速く、決まった形で繰り返す**場面だという点です。
 
 - **カスタマーサポート**: 問い合わせの分類、緊急度・不満・解約リスク・返金要求の検出、担当への振り分け、回答がポリシーに沿っているかの検査
 - **営業**: 会社情報や受信メッセージを理想の顧客像と照合し、業界適合・成熟度・購買意図をスコアリングして優先順位を付ける
@@ -94,7 +94,7 @@ Jevはファインチューニングもできません。同じ重みが全ア�
 
 ### LLMの出力を検査するVerifierとしての使い方
 
-X上でも最も注目されている用途が、LLMの前後に置く検査役です。公式のクックブック「LLM guardrails」は、LLMの前に別のLLMを置く方法の問題を「毎ターン1回分の遅延と費用がかかり、攻撃者はそのLLMも言いくるめられる」と書き、代わりに1回のJevリクエストで検査する構成を示しています。
+X上でも最も注目されている用途が、LLMの前後に置く検査役です。公式のクックブック「[LLM guardrails](https://docs.typesafe.ai/cookbooks/llm_guardrails)」は、LLMの前に別のLLMを置く方法の問題を「毎ターン1回分の遅延と費用がかかり、攻撃者はそのLLMも言いくるめられる」と書き、代わりに1回のJevリクエストで検査する構成を示しています。
 
 <figure class="post-figure"><img src="/media/images/jev-typesafe-guide/00_fig_verifier.png" alt="利用者の入力をLLMが処理し、その出力をJevが判定して、確率に応じて返す・再生成・人の確認に分岐する図" loading="lazy"><figcaption>LLMの出力をJevで検査する構成。しきい値はアプリ側で決める</figcaption></figure>
 
@@ -102,11 +102,11 @@ X上でも最も注目されている用途が、LLMの前後に置く検査役�
 
 ### 確信度でルーティングする
 
-公式の「Confidence」ページには、確信度で処理を分けるコードの型があります。破壊的な操作ほど自動実行に必要な確信度を高く設定し、0.5を下回るものは「モデルが本当に迷っている」として必ず人に回す、という書き方です。しきい値は用途と自分のデータでの精度に依存するので、**保守的な値から始めて、結果を見ながら調整する**ようにと書かれています。
+公式の「[Confidence](https://docs.typesafe.ai/confidence)」ページには、確信度で処理を分けるコードの型があります。破壊的な操作ほど自動実行に必要な確信度を高く設定し、0.5を下回るものは「モデルが本当に迷っている」として必ず人に回す、という書き方です。しきい値は用途と自分のデータでの精度に依存するので、**保守的な値から始めて、結果を見ながら調整する**ようにと書かれています。
 
 ## 公式が認めているJevの苦手なこと
 
-公式ドキュメントには「Model jaggedness（モデルのむら）」というページがあり、jev-1.13が苦手なことが失敗の型ごとに整理されています。業務に組み込む前に見ておく表です。
+公式ドキュメントには「[Model jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13)（モデルのむら）」というページがあり、jev-1.13が苦手なことが失敗の型ごとに整理されています。業務に組み込む前に見ておく表です。
 
 <figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_06_docs_jagged.jpg" alt="公式ドキュメントのJev 1.13 jaggednessページ。失敗の型と代わりにすべきことの表" loading="lazy"><figcaption>公式の「Jev 1.13 jaggedness」（2026年9月17日更新）</figcaption></figure>
 
@@ -126,13 +126,13 @@ X上でも最も注目されている用途が、LLMの前後に置く検査役�
 
 公式の「Models」ページには、英語が主な学習言語で精度も英語が最も高く、**日本語を含むCJKは扱えるが同等ではないので自分のコンテンツでテストしてから頼ること**、と書かれています。日本語の問い合わせ分類に使うなら、まず数百件で英語と同じ精度が出るかを確かめ、確信度のしきい値を英語より保守的に置くのが現実的です。
 
-日本から呼ぶ場合は通信の遅れも乗ります。公表の70〜500ミリ秒は米国西海岸からの計測なので、国内からだと0.5〜0.8秒程度になったという報告が日本の解説記事にあります。
+日本から呼ぶ場合は通信の遅れも乗ります。公表の70〜500ミリ秒は米国西海岸からの計測なので、国内からだと0.5〜0.8秒程度になったという報告が[日本の解説記事](https://koiyal.com/blog/jev-system-one-model-explained)にあります。
 
 ## 使い始める手順
 
-公式の「Quick start」に3つの入口があります。
+公式の「[Quick start](https://docs.typesafe.ai/introduction/quickstart)」に3つの入口があります。
 
-1. **Playground**: TypeSafeのコンソールにログインし、サンプルの文面を貼って質問を追加するだけで試せる。登録はウェイトリスト経由
+1. **Playground**: [TypeSafeのコンソール](https://console.typesafe.ai/)にログインし、サンプルの文面を貼って質問を追加するだけで試せる。登録はウェイトリスト経由
 2. **API・SDK**: PythonとJavaScriptのSDKがあり、`pip install typesafe-sdk` のあと環境変数 `TYPESAFE_API_KEY` を設定して `client.system_one(state=..., questions={...})` を呼ぶ。HTTPなら `POST /v1/systemone`
 3. **コーディングエージェント用のスキル**: Claude Codeなら `claude plugin marketplace add typesafe-ai/skills` と `claude plugin install typesafe@typesafe-ai` の2行でTypeSafeスキルが入り、「TypeSafeスキルを使って問い合わせを4分類するCLIを作って」のように頼める
 
@@ -178,6 +178,6 @@ X上でも最も注目されている用途が、LLMの前後に置く検査役�
 
 ## 出典
 
-- TypeSafe AI 公式サイト typesafe.ai、公式ドキュメント docs.typesafe.ai（Introduction・System One・Primitives・Models・Confidence・Use case map・Patterns・Cookbooks「LLM guardrails」・Model jaggedness jev-1.13・Legal、2026年9月19日取得）
-- heise online「AI model "Jev" to make machines decide faster」（2026年9月）
+- [TypeSafe AI 公式サイト](https://typesafe.ai/)、[公式ドキュメント](https://docs.typesafe.ai/)（Introduction・System One・Primitives・Models・Confidence・Use case map・Patterns・Cookbooks「LLM guardrails」・Model jaggedness jev-1.13・Legal、2026年9月19日取得）
+- [heise online「AI model "Jev" to make machines decide faster」](https://www.heise.de/en/news/AI-model-Jev-to-make-machines-decide-faster-11457071.html)（2026年9月）
 - 日本からの応答時間はKOIYALの解説記事の実測値。X上の用途とコストの数字は投稿者の実測値で、いずれも第三者の検証はありません
