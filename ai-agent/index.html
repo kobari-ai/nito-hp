@@ -1259,6 +1259,27 @@
             .about-wrap { grid-template-columns: 1fr !important; gap: 28px; }
             .price-cols { grid-template-columns: 1fr; }
         }
+
+        /* ── 2026-09-19 3周目 ── */
+        /* FV: kintone 型（ブランド色の薄いベタ＋強い色の図形）。グラデーションをやめる */
+        .hero { background: #fff3e0; }
+        .hero::before { content: ""; position: absolute; left: -180px; top: -260px; width: 620px; height: 620px; border-radius: 50%; background: #ffb454; opacity: .9; pointer-events: none; }
+        .hero::after { content: ""; position: absolute; right: -140px; bottom: -420px; width: 560px; height: 560px; border-radius: 50%; background: #ffd9a8; pointer-events: none; }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-title .grad { background: none; color: var(--color-secondary); -webkit-text-fill-color: initial; }
+        .slackmock { transform: rotate(0); }
+        /* 課題の締め: 文の切れ目で改行 */
+        .problem-close { max-width: none; font-size: 17px; }
+        .problem-close span { display: block; }
+        /* 進め方: 背景に大きな薄い番号、見出しを重ねる */
+        .steps { border-left: none; margin-left: 0; }
+        .step { grid-template-columns: 1.1fr 1fr; padding: 44px 0 44px 0; }
+        .step + .step { border-top: 1px solid #ececec; }
+        .step-num { position: absolute; left: -8px; top: 6px; width: auto; height: auto; border-radius: 0; background: none; color: #ffe7cc; font-family: var(--font-heading-en); font-size: 120px; font-weight: 800; line-height: 1; letter-spacing: -0.04em; z-index: 0; }
+        .step-main { position: relative; z-index: 1; padding-top: 44px; padding-left: 8px; }
+        .step-title { font-size: 24px; }
+        .step-visual { position: relative; z-index: 1; }
+        @media (max-width: 900px) { .step-num { font-size: 84px; left: 0; top: 0; } .step-main { padding-top: 30px; } .hero::before { width: 380px; height: 380px; left: -140px; top: -200px; } .hero::after { display: none; } }
     </style>
 </head>
 
@@ -1375,7 +1396,7 @@
                     </div>
                 </div>
             </div>
-            <p class="problem-close">どれもAIの性能の問題ではありません。会社情報の蓄積・定刻に動く仕組み・承認の線引きといったAI環境を構築すれば、自ら思考して動くようになります。</p>
+            <p class="problem-close"><span>どれもAIの性能の問題ではありません。</span><span>会社情報の蓄積・定刻に動く仕組み・承認の線引きといったAI環境を構築すれば、自ら思考して動くようになります。</span></p>
         </div>
     </section>
 
@@ -1496,7 +1517,7 @@
             </div>
             <div class="steps">
                 <div class="step">
-                    <span class="step-num">1</span>
+                    <span class="step-num">01</span>
                     <div class="step-main">
                         <h3 class="step-title">業務の棚卸し</h3>
                         <span class="step-tag">無料・オンライン30分から</span>
@@ -1505,7 +1526,7 @@
                     <div class="step-visual"></div>
                 </div>
                 <div class="step">
-                    <span class="step-num">2</span>
+                    <span class="step-num">02</span>
                     <div class="step-main">
                         <h3 class="step-title">優先順位の高い業務でデモを作成</h3>
                         <p class="step-desc">業務工数・売上への貢献度で優先順位をつけ、最初に構築するタスクを選定してデモを作成。デモを見てから導入するかどうかを決定できます。</p>
@@ -1513,7 +1534,7 @@
                     <div class="step-visual"><figure class="ph"><span><b>ここに実物: 優先順位の表とデモの画面</b></span></figure></div>
                 </div>
                 <div class="step">
-                    <span class="step-num">3</span>
+                    <span class="step-num">03</span>
                     <div class="step-main">
                         <h3 class="step-title">構築</h3>
                         <p class="step-desc">実際に社内システム内で構築。AIに任せる業務範囲のルールやセキュリティ面も考慮し、安全性の高いエージェントを作ります。</p>
@@ -1521,7 +1542,7 @@
                     <div class="step-visual"><figure class="ph"><span><b>ここに実物: 最初の1つが動いた画面</b></span></figure></div>
                 </div>
                 <div class="step">
-                    <span class="step-num">4</span>
+                    <span class="step-num">04</span>
                     <div class="step-main">
                         <h3 class="step-title">運用アドバイザリー</h3>
                         <span class="step-tag">月1回</span>
