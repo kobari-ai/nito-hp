@@ -1,5 +1,5 @@
 ---
-title: Claude Codeの料金。Pro・Max・Team・APIの違い、使用量の上限、無料で使えるか【2026年9月】
+title: 【2026年9月】Claude Codeの料金プランを解説。Pro・Max・Team・APIの違いと使用量の上限
 date: 2026-09-18
 category: AI検索対策
 description: Claude Codeの料金を、Anthropicの日本向け料金ページ（消費税込み）と公式ドキュメントを一次ソースにまとめました。Pro・Max・Team・Enterpriseの月額とClaude Codeで使える範囲、5時間枠と週枠の仕組み、上限に達したときの3つの選択肢、API従量課金の単価、プランの選び方と使いすぎを防ぐ設定まで書いています。
