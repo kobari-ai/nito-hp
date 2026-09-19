@@ -8,9 +8,9 @@ cover_headline: Jev（TypeSafe AI）とは
 cover_sub: 判断だけを返すAIの仕組みと使いどころ
 ---
 
-2026年9月15日、TypeSafe AIが「Jev」というAIモデルを公開しました。ChatGPTやClaudeのように文章を書くのではなく、渡された状況に対して「どれか」「どの段階か」「本当か」を確率つきで返すだけのモデルで、同社はこれを「System One モデル」と呼んでいます。公表値は応答70〜500ミリ秒、料金は入力100万トークンあたり$0.042で出力は無料です。
+2026年9月15日、TypeSafe AIが「Jev」というAIモデルを公開しました。**ChatGPTやClaudeのように文章を書くのではなく、渡された状況に対して「どれか」「どの段階か」「本当か」を確率つきで返すだけのモデル**で、同社はこれを「System One モデル」と呼んでいます。公表値は応答70〜500ミリ秒、料金は入力100万トークンあたり$0.042で出力は無料です。
 
-日本語の解説記事は公開から数日で10本近く出ており、仕組みの説明はどれも似ています。この記事は公式ドキュメント（docs.typesafe.ai、2026年9月19日取得）を全ページ読んだうえで、他の記事にあまり書かれていない**公式が認めている苦手なこと**、**LLMの出力を検査する使い方**、**日本語で使うときの注意**まで含めて書きます。
+この記事は公式ドキュメント（docs.typesafe.ai、2026年9月19日取得）を全ページ読んだうえで、仕組みと料金に加えて**公式が認めている苦手なこと**、**LLMの出力を検査する使い方**、**日本語で使うときの注意**まで含めて書きます。
 
 :::takeaways
 - Jevは文章を生成しない。**Choice（どれか）・Score（どの段階か）・Noul（本当か）**の3種類の答えを確率つきで返す
@@ -24,7 +24,7 @@ cover_sub: 判断だけを返すAIの仕組みと使いどころ
 
 JevはTypeSafe AIが「System One モデル」と呼ぶ新しい種類のAIです。LLMと同じように自然言語を読みますが、返すのは文章ではなく、型の決まった答えと確率です。公式ドキュメントの言い方では「state（状況）と型付きの質問を送ると、コードがそのまま使える構造化された答えが返る」モデルです。
 
-<figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_01_home.jpg" alt="TypeSafe AIの公式サイト。The First (Public) System One Modelの見出しと、Sept 15, 2026のニュース" loading="lazy"><figcaption>TypeSafe AIの公式サイト（2026年9月19日）。9月15日にSystem Oneモデルとして発表</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_01_home.jpg" alt="TypeSafe AIの公式サイト。The First (Public) System One Model; Jev Gives AI The Properties Of Codeの見出しと、Sept 15, 2026のニュース" loading="lazy"><figcaption>TypeSafe AIの公式サイト（2026年9月19日）。9月15日にSystem Oneモデルとして発表</figcaption></figure>
 
 System Oneの名前は、心理学者ダニエル・カーネマンの「速い思考（システム1）」と「遅い思考（システム2）」から取られています。TypeSafe AIの説明では、文章を組み立てながら答えるLLMを熟考型、一瞬で判断だけを下すJevを直感型として対比しています。開発者向けの説明では「賢いif文」という言い方もされています。
 
