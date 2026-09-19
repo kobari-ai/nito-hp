@@ -1,5 +1,5 @@
 ---
-title: GPT-6 Astraとは。ChatGPTで使う方法・プラン別の上限・料金・GPT-5.6との違い【2026年9月】
+title: 【2026年9月】GPT-6 Astraとは？ChatGPTで使えるプラン・上限・料金・GPT-5.6との違い
 date: 2026-09-17
 category: AI検索対策
 description: OpenAIが2026年9月3日に発表したGPT-6 Astraについて、公式の発表ページ・ヘルプ・モデルページを一次ソースに、ChatGPTのどのプランで使えるか、画面のどこに出るか、上限と料金、GPT-5.6 Solとの違いをまとめました。無料プランの実画面も載せています。
