@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】Jev（TypeSafe AI）とは？文章を書かないAIの仕組み・料金・使い方・苦手なこと | nito Column</title>
+    <meta name="description" content="2026年9月15日にTypeSafe AIが公開した「Jev」は、文章を生成せずに判断だけを返す「System One」モデルです。公式ドキュメント全体を一次ソースに、仕組み、3種類の質問、料金と上限、LLMの出力検査（Verifier）としての使い方、公式が認めている苦手なこと、日本語の注意点まで書いています。">
+    <link rel="canonical" href="https://nito-0210.com/media/jev-typesafe-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】Jev（TypeSafe AI）とは？文章を書かないAIの仕組み・料金・使い方・苦手なこと">
+    <meta property="og:description" content="2026年9月15日にTypeSafe AIが公開した「Jev」は、文章を生成せずに判断だけを返す「System One」モデルです。公式ドキュメント全体を一次ソースに、仕組み、3種類の質問、料金と上限、LLMの出力検査（Verifier）としての使い方、公式が認めている苦手なこと、日本語の注意点まで書いています。">
+    <meta property="og:url" content="https://nito-0210.com/media/jev-typesafe-guide/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/jev-typesafe-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/jev-typesafe-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Jev（TypeSafe AI）とは？文章を書かないAIの仕組み・料金・使い方・苦手なこと", "description": "2026年9月15日にTypeSafe AIが公開した「Jev」は、文章を生成せずに判断だけを返す「System One」モデルです。公式ドキュメント全体を一次ソースに、仕組み、3種類の質問、料金と上限、LLMの出力検査（Verifier）としての使い方、公式が認めている苦手なこと、日本語の注意点まで書いています。", "datePublished": "2026-09-19", "dateModified": "2026-09-19", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/jev-typesafe-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Jev（TypeSafe AI）とは？文章を書かないAIの仕組み・料金・使い方・苦手なこと"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "JevはChatGPTの代わりになりますか？", "acceptedAnswer": {"@type": "Answer", "text": "なりません。Jevは文章を書かず、選択・段階・確率だけを返します。文章を作る仕事はLLMに任せ、その前後の判断と検査をJevに任せる組み合わせが公式の想定です。"}}, {"@type": "Question", "name": "Jevは本当にハルシネーションしないのですか？", "acceptedAnswer": {"@type": "Answer", "text": "用意した選択肢の外の答えや、壊れた形式の出力は出ません。ただし選択肢の中で間違った答えを選ぶことはあり、公式も「較正は集団に対して測られ、個々の答えの正しさは保証しない」と書いています。"}}, {"@type": "Question", "name": "Jevは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "料金は入力100万トークンあたり$0.042で、出力は無料です。無料枠の有無は公式ページに明記がなく、利用にはコンソールへの登録（ウェイトリスト）が必要です。"}}, {"@type": "Question", "name": "Jevは日本語に対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "日本語のテキストも受け付けますが、公式は英語が主で、CJKは同等の精度が出ないと明記しています。自分のデータでテストしてから使う前提です。"}}, {"@type": "Question", "name": "Jevはいつどこが出したモデルですか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年9月15日に、OpenAI出身のDiogo Almeida氏らのTypeSafe AIが公開しました。現在の版はjev-1.13.0です。"}}, {"@type": "Question", "name": "Jevは画像や音声を判定できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できません。入力はテキストだけで、画像・音声・動画は事前にテキストか構造化データに変換してから渡します。"}}, {"@type": "Question", "name": "Jevをファインチューニングできますか？", "acceptedAnswer": {"@type": "Answer", "text": "できません。同じ重みが全アカウントに使われ、自分の用途に合わせるのは質問文・選択肢の書き方と、判断の分解で行います。"}}, {"@type": "Question", "name": "JevとLLMのどちらを使えばいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "答えが文章なら LLM、答えが「どれか・どの段階か・本当か」ならJevです。両方使うなら、LLMが作った文章をJevで検査してから外に出す構成が公式のクックブックにあります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Jev（TypeSaf…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.19</span>
+        </div>
+        <h1 class="post-title">【2026年9月】Jev（TypeSafe AI）とは？文章を書かないAIの仕組み・料金・使い方・苦手なこと</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jev（TypeSafe AI）とは"><defs><linearGradient id="ecg-5e05245f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5e05245f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Jev（TypeSafe AI）とは</text><line x1="128.8" y1="327.1" x2="1071.2" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">判断だけを返すAIの仕組みと使いどころ</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>2026年9月15日、<a href="https://typesafe.ai/">TypeSafe AI</a>が「Jev」というAIモデルを公開しました。<strong>ChatGPTやClaudeのように文章を書くのではなく、渡された状況に対して「どれか」「どの段階か」「本当か」を確率つきで返すだけのモデル</strong>で、同社はこれを「System One モデル」と呼んでいます。公表値は応答70〜500ミリ秒、料金は入力100万トークンあたり$0.042で出力は無料です。</p>
+<p>この記事は<a href="https://docs.typesafe.ai/">公式ドキュメント</a>（2026年9月19日取得）を全ページ読んだうえで、仕組みと料金に加えて<strong>公式が認めている苦手なこと</strong>、<strong>LLMの出力を検査する使い方</strong>、<strong>日本語で使うときの注意</strong>まで含めて書きます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>Jevは文章を生成しない。<strong>Choice（どれか）・Score（どの段階か）・Noul（本当か）</strong>の3種類の答えを確率つきで返す</li>
+<li>料金は<strong>入力100万トークンあたり$0.042、出力は無料</strong>。1回に渡せるのは64,000トークンまで</li>
+<li>「ハルシネーションしない」の意味は<strong>用意した選択肢の外に答えが出ない</strong>こと。選択肢の中で間違えることはある</li>
+<li>得意なのはLLMの出力検査、問い合わせの振り分け、リード判定など<strong>判断を大量に繰り返す場面</strong></li>
+<li><strong>英語が主で、日本語を含むCJKは同等の精度が出ない</strong>と公式が明記。日付計算・数値・文章生成も苦手</li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Jevとは何か</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>LLMと何が違うのか</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>公開日と開発元</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Jevに投げられる3種類の質問</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>質問の作り方の原則</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>料金と上限</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>公式が挙げている使いどころ</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>LLMの出力を検査するVerifierとしての使い方</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>確信度でルーティングする</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>公式が認めているJevの苦手なこと</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>日本語で使うときの注意</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>使い始める手順</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>AI検索の側から見たJev</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Jevとは何か</h2>
+<p>JevはTypeSafe AIが「System One モデル」と呼ぶ新しい種類のAIです。LLMと同じように自然言語を読みますが、返すのは文章ではなく、型の決まった答えと確率です。公式ドキュメントの言い方では「state（状況）と型付きの質問を送ると、コードがそのまま使える構造化された答えが返る」モデルです。</p>
+<figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_01_home.jpg" alt="TypeSafe AIの公式サイト。The First (Public) System One Model; Jev Gives AI The Properties Of Codeの見出しと、Sept 15, 2026のニュース" loading="lazy"><figcaption>TypeSafe AIの公式サイト（2026年9月19日）。9月15日にSystem Oneモデルとして発表</figcaption></figure>
+
+<p>System Oneの名前は、心理学者ダニエル・カーネマンの「速い思考（システム1）」と「遅い思考（システム2）」から取られています。TypeSafe AIの説明では、文章を組み立てながら答えるLLMを熟考型、一瞬で判断だけを下すJevを直感型として対比しています。開発者向けの説明では「賢いif文」という言い方もされています。</p>
+<h3 id="s1-1">LLMと何が違うのか</h3>
+<figure class="post-figure"><img src="/media/images/jev-typesafe-guide/00_fig_vs_llm.png" alt="同じ問い合わせに対してLLMは文章を返し、Jevは担当・怒りの度合い・緊急かを型と確率で返す比較図" loading="lazy"><figcaption>LLMは人が読む文章を返す。Jevはプログラムがそのまま使う値を返す</figcaption></figure>
+
+<p>LLMは答えを1トークンずつ順番に生成するため、100トークンの答えには100回の計算が要り、返答まで数秒かかります。Jevは渡された質問すべてに対する確率を1回の計算で並列に出す仕組み（公式は parallel sampler と呼んでいます）で、文章を作らない分だけ速く安くなります。</p>
+<p>もう1つの違いは確率の意味です。公式ドキュメントによると、System Oneモデルは「較正された判断」のために訓練されており、返す確率は実際の結果に対して調整されています。ただし較正は予測の集団に対して測られるもので、<strong>個々の答えが正しいことを保証するものではない</strong>とも書かれています。</p>
+<h3 id="s1-2">公開日と開発元</h3>
+<p>TypeSafe AIはOpenAI出身のDiogo Almeida氏らが率いる企業で、Jevは2026年9月15日に公開されました（<a href="https://www.heise.de/en/news/AI-model-Jev-to-make-machines-decide-faster-11457071.html">heise onlineの報道</a>と公式サイトのニュース）。現在の版は <code>jev-1.13.0</code> で、公式ドキュメントには「AIモデルとして初めて公開されたSystem Oneモデル」とあります。</p>
+<h2 id="s2">Jevに投げられる3種類の質問</h2>
+<p>Jevへの質問は「<a href="https://docs.typesafe.ai/primitives">プリミティブ</a>」と呼ばれ、3種類しかありません。質問ごとにIDと <code>type</code> と <code>instructions</code>（何を判断するか）を書き、ChoiceとScoreには <code>criteria</code>（選択肢や段階）を付けます。</p>
+<figure class="post-figure"><img src="/media/images/jev-typesafe-guide/00_fig_primitives.png" alt="Choice・Score・Noulの3種類の質問と、それぞれが返す値の例" loading="lazy"><figcaption>3種類の質問と返り値（公式ドキュメント「Primitives」から。数値は例）</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>質問の型</th>
+<th>答えるもの</th>
+<th>返る値</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Choice</td>
+<td>どれか</td>
+<td>選んだ1つ、全選択肢の確率、確信度</td>
+<td>この問い合わせは請求・技術・営業のどの担当か</td>
+</tr>
+<tr>
+<td>Score</td>
+<td>どの段階か</td>
+<td>段階の期待値、段階ごとの確率、確信度</td>
+<td>顧客の怒りは冷静・不満・激怒のどこか</td>
+</tr>
+<tr>
+<td>Noul</td>
+<td>本当か</td>
+<td>0〜1の確率</td>
+<td>この文面は返金を求めているか</td>
+</tr>
+</tbody>
+</table>
+<p>公式ドキュメントの例では、決済連携が3日間失敗しているという問い合わせを渡して「担当」「怒りの度合い」「緊急か」の3問を同時に投げると、<code>department: "billing"</code>、<code>frustration: 1.035</code>、<code>is_urgent: 0.999</code> のような答えが返ります。プログラム側は「緊急の確率が0.9を超えたら優先キューへ」「担当の確信度が0.6を下回ったら人が振り分ける」といった分岐をそのまま書けます。</p>
+<figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_05_docs_quickstart.jpg" alt="公式ドキュメントのQuick start。Playgroundにサンプルの問い合わせを貼り、Noulの質問を追加する手順" loading="lazy"><figcaption>公式のQuick start。Playgroundなら登録だけで試せる</figcaption></figure>
+
+<h3 id="s2-1">質問の作り方の原則</h3>
+<p>公式ドキュメントが繰り返し書いているのは「1つの質問には1つの即断」という原則です。「このメッセージは緊急か」は良い質問で、「このメッセージを分析して最適な対応を決めて」は悪い質問です。複数の要因で決まる判断は要因ごとに別の質問にして、答えをコードで組み合わせます。スタートアップのピッチを採点したいなら「市場規模」「技術的な実現性」「チーム」を別々に聞く、という具合です。</p>
+<h2 id="s3">料金と上限</h2>
+<p>公式の「<a href="https://docs.typesafe.ai/models">Models</a>」ページに載っている、2026年9月19日時点の仕様です。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>公表値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>モデル</td>
+<td>jev-1.13.0（エイリアス <code>jev-latest</code>、<code>jev-preview</code>）</td>
+</tr>
+<tr>
+<td>料金</td>
+<td><strong>入力100万トークンあたり$0.042。出力は無料</strong></td>
+</tr>
+<tr>
+<td>応答時間</td>
+<td>70〜500ミリ秒（米国西海岸からの計測）</td>
+</tr>
+<tr>
+<td>コンテキスト</td>
+<td>1リクエスト64,000トークン。stateと最長の質問で32,000トークン</td>
+</tr>
+<tr>
+<td>レート上限</td>
+<td>毎秒250,000トークン・毎分1,200リクエスト（需要に応じて予告なく変動）</td>
+</tr>
+<tr>
+<td>入力</td>
+<td>テキストのみ。画像・音声・動画は非対応</td>
+</tr>
+<tr>
+<td>学習への利用</td>
+<td>顧客のリクエストと応答は学習に使わない。企業向けにゼロデータ保持あり</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_04_docs_models.jpg" alt="公式ドキュメントのModelsページ。Jev 1.13の料金・レート上限・コンテキスト長・入力形式の表" loading="lazy"><figcaption>公式のModelsページ（2026年9月19日）</figcaption></figure>
+
+<p>料金を業務の規模で見ると、問い合わせ1件を1,000トークンとして1件あたり$0.000042、1ドル150円なら約0.006円です。10万件を判定しても約630円で、出力が無料なので質問を増やしても入力分しか増えません。X上で共有されている「1決定あたり$0.0002」という数字は、ブラウザ操作のように1回のstateが数千トークンになる用途での実測値です。</p>
+<p>Jevはファインチューニングもできません。同じ重みが全アカウントに使われ、自分の領域に合わせるのは質問文と選択肢の書き方、そして判断を小さな質問に分解してコードで組み合わせることで行います。</p>
+<h2 id="s4">公式が挙げている使いどころ</h2>
+<p>公式の「<a href="https://docs.typesafe.ai/concepts/use-case-map">Use case map</a>」には14の領域が並んでいます。共通するのは<strong>判断を大量に、速く、決まった形で繰り返す</strong>場面だという点です。</p>
+<ul>
+<li><strong>カスタマーサポート</strong>: 問い合わせの分類、緊急度・不満・解約リスク・返金要求の検出、担当への振り分け、回答がポリシーに沿っているかの検査</li>
+<li><strong>営業</strong>: 会社情報や受信メッセージを理想の顧客像と照合し、業界適合・成熟度・購買意図をスコアリングして優先順位を付ける</li>
+<li><strong>採用</strong>: 履歴書や面接メモを職務要件と照合し、経験の関連性や必須スキルの根拠を採点して、担当者に振り分ける</li>
+<li><strong>コンテンツモデレーション</strong>: 有害・スパム・詐欺・個人情報の露出・ポリシー違反を検出し、深刻度と確信度で「通す・警告・確認・ブロック」を分ける</li>
+<li><strong>EC</strong>: 商品リストの分類と属性抽出、禁止商品や偽物・レビュー不正の検出</li>
+<li><strong>保険・金融</strong>: 事故報告や取引記述からリスク指標を出し、専門家に回す案件を選ぶ</li>
+<li><strong>法務・コンプライアンス</strong>: 契約や広告文を分類し、欠けている条項や禁止表現を検出する</li>
+</ul>
+<h3 id="s4-1">LLMの出力を検査するVerifierとしての使い方</h3>
+<p>X上でも最も注目されている用途が、LLMの前後に置く検査役です。公式のクックブック「<a href="https://docs.typesafe.ai/cookbooks/llm_guardrails">LLM guardrails</a>」は、LLMの前に別のLLMを置く方法の問題を「毎ターン1回分の遅延と費用がかかり、攻撃者はそのLLMも言いくるめられる」と書き、代わりに1回のJevリクエストで検査する構成を示しています。</p>
+<figure class="post-figure"><img src="/media/images/jev-typesafe-guide/00_fig_verifier.png" alt="利用者の入力をLLMが処理し、その出力をJevが判定して、確率に応じて返す・再生成・人の確認に分岐する図" loading="lazy"><figcaption>LLMの出力をJevで検査する構成。しきい値はアプリ側で決める</figcaption></figure>
+
+<p>具体的には、1つのメッセージに対して「脱獄や指示の注入か」「危害や犯罪か」「診断や投薬量を含むか」「自傷か」といったNoulを並べ、さらに「従った場合の害の大きさ」をScoreで聞きます。「指示を無視しろ」という文は、指示として働く代わりに脱獄として採点されます。公式は<strong>入力と出力の両方に同じ検査をかける</strong>ことを勧めています。普通に見える入力でも、有害な返答につながることがあるためです。</p>
+<h3 id="s4-2">確信度でルーティングする</h3>
+<p>公式の「<a href="https://docs.typesafe.ai/confidence">Confidence</a>」ページには、確信度で処理を分けるコードの型があります。破壊的な操作ほど自動実行に必要な確信度を高く設定し、0.5を下回るものは「モデルが本当に迷っている」として必ず人に回す、という書き方です。しきい値は用途と自分のデータでの精度に依存するので、<strong>保守的な値から始めて、結果を見ながら調整する</strong>ようにと書かれています。</p>
+<h2 id="s5">公式が認めているJevの苦手なこと</h2>
+<p>公式ドキュメントには「<a href="https://docs.typesafe.ai/model-jaggedness/jev-1.13">Model jaggedness</a>（モデルのむら）」というページがあり、jev-1.13が苦手なことが失敗の型ごとに整理されています。業務に組み込む前に見ておく表です。</p>
+<figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_06_docs_jagged.jpg" alt="公式ドキュメントのJev 1.13 jaggednessページ。失敗の型と代わりにすべきことの表" loading="lazy"><figcaption>公式の「Jev 1.13 jaggedness」（2026年9月17日更新）</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>苦手なこと</th>
+<th>何が起きるか</th>
+<th>公式の代替案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数値と計算</td>
+<td>個数を数える、金額を比べる、Scoreの小数から正確な量を出す</td>
+<td>数えるのも計算もコードで。モデルには「しきい値を超えるか」だけ聞く</td>
+</tr>
+<tr>
+<td>数値の表現</td>
+<td>16進のカラーコードやRGBより「赤」のような名前のほうが精度が高い</td>
+<td>コードで名前や区分に変換してから渡す</td>
+</tr>
+<tr>
+<td>日付と時刻</td>
+<td>どちらが先か、何日離れているか、期間内かの判定が不安定</td>
+<td>日付の抽出だけモデルに任せ（月・日・年はChoice）、比較はコードで</td>
+</tr>
+<tr>
+<td>回りくどい指示</td>
+<td>二重否定や、性質の性質を問う多段の推論で精度が落ちる</td>
+<td>直接的に書く。stateの該当箇所を名前で指す</td>
+</tr>
+<tr>
+<td>無関係な情報の多いstate</td>
+<td>判断に関係ない内容が増えるほど精度が落ちる</td>
+<td>コードで絞ってから渡す。無理ならNoulで関連性を先に判定</td>
+</tr>
+<tr>
+<td>敵対的な内容</td>
+<td>stateを「データ」として扱い、注入された指示を疑わない</td>
+<td>criteriaに明示する。多人数に出す前に十分テスト</td>
+</tr>
+<tr>
+<td>指示とcriteriaの矛盾</td>
+<td>trueが「いいえ」を意味するような書き方で混乱する</td>
+<td>criteriaを指示の延長として、同じ言葉で書く</td>
+</tr>
+<tr>
+<td>質問形式をまたいだ一貫性</td>
+<td>同じ問いをNoulとChoiceで聞くと数値が対応しない。「返金か」と「返金でないか」の確率の和が1にならない</td>
+<td>聞きたいことをそのまま1つの形で聞く。しきい値を別の形式に流用しない</td>
+</tr>
+<tr>
+<td>文章生成</td>
+<td>Choiceを連鎖させて文章を作ることは技術的に可能だが、精度が低く遅い</td>
+<td>生成は生成モデルに任せる</td>
+</tr>
+</tbody>
+</table>
+<h3 id="s5-1">日本語で使うときの注意</h3>
+<p>公式の「Models」ページには、英語が主な学習言語で精度も英語が最も高く、<strong>日本語を含むCJKは扱えるが同等ではないので自分のコンテンツでテストしてから頼ること</strong>、と書かれています。日本語の問い合わせ分類に使うなら、まず数百件で英語と同じ精度が出るかを確かめ、確信度のしきい値を英語より保守的に置くのが現実的です。</p>
+<p>日本から呼ぶ場合は通信の遅れも乗ります。公表の70〜500ミリ秒は米国西海岸からの計測なので、国内からだと0.5〜0.8秒程度になったという報告が<a href="https://koiyal.com/blog/jev-system-one-model-explained">日本の解説記事</a>にあります。</p>
+<h2 id="s6">使い始める手順</h2>
+<p>公式の「<a href="https://docs.typesafe.ai/introduction/quickstart">Quick start</a>」に3つの入口があります。</p>
+<ol>
+<li><strong>Playground</strong>: <a href="https://console.typesafe.ai/">TypeSafeのコンソール</a>にログインし、サンプルの文面を貼って質問を追加するだけで試せる。登録はウェイトリスト経由</li>
+<li><strong>API・SDK</strong>: PythonとJavaScriptのSDKがあり、<code>pip install typesafe-sdk</code> のあと環境変数 <code>TYPESAFE_API_KEY</code> を設定して <code>client.system_one(state=..., questions={...})</code> を呼ぶ。HTTPなら <code>POST /v1/systemone</code></li>
+<li><strong>コーディングエージェント用のスキル</strong>: Claude Codeなら <code>claude plugin marketplace add typesafe-ai/skills</code> と <code>claude plugin install typesafe@typesafe-ai</code> の2行でTypeSafeスキルが入り、「TypeSafeスキルを使って問い合わせを4分類するCLIを作って」のように頼める</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_03_docs_system_one.jpg" alt="公式ドキュメントのSystem Oneページ。LLMとの違いと、Choice・Score・Noulの例" loading="lazy"><figcaption>公式の「System One」ページ。テキスト入力のみで、画像・音声・動画は非対応と明記</figcaption></figure>
+
+<h2 id="s7">AI検索の側から見たJev</h2>
+<p>「AI検索の回答が変わるのか」という質問をAI検索対策の相談で受けます。Jevは文章を生成しないので、ChatGPTやGoogleのAIモードのように回答を書く側には立ちません。変わりうるのは<strong>回答を出す前の検査と振り分け</strong>のほうです。AI検索を運営する側が「この引用元は信頼できるか」「この回答はポリシーに反しないか」を判定する層にJevのようなモデルを置けば、引用の選別が速く安くなります。自社サイトが引用されるかどうかの基準そのものは変わらず、判定の回数と速度が上がりうる、という見方です。実際に採用されるかは各社の実装次第で、公表されている事実はありません。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">JevはChatGPTの代わりになりますか？</h3>
+<p>なりません。Jevは文章を書かず、選択・段階・確率だけを返します。文章を作る仕事はLLMに任せ、その前後の判断と検査をJevに任せる組み合わせが公式の想定です。</p>
+<h3 id="s8-2">Jevは本当にハルシネーションしないのですか？</h3>
+<p>用意した選択肢の外の答えや、壊れた形式の出力は出ません。ただし選択肢の中で間違った答えを選ぶことはあり、公式も「較正は集団に対して測られ、個々の答えの正しさは保証しない」と書いています。</p>
+<h3 id="s8-3">Jevは無料で使えますか？</h3>
+<p>料金は入力100万トークンあたり$0.042で、出力は無料です。無料枠の有無は公式ページに明記がなく、利用にはコンソールへの登録（ウェイトリスト）が必要です。</p>
+<h3 id="s8-4">Jevは日本語に対応していますか？</h3>
+<p>日本語のテキストも受け付けますが、公式は英語が主で、CJKは同等の精度が出ないと明記しています。自分のデータでテストしてから使う前提です。</p>
+<h3 id="s8-5">Jevはいつどこが出したモデルですか？</h3>
+<p>2026年9月15日に、OpenAI出身のDiogo Almeida氏らのTypeSafe AIが公開しました。現在の版はjev-1.13.0です。</p>
+<h3 id="s8-6">Jevは画像や音声を判定できますか？</h3>
+<p>できません。入力はテキストだけで、画像・音声・動画は事前にテキストか構造化データに変換してから渡します。</p>
+<h3 id="s8-7">Jevをファインチューニングできますか？</h3>
+<p>できません。同じ重みが全アカウントに使われ、自分の用途に合わせるのは質問文・選択肢の書き方と、判断の分解で行います。</p>
+<h3 id="s8-8">JevとLLMのどちらを使えばいいですか？</h3>
+<p>答えが文章なら LLM、答えが「どれか・どの段階か・本当か」ならJevです。両方使うなら、LLMが作った文章をJevで検査してから外に出す構成が公式のクックブックにあります。</p>
+<h2 id="s9">出典</h2>
+<ul>
+<li><a href="https://typesafe.ai/">TypeSafe AI 公式サイト</a>、<a href="https://docs.typesafe.ai/">公式ドキュメント</a>（Introduction・System One・Primitives・Models・Confidence・Use case map・Patterns・Cookbooks「LLM guardrails」・Model jaggedness jev-1.13・Legal、2026年9月19日取得）</li>
+<li><a href="https://www.heise.de/en/news/AI-model-Jev-to-make-machines-decide-faster-11457071.html">heise online「AI model "Jev" to make machines decide faster」</a>（2026年9月）</li>
+<li>日本からの応答時間はKOIYALの解説記事の実測値。X上の用途とコストの数字は投稿者の実測値で、いずれも第三者の検証はありません</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/claude-code-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Codeの料金"><defs><linearGradient id="ecg-5bf00a7a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5bf00a7a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Codeの料金</text><line x1="235.2" y1="365.9" x2="964.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.18</div>
+                <div class="rel-card__ttl">【2026年9月】Claude Codeの料金プランを解説。Pro・Max・Team・APIの違いと使用量の上限</div>
+            </a>
+            <a href="/media/gemini-notebook-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NotebookLMの使い方"><defs><linearGradient id="ecg-ae7ae171" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ae7ae171)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">NotebookLMの使い方</text><line x1="220.0" y1="365.9" x2="980.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.17</div>
+                <div class="rel-card__ttl">【2026年9月】NotebookLM（Gemini Notebook）の使い方とは？無料の上限・できること・ChatGPTとの違い</div>
+            </a>
+            <a href="/media/gpt-6-astra-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GPT-6 Astraとは"><defs><linearGradient id="ecg-82a5c5fd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-82a5c5fd)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GPT-6 Astraとは</text><line x1="273.2" y1="365.9" x2="926.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.17</div>
+                <div class="rel-card__ttl">【2026年9月】GPT-6 Astraとは？ChatGPTで使えるプラン・上限・料金・GPT-5.6との違い</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
