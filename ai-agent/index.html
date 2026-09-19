@@ -32,8 +32,8 @@
             --width-max: 1100px;
             --section-gap: 100px;
             --font-heading-en: 'Montserrat', sans-serif;
-            --font-heading-jp: 'Noto Sans JP', sans-serif;
-            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --font-heading-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans", 'Noto Sans JP', sans-serif;
+            --font-body: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -88,8 +88,9 @@
 
         /* ── Header ── */
         .header-wrapper {
-            position: sticky;
+            position: fixed;
             top: 16px;
+            left: 0; right: 0;
             z-index: 1000;
             width: 95%;
             max-width: 1060px;
@@ -110,7 +111,7 @@
 
         .logo {
             font-size: 22px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             letter-spacing: 0.08em;
             color: var(--color-text);
@@ -224,7 +225,7 @@
         .nav-close::after { transform: rotate(-45deg); }
 
         .nav-overlay-item {
-            font-size: 18px; font-weight: 900;
+            font-size: 18px; font-weight: 700;
             font-family: var(--font-heading-jp); color: var(--color-text);
         }
         .nav-overlay-cta { display: flex; flex-direction: column; gap: 12px; }
@@ -254,7 +255,7 @@
         .hero-title {
             max-width: 1100px;
             font-size: 46px;
-            font-weight: 900;
+            font-weight: 700;
             line-height: 1.35;
             letter-spacing: -0.02em;
             color: var(--color-text);
@@ -321,7 +322,7 @@
 
         .intro-heading {
             font-size: 40px;
-            font-weight: 900;
+            font-weight: 700;
             color: var(--color-text);
             font-family: var(--font-heading-jp);
             line-height: 1.5;
@@ -387,7 +388,7 @@
 
         .section-title {
             font-size: 44px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             color: var(--color-text);
             line-height: 1.3;
@@ -426,7 +427,7 @@
 
         .feature-num {
             font-size: 22px;
-            font-weight: 900;
+            font-weight: 700;
             color: var(--color-secondary);
             font-family: var(--font-heading-en);
             flex-shrink: 0;
@@ -434,7 +435,7 @@
 
         .feature-card-title {
             font-size: 24px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             color: var(--color-text);
             line-height: 1.4;
@@ -513,7 +514,7 @@
         }
         .case-headline {
             font-size: 26px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             color: var(--color-text);
             line-height: 1.55;
@@ -646,7 +647,7 @@
 
         .cta-banner-label {
             font-size: 56px;
-            font-weight: 900;
+            font-weight: 700;
             letter-spacing: 0.06em;
             font-family: var(--font-heading-jp);
             display: block;
@@ -707,7 +708,7 @@
 
         .footer-logo {
             font-size: 32px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             color: #333;
             display: block;
@@ -799,7 +800,7 @@
         .flow-step em { font-style: normal; font-size: 28px; letter-spacing: 0; margin-left: 6px; }
         .flow-title {
             font-size: 22px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             color: var(--color-text);
             line-height: 1.45;
@@ -903,7 +904,7 @@
         }
         .price-title {
             font-size: 26px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             color: var(--color-text);
             line-height: 1.4;
@@ -963,7 +964,7 @@
         .hero-fact { flex: 1; padding: 18px 20px; border-right: 1px solid var(--color-border); }
         .hero-fact:last-child { border-right: none; }
         .hero-fact-label { display: block; font-size: 12px; color: var(--color-text-light); margin-bottom: 4px; letter-spacing: 0.04em; }
-        .hero-fact-value { font-size: 20px; font-weight: 900; color: var(--color-text); font-family: var(--font-heading-jp); }
+        .hero-fact-value { font-size: 20px; font-weight: 700; color: var(--color-text); font-family: var(--font-heading-jp); }
         .hero-fact-value small { font-size: 13px; font-weight: 700; color: var(--color-text-light); margin-left: 2px; }
         @media (max-width: 768px) {
             .hero-facts { flex-direction: column; margin-top: 28px; }
@@ -984,9 +985,9 @@
             width: 40px; height: 40px; border-radius: 50%;
             background: var(--color-card-bg); border: 1px solid #ffe2c2;
             display: flex; align-items: center; justify-content: center;
-            font-family: var(--font-heading-en); font-weight: 900; color: var(--color-primary-deep); font-size: 15px;
+            font-family: var(--font-heading-en); font-weight: 700; color: var(--color-primary-deep); font-size: 15px;
         }
-        .problem-title { font-size: 18px; font-weight: 900; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; margin-bottom: 8px; }
+        .problem-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; margin-bottom: 8px; }
         .problem-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
         .problem-close { margin-top: 32px; font-size: 16px; color: var(--color-text); line-height: 2; max-width: 760px; }
         @media (max-width: 768px) {
@@ -1007,7 +1008,7 @@
             display: flex; flex-direction: column; gap: 10px;
         }
         .usecase-cat { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.06em; }
-        .usecase-title { font-size: 18px; font-weight: 900; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; }
+        .usecase-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; }
         .usecase-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; flex: 1; }
         .usecase-human {
             font-size: 13px; color: var(--color-text); line-height: 1.7;
@@ -1024,11 +1025,11 @@
 
         /* ── Types（棚卸しで出る業務の型） ── */
         .types-wrap { margin-top: 56px; }
-        .types-heading { font-size: 20px; font-weight: 900; font-family: var(--font-heading-jp); color: var(--color-text); margin-bottom: 8px; }
+        .types-heading { font-size: 20px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); margin-bottom: 8px; }
         .types-lead { font-size: 15px; color: var(--color-text-light); line-height: 1.9; margin-bottom: 20px; }
         .types-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
         .types-item { background: #fff; border: 1px solid var(--color-border); border-radius: 14px; padding: 18px 16px; }
-        .types-name { display: block; font-size: 15px; font-weight: 900; font-family: var(--font-heading-jp); color: var(--color-text); margin-bottom: 6px; }
+        .types-name { display: block; font-size: 15px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); margin-bottom: 6px; }
         .types-ex { font-size: 13px; color: var(--color-text-light); line-height: 1.7; }
         @media (max-width: 1000px) { .types-grid { grid-template-columns: repeat(3, 1fr); } }
         @media (max-width: 768px) { .types-grid { grid-template-columns: repeat(2, 1fr); } .types-wrap { margin-top: 40px; } }
@@ -1038,7 +1039,7 @@
         .data-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .data-item { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 16px; padding: 30px 28px; }
         .data-num { font-size: 12px; font-weight: 700; letter-spacing: 0.15em; color: var(--color-secondary); font-family: var(--font-heading-en); margin-bottom: 10px; }
-        .data-title { font-size: 19px; font-weight: 900; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; margin-bottom: 10px; }
+        .data-title { font-size: 19px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; margin-bottom: 10px; }
         .data-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
         @media (max-width: 768px) {
             .section-data { padding: 64px 0; }
@@ -1049,13 +1050,44 @@
         .about-body p { font-size: 16px; line-height: 2; color: var(--color-text); margin-bottom: 18px; }
         .about-rep { display: flex; gap: 20px; align-items: center; border-top: 1px solid #e5e5e5; padding-top: 24px; margin-top: 8px; }
         .about-rep img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-        .about-rep-name { font-size: 18px; font-weight: 900; font-family: var(--font-heading-jp); margin-bottom: 6px; }
+        .about-rep-name { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); margin-bottom: 6px; }
         .about-rep-name small { font-size: 13px; font-weight: 700; color: var(--color-text-light); margin-right: 8px; }
         .about-rep-bio { font-size: 14px; color: var(--color-text-light); line-height: 1.8; }
         .about-rep-bio a { color: var(--color-primary-deep); text-decoration: underline; }
         @media (max-width: 768px) { .about-wrap { grid-template-columns: 1fr; gap: 24px; } }
+        /* 2026-09-19: スクロールの fade-in は全部外す（希一さん） */
+        .ani-show-up, .ani-fade-bottom, .ani-slide-left, .ani-slide-right, .ani-fade-top { opacity: 1 !important; transform: none !important; transition: none !important; }
         /* ═══ v3（2026-09-17）flyle/バクラク型: 各パネルに実物、2列3列を混ぜる ═══ */
-        .hero { background: linear-gradient(135deg, #fff3e6 0%, #fffaf5 45%, #fff 100%); padding: 150px 0 80px; }
+        .hero {
+            min-height: 100vh;
+            display: flex; align-items: center;
+            padding: 110px 0 60px;
+            background:
+                radial-gradient(900px 520px at 88% 18%, rgba(255,159,67,0.35) 0%, rgba(255,159,67,0) 60%),
+                radial-gradient(700px 480px at 12% 90%, rgba(255,210,170,0.45) 0%, rgba(255,210,170,0) 60%),
+                linear-gradient(180deg, #fff6ec 0%, #fffaf5 60%, #ffffff 100%);
+            position: relative; overflow: hidden;
+        }
+        .hero-wrap { width: 100%; }
+        .btn-text { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--color-text); padding: 16px 6px; }
+        .btn-text::after { content: "→"; }
+        /* Slack 風モック（実物のキャプチャが入るまでの代替。個人情報なし） */
+        .slackmock { background: #fff; border-radius: 12px; box-shadow: 0 30px 70px rgba(120,60,0,0.18), 0 2px 8px rgba(0,0,0,0.06); overflow: hidden; font-family: var(--font-body); transform: rotate(-1.5deg); }
+        .slackmock-head { background: #3f0e40; color: #fff; padding: 12px 18px; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        .slackmock-head span { opacity: .7; font-weight: 400; }
+        .slackmock-body { padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 14px; }
+        .msg { display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: start; }
+        .msg-av { width: 36px; height: 36px; border-radius: 6px; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #555; }
+        .msg-av.ai { background: var(--color-secondary); color: #fff; }
+        .msg-name { font-size: 13px; font-weight: 700; }
+        .msg-name small { font-weight: 400; color: #888; margin-left: 6px; }
+        .msg-text { font-size: 13.5px; line-height: 1.7; color: #1d1c1d; margin-top: 2px; }
+        .msg-card { margin-top: 8px; border-left: 4px solid var(--color-secondary); background: #fff7ef; padding: 10px 12px; border-radius: 4px; font-size: 12.5px; line-height: 1.7; }
+        .msg-card b { display: block; margin-bottom: 2px; }
+        .msg-actions { display: flex; gap: 8px; margin-top: 8px; }
+        .msg-actions span { border: 1px solid #ddd; border-radius: 4px; padding: 4px 10px; font-size: 12px; font-weight: 700; }
+        .msg-actions span.ok { background: #007a5a; color: #fff; border-color: #007a5a; }
+        @media (max-width: 768px) { .slackmock { transform: none; } }
         .hero-wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
         .hero-pain { font-size: 15px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.02em; margin-bottom: 18px; }
         .hero-title { max-width: none; font-size: 42px; line-height: 1.35; margin-bottom: 22px; letter-spacing: -0.01em; }
@@ -1086,7 +1118,7 @@
         .problem-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid #e5e5e5; }
         .problem { padding: 28px 28px 28px 0; border-bottom: 1px solid #e5e5e5; }
         .problem + .problem { padding-left: 28px; border-left: 1px solid #e5e5e5; }
-        .problem-title { font-size: 20px; font-weight: 900; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; }
+        .problem-title { font-size: 20px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; }
         .problem-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
         .problem-close { margin-top: 28px; font-size: 16px; line-height: 2; max-width: 760px; }
 
@@ -1096,7 +1128,7 @@
         .tab.is-active { background: #fff1e3; border-color: #f0b27a; color: var(--color-primary-deep); }
         .panel { display: none; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 36px; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: center; }
         .panel.is-active { display: grid; }
-        .panel-title { font-size: 24px; font-weight: 900; font-family: var(--font-heading-jp); line-height: 1.45; margin-bottom: 14px; }
+        .panel-title { font-size: 24px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.45; margin-bottom: 14px; }
         .panel-desc { font-size: 15px; color: var(--color-text-light); line-height: 1.95; margin-bottom: 18px; }
         .panel-kv { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; font-size: 14px; line-height: 1.7; border-top: 1px solid #eee; padding-top: 16px; }
         .panel-kv dt { color: var(--color-primary-deep); font-weight: 700; white-space: nowrap; }
@@ -1106,7 +1138,7 @@
         .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
         .bento-item { background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 14px; }
         .bento-item.w3 { grid-column: span 3; } .bento-item.w2 { grid-column: span 2; } .bento-item.w4 { grid-column: span 4; }
-        .bento-title { font-size: 18px; font-weight: 900; font-family: var(--font-heading-jp); line-height: 1.5; }
+        .bento-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; }
         .bento-desc { font-size: 14px; color: var(--color-text-light); line-height: 1.85; }
         .bento-item .ph { min-height: 150px; }
 
@@ -1114,7 +1146,7 @@
         .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
         .step { background: #fff; border: 1px solid var(--color-border); border-radius: 14px; padding: 22px; position: relative; display: flex; flex-direction: column; gap: 10px; }
         .step-num { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #fff; background: var(--color-text); border-radius: 4px; padding: 3px 8px; align-self: flex-start; }
-        .step-title { font-size: 18px; font-weight: 900; font-family: var(--font-heading-jp); line-height: 1.45; }
+        .step-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.45; }
         .step-tag { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); }
         .step-desc { font-size: 14px; color: var(--color-text-light); line-height: 1.85; }
         .step .ph { min-height: 120px; }
@@ -1124,14 +1156,14 @@
         /* 理由・データ: 罫線の3列 */
         .points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
         .point-num { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.1em; margin-bottom: 10px; }
-        .point-title { font-size: 20px; font-weight: 900; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; padding-top: 14px; border-top: 2px solid var(--color-text); }
+        .point-title { font-size: 20px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; padding-top: 14px; border-top: 2px solid var(--color-text); }
         .point-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
 
         /* 費用 */
         .price-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         .price-col { border-top: 2px solid var(--color-text); padding-top: 18px; }
         .price-kind { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); margin-bottom: 6px; }
-        .price-title { font-size: 26px; font-weight: 900; font-family: var(--font-heading-jp); margin-bottom: 4px; }
+        .price-title { font-size: 26px; font-weight: 700; font-family: var(--font-heading-jp); margin-bottom: 4px; }
         .price-sub { font-size: 14px; color: var(--color-text-light); margin-bottom: 16px; }
         .price-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
         .price-list li { position: relative; padding-left: 18px; font-size: 15px; line-height: 1.8; }
@@ -1143,8 +1175,8 @@
             .steps { grid-template-columns: repeat(2, 1fr); } .step::after { display: none; }
         }
         @media (max-width: 768px) {
-            .hero { padding: 120px 0 56px; }
-            .hero-wrap { grid-template-columns: 1fr; gap: 28px; }
+            .hero { min-height: auto; padding: 110px 0 48px; }
+            .hero-wrap { grid-template-columns: 1fr !important; gap: 28px; }
             .hero-title { font-size: 28px; }
             .hero-title .line { white-space: normal; }
 
@@ -1189,18 +1221,27 @@
     </div>
 
     <!-- Hero -->
-    <section class="hero ani-fade-bottom">
-        <div class="container hero-wrap">
+    <section class="hero">
+        <div class="container hero-wrap" style="display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center">
             <div>
                 <h1 class="hero-title"><span class="line"><span class="grad">指示しなくても動く</span></span><span class="line">AIエージェントを構築</span></h1>
                 <p class="hero-do">貴社の業務に合わせた完全カスタマイズ。<br>業務の棚卸しから構築、運用まで一気通貫で伴走。</p>
                 <div class="hero-btns">
                     <a href="https://nito-0210.com/contact.html" class="btn-primary">無料で業務棚卸しを相談</a>
-                    <a href="#flow" class="btn-outline">進め方を見る</a>
+                    <a href="#flow" class="btn-text">進め方を見る</a>
                 </div>
             </div>
             <div class="hero-visual">
-                <figure class="ph ph--hero"><span><b>ここに実物: Slack上でAIが勝手にタスクを進めている画面</b></span></figure>
+                <div class="slackmock" aria-label="Slack上でAIが自分でタスクを進めている画面のイメージ">
+                    <div class="slackmock-head"># 営業チーム <span>3人のメンバー</span></div>
+                    <div class="slackmock-body">
+                        <div class="msg"><div class="msg-av">田</div><div><div class="msg-name">田中<small>9:12</small></div><div class="msg-text">A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div></div>
+                        <div class="msg"><div class="msg-av ai">AI</div><div><div class="msg-name">nito AI<small>アプリ 9:13</small></div><div class="msg-text">商談メモを読みました。A社は物流部門でも同じ課題を持っているようです。物流向けプランの追加提案ができそうなので、たたき台を作っておきます。</div>
+                            <div class="msg-card"><b>次回商談の準備（自動作成）</b>・前回の宿題3件の進捗<br>・物流部門向けの提案1枚<br>・想定質問と回答</div>
+                            <div class="msg-actions"><span class="ok">この内容で進めて</span><span>修正する</span></div></div></div>
+                        <div class="msg"><div class="msg-av ai">AI</div><div><div class="msg-name">nito AI<small>アプリ 22:00</small></div><div class="msg-text">提案1枚と想定質問を仕上げました。別のAIに一度確認させて、指摘2件を直してあります。朝に確認だけお願いします。</div></div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
