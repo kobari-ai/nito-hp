@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】Claude Codeの料金プランを解説。Pro・Max・Team・APIの違いと使用量の上限 | nito Column</title>
+    <meta name="description" content="Claude Codeの料金を、Anthropicの日本向け料金ページ（消費税込み）と公式ドキュメントを一次ソースにまとめました。Pro・Max・Team・Enterpriseの月額とClaude Codeで使える範囲、5時間枠と週枠の仕組み、上限に達したときの3つの選択肢、API従量課金の単価、プランの選び方と使いすぎを防ぐ設定まで書いています。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-code-pricing/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】Claude Codeの料金プランを解説。Pro・Max・Team・APIの違いと使用量の上限">
+    <meta property="og:description" content="Claude Codeの料金を、Anthropicの日本向け料金ページ（消費税込み）と公式ドキュメントを一次ソースにまとめました。Pro・Max・Team・Enterpriseの月額とClaude Codeで使える範囲、5時間枠と週枠の仕組み、上限に達したときの3つの選択肢、API従量課金の単価、プランの選び方と使いすぎを防ぐ設定まで書いています。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-code-pricing/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-code-pricing.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-code-pricing.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Claude Codeの料金プランを解説。Pro・Max・Team・APIの違いと使用量の上限", "description": "Claude Codeの料金を、Anthropicの日本向け料金ページ（消費税込み）と公式ドキュメントを一次ソースにまとめました。Pro・Max・Team・Enterpriseの月額とClaude Codeで使える範囲、5時間枠と週枠の仕組み、上限に達したときの3つの選択肢、API従量課金の単価、プランの選び方と使いすぎを防ぐ設定まで書いています。", "datePublished": "2026-09-18", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-code-pricing/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Claude Codeの料金プランを解説。Pro・Max・Team・APIの違いと使用量の上限"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude Codeは無料で利用できますか？", "acceptedAnswer": {"@type": "Answer", "text": "無料プランでは使えません。料金ページの機能比較表で、Claude Codeの行はFreeだけ「いいえ」です。使うにはPro（月$22）以上のプランか、APIキーでの従量課金が必要です。"}}, {"@type": "Question", "name": "Claude CodeのProプランはどれくらい使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Anthropicは固定のメッセージ数を公開していません。5時間あたりの使用量はFreeの5倍以上で、会話の長さ・モデル・機能で変わります。解説動画ではSonnet中心の軽い作業なら半日から1日、Opusで重い作業を続けると2〜3時間で上限に当たると語られています。"}}, {"@type": "Question", "name": "有料プランは無料版と何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "Claude Codeそのものが使えるようになるほか、Claude Design・Slides・Docs、プロジェクト、Claude in Chrome、Microsoft 365向けのClaude、Opusモデルが使えます。使用量もFreeの5倍以上です。"}}, {"@type": "Question", "name": "Claude Codeは高いですか？", "acceptedAnswer": {"@type": "Answer", "text": "月$22のProで始められ、公式ドキュメントの企業平均は開発者1人あたり1日約$13です。Maxの$110・$220は毎日数時間から終日使う人向けで、上限で止まる時間をどれだけ減らしたいかで決まります。"}}, {"@type": "Question", "name": "Claude Codeの料金はどこで確認できますか？", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code内で `/usage` を実行すると、現在のセッションの使用量と5時間枠・週枠の残りが出ます。claude.aiの設定＞使用状況でも同じ内容と、使用クレジットの残高・今月の支出が確認できます。"}}, {"@type": "Question", "name": "Claude Codeを使うのに追加料金はかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "Pro・Max・Teamに入っていれば、プランの枠内は追加料金なしです。上限を超えて使いたいときだけ、自分で使用クレジットをオンにすると超過分がAPI単価で請求されます。オンにしない限り追加請求はありません。"}}, {"@type": "Question", "name": "Claude Codeの料金は日本円でいくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "日本向けの料金ページはドル建てで消費税込みの表示です。Proは月$22、Maxは月$110と$220で、請求時のレートで円換算されます。1ドル150円ならProは約3,300円、Max 5xは約16,500円です。"}}, {"@type": "Question", "name": "年払いにしたほうがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "Proの年払いは月$18相当（$220一括）で、月払いの$22より約18%安くなります。Maxは月払いのみです。数か月で使わなくなる可能性があるなら、最初は月払いで上限に当たる頻度を見てから決めるほうが無駄がありません。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claude Code…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.18</span>
+        </div>
+        <h1 class="post-title">【2026年9月】Claude Codeの料金プランを解説。Pro・Max・Team・APIの違いと使用量の上限</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Codeの料金"><defs><linearGradient id="ecg-4d30809b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4d30809b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Codeの料金</text><line x1="235.2" y1="327.1" x2="964.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">プラン別の月額・上限・APIの単価を公式で確認</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Claude Codeは、Anthropicの有料プラン（Pro・Max・Team・Enterprise）に含まれる形か、APIの従量課金のどちらかで使います。無料プランでは使えません。日本向けの料金ページは2026年9月18日時点で消費税込みの表示になっており、Proは月$22（年払いなら月$18）、Maxは月$110からです。</p>
+<p>料金そのものより分かりにくいのが、使用量の上限の仕組みと、定額と従量課金の境目です。プランに入っていても環境変数の設定ひとつで従量課金に切り替わり、上限に当たったときの選択肢も3つあります。Anthropicの料金ページ、ヘルプセンター、Claude Codeの公式ドキュメント（いずれも2026年9月18日取得）を一次ソースに、そこまで含めて書きます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>無料プランではClaude Codeは使えない</strong>。Pro（月$22、年払いで月$18）以上か、APIの従量課金</li>
+<li>Maxは<strong>Pro の5倍（$110）か20倍（$220）</strong>の使用量。Teamはスタンダード$27.50・プレミアム$137.50（月払い、1シート）</li>
+<li>上限は<strong>5時間ごとの枠と1週間の枠の2段構え</strong>で、claude.aiのチャットとClaude Codeが同じ枠を使う</li>
+<li>上限に当たっても勝手に課金はされない。<strong>待つ・上位プラン・使用クレジット</strong>の3択</li>
+<li>APIはSonnet 5が入力$2・出力$10（100万トークンあたり）。公式の平均は開発者1人あたり1日約$13</li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Claude Codeの料金は2通り</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>プラン別の料金とClaude Codeで使える範囲</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>Pro（月$22）で使えること</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>Max（$110・$220）で増えるもの</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>Team・Enterpriseの単価</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>使用量の上限の仕組み</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>上限に達したときの3つの選択肢</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>API従量課金の料金</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>どのプランを選ぶか</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>使いすぎを防ぐ設定と確認方法</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>上級編。同じ作業でトークンを減らす3つの手</a></li>
+                    <li class="toc-h3"><a href="#s8-1"><span class="toc__n">8-1</span>① 作業の切れ目で /clear と /compact</a></li>
+                    <li class="toc-h3"><a href="#s8-2"><span class="toc__n">8-2</span>② モデルを作業で使い分ける</a></li>
+                    <li class="toc-h3"><a href="#s8-3"><span class="toc__n">8-3</span>③ 使っていないMCPサーバーを切る</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Claude Codeの料金は2通り</h2>
+<p>Claude CodeはターミナルやVS Codeなどのエディタから使うAnthropicのコーディングエージェントで、料金はclaude.aiのアカウントでログインして<strong>定額プランの枠内で使う</strong>か、APIキーで認証して<strong>使ったトークン量で払う</strong>かの2通りしかありません。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-pricing/00_fig_billing.png" alt="Claude Codeの請求は定額（Pro・Max・Team）と従量（API）の2つに分かれる図" loading="lazy"><figcaption>同じClaude Codeでも、ログインの仕方で請求の種類が変わる</figcaption></figure>
+
+<p>どちらで動いているかは、認証の方法で決まります。<code>claude</code> を起動して <code>/login</code> でclaude.aiのアカウントに入れば定額プラン、環境変数 <code>ANTHROPIC_API_KEY</code> が設定されていればAPIキーで認証されて従量課金です。ProやMaxに加入していてもこの環境変数があるとAPIキーが優先される、と公式ヘルプに明記されています。<strong>プランに入ったのにコンソールの残高が減っている</strong>というときは、まずここを疑います。</p>
+<h2 id="s2">プラン別の料金とClaude Codeで使える範囲</h2>
+<p>日本向けの料金ページ（claude.com/ja/pricing）は「Prices include 10% JCT」と書かれており、米国向けの$20・$100・$200に消費税10%が乗った金額が表示されます。2026年9月18日時点の表示です。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-pricing/cc_01_pricing_personal.jpg" alt="Anthropicの日本向け料金ページ。Free $0、Pro $18（年払い時の月額）、Max $110からと表示" loading="lazy"><figcaption>日本向け料金ページの個人プラン（2026年9月18日）。消費税込みの表示</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>プラン</th>
+<th>月額（消費税込み）</th>
+<th>Claude Code</th>
+<th>使用量の目安</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free</td>
+<td>$0</td>
+<td><strong>使えない</strong></td>
+<td>5時間枠あり。日常的な質問向け</td>
+</tr>
+<tr>
+<td>Pro</td>
+<td>$22（年払いは月$18、$220一括）</td>
+<td>使える</td>
+<td>Freeの5倍以上</td>
+</tr>
+<tr>
+<td>Max 5x</td>
+<td>$110</td>
+<td>使える</td>
+<td>Proの5倍</td>
+</tr>
+<tr>
+<td>Max 20x</td>
+<td>$220（$200＋消費税）</td>
+<td>使える</td>
+<td>Proの20倍</td>
+</tr>
+<tr>
+<td>Team スタンダード</td>
+<td>1シート$27.50（年払いは$22）</td>
+<td>使える</td>
+<td>Proより多い</td>
+</tr>
+<tr>
+<td>Team プレミアム</td>
+<td>1シート$137.50（年払いは$110）</td>
+<td>使える</td>
+<td>スタンダードの5倍</td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td>1シート$20（年払い）＋API単価で使用量</td>
+<td>使える</td>
+<td>管理者が上限を設定</td>
+</tr>
+</tbody>
+</table>
+<p>出典はAnthropicの料金ページです。Freeの行にある「使えない」は、機能比較表の「Claude Code」の行がFreeだけ「いいえ」になっていることから取っています。</p>
+<h3 id="s2-1">Pro（月$22）で使えること</h3>
+<p>ProはClaude Codeが使える最も安いプランです。Claude Codeのほかに、Claude Design・Slides・Docs、プロジェクト、Claude in Chrome、Microsoft 365向けのClaudeが付きます。使えるモデルはOpus・Sonnet・Haikuで、Fableは「使用クレジット」経由になります。5時間あたりの使用量はFreeの5倍以上と書かれていますが、<strong>固定のメッセージ数は公開されていません</strong>。会話の長さ、選ぶモデル、使う機能で消費が変わるためです。</p>
+<h3 id="s2-2">Max（$110・$220）で増えるもの</h3>
+<p>MaxはProの全機能に加えて、使用量がProの5倍か20倍になり、出力の上限が上がり、混雑時の優先アクセスと新機能の早期アクセスが付きます。Fableは週の上限の50%まで使えます。料金ページには「一日中Claudeと仕事をする方へ」とあり、Claude Codeを毎日数時間回す人向けの設計です。</p>
+<h3 id="s2-3">Team・Enterpriseの単価</h3>
+<p>Teamは2〜150名向けで、シートが2種類あります。スタンダードは月払い$27.50で使用量がProより多く、プレミアムは$137.50でスタンダードの5倍です。どちらもClaude Codeが含まれ、一元請求・SSO・管理者コントロールが付きます。Enterpriseは1シート$20（年払い）にAPI単価での使用量が加わる形で、管理者がユーザーごとの利用上限を設定できます。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-pricing/cc_02_pricing_team.jpg" alt="料金ページのTeam & Enterpriseタブ。スタンダードシート$22、プレミアムシート$110（年払い時の月額）、Enterpriseは$20/シート/月＋API使用量" loading="lazy"><figcaption>Team & Enterpriseの料金（2026年9月18日）。表示は年払い時の月額</figcaption></figure>
+
+<h2 id="s3">使用量の上限の仕組み</h2>
+<p>料金ページのFAQによると、すべてのプランに<strong>5時間のローリングウィンドウでリセットされる上限</strong>があり、有料プランにはさらに<strong>週次の上限</strong>が加わります。5時間の枠が回復しても、週の枠を使い切っていれば止まります。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-pricing/00_fig_limits.png" alt="5時間ごとの枠と1週間の枠の2段構えで、claude.aiのチャットとClaude Codeが同じ枠を使う図" loading="lazy"><figcaption>上限は2段構え。ウェブ・アプリ・Claude Codeの利用がすべて同じ枠から減る</figcaption></figure>
+
+<p>見落としやすいのは、この枠が<strong>ウェブ・デスクトップ・スマホのClaudeとClaude Codeで共通</strong>だという点です。昼間にclaude.aiで長い文章を作らせると、その分だけ夜のClaude Codeの枠が減ります。Claude Codeの公式ドキュメントにも、5時間枠と週枠は「すべてのモデル全体で共有される」ため、<code>/model</code> でモデルを切り替えても上限は回復しないと書かれていました。</p>
+<p>上限に達すると、Claude Codeには「セッション制限に達しました」か「週間制限に達しました」と出ます。v2.1.234以降はリセットまで自動で待って作業を再開する設定もあり、<code>/rate-limit-options</code> から選べます。</p>
+<h2 id="s4">上限に達したときの3つの選択肢</h2>
+<p>公式ヘルプが挙げている選択肢は3つです。どれを選んでも、<strong>自動で従量課金に切り替わることはありません</strong>。</p>
+<ol>
+<li><strong>リセットを待つ</strong>。5時間枠は時間で回復し、週枠は週の区切りで回復する</li>
+<li><strong>上位プランに上げる</strong>。Proで頻繁に当たるならMax 5x、Max 5xで当たるならMax 20x</li>
+<li><strong>使用クレジットをオンにする</strong>。プランの枠を超えた分だけ、標準のAPI単価で請求される</li>
+</ol>
+<p>3つ目の使用クレジットは、claude.aiの「設定＞使用状況」（Settings &gt; Usage）でオン・オフを切り替え、月間の支出上限も設定できます。Claude Code側からは <code>/usage-credits</code> で同じ画面が開く仕組みです。Pro・Maxで支出上限に達すると、Claude Codeが上限を引き上げるか聞いてくるので、CLIを離れずに続けられます。</p>
+<h2 id="s5">API従量課金の料金</h2>
+<p>APIキーで使う場合はモデルごとの単価に使ったトークン量を掛けた金額が請求されます。2026年9月18日時点の主なモデルの単価（100万トークンあたり）です。</p>
+<table>
+<thead>
+<tr>
+<th>モデル</th>
+<th>入力</th>
+<th>出力</th>
+<th>キャッシュ読み取り</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Fable 5.1</td>
+<td>$10</td>
+<td>$50</td>
+<td>$0.25</td>
+</tr>
+<tr>
+<td>Claude Opus 5</td>
+<td>$5</td>
+<td>$25</td>
+<td>$0.50</td>
+</tr>
+<tr>
+<td>Claude Sonnet 5</td>
+<td>$2</td>
+<td>$10</td>
+<td>$0.20</td>
+</tr>
+<tr>
+<td>Claude Haiku 4.5</td>
+<td>$1</td>
+<td>$5</td>
+<td>$0.10</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/claude-code-pricing/cc_05_api_pricing_table.jpg" alt="Anthropic公式ドキュメントのモデル別料金表。Fable 5.1、Opus 5、Sonnet 5、Haiku 4.5の入力・出力・キャッシュ単価" loading="lazy"><figcaption>公式ドキュメントのモデル料金表（2026年9月18日）</figcaption></figure>
+
+<p>Claude Codeは毎回のやり取りで <code>CLAUDE.md</code> やこれまでの会話を送り直すため、入力トークンが積み上がります。それを抑えるのがプロンプトキャッシュで、キャッシュに当たった入力は基本単価の1/10です。Claude Codeは自動でキャッシュを使うので、<code>/usage</code> の「Prompt cache」の行でヒット率を確認できます。</p>
+<p>実際にいくらかかるかは、公式ドキュメントに目安があります。<strong>企業での平均は開発者1人あたり1日約$13、月$150〜250で、90%のユーザーは1日$30以下</strong>です。ただしモデルの選択、コードベースの大きさ、複数インスタンスの実行や自動化の有無で大きく変わるので、小さなグループで試して自分たちの値を測るように書かれています。</p>
+<h2 id="s6">どのプランを選ぶか</h2>
+<p>料金ページの説明と、Claude Codeの解説動画で語られている使用感を合わせると、線引きは使う時間で決まります。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-pricing/00_fig_choose.png" alt="Free・Pro・Max 5x・Max 20xの料金と向いている人を並べた図" loading="lazy"><figcaption>プランの選び方（日本の料金ページ、消費税込み、2026年9月18日）</figcaption></figure>
+
+<ul>
+<li><strong>週に数回、個人開発や学習で使う</strong>: Pro。Sonnet中心なら半日から1日は持つが、Opusで重い作業を続けると2〜3時間で上限に当たる、という報告が解説動画に複数あります</li>
+<li><strong>毎日数時間、仕事で回す</strong>: Max 5x。上限に当たる回数が減り、1つの作業を止めずに終えやすくなります</li>
+<li><strong>終日回す、サブエージェントを並列で動かす</strong>: Max 20x。動画では「1タスクでサブエージェントを4〜5個同時に走らせるなら5xでも足りない」と語られています</li>
+<li><strong>5人以上のチーム</strong>: Team。個人のProを人数分契約するより、一元請求とSSOが付く分だけ管理が楽になります</li>
+<li><strong>自社サービスに組み込む、夜間に自動実行する</strong>: API。定額プランの枠ではなく従量課金で設計します</li>
+</ul>
+<p>迷ったらProから始めて、上限に当たる頻度を見てから上げるのが公式ヘルプの案内でもあります。年払いは月$18で約18%安くなりますが、数か月で使わなくなると残りが無駄になるので、最初の1〜2か月は月払いで様子を見る人が多いです。</p>
+<h2 id="s7">使いすぎを防ぐ設定と確認方法</h2>
+<p>Claude Codeには使用量を見るコマンドが揃っています。</p>
+<ul>
+<li><code>/usage</code>: 現在のセッションのトークン使用量と、5時間枠・週枠の残り。Pro・Maxでは使用クレジットの月間支出も出る</li>
+<li><code>/usage-credits</code>: 使用クレジットの設定画面（claude.aiの設定＞使用状況）を開く</li>
+<li><code>/insights</code>: トークン数ではなく作業の仕方のレポートを <code>~/.claude/usage-data/report.html</code> に書き出す</li>
+<li><code>/context</code>: いま何がコンテキストを占めているか（MCPサーバー、CLAUDE.md、会話）</li>
+</ul>
+<figure class="post-figure"><img src="/media/images/claude-code-pricing/cc_06_docs_usage.jpg" alt="Claude Code公式ドキュメントの「コストを追跡する」の節。/usageコマンドの説明" loading="lazy"><figcaption>公式ドキュメントの「コストを追跡する」（2026年9月18日）</figcaption></figure>
+
+<p>TeamとEnterpriseでは、管理者が「管理者設定＞使用状況」でユーザーごと・組織ごとの月間支出上限を設定できます。</p>
+<h2 id="s8">上級編。同じ作業でトークンを減らす3つの手</h2>
+<p>上位の解説記事にはあまり書かれていない、公式ドキュメントの「トークン使用量を削減する」の節から、効き目の大きい順に3つです。</p>
+<h3 id="s8-1">① 作業の切れ目で /clear と /compact</h3>
+<p>トークンのコストはコンテキストの大きさに比例します。古い会話は後続のすべてのメッセージで送り直されるので、関係ない作業に移るときは <code>/clear</code> で新しく始めます。同じ作業が長引いたら <code>/compact</code> で要約し、<code>/compact Focus on code samples and API usage</code> のように残したい内容を指示できます。</p>
+<h3 id="s8-2">② モデルを作業で使い分ける</h3>
+<p>ほとんどのコーディング作業はSonnetで足り、Opusは複雑な設計判断や多段の推論に取っておく、というのが公式ドキュメントの案内です。単価は入力でSonnet $2に対してOpus $5、出力で$10に対して$25なので、同じ作業なら2.5倍の差です。<code>/model</code> で切り替えられます。ただし前述のとおり、定額プランの上限はモデルをまたいで共通なので、上限回避の手段にはなりません。</p>
+<h3 id="s8-3">③ 使っていないMCPサーバーを切る</h3>
+<p>MCPのツール定義は初期状態では遅延読み込みですが、接続しているだけで名前と指示はコンテキストに入ります。<code>/mcp</code> で一覧を見て、使っていないサーバーは無効にします。<code>gh</code>・<code>aws</code>・<code>gcloud</code> のようなCLIがあるものはMCPよりCLIのほうがコンテキストを食いません。</p>
+<p>このほか、Claude Codeはアイドル中も会話の要約などで少量のトークンを使い（通常1セッション$0.04未満）、数時間開きっぱなしのセッションは見た目より多くの枠を消費します。使わないセッションは閉じるのが単純に効きます。</p>
+<h2 id="s9">よくある質問</h2>
+<p>検索で「claude code 料金」と一緒に出る関連質問（Googleの「他の人はこちらも質問」、2026年9月18日）を中心に答えます。</p>
+<h3 id="s9-1">Claude Codeは無料で利用できますか？</h3>
+<p>無料プランでは使えません。料金ページの機能比較表で、Claude Codeの行はFreeだけ「いいえ」です。使うにはPro（月$22）以上のプランか、APIキーでの従量課金が必要です。</p>
+<h3 id="s9-2">Claude CodeのProプランはどれくらい使えますか？</h3>
+<p>Anthropicは固定のメッセージ数を公開していません。5時間あたりの使用量はFreeの5倍以上で、会話の長さ・モデル・機能で変わります。解説動画ではSonnet中心の軽い作業なら半日から1日、Opusで重い作業を続けると2〜3時間で上限に当たると語られています。</p>
+<h3 id="s9-3">有料プランは無料版と何が違いますか？</h3>
+<p>Claude Codeそのものが使えるようになるほか、Claude Design・Slides・Docs、プロジェクト、Claude in Chrome、Microsoft 365向けのClaude、Opusモデルが使えます。使用量もFreeの5倍以上です。</p>
+<h3 id="s9-4">Claude Codeは高いですか？</h3>
+<p>月$22のProで始められ、公式ドキュメントの企業平均は開発者1人あたり1日約$13です。Maxの$110・$220は毎日数時間から終日使う人向けで、上限で止まる時間をどれだけ減らしたいかで決まります。</p>
+<h3 id="s9-5">Claude Codeの料金はどこで確認できますか？</h3>
+<p>Claude Code内で <code>/usage</code> を実行すると、現在のセッションの使用量と5時間枠・週枠の残りが出ます。claude.aiの設定＞使用状況でも同じ内容と、使用クレジットの残高・今月の支出が確認できます。</p>
+<h3 id="s9-6">Claude Codeを使うのに追加料金はかかりますか？</h3>
+<p>Pro・Max・Teamに入っていれば、プランの枠内は追加料金なしです。上限を超えて使いたいときだけ、自分で使用クレジットをオンにすると超過分がAPI単価で請求されます。オンにしない限り追加請求はありません。</p>
+<h3 id="s9-7">Claude Codeの料金は日本円でいくらですか？</h3>
+<p>日本向けの料金ページはドル建てで消費税込みの表示です。Proは月$22、Maxは月$110と$220で、請求時のレートで円換算されます。1ドル150円ならProは約3,300円、Max 5xは約16,500円です。</p>
+<h3 id="s9-8">年払いにしたほうがいいですか？</h3>
+<p>Proの年払いは月$18相当（$220一括）で、月払いの$22より約18%安くなります。Maxは月払いのみです。数か月で使わなくなる可能性があるなら、最初は月払いで上限に当たる頻度を見てから決めるほうが無駄がありません。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li>Anthropic 料金ページ claude.com/ja/pricing（個人・Team &amp; Enterprise・API、2026年9月18日取得。消費税込み表示）</li>
+<li>Claude ヘルプセンター「Use Claude Code with your Pro or Max plan」（2026年9月18日取得）</li>
+<li>Claude Code 公式ドキュメント「コストを効果的に管理する」、Claude Platform ドキュメント「料金」（2026年9月18日取得）</li>
+<li>使用感の記述はYouTubeの解説動画（Claude Codeの料金プラン比較、社長のAI活用チャンネル、AIで自動で動画を作る工場）の内容で、動画内の体験談です</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/gemini-notebook-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NotebookLMの使い方"><defs><linearGradient id="ecg-ae7ae171" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ae7ae171)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">NotebookLMの使い方</text><line x1="220.0" y1="365.9" x2="980.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.17</div>
+                <div class="rel-card__ttl">NotebookLM（Gemini Notebook）の使い方。無料の上限・できること・ChatGPTとの違い【2026年9月】</div>
+            </a>
+            <a href="/media/gpt-6-astra-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GPT-6 Astraとは"><defs><linearGradient id="ecg-82a5c5fd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-82a5c5fd)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GPT-6 Astraとは</text><line x1="273.2" y1="365.9" x2="926.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.17</div>
+                <div class="rel-card__ttl">GPT-6 Astraとは。ChatGPTで使う方法・プラン別の上限・料金・GPT-5.6との違い【2026年9月】</div>
+            </a>
+            <a href="/media/google-ai-mode-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google AIモードの使い方"><defs><linearGradient id="ecg-bfc9ca43" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-bfc9ca43)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Google AIモードの使い方</text><line x1="128.8" y1="365.9" x2="1071.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.16</div>
+                <div class="rel-card__ttl">Google AIモードの使い方。切り替え・表示されない・消し方・履歴【2026年9月】</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
