@@ -1317,6 +1317,27 @@
         .step-num { position: static; font-size: 40px; color: var(--color-secondary); line-height: 1; align-self: start; padding-top: 4px; }
         .step-main { padding-top: 0; padding-left: 0; }
         @media (max-width: 900px) { .step { grid-template-columns: 56px 1fr; } .step-visual { grid-column: 2; } .step-num { font-size: 32px; } .hero::before { right: -220px; top: -240px; width: 420px; height: 420px; } }
+
+        /* ── 構築サービスのモック（実物風。架空データ） ── */
+        .mock { background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(120,60,0,0.10), 0 1px 4px rgba(0,0,0,0.06); overflow: hidden; font-family: var(--font-body); }
+        .mock .slackmock-head { font-size: 12.5px; padding: 10px 16px; }
+        .mock .slackmock-body { padding: 12px 16px 14px; gap: 12px; }
+        .mock .msg-text { font-size: 13px; }
+        .mock .msg-card { font-size: 12px; }
+        .mock-doc { padding: 18px 20px; }
+        .mock-doc-title { font-size: 13px; font-weight: 700; color: #1a1a1a; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 10px; display: flex; justify-content: space-between; }
+        .mock-doc-title span { font-weight: 400; color: #999; font-size: 11.5px; }
+        .mock-doc h5 { font-size: 12.5px; font-weight: 700; color: var(--color-primary-deep); margin: 10px 0 4px; }
+        .mock-doc ul { list-style: none; }
+        .mock-doc li { font-size: 12.5px; line-height: 1.7; color: #333; padding-left: 14px; position: relative; }
+        .mock-doc li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: #e6b27a; }
+        .mock-doc li.todo::before { background: var(--color-secondary); }
+        .mock-term { background: #1e1e22; color: #d6d6dc; padding: 14px 16px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; line-height: 1.8; }
+        .mock-term .t { color: #8a8a94; }
+        .mock-term .ok { color: #7dd3a0; }
+        .mock-term .ai { color: #ffb454; }
+        .mock-term .head { color: #fff; font-weight: 700; margin-bottom: 4px; }
+        @media (max-width: 768px) { .mock-term { font-size: 11px; } }
     </style>
 </head>
 
@@ -1437,7 +1458,15 @@
                         <h3 class="case-title">商談の議事録から追加提案の機会を拾う</h3>
                         <p class="case-desc">全ての商談の議事録を読み、クロスセル・アップセルの可能性がある顧客を見つけ、チームを横断して担当者と連携します。</p>
                     </div>
-                    <div class="case-visual"><figure class="ph"><span><b>ここに実物: Slackに届いたアップセル候補の通知</b></span></figure></div>
+                    <div class="case-visual"><div class="mock">
+                        <div class="slackmock-head"># 営業-連携 <span>アプリからの通知</span></div>
+                        <div class="slackmock-body">
+                            <div class="msg"><div class="msg-av ai">AI</div><div><div class="msg-name">nito AI<small>アプリ 8:05</small></div><div class="msg-text">昨日の商談メモ 6件を読みました。他のサービスも役立ちそうな会社が2社あります。</div>
+                                <div class="msg-card"><b>B社（担当: 佐藤）</b>商談で「請求書の処理に月20時間」と発言。経理向けプランの対象です。</div>
+                                <div class="msg-card"><b>C社（担当: 鈴木）</b>子会社でも同じ課題。グループ導入の提案余地。</div>
+                                <div class="msg-actions"><span class="ok">佐藤さんに共有</span><span>あとで</span></div></div></div>
+                        </div>
+                    </div></div>
                 </div>
                 <div class="case">
                     <div>
@@ -1445,7 +1474,15 @@
                         <h3 class="case-title">AIが自分で巻き取れる仕事を申し出る</h3>
                         <p class="case-desc">Slackのやりとりや社内MTGの議事録から、「これはAIが進められる」というタスクを自ら進めます。</p>
                     </div>
-                    <div class="case-visual"><figure class="ph"><span><b>ここに実物: AIが「これやります」と申し出ているSlackの画面</b></span></figure></div>
+                    <div class="case-visual"><div class="mock">
+                        <div class="slackmock-head"># cs-チーム <span>4人のメンバー</span></div>
+                        <div class="slackmock-body">
+                            <div class="msg"><div class="msg-av">高</div><div><div class="msg-name">高橋<small>14:20</small></div><div class="msg-text">D社の更新資料、来週までに去年との差分をまとめないと…</div></div></div>
+                            <div class="msg"><div class="msg-av ai">AI</div><div><div class="msg-name">nito AI<small>アプリ 14:21</small></div><div class="msg-text">去年の資料と今年の利用ログは読めるので、差分の一覧はこちらで作れます。今夜のうちに下書きを出しておきますか？</div>
+                                <div class="msg-actions"><span class="ok">お願いします</span><span>自分でやる</span></div></div></div>
+                            <div class="msg"><div class="msg-av">高</div><div><div class="msg-name">高橋<small>14:22</small></div><div class="msg-text">助かる、お願い</div></div></div>
+                        </div>
+                    </div></div>
                 </div>
                 <div class="case">
                     <div>
@@ -1453,7 +1490,16 @@
                         <h3 class="case-title">頼まれたタスクを朝までに仕上げておく</h3>
                         <p class="case-desc">日中に頼まれたタスクを夜間に進行。複数のAIエージェントとの議論を通して、品質の高いアウトプットを行います。</p>
                     </div>
-                    <div class="case-visual"><figure class="ph"><span><b>ここに実物: 夜間に仕上がった成果物と、別のAIの指摘を反映した記録</b></span></figure></div>
+                    <div class="case-visual"><div class="mock"><div class="mock-term">
+                        <div class="head">夜間の作業ログ  <span class="t">2026-09-18 22:00 〜</span></div>
+                        <div><span class="t">22:00</span> D社 更新資料の差分一覧 を開始（依頼: 高橋）</div>
+                        <div><span class="t">22:14</span> 去年の資料・今年の利用ログを読み込み <span class="ok">完了</span></div>
+                        <div><span class="t">22:31</span> 差分一覧 v1 を作成（12項目）</div>
+                        <div><span class="t">22:33</span> <span class="ai">添削AI</span> に確認を依頼</div>
+                        <div><span class="t">22:40</span> <span class="ai">添削AI</span>: 指摘2件（数値の根拠が無い1件・重複1件）</div>
+                        <div><span class="t">22:52</span> 指摘を反映して v2 <span class="ok">完了</span></div>
+                        <div><span class="t">06:30</span> 朝の一覧に「確認待ち」として掲載</div>
+                    </div></div></div>
                 </div>
                 <div class="case">
                     <div>
@@ -1461,7 +1507,15 @@
                         <h3 class="case-title">今日の状況と判断待ちを1枚に</h3>
                         <p class="case-desc">予定・メール・Slack・前日の記録を読み、今日の予定と決めるべきことを全社員分まとめます。</p>
                     </div>
-                    <div class="case-visual"><figure class="ph"><span><b>ここに実物: 毎朝6時半に作られる「今日の状況」</b></span></figure></div>
+                    <div class="case-visual"><div class="mock"><div class="mock-doc">
+                        <div class="mock-doc-title">今日の状況 <span>9/19（金）6:30 自動作成</span></div>
+                        <h5>今日の予定</h5>
+                        <ul><li>10:00 E社 初回商談（佐藤）… 事前調査を添付済み</li><li>15:00 D社 更新のご説明（高橋）</li></ul>
+                        <h5>決めてほしいこと</h5>
+                        <ul><li class="todo">D社 差分一覧 v2 の確認（昨夜完成）</li><li class="todo">B社への経理向けプラン提案、進めるか</li></ul>
+                        <h5>昨日終わったこと</h5>
+                        <ul><li>商談メモ6件の取り込み・要点整理</li><li>E社の事前調査（競合3社・直近ニュース）</li></ul>
+                    </div></div></div>
                 </div>
             </div>
         </div>
