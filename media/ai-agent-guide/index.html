@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】AIエージェントとは？生成AI・ChatGPTとの違いと仕組みをわかりやすく解説｜身近な例・種類・使いどころ | nito Column</title>
+    <meta name="description" content="AIエージェントとは何かを、Google Cloud・Anthropic・OpenAI・Gartner・AWSの一次ソースの定義を並べて説明します。生成AIやChatGPTとの違い、観測→計画→行動のループと4つの構成要素、Anthropicが分けた「ワークフロー」と「エージェント」の違い、5つの種類、ChatGPTのエージェントモードやClaude Codeなど身近な例、向いている仕事と向いていない仕事、導入で失敗しないための3点まで書いています。">
+    <link rel="canonical" href="https://nito-0210.com/media/ai-agent-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】AIエージェントとは？生成AI・ChatGPTとの違いと仕組みをわかりやすく解説｜身近な例・種類・使いどころ">
+    <meta property="og:description" content="AIエージェントとは何かを、Google Cloud・Anthropic・OpenAI・Gartner・AWSの一次ソースの定義を並べて説明します。生成AIやChatGPTとの違い、観測→計画→行動のループと4つの構成要素、Anthropicが分けた「ワークフロー」と「エージェント」の違い、5つの種類、ChatGPTのエージェントモードやClaude Codeなど身近な例、向いている仕事と向いていない仕事、導入で失敗しないための3点まで書いています。">
+    <meta property="og:url" content="https://nito-0210.com/media/ai-agent-guide/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/ai-agent-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/ai-agent-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】AIエージェントとは？生成AI・ChatGPTとの違いと仕組みをわかりやすく解説｜身近な例・種類・使いどころ", "description": "AIエージェントとは何かを、Google Cloud・Anthropic・OpenAI・Gartner・AWSの一次ソースの定義を並べて説明します。生成AIやChatGPTとの違い、観測→計画→行動のループと4つの構成要素、Anthropicが分けた「ワークフロー」と「エージェント」の違い、5つの種類、ChatGPTのエージェントモードやClaude Codeなど身近な例、向いている仕事と向いていない仕事、導入で失敗しないための3点まで書いています。", "datePublished": "2026-09-19", "dateModified": "2026-09-19", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-agent-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】AIエージェントとは？生成AI・ChatGPTとの違いと仕組みをわかりやすく解説｜身近な例・種類・使いどころ"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AIエージェントとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "与えられた目標に向かって、自分で手順を考え、検索やファイル操作などのツールを使い、結果を確かめながら作業を終わらせるソフトウェアです。Google Cloud・Anthropic・OpenAI・Gartner・AWSの定義に共通するのは「目標」「自律」「行動」の3つです。"}}, {"@type": "Question", "name": "AIエージェントとChatGPTの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPTのチャットは質問に1回答えて終わり、次に何をするかは人が決めます。AIエージェントは目標に向けて複数の手順を自分で続けて実行します。ChatGPTにもエージェントモードがあり、同じ製品でも使い方によって生成AIにもAIエージェントにもなります。"}}, {"@type": "Question", "name": "AIとAIエージェントの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "AIは画像認識や翻訳、文章生成など、入力に対して出力を返す技術の総称です。AIエージェントはそのAIを頭脳にして、ツールと記憶と「観測→計画→行動→確認」のループを付け、目標まで自分で動くようにした使い方です。"}}, {"@type": "Question", "name": "AIエージェントの身近な例は？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPTのエージェントモード、Claude Code、GeminiのDeep Research、Microsoft 365 Copilotのエージェントが、月額プランの中で使える身近な例です。Googleの検索結果に出るAIモードも、複数の検索を裏で回す点でエージェントの仕組みを使っています。"}}, {"@type": "Question", "name": "AIエージェントは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "製品によります。ChatGPTのエージェントモードとClaude Codeは有料プランが必要です。GeminiのDeep Researchは無料のアカウントでも使えますが、利用上限はプランで異なります（2026年9月19日時点の各社の公開ページ）。Claude Codeの料金は[別記事](https://nito-0210.com/media/claude-code-pricing/)にまとめています。"}}, {"@type": "Question", "name": "AIエージェントは何ができますか？", "acceptedAnswer": {"@type": "Answer", "text": "調査と比較、レポートや資料の作成、複数ファイルにまたがるコードの修正、メールやチャットの整理、社内システムへの入力など、複数の手順が要る作業をひとまとまりで進められます。取り消せない操作（送金・削除・契約）は、人の承認を挟む設計にするのが前提です。"}}, {"@type": "Question", "name": "AIエージェントと自動化（RPA）の違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "RPAは人が決めた手順をそのまま繰り返す自動化で、手順が変わると止まります。AIエージェントは結果を見て次の手順を自分で決めるので、手順が毎回変わる作業に向きます。手順が固定の作業はRPAのほうが速くて確実で、両者は置き換えではなく役割分担の関係です。"}}, {"@type": "Question", "name": "AIエージェントを作るには何が必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "頭脳になる言語モデル、外部に働きかけるツール、記憶、そして役割と禁止事項を書いた指示の4つです。AnthropicのBuilding effective agentsは、複雑なフレームワークより単純で組み合わせ可能な型から始めることを勧めており、OpenAIはResponses APIとAgents SDK、GoogleはGemini Enterprise Agent Platformをエージェント構築の基盤として提供しています。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】AIエージェントとは？…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.19</span>
+        </div>
+        <h1 class="post-title">【2026年9月】AIエージェントとは？生成AI・ChatGPTとの違いと仕組みをわかりやすく解説｜身近な例・種類・使いどころ</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIエージェントとは"><defs><linearGradient id="ecg-7a51dc39" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7a51dc39)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">用語解説</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIエージェントとは</text><line x1="250.4" y1="327.1" x2="949.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">定義・生成AIとの違い・仕組み・身近な例・使いどころ</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>AIエージェントとは、与えられた目標に向かって、自分で手順を考え、ツールを使い、結果を確かめながら作業を進めるソフトウェアです。チャット型の生成AIが「聞かれたことに答える」道具だとすると、AIエージェントは「頼まれた仕事を終わらせる」道具です。</p>
+<p>言葉の定義は提供する会社ごとに少しずつ違い、解説記事も自社製品の説明に寄りがちです。この記事では<a href="https://cloud.google.com/discover/what-are-ai-agents?hl=ja">Google Cloud</a>、<a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic</a>、<a href="https://openai.com/index/new-tools-for-building-agents/">OpenAI</a>、<a href="https://www.gartner.co.jp/ja/articles/ai-agents">Gartner</a>、<a href="https://aws.amazon.com/jp/what-is/ai-agents/">AWS</a>の一次ソース（いずれも2026年9月19日取得）の定義を並べたうえで、生成AIとの違い、仕組み、種類、身近な例、向いている仕事と向いていない仕事、導入で失敗しないための考え方までを順番に書きます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>AIエージェントは<strong>目標を渡すと、手順・ツール・確認を自分で回して仕事を終わらせる</strong>ソフトウェア。各社の定義に共通するのは「自律」「目標」「行動」の3語</li>
+<li>生成AI（ChatGPT のチャット）との違いは<strong>1問1答か、複数の手順を続けて実行するか</strong>。中身の言語モデルは同じでも、ツールと記憶とループが付くとエージェントになる</li>
+<li>Anthropicは<strong>手順が決まっている「ワークフロー」と、手順をAIが決める「エージェント」を分けて</strong>考えるよう勧めている。まずはシンプルな側から</li>
+<li>身近な例は<strong>ChatGPTのエージェントモード・Claude Code・GeminiのDeep Research</strong>。すでに月額プランの中で使える</li>
+<li>向いているのは手順が読めない調査・複数ファイルの変更・定型の連続作業。<strong>責任の重い判断や、決まった手順の反復はエージェントでなくてよい</strong></li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>AIエージェントとは</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>生成AI・ChatGPTとの違い</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>AIエージェントの仕組み</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>観測・計画・行動・確認のループ</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>4つの構成要素</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>ワークフローとエージェントの違い</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>AIエージェントの種類</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>AIエージェントの身近な例</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>向いている仕事と向いていない仕事</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>導入で失敗しないための3つの考え方</a></li>
+                    <li class="toc-h3"><a href="#s8-1"><span class="toc__n">8-1</span>① 人の承認をどこに挟むかを先に決める</a></li>
+                    <li class="toc-h3"><a href="#s8-2"><span class="toc__n">8-2</span>② チャットで足りないことを確かめてから</a></li>
+                    <li class="toc-h3"><a href="#s8-3"><span class="toc__n">8-3</span>③ RPAや既存の自動化と役割を分ける</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">AIエージェントとは</h2>
+<p>各社の定義を並べると、言い方は違っても同じ3つの要素が入っています。</p>
+<table>
+<thead>
+<tr>
+<th>出典</th>
+<th>定義（要約）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://cloud.google.com/discover/what-are-ai-agents?hl=ja">Google Cloud</a></td>
+<td>AIを使ってユーザーの代わりに目標を追求し、タスクを完了させるソフトウェアシステム。推論・計画・メモリーを持ち、意思決定・学習・適応を行う自律性を備える</td>
+</tr>
+<tr>
+<td><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic</a></td>
+<td>LLMが自分のプロセスとツールの使い方を動的に決め、タスクをどう達成するかの制御を自ら持つシステム</td>
+</tr>
+<tr>
+<td><a href="https://openai.com/index/new-tools-for-building-agents/">OpenAI</a></td>
+<td>ユーザーに代わって独立してタスクを達成するシステム</td>
+</tr>
+<tr>
+<td><a href="https://www.gartner.co.jp/ja/articles/ai-agents">Gartner</a></td>
+<td>デジタル環境や物理環境で、AIの手法を使って状況を把握し、判断し、行動し、目標を達成できる自律（または半自律）のソフトウェア</td>
+</tr>
+<tr>
+<td><a href="https://aws.amazon.com/jp/what-is/ai-agents/">AWS</a></td>
+<td>環境と対話し、データを収集し、そのデータを使って自己決定タスクを実行し、目標を達成するソフトウェアプログラム</td>
+</tr>
+</tbody>
+</table>
+<p>共通しているのは<strong>目標</strong>を与えられること、<strong>自律</strong>して動くこと、そして答えを返すだけでなく<strong>行動</strong>することの3点です。Google CloudとGartnerは「推論・計画・メモリー」「状況把握・判断・行動」のように内部の働きまで書き、AnthropicとOpenAIは「誰が制御を持つか」に絞って定義しています。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_definition.png" alt="AIエージェントの定義を5社で比べた図。共通する3要素（目標・自律・行動）を中央に置き、Google Cloud・Anthropic・OpenAI・Gartner・AWSの定義の要点を周囲に配置" loading="lazy"><figcaption>5社の定義に共通するのは「目標」「自律」「行動」の3つ（各社の公開ページ、2026年9月19日）</figcaption></figure>
+
+<p>「AI」と「AIエージェント」は別のものではなく、AIエージェントはAIの使い方の一つです。画像認識も翻訳もAIですが、それらは入力に対して出力を返して終わります。AIエージェントはその出力を見て次に何をするかを自分で決め、必要なら別の道具を使い、目標に届くまで続けるところが違います。</p>
+<h2 id="s2">生成AI・ChatGPTとの違い</h2>
+<p>Googleの「他の人はこちらも質問」にも「AIエージェントとChatGPTの違いは何ですか？」が並んでいます。中身の言語モデルは同じものが使われていることが多く、違いはモデルの賢さではなく、<strong>周りに何が付いているか</strong>と<strong>誰が次の一手を決めるか</strong>にあります。</p>
+<table>
+<thead>
+<tr>
+<th>観点</th>
+<th>生成AI（チャット）</th>
+<th>AIエージェント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>動き方</td>
+<td>質問に答えて終わる（1問1答）</td>
+<td>目標に向けて複数の手順を続けて実行する</td>
+</tr>
+<tr>
+<td>次の一手</td>
+<td>人が決めて、次の指示を打つ</td>
+<td>AIが結果を見て自分で決める</td>
+</tr>
+<tr>
+<td>ツール</td>
+<td>基本は文章・画像の生成</td>
+<td>検索・ファイル操作・API・ブラウザ操作などを自分で呼ぶ</td>
+</tr>
+<tr>
+<td>記憶</td>
+<td>その会話の中だけ</td>
+<td>会話をまたいだ記憶を持てる</td>
+</tr>
+<tr>
+<td>人の役割</td>
+<td>良い質問を書き、結果を判断する</td>
+<td>目標とルールを決め、要所で承認する</td>
+</tr>
+<tr>
+<td>例</td>
+<td>ChatGPTのチャット、Geminiのチャット</td>
+<td>ChatGPTのエージェントモード、Claude Code、Deep Research</td>
+</tr>
+</tbody>
+</table>
+<p>解説動画（PIVOT「AIエージェント活用術」、キノコード「AIエージェントとは？」）では、この違いを「副操縦士から操縦士へ」「賢い検索エンジンから優秀な部下へ」という比喩で説明していました。チャットは人が操縦して横で手伝ってもらう道具、エージェントは目的地を伝えて操縦を任せる道具、という整理です。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_vs_chat.png" alt="生成AIのチャットとAIエージェントの違いを、同じ「競合3社を調べて資料にして」という依頼で比べた図。チャットは1回答えて人が次を指示する、エージェントは検索・比較・資料作成を続けて実行する" loading="lazy"><figcaption>同じ依頼でも、チャットは1回答えて止まり、エージェントは終わるまで続ける</figcaption></figure>
+
+<p>ChatGPT自体にも2025年7月から「エージェントモード」があり、<a href="https://openai.com/index/introducing-chatgpt-agent/">OpenAIの発表</a>では「カレンダーを確認して今後の会議を説明する」「競合3社を分析してスライドを作る」といった例が挙げられています。同じChatGPTでも、チャットとして使えば生成AI、エージェントモードで使えばAIエージェントという関係です。</p>
+<h2 id="s3">AIエージェントの仕組み</h2>
+<p>Gartner・Google Cloud・Anthropicの説明を重ねると、中身は<strong>ループ</strong>と<strong>4つの部品</strong>に整理できます。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_loop.png" alt="AIエージェントの仕組みの図。観測→計画→行動→結果の確認のループを中央に、周囲にモデル・ツール・メモリー・指示（ルール）の4つの構成要素" loading="lazy"><figcaption>観測→計画→行動→確認を目標に届くまで繰り返す。周りの4つが部品</figcaption></figure>
+
+<h3 id="s3-1">観測・計画・行動・確認のループ</h3>
+<p>Gartnerは仕組みを「観測 → 判断 → 行動 → 再観測」を繰り返して目的に近づく、と説明しています。「競合3社を調べて資料にして」と頼まれたエージェントは、まず何を調べるべきかを計画し、検索という行動を取り、結果を観測して足りないものを判断し、また検索し、集まったら資料を作る、という流れを自分で回します。人が毎回「次はこれを調べて」と言わなくてよいのは、このループが中にあるからです。</p>
+<h3 id="s3-2">4つの構成要素</h3>
+<table>
+<thead>
+<tr>
+<th>部品</th>
+<th>役割</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>モデル（LLM）</td>
+<td>頭脳。状況を理解し、次の一手を考える</td>
+<td>GPT、Claude、Geminiなど</td>
+</tr>
+<tr>
+<td>ツール</td>
+<td>手足。外の世界に働きかける</td>
+<td>ウェブ検索、ファイルの読み書き、コードの実行、社内システムのAPI、ブラウザ操作</td>
+</tr>
+<tr>
+<td>メモリー</td>
+<td>記憶。今の会話と過去の経験を保持する</td>
+<td>Google Cloudは短期・長期・エピソード・コンセンサスの4層に分けている</td>
+</tr>
+<tr>
+<td>指示（ルール・ペルソナ）</td>
+<td>何を目標にどう振る舞うか</td>
+<td>役割、禁止事項、どこで人に確認するか</td>
+</tr>
+</tbody>
+</table>
+<p>Anthropicはこの「モデルに検索・ツール・メモリーを足したもの」を<strong>augmented LLM（拡張されたLLM）</strong>と呼び、あらゆるエージェントの基本の部品だと説明しています。チャットのAIとエージェントの差は、この部品が付いているかどうかです。</p>
+<h2 id="s4">ワークフローとエージェントの違い</h2>
+<p>検索上位の解説記事9本（2026年9月19日時点）にはこの区別が出てきませんが、実際に作る・頼むときに判断を分ける線です。Anthropicの<a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a>は、自律的に動くシステムをまとめて「エージェント的システム」と呼んだうえで、2つに分けています。</p>
+<ul>
+<li><strong>ワークフロー</strong>: LLMとツールが、あらかじめ決めたコードの経路に沿って動く。手順は人が決める</li>
+<li><strong>エージェント</strong>: LLMが自分のプロセスとツールの使い方を動的に決める。手順はAIが決める</li>
+</ul>
+<figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_workflow_vs_agent.png" alt="ワークフローとエージェントの違いの図。ワークフローは人が決めた手順をLLMが順番に実行、エージェントはLLMが結果を見て次の手順を自分で決める。Anthropicの5つのワークフローパターン（プロンプト連鎖・ルーティング・並列化・オーケストレーター＝ワーカー・評価者＝最適化者）を下に並べる" loading="lazy"><figcaption>手順を人が決めるのがワークフロー、AIが決めるのがエージェント（Anthropic「Building effective agents」を元に作成）</figcaption></figure>
+
+<p>Anthropicが挙げるワークフローの型は5つです。</p>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>動き</th>
+<th>向いている場面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>プロンプト連鎖</td>
+<td>作業を固定の段階に分け、前の出力を次に渡す</td>
+<td>下書き→翻訳→校正のように順番が決まっている</td>
+</tr>
+<tr>
+<td>ルーティング</td>
+<td>入力を分類して、担当のプロンプトやモデルに振り分ける</td>
+<td>問い合わせを種類別に処理する</td>
+</tr>
+<tr>
+<td>並列化</td>
+<td>複数のLLMを同時に走らせて結果を合わせる</td>
+<td>観点ごとに分けて評価する、多数決を取る</td>
+</tr>
+<tr>
+<td>オーケストレーター＝ワーカー</td>
+<td>中央のLLMが作業を分解して配り、結果を統合する</td>
+<td>何ファイル変えるか事前に分からない修正</td>
+</tr>
+<tr>
+<td>評価者＝最適化者</td>
+<td>一方が作り、もう一方が評価して直しを繰り返す</td>
+<td>基準が明確な文章や翻訳の改善</td>
+</tr>
+</tbody>
+</table>
+<p>そして、いつエージェントにするかについては、<strong>必要な手順の数を予測できず、固定の経路を書けない問題</strong>にだけ使うと書かれています。同じ文書では「最も成功している実装は、複雑なフレームワークではなく、シンプルで組み合わせ可能なパターンを使っている」「まずは最もシンプルな解決策を探し、必要なときだけ複雑さを足す。それはエージェント的システムをまったく作らないことを意味する場合もある」とも述べられており、エージェントを作る側の会社が「まず作るな」と書いています。</p>
+<h2 id="s5">AIエージェントの種類</h2>
+<p>種類の分け方は2通りあります。AWSやIBMが使う<strong>判断の仕方</strong>による分類と、Google Cloudが使う<strong>役割</strong>による分類です。</p>
+<table>
+<thead>
+<tr>
+<th>分類</th>
+<th>種類</th>
+<th>動き</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>判断の仕方（AWS・IBM）</td>
+<td>単純反射型</td>
+<td>「この条件ならこの行動」のルールで即座に動く。サーモスタットに近い</td>
+</tr>
+<tr>
+<td></td>
+<td>モデルベース反射型</td>
+<td>周囲の状態を内部モデルとして持ち、見えていない部分も推定して動く。部屋の地図を覚える掃除ロボット</td>
+</tr>
+<tr>
+<td></td>
+<td>目標ベース型</td>
+<td>目標に届く行動を先読みして選ぶ。経路探索</td>
+</tr>
+<tr>
+<td></td>
+<td>効用ベース型</td>
+<td>複数の選択肢を「どれがより望ましいか」の点数で比べて選ぶ。コストと時間の両方を見る配車</td>
+</tr>
+<tr>
+<td></td>
+<td>学習型</td>
+<td>経験から学んで行動を改善する</td>
+</tr>
+<tr>
+<td>役割（Google Cloud）</td>
+<td>対話型（サーフェスエージェント）</td>
+<td>人と直接やり取りし、質問に答えたり手続きを進めたりする</td>
+</tr>
+<tr>
+<td></td>
+<td>バックグラウンド型</td>
+<td>人と対話せず、イベントをきっかけに裏で定型の処理を回す</td>
+</tr>
+<tr>
+<td>数</td>
+<td>単一エージェント／マルチエージェント</td>
+<td>1つで完結するか、役割の違う複数が連携するか</td>
+</tr>
+</tbody>
+</table>
+<p>2026年9月時点で「AIエージェント」と呼ばれている製品の多くは、言語モデルを頭脳にした目標ベース型か学習型で、ツールを持ち、会話をまたぐ記憶を持つものです。Gartnerはさらに、チャットボット→RPA→AIエージェント→エージェント型AI（Agentic AI）の順に自律性が上がる段階として整理しています。</p>
+<h2 id="s6">AIエージェントの身近な例</h2>
+<p>「身近な例は？」という質問には、すでに月額プランの中で使える製品を挙げるのが一番早いです。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_examples.png" alt="身近なAIエージェントの例4つ。ChatGPTのエージェントモード、Claude Code、GeminiのDeep Research、Microsoft 365 Copilotのエージェント。それぞれの得意な作業と入口" loading="lazy"><figcaption>いま使える身近なAIエージェント（各社の公開情報、2026年9月19日）</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>例</th>
+<th>何をするか</th>
+<th>入口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPTのエージェントモード</td>
+<td>自分の仮想コンピューターでブラウザを操作し、調査・比較・スライドや表の作成までを一続きで行う</td>
+<td>ChatGPTの有料プラン。ツールの選択から「エージェントモード」</td>
+</tr>
+<tr>
+<td><a href="https://www.anthropic.com/claude-code">Claude Code</a></td>
+<td>フォルダの中のファイルを読み、複数ファイルを編集し、コマンドを実行してテストまで回すコーディングエージェント</td>
+<td>ターミナル・VS Code・デスクトップアプリ。使い方は<a href="https://nito-0210.com/media/claude-code-guide/">別記事</a></td>
+</tr>
+<tr>
+<td><a href="https://gemini.google/overview/deep-research/">GeminiのDeep Research</a></td>
+<td>調査計画を立て、何十ものサイトを回って読み、出典つきのレポートにまとめる</td>
+<td>Geminiアプリの「Deep Research」</td>
+</tr>
+<tr>
+<td>Microsoft 365 Copilotのエージェント</td>
+<td>メール・Teams・ファイルを横断して、定型の業務（議事録作成・タスク整理など）を代行する</td>
+<td>Microsoft 365のCopilot</td>
+</tr>
+</tbody>
+</table>
+<p>このほか、Perplexityやその他の検索サービスにもDeep Research型の機能があり、Googleの検索結果に出るAIモードも、複数の検索を裏で回して答えを組み立てる点ではエージェントの仕組みを使っています（<a href="https://nito-0210.com/media/google-ai-mode-guide/">AIモードの記事</a>）。「AIエージェント」と名乗っていなくても、裏で観測と行動のループを回している製品は増えています。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-guide/aag_01_openai_agent.jpg" alt="OpenAIの「ChatGPT エージェントが登場」の発表ページ。2025年7月17日、自ら思考して行動し、タスク達成のためのスキルを自律的に選択すると説明" loading="lazy"><figcaption>OpenAIの発表ページ（2025年7月17日公開、2026年9月19日取得）。Operatorとdeep researchを統合したと説明している</figcaption></figure>
+
+<h2 id="s7">向いている仕事と向いていない仕事</h2>
+<p>Anthropicの「手順を予測できない問題に使う」という基準と、解説動画で紹介されていた失敗例を合わせると、次のように分かれます。</p>
+<table>
+<thead>
+<tr>
+<th>向いている</th>
+<th>向いていない</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>何を何回調べるか事前に分からない調査・比較</td>
+<td>毎回同じ手順を同じ順番で繰り返す作業（ワークフローやRPAで足りる）</td>
+</tr>
+<tr>
+<td>何ファイル変えるか分からないコードの修正</td>
+<td>1回の質問で答えが出る作業（チャットで足りる）</td>
+</tr>
+<tr>
+<td>途中の結果で次の手が変わる作業</td>
+<td>間違えたときの損失が大きく、取り消せない操作（送金・削除・契約）</td>
+</tr>
+<tr>
+<td>人が張り付いていられない長時間の処理</td>
+<td>判断の根拠を人が説明する責任がある決定</td>
+</tr>
+</tbody>
+</table>
+<p>解説動画（ユースフル「10分でわかるAIエージェント」）では、売上データの分析からグラフとレポートを作らせる例が紹介されていましたが、同時に「ツールのインストールに失敗して止まる」「途中で前提を誤解したまま進む」といった様子も映っていました。エージェントは止まらずに進む分、間違った方向にも止まらずに進みます。取り消せない操作の前には人の承認を挟む、という設計が要るのはそのためです。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_when.png" alt="どの道具を使うかの判断の図。1回で答えが出るならチャット、手順が決まっているならワークフロー（自動化）、手順が読めないならエージェント。取り消せない操作の前には人の承認を挟む" loading="lazy"><figcaption>まずはチャット、次にワークフロー、手順が読めないときだけエージェント。取り消せない操作の前は人が承認</figcaption></figure>
+
+<h2 id="s8">導入で失敗しないための3つの考え方</h2>
+<p>実際に使い始めるときの考え方を3つに絞ります。</p>
+<h3 id="s8-1">① 人の承認をどこに挟むかを先に決める</h3>
+<p>Claude Codeにはファイルを書き込む前に確認を出す既定のモードと、計画だけを出させるモードがあり、ChatGPTのエージェントモードも「結果に影響する操作の前に許可を求める」と発表に書かれています。製品側がこう作られているのは、<strong>自律と承認は両立させるもの</strong>だからです。「どの操作は自動でよく、どの操作は人が見るか」を先に決めておくと、任せられる範囲が具体的になります。</p>
+<h3 id="s8-2">② チャットで足りないことを確かめてから</h3>
+<p>Anthropicの「まずシンプルな解決策を」はそのまま導入の順番になります。最初はチャットで同じ仕事を試し、毎回同じ指示を打っているならワークフロー（定型の自動化）に、手順が毎回変わって人が張り付いているならエージェントに、という順で上げていくと、費用も失敗も小さく済みます。</p>
+<h3 id="s8-3">③ RPAや既存の自動化と役割を分ける</h3>
+<p>「請求書のデータを会計システムに転記する」のように手順が固定の作業は、RPAやワークフローのほうが速く、安く、間違えません。エージェントが向くのはその手前の「どの請求書に不備があるかを判断する」「不備の内容を先方に確認する文面を作る」のように、判断と文章が要る部分です。既存の自動化を置き換えるのではなく、判断が要る部分にだけエージェントを足す、という分け方です。</p>
+<p>AI検索との関係にも一言だけ触れておくと、ChatGPTやGoogleのAIモードは調べものをエージェントの仕組みで回すので、企業のサイトは「人が読むページ」であると同時に「エージェントが調べて引用するページ」にもなっています。この観点は<a href="https://nito-0210.com/media/what-is-llmo/">AI検索対策（LLMO）の記事</a>で扱っています。</p>
+<h2 id="s9">よくある質問</h2>
+<p>Googleの「他の人はこちらも質問」に出ている質問が中心です。</p>
+<h3 id="s9-1">AIエージェントとは何ですか？</h3>
+<p>与えられた目標に向かって、自分で手順を考え、検索やファイル操作などのツールを使い、結果を確かめながら作業を終わらせるソフトウェアです。Google Cloud・Anthropic・OpenAI・Gartner・AWSの定義に共通するのは「目標」「自律」「行動」の3つです。</p>
+<h3 id="s9-2">AIエージェントとChatGPTの違いは何ですか？</h3>
+<p>ChatGPTのチャットは質問に1回答えて終わり、次に何をするかは人が決めます。AIエージェントは目標に向けて複数の手順を自分で続けて実行します。ChatGPTにもエージェントモードがあり、同じ製品でも使い方によって生成AIにもAIエージェントにもなります。</p>
+<h3 id="s9-3">AIとAIエージェントの違いは何ですか？</h3>
+<p>AIは画像認識や翻訳、文章生成など、入力に対して出力を返す技術の総称です。AIエージェントはそのAIを頭脳にして、ツールと記憶と「観測→計画→行動→確認」のループを付け、目標まで自分で動くようにした使い方です。</p>
+<h3 id="s9-4">AIエージェントの身近な例は？</h3>
+<p>ChatGPTのエージェントモード、Claude Code、GeminiのDeep Research、Microsoft 365 Copilotのエージェントが、月額プランの中で使える身近な例です。Googleの検索結果に出るAIモードも、複数の検索を裏で回す点でエージェントの仕組みを使っています。</p>
+<h3 id="s9-5">AIエージェントは無料で使えますか？</h3>
+<p>製品によります。ChatGPTのエージェントモードとClaude Codeは有料プランが必要です。GeminiのDeep Researchは無料のアカウントでも使えますが、利用上限はプランで異なります（2026年9月19日時点の各社の公開ページ）。Claude Codeの料金は<a href="https://nito-0210.com/media/claude-code-pricing/">別記事</a>にまとめています。</p>
+<h3 id="s9-6">AIエージェントは何ができますか？</h3>
+<p>調査と比較、レポートや資料の作成、複数ファイルにまたがるコードの修正、メールやチャットの整理、社内システムへの入力など、複数の手順が要る作業をひとまとまりで進められます。取り消せない操作（送金・削除・契約）は、人の承認を挟む設計にするのが前提です。</p>
+<h3 id="s9-7">AIエージェントと自動化（RPA）の違いは何ですか？</h3>
+<p>RPAは人が決めた手順をそのまま繰り返す自動化で、手順が変わると止まります。AIエージェントは結果を見て次の手順を自分で決めるので、手順が毎回変わる作業に向きます。手順が固定の作業はRPAのほうが速くて確実で、両者は置き換えではなく役割分担の関係です。</p>
+<h3 id="s9-8">AIエージェントを作るには何が必要ですか？</h3>
+<p>頭脳になる言語モデル、外部に働きかけるツール、記憶、そして役割と禁止事項を書いた指示の4つです。AnthropicのBuilding effective agentsは、複雑なフレームワークより単純で組み合わせ可能な型から始めることを勧めており、OpenAIはResponses APIとAgents SDK、GoogleはGemini Enterprise Agent Platformをエージェント構築の基盤として提供しています。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li><a href="https://cloud.google.com/discover/what-are-ai-agents?hl=ja">Google Cloud「AI エージェントの定義、例、種類」</a>（2026年9月19日取得）</li>
+<li><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic「Building effective agents」</a>（同上）</li>
+<li><a href="https://openai.com/index/new-tools-for-building-agents/">OpenAI「New tools for building agents」</a>、<a href="https://openai.com/index/introducing-chatgpt-agent/">「ChatGPT エージェントが登場」</a>（2025年7月17日公開、2026年9月19日取得）</li>
+<li><a href="https://www.gartner.co.jp/ja/articles/ai-agents">Gartner「AIエージェントとは？生成AIとの違い、活用例をわかりやすく解説」</a>（2026年8月2日更新、2026年9月19日取得）</li>
+<li><a href="https://aws.amazon.com/jp/what-is/ai-agents/">AWS「AI エージェントとは何ですか?」</a>、<a href="https://www.ibm.com/jp-ja/think/topics/ai-agents">IBM「AIエージェントとは」</a>（2026年9月19日取得）</li>
+<li><a href="https://gemini.google/overview/deep-research/">Google「Gemini Deep Research」</a>、<a href="https://www.anthropic.com/claude-code">Anthropic「Claude Code」</a>（同上）</li>
+<li>解説動画: PIVOT「AIエージェント活用術 vol.1」（d1o0lW9p3-Q）、キノコード「AIエージェントとは？」（bsUC8AQBX5A）、ユースフル「10分でわかるAIエージェントとは？」（9AiWzy1uAJY）。動画内の使用感は投稿者の実演で第三者検証なし</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-overviews-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIによる概要とは"><defs><linearGradient id="ecg-cb61e959" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-cb61e959)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIによる概要とは</text><line x1="288.4" y1="365.9" x2="911.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.19</div>
+                <div class="rel-card__ttl">【2026年9月】AIによる概要（AI Overviews）とは？仕組み・消し方・AIモードとの違いと企業の対策</div>
+            </a>
+            <a href="/media/claude-code-about/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Codeとは"><defs><linearGradient id="ecg-f1ea21d6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f1ea21d6)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Codeとは</text><line x1="273.2" y1="365.9" x2="926.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.19</div>
+                <div class="rel-card__ttl">【2026年9月】Claude Codeとは？仕組み・できること・他のAIコーディングツールとの違い</div>
+            </a>
+            <a href="/media/claude-code-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Codeの使い方"><defs><linearGradient id="ecg-603cb86b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-603cb86b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Codeの使い方</text><line x1="197.2" y1="365.9" x2="1002.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.19</div>
+                <div class="rel-card__ttl">【2026年9月】Claude Codeの使い方を初心者向けに解説｜インストール・基本コマンド・CLAUDE.md・上級編</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

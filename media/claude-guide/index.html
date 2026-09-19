@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】Claude（クロード）の使い方を初心者向けに解説｜始め方・機能の使い分け・プロジェクト・ファイル作成・上級編 | nito Column</title>
+    <meta name="description" content="Anthropicのチャット型AI「Claude（クロード）」の使い方を、公式ヘルプセンターの記事11本を一次ソースにまとめました。登録と使える場所、無料と有料で使える機能の違い、ウェブ検索・拡張思考・リサーチの公式の使い分け、プロジェクト・アーティファクト・メモリ・ファイル作成・スキル・シークレットチャットの手順、機密データの扱い、上級編3つ、ChatGPTとの使い分けまで書いています。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】Claude（クロード）の使い方を初心者向けに解説｜始め方・機能の使い分け・プロジェクト・ファイル作成・上級編">
+    <meta property="og:description" content="Anthropicのチャット型AI「Claude（クロード）」の使い方を、公式ヘルプセンターの記事11本を一次ソースにまとめました。登録と使える場所、無料と有料で使える機能の違い、ウェブ検索・拡張思考・リサーチの公式の使い分け、プロジェクト・アーティファクト・メモリ・ファイル作成・スキル・シークレットチャットの手順、機密データの扱い、上級編3つ、ChatGPTとの使い分けまで書いています。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-guide/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Claude（クロード）の使い方を初心者向けに解説｜始め方・機能の使い分け・プロジェクト・ファイル作成・上級編", "description": "Anthropicのチャット型AI「Claude（クロード）」の使い方を、公式ヘルプセンターの記事11本を一次ソースにまとめました。登録と使える場所、無料と有料で使える機能の違い、ウェブ検索・拡張思考・リサーチの公式の使い分け、プロジェクト・アーティファクト・メモリ・ファイル作成・スキル・シークレットチャットの手順、機密データの扱い、上級編3つ、ChatGPTとの使い分けまで書いています。", "datePublished": "2026-09-19", "dateModified": "2026-09-19", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Claude（クロード）の使い方を初心者向けに解説｜始め方・機能の使い分け・プロジェクト・ファイル作成・上級編"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claudeは無料で何回まで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "決まった回数ではなく、5時間ごとにリセットされる使用量の枠で管理されています。送信できるメッセージ数は混雑状況によって変わると公式ヘルプに書かれており、長い文書の読み込みやファイル作成は枠を多く使います。枠に達すると、リセットまでの時間が表示されます。"}}, {"@type": "Question", "name": "ClaudeとChatGPTはどちらがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "用途しだいです。長い文書の要約や書き直し、文体を指定した文章作成、コードの相談ではClaudeを選ぶ人が多く、画像生成や連携アプリの多さではChatGPTに分があります。どちらも無料で試せます。"}}, {"@type": "Question", "name": "Claudeはどういうときに使いますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプが挙げる用途は執筆、学習、要約、コーディング、ブレインストーミング、翻訳、画像分析の7つです。これに、ウェブ検索・リサーチによる調べもの、ExcelやPowerPointのファイル作成、プロジェクトでの資料管理が加わります。"}}, {"@type": "Question", "name": "Claudeの何がすごいのですか？", "acceptedAnswer": {"@type": "Answer", "text": "検索上位の解説記事（Teachme Biz・リコーなど、2026年9月19日時点）が共通して挙げているのは、長い文書をまとめて読める処理量と、指示した文体に沿った日本語の文章です。2026年9月時点ではリサーチ、ファイル作成、メモリ、スキルといった「答えを返す」以外の機能がひとつの画面にそろっている点も特徴です。"}}, {"@type": "Question", "name": "Claudeは日本語で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。公式ヘルプでは12以上の言語に対応し、英語が最も得意と書かれていますが、日本語での指示と応答は問題なく、日本は対応地域に含まれています。"}}, {"@type": "Question", "name": "Claudeにアップロードしたファイルは学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "無料・Pro・Maxでは「プライバシー設定」でモデル改善へのデータ提供を許可するかどうかを選べます。許可していてもシークレットチャットの内容は使われません。TeamとEnterpriseは組織の契約に従います。"}}, {"@type": "Question", "name": "デスクトップアプリとブラウザ版は違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "チャット機能は同じで、履歴も共有されます。デスクトップアプリにはChat・Cowork・Codeの3つのタブがあり、Coworkは手元のファイルの整理、CodeはClaude Codeによる開発作業に使います。ブラウザだけで完結する使い方なら、アプリを入れる必要はありません。"}}, {"@type": "Question", "name": "Claudeでファイルは作れますか？", "acceptedAnswer": {"@type": "Answer", "text": "作れます。「設定」→「機能」で「コード実行とファイル作成」をオンにすると、Excel（.xlsx）・PowerPoint（.pptx）・Word（.docx）・PDFを会話の中で作成・編集でき、ダウンロードかGoogle Driveへの保存ができます。無料プランでも使えますが、通常のチャットより使用量の枠を多く消費します。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claude（クロード…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.19</span>
+        </div>
+        <h1 class="post-title">【2026年9月】Claude（クロード）の使い方を初心者向けに解説｜始め方・機能の使い分け・プロジェクト・ファイル作成・上級編</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの使い方"><defs><linearGradient id="ecg-f157380b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f157380b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの使い方</text><line x1="311.2" y1="327.1" x2="888.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">始め方から機能の使い分け、上級編まで</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Claude（クロード）は、Anthropicが提供するチャット型のAIです。ブラウザで <a href="https://claude.ai">claude.ai</a> を開けば無料で始められ、文章の作成や要約、翻訳、コードの相談から、ExcelやPowerPointのファイル作成、複数のサイトを回る調査まで、2026年9月時点ではひとつの画面でできる範囲がかなり広がっています。</p>
+<p>機能が増えたぶん、「ウェブ検索とリサーチは何が違うのか」「プロジェクトは何のためにあるのか」「無料でどこまで使えるのか」が分かりにくくなりました。この記事はAnthropicの<a href="https://support.claude.com/ja/">公式ヘルプセンター</a>の記事12本（2026年9月19日取得）を一次ソースに、始め方から機能の使い分け、上級編までを順番に書きます。ターミナルで動くClaude Codeは<a href="https://nito-0210.com/media/claude-code-guide/">別の記事</a>で扱い、ここではチャット画面のClaudeに絞ります。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>始め方は<strong>claude.aiでアカウントを作るだけ</strong>。ウェブ・デスクトップ（Mac／Windows）・スマホ（iOS／Android）の3つから使える。18歳以上が条件</li>
+<li>無料プランでもチャット、ファイルの読み込み、アーティファクト、プロジェクト（5つまで）、ファイル作成、メモリ、シークレットチャットは使える。<strong>有料で増えるのは使用量と、過去チャットの検索・リサーチ・拡張ナレッジ</strong></li>
+<li>調べものは<strong>3段階</strong>。1〜2回の検索で済むなら「ウェブ検索」、考えてほしいなら「拡張思考」、5回以上の検索と数分かけてよいなら「リサーチ」</li>
+<li>同じ仕事を繰り返すなら<strong>プロジェクト</strong>に資料と指示を置く。作ったものを持ち出すなら<strong>アーティファクト</strong>か<strong>ファイル作成</strong></li>
+<li>機密データは<strong>シークレットチャット</strong>か<strong>プライバシー設定</strong>で学習に使われない状態にできる。政府ID・口座番号などは頼んでもメモリに保存されない</li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Claudeとは何か</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Claudeの始め方</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>無料と有料で使える機能</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>ウェブ検索・拡張思考・リサーチの使い分け</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>プロジェクトで資料と指示をまとめる</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>アーティファクトとファイル作成</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>メモリと過去のチャットの検索</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>スキルで定型作業を任せる</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>機密データの扱いとシークレットチャット</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>上級編</a></li>
+                    <li class="toc-h3"><a href="#s10-1"><span class="toc__n">10-1</span>① プロジェクト指示に出力の型まで書く</a></li>
+                    <li class="toc-h3"><a href="#s10-2"><span class="toc__n">10-2</span>② リサーチは比べる観点を先に決めて頼む</a></li>
+                    <li class="toc-h3"><a href="#s10-3"><span class="toc__n">10-3</span>③ 作るものに合わせてアーティファクトとファイルを使い分ける</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>ChatGPTとどちらを使うか</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s13"><span class="toc__n">13</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Claudeとは何か</h2>
+<p>ClaudeはAnthropicが開発した言語モデルと、それを使うチャット製品の両方を指す名前です。公式ヘルプの「<a href="https://support.claude.com/ja/articles/7996845">Claudeで何ができますか？</a>」では、執筆、学習、要約、コーディング、ブレインストーミング、翻訳、画像分析が用途として挙げられています。</p>
+<table>
+<thead>
+<tr>
+<th>製品</th>
+<th>何か</th>
+<th>使う場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude（この記事）</td>
+<td>チャット型のAI。文章・調査・ファイル作成</td>
+<td>claude.ai、デスクトップアプリ、スマホアプリ</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td>ターミナルやエディタで動くコーディングエージェント</td>
+<td>ターミナル、VS Code、デスクトップアプリのCodeタブ</td>
+</tr>
+<tr>
+<td>Claude API</td>
+<td>開発者が自社のアプリに組み込むためのもの</td>
+<td>Claude Console</td>
+</tr>
+</tbody>
+</table>
+<p>料金は無料プランのほかにPro（月$22）・Max・Team・Enterpriseがあり、2026年9月19日時点の日本向け料金ページは消費税込みの表示です。プランの違いは<a href="https://nito-0210.com/media/claude-code-pricing/">Claude Codeの料金プランの記事</a>に表でまとめています。</p>
+<h2 id="s2">Claudeの始め方</h2>
+<p>必要なのはメールアドレス（またはGoogle／Appleのアカウント）だけです。公式ヘルプの「<a href="https://support.claude.com/ja/articles/8114491-claude%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B">Claudeを始める</a>」に沿うと、手順は3つに収まります。</p>
+<ol>
+<li><a href="https://claude.ai">claude.ai</a> を開き、メールアドレスかGoogle／Appleアカウントで登録する（18歳以上、対応地域に日本を含む）</li>
+<li>電話番号の確認を求められたら入力する</li>
+<li>画面下の入力欄に質問を打って送信する</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/claude-guide/cg_01_help_getting_started.jpg" alt="Anthropicヘルプセンター「Claudeを始める」の記事。Web・Desktop・Mobileの3つのアクセス方法と、チャットの始め方" loading="lazy"><figcaption>公式ヘルプ「Claudeを始める」（2026年9月19日取得）</figcaption></figure>
+
+<p>使える場所は3つで、どれも同じアカウントで履歴が共有されます。</p>
+<table>
+<thead>
+<tr>
+<th>場所</th>
+<th>入手先</th>
+<th>向いている使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ウェブ</td>
+<td>claude.ai</td>
+<td>最初はここ。すべての機能が使える</td>
+</tr>
+<tr>
+<td>デスクトップアプリ</td>
+<td><a href="https://claude.ai/download">claude.ai/download</a>（Mac／Windows）</td>
+<td>常に開いておく人。Chat・Cowork・Codeの3タブ</td>
+</tr>
+<tr>
+<td>スマホアプリ</td>
+<td>App Store／Google Play</td>
+<td>音声入力や写真の読み取り。外出先の調べもの</td>
+</tr>
+</tbody>
+</table>
+<p>入力欄の左下の「+」をクリックするか「/」と打つと、ファイルの添付やウェブ検索・リサーチなどの機能の一覧が出ます。入力欄の下に表示されているのが今使っているモデルで、クリックすると切り替えられます。まずは「この文章を3行に要約して」「この画像に写っているものを説明して」のように、手元にあるもので試すのが早いです。</p>
+<h2 id="s3">無料と有料で使える機能</h2>
+<p>「無料で何回まで使えるか」は決まった回数ではなく、<strong>5時間ごとにリセットされる使用量の枠</strong>で管理されています。公式ヘルプには「送信できるメッセージ数は需要によって変わる」と書かれており、長い文書を読ませたりファイルを作らせたりすると、枠は早く減ります。機能そのものは無料プランでもほとんど使えます。</p>
+<figure class="post-figure"><img src="/media/images/claude-guide/00_fig_features.png" alt="Claudeの機能を無料プランで使えるものと有料プランで増えるものに分けた図。無料: チャット・ファイル読み込み・アーティファクト・プロジェクト5つ・ファイル作成・メモリ・シークレットチャット。有料で増える: 使用量・過去チャット検索・リサーチ・プロジェクトの拡張ナレッジ・Design/Slides/Docs" loading="lazy"><figcaption>無料でも機能はほぼ使える。有料で変わるのは使用量と一部の機能（公式ヘルプ各記事、2026年9月19日）</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>無料</th>
+<th>有料（Pro以上）</th>
+<th>出典</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>チャット・画像の読み取り・ファイルの添付</td>
+<td>○</td>
+<td>○</td>
+<td>Claudeを始める</td>
+</tr>
+<tr>
+<td>アーティファクト（右側の作業ウィンドウ）</td>
+<td>○</td>
+<td>○（Design・Slides・Docsのベータは有料のみ）</td>
+<td>アーティファクトとは</td>
+</tr>
+<tr>
+<td>プロジェクト</td>
+<td>○（5つまで）</td>
+<td>○（拡張ナレッジで容量最大10倍）</td>
+<td>プロジェクトとは</td>
+</tr>
+<tr>
+<td>コード実行とファイル作成（Excel・PowerPoint・Word・PDF）</td>
+<td>○</td>
+<td>○</td>
+<td>ファイルを作成・編集する</td>
+</tr>
+<tr>
+<td>メモリ</td>
+<td>○</td>
+<td>○</td>
+<td>チャット検索とメモリ</td>
+</tr>
+<tr>
+<td>過去のチャットを検索</td>
+<td>×</td>
+<td>○</td>
+<td>チャット検索とメモリ</td>
+</tr>
+<tr>
+<td>リサーチ</td>
+<td>×</td>
+<td>○</td>
+<td>ウェブ検索・拡張思考・リサーチ</td>
+</tr>
+<tr>
+<td>スキル</td>
+<td>○（コード実行を有効にする）</td>
+<td>○</td>
+<td>スキルとは</td>
+</tr>
+<tr>
+<td>シークレットチャット</td>
+<td>○</td>
+<td>○</td>
+<td>シークレットチャットを使用する</td>
+</tr>
+</tbody>
+</table>
+<p>有料プランで変わるのは、機能の解放より<strong>使用量の枠の大きさ</strong>です。公式の案内ではProの枠は無料の5倍以上と書かれています。</p>
+<h2 id="s4">ウェブ検索・拡張思考・リサーチの使い分け</h2>
+<p>調べものの機能は3つあり、公式ヘルプ「<a href="https://support.claude.com/ja/articles/11095361">ウェブ検索、拡張思考、リサーチはいつ使うべき？</a>」がそれぞれの使いどころを書いています。</p>
+<figure class="post-figure"><img src="/media/images/claude-guide/00_fig_search_modes.png" alt="ウェブ検索・拡張思考・リサーチの使い分けの図。ウェブ検索は1〜2回の検索で答えが出る事実確認、拡張思考は最新情報が要らない複雑な推論、リサーチは5回以上の検索と1〜3分かけて複数ソースをまとめるレポート" loading="lazy"><figcaption>公式ヘルプの使い分け。かける時間と検索回数で選ぶ（2026年9月19日）</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>公式の位置づけ</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ウェブ検索</td>
+<td>1〜2回のツール呼び出しで答えられる、シンプルで事実的な質問</td>
+<td>天気、企業情報、最新のニュース、試合結果</td>
+</tr>
+<tr>
+<td>拡張思考</td>
+<td>ウェブの最新情報が要らない複雑な推論。結論の前に複数の角度から検討する</td>
+<td>アルゴリズムの最適化、コードのデバッグ、概念の分析</td>
+</tr>
+<tr>
+<td>リサーチ</td>
+<td>1〜3分に5回以上のツール呼び出しが要る包括的な情報収集。複数ソースを統合して引用つきのレポートを作る</td>
+<td>競合他社の比較、古い社内文書の更新</td>
+</tr>
+</tbody>
+</table>
+<p>ウェブ検索は「何を検索するかは自分で指示したいが、検索と結果の読み込みはClaudeに任せたい」場面向けだと書かれています。リサーチは拡張思考と組み合わせると「アプローチを慎重に計画してから情報収集する」ようになり、より長いレポートになります。公式ヘルプの区分に沿うなら、まず質問を打ち、事実確認が要ればウェブ検索、数分待ってよい調査ならリサーチ、という順になります。</p>
+<h2 id="s5">プロジェクトで資料と指示をまとめる</h2>
+<p>同じ資料を毎回添付し、同じ前置きを毎回書いているなら、プロジェクトの出番です。公式ヘルプ「<a href="https://support.claude.com/ja/articles/9517075">プロジェクトとは何ですか？</a>」では、独自のチャット履歴とナレッジベースを持つ自己完結型のワークスペースと説明されています。</p>
+<figure class="post-figure"><img src="/media/images/claude-guide/00_fig_projects.png" alt="プロジェクトの仕組みの図。プロジェクトの中にナレッジ（資料・コード）と指示（役割・トーン）を置き、その中で開いた全チャットが両方を参照する。プロジェクトごとにメモリも分かれる" loading="lazy"><figcaption>プロジェクトに資料と指示を置くと、その中のチャット全部が同じ前提で動く</figcaption></figure>
+
+<p>使い方は次の3手順です。</p>
+<ol>
+<li>サイドバーの「プロジェクト」から新規作成する</li>
+<li>「プロジェクトナレッジ」に資料（文書・テキスト・コード）をアップロードする</li>
+<li>「プロジェクト指示」に役割やトーン、毎回守ってほしいことを書く</li>
+</ol>
+<p>無料プランでも5つまで作れます。有料プランではナレッジの容量が最大10倍に広がり（RAGという仕組みで必要な部分だけ取り出す）、TeamとEnterpriseでは他のメンバーと共有できます。メモリもプロジェクトごとに分かれるので、「A社向け」「社内向け」のように分けておくと、話が混ざりません。</p>
+<h2 id="s6">アーティファクトとファイル作成</h2>
+<p>Claudeに文書やコードを頼むと、15行を超えるようなまとまった成果物は<strong>アーティファクト</strong>として画面の右側に別ウィンドウで開きます。チャットで修正を頼むか、文章をハイライトして「Claudeで編集」を押せば、その場で直せます。右下からコードの表示、コピー、ダウンロードができます。</p>
+<figure class="post-figure"><img src="/media/images/claude-guide/cg_02_help_artifacts.jpg" alt="Anthropicヘルプセンター「アーティファクトとは何か、どのように使用するのか？」の記事。アーティファクトの説明と有効化の手順" loading="lazy"><figcaption>公式ヘルプ「アーティファクトとは何か」（2026年9月19日取得）</figcaption></figure>
+
+<p>Excel・PowerPoint・Word・PDFのファイルそのものが欲しいときは<strong>コード実行とファイル作成</strong>を使います。「設定」→「機能」で「コード実行とファイル作成」をオンにしてから、「月間経費を追跡するExcelを作って」のように構造と内容を具体的に頼みます。Claudeはサンドボックスの中でPythonなどを動かしてファイルを作り、会話からダウンロードするかGoogle Driveに保存できます。ファイルは1つ30MBまでで、通常のチャットより使用量の枠を多く消費する、というのが公式の注意書きです。</p>
+<table>
+<thead>
+<tr>
+<th>欲しいもの</th>
+<th>使う機能</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>画面の中で編集したい文書・コード・図</td>
+<td>アーティファクト</td>
+<td>提案文の下書き、簡単なウェブページ、図解</td>
+</tr>
+<tr>
+<td>手元に置くファイル</td>
+<td>コード実行とファイル作成</td>
+<td>集計表（.xlsx）、スライド（.pptx）、報告書（.docx）、PDF</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s7">メモリと過去のチャットの検索</h2>
+<p>2026年9月時点のClaudeは、チャットの中で出てきたあなたの役割・進行中の仕事・好みを<strong>メモリ</strong>として保存し、次の会話から使う仕組みです。公式ヘルプ「<a href="https://support.claude.com/ja/articles/11817273">チャット検索とメモリ</a>」によると、会話が終わってから要約するのではなく、チャット中にトピックごとに保存する方式で、無料・Pro・Maxでは既定でオンです。</p>
+<ul>
+<li>何を覚えているかは「設定」→「メモリ」の一覧で見られ、編集も削除もできる</li>
+<li>チャットで「これを覚えておいて」「これは忘れて」と言えば、その場で反映される</li>
+<li>健康・宗教・政治などの機密トピックは、オンにしない限り保存されない。政府ID番号・口座番号・犯罪歴・在留資格は、頼んでも保存されない</li>
+<li>止めたいときは「メモリを一時停止」（保持したまま使わない）か「メモリをリセット」（全削除）</li>
+</ul>
+<p>有料プランではこれに加えて<strong>過去のチャットを検索</strong>できます。「先週話した見積もりの件を続けよう」と言えば、Claudeが以前のチャットを探して参照します。オフにしたい場合は「設定」→「メモリ」の「チャットを検索して参照」を切ります。</p>
+<h2 id="s8">スキルで定型作業を任せる</h2>
+<p><strong>スキル</strong>は特定の作業のやり方を書いたフォルダで、Claudeが必要なときだけ読み込みます。公式ヘルプ「<a href="https://support.claude.com/ja/articles/12512176">スキルとは何ですか？</a>」では、必要な情報だけを段階的に読む仕組み（プログレッシブ・ディスクロージャー）で、文脈の圧迫を防ぐと説明されています。</p>
+<p>使うのに特別な操作は要りません。「カスタマイズ」→「スキル」からAnthropicが用意したスキルを追加しておけば、関係する作業を頼んだときにClaudeが自動で読み込みます。自分で作るならMarkdownで手順を書くだけで、「この作業をスキルにして」と頼めばClaude自身が作ってくれます。前提として「コード実行」を有効にしておく必要があります。</p>
+<h2 id="s9">機密データの扱いとシークレットチャット</h2>
+<p>仕事で使うなら、誰が会話を見られるのかは先に知っておくべき点です。公式ヘルプ「<a href="https://support.claude.com/ja/articles/8325621">機密データを入力したいのですが、誰が私の会話を見ることができますか？</a>」の内容をまとめると、次の通りです。</p>
+<ul>
+<li>無料・Pro・Maxで「モデル改善」にデータ提供を許可している場合、レビュー前にメールアドレスなどの識別情報が切り離され、見られるのはモデル訓練に関わる少数のスタッフに限られる</li>
+<li>許可するかどうかは「プライバシー設定」でいつでも変えられる</li>
+<li>共有を慎重に考えるべき情報として、財務情報（カード番号・口座）、健康記録、パスワード、機密の文書が挙げられている</li>
+<li>Team・Enterpriseの会話は、組織の管理者のデータ保持ポリシーに従う</li>
+</ul>
+<p>その場限りの相談は<strong>シークレットチャット</strong>を使います。新しいチャットの右上にあるゴーストのアイコンを押すと、履歴にもメモリにも残らず、モデルの改善にも使われない会話が始まります。閉じると再開できないので、残したい内容は先にコピーします。全プランで使えます。</p>
+<figure class="post-figure"><img src="/media/images/claude-guide/cg_03_help_incognito.jpg" alt="Anthropicヘルプセンター「シークレットチャットを使用する」の記事。ゴーストアイコンから始める手順と、履歴・メモリ・学習に使われないという説明" loading="lazy"><figcaption>公式ヘルプ「シークレットチャットを使用する」（2026年9月19日取得）</figcaption></figure>
+
+<h2 id="s10">上級編</h2>
+<p>公式ヘルプの手順を組み合わせた使い方を3つ挙げます。</p>
+<h3 id="s10-1">① プロジェクト指示に出力の型まで書く</h3>
+<p>プロジェクト指示には役割やトーンを書くのが公式の案内ですが、加えて<strong>出力の型</strong>を書いておくと直しが減ります。「見出しは3つ、各200字以内」「数字は出典を添える」「結論を先に、根拠を後に」のように、毎回直している点をそのまま書いておくと、直しの往復が減ります。資料をナレッジに入れ、指示に型を書き、その中でチャットを開く、という順番です。</p>
+<h3 id="s10-2">② リサーチは比べる観点を先に決めて頼む</h3>
+<p>リサーチは数分かけて複数のソースを回るので、頼み方が曖昧だと、対象も観点も広いレポートが返ってきます。「A社・B社・C社を料金・対応OS・日本語サポートの3点で比べて表にして」のように、対象と観点を先に固定するのがコツです。出てくるレポートの表がそのまま使えます。公式ヘルプが例に挙げる「古い社内文書をウェブの情報で更新する」も、文書をプロジェクトに入れたうえでリサーチを回せば1回で済む作業です。</p>
+<h3 id="s10-3">③ 作るものに合わせてアーティファクトとファイルを使い分ける</h3>
+<p>画面の中で直しながら仕上げるものはアーティファクト、.xlsxや.pptxとして人に渡すものはファイル作成、と公式の説明どおりに分けます。たとえば提案の骨子はアーティファクトで練り、固まったらファイル作成で.pptxに落とす、という流れです。ファイル作成のほうが使用量の枠を多く使うので、練る段階では使わないほうが枠が長持ちします。</p>
+<h2 id="s11">ChatGPTとどちらを使うか</h2>
+<p>「どっちがいい」に一つの答えはなく、公式ヘルプも他社との比較は書いていません。機能で分けるなら、Claudeは写真やイラストの生成をしません（公式ヘルプ「<a href="https://support.claude.com/ja/articles/9002504">Claudeは画像を生成できますか？</a>」。図表やグラフはHTML・SVGで作れる）。画像生成が要る作業はChatGPTなど別のツールで行います。一方で長い文書の読み込みと文体の指定は、検索上位の解説記事がClaudeの特徴として挙げている点です。どちらも無料で試せるので、同じ依頼を両方に投げて、返ってきた文章の読みやすさで決めるのが確実です。</p>
+<h2 id="s12">よくある質問</h2>
+<p>Googleの「他の人はこちらも質問」に出ている質問が中心です。</p>
+<h3 id="s12-1">Claudeは無料で何回まで使えますか？</h3>
+<p>決まった回数ではなく、5時間ごとにリセットされる使用量の枠で管理されています。送信できるメッセージ数は混雑状況によって変わると公式ヘルプに書かれており、長い文書の読み込みやファイル作成は枠を多く使います。枠に達すると、リセットまでの時間が表示されます。</p>
+<h3 id="s12-2">ClaudeとChatGPTはどちらがいいですか？</h3>
+<p>用途しだいです。長い文書の要約や書き直し、文体を指定した文章作成、コードの相談ではClaudeを選ぶ人が多く、画像生成や連携アプリの多さではChatGPTに分があります。どちらも無料で試せます。</p>
+<h3 id="s12-3">Claudeはどういうときに使いますか？</h3>
+<p>公式ヘルプが挙げる用途は執筆、学習、要約、コーディング、ブレインストーミング、翻訳、画像分析の7つです。これに、ウェブ検索・リサーチによる調べもの、ExcelやPowerPointのファイル作成、プロジェクトでの資料管理が加わります。</p>
+<h3 id="s12-4">Claudeの何がすごいのですか？</h3>
+<p>検索上位の解説記事（Teachme Biz・リコーなど、2026年9月19日時点）が共通して挙げているのは、長い文書をまとめて読める処理量と、指示した文体に沿った日本語の文章です。2026年9月時点ではリサーチ、ファイル作成、メモリ、スキルといった「答えを返す」以外の機能がひとつの画面にそろっている点も特徴です。</p>
+<h3 id="s12-5">Claudeは日本語で使えますか？</h3>
+<p>使えます。公式ヘルプでは12以上の言語に対応し、英語が最も得意と書かれていますが、日本語での指示と応答は問題なく、日本は対応地域に含まれています。</p>
+<h3 id="s12-6">Claudeにアップロードしたファイルは学習に使われますか？</h3>
+<p>無料・Pro・Maxでは「プライバシー設定」でモデル改善へのデータ提供を許可するかどうかを選べます。許可していてもシークレットチャットの内容は使われません。TeamとEnterpriseは組織の契約に従います。</p>
+<h3 id="s12-7">デスクトップアプリとブラウザ版は違いますか？</h3>
+<p>チャット機能は同じで、履歴も共有されます。デスクトップアプリにはChat・Cowork・Codeの3つのタブがあり、Coworkは手元のファイルの整理、CodeはClaude Codeによる開発作業に使います。ブラウザだけで完結する使い方なら、アプリを入れる必要はありません。</p>
+<h3 id="s12-8">Claudeでファイルは作れますか？</h3>
+<p>作れます。「設定」→「機能」で「コード実行とファイル作成」をオンにすると、Excel（.xlsx）・PowerPoint（.pptx）・Word（.docx）・PDFを会話の中で作成・編集でき、ダウンロードかGoogle Driveへの保存ができます。無料プランでも使えますが、通常のチャットより使用量の枠を多く消費します。</p>
+<h2 id="s13">出典</h2>
+<ul>
+<li><a href="https://support.claude.com/ja/articles/8114491-claude%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B">Anthropicヘルプセンター「Claudeを始める」</a>、<a href="https://support.claude.com/ja/articles/7996845">「Claudeで何ができますか？」</a>（2026年9月19日取得）</li>
+<li><a href="https://support.claude.com/ja/articles/11095361">「ウェブ検索、拡張思考、リサーチはいつ使うべき？」</a>（同上）</li>
+<li><a href="https://support.claude.com/ja/articles/9517075">「プロジェクトとは何ですか？」</a>、<a href="https://support.claude.com/ja/articles/9487310">「アーティファクトとは何か、どのように使用するのか？」</a>、<a href="https://support.claude.com/ja/articles/12111783">「Claudeでファイルを作成・編集する」</a>（同上）</li>
+<li><a href="https://support.claude.com/ja/articles/11817273">「Claudeのチャット検索とメモリ」</a>、<a href="https://support.claude.com/ja/articles/12512176">「スキルとは何ですか？」</a>、<a href="https://support.claude.com/ja/articles/12260368">「シークレットチャットを使用する」</a>（同上）</li>
+<li><a href="https://support.claude.com/ja/articles/8325621">「機密データを入力したいのですが、誰が私の会話を見ることができますか？」</a>（同上）</li>
+<li><a href="https://support.claude.com/ja/articles/9002504">「Claudeは画像を生成できますか？」</a>（2026年3月13日、同上）</li>
+<li><a href="https://claude.com/ja/pricing">Anthropic 料金ページ（日本向け）</a>（2026年9月18日取得）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-agent-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIエージェントとは"><defs><linearGradient id="ecg-121d1252" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-121d1252)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">用語解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIエージェントとは</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.19</div>
+                <div class="rel-card__ttl">【2026年9月】AIエージェントとは？生成AI・ChatGPTとの違いと仕組みをわかりやすく解説｜身近な例・種類・使いどころ</div>
+            </a>
+            <a href="/media/ai-overviews-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIによる概要とは"><defs><linearGradient id="ecg-cb61e959" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-cb61e959)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIによる概要とは</text><line x1="288.4" y1="365.9" x2="911.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.19</div>
+                <div class="rel-card__ttl">【2026年9月】AIによる概要（AI Overviews）とは？仕組み・消し方・AIモードとの違いと企業の対策</div>
+            </a>
+            <a href="/media/claude-code-about/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Codeとは"><defs><linearGradient id="ecg-f1ea21d6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f1ea21d6)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Codeとは</text><line x1="273.2" y1="365.9" x2="926.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.19</div>
+                <div class="rel-card__ttl">【2026年9月】Claude Codeとは？仕組み・できること・他のAIコーディングツールとの違い</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
