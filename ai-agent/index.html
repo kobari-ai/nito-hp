@@ -1191,12 +1191,80 @@
             .points { grid-template-columns: 1fr; gap: 24px; }
             .price-cols { grid-template-columns: 1fr; gap: 28px; }
         }
+
+        /* ── 2026-09-19 すり合わせ ── */
+        /* 課題: 図つきカード */
+        .problem-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; border-top: none; }
+        .problem { padding: 0; border: none; background: #fff; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; }
+        .problem + .problem { padding-left: 0; border-left: none; }
+        .problem-fig { padding: 16px 12px 10px; display: flex; align-items: center; justify-content: center; background: #fff6ec; }
+        .problem-fig svg { width: 100%; max-width: 230px; height: auto; }
+        .problem-body { padding: 22px 24px 26px; }
+        .problem-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; }
+        .problem-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        .problem-close { margin-top: 32px; font-size: 17px; line-height: 2; max-width: 860px; }
+
+        /* 構築サービス: 縦4つ、左右交互 */
+        .cases { display: flex; flex-direction: column; gap: 28px; }
+        .case { display: grid; grid-template-columns: 1fr 1.05fr; gap: 40px; align-items: center; background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+        .case:nth-child(even) .case-visual { order: -1; }
+        .case-tag { display: inline-block; font-size: 12px; font-weight: 700; color: #fff; background: var(--color-secondary); border-radius: 4px; padding: 4px 10px; margin-bottom: 12px; }
+        .case-title { font-size: 23px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 12px; }
+        .case-desc { font-size: 15.5px; color: var(--color-text-light); line-height: 1.95; }
+
+        /* 仕組み: 図つき */
+        .bento-item .ph, .bento-item .shot { margin-top: auto; }
+        .diagram { width: 100%; height: auto; display: block; }
+
+        /* 進め方: 横帯の階段 */
+        .steps { display: flex; flex-direction: column; gap: 0; border-left: 2px solid #f0d6b8; margin-left: 18px; }
+        .step { position: static; display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; background: transparent; border: none; border-radius: 0; padding: 30px 0 30px 42px; }
+        .step-main { position: relative; }
+        .step + .step { border-top: 1px solid #ececec; }
+        .step::after { display: none; }
+        .step-num { position: absolute; left: -61px; top: 30px; width: 38px; height: 38px; border-radius: 50%; background: var(--color-secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; padding: 0; }
+        .step { position: relative; }
+        .step-visual:empty { display: none; }
+        .step-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+        .step-tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--color-primary-deep); background: #fff1e3; border-radius: 4px; padding: 3px 10px; margin-bottom: 8px; }
+        .step-desc { font-size: 15px; color: var(--color-text-light); line-height: 1.95; }
+        .step .ph { min-height: 118px; }
+
+        /* nitoについて: 代表を主役に */
+        .about-wrap { grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+        .about-photo { text-align: center; }
+        .about-photo img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
+        .about-photo-name { margin-top: 18px; font-size: 21px; font-weight: 700; font-family: var(--font-heading-jp); }
+        .about-photo-role { font-size: 13px; color: var(--color-text-light); margin-top: 4px; }
+        .about-body p { font-size: 17px; line-height: 2.05; }
+        .about-bio { font-size: 14px; color: var(--color-text-light); line-height: 1.9; border-top: 1px solid #e5e5e5; padding-top: 16px; margin-top: 20px; }
+        .about-bio a { color: var(--color-primary-deep); }
+
+        /* 費用: 2枚のカード */
+        .price-cols { grid-template-columns: 1fr 1fr; gap: 24px; }
+        .price-col { border-top: none; background: #fff; border-radius: 16px; padding: 34px 36px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+        .price-kind { display: inline-block; font-size: 12px; font-weight: 700; color: #fff; background: var(--color-text); border-radius: 4px; padding: 4px 12px; margin-bottom: 14px; }
+        .price-title { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        .price-sub { font-size: 14.5px; color: var(--color-text-light); margin-bottom: 20px; }
+        .price-list li { font-size: 15px; padding-left: 26px; }
+        .price-list li::before { width: 16px; height: 16px; border-radius: 4px; background: #fff1e3; top: 8px; }
+        .price-list li::after { content: "✓"; position: absolute; left: 3px; top: 3px; font-size: 11px; font-weight: 700; color: var(--color-primary-deep); }
+
+        @media (max-width: 900px) {
+            .problem-list { grid-template-columns: 1fr; }
+            .case { grid-template-columns: 1fr; gap: 20px; padding: 22px; }
+            .case:nth-child(even) .case-visual { order: 0; }
+            .step { grid-template-columns: 1fr; gap: 14px; padding: 24px 0 24px 34px; }
+            .step-num { left: -52px; top: 24px; width: 32px; height: 32px; font-size: 13px; }
+            .about-wrap { grid-template-columns: 1fr !important; gap: 28px; }
+            .price-cols { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 
 <body>
     <!-- Header -->
-    <div class="header-wrapper ani-show-up">
+    <div class="header-wrapper">
         <header>
             <a href="https://nito-0210.com" class="logo"><img src="/nito-logo-black.png" alt="nito"></a>
             <nav class="nav-links">
@@ -1249,66 +1317,107 @@
     <!-- Problem -->
     <section class="section section--gray">
         <div class="container">
-            <div class="section-head ani-fade-bottom">
+            <div class="section-head">
                 <h2 class="section-title">よくあるAI活用の課題</h2>
             </div>
-            <div class="problem-list ani-fade-bottom">
+            <div class="problem-list">
                 <div class="problem">
-                    <h3 class="problem-title">チャットで指示しないと動かない</h3>
-                    <p class="problem-desc">日報の集計や議事録の整理のような毎日の仕事も、結局人が指示する状態のままになっている。</p>
+                    <div class="problem-fig">
+                        <svg class="diagram" viewBox="0 0 220 112" role="img" aria-label="人が指示しないとAIが動かない図">
+                            <rect x="12" y="26" width="76" height="58" rx="8" fill="#fff" stroke="#e8c9a3"/>
+                            <circle cx="34" cy="46" r="7" fill="#c9c9c9"/><rect x="46" y="42" width="30" height="7" rx="3.5" fill="#e4e4e4"/>
+                            <rect x="24" y="60" width="52" height="7" rx="3.5" fill="#e4e4e4"/><rect x="24" y="71" width="36" height="7" rx="3.5" fill="#e4e4e4"/>
+                            <path d="M96 55 L124 55" stroke="#e67e22" stroke-width="2.5" stroke-dasharray="5 4"/>
+                            <path d="M118 49 L126 55 L118 61" fill="none" stroke="#e67e22" stroke-width="2.5"/>
+                            <rect x="132" y="26" width="76" height="58" rx="8" fill="#fff7ef" stroke="#e8c9a3"/>
+                            <text x="170" y="60" text-anchor="middle" font-size="22" font-weight="700" fill="#e67e22" font-family="sans-serif">AI</text>
+                            <text x="110" y="100" text-anchor="middle" font-size="11" fill="#b9773a" font-family="sans-serif">毎回この矢印を人が出している</text>
+                        </svg>
+                    </div>
+                    <div class="problem-body">
+                        <h3 class="problem-title">チャットで指示しないと動かない</h3>
+                        <p class="problem-desc">日報の集計や議事録の整理のような毎日の仕事も、結局人が指示する状態のままになっている。</p>
+                    </div>
                 </div>
                 <div class="problem">
-                    <h3 class="problem-title">AIに詳しい人が社内にいない</h3>
-                    <p class="problem-desc">ツール選定や設定を任せられる人がおらず、何から頼めば良いのか分からない。</p>
+                    <div class="problem-fig">
+                        <svg class="diagram" viewBox="0 0 220 112" role="img" aria-label="社内にAIに詳しい人がいない図">
+                            <circle cx="52" cy="46" r="15" fill="#fff" stroke="#ddd"/><circle cx="110" cy="46" r="15" fill="#fff" stroke="#ddd"/><circle cx="168" cy="46" r="15" fill="#fff" stroke="#ddd"/>
+                            <path d="M46 44 q6 -6 12 0 M104 44 q6 -6 12 0 M162 44 q6 -6 12 0" stroke="#bbb" stroke-width="2" fill="none"/>
+                            <path d="M47 53 q5 4 10 0 M105 53 q5 4 10 0 M163 53 q5 4 10 0" stroke="#bbb" stroke-width="2" fill="none"/>
+                            <text x="52" y="86" text-anchor="middle" font-size="18" font-weight="700" fill="#e67e22" font-family="sans-serif">?</text>
+                            <text x="110" y="86" text-anchor="middle" font-size="18" font-weight="700" fill="#e67e22" font-family="sans-serif">?</text>
+                            <text x="168" y="86" text-anchor="middle" font-size="18" font-weight="700" fill="#e67e22" font-family="sans-serif">?</text>
+                            <text x="110" y="104" text-anchor="middle" font-size="11" fill="#b9773a" font-family="sans-serif">誰に頼めばいいか決まらない</text>
+                        </svg>
+                    </div>
+                    <div class="problem-body">
+                        <h3 class="problem-title">AIに詳しい人が社内にいない</h3>
+                        <p class="problem-desc">ツール選定や設定を任せられる人がおらず、何から頼めば良いのか分からない。</p>
+                    </div>
                 </div>
                 <div class="problem">
-                    <h3 class="problem-title">AIが会社の前提を知らない</h3>
-                    <p class="problem-desc">社内の決まりごとや案件の状況をAIが知らないので、期待しているアウトプットとズレる。</p>
+                    <div class="problem-fig">
+                        <svg class="diagram" viewBox="0 0 220 112" role="img" aria-label="AIが会社の前提を知らない図">
+                            <rect x="16" y="22" width="80" height="66" rx="8" fill="#fff" stroke="#ddd"/>
+                            <rect x="28" y="34" width="56" height="6" rx="3" fill="#e4e4e4"/><rect x="28" y="46" width="44" height="6" rx="3" fill="#e4e4e4"/><rect x="28" y="58" width="52" height="6" rx="3" fill="#e4e4e4"/><rect x="28" y="70" width="34" height="6" rx="3" fill="#e4e4e4"/>
+                            <text x="56" y="16" text-anchor="middle" font-size="10" fill="#999" font-family="sans-serif">社内の決まりごと</text>
+                            <path d="M104 55 L128 55" stroke="#ccc" stroke-width="2.5" stroke-dasharray="4 5"/>
+                            <line x1="110" y1="45" x2="122" y2="65" stroke="#e67e22" stroke-width="3"/><line x1="122" y1="45" x2="110" y2="65" stroke="#e67e22" stroke-width="3"/>
+                            <rect x="136" y="22" width="68" height="66" rx="8" fill="#fff7ef" stroke="#e8c9a3"/>
+                            <text x="170" y="60" text-anchor="middle" font-size="20" font-weight="700" fill="#e67e22" font-family="sans-serif">AI</text>
+                            <text x="110" y="104" text-anchor="middle" font-size="11" fill="#b9773a" font-family="sans-serif">前提が届いていない</text>
+                        </svg>
+                    </div>
+                    <div class="problem-body">
+                        <h3 class="problem-title">AIが会社の前提を知らない</h3>
+                        <p class="problem-desc">社内の決まりごとや案件の状況をAIが知らないので、期待しているアウトプットとズレる。</p>
+                    </div>
                 </div>
             </div>
-            <p class="problem-close ani-fade-bottom">どれもAIの性能の問題ではありません。<br>会社情報の蓄積・定刻に動く仕組み・承認の線引きといったAI環境を構築すれば、自ら思考して動くようになります。</p>
+            <p class="problem-close">どれもAIの性能の問題ではありません。会社情報の蓄積・定刻に動く仕組み・承認の線引きといったAI環境を構築すれば、自ら思考して動くようになります。</p>
         </div>
     </section>
 
     <!-- Example -->
     <section class="section" id="example">
         <div class="container">
-            <div class="section-head ani-fade-bottom">
+            <div class="section-head">
                 <h2 class="section-title">構築サービス（一例）</h2>
                 <p class="section-lead">構築支援をしているAIエージェントの一例です。</p>
             </div>
-            <div class="tabs ani-fade-bottom" role="tablist">
-                <button class="tab is-active" data-tab="t1">営業</button>
-                <button class="tab" data-tab="t2">Slack</button>
-                <button class="tab" data-tab="t3">夜間</button>
-                <button class="tab" data-tab="t4">毎朝</button>
-            </div>
-            <div class="panel is-active ani-fade-bottom" id="t1">
-                <figure class="ph"><span><b>ここに実物: Slackに届いたアップセル候補の通知</b></span></figure>
-                <div>
-                    <h3 class="panel-title">商談の議事録から追加提案の機会を拾う</h3>
-                    <p class="panel-desc">全ての商談の議事録を読み、クロスセル・アップセルの可能性がある顧客を見つけ、チームを横断して担当者と連携します。</p>
+            <div class="cases">
+                <div class="case">
+                    <div>
+                        <span class="case-tag">営業</span>
+                        <h3 class="case-title">商談の議事録から追加提案の機会を拾う</h3>
+                        <p class="case-desc">全ての商談の議事録を読み、クロスセル・アップセルの可能性がある顧客を見つけ、チームを横断して担当者と連携します。</p>
+                    </div>
+                    <div class="case-visual"><figure class="ph"><span><b>ここに実物: Slackに届いたアップセル候補の通知</b></span></figure></div>
                 </div>
-            </div>
-            <div class="panel ani-fade-bottom" id="t2">
-                <figure class="ph"><span><b>ここに実物: AIが「これやります」と申し出ているSlackの画面</b></span></figure>
-                <div>
-                    <h3 class="panel-title">AIが自分で巻き取れる仕事を申し出る</h3>
-                    <p class="panel-desc">Slackのやりとりや社内MTGの議事録から、「これはAIが進められる」というタスクを自ら進めます。</p>
+                <div class="case">
+                    <div>
+                        <span class="case-tag">Slack</span>
+                        <h3 class="case-title">AIが自分で巻き取れる仕事を申し出る</h3>
+                        <p class="case-desc">Slackのやりとりや社内MTGの議事録から、「これはAIが進められる」というタスクを自ら進めます。</p>
+                    </div>
+                    <div class="case-visual"><figure class="ph"><span><b>ここに実物: AIが「これやります」と申し出ているSlackの画面</b></span></figure></div>
                 </div>
-            </div>
-            <div class="panel ani-fade-bottom" id="t3">
-                <figure class="ph"><span><b>ここに実物: 夜間に仕上がった成果物と、別のAIの指摘を反映した記録</b></span></figure>
-                <div>
-                    <h3 class="panel-title">頼まれたタスクを朝までに仕上げておく</h3>
-                    <p class="panel-desc">日中に頼まれたタスクを夜間に進行。複数のAIエージェントとの議論を通して、品質の高いアウトプットを行います。</p>
+                <div class="case">
+                    <div>
+                        <span class="case-tag">夜間</span>
+                        <h3 class="case-title">頼まれたタスクを朝までに仕上げておく</h3>
+                        <p class="case-desc">日中に頼まれたタスクを夜間に進行。複数のAIエージェントとの議論を通して、品質の高いアウトプットを行います。</p>
+                    </div>
+                    <div class="case-visual"><figure class="ph"><span><b>ここに実物: 夜間に仕上がった成果物と、別のAIの指摘を反映した記録</b></span></figure></div>
                 </div>
-            </div>
-            <div class="panel ani-fade-bottom" id="t4">
-                <figure class="ph"><span><b>ここに実物: 毎朝6時半に作られる「今日の状況」</b></span></figure>
-                <div>
-                    <h3 class="panel-title">今日の状況と判断待ちを1枚に</h3>
-                    <p class="panel-desc">予定・メール・Slack・前日の記録を読み、今日の予定と決めるべきことを全社員分まとめます。</p>
+                <div class="case">
+                    <div>
+                        <span class="case-tag">毎朝</span>
+                        <h3 class="case-title">今日の状況と判断待ちを1枚に</h3>
+                        <p class="case-desc">予定・メール・Slack・前日の記録を読み、今日の予定と決めるべきことを全社員分まとめます。</p>
+                    </div>
+                    <div class="case-visual"><figure class="ph"><span><b>ここに実物: 毎朝6時半に作られる「今日の状況」</b></span></figure></div>
                 </div>
             </div>
         </div>
@@ -1317,30 +1426,63 @@
     <!-- Mechanism -->
     <section class="section section--gray">
         <div class="container">
-            <div class="section-head ani-fade-bottom">
+            <div class="section-head">
                 <h2 class="section-title">仕組み</h2>
                 <p class="section-lead">指示しなくても動くAIエージェントを活用するために、以下の環境を構築します。</p>
             </div>
-            <div class="bento ani-fade-bottom">
+            <div class="bento">
                 <div class="bento-item w4">
                     <h3 class="bento-title">会社のデータベース</h3>
                     <p class="bento-desc">会社情報・案件ごとの状況・AIの活用方法などを1箇所にまとめたbrainを作成します。個人ごとに使うAIとは異なり、成功例が全社で共有されるため、改善が積み上がります。</p>
-                    <figure class="shot"><img src="/media/images/company-memory-first_lessons.png" alt="直近7日の指摘を1箇所に集めた一覧の実物"><figcaption>実物: 直近7日の指摘を1枚に集め、すべてのAIが作業前に読むページ</figcaption></figure>
+                    <svg class="diagram" viewBox="0 0 560 190" role="img" aria-label="会社のデータベースを全員とAIが読む図">
+                        <rect x="180" y="18" width="200" height="72" rx="10" fill="#fff" stroke="#e8c9a3" stroke-width="1.5"/>
+                        <text x="280" y="44" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a" font-family="sans-serif">会社のデータベース</text>
+                        <text x="280" y="64" text-anchor="middle" font-size="11" fill="#888" font-family="sans-serif">決まりごと・案件の状況・AIの使い方</text>
+                        <text x="280" y="80" text-anchor="middle" font-size="11" fill="#888" font-family="sans-serif">うまくいった例がここに溜まる</text>
+                        <path d="M120 130 L200 96 M280 130 L280 96 M440 130 L360 96" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="4 4"/>
+                        <g font-family="sans-serif">
+                            <rect x="60" y="130" width="120" height="44" rx="8" fill="#fff" stroke="#ddd"/><text x="120" y="157" text-anchor="middle" font-size="12" fill="#555">営業チーム</text>
+                            <rect x="220" y="130" width="120" height="44" rx="8" fill="#fff" stroke="#ddd"/><text x="280" y="157" text-anchor="middle" font-size="12" fill="#555">CS・管理部門</text>
+                            <rect x="380" y="130" width="120" height="44" rx="8" fill="#fff7ef" stroke="#e8c9a3"/><text x="440" y="157" text-anchor="middle" font-size="12" fill="#e67e22" font-weight="700">すべてのAI</text>
+                        </g>
+                    </svg>
                 </div>
                 <div class="bento-item w2">
                     <h3 class="bento-title">決まった時刻に動く定期実行</h3>
                     <p class="bento-desc">朝は状況の整理、夜は日中に頼まれたタスク。人が頼まなくても、時刻が来れば動き始めます。</p>
-                    <figure class="ph"><span><b>ここに実物: 定期実行の予定一覧</b></span></figure>
+                    <svg class="diagram" viewBox="0 0 300 150" role="img" aria-label="朝と夜に自動で動く図">
+                        <line x1="30" y1="96" x2="270" y2="96" stroke="#ddd" stroke-width="2"/>
+                        <g font-family="sans-serif" font-size="11" fill="#888">
+                            <circle cx="70" cy="96" r="7" fill="#e67e22"/><text x="70" y="122" text-anchor="middle">6:30</text><text x="70" y="78" text-anchor="middle" font-size="11" fill="#555">状況の整理</text>
+                            <circle cx="170" cy="96" r="5" fill="#e6b27a"/><text x="170" y="122" text-anchor="middle">毎時</text><text x="170" y="78" text-anchor="middle" fill="#555">取り込み</text>
+                            <circle cx="245" cy="96" r="7" fill="#e67e22"/><text x="245" y="122" text-anchor="middle">22:00</text><text x="245" y="78" text-anchor="middle" fill="#555">夜間の作業</text>
+                        </g>
+                        <text x="150" y="26" text-anchor="middle" font-size="12" fill="#b9773a" font-family="sans-serif">人の依頼なしで始まる</text>
+                    </svg>
                 </div>
                 <div class="bento-item w3">
                     <h3 class="bento-title">取り消せない操作だけ人が承認</h3>
                     <p class="bento-desc">対外送信・契約・支払い・公開は、AIが下書きを作り、人が確認してから実行します。</p>
-                    <figure class="ph"><span><b>ここに実物: 承認を求める画面</b></span></figure>
+                    <svg class="diagram" viewBox="0 0 420 140" role="img" aria-label="承認の線引きの図">
+                        <g font-family="sans-serif">
+                            <rect x="14" y="30" width="118" height="76" rx="8" fill="#fff" stroke="#ddd"/><text x="73" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#555">AIが実行</text><text x="73" y="78" text-anchor="middle" font-size="10.5" fill="#999">調査・下書き・集計</text>
+                            <rect x="151" y="30" width="118" height="76" rx="8" fill="#fff7ef" stroke="#e8c9a3" stroke-width="1.5"/><text x="210" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#e67e22">人が承認</text><text x="210" y="78" text-anchor="middle" font-size="10.5" fill="#b9773a">送信・契約・支払い・公開</text>
+                            <rect x="288" y="30" width="118" height="76" rx="8" fill="#f4f4f4" stroke="#ddd"/><text x="347" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#888">触らせない</text><text x="347" y="78" text-anchor="middle" font-size="10.5" fill="#aaa">最初に決めて文書に</text>
+                        </g>
+                    </svg>
                 </div>
                 <div class="bento-item w3">
                     <h3 class="bento-title">AIエージェント同士での議論</h3>
                     <p class="bento-desc">作ったAIとは別のAIがアウトプットを添削し、直してから人に回します。</p>
-                    <figure class="shot"><img src="/media/images/company-memory-first_mailbox.png" alt="AI同士がやり取りしている記録の実物"><figcaption>実物: AI同士の依頼と返答の記録</figcaption></figure>
+                    <svg class="diagram" viewBox="0 0 420 140" role="img" aria-label="AI同士で添削してから人に渡す図">
+                        <g font-family="sans-serif">
+                            <rect x="14" y="40" width="108" height="58" rx="8" fill="#fff7ef" stroke="#e8c9a3"/><text x="68" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#e67e22">作るAI</text><text x="68" y="84" text-anchor="middle" font-size="10.5" fill="#b9773a">下書き</text>
+                            <path d="M126 62 L160 62 M160 76 L126 76" stroke="#e67e22" stroke-width="1.5"/><path d="M154 57 L162 62 L154 67" fill="none" stroke="#e67e22" stroke-width="1.5"/><path d="M132 71 L124 76 L132 81" fill="none" stroke="#e67e22" stroke-width="1.5"/>
+                            <rect x="166" y="40" width="108" height="58" rx="8" fill="#fff7ef" stroke="#e8c9a3"/><text x="220" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#e67e22">添削するAI</text><text x="220" y="84" text-anchor="middle" font-size="10.5" fill="#b9773a">指摘・修正</text>
+                            <path d="M280 69 L306 69" stroke="#ccc" stroke-width="1.5"/><path d="M300 64 L308 69 L300 74" fill="none" stroke="#ccc" stroke-width="1.5"/>
+                            <rect x="312" y="40" width="94" height="58" rx="8" fill="#fff" stroke="#ddd"/><text x="359" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#555">人が確認</text>
+                        </g>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -1349,35 +1491,43 @@
     <!-- Flow -->
     <section class="section" id="flow">
         <div class="container">
-            <div class="section-head ani-fade-bottom">
+            <div class="section-head">
                 <h2 class="section-title">進め方</h2>
-                <p class="section-lead">まずは無料の棚卸しから。</p>
             </div>
-            <div class="steps ani-fade-bottom">
+            <div class="steps">
                 <div class="step">
                     <span class="step-num">1</span>
-                    <h3 class="step-title">業務の棚卸し</h3>
-                    <span class="step-tag">無料・オンライン30分から</span>
-                    <p class="step-desc">毎日・毎週くり返している業務を伺って書き出します。</p>
+                    <div class="step-main">
+                        <h3 class="step-title">業務の棚卸し</h3>
+                        <span class="step-tag">無料・オンライン30分から</span>
+                        <p class="step-desc">毎日・毎週くり返している業務を伺って書き出します。</p>
+                    </div>
+                    <div class="step-visual"></div>
                 </div>
                 <div class="step">
                     <span class="step-num">2</span>
-                    <h3 class="step-title">優先順位の高い業務でデモを作成</h3>
-                    <p class="step-desc">業務工数・売上への貢献度で優先順位をつけ、最初に構築するタスクを選定してデモを作成。デモを見てから導入するかどうかを決定できます。</p>
-                    <figure class="ph"><span><b>ここに実物: 優先順位の表とデモの画面</b></span></figure>
+                    <div class="step-main">
+                        <h3 class="step-title">優先順位の高い業務でデモを作成</h3>
+                        <p class="step-desc">業務工数・売上への貢献度で優先順位をつけ、最初に構築するタスクを選定してデモを作成。デモを見てから導入するかどうかを決定できます。</p>
+                    </div>
+                    <div class="step-visual"><figure class="ph"><span><b>ここに実物: 優先順位の表とデモの画面</b></span></figure></div>
                 </div>
                 <div class="step">
                     <span class="step-num">3</span>
-                    <h3 class="step-title">構築</h3>
-                    <p class="step-desc">実際に社内システム内で構築。AIに任せる業務範囲のルールやセキュリティ面も考慮し、安全性の高いエージェントを作ります。</p>
-                    <figure class="ph"><span><b>ここに実物: 最初の1つが動いた画面</b></span></figure>
+                    <div class="step-main">
+                        <h3 class="step-title">構築</h3>
+                        <p class="step-desc">実際に社内システム内で構築。AIに任せる業務範囲のルールやセキュリティ面も考慮し、安全性の高いエージェントを作ります。</p>
+                    </div>
+                    <div class="step-visual"><figure class="ph"><span><b>ここに実物: 最初の1つが動いた画面</b></span></figure></div>
                 </div>
                 <div class="step">
                     <span class="step-num">4</span>
-                    <h3 class="step-title">運用アドバイザリー</h3>
-                    <span class="step-tag">月1回</span>
-                    <p class="step-desc">実際の利用状況や要望を踏まえて運用改善を提案します。また、最新のAI活用方法の共有や、追加のエージェント作成のご提案も行います。</p>
-                    <figure class="ph"><span><b>ここに実物: 月次レビューの1枚</b></span></figure>
+                    <div class="step-main">
+                        <h3 class="step-title">運用アドバイザリー</h3>
+                        <span class="step-tag">月1回</span>
+                        <p class="step-desc">実際の利用状況や要望を踏まえて運用改善を提案します。また、最新のAI活用方法の共有や、追加のエージェント作成のご提案も行います。</p>
+                    </div>
+                    <div class="step-visual"><figure class="ph"><span><b>ここに実物: 月次レビューの1枚</b></span></figure></div>
                 </div>
             </div>
         </div>
@@ -1386,20 +1536,19 @@
     <!-- About -->
     <section class="section section--gray" id="about">
         <div class="container">
-            <div class="section-head ani-fade-bottom">
+            <div class="section-head">
                 <h2 class="section-title">nitoについて</h2>
             </div>
-            <div class="about-wrap ani-fade-bottom">
+            <div class="about-wrap">
+                <div class="about-photo">
+                    <img src="/profile_okamura.jpg" alt="代表 岡村希一">
+                    <div class="about-photo-name">岡村 希一</div>
+                    <div class="about-photo-role">nito 代表</div>
+                </div>
                 <div class="about-body">
                     <p>nitoは自社の業務をAI中心で運営しています。営業の下調べも、夜間の作業も、毎朝の状況の整理も、人が頼まなくてもAIが進め、人は結果を見て決めます。</p>
                     <p>このページで説明した仕組みは、その運営から生まれたものです。導入先では企業ごと・課題ごとに作り、業務の中で動く状態にして引き渡します。</p>
-                </div>
-                <div class="about-rep">
-                    <img src="/profile_okamura.jpg" alt="岡村希一">
-                    <div>
-                        <div class="about-rep-name"><small>代表</small>岡村 希一</div>
-                        <p class="about-rep-bio">株式会社サイバーエージェントで広告の新規事業開発に携わりながら、新卒採用や育成部門での責任者も務めたのち、nitoを立ち上げ。<a href="https://nito-0210.com/#member">メンバー紹介</a></p>
-                    </div>
+                    <p class="about-bio">株式会社サイバーエージェントで広告の新規事業開発に携わりながら、新卒採用や育成部門での責任者も務めたのち、nitoを立ち上げ。<a href="https://nito-0210.com/#member">メンバー紹介</a></p>
                 </div>
             </div>
         </div>
@@ -1408,10 +1557,10 @@
     <!-- Price -->
     <section class="section">
         <div class="container">
-            <div class="section-head ani-fade-bottom">
+            <div class="section-head">
                 <h2 class="section-title">費用の考え方</h2>
             </div>
-            <div class="price-cols ani-fade-bottom">
+            <div class="price-cols">
                 <div class="price-col">
                     <div class="price-kind">一時金</div>
                     <h3 class="price-title">構築費</h3>
@@ -1433,14 +1582,14 @@
                     </ul>
                 </div>
             </div>
-            <p class="price-note ani-fade-bottom">金額は棚卸しのあとに、対象業務と範囲を確定してから提示します。</p>
+            <p class="price-note">金額は棚卸しのあとに、対象業務と範囲を確定してから提示します。</p>
         </div>
     </section>
 
     <!-- CTA -->
     <section class="section-cta" id="cta">
         <div class="container">
-            <a href="https://nito-0210.com/contact.html" class="cta-banner ani-fade-bottom">
+            <a href="https://nito-0210.com/contact.html" class="cta-banner">
                 <div class="cta-banner-text">
                     <span class="cta-banner-label">相談する</span>
                     <p class="cta-banner-title">いま手で回している業務を、まず聞かせてください。</p>
@@ -1453,10 +1602,10 @@
     <!-- FAQ -->
     <section class="section-faq">
         <div class="container">
-            <div class="ani-fade-bottom">
+            <div class="">
                 <h2 class="section-title">よくある質問</h2>
             </div>
-            <div class="faq-list ani-fade-bottom">
+            <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question"><span>何から始めればいいですか？</span><span class="faq-icon">+</span></button>
                     <div class="faq-answer"><div class="faq-answer-inner">無料の業務棚卸しからです。部門の反復業務を30分ほど伺い、AIに渡しやすい順に並べたものをお返しします。その時点で構築に進むかどうかを決めていただけます。</div></div>
@@ -1524,7 +1673,7 @@
             });
         }, { threshold: 0.12 });
 
-        document.querySelectorAll('.ani-show-up, .ani-fade-bottom, .ani-slide-left, .ani-slide-right').forEach(el => observer.observe(el));
+        document.querySelectorAll('., ., ., .').forEach(el => observer.observe(el));
 
         window.addEventListener('load', () => {
             document.querySelector('.header-wrapper').classList.add('animated');
