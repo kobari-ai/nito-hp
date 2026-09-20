@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIエージェント構築支援｜指示しなくても動くAIエージェントを構築｜nito</title>
+    <link rel="canonical" href="https://nito-0210.com/ai-agent/">
+    <meta name="description" content="指示しなくても動くAIエージェントを構築。貴社の業務に合わせた完全カスタマイズで、業務の棚卸しから構築、運用まで一気通貫で伴走します。まずは無料の業務棚卸しから。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #ffffff;
+            --color-text: #1a1a1a;
+            --color-text-light: #666666;
+            --color-primary: #ff9f43;
+            --color-primary-deep: #e67e22;
+            --color-secondary: #ff8c00;
+            --color-card-bg: #fffbf5;
+            --color-hero-bg: #fff8f0;
+            --color-border: #f0f0f0;
+            --width-max: 1100px;
+            --section-gap: 100px;
+            --font-heading-en: 'Montserrat', sans-serif;
+            --font-heading-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans", 'Noto Sans JP', sans-serif;
+            --font-body: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 17px;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.85;
+            letter-spacing: 0.04em;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; transition: opacity 0.3s; }
+        a:hover { opacity: 0.7; }
+        /* ボタン系はopacityではなくtransformで演出 */
+        .btn-fill:hover, .btn-fill-lg:hover, .cta-banner:hover { opacity: 1; }
+
+        .container {
+            max-width: var(--width-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Animations */
+        .ani-show-up {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .ani-fade-bottom {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .ani-slide-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .ani-slide-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .animated {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+
+        /* ── Header ── */
+        .header-wrapper {
+            position: fixed;
+            top: 16px;
+            left: 0; right: 0;
+            z-index: 1000;
+            width: 95%;
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 38px;
+            border-radius: 50px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            letter-spacing: 0.08em;
+            color: var(--color-text);
+        }
+
+        .logo img {
+            height: 32px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .nav-links a.nav-text { color: var(--color-text); }
+
+        .btn-outline {
+            border: 2px solid var(--color-secondary);
+            color: var(--color-secondary);
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: background-color 0.2s, color 0.2s;
+            font-family: var(--font-heading-jp);
+        }
+        .btn-outline:hover { background-color: var(--color-secondary); color: #fff; opacity: 1; }
+
+        .btn-fill {
+            background: var(--color-secondary);
+            color: #fff;
+            padding: 9px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            font-family: var(--font-heading-jp);
+            opacity: 1;
+        }
+        .btn-fill:hover {
+            background: #e67e22;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(255,140,0,0.28);
+            opacity: 1;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 28px;
+            height: 18px;
+            position: relative;
+        }
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--color-text);
+            position: absolute;
+            transition: all 0.3s;
+        }
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 8px; }
+        .hamburger span:nth-child(3) { top: 16px; }
+        .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+        }
+
+        /* Mobile nav */
+        .nav-overlay-backdrop {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.3); z-index: 1999;
+            opacity: 0; visibility: hidden; transition: all 0.3s;
+        }
+        .nav-overlay-backdrop.active { opacity: 1; visibility: visible; }
+
+        .nav-overlay {
+            position: fixed; top: 16px; left: 5%; width: 90%;
+            background: #fff; z-index: 2000;
+            padding: 72px 28px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            opacity: 0; visibility: hidden;
+            transform: translateY(-16px);
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex; flex-direction: column; gap: 32px;
+        }
+        .nav-overlay.active { opacity: 1; visibility: visible; transform: translateY(0); }
+
+        .nav-close {
+            position: absolute; top: 18px; right: 18px;
+            width: 36px; height: 36px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-close::before, .nav-close::after {
+            content: ''; position: absolute;
+            width: 18px; height: 2px; background: var(--color-text);
+        }
+        .nav-close::before { transform: rotate(45deg); }
+        .nav-close::after { transform: rotate(-45deg); }
+
+        .nav-overlay-item {
+            font-size: 18px; font-weight: 700;
+            font-family: var(--font-heading-jp); color: var(--color-text);
+        }
+        .nav-overlay-cta { display: flex; flex-direction: column; gap: 12px; }
+        .nav-overlay-cta a { display: block; text-align: center; font-size: 16px; padding: 14px; }
+
+        /* ── Hero ── */
+        .hero {
+            background-color: var(--color-hero-bg);
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+            min-height: 560px;
+        }
+
+
+        .hero-sub { color:#4a4a4a; font-size:17px; line-height:1.9; margin:18px 0 0; max-width:680px; font-weight:500; }
+        .hero-label {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-secondary);
+            letter-spacing: 0.06em;
+            margin-bottom: 20px;
+            font-family: var(--font-heading-jp);
+        }
+
+        .hero-title {
+            max-width: 1100px;
+            font-size: 46px;
+            font-weight: 700;
+            line-height: 1.35;
+            letter-spacing: -0.02em;
+            color: var(--color-text);
+            font-family: var(--font-heading-jp);
+            margin-bottom: 40px;
+        }
+
+        .hero-title span { color: var(--color-secondary); }
+        .sp-only { display: none; }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-cta .btn-fill-lg {
+            background: var(--color-secondary);
+            color: #fff;
+            padding: 18px 48px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: inline-block;
+            opacity: 1;
+        }
+        .hero-cta .btn-fill-lg:hover {
+            background: #e67e22;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(255,140,0,0.3);
+            opacity: 1;
+        }
+
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 0 60px;
+                min-height: unset;
+            }
+            .hero-title { font-size: 30px; letter-spacing: -0.01em; }
+            .sp-only { display: inline; }
+            .hero-sub { font-size: 15px; }
+            .hero-label { font-size: 16px; margin-bottom: 16px; }
+            .hero-cta { flex-direction: column; }
+            .hero-cta .btn-fill-lg {
+                text-align: center;
+                padding: 18px 0;
+                width: 100%;
+                border-radius: 14px;
+                font-size: 18px;
+            }
+        }
+
+        /* ── Intro ── */
+        .section-intro {
+            padding: 100px 0;
+        }
+
+        .intro-inner {
+            max-width: 760px;
+        }
+
+        .intro-heading {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--color-text);
+            font-family: var(--font-heading-jp);
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        .intro-lead {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--color-text);
+            font-family: var(--font-heading-jp);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .intro-body {
+            color: var(--color-text-light);
+            font-size: 17px;
+            line-height: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+        @media (max-width: 768px) {
+            .section-intro { padding: 60px 0; }
+            .intro-inner {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .intro-heading {
+                font-size: 24px;
+                line-height: 1.6;
+                margin-bottom: 32px;
+                word-break: keep-all;
+            }
+            /* モバイルでは本文の強制改行を外して自然な折り返しに */
+            .intro-body br { display: none; }
+            .intro-lead { font-size: 18px; margin-bottom: 20px; }
+            .intro-body {
+                font-size: 16px;
+                gap: 20px;
+                line-height: 1.95;
+            }
+        }
+
+        /* ── Feature ── */
+        .section-feature {
+            padding: 100px 0;
+            background-color: #fafafa;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-secondary);
+            font-family: var(--font-heading-en);
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 44px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.3;
+            margin-bottom: 56px;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            padding: 48px 56px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 48px;
+            align-items: center;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 16px 48px rgba(0,0,0,0.07);
+            transform: translateY(-4px);
+        }
+
+        .feature-card-header {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .feature-num {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--color-secondary);
+            font-family: var(--font-heading-en);
+            flex-shrink: 0;
+        }
+
+        .feature-card-title {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.4;
+        }
+
+        .feature-card-desc {
+            font-size: 16px;
+            color: var(--color-text-light);
+            line-height: 2;
+        }
+
+        .feature-img {
+            background-color: var(--color-card-bg);
+            border-radius: 14px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 13px;
+            font-family: var(--font-heading-en);
+            letter-spacing: 0.1em;
+        }
+
+        .feature-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+            display: block;
+        }
+
+        .feature-card--reverse {
+            grid-template-columns: 300px 1fr;
+        }
+        .feature-card--reverse .feature-img {
+            order: -1;
+        }
+
+        @media (max-width: 768px) {
+            .section-feature { padding: 64px 0; }
+            .section-title { font-size: 32px; margin-bottom: 36px; }
+            .feature-card,
+            .feature-card--reverse {
+                grid-template-columns: 1fr;
+                padding: 28px 24px;
+                gap: 20px;
+            }
+            .feature-card--reverse .feature-img { order: 0; }
+            .feature-img { height: 160px; }
+            .feature-num { font-size: 20px; }
+            .feature-card-title { font-size: 22px; }
+            .feature-card-desc { font-size: 16px; line-height: 1.85; }
+        }
+
+        /* ── Case ── */
+        .section-case { padding: 100px 0; background-color: #fafafa; }
+        .case-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            padding: 48px 56px;
+            box-shadow: 0 4px 24px rgba(0,0,0,.04);
+        }
+        .case-tag {
+            display: inline-block;
+            background: var(--color-text);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 5px 16px;
+            border-radius: 30px;
+            letter-spacing: .05em;
+            font-family: var(--font-heading-jp);
+            margin-bottom: 18px;
+        }
+        .case-headline {
+            font-size: 26px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.55;
+            margin-bottom: 28px;
+        }
+        .case-headline em { font-style: normal; color: var(--color-primary-deep); }
+        .case-chart { width: 100%; height: auto; display: block; margin-bottom: 24px; }
+        .case-desc { font-size: 16px; color: var(--color-text-light); line-height: 2; margin-bottom: 18px; }
+        .case-note { font-size: 12.5px; color: #aaa; line-height: 1.9; }
+        @media (max-width: 768px) {
+            .section-case { padding: 64px 0; }
+            .case-card { padding: 26px 20px; }
+            .case-headline { font-size: 19px; line-height: 1.6; margin-bottom: 20px; }
+        }
+
+        /* ── FAQ ── */
+        .section-faq {
+            padding: 100px 0;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-top: 1px solid var(--color-border);
+            max-width: 800px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 0;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            text-align: left;
+            gap: 20px;
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid var(--color-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            color: var(--color-secondary);
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            font-size: 16px;
+            color: var(--color-text-light);
+            line-height: 1.9;
+        }
+
+        .faq-answer-inner { padding-bottom: 28px; }
+
+        .faq-item.open .faq-answer { max-height: 500px; }
+
+        @media (max-width: 768px) {
+            .section-faq { padding: 64px 0; }
+            .faq-question { font-size: 17px; padding: 24px 0; }
+            .faq-answer { font-size: 15px; line-height: 1.9; }
+            .faq-icon { width: 26px; height: 26px; font-size: 18px; }
+        }
+
+        /* ── CTA ── */
+        .section-cta {
+            padding: 60px 0 100px;
+        }
+
+        .cta-banner {
+            background: var(--color-secondary);
+            color: #fff;
+            border-radius: 24px;
+            padding: 72px 72px;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            opacity: 1;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+        }
+        /* グラデーションを疑似要素でフェードイン → フリッカーなし */
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #e67e22;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            border-radius: inherit;
+            pointer-events: none;
+        }
+        .cta-banner:hover,
+        .cta-banner.animated:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 20px 48px rgba(255,140,0,0.28);
+            opacity: 1;
+        }
+        .cta-banner:hover::before { opacity: 1; }
+        /* コンテンツを疑似要素の上に */
+        .cta-banner-text, .cta-banner-arrow { position: relative; z-index: 1; }
+
+        .cta-banner-text { flex: 1; }
+
+        .cta-banner-label {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            font-family: var(--font-heading-jp);
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .cta-banner-title {
+            font-size: 15px;
+            font-weight: 500;
+            font-family: var(--font-heading-jp);
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        .cta-banner-arrow {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .cta-banner:hover .cta-banner-arrow {
+            background: rgba(255,255,255,0.35);
+            transform: translateX(6px);
+        }
+
+        @media (max-width: 768px) {
+            .section-cta { padding: 40px 0 72px; }
+            .cta-banner {
+                padding: 36px 28px;
+                border-radius: 16px;
+                gap: 20px;
+            }
+            .cta-banner-label { font-size: 36px; }
+            .cta-banner-title { font-size: 13px; }
+            .cta-banner-arrow { width: 44px; height: 44px; font-size: 18px; }
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: #fdfdfd;
+            border-top: 1px solid #eee;
+            padding: 80px 0 40px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            font-size: 32px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            color: var(--color-text-light);
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 56px;
+        }
+
+        .footer-nav-col { display: flex; flex-direction: column; gap: 16px; }
+
+        .footer-nav-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--color-text);
+        }
+
+        .footer-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-nav-links a {
+            font-size: 14px;
+            color: #bbb;
+            font-weight: 500;
+        }
+
+        .footer-bottom {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .footer-privacy {
+            font-size: 12px;
+            color: #ccc;
+            font-weight: 500;
+        }
+        .footer-privacy:hover { color: #999; opacity: 1; }
+
+        @media (max-width: 768px) {
+            footer { padding: 56px 0 32px; }
+            .footer-inner { flex-direction: column; gap: 40px; }
+            .footer-logo { font-size: 26px; }
+            .footer-nav { flex-direction: row; flex-wrap: wrap; gap: 32px; }
+            .footer-nav-col { gap: 12px; }
+            .footer-bottom { margin-top: 40px; flex-direction: column; gap: 12px; }
+        }
+
+        /* ── Flow（提供の流れ） ── */
+        .section-flow { padding: 100px 0; background-color: #fafafa; }
+        .flow-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .flow-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            padding: 40px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .flow-step {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--color-secondary);
+            font-family: var(--font-heading-en);
+        }
+        .flow-step em { font-style: normal; font-size: 28px; letter-spacing: 0; margin-left: 6px; }
+        .flow-title {
+            font-size: 22px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.45;
+        }
+        .flow-tag {
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--color-primary-deep);
+            background: var(--color-card-bg);
+            border: 1px solid #ffe2c2;
+            border-radius: 4px;
+            padding: 4px 10px;
+        }
+        .flow-desc { font-size: 15.5px; color: var(--color-text-light); line-height: 1.95; }
+        .flow-after {
+            margin-top: 28px;
+            background: #fff;
+            border: 1px dashed #e8c9a3;
+            border-radius: 16px;
+            padding: 26px 32px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+        .flow-after-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-primary-deep);
+            white-space: nowrap;
+            letter-spacing: 0.05em;
+        }
+        .flow-after p { font-size: 15.5px; color: var(--color-text-light); line-height: 1.9; }
+        @media (max-width: 1000px) { .flow-list { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) {
+            .section-flow { padding: 64px 0; }
+            .flow-list { grid-template-columns: 1fr; gap: 16px; }
+            .flow-card { padding: 28px 24px; }
+            .flow-after { grid-template-columns: 1fr; gap: 8px; padding: 22px 22px; }
+        }
+
+        /* ── Cases（業種ごとの例） ── */
+        .section-industry { padding: 100px 0; }
+        .industry-lead { font-size: 17px; color: var(--color-text-light); line-height: 2; max-width: 760px; margin: -32px 0 40px; }
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .industry-item {
+            background: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 24px 22px;
+        }
+        .industry-name {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-primary-deep);
+            margin-bottom: 10px;
+            letter-spacing: 0.04em;
+        }
+        .industry-work {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-text);
+            line-height: 1.6;
+            font-family: var(--font-heading-jp);
+        }
+        .industry-note { font-size: 13px; color: #aaa; margin-top: 24px; line-height: 1.8; }
+        @media (max-width: 1000px) { .industry-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) {
+            .section-industry { padding: 64px 0; }
+            .industry-lead { margin: -16px 0 28px; font-size: 16px; }
+            .industry-item { padding: 20px 18px; }
+        }
+
+        /* ── Price（価格の型） ── */
+        .section-price { padding: 100px 0; background-color: #fafafa; }
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .price-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            padding: 44px 44px 40px;
+        }
+        .price-kind {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--color-secondary);
+            font-family: var(--font-heading-en);
+            margin-bottom: 10px;
+        }
+        .price-title {
+            font-size: 26px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .price-sub { font-size: 14px; color: var(--color-text-light); margin-bottom: 24px; }
+        .price-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .price-list li {
+            position: relative;
+            padding-left: 22px;
+            font-size: 15.5px;
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+        .price-list li::before {
+            content: "";
+            position: absolute;
+            left: 0; top: 11px;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--color-primary);
+        }
+        .price-note {
+            margin-top: 28px;
+            font-size: 15px;
+            color: var(--color-text-light);
+            line-height: 1.95;
+            max-width: 760px;
+        }
+        @media (max-width: 768px) {
+            .section-price { padding: 64px 0; }
+            .price-grid { grid-template-columns: 1fr; gap: 16px; }
+            .price-card { padding: 28px 24px; }
+            .price-title { font-size: 22px; }
+        }
+
+        .hero-source { margin-top: 28px; font-size: 12.5px; color: #999; line-height: 1.8; }
+        .hero-source a { color: #999; text-decoration: underline; }
+        .shot { margin: 40px 0 0; }
+        .shot img { width: 100%; height: auto; display: block; border: 1px solid var(--color-border); border-radius: 8px; }
+        .shot figcaption { font-size: 13px; color: var(--color-text-light); line-height: 1.8; margin-top: 12px; }
+        .intro-inner { max-width: 100%; }
+        .intro-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+        .intro-cols .intro-body br { display: none; }
+        @media (max-width: 900px) { .intro-cols { grid-template-columns: 1fr; gap: 32px; } }
+        /* ── Hero facts ── */
+        .hero-facts {
+            display: flex;
+            gap: 0;
+            margin-top: 40px;
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            max-width: 720px;
+            overflow: hidden;
+        }
+        .hero-fact { flex: 1; padding: 18px 20px; border-right: 1px solid var(--color-border); }
+        .hero-fact:last-child { border-right: none; }
+        .hero-fact-label { display: block; font-size: 12px; color: var(--color-text-light); margin-bottom: 4px; letter-spacing: 0.04em; }
+        .hero-fact-value { font-size: 20px; font-weight: 700; color: var(--color-text); font-family: var(--font-heading-jp); }
+        .hero-fact-value small { font-size: 13px; font-weight: 700; color: var(--color-text-light); margin-left: 2px; }
+        @media (max-width: 768px) {
+            .hero-facts { flex-direction: column; margin-top: 28px; }
+            .hero-fact { border-right: none; border-bottom: 1px solid var(--color-border); padding: 14px 18px; }
+            .hero-fact:last-child { border-bottom: none; }
+        }
+
+        /* ── Problem ── */
+        .section-problem { padding: 100px 0; background-color: #fafafa; }
+        .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .problem-item {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 28px 30px;
+        }
+        .problem-mark {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: var(--color-card-bg); border: 1px solid #ffe2c2;
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-heading-en); font-weight: 700; color: var(--color-primary-deep); font-size: 15px;
+        }
+        .problem-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; margin-bottom: 8px; }
+        .problem-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        .problem-close { margin-top: 32px; font-size: 16px; color: var(--color-text); line-height: 2; max-width: 760px; }
+        @media (max-width: 768px) {
+            .section-problem { padding: 64px 0; }
+            .problem-grid { grid-template-columns: 1fr; gap: 14px; }
+            .problem-item { padding: 22px 20px; }
+        }
+
+        /* ── Usecase（nitoで動いているもの） ── */
+        .section-usecase { padding: 100px 0; }
+        .usecase-lead { font-size: 17px; color: var(--color-text-light); line-height: 2; max-width: 760px; margin: -32px 0 40px; }
+        .usecase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .usecase-item {
+            background: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 28px 26px;
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .usecase-cat { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.06em; }
+        .usecase-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; }
+        .usecase-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; flex: 1; }
+        .usecase-human {
+            font-size: 13px; color: var(--color-text); line-height: 1.7;
+            padding-top: 12px; border-top: 1px dashed #e8c9a3;
+        }
+        .usecase-human b { color: var(--color-primary-deep); font-weight: 700; margin-right: 6px; }
+        .usecase-note { font-size: 13px; color: #aaa; margin-top: 24px; line-height: 1.8; }
+        @media (max-width: 1000px) { .usecase-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) {
+            .section-usecase { padding: 64px 0; }
+            .usecase-lead { margin: -16px 0 28px; font-size: 16px; }
+            .usecase-grid { grid-template-columns: 1fr; gap: 14px; }
+        }
+
+        /* ── Types（棚卸しで出る業務の型） ── */
+        .types-wrap { margin-top: 56px; }
+        .types-heading { font-size: 20px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); margin-bottom: 8px; }
+        .types-lead { font-size: 15px; color: var(--color-text-light); line-height: 1.9; margin-bottom: 20px; }
+        .types-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+        .types-item { background: #fff; border: 1px solid var(--color-border); border-radius: 14px; padding: 18px 16px; }
+        .types-name { display: block; font-size: 15px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); margin-bottom: 6px; }
+        .types-ex { font-size: 13px; color: var(--color-text-light); line-height: 1.7; }
+        @media (max-width: 1000px) { .types-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .types-grid { grid-template-columns: repeat(2, 1fr); } .types-wrap { margin-top: 40px; } }
+
+        /* ── Data（データの扱い） ── */
+        .section-data { padding: 100px 0; }
+        .data-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .data-item { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 16px; padding: 30px 28px; }
+        .data-num { font-size: 12px; font-weight: 700; letter-spacing: 0.15em; color: var(--color-secondary); font-family: var(--font-heading-en); margin-bottom: 10px; }
+        .data-title { font-size: 19px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; margin-bottom: 10px; }
+        .data-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        @media (max-width: 768px) {
+            .section-data { padding: 64px 0; }
+            .data-grid { grid-template-columns: 1fr; gap: 14px; }
+        }
+
+        .about-wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start; }
+        .about-body p { font-size: 16px; line-height: 2; color: var(--color-text); margin-bottom: 18px; }
+        .about-rep { display: flex; gap: 20px; align-items: center; border-top: 1px solid #e5e5e5; padding-top: 24px; margin-top: 8px; }
+        .about-rep img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+        .about-rep-name { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); margin-bottom: 6px; }
+        .about-rep-name small { font-size: 13px; font-weight: 700; color: var(--color-text-light); margin-right: 8px; }
+        .about-rep-bio { font-size: 14px; color: var(--color-text-light); line-height: 1.8; }
+        .about-rep-bio a { color: var(--color-primary-deep); text-decoration: underline; }
+        @media (max-width: 768px) { .about-wrap { grid-template-columns: 1fr; gap: 24px; } }
+        /* 2026-09-19: スクロールの fade-in は全部外す（希一さん） */
+        .ani-show-up, .ani-fade-bottom, .ani-slide-left, .ani-slide-right, .ani-fade-top { opacity: 1 !important; transform: none !important; transition: none !important; }
+        /* ═══ v3（2026-09-17）flyle/バクラク型: 各パネルに実物、2列3列を混ぜる ═══ */
+        .hero {
+            min-height: 100vh;
+            display: flex; align-items: center;
+            padding: 110px 0 60px;
+            background:
+                radial-gradient(900px 520px at 88% 18%, rgba(255,159,67,0.35) 0%, rgba(255,159,67,0) 60%),
+                radial-gradient(700px 480px at 12% 90%, rgba(255,210,170,0.45) 0%, rgba(255,210,170,0) 60%),
+                linear-gradient(180deg, #fff6ec 0%, #fffaf5 60%, #ffffff 100%);
+            position: relative; overflow: hidden;
+        }
+        .hero-wrap { width: 100%; }
+        .btn-text { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--color-text); padding: 16px 6px; }
+        .btn-text::after { content: "→"; }
+        /* Slack 風モック（実物のキャプチャが入るまでの代替。個人情報なし） */
+        .slackmock { background: #fff; border-radius: 12px; box-shadow: 0 30px 70px rgba(120,60,0,0.18), 0 2px 8px rgba(0,0,0,0.06); overflow: hidden; font-family: var(--font-body); transform: rotate(-1.5deg); }
+        .slackmock-head { background: #3f0e40; color: #fff; padding: 12px 18px; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        .slackmock-head span { opacity: .7; font-weight: 400; }
+        .slackmock-body { padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 14px; }
+        .msg { display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: start; }
+        .msg-av { width: 36px; height: 36px; border-radius: 6px; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #555; }
+        .msg-av.ai { background: var(--color-secondary); color: #fff; }
+        .msg-name { font-size: 13px; font-weight: 700; }
+        .msg-name small { font-weight: 400; color: #888; margin-left: 6px; }
+        .msg-text { font-size: 13.5px; line-height: 1.7; color: #1d1c1d; margin-top: 2px; }
+        .msg-card { margin-top: 8px; border-left: 4px solid var(--color-secondary); background: #fff7ef; padding: 10px 12px; border-radius: 4px; font-size: 12.5px; line-height: 1.7; }
+        .msg-card b { display: block; margin-bottom: 2px; }
+        .msg-actions { display: flex; gap: 8px; margin-top: 8px; }
+        .msg-actions span { border: 1px solid #ddd; border-radius: 4px; padding: 4px 10px; font-size: 12px; font-weight: 700; }
+        .msg-actions span.ok { background: #007a5a; color: #fff; border-color: #007a5a; }
+        @media (max-width: 768px) { .slackmock { transform: none; } }
+        .hero-wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+        .hero-pain { font-size: 15px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.02em; margin-bottom: 18px; }
+        .hero-title { max-width: none; font-size: 42px; line-height: 1.35; margin-bottom: 22px; letter-spacing: -0.01em; }
+        .hero-title { color: var(--color-text); }
+        .hero-title .line { display: block; color: var(--color-text); white-space: nowrap; }
+        .hero-title .grad { background: linear-gradient(90deg, #ff9f43, #e8590c); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero-do { font-size: 17px; color: #4a4a4a; line-height: 1.9; font-weight: 500; margin-bottom: 30px; }
+        .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-primary { display: inline-block; background: var(--color-secondary); color: #fff; font-weight: 700; font-size: 15px; padding: 16px 28px; border-radius: 8px; }
+        .btn-outline { display: inline-block; border: 2px solid var(--color-text); color: var(--color-text); font-weight: 700; font-size: 15px; padding: 14px 26px; border-radius: 8px; background: #fff; }
+        .hero-visual { position: relative; }
+        /* 画像の枠（実物を差し込むまでのプレースホルダ） */
+        .ph { display: flex; align-items: center; justify-content: center; text-align: center; background: repeating-linear-gradient(45deg, #fff, #fff 10px, #fff6ea 10px, #fff6ea 20px); border: 2px dashed #f0b27a; border-radius: 12px; color: #b9773a; font-size: 13px; line-height: 1.7; padding: 16px; min-height: 160px; margin: 0; }
+        .ph b { display: block; font-size: 14px; margin-bottom: 4px; }
+        .ph--hero { min-height: 400px; box-shadow: 0 24px 60px rgba(230,126,34,0.12); }
+        .shot { margin: 0; }
+        .shot img { width: 100%; height: auto; display: block; border: 1px solid var(--color-border); border-radius: 10px; }
+        .shot figcaption { font-size: 12.5px; color: var(--color-text-light); margin-top: 10px; line-height: 1.7; }
+
+        .section { padding: 96px 0; }
+        .section--gray { background: #fafafa; }
+        .section-head { max-width: 760px; margin-bottom: 44px; }
+        .section-kicker { font-size: 13px; font-weight: 700; color: var(--color-primary-deep); margin-bottom: 10px; }
+        .section-title { font-size: 38px; margin-bottom: 14px; }
+        .section-lead { font-size: 16px; color: var(--color-text-light); line-height: 1.9; }
+
+        /* 課題: 枠なし・罫線 */
+        .problem-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid #e5e5e5; }
+        .problem { padding: 28px 28px 28px 0; border-bottom: 1px solid #e5e5e5; }
+        .problem + .problem { padding-left: 28px; border-left: 1px solid #e5e5e5; }
+        .problem-title { font-size: 20px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; }
+        .problem-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        .problem-close { margin-top: 28px; font-size: 16px; line-height: 2; max-width: 760px; }
+
+        /* 導入するとこう動く: タブ＋大パネル */
+        .tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        .tab { border: 1px solid #ddd; background: #fff; border-radius: 999px; padding: 10px 22px; font-size: 14px; font-weight: 700; color: var(--color-text); cursor: pointer; }
+        .tab.is-active { background: #fff1e3; border-color: #f0b27a; color: var(--color-primary-deep); }
+        .panel { display: none; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 36px; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: center; }
+        .panel.is-active { display: grid; }
+        .panel-title { font-size: 24px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.45; margin-bottom: 14px; }
+        .panel-desc { font-size: 15px; color: var(--color-text-light); line-height: 1.95; margin-bottom: 18px; }
+        .panel-kv { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; font-size: 14px; line-height: 1.7; border-top: 1px solid #eee; padding-top: 16px; }
+        .panel-kv dt { color: var(--color-primary-deep); font-weight: 700; white-space: nowrap; }
+        .panel-kv dd { margin: 0; color: var(--color-text); }
+
+        /* 仕組みの中身: ベント型 */
+        .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+        .bento-item { background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+        .bento-item.w3 { grid-column: span 3; } .bento-item.w2 { grid-column: span 2; } .bento-item.w4 { grid-column: span 4; }
+        .bento-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; }
+        .bento-desc { font-size: 14px; color: var(--color-text-light); line-height: 1.85; }
+        .bento-item .ph { min-height: 150px; }
+
+        /* 進め方: 横4段＋矢印 */
+        .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        .step { background: #fff; border: 1px solid var(--color-border); border-radius: 14px; padding: 22px; position: relative; display: flex; flex-direction: column; gap: 10px; }
+        .step-num { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #fff; background: var(--color-text); border-radius: 4px; padding: 3px 8px; align-self: flex-start; }
+        .step-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.45; }
+        .step-tag { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); }
+        .step-desc { font-size: 14px; color: var(--color-text-light); line-height: 1.85; }
+        .step .ph { min-height: 120px; }
+        .step::after { content: "▶"; position: absolute; right: -16px; top: 50%; transform: translateY(-50%); color: #ddd; font-size: 12px; }
+        .step:last-child::after { display: none; }
+
+        /* 理由・データ: 罫線の3列 */
+        .points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .point-num { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.1em; margin-bottom: 10px; }
+        .point-title { font-size: 20px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; padding-top: 14px; border-top: 2px solid var(--color-text); }
+        .point-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+
+        /* 費用 */
+        .price-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .price-col { border-top: 2px solid var(--color-text); padding-top: 18px; }
+        .price-kind { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); margin-bottom: 6px; }
+        .price-title { font-size: 26px; font-weight: 700; font-family: var(--font-heading-jp); margin-bottom: 4px; }
+        .price-sub { font-size: 14px; color: var(--color-text-light); margin-bottom: 16px; }
+        .price-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .price-list li { position: relative; padding-left: 18px; font-size: 15px; line-height: 1.8; }
+        .price-list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 8px; height: 8px; border-radius: 50%; background: var(--color-primary); }
+        .price-note { margin-top: 26px; font-size: 15px; color: var(--color-text-light); line-height: 1.9; }
+
+        @media (max-width: 1000px) {
+            .bento { grid-template-columns: repeat(2, 1fr); } .bento-item.w3, .bento-item.w2, .bento-item.w4 { grid-column: span 1; }
+            .steps { grid-template-columns: repeat(2, 1fr); } .step::after { display: none; }
+        }
+        @media (max-width: 768px) {
+            .hero { min-height: auto; padding: 110px 0 48px; }
+            .hero-wrap { grid-template-columns: 1fr !important; gap: 28px; }
+            .hero-title { font-size: 28px; }
+            .hero-title .line { white-space: normal; }
+
+            .ph--hero { min-height: 240px; }
+            .section { padding: 60px 0; }
+            .section-title { font-size: 28px; }
+            .problem-list { grid-template-columns: 1fr; }
+            .problem + .problem { padding-left: 0; border-left: none; }
+            .panel { grid-template-columns: 1fr; padding: 22px; }
+            .bento { grid-template-columns: 1fr; }
+            .steps { grid-template-columns: 1fr; }
+            .points { grid-template-columns: 1fr; gap: 24px; }
+            .price-cols { grid-template-columns: 1fr; gap: 28px; }
+        }
+
+        /* ── 2026-09-19 すり合わせ ── */
+        /* 課題: 図つきカード */
+        .problem-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; border-top: none; }
+        .problem { padding: 0; border: none; background: #fff; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; }
+        .problem + .problem { padding-left: 0; border-left: none; }
+        .problem-fig { background: #fff6ec; }
+        .problem-fig img { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .problem-body { padding: 22px 24px 26px; }
+        .problem-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; }
+        .problem-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        .problem-close { margin-top: 32px; font-size: 17px; line-height: 2; max-width: 860px; }
+
+        /* 構築サービス: 縦4つ、左右交互 */
+        .cases { display: flex; flex-direction: column; gap: 28px; }
+        .case { display: grid; grid-template-columns: 1fr 1.05fr; gap: 40px; align-items: center; background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+        .case:nth-child(even) .case-visual { order: -1; }
+        .case-tag { display: inline-block; font-size: 12px; font-weight: 700; color: #fff; background: var(--color-secondary); border-radius: 4px; padding: 4px 10px; margin-bottom: 12px; }
+        .case-title { font-size: 23px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 12px; }
+        .case-desc { font-size: 15.5px; color: var(--color-text-light); line-height: 1.95; }
+
+        /* 仕組み: 図つき */
+        .bento-item .ph, .bento-item .shot { margin-top: auto; }
+        .diagram { width: 100%; height: auto; display: block; }
+
+        /* 進め方: 横帯の階段 */
+        .steps { display: flex; flex-direction: column; gap: 0; border-left: 2px solid #f0d6b8; margin-left: 18px; }
+        .step { position: static; display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; background: transparent; border: none; border-radius: 0; padding: 30px 0 30px 42px; }
+        .step-main { position: relative; }
+        .step + .step { border-top: 1px solid #ececec; }
+        .step::after { display: none; }
+        .step-num { position: absolute; left: -61px; top: 30px; width: 38px; height: 38px; border-radius: 50%; background: var(--color-secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; padding: 0; }
+        .step { position: relative; }
+        .step-visual:empty { display: none; }
+        .step-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+        .step-tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--color-primary-deep); background: #fff1e3; border-radius: 4px; padding: 3px 10px; margin-bottom: 8px; }
+        .step-desc { font-size: 15px; color: var(--color-text-light); line-height: 1.95; }
+        .step .ph { min-height: 118px; }
+
+        /* nitoについて: 代表を主役に */
+        .about-wrap { grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+        .about-photo { text-align: center; }
+        .about-photo img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
+        .about-photo-name { margin-top: 18px; font-size: 21px; font-weight: 700; font-family: var(--font-heading-jp); }
+        .about-photo-role { font-size: 13px; color: var(--color-text-light); margin-top: 4px; }
+        .about-body p { font-size: 17px; line-height: 2.05; }
+        .about-bio { font-size: 14px; color: var(--color-text-light); line-height: 1.9; border-top: 1px solid #e5e5e5; padding-top: 16px; margin-top: 20px; }
+        .about-bio a { color: var(--color-primary-deep); }
+
+        /* 費用: 2枚のカード */
+        .price-cols { grid-template-columns: 1fr 1fr; gap: 24px; }
+        .price-col { border-top: none; background: #fff; border-radius: 16px; padding: 34px 36px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+        .price-kind { display: inline-block; font-size: 12px; font-weight: 700; color: #fff; background: var(--color-text); border-radius: 4px; padding: 4px 12px; margin-bottom: 14px; }
+        .price-title { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        .price-sub { font-size: 14.5px; color: var(--color-text-light); margin-bottom: 20px; }
+        .price-list li { font-size: 15px; padding-left: 26px; }
+        .price-list li::before { width: 16px; height: 16px; border-radius: 4px; background: #fff1e3; top: 8px; }
+        .price-list li::after { content: "✓"; position: absolute; left: 3px; top: 3px; font-size: 11px; font-weight: 700; color: var(--color-primary-deep); }
+
+        @media (max-width: 900px) {
+            .problem-list { grid-template-columns: 1fr; }
+            .case { grid-template-columns: 1fr; gap: 20px; padding: 22px; }
+            .case:nth-child(even) .case-visual { order: 0; }
+            .step { grid-template-columns: 1fr; gap: 14px; padding: 24px 0 24px 34px; }
+            .step-num { left: -52px; top: 24px; width: 32px; height: 32px; font-size: 13px; }
+            .about-wrap { grid-template-columns: 1fr !important; gap: 28px; }
+            .price-cols { grid-template-columns: 1fr; }
+        }
+
+        /* ── 2026-09-19 3周目 ── */
+        /* FV: kintone 型（ブランド色の薄いベタ＋強い色の図形）。グラデーションをやめる */
+        .hero { background: #fff3e0; }
+        .hero::before { content: ""; position: absolute; left: -180px; top: -260px; width: 620px; height: 620px; border-radius: 50%; background: #ffb454; opacity: .9; pointer-events: none; }
+        .hero::after { content: ""; position: absolute; right: -140px; bottom: -420px; width: 560px; height: 560px; border-radius: 50%; background: #ffd9a8; pointer-events: none; }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-title .grad { background: none; color: var(--color-secondary); -webkit-text-fill-color: initial; }
+        .slackmock { transform: rotate(0); }
+        /* 課題の締め: 文の切れ目で改行 */
+        .problem-close { max-width: none; font-size: 17px; }
+        .problem-close span { display: block; }
+        /* 進め方: 背景に大きな薄い番号、見出しを重ねる */
+        .steps { border-left: none; margin-left: 0; }
+        .step { grid-template-columns: 1.1fr 1fr; padding: 44px 0 44px 0; }
+        .step + .step { border-top: 1px solid #ececec; }
+        .step-num { position: absolute; left: -8px; top: 6px; width: auto; height: auto; border-radius: 0; background: none; color: #ffe7cc; font-family: var(--font-heading-en); font-size: 120px; font-weight: 800; line-height: 1; letter-spacing: -0.04em; z-index: 0; }
+        .step-main { position: relative; z-index: 1; padding-top: 44px; padding-left: 8px; }
+        .step-title { font-size: 24px; }
+        .step-visual { position: relative; z-index: 1; }
+        @media (max-width: 900px) { .step-num { font-size: 84px; left: 0; top: 0; } .step-main { padding-top: 30px; } .hero::before { width: 380px; height: 380px; left: -140px; top: -200px; } .hero::after { display: none; } }
+
+        /* ── 2026-09-19 4周目 ── */
+        .hero::before { left: auto; right: -160px; top: -300px; width: 640px; height: 640px; background: #ffb454; opacity: .85; }
+        .hero::after { left: -220px; right: auto; bottom: -440px; width: 560px; height: 560px; background: #ffd9a8; }
+        /* 課題: 線画ピクトグラム */
+        .problem-fig { background: #fff6ec; padding: 26px 0 18px; display: flex; justify-content: center; }
+        .problem-fig svg { width: 150px; height: 110px; }
+        .pict { fill: none; stroke: #e67e22; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+        .pict-soft { fill: none; stroke: #c9c9c9; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+        .pict-fill { fill: #e67e22; }
+        /* 仕組み: スライド型の図 */
+        .slide { background: #fff8f1; border-radius: 12px; padding: 22px 20px; margin-top: auto; }
+        .sl-row { display: flex; align-items: stretch; justify-content: center; gap: 8px; flex-wrap: nowrap; }
+        .sl-row .sl-box { min-width: 0; flex: 1; padding: 10px 8px; font-size: 12.5px; }
+        .sl-row .sl-box small { font-size: 10.5px; }
+        .sl-row .sl-arrow { align-self: center; flex: none; }
+        .sl-col { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+        .sl-box { background: #fff; border: 1.5px solid #e8c9a3; border-radius: 8px; padding: 10px 14px; font-size: 13px; font-weight: 700; color: #1a1a1a; text-align: center; line-height: 1.5; min-width: 92px; }
+        .sl-box small { display: block; font-size: 11px; font-weight: 400; color: #888; margin-top: 2px; }
+        .sl-box.on { background: var(--color-secondary); border-color: var(--color-secondary); color: #fff; }
+        .sl-box.on small { color: #ffe3c6; }
+        .sl-box.off { background: #f3f3f3; border-color: #ddd; color: #888; }
+        .sl-arrow { color: #e67e22; font-size: 18px; font-weight: 700; line-height: 1; }
+        .sl-line { width: 2px; height: 22px; background: #e8c9a3; }
+        .sl-note { font-size: 11.5px; color: #b9773a; text-align: center; margin-top: 12px; }
+        .sl-hub { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; }
+        .sl-hub .sl-col .sl-box { min-width: 120px; }
+        .sl-time { display: flex; align-items: flex-end; justify-content: space-between; gap: 6px; padding: 8px 6px 0; border-bottom: 2px solid #e8c9a3; }
+        .sl-tick { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 11px; color: #888; }
+        .sl-tick b { font-size: 12px; color: #1a1a1a; }
+        .sl-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--color-secondary); margin-bottom: -7px; }
+        .sl-dot.s { width: 8px; height: 8px; background: #e6b27a; margin-bottom: -5px; }
+        /* 進め方: 番号を左の列に */
+        .step { grid-template-columns: 72px 1fr 1fr; gap: 28px; padding: 36px 0; align-items: start; }
+        .step-main { padding-top: 6px; }
+        .step-num { position: static; font-size: 40px; color: var(--color-secondary); line-height: 1; align-self: start; padding-top: 4px; }
+        .step-main { padding-top: 0; padding-left: 0; }
+        @media (max-width: 900px) { .step { grid-template-columns: 56px 1fr; } .step-visual { grid-column: 2; } .step-num { font-size: 32px; } .hero::before { right: -300px; top: -330px; width: 460px; height: 460px; } .hero { padding-top: 140px; } }
+
+        /* ── 構築サービスのモック（実物風。架空データ） ── */
+        .mock { background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(120,60,0,0.10), 0 1px 4px rgba(0,0,0,0.06); overflow: hidden; font-family: var(--font-body); }
+        .mock .slackmock-head { font-size: 12.5px; padding: 10px 16px; }
+        .mock .slackmock-body { padding: 12px 16px 14px; gap: 12px; }
+        .mock .msg-text { font-size: 13px; }
+        .mock .msg-card { font-size: 12px; }
+        .mock-doc { padding: 18px 20px; }
+        .mock-doc-title { font-size: 13px; font-weight: 700; color: #1a1a1a; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 10px; display: flex; justify-content: space-between; }
+        .mock-doc-title span { font-weight: 400; color: #999; font-size: 11.5px; }
+        .mock-doc h5 { font-size: 12.5px; font-weight: 700; color: var(--color-primary-deep); margin: 10px 0 4px; }
+        .mock-doc ul { list-style: none; }
+        .mock-doc li { font-size: 12.5px; line-height: 1.7; color: #333; padding-left: 14px; position: relative; }
+        .mock-doc li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: #e6b27a; }
+        .mock-doc li.todo::before { background: var(--color-secondary); }
+        .mock-term { background: #1e1e22; color: #d6d6dc; padding: 14px 16px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; line-height: 1.8; }
+        .mock-term .t { color: #8a8a94; }
+        .mock-term .ok { color: #7dd3a0; }
+        .mock-term .ai { color: #ffb454; }
+        .mock-term .head { color: #fff; font-weight: 700; margin-bottom: 4px; }
+        @media (max-width: 768px) { .mock-term { font-size: 11px; } }
+
+        /* 進め方のモック */
+        .mock-sheet { padding: 0; }
+        .mock-sheet table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        .mock-sheet th, .mock-sheet td { border-bottom: 1px solid #eee; padding: 8px 10px; text-align: left; white-space: nowrap; }
+        .mock-sheet th { background: #f7f7f7; color: #666; font-weight: 700; font-size: 11.5px; }
+        .mock-sheet td.n { text-align: right; font-variant-numeric: tabular-nums; }
+        .mock-sheet tr.pick td { background: #fff4e6; }
+        .mock-sheet .tag { display: inline-block; font-size: 10.5px; font-weight: 700; color: #fff; background: var(--color-secondary); border-radius: 3px; padding: 2px 6px; }
+        .mock-sheet-title { font-size: 12px; font-weight: 700; padding: 10px 12px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+        .mock-sheet-title span { font-weight: 400; color: #999; font-size: 11px; }
+        .mock-rev { padding: 16px 18px; }
+        .mock-rev-title { font-size: 12.5px; font-weight: 700; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 12px; display: flex; justify-content: space-between; }
+        .mock-rev-title span { font-weight: 400; color: #999; font-size: 11px; }
+        .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+        .kpi { background: #f7f7f7; border-radius: 8px; padding: 10px 12px; }
+        .kpi b { display: block; font-size: 20px; line-height: 1.1; color: #1a1a1a; }
+        .kpi small { font-size: 10.5px; color: #888; }
+        .kpi.on { background: #fff4e6; } .kpi.on b { color: var(--color-primary-deep); }
+        .mock-rev h5 { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); margin: 8px 0 4px; }
+        .mock-rev li { font-size: 12px; line-height: 1.7; color: #333; list-style: none; padding-left: 12px; position: relative; }
+        .mock-rev li::before { content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: #e6b27a; }
+
+        /* ── 2026-09-20 稜生さんの修正版から2点を取り込み ── */
+        /* 課題: unDraw のイラスト（オープンライセンス・商用可・帰属表示不要。色は nito のオレンジ） */
+        .problem-fig { background: #fff6ec; padding: 22px 26px 14px; display: flex; align-items: flex-end; justify-content: center; height: 200px; }
+        .problem-fig svg.illu { width: 100%; height: 100%; max-width: 250px; }
+        /* 費用: チェックマークをやめて罫線区切り */
+        .price-list { gap: 0; border-top: 1px solid #ededed; }
+        .price-list li { padding: 12px 0; padding-left: 0; border-bottom: 1px solid #ededed; font-size: 15px; line-height: 1.75; }
+        .price-list li::before, .price-list li::after { content: none; display: none; }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header-wrapper">
+        <header>
+            <a href="https://nito-0210.com" class="logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="nav-links">
+                <a href="https://nito-0210.com" class="nav-text">会社情報</a>
+                <a href="https://nito-0210.com/media/" class="nav-text">コラム</a>
+                <a href="https://nito-0210.com/contact.html" class="btn-fill">相談する</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </header>
+    </div>
+    <div class="nav-overlay-backdrop" id="nav-overlay-backdrop"></div>
+    <div class="nav-overlay" id="nav-overlay">
+        <div class="nav-close" id="nav-close"></div>
+        <div class="nav-overlay-cta">
+            <a href="https://nito-0210.com/contact.html" class="btn-fill">相談する</a>
+        </div>
+        <a href="https://nito-0210.com" class="nav-overlay-item">会社情報</a>
+        <a href="https://nito-0210.com/llmo/" class="nav-overlay-item">AI検索対策</a>
+        <a href="https://nito-0210.com/media/" class="nav-overlay-item">コラム</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-wrap" style="display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center">
+            <div>
+                <h1 class="hero-title"><span class="line"><span class="grad">指示しなくても動く</span></span><span class="line">AIエージェントを構築</span></h1>
+                <p class="hero-do">貴社の業務に合わせた完全カスタマイズ。<br>業務の棚卸しから構築、運用まで一気通貫で伴走。</p>
+                <div class="hero-btns">
+                    <a href="https://nito-0210.com/contact.html" class="btn-primary">無料で業務棚卸しを相談</a>
+                    <a href="#flow" class="btn-text">進め方を見る</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="slackmock" aria-label="Slack上でAIが自分でタスクを進めている画面のイメージ">
+                    <div class="slackmock-head"># 営業チーム <span>3人のメンバー</span></div>
+                    <div class="slackmock-body">
+                        <div class="msg"><div class="msg-av">田</div><div><div class="msg-name">田中<small>9:12</small></div><div class="msg-text">A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div></div>
+                        <div class="msg"><div class="msg-av ai">AI</div><div><div class="msg-name">nito AI<small>アプリ 9:13</small></div><div class="msg-text">商談メモを読みました。A社は物流部門でも同じ課題を持っているようです。物流向けプランの追加提案ができそうなので、たたき台を作っておきます。</div>
+                            <div class="msg-card"><b>次回商談の準備（自動作成）</b>・前回の宿題3件の進捗<br>・物流部門向けの提案1枚<br>・想定質問と回答</div>
+                            <div class="msg-actions"><span class="ok">この内容で進めて</span><span>修正する</span></div></div></div>
+                        <div class="msg"><div class="msg-av ai">AI</div><div><div class="msg-name">nito AI<small>アプリ 22:00</small></div><div class="msg-text">提案1枚と想定質問を仕上げました。別のAIに一度確認させて、指摘2件を直してあります。朝に確認だけお願いします。</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">よくあるAI活用の課題</h2>
+            </div>
+            <div class="problem-list">
+                <div class="problem">
+                    <div class="problem-fig"><svg class="illu" role="img" aria-label="AIの返答を待っている人" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800.292 680.201"><g transform="translate(-445.17 -153)"><path d="M17.872,0H223.4c9.871,0,17.872,6.251,17.872,13.963V30.543c0,7.711-8,13.963-17.872,13.963H17.872C8,44.506,0,38.255,0,30.543V13.963C0,6.251,8,0,17.872,0Z" transform="translate(696.307 218.358)" fill="#f2f2f2"/><g transform="translate(454.089 337.363)"><rect width="27.497" height="36.242" transform="translate(337.978 433.438)" fill="#ffb9b9"/><path d="M237.2,598.367h58.45a33.713,33.713,0,0,0,14.519-3.308l10.776-5.18a6.471,6.471,0,0,0-1.078-12.069l-22.23-6.151-38.031-19.99-.028.144c-.711,3.6-1.813,9.044-1.953,9.374-3.9,4.468-7.907,6.527-11.908,6.121-6.98-.708-11.62-8.767-11.666-8.849l-.035-.062-.071.007a4.629,4.629,0,0,0-3.593,1.959c-1.592,2.4-.621,6.1-.461,6.656-1.907,1.866-2.763,12.285-2.829,13.126-2.757,2.922-4.067,5.732-3.894,8.351.152,2.289,1.421,4.415,3.773,6.319a16.323,16.323,0,0,0,10.261,3.552Z" transform="translate(105.469 -103.673)" fill="#090814"/><path d="M516.437,201.656a37.847,37.847,0,1,1,49.186,36.117l-7.316,48.353-37.3-31.082s8.057-10.263,12.379-21.836a37.806,37.806,0,0,1-16.95-31.552Z" transform="translate(-489.648 -149.056)" fill="#ffb9b9"/><path d="M423.15,236.869l53.268,2.557,6.36,14.311s61.683,27.4,65.194,54.063c0,0,15.916,44.391,50.883,42.932s-68.374,100.176-68.374,100.176L423.945,315.751l-3.975-62.557,3.18-16.325Z" transform="translate(-395.839 -140.507)" fill="#ff8c00"/><path d="M453.606,417.683l21.592-2.446c-5.5,11.672-3.574,38.928.369,66.126,5.205,35.823,13.94,101.715,13.94,101.715l36.571-9.495V394.56c0-23.881-69.042-34.738-120.693-39.52-30.852-2.848-55.5-3.541-55.5-3.541l-71.489,86.01Z" transform="translate(-157.696 -127.095)" fill="#090814"/><rect width="27.497" height="36.242" transform="translate(258.716 446.922) rotate(-145.769)" fill="#ffb9b9"/><path d="M334.132,545.4c1.329-2.256,3.988-3.842,7.919-4.7.525-.659,7.093-8.791,9.718-9.271.178-.548,1.452-4.144,4.122-5.239a4.168,4.168,0,0,1,2.714-.146,6,6,0,0,1,1.363.548l.067.033-.011.067c-.011.1-.7,9.372,4.669,13.885,3.083,2.58,7.551,3.139,13.292,1.642.3-.2,4.267-4.077,6.881-6.657l.112-.1.212.391,19.983,37.532,14.912,17.593a6.463,6.463,0,0,1-5.9,10.578L402.37,599.78a33.832,33.832,0,0,1-13.862-5.428l-48.333-32.885a16.348,16.348,0,0,1-6.478-8.713C332.825,549.861,332.97,547.393,334.132,545.4Z" transform="translate(-114.391 -106.69)" fill="#090814"/><path d="M338.354,444.312c-21.982,36.459-44.211,95.918-44.211,95.918l6,2.145,26.753,9.562,2.826,1.016,30.6-44.96c17.581-25.847,38.492-56.587,50.511-74.236V421.19c0-23.881-69.042-34.738-120.693-39.52l69.635,36.671C353.243,422.2,345.815,431.924,338.354,444.312Z" transform="translate(-55.558 -123.564)" fill="#090814"/><path d="M328.734,319.584h0a29.653,29.653,0,0,1,46.485.815l91.447,119.715,145.756-16.762a26.25,26.25,0,0,1,29.172,24.065h0a26.25,26.25,0,0,1-22.437,28L452.008,499.446A56.982,56.982,0,0,1,394.6,471.62L326,353.27a29.653,29.653,0,0,1,2.735-33.686Z" transform="translate(-322 -132.097)" fill="#e6e6e6"/><rect width="20.671" height="162.854" transform="translate(257.874 331.867)" fill="#e6e6e6"/><rect width="20.671" height="162.854" transform="translate(116.014 331.867)" fill="#e6e6e6"/><path d="M525.506,270.983s5.918,14.5,24.391,10.184l37.472-8.761s-51.527-68.306-36.332-63.073,40.208-39.966,40.208-39.966l15.182,16.419s22.006-15.18-10.594-29.675c0,0-38.668-16.427-68.888,7.448s-1.441,107.424-1.441,107.424h0Z" transform="translate(-507.516 -150.601)" fill="#090814"/><path d="M570.565,239.834a16.739,16.739,0,1,0,0-33.478v2.234a14.492,14.492,0,1,1-5.706,1.165l-.879-2.053a16.741,16.741,0,0,0,6.585,32.131Z" transform="translate(-526.584 -144.077)" fill="#ff8c00"/><path d="M419.329,340.706l-35.151,15.842,9.249,20.524,35.152-15.842a23.628,23.628,0,0,0,18.249-.816c10.957-4.938,16.527-16.292,12.44-25.36s-16.282-12.416-27.239-7.478a23.629,23.629,0,0,0-12.7,13.131Z" transform="translate(-210.389 -130.161)" fill="#ffb9b9"/><path d="M474.685,286.135l28.622,82.685,66.784-20.671,12.721,34.982-99.036,27.148L423.589,303.3" transform="translate(-376.615 -134.743)" fill="#ff8c00"/></g><path d="M0,1.234H800.292V-1H0Z" transform="translate(445.17 831.967)" fill="#e6e6e6"/><path d="M354.693,550.642c0-5.8,1.949-10.513,4.341-10.524h180.26c2.4.01,4.341,4.72,4.355,10.524V789.529a2.169,2.169,0,0,0,1.958,2.158q2.626.252,5.253.469c.044,0,.087.01.13.01.953.087,1.906.152,2.858.227h.011q.735-1.359,1.454-2.742a2.178,2.178,0,0,0,.247-1.006V536.989c0-1.6-.065-3.215-.174-4.807a61.639,61.639,0,0,0-.812-6.518c-1.829-10.058-5.966-16.868-10.665-16.89H354.433a5.071,5.071,0,0,0-1.993.422,7.767,7.767,0,0,0-2.458,1.722,15.243,15.243,0,0,0-2.414,3.3c-2.317,4.082-3.973,10.167-4.558,17.244,0,.065-.01.13-.01.2-.152,1.754-.227,3.54-.217,5.327l-.152,23.2-.1,13.837-.293,43.416-.108,15.415-.476,158.291h0a2.165,2.165,0,0,0,2.165,2.165h8.709a2.165,2.165,0,0,0,2.165-2.165Z" transform="translate(550.986 38.77)" fill="#e6e6e6"/><path d="M216.883,324.518l12.541,55.169,8.012,8.776h5.78L219.39,288.155,218.212,305.2v.012Z" transform="translate(816.18 158.66)" fill="#090814"/><path d="M372.68,501.442l73.559-.466,6.532-.044,4.656-.032,5.424-.032h.044a2.993,2.993,0,0,1,2.1.867l9.159,9.16a2.362,2.362,0,0,1,.487.7,1.054,1.054,0,0,1,.141.238,3.058,3.058,0,0,1-2.75,4.267H376.74a3.032,3.032,0,0,1-2.729-1.732l-.747-1.624-1.537-3.3-1.742-3.725a2.968,2.968,0,0,1-.281-1.267,3.015,3.015,0,0,1,2.978-3Z" transform="translate(600.039 38.118)" fill="#090814"/><path d="M369.7,511.912l.752,1.63a3.031,3.031,0,0,0,2.721,1.73h95.3a3.048,3.048,0,0,0,2.746-4.267.906.906,0,0,0-.138-.238Z" transform="translate(603.602 38.936)" opacity="0.17" style="isolation:isolate"/><path d="M216.883,305.2v.012l20.4,83.258h4.6L218.061,288.155Z" transform="translate(817.51 158.66)" opacity="0.17" style="isolation:isolate"/><path d="M375.215,464.563l28.876-219.691a3.135,3.135,0,0,1,1.191-2.079l19.878-24.881,1.786-1.375a3.171,3.171,0,0,1,2.317-.617l2.988.4a3.135,3.135,0,0,1,2.707,3.508h0L405.033,447.456v.01L403.2,461.39l-2.177,16.533v.022l-3.378,25.725a3.066,3.066,0,0,1-1.353,2.187,3.111,3.111,0,0,1-2.526.455l-1.9-.476a3.182,3.182,0,0,1-1.8-1.234l-.845-1.2-.39-.563-13.079-36.055A3.114,3.114,0,0,1,375.215,464.563Z" transform="translate(634.145 14.55)" fill="#090814"/><path d="M411.516,217.913,375.192,502.84l.395.557.841,1.2a3.173,3.173,0,0,0,1.8,1.235l1.9.477a3.146,3.146,0,0,0,3.876-2.64l37.3-283.837a3.135,3.135,0,0,0-2.7-3.517l-3-.394a3.091,3.091,0,0,0-2.307.62Z" transform="translate(647.795 14.55)" fill="#090814" opacity="0.17" style="isolation:isolate"/><path d="M260.137,97.7l-19.276,27.513L217.951,299.53l12.421,24.641Z" transform="translate(798.101 142.912)" fill="#ff8c00"/><g transform="translate(732.051 232.639)"><path d="M7.819,0H161.966a7.819,7.819,0,1,1,0,15.638H7.819A7.819,7.819,0,0,1,7.819,0Z" fill="#ff8c00"/><path d="M0,0H32.393a7.819,7.819,0,1,1,0,15.638H0Z" transform="translate(129.573)" fill="#090814"/></g><path d="M22.6,43.192A20.6,20.6,0,0,1,22.6,2a2.06,2.06,0,0,1,0,4.119A16.477,16.477,0,1,0,39.073,22.6a2.06,2.06,0,1,1,4.119,0A20.619,20.619,0,0,1,22.6,43.192Z" transform="translate(794.348 151)" fill="#ff8c00"/></g></svg></div>
+                    <div class="problem-body">
+                        <h3 class="problem-title">チャットで指示しないと動かない</h3>
+                        <p class="problem-desc">日報の集計や議事録の整理のような毎日の仕事も、結局人が指示する状態のままになっている。</p>
+                    </div>
+                </div>
+                <div class="problem">
+                    <div class="problem-fig"><svg class="illu" role="img" aria-label="AIについて分からず困っている社内の2人" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 676.854"><g transform="translate(-537.662 -242.369)"><circle cx="52.28" cy="52.28" r="52.28" transform="translate(975.673 812.908)" fill="#ff8c00"/><path d="M963.4,818.129c29.248-8.784,60.343-17.943,83.539-38.825,20.728-18.66,34.721-47.154,26.134-75.138-8.569-27.927-34.237-46.548-60.738-55.81-15.031-5.253-30.755-8.167-46.474-10.456-17.088-2.489-34.251-4.528-51.406-6.49Q810.258,619.493,705.28,616.85c-34.533-.87-69.06-.849-103.6-.347-30.845.448-63.33.437-91.944-12.673-22.252-10.194-42.447-28.742-48.647-53.114-7.157-28.134,6.044-56.785,24.981-77.161,9.982-10.74,21.648-19.78,33.682-28.092,13.056-9.017,26.567-17.4,40.371-25.217A562.168,562.168,0,0,1,645.1,381.07c14.485-5.267,29.186-9.811,44.015-14,12.521-3.54,25.081-7.085,37.183-11.908,23.394-9.324,45.644-25.117,51.592-51.009,5.638-24.539-3.868-51.179-20.531-69.409-19.279-21.091-48.347-30.336-76.216-31.832-31.287-1.679-61.853,6.151-91.26,16.089-31.365,10.6-62.053,22.787-94.08,31.372a633,633,0,0,1-96.828,18c-16,1.7-32.494,3.629-48.594,2.324-13.493-1.093-26.918-5.062-36.862-14.638-8.527-8.211-13.606-19.5-11.86-31.405.317-2.163,3.6-1.243,3.288.906-2.126,14.5,7.728,27.855,19.871,34.7,14.034,7.908,31.112,7.919,46.736,7.015a611.272,611.272,0,0,0,100.6-14.543c32.5-7.422,63.832-18.033,95.132-29.367,29.727-10.765,60.119-21.271,91.877-23.6,27.556-2.023,56.544,1.991,80.551,16.392,21.1,12.656,36.613,33.763,41.557,57.984,4.831,23.668-1.86,47.49-19.776,64.006-18.55,17.1-43.985,24.412-67.688,31.145-30.064,8.54-59.483,18.523-87.959,31.485a552.159,552.159,0,0,0-82.739,46.516c-25.284,17.278-50.236,39.018-58.232,69.841-3.725,14.358-3.037,29.586,3.2,43.148,5.542,12.059,14.669,22.2,25.3,30.025,25.368,18.667,57.341,22.5,87.984,22.881,34.416.428,68.833-.733,103.26-.168q105.242,1.727,210.052,12.812,26.263,2.78,52.46,6.145c15.709,2.018,31.47,4.024,46.914,7.609,27.461,6.374,54.183,18.63,71.251,41.913a69.692,69.692,0,0,1,13.578,34.6c1.195,13.1-2.011,26.219-7.933,37.87-13.107,25.788-37.657,42.191-63.729,52.968-13.964,5.772-28.449,10.145-42.906,14.486-2.106.632-3.006-2.657-.906-3.288Z" transform="translate(376.883 96.403)" fill="#f2f2f2"/><circle cx="27.277" cy="27.277" r="27.277" transform="translate(653.466 294.081)" fill="#f2f2f2"/><circle cx="27.277" cy="27.277" r="27.277" transform="translate(842.699 345.794)" fill="#f2f2f2"/><circle cx="27.277" cy="27.277" r="27.277" transform="translate(1002.95 242.369)" fill="#f2f2f2"/><circle cx="27.277" cy="27.277" r="27.277" transform="translate(1102.964 358.295)" fill="#f2f2f2"/><circle cx="27.277" cy="27.277" r="27.277" transform="translate(967.717 492.406)" fill="#f2f2f2"/><circle cx="27.277" cy="27.277" r="27.277" transform="translate(796.101 557.188)" fill="#f2f2f2"/><circle cx="27.277" cy="27.277" r="27.277" transform="translate(977.946 658.34)" fill="#f2f2f2"/><circle cx="27.277" cy="27.277" r="27.277" transform="translate(1173.429 715.166)" fill="#f2f2f2"/><circle cx="27.277" cy="27.277" r="27.277" transform="translate(1401.872 702.664)" fill="#f2f2f2"/><path d="M622.121,220.373c-81.707.577-148.608,66.976-149.769,148.677-.011.754-.016,6.058-.015,13A38.355,38.355,0,0,0,510.686,420.4h0a38.377,38.377,0,0,0,38.371-38.4c0-4.727-.006-7.994-.006-8.194a72.738,72.738,0,1,1,111.972,61.236l.013.016S606.451,470.194,589.81,518.4l.014,0a106.843,106.843,0,0,0-4.4,30.423c0,4.234.249,41.28.73,71.349a39.536,39.536,0,0,0,39.54,38.895h0a39.547,39.547,0,0,0,39.544-39.791c-.167-27.537-.258-59.6-.258-61.929,0-29.6,28.556-59.094,52.012-78.327,27.011-22.148,46.448-52.329,54.255-86.375a98.611,98.611,0,0,0,2.841-21.4A150.874,150.874,0,0,0,622.121,220.373Z" transform="translate(400.232 99.284)" fill="#ff8c00"/><path d="M1136.309,747.956H179.016a1.353,1.353,0,1,1,0-2.706h957.293a1.353,1.353,0,1,1,0,2.706Z" transform="translate(360 170.947)" fill="#3f3d56"/><path d="M521.581,394.755h0a38.355,38.355,0,0,1-38.351-38.349c0-6.941,0-12.245.015-13A149.461,149.461,0,0,1,500.7,275.319a149.8,149.8,0,0,0-28.821,86.273c-.011.754-.016,6.058-.015,13a38.355,38.355,0,0,0,38.349,38.353h0a38.384,38.384,0,0,0,36.923-27.948A38.213,38.213,0,0,1,521.581,394.755Z" transform="translate(400.168 106.786)" fill="#3f3d56"/><path d="M613.483,293.673a72.742,72.742,0,0,1,63.258,101.621,72.735,72.735,0,1,0-122.093-76.131,72.591,72.591,0,0,1,58.834-25.49Z" transform="translate(411.47 106.798)" fill="#3f3d56"/><path d="M623,609.04h0a39.538,39.538,0,0,1-39.54-38.9c-.481-30.06-.73-67.106-.73-71.34a106.841,106.841,0,0,1,4.4-30.423l-.014,0a108.037,108.037,0,0,1,6.244-14.435,125.074,125.074,0,0,0-17.609,32.62l.014,0a106.841,106.841,0,0,0-4.4,30.423c0,4.234.249,41.28.73,71.349a39.536,39.536,0,0,0,39.54,38.895h0a39.552,39.552,0,0,0,37.96-28.462A39.392,39.392,0,0,1,623,609.04Z" transform="translate(413.753 131.173)" fill="#3f3d56"/><path d="M603.828,744.91a52.273,52.273,0,0,1-19.4-81.249A52.277,52.277,0,1,0,655.539,739.2a52.246,52.246,0,0,1-51.711,5.711Z" transform="translate(412.607 159.807)" fill="#3f3d56"/><g transform="translate(1135.87 516.267)"><path d="M274.847,101.451l-18.867,6.2V80.5H273.1Z" transform="translate(-207.812 -42.416)" fill="#f8a8ab"/><ellipse cx="18.799" cy="18.799" rx="18.799" ry="18.799" transform="translate(31.706 8.004)" fill="#f8a8ab"/><path d="M260.955,60.3c-3.147-.093-5.215-3.274-6.434-6.176s-2.48-6.236-5.4-7.433c-2.388-.979-6.6,5.645-8.479,3.881-1.966-1.84-.05-11.283,2.034-12.977s4.936-2.025,7.62-2.151a78.078,78.078,0,0,1,19.559,1.569c3.974.827,8.058,2.076,10.926,4.942,3.628,3.645,4.556,9.139,4.818,14.277.27,5.257-.034,10.757-2.591,15.357s-7.906,7.991-13.036,6.818c-.515-2.784.008-5.645.211-8.479s-.008-5.881-1.738-8.133-5.417-3.147-7.425-1.148" transform="translate(-205.287 -35.364)" fill="#2f2e43"/><path d="M291.721,72.216c1.882-1.375,4.135-2.531,6.446-2.245a6.5,6.5,0,0,1,5.257,4.8,8.349,8.349,0,0,1-1.628,7.113,11.784,11.784,0,0,1-6.278,3.962,6.621,6.621,0,0,1-4.3-.034,4.373,4.373,0,0,1-2.27-5.383" transform="translate(-212.925 -40.764)" fill="#2f2e43"/><rect width="17.668" height="25.068" transform="translate(43.138 361.184)" fill="#f8a8ab"/><path d="M226.427,505.82c-1.857,0-3.51-.042-4.756-.16-4.691-.43-9.171-3.9-11.424-5.923a3.2,3.2,0,0,1-.81-3.612h0a3.17,3.17,0,0,1,2.067-1.832l12.4-3.543L243.982,477.2l.228.4a35.787,35.787,0,0,1,2.717,6.1,2.715,2.715,0,0,1-.194,2.261,2.159,2.159,0,0,1-.933.776c.363.379,1.5,1.156,5.012,1.713,5.121.81,6.2-4.5,6.248-4.717l.034-.177.152-.1c2.439-1.569,3.941-2.286,4.455-2.134.321.093.861.262,2.32,14.715a14.856,14.856,0,0,1,.473,6.961c-.751,3.46-15.871,2.27-18.9,2-.084.008-11.407.819-19.161.819h-.008Z" transform="translate(-200.501 -104.397)" fill="#2f2e43"/><rect width="17.668" height="25.068" transform="translate(96.126 350.822) rotate(-31.95)" fill="#f8a8ab"/><path d="M305.5,499.023a31.637,31.637,0,0,1-5.34-.49,3.211,3.211,0,0,1-2.6-2.633h0a3.171,3.171,0,0,1,.784-2.649L307,483.683l9.872-22.123.4.219a35.788,35.788,0,0,1,5.535,3.738,2.689,2.689,0,0,1,1.026,2.025,2.135,2.135,0,0,1-.379,1.156c.506.135,1.882.187,5.155-1.2,4.775-2.017,2.885-7.1,2.8-7.307l-.067-.169.076-.16c1.24-2.624,2.126-4.025,2.649-4.168.329-.093.869-.236,9.754,11.264a14.8,14.8,0,0,1,4.083,5.653c1.19,3.333-12.268,10.328-14.977,11.695-.084.067-14.167,10.3-19.956,13.213a16.851,16.851,0,0,1-7.484,1.511h0Z" transform="translate(-214.303 -101.035)" fill="#2f2e43"/><path d="M276.388,214.98h-49.47L222.429,261l19.642,170.034h25.253l-10.1-98.205,40.964,88.662,22.444-15.711L288.65,323.005s11.424-72.108,2.447-90.071-14.707-17.956-14.707-17.956h0Z" transform="translate(-202.57 -63.427)" fill="#2f2e43"/><path d="M300.993,199.491H222.43L245.995,97.92h34.233Z" transform="translate(-202.57 -45.138)" fill="#2f2e43"/><path d="M199.236,93.2c-1.257-6.176,1.046-11.821,5.129-12.606s8.412,3.595,9.661,9.771a15.33,15.33,0,0,1-.244,7.441l4.969,26.249-12.842,2.034L202.374,100a15.508,15.508,0,0,1-3.139-6.8Z" transform="translate(-198.893 -42.416)" fill="#f8a8ab"/><path d="M276.036,97.918H245.851l-20.351,40.7-7.678-30.5-16.866,1.789s3.991,59.594,21.431,57.578,58.118-55.7,53.646-69.576h.008Z" transform="translate(-199.215 -45.136)" fill="#2f2e43"/><path d="M326.276,275.28c1.257,6.176-1.046,11.822-5.129,12.606s-8.412-3.595-9.661-9.771a15.33,15.33,0,0,1,.244-7.442l-4.969-26.249,12.842-2.034,3.535,26.089a15.507,15.507,0,0,1,3.139,6.8Z" transform="translate(-215.746 -67.71)" fill="#f8a8ab"/><path d="M269.54,97.861s17.154-.725,18.048,0c4.683,3.823,32.148,141.785,32.148,141.785h-17.4Z" transform="translate(-209.931 -45.078)" fill="#2f2e43"/></g><g transform="translate(606.503 502.092)"><path d="M802.988,361.878l17.819,35.274,53.267,24.218c5.689,9.615,23.768,10.351,25.083,4.136,1.476-6.975-21.955-18.2-21.955-18.2l-44.559-30.139-3.9-25.946Z" transform="translate(-746.5 -229.103)" fill="#ed9da0"/><path d="M729.219,464.214,725.933,490.5l19.058,1.315,1.969-27.6Z" transform="translate(-670.628 -94.732)" fill="#ed9da0"/><path d="M865.991,677.545a51.6,51.6,0,0,1-4.7-5.751c-2.728-3.78-5.152,15.608-5.152,15.608s-2.629,7.886-1.969,11.829,15.771,3.943,18.4,3.288,15.771,0,15.771,0h19.715c17.087-7.886,0-13.143,0-13.143-5.258-.657-23-17.087-23-17.087l-3.943-7.229c-2.628-.657-5.258,9.2-5.258,9.2Z" transform="translate(-804.773 -285.719)" fill="#2f2e43"/><path d="M789.36,464.615,786.072,490.9l19.059,1.315,1.969-27.6Z" transform="translate(-780.058 -94.804)" fill="#ed9da0"/><path d="M926.126,677.947a51.653,51.653,0,0,1-4.7-5.751c-2.731-3.78-5.154,15.608-5.154,15.608s-2.628,7.229-1.969,11.172,15.771,3.939,18.4,3.288,15.771.657,15.771.657h19.715c17.087-7.886,0-13.144,0-13.144-5.258-.658-23-17.087-23-17.087l-3.943-7.229c-2.628-.657-5.258,9.2-5.258,9.2Z" transform="translate(-914.194 -285.791)" fill="#2f2e43"/><path d="M886.547,446.248c-2.629,3.288-1.314,14.458-1.314,14.458s-4.6,36.144-2.628,39.43-1.314,5.914-3.288,10.515-3.944,15.771-3.944,15.771c-11.172,9.2-10.515,51.259-10.515,51.259l-3.939,37.458c1.314,3.943,19.715,4.6,22.345,3.943s10.515-59.8,10.515-59.8l17.743-33.516s-1.314,89.374-1.314,93.32,17.743,1.969,21.686,1.969,3.943-65.717,3.943-65.717l3.943-17.085,21.03-78.2v-9.2l-3.288-4.6S889.175,442.962,886.547,446.248Z" transform="translate(-855.557 -245.985)" fill="#2f2e43"/><path d="M922.73,251.326c-4.129,9.2-1.685,22.042,6.576,36.144L895.79,271.7l5.258-4.6-1.311-13.141Z" transform="translate(-852.639 -211.083)" fill="#ed9da0"/><ellipse cx="20.373" cy="20.373" rx="20.373" ry="20.373" transform="translate(39.531 10.343)" fill="#ed9da0"/><path d="M913.238,275.827c4.389,2.609,7.014,7.4,8.521,12.282a116.4,116.4,0,0,1,5,27.807l1.591,28.253,19.715,74.918c-17.085,14.458-26.94,11.172-49.944-.657s-25.63,3.946-25.63,3.946-1.969-.657,0-2.628,0,0-1.969-1.969,0,0,.657-1.969,0-.658-.657-1.314,2.628-6.576,2.628-6.576l-5.255-49.29-6.576-69.659c7.886-9.858,30.228-18.4,30.228-18.4l20.376,14.458c6.576,2.628,1.314-7.886,1.314-7.886Z" transform="translate(-843.147 -214.555)" fill="#e6e6e6"/><path d="M929.576,343.937l-2.628,39.43,33.519,47.973c0,11.172,5.914,13.8,5.914,13.8a86.859,86.859,0,0,0,5.914-11.172c3.288-7.229-1.969-13.143-1.969-13.143l-23-48.629,9.858-24.315Z" transform="translate(-922.244 -227.791)" fill="#ed9da0"/><path d="M950.6,293.123c-11.172,3.943-13.143,46.66-13.143,46.66,13.143-7.229,28.915,4.6,28.915,4.6s3.288-11.172,7.229-25.629a25.116,25.116,0,0,0-5.258-23.659S961.778,289.181,950.6,293.123Z" transform="translate(-932.102 -218.378)" fill="#e6e6e6"/><path d="M18.824,31.062c2.266.295,3.975-2.023,4.766-4.167s1.4-4.637,3.366-5.795c2.692-1.581,6.134.321,9.211-.2,3.475-.589,5.734-4.272,5.913-7.792s-1.224-6.9-2.6-10.15L39,6.991A8,8,0,0,0,35.505,0l.616,5.918A6.282,6.282,0,0,0,28.9.721l.1,3.526A58.415,58.415,0,0,0,16.9,3.654,19.54,19.54,0,0,0,5.775,7.943C1.212,11.91-.455,18.439.1,24.459S3.148,36.135,5.739,41.6c.651,1.374,1.553,2.925,3.064,3.1a3.088,3.088,0,0,0,3.022-2.279,8.253,8.253,0,0,0-.037-4.055,17.21,17.21,0,0,1-.5-6.136c.358-2.033,1.822-4.043,3.871-4.291s4.147,2.094,3.162,3.911Z" transform="translate(35.443 0)" fill="#2f2e43"/><path d="M298.55,550.829l33.429-64.009a5.247,5.247,0,0,1,7.072-2.219l48.523,25.342a5.247,5.247,0,0,1,2.219,7.072l-33.429,64.009a5.247,5.247,0,0,1-7.072,2.219L300.769,557.9A5.247,5.247,0,0,1,298.55,550.829Z" transform="translate(-173.513 -332.917)" fill="#3f3d56"/></g></g></svg></div>
+                    <div class="problem-body">
+                        <h3 class="problem-title">AIに詳しい人が社内にいない</h3>
+                        <p class="problem-desc">ツール選定や設定を任せられる人がおらず、何から頼めば良いのか分からない。</p>
+                    </div>
+                </div>
+                <div class="problem">
+                    <div class="problem-fig"><svg class="illu" role="img" aria-label="社内の資料が人の手元に散らばっている" id="p3-uuid-b619416f-6205-486c-b78f-4a074302c8ec" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 796.83295 753.07776"><metadata><c2pa:manifest xmlns:c2pa="http://c2pa.org/manifest">AAA0RWp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAADQfanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46dXVpZDpiNjAxYjU0Ni1kYTc0LTQ0NWItOTlmZS0zOWMxY2FkZDJkYjcAAAABtWp1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAANdqdW1iAAAAJmp1bWRjYm9yABEAEIAAAKoAOJtxA2MycGEuYWN0aW9ucwAAAACpY2JvcqFnYWN0aW9uc4GjZmFjdGlvbmtjMnBhLmVkaXRlZG1zb2Z0d2FyZUFnZW50bUFkb2JlIEZpcmVmbHlxZGlnaXRhbFNvdXJjZVR5cGV4U2h0dHA6Ly9jdi5pcHRjLm9yZy9uZXdzY29kZXMvZGlnaXRhbHNvdXJjZXR5cGUvY29tcG9zaXRlV2l0aFRyYWluZWRBbGdvcml0aG1pY01lZGlhAAAArWp1bWIAAAAoanVtZGNib3IAEQAQgAAAqgA4m3EDYzJwYS5oYXNoLmRhdGEAAAAAfWNib3KlamV4Y2x1c2lvbnOBomVzdGFydBkBA2ZsZW5ndGgZRbRkbmFtZW5qdW1iZiBtYW5pZmVzdGNhbGdmc2hhMjU2ZGhhc2hYIMGgorwb9jnKVwYMoU8X62w3ycRYkgFGgim+LE5tFprqY3BhZEkAAAAAAAAAAAAAAAILanVtYgAAACRqdW1kYzJjbAARABCAAACqADibcQNjMnBhLmNsYWltAAAAAd9jYm9yqGhkYzp0aXRsZW9HZW5lcmF0ZWQgSW1hZ2VpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpjMzMyM2UxYi0zOWFlLTQxMzktYWIxMi1jYzcwZDg2ODRhYjNvY2xhaW1fZ2VuZXJhdG9yeDZBZG9iZV9JbGx1c3RyYXRvci8yOC43IGFkb2JlX2MycGEvMC43LjYgYzJwYS1ycy8wLjI1LjJ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+Bv2RuYW1lcUFkb2JlIElsbHVzdHJhdG9yZ3ZlcnNpb25kMjguN/9pc2lnbmF0dXJleBlzZWxmI2p1bWJmPWMycGEuc2lnbmF0dXJlamFzc2VydGlvbnOComN1cmx4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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2WQEAYg6JfumRp8uwR4GB9JFF2RWPztxV7o9llXnzD5NKg8GRmDTAvIHQ9vwKLTNegUx0+sD7vnqMz5KYt2B+FJ1lgnXuOrYb18gPSORZOEGDB0zSnHwt4cArKVYcFzwN/QI9vCTPq0novPEXtYHtnAgcFXT1J2pVz3yCTOSAJ1yYbURgqAG+hmMqgEuRgrA+sm2BSz00BiaSNGuKOWY/URiKnf50RWIS/knX6I+3xJtCL+Il0wTP176xT6H67jFFtmwfDMqwn9kHq7CvZNhq8AiP/d7n9ZLA+g50sesK02D00sCg+tu7+8J9oLCRwheoT05/XnEXP3/IcwV5c+A/3F9TMQ==</c2pa:manifest></metadata><path d="M34.83943,141.98139c-6.00379,0-11.28299-4.30203-12.43683-10.25476L.23273,17.37851c-.71217-3.67405.22773-7.45161,2.57818-10.36379,2.34907-2.91081,5.84231-4.62775,9.58399-4.7078L119.52743.00339c6.25637-.14216,11.55903,4.1999,12.71562,10.30444l21.0119,110.89215c.67905,3.58847-.22221,7.29426-2.47605,10.16919-2.25246,2.87354-5.63529,4.63603-9.28035,4.8334l-105.97456,5.7595c-.22911.01242-.45822.01932-.68457.01932Z" fill="#d6d6e3"/><polygon points="27.90646 123.44951 51.22602 60.55735 90.09196 89.53014 102.81173 76.81038 147.3309 122.74285 27.90646 123.44951" fill="#ff8c00"/><path d="M99.98543,54.90429c-5.84507,0-10.5998-4.75473-10.5998-10.5998s4.75473-10.5998,10.5998-10.5998,10.5998,4.75473,10.5998,10.5998-4.75473,10.5998-10.5998,10.5998Z" fill="#ff8c00"/><path d="M38.80607,573.91229c-3.34004,0-6.60693-.97717-9.46529-2.86802-3.90592-2.58646-6.54069-6.54483-7.41572-11.14635L.51429,447.35783c-1.74317-9.16717,4.01909-17.9617,13.11864-20.02093l95.91717-21.72683c4.55184-1.02824,9.2141-.20565,13.13382,2.31733,3.92248,2.52573,6.60141,6.43303,7.54408,11.00006l23.33751,113.05628c1.90189,9.21272-4.03013,18.32744-13.22215,20.32043l-97.84528,21.20927c-1.22836.26638-2.46501.39887-3.69199.39887Z" fill="#d6d6e3"/><path d="M31.43452,472.53788c-2.33527,0-4.41244-1.66036-4.85686-4.03979-.50239-2.68584,1.26839-5.26954,3.95422-5.77054l77.54418-14.4864c2.68446-.50929,5.26816,1.26839,5.77054,3.95422s-1.26839,5.26954-3.95422,5.77054l-77.54418,14.4864c-.3064.05797-.6128.08557-.91368.08557Z" fill="#090814"/><path d="M38.50243,502.21733c-2.23866,0-4.26614-1.52924-4.80856-3.8024-.63212-2.65685,1.00891-5.32474,3.66715-5.95825l72.9951-17.38064c2.65547-.62936,5.32336,1.00891,5.95825,3.66715.63212,2.65685-1.00891,5.32474-3.66715,5.95825l-72.9951,17.38064c-.38507.09109-.77014.13526-1.14969.13526Z" fill="#090814"/><path d="M43.44763,530.9334c-2.28696,0-4.34067-1.59549-4.8334-3.92248-.56587-2.67341,1.14141-5.29852,3.81344-5.8644l49.79975-10.54598c2.68722-.56449,5.2999,1.14141,5.8644,3.81344.56587,2.67341-1.14141,5.29852-3.81344,5.8644l-49.79975,10.54598c-.34643.07315-.69147.10903-1.031.10903Z" fill="#090814"/><path d="M760.56841,227.68107c-.87918,0-1.76801-.06901-2.66099-.20841l-98.90664-15.51739c-4.62913-.72736-8.67031-3.23101-11.38099-7.05273-2.71068-3.82035-3.73891-8.46328-2.89562-13.07033l20.63373-112.68501c1.68382-9.17821,10.22301-15.2869,19.45919-13.94122l97.29597,14.34148c4.61395.68043,8.66755,3.13163,11.41273,6.90229,2.74656,3.76928,3.83553,8.37909,3.06677,12.97924l-19.02306,113.8623c-1.39951,8.38599-8.7407,14.38978-17.00109,14.38978Z" fill="#d6d6e3"/><path d="M764.45638,128.58672c-.30088,0-.6059-.0276-.9123-.08557l-77.5497-14.46569c-2.68584-.50101-4.45661-3.08333-3.9556-5.76916.49963-2.68584,3.07643-4.46765,5.76916-3.9556l77.5497,14.46569c2.68584.50101,4.45661,3.08333,3.9556,5.76916-.44304,2.37943-2.52159,4.04117-4.85686,4.04117Z" fill="#090814"/><path d="M757.14142,154.47481c-.22359,0-.44718-.0138-.67491-.04555l-74.35044-10.12502c-2.70654-.36851-4.60153-2.86112-4.23302-5.56904.36989-2.70792,2.87078-4.60429,5.56904-4.23302l74.35044,10.12502c2.70654.36851,4.60153,2.86112,4.23302,5.56904-.33814,2.48019-2.45949,4.27857-4.89413,4.27857Z" fill="#090814"/><path d="M727.29359,181.05022c-.26223,0-.52861-.02208-.79637-.06487l-50.25107-8.13204c-2.69688-.43614-4.52838-2.97705-4.09224-5.67393.43752-2.69688,2.96049-4.52286,5.67393-4.09224l50.25107,8.13204c2.69688.43614,4.52838,2.97705,4.09224,5.67393-.39335,2.42912-2.49261,4.15711-4.87757,4.15711Z" fill="#090814"/><path d="M222.64891,287.14791l-47.29506,161.67135c-6.28035,21.46857,8.64874,43.31638,30.93188,45.26688l51.60908,4.51747-35.24589-211.45575v.00004Z" fill="#ff8c00"/><path d="M222.64891,287.14791l-47.29506,161.67135c-6.28035,21.46857,8.64874,43.31638,30.93188,45.26688l51.60908,4.51747-35.24589-211.45575v.00004Z" isolation="isolate" opacity=".1"/><path d="M651.92149,257.32277l-63.26257,104.62478-29.78667-37.73747,58.21446-91.14269c-2.0682-10.60368.43614-22.91144,7.83685-33.54014,12.94939-18.59749,35.92365-24.98598,51.31467-14.26928,15.39102,10.71677,17.37037,34.48035,4.4209,53.07788-7.4008,10.62879-18.07539,17.24745-28.73773,18.98691h.00009Z" fill="#9d616a"/><path d="M257.5162,510.95284l-7.59696,25.83762.25766,26.1991s-49.96735,60.09837-31.55908,190.08819l234.12408-2.93573-27.88935-209.17038-167.33635-30.0188Z" fill="#090814"/><path d="M283.8688,152.90862c0-36.66843,29.72568-66.39414,66.39437-66.39414s66.39437,29.7257,66.39437,66.39414c0,29.7381-19.55287,54.90653-46.50266,63.35927l-9.89876,7.97558,17.77149,62.20019-20.70791,14.64919-65.43239-54.52672s14.13548-18.00465,21.71605-38.30645c-17.91658-11.89023-29.73465-32.23667-29.73465-55.35106h.00009Z" fill="#9d616a"/><path d="M603.92063,254.00171c-23.44093-.35738-66.77332,74.86783-66.77332,74.86783l-35.59551-12.58843-73.20808-25.91741-56.10632-23.09235.24671,1.69586c-.221-.53178-.46098-1.06897-.72537-1.61115-5.89847-12.15404-23.03231-26.4537-71.67599-23.61958l-22.90482,18.07864-3.11516,2.47674s-14.45275-1.25105-28.85427,4.49418c-10.41822,4.18799-20.83644,12.0023-25.76464,26.60727-2.55342,7.53347-2.55342,23.10913-1.02142,42.89853,5.54117,71.6505,31.36594,223.97025,31.36594,223.97025l163.0301-21.58174,12.027.28126s1.42996-16.41857,2.70662-37.91927c.79162-12.61422,1.50664-26.93974,1.91518-40.72798.28087-10.11169.35747-19.91716.17865-28.5477-.02545-.53676-.02545-1.07305-.05107-1.60934-.48522-15.75453-2.06829-27.16846-5.46449-28.41951,0,0,10.54598-.28126,25.76464-.84295,36.77013-1.37876,100.86236-4.46882,110.00383-9.44765,12.92058-7.02211,80.66425-101.27081,80.66425-101.27081,0,0-13.17591-37.79151-36.64238-38.17471l-.00009.00002Z" fill="#ff8c00"/><path d="M418.61948,157.80939c-5.01532-24.53704-7.42116-37.10576-25.65147-54.46304-4.32696.6124,1.14219,23.04847-22.70797,54.30175-34.67053,45.43222-31.21438,3.77633-41.46681,17.77149-2.22563,3.03823-2.70602,14.00027-1.97461,17.77149,2.89019,14.90138,19.99384.35113,1.97461,51.33984-2.68083,3.96572-5.84162,3.0016-9.87305,2.96191-.31218-.00306,1.73282-.39355-5.92383-1.97461-3.65446-.75466-8.76959-1.646-14.90157-2.67902-71.23459-12.0008-96.38772-101.88441-41.32758-148.64722,12.52731-10.6395,24.82146-18.70302,35.49571-22.43939,32.1498-11.25363,105.40066-3.93893,119.46386,32.58105,6.70838,17.42062,8.9491,35.27059,6.89263,53.47573h.00009Z" fill="#010102"/><circle cx="271.90478" cy="251.28667" r="50.80564" fill="#010102"/></svg></div>
+                    <div class="problem-body">
+                        <h3 class="problem-title">AIが会社の前提を知らない</h3>
+                        <p class="problem-desc">社内の決まりごとや案件の状況をAIが知らないので、期待しているアウトプットとズレる。</p>
+                    </div>
+                </div>
+            </div>
+            <p class="problem-close"><span>どれもAIの性能の問題ではありません。</span><span>会社情報の蓄積・定刻に動く仕組み・承認の線引きといったAI環境を構築すれば、自ら思考して動くようになります。</span></p>
+        </div>
+    </section>
+
+    <!-- Example -->
+    <section class="section" id="example">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">構築サービス（一例）</h2>
+                <p class="section-lead">構築支援をしているAIエージェントの一例です。</p>
+            </div>
+            <div class="cases">
+                <div class="case">
+                    <div>
+                        <span class="case-tag">営業</span>
+                        <h3 class="case-title">商談の議事録から追加提案の機会を拾う</h3>
+                        <p class="case-desc">全ての商談の議事録を読み、クロスセル・アップセルの可能性がある顧客を見つけ、チームを横断して担当者と連携します。</p>
+                    </div>
+                    <div class="case-visual"><div class="mock">
+                        <div class="slackmock-head"># 営業-連携 <span>アプリからの通知</span></div>
+                        <div class="slackmock-body">
+                            <div class="msg"><div class="msg-av ai">AI</div><div><div class="msg-name">nito AI<small>アプリ 8:05</small></div><div class="msg-text">昨日の商談メモ 6件を読みました。他のサービスも役立ちそうな会社が2社あります。</div>
+                                <div class="msg-card"><b>B社（担当: 佐藤）</b>商談で「請求書の処理に月20時間」と発言。経理向けプランの対象です。</div>
+                                <div class="msg-card"><b>C社（担当: 鈴木）</b>子会社でも同じ課題。グループ導入の提案余地。</div>
+                                <div class="msg-actions"><span class="ok">佐藤さんに共有</span><span>あとで</span></div></div></div>
+                        </div>
+                    </div></div>
+                </div>
+                <div class="case">
+                    <div>
+                        <span class="case-tag">Slack</span>
+                        <h3 class="case-title">AIが自分で進められる仕事を申し出る</h3>
+                        <p class="case-desc">Slackのやりとりや社内MTGの議事録から、「これはAIが進められる」というタスクを自ら進めます。</p>
+                    </div>
+                    <div class="case-visual"><div class="mock">
+                        <div class="slackmock-head"># cs-チーム <span>4人のメンバー</span></div>
+                        <div class="slackmock-body">
+                            <div class="msg"><div class="msg-av">高</div><div><div class="msg-name">高橋<small>14:20</small></div><div class="msg-text">D社の更新資料、来週までに去年との差分をまとめないと…</div></div></div>
+                            <div class="msg"><div class="msg-av ai">AI</div><div><div class="msg-name">nito AI<small>アプリ 14:21</small></div><div class="msg-text">去年の資料と今年の利用ログは読めるので、差分の一覧はこちらで作れます。今夜のうちに下書きを出しておきますか？</div>
+                                <div class="msg-actions"><span class="ok">お願いします</span><span>自分でやる</span></div></div></div>
+                            <div class="msg"><div class="msg-av">高</div><div><div class="msg-name">高橋<small>14:22</small></div><div class="msg-text">助かる、お願い</div></div></div>
+                        </div>
+                    </div></div>
+                </div>
+                <div class="case">
+                    <div>
+                        <span class="case-tag">夜間</span>
+                        <h3 class="case-title">頼まれたタスクを朝までに仕上げておく</h3>
+                        <p class="case-desc">日中に頼まれたタスクを夜間に進行。複数のAIエージェントで添削し合い、直した状態で朝に届けます。</p>
+                    </div>
+                    <div class="case-visual"><div class="mock"><div class="mock-term">
+                        <div class="head">夜間の作業ログ  <span class="t">2026-09-18 22:00 〜</span></div>
+                        <div><span class="t">22:00</span> D社 更新資料の差分一覧 を開始（依頼: 高橋）</div>
+                        <div><span class="t">22:14</span> 去年の資料・今年の利用ログを読み込み <span class="ok">完了</span></div>
+                        <div><span class="t">22:31</span> 差分一覧 v1 を作成（12項目）</div>
+                        <div><span class="t">22:33</span> <span class="ai">添削AI</span> に確認を依頼</div>
+                        <div><span class="t">22:40</span> <span class="ai">添削AI</span>: 指摘2件（数値の根拠が無い1件・重複1件）</div>
+                        <div><span class="t">22:52</span> 指摘を反映して v2 <span class="ok">完了</span></div>
+                        <div><span class="t">06:30</span> 朝の一覧に「確認待ち」として掲載</div>
+                    </div></div></div>
+                </div>
+                <div class="case">
+                    <div>
+                        <span class="case-tag">毎朝</span>
+                        <h3 class="case-title">今日の状況と判断待ちを1枚に</h3>
+                        <p class="case-desc">予定・メール・Slack・前日の記録を読み、今日の予定と決めるべきことを全社員分まとめます。</p>
+                    </div>
+                    <div class="case-visual"><div class="mock"><div class="mock-doc">
+                        <div class="mock-doc-title">今日の状況 <span>9/19 6:30 自動作成</span></div>
+                        <h5>今日の予定</h5>
+                        <ul><li>10:00 E社 初回商談（佐藤）… 事前調査を添付済み</li><li>15:00 D社 更新のご説明（高橋）</li></ul>
+                        <h5>決めてほしいこと</h5>
+                        <ul><li class="todo">D社 差分一覧 v2 の確認（昨夜完成）</li><li class="todo">B社への経理向けプラン提案、進めるか</li></ul>
+                        <h5>昨日終わったこと</h5>
+                        <ul><li>商談メモ6件の取り込み・要点整理</li><li>E社の事前調査（競合3社・直近ニュース）</li></ul>
+                    </div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mechanism -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">仕組み</h2>
+                <p class="section-lead">指示しなくても動くAIエージェントを活用するために、以下の環境を構築します。</p>
+            </div>
+            <div class="bento">
+                <div class="bento-item w4">
+                    <h3 class="bento-title">会社のデータベース</h3>
+                    <p class="bento-desc">会社情報・案件ごとの状況・AIの活用方法などを1箇所にまとめたデータベースを作成します。個人ごとに使うAIとは異なり、成功例が全社で共有されるため、改善が積み上がります。</p>
+                    <div class="slide">
+                        <div class="sl-hub">
+                            <div class="sl-col"><div class="sl-box">営業<small>担当者</small></div><div class="sl-box">CS<small>担当者</small></div><div class="sl-box">管理部門<small>担当者</small></div></div>
+                            <div class="sl-col"><span class="sl-arrow">⇄</span><div class="sl-box on">会社のデータベース<small>決まりごと・案件の状況・AIの使い方</small></div><span class="sl-arrow">⇄</span></div>
+                            <div class="sl-col"><div class="sl-box">営業AI</div><div class="sl-box">CS AI</div><div class="sl-box">夜間AI</div></div>
+                        </div>
+                        <p class="sl-note">人もAIも同じ1箇所を読む。うまくいった使い方がここに溜まる</p>
+                    </div>
+                </div>
+                <div class="bento-item w2">
+                    <h3 class="bento-title">決まった時刻に動く定期実行</h3>
+                    <p class="bento-desc">朝は状況の整理、夜は日中に頼まれたタスク。人が頼まなくても、時刻が来れば動き始めます。</p>
+                    <div class="slide">
+                        <div class="sl-time">
+                            <div class="sl-tick"><b>6:30</b><span>状況の整理</span><span class="sl-dot"></span></div>
+                            <div class="sl-tick"><b>毎時</b><span>取り込み</span><span class="sl-dot s"></span></div>
+                            <div class="sl-tick"><b>22:00</b><span>夜間の作業</span><span class="sl-dot"></span></div>
+                        </div>
+                        <p class="sl-note">人の依頼なしで始まる</p>
+                    </div>
+                </div>
+                <div class="bento-item w3">
+                    <h3 class="bento-title">取り消せない操作だけ人が承認</h3>
+                    <p class="bento-desc">対外送信・契約・支払い・公開は、AIが下書きを作り、人が確認してから実行します。</p>
+                    <div class="slide">
+                        <div class="sl-row">
+                            <div class="sl-box">AIが実行<small>調査・下書き・集計</small></div>
+                            <div class="sl-box on">人が承認<small>送信・契約・支払い・公開</small></div>
+                            <div class="sl-box off">触らせない<small>最初に決めて文書に</small></div>
+                        </div>
+                        <p class="sl-note">3つの線引きを最初に決める</p>
+                    </div>
+                </div>
+                <div class="bento-item w3">
+                    <h3 class="bento-title">AIエージェント同士での議論</h3>
+                    <p class="bento-desc">作ったAIとは別のAIがアウトプットを添削し、直してから人に回します。</p>
+                    <div class="slide">
+                        <div class="sl-row">
+                            <div class="sl-box on">作るAI<small>下書き</small></div>
+                            <span class="sl-arrow">⇄</span>
+                            <div class="sl-box on">添削するAI<small>指摘・修正</small></div>
+                            <span class="sl-arrow">→</span>
+                            <div class="sl-box">人が確認</div>
+                        </div>
+                        <p class="sl-note">人に届くのは直した後</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow -->
+    <section class="section" id="flow">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">進め方</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <div class="step-main">
+                        <h3 class="step-title">業務の棚卸し</h3>
+                        <span class="step-tag">無料・オンライン30分から</span>
+                        <p class="step-desc">毎日・毎週くり返している業務を伺って書き出します。</p>
+                    </div>
+                    <div class="step-visual"></div>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <div class="step-main">
+                        <h3 class="step-title">優先順位の高い業務でデモを作成</h3>
+                        <p class="step-desc">業務工数・売上への貢献度で優先順位をつけ、最初に構築するタスクを選定してデモを作成。デモを見てから導入するかどうかを決定できます。</p>
+                    </div>
+                    <div class="step-visual"><div class="mock mock-sheet">
+                        <div class="mock-sheet-title">業務の棚卸し（営業部） <span>優先順位つき</span></div>
+                        <table>
+                            <tr><th>業務</th><th>月の時間</th><th>売上への影響</th><th>優先</th></tr>
+                            <tr class="pick"><td>商談後の議事録整理と次の行動出し</td><td class="n">38h</td><td>大</td><td><span class="tag">最初の1つ</span></td></tr>
+                            <tr><td>新規アポ先の事前調査</td><td class="n">22h</td><td>大</td><td>2</td></tr>
+                            <tr><td>週次の売上レポート作成</td><td class="n">12h</td><td>中</td><td>3</td></tr>
+                            <tr><td>問い合わせメールの一次返信</td><td class="n">18h</td><td>中</td><td>4</td></tr>
+                            <tr><td>名刺・顧客情報の入力</td><td class="n">9h</td><td>小</td><td>5</td></tr>
+                        </table>
+                    </div></div>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <div class="step-main">
+                        <h3 class="step-title">構築</h3>
+                        <p class="step-desc">実際に社内システム内で構築。AIに任せる業務範囲のルールやセキュリティ面も考慮し、安全性の高いエージェントを作ります。</p>
+                    </div>
+                    <div class="step-visual"><div class="mock">
+                        <div class="slackmock-head"># 営業チーム <span>導入初週</span></div>
+                        <div class="slackmock-body">
+                            <div class="msg"><div class="msg-av ai">AI</div><div><div class="msg-name">nito AI<small>アプリ 17:40</small></div><div class="msg-text">今日の商談メモ 3件を整理しました。それぞれの次の行動です。</div>
+                                <div class="msg-card"><b>E社（佐藤）</b>見積の再提示を来週火曜まで。前回の宿題「他社比較」は資料に反映済み。</div>
+                                <div class="msg-card"><b>F社（鈴木）</b>決裁者との2回目を提案。日程候補を3つ用意しました。</div>
+                                <div class="msg-actions"><span class="ok">この内容で送る</span><span>修正する</span></div></div></div>
+                            <div class="msg"><div class="msg-av">佐</div><div><div class="msg-name">佐藤<small>17:52</small></div><div class="msg-text">E社の件、この通りで。ありがとう</div></div></div>
+                        </div>
+                    </div></div>
+                </div>
+                <div class="step">
+                    <span class="step-num">04</span>
+                    <div class="step-main">
+                        <h3 class="step-title">運用アドバイザリー</h3>
+                        <span class="step-tag">月1回</span>
+                        <p class="step-desc">実際の利用状況や要望を踏まえて運用改善を提案します。最新のAI活用方法の共有や、次に作るエージェントの選定もこの場で行います。</p>
+                    </div>
+                    <div class="step-visual"><div class="mock mock-rev">
+                        <div class="mock-rev-title">月次レビュー <span>9月・営業チーム</span></div>
+                        <div class="kpis">
+                            <div class="kpi on"><b>62件</b><small>AIが整理した商談メモ</small></div>
+                            <div class="kpi"><b>3件</b><small>止まった処理（対応済み）</small></div>
+                            <div class="kpi"><b>2件</b><small>人が差し戻した提案</small></div>
+                        </div>
+                        <h5>次にAIに渡す候補</h5>
+                        <ul><li>新規アポ先の事前調査（月22h）</li><li>週次の売上レポート（月12h）</li></ul>
+                        <h5>今月の変更</h5>
+                        <ul><li>承認なしで送ってよい範囲に「日程候補の提示」を追加</li></ul>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--gray" id="about">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">nitoについて</h2>
+            </div>
+            <div class="about-wrap">
+                <div class="about-photo">
+                    <img src="/profile_okamura.jpg" alt="代表 岡村希一">
+                    <div class="about-photo-name">岡村 希一</div>
+                    <div class="about-photo-role">nito 代表</div>
+                </div>
+                <div class="about-body">
+                    <p>nitoは自社の業務をAI中心で運営しています。営業の下調べも、夜間の作業も、毎朝の状況の整理も、人が頼まなくてもAIが進め、人は結果を見て決めます。</p>
+                    <p>このページで説明した仕組みは、その運営から生まれたものです。導入先では企業ごと・課題ごとに作り、業務の中で動く状態にして引き渡します。</p>
+                    <p class="about-bio">株式会社サイバーエージェントで広告の新規事業開発に携わりながら、新卒採用や育成部門での責任者も務めたのち、nitoを立ち上げ。<a href="https://nito-0210.com/#member">メンバー紹介</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">費用の考え方</h2>
+            </div>
+            <div class="price-cols">
+                <div class="price-col">
+                    <div class="price-kind">一時金</div>
+                    <h3 class="price-title">構築費</h3>
+                    <p class="price-sub">業務の数と連携先の数で見積ります</p>
+                    <ul class="price-list">
+                        <li>要件定義・設計・実装</li>
+                        <li>承認ルールと運用手順の整備</li>
+                        <li>引き渡しと検収後の初期不具合の修正</li>
+                    </ul>
+                </div>
+                <div class="price-col">
+                    <div class="price-kind">月額</div>
+                    <h3 class="price-title">運用アドバイザリー</h3>
+                    <p class="price-sub">月1回のミーティングで次を決めます</p>
+                    <ul class="price-list">
+                        <li>稼働量と例外処理の運用レビュー</li>
+                        <li>次にAIに渡す業務の候補と優先順位</li>
+                        <li>AIモデルの仕様変更への追随と社内展開</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="price-note">金額は棚卸しのあとに、対象業務と範囲を確定してから提示します。</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-cta" id="cta">
+        <div class="container">
+            <a href="https://nito-0210.com/contact.html" class="cta-banner">
+                <div class="cta-banner-text">
+                    <span class="cta-banner-label">相談する</span>
+                    <p class="cta-banner-title">いま手で回している業務を、まず聞かせてください。</p>
+                </div>
+                <div class="cta-banner-arrow">→</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-faq">
+        <div class="container">
+            <div class="">
+                <h2 class="section-title">よくある質問</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question"><span>何から始めればいいですか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">無料の業務棚卸しからです。部門の反復業務を30分ほど伺い、工数と売上への影響で順位をつけたものをお返しします。その時点で構築に進むかどうかを決めていただけます。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>どの部門から入るのがよいですか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">営業やカスタマーサクセスからをおすすめしています。商談の議事録から次の行動を出す、追加提案の機会を社内に流すといった売上に直結する業務は、AIに渡した効果が数字で見えやすいためです。1つ動いてからバックオフィスに広げます。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>いまはChatGPTを個人で使っている程度です。相談できますか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">できます。むしろその段階からのほうが進めやすく、個人で使っていて時間がかかっている作業を棚卸しの入口にします。人が頼まなくても動く定期処理と、会社の前提をAIに持たせる場所を先に作り、そこから業務を1つずつ渡していきます。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>社内にAIに詳しい担当者がいなくても大丈夫ですか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">大丈夫です。設計と構築はnitoが行い、必要なのは業務の説明と、任せる範囲の判断だけです。引き渡し後は月1回のミーティングで使い方と承認ルールを整え、担当者が替わっても使い続けられる状態にします。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>費用はどのくらいかかりますか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">構築費と月額の2つです。構築費は業務の数と連携先の数で、月額は月1回のミーティングを含む運用アドバイザリーの内容で決まります。棚卸しで対象業務と範囲が決まった時点でお伝えします。</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    <a href="https://nito-0210.com" class="footer-logo">nito</a>
+                    <p class="footer-tagline">いいモノが自然に広まる仕組みをつくる</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="footer-nav-col">
+                        <span class="footer-nav-title">わたしたちについて</span>
+                        <div class="footer-nav-links">
+                            <a href="https://nito-0210.com/#about">ビジョン</a>
+                            <a href="https://nito-0210.com/#member">メンバー</a>
+                        </div>
+                    </div>
+                    <div class="footer-nav-col">
+                        <span class="footer-nav-title">サービス</span>
+                        <div class="footer-nav-links">
+                            <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">AIエージェント構築支援</a>
+                            <a href="https://nito-0210.com/llmo/">AI検索対策</a>
+                        </div>
+                    </div>
+                    <div class="footer-nav-col">
+                        <a href="https://nito-0210.com/media/" class="footer-nav-title">コラム</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2025 nito Inc. All rights reserved.</p>
+                <a href="https://nito-0210.com/privacy.html" class="footer-privacy">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('animated');
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('., ., ., .').forEach(el => observer.observe(el));
+
+        window.addEventListener('load', () => {
+            document.querySelector('.header-wrapper').classList.add('animated');
+        });
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const navOverlay = document.getElementById('nav-overlay');
+        const backdrop = document.getElementById('nav-overlay-backdrop');
+        const navClose = document.getElementById('nav-close');
+
+        const toggleMenu = () => {
+            const open = navOverlay.classList.toggle('active');
+            backdrop.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            document.body.style.overflow = open ? 'hidden' : '';
+        };
+
+        hamburger.addEventListener('click', toggleMenu);
+        navClose.addEventListener('click', toggleMenu);
+        backdrop.addEventListener('click', toggleMenu);
+        navOverlay.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            if (navOverlay.classList.contains('active')) toggleMenu();
+        }));
+
+        // Tabs
+        document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+            document.querySelectorAll('.tab').forEach(x => x.classList.remove('is-active'));
+            document.querySelectorAll('.panel').forEach(x => x.classList.remove('is-active'));
+            t.classList.add('is-active'); document.getElementById(t.dataset.tab).classList.add('is-active');
+        }));
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    </script>
+</body>
+
+</html>
