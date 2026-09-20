@@ -1313,7 +1313,8 @@
         .sl-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--color-secondary); margin-bottom: -7px; }
         .sl-dot.s { width: 8px; height: 8px; background: #e6b27a; margin-bottom: -5px; }
         /* 進め方: 番号を左の列に */
-        .step { grid-template-columns: 72px 1fr 1fr; gap: 28px; padding: 36px 0; }
+        .step { grid-template-columns: 72px 1fr 1fr; gap: 28px; padding: 36px 0; align-items: start; }
+        .step-main { padding-top: 6px; }
         .step-num { position: static; font-size: 40px; color: var(--color-secondary); line-height: 1; align-self: start; padding-top: 4px; }
         .step-main { padding-top: 0; padding-left: 0; }
         @media (max-width: 900px) { .step { grid-template-columns: 56px 1fr; } .step-visual { grid-column: 2; } .step-num { font-size: 32px; } .hero::before { right: -220px; top: -240px; width: 420px; height: 420px; } }
@@ -1338,6 +1339,28 @@
         .mock-term .ai { color: #ffb454; }
         .mock-term .head { color: #fff; font-weight: 700; margin-bottom: 4px; }
         @media (max-width: 768px) { .mock-term { font-size: 11px; } }
+
+        /* 進め方のモック */
+        .mock-sheet { padding: 0; }
+        .mock-sheet table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        .mock-sheet th, .mock-sheet td { border-bottom: 1px solid #eee; padding: 8px 10px; text-align: left; white-space: nowrap; }
+        .mock-sheet th { background: #f7f7f7; color: #666; font-weight: 700; font-size: 11.5px; }
+        .mock-sheet td.n { text-align: right; font-variant-numeric: tabular-nums; }
+        .mock-sheet tr.pick td { background: #fff4e6; }
+        .mock-sheet .tag { display: inline-block; font-size: 10.5px; font-weight: 700; color: #fff; background: var(--color-secondary); border-radius: 3px; padding: 2px 6px; }
+        .mock-sheet-title { font-size: 12px; font-weight: 700; padding: 10px 12px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+        .mock-sheet-title span { font-weight: 400; color: #999; font-size: 11px; }
+        .mock-rev { padding: 16px 18px; }
+        .mock-rev-title { font-size: 12.5px; font-weight: 700; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 12px; display: flex; justify-content: space-between; }
+        .mock-rev-title span { font-weight: 400; color: #999; font-size: 11px; }
+        .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+        .kpi { background: #f7f7f7; border-radius: 8px; padding: 10px 12px; }
+        .kpi b { display: block; font-size: 20px; line-height: 1.1; color: #1a1a1a; }
+        .kpi small { font-size: 10.5px; color: #888; }
+        .kpi.on { background: #fff4e6; } .kpi.on b { color: var(--color-primary-deep); }
+        .mock-rev h5 { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); margin: 8px 0 4px; }
+        .mock-rev li { font-size: 12px; line-height: 1.7; color: #333; list-style: none; padding-left: 12px; position: relative; }
+        .mock-rev li::before { content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: #e6b27a; }
     </style>
 </head>
 
@@ -1605,7 +1628,17 @@
                         <h3 class="step-title">優先順位の高い業務でデモを作成</h3>
                         <p class="step-desc">業務工数・売上への貢献度で優先順位をつけ、最初に構築するタスクを選定してデモを作成。デモを見てから導入するかどうかを決定できます。</p>
                     </div>
-                    <div class="step-visual"><figure class="ph"><span><b>ここに実物: 優先順位の表とデモの画面</b></span></figure></div>
+                    <div class="step-visual"><div class="mock mock-sheet">
+                        <div class="mock-sheet-title">業務の棚卸し（営業部） <span>優先順位つき</span></div>
+                        <table>
+                            <tr><th>業務</th><th>月の時間</th><th>売上への影響</th><th>優先</th></tr>
+                            <tr class="pick"><td>商談後の議事録整理と次の行動出し</td><td class="n">38h</td><td>大</td><td><span class="tag">最初の1つ</span></td></tr>
+                            <tr><td>新規アポ先の事前調査</td><td class="n">22h</td><td>大</td><td>2</td></tr>
+                            <tr><td>週次の売上レポート作成</td><td class="n">12h</td><td>中</td><td>3</td></tr>
+                            <tr><td>問い合わせメールの一次返信</td><td class="n">18h</td><td>中</td><td>4</td></tr>
+                            <tr><td>名刺・顧客情報の入力</td><td class="n">9h</td><td>小</td><td>5</td></tr>
+                        </table>
+                    </div></div>
                 </div>
                 <div class="step">
                     <span class="step-num">03</span>
@@ -1613,7 +1646,16 @@
                         <h3 class="step-title">構築</h3>
                         <p class="step-desc">実際に社内システム内で構築。AIに任せる業務範囲のルールやセキュリティ面も考慮し、安全性の高いエージェントを作ります。</p>
                     </div>
-                    <div class="step-visual"><figure class="ph"><span><b>ここに実物: 最初の1つが動いた画面</b></span></figure></div>
+                    <div class="step-visual"><div class="mock">
+                        <div class="slackmock-head"># 営業チーム <span>導入初週</span></div>
+                        <div class="slackmock-body">
+                            <div class="msg"><div class="msg-av ai">AI</div><div><div class="msg-name">nito AI<small>アプリ 17:40</small></div><div class="msg-text">今日の商談メモ 3件を整理しました。それぞれの次の行動です。</div>
+                                <div class="msg-card"><b>E社（佐藤）</b>見積の再提示を来週火曜まで。前回の宿題「他社比較」は資料に反映済み。</div>
+                                <div class="msg-card"><b>F社（鈴木）</b>決裁者との2回目を提案。日程候補を3つ用意しました。</div>
+                                <div class="msg-actions"><span class="ok">この内容で送る</span><span>修正する</span></div></div></div>
+                            <div class="msg"><div class="msg-av">佐</div><div><div class="msg-name">佐藤<small>17:52</small></div><div class="msg-text">E社の件、この通りで。ありがとう</div></div></div>
+                        </div>
+                    </div></div>
                 </div>
                 <div class="step">
                     <span class="step-num">04</span>
@@ -1622,7 +1664,18 @@
                         <span class="step-tag">月1回</span>
                         <p class="step-desc">実際の利用状況や要望を踏まえて運用改善を提案します。また、最新のAI活用方法の共有や、追加のエージェント作成のご提案も行います。</p>
                     </div>
-                    <div class="step-visual"><figure class="ph"><span><b>ここに実物: 月次レビューの1枚</b></span></figure></div>
+                    <div class="step-visual"><div class="mock mock-rev">
+                        <div class="mock-rev-title">月次レビュー <span>9月・営業チーム</span></div>
+                        <div class="kpis">
+                            <div class="kpi on"><b>62件</b><small>AIが整理した商談メモ</small></div>
+                            <div class="kpi"><b>3件</b><small>止まった処理（対応済み）</small></div>
+                            <div class="kpi"><b>2件</b><small>人が差し戻した提案</small></div>
+                        </div>
+                        <h5>次にAIに渡す候補</h5>
+                        <ul><li>新規アポ先の事前調査（月22h）</li><li>週次の売上レポート（月12h）</li></ul>
+                        <h5>今月の変更</h5>
+                        <ul><li>承認なしで送ってよい範囲に「日程候補の提示」を追加</li></ul>
+                    </div></div>
                 </div>
             </div>
         </div>
