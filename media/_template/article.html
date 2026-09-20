@@ -20,6 +20,11 @@
     <meta property="og:description" content="{{DESCRIPTION}}">
     <meta property="og:url" content="https://nito-0210.com/media/{{SLUG}}/">
     <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="{{OG_IMAGE}}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{OG_IMAGE}}">
     <link rel="icon" href="/favicon.png">
     {{JSONLD}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,6 +63,10 @@
 {{LEAD}}
 
 {{TOC}}
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
 
 {{BODY}}
         </div>
@@ -65,7 +74,7 @@
         <div class="post-cta">
             <div class="post-cta__label">CONTACT</div>
             <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AI検索対策・ブランド戦略について、まずはお気軽にご相談ください。</p>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
             <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
         </div>
 

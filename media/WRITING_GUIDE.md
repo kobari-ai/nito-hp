@@ -161,6 +161,16 @@ image: /media/images/aeo-basics.png
 
 新しくAI感のある表現に気づいたら、`AI_TELL_PATTERNS` に追加して機械的に弾けるようにする。同じ指摘を繰り返さないための仕組み。
 
+## 共有時のサムネイル（OG画像）
+
+記事を Slack や X に貼ったときのカード画像は `media/images/og/<slug>.jpg`（1200×628）。**新しい記事を書いたら1回だけ生成してコミットする**（CI では作られない）:
+
+```bash
+python3 media/_template/gen_og.py <slug>
+```
+
+アイキャッチ SVG（`cover_headline` 等）をそのまま JPEG にしたもの。`image:` を指定した記事はその画像が OG になるので不要。無い記事は `_default.jpg` が使われる。
+
 ## ローカルでのプレビュー（任意）
 
 ```bash

@@ -11,11 +11,18 @@ on:
 permissions:
   contents: write
 
+# 複数 PR を続けてマージしたときにビルドが並走して push が non-fast-forward で落ちるのを防ぐ（2026-09-18・09-19 に4連続失敗）
+concurrency:
+  group: build-media
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # sitemap の lastmod を記事の最終コミット日から取るため（shallow だと全記事が同じ日になる）
 
       - uses: actions/setup-python@v5
         with:
@@ -41,6 +48,7 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "build: 記事HTMLを自動生成"
+            git pull --rebase origin main || true
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi

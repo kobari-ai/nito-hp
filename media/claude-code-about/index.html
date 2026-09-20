@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】Claude Codeとは？仕組み・できること・他のAIコーディングツールとの違い | nito Column</title>
+    <meta name="description" content="Claude Codeとは何かを公式ドキュメント「Claude Codeの仕組み」から解説。agenticループ、5つのツール、補完型・チャット型との違い、できること、料金、安全の仕組み、向き不向きまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-code-about/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】Claude Codeとは？仕組み・できること・他のAIコーディングツールとの違い">
+    <meta property="og:description" content="Claude Codeとは何かを公式ドキュメント「Claude Codeの仕組み」から解説。agenticループ、5つのツール、補完型・チャット型との違い、できること、料金、安全の仕組み、向き不向きまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-code-about/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-code-about.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-code-about.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Claude Codeとは？仕組み・できること・他のAIコーディングツールとの違い", "description": "Claude Codeとは何かを公式ドキュメント「Claude Codeの仕組み」から解説。agenticループ、5つのツール、補完型・チャット型との違い、できること、料金、安全の仕組み、向き不向きまで。", "datePublished": "2026-09-19", "dateModified": "2026-09-19", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-code-about/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Claude Codeとは？仕組み・できること・他のAIコーディングツールとの違い"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude Codeとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Anthropicが提供するコーディングエージェントです。ターミナルやエディタから使い、目標を伝えるとプロジェクトのファイルを自分で探して読み、編集し、コマンドを実行して結果を確かめます。公式ドキュメントの言葉では「ターミナルで実行されるagenticアシスタント」です。"}}, {"@type": "Question", "name": "Claude Codeは何ができますか？", "acceptedAnswer": {"@type": "Answer", "text": "コードベースの説明、機能の追加、バグの修正、リファクタリング、テストの作成と実行、gitの操作、ドキュメントの更新、コードレビューができます。コードのないフォルダでMarkdownのメモや資料を扱うことも公式に案内されています。"}}, {"@type": "Question", "name": "Claude Codeは無料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "無料では使えません。Claude Pro（月$22、年払いなら月$18）以上のプランか、APIの従量課金が必要です。日本向け料金ページの表示です。"}}, {"@type": "Question", "name": "Claude Codeの何がすごいのですか？", "acceptedAnswer": {"@type": "Answer", "text": "プロジェクト全体を見て、複数のファイルにまたがる変更を自分で進め、テストの実行まで含めて検証まで回る点です。提案を受け取って人が反映する従来の使い方と違い、作業そのものが終わった状態で返ってきます。"}}, {"@type": "Question", "name": "ClaudeとClaude Codeの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Claudeはブラウザやアプリで使うチャット型のAI、Claude Codeはターミナルやエディタで動くエージェントです。中身のモデルは共通ですが、Claude Codeにはファイル操作やコマンド実行のツールと、結果を確かめて次を決めるループが付いています。"}}, {"@type": "Question", "name": "Claude Codeは日本語で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。指示も応答も日本語で問題ありません。常に日本語で答えてほしい場合は、`~/.claude/CLAUDE.md` に「日本語で答える」と書いておくと、すべてのプロジェクトで有効になります。"}}, {"@type": "Question", "name": "Claude Codeで勝手にファイルを壊されませんか？", "acceptedAnswer": {"@type": "Answer", "text": "既定の設定ではファイルの書き込みやコマンドの実行の前に確認が出ます。編集前のスナップショットも取られるので、Escを2回押せば直前の状態に戻せます。Manualモードでは起動したフォルダとその下にしか書き込めません。"}}, {"@type": "Question", "name": "Claude CodeはWindowsでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。Windows 10 1809以上またはWindows Server 2019以上が対象で、PowerShellからインストールします。WSLでもmacOSと同じ手順で導入できます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claude Code…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.19</span>
+        </div>
+        <h1 class="post-title">【2026年9月】Claude Codeとは？仕組み・できること・他のAIコーディングツールとの違い</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Codeとは"><defs><linearGradient id="ecg-8a838d84" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-8a838d84)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Codeとは</text><line x1="273.2" y1="327.1" x2="926.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">仕組み・できること・他ツールとの違い</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Claude Codeは、Anthropicが提供するコーディングエージェントです。ターミナルで動き、指示を受けるとプロジェクトの中のファイルを自分で探して読み、編集し、コマンドを実行してテストまで回します。公式ドキュメントは「ターミナルで実行されるagenticアシスタント」と説明しており、コーディング以外でも、コマンドラインからできることなら支援できると書かれています。</p>
+<p>ChatGPTやClaudeのチャットにコードを貼って相談するのとは、性質が違います。この記事は<a href="https://code.claude.com/docs/ja/how-claude-code-works">Claude Codeの仕組み</a>、<a href="https://code.claude.com/docs/ja/overview">概要</a>、<a href="https://code.claude.com/docs/ja/security">セキュリティ</a>の各ページ（2026年9月19日取得）を一次ソースに、何をするものなのか、どう動いているのか、他のAIコーディングツールと何が違うのかを整理します。インストールや操作の手順は<a href="https://nito-0210.com/media/claude-code-guide/">使い方の記事</a>、料金は<a href="https://nito-0210.com/media/claude-code-pricing/">料金プランの記事</a>にあります。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>Claude Codeは<strong>agenticループ</strong>（コンテキストの収集 → アクションの実行 → 結果の検証）を回して仕事を終わらせるツール。コードを提案して終わりではない</li>
+<li>ループを動かすのは<strong>モデル</strong>と<strong>ツール</strong>の2つ。ツールはファイル操作・検索・実行・ウェブ・コードインテリジェンスの5カテゴリ</li>
+<li>チャット型（貼り付けて相談）・補完型（書いている横で提案）と違い、<strong>プロジェクト全体を見て複数ファイルを変更する</strong></li>
+<li>無料プランでは使えない。<strong>Pro（月$22）以上かAPIの従量課金</strong>が必要</li>
+<li>ファイル編集の前にスナップショットを取るため、<strong>Escを2回押せば直前の状態に戻せる</strong>。権限モードで任せる範囲も決められる</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Claude Codeとは</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>仕組み: agenticループと5つのツール</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>Claude Codeがアクセスできるもの</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>他のAIコーディングツールとの違い</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Claude Codeでできること</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>料金と使える条件</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>勝手に壊されないための仕組み</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>向いている人・向いていない人</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Claude Codeとは</h2>
+<p>公式ドキュメントの<a href="https://code.claude.com/docs/ja/overview">概要</a>は、Claude Codeを「コードベースを読み取り、ファイルを編集し、コマンドを実行し、開発ツールと統合するagentic codingツール」と説明しています。名前にCodeと付きますが、動くのはコードの中だけではなく、ドキュメントの作成やファイルの整理など、コマンドラインからできる作業全般が対象です。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-about/00_fig_what.png" alt="Claude Codeの位置づけの図。チャットのClaudeは答えを返す、Claude Codeは目標を受けてファイルを読み・編集し・コマンドを実行して仕事を終わらせる" loading="lazy"><figcaption>同じ依頼でも、チャットは提案までで止まり、Claude Codeは変更と検証まで進む</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>チャットのClaude</th>
+<th>Claude Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入力</td>
+<td>質問・貼り付けたコード</td>
+<td>目標（「このバグを直して」）</td>
+</tr>
+<tr>
+<td>ファイル</td>
+<td>添付したものを読む</td>
+<td>プロジェクトの中を自分で探して読み書きする</td>
+</tr>
+<tr>
+<td>コマンド</td>
+<td>実行できない</td>
+<td>実行できる（許可の上で）</td>
+</tr>
+<tr>
+<td>出力</td>
+<td>文章・コードの提案</td>
+<td>変更されたファイル、実行されたテスト</td>
+</tr>
+<tr>
+<td>使う場所</td>
+<td>ブラウザ・アプリ</td>
+<td>ターミナル・VS Code・デスクトップアプリ・ウェブ</td>
+</tr>
+</tbody>
+</table>
+<p>どちらもAnthropicの製品で、中身の言語モデルも共通です。周りにツールとループが付いているかどうかが、両者を分けています。チャット画面のClaudeの使い方は<a href="https://nito-0210.com/media/claude-guide/">別記事</a>にまとめています。</p>
+<h2 id="s2">仕組み: agenticループと5つのツール</h2>
+<p>公式ドキュメント「<a href="https://code.claude.com/docs/ja/how-claude-code-works">Claude Codeの仕組み</a>」は、タスクを渡されたClaudeが<strong>コンテキストの収集 → アクションの実行 → 結果の検証</strong>の3つのフェーズを通って働く、と説明しています。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-about/00_fig_loop.png" alt="agenticループの図。コンテキストの収集・アクションの実行・結果の検証の3フェーズを回し、「失敗しているテストを直して」の例でテスト実行→エラーを読む→ファイル検索→読む→編集→再実行という流れを示す" loading="lazy"><figcaption>agenticループの3フェーズ。公式ドキュメントが挙げる「失敗しているテストを直して」の例</figcaption></figure>
+
+<p>「失敗しているテストを修正して」と頼まれたとき、Claude Codeは公式ドキュメントの例では次のように動きます。</p>
+<ol>
+<li>テストスイートを実行して、何が失敗しているかを確認する</li>
+<li>エラー出力を読む</li>
+<li>関連するソースファイルを検索する</li>
+<li>それらのファイルを読んでコードを理解する</li>
+<li>ファイルを編集して問題を修正する</li>
+<li>テストを再度実行して検証する</li>
+</ol>
+<p>どのツールを使うかは、プロンプトとその時点で分かっていることからClaude自身が選びます。ループは依頼の内容によって伸び縮みし、コードベースへの質問なら収集だけで終わることもあります。途中で止めて方向を変えるのも前提の設計です。Escを押せばその場で止まります。</p>
+<p>ループを動かすのは推論する<strong>モデル</strong>と、行動する<strong>ツール</strong>の2つです。組み込みツールは5つのカテゴリに分かれます。</p>
+<table>
+<thead>
+<tr>
+<th>カテゴリ</th>
+<th>できること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ファイル操作</td>
+<td>ファイルの読み取り、コード編集、新規作成、名前変更と再編成</td>
+</tr>
+<tr>
+<td>検索</td>
+<td>パターンでファイルを検索、正規表現で内容を検索、コードベースを探索</td>
+</tr>
+<tr>
+<td>実行</td>
+<td>シェルコマンドの実行、サーバー起動、テスト実行、gitの操作</td>
+</tr>
+<tr>
+<td>ウェブ</td>
+<td>ウェブ検索、ドキュメントの取得、エラーメッセージの検索</td>
+</tr>
+<tr>
+<td>コードインテリジェンス</td>
+<td>編集後の型エラーと警告の表示、定義へのジャンプ、参照の検索（プラグインが必要）</td>
+</tr>
+</tbody>
+</table>
+<p>公式ドキュメントは「ツールがなければ、Claudeはテキストで応答することしかできません。ツールがあれば、Claudeはアクションを実行できます」と書いています。</p>
+<h2 id="s3">Claude Codeがアクセスできるもの</h2>
+<p>あるディレクトリで <code>claude</code> と打って起動したとき、Claude Codeが見られるものは公式ドキュメントに列挙されています。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-about/00_fig_access.png" alt="Claude Codeがアクセスできるものの図。プロジェクトのファイル、ターミナル、gitの状態、CLAUDE.md、自動メモリ、拡張機能（MCP・スキル・サブエージェント）" loading="lazy"><figcaption>起動したディレクトリを中心に、これだけのものが見えている</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>対象</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>プロジェクト</td>
+<td>ディレクトリとサブディレクトリ内のファイル、許可した他の場所のファイル</td>
+</tr>
+<tr>
+<td>ターミナル</td>
+<td>実行できるあらゆるコマンド。ビルドツール、git、パッケージマネージャー</td>
+</tr>
+<tr>
+<td>gitの状態</td>
+<td>現在のブランチ、コミットされていない変更、最近のコミット履歴</td>
+</tr>
+<tr>
+<td>CLAUDE.md</td>
+<td>プロジェクト固有の指示・規約を書いたファイル。毎セッションの開始時に読まれる</td>
+</tr>
+<tr>
+<td>自動メモリ</td>
+<td>作業中にClaudeが保存した学び。各セッションの開始時に先頭200行または25KBまで読まれる</td>
+</tr>
+<tr>
+<td>拡張機能</td>
+<td>MCPサーバー、スキル、サブエージェント、Claude in Chrome</td>
+</tr>
+</tbody>
+</table>
+<p>プロジェクト全体が見えているので、「認証のバグを直して」と頼めば、関連ファイルを検索して複数のファイルにまたがる修正ができます。ここが、開いているファイルしか見ていない補完型のツールとの差です。</p>
+<h2 id="s4">他のAIコーディングツールとの違い</h2>
+<p>AIでコードを書くツールは大きく3つの型に分かれます。3つを分ける軸が<strong>誰が次の一手を決めるか</strong>です。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-about/00_fig_types.png" alt="AIコーディングツールの3つの型の図。補完型（書いている横で次の行を提案）、チャット型（貼り付けて相談）、エージェント型（目標を渡すと自分でファイルを読み編集し実行する）" loading="lazy"><figcaption>3つの型。Claude Codeはエージェント型で、実行と検証まで自分で回す</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>動き</th>
+<th>人の役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>補完型</td>
+<td>書いている横で次の行やブロックを提案する</td>
+<td>採用するか決め、自分で書き進める</td>
+</tr>
+<tr>
+<td>チャット型</td>
+<td>貼り付けたコードについて相談に答える</td>
+<td>コードを貼り、答えを自分で反映する</td>
+</tr>
+<tr>
+<td>エージェント型（Claude Code）</td>
+<td>目標を渡すと、ファイルを探して読み、編集し、コマンドを実行して検証する</td>
+<td>目標を決め、要所で承認し、必要なら止めて方向を変える</td>
+</tr>
+</tbody>
+</table>
+<p>同じエージェント型の中での違いは、どこで動くか（ターミナル・エディタ・クラウド）、どのモデルを使うか、権限の仕組みがどうなっているか、に分かれます。Claude Codeの場合、<strong>ターミナル、VS Code・JetBrains拡張、デスクトップアプリ、claude.ai/code、Slack、CI/CD</strong>から使え、実行環境もローカル・クラウド・リモートコントロールの3つが選べます。agenticループもツールも、どこから使っても同じだというのが公式ドキュメントの説明です。</p>
+<h2 id="s5">Claude Codeでできること</h2>
+<p>公式ドキュメントとクイックスタートに例として挙げられているものを整理すると、次の8つになります。</p>
+<table>
+<thead>
+<tr>
+<th>できること</th>
+<th>頼み方の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>コードベースの説明</td>
+<td>「このプロジェクトは何をしていますか？」「入口になるファイルはどれ？」</td>
+</tr>
+<tr>
+<td>機能の追加</td>
+<td>「ユーザー登録フォームに入力検証を追加して」</td>
+</tr>
+<tr>
+<td>バグの修正</td>
+<td>「空のフォームが送信できるバグを直して」</td>
+</tr>
+<tr>
+<td>リファクタリング</td>
+<td>「認証モジュールをasync/awaitに書き換えて」</td>
+</tr>
+<tr>
+<td>テストの作成と実行</td>
+<td>「この関数のユニットテストを書いて、実行して」</td>
+</tr>
+<tr>
+<td>gitの操作</td>
+<td>「変更をコミットして」「ブランチを作って」「コンフリクトの解決を手伝って」</td>
+</tr>
+<tr>
+<td>ドキュメントの更新</td>
+<td>「READMEをインストール手順込みで更新して」</td>
+</tr>
+<tr>
+<td>コードレビュー</td>
+<td>「変更をレビューして改善を提案して」</td>
+</tr>
+</tbody>
+</table>
+<p>コードのないフォルダでも動く点も特徴です。公式ドキュメントの<a href="https://code.claude.com/docs/ja/common-workflows">一般的なワークフロー</a>には「ノートと非コードフォルダで作業する」という節があり、Markdownのメモや資料のフォルダで使う例が案内されています。</p>
+<h2 id="s6">料金と使える条件</h2>
+<p>Claude Codeは無料プランでは使えません。Claude Pro（月$22、年払いなら月$18）以上のプランに入るか、APIの従量課金で使います。日本向け料金ページは消費税込みの表示です。</p>
+<table>
+<thead>
+<tr>
+<th>プラン</th>
+<th>月額（消費税込み）</th>
+<th>Claude Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free</td>
+<td>$0</td>
+<td>使えない</td>
+</tr>
+<tr>
+<td>Pro</td>
+<td>$22（年払いは月$18）</td>
+<td>使える</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>$110／$220</td>
+<td>使える（Proの5倍／20倍の使用量）</td>
+</tr>
+<tr>
+<td>Team・Enterprise</td>
+<td>1シート$27.50〜</td>
+<td>使える</td>
+</tr>
+<tr>
+<td>API</td>
+<td>従量課金</td>
+<td>使える</td>
+</tr>
+</tbody>
+</table>
+<p>使用量の上限は5時間ごとの枠と1週間の枠の2段構えで、claude.aiのチャットとClaude Codeが同じ枠を使います。上限に当たったときの選択肢や、APIの単価は<a href="https://nito-0210.com/media/claude-code-pricing/">料金プランの記事</a>に詳しく書いています。</p>
+<h2 id="s7">勝手に壊されないための仕組み</h2>
+<p>「AIが自分でコマンドを実行する」と聞いて最初に気になるのは安全性です。Claude Codeには3つの層があります。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-about/00_fig_safety.png" alt="Claude Codeの安全の仕組みの図。権限モード（Manualで読み取り専用から開始、Shift+Tabで切り替え）、チェックポイント（Esc2回で編集前に戻せる）、作業ディレクトリの境界とサンドボックス" loading="lazy"><figcaption>権限・チェックポイント・境界の3層。任せる範囲は自分で決める</figcaption></figure>
+
+<ul>
+<li><strong>権限モード</strong>: Manualモードでは読み取り専用で始まり、ファイルの編集やコマンドの実行の前に毎回確認が出ます。Shift+Tabで切り替えられ、編集だけ自動で受け入れるモード、読むだけで計画を出すモードもあります</li>
+<li><strong>チェックポイント</strong>: ファイル編集の前に現在の内容のスナップショットを取るので、<strong>Escを2回押せば直前の状態に戻せます</strong>。gitとは別に保持され、会話を再開しても使えます</li>
+<li><strong>作業ディレクトリの境界とサンドボックス</strong>: Manualモードでは起動したフォルダとその下にしか書き込めず、サンドボックス化したbashではファイルシステムとネットワークを分離して実行します</li>
+</ul>
+<p>公式のセキュリティページには「Claude Codeは、ユーザーが付与したパーミッションのみを持ちます。承認前に、提案されたコードとコマンドのセキュリティを確認する責任があります」と書かれています。自動で進む範囲を広げるほど、人が事前に確認できる量は減る、という関係です。</p>
+<h2 id="s8">向いている人・向いていない人</h2>
+<table>
+<thead>
+<tr>
+<th>向いている</th>
+<th>向いていない</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>複数ファイルにまたがる修正が多い人</td>
+<td>1行ずつ提案してほしい人（補完型のほうが合う）</td>
+</tr>
+<tr>
+<td>テストやビルドまで含めて任せたい人</td>
+<td>提案を読んで自分で書きたい人</td>
+</tr>
+<tr>
+<td>定型作業をコマンドや手順書ごと自動化したい人</td>
+<td>無料で使いたい人（Pro以上が必要）</td>
+</tr>
+<tr>
+<td>ターミナルでの作業に抵抗がない人</td>
+<td>GUIだけで完結させたい人（デスクトップアプリなら可）</td>
+</tr>
+<tr>
+<td>コード以外のファイル整理にも使いたい人</td>
+<td>取り消せない操作を承認なしで任せたい人</td>
+</tr>
+</tbody>
+</table>
+<p>プログラミングをしない人の用途としては、議事録の整形やフォルダの整理があります。その場合はターミナルよりデスクトップアプリのほうが入りやすく、具体的な手順は<a href="https://nito-0210.com/media/claude-code-guide/">使い方の記事</a>に書いています。</p>
+<h2 id="s9">よくある質問</h2>
+<p>Googleの「他の人はこちらも質問」に出ている質問が中心です。</p>
+<h3 id="s9-1">Claude Codeとは何ですか？</h3>
+<p>Anthropicが提供するコーディングエージェントです。ターミナルやエディタから使い、目標を伝えるとプロジェクトのファイルを自分で探して読み、編集し、コマンドを実行して結果を確かめます。公式ドキュメントの言葉では「ターミナルで実行されるagenticアシスタント」です。</p>
+<h3 id="s9-2">Claude Codeは何ができますか？</h3>
+<p>コードベースの説明、機能の追加、バグの修正、リファクタリング、テストの作成と実行、gitの操作、ドキュメントの更新、コードレビューができます。コードのないフォルダでMarkdownのメモや資料を扱うことも公式に案内されています。</p>
+<h3 id="s9-3">Claude Codeは無料ですか？</h3>
+<p>無料では使えません。Claude Pro（月$22、年払いなら月$18）以上のプランか、APIの従量課金が必要です。日本向け料金ページの表示です。</p>
+<h3 id="s9-4">Claude Codeの何がすごいのですか？</h3>
+<p>プロジェクト全体を見て、複数のファイルにまたがる変更を自分で進め、テストの実行まで含めて検証まで回る点です。提案を受け取って人が反映する従来の使い方と違い、作業そのものが終わった状態で返ってきます。</p>
+<h3 id="s9-5">ClaudeとClaude Codeの違いは何ですか？</h3>
+<p>Claudeはブラウザやアプリで使うチャット型のAI、Claude Codeはターミナルやエディタで動くエージェントです。中身のモデルは共通ですが、Claude Codeにはファイル操作やコマンド実行のツールと、結果を確かめて次を決めるループが付いています。</p>
+<h3 id="s9-6">Claude Codeは日本語で使えますか？</h3>
+<p>使えます。指示も応答も日本語で問題ありません。常に日本語で答えてほしい場合は、<code>~/.claude/CLAUDE.md</code> に「日本語で答える」と書いておくと、すべてのプロジェクトで有効になります。</p>
+<h3 id="s9-7">Claude Codeで勝手にファイルを壊されませんか？</h3>
+<p>既定の設定ではファイルの書き込みやコマンドの実行の前に確認が出ます。編集前のスナップショットも取られるので、Escを2回押せば直前の状態に戻せます。Manualモードでは起動したフォルダとその下にしか書き込めません。</p>
+<h3 id="s9-8">Claude CodeはWindowsでも使えますか？</h3>
+<p>使えます。Windows 10 1809以上またはWindows Server 2019以上が対象で、PowerShellからインストールします。WSLでもmacOSと同じ手順で導入できます。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li><a href="https://code.claude.com/docs/ja/how-claude-code-works">Claude Code ドキュメント「Claude Code の仕組み」</a>（Anthropic、2026年9月19日取得）</li>
+<li><a href="https://code.claude.com/docs/ja/overview">「概要」</a>、<a href="https://code.claude.com/docs/ja/quickstart">「クイックスタート」</a>、<a href="https://code.claude.com/docs/ja/common-workflows">「一般的なワークフロー」</a>（同上）</li>
+<li><a href="https://code.claude.com/docs/ja/security">「セキュリティ」</a>、<a href="https://code.claude.com/docs/ja/permissions">「権限」</a>（同上）</li>
+<li><a href="https://claude.com/ja/pricing">Anthropic 料金ページ（日本向け）</a>（2026年9月18日取得）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-search-engine-comparison/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI検索エンジン4種の実測比較"><defs><linearGradient id="ecg-df903812" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-df903812)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="125.2" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">実測比較</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI検索エンジン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">4種の実測比較</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.20</div>
+                <div class="rel-card__ttl">【2026年9月】AI検索エンジン4種を実測比較｜ChatGPT・Perplexity・Gemini・AIモードの引用と回答の違い</div>
+            </a>
+            <a href="/media/claude-cowork-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Coworkの使い方"><defs><linearGradient id="ecg-660541b2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-660541b2)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Coworkの使い方</text><line x1="151.6" y1="365.9" x2="1048.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.20</div>
+                <div class="rel-card__ttl">【2026年9月】Claude Coworkとは？使い方・できること・料金｜チャットとの統合で変わった点</div>
+            </a>
+            <a href="/media/ai-agent-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIエージェントとは"><defs><linearGradient id="ecg-121d1252" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-121d1252)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">用語解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIエージェントとは</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.19</div>
+                <div class="rel-card__ttl">【2026年9月】AIエージェントとは？生成AI・ChatGPTとの違いと仕組みをわかりやすく解説｜身近な例・種類・使いどころ</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

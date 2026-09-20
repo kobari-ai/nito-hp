@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】AI検索エンジン4種を実測比較｜ChatGPT・Perplexity・Gemini・AIモードの引用と回答の違い | nito Column</title>
+    <meta name="description" content="ChatGPT・Perplexity・Gemini・GoogleのAIモードに同じ5つの質問を投げて、出典の数・回答の長さ・引用されるサイトの種類を実測しました。選び方の目安と、企業が引用される側になるための示唆までまとめています。">
+    <link rel="canonical" href="https://nito-0210.com/media/ai-search-engine-comparison/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】AI検索エンジン4種を実測比較｜ChatGPT・Perplexity・Gemini・AIモードの引用と回答の違い">
+    <meta property="og:description" content="ChatGPT・Perplexity・Gemini・GoogleのAIモードに同じ5つの質問を投げて、出典の数・回答の長さ・引用されるサイトの種類を実測しました。選び方の目安と、企業が引用される側になるための示唆までまとめています。">
+    <meta property="og:url" content="https://nito-0210.com/media/ai-search-engine-comparison/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/ai-search-engine-comparison.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/ai-search-engine-comparison.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】AI検索エンジン4種を実測比較｜ChatGPT・Perplexity・Gemini・AIモードの引用と回答の違い", "description": "ChatGPT・Perplexity・Gemini・GoogleのAIモードに同じ5つの質問を投げて、出典の数・回答の長さ・引用されるサイトの種類を実測しました。選び方の目安と、企業が引用される側になるための示唆までまとめています。", "datePublished": "2026-09-20", "dateModified": "2026-09-20", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-search-engine-comparison/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】AI検索エンジン4種を実測比較｜ChatGPT・Perplexity・Gemini・AIモードの引用と回答の違い"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "おすすめのAI検索エンジンは？", "acceptedAnswer": {"@type": "Answer", "text": "目的で変わります。根拠まで確かめたいならPerplexity（実測で出典16ドメイン・回答2,788字）、短く早く知りたいならChatGPT（333字）、検索のついでに読むならGoogleのAIモードです。どれも無料で試せます。"}}, {"@type": "Question", "name": "AIで1番優秀なのはどれですか？", "acceptedAnswer": {"@type": "Answer", "text": "測る軸で変わるため、1つには決まりません。出典の数ならPerplexity、回答の短さならChatGPTが実測では上で、AIモードは検索の画面で完結する点が違いです。自分がよくする質問を1つ決めて、同じ文を投げ比べるのが確実です。"}}, {"@type": "Question", "name": "無料の1番いいAIは？", "acceptedAnswer": {"@type": "Answer", "text": "今回測った4つはいずれも無料で使えます。無料の範囲で見ると、出典の多さならPerplexity、検索のついでに使えるのはGoogleのAIモードです。回数や高度な機能に制限がある点は各サービスで異なります。"}}, {"@type": "Question", "name": "PerplexityとChatGPTのどちらがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "実測でのPerplexityは出典16ドメイン・2,788字で根拠を広く集め、ChatGPTは出典12ドメイン・333字で要点を短く返しました。調べものの深さならPerplexity、読む時間の短さならChatGPTです。"}}, {"@type": "Question", "name": "AI検索エンジンと従来の検索の違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "従来の検索はキーワードに合うページの一覧を返し、AI検索は質問の意味を解釈して回答そのものを返します。AI検索は回答の下に参照したサイトを示すので、サイト側は「上位に出る」だけでなく「引用される」ことが必要になります。"}}, {"@type": "Question", "name": "GoogleのAIによる概要とAIモードは違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "違います。AIによる概要は通常の検索結果の最上部に自動で出る要約、AIモードは専用タブで会話しながら掘り下げる機能です。詳しくは[AIによる概要の記事](https://nito-0210.com/media/ai-overviews-guide/)と[AIモードの記事](https://nito-0210.com/media/google-ai-mode-guide/)に書いています。"}}, {"@type": "Question", "name": "自社がAI検索で引用されているか調べる方法は？", "acceptedAnswer": {"@type": "Answer", "text": "顧客がしそうな質問を5つ決めて、4つのAIに同じ文で投げ、社名が出るか、どのサイトが引用されているかを記録します。AIごとに引用元が違うので、1つだけで判断しないことが大切です。月に1回同じ質問で測ると、変化が追えます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】AI検索エンジン4種を…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.20</span>
+        </div>
+        <h1 class="post-title">【2026年9月】AI検索エンジン4種を実測比較｜ChatGPT・Perplexity・Gemini・AIモードの引用と回答の違い</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI検索エンジン4種の実測比較"><defs><linearGradient id="ecg-d12cc42a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d12cc42a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="86.4" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">実測比較</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI検索エンジン</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">4種の実測比較</text><line x1="326.4" y1="378.0" x2="873.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">出典の数・回答の長さ・引用されるサイト</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p><strong>ChatGPT・Perplexity・Gemini・GoogleのAIモードの4つに、同じ5つの質問を2026年9月20日に投げて、返ってきた回答と出典を数えました。</strong> 同じ質問でも、出典の数も回答の長さも大きく違います。</p>
+<p>測ったのは出典に出てきたドメインの数、回答の長さ、そして引用元が公式ページなのか比較サイトなのかという内訳です。使う側の「どれを選ぶか」と、サイトを持つ側の「どこに引用されるか」の両方から読める形にしました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>出典の数はPerplexityとChatGPTが多い</strong>（実測の中央値: Perplexity 16ドメイン、ChatGPT 12、AIモード 4、Gemini 4）</li>
+<li><strong>回答の長さは逆</strong>。Perplexity 2,788字、AIモード 1,427字、Gemini 1,083字、ChatGPT 333字（いずれも中央値）</li>
+<li><strong>公式・一次ソースを引く比率はChatGPTとPerplexityが高い</strong>（45ドメイン中7と6。AIモードとGeminiは各1）</li>
+<li>「どれが一番」ではなく<strong>質問の種類で選ぶ</strong>。短く早く知るならChatGPT、根拠まで確かめるならPerplexity、検索のついでに読むならAIモード</li>
+<li>サイト側の示唆: <strong>同じ質問でも引用されるサイトはAIごとに違う</strong>。1つのAIで出ないことは、全部で出ないことを意味しない</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>測り方</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>実測の結果</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>質問の種類で結果が変わる</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>使う側の選び方</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>サイトを持つ側への示唆</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>AI検索での引用を実測から始めるなら</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">測り方</h2>
+<p>nitoが日常的に使っているAI検索の実測ツール（4つのAIに同じ質問を投げて、回答と出典を記録する仕組み）で、2026年9月20日に次の5つの質問を投げました。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>質問</th>
+<th>質問の種類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2026年9月時点で、日本で使える電子帳簿保存法に対応した会計ソフトのおすすめは？</td>
+<td>商品の比較</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Claude Code と Cursor はどちらが初心者向き？違いを教えて</td>
+<td>ツールの比較</td>
+</tr>
+<tr>
+<td>3</td>
+<td>東京都内で法人向けにLLMO（AI検索対策）を支援している会社を教えて</td>
+<td>会社探し</td>
+</tr>
+<tr>
+<td>4</td>
+<td>AIによる概要（Google）を非表示にする方法は？</td>
+<td>手順の確認</td>
+</tr>
+<tr>
+<td>5</td>
+<td>今週のAI関連の主なニュースを3つ教えて</td>
+<td>最新情報</td>
+</tr>
+</tbody>
+</table>
+<p>記録したのは回答の本文、出典として提示されたURL、そしてAIが裏で実行した検索クエリ（取得できるものだけ）です。各AIとも既定のモードで、無料・有料の切り替えや検索機能の手動オンオフはしていません。GeminiとPerplexityは5問のうち2問で取得に失敗したので、集計は取得できた分だけで出しています。取得できなかった2問は計測側の失敗で、そのAIが答えられなかったわけではありません。</p>
+<figure class="post-figure"><img src="/media/images/ai-search-engine-comparison/00_fig_method.png" alt="実測の方法の図。同じ5つの質問を ChatGPT・Perplexity・Gemini・Google AIモードの4つに同時に投げ、回答の本文・出典URL・裏で実行された検索クエリを記録して比較する" loading="lazy"><figcaption>同じ質問を同じ日に4つへ。記録するのは回答・出典・裏の検索</figcaption></figure>
+
+<h2 id="s2">実測の結果</h2>
+<figure class="post-figure"><img src="/media/images/ai-search-engine-comparison/00_fig_result.png" alt="4つのAI検索の実測結果。出典ドメイン数の中央値はPerplexity 16・ChatGPT 12・AIモード 4・Gemini 4。回答の長さはPerplexity 2788字・AIモード 1427字・Gemini 1083字・ChatGPT 333字" loading="lazy"><figcaption>出典の数と回答の長さは逆の関係（2026年9月20日、同一の5問）</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>取得できた問</th>
+<th>出典ドメイン数（中央値・範囲）</th>
+<th>回答の長さ（中央値）</th>
+<th>出典の総数</th>
+<th>うち公式・一次</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>5 / 5</td>
+<td>12（0〜17）</td>
+<td>333字</td>
+<td>45</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>3 / 5</td>
+<td>16（11〜18）</td>
+<td>2,788字</td>
+<td>45</td>
+<td>6</td>
+</tr>
+<tr>
+<td>GoogleのAIモード</td>
+<td>5 / 5</td>
+<td>4（0〜11）</td>
+<td>1,427字</td>
+<td>23</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>3 / 5</td>
+<td>4（4〜5）</td>
+<td>1,083字</td>
+<td>13</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>「公式・一次」は、出典のドメインがサービスの公式サイトや提供元のヘルプ（support.google.com、anthropic.com、claude.com、cursor.com、会計ソフト各社の公式サイトなど）だったものを数えたものです。</p>
+<p><strong>① 出典の数と回答の長さは連動しない。</strong> ChatGPTは出典を12ドメイン提示しながら、回答は333字と最も短いです。要点だけを短く返し、根拠はリンクで示す形です。Perplexityは出典16ドメインで回答2,788字と、どちらも最多でした。</p>
+<p><strong>② AIモードとGeminiは出典が少ない。</strong> どちらもGoogleの製品ですが、実測では出典として提示されたドメインが4前後でした。回答は1,000字を超える一方、根拠の幅は狭くなります。</p>
+<p><strong>③ 引用元の種類が違う。</strong> ChatGPTは45ドメイン中7、Perplexityは45中6が公式や提供元のページでした。AIモードとGeminiは、比較サイトやまとめ記事が中心です。</p>
+<h2 id="s3">質問の種類で結果が変わる</h2>
+<p>平均の傾向とは別に、質問ごとの結果も並べます。</p>
+<figure class="post-figure"><img src="/media/images/ai-search-engine-comparison/00_fig_by_question.png" alt="質問の種類ごとの結果の図。商品の比較・ツールの比較・会社探し・手順の確認・最新情報の5種類で、どのAIが出典を多く出したか、回答が長かったかを並べた表" loading="lazy"><figcaption>質問の種類で得意なAIが変わる。同じ質問でも引用されるサイトは重ならない</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>質問</th>
+<th>出典が多かった</th>
+<th>回答が長かった</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会計ソフトのおすすめ</td>
+<td>Perplexity 18</td>
+<td>Perplexity 3,555字</td>
+<td>Perplexityは裏で45回の検索を実行。ChatGPTは出典0で要約のみ</td>
+</tr>
+<tr>
+<td>Claude Code と Cursor</td>
+<td>ChatGPT 17</td>
+<td>AIモード 1,795字</td>
+<td>ChatGPTは公式ドキュメントと個人ブログを併用。AIモードは出典0で長文</td>
+</tr>
+<tr>
+<td>LLMO支援会社を探す</td>
+<td>Perplexity 16、ChatGPT 12</td>
+<td>AIモード 1,845字</td>
+<td>4つとも回答。引用された会社は各AIで大きく違った</td>
+</tr>
+<tr>
+<td>AIによる概要の消し方</td>
+<td>Perplexity 11</td>
+<td>AIモード 1,427字</td>
+<td>ChatGPTは公式ヘルプ1件に絞り、267字で回答</td>
+</tr>
+<tr>
+<td>今週のAIニュース</td>
+<td>ChatGPT 15</td>
+<td>AIモード 726字</td>
+<td>ChatGPTは海外メディアが中心、AIモードは国内メディア4件。PerplexityとGeminiは取得できず</td>
+</tr>
+</tbody>
+</table>
+<p>「会社を探す」質問では、4つのAIとも回答しましたが、<strong>名前が挙がった会社はほとんど重なりませんでした</strong>。同じ検索意図でも、AIごとに参照する情報源が違うためです。</p>
+<h2 id="s4">使う側の選び方</h2>
+<p>実測から言える使い分けは次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>向いているAI</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>事実を早く確認したい</td>
+<td>ChatGPT</td>
+<td>回答が短く、出典のリンクが多い。読む時間が最小</td>
+</tr>
+<tr>
+<td>根拠まで確かめたい</td>
+<td>Perplexity</td>
+<td>出典が最多で、回答も詳しい。裏で何十回も検索する</td>
+</tr>
+<tr>
+<td>検索のついでに答えを読みたい</td>
+<td>GoogleのAIモード</td>
+<td>検索結果の画面で完結する。回答は1,000〜1,800字で、出典は少ない</td>
+</tr>
+<tr>
+<td>文章の作成まで続けたい</td>
+<td>Gemini・ChatGPT</td>
+<td>調べたあとにそのまま書かせる流れが自然</td>
+</tr>
+<tr>
+<td>最新のニュース</td>
+<td>ChatGPT</td>
+<td>出典15ドメインで海外メディアまで広く引いた</td>
+</tr>
+</tbody>
+</table>
+<p>「AIで1番優秀なのはどれか」は、測る軸で答えが変わります。出典の数で選ぶならPerplexity、回答の短さならChatGPT、検索の画面で完結するのはAIモードでした。4つとも無料で試せます。各サービスの回答の出方の違いは<a href="https://nito-0210.com/media/ai-platform-differences/">AI検索の出方の比較記事</a>にも書いています。</p>
+<h2 id="s5">サイトを持つ側への示唆</h2>
+<p>ここからは企業のサイト運営の話です。実測から見えた点が3つあります。</p>
+<figure class="post-figure"><img src="/media/images/ai-search-engine-comparison/00_fig_implication.png" alt="サイト側への示唆の図。同じ質問でもAIごとに引用元が違う、公式・一次ソースを引くAIと比較サイトを引くAIがある、出典が少ないAIでは載るかどうかの差が大きい、の3点" loading="lazy"><figcaption>1つのAIで出ないことは、全部で出ないことを意味しない</figcaption></figure>
+
+<p><strong>① 引用元はAIごとに重ならない。</strong> 会社を探す質問では4つのAIが合わせて30以上のドメインを引用しましたが、複数のAIに共通して出たのは数件でした。自社が1つのAIで出ないからといって、すべてで出ないわけではありません。</p>
+<p><strong>② 公式・一次ソースを引くAIと、まとめ記事を引くAIがある。</strong> ChatGPTとPerplexityは公式サイトを引く比率が高く、AIモードとGeminiは比較サイトやまとめ記事が中心でした。自社サイトを整えるだけでなく、業界のまとめ記事に載っているかどうかも、AIによっては効きます。</p>
+<p><strong>③ 出典が少ないAIほど、載るかどうかの差が大きい。</strong> 出典が4件しかない場面で選ばれるかどうかは、16件あるうちの1件に入るよりずっと厳しい条件です。AIモードやGeminiで引用を狙うなら、その質問でよく引かれているまとめ記事に載るほうが早い、という関係になります。</p>
+<p>測り方は自社の顧客がしそうな質問を5つ決めて、この記事と同じように4つのAIへ同じ文で投げるだけです。考え方は<a href="https://nito-0210.com/media/what-is-llmo/">AI検索対策（LLMO）の記事</a>にまとめています。</p>
+<h2 id="s6">AI検索での引用を実測から始めるなら</h2>
+<p>nitoはこの記事と同じ仕組みで自社と競合の引用状況を測り、引用されていない質問に対して、出典と数字のある記事を作るところまでやります。</p>
+<!-- 固定PRパート（ブログパーツ）: llmo-cta
+     このファイルを更新すると、埋め込んだ全記事に反映される。
+     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
+<div class="bp-cta">
+    <div class="bp-cta__body">
+        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（LLMO / AEO）</p>
+        <p class="bp-cta__lead">nitoは、AI検索（LLMO／AIO）での見え方を計測するだけ・提案するだけで終わらせません。<strong>効く施策に絞って、記事の制作と改善まで実行</strong>します。まず無料診断で、いまの見え方を数字にします。</p>
+        <ul class="bp-cta__points">
+            <li><strong>本当に効く施策を、ピンポイントで</strong>：AI経由の問い合わせ・購入まで毎日追ってきたから、効く施策を切り分けられる</li>
+            <li><strong>提案で終わらせず、実行まで</strong>：記事の制作・既存記事の改善まで手を動かす</li>
+            <li><strong>主要AIでの見え方を毎日計測</strong>：ChatGPT・Geminiなどでの言及・引用を自社基盤で毎日計測し、次に直す場所を数字で決める</li>
+        </ul>
+        <p class="bp-cta__lead">実際にあるSaaS企業では、AIでの言及率を10%から45%へ引き上げ、AI経由のコンバージョンを約4倍に改善しました。</p>
+        <div class="bp-cta__actions">
+            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
+            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
+        </div>
+    </div>
+</div>
+<h2 id="s7">よくある質問</h2>
+<p>Googleの「他の人はこちらも質問」に出ている質問が中心です。</p>
+<h3 id="s7-1">おすすめのAI検索エンジンは？</h3>
+<p>目的で変わります。根拠まで確かめたいならPerplexity（実測で出典16ドメイン・回答2,788字）、短く早く知りたいならChatGPT（333字）、検索のついでに読むならGoogleのAIモードです。どれも無料で試せます。</p>
+<h3 id="s7-2">AIで1番優秀なのはどれですか？</h3>
+<p>測る軸で変わるため、1つには決まりません。出典の数ならPerplexity、回答の短さならChatGPTが実測では上で、AIモードは検索の画面で完結する点が違いです。自分がよくする質問を1つ決めて、同じ文を投げ比べるのが確実です。</p>
+<h3 id="s7-3">無料の1番いいAIは？</h3>
+<p>今回測った4つはいずれも無料で使えます。無料の範囲で見ると、出典の多さならPerplexity、検索のついでに使えるのはGoogleのAIモードです。回数や高度な機能に制限がある点は各サービスで異なります。</p>
+<h3 id="s7-4">PerplexityとChatGPTのどちらがいいですか？</h3>
+<p>実測でのPerplexityは出典16ドメイン・2,788字で根拠を広く集め、ChatGPTは出典12ドメイン・333字で要点を短く返しました。調べものの深さならPerplexity、読む時間の短さならChatGPTです。</p>
+<h3 id="s7-5">AI検索エンジンと従来の検索の違いは何ですか？</h3>
+<p>従来の検索はキーワードに合うページの一覧を返し、AI検索は質問の意味を解釈して回答そのものを返します。AI検索は回答の下に参照したサイトを示すので、サイト側は「上位に出る」だけでなく「引用される」ことが必要になります。</p>
+<h3 id="s7-6">GoogleのAIによる概要とAIモードは違いますか？</h3>
+<p>違います。AIによる概要は通常の検索結果の最上部に自動で出る要約、AIモードは専用タブで会話しながら掘り下げる機能です。詳しくは<a href="https://nito-0210.com/media/ai-overviews-guide/">AIによる概要の記事</a>と<a href="https://nito-0210.com/media/google-ai-mode-guide/">AIモードの記事</a>に書いています。</p>
+<h3 id="s7-7">自社がAI検索で引用されているか調べる方法は？</h3>
+<p>顧客がしそうな質問を5つ決めて、4つのAIに同じ文で投げ、社名が出るか、どのサイトが引用されているかを記録します。AIごとに引用元が違うので、1つだけで判断しないことが大切です。月に1回同じ質問で測ると、変化が追えます。</p>
+<h2 id="s8">出典</h2>
+<ul>
+<li>実測データ: nitoのAI検索実測（ChatGPT・Perplexity・Gemini・GoogleのAIモード、2026年9月20日、同一の5問）。<strong>自社の実測値で第三者検証はなし</strong>。GeminiとPerplexityは5問中2問で取得に失敗し、集計は取得できた分のみ</li>
+<li><a href="https://support.google.com/websearch/answer/14901683?hl=ja">Google 検索ヘルプ「AI による概要」</a>（2026年9月20日取得）</li>
+<li>各サービスの公式サイト: <a href="https://chatgpt.com/">ChatGPT</a>、<a href="https://www.perplexity.ai/">Perplexity</a>、<a href="https://gemini.google.com/">Gemini</a>、<a href="https://nito-0210.com/media/google-ai-mode-guide/">GoogleのAIモード</a>（同上）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/claude-cowork-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Coworkの使い方"><defs><linearGradient id="ecg-660541b2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-660541b2)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Coworkの使い方</text><line x1="151.6" y1="365.9" x2="1048.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.20</div>
+                <div class="rel-card__ttl">【2026年9月】Claude Coworkとは？使い方・できること・料金｜チャットとの統合で変わった点</div>
+            </a>
+            <a href="/media/ai-agent-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIエージェントとは"><defs><linearGradient id="ecg-121d1252" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-121d1252)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">用語解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIエージェントとは</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.19</div>
+                <div class="rel-card__ttl">【2026年9月】AIエージェントとは？生成AI・ChatGPTとの違いと仕組みをわかりやすく解説｜身近な例・種類・使いどころ</div>
+            </a>
+            <a href="/media/ai-overviews-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIによる概要とは"><defs><linearGradient id="ecg-cb61e959" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-cb61e959)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIによる概要とは</text><line x1="288.4" y1="365.9" x2="911.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.19</div>
+                <div class="rel-card__ttl">【2026年9月】AIによる概要（AI Overviews）とは？仕組み・消し方・AIモードとの違い・企業の対策</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

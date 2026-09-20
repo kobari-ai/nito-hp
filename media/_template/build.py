@@ -44,11 +44,11 @@ TEMPLATE_DIR = ROOT / "_template"
 POSTS_DIR = ROOT / "posts"
 
 DEFAULT_AUTHOR = "岡村 希一"
-DEFAULT_AUTHOR_ROLE = "nito代表 / AI検索対策（LLMO）コンサルタント"
+DEFAULT_AUTHOR_ROLE = "nito代表"
 DEFAULT_AUTHOR_BIO = (
-    "AI検索対策（LLMO）を中心に、マーケティング戦略から実行まで幅広く経験。"
-    "サイバーエージェントで培ったデジタルマーケティングや、株式会社刀の戦略設計を武器に、"
-    "「いいモノが自然に広まる仕組みづくり」を支援。"
+    "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。"
+    "累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。"
+    "自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。"
 )
 DEFAULT_AUTHOR_IMAGE = "/profile_okamura.jpg"
 
@@ -179,12 +179,18 @@ def add_heading_ids_and_toc(body_html: str):
         in_faq = item[3] if len(item) > 3 else False
         if in_faq:
             continue  # FAQの質問は目次から除外
-        cls = ' class="toc-h3"' if level == 3 else ""
-        lis.append(f'                    <li{cls}><a href="#{hid}">{text}</a></li>')
+        # 番号は id から作る（s3 → 3、s3-2 → 3-2）。上位記事の目次と同じ「1｜」「1-1｜」の形
+        num = hid[1:]
+        cls = "toc-h3" if level == 3 else "toc-h2"
+        lis.append(f'                    <li class="{cls}"><a href="#{hid}"><span class="toc__n">{num}</span>{text}</a></li>')
+    # 長い目次は畳んで「もっと見る」。12行を超えたら畳む（実測: 上位記事は目次を10行前後で折り畳む）
+    long_cls = " toc--long" if len(lis) > 12 else ""
+    more_btn = ('\n                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>'
+                if long_cls else "")
     toc_html = (
-        '            <nav class="toc">\n'
+        f'            <nav class="toc{long_cls}">\n'
         '                <div class="toc__ttl">目次</div>\n'
-        "                <ol>\n" + "\n".join(lis) + "\n                </ol>\n"
+        "                <ol>\n" + "\n".join(lis) + "\n                </ol>" + more_btn + "\n"
         "            </nav>"
     )
     return body_html, toc_html
@@ -466,6 +472,17 @@ def build_jsonld(post) -> str:
     )
 
 
+def og_image_url(meta, slug) -> str:
+    """共有時のサムネイル。front matter の image → media/images/og/<slug>.jpg（gen_og.py で生成）→ サイト既定。
+    2026-09-17 まで og:image が無く、Slack/X で共有すると画像なしのカードになっていた。"""
+    if meta.get("image"):
+        img = meta["image"]
+        return img if img.startswith("http") else SITE + img
+    if (ROOT / "images" / "og" / f"{slug}.jpg").exists():
+        return f"{SITE}/media/images/og/{slug}.jpg"
+    return f"{SITE}/media/images/og/_default.jpg"
+
+
 def build_article(post, posts, template: str) -> str:
     meta = post["meta"]
     author = meta.get("author", DEFAULT_AUTHOR)
@@ -491,6 +508,7 @@ def build_article(post, posts, template: str) -> str:
         "{{AUTHOR_ROLE}}": html.escape(profile.get("role", DEFAULT_AUTHOR_ROLE)),
         "{{AUTHOR_BIO}}": html.escape(profile["bio"]),
         "{{AUTHOR_IMAGE}}": profile["image"],
+        "{{OG_IMAGE}}": og_image_url(meta, post["slug"]),
     }
     for key, val in replacements.items():
         out = out.replace(key, val)
@@ -600,6 +618,22 @@ SITE = "https://nito-0210.com"
 STATIC_PAGES = ["/", "/ai-agent/", "/llmo/", "/media/", "/contact.html", "/privacy.html"]
 
 
+def post_lastmod(p) -> str:
+    """sitemap の lastmod。front matter の date と、md の最終コミット日の新しい方。
+    公開後に直した記事が lastmod 固定のままだと再クロールの優先度が上がらない（2026-09-17 実測:
+    9/13 に直した記事の最終クロールが 8/11 のまま）。git が無い／shallow の場合は date にフォールバック。"""
+    import subprocess
+    d = p["meta"]["date"]
+    try:
+        out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(POSTS_DIR / f"{p['slug']}.md")],
+                             capture_output=True, text=True, timeout=10, cwd=ROOT.parent).stdout.strip()
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", out) and out > d:
+            return out
+    except Exception:
+        pass
+    return d
+
+
 def generate_sitemap(posts):
     """リポジトリ直下に sitemap.xml を生成する（固定ページ＋全記事）。"""
     root = ROOT.parent
@@ -608,7 +642,7 @@ def generate_sitemap(posts):
     for path in STATIC_PAGES:
         urls.append((f"{SITE}{path}", today))
     for p in posts:
-        urls.append((f"{SITE}/media/{p['slug']}/", p["meta"]["date"]))
+        urls.append((f"{SITE}/media/{p['slug']}/", post_lastmod(p)))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -697,13 +731,20 @@ def main():
     # 新しい順
     posts.sort(key=lambda p: p["meta"]["date"], reverse=True)
 
+    # CSS のキャッシュ破り: media.css の内容ハッシュを ?v= に付ける。
+    # 2026-09-17 実測: Cloudflare が media.css を max-age=14400 で保持し、テンプレート更新後も
+    # 最大4時間古い CSS が配られた（HTML は新しいのに見た目が変わらない）。URL を変えれば即反映される。
+    css_ver = hashlib.sha1((ROOT / "_template" / "media.css").read_bytes()).hexdigest()[:8]
+    def bust(html_text: str) -> str:
+        return html_text.replace('/media/_template/media.css"', f'/media/_template/media.css?v={css_ver}"')
+
     for p in posts:
         out_dir = ROOT / p["slug"]
         out_dir.mkdir(exist_ok=True)
-        (out_dir / "index.html").write_text(build_article(p, posts, article_tpl), encoding="utf-8")
+        (out_dir / "index.html").write_text(bust(build_article(p, posts, article_tpl)), encoding="utf-8")
         print(f"✔ media/{p['slug']}/index.html")
 
-    (ROOT / "index.html").write_text(build_list(posts, list_tpl), encoding="utf-8")
+    (ROOT / "index.html").write_text(bust(build_list(posts, list_tpl)), encoding="utf-8")
     print("✔ media/index.html （一覧）")
 
     update_top_page(posts)
