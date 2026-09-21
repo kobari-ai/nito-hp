@@ -42,22 +42,22 @@ MCPサーバーはClaude Code専用ではありません。同じサーバーを
 
 このほかにMCPサーバーは**チャネル**としても動きます。サーバー側からセッションにメッセージを押し込めるため、離席中に届いたDiscordのチャットやwebhookのイベントにClaudeが反応できます。使うにはサーバーが `claude/channel` 機能を宣言し、起動時に `--channels` フラグで有効にしてください。
 
-接続するサーバーは[Anthropic Directory](https://claude.com/directory)で探せます。Directoryのコネクターは Claude Code と同じMCPの仕組みを使っているため、`claude mcp add` でそのまま追加できました。
+接続するサーバーは[Anthropic Directory](https://claude.com/directory)で探せます。DirectoryのコネクターはClaude Codeと同じMCPの仕組みを使うため、`claude mcp add` でそのまま追加できます。
 
 ## サーバーを追加する4つの方法
 
 トランスポートはサーバーがどこで動くかで決まります。
 
-| 方法 | どんなサーバー向きか | コマンド |
+| 方法 | どんなサーバー向きか | 追加の仕方 |
 |---|---|---|
 | HTTP（推奨） | クラウド上のサービス。最も広くサポートされている | `claude mcp add --transport http <name> <url>` |
-| SSE（非推奨） | SSEのエンドポイントしか公開していないサービス | HTTPと同じコマンドで自動的に切り替わる |
+| SSE（非推奨） | SSEのエンドポイントしか公開していないサービス | HTTPと同じコマンド（自動で切り替わる） |
 | stdio | 自分のマシンで動かすプロセス、カスタムスクリプト | `claude mcp add <name> -- <command> [args...]` |
 | WebSocket | サーバー側から予期しないイベントを押し込みたい場合 | `claude mcp add-json` で `"type":"ws"` を指定 |
 
 <figure class="post-figure"><img src="/media/images/claude-mcp-guide/00_fig_transports.png" alt="MCPサーバーを追加する4つの方法の図。HTTPは推奨でクラウド上のサービス向けOAuth対応、SSEは非推奨でHTTPと同じコマンド、stdioはローカルのプロセスで--の後ろがサーバーのコマンド、WebSocketはサーバー側からイベントを押し込みたいときでOAuthは使えない" loading="lazy"><figcaption>4つのトランスポートの選び分け</figcaption></figure>
 
-リモートのサービスをつなぐならHTTPを選んでください。SSEしか公開していないサーバーも、HTTPと同じコマンドで追加できます。Claude Codeがまず HTTP を試し、受け付けられなければSSEに切り替えるためです。
+リモートのサービスをつなぐならHTTPを選んでください。SSEしか公開していないサーバーも、HTTPと同じコマンドで追加できます。Claude CodeがまずHTTPを試し、受け付けられなければSSEに切り替えるためです。
 
 ```
 claude mcp add --transport http notion https://mcp.notion.com/mcp
@@ -113,7 +113,7 @@ projectは `.mcp.json` に書き込まれ、これをバージョン管理に入
 
 ## リモートサーバーで認証する
 
-多くのクラウド型サーバーは認証を求めてきました。Claude CodeはOAuth 2.0に対応しており、`/mcp` を実行してブラウザでログインすると、トークンは安全に保存されて自動で更新されます。
+多くのクラウド型サーバーは認証を求めてきます。Claude CodeはOAuth 2.0に対応しており、`/mcp` を実行してブラウザでログインすれば、トークンは安全に保存され、以後の更新も自動です。
 
 ターミナルから直接サインインすることもできます。
 
@@ -129,7 +129,7 @@ SSH越しなど、手元にブラウザがない環境では、このコマン�
 claude mcp add --transport http --client-id your-client-id --client-secret --callback-port 8080 my-server https://mcp.example.com/mcp
 ```
 
-クライアントシークレットはmacOSのキーチェーンか認証情報ファイルに保存され、設定ファイルには書かれません。後から変更するなら、いったん `claude mcp remove` してから同じスコープで追加し直してください。
+`--client-secret` は値を書きません。実行するとマスクされた入力でシークレットを聞かれるため、シェルの履歴には残らない形です。保存先はmacOSのキーチェーンか認証情報ファイルで、設定ファイルには書かれません。後から変更するなら、いったん `claude mcp remove` してから同じスコープで追加し直してください。
 
 なお、`headers.Authorization` を自分で設定したサーバーが認証に失敗した場合、Claude CodeはOAuthに切り替えず、接続失敗として報告します。トークンを直すか、ヘッダーを外してOAuthに任せるかのどちらかです。
 
@@ -149,7 +149,7 @@ claude mcp add --transport http --client-id your-client-id --client-secret --cal
 
 `✘ Failed to connect` はサーバーに接続できなかったという意味で、`list` コマンドが失敗したわけではありません。失敗の詳細にはサーバーが返したHTTPステータス（401など）とエラーテキストが付きます。認証情報のように見えるテキストと展開後のURLは、秘密が混ざりうるため伏せられます。
 
-WebSocketのサーバーは `claude mcp list` に出てきません。`claude mcp get <name>` か `/mcp` のパネルで確認します。
+WebSocketのサーバーは `claude mcp list` の出力に表示されません。消えたわけではないので、`claude mcp get <name>` か `/mcp` のパネルで確認します。
 
 ## 設定でつまずく箇所
 
@@ -177,9 +177,9 @@ WebSocketのサーバーは `claude mcp list` に出てきません。`claude mc
 
 ## claude.aiのコネクターとの関係
 
-claude.aiのアカウントでClaude Codeにログインしている場合、claude.aiに追加したMCPサーバー（コネクター）はClaude Codeでも自動的に使えます。設定は [claude.ai/customize/connectors](https://claude.ai/customize/connectors) で行い、TeamとEnterpriseのプランでは管理者だけが追加できます。
+claude.aiのアカウントでClaude Codeにログインしている場合、claude.aiに追加したMCPサーバー（コネクター）はClaude Codeでも自動的に使えます。設定は [claude.ai/customize/connectors](https://claude.ai/customize/connectors) で行います。TeamとEnterpriseのプランでは、追加できるのは管理者だけです。
 
-Claude Desktopで設定済みのサーバーを取り込むこともできました。
+Claude Desktopで設定済みのサーバーは、そのまま取り込めます。
 
 ```
 claude mcp add-from-claude-desktop

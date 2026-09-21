@@ -15,8 +15,8 @@ Geminiは無料で使えます。有料プランに上げると何が変わる�
 :::takeaways
 - 日本の月額は**Plus 725円・Pro 2,900円・Ultra 14,500円から**。無料プランは0円
 - 有料で増えるのは**使用量の上限・一度に読ませられる長さ・一部の機能**の3つ。**モデルは無料でも同じ3つが選べる**
-- 上限は回数ではなく**コンピューティング量**で決まる。倍率は無料を基準にPlusが2倍、Proが4倍、UltraはProの4倍か20倍
-- Pro・Ultraの説明にある**AI受信トレイ、Deep Search、Chromeの自動ブラウジングなどは米国のみ**と公式に明記されている
+- 上限は回数ではなく**コンピューティング量**で決まる。AIプランなしとの比でPlusが2倍、Proが4倍、Ultraが最大20倍（実測ではなく公式の表記）
+- Pro・Ultraの説明にある**AI受信トレイ、Deep Search、Chromeの自動ブラウジングは米国のみ**と公式に明記されている。**Gemini Sparkも「一部の国」とだけ書かれ、日本での提供は明記がない**
 - **学生はGoogle AI Plusを1年間無料**で使える
 :::
 
@@ -24,12 +24,12 @@ Geminiは無料で使えます。有料プランに上げると何が変わる�
 
 公式のプランページに載っている日本の月額と、含まれるストレージは次のとおりです。
 
-| プラン | 月額（日本） | ストレージ | 使用量の上限 |
+| プラン | 月額（日本） | ストレージ | 使用量の上限（AIプランなしとの比） |
 |---|---|---|---|
 | 無料 | 0円 | Googleアカウントの既定 | 標準 |
 | Google AI Plus | 725円 | 400GB | 標準の2倍 |
 | Google AI Pro | 2,900円 | 5TB | 標準の4倍 |
-| Google AI Ultra | 14,500円から | 20TBから | AI Proの4倍または20倍 |
+| Google AI Ultra | 14,500円から | 20TBから | 最大20倍（ヘルプではAI Proの4倍または20倍と表記） |
 
 <figure class="post-figure"><img src="/media/images/gemini-pricing/gp_01_plans_page.jpg" alt="Google Oneの「Google AIのプラン」ページ。日本を選択した状態で、Google AI Plusが月額725円、Google AI Proが月額2,900円、Google AI Ultraが月額14,500円からと表示されている" loading="lazy"><figcaption>公式ページの日本価格（地域の選択は「日本」）</figcaption></figure>
 
@@ -61,28 +61,28 @@ Geminiアプリの上限は、使った回数ではありません。公式ヘ�
 
 ### 一部の機能
 
-モデルそのものに差はありません。公式ヘルプの「モデルへのアクセス」の表では、Gemini 3 Flash-Lite・Flash・Proの3つすべてに、無料からUltraまで4プラン分の○が並びます。
+モデルそのものに差はありません。公式ヘルプの「モデルへのアクセス」の表では、Gemini 3 Flash-Lite・Flash・Proの3つすべてに、無料からUltraまで4プラン分の○が並びます。なおプランページ側は有料の特典を「Gemini 3.1 Proへのアクセスの拡大」と書いており、ヘルプのモデル表とは呼び方が揃っていません。ここで言う「同じ3つが選べる」はヘルプの表に基づく記載です。
 
 無料で使える機能も多く、Canvas、Gem、Deep Research、画像生成、音楽生成、アプリ連携は無料プランの列にもチェックが入っています。有料でないと使えないのは次のものです。
 
 | 機能 | 無料 | Plus | Pro・Ultra |
 |---|---|---|---|
 | 動画生成、時間指定アクション、今日のまとめ、Nano Banana Proでの再生成 | × | ○ | ○ |
-| Gemini Spark | × | × | ○ |
+| Gemini Spark（提供は一部の国。日本での提供は公式に明記なし） | × | × | ○ |
 
 ## 日本では使えない機能に注意
 
 プランページのPro・Ultraの説明には、**米国のみと明記された機能がいくつも含まれています**。料金を比べる前に、ここを切り分けておきます。
 
-<figure class="post-figure"><img src="/media/images/gemini-pricing/00_fig_us_only.png" alt="Pro・Ultraの説明に含まれる米国のみの機能の図。日本でも使えるのはGemini 3 ProとDeep Researchの拡大、動画生成・画像生成・音楽生成、Gemini Notebookの拡張、Gemini Spark。公式に米国のみと書かれているのはGmailのAI受信トレイ、AIモードのDeep Search、Chromeの自動ブラウジング、Gemini Agent" loading="lazy"><figcaption>プラン自体は契約できるが、一部の機能は米国限定</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/gemini-pricing/00_fig_us_only.png" alt="Pro・Ultraの説明に含まれる米国のみの機能の図。日本でも使えるのはGemini 3 ProとDeep Researchの拡大、動画生成・画像生成・音楽生成、Gemini Notebookの拡張。米国のみまたは一部の国のみなのはGmailのAI受信トレイ、AIモードのDeep Search、Chromeの自動ブラウジング、Gemini Agent、Gemini Spark" loading="lazy"><figcaption>プラン自体は契約できるが、一部の機能は米国限定</figcaption></figure>
 
-公式ページに「米国のみ」「米国にお住まいの」と書かれているのは、Gmailの受信トレイでのAIによる概要、AI受信トレイ、AIモードのDeep Search、Chromeの自動ブラウジング、Gemini Agent（英語のみ）、Googleフォトのリミックス生成回数アップなどです。
+公式ページに「米国のみ」「米国にお住まいの」と書かれているのは、Gmailの受信トレイでのAIによる概要、AI受信トレイ、AIモードのDeep Search、Chromeの自動ブラウジング、Gemini Agent（英語のみ）、Googleフォトのリミックス生成回数アップなどです。Gemini Sparkの注記は「一部の国で提供」で、日本で使えるとは書かれていません。
 
 Ultraのプランそのものは150か国以上で提供されており、日本はGoogle AI PlusとPro・Ultraのどちらの提供国リストにも入っています。使えないのはプランではなく、**その中の一部の機能**です。
 
 ## 学生は1年間無料
 
-公式ページは学生向けの案内を出しており、**Google AI Plusを1年間無料**で使えます。使用量上限4倍・5TBのストレージ・YouTubeの広告なし再生がセットになった学生割引プランも選べる、と書かれています。
+公式ページは学生向けの案内を出しており、無料になるのは**Google AI Plusを1年間**です。これとは別に、使用量上限4倍・5TBのストレージ・YouTubeの広告なし再生がセットになった学生割引プランも選べます。
 
 プロモーションには期限があり、公式サイト上でも終了が近い旨の表示が出ています。学生で使う予定があるなら、条件を確認してから判断してください。
 
@@ -94,7 +94,7 @@ Ultraのプランそのものは150か国以上で提供されており、日本
 
 無料で上限に当たるようになったものの100万トークンまでは要らない、という段階に**Plusが向きます**。月725円で上限が2倍、コンテキストが4倍になります。
 
-長い資料を読ませる、動画を生成する、Gemini Sparkを使う。このどれかに当たるなら**Proです**。コンテキストが100万トークンになるのはProからで、ここが無料・Plusとの決定的な差になります。
+長い資料を読ませる、動画を生成する。このどちらかに当たるなら**Proです**。コンテキストが100万トークンになるのはProからで、ここが無料・Plusとの決定的な差になります。
 
 Proでも上限に当たるほど使うか、Deep Thinkの推論モードが要るなら**Ultraになります**。月14,500円からと金額が上がるため、先にProで上限に当たるかどうかを確かめる順番が無難です。
 
@@ -138,7 +138,7 @@ Family Sharingで最大5人まで共有できます。
 使えません。AI受信トレイ、AIモードのDeep Search、Chromeの自動ブラウジング、Gemini Agentなどは公式に米国のみと書かれています。
 
 **解約するとどうなりますか？**
-Pro限定の機能とPro での会話が使えなくなり、Google One側の追加ストレージや特典も終了します。容量を使っている場合は事前の確認が要ります。
+Pro限定の機能とProでの会話が使えなくなり、Google One側の追加ストレージや特典も終了します。容量を使っている場合は事前の確認が要ります。
 
 ## 出典
 
