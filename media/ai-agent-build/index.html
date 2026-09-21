@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】AIエージェントの作り方を解説｜3つの作り方・5つの型・作る前に決める2つのこと | nito Column</title>
+    <meta name="description" content="AIエージェントの作り方を、ノーコード・既製の基盤・コードの3通りで解説。ワークフローとの違い、Anthropicが挙げる5つの設計パターン、作る前に決める2つのこと、動かし続けるための設計まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/ai-agent-build/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】AIエージェントの作り方を解説｜3つの作り方・5つの型・作る前に決める2つのこと">
+    <meta property="og:description" content="AIエージェントの作り方を、ノーコード・既製の基盤・コードの3通りで解説。ワークフローとの違い、Anthropicが挙げる5つの設計パターン、作る前に決める2つのこと、動かし続けるための設計まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/ai-agent-build/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/ai-agent-build.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/ai-agent-build.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】AIエージェントの作り方を解説｜3つの作り方・5つの型・作る前に決める2つのこと", "description": "AIエージェントの作り方を、ノーコード・既製の基盤・コードの3通りで解説。ワークフローとの違い、Anthropicが挙げる5つの設計パターン、作る前に決める2つのこと、動かし続けるための設計まで。", "datePublished": "2026-09-21", "dateModified": "2026-09-21", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-agent-build/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】AIエージェントの作り方を解説｜3つの作り方・5つの型・作る前に決める2つのこと"}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】AIエージェントの作り…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.21</span>
+        </div>
+        <h1 class="post-title">【2026年9月】AIエージェントの作り方を解説｜3つの作り方・5つの型・作る前に決める2つのこと</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIエージェントの作り方"><defs><linearGradient id="ecg-782344d6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-782344d6)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIエージェントの作り方</text><line x1="174.4" y1="327.1" x2="1025.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">3つの作り方と、作る前に決める2つのこと</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>AIエージェントを作る手順そのものは、いまは難しくありません。ノーコードのツールなら画面でノードをつなぐだけで動くものができますし、コードで組む場合も、中身はモデルにツールを渡してループさせるだけです。</p>
+<p>つまずくのはその後です。動いたものが毎回同じ結果を返さない、権限を持たせすぎて怖くて任せられない、誰も止め方を決めていない。この記事は作り方を3通りに分けて手順を示しつつ、<strong>作る前に決めておくと後が楽になる2つのこと</strong>から先に書きます。設計パターンの出典はAnthropicの<a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a>で、2024年12月に公開され、ツール周りはその後変わったと本文に注記があります。パターンそのものは現在も有効です。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>エージェントとワークフローは別物</strong>。決めた道筋をコードで通すのがワークフロー、進め方をモデル自身が決めるのがエージェント</li>
+<li>公式が推すのは<strong>いちばん単純な方法から始めること</strong>。多くの用途では、検索と例を足した1回のモデル呼び出しで足りる</li>
+<li>作り方は3通り。<strong>ノーコード／既製のエージェント基盤／コードで組む</strong>。選ぶ基準は「どこまで自分で直したいか」</li>
+<li>コードで組むときの型は5つ（<strong>プロンプト連鎖・ルーティング・並列化・オーケストレーター／ワーカー・評価と改善</strong>）。いきなり自律型にしない</li>
+<li>フレームワークは着手を速くする一方、<strong>抽象化の層がプロンプトと応答を見えなくして、デバッグを難しくする</strong></li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>作る前に決める2つのこと</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>そもそもエージェントが要るか</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>人の承認をどこに置くか</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>ワークフローとエージェントの違い</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>作り方は3通り</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>ノーコードで作る場合</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>コードで組む場合の5つの型</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>フレームワークをいつ使うか</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>動かし続けるための3つの原則</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>AI検索での見え方は別の話</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">作る前に決める2つのこと</h2>
+<h3 id="s1-1">そもそもエージェントが要るか</h3>
+<p>Anthropicの記事は、エージェントを作らないという選択肢を最初に挙げています。<strong>いちばん単純な解決策から始め、必要になったときだけ複雑にする</strong>のが推奨で、多くの用途では検索と例を添えた1回のモデル呼び出しを磨くだけで足ります。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-build/aab_01_source.jpg" alt="Anthropicの記事Building effective agents。2024年12月19日公開で、最も成功している実装は複雑なフレームワークではなく単純で組み合わせ可能なパターンを使っていると書かれ、ツール周りは公開後に変わったという注記が付いている" loading="lazy"><figcaption>出典の記事。公開後にツール周りが変わった旨の注記が付いている</figcaption></figure>
+
+<p>エージェントにするということは、処理時間とコストを払って柔軟さを買うということでした。自律的に動く分だけ費用は増え、途中の誤りが後ろの工程に積み上がります。<strong>決まった手順を毎回同じようにこなしてほしい仕事なら、エージェントよりワークフローのほうが結果は安定します。</strong></p>
+<h3 id="s1-2">人の承認をどこに置くか</h3>
+<p>エージェントは人からの指示か対話で仕事を始め、そこからは自分で計画して動きます。公式が重視しているのは2点です。その途中で<strong>チェックポイントや行き詰まりで人の判断を仰ぐ形にしておくこと</strong>と、<strong>繰り返し回数の上限のような停止条件を入れておくこと</strong>です。</p>
+<p>これを後から足すのは大変です。メールの送信、ファイルの削除、外部への書き込みのように取り返しがつかない操作を洗い出し、そこだけ人が押す形にしてから作り始めます。</p>
+<h2 id="s2">ワークフローとエージェントの違い</h2>
+<p>言葉の使われ方が幅広いので、公式の定義に沿って整理します。Anthropicは両方をまとめて「エージェント的なシステム」と呼んだうえで、構造の違いをはっきり分けています。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ワークフロー</th>
+<th>エージェント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>進め方を決めるのは</td>
+<td>あらかじめ書いたコード</td>
+<td>モデル自身</td>
+</tr>
+<tr>
+<td>向いている仕事</td>
+<td>手順がはっきりしている仕事</td>
+<td>何手かかるか読めない仕事</td>
+</tr>
+<tr>
+<td>強み</td>
+<td>予測できる、結果が揃う</td>
+<td>柔軟に対応できる</td>
+</tr>
+<tr>
+<td>弱み</td>
+<td>想定外に弱い</td>
+<td>コストが増え、誤りが積み上がる</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/ai-agent-build/00_fig_vs.png" alt="ワークフローとエージェントの違いの図。ワークフローは進め方をあらかじめ書いたコードが決め、手順がはっきりした仕事に向き結果が揃うが想定外に弱い。エージェントは進め方をモデル自身が決め、何手かかるか読めない仕事に向き柔軟だがコストが増え誤りが積み上がる" loading="lazy"><figcaption>進め方を誰が決めるかで分かれる</figcaption></figure>
+
+<p>自律的なエージェントが向くのは、必要な手数を予測できず、決まった道筋を書けない仕事です。そのかわり<strong>モデルの判断をある程度信用する前提</strong>になるため、公式はサンドボックスでの十分なテストとガードレールを勧めています。</p>
+<h2 id="s3">作り方は3通り</h2>
+<p>手を動かす方法は大きく3つに分かれます。</p>
+<table>
+<thead>
+<tr>
+<th>作り方</th>
+<th>何を使うか</th>
+<th>向いている人</th>
+<th>引き換えに失うもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ノーコード</td>
+<td>Dify、n8n など画面でノードをつなぐツール</td>
+<td>まず動かして試したい</td>
+<td>細かい制御、移植しやすさ</td>
+</tr>
+<tr>
+<td>既製のエージェント基盤</td>
+<td>Copilot Studio など、業務アプリと一体のもの</td>
+<td>既にその業務基盤を使っている</td>
+<td>その基盤の外に出づらい</td>
+</tr>
+<tr>
+<td>コードで組む</td>
+<td>モデルのAPIを直接、必要ならフレームワーク</td>
+<td>自分で直し続けたい</td>
+<td>立ち上がりの速さ</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/ai-agent-build/00_fig_three.png" alt="AIエージェントの作り方3通りの図。ノーコードはDifyやn8nで画面でノードをつないで作るが細かい制御と移植がしづらい、既製の基盤はCopilot Studioなどで業務アプリと一体だが基盤の外に出づらい、コードで組むとAPIを直接使えて中身が見えるが立ち上がりは遅い" loading="lazy"><figcaption>3通りの違いと、引き換えに失うもの</figcaption></figure>
+
+<p>選ぶ基準は機能の多さではなく、<strong>動かなかったときに自分で直したいかどうか</strong>です。直したいならコード、中身に踏み込まないと決めているならノーコードや既製の基盤が向きます。</p>
+<h3 id="s3-1">ノーコードで作る場合</h3>
+<p>Difyを例にすると、流れはアカウント作成、モデルの設定、ワークフローの作成の3つです。クラウド版のSandboxプランには最初に200のAIクレジットが付いており、OpenAIやAnthropic、Geminiのモデルを呼べます。<strong>このクレジットは一度きりの付与で、毎月は更新されません。</strong></p>
+<p>入力を受け取るノード、自由入力から必要な値を取り出すノード、モデルを呼ぶノードといった部品を、画面上で並べてつなぎます。自然文で書かれた入力を決まった形に直す処理をモデルに任せられるため、後ろのノードが扱いやすくなります。</p>
+<p>ここで作れるものの多くは定義上のエージェントではなく、ワークフローに当たります。それで用が足りるなら、無理に自律型にする必要はありません。</p>
+<h3 id="s3-2">コードで組む場合の5つの型</h3>
+<p>コードで組むなら、いきなり自律型を目指さず、公式が挙げる型を順に当てはめます。どれも部品はひとつで、検索・ツール・記憶を足したモデル呼び出しです。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-build/00_fig_patterns.png" alt="コードで組むときの5つの型の表。プロンプト連鎖は前の出力を次の入力にする、ルーティングは入力を分類して振り分ける、並列化は分担や多数決、オーケストレーターとワーカーは中心が分解して任せる、評価と改善は作る側と評価する側で往復する" loading="lazy"><figcaption>5つの型。いきなり自律型にしない</figcaption></figure>
+
+<p><strong>プロンプト連鎖</strong>では仕事をいくつかの段に分けて、前の出力を次の入力にします。段と段のあいだにプログラムによる確認を挟めるので、途中でずれたまま進むのを止められます。下書きの骨子を作り、条件を満たしているか確認してから本文を書かせる、といった流れが当てはまります。</p>
+<p><strong>ルーティング</strong>では入力を分類して専用の処理に振り分けます。問い合わせの種類ごとに別のプロンプトとツールを使う、簡単な質問は小さいモデルに、難しい質問は能力の高いモデルに回す、といった使い方です。1種類の入力に合わせて調整すると他の入力で精度が落ちる、という問題を避けられます。</p>
+<p><strong>並列化</strong>には分担と多数決の2つの形があります。分担は独立した小さな仕事を同時に走らせる形、多数決は同じ仕事を何度か走らせて結果を突き合わせる形です。公式は<strong>ガードレールを別のモデル呼び出しに分ける</strong>例を挙げており、本来の回答と内容の審査を同じ呼び出しでやらせるより精度が上がります。</p>
+<p><strong>オーケストレーターとワーカー</strong>では、中心のモデルが仕事を分解してワーカーに任せ、結果をまとめました。並列化と形は似ていますが、<strong>小さな仕事を事前に決めておかない</strong>点が違います。修正するファイル数が入力次第で変わるコーディングのような仕事に向きます。</p>
+<p><strong>評価と改善</strong>は片方が作り、もう片方が評価して戻す往復の形です。評価の基準がはっきりしていて、繰り返すほど良くなる仕事に効きました。人が言葉で指摘すれば明らかに良くなる、そしてその指摘をモデルにも書ける、という2つが揃えば当てはまります。</p>
+<h2 id="s4">フレームワークをいつ使うか</h2>
+<p>Claude Agent SDKやAWSのStrands Agents SDKのようなフレームワークは、モデルの呼び出しやツールの定義といった定型の処理を肩代わりしてくれます。着手は確実に速くなります。</p>
+<p>一方で公式は、<strong>まずAPIを直接使うことを勧めています</strong>。多くの型は数行のコードで書けるためです。フレームワークが増やす抽象化の層は、実際に投げられたプロンプトと返ってきた応答を見えなくしてしまい、デバッグを難しくします。単純な作りで足りる場面なのに複雑な仕組みを足したくなる、という副作用もあります。</p>
+<p>フレームワークを使う場合でも、<strong>中で何が起きているかを理解しておくこと</strong>が条件です。内部の動作についての思い込みが利用者の失敗によくある原因だ、と公式に書かれています。</p>
+<h2 id="s5">動かし続けるための3つの原則</h2>
+<p>公式が挙げる原則は3つです。</p>
+<ol>
+<li><strong>設計を単純に保つ</strong></li>
+<li><strong>計画の段階を明示して、何をしようとしているか見えるようにする</strong></li>
+<li><strong>ツールの説明とテストに手をかけて、モデルとツールのあいだの接点を丁寧に作る</strong></li>
+</ol>
+<p>3つ目が見落とされがちです。エージェントの中身は環境からの反応を見ながらツールを使うループにすぎません。<strong>どのツールが何をするのか、引数に何を入れるのかをモデルが読んで分かる形で書けているか</strong>が、そのまま精度に出ます。</p>
+<p>実行中はツールの呼び出し結果やコードの実行結果といった事実を各段階で受け取り、進み具合を自分で確かめられる状態にします。うまくいかないときに設計を疑う前に、まずツールの説明を読み直すほうが早いことが多いはずです。</p>
+<h2 id="s6">AI検索での見え方は別の話</h2>
+<p>社内向けにエージェントを作ることと、自社がAIの回答に登場することは別の問題で、後者は<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。</p>
+<h2 id="s7">よくある質問</h2>
+<p>AIエージェントの作り方について検索されている関連質問を中心に答えます。</p>
+<p><strong>AIエージェントは無料で作れますか？</strong>
+試すだけなら作れます。Dify Cloudの無料プランには最初に200のAIクレジットが付いており、モデルの呼び出しに使えます。ただし一度きりの付与なので、使い切った後は自分のAPIキーを設定するか、有料プランに移ります。</p>
+<p><strong>プログラミングができなくても作れますか？</strong>
+ノーコードのツールなら画面でノードをつないで作れます。ただし動かなかったときに中身を直すには、どこで何が起きているかを読む力が要ります。</p>
+<p><strong>ChatGPTはAIエージェントですか？</strong>
+定義によります。Anthropicの分け方では、進め方をモデル自身が決めて動くものがエージェントで、決めた道筋をコードで通すものはワークフローです。チャットの画面で1往復するだけなら、どちらにも当たりません。エージェントとは何かは<a href="https://nito-0210.com/media/ai-agent-guide/">別の記事</a>にまとめています。</p>
+<p><strong>どのフレームワークを使えばいいですか？</strong>
+公式はまずAPIを直接使うことを勧めています。多くの型は数行で書けるためです。フレームワークを使う場合も、内部で何が起きているかを理解しておくことが条件になります。</p>
+<p><strong>作ったエージェントが毎回違う結果を返します。</strong>
+手順が決まっている仕事なら、エージェントではなくワークフローに寄せると結果が揃います。決めた道筋をコードで通す形にして、モデルに判断させる範囲を狭めます。</p>
+<p><strong>暴走を防ぐにはどうしますか？</strong>
+繰り返し回数の上限のような停止条件を入れ、取り返しがつかない操作の手前に人の承認を置きます。公式はサンドボックスでの十分なテストとガードレールも勧めています。</p>
+<p><strong>ガードレールはどう作りますか？</strong>
+公式が挙げているのは、本来の回答とは別のモデル呼び出しで内容を審査する形です。同じ呼び出しに両方をやらせるより精度が上がります。</p>
+<p><strong>エージェントを作るべきか判断する基準はありますか？</strong>
+必要な手数を予測できず、決まった道筋を書けない仕事かどうかです。手順が書けるならワークフロー、1往復で済むならモデルを1回呼ぶだけで足ります。</p>
+<h2 id="s8">出典</h2>
+<p>本文の事実関係は次の公開ドキュメントで確認しています（2026年9月21日取得）。</p>
+<ul>
+<li><a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents（Anthropic）</a></li>
+<li><a href="https://docs.dify.ai/en/guides/application-orchestrate/agent">Dify Docs 30-Minute Quick Start</a></li>
+<li><a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol</a></li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-mode-history/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードの履歴"><defs><linearGradient id="ecg-5c2b240b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5c2b240b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードの履歴</text><line x1="326.4" y1="365.9" x2="873.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.21</div>
+                <div class="rel-card__ttl">【2026年9月】Google AIモードの履歴の見方と消し方｜残らない原因・復元・シークレットモード・保存期間</div>
+            </a>
+            <a href="/media/claude-mcp-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude MCPの接続方法"><defs><linearGradient id="ecg-d56dd878" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d56dd878)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude MCPの接続方法</text><line x1="182.0" y1="365.9" x2="1018.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.21</div>
+                <div class="rel-card__ttl">【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ</div>
+            </a>
+            <a href="/media/gemini-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Geminiの使い方"><defs><linearGradient id="ecg-56dd110b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-56dd110b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Geminiの使い方</text><line x1="311.2" y1="365.9" x2="888.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.21</div>
+                <div class="rel-card__ttl">【2026年9月】Geminiの使い方を公式ヘルプで解説｜始め方・モデルの選び方・無料の上限・Deep Research・上級編</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
