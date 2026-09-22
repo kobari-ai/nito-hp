@@ -111,7 +111,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s4">公式のREADMEがまだ古い</h2>
 <figure class="post-figure"><img src="/media/images/gemini-cli-guide/gc_03_readme.jpg" alt="GitHubのgoogle-gemini/gemini-cliリポジトリのREADME。Why Gemini CLI?の節に、個人のGoogleアカウントで毎分60リクエスト、1日1,000リクエストの無料枠という記載が残っている" loading="lazy"><figcaption>リポジトリのREADMEに残る旧来の無料枠の記載</figcaption></figure>
 
-<p>混乱のもとがここにあります。GitHubのリポジトリのREADMEには、2026年9月22日の時点でも「個人のGoogleアカウントで毎分60リクエスト・1日1,000リクエストの無料枠」という記載が残っています。認証の選択肢の1番目も、Googleアカウントでのサインインのままです。</p>
+<p>混乱のもとがここにあります。認証の選択肢の1番目も、Googleアカウントでのサインインのままです。</p>
 <p>2025年に書かれた解説は、この記載を前提にしています。手順どおりに進めても無料では通らないのは、記事が間違っていたからではなく、その後に前提が変わったためです。判断の基準にするなら、READMEではなく<a href="https://www.geminicli.com/docs/get-started/authentication">公式ドキュメント</a>と発表のほうを見てください。</p>
 <h2 id="s5">開発自体は止まっていない</h2>
 <p>Gemini CLIのリポジトリは動き続けています。安定版は毎週火曜のUTC 20:00（日本時間の水曜5:00）、プレビュー版は毎週火曜のUTC 23:59（同じく水曜8:59）、ナイトリー版は毎日UTC 0:00（日本時間の9:00）に公開される形です。直近のリリースはv0.60.0で、2026年9月15日に出ています。</p>
@@ -119,7 +119,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s6">いま取れる3つの道</h2>
 <figure class="post-figure"><img src="/media/images/gemini-cli-guide/02_fig_choice.png" alt="ターミナルでGeminiを使う3つの選択肢の図。無料枠やAI Pro・Ultraで使っていた個人はAntigravity CLI、有料のAPIキーを持つ人はGemini CLIに従量課金、Code AssistのStandardやEnterpriseライセンスを持つ組織はGemini CLIをそのまま" loading="lazy"><figcaption>契約の形で選ぶ道が決まる</figcaption></figure>
 
-<p>無料またはAI Pro・Ultraで使っていたなら、素直にAntigravity CLIへ移るのが公式の案内どおりです。APIキーを持っているなら、Gemini CLIを続けて従量課金で払う形も残っています。会社のライセンスで使っているなら、そのままで構いません。</p>
+<p>どれになるかは契約の形で決まるので、選ぶ余地はあまりありません。迷うとすればこの一点です。これまで無料で使っていた人が、Antigravity CLIへ移るか、APIキーを取って従量課金でGemini CLIを続けるか。手元の設定やスクリプトを作り込んでいるなら後者、そうでなければ前者が軽く済みます。</p>
 <p>Google Cloudのプロジェクトを指定する必要がある場合は、<code>GOOGLE_CLOUD_PROJECT</code>に自分のプロジェクトIDを入れてから起動します。</p>
 <h2 id="s7">AI検索での見え方は別の話</h2>
 <p>AI検索に古い答えが残り続ける例としても、この移行は分かりやすいものです。2025年に書かれた解説が大量にあり、検索でもAIの回答でも上位に出続けている状態です。自社の情報が同じ形で古いまま引用されていないかは、順位とは別に確かめる必要があります。実際に4つのサービスへ同じ質問を投げた結果は<a href="https://nito-0210.com/media/ai-search-engine-comparison/">AI検索エンジンの比較記事</a>に載せました。</p>

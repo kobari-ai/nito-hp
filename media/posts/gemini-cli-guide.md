@@ -52,7 +52,7 @@ Antigravity CLIは2026年5月19日から誰でも使えます。Goで書かれ�
 
 <figure class="post-figure"><img src="/media/images/gemini-cli-guide/gc_03_readme.jpg" alt="GitHubのgoogle-gemini/gemini-cliリポジトリのREADME。Why Gemini CLI?の節に、個人のGoogleアカウントで毎分60リクエスト、1日1,000リクエストの無料枠という記載が残っている" loading="lazy"><figcaption>リポジトリのREADMEに残る旧来の無料枠の記載</figcaption></figure>
 
-混乱のもとがここにあります。GitHubのリポジトリのREADMEには、2026年9月22日の時点でも「個人のGoogleアカウントで毎分60リクエスト・1日1,000リクエストの無料枠」という記載が残っています。認証の選択肢の1番目も、Googleアカウントでのサインインのままです。
+混乱のもとがここにあります。認証の選択肢の1番目も、Googleアカウントでのサインインのままです。
 
 2025年に書かれた解説は、この記載を前提にしています。手順どおりに進めても無料では通らないのは、記事が間違っていたからではなく、その後に前提が変わったためです。判断の基準にするなら、READMEではなく[公式ドキュメント](https://www.geminicli.com/docs/get-started/authentication)と発表のほうを見てください。
 
@@ -66,7 +66,7 @@ Gemini CLIのリポジトリは動き続けています。安定版は毎週火�
 
 <figure class="post-figure"><img src="/media/images/gemini-cli-guide/02_fig_choice.png" alt="ターミナルでGeminiを使う3つの選択肢の図。無料枠やAI Pro・Ultraで使っていた個人はAntigravity CLI、有料のAPIキーを持つ人はGemini CLIに従量課金、Code AssistのStandardやEnterpriseライセンスを持つ組織はGemini CLIをそのまま" loading="lazy"><figcaption>契約の形で選ぶ道が決まる</figcaption></figure>
 
-無料またはAI Pro・Ultraで使っていたなら、素直にAntigravity CLIへ移るのが公式の案内どおりです。APIキーを持っているなら、Gemini CLIを続けて従量課金で払う形も残っています。会社のライセンスで使っているなら、そのままで構いません。
+どれになるかは契約の形で決まるので、選ぶ余地はあまりありません。迷うとすればこの一点です。これまで無料で使っていた人が、Antigravity CLIへ移るか、APIキーを取って従量課金でGemini CLIを続けるか。手元の設定やスクリプトを作り込んでいるなら後者、そうでなければ前者が軽く済みます。
 
 Google Cloudのプロジェクトを指定する必要がある場合は、`GOOGLE_CLOUD_PROJECT`に自分のプロジェクトIDを入れてから起動します。
 
