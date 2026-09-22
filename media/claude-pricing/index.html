@@ -66,7 +66,7 @@
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
 <li>個人向けは<strong>Free $0・Pro $18・Max $110から</strong>。Proの$18は年払いの月額で、月払いなら$22</li>
 <li><strong>表示価格には消費税10%が含まれる</strong>（公式の注記は「Prices include 10% JCT」）</li>
-<li><strong>年払いを選べるのはProだけ</strong>。Maxは月払いのみ</li>
+<li><strong>個人向けで年払いを選べるのはProだけ</strong>。Maxは月払いのみ</li>
 <li>使用量は<strong>5時間のローリングの枠</strong>で決まり、有料プランには週次の上限が加わる。ウェブもClaude Codeも同じ枠から引かれる</li>
 <li><strong>Opus と Claude Code はProから</strong>。Freeで使えるのはSonnetとHaiku</li>
 </ul></div></div>
@@ -82,7 +82,7 @@
                     <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>年払いはいくら安くなるのか</a></li>
                     <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>プランの変更と解約</a></li>
                     <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>どのプランを選ぶか</a></li>
-                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>AI検索から見たときの一言</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>AI検索での見え方は別の話</a></li>
                     <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
                     <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
                 </ol>
@@ -122,7 +122,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </table>
 <figure class="post-figure"><img src="/media/images/claude-pricing/cl_01_plans.jpg" alt="Claudeの公式料金ページの個人タブ。Freeが$0、Proが$18で年間サブスクリプション割引適用時の月額と注記、Maxが$110からと表示されている" loading="lazy"><figcaption>公式の料金ページ。個人向けは3プラン</figcaption></figure>
 
-<p>Proの$18は年間サブスクリプションの割引が入った月額で、請求は$220の一括です。月払いを選ぶと$22になります。Maxの$110は「から」で、後述する5倍と20倍のどちらを選ぶかで変わります。</p>
+<p>Proの$18は年間サブスクリプションの割引が入った月額で、請求は$220の一括です。月払いを選ぶと$22になります。Maxの$110は「から」で、後述する5倍と20倍のどちらを選ぶかで変わります。20倍を選んだときの金額は料金ページには出ていません。</p>
 <figure class="post-figure"><img src="/media/images/claude-pricing/00_fig_plans.png" alt="Claudeの個人向け3プランの比較図。Free $0はSonnetとHaikuが使えてOpusとClaude Codeは使えない、Pro $18はOpusとClaude Codeが使えて使用量はFreeの5倍以上、Max $110からはProの5倍か20倍を選び出力の上限も上がる" loading="lazy"><figcaption>3つのプランと、それぞれが向く人</figcaption></figure>
 
 <h2 id="s2">表示価格に消費税が含まれている</h2>
@@ -208,8 +208,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table>
-<p>FreeとProの間にある壁は、<strong>OpusとClaude Code</strong>です。この2つが必要なら、無料のままでは届きません。MaxとProの差は機能ではなく量で、出力の上限と混雑時の優先アクセスが加わります。</p>
-<p>モデルの学習にデータを使うかどうかは、どのプランもオプトアウトできます。</p>
+<p>Fableは比較表に別枠で載っている上位のモデルで、Proでは使用クレジット、Maxでは週次制限の50%までという扱いになります。FreeとProの間にある壁は、<strong>OpusとClaude Code</strong>です。この2つが必要なら、無料のままでは届きません。MaxとProの差は機能ではなく量で、出力の上限と混雑時の優先アクセスが加わります。</p>
+<p>コンテキストウィンドウは4プランとも「最大100万（モデルによって異なります）」で、プランで差が付いていません。Geminiは無料と有料でここが大きく変わるので、Claudeの特徴として覚えておく価値があります。モデルの学習にデータを使うかどうかは、どのプランもオプトアウトできます。</p>
 <h2 id="s5">チームと会社で契約するとき</h2>
 <p>「Team &amp; Enterprise」タブに切り替えると、Teamはシートの種類で金額が2つに分かれます。</p>
 <figure class="post-figure"><img src="/media/images/claude-pricing/cl_02_team.jpg" alt="Claude料金ページのTeam & Enterpriseタブ。Teamは2〜150名向けでスタンダードシートが$22、プレミアムシートが$110、EnterpriseはUS$20のシート料金にAPIレートでの使用量を加える形と表示されている" loading="lazy"><figcaption>チーム向けタブの表示</figcaption></figure>
@@ -248,8 +248,9 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <p>Teamは2名から150名までで、2種類のシートを混ぜて契約できます。SSO、一元的な請求、コネクターの管理者コントロールはTeam以上に付き、個人向けのProやMaxには付きません。会社の管理を効かせたいなら、人数が少なくてもTeamです。</p>
 <p>Enterpriseはシートあたり$20に、使った分のAPIレートが乗る形です。使うモデルとタスクでコストが動きます。</p>
+<p>このほか大学向けに教育プランがあり、学生・教員・スタッフを含む大学全体を対象に、割引料金、学習モード、専用のAPIクレジットが用意されています。</p>
 <h2 id="s6">年払いはいくら安くなるのか</h2>
-<p>年払いを選べるのはProとTeamだけです（Enterpriseは年払いのみ）。12か月使った場合の総額を並べると差が見えます。</p>
+<p>年払いがあるのはProとTeam、Enterpriseは年払いのみです。12か月使った場合の総額を並べると差が見えます。</p>
 <table>
 <thead>
 <tr>
@@ -289,12 +290,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>解約してもチャットとプロジェクト、ファイルは残ります。消えるのは有料プランでしか使えない機能へのアクセスだけです。App StoreやGoogle Play経由で契約した場合は、Claudeの設定ではなくストア側から解約してください。</p>
 <h2 id="s8">どのプランを選ぶか</h2>
 <p>判断は2段階です。まず、<strong>OpusかClaude Codeを使うか</strong>。使うならProまで上げる必要があります。次に、<strong>5時間の枠で足りているか</strong>。設定の使用状況を1〜2週間見て、上限に当たる日が続くならMaxです。</p>
-<p>年払いはProにしかありません。Maxを長く使う前提でも、前払いで安くする選択肢は用意されていない点に注意してください。</p>
+<p>個人向けでは年払いはProだけです。Maxを長く使う前提でも、前払いで安くする選択肢は用意されていない点に注意してください。</p>
 <p>複数人で使うなら、人数が2名でもTeamを選べます。管理機能が要るかどうかで、ProのままかTeamかが決まります。</p>
-<h2 id="s9">AI検索から見たときの一言</h2>
-<p>有料プランの利用者が増えるほど、調べものは検索結果を読む形から、Claudeに聞いて答えだけ読む形へ移ります。自社の情報が答えの中で引用されるかどうかは、検索順位とは別の指標です。測り方は<a href="https://nito-0210.com/media/ai-search-engine-comparison/">AI検索エンジンの比較記事</a>に、4つのサービスへ同じ質問を投げた結果とあわせて載せました。</p>
+<h2 id="s9">AI検索での見え方は別の話</h2>
+<p>Claudeを自分で使うことと、自社がClaudeの回答に登場することは別の問題で、後者は<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。測り方は<a href="https://nito-0210.com/media/ai-search-engine-comparison/">AI検索エンジンの比較記事</a>にまとめました。</p>
 <h2 id="s10">よくある質問</h2>
-<p>関連質問を中心に答えます。</p>
+<p>金額はすべて2026年9月22日時点の公式ページの表示で、消費税10%を含みます。</p>
 <p><strong>Claudeの有料プランはいくらですか？</strong></p>
 <p>個人向けはProが月$18（年払いの月額、$220を一括）、月払いなら$22です。Maxは月$110からで、月払いのみです。表示価格には消費税10%が含まれます。</p>
 <p><strong>Claudeは無料でどこまで使えますか？</strong></p>
@@ -341,6 +342,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/chatgpt-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの料金プラン"><defs><linearGradient id="ecg-71d92242" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-71d92242)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの料金プラン</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.22</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTの料金プランを比較｜無料・Go 1,400円・Plus 3,000円・Proの違い</div>
+            </a>
             <a href="/media/ai-agent-build/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIエージェントの作り方"><defs><linearGradient id="ecg-34d1d203" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-34d1d203)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIエージェントの作り方</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.09.21</div>
@@ -350,11 +356,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードの履歴"><defs><linearGradient id="ecg-5c2b240b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5c2b240b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードの履歴</text><line x1="326.4" y1="365.9" x2="873.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.09.21</div>
                 <div class="rel-card__ttl">【2026年9月】Google AIモードの履歴の見方と消し方｜残らない原因・復元・シークレットモード・保存期間</div>
-            </a>
-            <a href="/media/claude-mcp-guide/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude MCPの接続方法"><defs><linearGradient id="ecg-d56dd878" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d56dd878)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude MCPの接続方法</text><line x1="182.0" y1="365.9" x2="1018.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.09.21</div>
-                <div class="rel-card__ttl">【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ</div>
             </a>
         </div>
     </section>
