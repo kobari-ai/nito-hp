@@ -33,7 +33,7 @@ ChatGPTの料金は、公式の日本語ページに**円の金額がそのま�
 
 <figure class="post-figure"><img src="/media/images/chatgpt-pricing/cp_01_plans.jpg" alt="ChatGPTの公式料金ページ。個人向けタブが選択され、無料版が￥0、Goが￥1,400、Plusが￥3,000、Proが月額￥16,800からと円で表示されている" loading="lazy"><figcaption>公式の日本語料金ページ。金額は円で表示される</figcaption></figure>
 
-料金ページには税の扱いについての記載が見当たりません。請求される実額は決済画面で確認してください。有料プランは1人あたりの月額で、Go・Plus・Businessに月額プラン、BusinessとEnterpriseに年間プランが用意されています。
+税込みか税別かは料金ページに書かれていません。請求される実額は決済画面で確認してください。有料プランは1人あたりの月額で、Go・Plus・Businessに月額プラン、BusinessとEnterpriseに年間プランが用意されています。
 
 <figure class="post-figure"><img src="/media/images/chatgpt-pricing/00_fig_plans.png" alt="ChatGPTの個人向け4プランの比較図。無料版0円はLunaが無制限でAstraとSolは使えない、Go1,400円は送信数と画像生成が増えるが広告が表示される場合がある、Plus3,000円はGPT-6 Astraが上限つきで使える、Pro16,800円からは利用枠がPlusの5倍" loading="lazy"><figcaption>4つのプランと、それぞれが向く人</figcaption></figure>
 
@@ -49,6 +49,7 @@ ChatGPTの料金は、公式の日本語ページに**円の金額がそのま�
 - Deep Research
 - メモリとコンテキスト
 - Codexへのアクセス
+- デスクトップでのChatGPTワークへのアクセス
 
 プロジェクト機能は無料版でも使えます。一方でGPT-6 AstraとGPT-5.6 Sol、レガシーモデルは無料版の対象外です。
 
@@ -69,16 +70,16 @@ Goは月1,400円で、無料版に対してツールを使ったメッセージ�
 | GPT-6 Astra | なし | なし | 上限あり | 拡張 |
 | GPT-5.6 Sol | なし | なし | 拡張 | 無制限 |
 | GPT-5.6 Sol Pro | なし | なし | 拡張 | 無制限 |
+| GPT-5.6 Terra | デスクトップのワークとCodexで制限 | デスクトップのワークとCodexで制限 | 拡張 | 無制限 |
 | GPT-5.6 Luna | あり | あり | 拡張 | 無制限 |
+| GPT-5 Thinking Mini | あり | あり | 拡張 | 無制限 |
 | レガシーモデル | なし | なし | あり | あり |
 
 <figure class="post-figure"><img src="/media/images/chatgpt-pricing/cp_02_models.jpg" alt="ChatGPT公式料金ページのモデル比較表。GPT-6 Astraの行は無料版とGoがハイフン、Plusが上限あり、Proが拡張と表示されている" loading="lazy"><figcaption>公式の比較表のモデル欄</figcaption></figure>
 
 3,000円のPlusでGPT-6 Astraは使えます。ただし表示は「上限あり」で、使い切ったあとは別のモデルに切り替えるか、利用枠のリセット待ちです。Astraそのものの位置づけは[GPT-6 Astraの解説記事](https://nito-0210.com/media/gpt-6-astra-guide/)にまとめています。
 
-GPT-5.6 Terraだけは書き方が違い、無料版とGoの欄は「デスクトップのワークとCodexでアクセスが制限されています」という条件つきの表記です。
-
-Plusではこのほか、メッセージとアップロードの上限、Deep Research、メモリとコンテキスト、Codexの利用枠が広がり、プロジェクト・スケジュール済みタスク・カスタムGPTが使えます。
+Plusではこのほか、メッセージとアップロードの上限、Deep Research、メモリとコンテキスト、Codexの利用枠が広がります。プランのカードには「プロジェクト、スケジュール済みタスク、カスタム GPT」も追加機能として並んでいますが、比較表ではプロジェクトが4プランとも「はい」、スケジュールタスクとGPTの作成はGoから「はい」です。Plusで変わるのは使える量のほうだと読むのが実態に近くなります。
 
 ## Proの16,800円と$200プランの新規停止
 
@@ -123,9 +124,9 @@ Go・Plus・Pro・Businessは主要なクレジットカードで購入できま
 
 教育向けの枠もあります。米国のK–12（幼稚園から高校）の教員を対象にしたChatGPT for Teachersは2027年6月まで無料です。大学向けにはChatGPT Eduがあります。
 
-## AI検索から見た料金の話
+## AI検索での見え方は別の話
 
-ChatGPTの有料プランが増えるほど、人がウェブを調べる手順は「検索して自分で読む」から「ChatGPTに聞いて答えだけ読む」へ寄っていきます。自社のサイトが答えの中で引用されるかどうかは、検索順位とは別の指標です。測り方は[AI検索エンジンの比較記事](https://nito-0210.com/media/ai-search-engine-comparison/)に、4つのサービスへ同じ質問を投げた結果とあわせて載せました。
+ChatGPTを自分で使うことと、自社がChatGPTの回答に登場することは別の問題で、後者は[AI検索対策](https://nito-0210.com/llmo/)として扱います。測り方は[AI検索エンジンの比較記事](https://nito-0210.com/media/ai-search-engine-comparison/)にまとめました。
 
 ## よくある質問
 

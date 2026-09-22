@@ -82,7 +82,7 @@
                     <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>会社で契約するとき</a></li>
                     <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>どのプランを選ぶか</a></li>
                     <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>支払いと契約の条件</a></li>
-                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>AI検索から見た料金の話</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>AI検索での見え方は別の話</a></li>
                     <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
                     <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
                 </ol>
@@ -127,7 +127,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </table>
 <figure class="post-figure"><img src="/media/images/chatgpt-pricing/cp_01_plans.jpg" alt="ChatGPTの公式料金ページ。個人向けタブが選択され、無料版が￥0、Goが￥1,400、Plusが￥3,000、Proが月額￥16,800からと円で表示されている" loading="lazy"><figcaption>公式の日本語料金ページ。金額は円で表示される</figcaption></figure>
 
-<p>料金ページには税の扱いについての記載が見当たりません。請求される実額は決済画面で確認してください。有料プランは1人あたりの月額で、Go・Plus・Businessに月額プラン、BusinessとEnterpriseに年間プランが用意されています。</p>
+<p>税込みか税別かは料金ページに書かれていません。請求される実額は決済画面で確認してください。有料プランは1人あたりの月額で、Go・Plus・Businessに月額プラン、BusinessとEnterpriseに年間プランが用意されています。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-pricing/00_fig_plans.png" alt="ChatGPTの個人向け4プランの比較図。無料版0円はLunaが無制限でAstraとSolは使えない、Go1,400円は送信数と画像生成が増えるが広告が表示される場合がある、Plus3,000円はGPT-6 Astraが上限つきで使える、Pro16,800円からは利用枠がPlusの5倍" loading="lazy"><figcaption>4つのプランと、それぞれが向く人</figcaption></figure>
 
 <h2 id="s2">無料版でどこまでできるのか</h2>
@@ -140,6 +140,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li>Deep Research</li>
 <li>メモリとコンテキスト</li>
 <li>Codexへのアクセス</li>
+<li>デスクトップでのChatGPTワークへのアクセス</li>
 </ul>
 <p>プロジェクト機能は無料版でも使えます。一方でGPT-6 AstraとGPT-5.6 Sol、レガシーモデルは無料版の対象外です。</p>
 <h2 id="s3">Goで増えるものと広告の注記</h2>
@@ -181,7 +182,21 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <td>無制限</td>
 </tr>
 <tr>
+<td>GPT-5.6 Terra</td>
+<td>デスクトップのワークとCodexで制限</td>
+<td>デスクトップのワークとCodexで制限</td>
+<td>拡張</td>
+<td>無制限</td>
+</tr>
+<tr>
 <td>GPT-5.6 Luna</td>
+<td>あり</td>
+<td>あり</td>
+<td>拡張</td>
+<td>無制限</td>
+</tr>
+<tr>
+<td>GPT-5 Thinking Mini</td>
 <td>あり</td>
 <td>あり</td>
 <td>拡張</td>
@@ -199,8 +214,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/chatgpt-pricing/cp_02_models.jpg" alt="ChatGPT公式料金ページのモデル比較表。GPT-6 Astraの行は無料版とGoがハイフン、Plusが上限あり、Proが拡張と表示されている" loading="lazy"><figcaption>公式の比較表のモデル欄</figcaption></figure>
 
 <p>3,000円のPlusでGPT-6 Astraは使えます。ただし表示は「上限あり」で、使い切ったあとは別のモデルに切り替えるか、利用枠のリセット待ちです。Astraそのものの位置づけは<a href="https://nito-0210.com/media/gpt-6-astra-guide/">GPT-6 Astraの解説記事</a>にまとめています。</p>
-<p>GPT-5.6 Terraだけは書き方が違い、無料版とGoの欄は「デスクトップのワークとCodexでアクセスが制限されています」という条件つきの表記です。</p>
-<p>Plusではこのほか、メッセージとアップロードの上限、Deep Research、メモリとコンテキスト、Codexの利用枠が広がり、プロジェクト・スケジュール済みタスク・カスタムGPTが使えます。</p>
+<p>Plusではこのほか、メッセージとアップロードの上限、Deep Research、メモリとコンテキスト、Codexの利用枠が広がります。プランのカードには「プロジェクト、スケジュール済みタスク、カスタム GPT」も追加機能として並んでいますが、比較表ではプロジェクトが4プランとも「はい」、スケジュールタスクとGPTの作成はGoから「はい」です。Plusで変わるのは使える量のほうだと読むのが実態に近くなります。</p>
 <h2 id="s5">Proの16,800円と$200プランの新規停止</h2>
 <p>料金ページのProは「月額 16,800円 から」という書き方で、「から」が付いています。ヘルプセンターを見ると、Proには<strong>$100と$200（Pro 20X）の2つ</strong>があることが分かります。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-pricing/cp_04_help.jpg" alt="OpenAIヘルプセンターのChatGPT Proプランの概要ページ。上部に、Pro $200プランへの新規登録とアップグレードを一時的に停止しているという告知が表示されている" loading="lazy"><figcaption>ヘルプセンターに出ている$200プランの告知</figcaption></figure>
@@ -249,8 +263,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s8">支払いと契約の条件</h2>
 <p>Go・Plus・Pro・Businessは主要なクレジットカードで購入できます。Enterpriseで請求書払いなどを使いたい場合は営業への相談になります。</p>
 <p>教育向けの枠もあります。米国のK–12（幼稚園から高校）の教員を対象にしたChatGPT for Teachersは2027年6月まで無料です。大学向けにはChatGPT Eduがあります。</p>
-<h2 id="s9">AI検索から見た料金の話</h2>
-<p>ChatGPTの有料プランが増えるほど、人がウェブを調べる手順は「検索して自分で読む」から「ChatGPTに聞いて答えだけ読む」へ寄っていきます。自社のサイトが答えの中で引用されるかどうかは、検索順位とは別の指標です。測り方は<a href="https://nito-0210.com/media/ai-search-engine-comparison/">AI検索エンジンの比較記事</a>に、4つのサービスへ同じ質問を投げた結果とあわせて載せました。</p>
+<h2 id="s9">AI検索での見え方は別の話</h2>
+<p>ChatGPTを自分で使うことと、自社がChatGPTの回答に登場することは別の問題で、後者は<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。測り方は<a href="https://nito-0210.com/media/ai-search-engine-comparison/">AI検索エンジンの比較記事</a>にまとめました。</p>
 <h2 id="s10">よくある質問</h2>
 <p>関連質問を中心に答えます。</p>
 <p><strong>ChatGPTの有料プランは日本円でいくらですか？</strong></p>
