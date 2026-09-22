@@ -80,7 +80,7 @@
                     <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>公式のREADMEがまだ古い</a></li>
                     <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>開発自体は止まっていない</a></li>
                     <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>いま取れる3つの道</a></li>
-                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>AI検索から見た一言</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>AI検索での見え方は別の話</a></li>
                     <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
                     <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
                 </ol>
@@ -102,7 +102,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/gemini-cli-guide/00_fig_who.png" alt="2026年6月18日に提供が止まった対象と引き続き使える対象の図。止まったのはGemini Code Assist for individualsの無料利用、Google AI ProとUltraの個人サブスクリプション、Gemini Code Assist for GitHub。続くのはCode AssistのStandardとEnterpriseライセンス、Google Cloud経由のGitHub連携、有料のAPIキー" loading="lazy"><figcaption>対象は契約しているライセンスで分かれる</figcaption></figure>
 
 <p>分かれ目はアカウントの種類ではなく、<strong>どの契約でリクエストを通しているか</strong>です。個人で無料で使っていた場合と、Google AI ProやUltraのサブスクリプションで使っていた場合が、提供の止まった側にあたります。</p>
-<p>会社のGemini Code AssistのStandardまたはEnterpriseライセンスを使っている場合、発表には「アクセスは変わらない」と書かれています。最新のGeminiモデルの提供も従来どおりです。有料のGeminiおよびGemini Enterprise Agent PlatformのAPIキー経由でも、Gemini CLIは引き続き使えます。</p>
+<p>会社のGemini Code AssistのStandardまたはEnterpriseライセンスを使っている場合、発表には「アクセスは変わらない」と書かれています。最新のGeminiモデルの提供も従来どおりです。Google Cloud経由でGemini Code Assist for GitHubを使っている組織も同じ扱いで、変わりません。有料のGeminiおよびGemini Enterprise Agent PlatformのAPIキー経由でも、Gemini CLIは引き続き使えます。</p>
 <h2 id="s3">移行先のAntigravity CLIはどう違うのか</h2>
 <figure class="post-figure"><img src="/media/images/gemini-cli-guide/01_fig_move.png" alt="Antigravity CLIに引き継がれた機能と新しくなった点の図。Agent Skills、Hooks、Subagents、ExtensionsはAntigravityのプラグインとして残り、Goで書き直されて動きが速く、複数のエージェントを背後で並行して動かせて、デスクトップのAntigravity 2.0と同じ土台を共有する" loading="lazy"><figcaption>残ったものと作り直されたところ</figcaption></figure>
 
@@ -112,19 +112,19 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/gemini-cli-guide/gc_03_readme.jpg" alt="GitHubのgoogle-gemini/gemini-cliリポジトリのREADME。Why Gemini CLI?の節に、個人のGoogleアカウントで毎分60リクエスト、1日1,000リクエストの無料枠という記載が残っている" loading="lazy"><figcaption>リポジトリのREADMEに残る旧来の無料枠の記載</figcaption></figure>
 
 <p>混乱のもとがここにあります。GitHubのリポジトリのREADMEには、2026年9月22日の時点でも「個人のGoogleアカウントで毎分60リクエスト・1日1,000リクエストの無料枠」という記載が残っています。認証の選択肢の1番目も、Googleアカウントでのサインインのままです。</p>
-<p>日本語の解説記事の多くは2025年に書かれていて、この記載を前提にしています。手順どおりに進めても無料では通らないのは、記事が間違っていたからではなく、その後に前提が変わったためです。判断の基準にするなら、READMEではなく<a href="https://www.geminicli.com/docs/get-started/authentication">公式ドキュメント</a>と発表のほうを見てください。</p>
+<p>2025年に書かれた解説は、この記載を前提にしています。手順どおりに進めても無料では通らないのは、記事が間違っていたからではなく、その後に前提が変わったためです。判断の基準にするなら、READMEではなく<a href="https://www.geminicli.com/docs/get-started/authentication">公式ドキュメント</a>と発表のほうを見てください。</p>
 <h2 id="s5">開発自体は止まっていない</h2>
-<p>Gemini CLIのリポジトリは動き続けています。安定版は毎週火曜のUTC 20:00、プレビュー版は毎週火曜のUTC 23:59、ナイトリー版は毎日UTC 0:00に公開される形です。直近のリリースはv0.60.0で、2026年9月15日に出ています。</p>
+<p>Gemini CLIのリポジトリは動き続けています。安定版は毎週火曜のUTC 20:00（日本時間の水曜5:00）、プレビュー版は毎週火曜のUTC 23:59（同じく水曜8:59）、ナイトリー版は毎日UTC 0:00（日本時間の9:00）に公開される形です。直近のリリースはv0.60.0で、2026年9月15日に出ています。</p>
 <p>企業のライセンスとAPIキーの利用が続く以上、当面はこのまま更新されると読めます。対象外の契約で使っているなら、置き換えを急ぐ理由はありません。</p>
 <h2 id="s6">いま取れる3つの道</h2>
 <figure class="post-figure"><img src="/media/images/gemini-cli-guide/02_fig_choice.png" alt="ターミナルでGeminiを使う3つの選択肢の図。無料枠やAI Pro・Ultraで使っていた個人はAntigravity CLI、有料のAPIキーを持つ人はGemini CLIに従量課金、Code AssistのStandardやEnterpriseライセンスを持つ組織はGemini CLIをそのまま" loading="lazy"><figcaption>契約の形で選ぶ道が決まる</figcaption></figure>
 
 <p>無料またはAI Pro・Ultraで使っていたなら、素直にAntigravity CLIへ移るのが公式の案内どおりです。APIキーを持っているなら、Gemini CLIを続けて従量課金で払う形も残っています。会社のライセンスで使っているなら、そのままで構いません。</p>
 <p>Google Cloudのプロジェクトを指定する必要がある場合は、<code>GOOGLE_CLOUD_PROJECT</code>に自分のプロジェクトIDを入れてから起動します。</p>
-<h2 id="s7">AI検索から見た一言</h2>
+<h2 id="s7">AI検索での見え方は別の話</h2>
 <p>AI検索に古い答えが残り続ける例としても、この移行は分かりやすいものです。2025年に書かれた解説が大量にあり、検索でもAIの回答でも上位に出続けている状態です。自社の情報が同じ形で古いまま引用されていないかは、順位とは別に確かめる必要があります。実際に4つのサービスへ同じ質問を投げた結果は<a href="https://nito-0210.com/media/ai-search-engine-comparison/">AI検索エンジンの比較記事</a>に載せました。</p>
 <h2 id="s8">よくある質問</h2>
-<p>関連質問を中心に答えます。</p>
+<p>内容はすべて2026年9月22日時点の公式の発表とドキュメントの記載です。</p>
 <p><strong>Gemini CLIが使えなくなったのはなぜですか？</strong></p>
 <p>2026年6月18日に、無料のGemini Code Assist for individualsと、Google AI Pro・Ultraのサブスクリプションに対するリクエストの提供が終わったためです。移行先としてAntigravity CLIが案内されています。</p>
 <p><strong>Gemini CLIを無料で利用するにはどうすればいいですか？</strong></p>
@@ -171,20 +171,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
-            <a href="/media/ai-agent-build/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIエージェントの作り方"><defs><linearGradient id="ecg-34d1d203" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-34d1d203)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIエージェントの作り方</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.09.21</div>
-                <div class="rel-card__ttl">【2026年9月】AIエージェントの作り方を解説｜3つの作り方・5つの型・作る前に決める2つのこと</div>
+            <a href="/media/chatgpt-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの料金プラン"><defs><linearGradient id="ecg-71d92242" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-71d92242)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの料金プラン</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.22</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTの料金プランを比較｜無料・Go 1,400円・Plus 3,000円・Proの違い</div>
             </a>
-            <a href="/media/ai-mode-history/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードの履歴"><defs><linearGradient id="ecg-5c2b240b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5c2b240b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードの履歴</text><line x1="326.4" y1="365.9" x2="873.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.09.21</div>
-                <div class="rel-card__ttl">【2026年9月】Google AIモードの履歴の見方と消し方｜残らない原因・復元・シークレットモード・保存期間</div>
+            <a href="/media/chatgpt-work-plans/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT Workのプランと上限"><defs><linearGradient id="ecg-c20e9bcf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-c20e9bcf)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT Work</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">のプランと上限</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.22</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPT Workが使えるプランと上限｜Chatとの違い・機能の差</div>
             </a>
-            <a href="/media/claude-mcp-guide/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude MCPの接続方法"><defs><linearGradient id="ecg-d56dd878" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d56dd878)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude MCPの接続方法</text><line x1="182.0" y1="365.9" x2="1018.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.09.21</div>
-                <div class="rel-card__ttl">【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ</div>
+            <a href="/media/claude-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの料金プラン"><defs><linearGradient id="ecg-f80f5358" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f80f5358)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの料金プラン</text><line x1="235.2" y1="365.9" x2="964.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.22</div>
+                <div class="rel-card__ttl">【2026年9月】Claudeの料金プランを比較｜Free・Pro $18・Max・Teamの違いと選び方</div>
             </a>
         </div>
     </section>
