@@ -81,7 +81,7 @@
                     <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>PlusでGPT-6 Astraを使う</a></li>
                     <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>何を任せる想定なのか</a></li>
                     <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>チームで使うときに変わるところ</a></li>
-                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>AI検索から見た一言</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>AI検索での見え方は別の話</a></li>
                     <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
                     <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
                 </ol>
@@ -100,7 +100,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/chatgpt-work-plans/00_fig_where.png" alt="ChatGPT Workが使えるプランの図。デスクトップアプリはすべてのプランで使えて無料版とGoは制限ありの表記、WebとモバイルはPlus・Pro・Business・Enterprise・Eduが対象で無料版とGoは対象外" loading="lazy"><figcaption>開く画面で対象プランが分かれる</figcaption></figure>
 
 <p>ローカルのファイルやアプリ、ブラウザを使う重いワークフローと、Codexを使う作業はデスクトップが前提です。外出先での確認や指示出しはWebとモバイルでできますが、ここはPlus以上の話になります。</p>
-<p>無料版とGoの人がWorkを試すなら、入口はデスクトップアプリだけです。</p>
+<p>無料版とGoの人がWorkを試すなら、入口はデスクトップアプリだけです。なお、この「制限あり」が何をどこまで制限するのかは公式に書かれていません。</p>
 <h2 id="s3">プラン別に使える機能</h2>
 <p>料金ページの比較表から、Workに関係する行を並べます。</p>
 <table>
@@ -176,12 +176,41 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/chatgpt-work-plans/02_fig_limits.png" alt="ChatGPT Workの上限の図。5時間ごとの枠と週ごとの枠が重なること、入力の長さはGoとPlusが約320ページ分でProが約680ページ分、PlusではWorkとCodexでGPT-6 Astraを使えること" loading="lazy"><figcaption>2つの枠と、一度に読ませられる長さ</figcaption></figure>
 
 <p>一度に渡せる分量には別の上限があります。料金ページの表にある推論モデルの入力上限は、GoとPlusが約320ページ分のテキスト、Proが約680ページ分です。長い議事録や仕様書をまとめて読ませる使い方だと、ここが先に効いてきます。</p>
+<p>会話が続いたときに効くのはコンテキストウィンドウのほうです。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>無料版</th>
+<th>Go</th>
+<th>Plus</th>
+<th>Pro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT Instant のコンテキスト</td>
+<td>27K</td>
+<td>54K</td>
+<td>54K</td>
+<td>128K</td>
+</tr>
+<tr>
+<td>GPT 推論のコンテキスト</td>
+<td>場合によって異なります</td>
+<td>256K</td>
+<td>256K</td>
+<td>400K</td>
+</tr>
+</tbody>
+</table>
+<p><strong>入力できるページ数もコンテキストも、GoとPlusは同じ値です。</strong>Goで足りるかどうかを調べているなら、差が出るのは量そのものではなく、使えるモデルと画面のほうだと分かります。</p>
 <p>BusinessとEnterpriseでは、より多く使うためのクレジットを追加で購入できます。</p>
 <h2 id="s5">PlusでGPT-6 Astraを使う</h2>
-<p>モデルの割り当てはWorkとChatで同じではありません。ヘルプセンターの料金表には、<strong>PlusプランではChatGPT WorkとCodexでGPT-6 Astraを利用できる</strong>と書かれています。Astraを積んだGPT-6 Proのほうは、Pro $100・Pro $200・Business・Enterpriseが対象です。</p>
+<p>モデルの割り当てはWorkとChatで同じではありません。ヘルプセンターの料金表には、<strong>PlusプランではChatGPT WorkとCodexでGPT-6 Astraを利用できる</strong>と書かれています。GPT-6 Proのほうは、Pro $100・Pro $200・Business・Enterpriseが対象です。</p>
 <p>デスクトップアプリでAstraが選べない場合は、アプリの更新が要ります。自動更新の通知を踏んだあとでも反映されないことがあるため、メニューの「更新を確認」から明示的に更新してください。CodexのCLIを使う場合はバージョン0.153.0以降が必要です。</p>
 <h2 id="s6">何を任せる想定なのか</h2>
-<p>公式ページに並んでいる用例は、どれも「散らばった情報を集めて1つの成果物にする」形をしています。</p>
+<p>対応しているプラグインは1,400を超え、普段使っているツールから情報を取り込めます。公式ページに並んでいる用例も、どれも「散らばった情報を集めて1つの成果物にする」形をしています。</p>
 <ul>
 <li>カレンダーとメッセージとドキュメントから、優先度・リスク・決定事項・フォローアップ付きの週次ブリーフを作る</li>
 <li>スプレッドシートのアンケート結果からテーマと代表的な声を抜き、短い共有文にまとめる</li>
@@ -189,18 +218,17 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li>企画書とスケジュールとチャットのスレッドから、担当とリスクと次の一手を並べたブリーフを作る</li>
 </ul>
 <p>いずれも、素材の置き場所が複数にまたがっている点が共通しています。1つのファイルを直すだけの作業なら、Chatのままで十分です。</p>
-<p>対応しているプラグインは1,400を超え、普段使っているツールから情報を取り込めます。</p>
 <h2 id="s7">チームで使うときに変わるところ</h2>
-<p>個人プランには付かず、BusinessとEnterpriseにだけ用意されている枠もあります。ここは組織のワークスペースが前提です。<strong>ワークスペースエージェント</strong>の行は、料金ページの比較表で無料版からProまですべて「いいえ」になっています。Businessはシートの種類が2つです。プレミアムシートは標準シートの5倍の利用枠で、5時間ごとの利用上限が外れます。Workで長い作業を連続して回すなら、ここが効いてきます。2種類のシートは混ぜて契約できるので、プレミアムは重い使い方をする人だけに割り当てる形でも構いません。</p>
-<p>企業向けのプランは2ユーザーから契約できます。金額は<a href="https://nito-0210.com/media/chatgpt-pricing/">ChatGPTの料金プラン</a>に載せました。</p>
-<h2 id="s8">AI検索から見た一言</h2>
-<p>Workのように、人が検索結果を開かずにAIへ仕事ごと渡す形が増えるほど、自社の情報がAIの答えの中に現れるかどうかが問われます。順位とは別の測り方が要る領域です。実際に4つのサービスへ同じ質問を投げた結果は<a href="https://nito-0210.com/media/ai-search-engine-comparison/">AI検索エンジンの比較記事</a>に載せました。</p>
+<p>Workを長く回すなら、効いてくるのはBusinessのプレミアムシートです。標準シートの5倍の利用枠があり、5時間ごとの利用上限が外れます。長い調査や大きなファイルの処理を連続して走らせる使い方では、ここが詰まりどころになります。</p>
+<p>シートは2種類を混ぜて契約できるので、重い使い方をする人にだけプレミアムを割り当てる形でも構いません。金額とシートの詳細は<a href="https://nito-0210.com/media/chatgpt-pricing/">ChatGPTの料金プラン</a>に載せました。なお比較表の<strong>ワークスペースエージェント</strong>は無料版からProまですべて「いいえ」で、組織のワークスペースが前提の機能です。</p>
+<h2 id="s8">AI検索での見え方は別の話</h2>
+<p>ChatGPTを自分で使うことと、自社がChatGPTの回答に登場することは別の問題で、後者は<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。測り方は<a href="https://nito-0210.com/media/ai-search-engine-comparison/">AI検索エンジンの比較記事</a>にまとめました。</p>
 <h2 id="s9">よくある質問</h2>
-<p>関連質問を中心に答えます。</p>
+<p>内容はすべて2026年9月22日時点の公式ページの記載です。</p>
 <p><strong>ChatGPT Workとは何ですか？</strong></p>
 <p>チームのツールやファイル、ブラウザからコンテキストを集めて、ドキュメント・スライド・スプレッドシート・サイト・レポートなどの成果物まで仕上げる画面です。質問に答えるChatと違い、目標を渡して進めてもらう形になります。</p>
 <p><strong>ChatGPT Workは無料で使えますか？</strong></p>
-<p>デスクトップアプリであれば、無料版でも「制限あり」という条件付きで使えます。Webとモバイルで使えるのはPlus以上です。</p>
+<p>デスクトップアプリであれば、無料版でも「制限あり」という条件付きで使えます。制限の中身は公式に書かれていません。Webとモバイルで使えるのはPlus以上です。</p>
 <p><strong>ChatGPT WorkとChatの違いは何ですか？</strong></p>
 <p>Chatは回答を返す画面で、Workは作業を進めて成果物を作る画面です。Workにはプランモードがあり、手順の案を承認してから作業が始まります。定期的なタスクのスケジュール設定もWork側にあります。</p>
 <p><strong>ChatGPT Workの上限はどうなっていますか？</strong></p>
@@ -208,7 +236,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p><strong>一度にどれくらいの長さを読ませられますか？</strong></p>
 <p>料金ページの表では、推論モデルの入力上限がGoとPlusで約320ページ分、Proで約680ページ分のテキストです。無料版は場合によって異なると書かれています。</p>
 <p><strong>PlusでGPT-6 Astraは使えますか？</strong></p>
-<p>WorkとCodexでは使えます。ヘルプセンターの料金表にそう書かれています。Astraを搭載したGPT-6 Proのほうは、Pro $100・Pro $200・Business・Enterpriseが対象です。</p>
+<p>WorkとCodexでは使えます。ヘルプセンターの料金表にそう書かれています。GPT-6 Proのほうは、Pro $100・Pro $200・Business・Enterpriseが対象です。</p>
 <p><strong>Sitesはどのプランから使えますか？</strong></p>
 <p>Plusからです。無料版とGoは対象外になります。ダッシュボードやプロジェクトトラッカーを共有できるページに変える機能です。</p>
 <p><strong>スケジュールタスクは無料版で使えますか？</strong></p>
@@ -243,20 +271,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/chatgpt-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの料金プラン"><defs><linearGradient id="ecg-71d92242" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-71d92242)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの料金プラン</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.22</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTの料金プランを比較｜無料・Go 1,400円・Plus 3,000円・Proの違い</div>
+            </a>
+            <a href="/media/claude-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの料金プラン"><defs><linearGradient id="ecg-f80f5358" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f80f5358)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの料金プラン</text><line x1="235.2" y1="365.9" x2="964.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.22</div>
+                <div class="rel-card__ttl">【2026年9月】Claudeの料金プランを比較｜Free・Pro $18・Max・Teamの違いと選び方</div>
+            </a>
             <a href="/media/ai-agent-build/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIエージェントの作り方"><defs><linearGradient id="ecg-34d1d203" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-34d1d203)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIエージェントの作り方</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.09.21</div>
                 <div class="rel-card__ttl">【2026年9月】AIエージェントの作り方を解説｜3つの作り方・5つの型・作る前に決める2つのこと</div>
-            </a>
-            <a href="/media/ai-mode-history/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードの履歴"><defs><linearGradient id="ecg-5c2b240b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5c2b240b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードの履歴</text><line x1="326.4" y1="365.9" x2="873.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.09.21</div>
-                <div class="rel-card__ttl">【2026年9月】Google AIモードの履歴の見方と消し方｜残らない原因・復元・シークレットモード・保存期間</div>
-            </a>
-            <a href="/media/claude-mcp-guide/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude MCPの接続方法"><defs><linearGradient id="ecg-d56dd878" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d56dd878)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude MCPの接続方法</text><line x1="182.0" y1="365.9" x2="1018.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.09.21</div>
-                <div class="rel-card__ttl">【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ</div>
             </a>
         </div>
     </section>
