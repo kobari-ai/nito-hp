@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】プロンプトの書き方｜公式ガイドが勧める4つと出てこない工夫 | nito Column</title>
+    <meta name="description" content="プロンプトの書き方をOpenAI・Google・Anthropicの公式ガイドで確認しました。3社が共通して勧める書き方、公式に出てこない工夫、依頼に足す4つの要素、直し方までまとめます。">
+    <link rel="canonical" href="https://nito-0210.com/media/prompt-writing-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】プロンプトの書き方｜公式ガイドが勧める4つと出てこない工夫">
+    <meta property="og:description" content="プロンプトの書き方をOpenAI・Google・Anthropicの公式ガイドで確認しました。3社が共通して勧める書き方、公式に出てこない工夫、依頼に足す4つの要素、直し方までまとめます。">
+    <meta property="og:url" content="https://nito-0210.com/media/prompt-writing-guide/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/_default.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/_default.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】プロンプトの書き方｜公式ガイドが勧める4つと出てこない工夫", "description": "プロンプトの書き方をOpenAI・Google・Anthropicの公式ガイドで確認しました。3社が共通して勧める書き方、公式に出てこない工夫、依頼に足す4つの要素、直し方までまとめます。", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/prompt-writing-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】プロンプトの書き方｜公式ガイドが勧める4つと出てこない工夫"}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】プロンプトの書き方｜公…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.23</span>
+        </div>
+        <h1 class="post-title">【2026年9月】プロンプトの書き方｜公式ガイドが勧める4つと出てこない工夫</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="プロンプトの書き方"><defs><linearGradient id="ecg-af1bd6ea" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-af1bd6ea)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">プロンプトの書き方</text><line x1="258.0" y1="327.1" x2="942.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">公式が勧める4つと出てこない工夫</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>プロンプトの書き方を調べると、役割を与える呪文や穴埋めのテンプレートが並びます。ところが、OpenAI・Google・Anthropicの公式ガイドを順に開くと、そこに書かれているのはもっと素っ気ない話です。<strong>普通の言葉で、具体的に、前提を渡して、複雑なら分ける</strong>。この4つが3社に共通しています。</p>
+<p>ここでは各社の公式ガイド（2026年9月23日取得）を突き合わせ、公式が勧めている書き方と、どのガイドにも出てこない工夫を分けます。ChatGPT側の画面の話は<a href="https://nito-0210.com/media/chatgpt-guide/">ChatGPTの使い方の記事</a>にまとめています。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>3社の公式が共通して勧めるのは<strong>自然な言葉・具体性・文脈・分割</strong>の4つ</li>
+<li>OpenAIは「完璧な言い回しより、<strong>自然で目的に沿った言葉</strong>に頼れるようになってきた」と書いている</li>
+<li><strong>ChatGPTのPlusとProでは「もっと考えて」と頼んでも思考の段階は変わらない</strong>。設定で選ぶ</li>
+<li>Anthropicは、プロンプトを直す前に<strong>成功の基準と評価の方法を決める</strong>ことを前提に置いている</li>
+<li>毎回同じ前置きを貼っているなら、カスタム指示やGemやプロジェクトに移す</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>3社が共通して言っていること</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>呪文よりも渡す情報</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>依頼に足す4つの要素</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>複雑な依頼は分ける</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>役割を与える指定は要るのか</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>一度で終わらせない</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>AI検索での見え方は別の話</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">3社が共通して言っていること</h2>
+<p>まず、公式ガイドの中身を並べます。</p>
+<table>
+<thead>
+<tr>
+<th>出どころ</th>
+<th>勧めていること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenAI（ChatGPTのプロンプト）</td>
+<td>明確で具体的に書く。文脈を渡す。複雑な作業は小さく分ける。返答を見て直す。語調は形容詞で指定する</td>
+</tr>
+<tr>
+<td>Google（Gemini for Google Workspace）</td>
+<td>自然な言葉で書く。明確かつ簡潔に。文脈を渡す。具体的で関連する語を使う。複雑な作業は別々のプロンプトに分ける</td>
+</tr>
+<tr>
+<td>Anthropic（Claudeのプロンプトエンジニアリング）</td>
+<td>先に成功の基準と評価の方法を決める。プロンプト以外で解決できることもある。明確さ、例示、構造化、役割、思考、連鎖といった技法を使う</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/prompt-writing-guide/pw_02_google.jpg" alt="Google Workspaceの日本語ヘルプ。Geminiへのプロンプトは自然な言葉で、明確かつ簡潔に、文脈を提供し、具体的なキーワードを使い、複雑なタスクは分けると書かれている" loading="lazy"><figcaption>Googleが挙げる5つの基本</figcaption></figure>
+
+<p>3社の言い方は違いますが、要求していることはほぼ同じです。OpenAIのヘルプはその理由を人への依頼にたとえて説明します。モデルは人間同士のやり取りを大量に学んでいるため、<strong>人に頼むときと同じように渡すとうまくいく</strong>という考え方です。「これをやっておいて」だけでは人も動けないのと同じで、詳しい指示を整理して渡すほど成功率が上がります。</p>
+<h2 id="s2">呪文よりも渡す情報</h2>
+<p>もう1つ、見落とされやすい記述があります。</p>
+<figure class="post-figure"><img src="/media/images/prompt-writing-guide/pw_01_openai.jpg" alt="OpenAIヘルプセンターのプロンプトの作り方のページ。明確で具体的に書く、依頼の大きさを調整する、反復して進めるという3つの方針が並んでいる" loading="lazy"><figcaption>OpenAIが挙げる3つの方針</figcaption></figure>
+
+<p>3つ目の「反復して進める」の中に、言い回しへのこだわりを弱める一文が入っています。</p>
+<p>OpenAIはそこで、ChatGPTが直感的になるにつれて<strong>完璧な言い回しではなく自然で目的に沿った言葉に頼れるようになる</strong>と書いています。言い換えると、凝ったテンプレートを覚えることの価値は下がっています。</p>
+<figure class="post-figure"><img src="/media/images/prompt-writing-guide/pw_04_fig_works.png" alt="公式ガイドが勧めていることと出てこないことの比較図。普通の言葉で具体的に書き分割して直すことは勧められているが、呪文やテンプレートの貼り付けは公式に出てこない" loading="lazy"><figcaption>公式に書いてあることと、書いていないこと</figcaption></figure>
+
+<p>公式に出てこない側が無意味だと決まったわけではありません。ただ、<strong>どの公式ガイドにも載っていない</strong>という事実は知っておく価値があります。</p>
+<p>分かりやすい例が「もっとよく考えて」です。ChatGPTのヘルプには、PlusとProで「think harder」「think deeply」と伝えても別の思考の段階には切り替わらないと明記されています。例外は安全上の理由で自動的に切り替わる場合だけです。深く考えさせたいときは送信する前に思考の段階を選びます。頼み方の工夫で設定を動かせた時代の知識が、そのまま残っている例です。</p>
+<h2 id="s3">依頼に足す4つの要素</h2>
+<p>では何を書くのか。3社のガイドをまとめると、足すべきものは4つです。</p>
+<figure class="post-figure"><img src="/media/images/prompt-writing-guide/pw_03_fig_four.png" alt="プロンプトの比較図。お礼メールを書いてという依頼に、文脈と目的と制約と出力の形を足すと、直す箇所が細部だけで済むようになる" loading="lazy"><figcaption>依頼に足す4つの要素</figcaption></figure>
+
+<p>4つを足した側は長く見えますが、書いているのは打ち合わせの前提だけです。| 要素 | 何を書くか | 書かないとどうなるか |
+|---|---|---|
+| 文脈 | いつ、誰と、何があったのか | 一般論に寄り、固有の事情が落ちる |
+| 目的 | 読んだ人に何をしてほしいのか | 体裁は整うが、次の行動につながらない |
+| 制約 | 長さ、語調、使ってよい情報、避けたい表現 | 毎回ばらつき、手直しが増える |
+| 出力の形 | 表なのか箇条書きなのか、いくつ出すのか | 形式を整える作業がこちらに残る |</p>
+<p>Googleのヘルプにある例も同じ構造です。「プロジェクト計画を作って」ではなく「新製品の発売に向けたプロジェクト計画を作って。期間は現在から6月まで」と書く、という形で、対象と期間が足されています。</p>
+<h2 id="s4">複雑な依頼は分ける</h2>
+<p>3社が揃って挙げているのに、実務で守られにくいのが分割です。</p>
+<p>調べる、比べる、選ぶ、書く。この4つを1つのプロンプトに詰め込むと、どこで判断を誤ったのかが見えなくなります。分けて出せば、比較の段階で条件を足すことも、選定の理由だけを問い直すこともできる形です。</p>
+<p>OpenAIのヘルプは複雑な作業は小さく焦点の絞れた依頼に分けること、必要なら<strong>複数の案を出させて選ぶこと</strong>を勧めています。Googleのヘルプも、関連する複数の作業は別々のプロンプトに分けるよう書いています。</p>
+<p>長い依頼を1回投げるより、短い依頼を3回投げるほうが速い。これが公式の推奨から読み取れる実務的な結論です。</p>
+<h2 id="s5">役割を与える指定は要るのか</h2>
+<p>「あなたはプロのライターです」で始める書き方の扱いは、公式の中でも一枚岩ではありません。</p>
+<p>Anthropicは技法の一覧に役割の指定を含めています。明確さ、例示、構造化、役割、思考、連鎖という並びです。一方でOpenAIのヘルプは、役割よりも<strong>語調を形容詞で指定する</strong>方法を例に挙げます。丁寧に、親しみやすく、真面目に、といった指定です。</p>
+<p>実務的には次のように分けると迷いません。</p>
+<ul>
+<li>語調や文体を揃えたいだけなら、形容詞で指定する</li>
+<li>専門的な観点や判断の基準を持ち込ませたいなら、役割ではなく<strong>判断の基準そのもの</strong>を書く</li>
+</ul>
+<p>「マーケターとして評価して」より「獲得単価と継続率の2つで評価して」のほうが、返ってくる内容は安定します。</p>
+<h2 id="s6">一度で終わらせない</h2>
+<p>公式ガイドが揃って書いているのに、記事ではあまり強調されないのが反復です。</p>
+<p>最初の返答はこちらの前提が伝わったかどうかの確認材料だと考えます。ずれていたら、プロンプト全体を書き直すのではなく、ずれた部分だけを足します。語調だけが違うなら語調を指定し、範囲が広すぎるなら範囲を絞ります。</p>
+<p>Anthropicのガイドはさらに手前に条件を置いていて、<strong>何をもって成功とするかの基準と、それを検証する方法</strong>を先に決めてから改善に入ることを前提にしています。「なんとなく良くなった」で止めないための順番です。</p>
+<p>同じ前置きを毎回貼っているなら、そこは設定に移せます。ChatGPTのカスタム指示、GeminiのGem、プロジェクトの指示に書いておけば、依頼のたびに繰り返す必要はなくなります。</p>
+<h2 id="s7">AI検索での見え方は別の話</h2>
+<p>プロンプトを上手に書くことと、自社の情報がAIの回答に引用されるかどうかは別の問題です。後者はAIがたどれる形で情報が置かれているかで決まります。考え方は<a href="https://nito-0210.com/media/ai-cited-writing/">AI検索で引用される記事の書き方</a>にまとめています。</p>
+<h2 id="s8">よくある質問</h2>
+<p>回答の内容はすべて2026年9月23日時点の各社公式ガイドの記載です。</p>
+<p><strong>プロンプトのテンプレートは覚えるべきですか？</strong></p>
+<p>公式ガイドはテンプレートの暗記を勧めていません。OpenAIは完璧な言い回しよりも自然で目的に沿った言葉に頼れるようになってきたと書いています。覚えるなら、文脈と目的と制約と出力の形という4つの観点のほうです。</p>
+<p><strong>「ステップバイステップで考えて」は効きますか？</strong></p>
+<p>2つに分けて考えます。ChatGPTのPlusとProでは、そう伝えても<strong>思考の段階（スライダー）は切り替わりません</strong>。深く考えさせたい場合は送信前に段階を選びます。一方で、出力の中で手順を踏ませる指示のほうは別の話で、Anthropicは技法の1つとして「思考」を挙げています。</p>
+<p><strong>長いプロンプトほど良いのですか？</strong></p>
+<p>長さではなく中身です。背景や制約のように判断に必要な情報が増えるのは有効ですが、同じ指示の言い換えを重ねても精度は上がりません。</p>
+<p><strong>役割を指定したほうがいいですか？</strong></p>
+<p>語調を揃えたいだけなら形容詞での指定で足ります。判断の質を上げたいなら、役割名よりも評価の基準を具体的に書くほうが安定します。</p>
+<p><strong>日本語と英語ではどちらがいいですか？</strong></p>
+<p>各社の公式ガイドは、書き方の原則を言語で分けていません。Google Workspaceのヘルプのように、機能によって対応言語が異なる注記はあるため、使う機能側の対応状況を確認します。</p>
+<p><strong>うまくいかないときは何から直しますか？</strong></p>
+<p>返ってきたものと欲しかったものの差を1つだけ特定して、その部分を足します。範囲、語調、形式のどれがずれたのかを見てから直すと、全部書き直さずに済みます。</p>
+<p><strong>毎回同じ前提を書くのが面倒です</strong></p>
+<p>ChatGPTのカスタム指示、GeminiのGem、プロジェクトの指示に移します。毎回の依頼に含める必要がなくなり、依頼文はその日の用件だけになります。</p>
+<p><strong>プロンプトを直せばどんな問題も解決しますか？</strong></p>
+<p>しません。Anthropicのガイドは、遅さやコストのようにモデルの選択で解決したほうが早い課題もあると書いています。プロンプトで直すべきことかどうかを、先に切り分けます。</p>
+<h2 id="s9">出典</h2>
+<p>出典は各社の公式ページで、取得日は2026年9月23日です。</p>
+<ul>
+<li><a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt">Prompt engineering best practices for ChatGPT（OpenAI）</a> — 明確さと具体性、反復、語調の指定</li>
+<li><a href="https://help.openai.com/en/articles/4936848-how-do-i-create-a-good-prompt-for-an-ai-model">How do I create a good prompt for an AI model?（OpenAI）</a> — 人に頼むときと同じ考え方、依頼の大きさの調整、自然で目的に沿った言葉</li>
+<li><a href="https://support.google.com/a/users/answer/14200040?hl=ja">Tips to write prompts for Gemini（Google）</a> — 自然な言葉、明確さ、文脈、具体的な語、分割</li>
+<li><a href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview">Prompt engineering overview（Anthropic）</a> — 成功基準と評価が先、プロンプト以外の解決、技法の一覧</li>
+<li><a href="https://help.openai.com/en/articles/20001354-gpt-56-and-gpt-6-pro-in-chatgpt">GPT-5.6 and GPT-6 Pro in ChatGPT（OpenAI）</a> — 頼み方では思考の段階が切り替わらないこと</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの使い方"><defs><linearGradient id="ecg-19299bb3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-19299bb3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの使い方</text><line x1="288.4" y1="365.9" x2="911.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.23</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTの使い方を公式ヘルプで確認｜モデル選択・ファイル・プラグイン</div>
+            </a>
+            <a href="/media/codex-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Codexの使い方"><defs><linearGradient id="ecg-ec9587a4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ec9587a4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Codexの使い方</text><line x1="334.0" y1="365.9" x2="866.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.23</div>
+                <div class="rel-card__ttl">【2026年9月】Codexの使い方を解説｜4つの入口とプラン別にできること</div>
+            </a>
+            <a href="/media/copilot-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilotの使い方"><defs><linearGradient id="ecg-e7a13211" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e7a13211)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilotの使い方</text><line x1="288.4" y1="365.9" x2="911.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.23</div>
+                <div class="rel-card__ttl">【2026年9月】Copilotの使い方を解説｜3つのライセンスとWork IQの違い</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
