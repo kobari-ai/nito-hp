@@ -22,9 +22,17 @@ Google検索のAIモードで交わしたやり取りは、通常の検索履歴
 
 ## 履歴を見る
 
-パソコンならAIモードの画面の左側にある履歴のアイコンから、アカウントに保存された会話の一覧が開きます。会話を選べば、その続きから質問を再開できます。
+入口は[AIモードの画面](https://www.google.com/search?udm=50)の左上にあるアイコンです。スマホもパソコンも位置は同じで、押すと保存された会話の一覧が開きます。会話を選べば、その続きから質問を再開できます。
 
-アカウント側の記録は [myactivity.google.com](https://myactivity.google.com) からも確認でき、日付とサービスで絞り込めます。
+<figure class="post-figure post-figure--sp"><img src="/media/images/ai-mode-history/amh_04_sp_open.jpg" alt="スマホのAIモードの画面。左上に履歴を開くアイコンがあり、赤い枠と番号1で位置が示されている" loading="lazy"><figcaption>スマホの画面。左上のアイコンが履歴の入口</figcaption></figure>
+
+押しても会話が出てこない場合は、ログインしていない可能性があります。ログアウトの状態で開くと、一覧の代わりに次の案内が出ます。
+
+<figure class="post-figure post-figure--sp"><img src="/media/images/ai-mode-history/amh_05_sp_signedout.jpg" alt="ログアウト状態でAIモードの履歴を開いたときの画面。ログアウトしました、履歴などにアクセスするにはアカウントにログインしてくださいと表示されている" loading="lazy"><figcaption>ログアウトしていると履歴そのものが表示されない</figcaption></figure>
+
+この画面が出たときは、同じ画面のログインのボタンからアカウントに入り直します。
+
+アカウント側の記録は [myactivity.google.com](https://myactivity.google.com) からも確認でき、日付とサービスで絞り込めます。検索の履歴だけを見たい場合は[検索のアクティビティのページ](https://myactivity.google.com/product/search)が近道です。
 
 ## 履歴が残らない4つの原因
 
