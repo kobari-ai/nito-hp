@@ -95,7 +95,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>まず全体像です。同じCodexでも、入る場所によって扱えるものが変わります。</p>
 <figure class="post-figure"><img src="/media/images/codex-guide/cx_04_fig_entry.png" alt="Codexの4つの入口の比較図。デスクトップアプリは全プラン、CLIとIDE拡張とクラウドはPlus以上。APIキーで入るとクラウド側の機能は使えずAPI課金になる" loading="lazy"><figcaption>4つの入口と、それぞれが使えるプラン</figcaption></figure>
 
-<p>はじめて触るなら、手元のコードを読ませて説明させるところから入るのが早道です。</p>
 <p>デスクトップアプリのCodexは、ChatGPTのアプリの中にある別の画面です。左上のメニューでChatGPTとCodexを切り替えます。ChatGPT側にはChatとWorkの2つがあり、Codexはそれらと履歴が分かれています。ウェブとモバイルのアプリからCodexを選ぶことはできません。モバイルアプリのRemoteタブから、デスクトップで動いているCodexのチャットに触れる形になります。</p>
 <h2 id="s2">プラン別に何ができるか</h2>
 <p>公式の料金ページは無料からEnterpriseまでCodexが含まれると書いたうえで、プランごとに使える入口を分けています。</p>
@@ -144,7 +143,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>CLIの導入は1行です。macOSとLinuxでは次のコマンドを実行します。</p>
 <p><code>curl -fsSL https://chatgpt.com/codex/install.sh | sh</code></p>
 <p>同じコマンドが更新にも使えます。npmやHomebrew、Windows向けの手順も公式に載っています。</p>
-<p>インストールが終わったら、対象のプロジェクトのディレクトリで<code>codex</code>と打つだけです。初回はChatGPTでのサインインか、別のサインイン方法かを選びます。ChatGPTでサインインすると、契約しているプランの利用量と請求の扱いになります。APIキーを使う場合はAPIの料金です。</p>
+<p>インストールが終わったら、対象のプロジェクトのディレクトリで<code>codex</code>と打つだけです。はじめて触るなら、手元のコードを読ませて説明させるところから入るのが早道です。初回はChatGPTでのサインインか、別のサインイン方法かを選びます。ChatGPTでサインインすると、契約しているプランの利用量と請求の扱いになります。APIキーを使う場合はAPIの料金です。</p>
 <p>起動直後に案内されるコマンドが、そのまま最初にやることの並びです。</p>
 <figure class="post-figure"><img src="/media/images/codex-guide/cx_01_docs.png" alt="Codex CLIの公式ドキュメント。ターミナルの画面にmodel gpt-6-sol mediumと表示され、slash initやslash permissionsなどのコマンドが並んでいる" loading="lazy"><figcaption>公式ドキュメントに載っているCLIの起動画面</figcaption></figure>
 
@@ -161,15 +160,17 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Codexにローカルの操作を任せる以上、最初に決めるのは権限です。公式は3つのモードを用意しています。</p>
 <figure class="post-figure"><img src="/media/images/codex-guide/cx_05_fig_perm.png" alt="Codexの権限モード3種の比較図。Ask for approvalは作業フォルダ内で動き範囲を越えるときに確認する、Approve for meは自動で判定する、Full accessはどのファイルも承認なしで編集できる" loading="lazy"><figcaption>3つの権限モードと、それぞれの境目</figcaption></figure>
 
-<p>自分のマシンで動かす以上、右へ寄せるほど事故の代償が大きくなります。試す段階では既定のまま触らないのが無難です。</p>
+<p>自分のマシンで動かす以上、Full accessに寄せるほど事故の代償が大きくなります。試す段階では既定のまま触らないのが無難です。</p>
 <p>仕組みとしては2つの制御が組み合わさっています。サンドボックスが触れるファイルとネットワークの範囲を決め、承認の設定がどこで止まるかを決めます。<strong>Approve for meを選んでも、触れる範囲そのものは広がりません</strong>。範囲を越える要求を人が見るか自動で見るかが変わるだけです。</p>
 <p>デスクトップアプリではApprove for me（設定の表記はAuto-review）とFull accessは初期状態ではメニューに出ません。設定のGeneralから有効にして初めて選べるようになります。Full accessについては、データの消失や流出、想定外の動作の危険が大きく上がると公式が明記しています。</p>
 <h2 id="s5">モデルはSolとLunaから選ぶ</h2>
 <p>Work とCodexで使うモデルは、通常のChatGPTのチャットとは別系統です。<strong>GPT-6 SolとGPT-6 Lunaは、WorkとCodexでのみ使えます</strong>。複雑なコーディングやエージェント的な作業にはSol、決まった形の反復作業にはLunaを公式が勧めています。</p>
+<p>入れ替えの最中なので、GPT-5.6のSol・Terra・Lunaも引き続き選べます。チャット側で使えるのはこの5.6系のほうです。</p>
 <p>CLIでは<code>/model</code>で切り替えるか、起動時に指定します。</p>
 <p><code>codex --model gpt-6-sol
 codex exec -m gpt-6-sol "Review the current changes"</code></p>
-<p>推論の深さはLow・Medium・High・Extra high・Max・Ultraの6段階です。既定はMediumで、Ultraはサブエージェントに作業を分けて走らせる段階です。深くするほど結果が良くなる可能性はありますが、時間もトークンも増えます。</p>
+<p>推論の深さはLow・Medium・High・Extra high・Max・Ultraの6段階です。<strong>最初に選ぶ深さはモデルごとに違い</strong>、公式はSolならMedium、LunaならHigh、AstraならLightから始めることを勧めています。</p>
+<p>呼び名も画面で違います。いちばん軽い段階はデスクトップアプリとウェブのWorkとIDE拡張ではLight、CLIではLowと表示されます。上の2つも役割が分かれていて、Maxは選んだモデルに同じ1つの仕事をより長く考えさせる段階、Ultraはサブエージェントに作業を分けて走らせる段階です。深くするほど時間もトークンも増えます。</p>
 <p>デスクトップアプリとウェブでは、入力欄の下のコントロールでモデルと推論の深さを選びます。CLIにスライダーはありません。Codexは手動で選んだモデルを保持します。</p>
 <h2 id="s6">10月14日にGPT-5.5が引退する</h2>
 <p><strong>2026年10月14日に、GPT-5.5がChatGPTとChatGPT WorkとCodexの全プランから引退します</strong>。OpenAI APIは対象外です。</p>
@@ -179,7 +180,7 @@ codex exec -m gpt-6-sol "Review the current changes"</code></p>
 <p>置き換え先はPlus・Pro・Business・Enterprise・Eduなら<code>gpt-6-sol</code>、無料とGoならデスクトップアプリの<code>gpt-6-luna</code>です。公式が確認を求めているのは、ワークスペースの既定値、保存したモデル設定、管理された構成、カスタムのエージェント、スケジュールしたタスク、モデルを指定しているスクリプトです。CIに組み込んでいる場合は、そこに<code>gpt-5.5</code>が残っていないかを見ます。</p>
 <p>なお、Astraを使うにはCodex CLIのバージョン0.153.0以降が必要です。GPT-5.6をCodexで使う場合の最低バージョンは、デスクトップアプリのCodexモードが26.707.30751、Codex CLIが0.144.0と公式に書かれています。</p>
 <h2 id="s7">クラウドで並行して走らせる</h2>
-<p>手元のマシンを占有したくない作業は、クラウド側に投げられます。隔離した環境が割り当てられ、複数の作業を並行して進められる形です。</p>
+<p>手元のマシンを占有したくない作業は、クラウド側に投げられます。隔離した環境が割り当てられ、複数の作業を並行して進められる形です。ChatGPTのプランで走らせるクラウドのチャットはGPT-5.6 Solを使い、手元で動かすときより利用枠を多く消費することがあると公式に書かれています。</p>
 <p>設定はCodexにサインインして、GitHubかGitLabをつなぐところから始めます。GitHubではCodexが触れるリポジトリを選び、GitLabは環境を作るときにプロジェクトを選ぶ形です。GitHub・GitLab・Linear・Slackから作業を開始することもできます。</p>
 <p>終わったら、要約と差分を確認して、追加の依頼を出すか、そのままプルリクエストを開きます。リポジトリごとに必要な依存関係やツール、環境変数、セットアップの手順を環境として定義できます。</p>
 <h2 id="s8">AI検索での見え方は別の話</h2>
