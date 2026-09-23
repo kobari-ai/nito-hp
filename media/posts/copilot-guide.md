@@ -26,15 +26,13 @@ Copilotの使い方でつまずく理由の多くは、操作ではなく**自�
 
 <figure class="post-figure"><img src="/media/images/copilot-guide/cp_03_fig_tiers.png" alt="Copilotの3つのライセンスの比較図。Copilot Chat基本はWebのデータ中心、Microsoft 365 Copilot基本はアプリ内の標準アクセス、プレミアムは優先アクセスと組織データの根拠付けが付く" loading="lazy"><figcaption>3つのライセンスで変わるもの</figcaption></figure>
 
-どれを使っているかが分かると、できないことの理由もはっきりします。
+見分ける手がかりは画面の中にあります。公式ドキュメントによると、WordやExcelなどのMicrosoft 365アプリとMicrosoft Copilotアプリには**製品内ラベル**が表示され、どのCopilotのエクスペリエンスなのかを利用者が識別できるようになっています。それでも分からない場合は、管理者に割り当てられているライセンスを確認します。
 
 共通しているのは土台のほうです。どの階層も、大規模言語モデルによる自然言語の理解と生成、Webや組織データによる根拠付け、そして**利用者のアクセス許可の範囲に限定されたアクセス**という3つで支えられていると公式ドキュメントに書かれています。権限のないファイルが回答に混ざることはありません。
 
-モデルについての注記もあります。Anthropicのサブプロセッサは該当するMicrosoft 365ライセンスのエクスペリエンスでのみ使え、既定で全員が使えるわけではありません。
+回答を作るモデルもライセンスで変わります。公式ドキュメントによれば、Anthropicのモデルは該当するMicrosoft 365ライセンスの機能でのみ使え、既定で全員が使えるわけではないと書かれています。
 
 <figure class="post-figure"><img src="/media/images/copilot-guide/cp_01_overview.jpg" alt="Microsoft Learnの日本語ドキュメント。Copilot ChatとMicrosoft Copilotは、データの根拠付け、統合の深さ、ライセンスが異なると書かれている" loading="lazy"><figcaption>公式ドキュメントの冒頭にある説明</figcaption></figure>
-
-導入の相談で食い違いが起きるのは、たいていこの前提の共有漏れです。
 
 ## Copilot Chatでできること
 
@@ -78,11 +76,9 @@ Teamsの会議の要約には期間の条件が付いていて、公式の説明
 
 Microsoft Graphが持ち込むのは、メール、ファイル、会議、予定表、チーム、組織の関係といった文脈です。Work IQはその上で、エージェントが組織のデータやコンテンツやツールについて推論できるようにする層になります。
 
-<figure class="post-figure"><img src="/media/images/copilot-guide/cp_04_fig_workiq.png" alt="Work IQのオンとオフの比較図。オフでは会議準備の一般論しか返らないのに対し、オンでは予定表やメールやファイルから出席者と前回の決定を拾って答える" loading="lazy"><figcaption>Work IQのオンとオフで変わる答え</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/copilot-guide/cp_04_fig_workiq.png" alt="Work IQのオンとオフで回答の根拠に何が乗るかの図。オフではWebと自分で貼った内容だけ、オンではMicrosoft GraphとWork IQとCopilot検索とセマンティックインデックスが加わる" loading="lazy"><figcaption>Work IQのオンとオフで根拠に乗るもの</figcaption></figure>
 
-この差は、依頼の文面を工夫しても埋まりません。
-
-**Work IQはオンとオフを切り替えられます**。オフにすると、回答はMicrosoft GraphとWork IQに基づかなくなります。答えは返ってきますが、仕事固有の文脈は乗りません。思ったより一般論しか返ってこないときに、まず見るべき設定です。
+この差は依頼の文面を工夫しても埋まりません。**Work IQはオンとオフを切り替えられます**。オフにすると、回答はMicrosoft GraphとWork IQに基づかなくなります。答えは返ってきますが、仕事固有の文脈は乗りません。思ったより一般論しか返ってこないときに、まず見るべき設定です。
 
 なお、Work IQ APIは別物です。カスタムのアプリやエージェントや統合のために、独立して購入して使う従量課金のサービスと位置づけられています。
 
@@ -92,9 +88,7 @@ Microsoft Graphが持ち込むのは、メール、ファイル、会議、予�
 
 <figure class="post-figure"><img src="/media/images/copilot-guide/cp_02_support.jpg" alt="Microsoft Copilotの日本語サポートページ。作業の開始、チャット、Agentsの3つのカードが並び、Agentsにはリサーチツールエージェントの案内がある" loading="lazy"><figcaption>公式サポートの入口</figcaption></figure>
 
-課金の線は、使うデータの種類で引かれています。
-
-Copilot Chat（基本）とMicrosoft 365 Copilot（基本）では、Webのデータを使うエージェントにアクセスでき、**作業データを使うエージェントは従量課金**です。プレミアムではWebと作業データの両方を使うエージェントへのアクセスが含まれます。
+課金の線は使うデータの種類で引かれています。Copilot Chat（基本）とMicrosoft 365 Copilot（基本）では、Webのデータを使うエージェントにアクセスでき、**作業データを使うエージェントは従量課金**です。プレミアムではWebと作業データの両方を使うエージェントへのアクセスが含まれます。
 
 プレミアムにはMicrosoft Copilot Coworkも付きますが、こちらも使用量ベースの課金です。Coworkは利用者に代わってMicrosoft 365の環境全体でタスクを実行します。
 
@@ -117,6 +111,8 @@ Copilot Chat（基本）とMicrosoft 365 Copilot（基本）では、Webのデ�
 3. Microsoft Purview。機微度でデータを分類してラベルを付け、不正な共有や漏洩を防ぎ、プロンプトと応答を確認する
 
 導入後の定着を見るなら、使用状況レポートで利用の様子を追い、組織のメッセージ機能で日常の業務の流れの中に案内を出す、という手順が案内されています。
+
+ライセンスごとの価格は変わることがあるため、契約の前に[Microsoft 365 Copilotの公式ページ](https://www.microsoft.com/ja-jp/microsoft-365/copilot)で確認してください。
 
 ## AI検索での見え方は別の話
 
