@@ -84,10 +84,11 @@
                     <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>カスタムGPTは12月11日に終了予定</a></li>
                     <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>プラグインとスキルの関係</a></li>
                     <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>仕事で使うときに先に触る設定</a></li>
-                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>公式の中でも記述が食い違う</a></li>
-                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>AI検索での見え方は別の話</a></li>
-                    <li class="toc-h2"><a href="#s13"><span class="toc__n">13</span>よくある質問</a></li>
-                    <li class="toc-h2"><a href="#s14"><span class="toc__n">14</span>出典</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>Officeのアプリから使う</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>公式の中でも記述が食い違う</a></li>
+                    <li class="toc-h2"><a href="#s13"><span class="toc__n">13</span>AI検索での見え方は別の話</a></li>
+                    <li class="toc-h2"><a href="#s14"><span class="toc__n">14</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s15"><span class="toc__n">15</span>出典</a></li>
                 </ol>
                 <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
             </nav>
@@ -151,7 +152,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <p>選ぶときに効くのは、日常でどの段階まで使うかです。Highまでで足りるならPlus、それより上の段階を常用するなら上位プランという分かれ方になります。</p>
 <p>無料版とGoにはGPT-5.6 Solの段階がありません。難しい質問には「Think」を使いますが、中身はGPT-5.6 Lunaです。日常のテキストチャットの回数は、無料版とGoでも上限なしと公式に書かれています。ファイルのアップロード、画像生成、音声、データ分析などには別の上限があります。</p>
-<p>GPT-6 Astraはチャットでは<strong>GPT-6 Pro</strong>という名前でProとBusinessとEnterpriseに提供されます。Plusの契約でAstraに触れるのは、チャットではなくChatGPT WorkとCodexの中です。</p>
+<p>GPT-6 Astraはチャットでは<strong>GPT-6 Pro</strong>という名前でProとBusinessとEnterpriseに提供されます。Plusの契約でAstraに触れるのは、チャットではなくChatGPT WorkとCodexの中です。料金ページの比較表ではPlusのGPT-6 Astraが「上限あり」と出ますが、これはチャットではなくChatGPT WorkとCodexでの提供を指します。</p>
 <h2 id="s4">自動で思考モードに切り替わらなくなった</h2>
 <p>2026年9月14日のリリースノートに、PlusとProで<strong>Instantから思考モードへの自動切り替えを廃止</strong>したという告知があります。あわせて、ウェブ版の「Higher intelligence」の設定も削除されました。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-guide/cg_02_thinking.png" alt="OpenAIヘルプセンターのGPT-5.6とGPT-6 Proのページ。思考の段階の説明と、PlusとProではInstantが自動で上の段階に切り替わらないという記述が表示されている" loading="lazy"><figcaption>思考の段階を説明する公式ヘルプのページ</figcaption></figure>
@@ -198,7 +199,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s7">繰り返す作業はスケジュールに置く</h2>
 <p>毎朝の要約や定期的な確認は、会話のたびに頼まなくても構いません。スケジュール機能に「荷物が届いたら教えて」のように頼むと、一度きりまたは繰り返しの仕事として登録されます。</p>
 <p>通知は設定のNotificationsからプッシュとメールを選びます。作った仕事の一覧はScheduledで確認でき、会話の中のタスク名を選ぶと編集と一時停止と削除ができます。2026年8月25日の更新で、Webhookを受けて動く形と、タスクの共有と、無料ユーザーの利用が加わりました。</p>
-<p>1つ落とし穴があります。<strong>プロジェクトの中で作ったタスクは、そのプロジェクトにあるファイルを読めません</strong>。資料を参照させたい定期実行は、プロジェクトの外に置く必要があります。</p>
+<p><strong>プロジェクトの中で作ったタスクは、そのプロジェクトにあるファイルを読めません</strong>。資料を参照させたい定期実行は、プロジェクトの外に置く必要があります。</p>
 <p>プロジェクトは会話とファイルと指示を1つの目的の下にまとめる置き場です。複数回に分かれる調べものや、同じ前提を毎回書き直したくない仕事に向きます。</p>
 <h2 id="s8">カスタムGPTは12月11日に終了予定</h2>
 <p>ChatGPTを長く使ってきた人ほど作業が残る変更です。2026年9月11日の告知で、<strong>カスタムGPTを終了してプラグインへ移行する</strong>方針が示され、専用のFAQで終了予定日が<strong>2026年12月11日</strong>と示されました。対象は全プランです。</p>
@@ -220,15 +221,18 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p><strong>学習への利用</strong>は既定で有効です。設定の中の「Improve the model for everyone」を切ると、以後の会話はモデルの学習に使われません。ログアウトの状態でこの設定を触った場合、設定はブラウザに紐づき、Cookieを消したりブラウザを変えたりすると戻ります。</p>
 <p><strong>プライバシーセンター</strong>は2026年9月21日から提供が始まりました。チャットのプライバシー、メモリ、パーソナライズ、データの使われ方、連携アプリ、アカウントの安全が1か所に集まっています。入口はウェブのアカウントメニューからHelpを開いた先にあるPrivacy Centerです。</p>
 <p><strong>メモリ</strong>は過去のチャット、保存されたメモリ、カスタム指示、ライブラリのファイル、Gmailなど連携アプリの内容を参照して回答を個別化します。設定のPersonalizationからMemoryで、参照の可否や保存された内容を確認できます。</p>
-<p>Officeで使う場合は2026年9月17日からWordにも対応しました。ExcelとPowerPointと同じMicrosoftのアドインで入り、下書き、要約、選択した箇所の書き直し、見出しや書式の調整ができます。<strong>無料プランを含む全プランで使えます</strong>。</p>
-<h2 id="s11">公式の中でも記述が食い違う</h2>
+<h2 id="s11">Officeのアプリから使う</h2>
+<p>2026年9月17日からWordにも対応しました。ExcelとPowerPointと同じMicrosoftのアドインで入り、下書き、要約、選択した箇所の書き直し、見出しや書式の調整ができます。</p>
+<p><strong>無料プランを含む全プランで使えます</strong>。ただし条件が付いていて、契約しているプランのトークンの上限が適用され、対象のプランではCodexなど他のプレミアム機能と同じ利用枠から引かれます。</p>
+<p>導入はMicrosoft Marketplaceからアドインを入れ、Wordの中でChatGPTを開いてサインインします。</p>
+<h2 id="s12">公式の中でも記述が食い違う</h2>
 <p>ヘルプセンターを一通り読むと、ページごとに更新の時期が違うため、記述が食い違っている箇所があります。</p>
-<p>1つ目は機能の一覧です。「ChatGPT Capabilities Overview」には、いまもカスタムGPTとGPTストアが機能として並んでいます。このページの更新は2か月前で、終了の告知はそのあとに出ました。新しい日付の告知と専用のFAQが優先します。</p>
-<p>2つ目は一時チャットとメモリの関係です。FAQのページには一時チャットは「メモリを使わず作らない」とあり、一時チャットの専用ページには「Personalizedを選べば既存のメモリやカスタム指示を使える」とあります。専用ページのほうが3日前の更新で、選択肢が増えたあとの説明です。</p>
+<p>1つ目は機能の一覧です。「ChatGPT Capabilities Overview」には、いまもカスタムGPTとGPTストアが機能として並んでいます。このページの更新は2026年7月で、終了の告知はそのあとに出ました。新しい日付の告知と専用のFAQが優先します。</p>
+<p>2つ目は一時チャットとメモリの関係です。FAQのページには一時チャットは「メモリを使わず作らない」とあり、一時チャットの専用ページには「Personalizedを選べば既存のメモリやカスタム指示を使える」とあります。専用ページのほうが2026年9月20日の更新で、選択肢が増えたあとの説明です。</p>
 <p><strong>ヘルプの記述が割れているときは、更新日の新しいページと、その機能の専用ページを基準にする</strong>のが安全です。</p>
-<h2 id="s12">AI検索での見え方は別の話</h2>
+<h2 id="s13">AI検索での見え方は別の話</h2>
 <p>ChatGPTを自分で使いこなすことと、ChatGPTが自社を答えに含めるかどうかは別の問題です。後者はAIが参照できる形で自社の情報が置かれているかで決まります。仕組みと対策は<a href="https://nito-0210.com/media/chatgpt-not-appearing/">ChatGPTに自社が出てこない原因の記事</a>にまとめています。</p>
-<h2 id="s13">よくある質問</h2>
+<h2 id="s14">よくある質問</h2>
 <p>回答の内容はすべて2026年9月23日時点の公式ヘルプの記載です。</p>
 <p><strong>ChatGPTはどうやって使えばいいですか？</strong></p>
 <p>chatgpt.comを開いて入力欄に質問を打つだけで始められます。アカウントがなくても1つの会話は試せますが、履歴を残す、ファイルを扱う、設定を保存するにはアカウントが必要です。</p>
@@ -246,7 +250,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>設定のデータコントロールから会話の書き出しとアカウントの削除ができます。削除は取り消せません。個別のプロンプトだけを消す方法は用意されていないため、機微な情報は入れないのが前提です。</p>
 <p><strong>ChatGPTの回答をそのまま使っていいですか？</strong></p>
 <p>公式ヘルプも回答が誤ることがあると書いています。ウェブ検索を使った回答には出典が付くので、数字や固有名詞は出典側で確認してから使います。</p>
-<h2 id="s14">出典</h2>
+<h2 id="s15">出典</h2>
 <p>出典はOpenAIの公式ページで、取得日は2026年9月23日です。</p>
 <ul>
 <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT — Release Notes（公式）</a> — 自動切り替えの廃止、カスタムGPTの終了告知、ライブラリの拡張、画像と音声の更新、プライバシーセンター、Word対応</li>
