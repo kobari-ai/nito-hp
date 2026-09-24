@@ -28,6 +28,7 @@
     <link rel="icon" href="/favicon.png">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Codexの使い方を解説｜4つの入口とプラン別にできること", "description": "OpenAIのCodexは、デスクトップアプリ・CLI・IDE拡張・クラウドの4つの入口があります。公式ドキュメントから入口ごとの違い、プラン別に使える範囲、権限モードの選び方を整理します。", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/codex-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Codexの使い方を解説｜4つの入口とプラン別にできること"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Codexは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "無料プランでも使えますが、入口はデスクトップアプリに限られ、モデルはGPT-6 Lunaの標準速度です。ターミナルのCLI、IDE拡張、クラウドはPlus以上が対象になります。"}}, {"@type": "Question", "name": "Codex CLIはどうやってインストールしますか？", "acceptedAnswer": {"@type": "Answer", "text": "macOSとLinuxでは`curl -fsSL https://chatgpt.com/codex/install.sh | sh`を実行します。npmとHomebrew、Windows向けの手順も公式にあります。更新も同じコマンドです。"}}, {"@type": "Question", "name": "Codexで使えるモデルはどれですか？", "acceptedAnswer": {"@type": "Answer", "text": "GPT-6 SolとGPT-6 Lunaです。この2つは通常のチャットでは選べず、ChatGPT WorkとCodexの中だけで使えます。GPT-6 Astraを使う場合はCodex CLIの0.153.0以降が必要です。"}}, {"@type": "Question", "name": "GPT-5.5はいつまで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年10月14日にChatGPTとChatGPT WorkとCodexから引退します。OpenAI APIは対象外です。設定やスクリプトにモデル名を書いている場合は、その前の入れ替えが要ります。"}}, {"@type": "Question", "name": "Codexはどこまで勝手に実行しますか？", "acceptedAnswer": {"@type": "Answer", "text": "答えは選んだ権限モード次第です。既定のAsk for approvalでは作業中のフォルダの中で動き、インターネットに出るときと範囲の外に出るときに確認を取ります。Full accessではどのファイルも承認なしで編集できる状態になります。"}}, {"@type": "Question", "name": "Codex CLIとIDE拡張はどちらがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "選ぶ基準は作業の形です。CLIはターミナルの中で完結させたい場合や、`codex exec`でCIや繰り返しの処理に組み込む場合に向きます。IDE拡張は開いているファイルと選択範囲をそのまま渡し、差分をその場で確認したい場合に向きます。"}}, {"@type": "Question", "name": "APIキーで使うと何が変わりますか？", "acceptedAnswer": {"@type": "Answer", "text": "CLIとSDKとIDE拡張は使えますが、GitHubの自動コードレビューやSlack連携といったクラウド側の機能は付きません。料金はAPIの従量課金で、使えるモデルはそのキーで利用できるものに従います。"}}, {"@type": "Question", "name": "ChatGPT WorkとCodexはどう違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "Workは調査や分析、文書や表計算や資料の作成を担当し、Codexはソフトウェア開発と技術的な作業を担当します。利用量と請求の仕組みは共通で、デスクトップアプリでは左上のメニューで切り替えます。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -187,21 +188,21 @@ codex exec -m gpt-6-sol "Review the current changes"</code></p>
 <p>開発にCodexを使うことと、自社のサービスがAIの回答に出てくるかどうかは別の問題です。後者はAIが参照できる形で情報が置かれているかで決まります。仕組みと対策は<a href="https://nito-0210.com/media/ai-search-first-steps/">AI検索対策は何から始めるかの記事</a>にまとめています。</p>
 <h2 id="s9">よくある質問</h2>
 <p>回答の内容はすべて2026年9月23日時点の公式ドキュメントとヘルプセンターの記載です。</p>
-<p><strong>Codexは無料で使えますか？</strong></p>
+<h3 id="s9-1">Codexは無料で使えますか？</h3>
 <p>無料プランでも使えますが、入口はデスクトップアプリに限られ、モデルはGPT-6 Lunaの標準速度です。ターミナルのCLI、IDE拡張、クラウドはPlus以上が対象になります。</p>
-<p><strong>Codex CLIはどうやってインストールしますか？</strong></p>
+<h3 id="s9-2">Codex CLIはどうやってインストールしますか？</h3>
 <p>macOSとLinuxでは<code>curl -fsSL https://chatgpt.com/codex/install.sh | sh</code>を実行します。npmとHomebrew、Windows向けの手順も公式にあります。更新も同じコマンドです。</p>
-<p><strong>Codexで使えるモデルはどれですか？</strong></p>
+<h3 id="s9-3">Codexで使えるモデルはどれですか？</h3>
 <p>GPT-6 SolとGPT-6 Lunaです。この2つは通常のチャットでは選べず、ChatGPT WorkとCodexの中だけで使えます。GPT-6 Astraを使う場合はCodex CLIの0.153.0以降が必要です。</p>
-<p><strong>GPT-5.5はいつまで使えますか？</strong></p>
-<p>2026年10月14日にChatGPTとChatGPT WorkとCodexから引退します。OpenAI APIは対象外です。設定やスクリプトにモデル名を書いている場合は、その前に入れ替えます。</p>
-<p><strong>Codexはどこまで勝手に実行しますか？</strong></p>
-<p>選んだ権限モードによります。既定のAsk for approvalでは作業中のフォルダの中で動き、インターネットに出るときと範囲の外に出るときに確認を取ります。Full accessではどのファイルも承認なしで編集できます。</p>
-<p><strong>Codex CLIとIDE拡張はどちらがいいですか？</strong></p>
-<p>作業の形で選びます。CLIはターミナルの中で完結させたい場合や、<code>codex exec</code>でCIや繰り返しの処理に組み込む場合に向きます。IDE拡張は開いているファイルと選択範囲をそのまま渡し、差分をその場で確認したい場合に向きます。</p>
-<p><strong>APIキーで使うと何が変わりますか？</strong></p>
+<h3 id="s9-4">GPT-5.5はいつまで使えますか？</h3>
+<p>2026年10月14日にChatGPTとChatGPT WorkとCodexから引退します。OpenAI APIは対象外です。設定やスクリプトにモデル名を書いている場合は、その前の入れ替えが要ります。</p>
+<h3 id="s9-5">Codexはどこまで勝手に実行しますか？</h3>
+<p>答えは選んだ権限モード次第です。既定のAsk for approvalでは作業中のフォルダの中で動き、インターネットに出るときと範囲の外に出るときに確認を取ります。Full accessではどのファイルも承認なしで編集できる状態になります。</p>
+<h3 id="s9-6">Codex CLIとIDE拡張はどちらがいいですか？</h3>
+<p>選ぶ基準は作業の形です。CLIはターミナルの中で完結させたい場合や、<code>codex exec</code>でCIや繰り返しの処理に組み込む場合に向きます。IDE拡張は開いているファイルと選択範囲をそのまま渡し、差分をその場で確認したい場合に向きます。</p>
+<h3 id="s9-7">APIキーで使うと何が変わりますか？</h3>
 <p>CLIとSDKとIDE拡張は使えますが、GitHubの自動コードレビューやSlack連携といったクラウド側の機能は付きません。料金はAPIの従量課金で、使えるモデルはそのキーで利用できるものに従います。</p>
-<p><strong>ChatGPT WorkとCodexはどう違いますか？</strong></p>
+<h3 id="s9-8">ChatGPT WorkとCodexはどう違いますか？</h3>
 <p>Workは調査や分析、文書や表計算や資料の作成を担当し、Codexはソフトウェア開発と技術的な作業を担当します。利用量と請求の仕組みは共通で、デスクトップアプリでは左上のメニューで切り替えます。</p>
 <h2 id="s10">出典</h2>
 <p>出典はOpenAIの公式ページで、取得日は2026年9月23日です。</p>

@@ -28,6 +28,7 @@
     <link rel="icon" href="/favicon.png">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】ディープリサーチの使い方｜4社の違いと頼み方のコツ", "description": "ディープリサーチはChatGPT・Gemini・Claude・Perplexityで設計が違います。各社の公式情報から、調べに行く先、途中で口を挟めるか、上限の数え方を比べ、失敗しない頼み方をまとめます。", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/deep-research-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】ディープリサーチの使い方｜4社の違いと頼み方のコツ"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ディープリサーチは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "サービスによります。Geminiは高速モードでのレポート生成が誰でも使えます。ClaudeのResearchはPro・Max・Team・Enterpriseの有料プランが対象です。ChatGPTは利用枠がプランごとに決まっています。"}}, {"@type": "Question", "name": "どれくらい時間がかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "Perplexityは発表記事で2分から4分としています。他社は時間を明示していませんが、通常のチャットより待つ前提の機能です。短い確認なら通常のチャットのほうが速いとOpenAIも書いています。"}}, {"@type": "Question", "name": "社内の資料を読ませられますか？", "acceptedAnswer": {"@type": "Answer", "text": "読ませられる形です。ChatGPTはアップロードしたファイルと、権限が通っていればGoogle ドライブやSharePointなどの保管先を使えます。GeminiはGmailやGoogle ドライブ、NotebookLMのノートブックを追加できます。ClaudeはつないだGmailやGoogleドキュメントを参照します。"}}, {"@type": "Question", "name": "途中で方向を変えられますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPTは提案された調査計画を実行前に直せるほか、実行中に割り込んで焦点や情報源を変えられます。Geminiはリサーチ計画を編集してから開始します。"}}, {"@type": "Question", "name": "ClaudeのResearchが始まりません", "acceptedAnswer": {"@type": "Answer", "text": "ウェブ検索がオンになっているかを確認します。そのうえで動かない場合は公式のFAQが勧めているとおり「リサーチツールを使って」と明示的に頼みます。"}}, {"@type": "Question", "name": "上限に当たったらどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPTは画面のカウンターに残りが出て、月ごとの割り当てのプランでは初回利用から30日ごとに戻ります。Geminiは1日の件数と同時実行数に上限があり、近づくと通知が出る形です。ClaudeのResearchは通常の会話と同じ枠を使います。"}}, {"@type": "Question", "name": "レポートをそのまま資料に使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "数字と固有名詞は出典をたどって確認してから使います。出典が付いていても、引用元にその数字が書かれているとは限りません。"}}, {"@type": "Question", "name": "ディープリサーチは外部に書き込みますか？", "acceptedAnswer": {"@type": "Answer", "text": "書き込みません。接続したアプリについては読み取りの操作だけを使うと公式ヘルプに明記されています。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -173,21 +174,21 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ディープリサーチを自分で使うことと、自社の情報がこうしたレポートに引用されるかは別の問題です。後者はAIがたどれる形で一次情報が置かれているかで決まります。考え方は<a href="https://nito-0210.com/media/ai-cited-writing/">AI検索で引用される記事の書き方</a>にまとめています。</p>
 <h2 id="s10">よくある質問</h2>
 <p>回答の内容はすべて2026年9月23日時点の各社公式ページの記載です。Perplexityの項目だけは2025年2月の発表記事に基づきます。</p>
-<p><strong>ディープリサーチは無料で使えますか？</strong></p>
+<h3 id="s10-1">ディープリサーチは無料で使えますか？</h3>
 <p>サービスによります。Geminiは高速モードでのレポート生成が誰でも使えます。ClaudeのResearchはPro・Max・Team・Enterpriseの有料プランが対象です。ChatGPTは利用枠がプランごとに決まっています。</p>
-<p><strong>どれくらい時間がかかりますか？</strong></p>
+<h3 id="s10-2">どれくらい時間がかかりますか？</h3>
 <p>Perplexityは発表記事で2分から4分としています。他社は時間を明示していませんが、通常のチャットより待つ前提の機能です。短い確認なら通常のチャットのほうが速いとOpenAIも書いています。</p>
-<p><strong>社内の資料を読ませられますか？</strong></p>
-<p>読ませられます。ChatGPTはアップロードしたファイルと、権限が通っていればGoogle ドライブやSharePointなどの保管先を使えます。GeminiはGmailやGoogle ドライブ、NotebookLMのノートブックを追加できます。ClaudeはつないだGmailやGoogleドキュメントを参照します。</p>
-<p><strong>途中で方向を変えられますか？</strong></p>
+<h3 id="s10-3">社内の資料を読ませられますか？</h3>
+<p>読ませられる形です。ChatGPTはアップロードしたファイルと、権限が通っていればGoogle ドライブやSharePointなどの保管先を使えます。GeminiはGmailやGoogle ドライブ、NotebookLMのノートブックを追加できます。ClaudeはつないだGmailやGoogleドキュメントを参照します。</p>
+<h3 id="s10-4">途中で方向を変えられますか？</h3>
 <p>ChatGPTは提案された調査計画を実行前に直せるほか、実行中に割り込んで焦点や情報源を変えられます。Geminiはリサーチ計画を編集してから開始します。</p>
-<p><strong>ClaudeのResearchが始まりません</strong></p>
+<h3 id="s10-5">ClaudeのResearchが始まりません</h3>
 <p>ウェブ検索がオンになっているかを確認します。そのうえで動かない場合は公式のFAQが勧めているとおり「リサーチツールを使って」と明示的に頼みます。</p>
-<p><strong>上限に当たったらどうなりますか？</strong></p>
-<p>ChatGPTは画面のカウンターに残りが出て、月ごとの割り当てのプランでは初回利用から30日ごとに戻ります。Geminiは1日の件数と同時実行数に上限があり、近づくと通知が出ます。ClaudeのResearchは通常の会話と同じ枠を使います。</p>
-<p><strong>レポートをそのまま資料に使えますか？</strong></p>
+<h3 id="s10-6">上限に当たったらどうなりますか？</h3>
+<p>ChatGPTは画面のカウンターに残りが出て、月ごとの割り当てのプランでは初回利用から30日ごとに戻ります。Geminiは1日の件数と同時実行数に上限があり、近づくと通知が出る形です。ClaudeのResearchは通常の会話と同じ枠を使います。</p>
+<h3 id="s10-7">レポートをそのまま資料に使えますか？</h3>
 <p>数字と固有名詞は出典をたどって確認してから使います。出典が付いていても、引用元にその数字が書かれているとは限りません。</p>
-<p><strong>ChatGPTのディープリサーチは外部サービスに書き込みますか？</strong></p>
+<h3 id="s10-8">ディープリサーチは外部に書き込みますか？</h3>
 <p>書き込みません。接続したアプリについては読み取りの操作だけを使うと公式ヘルプに明記されています。</p>
 <h2 id="s11">出典</h2>
 <p>出典は各社の公式ページで、取得日は2026年9月23日です。</p>

@@ -28,6 +28,7 @@
     <link rel="icon" href="/favicon.png">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ", "description": "Claude MCPを公式ドキュメントを一次ソースに解説。MCPの役割、claude mcp addの4つの接続方法、local・project・userのスコープ、OAuth認証、サーバー状態の読み方、設定でつまずく箇所まで。", "datePublished": "2026-09-21", "dateModified": "2026-09-21", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-mcp-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude MCPで何ができますか？", "acceptedAnswer": {"@type": "Answer", "text": "課題追跡ツールの内容を読んで実装する、監視データを分析する、データベースをクエリする、デザインツールの更新を反映する、といった外部ツールをまたぐ作業ができます。サーバーがチャネルに対応していれば、外部で起きたイベントにClaudeが反応することも可能です。"}}, {"@type": "Question", "name": "MCPサーバーはどこで探せますか？", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic Directoryにレビュー済みのコネクターがまとまっています。Directoryのサーバーは `claude mcp add` でそのまま追加できる形です。"}}, {"@type": "Question", "name": "HTTPとSSEとstdioはどう選びますか？", "acceptedAnswer": {"@type": "Answer", "text": "クラウドのサービスはHTTP、自分のマシンで動かすものはstdioです。SSEは非推奨で、SSEしか公開していないサーバーもHTTPと同じコマンドで追加でき、Claude Codeが自動で切り替えます。"}}, {"@type": "Question", "name": "チームで同じMCPサーバーを使うにはどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "`--scope project` で追加して、プロジェクトルートの `.mcp.json` をバージョン管理に入れます。各メンバーは最初に対話セッションで承認する必要があります。"}}, {"@type": "Question", "name": "Pending approval のまま動きません", "acceptedAnswer": {"@type": "Answer", "text": "`.mcp.json` のプロジェクトスコープのサーバーが未承認の状態です。`claude` を対話的に起動して承認します。クローンしたリポジトリでは、ワークスペースの信頼ダイアログを受け入れるまで自分のサーバーを承認できません。"}}, {"@type": "Question", "name": "設定を消さずにサーバーを止められますか？", "acceptedAnswer": {"@type": "Answer", "text": "`/mcp` のパネルでオフに切り替えると、設定を残したまま接続を止められます。選択はプロジェクトごとに `~/.claude.json` に記録されます。"}}, {"@type": "Question", "name": "MCPサーバーを入れるとセキュリティ上のリスクはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "外部のコンテンツを取得するサーバーはプロンプトインジェクションの経路になりえます。信頼できるサーバーだけを入れ、データベースは読み取り専用ユーザーでつないでください。"}}, {"@type": "Question", "name": "ツールの呼び出しが途中で止まります。", "acceptedAnswer": {"@type": "Answer", "text": "応答も進捗通知も返さない呼び出しは、アイドルとして中断されます。既定の待ち時間はリモートが5分、stdioが30分です。実行時間そのものが長い場合は、2分を超えた時点で自動的にバックグラウンドのタスクへ移ります。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -279,23 +280,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s11">AI検索での見え方は別の話</h2>
 <p>MCPで自社のデータをAIにつなぐことと、自社がAIの回答に登場することは別の問題で、後者は<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。</p>
 <h2 id="s12">よくある質問</h2>
-<p>Claude MCPについて検索されている関連質問を中心に答えます。</p>
-<p><strong>Claude MCPで何ができますか？</strong>
-課題追跡ツールの内容を読んで実装する、監視データを分析する、データベースをクエリする、デザインツールの更新を反映する、といった外部ツールをまたぐ作業ができます。サーバーがチャネルに対応していれば、外部で起きたイベントにClaudeが反応することもできます。</p>
-<p><strong>MCPサーバーはどこで探せますか？</strong>
-Anthropic Directoryにレビュー済みのコネクターがまとまっています。Directoryのサーバーは <code>claude mcp add</code> でそのまま追加できます。</p>
-<p><strong>HTTPとSSEとstdioはどう選びますか？</strong>
-クラウドのサービスはHTTP、自分のマシンで動かすものはstdioです。SSEは非推奨で、SSEしか公開していないサーバーもHTTPと同じコマンドで追加でき、Claude Codeが自動で切り替えます。</p>
-<p><strong>チームで同じMCPサーバーを使うにはどうしますか？</strong>
-<code>--scope project</code> で追加して、プロジェクトルートの <code>.mcp.json</code> をバージョン管理に入れます。各メンバーは最初に対話セッションで承認する必要があります。</p>
-<p><strong>サーバーが「Pending approval」のまま動きません。</strong>
-<code>.mcp.json</code> のプロジェクトスコープのサーバーが未承認の状態です。<code>claude</code> を対話的に起動して承認します。クローンしたリポジトリでは、ワークスペースの信頼ダイアログを受け入れるまで自分のサーバーを承認できません。</p>
-<p><strong>設定を消さずにサーバーを止められますか？</strong>
-<code>/mcp</code> のパネルでオフに切り替えると、設定を残したまま接続を止められます。選択はプロジェクトごとに <code>~/.claude.json</code> に記録されます。</p>
-<p><strong>MCPサーバーを入れるとセキュリティ上のリスクはありますか？</strong>
-外部のコンテンツを取得するサーバーはプロンプトインジェクションの経路になりえます。信頼できるサーバーだけを入れ、データベースは読み取り専用ユーザーでつないでください。</p>
-<p><strong>ツールの呼び出しが途中で止まります。</strong>
-応答も進捗通知も返さない呼び出しは、アイドルとして中断されます。既定の待ち時間はリモートが5分、stdioが30分です。実行時間そのものが長い場合は、2分を超えた時点で自動的にバックグラウンドのタスクへ移ります。</p>
+<p>回答の内容は2026年9月21日時点の Anthropic の公式ドキュメントの記載に基づきます。</p>
+<h3 id="s12-1">Claude MCPで何ができますか？</h3>
+<p>課題追跡ツールの内容を読んで実装する、監視データを分析する、データベースをクエリする、デザインツールの更新を反映する、といった外部ツールをまたぐ作業ができます。サーバーがチャネルに対応していれば、外部で起きたイベントにClaudeが反応することも可能です。</p>
+<h3 id="s12-2">MCPサーバーはどこで探せますか？</h3>
+<p>Anthropic Directoryにレビュー済みのコネクターがまとまっています。Directoryのサーバーは <code>claude mcp add</code> でそのまま追加できる形です。</p>
+<h3 id="s12-3">HTTPとSSEとstdioはどう選びますか？</h3>
+<p>クラウドのサービスはHTTP、自分のマシンで動かすものはstdioです。SSEは非推奨で、SSEしか公開していないサーバーもHTTPと同じコマンドで追加でき、Claude Codeが自動で切り替えます。</p>
+<h3 id="s12-4">チームで同じMCPサーバーを使うにはどうしますか？</h3>
+<p><code>--scope project</code> で追加して、プロジェクトルートの <code>.mcp.json</code> をバージョン管理に入れます。各メンバーは最初に対話セッションで承認する必要があります。</p>
+<h3 id="s12-5">Pending approval のまま動きません</h3>
+<p><code>.mcp.json</code> のプロジェクトスコープのサーバーが未承認の状態です。<code>claude</code> を対話的に起動して承認します。クローンしたリポジトリでは、ワークスペースの信頼ダイアログを受け入れるまで自分のサーバーを承認できません。</p>
+<h3 id="s12-6">設定を消さずにサーバーを止められますか？</h3>
+<p><code>/mcp</code> のパネルでオフに切り替えると、設定を残したまま接続を止められます。選択はプロジェクトごとに <code>~/.claude.json</code> に記録されます。</p>
+<h3 id="s12-7">MCPサーバーを入れるとセキュリティ上のリスクはありますか？</h3>
+<p>外部のコンテンツを取得するサーバーはプロンプトインジェクションの経路になりえます。信頼できるサーバーだけを入れ、データベースは読み取り専用ユーザーでつないでください。</p>
+<h3 id="s12-8">ツールの呼び出しが途中で止まります。</h3>
+<p>応答も進捗通知も返さない呼び出しは、アイドルとして中断されます。既定の待ち時間はリモートが5分、stdioが30分です。実行時間そのものが長い場合は、2分を超えた時点で自動的にバックグラウンドのタスクへ移ります。</p>
 <h2 id="s13">出典</h2>
 <p>本文の事実関係はAnthropicの公式ドキュメントで確認しています（2026年9月21日取得）。</p>
 <ul>
