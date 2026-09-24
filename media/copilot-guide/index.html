@@ -28,6 +28,7 @@
     <link rel="icon" href="/favicon.png">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Copilotの使い方を解説｜3つのライセンスとWork IQの違い", "description": "Microsoft Copilotは同じ名前でもライセンスで中身が変わります。Copilot Chatとアドオンの違い、Wordなどアプリ内の機能、Work IQをオンにしたときの応答の差を公式ドキュメントで整理します。", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/copilot-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Copilotの使い方を解説｜3つのライセンスとWork IQの違い"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Copilotは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "対象のMicrosoft 365ライセンスがあれば、Copilot Chat（基本）が含まれます。個人用アカウントでもcopilot.microsoft.comなどから使えます。ただしWordやExcelの中のCopilotは、これらには含まれません。"}}, {"@type": "Question", "name": "WordやExcelでCopilotが出てきません", "acceptedAnswer": {"@type": "Answer", "text": "Copilot Chat（基本）だけの状態では、Word・Excel・PowerPoint・OneNoteのCopilotにはアクセスできません。アプリ内で使うには標準アクセスがある状態かアドオンのライセンスが必要です。"}}, {"@type": "Question", "name": "Copilotが社内のファイルを見てくれません", "acceptedAnswer": {"@type": "Answer", "text": "組織データの根拠付けが付くのはMicrosoft 365 Copilot（プレミアム）です。そのうえでWork IQがオフになっていると、回答はMicrosoft GraphとWork IQに基づかなくなります。Copilot Chatの場合は、ファイルを貼るかアップロードして渡します。"}}, {"@type": "Question", "name": "Work IQとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "エージェントが組織のデータやコンテンツやツールについて推論できるようにする層です。オンにすると、メール、ファイル、会議、予定表、チーム、組織の関係を踏まえた回答になります。"}}, {"@type": "Question", "name": "Copilotは自分に権限のない資料まで見ますか？", "acceptedAnswer": {"@type": "Answer", "text": "見ません。どの階層も、利用者のアクセス許可の範囲に限定されたアクセスで動くと公式ドキュメントに書かれています。"}}, {"@type": "Question", "name": "時間帯によって使えたり使えなかったりします", "acceptedAnswer": {"@type": "Answer", "text": "アドオンなしの標準アクセスは、サービス容量の影響を受けて1日を通して変わることがあると公式が明記しています。混雑時の安定性が要るなら、選択肢は優先アクセスの付くプレミアムです。"}}, {"@type": "Question", "name": "エージェントは追加料金がかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "使うデータによります。基本の階層では作業データを使うエージェントが従量課金です。プレミアムではWebと作業データの両方を使うエージェントが含まれます。Microsoft Copilot Coworkは使用量ベースの課金です。"}}, {"@type": "Question", "name": "Teamsの会議の要約はいつまで見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式の説明では会議の要約は最大30日間です。長く残したい内容は会議のあとに別の場所へ書き出しておきます。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -186,22 +187,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>社内でCopilotを使いこなすことと、自社の情報がAIの回答に出てくるかどうかは別の問題です。後者はAIがたどれる形で情報が置かれているかで決まります。考え方は<a href="https://nito-0210.com/media/ai-search-first-steps/">AI検索対策は何から始めるかの記事</a>にまとめています。</p>
 <h2 id="s9">よくある質問</h2>
 <p>回答の内容はすべて2026年9月23日時点のMicrosoftの公式ドキュメントとサポートページの記載です。</p>
-<p><strong>Copilotは無料で使えますか？</strong></p>
+<h3 id="s9-1">Copilotは無料で使えますか？</h3>
 <p>対象のMicrosoft 365ライセンスがあれば、Copilot Chat（基本）が含まれます。個人用アカウントでもcopilot.microsoft.comなどから使えます。ただしWordやExcelの中のCopilotは、これらには含まれません。</p>
-<p><strong>WordやExcelでCopilotが出てきません</strong></p>
+<h3 id="s9-2">WordやExcelでCopilotが出てきません</h3>
 <p>Copilot Chat（基本）だけの状態では、Word・Excel・PowerPoint・OneNoteのCopilotにはアクセスできません。アプリ内で使うには標準アクセスがある状態かアドオンのライセンスが必要です。</p>
-<p><strong>Copilotが社内のファイルを見てくれません</strong></p>
+<h3 id="s9-3">Copilotが社内のファイルを見てくれません</h3>
 <p>組織データの根拠付けが付くのはMicrosoft 365 Copilot（プレミアム）です。そのうえでWork IQがオフになっていると、回答はMicrosoft GraphとWork IQに基づかなくなります。Copilot Chatの場合は、ファイルを貼るかアップロードして渡します。</p>
-<p><strong>Work IQとは何ですか？</strong></p>
+<h3 id="s9-4">Work IQとは何ですか？</h3>
 <p>エージェントが組織のデータやコンテンツやツールについて推論できるようにする層です。オンにすると、メール、ファイル、会議、予定表、チーム、組織の関係を踏まえた回答になります。</p>
-<p><strong>Copilotは自分に権限のない資料まで見ますか？</strong></p>
+<h3 id="s9-5">Copilotは自分に権限のない資料まで見ますか？</h3>
 <p>見ません。どの階層も、利用者のアクセス許可の範囲に限定されたアクセスで動くと公式ドキュメントに書かれています。</p>
-<p><strong>時間帯によって使えたり使えなかったりします</strong></p>
-<p>アドオンなしの標準アクセスは、サービス容量の影響を受けて1日を通して変わることがあると公式が明記しています。混雑時の安定性が要るなら、優先アクセスの付くプレミアムが選択肢になります。</p>
-<p><strong>エージェントは追加料金がかかりますか？</strong></p>
+<h3 id="s9-6">時間帯によって使えたり使えなかったりします</h3>
+<p>アドオンなしの標準アクセスは、サービス容量の影響を受けて1日を通して変わることがあると公式が明記しています。混雑時の安定性が要るなら、選択肢は優先アクセスの付くプレミアムです。</p>
+<h3 id="s9-7">エージェントは追加料金がかかりますか？</h3>
 <p>使うデータによります。基本の階層では作業データを使うエージェントが従量課金です。プレミアムではWebと作業データの両方を使うエージェントが含まれます。Microsoft Copilot Coworkは使用量ベースの課金です。</p>
-<p><strong>Teamsの会議の要約はいつまで見られますか？</strong></p>
-<p>公式の説明では、会議の要約は最大30日間です。長く残したい内容は会議のあとに別の場所へ書き出しておきます。</p>
+<h3 id="s9-8">Teamsの会議の要約はいつまで見られますか？</h3>
+<p>公式の説明では会議の要約は最大30日間です。長く残したい内容は会議のあとに別の場所へ書き出しておきます。</p>
 <h2 id="s10">出典</h2>
 <p>出典はMicrosoftの公式ページで、取得日は2026年9月23日です。</p>
 <ul>

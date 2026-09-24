@@ -687,6 +687,30 @@ def main():
 
     md_files = sorted(POSTS_DIR.glob("*.md"))
 
+    # FAQ構造化データの欠落チェック（2026-09-24）
+    # 「## よくある質問」があるのに ### が無いと extract_faq が拾えず、
+    # FAQPage/Question の JSON-LD が丸ごと出ない。9/21〜9/23 に15本で起きた。
+    faq_broken = []
+    for f in md_files:
+        text = f.read_text(encoding="utf-8")
+        m = re.search(r"^## .*よくある質問.*$", text, flags=re.M)
+        if not m:
+            continue
+        block = text[m.end():]
+        nxt = re.search(r"^## ", block, flags=re.M)
+        block = block[: nxt.start()] if nxt else block
+        if not re.search(r"^### ", block, flags=re.M):
+            bold = len(re.findall(r"^\*\*.+\*\*$", block, flags=re.M))
+            faq_broken.append(f"  {f.name}: よくある質問に ### が1つも無い"
+                              + (f"（太字の行が{bold}件。### に直す）" if bold else ""))
+    if faq_broken:
+        print("=" * 60)
+        print("⚠ FAQ構造化データが出ません（質問は ### で書く）")
+        for w in faq_broken:
+            print(w)
+        print("=" * 60)
+        print("")
+
     # AI感チェック（禁止表現の機械検出）
     lint_warnings = lint_posts(md_files)
     if lint_warnings:

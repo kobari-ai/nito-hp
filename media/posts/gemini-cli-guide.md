@@ -78,35 +78,35 @@ AI検索に古い答えが残り続ける例としても、この移行は分か
 
 内容はすべて2026年9月22日時点の公式の発表とドキュメントの記載です。
 
-**Gemini CLIが使えなくなったのはなぜですか？**
+### Gemini CLIが使えなくなったのはなぜですか？
 
 2026年6月18日に、無料のGemini Code Assist for individualsと、Google AI Pro・Ultraのサブスクリプションに対するリクエストの提供が終わったためです。移行先としてAntigravity CLIが案内されています。
 
-**Gemini CLIを無料で利用するにはどうすればいいですか？**
+### Gemini CLIは無料で使えますか？
 
 Gemini CLIの側に無料で使う道は案内されていません。無料で使いたい場合の移行先はAntigravity CLIです。
 
-**Gemini CLIはもう使えないのですか？**
+### Gemini CLIはもう使えないのですか？
 
 契約によります。Gemini Code AssistのStandardまたはEnterpriseライセンス、Google Cloud経由のGemini Code Assist for GitHub、有料のGeminiおよびGemini Enterprise Agent PlatformのAPIキーであれば、そのまま使えます。
 
-**Antigravity CLIとは何ですか？**
+### Antigravity CLIとは何ですか？
 
 Google Antigravityというエージェント中心の開発プラットフォームに含まれる、新しいターミナル向けのツールです。Goで書かれていて、複数のエージェントを背後で動かす非同期の作業に対応しています。デスクトップアプリのAntigravity 2.0と同じ土台を共有します。
 
-**Gemini CLIで使っていた機能はAntigravity CLIに残っていますか？**
+### 以前の機能はAntigravity CLIに残りますか？
 
 Agent Skills、Hooks、Subagents、Extensionsは引き継がれました。Extensionsの扱いはAntigravityのプラグインという形になります。すべての機能がそのまま揃うわけではないと公式が書いているため、個別の機能はドキュメントで確認してください。
 
-**READMEに書かれている1日1,000リクエストの無料枠は使えますか？**
+### 1日1,000リクエストの無料枠は使えますか？
 
 2026年9月22日の時点でREADMEに記載は残っていますが、公式ドキュメントの告知と発表の内容が優先されます。無料枠での提供は6月18日に終わっています。
 
-**Gemini CLIの開発は終わったのですか？**
+### Gemini CLIの開発は終わったのですか？
 
 続いています。安定版が毎週火曜、ナイトリー版が毎日公開される体制で、直近のリリースは2026年9月15日のv0.60.0です。
 
-**GitHubでの自動レビューはどうなりますか？**
+### GitHubでの自動レビューはどうなりますか？
 
 Gemini Code Assist for GitHubは、2026年6月18日からGitHubの組織への新規インストールができなくなり、その後数週間でリクエストの処理も止まると発表されています。Google Cloud経由で使っている組織は対象外です。
 

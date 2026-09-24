@@ -28,6 +28,7 @@
     <link rel="icon" href="/favicon.png">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】ChatGPTの使い方を公式ヘルプで確認｜モデル選択・ファイル・プラグイン", "description": "ChatGPTの使い方を2026年9月の公式ヘルプで確認しました。Thinkingのスライダーによるモデル選択、ライブラリからのファイル参照、カスタムGPTの終了予定とプラグインへの移行までまとめます。", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/chatgpt-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】ChatGPTの使い方を公式ヘルプで確認｜モデル選択・ファイル・プラグイン"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTはどうやって使えばいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "chatgpt.comを開いて入力欄に質問を打つだけで始められます。アカウントがなくても1つの会話は試せますが、履歴を残す、ファイルを扱う、設定を保存するにはアカウントが必要です。"}}, {"@type": "Question", "name": "ChatGPTは無料でどこまで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "無料版の日常のテキストチャットに回数の上限はありません。ファイルのアップロード、画像生成、音声、データ分析などには別の上限があります。思考の段階のうちMedium以上は無料版の対象外で、難しい質問にはThinkを使う形です。"}}, {"@type": "Question", "name": "スマホでも同じことができますか？", "acceptedAnswer": {"@type": "Answer", "text": "iOSとAndroidのアプリがあり、会話の内容はアカウントで同期します。スケジュールした仕事のプッシュ通知を受け取るにはアプリ側で作る必要があります。下絵から画像を作るSketchのようにスマホだけの操作もあります。"}}, {"@type": "Question", "name": "どのモデルを選べばいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "普段の質問はInstantのままで構いません。調べものや資料の読み込みなど時間をかけて考えてほしいものはMediumかHighに上げます。PlusとProでは自動で切り替わらないため、送信前に選んでおく必要があります。"}}, {"@type": "Question", "name": "カスタムGPTはいつまで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "終了予定は2026年12月11日です。それまでは既存のGPTを使えます。自分で作ったものがあるなら、プラグインへ移行して中身を確かめる時間を見込んでおくのが安全です。"}}, {"@type": "Question", "name": "社内の資料を読ませても大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "既定では会話がモデルの改善に使われるため、まず設定で学習への利用を切ります。そのうえで、ファイルは会話へのアップロードではなくライブラリの連携を使うと、元の保管先の権限がそのまま効きます。"}}, {"@type": "Question", "name": "会話を消すとどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "設定のデータコントロールから会話の書き出しとアカウントの削除ができます。削除は取り消せません。個別のプロンプトだけを消す方法は用意されていないため、機微な情報は入れないのが前提です。"}}, {"@type": "Question", "name": "ChatGPTの回答をそのまま使っていいですか？", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプも回答が誤ることがあると書いています。ウェブ検索を使った回答には出典が付くので、数字や固有名詞は出典側で確認してから使います。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -234,21 +235,21 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ChatGPTを自分で使いこなすことと、ChatGPTが自社を答えに含めるかどうかは別の問題です。後者はAIが参照できる形で自社の情報が置かれているかで決まります。仕組みと対策は<a href="https://nito-0210.com/media/chatgpt-not-appearing/">ChatGPTに自社が出てこない原因の記事</a>にまとめています。</p>
 <h2 id="s14">よくある質問</h2>
 <p>回答の内容はすべて2026年9月23日時点の公式ヘルプの記載です。</p>
-<p><strong>ChatGPTはどうやって使えばいいですか？</strong></p>
+<h3 id="s14-1">ChatGPTはどうやって使えばいいですか？</h3>
 <p>chatgpt.comを開いて入力欄に質問を打つだけで始められます。アカウントがなくても1つの会話は試せますが、履歴を残す、ファイルを扱う、設定を保存するにはアカウントが必要です。</p>
-<p><strong>ChatGPTは無料でどこまで使えますか？</strong></p>
+<h3 id="s14-2">ChatGPTは無料でどこまで使えますか？</h3>
 <p>無料版の日常のテキストチャットに回数の上限はありません。ファイルのアップロード、画像生成、音声、データ分析などには別の上限があります。思考の段階のうちMedium以上は無料版の対象外で、難しい質問にはThinkを使う形です。</p>
-<p><strong>スマホでも同じことができますか？</strong></p>
+<h3 id="s14-3">スマホでも同じことができますか？</h3>
 <p>iOSとAndroidのアプリがあり、会話の内容はアカウントで同期します。スケジュールした仕事のプッシュ通知を受け取るにはアプリ側で作る必要があります。下絵から画像を作るSketchのようにスマホだけの操作もあります。</p>
-<p><strong>どのモデルを選べばいいですか？</strong></p>
+<h3 id="s14-4">どのモデルを選べばいいですか？</h3>
 <p>普段の質問はInstantのままで構いません。調べものや資料の読み込みなど時間をかけて考えてほしいものはMediumかHighに上げます。PlusとProでは自動で切り替わらないため、送信前に選んでおく必要があります。</p>
-<p><strong>カスタムGPTはいつまで使えますか？</strong></p>
+<h3 id="s14-5">カスタムGPTはいつまで使えますか？</h3>
 <p>終了予定は2026年12月11日です。それまでは既存のGPTを使えます。自分で作ったものがあるなら、プラグインへ移行して中身を確かめる時間を見込んでおくのが安全です。</p>
-<p><strong>社内の資料を読ませても大丈夫ですか？</strong></p>
+<h3 id="s14-6">社内の資料を読ませても大丈夫ですか？</h3>
 <p>既定では会話がモデルの改善に使われるため、まず設定で学習への利用を切ります。そのうえで、ファイルは会話へのアップロードではなくライブラリの連携を使うと、元の保管先の権限がそのまま効きます。</p>
-<p><strong>会話を消すとどうなりますか？</strong></p>
+<h3 id="s14-7">会話を消すとどうなりますか？</h3>
 <p>設定のデータコントロールから会話の書き出しとアカウントの削除ができます。削除は取り消せません。個別のプロンプトだけを消す方法は用意されていないため、機微な情報は入れないのが前提です。</p>
-<p><strong>ChatGPTの回答をそのまま使っていいですか？</strong></p>
+<h3 id="s14-8">ChatGPTの回答をそのまま使っていいですか？</h3>
 <p>公式ヘルプも回答が誤ることがあると書いています。ウェブ検索を使った回答には出典が付くので、数字や固有名詞は出典側で確認してから使います。</p>
 <h2 id="s15">出典</h2>
 <p>出典はOpenAIの公式ページで、取得日は2026年9月23日です。</p>

@@ -28,6 +28,7 @@
     <link rel="icon" href="/favicon.png">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Gemini CLIはAntigravity CLIへ｜使えない理由と今の選択肢", "description": "Gemini CLIは2026年6月18日に無料枠とAI Pro・Ultraへの提供を終えてAntigravity CLIに移りました。止まった対象、いまもGemini CLIを使える条件、移行先の中身を公式の発表から整理します。", "datePublished": "2026-09-22", "dateModified": "2026-09-22", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/gemini-cli-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Gemini CLIはAntigravity CLIへ｜使えない理由と今の選択肢"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Gemini CLIが使えなくなったのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年6月18日に、無料のGemini Code Assist for individualsと、Google AI Pro・Ultraのサブスクリプションに対するリクエストの提供が終わったためです。移行先としてAntigravity CLIが案内されています。"}}, {"@type": "Question", "name": "Gemini CLIは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Gemini CLIの側に無料で使う道は案内されていません。無料で使いたい場合の移行先はAntigravity CLIです。"}}, {"@type": "Question", "name": "Gemini CLIはもう使えないのですか？", "acceptedAnswer": {"@type": "Answer", "text": "契約によります。Gemini Code AssistのStandardまたはEnterpriseライセンス、Google Cloud経由のGemini Code Assist for GitHub、有料のGeminiおよびGemini Enterprise Agent PlatformのAPIキーであれば、そのまま使えます。"}}, {"@type": "Question", "name": "Antigravity CLIとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Google Antigravityというエージェント中心の開発プラットフォームに含まれる、新しいターミナル向けのツールです。Goで書かれていて、複数のエージェントを背後で動かす非同期の作業に対応しています。デスクトップアプリのAntigravity 2.0と同じ土台を共有します。"}}, {"@type": "Question", "name": "以前の機能はAntigravity CLIに残りますか？", "acceptedAnswer": {"@type": "Answer", "text": "Agent Skills、Hooks、Subagents、Extensionsは引き継がれました。Extensionsの扱いはAntigravityのプラグインという形になります。すべての機能がそのまま揃うわけではないと公式が書いているため、個別の機能はドキュメントで確認してください。"}}, {"@type": "Question", "name": "1日1,000リクエストの無料枠は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年9月22日の時点でREADMEに記載は残っていますが、公式ドキュメントの告知と発表の内容が優先されます。無料枠での提供は6月18日に終わっています。"}}, {"@type": "Question", "name": "Gemini CLIの開発は終わったのですか？", "acceptedAnswer": {"@type": "Answer", "text": "続いています。安定版が毎週火曜、ナイトリー版が毎日公開される体制で、直近のリリースは2026年9月15日のv0.60.0です。"}}, {"@type": "Question", "name": "GitHubでの自動レビューはどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "Gemini Code Assist for GitHubは、2026年6月18日からGitHubの組織への新規インストールができなくなり、その後数週間でリクエストの処理も止まると発表されています。Google Cloud経由で使っている組織は対象外です。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -125,21 +126,21 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>AI検索に古い答えが残り続ける例としても、この移行は分かりやすいものです。2025年に書かれた解説が大量にあり、検索でもAIの回答でも上位に出続けている状態です。自社の情報が同じ形で古いまま引用されていないかは、順位とは別に確かめる必要があります。実際に4つのサービスへ同じ質問を投げた結果は<a href="https://nito-0210.com/media/ai-search-engine-comparison/">AI検索エンジンの比較記事</a>に載せました。</p>
 <h2 id="s8">よくある質問</h2>
 <p>内容はすべて2026年9月22日時点の公式の発表とドキュメントの記載です。</p>
-<p><strong>Gemini CLIが使えなくなったのはなぜですか？</strong></p>
+<h3 id="s8-1">Gemini CLIが使えなくなったのはなぜですか？</h3>
 <p>2026年6月18日に、無料のGemini Code Assist for individualsと、Google AI Pro・Ultraのサブスクリプションに対するリクエストの提供が終わったためです。移行先としてAntigravity CLIが案内されています。</p>
-<p><strong>Gemini CLIを無料で利用するにはどうすればいいですか？</strong></p>
+<h3 id="s8-2">Gemini CLIは無料で使えますか？</h3>
 <p>Gemini CLIの側に無料で使う道は案内されていません。無料で使いたい場合の移行先はAntigravity CLIです。</p>
-<p><strong>Gemini CLIはもう使えないのですか？</strong></p>
+<h3 id="s8-3">Gemini CLIはもう使えないのですか？</h3>
 <p>契約によります。Gemini Code AssistのStandardまたはEnterpriseライセンス、Google Cloud経由のGemini Code Assist for GitHub、有料のGeminiおよびGemini Enterprise Agent PlatformのAPIキーであれば、そのまま使えます。</p>
-<p><strong>Antigravity CLIとは何ですか？</strong></p>
+<h3 id="s8-4">Antigravity CLIとは何ですか？</h3>
 <p>Google Antigravityというエージェント中心の開発プラットフォームに含まれる、新しいターミナル向けのツールです。Goで書かれていて、複数のエージェントを背後で動かす非同期の作業に対応しています。デスクトップアプリのAntigravity 2.0と同じ土台を共有します。</p>
-<p><strong>Gemini CLIで使っていた機能はAntigravity CLIに残っていますか？</strong></p>
+<h3 id="s8-5">以前の機能はAntigravity CLIに残りますか？</h3>
 <p>Agent Skills、Hooks、Subagents、Extensionsは引き継がれました。Extensionsの扱いはAntigravityのプラグインという形になります。すべての機能がそのまま揃うわけではないと公式が書いているため、個別の機能はドキュメントで確認してください。</p>
-<p><strong>READMEに書かれている1日1,000リクエストの無料枠は使えますか？</strong></p>
+<h3 id="s8-6">1日1,000リクエストの無料枠は使えますか？</h3>
 <p>2026年9月22日の時点でREADMEに記載は残っていますが、公式ドキュメントの告知と発表の内容が優先されます。無料枠での提供は6月18日に終わっています。</p>
-<p><strong>Gemini CLIの開発は終わったのですか？</strong></p>
+<h3 id="s8-7">Gemini CLIの開発は終わったのですか？</h3>
 <p>続いています。安定版が毎週火曜、ナイトリー版が毎日公開される体制で、直近のリリースは2026年9月15日のv0.60.0です。</p>
-<p><strong>GitHubでの自動レビューはどうなりますか？</strong></p>
+<h3 id="s8-8">GitHubでの自動レビューはどうなりますか？</h3>
 <p>Gemini Code Assist for GitHubは、2026年6月18日からGitHubの組織への新規インストールができなくなり、その後数週間でリクエストの処理も止まると発表されています。Google Cloud経由で使っている組織は対象外です。</p>
 <h2 id="s9">出典</h2>
 <p>出典は公式のページで、取得日は2026年9月22日です。</p>

@@ -28,6 +28,7 @@
     <link rel="icon" href="/favicon.png">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】プロンプトの書き方｜公式ガイドが勧める4つと出てこない工夫", "description": "プロンプトの書き方をOpenAI・Google・Anthropicの公式ガイドで確認しました。3社が共通して勧める書き方、公式に出てこない工夫、依頼に足す4つの要素、直し方までまとめます。", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/prompt-writing-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】プロンプトの書き方｜公式ガイドが勧める4つと出てこない工夫"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "プロンプトのテンプレートは覚えるべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "公式ガイドはテンプレートの暗記を勧めていません。OpenAIは完璧な言い回しよりも自然で目的に沿った言葉に頼れるようになってきたと書いています。覚えるなら、文脈と目的と制約と出力の形という4つの観点のほうです。"}}, {"@type": "Question", "name": "ステップバイステップで考えては効きますか？", "acceptedAnswer": {"@type": "Answer", "text": "2つに分けて考えます。ChatGPTのPlusとProでは、そう伝えても**思考の段階（スライダー）は切り替わりません**。深く考えさせたい場合は送信前に段階を選びます。一方で、出力の中で手順を踏ませる指示のほうは別の話で、Anthropicは技法の1つとして「思考」を挙げています。"}}, {"@type": "Question", "name": "長いプロンプトほど良いのですか？", "acceptedAnswer": {"@type": "Answer", "text": "長さではなく中身です。背景や制約のように判断に必要な情報が増えるのは有効ですが、同じ指示の言い換えを重ねても精度は上がりません。"}}, {"@type": "Question", "name": "役割を指定したほうがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "語調を揃えたいだけなら形容詞での指定で足ります。判断の質を上げたいなら、役割名よりも評価の基準を具体的に書くほうが安定します。"}}, {"@type": "Question", "name": "日本語と英語ではどちらがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "各社の公式ガイドは書き方の原則を言語で分けていません。Google Workspaceのヘルプのように、機能によって対応言語が異なる注記はあるため、使う機能側の対応状況を確認します。"}}, {"@type": "Question", "name": "うまくいかないときは何から直しますか？", "acceptedAnswer": {"@type": "Answer", "text": "返ってきたものと欲しかったものの差を1つだけ特定して、その部分を足します。範囲、語調、形式のどれがずれたのかを見てから直すと、全部書き直さずに済みます。"}}, {"@type": "Question", "name": "毎回同じ前提を書くのが面倒です", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPTのカスタム指示、GeminiのGem、プロジェクトの指示に移します。毎回の依頼に含める必要がなくなり、依頼文はその日の用件だけになります。"}}, {"@type": "Question", "name": "プロンプトを直せばどんな問題も解決しますか？", "acceptedAnswer": {"@type": "Answer", "text": "しません。Anthropicのガイドは、遅さやコストのようにモデルの選択で解決したほうが早い課題もあると書いています。プロンプトで直すべきことかどうかを、先に切り分けます。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -161,21 +162,21 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>プロンプトを上手に書くことと、自社の情報がAIの回答に引用されるかどうかは別の問題です。後者はAIがたどれる形で情報が置かれているかで決まります。考え方は<a href="https://nito-0210.com/media/ai-cited-writing/">AI検索で引用される記事の書き方</a>にまとめています。</p>
 <h2 id="s8">よくある質問</h2>
 <p>回答の内容はすべて2026年9月23日時点の各社公式ガイドの記載です。</p>
-<p><strong>プロンプトのテンプレートは覚えるべきですか？</strong></p>
+<h3 id="s8-1">プロンプトのテンプレートは覚えるべきですか？</h3>
 <p>公式ガイドはテンプレートの暗記を勧めていません。OpenAIは完璧な言い回しよりも自然で目的に沿った言葉に頼れるようになってきたと書いています。覚えるなら、文脈と目的と制約と出力の形という4つの観点のほうです。</p>
-<p><strong>「ステップバイステップで考えて」は効きますか？</strong></p>
+<h3 id="s8-2">ステップバイステップで考えては効きますか？</h3>
 <p>2つに分けて考えます。ChatGPTのPlusとProでは、そう伝えても<strong>思考の段階（スライダー）は切り替わりません</strong>。深く考えさせたい場合は送信前に段階を選びます。一方で、出力の中で手順を踏ませる指示のほうは別の話で、Anthropicは技法の1つとして「思考」を挙げています。</p>
-<p><strong>長いプロンプトほど良いのですか？</strong></p>
+<h3 id="s8-3">長いプロンプトほど良いのですか？</h3>
 <p>長さではなく中身です。背景や制約のように判断に必要な情報が増えるのは有効ですが、同じ指示の言い換えを重ねても精度は上がりません。</p>
-<p><strong>役割を指定したほうがいいですか？</strong></p>
+<h3 id="s8-4">役割を指定したほうがいいですか？</h3>
 <p>語調を揃えたいだけなら形容詞での指定で足ります。判断の質を上げたいなら、役割名よりも評価の基準を具体的に書くほうが安定します。</p>
-<p><strong>日本語と英語ではどちらがいいですか？</strong></p>
-<p>各社の公式ガイドは、書き方の原則を言語で分けていません。Google Workspaceのヘルプのように、機能によって対応言語が異なる注記はあるため、使う機能側の対応状況を確認します。</p>
-<p><strong>うまくいかないときは何から直しますか？</strong></p>
+<h3 id="s8-5">日本語と英語ではどちらがいいですか？</h3>
+<p>各社の公式ガイドは書き方の原則を言語で分けていません。Google Workspaceのヘルプのように、機能によって対応言語が異なる注記はあるため、使う機能側の対応状況を確認します。</p>
+<h3 id="s8-6">うまくいかないときは何から直しますか？</h3>
 <p>返ってきたものと欲しかったものの差を1つだけ特定して、その部分を足します。範囲、語調、形式のどれがずれたのかを見てから直すと、全部書き直さずに済みます。</p>
-<p><strong>毎回同じ前提を書くのが面倒です</strong></p>
+<h3 id="s8-7">毎回同じ前提を書くのが面倒です</h3>
 <p>ChatGPTのカスタム指示、GeminiのGem、プロジェクトの指示に移します。毎回の依頼に含める必要がなくなり、依頼文はその日の用件だけになります。</p>
-<p><strong>プロンプトを直せばどんな問題も解決しますか？</strong></p>
+<h3 id="s8-8">プロンプトを直せばどんな問題も解決しますか？</h3>
 <p>しません。Anthropicのガイドは、遅さやコストのようにモデルの選択で解決したほうが早い課題もあると書いています。プロンプトで直すべきことかどうかを、先に切り分けます。</p>
 <h2 id="s9">出典</h2>
 <p>出典は各社の公式ページで、取得日は2026年9月23日です。</p>

@@ -28,6 +28,7 @@
     <link rel="icon" href="/favicon.png">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Perplexityの使い方｜Search・Computer・Cometの違いと料金", "description": "Perplexityは検索に答えるAIから、作業まで実行するエージェントへ広がりました。Search・Computer・Cometの3つの入口、無料とPro・Maxの違い、公式が挙げる使いこなしの勘所を整理します。", "datePublished": "2026-09-22", "dateModified": "2026-09-22", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/perplexity-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Perplexityの使い方｜Search・Computer・Cometの違いと料金"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Perplexityは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。無料プランは月額$0で、出典付きの検索が対象です。週ごとの利用制限付きで、最上位のモデルにもアクセスできます。Perplexity Computerは対象外です。"}}, {"@type": "Question", "name": "ProとMaxはどちらを選べばいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "Proは月$20で、Computerへの拡張アクセスと深い研究、モデルの指定が付きます。Maxは月$200で、Computerの利用量が最大になり、月10,000のクレジットとBrainが加わります。まずProで上限に当たるかどうかを見るのが順当です。"}}, {"@type": "Question", "name": "Perplexityはどのモデルを使っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "固定ではありません。ChatGPT、Google Gemini、Anthropic Claude、NVIDIA Nemotronなど複数のモデルを統合し、質問ごとに適したものを選びます。ProとMaxでは自分で指定する形です。"}}, {"@type": "Question", "name": "PerplexityとChatGPTはどちらがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "違うのは用途です。Perplexityは回答に必ず出典を並べる設計で、裏取りが要る調べものに向きます。同じ質問を両方に投げて引用の量と質を比べるのが、自分の用途での答えになります。"}}, {"@type": "Question", "name": "Perplexity Computerとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "調査・分析・作成・コーディングを複数の工程としてまとめて実行する入口です。400以上のコネクタやMCPで自分たちのツールをつなぎ、レコードの更新やメッセージの投稿まで任せられます。"}}, {"@type": "Question", "name": "Cometとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Perplexityのブラウザです。開いている複数のタブをまたいで質問でき、ログイン済みの画面の中でフォーム入力などの作業を任せられます。"}}, {"@type": "Question", "name": "回答が正しいかどうかはどう確かめますか？", "acceptedAnswer": {"@type": "Answer", "text": "回答の文をハイライトすると、その部分がどの情報源から来たかを確認できます。引用には「政府」「学術」「信頼済み」のラベルが付くため、根拠の種類も分かります。"}}, {"@type": "Question", "name": "同じ作業を毎回頼まずに済ませる方法はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "スキルとして保存します。やり方を書いて保存しておくと、条件に合うリクエストが来たときに自動で呼び出されます。定期実行の設定もできます。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -159,21 +160,21 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>どの質問でどのサイトが引用されているかは、実際に質問を投げて数えるのが早道です。測り方と、4つのサービスで結果がどう割れたかは<a href="https://nito-0210.com/media/ai-search-engine-comparison/">AI検索エンジンの比較記事</a>にまとめました。</p>
 <h2 id="s8">よくある質問</h2>
 <p>内容はすべて2026年9月22日時点の公式ページの記載です。</p>
-<p><strong>Perplexityは無料で使えますか？</strong></p>
+<h3 id="s8-1">Perplexityは無料で使えますか？</h3>
 <p>使えます。無料プランは月額$0で、出典付きの検索が対象です。週ごとの利用制限付きで、最上位のモデルにもアクセスできます。Perplexity Computerは対象外です。</p>
-<p><strong>ProとMaxはどちらを選べばいいですか？</strong></p>
+<h3 id="s8-2">ProとMaxはどちらを選べばいいですか？</h3>
 <p>Proは月$20で、Computerへの拡張アクセスと深い研究、モデルの指定が付きます。Maxは月$200で、Computerの利用量が最大になり、月10,000のクレジットとBrainが加わります。まずProで上限に当たるかどうかを見るのが順当です。</p>
-<p><strong>Perplexityはどのモデルを使っていますか？</strong></p>
-<p>固定ではありません。ChatGPT、Google Gemini、Anthropic Claude、NVIDIA Nemotronなど複数のモデルを統合し、質問ごとに適したものを選びます。ProとMaxでは自分で指定できます。</p>
-<p><strong>PerplexityとChatGPTはどちらがいいですか？</strong></p>
-<p>用途が違います。Perplexityは回答に必ず出典を並べる設計で、裏取りが要る調べものに向きます。同じ質問を両方に投げて引用の量と質を比べるのが、自分の用途での答えになります。</p>
-<p><strong>Perplexity Computerとは何ですか？</strong></p>
+<h3 id="s8-3">Perplexityはどのモデルを使っていますか？</h3>
+<p>固定ではありません。ChatGPT、Google Gemini、Anthropic Claude、NVIDIA Nemotronなど複数のモデルを統合し、質問ごとに適したものを選びます。ProとMaxでは自分で指定する形です。</p>
+<h3 id="s8-4">PerplexityとChatGPTはどちらがいいですか？</h3>
+<p>違うのは用途です。Perplexityは回答に必ず出典を並べる設計で、裏取りが要る調べものに向きます。同じ質問を両方に投げて引用の量と質を比べるのが、自分の用途での答えになります。</p>
+<h3 id="s8-5">Perplexity Computerとは何ですか？</h3>
 <p>調査・分析・作成・コーディングを複数の工程としてまとめて実行する入口です。400以上のコネクタやMCPで自分たちのツールをつなぎ、レコードの更新やメッセージの投稿まで任せられます。</p>
-<p><strong>Cometとは何ですか？</strong></p>
+<h3 id="s8-6">Cometとは何ですか？</h3>
 <p>Perplexityのブラウザです。開いている複数のタブをまたいで質問でき、ログイン済みの画面の中でフォーム入力などの作業を任せられます。</p>
-<p><strong>回答が正しいかどうかはどう確かめますか？</strong></p>
+<h3 id="s8-7">回答が正しいかどうかはどう確かめますか？</h3>
 <p>回答の文をハイライトすると、その部分がどの情報源から来たかを確認できます。引用には「政府」「学術」「信頼済み」のラベルが付くため、根拠の種類も分かります。</p>
-<p><strong>同じ作業を毎回頼まずに済ませる方法はありますか？</strong></p>
+<h3 id="s8-8">同じ作業を毎回頼まずに済ませる方法はありますか？</h3>
 <p>スキルとして保存します。やり方を書いて保存しておくと、条件に合うリクエストが来たときに自動で呼び出されます。定期実行の設定もできます。</p>
 <h2 id="s9">出典</h2>
 <p>出典は公式のページで、取得日は2026年9月22日です。</p>

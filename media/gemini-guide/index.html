@@ -28,6 +28,7 @@
     <link rel="icon" href="/favicon.png">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Geminiの使い方を公式ヘルプで解説｜始め方・モデルの選び方・無料の上限・Deep Research・上級編", "description": "Geminiの使い方をGoogle公式ヘルプ17本を一次ソースに解説。始め方、3つのモデルと思考レベルの選び方、無料の上限の正体、Deep Research、Canvas、ノートブック、上級編3つまで。", "datePublished": "2026-09-21", "dateModified": "2026-09-21", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/gemini-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Geminiの使い方を公式ヘルプで解説｜始め方・モデルの選び方・無料の上限・Deep Research・上級編"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ジェミニはどうやって使うのですか？", "acceptedAnswer": {"@type": "Answer", "text": "gemini.google.com をブラウザで開き、Googleアカウントでログインして、下部のテキストボックスに質問を入力します。スマホはGeminiアプリ、パソコンはMac版・Windows版のアプリからも使えます。"}}, {"@type": "Question", "name": "Geminiは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "無料で使えます。Googleアカウントがあれば、3つのモデル、Deep Research、Canvas、Gem、画像生成まで利用できます。動画生成、時間指定アクション、今日のまとめ、Nano Banana Proでの再生成、Gemini Sparkは有料プランが必要です。"}}, {"@type": "Question", "name": "Geminiは何回まで無料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "回数では決まっていません。上限はプロンプトの複雑さ、使うモデルと機能、チャットの長さから計算されるコンピューティング量で決まり、週の上限に達するまで5時間ごとにリセットされます。現在の状況は左下の設定で確認できる形です。"}}, {"@type": "Question", "name": "GeminiとChatGPTのどちらがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "答えは用途で変わります。GmailやGoogleドライブの中身を前提に頼む作業はGeminiが有利で、両者の回答の作られ方の違いは[AIモードとChatGPTを比べた記事](https://nito-0210.com/media/ai-mode-vs-chatgpt/)にまとめています。"}}, {"@type": "Question", "name": "Proにすると賢くなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "モデルは変わりません。無料でもGemini 3 Proを選べます。変わるのは使える量、一度に読ませられる長さ（32,000トークンから100万トークン）、動画生成などの一部機能です。"}}, {"@type": "Question", "name": "Geminiに渡したファイルはどこまで読まれますか？", "acceptedAnswer": {"@type": "Answer", "text": "ひとつのプロンプトに追加できるのは最大10個までで、読める量はコンテキストウィンドウの上限までです。上限を超えると、渡した内容の一部が考慮されないまま回答が返ることがあります。"}}, {"@type": "Question", "name": "履歴を残さない設定にはできますか？", "acceptedAnswer": {"@type": "Answer", "text": "「アクティビティの保存」をオフにする形です。ただしノートブック、メモリー、Workspace連携、時間指定アクション、過去のDeep Researchレポートは使えなくなります。"}}, {"@type": "Question", "name": "仕事用のGoogleアカウントでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "対象エディションのWorkspaceアカウントなら18歳以上で使えます。カスタム指示とメモリー、ノートブックは個人アカウント限定で、アクティビティの設定は管理者の管理下に入ります。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -303,23 +304,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s12">AI検索での見え方は別の話</h2>
 <p>Geminiを自分で使うことと、自社がGeminiの回答に登場することは別の問題で、後者は<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。</p>
 <h2 id="s13">よくある質問</h2>
-<p>Geminiについて検索されている関連質問を中心に答えます。</p>
-<p><strong>ジェミニはどうやって使うのですか？</strong>
-gemini.google.com をブラウザで開き、Googleアカウントでログインして、下部のテキストボックスに質問を入力します。スマホはGeminiアプリ、パソコンはMac版・Windows版のアプリからも使えます。</p>
-<p><strong>Geminiは無料で使えますか？</strong>
-無料で使えます。Googleアカウントがあれば、3つのモデル、Deep Research、Canvas、Gem、画像生成まで利用できます。動画生成、時間指定アクション、今日のまとめ、Nano Banana Proでの再生成、Gemini Sparkは有料プランが必要です。</p>
-<p><strong>Geminiは何回まで無料ですか？</strong>
-回数では決まっていません。上限はプロンプトの複雑さ、使うモデルと機能、チャットの長さから計算されるコンピューティング量で決まり、週の上限に達するまで5時間ごとにリセットされます。現在の状況は左下の設定から確認できます。</p>
-<p><strong>GeminiとChatGPTのどちらがいいですか？</strong>
-用途で変わります。GmailやGoogleドライブの中身を前提に頼む作業はGeminiが有利で、両者の回答の作られ方の違いは<a href="https://nito-0210.com/media/ai-mode-vs-chatgpt/">AIモードとChatGPTを比べた記事</a>にまとめています。</p>
-<p><strong>Proにすると賢くなりますか？</strong>
-モデルは変わりません。無料でもGemini 3 Proを選べます。変わるのは使える量、一度に読ませられる長さ（32,000トークンから100万トークン）、動画生成などの一部機能です。</p>
-<p><strong>Geminiに渡したファイルはどこまで読まれますか？</strong>
-ひとつのプロンプトに追加できるのは最大10個までで、読める量はコンテキストウィンドウの上限までです。上限を超えると、渡した内容の一部が考慮されないまま回答が返ることがあります。</p>
-<p><strong>履歴を残さない設定にはできますか？</strong>
-「アクティビティの保存」をオフにできます。ただしノートブック、メモリー、Workspace連携、時間指定アクション、過去のDeep Researchレポートは使えなくなります。</p>
-<p><strong>仕事用のGoogleアカウントでも使えますか？</strong>
-対象エディションのWorkspaceアカウントなら18歳以上で使えます。カスタム指示とメモリー、ノートブックは個人アカウント限定で、アクティビティの設定は管理者の管理下に入ります。</p>
+<p>回答の内容は2026年9月21日時点の Google 公式ヘルプの記載に基づきます。</p>
+<h3 id="s13-1">ジェミニはどうやって使うのですか？</h3>
+<p>gemini.google.com をブラウザで開き、Googleアカウントでログインして、下部のテキストボックスに質問を入力します。スマホはGeminiアプリ、パソコンはMac版・Windows版のアプリからも使えます。</p>
+<h3 id="s13-2">Geminiは無料で使えますか？</h3>
+<p>無料で使えます。Googleアカウントがあれば、3つのモデル、Deep Research、Canvas、Gem、画像生成まで利用できます。動画生成、時間指定アクション、今日のまとめ、Nano Banana Proでの再生成、Gemini Sparkは有料プランが必要です。</p>
+<h3 id="s13-3">Geminiは何回まで無料ですか？</h3>
+<p>回数では決まっていません。上限はプロンプトの複雑さ、使うモデルと機能、チャットの長さから計算されるコンピューティング量で決まり、週の上限に達するまで5時間ごとにリセットされます。現在の状況は左下の設定で確認できる形です。</p>
+<h3 id="s13-4">GeminiとChatGPTのどちらがいいですか？</h3>
+<p>答えは用途で変わります。GmailやGoogleドライブの中身を前提に頼む作業はGeminiが有利で、両者の回答の作られ方の違いは<a href="https://nito-0210.com/media/ai-mode-vs-chatgpt/">AIモードとChatGPTを比べた記事</a>にまとめています。</p>
+<h3 id="s13-5">Proにすると賢くなりますか？</h3>
+<p>モデルは変わりません。無料でもGemini 3 Proを選べます。変わるのは使える量、一度に読ませられる長さ（32,000トークンから100万トークン）、動画生成などの一部機能です。</p>
+<h3 id="s13-6">Geminiに渡したファイルはどこまで読まれますか？</h3>
+<p>ひとつのプロンプトに追加できるのは最大10個までで、読める量はコンテキストウィンドウの上限までです。上限を超えると、渡した内容の一部が考慮されないまま回答が返ることがあります。</p>
+<h3 id="s13-7">履歴を残さない設定にはできますか？</h3>
+<p>「アクティビティの保存」をオフにする形です。ただしノートブック、メモリー、Workspace連携、時間指定アクション、過去のDeep Researchレポートは使えなくなります。</p>
+<h3 id="s13-8">仕事用のGoogleアカウントでも使えますか？</h3>
+<p>対象エディションのWorkspaceアカウントなら18歳以上で使えます。カスタム指示とメモリー、ノートブックは個人アカウント限定で、アクティビティの設定は管理者の管理下に入ります。</p>
 <h2 id="s14">出典</h2>
 <p>この記事の事実はGoogleの公式ヘルプとサービスページで確認しました（2026年9月21日取得）。</p>
 <ul>
