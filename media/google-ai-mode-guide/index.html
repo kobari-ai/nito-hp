@@ -219,11 +219,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h3 id="s2-1">PCで開く</h3>
 <ol>
-<li><code>google.com/ai</code> を直接開く</li>
+<li><a href="https://www.google.com/ai">google.com/ai</a> を直接開く</li>
 <li><code>google.com</code> の検索ボックスに質問を入れ、右端の「AI モード」を押す</li>
 <li>検索したあと、検索結果の上に並ぶタブの一番左「AI モード」を押す</li>
 </ol>
-<p><strong>迷ったら <code>google.com/ai</code> を直接開くのが一番確実です。</strong> ボタンやタブが見当たらない環境でも、このURLからなら入れます。</p>
+<p><strong>迷ったら <a href="https://www.google.com/ai">google.com/ai</a> を直接開くのが一番確実です。</strong> ボタンやタブが見当たらない環境でも、このURLからなら入れます。</p>
 <h3 id="s2-2">スマホで開く</h3>
 <p>Googleアプリを開くと、検索の下に虫眼鏡にキラキラが付いた「AI モード」のアイコンがあります。押した先が専用画面です。ブラウザから使う場合はPCと同じで、<code>google.com/ai</code> を開くか検索結果のタブから入ります。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/google-ai-mode-guide/22_sp_aimode.png" alt="スマホのブラウザで開いたAIモードの会話画面。上部のタブ列の左端に「AI モード」があり、質問と回答、出典、下部に「質問する」の入力欄" loading="lazy"><figcaption>スマホのブラウザでのAIモード。検索結果のタブ列の左端「AI モード」から入ると、この画面になる</figcaption></figure>
@@ -320,10 +320,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>原因を探す前に、<strong>「AI モードという項目自体が無い」のか「項目はあるが押しても動かない」のか</strong>を分けてください。前者はアカウントか提供状況、後者は環境の問題であることが多く、対処が違います。</p>
 <h3 id="s4-1">最初に試す3つ</h3>
 <ol>
-<li><code>google.com/ai</code> を直接開く。ボタンやタブが無くても、ここから入れれば機能自体は使える</li>
+<li><a href="https://www.google.com/ai">google.com/ai</a> を直接開く。ボタンやタブが無くても、ここから入れれば機能自体は使える</li>
 <li>Googleアカウントにログインし、シークレットモードを解除する</li>
 <li>GoogleアプリとChromeを最新版に更新する</li>
 </ol>
+<figure class="post-figure post-figure--sp"><img src="/media/images/google-ai-mode-guide/24_sp_google_ai.jpg" alt="スマホでgoogle.com/aiを直接開いた画面。上部のタブ列の左端にAI モードがあり、中央に質問の例、下部に質問するの入力欄が出ている" loading="lazy"><figcaption>この画面が開けば、機能自体は使える状態</figcaption></figure>
+
 <p>この3つはアカウントや環境を触らずに済むので、先に試す価値があります。解決しない場合に下のアカウントと環境を疑います。</p>
 <h3 id="s4-2">アカウントが原因のケース</h3>
 <p>ログインして使っている場合はアカウントの条件が効きます。<strong>18歳未満のアカウントでは使えません。</strong> Family Link で管理されている端末も制限がかかります。会社や学校の Google Workspace アカウントでは一部の機能が使えないことがあるため、個人のアカウントに切り替えて試してください。複数のアカウントを使っている場合は、今どのアカウントでログインしているかを確認します。Search Labs でAIモードをオフにしていると項目が出ないので、フラスコのアイコンから設定を見ます。</p>
@@ -376,6 +378,9 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>同じ状態をURLで指定するのが <code>udm=14</code> です。<code>https://www.google.com/search?q=キーワード&amp;udm=14</code> の形で開くと、「ウェブ」タブを選んだのと同じ画面になります。2024年5月から使えるGoogleの正規のパラメータで、2年以上動き続けています。</p>
 <figure class="post-figure"><img src="/media/images/google-ai-mode-guide/03_pc_udm14.png" alt="udm=14を付けた検索結果。AIによる概要は無く「ウェブ検索結果」の見出しの下にリンクが並ぶが、タブ列の左端には「AI モード」が残っている" loading="lazy"><figcaption>udm=14 の画面。AIによる概要は消えるが、タブ列の「AI モード」はそのまま残る</figcaption></figure>
 
+<figure class="post-figure post-figure--sp"><img src="/media/images/google-ai-mode-guide/23_sp_udm14.jpg" alt="スマホで udm=14 を付けた検索結果。AIによる概要は表示されず、ウェブ検索結果のリンクが上から並んでいる" loading="lazy"><figcaption>スマホでも同じで、AIによる概要が出ずにリンクだけが並ぶ</figcaption></figure>
+
+<p>試すだけなら<a href="https://www.google.com/search?q=%E7%A5%9D%E6%97%A5%E3%81%AF%E3%81%84%E3%81%A4&amp;udm=14">このリンク</a>を開くと、<code>udm=14</code> を付けた検索結果がそのまま出ます。</p>
 <p><strong>実機で試したところ、<code>udm=14</code> でAIによる概要は消えましたが、タブ列の「AI モード」はそのまま残っていました。</strong> 上位の解説記事には「AIの要約や広告が排除される」と書かれていますが、消えるのはAIによる概要だけで、AIモードの入口は消えません。AIモードそのものを画面から無くしたい場合は、この章の後半にある <code>chrome://flags</code> が必要です。</p>
 <p>毎回URLを打つのは現実的ではないので、Chromeの検索エンジンに登録します。</p>
 <ol>

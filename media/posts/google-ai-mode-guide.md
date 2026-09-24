@@ -71,11 +71,11 @@ AIモードは検索から得た情報を整理して見せる機能で、Gemini
 
 ### PCで開く
 
-1. `google.com/ai` を直接開く
+1. [google.com/ai](https://www.google.com/ai) を直接開く
 2. `google.com` の検索ボックスに質問を入れ、右端の「AI モード」を押す
 3. 検索したあと、検索結果の上に並ぶタブの一番左「AI モード」を押す
 
-**迷ったら `google.com/ai` を直接開くのが一番確実です。** ボタンやタブが見当たらない環境でも、このURLからなら入れます。
+**迷ったら [google.com/ai](https://www.google.com/ai) を直接開くのが一番確実です。** ボタンやタブが見当たらない環境でも、このURLからなら入れます。
 
 ### スマホで開く
 
@@ -142,9 +142,11 @@ Googleアプリにアイコンが無いときは、画面左上のフラスコ�
 
 ### 最初に試す3つ
 
-1. `google.com/ai` を直接開く。ボタンやタブが無くても、ここから入れれば機能自体は使える
+1. [google.com/ai](https://www.google.com/ai) を直接開く。ボタンやタブが無くても、ここから入れれば機能自体は使える
 2. Googleアカウントにログインし、シークレットモードを解除する
 3. GoogleアプリとChromeを最新版に更新する
+
+<figure class="post-figure post-figure--sp"><img src="/media/images/google-ai-mode-guide/24_sp_google_ai.jpg" alt="スマホでgoogle.com/aiを直接開いた画面。上部のタブ列の左端にAI モードがあり、中央に質問の例、下部に質問するの入力欄が出ている" loading="lazy"><figcaption>この画面が開けば、機能自体は使える状態</figcaption></figure>
 
 この3つはアカウントや環境を触らずに済むので、先に試す価値があります。解決しない場合に下のアカウントと環境を疑います。
 
@@ -182,6 +184,10 @@ Chromeで検索語を途中まで入れて Tab キーを押すと、いつもの
 同じ状態をURLで指定するのが `udm=14` です。`https://www.google.com/search?q=キーワード&udm=14` の形で開くと、「ウェブ」タブを選んだのと同じ画面になります。2024年5月から使えるGoogleの正規のパラメータで、2年以上動き続けています。
 
 <figure class="post-figure"><img src="/media/images/google-ai-mode-guide/03_pc_udm14.png" alt="udm=14を付けた検索結果。AIによる概要は無く「ウェブ検索結果」の見出しの下にリンクが並ぶが、タブ列の左端には「AI モード」が残っている" loading="lazy"><figcaption>udm=14 の画面。AIによる概要は消えるが、タブ列の「AI モード」はそのまま残る</figcaption></figure>
+
+<figure class="post-figure post-figure--sp"><img src="/media/images/google-ai-mode-guide/23_sp_udm14.jpg" alt="スマホで udm=14 を付けた検索結果。AIによる概要は表示されず、ウェブ検索結果のリンクが上から並んでいる" loading="lazy"><figcaption>スマホでも同じで、AIによる概要が出ずにリンクだけが並ぶ</figcaption></figure>
+
+試すだけなら[このリンク](https://www.google.com/search?q=%E7%A5%9D%E6%97%A5%E3%81%AF%E3%81%84%E3%81%A4&udm=14)を開くと、`udm=14` を付けた検索結果がそのまま出ます。
 
 **実機で試したところ、`udm=14` でAIによる概要は消えましたが、タブ列の「AI モード」はそのまま残っていました。** 上位の解説記事には「AIの要約や広告が排除される」と書かれていますが、消えるのはAIによる概要だけで、AIモードの入口は消えません。AIモードそのものを画面から無くしたい場合は、この章の後半にある `chrome://flags` が必要です。
 
