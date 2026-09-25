@@ -1647,6 +1647,33 @@
         .vs-col.on .vs-visual { flex: none; height: 300px; min-height: 0; }
         .vs-col.on .vs-visual img { object-fit: cover; object-position: left top; }
         @media (max-width: 900px) { .vs-sub { min-height: 0; } .vs-col.on .vs-visual { height: 220px; } }
+
+        /* 9/25 スマホの見直し */
+        .vs-visual picture { display: block; width: 100%; height: 100%; }
+        .rcase .bar-group .bar-label { min-height: 2.9em; }
+        @media (max-width: 600px) {
+            .aimock-head .chatmock-tabs { flex-wrap: nowrap; gap: 4px; }
+            .aimock-head .chatmock-tabs span { font-size: 10.5px; padding: 3px 7px; white-space: nowrap; }
+            .section-title { font-size: 25px; }
+            .af-row { flex-direction: column; align-items: stretch; gap: 4px; }
+            .af-row .sl-box { padding: 8px; }
+            .af-arrow { transform: none; }
+            .af-arrow span { display: inline; margin-right: 4px; }
+            .af-row .af-arrow { font-size: 14px; }
+            .vs-col.on .vs-visual { height: 300px; }
+            .cta-banner-label { font-size: 20px !important; }
+        }
+        @media (max-width: 600px) {
+            .vs-col:not(.on) .vs-visual { height: auto; }
+            .apiflow { padding: 18px 14px; }
+            .af-row .af-arrow { font-size: 0; display: flex; align-items: center; justify-content: center; gap: 6px; }
+            .af-row .af-arrow::after { content: "↓"; font-size: 15px; color: #b0b0b0; }
+            .af-row .af-arrow span { font-size: 10.5px; display: inline; }
+        }
+        @media (max-width: 600px) {
+            .rcase .bar-group .bar-label { min-height: 3.8em; }
+            .cta-banner-label { font-size: 18px !important; }
+        }
     </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現状分析レポートには何が載っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "新しいページが公開から3日でAIの回答の引用元に入った例や、3ヶ月で言及率が10%から45%に上がった例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "どのAIに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。"}}, {"@type": "Question", "name": "AI検索対策はSEOと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。"}}, {"@type": "Question", "name": "どんな会社に向いていますか？", "acceptedAnswer": {"@type": "Answer", "text": "BtoB・SaaS・金融など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。"}}]}</script>
 
@@ -1842,7 +1869,7 @@
                 <div class="vs-col on">
                     <p class="vs-kind">nitoの計測</p>
                     <p class="vs-sub">実際のチャット画面で回答を収集できるシステムを独自開発</p>
-                    <div class="vs-visual"><img src="/llmo/img/chatgpt-answer.jpg" alt="ChatGPTの実際の回答画面。還元率の高いクレジットカードのおすすめを答えている" width="1330" height="1000"></div>
+                    <div class="vs-visual"><picture><source media="(max-width: 900px)" srcset="/llmo/img/chatgpt-answer-sp.jpg"><img src="/llmo/img/chatgpt-answer.jpg" alt="ChatGPTの実際の回答画面。還元率の高いクレジットカードのおすすめを答えている" width="1330" height="1000"></picture></div>
                     <ul class="vs-list">
                         <li>人が使うチャット画面に毎日質問する</li>
                         <li><b>メリット：</b>実際の利用者が見ている回答のまま計測できる</li>
