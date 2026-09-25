@@ -12,9 +12,9 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI検索対策（LLMO/AIO）｜月20万円から実行支援まで｜nito</title>
+    <title>AI検索対策（LLMO）｜AIのおすすめに名前が挙がる会社へ｜nito</title>
     <link rel="canonical" href="https://nito-0210.com/llmo/">
-    <meta name="description" content="効く施策に絞るから、月20万円から実行支援まで。ChatGPT・GeminiなどAI回答での言及を毎日計測し、記事の制作・改善まで nito が代行します。AI検索対策（LLMO／AIO）の無料診断から。">
+    <meta name="description" content="ChatGPT・Gemini・AIモードなどの回答を毎日計測し、AIに名前が挙がらない理由を読み解いて、ページの制作と改善まで実行します。月20万円から。無料の現状分析レポートから始められます。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
@@ -32,8 +32,8 @@
             --width-max: 1100px;
             --section-gap: 100px;
             --font-heading-en: 'Montserrat', sans-serif;
-            --font-heading-jp: 'Noto Sans JP', sans-serif;
-            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --font-heading-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans", 'Noto Sans JP', sans-serif;
+            --font-body: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -88,8 +88,9 @@
 
         /* ── Header ── */
         .header-wrapper {
-            position: sticky;
+            position: fixed;
             top: 16px;
+            left: 0; right: 0;
             z-index: 1000;
             width: 95%;
             max-width: 1060px;
@@ -110,7 +111,7 @@
 
         .logo {
             font-size: 22px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             letter-spacing: 0.08em;
             color: var(--color-text);
@@ -224,7 +225,7 @@
         .nav-close::after { transform: rotate(-45deg); }
 
         .nav-overlay-item {
-            font-size: 18px; font-weight: 900;
+            font-size: 18px; font-weight: 700;
             font-family: var(--font-heading-jp); color: var(--color-text);
         }
         .nav-overlay-cta { display: flex; flex-direction: column; gap: 12px; }
@@ -239,16 +240,8 @@
             min-height: 560px;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -150px; right: -150px;
-            width: 700px; height: 700px;
-            background: radial-gradient(circle, rgba(255,159,67,0.12) 0%, transparent 65%);
-            pointer-events: none;
-        }
 
-        .hero-sub { color:#4a4a4a; font-size:18px; line-height:1.8; margin:18px 0 0; max-width:720px; font-weight:500; }
+        .hero-sub { color:#4a4a4a; font-size:17px; line-height:1.9; margin:18px 0 0; max-width:680px; font-weight:500; }
         .hero-label {
             display: inline-block;
             font-size: 24px;
@@ -260,9 +253,10 @@
         }
 
         .hero-title {
-            font-size: 80px;
-            font-weight: 900;
-            line-height: 1.08;
+            max-width: 1100px;
+            font-size: 46px;
+            font-weight: 700;
+            line-height: 1.35;
             letter-spacing: -0.02em;
             color: var(--color-text);
             font-family: var(--font-heading-jp);
@@ -270,6 +264,7 @@
         }
 
         .hero-title span { color: var(--color-secondary); }
+        .sp-only { display: none; }
 
         .hero-cta {
             display: flex;
@@ -296,24 +291,14 @@
             opacity: 1;
         }
 
-        /* Hero decoration — トップページと同じ方眼ライン */
-        .hero-grid {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            background:
-                linear-gradient(rgba(230,126,34,0.10) 1px, transparent 1px) 0 0 / 100% 130px,
-                linear-gradient(90deg, rgba(230,126,34,0.10) 1px, transparent 1px) 0 0 / 130px 100%;
-            -webkit-mask-image: radial-gradient(ellipse 85% 90% at 75% 30%, black 0%, transparent 72%);
-            mask-image: radial-gradient(ellipse 85% 90% at 75% 30%, black 0%, transparent 72%);
-        }
 
         @media (max-width: 768px) {
             .hero {
                 padding: 100px 0 60px;
                 min-height: unset;
             }
-            .hero-title { font-size: 44px; letter-spacing: -0.01em; }
+            .hero-title { font-size: 30px; letter-spacing: -0.01em; }
+            .sp-only { display: inline; }
             .hero-sub { font-size: 15px; }
             .hero-label { font-size: 16px; margin-bottom: 16px; }
             .hero-cta { flex-direction: column; }
@@ -324,7 +309,6 @@
                 border-radius: 14px;
                 font-size: 18px;
             }
-            .hero-grid { display: none; }
         }
 
         /* ── Intro ── */
@@ -338,7 +322,7 @@
 
         .intro-heading {
             font-size: 40px;
-            font-weight: 900;
+            font-weight: 700;
             color: var(--color-text);
             font-family: var(--font-heading-jp);
             line-height: 1.5;
@@ -404,7 +388,7 @@
 
         .section-title {
             font-size: 44px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             color: var(--color-text);
             line-height: 1.3;
@@ -443,7 +427,7 @@
 
         .feature-num {
             font-size: 22px;
-            font-weight: 900;
+            font-weight: 700;
             color: var(--color-secondary);
             font-family: var(--font-heading-en);
             flex-shrink: 0;
@@ -451,7 +435,7 @@
 
         .feature-card-title {
             font-size: 24px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             color: var(--color-text);
             line-height: 1.4;
@@ -530,7 +514,7 @@
         }
         .case-headline {
             font-size: 26px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             color: var(--color-text);
             line-height: 1.55;
@@ -663,7 +647,7 @@
 
         .cta-banner-label {
             font-size: 56px;
-            font-weight: 900;
+            font-weight: 700;
             letter-spacing: 0.06em;
             font-family: var(--font-heading-jp);
             display: block;
@@ -724,7 +708,7 @@
 
         .footer-logo {
             font-size: 32px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: var(--font-heading-jp);
             color: #333;
             display: block;
@@ -789,13 +773,730 @@
             .footer-nav-col { gap: 12px; }
             .footer-bottom { margin-top: 40px; flex-direction: column; gap: 12px; }
         }
+
+        /* ── Flow（提供の流れ） ── */
+        .section-flow { padding: 100px 0; background-color: #fafafa; }
+        .flow-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .flow-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            padding: 40px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .flow-step {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--color-secondary);
+            font-family: var(--font-heading-en);
+        }
+        .flow-step em { font-style: normal; font-size: 28px; letter-spacing: 0; margin-left: 6px; }
+        .flow-title {
+            font-size: 22px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.45;
+        }
+        .flow-tag {
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--color-primary-deep);
+            background: var(--color-card-bg);
+            border: 1px solid #ffe2c2;
+            border-radius: 4px;
+            padding: 4px 10px;
+        }
+        .flow-desc { font-size: 15.5px; color: var(--color-text-light); line-height: 1.95; }
+        .flow-after {
+            margin-top: 28px;
+            background: #fff;
+            border: 1px dashed #e8c9a3;
+            border-radius: 16px;
+            padding: 26px 32px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+        .flow-after-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-primary-deep);
+            white-space: nowrap;
+            letter-spacing: 0.05em;
+        }
+        .flow-after p { font-size: 15.5px; color: var(--color-text-light); line-height: 1.9; }
+        @media (max-width: 1000px) { .flow-list { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) {
+            .section-flow { padding: 64px 0; }
+            .flow-list { grid-template-columns: 1fr; gap: 16px; }
+            .flow-card { padding: 28px 24px; }
+            .flow-after { grid-template-columns: 1fr; gap: 8px; padding: 22px 22px; }
+        }
+
+        /* ── Cases（業種ごとの例） ── */
+        .section-industry { padding: 100px 0; }
+        .industry-lead { font-size: 17px; color: var(--color-text-light); line-height: 2; max-width: 760px; margin: -32px 0 40px; }
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .industry-item {
+            background: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 24px 22px;
+        }
+        .industry-name {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-primary-deep);
+            margin-bottom: 10px;
+            letter-spacing: 0.04em;
+        }
+        .industry-work {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-text);
+            line-height: 1.6;
+            font-family: var(--font-heading-jp);
+        }
+        .industry-note { font-size: 13px; color: #aaa; margin-top: 24px; line-height: 1.8; }
+        @media (max-width: 1000px) { .industry-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) {
+            .section-industry { padding: 64px 0; }
+            .industry-lead { margin: -16px 0 28px; font-size: 16px; }
+            .industry-item { padding: 20px 18px; }
+        }
+
+        /* ── Price（価格の型） ── */
+        .section-price { padding: 100px 0; background-color: #fafafa; }
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .price-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            padding: 44px 44px 40px;
+        }
+        .price-kind {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--color-secondary);
+            font-family: var(--font-heading-en);
+            margin-bottom: 10px;
+        }
+        .price-title {
+            font-size: 26px;
+            font-weight: 700;
+            font-family: var(--font-heading-jp);
+            color: var(--color-text);
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .price-sub { font-size: 14px; color: var(--color-text-light); margin-bottom: 24px; }
+        .price-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .price-list li {
+            position: relative;
+            padding-left: 22px;
+            font-size: 15.5px;
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+        .price-list li::before {
+            content: "";
+            position: absolute;
+            left: 0; top: 11px;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--color-primary);
+        }
+        .price-note {
+            margin-top: 28px;
+            font-size: 15px;
+            color: var(--color-text-light);
+            line-height: 1.95;
+            max-width: 760px;
+        }
+        @media (max-width: 768px) {
+            .section-price { padding: 64px 0; }
+            .price-grid { grid-template-columns: 1fr; gap: 16px; }
+            .price-card { padding: 28px 24px; }
+            .price-title { font-size: 22px; }
+        }
+
+        .hero-source { margin-top: 28px; font-size: 12.5px; color: #999; line-height: 1.8; }
+        .hero-source a { color: #999; text-decoration: underline; }
+        .shot { margin: 40px 0 0; }
+        .shot img { width: 100%; height: auto; display: block; border: 1px solid var(--color-border); border-radius: 8px; }
+        .shot figcaption { font-size: 13px; color: var(--color-text-light); line-height: 1.8; margin-top: 12px; }
+        .intro-inner { max-width: 100%; }
+        .intro-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+        .intro-cols .intro-body br { display: none; }
+        @media (max-width: 900px) { .intro-cols { grid-template-columns: 1fr; gap: 32px; } }
+        /* ── Hero facts ── */
+        .hero-facts {
+            display: flex;
+            gap: 0;
+            margin-top: 40px;
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            max-width: 720px;
+            overflow: hidden;
+        }
+        .hero-fact { flex: 1; padding: 18px 20px; border-right: 1px solid var(--color-border); }
+        .hero-fact:last-child { border-right: none; }
+        .hero-fact-label { display: block; font-size: 12px; color: var(--color-text-light); margin-bottom: 4px; letter-spacing: 0.04em; }
+        .hero-fact-value { font-size: 20px; font-weight: 700; color: var(--color-text); font-family: var(--font-heading-jp); }
+        .hero-fact-value small { font-size: 13px; font-weight: 700; color: var(--color-text-light); margin-left: 2px; }
+        @media (max-width: 768px) {
+            .hero-facts { flex-direction: column; margin-top: 28px; }
+            .hero-fact { border-right: none; border-bottom: 1px solid var(--color-border); padding: 14px 18px; }
+            .hero-fact:last-child { border-bottom: none; }
+        }
+
+        /* ── Problem ── */
+        .section-problem { padding: 100px 0; background-color: #fafafa; }
+        .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .problem-item {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 28px 30px;
+        }
+        .problem-mark {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: var(--color-card-bg); border: 1px solid #ffe2c2;
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-heading-en); font-weight: 700; color: var(--color-primary-deep); font-size: 15px;
+        }
+        .problem-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; margin-bottom: 8px; }
+        .problem-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        .problem-close { margin-top: 32px; font-size: 16px; color: var(--color-text); line-height: 2; max-width: 760px; }
+        @media (max-width: 768px) {
+            .section-problem { padding: 64px 0; }
+            .problem-grid { grid-template-columns: 1fr; gap: 14px; }
+            .problem-item { padding: 22px 20px; }
+        }
+
+        /* ── Usecase（nitoで動いているもの） ── */
+        .section-usecase { padding: 100px 0; }
+        .usecase-lead { font-size: 17px; color: var(--color-text-light); line-height: 2; max-width: 760px; margin: -32px 0 40px; }
+        .usecase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .usecase-item {
+            background: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 28px 26px;
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .usecase-cat { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.06em; }
+        .usecase-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; }
+        .usecase-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; flex: 1; }
+        .usecase-human {
+            font-size: 13px; color: var(--color-text); line-height: 1.7;
+            padding-top: 12px; border-top: 1px dashed #e8c9a3;
+        }
+        .usecase-human b { color: var(--color-primary-deep); font-weight: 700; margin-right: 6px; }
+        .usecase-note { font-size: 13px; color: #aaa; margin-top: 24px; line-height: 1.8; }
+        @media (max-width: 1000px) { .usecase-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) {
+            .section-usecase { padding: 64px 0; }
+            .usecase-lead { margin: -16px 0 28px; font-size: 16px; }
+            .usecase-grid { grid-template-columns: 1fr; gap: 14px; }
+        }
+
+        /* ── Types（棚卸しで出る業務の型） ── */
+        .types-wrap { margin-top: 56px; }
+        .types-heading { font-size: 20px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); margin-bottom: 8px; }
+        .types-lead { font-size: 15px; color: var(--color-text-light); line-height: 1.9; margin-bottom: 20px; }
+        .types-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+        .types-item { background: #fff; border: 1px solid var(--color-border); border-radius: 14px; padding: 18px 16px; }
+        .types-name { display: block; font-size: 15px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); margin-bottom: 6px; }
+        .types-ex { font-size: 13px; color: var(--color-text-light); line-height: 1.7; }
+        @media (max-width: 1000px) { .types-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .types-grid { grid-template-columns: repeat(2, 1fr); } .types-wrap { margin-top: 40px; } }
+
+        /* ── Data（データの扱い） ── */
+        .section-data { padding: 100px 0; }
+        .data-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .data-item { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 16px; padding: 30px 28px; }
+        .data-num { font-size: 12px; font-weight: 700; letter-spacing: 0.15em; color: var(--color-secondary); font-family: var(--font-heading-en); margin-bottom: 10px; }
+        .data-title { font-size: 19px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-text); line-height: 1.5; margin-bottom: 10px; }
+        .data-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        @media (max-width: 768px) {
+            .section-data { padding: 64px 0; }
+            .data-grid { grid-template-columns: 1fr; gap: 14px; }
+        }
+
+        .about-wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start; }
+        .about-body p { font-size: 16px; line-height: 2; color: var(--color-text); margin-bottom: 18px; }
+        .about-rep { display: flex; gap: 20px; align-items: center; border-top: 1px solid #e5e5e5; padding-top: 24px; margin-top: 8px; }
+        .about-rep img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+        .about-rep-name { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); margin-bottom: 6px; }
+        .about-rep-name small { font-size: 13px; font-weight: 700; color: var(--color-text-light); margin-right: 8px; }
+        .about-rep-bio { font-size: 14px; color: var(--color-text-light); line-height: 1.8; }
+        .about-rep-bio a { color: var(--color-primary-deep); text-decoration: underline; }
+        @media (max-width: 768px) { .about-wrap { grid-template-columns: 1fr; gap: 24px; } }
+        /* 2026-09-19: スクロールの fade-in は全部外す（希一さん） */
+        .ani-show-up, .ani-fade-bottom, .ani-slide-left, .ani-slide-right, .ani-fade-top { opacity: 1 !important; transform: none !important; transition: none !important; }
+        /* ═══ v3（2026-09-17）flyle/バクラク型: 各パネルに実物、2列3列を混ぜる ═══ */
+        .hero {
+            min-height: 100vh;
+            display: flex; align-items: center;
+            padding: 110px 0 60px;
+            background:
+                radial-gradient(900px 520px at 88% 18%, rgba(255,159,67,0.35) 0%, rgba(255,159,67,0) 60%),
+                radial-gradient(700px 480px at 12% 90%, rgba(255,210,170,0.45) 0%, rgba(255,210,170,0) 60%),
+                linear-gradient(180deg, #fff6ec 0%, #fffaf5 60%, #ffffff 100%);
+            position: relative; overflow: hidden;
+        }
+        .hero-wrap { width: 100%; }
+        .btn-text { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--color-text); padding: 16px 6px; }
+        .btn-text::after { content: "→"; }
+        /* Slack 風モック（実物のキャプチャが入るまでの代替。個人情報なし） */
+        .slackmock { background: #fff; border-radius: 12px; box-shadow: 0 30px 70px rgba(120,60,0,0.18), 0 2px 8px rgba(0,0,0,0.06); overflow: hidden; font-family: var(--font-body); transform: rotate(-1.5deg); }
+        .slackmock-head { background: #3f0e40; color: #fff; padding: 12px 18px; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        .slackmock-head span { opacity: .7; font-weight: 400; }
+        .slackmock-body { padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 14px; }
+        .msg { display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: start; }
+        .msg-av { width: 36px; height: 36px; border-radius: 6px; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #555; }
+        .msg-av.ai { background: var(--color-secondary); color: #fff; }
+        .msg-name { font-size: 13px; font-weight: 700; }
+        .msg-name small { font-weight: 400; color: #888; margin-left: 6px; }
+        .msg-text { font-size: 13.5px; line-height: 1.7; color: #1d1c1d; margin-top: 2px; }
+        .msg-card { margin-top: 8px; border-left: 4px solid var(--color-secondary); background: #fff7ef; padding: 10px 12px; border-radius: 4px; font-size: 12.5px; line-height: 1.7; }
+        .msg-card b { display: block; margin-bottom: 2px; }
+        .msg-actions { display: flex; gap: 8px; margin-top: 8px; }
+        .msg-actions span { border: 1px solid #ddd; border-radius: 4px; padding: 4px 10px; font-size: 12px; font-weight: 700; }
+        .msg-actions span.ok { background: #007a5a; color: #fff; border-color: #007a5a; }
+        @media (max-width: 768px) { .slackmock { transform: none; } }
+        .hero-wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+        .hero-pain { font-size: 15px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.02em; margin-bottom: 18px; }
+        .hero-title { max-width: none; font-size: 42px; line-height: 1.35; margin-bottom: 22px; letter-spacing: -0.01em; }
+        .hero-title { color: var(--color-text); }
+        .hero-title .line { display: block; color: var(--color-text); white-space: nowrap; }
+        .hero-title .grad { background: linear-gradient(90deg, #ff9f43, #e8590c); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero-do { font-size: 17px; color: #4a4a4a; line-height: 1.9; font-weight: 500; margin-bottom: 30px; }
+        .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-primary { display: inline-block; background: var(--color-secondary); color: #fff; font-weight: 700; font-size: 15px; padding: 16px 28px; border-radius: 8px; }
+        .btn-outline { display: inline-block; border: 2px solid var(--color-text); color: var(--color-text); font-weight: 700; font-size: 15px; padding: 14px 26px; border-radius: 8px; background: #fff; }
+        .hero-visual { position: relative; }
+        /* 画像の枠（実物を差し込むまでのプレースホルダ） */
+        .ph { display: flex; align-items: center; justify-content: center; text-align: center; background: repeating-linear-gradient(45deg, #fff, #fff 10px, #fff6ea 10px, #fff6ea 20px); border: 2px dashed #f0b27a; border-radius: 12px; color: #b9773a; font-size: 13px; line-height: 1.7; padding: 16px; min-height: 160px; margin: 0; }
+        .ph b { display: block; font-size: 14px; margin-bottom: 4px; }
+        .ph--hero { min-height: 400px; box-shadow: 0 24px 60px rgba(230,126,34,0.12); }
+        .shot { margin: 0; }
+        .shot img { width: 100%; height: auto; display: block; border: 1px solid var(--color-border); border-radius: 10px; }
+        .shot figcaption { font-size: 12.5px; color: var(--color-text-light); margin-top: 10px; line-height: 1.7; }
+
+        .section { padding: 96px 0; }
+        .section--gray { background: #fafafa; }
+        .section-head { max-width: 760px; margin-bottom: 44px; }
+        .section-kicker { font-size: 13px; font-weight: 700; color: var(--color-primary-deep); margin-bottom: 10px; }
+        .section-title { font-size: 38px; margin-bottom: 14px; }
+        .section-lead { font-size: 16px; color: var(--color-text-light); line-height: 1.9; }
+
+        /* 課題: 枠なし・罫線 */
+        .problem-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid #e5e5e5; }
+        .problem { padding: 28px 28px 28px 0; border-bottom: 1px solid #e5e5e5; }
+        .problem + .problem { padding-left: 28px; border-left: 1px solid #e5e5e5; }
+        .problem-title { font-size: 20px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; }
+        .problem-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        .problem-close { margin-top: 28px; font-size: 16px; line-height: 2; max-width: 760px; }
+
+        /* 導入するとこう動く: タブ＋大パネル */
+        .tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        .tab { border: 1px solid #ddd; background: #fff; border-radius: 999px; padding: 10px 22px; font-size: 14px; font-weight: 700; color: var(--color-text); cursor: pointer; }
+        .tab.is-active { background: #fff1e3; border-color: #f0b27a; color: var(--color-primary-deep); }
+        .panel { display: none; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 36px; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: center; }
+        .panel.is-active { display: grid; }
+        .panel-title { font-size: 24px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.45; margin-bottom: 14px; }
+        .panel-desc { font-size: 15px; color: var(--color-text-light); line-height: 1.95; margin-bottom: 18px; }
+        .panel-kv { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; font-size: 14px; line-height: 1.7; border-top: 1px solid #eee; padding-top: 16px; }
+        .panel-kv dt { color: var(--color-primary-deep); font-weight: 700; white-space: nowrap; }
+        .panel-kv dd { margin: 0; color: var(--color-text); }
+
+        /* 仕組みの中身: ベント型 */
+        .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+        .bento-item { background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+        .bento-item.w3 { grid-column: span 3; } .bento-item.w2 { grid-column: span 2; } .bento-item.w4 { grid-column: span 4; }
+        .bento-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; }
+        .bento-desc { font-size: 14px; color: var(--color-text-light); line-height: 1.85; }
+        .bento-item .ph { min-height: 150px; }
+
+        /* 進め方: 横4段＋矢印 */
+        .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        .step { background: #fff; border: 1px solid var(--color-border); border-radius: 14px; padding: 22px; position: relative; display: flex; flex-direction: column; gap: 10px; }
+        .step-num { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #fff; background: var(--color-text); border-radius: 4px; padding: 3px 8px; align-self: flex-start; }
+        .step-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.45; }
+        .step-tag { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); }
+        .step-desc { font-size: 14px; color: var(--color-text-light); line-height: 1.85; }
+        .step .ph { min-height: 120px; }
+        .step::after { content: "▶"; position: absolute; right: -16px; top: 50%; transform: translateY(-50%); color: #ddd; font-size: 12px; }
+        .step:last-child::after { display: none; }
+
+        /* 理由・データ: 罫線の3列 */
+        .points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .point-num { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); letter-spacing: 0.1em; margin-bottom: 10px; }
+        .point-title { font-size: 20px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; padding-top: 14px; border-top: 2px solid var(--color-text); }
+        .point-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+
+        /* 費用 */
+        .price-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .price-col { border-top: 2px solid var(--color-text); padding-top: 18px; }
+        .price-kind { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); margin-bottom: 6px; }
+        .price-title { font-size: 26px; font-weight: 700; font-family: var(--font-heading-jp); margin-bottom: 4px; }
+        .price-sub { font-size: 14px; color: var(--color-text-light); margin-bottom: 16px; }
+        .price-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .price-list li { position: relative; padding-left: 18px; font-size: 15px; line-height: 1.8; }
+        .price-list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 8px; height: 8px; border-radius: 50%; background: var(--color-primary); }
+        .price-note { margin-top: 26px; font-size: 15px; color: var(--color-text-light); line-height: 1.9; }
+
+        @media (max-width: 1000px) {
+            .bento { grid-template-columns: repeat(2, 1fr); } .bento-item.w3, .bento-item.w2, .bento-item.w4 { grid-column: span 1; }
+            .steps { grid-template-columns: repeat(2, 1fr); } .step::after { display: none; }
+        }
+        @media (max-width: 768px) {
+            .hero { min-height: auto; padding: 110px 0 48px; }
+            .hero-wrap { grid-template-columns: 1fr !important; gap: 28px; }
+            .hero-title { font-size: 28px; }
+            .hero-title .line { white-space: normal; }
+
+            .ph--hero { min-height: 240px; }
+            .section { padding: 60px 0; }
+            .section-title { font-size: 28px; }
+            .problem-list { grid-template-columns: 1fr; }
+            .problem + .problem { padding-left: 0; border-left: none; }
+            .panel { grid-template-columns: 1fr; padding: 22px; }
+            .bento { grid-template-columns: 1fr; }
+            .steps { grid-template-columns: 1fr; }
+            .points { grid-template-columns: 1fr; gap: 24px; }
+            .price-cols { grid-template-columns: 1fr; gap: 28px; }
+        }
+
+        /* ── 2026-09-19 すり合わせ ── */
+        /* 課題: 図つきカード */
+        .problem-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; border-top: none; }
+        .problem { padding: 0; border: none; background: #fff; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; }
+        .problem + .problem { padding-left: 0; border-left: none; }
+        .problem-fig { background: #fff6ec; }
+        .problem-fig img { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .problem-body { padding: 22px 24px 26px; }
+        .problem-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 10px; }
+        .problem-desc { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        .problem-close { margin-top: 32px; font-size: 17px; line-height: 2; max-width: 860px; }
+
+        /* 構築サービス: 縦4つ、左右交互 */
+        .cases { display: flex; flex-direction: column; gap: 28px; }
+        .case { display: grid; grid-template-columns: 1fr 1.05fr; gap: 40px; align-items: center; background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+        .case:nth-child(even) .case-visual { order: -1; }
+        .case-tag { display: inline-block; font-size: 12px; font-weight: 700; color: #fff; background: var(--color-secondary); border-radius: 4px; padding: 4px 10px; margin-bottom: 12px; }
+        .case-title { font-size: 23px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; margin-bottom: 12px; }
+        .case-desc { font-size: 15.5px; color: var(--color-text-light); line-height: 1.95; }
+
+        /* 仕組み: 図つき */
+        .bento-item .ph, .bento-item .shot { margin-top: auto; }
+        .diagram { width: 100%; height: auto; display: block; }
+
+        /* 進め方: 横帯の階段 */
+        .steps { display: flex; flex-direction: column; gap: 0; border-left: 2px solid #f0d6b8; margin-left: 18px; }
+        .step { position: static; display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; background: transparent; border: none; border-radius: 0; padding: 30px 0 30px 42px; }
+        .step-main { position: relative; }
+        .step + .step { border-top: 1px solid #ececec; }
+        .step::after { display: none; }
+        .step-num { position: absolute; left: -61px; top: 30px; width: 38px; height: 38px; border-radius: 50%; background: var(--color-secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; padding: 0; }
+        .step { position: relative; }
+        .step-visual:empty { display: none; }
+        .step-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+        .step-tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--color-primary-deep); background: #fff1e3; border-radius: 4px; padding: 3px 10px; margin-bottom: 8px; }
+        .step-desc { font-size: 15px; color: var(--color-text-light); line-height: 1.95; }
+        .step .ph { min-height: 118px; }
+
+        /* nitoについて: 代表を主役に */
+        .about-wrap { grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+        .about-photo { text-align: center; }
+        .about-photo img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
+        .about-photo-name { margin-top: 18px; font-size: 21px; font-weight: 700; font-family: var(--font-heading-jp); }
+        .about-photo-role { font-size: 13px; color: var(--color-text-light); margin-top: 4px; }
+        .about-body p { font-size: 17px; line-height: 2.05; }
+        .about-bio { font-size: 14px; color: var(--color-text-light); line-height: 1.9; border-top: 1px solid #e5e5e5; padding-top: 16px; margin-top: 20px; }
+        .about-bio a { color: var(--color-primary-deep); }
+
+        /* 費用: 2枚のカード */
+        .price-cols { grid-template-columns: 1fr 1fr; gap: 24px; }
+        .price-col { border-top: none; background: #fff; border-radius: 16px; padding: 34px 36px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+        .price-kind { display: inline-block; font-size: 12px; font-weight: 700; color: #fff; background: var(--color-text); border-radius: 4px; padding: 4px 12px; margin-bottom: 14px; }
+        .price-title { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        .price-sub { font-size: 14.5px; color: var(--color-text-light); margin-bottom: 20px; }
+        .price-list li { font-size: 15px; padding-left: 26px; }
+        .price-list li::before { width: 16px; height: 16px; border-radius: 4px; background: #fff1e3; top: 8px; }
+        .price-list li::after { content: "✓"; position: absolute; left: 3px; top: 3px; font-size: 11px; font-weight: 700; color: var(--color-primary-deep); }
+
+        @media (max-width: 900px) {
+            .problem-list { grid-template-columns: 1fr; }
+            .case { grid-template-columns: 1fr; gap: 20px; padding: 22px; }
+            .case:nth-child(even) .case-visual { order: 0; }
+            .step { grid-template-columns: 1fr; gap: 14px; padding: 24px 0 24px 34px; }
+            .step-num { left: -52px; top: 24px; width: 32px; height: 32px; font-size: 13px; }
+            .about-wrap { grid-template-columns: 1fr !important; gap: 28px; }
+            .price-cols { grid-template-columns: 1fr; }
+        }
+
+        /* ── 2026-09-19 3周目 ── */
+        /* FV: kintone 型（ブランド色の薄いベタ＋強い色の図形）。グラデーションをやめる */
+        .hero { background: #fff3e0; }
+        .hero::before { content: ""; position: absolute; left: -180px; top: -260px; width: 620px; height: 620px; border-radius: 50%; background: #ffb454; opacity: .9; pointer-events: none; }
+        .hero::after { content: ""; position: absolute; right: -140px; bottom: -420px; width: 560px; height: 560px; border-radius: 50%; background: #ffd9a8; pointer-events: none; }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-title .grad { background: none; color: var(--color-secondary); -webkit-text-fill-color: initial; }
+        .slackmock { transform: rotate(0); }
+        /* 課題の締め: 文の切れ目で改行 */
+        .problem-close { max-width: none; font-size: 17px; }
+        .problem-close span { display: block; }
+        /* 進め方: 背景に大きな薄い番号、見出しを重ねる */
+        .steps { border-left: none; margin-left: 0; }
+        .step { grid-template-columns: 1.1fr 1fr; padding: 44px 0 44px 0; }
+        .step + .step { border-top: 1px solid #ececec; }
+        .step-num { position: absolute; left: -8px; top: 6px; width: auto; height: auto; border-radius: 0; background: none; color: #ffe7cc; font-family: var(--font-heading-en); font-size: 120px; font-weight: 800; line-height: 1; letter-spacing: -0.04em; z-index: 0; }
+        .step-main { position: relative; z-index: 1; padding-top: 44px; padding-left: 8px; }
+        .step-title { font-size: 24px; }
+        .step-visual { position: relative; z-index: 1; }
+        @media (max-width: 900px) { .step-num { font-size: 84px; left: 0; top: 0; } .step-main { padding-top: 30px; } .hero::before { width: 380px; height: 380px; left: -140px; top: -200px; } .hero::after { display: none; } }
+
+        /* ── 2026-09-19 4周目 ── */
+        .hero::before { left: auto; right: -160px; top: -300px; width: 640px; height: 640px; background: #ffb454; opacity: .85; }
+        .hero::after { left: -220px; right: auto; bottom: -440px; width: 560px; height: 560px; background: #ffd9a8; }
+        /* 課題: 線画ピクトグラム */
+        .problem-fig { background: #fff6ec; padding: 26px 0 18px; display: flex; justify-content: center; }
+        .problem-fig svg { width: 150px; height: 110px; }
+        .pict { fill: none; stroke: #e67e22; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+        .pict-soft { fill: none; stroke: #c9c9c9; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+        .pict-fill { fill: #e67e22; }
+        /* 仕組み: スライド型の図 */
+        .slide { background: #fff8f1; border-radius: 12px; padding: 22px 20px; margin-top: auto; }
+        .sl-row { display: flex; align-items: stretch; justify-content: center; gap: 8px; flex-wrap: nowrap; }
+        .sl-row .sl-box { min-width: 0; flex: 1; padding: 10px 8px; font-size: 12.5px; }
+        .sl-row .sl-box small { font-size: 10.5px; }
+        .sl-row .sl-arrow { align-self: center; flex: none; }
+        .sl-col { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+        .sl-box { background: #fff; border: 1.5px solid #e8c9a3; border-radius: 8px; padding: 10px 14px; font-size: 13px; font-weight: 700; color: #1a1a1a; text-align: center; line-height: 1.5; min-width: 92px; }
+        .sl-box small { display: block; font-size: 11px; font-weight: 400; color: #888; margin-top: 2px; }
+        .sl-box.on { background: var(--color-secondary); border-color: var(--color-secondary); color: #fff; }
+        .sl-box.on small { color: #ffe3c6; }
+        .sl-box.off { background: #f3f3f3; border-color: #ddd; color: #888; }
+        .sl-arrow { color: #e67e22; font-size: 18px; font-weight: 700; line-height: 1; }
+        .sl-line { width: 2px; height: 22px; background: #e8c9a3; }
+        .sl-note { font-size: 11.5px; color: #b9773a; text-align: center; margin-top: 12px; }
+        .sl-hub { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; }
+        .sl-hub .sl-col .sl-box { min-width: 120px; }
+        .sl-time { display: flex; align-items: flex-end; justify-content: space-between; gap: 6px; padding: 8px 6px 0; border-bottom: 2px solid #e8c9a3; }
+        .sl-tick { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 11px; color: #888; }
+        .sl-tick b { font-size: 12px; color: #1a1a1a; }
+        .sl-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--color-secondary); margin-bottom: -7px; }
+        .sl-dot.s { width: 8px; height: 8px; background: #e6b27a; margin-bottom: -5px; }
+        /* 進め方: 番号を左の列に */
+        .step { grid-template-columns: 72px 1fr 1fr; gap: 28px; padding: 36px 0; align-items: start; }
+        .step-main { padding-top: 6px; }
+        .step-num { position: static; font-size: 40px; color: var(--color-secondary); line-height: 1; align-self: start; padding-top: 4px; }
+        .step-main { padding-top: 0; padding-left: 0; }
+        @media (max-width: 900px) { .step { grid-template-columns: 56px 1fr; } .step-visual { grid-column: 2; } .step-num { font-size: 32px; } .hero::before { right: -300px; top: -330px; width: 460px; height: 460px; } .hero { padding-top: 140px; } }
+
+        /* ── 構築サービスのモック（実物風。架空データ） ── */
+        .mock { background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(120,60,0,0.10), 0 1px 4px rgba(0,0,0,0.06); overflow: hidden; font-family: var(--font-body); }
+        .mock .slackmock-head { font-size: 12.5px; padding: 10px 16px; }
+        .mock .slackmock-body { padding: 12px 16px 14px; gap: 12px; }
+        .mock .msg-text { font-size: 13px; }
+        .mock .msg-card { font-size: 12px; }
+        .mock-doc { padding: 18px 20px; }
+        .mock-doc-title { font-size: 13px; font-weight: 700; color: #1a1a1a; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 10px; display: flex; justify-content: space-between; }
+        .mock-doc-title span { font-weight: 400; color: #999; font-size: 11.5px; }
+        .mock-doc h5 { font-size: 12.5px; font-weight: 700; color: var(--color-primary-deep); margin: 10px 0 4px; }
+        .mock-doc ul { list-style: none; }
+        .mock-doc li { font-size: 12.5px; line-height: 1.7; color: #333; padding-left: 14px; position: relative; }
+        .mock-doc li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: #e6b27a; }
+        .mock-doc li.todo::before { background: var(--color-secondary); }
+        .mock-term { background: #1e1e22; color: #d6d6dc; padding: 14px 16px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; line-height: 1.8; }
+        .mock-term .t { color: #8a8a94; }
+        .mock-term .ok { color: #7dd3a0; }
+        .mock-term .ai { color: #ffb454; }
+        .mock-term .head { color: #fff; font-weight: 700; margin-bottom: 4px; }
+        @media (max-width: 768px) { .mock-term { font-size: 11px; } }
+
+        /* 進め方のモック */
+        .mock-sheet { padding: 0; }
+        .mock-sheet table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        .mock-sheet th, .mock-sheet td { border-bottom: 1px solid #eee; padding: 8px 10px; text-align: left; white-space: nowrap; }
+        .mock-sheet th { background: #f7f7f7; color: #666; font-weight: 700; font-size: 11.5px; }
+        .mock-sheet td.n { text-align: right; font-variant-numeric: tabular-nums; }
+        .mock-sheet tr.pick td { background: #fff4e6; }
+        .mock-sheet .tag { display: inline-block; font-size: 10.5px; font-weight: 700; color: #fff; background: var(--color-secondary); border-radius: 3px; padding: 2px 6px; }
+        .mock-sheet-title { font-size: 12px; font-weight: 700; padding: 10px 12px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+        .mock-sheet-title span { font-weight: 400; color: #999; font-size: 11px; }
+        .mock-rev { padding: 16px 18px; }
+        .mock-rev-title { font-size: 12.5px; font-weight: 700; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 12px; display: flex; justify-content: space-between; }
+        .mock-rev-title span { font-weight: 400; color: #999; font-size: 11px; }
+        .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+        .kpi { background: #f7f7f7; border-radius: 8px; padding: 10px 12px; }
+        .kpi b { display: block; font-size: 20px; line-height: 1.1; color: #1a1a1a; }
+        .kpi small { font-size: 10.5px; color: #888; }
+        .kpi.on { background: #fff4e6; } .kpi.on b { color: var(--color-primary-deep); }
+        .mock-rev h5 { font-size: 12px; font-weight: 700; color: var(--color-primary-deep); margin: 8px 0 4px; }
+        .mock-rev li { font-size: 12px; line-height: 1.7; color: #333; list-style: none; padding-left: 12px; position: relative; }
+        .mock-rev li::before { content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: #e6b27a; }
+
+        /* ── 2026-09-20 稜生さんの修正版から2点を取り込み ── */
+        /* 課題: unDraw のイラスト（オープンライセンス・商用可・帰属表示不要。色は nito のオレンジ） */
+        .problem-fig { background: #fff6ec; padding: 22px 26px 14px; display: flex; align-items: flex-end; justify-content: center; height: 200px; }
+        .problem-fig svg.illu { width: 100%; height: 100%; max-width: 250px; }
+        /* 費用: チェックマークをやめて罫線区切り */
+        .price-list { gap: 0; border-top: 1px solid #ededed; }
+        .price-list li { padding: 12px 0; padding-left: 0; border-bottom: 1px solid #ededed; font-size: 15px; line-height: 1.75; }
+        .price-list li::before, .price-list li::after { content: none; display: none; }
+    
+        /* ── 2026-09-25 /llmo/ 作り直し（/ai-agent/ の部品に AI 回答モックを足す） ── */
+        .hero-kicker { font-size: 14px; font-weight: 700; color: var(--color-primary-deep); margin-bottom: 14px; }
+        .hero-do span { display: block; }
+        .hero-visual { padding-bottom: 96px; }
+        .aimock { background: #fff; border-radius: 14px; box-shadow: 0 24px 60px rgba(120,60,0,0.14), 0 1px 4px rgba(0,0,0,0.06); overflow: hidden; }
+        .aimock-head { display: flex; align-items: center; gap: 10px; font-size: 12px; color: #888; padding: 10px 16px; border-bottom: 1px solid #f0f0f0; background: #fcfcfc; }
+        .aimock-head .dots { display: inline-flex; gap: 5px; }
+        .aimock-head .dots i { width: 8px; height: 8px; border-radius: 50%; background: #e3e3e3; display: block; }
+        .aimock-body { padding: 18px 20px 20px; }
+        .aq { margin-left: auto; max-width: 86%; width: fit-content; background: #f2f2f2; border-radius: 16px; padding: 10px 14px; font-size: 13.5px; line-height: 1.7; margin-bottom: 14px; }
+        .aa { font-size: 13.5px; line-height: 1.8; margin-bottom: 10px; }
+        .alist { list-style: none; counter-reset: a; display: flex; flex-direction: column; gap: 8px; }
+        .alist li { counter-increment: a; position: relative; padding: 10px 12px 10px 38px; border-radius: 8px; font-size: 12.5px; line-height: 1.7; color: #444; }
+        .alist li::before { content: counter(a); position: absolute; left: 12px; top: 10px; width: 18px; height: 18px; border-radius: 50%; background: #eee; color: #666; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+        .alist li b { display: block; font-size: 13.5px; color: #1a1a1a; }
+        .alist li.hit { background: #fff4e6; box-shadow: inset 0 0 0 1.5px #ffb454; }
+        .alist li.hit::before { background: var(--color-secondary); color: #fff; }
+        .float-card { position: absolute; left: -32px; bottom: 0; background: #fff; border-radius: 12px; padding: 14px 18px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); min-width: 210px; }
+        .fc-label { font-size: 11.5px; color: #888; font-weight: 700; }
+        .fc-row { display: flex; align-items: baseline; gap: 8px; margin: 2px 0; }
+        .fc-before { font-size: 18px; font-weight: 700; color: #aaa; }
+        .fc-arrow { color: var(--color-primary-deep); font-weight: 700; }
+        .fc-after { font-size: 30px; font-weight: 800; color: var(--color-primary-deep); font-family: var(--font-heading-en); line-height: 1.1; }
+        .fc-note { font-size: 11px; color: #999; }
+
+        /* 課題: 回答画面の断片 */
+        .problem-fig .mini { width: 100%; max-width: 250px; align-self: center; background: #fff; border-radius: 10px; box-shadow: 0 6px 18px rgba(120,60,0,0.10); padding: 12px 14px; font-size: 12px; line-height: 1.6; }
+        .mini-q { margin-left: auto; width: fit-content; background: #f2f2f2; border-radius: 12px; padding: 4px 10px; font-size: 11.5px; margin-bottom: 8px; }
+        .mini-row { padding: 5px 8px; border-radius: 6px; color: #444; }
+        .mini-row small { display: block; font-size: 10.5px; color: #888; }
+        .mini-row.empty { border: 1.5px dashed #f0b27a; color: var(--color-primary-deep); font-weight: 700; text-align: center; margin-top: 4px; }
+        .mini-row.strong { background: #f5f5f5; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+        .mini-text { color: #444; margin: 4px 0 8px; }
+        .mini-text .old { background: #fff1e3; color: var(--color-primary-deep); font-weight: 700; padding: 0 3px; border-radius: 3px; }
+        .mini-chip { display: inline-block; font-size: 10.5px; font-weight: 700; color: #fff; background: var(--color-secondary); border-radius: 4px; padding: 2px 8px; }
+
+        /* 仕組み: 4段の図 */
+        .mech { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; position: relative; }
+        .mech-col { position: relative; display: flex; flex-direction: column; gap: 12px; }
+        .mech-col + .mech-col::before { content: "→"; position: absolute; left: -27px; top: 104px; color: var(--color-primary-deep); font-size: 20px; font-weight: 700; }
+        .mech-step { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; font-family: var(--font-heading-jp); }
+        .mech-step span { width: 28px; height: 28px; border-radius: 50%; background: #fff1e3; color: var(--color-primary-deep); font-size: 13px; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading-en); }
+        .mech-step.on span { background: var(--color-secondary); color: #fff; }
+        .mech-box { background: #fff8f1; border-radius: 12px; padding: 18px 16px; min-height: 150px; display: flex; align-items: center; justify-content: center; }
+        .mech-q { background: #fff; border-radius: 14px; padding: 10px 12px; font-size: 13px; line-height: 1.7; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .chips { display: flex; flex-direction: column; gap: 6px; width: 100%; }
+        .chips span { background: #fff; border: 1.5px solid #e8c9a3; border-radius: 999px; padding: 4px 12px; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .pages { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; }
+        .pg { background: #fff; border: 1.5px solid #e8c9a3; border-radius: 6px; padding: 8px 6px 6px; font-size: 11.5px; text-align: center; color: #666; }
+        .pg i { display: block; height: 18px; margin: 0 auto 4px; width: 80%; background: repeating-linear-gradient(#eee 0 3px, transparent 3px 7px); }
+        .pg.on { border-color: var(--color-secondary); color: var(--color-primary-deep); font-weight: 700; box-shadow: 0 0 0 3px #ffe3c6; }
+        .pg.on i { background: repeating-linear-gradient(#ffc987 0 3px, transparent 3px 7px); }
+        .mech-a { background: #fff; border-radius: 10px; padding: 12px 14px; font-size: 12px; line-height: 1.7; color: #555; box-shadow: inset 0 0 0 1.5px #ffb454; }
+        .mech-a b { display: block; font-size: 13.5px; color: #1a1a1a; }
+        .mech-cap { font-size: 13.5px; color: var(--color-text-light); line-height: 1.8; }
+        .mech-conclusion { margin-top: 44px; font-size: 20px; font-weight: 700; line-height: 1.9; font-family: var(--font-heading-jp); }
+        .mech-conclusion em { font-style: normal; color: var(--color-primary-deep); }
+
+        /* 進め方のモック（/llmo/ 用） */
+        .mock-sheet td.no { color: #bbb; }
+        .mock-sheet tr.pick td.no { color: var(--color-primary-deep); font-weight: 700; }
+        .mock-sheet td { white-space: normal; }
+                .trend { width: 100%; height: auto; display: block; margin: 4px 0 10px; }
+        #flow .step { background: transparent; }
+
+        /* 導入事例: 2枚 */
+        .rcases { display: grid; grid-template-columns: 1.25fr 1fr; gap: 24px; }
+        .rcase { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
+        .rcase .case-tag { align-self: flex-start; }
+        .rcase-head { font-size: 20px; font-weight: 700; line-height: 1.7; font-family: var(--font-heading-jp); margin-bottom: 24px; }
+        .rcase-head em { font-style: normal; color: var(--color-primary-deep); }
+        .bars { display: flex; gap: 28px; margin-bottom: 20px; }
+        .bar-group { flex: 1; }
+        .bar-label { font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+        .bar-pair { display: flex; align-items: flex-end; gap: 16px; height: 170px; border-bottom: 1.5px solid #e5e5e5; }
+        .bar-col { flex: 1; max-width: 80px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative; }
+        .bar-col b { font-size: 15px; color: #999; margin-bottom: 4px; }
+        .bar-col b.on { color: var(--color-primary-deep); font-size: 20px; }
+        .bar { width: 100%; border-radius: 6px 6px 0 0; max-height: calc(100% - 30px); }
+        .bar.b0 { background: #e6e6e6; }
+        .bar.b1 { background: var(--color-secondary); }
+        .bar-col small { position: absolute; bottom: -24px; font-size: 11.5px; color: #888; white-space: nowrap; }
+        .rcase-desc { margin-top: 26px; font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; }
+        .rcase-note { margin-top: 18px; font-size: 12.5px; color: #aaa; line-height: 1.9; }
+
+        /* 費用: 1枚 */
+        .price-one { display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: center; background: #fff; border-radius: 16px; padding: 34px 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .price-big { font-family: var(--font-heading-en); font-size: 64px; font-weight: 800; line-height: 1; color: var(--color-text); }
+        .price-big small { font-family: var(--font-heading-jp); font-size: 20px; font-weight: 700; margin-left: 6px; }
+
+        .step > * { min-width: 0; }
+        .mock-sheet table { table-layout: fixed; }
+        .mock-sheet td:first-child, .mock-sheet th:first-child { width: 44%; }
+        @media (max-width: 1000px) {
+            .mech { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+            .mech-col:nth-child(3)::before { display: none; }
+        }
+        @media (max-width: 900px) {
+            .rcases { grid-template-columns: 1fr; }
+            .price-one { grid-template-columns: 1fr; gap: 20px; padding: 28px 24px; }
+            .float-card { position: static; margin-top: -18px; margin-left: 16px; width: fit-content; }
+            .hero-visual { padding-bottom: 0; }
+        }
+        @media (max-width: 600px) {
+            .mech { grid-template-columns: 1fr; }
+            .mech-col + .mech-col::before { content: "↓"; left: 50%; top: -30px; }
+            .mech-col:nth-child(3)::before { display: block; }
+            .mech-box { min-height: 0; }
+            .mech-conclusion { font-size: 17px; }
+            .bars { gap: 16px; }
+            .rcase { padding: 24px 20px; }
+            .rcase-head { font-size: 17px; }
+            .mock-sheet table { font-size: 11px; }
+            .mock-sheet td:first-child { min-width: 0; }
+            .mock-sheet th, .mock-sheet td { padding: 7px 6px; }
+            .step-visual { grid-column: 1 / -1 !important; }
+            .bar-label { min-height: 3.4em; }
+        }
     </style>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現状分析レポートには何が載っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "1ヶ月ほどで、狙った質問に名前が挙がり始めた例があります。事業や競合の状況で差があるため、2〜4ヶ月を目安にしています。"}}, {"@type": "Question", "name": "どのAIに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。"}}, {"@type": "Question", "name": "AI検索対策はSEOと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。"}}, {"@type": "Question", "name": "どんな会社に向いていますか？", "acceptedAnswer": {"@type": "Answer", "text": "BtoB・SaaS・金融・士業など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月20万円からです。狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。"}}]}</script>
+
 </head>
 
 <body>
-
     <!-- Header -->
-    <div class="header-wrapper ani-show-up">
+    <div class="header-wrapper">
         <header>
             <a href="https://nito-0210.com" class="logo"><img src="/nito-logo-black.png" alt="nito"></a>
             <nav class="nav-links">
@@ -808,7 +1509,6 @@
             </div>
         </header>
     </div>
-
     <div class="nav-overlay-backdrop" id="nav-overlay-backdrop"></div>
     <div class="nav-overlay" id="nav-overlay">
         <div class="nav-close" id="nav-close"></div>
@@ -816,180 +1516,342 @@
             <a href="https://nito-0210.com/contact.html" class="btn-fill">相談する</a>
         </div>
         <a href="https://nito-0210.com" class="nav-overlay-item">会社情報</a>
-        <a href="https://nito-0210.com/media/" class="nav-overlay-item">お知らせ</a>
+        <a href="https://nito-0210.com/llmo/" class="nav-overlay-item">AI検索対策</a>
+        <a href="https://nito-0210.com/media/" class="nav-overlay-item">コラム</a>
     </div>
 
     <!-- Hero -->
-    <section class="hero ani-fade-bottom">
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="container">
-            <span class="hero-label">月20万円から始められるAI検索対策</span>
-            <h1 class="hero-title">nito <span>LLMO</span>対策</h1>
-            <p class="hero-sub" style="margin-bottom:26px">ChatGPT・GeminiなどのAI回答を毎日モニタリング。<br>AIの言及率を上げる記事制作・運用まで 実行支援します。</p>
-            <div class="hero-cta">
-                <a href="https://nito-0210.com/contact.html" class="btn-fill-lg">相談する</a>
+        <section class="hero">
+        <div class="container hero-wrap" style="display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center">
+            <div>
+                <p class="hero-kicker">AI検索対策（LLMO）・月20万円から</p>
+                <h1 class="hero-title"><span class="line"><span class="grad">AIのおすすめに</span></span><span class="line">名前が挙がる会社へ</span></h1>
+                <p class="hero-do"><span>ChatGPT・Gemini・AIモードの回答を毎日計測。</span><span>名前が挙がらない理由を読み解き、ページの制作と改善まで実行。</span></p>
+                <div class="hero-btns">
+                    <a href="https://nito-0210.com/contact.html" class="btn-primary">無料で現状分析レポートを申し込む</a>
+                    <a href="#flow" class="btn-text">進め方を見る</a>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Intro -->
-    <section class="section-intro">
-        <div class="container">
-            <div class="intro-inner ani-fade-bottom">
-                <h2 class="intro-heading">AIをハックするのではなく、<br>事業そのものに向き合う。</h2>
-                <p class="intro-lead">AIはハックできるほど単純ではありません。</p>
-                <div class="intro-body">
-                    <p>ユーザーの質問意図や背景を理解し、<br>膨大な情報を比較検討し、最適なものを推奨する。<br>まるで全ての領域に精通した1人の人間のように考えます。</p>
-                    <p>だからこそ私たちは、AIではなく事業そのものに向き合います。<br>その事業の強みは何か。どんな文脈で、どのような価値になるのか。</p>
-                    <p>この言語化と常に向き合いながら、適切な形で情報を発信することが、<br>AI時代に選ばれるブランドの必須条件だと考えています。</p>
+            <div class="hero-visual">
+                <div class="aimock" aria-label="AIの回答画面のイメージ">
+                    <div class="aimock-head"><span class="dots"><i></i><i></i><i></i></span>AIの回答（イメージ）</div>
+                    <div class="aimock-body">
+                        <div class="aq">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+                        <p class="aa">条件に合いそうなのは次の3つです。</p>
+                        <ol class="alist">
+                            <li class="hit"><b>A社の勤怠クラウド</b><span>シフト制と固定勤務が混ざる会社でも使いやすく、人数別の料金が公開されていて比べやすい。</span></li>
+                            <li><b>B勤怠</b><span>機能が多く、拠点が多い会社向け。</span></li>
+                            <li><b>Cタイム</b><span>無料プランから試せる。</span></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="float-card">
+                    <div class="fc-label">狙った質問での言及率</div>
+                    <div class="fc-row"><span class="fc-before">10%</span><span class="fc-arrow">→</span><span class="fc-after">45%</span></div>
+                    <div class="fc-note">取り組み3ヶ月（SaaS企業）</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Feature -->
-    <section class="section-feature">
+    <!-- Problem -->
+    <section class="section section--gray">
         <div class="container">
-            <div class="ani-fade-bottom">
-                <div class="section-label">Feature</div>
-                <h2 class="section-title">特徴</h2>
+            <div class="section-head">
+                <h2 class="section-title">よくあるAI検索の課題</h2>
             </div>
-            <div class="feature-list">
-                <div class="feature-card ani-slide-left">
-                    <div>
-                        <div class="feature-card-header">
-                            <span class="feature-num">01</span>
-                            <h3 class="feature-card-title">本当に効く施策を、ピンポイントで</h3>
-                        </div>
-                        <p class="feature-card-desc">私たちが見てきたのは、AIでの言及率だけではありません。AI経由で実際に問い合わせ・購入に至った方と、そのとき打っていた施策との関係を、毎日の計測で追ってきました。だから「言及率は上がるが売上につながらない施策」と「最後の問い合わせ・購入まで効く施策」を切り分けられます。効く施策に絞るから、実行支援まで含めてこの価格でできます。</p>
+            <div class="problem-list">
+                <div class="problem">
+                    <div class="problem-fig"><div class="mini">
+                        <div class="mini-q">〇〇のおすすめは？</div>
+                        <div class="mini-row">1. B社</div>
+                        <div class="mini-row">2. C社</div>
+                        <div class="mini-row">3. D社</div>
+                        <div class="mini-row empty">自社の名前はない</div>
+                    </div></div>
+                    <div class="problem-body">
+                        <h3 class="problem-title">AIに聞いても名前が挙がらない</h3>
+                        <p class="problem-desc">「〇〇のおすすめは？」とAIに聞いても、自社が出てこない。検索の順位が高くても、AIの答えには入っていないことがある。</p>
                     </div>
-                    <div class="feature-img"><img src="img/feature-01.jpg" alt="深い事業理解と戦略策定" loading="lazy"></div>
                 </div>
-                <div class="feature-card feature-card--reverse ani-slide-right">
-                    <div>
-                        <div class="feature-card-header">
-                            <span class="feature-num">02</span>
-                            <h3 class="feature-card-title">提案で終わらせず、実行まで</h3>
-                        </div>
-                        <p class="feature-card-desc">戦略設計だけで終わらせません。記事制作、外部メディアへの掲載、モニタリングまでを一気通貫で自ら実行します。戦略の意図は施策の細部に宿るからこそ、施策リストを渡して終わりにせず、まるで社内の担当者のように推進します。</p>
+                <div class="problem">
+                    <div class="problem-fig"><div class="mini">
+                        <div class="mini-q">A社の料金は？</div>
+                        <div class="mini-text">A社の料金は<span class="old">月額980円から</span>です。</div>
+                        <div class="mini-chip">2年前の料金のまま</div>
+                    </div></div>
+                    <div class="problem-body">
+                        <h3 class="problem-title">挙がっても紹介のされ方が違う</h3>
+                        <p class="problem-desc">古い料金や、今はやっていないサービスのまま紹介される。強みが伝わらず、比べる候補から外れてしまう。</p>
                     </div>
-                    <div class="feature-img"><img src="img/feature-02.jpg" alt="実行までの推進力" loading="lazy"></div>
                 </div>
-                <div class="feature-card ani-slide-left">
-                    <div>
-                        <div class="feature-card-header">
-                            <span class="feature-num">03</span>
-                            <h3 class="feature-card-title">主要AIでの見え方を毎日計測</h3>
-                        </div>
-                        <p class="feature-card-desc">ChatGPT・Gemini・Perplexity・Google AI Modeでの言及や引用を、自社開発の計測基盤で定点観測。施策とAI回答の変化をセットで捉え、収益への影響まで見ながら、スピーディにPDCAを回して改善し続けます。</p>
+                <div class="problem">
+                    <div class="problem-fig"><div class="mini">
+                        <div class="mini-q">〇〇はどこがいい？</div>
+                        <div class="mini-row strong">B社<small>導入事例が多く、料金も明確</small></div>
+                        <div class="mini-row">A社<small>名前だけ</small></div>
+                    </div></div>
+                    <div class="problem-body">
+                        <h3 class="problem-title">競合だけがおすすめされる</h3>
+                        <p class="problem-desc">同じ業界の他社は理由つきでおすすめされ、自社は名前が出るだけ。問い合わせは理由を言われた会社に流れる。</p>
                     </div>
-                    <div class="feature-img"><img src="img/feature-03.jpg" alt="収益起点での効果測定" loading="lazy"></div>
+                </div>
+            </div>
+            <p class="problem-close"><span>どれも、検索の順位とは別のところで決まっています。</span><span>AIは質問を自分で調べ直し、見つけたページを読み比べて、おすすめする理由を言える会社を挙げるからです。</span></p>
+        </div>
+    </section>
+
+    <!-- Mechanism -->
+    <section class="section" id="mechanism">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">AIがおすすめを決めるまで</h2>
+            </div>
+            <div class="mech">
+                <div class="mech-col">
+                    <div class="mech-step"><span>1</span>質問を受ける</div>
+                    <div class="mech-box"><div class="mech-q">従業員50人の会社に合う勤怠管理は？</div></div>
+                    <p class="mech-cap">利用者は、条件を添えて相談する</p>
+                </div>
+                <div class="mech-col">
+                    <div class="mech-step"><span>2</span>検索語を作り直す</div>
+                    <div class="mech-box"><div class="chips"><span>勤怠管理 中小企業 比較</span><span>勤怠管理 料金</span><span>勤怠管理 シフト制 対応</span></div></div>
+                    <p class="mech-cap">1つの質問から、裏で複数の検索をかける</p>
+                </div>
+                <div class="mech-col">
+                    <div class="mech-step"><span>3</span>ページを読み比べる</div>
+                    <div class="mech-box"><div class="pages"><div class="pg"><i></i>公式サイト</div><div class="pg on"><i></i>料金ページ</div><div class="pg"><i></i>比較記事</div><div class="pg"><i></i>口コミ</div></div></div>
+                    <p class="mech-cap">理由に使える情報があるページを拾う</p>
+                </div>
+                <div class="mech-col">
+                    <div class="mech-step on"><span>4</span>理由つきで挙げる</div>
+                    <div class="mech-box"><div class="mech-a"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div></div>
+                    <p class="mech-cap">理由を言える会社が、答えに残る</p>
+                </div>
+            </div>
+            <p class="mech-conclusion">名前が挙がるかどうかは、<em>AIが調べ直した先に、理由として使える情報が自社のページにあるか</em>で決まります。</p>
+        </div>
+    </section>
+
+    <!-- Flow -->
+    <section class="section section--gray" id="flow">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">進め方</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <div class="step-main">
+                        <h3 class="step-title">現状分析</h3>
+                        <span class="step-tag">無料</span>
+                        <p class="step-desc">狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞き、名前が挙がるか、どう紹介されるか、代わりにどの会社が挙がっているかをまとめます。人が実際に見るアプリの画面で計測します。</p>
+                    </div>
+                    <div class="step-visual"><div class="mock mock-sheet">
+                        <div class="mock-sheet-title">現状分析レポート（例） <span>質問ごとの結果</span></div>
+                        <table>
+                            <tr><th>質問</th><th>ChatGPT</th><th>Gemini</th><th>AIモード</th></tr>
+                            <tr><td>勤怠管理 おすすめ 中小企業</td><td class="no">なし</td><td class="no">なし</td><td>3番目</td></tr>
+                            <tr><td>シフト制に強い勤怠管理</td><td class="no">なし</td><td>1番目</td><td class="no">なし</td></tr>
+                            <tr><td>勤怠管理の乗り換えで注意すること</td><td class="no">なし</td><td class="no">なし</td><td class="no">なし</td></tr>
+                            <tr><td>勤怠管理 料金 比較</td><td>2番目</td><td class="no">なし</td><td class="no">なし</td></tr>
+                        </table>
+                    </div></div>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <div class="step-main">
+                        <h3 class="step-title">挙がらない理由を読む</h3>
+                        <p class="step-desc">AIの回答本文から、他社がおすすめされている理由を抜き出します。理由に使われている情報のうち、自社のページに無いものが、作るページの候補になります。</p>
+                    </div>
+                    <div class="step-visual"><div class="mock mock-sheet">
+                        <div class="mock-sheet-title">おすすめの理由（回答本文から） <span>自社に無いものが候補</span></div>
+                        <table>
+                            <tr><th>AIが挙げた理由</th><th>B社</th><th>C社</th><th>自社</th></tr>
+                            <tr class="pick"><td>人数別の料金を公開している</td><td>あり</td><td>あり</td><td class="no">なし</td></tr>
+                            <tr><td>シフト制に対応している</td><td>あり</td><td class="no">なし</td><td>あり</td></tr>
+                            <tr class="pick"><td>導入事例が載っている</td><td>あり</td><td>あり</td><td class="no">なし</td></tr>
+                            <tr><td>乗り換えの手順を説明している</td><td class="no">なし</td><td>あり</td><td class="no">なし</td></tr>
+                        </table>
+                    </div></div>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <div class="step-main">
+                        <h3 class="step-title">ページを作る・直す</h3>
+                        <p class="step-desc">足りない情報を載せたページを作ります。いまあるサービスページや記事も、AIが理由として拾える書き方に直します。</p>
+                    </div>
+                    <div class="step-visual"><div class="mock"><div class="mock-doc">
+                        <div class="mock-doc-title">料金ページ <span>追加する内容</span></div>
+                        <h5>追加する</h5>
+                        <ul><li class="todo">人数別の料金の目安（10人・50人・100人）</li><li class="todo">導入事例3社（業種・人数・使い方）</li><li class="todo">他社からの乗り換え手順と期間</li></ul>
+                        <h5>書き方を直す</h5>
+                        <ul><li>「シフト制対応」を見出しと表の両方に書く</li><li>古い料金の記載を消す</li></ul>
+                    </div></div></div>
+                </div>
+                <div class="step">
+                    <span class="step-num">04</span>
+                    <div class="step-main">
+                        <h3 class="step-title">毎日測って直す</h3>
+                        <span class="step-tag">毎日計測</span>
+                        <p class="step-desc">公開後の回答の変化を毎日追います。効いた変更は他のページにも広げ、効かなかったものは書き方を変えます。</p>
+                    </div>
+                    <div class="step-visual"><div class="mock mock-rev">
+                        <div class="mock-rev-title">言及率の推移（例） <span>狙った質問・ChatGPT</span></div>
+                        <svg class="trend" viewBox="0 0 320 120" role="img" aria-label="言及率が10%から45%に上がる推移のグラフ">
+                            <line x1="30" y1="100" x2="310" y2="100" stroke="#e5e5e5" stroke-width="1"/>
+                            <line x1="30" y1="60" x2="310" y2="60" stroke="#f1f1f1" stroke-width="1"/>
+                            <line x1="30" y1="20" x2="310" y2="20" stroke="#f1f1f1" stroke-width="1"/>
+                            <text x="24" y="104" text-anchor="end" font-size="9" fill="#999">0%</text>
+                            <text x="24" y="64" text-anchor="end" font-size="9" fill="#999">25%</text>
+                            <text x="24" y="24" text-anchor="end" font-size="9" fill="#999">50%</text>
+                            <line x1="118" y1="14" x2="118" y2="100" stroke="#e8c9a3" stroke-width="1" stroke-dasharray="3 3"/>
+                            <text x="122" y="14" font-size="9" fill="#b9773a">料金ページ公開</text>
+                            <polyline fill="none" stroke="#ff8c00" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="30,84 52,86 74,82 96,85 118,83 140,74 162,66 184,60 206,52 228,49 250,44 272,40 294,30 310,28"/>
+                            <circle cx="310" cy="28" r="4" fill="#ff8c00"/>
+                            <text x="306" y="18" text-anchor="end" font-size="11" font-weight="700" fill="#e67e22">45%</text>
+                            <text x="30" y="116" font-size="9" fill="#999">開始</text>
+                            <text x="310" y="116" text-anchor="end" font-size="9" fill="#999">3ヶ月後</text>
+                        </svg>
+                        <ul><li>料金ページの公開後から、回答に名前が挙がり始めた</li><li>次は導入事例のページを追加</li></ul>
+                    </div></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Case -->
-    <section class="section-case">
+    <section class="section" id="case">
         <div class="container">
-            <div class="ani-fade-bottom">
-                <div class="section-label">Case</div>
+            <div class="section-head">
                 <h2 class="section-title">導入事例</h2>
             </div>
-            <div class="case-card ani-fade-bottom">
-                <span class="case-tag">SaaS企業</span>
-                <h3 class="case-headline">取り組み3ヶ月で、AIでの言及率が<em>10% → 45%</em>に。<br>AI経由のコンバージョンは<em>3.8倍</em>に伸長。</h3>
-                <svg class="case-chart" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIでの言及率は10%から45%へ、AI経由のコンバージョンは3.8倍に改善">
-                    <defs>
-                        <linearGradient id="caseBar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="1" stop-color="#e67e22"/></linearGradient>
-                        <marker id="caseArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e67e22"/></marker>
-                    </defs>
-                    <line x1="360" y1="30" x2="360" y2="310" stroke="#eee" stroke-width="1"/>
-                    <text x="180" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#1a1a1a" font-family="'Noto Sans JP',sans-serif">AIでの言及率</text>
-                    <text x="180" y="52" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">取り組み3ヶ月</text>
-                    <text x="180" y="108" text-anchor="middle" font-size="42" font-weight="900" fill="#e67e22" font-family="'Noto Sans JP',sans-serif">4.5<tspan font-size="24">倍</tspan></text>
-                    <line x1="60" y1="290" x2="300" y2="290" stroke="#ddd" stroke-width="1.5"/>
-                    <rect x="98" y="261" width="70" height="29" fill="#dfe4e8" rx="2"/>
-                    <text x="133" y="251" text-anchor="middle" font-size="17" font-weight="700" fill="#666" font-family="'Noto Sans JP',sans-serif">10%</text>
-                    <text x="133" y="308" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">開始時</text>
-                    <rect x="212" y="160" width="70" height="130" fill="url(#caseBar)" rx="2"/>
-                    <text x="247" y="150" text-anchor="middle" font-size="19" font-weight="900" fill="#e67e22" font-family="'Noto Sans JP',sans-serif">45%</text>
-                    <text x="247" y="308" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">3ヶ月後</text>
-                    <line x1="152" y1="252" x2="228" y2="178" stroke="#e67e22" stroke-width="3" marker-end="url(#caseArrow)"/>
-                    <text x="540" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#1a1a1a" font-family="'Noto Sans JP',sans-serif">AI経由のコンバージョン</text>
-                    <text x="540" y="52" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">取り組み3ヶ月</text>
-                    <text x="540" y="108" text-anchor="middle" font-size="42" font-weight="900" fill="#e67e22" font-family="'Noto Sans JP',sans-serif">3.8<tspan font-size="24">倍</tspan></text>
-                    <line x1="420" y1="290" x2="660" y2="290" stroke="#ddd" stroke-width="1.5"/>
-                    <rect x="458" y="256" width="70" height="34" fill="#dfe4e8" rx="2"/>
-                    <text x="493" y="246" text-anchor="middle" font-size="17" font-weight="700" fill="#666" font-family="'Noto Sans JP',sans-serif">1.0</text>
-                    <text x="493" y="308" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">開始時</text>
-                    <rect x="572" y="160" width="70" height="130" fill="url(#caseBar)" rx="2"/>
-                    <text x="607" y="150" text-anchor="middle" font-size="19" font-weight="900" fill="#e67e22" font-family="'Noto Sans JP',sans-serif">3.8</text>
-                    <text x="607" y="308" text-anchor="middle" font-size="13" fill="#888" font-family="'Noto Sans JP',sans-serif">3ヶ月後</text>
-                    <line x1="512" y1="247" x2="588" y2="178" stroke="#e67e22" stroke-width="3" marker-end="url(#caseArrow)"/>
-                </svg>
-                <p class="case-desc">戦略設計から記事制作・外部掲載・モニタリングまでを一気通貫で実行。施策とAI回答の変化をセットで定点観測し、改善を回しました。</p>
-                <p class="case-note">※ AI経由のコンバージョンは、開始時を1.0とした相対値です<br>※ 成果は事業・体制・市場環境により異なります</p>
+            <div class="rcases">
+                <div class="rcase">
+                    <span class="case-tag">SaaS企業</span>
+                    <p class="rcase-head">取り組み3ヶ月で、AIでの言及率が<em>10%→45%</em>に。AI経由のコンバージョンは<em>3.8倍</em>に。</p>
+                    <div class="bars">
+                        <div class="bar-group">
+                            <div class="bar-label">AIでの言及率</div>
+                            <div class="bar-pair">
+                                <div class="bar-col"><b>10%</b><div class="bar b0" style="height:22%"></div><small>開始時</small></div>
+                                <div class="bar-col"><b class="on">45%</b><div class="bar b1" style="height:100%"></div><small>3ヶ月後</small></div>
+                            </div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar-label">AI経由のコンバージョン</div>
+                            <div class="bar-pair">
+                                <div class="bar-col"><b>1.0</b><div class="bar b0" style="height:26%"></div><small>開始時</small></div>
+                                <div class="bar-col"><b class="on">3.8</b><div class="bar b1" style="height:100%"></div><small>3ヶ月後</small></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="rcase-desc">狙う質問を決めて毎日計測し、おすすめの理由に使われる情報を記事とページに足していきました。</p>
+                </div>
+                <div class="rcase">
+                    <span class="case-tag">士業</span>
+                    <p class="rcase-head">取り組み1ヶ月で、AIでの言及率が<em>0%→20%</em>に。</p>
+                    <div class="bars">
+                        <div class="bar-group">
+                            <div class="bar-label">AIでの言及率</div>
+                            <div class="bar-pair">
+                                <div class="bar-col"><b>0%</b><div class="bar b0" style="height:3%"></div><small>開始時</small></div>
+                                <div class="bar-col"><b class="on">20%</b><div class="bar b1" style="height:44%"></div><small>1ヶ月後</small></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="rcase-desc">「地域名＋手続き名」で相談されたときに名前が挙がるよう、サービスページを作り直しました。</p>
+                </div>
+            </div>
+            <p class="rcase-note">※ AI経由のコンバージョンは、開始時を1.0とした相対値です　※ 成果は事業・体制・市場環境により異なります</p>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--gray" id="about">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">nitoについて</h2>
+            </div>
+            <div class="about-wrap">
+                <div class="about-photo">
+                    <img src="/profile_okamura.jpg" alt="代表 岡村希一">
+                    <div class="about-photo-name">岡村 希一</div>
+                    <div class="about-photo-role">nito 代表</div>
+                </div>
+                <div class="about-body">
+                    <p>nitoは自社の業務をAI中心で運営しています。AI検索の計測もその1つで、ChatGPT・Gemini・Perplexity・AIモードの回答を毎日記録し、どの変更で回答が変わったかを追っています。</p>
+                    <p>記事やページは作って終わりにしません。回答の変化を見ながら、名前が挙がるまで直し続けるところまで一緒に進めます。</p>
+                    <p class="about-bio">株式会社サイバーエージェントで広告の新規事業開発に携わりながら、新卒採用や育成部門での責任者も務めたのち、nitoを立ち上げ。<a href="https://nito-0210.com/#member">メンバー紹介</a></p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Price -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">費用</h2>
+            </div>
+            <div class="price-one">
+                <div class="price-one-left">
+                    <div class="price-kind">月額</div>
+                    <p class="price-big">20<small>万円から</small></p>
+                </div>
+                <ul class="price-list">
+                    <li>狙う質問の毎日の計測と、毎月のレポート</li>
+                    <li>おすすめの理由の分析と、作るページの設計</li>
+                    <li>ページ・記事の制作と、公開後の改善</li>
+                </ul>
+            </div>
+            <p class="price-note">金額は現状分析のあとに、狙う質問の数と制作する量を決めてから提示します。</p>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="section-cta" id="cta">
         <div class="container">
-            <a href="https://nito-0210.com/contact.html" class="cta-banner ani-fade-bottom">
+            <a href="https://nito-0210.com/contact.html" class="cta-banner">
                 <div class="cta-banner-text">
-                    <span class="cta-banner-label">相談する</span>
-                    <p class="cta-banner-title">まずは、事業の話を聞かせてください。</p>
+                    <span class="cta-banner-label">無料の現状分析レポート</span>
+                    <p class="cta-banner-title">狙いたい質問で、いまAIにどう紹介されているかをまとめます。</p>
                 </div>
                 <div class="cta-banner-arrow">→</div>
             </a>
         </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section-faq">
         <div class="container">
-            <div class="ani-fade-bottom">
-                <div class="section-label">FAQ</div>
+            <div class="">
                 <h2 class="section-title">よくある質問</h2>
             </div>
-            <div class="faq-list ani-fade-bottom">
+            <div class="faq-list">
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>効果が出るまでどのくらいかかりますか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">事業・業界・現状によって異なりますが、情報整備フェーズから着手した場合、AI検索での言及頻度に変化が現れるまで概ね2〜4ヶ月が目安です。ただし、LLMOは継続的な情報発信と改善の積み重ねが重要なため、中長期での取り組みを前提としています。</div>
-                    </div>
+                    <button class="faq-question"><span>現状分析レポートには何が載っていますか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>どのような企業が対象ですか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">LLMO対策の本質は、企業やサービスの価値を世間に正しく発信する基盤をつくることです。その意味では、業種・業界を問わず全ての企業が取り組む価値があります。<br><br>その中でも特に相性が良いのは、BtoB・SaaS・金融・士業など、意思決定に長い時間がかかったり、高度な専門知識が求められるサービスです。ユーザーが「選ぶ前にAIに相談する」という行動が起きやすい領域ほど、AI検索に選ばれることが直接的な競争優位につながります。</div>
-                    </div>
+                    <button class="faq-question"><span>効果が出るまでどのくらいかかりますか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">1ヶ月ほどで、狙った質問に名前が挙がり始めた例があります。事業や競合の状況で差があるため、2〜4ヶ月を目安にしています。</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>既存のSEO施策との違いは何ですか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">SEOは検索エンジンのランキングアルゴリズムに最適化するアプローチですが、LLMOはAIが「信頼できる情報源として認識する」ことを目指します。キーワード密度よりも、情報の正確性・一貫性・権威性が重視されます。既存のコンテンツ資産を活かしながら、AI時代に対応した形に再整備することも可能です。</div>
-                    </div>
+                    <button class="faq-question"><span>どのAIに対応していますか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>料金体系を教えてください</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">月20万円から（計測・改善設計）、記事制作と改善の実行まで含む場合は月35〜40万円からです。まずは無料診断で、いまのAIでの見え方を数字にします。</div>
-                    </div>
+                    <button class="faq-question"><span>AI検索対策はSEOと何が違いますか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>どんな会社に向いていますか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">BtoB・SaaS・金融・士業など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>費用はどのくらいかかりますか？</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">月20万円からです。狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。</div></div>
                 </div>
             </div>
         </div>
@@ -1038,7 +1900,7 @@
             });
         }, { threshold: 0.12 });
 
-        document.querySelectorAll('.ani-show-up, .ani-fade-bottom, .ani-slide-left, .ani-slide-right').forEach(el => observer.observe(el));
+        document.querySelectorAll('., ., ., .').forEach(el => observer.observe(el));
 
         window.addEventListener('load', () => {
             document.querySelector('.header-wrapper').classList.add('animated');
@@ -1064,6 +1926,12 @@
             if (navOverlay.classList.contains('active')) toggleMenu();
         }));
 
+        // Tabs
+        document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+            document.querySelectorAll('.tab').forEach(x => x.classList.remove('is-active'));
+            document.querySelectorAll('.panel').forEach(x => x.classList.remove('is-active'));
+            t.classList.add('is-active'); document.getElementById(t.dataset.tab).classList.add('is-active');
+        }));
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
