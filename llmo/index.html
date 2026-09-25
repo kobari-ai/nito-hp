@@ -1596,6 +1596,24 @@
         @media (max-width: 900px) { .board-row { grid-template-columns: 1fr; gap: 20px; } .vs-visual { height: 220px; } }
         .vs-visual { height: 300px; }
         .vs-col.on .vs-visual img { object-fit: cover; object-position: left top; }
+
+        /* 9/25 7周目: APIの収集の図 */
+        .apiflow { height: 100%; background: #fafafa; padding: 26px 18px 18px; display: flex; flex-direction: column; gap: 14px; }
+        .af-row { display: flex; align-items: center; gap: 6px; }
+        .af-row .sl-box { flex: 1; min-width: 0; padding: 10px 6px; font-size: 13px; }
+        .af-arrow { flex: none; color: #b0b0b0; font-weight: 700; font-size: 16px; text-align: center; line-height: 1.1; }
+        .af-arrow span { display: block; font-size: 10.5px; font-weight: 700; color: #999; }
+        .af-back { font-size: 12.5px; color: #777; text-align: center; background: #fff; border: 1.5px dashed #d6d6d6; border-radius: 8px; padding: 8px; }
+        .af-chat { margin-top: auto; display: flex; align-items: center; gap: 12px; opacity: .75; }
+        .af-chat-win { position: relative; width: 74px; height: 50px; border: 2px solid #cfcfcf; border-radius: 8px; background: #fff; padding: 8px 7px; display: flex; flex-direction: column; gap: 5px; }
+        .af-chat-win i { display: block; height: 4px; border-radius: 2px; background: #e3e3e3; }
+        .af-chat-win i:nth-child(2) { width: 70%; margin-left: auto; }
+        .af-chat-win::after { content: "×"; position: absolute; right: -10px; top: -12px; width: 22px; height: 22px; border-radius: 50%; background: #999; color: #fff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+        .af-chat p { font-size: 12.5px; color: #777; font-weight: 700; }
+        .vs-list b { font-weight: 700; }
+        .vs-col.on .vs-list b { color: var(--color-primary-deep); }
+        .apiflow { justify-content: center; gap: 18px; }
+        .af-chat { margin-top: 6px; justify-content: center; }
     </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現状分析レポートには何が載っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "新しいページが公開から3日でAIの回答の引用元に入った例や、3ヶ月で言及率が10%から45%に上がった例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "どのAIに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。"}}, {"@type": "Question", "name": "AI検索対策はSEOと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。"}}, {"@type": "Question", "name": "どんな会社に向いていますか？", "acceptedAnswer": {"@type": "Answer", "text": "BtoB・SaaS・金融など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。"}}]}</script>
 
@@ -1761,47 +1779,52 @@
         <div class="container">
             <div class="section-head">
                 <h2 class="section-title">nitoが選ばれる理由</h2>
-                <p class="measure-lead">nitoは実際のAIチャットの画面で回答を毎日計測しています。</p>
+                <p class="measure-lead">ChatGPTやGeminiなど、実際に使われるチャット画面で質問し、毎日計測しています。</p>
             </div>
             <div class="vs">
                 <div class="vs-col">
-                    <p class="vs-kind">APIで取得する計測</p>
-                    <p class="vs-sub">APIはプログラムからAIに質問するための開発者向けの窓口</p>
-                    <div class="vs-visual"><div class="mock-term api-term">
-                        <div class="head">プログラムからの質問と返答（イメージ）</div>
-                        <div><span class="t">POST</span> /v1/responses</div>
-                        <div>{ "input": "還元率の高いクレジットカードのおすすめは？" }</div>
-                        <div>&nbsp;</div>
-                        <div><span class="ok">200 OK</span></div>
-                        <div>{ "output_text": "候補は次のとおりです…",</div>
-                        <div>&nbsp;&nbsp;"sources": [ "site-a.example", "site-b.example" ] }</div>
+                    <p class="vs-kind">通常の計測ツール・支援会社の場合</p>
+                    <p class="vs-sub">API（ITツール用の窓口）を使って計測</p>
+                    <div class="vs-visual"><div class="apiflow" aria-label="APIを使った回答の収集の図">
+                        <div class="af-row">
+                            <div class="sl-box">計測ツール<small>プログラム</small></div>
+                            <div class="af-arrow"><span>質問</span>→</div>
+                            <div class="sl-box on">API<small>ITツール用の窓口</small></div>
+                            <div class="af-arrow">→</div>
+                            <div class="sl-box">AI</div>
+                        </div>
+                        <div class="af-back">← 文字の回答と出典の一覧だけが返る</div>
+                        <div class="af-chat">
+                            <div class="af-chat-win"><i></i><i></i><i></i></div>
+                            <p>利用者が見るチャット画面は通らない</p>
+                        </div>
                     </div></div>
                     <ul class="vs-list">
-                        <li>画面を通さずプログラムから質問する</li>
-                        <li>出典に出るサイトが画面とほとんど重ならない</li>
-                        <li>利用者が見ている答えとずれることがある</li>
+                        <li>チャット画面を通さずにプログラムで回答を収集</li>
+                        <li><b>メリット：</b>情報収集のシステムを作るのが簡単</li>
+                        <li><b>デメリット：</b>実際に利用者がみる回答と異なる可能性が高い</li>
                     </ul>
-                    <div class="measure-stat"><b>12.0<small>%</small></b><span>同じ質問でAPIと画面の出典が重なった割合（ChatGPT・平均）</span></div>
+                    <div class="measure-stat"><b>12.0<small>%</small></b><span>APIとチャットで同じ質問をした時、出典が重なる割合（ChatGPT・平均）</span></div>
                 </div>
                 <div class="vs-col on">
                     <p class="vs-kind">nitoの計測</p>
-                    <p class="vs-sub">ChatGPTの実際の回答画面</p>
+                    <p class="vs-sub">実際のチャット画面で回答を収集できるシステムを独自開発</p>
                     <div class="vs-visual"><img src="/llmo/img/chatgpt-answer.jpg" alt="ChatGPTの実際の回答画面。還元率の高いクレジットカードのおすすめを答えている" width="1330" height="1000"></div>
                     <ul class="vs-list">
                         <li>人が使うチャット画面に毎日質問する</li>
-                        <li>画面に出た回答と出典をそのまま記録する</li>
-                        <li>利用者が見ている答えのまま測る</li>
+                        <li><b>メリット：</b>実際の利用者が見ている回答のまま計測できる</li>
+                        <li><b>デメリット：</b>毎日集計するには大きな工数がかかる</li>
                     </ul>
                 </div>
             </div>
             <div class="board-row">
                 <div class="board-text">
-                    <p class="board-kind">毎日集計してボードに</p>
-                    <p>記録した回答と出典は毎日集計し、お客さまもボードで確認できます。</p>
+                    <p class="board-kind">毎日集計・結果はダッシュボードで可視化</p>
+                    <p>記録した回答と出典は毎日集計し、お客さまも専用のダッシュボードで確認できます。</p>
                 </div>
                 <figure class="measure-shot">
-                    <img src="/llmo/img/board-demo.jpg" alt="AI検索ボードの画面。言及率・平均順位・Top3率などを毎日表示する" width="1280" height="800">
-                    <figcaption>AI検索ボード（架空の歯科医院のデモ画面）</figcaption>
+                    <img src="/llmo/img/board-demo.jpg" alt="ダッシュボードの画面。言及率・平均順位・Top3率などを毎日表示する" width="1280" height="800">
+                    <figcaption>ダッシュボード（架空の歯科医院のデモ画面）</figcaption>
                 </figure>
             </div>
             <p class="src">出典: <a href="https://arxiv.org/abs/2609.18729" target="_blank" rel="noopener">Uberti-Bona Marin ほか「Auditing AI-Generated Product Recommendations」</a>（arXiv、2026年9月）</p>
