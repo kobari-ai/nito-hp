@@ -1581,6 +1581,21 @@
             .pipe-arrow { transform: rotate(90deg); padding: 0; text-align: center; }
             #measure .measure-lead { font-size: 18px; }
         }
+
+        /* 9/25 6周目: 対比に画像、ボードは別の行 */
+        .vs-sub { font-size: 13.5px; color: var(--color-text-light); margin: -6px 0 14px; }
+        .vs-visual { height: 280px; border-radius: 10px; overflow: hidden; margin-bottom: 16px; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+        .vs-visual img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+        .api-term { height: 100%; font-size: 11.5px; line-height: 1.9; word-break: break-all; }
+        .api-term .t { color: #ffb454; }
+        .vs { align-items: start; }
+        .board-row { display: grid; grid-template-columns: 0.8fr 1.4fr; gap: 40px; align-items: start; margin-top: 8px; }
+        .board-kind { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); color: var(--color-primary-deep); margin-bottom: 10px; }
+        .board-text p:not(.board-kind) { font-size: 16px; line-height: 2; }
+        .shift-stats { grid-template-rows: 1fr; }
+        @media (max-width: 900px) { .board-row { grid-template-columns: 1fr; gap: 20px; } .vs-visual { height: 220px; } }
+        .vs-visual { height: 300px; }
+        .vs-col.on .vs-visual img { object-fit: cover; object-position: left top; }
     </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現状分析レポートには何が載っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "新しいページが公開から3日でAIの回答の引用元に入った例や、3ヶ月で言及率が10%から45%に上がった例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "どのAIに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。"}}, {"@type": "Question", "name": "AI検索対策はSEOと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。"}}, {"@type": "Question", "name": "どんな会社に向いていますか？", "acceptedAnswer": {"@type": "Answer", "text": "BtoB・SaaS・金融など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。"}}]}</script>
 
@@ -1656,7 +1671,6 @@
                     <p class="shift-note">生成AIで調べる人は1年3か月で21.3%から52.3%に</p>
                 </div>
                 <div class="shift-stats">
-                    <div class="stat"><b>50.2<small>%</small></b><span>生成AIで調べる40代の割合（初めて5割超え）</span></div>
                     <div class="stat"><b>46.6<small>%</small></b><span>両方を使う人のうち検索の半分以上を生成AIに移した人</span></div>
                 </div>
             </div>
@@ -1752,6 +1766,16 @@
             <div class="vs">
                 <div class="vs-col">
                     <p class="vs-kind">APIで取得する計測</p>
+                    <p class="vs-sub">APIはプログラムからAIに質問する開発者向けの窓口</p>
+                    <div class="vs-visual"><div class="mock-term api-term">
+                        <div class="head">プログラムからの質問と返答（イメージ）</div>
+                        <div><span class="t">POST</span> /v1/responses</div>
+                        <div>{ "input": "従業員50人の会社に合う勤怠管理システムのおすすめは？" }</div>
+                        <div>&nbsp;</div>
+                        <div><span class="ok">200 OK</span></div>
+                        <div>{ "output_text": "候補は次のとおりです…",</div>
+                        <div>&nbsp;&nbsp;"sources": [ "site-a.example", "site-b.example" ] }</div>
+                    </div></div>
                     <ul class="vs-list">
                         <li>開発者向けの窓口から質問する</li>
                         <li>出典に出るサイトが画面とほとんど重ならない</li>
@@ -1761,6 +1785,8 @@
                 </div>
                 <div class="vs-col on">
                     <p class="vs-kind">nitoの計測</p>
+                    <p class="vs-sub">利用者が見るChatGPTなどの画面そのもの</p>
+                    <div class="vs-visual"><img src="/llmo/img/chatgpt-answer.jpg" alt="ChatGPTの実際の回答画面。勤怠管理システムのおすすめを表で答えている" width="1320" height="1000"></div>
                     <ul class="vs-list">
                         <li>人が使うチャット画面に毎日質問する</li>
                         <li>画面に出た回答と出典をそのまま記録する</li>
@@ -1768,26 +1794,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="pipe">
-                <div class="pipe-step">
-                    <p class="pipe-cap"><span>1</span>チャット画面の回答をそのまま記録</p>
-                    <div class="chatmock">
-                        <div class="chatmock-tabs"><span class="on">ChatGPT</span><span>Gemini</span><span>Perplexity</span><span>AIモード</span></div>
-                        <div class="aq">横浜で土日も診療している歯医者は？</div>
-                        <p class="aa">土日に診療している歯科医院を挙げます。</p>
-                        <ol class="alist"><li class="hit"><b>みなと歯科クリニック</b><span>土日診療。駅から徒歩3分</span></li><li><b>横浜ベイ歯科</b><span>日曜のみ診療</span></li></ol>
-                        <div class="chatmock-src">出典: minato-dental.example ほか2件</div>
-                        <div class="chatmock-rec">毎日記録</div>
-                    </div>
+            <div class="board-row">
+                <div class="board-text">
+                    <p class="board-kind">毎日集計してボードに</p>
+                    <p>記録した回答と出典は毎日集計し、お客さまもボードで同じ数字を見られる作りです。</p>
                 </div>
-                <div class="pipe-arrow">→</div>
-                <div class="pipe-step wide">
-                    <p class="pipe-cap"><span>2</span>回答と出典を集計してボードに</p>
-                    <figure class="measure-shot">
-                        <img src="/llmo/img/board-demo.jpg" alt="AI検索ボードの画面。言及率・平均順位・Top3率などを毎日表示する" width="1280" height="800">
-                        <figcaption>AI検索ボード（架空の歯科医院のデモ画面）</figcaption>
-                    </figure>
-                </div>
+                <figure class="measure-shot">
+                    <img src="/llmo/img/board-demo.jpg" alt="AI検索ボードの画面。言及率・平均順位・Top3率などを毎日表示する" width="1280" height="800">
+                    <figcaption>AI検索ボード（架空の歯科医院のデモ画面）</figcaption>
+                </figure>
             </div>
             <p class="src">出典: <a href="https://arxiv.org/abs/2609.18729" target="_blank" rel="noopener">Uberti-Bona Marin ほか「Auditing AI-Generated Product Recommendations」</a>（arXiv、2026年9月）</p>
         </div>
