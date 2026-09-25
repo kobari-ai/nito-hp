@@ -1614,6 +1614,29 @@
         .vs-col.on .vs-list b { color: var(--color-primary-deep); }
         .apiflow { justify-content: center; gap: 18px; }
         .af-chat { margin-top: 6px; justify-content: center; }
+
+        /* 9/25 8周目: 12.0% の見せ方、nitoの計測→ダッシュボードの矢印 */
+        .measure-stat.v2 { flex-direction: column; align-items: flex-start; gap: 4px; }
+        .measure-stat.v2 b { font-size: 52px; }
+        .measure-stat.v2 b em { font-style: normal; font-family: var(--font-heading-jp); font-size: 20px; margin-right: 6px; }
+        .measure-stat.v2 .note { font-size: 12px; color: #999; }
+        .vs { margin-bottom: 0; }
+        .vs-link { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; height: 80px; }
+        .board-row { grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 0; }
+        .vs-link-arrow { position: relative; }
+        .vs-link-arrow::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 12px; width: 3px; background: var(--color-secondary); transform: translateX(-50%); }
+        .vs-link-arrow::after { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); border-left: 9px solid transparent; border-right: 9px solid transparent; border-top: 14px solid var(--color-secondary); }
+        .vs-link-arrow span { position: absolute; left: calc(50% + 14px); top: 50%; transform: translateY(-50%); font-size: 13px; font-weight: 700; color: var(--color-primary-deep); white-space: nowrap; }
+        .board-text { padding-top: 20px; }
+        @media (max-width: 900px) {
+            .vs-link { grid-template-columns: 1fr; height: 70px; } .vs-link > div:first-child { display: none; }
+            .board-row { grid-template-columns: 1fr; }
+            .board-row .measure-shot { order: 2; } .board-text { padding-top: 0; }
+        }
+        .vs { align-items: stretch; }
+        .vs-col.on { display: flex; flex-direction: column; }
+        .vs-col.on .vs-visual { flex: 1; height: auto; min-height: 300px; }
+        .vs-col.on .vs-visual img { object-fit: contain; object-position: center top; }
     </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現状分析レポートには何が載っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "新しいページが公開から3日でAIの回答の引用元に入った例や、3ヶ月で言及率が10%から45%に上がった例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "どのAIに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。"}}, {"@type": "Question", "name": "AI検索対策はSEOと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。"}}, {"@type": "Question", "name": "どんな会社に向いていますか？", "acceptedAnswer": {"@type": "Answer", "text": "BtoB・SaaS・金融など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。"}}]}</script>
 
@@ -1700,7 +1723,7 @@
     <section class="section section--gray">
         <div class="container">
             <div class="section-head">
-                <h2 class="section-title">AI検索で起きていること</h2>
+                <h2 class="section-title">よくあるAI検索の課題</h2>
             </div>
             <div class="problem-list">
                 <div class="problem">
@@ -1784,7 +1807,7 @@
             <div class="vs">
                 <div class="vs-col">
                     <p class="vs-kind">通常の計測ツール・支援会社の場合</p>
-                    <p class="vs-sub">API（ITツール用の窓口）を使って計測</p>
+                    <p class="vs-sub">API（ITツール用の窓口）での計測が多く、実際の回答とは異なる可能性が高い</p>
                     <div class="vs-visual"><div class="apiflow" aria-label="APIを使った回答の収集の図">
                         <div class="af-row">
                             <div class="sl-box">計測ツール<small>プログラム</small></div>
@@ -1804,12 +1827,12 @@
                         <li><b>メリット：</b>情報収集のシステムを作るのが簡単</li>
                         <li><b>デメリット：</b>実際に利用者がみる回答と異なる可能性が高い</li>
                     </ul>
-                    <div class="measure-stat"><b>12.0<small>%</small></b><span>APIとチャットで同じ質問をした時、出典が重なる割合（ChatGPT・平均）</span></div>
+                    <div class="measure-stat v2"><span>APIとチャットで同じ質問をした時、出典が重なるのは</span><b><em>たった</em>12.0<small>%</small></b><span class="note">ChatGPT・平均</span></div>
                 </div>
                 <div class="vs-col on">
                     <p class="vs-kind">nitoの計測</p>
                     <p class="vs-sub">実際のチャット画面で回答を収集できるシステムを独自開発</p>
-                    <div class="vs-visual"><img src="/llmo/img/chatgpt-answer.jpg" alt="ChatGPTの実際の回答画面。還元率の高いクレジットカードのおすすめを答えている" width="1330" height="1000"></div>
+                    <div class="vs-visual"><img src="/llmo/img/chatgpt-answer.jpg" alt="ChatGPTの実際の回答画面。還元率の高いクレジットカードのおすすめを答えている" width="1330" height="1380"></div>
                     <ul class="vs-list">
                         <li>人が使うチャット画面に毎日質問する</li>
                         <li><b>メリット：</b>実際の利用者が見ている回答のまま計測できる</li>
@@ -1817,6 +1840,7 @@
                     </ul>
                 </div>
             </div>
+            <div class="vs-link" aria-hidden="true"><div></div><div class="vs-link-arrow"><span>回答を毎日集計して反映</span></div></div>
             <div class="board-row">
                 <div class="board-text">
                     <p class="board-kind">毎日集計・結果はダッシュボードで可視化</p>
