@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI検索対策（LLMO）｜AIのおすすめに名前が挙がる会社へ｜nito</title>
     <link rel="canonical" href="https://nito-0210.com/llmo/">
-    <meta name="description" content="ChatGPT・Gemini・AIモードなどの回答を毎日計測し、AIに名前が挙がらない理由を読み解いて、ページの制作と改善まで実行します。月20万円から。無料の現状分析レポートから始められます。">
+    <meta name="description" content="ChatGPT・Gemini・AIモードなどの回答を毎日計測し、AIに名前が挙がらない理由を読み解いて、ページの制作と改善まで実行します。無料の現状分析レポートから始められます。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
@@ -1374,7 +1374,7 @@
         /* ── 2026-09-25 /llmo/ 作り直し（/ai-agent/ の部品に AI 回答モックを足す） ── */
         .hero-kicker { font-size: 14px; font-weight: 700; color: var(--color-primary-deep); margin-bottom: 14px; }
         .hero-do span { display: block; }
-        .hero-visual { padding-bottom: 96px; }
+        .hero-visual { padding-bottom: 0; }
         .aimock { background: #fff; border-radius: 14px; box-shadow: 0 24px 60px rgba(120,60,0,0.14), 0 1px 4px rgba(0,0,0,0.06); overflow: hidden; }
         .aimock-head { display: flex; align-items: center; gap: 10px; font-size: 12px; color: #888; padding: 10px 16px; border-bottom: 1px solid #f0f0f0; background: #fcfcfc; }
         .aimock-head .dots { display: inline-flex; gap: 5px; }
@@ -1489,8 +1489,24 @@
             .step-visual { grid-column: 1 / -1 !important; }
             .bar-label { min-height: 3.4em; }
         }
+
+        /* 9/25 2周目: 課題の図・事例1枚・金額なし */
+        .mini-pair { margin-bottom: 8px; }
+        .mini-pair .mini-q { margin-bottom: 4px; }
+        .mini-title { font-size: 11.5px; font-weight: 700; color: #666; margin-bottom: 8px; }
+        .weeks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+        .wk { background: #f3f3f3; border-radius: 6px; padding: 10px 4px 6px; text-align: center; }
+        .wk b { display: block; font-size: 11px; color: #aaa; }
+        .wk small { font-size: 10px; color: #999; }
+        .wk.on { background: #fff1e3; } .wk.on b { color: var(--color-primary-deep); }
+        .rcases { grid-template-columns: 1fr; }
+        .rcase--wide { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center; padding: 40px; }
+        .rcase--wide .rcase-desc { margin-top: 0; }
+        .rcase--wide .bars { margin-bottom: 26px; }
+        .price-by { font-size: 22px; font-weight: 700; line-height: 1.6; font-family: var(--font-heading-jp); }
+        @media (max-width: 900px) { .rcase--wide { grid-template-columns: 1fr; gap: 24px; padding: 26px 22px; } }
     </style>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現状分析レポートには何が載っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "取り組み2ヶ月で、狙った質問に名前が挙がり始めた例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "どのAIに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。"}}, {"@type": "Question", "name": "AI検索対策はSEOと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。"}}, {"@type": "Question", "name": "どんな会社に向いていますか？", "acceptedAnswer": {"@type": "Answer", "text": "BtoB・SaaS・金融・士業など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月20万円からです。狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。"}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現状分析レポートには何が載っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "取り組み3ヶ月で、言及率が10%から45%に上がった例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "どのAIに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。"}}, {"@type": "Question", "name": "AI検索対策はSEOと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。"}}, {"@type": "Question", "name": "どんな会社に向いていますか？", "acceptedAnswer": {"@type": "Answer", "text": "BtoB・SaaS・金融など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。"}}]}</script>
 
 </head>
 
@@ -1524,7 +1540,7 @@
         <section class="hero">
         <div class="container hero-wrap" style="display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center">
             <div>
-                <p class="hero-kicker">AI検索対策（LLMO）・月20万円から</p>
+                <p class="hero-kicker">AI検索対策（LLMO）</p>
                 <h1 class="hero-title"><span class="line"><span class="grad">AIのおすすめに</span></span><span class="line">名前が挙がる会社へ</span></h1>
                 <p class="hero-do"><span>ChatGPT・Gemini・AIモードなどの回答を毎日計測。</span><span>名前が挙がらない理由を読み解き、ページの制作と改善まで実行。</span></p>
                 <div class="hero-btns">
@@ -1545,11 +1561,6 @@
                         </ol>
                     </div>
                 </div>
-                <div class="float-card">
-                    <div class="fc-label">狙った質問での言及率</div>
-                    <div class="fc-row"><span class="fc-before">10%</span><span class="fc-arrow">→</span><span class="fc-after">45%</span></div>
-                    <div class="fc-note">取り組み3ヶ月（SaaS企業）</div>
-                </div>
             </div>
         </div>
     </section>
@@ -1558,31 +1569,27 @@
     <section class="section section--gray">
         <div class="container">
             <div class="section-head">
-                <h2 class="section-title">よくあるAI検索の課題</h2>
+                <h2 class="section-title">AI検索で起きていること</h2>
             </div>
             <div class="problem-list">
                 <div class="problem">
                     <div class="problem-fig"><div class="mini">
-                        <div class="mini-q">〇〇のおすすめは？</div>
-                        <div class="mini-row">1. B社</div>
-                        <div class="mini-row">2. C社</div>
-                        <div class="mini-row">3. D社</div>
-                        <div class="mini-row empty">自社の名前はない</div>
+                        <div class="mini-pair"><div class="mini-q">〇〇のおすすめは？</div><div class="mini-row strong">1. A社</div></div>
+                        <div class="mini-pair"><div class="mini-q">建設業向けの〇〇のおすすめは？</div><div class="mini-row empty">A社の名前はない</div></div>
                     </div></div>
                     <div class="problem-body">
-                        <h3 class="problem-title">AIに聞いても名前が挙がらない</h3>
-                        <p class="problem-desc">「〇〇のおすすめは？」とAIに聞いても、自社が出てこない。検索の順位が高くても、AIの答えには入っていないことがある。</p>
+                        <h3 class="problem-title">聞き方で挙がる会社が入れ替わる</h3>
+                        <p class="problem-desc">一般的な聞き方では挙がっても、業種や条件を付けた質問では出てこない。nitoの計測でも、業種を付けただけで12回から0回に減った会社があった。</p>
                     </div>
                 </div>
                 <div class="problem">
                     <div class="problem-fig"><div class="mini">
-                        <div class="mini-q">A社の料金は？</div>
-                        <div class="mini-text">A社の料金は<span class="old">月額980円から</span>です。</div>
-                        <div class="mini-chip">2年前の料金のまま</div>
+                        <div class="mini-title">狙った質問でA社が挙がったか</div>
+                        <div class="weeks"><div class="wk on"><b>あり</b><small>1週目</small></div><div class="wk on"><b>あり</b><small>2週目</small></div><div class="wk"><b>なし</b><small>3週目</small></div><div class="wk"><b>なし</b><small>4週目</small></div></div>
                     </div></div>
                     <div class="problem-body">
-                        <h3 class="problem-title">挙がっても紹介のされ方が違う</h3>
-                        <p class="problem-desc">古い料金や、今はやっていないサービスのまま紹介される。</p>
+                        <h3 class="problem-title">先週挙がっていたのに今週は消えている</h3>
+                        <p class="problem-desc">AIの回答は週ごとに入れ替わる。一度調べただけでは、挙がっている状態が続いているのか、もう消えたのかが分からない。</p>
                     </div>
                 </div>
                 <div class="problem">
@@ -1597,7 +1604,7 @@
                     </div>
                 </div>
             </div>
-            <p class="problem-close"><span>どれも、検索の順位とは別のところで決まっています。</span></p>
+            <p class="problem-close"><span>どれも、検索の順位を見ているだけでは気づけません。</span></p>
         </div>
     </section>
 
@@ -1727,9 +1734,12 @@
                 <h2 class="section-title">導入事例</h2>
             </div>
             <div class="rcases">
-                <div class="rcase">
+                <div class="rcase rcase--wide">
+                    <div class="rcase-text">
                     <span class="case-tag">SaaS企業</span>
                     <p class="rcase-head">取り組み3ヶ月で、AIでの言及率が<em>10%→45%</em>に。AI経由のコンバージョンは<em>3.8倍</em>に。</p>
+                    <p class="rcase-desc">狙う質問を決めて毎日計測し、おすすめの理由に使われる情報を記事とページに足していきました。</p>
+                    </div>
                     <div class="bars">
                         <div class="bar-group">
                             <div class="bar-label">AIでの言及率</div>
@@ -1746,21 +1756,6 @@
                             </div>
                         </div>
                     </div>
-                    <p class="rcase-desc">狙う質問を決めて毎日計測し、おすすめの理由に使われる情報を記事とページに足していきました。</p>
-                </div>
-                <div class="rcase">
-                    <span class="case-tag">士業</span>
-                    <p class="rcase-head">取り組み2ヶ月で、AIでの言及率が<em>0%→20%</em>に。</p>
-                    <div class="bars">
-                        <div class="bar-group">
-                            <div class="bar-label">AIでの言及率</div>
-                            <div class="bar-pair">
-                                <div class="bar-col"><b>0%</b><div class="bar b0" style="height:3%"></div><small>開始時</small></div>
-                                <div class="bar-col"><b class="on">20%</b><div class="bar b1" style="height:44%"></div><small>2ヶ月後</small></div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="rcase-desc">「地域名＋手続き名」で相談されたときに名前が挙がるよう、サービスページを作り直しました。</p>
                 </div>
             </div>
             <p class="rcase-note">※ AI経由のコンバージョンは、開始時を1.0とした相対値です　※ 成果は事業・体制・市場環境により異なります</p>
@@ -1792,12 +1787,12 @@
     <section class="section">
         <div class="container">
             <div class="section-head">
-                <h2 class="section-title">費用</h2>
+                <h2 class="section-title">費用の考え方</h2>
             </div>
             <div class="price-one">
                 <div class="price-one-left">
                     <div class="price-kind">月額</div>
-                    <p class="price-big">20<small>万円から</small></p>
+                    <p class="price-by">狙う質問の数と、制作する量で決めます</p>
                 </div>
                 <ul class="price-list">
                     <li>狙う質問の毎日の計測と、毎月のレポート</li>
@@ -1805,7 +1800,7 @@
                     <li>ページ・記事の制作と、公開後の改善</li>
                 </ul>
             </div>
-            <p class="price-note">金額は現状分析のあとに、狙う質問の数と制作する量を決めてから提示します。</p>
+            <p class="price-note">金額は現状分析のあとに、範囲を決めてから提示します。</p>
         </div>
     </section>
 
@@ -1835,7 +1830,7 @@
                 </div>
                 <div class="faq-item">
                     <button class="faq-question"><span>効果が出るまでどのくらいかかりますか？</span><span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">取り組み2ヶ月で、狙った質問に名前が挙がり始めた例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner">取り組み3ヶ月で、言及率が10%から45%に上がった例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。</div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question"><span>どのAIに対応していますか？</span><span class="faq-icon">+</span></button>
@@ -1847,11 +1842,11 @@
                 </div>
                 <div class="faq-item">
                     <button class="faq-question"><span>どんな会社に向いていますか？</span><span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">BtoB・SaaS・金融・士業など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner">BtoB・SaaS・金融など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。</div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question"><span>費用はどのくらいかかりますか？</span><span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">月20万円からです。狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner">月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。</div></div>
                 </div>
             </div>
         </div>
