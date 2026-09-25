@@ -1548,6 +1548,39 @@
             .stat b, .measure-stat b { font-size: 38px; }
         }
         @media (max-width: 600px) { .cta-banner-label { font-size: 24px !important; line-height: 1.4; } }
+
+        /* 9/25 5周目: nitoが選ばれる理由（APIとの対比＋チャット画面→ボード） */
+        #measure .section-head { max-width: none; }
+        #measure .measure-lead { font-size: 22px; margin: 4px 0 0; }
+        .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; }
+        .vs-col { background: #f6f6f6; border-radius: 16px; padding: 28px 30px; }
+        .vs-col.on { background: #fff; box-shadow: inset 0 0 0 2px #ffb454, 0 2px 12px rgba(0,0,0,0.06); }
+        .vs-kind { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); margin-bottom: 12px; color: #777; }
+        .vs-col.on .vs-kind { color: var(--color-primary-deep); }
+        .vs-list { list-style: none; border-top: 1px solid #e3e3e3; }
+        .vs-list li { padding: 11px 0; border-bottom: 1px solid #e3e3e3; font-size: 15px; line-height: 1.7; color: #666; }
+        .vs-col.on .vs-list li { color: #1a1a1a; border-color: #f3e1cc; }
+        .vs-col .measure-stat { margin: 18px 0 0; background: #fff; }
+        .pipe { display: grid; grid-template-columns: 0.8fr auto 1.4fr; gap: 20px; align-items: center; }
+        .pipe-cap { font-size: 15px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+        .pipe-cap span { width: 26px; height: 26px; border-radius: 50%; background: var(--color-secondary); color: #fff; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-heading-en); }
+        .pipe-arrow { color: var(--color-primary-deep); font-size: 28px; font-weight: 700; padding-top: 30px; }
+        .chatmock { background: #fff; border-radius: 14px; box-shadow: 0 16px 40px rgba(120,60,0,0.12), 0 1px 4px rgba(0,0,0,0.06); padding: 14px 16px 16px; position: relative; }
+        .chatmock-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+        .chatmock-tabs span { font-size: 11px; padding: 3px 9px; border-radius: 999px; background: #f2f2f2; color: #888; }
+        .chatmock-tabs span.on { background: #1a1a1a; color: #fff; }
+        .chatmock .aq { font-size: 12.5px; margin-bottom: 10px; }
+        .chatmock .aa { font-size: 12.5px; margin-bottom: 8px; }
+        .chatmock .alist li { font-size: 11.5px; padding: 8px 10px 8px 34px; }
+        .chatmock .alist li::before { left: 10px; top: 9px; }
+        .chatmock .alist li b { font-size: 12.5px; }
+        .chatmock-src { font-size: 11px; color: #999; margin-top: 10px; }
+        .chatmock-rec { position: absolute; right: 12px; bottom: -14px; font-size: 11px; font-weight: 700; color: #fff; background: var(--color-secondary); border-radius: 4px; padding: 3px 10px; }
+        @media (max-width: 900px) {
+            .vs, .pipe { grid-template-columns: 1fr; }
+            .pipe-arrow { transform: rotate(90deg); padding: 0; text-align: center; }
+            #measure .measure-lead { font-size: 18px; }
+        }
     </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現状分析レポートには何が載っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "新しいページが公開から3日でAIの回答の引用元に入った例や、3ヶ月で言及率が10%から45%に上がった例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "どのAIに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。"}}, {"@type": "Question", "name": "AI検索対策はSEOと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。"}}, {"@type": "Question", "name": "どんな会社に向いていますか？", "acceptedAnswer": {"@type": "Answer", "text": "BtoB・SaaS・金融など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。"}}]}</script>
 
@@ -1713,20 +1746,50 @@
     <section class="section" id="measure">
         <div class="container">
             <div class="section-head">
-                <h2 class="section-title">実際のAI画面での計測</h2>
+                <h2 class="section-title">nitoが選ばれる理由</h2>
+                <p class="measure-lead">nitoは実際のAIチャットの画面で回答を毎日計測しています。</p>
             </div>
-            <div class="measure">
-                <div class="measure-text">
-                    <p class="measure-lead">APIの回答と実際の画面の回答は出典のサイトがほとんど重ならない</p>
+            <div class="vs">
+                <div class="vs-col">
+                    <p class="vs-kind">APIで取得する計測</p>
+                    <ul class="vs-list">
+                        <li>開発者向けの窓口から質問する</li>
+                        <li>画面とは出典に出るサイトがほとんど重ならない</li>
+                        <li>利用者が見ている答えとずれることがある</li>
+                    </ul>
                     <div class="measure-stat"><b>12.0<small>%</small></b><span>同じ質問でAPIと画面の出典が重なった割合（ChatGPT・平均）</span></div>
-                    <p>nitoの計測はChatGPT・Gemini・Perplexity・AIモードの実際の画面に毎日質問し、回答をそのまま記録する方法です。回答の原文から施策の前後の変化まで、お客さまもボードで毎日確認できます。</p>
-                    <p class="src">出典: <a href="https://arxiv.org/abs/2609.18729" target="_blank" rel="noopener">Uberti-Bona Marin ほか「Auditing AI-Generated Product Recommendations」</a>（arXiv、2026年9月）</p>
                 </div>
-                <figure class="measure-shot">
-                    <img src="/llmo/img/board-demo.jpg" alt="AI検索ボードの画面。言及率・平均順位・Top3率などを毎日表示する" width="1280" height="800">
-                    <figcaption>AI検索ボード（架空の歯科医院のデモ画面）</figcaption>
-                </figure>
+                <div class="vs-col on">
+                    <p class="vs-kind">nitoの計測</p>
+                    <ul class="vs-list">
+                        <li>人が使うチャット画面に毎日質問する</li>
+                        <li>画面に出た回答と出典をそのまま記録する</li>
+                        <li>集計はボードでお客さまも毎日見られる</li>
+                    </ul>
+                </div>
             </div>
+            <div class="pipe">
+                <div class="pipe-step">
+                    <p class="pipe-cap"><span>1</span>実際のチャット画面に質問</p>
+                    <div class="chatmock">
+                        <div class="chatmock-tabs"><span class="on">ChatGPT</span><span>Gemini</span><span>Perplexity</span><span>AIモード</span></div>
+                        <div class="aq">横浜で土日も診療している歯医者は？</div>
+                        <p class="aa">土日に診療している歯科医院を挙げます。</p>
+                        <ol class="alist"><li class="hit"><b>みなと歯科クリニック</b><span>土日診療。駅から徒歩3分</span></li><li><b>横浜ベイ歯科</b><span>日曜のみ診療</span></li></ol>
+                        <div class="chatmock-src">出典: minato-dental.example ほか2件</div>
+                        <div class="chatmock-rec">毎朝 6:00 に記録</div>
+                    </div>
+                </div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step wide">
+                    <p class="pipe-cap"><span>2</span>回答と出典を集計してボードに</p>
+                    <figure class="measure-shot">
+                        <img src="/llmo/img/board-demo.jpg" alt="AI検索ボードの画面。言及率・平均順位・Top3率などを毎日表示する" width="1280" height="800">
+                        <figcaption>AI検索ボード（架空の歯科医院のデモ画面）</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <p class="src">出典: <a href="https://arxiv.org/abs/2609.18729" target="_blank" rel="noopener">Uberti-Bona Marin ほか「Auditing AI-Generated Product Recommendations」</a>（arXiv、2026年9月）</p>
         </div>
     </section>
 
