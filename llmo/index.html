@@ -1505,6 +1505,13 @@
         .rcase--wide .bars { margin-bottom: 26px; }
         .price-by { font-size: 22px; font-weight: 700; line-height: 1.6; font-family: var(--font-heading-jp); }
         @media (max-width: 900px) { .rcase--wide { grid-template-columns: 1fr; gap: 24px; padding: 26px 22px; } }
+
+        /* 9/25 3周目: 仕組みの1〜4を課題と同じ白いカードに */
+        .mech-col { background: #fff; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 18px 18px 20px; }
+        .mech-col + .mech-col::before { left: -29px; top: 50%; transform: translateY(-50%); }
+        .mech-box { background: #fff4e6; }
+        #mechanism { background: #fff8f1; }
+        @media (max-width: 600px) { .mech-col + .mech-col::before { top: -30px; transform: translateX(-50%); } }
     </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現状分析レポートには何が載っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "取り組み3ヶ月で、言及率が10%から45%に上がった例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "どのAIに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。"}}, {"@type": "Question", "name": "AI検索対策はSEOと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。"}}, {"@type": "Question", "name": "どんな会社に向いていますか？", "acceptedAnswer": {"@type": "Answer", "text": "BtoB・SaaS・金融など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。"}}]}</script>
 
@@ -1645,7 +1652,7 @@
     </section>
 
     <!-- Flow -->
-    <section class="section section--gray" id="flow">
+    <section class="section" id="flow">
         <div class="container">
             <div class="section-head">
                 <h2 class="section-title">進め方</h2>
@@ -1784,27 +1791,6 @@
                     <p class="about-bio">株式会社サイバーエージェントで広告の新規事業開発に携わりながら、新卒採用や育成部門での責任者も務めたのち、nitoを立ち上げ。<a href="https://nito-0210.com/#member">メンバー紹介</a></p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Price -->
-    <section class="section">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-title">費用の考え方</h2>
-            </div>
-            <div class="price-one">
-                <div class="price-one-left">
-                    <div class="price-kind">月額</div>
-                    <p class="price-by">狙う質問の数と、制作する量で決めます</p>
-                </div>
-                <ul class="price-list">
-                    <li>狙う質問の毎日の計測と、毎月のレポート</li>
-                    <li>おすすめの理由の分析と、作るページの設計</li>
-                    <li>ページ・記事の制作と、公開後の改善</li>
-                </ul>
-            </div>
-            <p class="price-note">金額は現状分析のあとに、範囲を決めてから提示します。</p>
         </div>
     </section>
 
