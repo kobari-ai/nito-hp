@@ -1674,6 +1674,14 @@
             .rcase .bar-group .bar-label { min-height: 3.8em; }
             .cta-banner-label { font-size: 18px !important; }
         }
+
+        /* 9/26 稜生さんの指摘 */
+        .btn-primary { transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; }
+        .btn-primary:hover { opacity: 1; background: #e67e22; transform: translateY(-3px); box-shadow: 0 6px 18px rgba(255,140,0,0.28); }
+        .hbar { grid-template-columns: 190px 1fr 64px; }
+        .hbar-label small { display: block; font-size: 11.5px; color: #999; line-height: 1.3; }
+        .step-title .step-tag.inline { margin: 0 0 0 12px; vertical-align: middle; position: relative; top: -2px; }
+        @media (max-width: 900px) { .hbar { grid-template-columns: 1fr 56px; } .hbar-label small { display: inline; margin-left: 6px; } }
     </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現状分析レポートには何が載っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞いた結果です。自社の名前が挙がったか、どう紹介されたか、代わりに挙がった会社と、その会社がおすすめされている理由をまとめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "新しいページが公開から3日でAIの回答の引用元に入った例や、3ヶ月で言及率が10%から45%に上がった例があります。事業や競合の状況で差があるため、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "どのAIに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT・Gemini・Perplexity・GoogleのAIモードです。どれも人が実際に見るアプリの画面で計測しています。"}}, {"@type": "Question", "name": "AI検索対策はSEOと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "SEOは検索結果の順位を上げる取り組みで、AI検索対策はAIの回答の中で名前が挙がることを目指します。AIは調べ直した先のページを読み比べて答えを作るので、順位が高くても名前が挙がらないことがあります。いまある記事やページも活かしながら進めます。"}}, {"@type": "Question", "name": "どんな会社に向いていますか？", "acceptedAnswer": {"@type": "Answer", "text": "BtoB・SaaS・金融など、選ぶ前に比べる時間が長いサービスです。AIに相談してから選ぶ人が多い領域ほど、名前が挙がるかどうかが問い合わせの数に響きます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をお伝えします。"}}]}</script>
 
@@ -1743,13 +1751,13 @@
             <div class="shift">
                 <div class="shift-chart">
                     <p class="shift-chart-title">調べものに使っている人の割合</p>
-                    <div class="hbar"><span class="hbar-label">検索エンジン</span><div class="hbar-track"><div class="hbar-fill gray" style="width:86.9%"></div></div><b>86.9%</b></div>
-                    <div class="hbar"><span class="hbar-label">生成AI（2026年8月）</span><div class="hbar-track"><div class="hbar-fill" style="width:52.3%"></div></div><b class="on">52.3%</b></div>
-                    <div class="hbar"><span class="hbar-label">生成AI（2025年5月）</span><div class="hbar-track"><div class="hbar-fill light" style="width:21.3%"></div></div><b>21.3%</b></div>
-                    <p class="shift-note">生成AIで調べる人は1年3か月で21.3%から52.3%に</p>
+                    <div class="hbar"><span class="hbar-label">Google、Yahoo!など</span><div class="hbar-track"><div class="hbar-fill gray" style="width:86.9%"></div></div><b>86.9%</b></div>
+                    <div class="hbar"><span class="hbar-label">ChatGPT、Geminiなど<small>2026年8月</small></span><div class="hbar-track"><div class="hbar-fill" style="width:52.3%"></div></div><b class="on">52.3%</b></div>
+                    <div class="hbar"><span class="hbar-label">ChatGPT、Geminiなど<small>2025年5月</small></span><div class="hbar-track"><div class="hbar-fill light" style="width:21.3%"></div></div><b>21.3%</b></div>
+                    <p class="shift-note">ChatGPTなどで調べる人は1年3か月で21.3%から52.3%に</p>
                 </div>
                 <div class="shift-stats">
-                    <div class="stat"><b>46.6<small>%</small></b><span>両方を使う人のうち検索の半分以上を生成AIに移した人</span></div>
+                    <div class="stat"><b>46.6<small>%</small></b><span>両方を使う人のうち検索の半分以上をChatGPTなどに移した人</span></div>
                 </div>
             </div>
             <p class="src">出典: <a href="https://www.cyberagent.co.jp/news/detail/id=33787" target="_blank" rel="noopener">サイバーエージェント GEOラボ「生成AI / AI Overview ユーザー利用実態調査」</a>（2026年8月、全国15〜69歳 9,278名）</p>
@@ -1773,7 +1781,7 @@
                     </div></div>
                     <div class="problem-body">
                         <h3 class="problem-title">AIに聞いても名前が挙がらない</h3>
-                        <p class="problem-desc">「〇〇のおすすめは？」とAIに聞いても、自社が出てこない。検索の順位が高くても、AIの答えには入っていないことがある。</p>
+                        <p class="problem-desc">「〇〇のおすすめは？」とAIに聞いても、自社が出てこない。Google検索の順位が高くても、ChatGPTのおすすめには入っていないことがある。</p>
                     </div>
                 </div>
                 <div class="problem">
@@ -1784,7 +1792,7 @@
                     </div></div>
                     <div class="problem-body">
                         <h3 class="problem-title">挙がっても紹介のされ方が違う</h3>
-                        <p class="problem-desc">古い料金や、今はやっていないサービスのまま紹介される。</p>
+                        <p class="problem-desc">古い料金で案内されたり、現在は提供していないサービスが紹介されたりする。</p>
                     </div>
                 </div>
                 <div class="problem">
@@ -1830,7 +1838,7 @@
                     <p class="mech-cap">理由を言える会社が答えに残る</p>
                 </div>
             </div>
-            <p class="mech-conclusion">名前が挙がるかを決めるのは、<em>調べた先の自社のページに理由として使える情報があるか</em>どうかです。</p>
+            <p class="mech-conclusion">名前が挙がるかを決めるのは、<em>調べた先の自社のページに理由として使える情報があるか</em>です。</p>
         </div>
     </section>
 
@@ -1862,7 +1870,7 @@
                     <ul class="vs-list">
                         <li>チャット画面を通さずにプログラムで回答を収集</li>
                         <li><b>メリット：</b>情報収集のシステムを作るのが簡単</li>
-                        <li><b>デメリット：</b>実際に利用者がみる回答と異なる可能性が高い</li>
+                        <li><b>デメリット：</b>実際に利用者が見る回答と異なる可能性が高い</li>
                     </ul>
                     <div class="measure-stat v2"><span>APIとチャットで同じ質問をした時、出典が重なるのは</span><b><em>たった</em>12.0<small>%</small></b><span class="note">ChatGPT・平均</span></div>
                 </div>
@@ -1902,8 +1910,7 @@
                 <div class="step">
                     <span class="step-num">01</span>
                     <div class="step-main">
-                        <h3 class="step-title">現状分析</h3>
-                        <span class="step-tag">無料</span>
+                        <h3 class="step-title">現状分析<span class="step-tag inline">無料</span></h3>
                         <p class="step-desc">狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞き、名前が挙がるか、どう紹介されるか、代わりにどの会社が挙がっているかをまとめます。</p>
                     </div>
                     <div class="step-visual"><div class="mock mock-sheet">
@@ -1952,7 +1959,6 @@
                     <span class="step-num">04</span>
                     <div class="step-main">
                         <h3 class="step-title">毎日の計測と運用</h3>
-                        <span class="step-tag">毎日計測</span>
                         <p class="step-desc">公開後の回答の変化を毎日追います。効いた変更は他のページにも広げ、効かなかったものは書き方を変えます。</p>
                     </div>
                     <div class="step-visual"><div class="mock mock-rev">
