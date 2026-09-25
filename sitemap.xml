@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://nito-0210.com/</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://nito-0210.com/ai-agent/</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://nito-0210.com/llmo/</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://nito-0210.com/media/</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://nito-0210.com/contact.html</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://nito-0210.com/privacy.html</loc><lastmod>2026-09-24</lastmod></url>
+  <url><loc>https://nito-0210.com/</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://nito-0210.com/ai-agent/</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://nito-0210.com/llmo/</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://nito-0210.com/media/</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://nito-0210.com/contact.html</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://nito-0210.com/privacy.html</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://nito-0210.com/media/claude-usage-limits/</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://nito-0210.com/media/google-ai-mode-switch/</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://nito-0210.com/media/chatgpt-guide/</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://nito-0210.com/media/codex-guide/</loc><lastmod>2026-09-24</lastmod></url>
@@ -14,7 +15,7 @@
   <url><loc>https://nito-0210.com/media/prompt-writing-guide/</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://nito-0210.com/media/chatgpt-pricing/</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://nito-0210.com/media/chatgpt-work-plans/</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://nito-0210.com/media/claude-pricing/</loc><lastmod>2026-09-24</lastmod></url>
+  <url><loc>https://nito-0210.com/media/claude-pricing/</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://nito-0210.com/media/gemini-cli-guide/</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://nito-0210.com/media/perplexity-guide/</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://nito-0210.com/media/ai-agent-build/</loc><lastmod>2026-09-24</lastmod></url>
@@ -30,7 +31,7 @@
   <url><loc>https://nito-0210.com/media/claude-code-guide/</loc><lastmod>2026-09-19</lastmod></url>
   <url><loc>https://nito-0210.com/media/claude-guide/</loc><lastmod>2026-09-19</lastmod></url>
   <url><loc>https://nito-0210.com/media/jev-typesafe-guide/</loc><lastmod>2026-09-19</lastmod></url>
-  <url><loc>https://nito-0210.com/media/claude-code-pricing/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://nito-0210.com/media/claude-code-pricing/</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://nito-0210.com/media/gemini-notebook-guide/</loc><lastmod>2026-09-19</lastmod></url>
   <url><loc>https://nito-0210.com/media/gpt-6-astra-guide/</loc><lastmod>2026-09-23</lastmod></url>
   <url><loc>https://nito-0210.com/media/google-ai-mode-guide/</loc><lastmod>2026-09-24</lastmod></url>
