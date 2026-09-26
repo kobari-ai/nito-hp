@@ -2148,19 +2148,6 @@
     </footer>
 
     <script>
-        // Intersection Observer animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('animated');
-            });
-        }, { threshold: 0.12 });
-
-        document.querySelectorAll('., ., ., .').forEach(el => observer.observe(el));
-
-        window.addEventListener('load', () => {
-            document.querySelector('.header-wrapper').classList.add('animated');
-        });
-
         // Hamburger
         const hamburger = document.getElementById('hamburger');
         const navOverlay = document.getElementById('nav-overlay');
