@@ -40,7 +40,7 @@ Anthropicのヘルプのトラブルシューティングとよくある質問�
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/claude-login-error/cle_01_sp_login.jpg" alt="スマホのブラウザで開いたClaudeのログイン画面。1のGoogleで続ける、2のAppleで続ける、メールアドレスの入力欄の下の3のメールで続けるが赤枠で囲まれている" loading="lazy"><figcaption>ログイン画面（2026年9月26日、スマホ）。1がGoogle、2がApple、3がメール</figcaption></figure>
 
-ヘルプは、別の端末で使うときも、いつもログインに使っているのと同じメールアドレスを入れるよう案内しています。**いつもログインに使っているのと同じメールアドレスで入るのが確実です。**Appleの非公開メールで登録したなら、そのアドレスは @privaterelay.appleid.com で終わるものです。
+ヘルプの案内どおり、**別の端末でも、いつもログインに使っているのと同じメールアドレスで入るのが確実です。**Appleの非公開メールで登録したなら、そのアドレスは @privaterelay.appleid.com で終わるものです。
 
 ## ログインメールが届かないとき
 
