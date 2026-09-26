@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ | nito Column</title>
+    <meta name="description" content="Claude MCPを公式ドキュメントを一次ソースに解説。MCPの役割、claude mcp addの4つの接続方法、local・project・userのスコープ、OAuth認証、サーバー状態の読み方、設定でつまずく箇所まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-mcp-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ">
+    <meta property="og:description" content="Claude MCPを公式ドキュメントを一次ソースに解説。MCPの役割、claude mcp addの4つの接続方法、local・project・userのスコープ、OAuth認証、サーバー状態の読み方、設定でつまずく箇所まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-mcp-guide/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-mcp-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-mcp-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ", "description": "Claude MCPを公式ドキュメントを一次ソースに解説。MCPの役割、claude mcp addの4つの接続方法、local・project・userのスコープ、OAuth認証、サーバー状態の読み方、設定でつまずく箇所まで。", "datePublished": "2026-09-21", "dateModified": "2026-09-21", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-mcp-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude MCPで何ができますか？", "acceptedAnswer": {"@type": "Answer", "text": "課題追跡ツールの内容を読んで実装する、監視データを分析する、データベースをクエリする、デザインツールの更新を反映する、といった外部ツールをまたぐ作業ができます。サーバーがチャネルに対応していれば、外部で起きたイベントにClaudeが反応することも可能です。"}}, {"@type": "Question", "name": "MCPサーバーはどこで探せますか？", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic Directoryにレビュー済みのコネクターがまとまっています。Directoryのサーバーは `claude mcp add` でそのまま追加できる形です。"}}, {"@type": "Question", "name": "HTTPとSSEとstdioはどう選びますか？", "acceptedAnswer": {"@type": "Answer", "text": "クラウドのサービスはHTTP、自分のマシンで動かすものはstdioです。SSEは非推奨で、SSEしか公開していないサーバーもHTTPと同じコマンドで追加でき、Claude Codeが自動で切り替えます。"}}, {"@type": "Question", "name": "チームで同じMCPサーバーを使うにはどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "`--scope project` で追加して、プロジェクトルートの `.mcp.json` をバージョン管理に入れます。各メンバーは最初に対話セッションで承認する必要があります。"}}, {"@type": "Question", "name": "Pending approval のまま動きません", "acceptedAnswer": {"@type": "Answer", "text": "`.mcp.json` のプロジェクトスコープのサーバーが未承認の状態です。`claude` を対話的に起動して承認します。クローンしたリポジトリでは、ワークスペースの信頼ダイアログを受け入れるまで自分のサーバーを承認できません。"}}, {"@type": "Question", "name": "設定を消さずにサーバーを止められますか？", "acceptedAnswer": {"@type": "Answer", "text": "`/mcp` のパネルでオフに切り替えると、設定を残したまま接続を止められます。選択はプロジェクトごとに `~/.claude.json` に記録されます。"}}, {"@type": "Question", "name": "MCPサーバーを入れるとセキュリティ上のリスクはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "外部のコンテンツを取得するサーバーはプロンプトインジェクションの経路になりえます。信頼できるサーバーだけを入れ、データベースは読み取り専用ユーザーでつないでください。"}}, {"@type": "Question", "name": "ツールの呼び出しが途中で止まります。", "acceptedAnswer": {"@type": "Answer", "text": "応答も進捗通知も返さない呼び出しは、アイドルとして中断されます。既定の待ち時間はリモートが5分、stdioが30分です。実行時間そのものが長い場合は、2分を超えた時点で自動的にバックグラウンドのタスクへ移ります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claude MCPと…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.21</span>
+        </div>
+        <h1 class="post-title">【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude MCPの接続方法"><defs><linearGradient id="ecg-1afd82ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1afd82ac)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude MCPの接続方法</text><line x1="182.0" y1="327.1" x2="1018.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">トランスポート・スコープ・認証・つまずきどころ</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>MCP（Model Context Protocol）は、AIツールと外部のデータやツールをつなぐためのオープンな規格です。Claude Codeはこの規格を通じて数百のツールに接続でき、課題管理やデータベース、デザインツールの中身を、コピーして貼り付けることなく直接読み書きできます。</p>
+<p>接続そのものは <code>claude mcp add</code> の一行で終わります。つまずくのはその先で、どのトランスポートを選ぶか、設定をどこに保存するか、チームで共有したサーバーがなぜ承認待ちのまま動かないのか、といった部分です。以下はAnthropicの<a href="https://code.claude.com/docs/ja/mcp">Claude Code公式ドキュメント</a>（2026年9月21日取得）を一次ソースにした、接続の手順と、運用でつまずく箇所です。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>MCPは<strong>AIと外部ツールをつなぐ共通規格</strong>で、Claude Code固有の機能ではない。同じサーバーを他のMCPクライアントでも使える</li>
+<li>接続方法は4つ。リモートは<strong>HTTPが推奨</strong>で、SSEは非推奨、ローカルのプロセスはstdio、サーバーから割り込みを受けたいときだけWebSocket</li>
+<li>設定の保存先は3つ。<strong>local（既定・自分だけ）／project（.mcp.jsonでチーム共有）／user（全プロジェクト）</strong>。同じ名前があればlocalが勝つ</li>
+<li>プロジェクトスコープのサーバーは<strong>承認を通すまで接続されない</strong>。<code>⏸ Pending approval</code> はこれ</li>
+<li>外部のコンテンツを取ってくるサーバーは<strong>プロンプトインジェクションの経路になりうる</strong>。信頼できるサーバーだけを入れ、データベースは読み取り専用ユーザーでつなぐ</li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>MCPとは何か</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>MCPで何ができるか</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>サーバーを追加する4つの方法</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>他のクライアント向けの手順を読み替える</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>3つのスコープと優先順位</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>リモートサーバーで認証する</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>サーバーの状態を読む</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>設定でつまずく箇所</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>claude.aiのコネクターとの関係</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>安全に使うために</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>AI検索での見え方は別の話</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s13"><span class="toc__n">13</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">MCPとは何か</h2>
+<p>「AIが社内のツールを触れない」という制約は、モデルの性能ではなく接続の問題です。MCPはその接続の作法をツールごとにバラバラに実装せずに済ませるための共通規格で、<a href="https://modelcontextprotocol.io/docs/getting-started/intro">modelcontextprotocol.io</a> で公開されています。</p>
+<p>公式ドキュメントには導入を検討する目安がはっきり書かれています。課題追跡ツールや監視ダッシュボードから<strong>チャットにデータをコピーしている作業があるなら、そのシステムをつなぐ</strong>、という基準です。貼り付けたものから作業する代わりに、Claudeがそのシステムを直接読み書きできる状態にします。</p>
+<figure class="post-figure"><img src="/media/images/claude-mcp-guide/cm_01_docs.jpg" alt="Claude Code公式ドキュメント「MCPを使用してClaude Codeをツールに接続する」。別のツールからチャットにデータをコピーしている場合はサーバーを接続してくださいと書かれている" loading="lazy"><figcaption>公式ドキュメント。つなぐ基準は「チャットにコピーしている作業があるか」</figcaption></figure>
+
+<p>MCPサーバーはClaude Code専用ではありません。同じサーバーをClaude Desktopや他のMCPクライアントでも使えるため、セットアップ手順が別のクライアント向けに書かれていることがよくあります。その読み替え方は後述します。</p>
+<h2 id="s2">MCPで何ができるか</h2>
+<p>公式ドキュメントが挙げている依頼の例は、どれも複数のツールをまたぐものです。</p>
+<ul>
+<li>課題追跡ツールから機能を実装する（JIRAの課題に書かれた内容を実装し、GitHubにPRを作る）</li>
+<li>監視データを分析する（SentryとStatsigで機能の使用状況を確認する）</li>
+<li>データベースをクエリする（PostgreSQLから条件に合うユーザーを検索する）</li>
+<li>デザインを統合する（Slackに投稿されたFigmaのデザインをもとにテンプレートを更新する）</li>
+<li>ワークフローを自動化する（対象者へのGmail下書きをまとめて作る）</li>
+</ul>
+<p>このほかにMCPサーバーは<strong>チャネル</strong>としても動きます。サーバー側からセッションにメッセージを押し込めるため、離席中に届いたDiscordのチャットやwebhookのイベントにClaudeが反応できます。使うにはサーバーが <code>claude/channel</code> 機能を宣言し、起動時に <code>--channels</code> フラグで有効にしてください。</p>
+<p>接続するサーバーは<a href="https://claude.com/directory">Anthropic Directory</a>で探せます。DirectoryのコネクターはClaude Codeと同じMCPの仕組みを使うため、<code>claude mcp add</code> でそのまま追加できます。</p>
+<h2 id="s3">サーバーを追加する4つの方法</h2>
+<p>トランスポートはサーバーがどこで動くかで決まります。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>どんなサーバー向きか</th>
+<th>追加の仕方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP（推奨）</td>
+<td>クラウド上のサービス。最も広くサポートされている</td>
+<td><code>claude mcp add --transport http &lt;name&gt; &lt;url&gt;</code></td>
+</tr>
+<tr>
+<td>SSE（非推奨）</td>
+<td>SSEのエンドポイントしか公開していないサービス</td>
+<td>HTTPと同じコマンド（自動で切り替わる）</td>
+</tr>
+<tr>
+<td>stdio</td>
+<td>自分のマシンで動かすプロセス、カスタムスクリプト</td>
+<td><code>claude mcp add &lt;name&gt; -- &lt;command&gt; [args...]</code></td>
+</tr>
+<tr>
+<td>WebSocket</td>
+<td>サーバー側から予期しないイベントを押し込みたい場合</td>
+<td><code>claude mcp add-json</code> で <code>"type":"ws"</code> を指定</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/claude-mcp-guide/00_fig_transports.png" alt="MCPサーバーを追加する4つの方法の図。HTTPは推奨でクラウド上のサービス向けOAuth対応、SSEは非推奨でHTTPと同じコマンド、stdioはローカルのプロセスで--の後ろがサーバーのコマンド、WebSocketはサーバー側からイベントを押し込みたいときでOAuthは使えない" loading="lazy"><figcaption>4つのトランスポートの選び分け</figcaption></figure>
+
+<p>リモートのサービスをつなぐならHTTPを選んでください。SSEしか公開していないサーバーも、HTTPと同じコマンドで追加できます。Claude CodeがまずHTTPを試し、受け付けられなければSSEに切り替えるためです。</p>
+<p><code>claude mcp add --transport http notion https://mcp.notion.com/mcp</code></p>
+<p>ローカルのプロセスを動かすstdioでは、<code>--</code>（ダブルダッシュ）の位置が重要です。<code>--</code> より後ろはすべてサーバーを起動するコマンドとして渡され、前にあるものはClaude Code自身のオプションとして解釈されます。</p>
+<p><code>claude mcp add --env AIRTABLE_API_KEY=YOUR_KEY --transport stdio airtable -- npx -y airtable-mcp-server</code></p>
+<p><code>--</code> を書かないと、サーバー側のフラグ（<code>--port</code> など）をClaude Codeが自分のオプションとして読もうとして失敗します。<code>--env</code> を複数渡すときは、サーバー名が <code>--env</code> の直後に来ないよう、間に別のオプションを挟みます。</p>
+<p>WebSocketだけは <code>claude mcp add --transport</code> が受け付けないため、<code>claude mcp add-json</code> で指定します。OAuthにも対応していないので、認証はヘッダーで渡します。<strong>サーバーがリクエストに応えるだけならHTTPを選ぶ</strong>、というのが公式の指針です。</p>
+<h2 id="s4">他のクライアント向けの手順を読み替える</h2>
+<p>MCPサーバーの導入手順は、Claude DesktopやCursor向けに書かれていることがあります。<code>claude mcp add</code> のコマンドが載っていなくても、手元にある情報は次の3つのどれかです。</p>
+<p><strong>URLがある場合</strong>、そのサーバーはリモートにあります。<code>https://</code> なら <code>--transport http</code> で追加し、<code>wss://</code> ならWebSocketの手順を使います。APIキーやトークンのヘッダーが指定されていれば <code>--header</code> で渡します。</p>
+<p><strong><code>npx -y @example/mcp-server</code> のような起動コマンドがある場合</strong>は、ローカルのstdioサーバーです。コマンド全体を <code>--</code> の後ろに置きます。</p>
+<p><code>claude mcp add example --env API_KEY=your-key -- npx -y @example/mcp-server</code></p>
+<p><strong><code>mcpServers</code> のJSONブロックがある場合</strong>は、<code>mcpServers</code> の中身のオブジェクトだけを <code>claude mcp add-json</code> に渡します。ラッパーごと渡すのではありません。</p>
+<p><code>claude mcp add-json example '{"command":"npx","args":["-y","@example/mcp-server"]}'</code></p>
+<p>このとき2か所を直す必要があります。ひとつが、<code>url</code> はあるのに <code>type</code> がないエントリです。Claude Codeは <code>type</code> のないエントリをstdioサーバーとして読むため、<code>"type": "http"</code>（または <code>sse</code>、<code>ws</code>）を足さないとそのサーバーはスキップされます。もうひとつはサーバー名で、使えるのは英数字とハイフンとアンダースコアだけです。</p>
+<h2 id="s5">3つのスコープと優先順位</h2>
+<p><code>claude mcp add</code> は、<code>--scope</code> を付けなければローカルスコープに書き込みます。3つのスコープで違うのはこの2点です。どのプロジェクトで読み込まれるか、そしてチームと共有されるかどうか。</p>
+<table>
+<thead>
+<tr>
+<th>スコープ</th>
+<th>読み込まれる範囲</th>
+<th>チームと共有</th>
+<th>保存場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>local（既定）</td>
+<td>追加したプロジェクトだけ</td>
+<td>されない</td>
+<td><code>~/.claude.json</code></td>
+</tr>
+<tr>
+<td>project</td>
+<td>そのプロジェクトだけ</td>
+<td>される（バージョン管理経由）</td>
+<td>プロジェクトルートの <code>.mcp.json</code></td>
+</tr>
+<tr>
+<td>user</td>
+<td>すべてのプロジェクト</td>
+<td>されない</td>
+<td><code>~/.claude.json</code></td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/claude-mcp-guide/00_fig_scopes.png" alt="MCPの3つのスコープの図。localは既定で~/.claude.jsonに保存され追加したプロジェクトだけ、projectはプロジェクトルートの.mcp.jsonでチームと共有し各自の承認が要る、userは~/.claude.jsonで全プロジェクト。同名はlocalからclaude.aiコネクタの順に優先しフィールドはマージされない" loading="lazy"><figcaption>スコープは保存場所と共有範囲で選ぶ</figcaption></figure>
+
+<p>localは個人の実験や、バージョン管理に入れたくない認証情報を持つサーバー向けです。名前が紛らわしいのですが、<strong>MCPのローカルスコープが書き込むのはホームディレクトリの <code>~/.claude.json</code></strong> で、一般的なローカル設定の <code>.claude/settings.local.json</code> とは別のファイルです。</p>
+<p>projectは <code>.mcp.json</code> に書き込まれ、これをバージョン管理に入れるとチーム全員が同じサーバーを使えます。ただし<strong>セキュリティ上の理由から、<code>.mcp.json</code> のサーバーは対話セッションで承認するまで使われません</strong>。承認の選択をやり直すには <code>claude mcp reset-project-choices</code> を実行します。</p>
+<p>同じ名前のサーバーが複数の場所にある場合、Claude Codeは優先度の高いほうの定義を使って1回だけ接続します。順番はlocal、project、user、プラグイン提供、claude.aiコネクタの順で、<strong>フィールドはスコープをまたいでマージされません</strong>。片方の定義が丸ごと使われます。</p>
+<h2 id="s6">リモートサーバーで認証する</h2>
+<p>多くのクラウド型サーバーは認証を求めてきます。Claude CodeはOAuth 2.0に対応しており、<code>/mcp</code> を実行してブラウザでログインすれば、トークンは安全に保存され、以後の更新も自動です。</p>
+<p>ターミナルから直接サインインすることもできます。</p>
+<p><code>claude mcp login sentry</code></p>
+<p>SSH越しなど、手元にブラウザがない環境では、このコマンドが認可URLを出力します。ローカルのマシンでそのURLを開き、リダイレクト先の完全なURLをプロンプトに貼り付けます。貼り付けの工程があるため、<code>ssh -t</code> で対話的な端末を確保しておきます。保存した認証情報を消すときは <code>claude mcp logout &lt;name&gt;</code> です。</p>
+<p>よくつまずくのが「Incompatible auth server: does not support dynamic client registration」というエラーです。これは動的クライアント登録に対応していないサーバーで、開発者ポータルでOAuthアプリを登録し、クライアントIDとシークレットを渡す必要があります。リダイレクトURIを登録する場合は <code>http://localhost:PORT/callback</code> の形にして、追加時の <code>--callback-port</code> と同じポートを指定します。</p>
+<p><code>claude mcp add --transport http --client-id your-client-id --client-secret --callback-port 8080 my-server https://mcp.example.com/mcp</code></p>
+<p><code>--client-secret</code> は値を書きません。実行するとマスクされた入力でシークレットを聞かれるため、シェルの履歴には残らない形です。保存先はmacOSのキーチェーンか認証情報ファイルで、設定ファイルには書かれません。後から変更するなら、いったん <code>claude mcp remove</code> してから同じスコープで追加し直してください。</p>
+<p>なお、<code>headers.Authorization</code> を自分で設定したサーバーが認証に失敗した場合、Claude CodeはOAuthに切り替えず、接続失敗として報告します。トークンを直すか、ヘッダーを外してOAuthに任せるかのどちらかです。</p>
+<h2 id="s7">サーバーの状態を読む</h2>
+<p><code>claude mcp add</code> が出す <code>Added ...</code> は、設定が書き込まれたという意味でしかありません。つながったかどうかは <code>claude mcp list</code> か、セッション内の <code>/mcp</code> で確認します。</p>
+<table>
+<thead>
+<tr>
+<th>表示</th>
+<th>意味</th>
+<th>すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✔ Connected</td>
+<td>接続済み</td>
+<td>なし</td>
+</tr>
+<tr>
+<td>! Needs authentication</td>
+<td>認証が必要</td>
+<td><code>/mcp</code> か <code>claude mcp login &lt;name&gt;</code> でサインイン</td>
+</tr>
+<tr>
+<td>✘ Failed to connect</td>
+<td>接続に失敗</td>
+<td>同じ行に出るHTTPステータスやエラーを読む</td>
+</tr>
+<tr>
+<td>⏸ Pending approval</td>
+<td><code>.mcp.json</code> のサーバーが未承認</td>
+<td><code>claude</code> を対話的に起動して承認する</td>
+</tr>
+<tr>
+<td>⊘ Disabled for this project</td>
+<td>このプロジェクトで無効</td>
+<td><code>/mcp</code> のパネルから戻す</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/claude-mcp-guide/00_fig_status.png" alt="claude mcp listが出す5つの状態と対処の表。Connectedは接続済み、Needs authenticationは/mcpかclaude mcp loginでサインイン、Failed to connectは同じ行のHTTPステータスを読む、Pending approvalはclaudeを対話的に起動して承認、Disabledは/mcpのパネルから戻す" loading="lazy"><figcaption>状態ごとに、次にすることが決まる</figcaption></figure>
+
+<p><code>✘ Failed to connect</code> はサーバーに接続できなかったという意味で、<code>list</code> コマンドが失敗したわけではありません。失敗の詳細にはサーバーが返したHTTPステータス（401など）とエラーテキストが付きます。認証情報のように見えるテキストと展開後のURLは、秘密が混ざりうるため伏せられます。</p>
+<p>WebSocketのサーバーは <code>claude mcp list</code> の出力に表示されません。消えたわけではないので、<code>claude mcp get &lt;name&gt;</code> か <code>/mcp</code> のパネルで確認します。</p>
+<h2 id="s8">設定でつまずく箇所</h2>
+<p>公式ドキュメントにはClaude Codeが警告を出す設定ミスが列挙されています。どれも原因が見えにくいものばかりです。</p>
+<p><strong>隠れた空白</strong>はトークンを貼り付けたときに起きます。末尾の改行まで一緒に入ってしまうためです。Claude Codeは <code>command</code>・<code>url</code>・<code>args</code>・<code>env</code>・<code>headers</code> の値とキー名をチェックし、<code>Leading or trailing whitespace in: headers.Authorization</code> のように場所を名指しします。<strong>空白は自動では取り除かれない</strong>ので、設定を直します。</p>
+<p><strong>予約名</strong>も引っかかります。<code>workspace</code>、<code>claude-in-chrome</code>、<code>computer-use</code>、<code>Claude Preview</code>、<code>Claude Browser</code> は組み込みサーバーの名前として予約されており、同じ名前のサーバーは読み込み時にスキップされます。</p>
+<p><strong>環境変数の展開</strong>で <code>${VAR}</code> が未設定でデフォルトもない場合、設定は読み込まれるものの <code>${VAR}</code> という文字列がそのまま使われます。<code>${VAR:-default}</code> を書いておくと安全です。</p>
+<p>リモートサーバーの <code>url</code> と <code>headers</code> では、<strong><code>ANTHROPIC_API_KEY</code> や <code>AWS_BEARER_TOKEN_BEDROCK</code>、<code>NPM_TOKEN</code> のような認証情報の変数が、意図的に空として読み込まれます</strong>。プロジェクトの <code>.mcp.json</code> やプラグインが、Claude Code自身の認証情報を外部のサーバーへ送ってしまうのを防ぐためです。<code>Bearer ${ANTHROPIC_AUTH_TOKEN}</code> と書くとサーバーには <code>Bearer</code> だけが届き、たいてい401で弾かれます。渡したい場合は自分の名前の変数にコピーして、その名前を参照します。</p>
+<figure class="post-figure"><img src="/media/images/claude-mcp-guide/00_fig_pitfalls.png" alt="設定でつまずく4つの図。隠れた空白は自動では取り除かれない、予約名は同名だとスキップされる、${VAR}が未設定だと文字列のまま読み込まれる、リモートのurlとheadersでは認証情報の変数が意図的に空として読まれる" loading="lazy"><figcaption>どれも原因が見えにくい4つ</figcaption></figure>
+
+<p>タイムアウトまわりも押さえておくと、途中で切れたときに慌てずに済みます。</p>
+<ul>
+<li>サーバー起動のタイムアウトは <code>MCP_TIMEOUT</code>（ミリ秒）</li>
+<li>ツール実行のタイムアウトは <code>.mcp.json</code> の <code>timeout</code>。サーバーごとに指定でき、1000未満は無視される</li>
+<li>応答も進捗通知も返さない呼び出しは、アイドルとして中断される。既定はリモートが5分、stdioが30分</li>
+<li><strong>2分を超えた呼び出しは自動でバックグラウンドのタスクに移り</strong>、セッションは止まらない。結果は通知として届く</li>
+<li>MCPツールの出力が10,000トークンを超えると警告が出て、既定で25,000トークンに制限される。上げるには <code>MAX_MCP_OUTPUT_TOKENS</code></li>
+</ul>
+<figure class="post-figure"><img src="/media/images/claude-mcp-guide/00_fig_timeouts.png" alt="MCPのタイムアウトと制限の表。サーバー起動はMCP_TIMEOUT、ツール実行は.mcp.jsonのtimeout、無反応での打ち切りはリモート5分stdio30分、2分でバックグラウンドへ、出力は25,000トークン制限で1万で警告" loading="lazy"><figcaption>止まったときに見る5か所</figcaption></figure>
+
+<h2 id="s9">claude.aiのコネクターとの関係</h2>
+<p>claude.aiのアカウントでClaude Codeにログインしている場合、claude.aiに追加したMCPサーバー（コネクター）はClaude Codeでも自動的に使えます。設定は <a href="https://claude.ai/customize/connectors">claude.ai/customize/connectors</a> で行います。TeamとEnterpriseのプランでは、追加できるのは管理者だけです。</p>
+<p>Claude Desktopで設定済みのサーバーは、そのまま取り込めます。</p>
+<p><code>claude mcp add-from-claude-desktop</code></p>
+<p>対話的なダイアログで取り込むサーバーを選ぶ形式で、macOSとWSLでのみ動きます。ひとつ注意点があり、<code>claude mcp</code> が受け付けるサーバー名は英数字とハイフンとアンダースコアだけなので、スペースを含む名前のサーバーは取り込めません。取り込みは拒否した名前を報告し、残りは通常どおり追加します。</p>
+<h2 id="s10">安全に使うために</h2>
+<p>公式ドキュメントには接続する前に<strong>そのサーバーを信頼できるか確認する</strong>よう明記されています。外部のコンテンツを取得するサーバーは、プロンプトインジェクションの経路になりうるためです。取ってきたページや課題の本文に指示のような文字列が混ざっていれば、それがAIへの入力になります。</p>
+<p>実務で効く対策は2つあります。ひとつが、データベースをつなぐときに<strong>読み取り専用のユーザーで接続文字列を書く</strong>ことです。公式の例も読み取り専用ユーザーを使っています。もうひとつが、<code>headersHelper</code> のように任意のシェルコマンドを実行する設定を、信頼したフォルダでしか動かさないことです。Claude Codeはプロジェクトの <code>.mcp.json</code> にあるヘルパーを、そのディレクトリの信頼ダイアログを受け入れるまで実行しません。</p>
+<p>リポジトリやプラグインが提供する <code>headersHelper</code> は、環境から認証情報らしき変数を取り除いた状態で実行されます。名前に <code>TOKEN</code>・<code>SECRET</code>・<code>PASSWORD</code>・<code>KEY</code>・<code>AUTH</code> を含む変数が対象なので、ヘルパー側はファイルや認証情報ストアから読む作りにします。</p>
+<h2 id="s11">AI検索での見え方は別の話</h2>
+<p>MCPで自社のデータをAIにつなぐことと、自社がAIの回答に登場することは別の問題で、後者は<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。</p>
+<h2 id="s12">よくある質問</h2>
+<p>回答の内容は2026年9月21日時点の Anthropic の公式ドキュメントの記載に基づきます。</p>
+<h3 id="s12-1">Claude MCPで何ができますか？</h3>
+<p>課題追跡ツールの内容を読んで実装する、監視データを分析する、データベースをクエリする、デザインツールの更新を反映する、といった外部ツールをまたぐ作業ができます。サーバーがチャネルに対応していれば、外部で起きたイベントにClaudeが反応することも可能です。</p>
+<h3 id="s12-2">MCPサーバーはどこで探せますか？</h3>
+<p>Anthropic Directoryにレビュー済みのコネクターがまとまっています。Directoryのサーバーは <code>claude mcp add</code> でそのまま追加できる形です。</p>
+<h3 id="s12-3">HTTPとSSEとstdioはどう選びますか？</h3>
+<p>クラウドのサービスはHTTP、自分のマシンで動かすものはstdioです。SSEは非推奨で、SSEしか公開していないサーバーもHTTPと同じコマンドで追加でき、Claude Codeが自動で切り替えます。</p>
+<h3 id="s12-4">チームで同じMCPサーバーを使うにはどうしますか？</h3>
+<p><code>--scope project</code> で追加して、プロジェクトルートの <code>.mcp.json</code> をバージョン管理に入れます。各メンバーは最初に対話セッションで承認する必要があります。</p>
+<h3 id="s12-5">Pending approval のまま動きません</h3>
+<p><code>.mcp.json</code> のプロジェクトスコープのサーバーが未承認の状態です。<code>claude</code> を対話的に起動して承認します。クローンしたリポジトリでは、ワークスペースの信頼ダイアログを受け入れるまで自分のサーバーを承認できません。</p>
+<h3 id="s12-6">設定を消さずにサーバーを止められますか？</h3>
+<p><code>/mcp</code> のパネルでオフに切り替えると、設定を残したまま接続を止められます。選択はプロジェクトごとに <code>~/.claude.json</code> に記録されます。</p>
+<h3 id="s12-7">MCPサーバーを入れるとセキュリティ上のリスクはありますか？</h3>
+<p>外部のコンテンツを取得するサーバーはプロンプトインジェクションの経路になりえます。信頼できるサーバーだけを入れ、データベースは読み取り専用ユーザーでつないでください。</p>
+<h3 id="s12-8">ツールの呼び出しが途中で止まります。</h3>
+<p>応答も進捗通知も返さない呼び出しは、アイドルとして中断されます。既定の待ち時間はリモートが5分、stdioが30分です。実行時間そのものが長い場合は、2分を超えた時点で自動的にバックグラウンドのタスクへ移ります。</p>
+<h2 id="s13">出典</h2>
+<p>本文の事実関係はAnthropicの公式ドキュメントで確認しています（2026年9月21日取得）。</p>
+<ul>
+<li><a href="https://code.claude.com/docs/ja/mcp">MCPを使用してClaude Codeをツールに接続する</a></li>
+<li><a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol 公式サイト</a></li>
+<li><a href="https://claude.com/directory">Anthropic Directory</a></li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-image-limit/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの画像生成ができない"><defs><linearGradient id="ecg-946deb45" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-946deb45)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの画像</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">生成ができない</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.25</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTの画像生成ができない原因と制限を解説｜上限・何枚まで・遅いときの対処</div>
+            </a>
+            <a href="/media/chatgpt-limit-reached/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの上限とリセット時間"><defs><linearGradient id="ecg-4f05aee3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4f05aee3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの上限</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">とリセット時間</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.25</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTで上限に達したときのリセット時間と対処｜無料版・Plus・Pro・Codex</div>
+            </a>
+            <a href="/media/claude-usage-limits/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの使用制限とリセット"><defs><linearGradient id="ecg-d22eaed3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d22eaed3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの使用制</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">限とリセット</text><line x1="311.2" y1="416.8" x2="888.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.25</div>
+                <div class="rel-card__ttl">【2026年9月】Claudeの使用制限とリセット時間を解説｜5時間・週間・無料版・ツール使用制限</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

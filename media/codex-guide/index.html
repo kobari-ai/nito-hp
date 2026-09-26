@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】Codexの使い方を解説｜4つの入口とプラン別にできること | nito Column</title>
+    <meta name="description" content="OpenAIのCodexは、デスクトップアプリ・CLI・IDE拡張・クラウドの4つの入口があります。公式ドキュメントから入口ごとの違い、プラン別に使える範囲、権限モードの選び方を整理します。">
+    <link rel="canonical" href="https://nito-0210.com/media/codex-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】Codexの使い方を解説｜4つの入口とプラン別にできること">
+    <meta property="og:description" content="OpenAIのCodexは、デスクトップアプリ・CLI・IDE拡張・クラウドの4つの入口があります。公式ドキュメントから入口ごとの違い、プラン別に使える範囲、権限モードの選び方を整理します。">
+    <meta property="og:url" content="https://nito-0210.com/media/codex-guide/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/_default.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/_default.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Codexの使い方を解説｜4つの入口とプラン別にできること", "description": "OpenAIのCodexは、デスクトップアプリ・CLI・IDE拡張・クラウドの4つの入口があります。公式ドキュメントから入口ごとの違い、プラン別に使える範囲、権限モードの選び方を整理します。", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/codex-guide/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Codexの使い方を解説｜4つの入口とプラン別にできること"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Codexは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "無料プランでも使えますが、入口はデスクトップアプリに限られ、モデルはGPT-6 Lunaの標準速度です。ターミナルのCLI、IDE拡張、クラウドはPlus以上が対象になります。"}}, {"@type": "Question", "name": "Codex CLIはどうやってインストールしますか？", "acceptedAnswer": {"@type": "Answer", "text": "macOSとLinuxでは`curl -fsSL https://chatgpt.com/codex/install.sh | sh`を実行します。npmとHomebrew、Windows向けの手順も公式にあります。更新も同じコマンドです。"}}, {"@type": "Question", "name": "Codexで使えるモデルはどれですか？", "acceptedAnswer": {"@type": "Answer", "text": "GPT-6 SolとGPT-6 Lunaです。この2つは通常のチャットでは選べず、ChatGPT WorkとCodexの中だけで使えます。GPT-6 Astraを使う場合はCodex CLIの0.153.0以降が必要です。"}}, {"@type": "Question", "name": "GPT-5.5はいつまで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年10月14日にChatGPTとChatGPT WorkとCodexから引退します。OpenAI APIは対象外です。設定やスクリプトにモデル名を書いている場合は、その前の入れ替えが要ります。"}}, {"@type": "Question", "name": "Codexはどこまで勝手に実行しますか？", "acceptedAnswer": {"@type": "Answer", "text": "答えは選んだ権限モード次第です。既定のAsk for approvalでは作業中のフォルダの中で動き、インターネットに出るときと範囲の外に出るときに確認を取ります。Full accessではどのファイルも承認なしで編集できる状態になります。"}}, {"@type": "Question", "name": "Codex CLIとIDE拡張はどちらがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "選ぶ基準は作業の形です。CLIはターミナルの中で完結させたい場合や、`codex exec`でCIや繰り返しの処理に組み込む場合に向きます。IDE拡張は開いているファイルと選択範囲をそのまま渡し、差分をその場で確認したい場合に向きます。"}}, {"@type": "Question", "name": "APIキーで使うと何が変わりますか？", "acceptedAnswer": {"@type": "Answer", "text": "CLIとSDKとIDE拡張は使えますが、GitHubの自動コードレビューやSlack連携といったクラウド側の機能は付きません。料金はAPIの従量課金で、使えるモデルはそのキーで利用できるものに従います。"}}, {"@type": "Question", "name": "ChatGPT WorkとCodexはどう違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "Workは調査や分析、文書や表計算や資料の作成を担当し、Codexはソフトウェア開発と技術的な作業を担当します。利用量と請求の仕組みは共通で、デスクトップアプリでは左上のメニューで切り替えます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Codexの使い方を解…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.23</span>
+        </div>
+        <h1 class="post-title">【2026年9月】Codexの使い方を解説｜4つの入口とプラン別にできること</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Codexの使い方"><defs><linearGradient id="ecg-e22bd32e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e22bd32e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Codexの使い方</text><line x1="334.0" y1="327.1" x2="866.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">4つの入口とプラン別にできること</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Codexを調べると「ターミナルにインストールして使うツール」という説明と「ChatGPTのサイドバーから開く機能」という説明が両方出てきます。どちらも間違いではありません。いまのCodexには<strong>入口が4つ</strong>あり、どこから入るかでプランの条件も使える機能も変わります。</p>
+<p>ここではOpenAIの<a href="https://developers.openai.com/codex/">Codexドキュメント</a>と<a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex">ヘルプセンター</a>（2026年9月23日取得）から、入口ごとの違いと最初の設定を整理します。ChatGPT本体の使い方は<a href="https://nito-0210.com/media/chatgpt-guide/">ChatGPTの使い方の記事</a>にまとめています。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>入口は<strong>デスクトップアプリ・CLI・IDE拡張・クラウド</strong>の4つ</li>
+<li><strong>無料プランとGoで使えるのはデスクトップアプリだけ</strong>。CLIとIDE拡張とクラウドはPlus以上</li>
+<li>CLIの導入は<code>curl</code>1行。最初に<code>/init</code>でAGENTS.mdを作り、<code>/permissions</code>で権限を決める</li>
+<li>権限は<strong>触れる範囲と、止まるタイミング</strong>の2つで決まる。承認役を変えても範囲は広がらない</li>
+<li><strong>GPT-5.5は2026年10月14日にChatGPT側から引退</strong>する。設定に書いてある人は入れ替えが要る</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Codexは4つの入口を持つ</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>プラン別に何ができるか</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>ターミナルから使う手順</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>権限は範囲と止まり方で決める</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>モデルはSolとLunaから選ぶ</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>10月14日にGPT-5.5が引退する</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>クラウドで並行して走らせる</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>AI検索での見え方は別の話</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Codexは4つの入口を持つ</h2>
+<p>まず全体像です。同じCodexでも、入る場所によって扱えるものが変わります。</p>
+<figure class="post-figure"><img src="/media/images/codex-guide/cx_04_fig_entry.png" alt="Codexの4つの入口の比較図。デスクトップアプリは全プラン、CLIとIDE拡張とクラウドはPlus以上。APIキーで入るとクラウド側の機能は使えずAPI課金になる" loading="lazy"><figcaption>4つの入口と、それぞれが使えるプラン</figcaption></figure>
+
+<p>デスクトップアプリのCodexは、ChatGPTのアプリの中にある別の画面です。左上のメニューでChatGPTとCodexを切り替えます。ChatGPT側にはChatとWorkの2つがあり、Codexはそれらと履歴が分かれています。ウェブとモバイルのアプリからCodexを選ぶことはできません。モバイルアプリのRemoteタブから、デスクトップで動いているCodexのチャットに触れる形になります。</p>
+<h2 id="s2">プラン別に何ができるか</h2>
+<p>公式の料金ページは無料からEnterpriseまでCodexが含まれると書いたうえで、プランごとに使える入口を分けています。</p>
+<table>
+<thead>
+<tr>
+<th>プラン</th>
+<th>月額</th>
+<th>Codexで使えるもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>無料</td>
+<td>$0</td>
+<td>デスクトップアプリでGPT-6 Lunaを標準速度で</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>$8</td>
+<td>デスクトップアプリでGPT-6 Lunaを標準速度で</td>
+</tr>
+<tr>
+<td>Plus</td>
+<td>$20</td>
+<td>ウェブ・CLI・IDE拡張・iOS、クラウド連携、GPT-6 SolとGPT-6 Luna</td>
+</tr>
+<tr>
+<td>Pro</td>
+<td>$100から</td>
+<td>Plusの5倍または20倍の利用量</td>
+</tr>
+<tr>
+<td>Business</td>
+<td>1人$20（年額課金）</td>
+<td>デスクトップとモバイル、大きい仮想マシン、管理機能</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/codex-guide/cx_02_pricing.jpg" alt="OpenAIのCodex料金ページ。無料が0ドル、Goが8ドル、Plusが20ドル、Proが100ドルからで、各プランに含まれる内容が並んでいる" loading="lazy"><figcaption>公式の料金ページに並ぶ個人向けプラン</figcaption></figure>
+
+<p>境目はPlusです。ターミナルやエディタから使いたいなら、無料やGoでは届きません。</p>
+<p>Businessは2人以上で年額課金のときの金額で、月額課金なら1人$25になります。APIキーで使う道もあり、この場合はCLIとSDKとIDE拡張が対象です。GitHubの自動コードレビューやSlack連携といったクラウド側の機能は付かず、料金はAPIの従量課金になります。</p>
+<p>ChatGPT WorkとCodexは利用量を共有します。料金ページの説明はコーディングの作業を前提にしているので、Workで文書や資料を作る場合の消費は作業ごとに変わります。</p>
+<h2 id="s3">ターミナルから使う手順</h2>
+<p>CLIの導入は1行です。macOSとLinuxでは次のコマンドを実行します。</p>
+<p><code>curl -fsSL https://chatgpt.com/codex/install.sh | sh</code></p>
+<p>同じコマンドが更新にも使えます。npmやHomebrew、Windows向けの手順も公式に載っています。</p>
+<p>インストールが終わったら、対象のプロジェクトのディレクトリで<code>codex</code>と打つだけです。はじめて触るなら、手元のコードを読ませて説明させるところから入るのが早道です。初回はChatGPTでのサインインか、別のサインイン方法かを選びます。ChatGPTでサインインすると、契約しているプランの利用量と請求の扱いになります。APIキーを使う場合はAPIの料金です。</p>
+<p>起動直後に案内されるコマンドが、そのまま最初にやることの並びです。</p>
+<figure class="post-figure"><img src="/media/images/codex-guide/cx_01_docs.png" alt="Codex CLIの公式ドキュメント。ターミナルの画面にmodel gpt-6-sol mediumと表示され、slash initやslash permissionsなどのコマンドが並んでいる" loading="lazy"><figcaption>公式ドキュメントに載っているCLIの起動画面</figcaption></figure>
+
+<p><code>/init</code>はAGENTS.mdを作るコマンドです。プロジェクトの約束ごとをここに書いておくと、毎回同じ説明をしなくて済みます。</p>
+<ul>
+<li><code>/init</code> プロジェクトの指示を書くAGENTS.mdを作る</li>
+<li><code>/status</code> いまのセッションの設定を表示する</li>
+<li><code>/permissions</code> できることの範囲を選ぶ</li>
+<li><code>/model</code> モデルと推論の深さを選ぶ</li>
+<li><code>/review</code> 変更を確認して問題を探す</li>
+</ul>
+<p>公式は作業の前後でGitのチェックポイントを作って、いつでも戻せるようにすることを勧めています。</p>
+<h2 id="s4">権限は範囲と止まり方で決める</h2>
+<p>Codexにローカルの操作を任せる以上、最初に決めるのは権限です。公式は3つのモードを用意しています。</p>
+<figure class="post-figure"><img src="/media/images/codex-guide/cx_05_fig_perm.png" alt="Codexの権限モード3種の比較図。Ask for approvalは作業フォルダ内で動き範囲を越えるときに確認する、Approve for meは自動で判定する、Full accessはどのファイルも承認なしで編集できる" loading="lazy"><figcaption>3つの権限モードと、それぞれの境目</figcaption></figure>
+
+<p>自分のマシンで動かす以上、Full accessに寄せるほど事故の代償が大きくなります。試す段階では既定のまま触らないのが無難です。</p>
+<p>仕組みとしては2つの制御が組み合わさっています。サンドボックスが触れるファイルとネットワークの範囲を決め、承認の設定がどこで止まるかを決めます。<strong>Approve for meを選んでも、触れる範囲そのものは広がりません</strong>。範囲を越える要求を人が見るか自動で見るかが変わるだけです。</p>
+<p>デスクトップアプリではApprove for me（設定の表記はAuto-review）とFull accessは初期状態ではメニューに出ません。設定のGeneralから有効にして初めて選べるようになります。Full accessについては、データの消失や流出、想定外の動作の危険が大きく上がると公式が明記しています。</p>
+<h2 id="s5">モデルはSolとLunaから選ぶ</h2>
+<p>Work とCodexで使うモデルは、通常のChatGPTのチャットとは別系統です。<strong>GPT-6 SolとGPT-6 Lunaは、WorkとCodexでのみ使えます</strong>。複雑なコーディングやエージェント的な作業にはSol、決まった形の反復作業にはLunaを公式が勧めています。</p>
+<p>入れ替えの最中なので、GPT-5.6のSol・Terra・Lunaも引き続き選べます。チャット側で使えるのはこの5.6系のほうです。</p>
+<p>CLIでは<code>/model</code>で切り替えるか、起動時に指定します。</p>
+<p><code>codex --model gpt-6-sol
+codex exec -m gpt-6-sol "Review the current changes"</code></p>
+<p>推論の深さはLow・Medium・High・Extra high・Max・Ultraの6段階です。<strong>最初に選ぶ深さはモデルごとに違い</strong>、公式はSolならMedium、LunaならHigh、AstraならLightから始めることを勧めています。</p>
+<p>呼び名も画面で違います。いちばん軽い段階はデスクトップアプリとウェブのWorkとIDE拡張ではLight、CLIではLowと表示されます。上の2つも役割が分かれていて、Maxは選んだモデルに同じ1つの仕事をより長く考えさせる段階、Ultraはサブエージェントに作業を分けて走らせる段階です。深くするほど時間もトークンも増えます。</p>
+<p>デスクトップアプリとウェブでは、入力欄の下のコントロールでモデルと推論の深さを選びます。CLIにスライダーはありません。Codexは手動で選んだモデルを保持します。</p>
+<h2 id="s6">10月14日にGPT-5.5が引退する</h2>
+<p><strong>2026年10月14日に、GPT-5.5がChatGPTとChatGPT WorkとCodexの全プランから引退します</strong>。OpenAI APIは対象外です。</p>
+<figure class="post-figure"><img src="/media/images/codex-guide/cx_03_models.jpg" alt="Codex公式ドキュメントのModelsページ。2026年10月14日にGPT-5.5がChatGPTとChatGPT WorkとCodexから引退すること、代わりにgpt-6-solまたはgpt-6-lunaを選ぶことが書かれている" loading="lazy"><figcaption>公式ドキュメントに出ているGPT-5.5の引退の告知</figcaption></figure>
+
+<p>手を動かす必要があるのは、設定ファイルや自動化にモデル名を書き込んでいる場合です。</p>
+<p>置き換え先はPlus・Pro・Business・Enterprise・Eduなら<code>gpt-6-sol</code>、無料とGoならデスクトップアプリの<code>gpt-6-luna</code>です。公式が確認を求めているのは、ワークスペースの既定値、保存したモデル設定、管理された構成、カスタムのエージェント、スケジュールしたタスク、モデルを指定しているスクリプトです。CIに組み込んでいる場合は、そこに<code>gpt-5.5</code>が残っていないかを見ます。</p>
+<p>なお、Astraを使うにはCodex CLIのバージョン0.153.0以降が必要です。GPT-5.6をCodexで使う場合の最低バージョンは、デスクトップアプリのCodexモードが26.707.30751、Codex CLIが0.144.0と公式に書かれています。</p>
+<h2 id="s7">クラウドで並行して走らせる</h2>
+<p>手元のマシンを占有したくない作業は、クラウド側に投げられます。隔離した環境が割り当てられ、複数の作業を並行して進められる形です。ChatGPTのプランで走らせるクラウドのチャットはGPT-5.6 Solを使い、手元で動かすときより利用枠を多く消費することがあると公式に書かれています。</p>
+<p>設定はCodexにサインインして、GitHubかGitLabをつなぐところから始めます。GitHubではCodexが触れるリポジトリを選び、GitLabは環境を作るときにプロジェクトを選ぶ形です。GitHub・GitLab・Linear・Slackから作業を開始することもできます。</p>
+<p>終わったら、要約と差分を確認して、追加の依頼を出すか、そのままプルリクエストを開きます。リポジトリごとに必要な依存関係やツール、環境変数、セットアップの手順を環境として定義できます。</p>
+<h2 id="s8">AI検索での見え方は別の話</h2>
+<p>開発にCodexを使うことと、自社のサービスがAIの回答に出てくるかどうかは別の問題です。後者はAIが参照できる形で情報が置かれているかで決まります。仕組みと対策は<a href="https://nito-0210.com/media/ai-search-first-steps/">AI検索対策は何から始めるかの記事</a>にまとめています。</p>
+<h2 id="s9">よくある質問</h2>
+<p>回答の内容はすべて2026年9月23日時点の公式ドキュメントとヘルプセンターの記載です。</p>
+<h3 id="s9-1">Codexは無料で使えますか？</h3>
+<p>無料プランでも使えますが、入口はデスクトップアプリに限られ、モデルはGPT-6 Lunaの標準速度です。ターミナルのCLI、IDE拡張、クラウドはPlus以上が対象になります。</p>
+<h3 id="s9-2">Codex CLIはどうやってインストールしますか？</h3>
+<p>macOSとLinuxでは<code>curl -fsSL https://chatgpt.com/codex/install.sh | sh</code>を実行します。npmとHomebrew、Windows向けの手順も公式にあります。更新も同じコマンドです。</p>
+<h3 id="s9-3">Codexで使えるモデルはどれですか？</h3>
+<p>GPT-6 SolとGPT-6 Lunaです。この2つは通常のチャットでは選べず、ChatGPT WorkとCodexの中だけで使えます。GPT-6 Astraを使う場合はCodex CLIの0.153.0以降が必要です。</p>
+<h3 id="s9-4">GPT-5.5はいつまで使えますか？</h3>
+<p>2026年10月14日にChatGPTとChatGPT WorkとCodexから引退します。OpenAI APIは対象外です。設定やスクリプトにモデル名を書いている場合は、その前の入れ替えが要ります。</p>
+<h3 id="s9-5">Codexはどこまで勝手に実行しますか？</h3>
+<p>答えは選んだ権限モード次第です。既定のAsk for approvalでは作業中のフォルダの中で動き、インターネットに出るときと範囲の外に出るときに確認を取ります。Full accessではどのファイルも承認なしで編集できる状態になります。</p>
+<h3 id="s9-6">Codex CLIとIDE拡張はどちらがいいですか？</h3>
+<p>選ぶ基準は作業の形です。CLIはターミナルの中で完結させたい場合や、<code>codex exec</code>でCIや繰り返しの処理に組み込む場合に向きます。IDE拡張は開いているファイルと選択範囲をそのまま渡し、差分をその場で確認したい場合に向きます。</p>
+<h3 id="s9-7">APIキーで使うと何が変わりますか？</h3>
+<p>CLIとSDKとIDE拡張は使えますが、GitHubの自動コードレビューやSlack連携といったクラウド側の機能は付きません。料金はAPIの従量課金で、使えるモデルはそのキーで利用できるものに従います。</p>
+<h3 id="s9-8">ChatGPT WorkとCodexはどう違いますか？</h3>
+<p>Workは調査や分析、文書や表計算や資料の作成を担当し、Codexはソフトウェア開発と技術的な作業を担当します。利用量と請求の仕組みは共通で、デスクトップアプリでは左上のメニューで切り替えます。</p>
+<h2 id="s10">出典</h2>
+<p>出典はOpenAIの公式ページで、取得日は2026年9月23日です。</p>
+<ul>
+<li><a href="https://developers.openai.com/codex/quickstart">Codex Quickstart（公式）</a> — デスクトップアプリとウェブの始め方、ChatGPTとCodexの切り替え</li>
+<li><a href="https://developers.openai.com/codex/pricing">Codex Pricing（公式）</a> — プラン別の金額と使える入口、APIキーで使う場合の違い</li>
+<li><a href="https://developers.openai.com/codex/models">Codex Models（公式）</a> — GPT-5.5の引退日と置き換え先、推論の深さ、モデルの選び方</li>
+<li><a href="https://developers.openai.com/codex/cli">Codex CLI（公式）</a> — インストールとサインイン、起動直後のコマンド</li>
+<li><a href="https://developers.openai.com/codex/ide">Codex IDE extension（公式）</a> — エディタ内での使い方</li>
+<li><a href="https://developers.openai.com/codex/cloud">Codex cloud（公式）</a> — クラウド環境の設定、GitHubとGitLabの接続</li>
+<li><a href="https://developers.openai.com/codex/permission-modes">Permissions（公式）</a> — 3つの権限モード、サンドボックスと承認の関係</li>
+<li><a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex">ChatGPT Work and Codex（公式ヘルプ）</a> — 3つの体験の使い分け、モデルの提供範囲、Astraの必要バージョン</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-image-limit/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの画像生成ができない"><defs><linearGradient id="ecg-946deb45" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-946deb45)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの画像</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">生成ができない</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.25</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTの画像生成ができない原因と制限を解説｜上限・何枚まで・遅いときの対処</div>
+            </a>
+            <a href="/media/chatgpt-limit-reached/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの上限とリセット時間"><defs><linearGradient id="ecg-4f05aee3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4f05aee3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの上限</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">とリセット時間</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.25</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTで上限に達したときのリセット時間と対処｜無料版・Plus・Pro・Codex</div>
+            </a>
+            <a href="/media/claude-usage-limits/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの使用制限とリセット"><defs><linearGradient id="ecg-d22eaed3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d22eaed3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの使用制</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">限とリセット</text><line x1="311.2" y1="416.8" x2="888.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.25</div>
+                <div class="rel-card__ttl">【2026年9月】Claudeの使用制限とリセット時間を解説｜5時間・週間・無料版・ツール使用制限</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

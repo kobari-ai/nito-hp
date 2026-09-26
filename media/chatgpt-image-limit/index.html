@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】ChatGPTの画像生成ができない原因と制限を解説｜上限・何枚まで・遅いときの対処 | nito Column</title>
+    <meta name="description" content="ChatGPTで画像生成ができないときの原因を、表示の出方で5つに分けて対処を整理。無料版とGo・Plus・Proの上限の書き方、上限に達したときの再開時刻、ChatGPT 画像 2.5で変わった点まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/chatgpt-image-limit/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】ChatGPTの画像生成ができない原因と制限を解説｜上限・何枚まで・遅いときの対処">
+    <meta property="og:description" content="ChatGPTで画像生成ができないときの原因を、表示の出方で5つに分けて対処を整理。無料版とGo・Plus・Proの上限の書き方、上限に達したときの再開時刻、ChatGPT 画像 2.5で変わった点まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/chatgpt-image-limit/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/chatgpt-image-limit.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/chatgpt-image-limit.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】ChatGPTの画像生成ができない原因と制限を解説｜上限・何枚まで・遅いときの対処", "description": "ChatGPTで画像生成ができないときの原因を、表示の出方で5つに分けて対処を整理。無料版とGo・Plus・Proの上限の書き方、上限に達したときの再開時刻、ChatGPT 画像 2.5で変わった点まで。", "datePublished": "2026-09-25", "dateModified": "2026-09-25", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/chatgpt-image-limit/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】ChatGPTの画像生成ができない原因と制限を解説｜上限・何枚まで・遅いときの対処"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTの画像生成は何回まで無料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "OpenAIは回数を公開していません。無料版の料金ページには「画像生成の回数に上限あり、速度も制限あり」とだけ書かれています。上限に達すると、再開できる時刻が画面に表示されます。"}}, {"@type": "Question", "name": "ChatGPTの画像作成が終わらないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "画像生成は内容によって数分かかることがあります。数分待っても終わらなければ、生成を止めて再生成するか、新しいチャットで送り直します。長い会話の途中で頼んでいたなら、新しいチャットに分けてください。"}}, {"@type": "Question", "name": "ChatGPTで画像生成を無料でできる時間は？", "acceptedAnswer": {"@type": "Answer", "text": "時間帯の決まりは公開されていません。上限に達したときの通知に、次に作れる時刻が出ます。公式ヘルプの例では「明日の9:17以降」と表示されていました。"}}, {"@type": "Question", "name": "ChatGPT Plusなら画像は無制限ですか？", "acceptedAnswer": {"@type": "Answer", "text": "無制限と書かれているのはProだけです。Plusの料金ページの記述は「より高度で正確な画像生成」で、枚数の上限は公開されていません。PlusではThinkingによる画像生成も選べます。"}}, {"@type": "Question", "name": "画像の上限に達したらテキストのチャットもできませんか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。画像生成の上限はテキストのチャットとは別枠です。無料版でもテキストのチャットは回数無制限（ただし不正利用を防ぐ制限はある）と公式FAQに書かれています。"}}, {"@type": "Question", "name": "上限に達したあと有料プランに変えるとすぐ使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。公式FAQに、無料版で上限に達したあとPlus・Pro・Businessに変えると利用上限がリセットされると書かれています。"}}, {"@type": "Question", "name": "ChatGPTでDALL·Eは使えなくなりましたか？", "acceptedAnswer": {"@type": "Answer", "text": "公式のDALL·E GPTは2026年8月30日に提供を終えました。今は通常のチャットで頼むか、サイドバーの「画像」から作ります。"}}, {"@type": "Question", "name": "ChatGPTで生成された画像が見られないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "作成した画像はサイドバーの「画像」に自動で保存されます。見つからない場合はその画像を作った会話を削除していないか確かめてください。会話を削除すると、その画像も「画像」から消えます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】ChatGPTの画像生…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.25</span>
+        </div>
+        <h1 class="post-title">【2026年9月】ChatGPTの画像生成ができない原因と制限を解説｜上限・何枚まで・遅いときの対処</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの画像生成ができない"><defs><linearGradient id="ecg-41d7b68b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-41d7b68b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="86.4" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの画像</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">生成ができない</text><line x1="326.4" y1="378.0" x2="873.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">上限・何枚まで・遅いときの対処</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>ChatGPTで画像が作れないとき、原因は大きく5つに分かれます。回数の上限、ポリシーによる断り、処理中のまま止まる、エラー、そして画像の機能そのものが使えない状態です。どれに当たるかは画面の出方で見分けられ、対処もそれぞれ違います。</p>
+<p>OpenAIのヘルプの画像のページは2026年9月中旬に更新され、現在の機能を「ChatGPT 画像 2.5」と呼んでいます。<strong>8月30日には以前の画像生成の入口だった公式のDALL·E GPTが提供を終えました。</strong>この記事ではOpenAIの公式ヘルプと料金ページの9月25日時点の記述をもとに、上限の仕組み、プランごとの違い、止まったときの対処を順に整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>画像が作れない原因は<strong>上限・ポリシー・処理中のまま・エラー・機能が使えない</strong>の5つ。画面の出方で分ける</li>
+<li>画像生成は<strong>テキストのチャットとは別の上限</strong>。上限に達すると再開の時刻が画面に出る</li>
+<li><strong>何枚まで作れるかは、無料版からPlusまで公開されていない。</strong>料金ページではProだけが無制限と書かれている</li>
+<li>無料版で上限に達したあとPlus・Pro・Businessに変えると、<strong>その場で上限がリセットされる</strong></li>
+<li>公式のDALL·E GPTは8月30日に終了した。画像はChatGPT 画像で作る</li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>画像生成ができない5つの原因</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>回数の上限に達したとき</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>画像の上限はテキストと別</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>有料プランに変えるとリセット</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>プランごとの画像生成の違い</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>何枚までという数字の扱い</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>ポリシーで断られるとき</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>処理中のまま進まないとき</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>エラーが表示されるとき</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>画像の機能が使えないとき</a></li>
+                    <li class="toc-h3"><a href="#s7-1"><span class="toc__n">7-1</span>DALL·E GPTの終了と今の入口</a></li>
+                    <li class="toc-h3"><a href="#s7-2"><span class="toc__n">7-2</span>保護者の設定と年齢</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>上限を無駄にしない頼み方</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">画像生成ができない5つの原因</h2>
+<p>「画像が作れない」という状態は、上限に達した場合だけではありません。OpenAIの<a href="https://help.openai.com/ja-jp/articles/7996703-troubleshooting-chatgpt-error-messages">エラーメッセージのトラブルシューティング</a>と<a href="https://help.openai.com/ja-jp/articles/11084440-images-in-chatgpt">ChatGPT の画像</a>のページに、<a href="https://openai.com/ja-JP/policies/usage-policies/">使用に関するポリシー</a>を合わせると、止まり方は5つに分かれます。<strong>最初に見るのは画像の代わりに何が表示されたかです。</strong></p>
+<figure class="post-figure"><img src="/media/images/chatgpt-image-limit/00_fig_causes.png" alt="ChatGPTで画像が作れない5つの原因の図。1回数の上限は再開の時刻が出るので待つかPlus以上に変える、2ポリシーで断られると文章で断られるので言い換える、3処理中のままは数分待ってから再生成、4エラーが出るときは障害情報を確認してVPNと拡張機能を外す、5画像の機能が使えないのはDALL·EのGPTの終了や保護者の設定" loading="lazy"><figcaption>画面の出方で原因を分ける</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>画面の出方</th>
+<th>原因</th>
+<th>まずやること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>画像作成の上限に達した旨と、再開の時刻</td>
+<td>回数の上限</td>
+<td>時刻まで待つ。急ぐならプランを上げる</td>
+</tr>
+<tr>
+<td>画像の代わりに文章で断られる</td>
+<td>利用ポリシー</td>
+<td>実在の人物名や作品名を外して言い換える</td>
+</tr>
+<tr>
+<td>生成中の表示が数分たっても終わらない</td>
+<td>処理の混雑・長い会話</td>
+<td>待つ。止めて再生成、新しいチャットで送り直す</td>
+</tr>
+<tr>
+<td>「問題が発生しました。」などのエラー</td>
+<td>通信・ブラウザ・障害</td>
+<td>障害情報を見て、VPNや拡張機能を外す</td>
+</tr>
+<tr>
+<td>DALL·Eが見つからない・画像が作れない設定</td>
+<td>機能の終了・保護者の設定</td>
+<td>ChatGPT 画像を使う。保護者の設定を確かめる</td>
+</tr>
+</tbody>
+</table>
+<p>表の上から順に当てはまるか確かめると、原因を取り違えずに済みます。公式ヘルプには<strong>画像生成はリクエストの複雑さによって数分かかる場合がある</strong>と書かれています。</p>
+<h2 id="s2">回数の上限に達したとき</h2>
+<p>無料版で画像を作り続けたときに出るのが、画像作成の上限に達した旨の通知です。<a href="https://help.openai.com/ja-jp/articles/9275245-chatgpt-free-tier-faq">ChatGPT 無料版に関するよくある質問</a>には、実際の表示例の画像が載っています。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-image-limit/cil_02_help_limit.jpg" alt="OpenAI公式ヘルプのChatGPT無料版に関するよくある質問のページ。無料プランのレート制限の仕組みの説明の下に、You've reached your image creation limit. Upgrade to ChatGPT Plus or try again tomorrow after 9:17 AM. という通知とGet Plusのボタンの画像が載っている" loading="lazy"><figcaption>公式ヘルプに載っている上限の通知の例（2026年9月25日取得）</figcaption></figure>
+
+<p>例の通知は英語で、「Plusにアップグレードするか、明日の9:17以降にもう一度試してください」という内容です。<strong>再開できる時刻は通知の中に書かれるため、まずその時刻を確かめます。</strong>例では翌日の時刻が出ていますが、何時間で戻るかの決まりは公開されていません。</p>
+<h3 id="s2-1">画像の上限はテキストと別</h3>
+<p>公式FAQによると、無料版のテキストのチャットは回数無制限です（ただし不正利用を防ぐための制限はあります）。ファイルのアップロード、画像生成、音声、データ分析などのツールには、それぞれ別の上限があります。<strong>画像の上限に達しても文章のやり取りはそのまま続けられるので、プロンプトを練り直す時間に使えます。</strong></p>
+<figure class="post-figure"><img src="/media/images/chatgpt-image-limit/02_fig_reset.png" alt="画像の上限に達したときに分かっていることの図。画像の枠はテキストのチャットとは別の上限で、画像が止まっても文章の質問は続けられる。再開の時刻は画面に出て、公式ヘルプの例は明日の9:17以降、回数と周期は公開されていない。無料版で上限に達した後にPlus、Pro、Businessに変えると上限がリセットされる" loading="lazy"><figcaption>上限について公式に書かれていること</figcaption></figure>
+
+<h3 id="s2-2">有料プランに変えるとリセット</h3>
+<p>急ぐときの手はプランを上げることです。同じ公式FAQに、<strong>無料版で上限に達したあとPlus・Pro・Businessに変えると利用上限がリセットされる</strong>と書かれています。対象として挙がっているのはこの3つで、Goは書かれていません。待つ時間を取れない日の選択肢です。</p>
+<h2 id="s3">プランごとの画像生成の違い</h2>
+<p><a href="https://chatgpt.com/ja-JP/pricing/">ChatGPTの料金ページ</a>では、画像生成の扱いがプランごとに1行で書かれています。<strong>無料版は回数と速度の両方に制限があり、Goで枚数が増え、Plusで品質が上がり、Proで無制限になります。</strong></p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-image-limit/cil_01_pricing_sp.jpg" alt="ChatGPTの料金ページをスマホで開いた画面。無料版0円の機能一覧に、GPT-5.6 Lunaでのテキストチャットは無制限、アップロードを含むメッセージ数に上限あり、画像生成の回数に上限あり、速度も制限ありが並び、画像生成の行が赤枠で囲まれている" loading="lazy"><figcaption>料金ページの無料版の欄。赤枠が画像生成の行</figcaption></figure>
+
+<figure class="post-figure"><img src="/media/images/chatgpt-image-limit/01_fig_plans.png" alt="ChatGPTの料金ページでの画像生成の書き方の図。無料版0円は画像生成の回数に上限あり速度も制限あり、Go月1,400円はより多くの画像生成、Plus月3,000円はより高度で正確な画像生成とThinkingによる画像生成、Pro月16,800円からは高速かつ無制限の画像作成" loading="lazy"><figcaption>料金ページの記述をプランごとに並べた</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>プラン</th>
+<th>月額</th>
+<th>料金ページの書き方</th>
+<th>Thinkingによる画像生成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>無料版</td>
+<td>0円</td>
+<td>画像生成の回数に上限あり、速度も制限あり</td>
+<td>なし</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>1,400円</td>
+<td>より多くの画像生成</td>
+<td>なし</td>
+</tr>
+<tr>
+<td>Plus</td>
+<td>3,000円</td>
+<td>より高度で正確な画像生成</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>Pro</td>
+<td>16,800円から</td>
+<td>高速かつ無制限の画像作成</td>
+<td>あり</td>
+</tr>
+</tbody>
+</table>
+<p>Plus以上で使えるThinkingによる画像生成は、公式ヘルプで「思考機能付き画像」と呼ばれている機能です。Plus・Pro・Businessで使え、EnterpriseとEduは近日対応と書かれています。<strong>何枚まで作れるかの数字は無料版からPlusまでどこにも公開されていません。</strong>金額の詳しい比較は<a href="/media/chatgpt-pricing/">ChatGPTの料金プランの記事</a>にまとめました。</p>
+<h3 id="s3-1">何枚までという数字の扱い</h3>
+<p>検索すると「無料版は1日2〜3枚」「Plusは3時間で40〜50枚」といった数字が多く見つかります。<strong>無料版の1日2枚という数字は、2024年8月にDALL·E 3で告知された上限で、今のChatGPT 画像の上限としては公表されていません。</strong>Plusの数字は利用者の体験から推した値で、OpenAIの発表ではありません。利用上限は変更される場合があると無料版のFAQにも書かれているため、数字を前提に予定を組むより、通知に出た再開の時刻で判断するほうが確実です。</p>
+<h2 id="s4">ポリシーで断られるとき</h2>
+<p>画像の代わりに文章で「作れません」と返ってくる場合は、上限ではなく<a href="https://openai.com/ja-JP/policies/usage-policies/">OpenAIの使用に関するポリシー</a>に沿って断られています。上限と違って待っても変わらず、送り直しても通るとは限りません。</p>
+<p>使用に関するポリシーが禁じているのは、実在の人物を本人の同意なく本物と見間違える形で使う画像、作品やキャラクターの権利を侵す再現、性的暴力や同意のない性的な内容などです。これに近い依頼は断られやすくなります。<strong>作品名や人物名を外し、描きたい要素（色・構図・雰囲気）を言葉で指定し直すと通ることがあります。</strong>言い換えても断られる内容は、そもそも作れないものと考えてください。</p>
+<h2 id="s5">処理中のまま進まないとき</h2>
+<p>生成中の表示が続くときはまず数分待ちます。画像は内容によって数分かかることがあると公式に書かれており、途中で止めて再生成すると上限の回数をもう1回使うことがあります。公式ヘルプは画像の作成中もChatGPTを使い続けられると説明しているので、別のチャットで作業を進めておけます。</p>
+<p>それでも終わらない場合は、エラーメッセージのページにある順番で試します。</p>
+<ol>
+<li>「生成を停止」を押し、「再生成」でもう一度送る</li>
+<li>新しいチャットを開いて同じプロンプトを送る</li>
+<li>ページをハード更新する（Cmd/Ctrl＋Shift＋R）か、アプリを再読み込みする</li>
+<li>サインアウトして、もう一度サインインする</li>
+</ol>
+<p><strong>長い会話の途中で画像を頼むと遅くなりやすいので、画像用に新しいチャットを分けるのが確実です。</strong>公式ヘルプでも、会話が長いときは新しいチャットを始めるよう勧めています。</p>
+<h2 id="s6">エラーが表示されるとき</h2>
+<p>「問題が発生しました。」「ネットワークエラーが発生しました。」のような表示は画像生成に限らずChatGPT全体の通信や環境の問題です。公式ヘルプが挙げる対処は共通しています。</p>
+<ul>
+<li><a href="https://status.openai.com">OpenAIのステータスページ</a>で障害が出ていないか確かめる</li>
+<li>VPNやプロキシ、セキュアDNSの機能をオフにする</li>
+<li>ブラウザの拡張機能を外すか、シークレットウィンドウで開く</li>
+<li>別のブラウザ、別のネットワークで試す</li>
+</ul>
+<p><strong>ステータスページに障害が出ているときは、自分の側で何をしても直りません。</strong>復旧を待つ間は画像以外の作業を進めておきます。</p>
+<h2 id="s7">画像の機能が使えないとき</h2>
+<p>画像を作る入口そのものが見当たらない場合は、機能の変更か設定が原因です。</p>
+<h3 id="s7-1">DALL·E GPTの終了と今の入口</h3>
+<p>以前はGPTストアの公式DALL·E GPTから画像を作っていた人もいました。<a href="https://help.openai.com/ja-jp/articles/6825453-chatgpt-release-notes">ChatGPTのリリースノート</a>によると、<strong>公式のDALL·E GPTは2026年8月30日に提供を終えています。</strong>今は通常のチャットで画像を頼むか、サイドバーの「画像」から作ります。画像生成を有効にした利用者作成のGPTは、この終了の影響を受けません。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-image-limit/cil_04_images_sp.jpg" alt="ChatGPTの画像のページをスマホで開いた画面。上に新しい画像の説明を入力してくださいという入力欄があり赤枠で囲まれている。その下にトレンドとTemplatesのタブと、80s flashbackやカリカチュアを作成などの作例が並ぶ" loading="lazy"><figcaption>ログイン前の「画像」のページ。赤枠の欄に作りたい画像を書く</figcaption></figure>
+
+<p>「画像」の画面には、作りたい画像を書く入力欄と、ポスターやロゴを作るためのテンプレートが並びます。テンプレートは現在、Workモードでは使えないと公式ヘルプに書かれています。</p>
+<h3 id="s7-2">保護者の設定と年齢</h3>
+<p>ティーン向けのアカウントでは、保護者がペアレンタルコントロールで<strong>画像の作成や編集を許可しない設定にできる</strong>場合があります。本人の画面では理由が分からないまま画像だけ作れない状態になるため、家族のアカウントで起きたときは保護者側の設定を確かめてください。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-image-limit/cil_03_help_images.jpg" alt="OpenAI公式ヘルプのChatGPTの画像のページ。更新日14日前、概要にChatGPT 画像 2.5では細部がより鮮明になり編集精度と画像生成速度が向上したこと、画像生成には複雑さに応じて数分かかる場合があり作成中もChatGPTを使い続けられることが書かれている" loading="lazy"><figcaption>ChatGPT 画像 2.5 の説明がある公式ヘルプ（2026年9月25日取得）</figcaption></figure>
+
+<h2 id="s8">上限を無駄にしない頼み方</h2>
+<p>回数に上限がある以上、1回ごとの精度を上げるほど多くの画像を仕上げられます。公式ヘルプに載っている機能のうち、作り直しの回数を減らせるものを並べます。</p>
+<table>
+<thead>
+<tr>
+<th>やり方</th>
+<th>何が減るか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用途と載せる文字を最初に書く</td>
+<td>ポスターやロゴで、文字の入れ直しによる作り直し</td>
+</tr>
+<tr>
+<td>アスペクト比を最初に指定する</td>
+<td>縦横の比率を変えるための作り直し</td>
+</tr>
+<tr>
+<td>気になる部分だけ選択ツールで範囲を選んで直す</td>
+<td>全体の作り直し</td>
+</tr>
+<tr>
+<td>テンプレートの質問に答えてから送る</td>
+<td>スタイルの指定漏れによる作り直し</td>
+</tr>
+<tr>
+<td>参照画像をアップロードして「この雰囲気で」と頼む</td>
+<td>言葉だけで雰囲気を伝える往復</td>
+</tr>
+</tbody>
+</table>
+<p>選択ツールは生成された画像を開いて「選択」を押し、直したい範囲をなぞって変更を書く機能です。公式ヘルプには<strong>ハイライトした範囲の外まで編集が及ぶことがある</strong>とも書かれています。範囲を選ぶときは「元に戻す」「やり直す」で選び直せます。編集が範囲の外まで及んだら、範囲を狭めて頼み直すか、会話で直したい部分を言葉で指定し直してください。</p>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">ChatGPTの画像生成は何回まで無料ですか？</h3>
+<p>OpenAIは回数を公開していません。無料版の料金ページには「画像生成の回数に上限あり、速度も制限あり」とだけ書かれています。上限に達すると、再開できる時刻が画面に表示されます。</p>
+<h3 id="s9-2">ChatGPTの画像作成が終わらないのはなぜですか？</h3>
+<p>画像生成は内容によって数分かかることがあります。数分待っても終わらなければ、生成を止めて再生成するか、新しいチャットで送り直します。長い会話の途中で頼んでいたなら、新しいチャットに分けてください。</p>
+<h3 id="s9-3">ChatGPTで画像生成を無料でできる時間は？</h3>
+<p>時間帯の決まりは公開されていません。上限に達したときの通知に、次に作れる時刻が出ます。公式ヘルプの例では「明日の9:17以降」と表示されていました。</p>
+<h3 id="s9-4">ChatGPT Plusなら画像は無制限ですか？</h3>
+<p>無制限と書かれているのはProだけです。Plusの料金ページの記述は「より高度で正確な画像生成」で、枚数の上限は公開されていません。PlusではThinkingによる画像生成も選べます。</p>
+<h3 id="s9-5">画像の上限に達したらテキストのチャットもできませんか？</h3>
+<p>できます。画像生成の上限はテキストのチャットとは別枠です。無料版でもテキストのチャットは回数無制限（ただし不正利用を防ぐ制限はある）と公式FAQに書かれています。</p>
+<h3 id="s9-6">上限に達したあと有料プランに変えるとすぐ使えますか？</h3>
+<p>使えます。公式FAQに、無料版で上限に達したあとPlus・Pro・Businessに変えると利用上限がリセットされると書かれています。</p>
+<h3 id="s9-7">ChatGPTでDALL·Eは使えなくなりましたか？</h3>
+<p>公式のDALL·E GPTは2026年8月30日に提供を終えました。今は通常のチャットで頼むか、サイドバーの「画像」から作ります。</p>
+<h3 id="s9-8">ChatGPTで生成された画像が見られないのはなぜですか？</h3>
+<p>作成した画像はサイドバーの「画像」に自動で保存されます。見つからない場合はその画像を作った会話を削除していないか確かめてください。会話を削除すると、その画像も「画像」から消えます。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/11084440-images-in-chatgpt">ChatGPT の画像</a>」（2026年9月25日取得）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/9275245-chatgpt-free-tier-faq">ChatGPT 無料版に関するよくある質問</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/7996703-troubleshooting-chatgpt-error-messages">ChatGPTのエラーメッセージのトラブルシューティング</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/6825453-chatgpt-release-notes">ChatGPT リリースノート</a>」（同。2026年7月31日の項で、8月30日の DALL·E GPT 提供終了を告知）</li>
+<li>ChatGPT「<a href="https://chatgpt.com/ja-JP/pricing/">料金</a>」（同）</li>
+<li>OpenAI「<a href="https://openai.com/ja-JP/policies/usage-policies/">使用に関するポリシー</a>」（同）</li>
+<li>OpenAI「<a href="https://status.openai.com">ステータスページ</a>」</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-limit-reached/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの上限とリセット時間"><defs><linearGradient id="ecg-4f05aee3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4f05aee3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの上限</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">とリセット時間</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.25</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTで上限に達したときのリセット時間と対処｜無料版・Plus・Pro・Codex</div>
+            </a>
+            <a href="/media/claude-usage-limits/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの使用制限とリセット"><defs><linearGradient id="ecg-d22eaed3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d22eaed3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの使用制</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">限とリセット</text><line x1="311.2" y1="416.8" x2="888.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.25</div>
+                <div class="rel-card__ttl">【2026年9月】Claudeの使用制限とリセット時間を解説｜5時間・週間・無料版・ツール使用制限</div>
+            </a>
+            <a href="/media/gemini-chat-lost/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Geminiのチャットが消えた"><defs><linearGradient id="ecg-44e8508f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-44e8508f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Geminiのチャットが消えた</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.25</div>
+                <div class="rel-card__ttl">【2026年9月】Geminiのチャットが消えた原因と戻し方を解説｜履歴の探し方・自動削除・一時チャット</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
