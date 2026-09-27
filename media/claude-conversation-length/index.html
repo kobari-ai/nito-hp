@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】Claudeの会話の長さ制限と圧縮を解説｜長さ制限のエラー・考えを整理・Claude Codeのcompact | nito Column</title>
+    <meta name="description" content="Claudeの会話が長くなったときの長さ制限と、前のやりとりを要約して続ける自動コンテキスト管理を、Anthropicのヘルプで整理。オンにする設定、長さ制限のエラーの対処、Claude Codeの/compactまでまとめました。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-conversation-length/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】Claudeの会話の長さ制限と圧縮を解説｜長さ制限のエラー・考えを整理・Claude Codeのcompact">
+    <meta property="og:description" content="Claudeの会話が長くなったときの長さ制限と、前のやりとりを要約して続ける自動コンテキスト管理を、Anthropicのヘルプで整理。オンにする設定、長さ制限のエラーの対処、Claude Codeの/compactまでまとめました。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-conversation-length/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-conversation-length.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-conversation-length.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Claudeの会話の長さ制限と圧縮を解説｜長さ制限のエラー・考えを整理・Claude Codeのcompact", "description": "Claudeの会話が長くなったときの長さ制限と、前のやりとりを要約して続ける自動コンテキスト管理を、Anthropicのヘルプで整理。オンにする設定、長さ制限のエラーの対処、Claude Codeの/compactまでまとめました。", "datePublished": "2026-09-28", "dateModified": "2026-09-28", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-conversation-length/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Claudeの会話の長さ制限と圧縮を解説｜長さ制限のエラー・考えを整理・Claude Codeのcompact"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claudeの長さ制限とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "1つの会話に入る量の上限です。Claudeのコンテキストウィンドウに結びついていて、有料プランのチャットではモデルによって100万・50万・20万トークンです。"}}, {"@type": "Question", "name": "Claudeの長さ制限は時間が経てば解除されますか？", "acceptedAnswer": {"@type": "Answer", "text": "解除されません。長さ制限は時間でリセットされる使用制限とは別の仕組みです。送る量を減らすか、新しい会話を始めてください。"}}, {"@type": "Question", "name": "Claudeが考えを整理していると出るのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "会話が長くなり、前のメッセージを要約しているときの表示です。自動コンテキスト管理が動いている印だと、ヘルプは説明しています。"}}, {"@type": "Question", "name": "Claudeで会話が要約されると前の内容は消えますか？", "acceptedAnswer": {"@type": "Answer", "text": "消えません。ヘルプによると、会話の履歴は全部保存されていて、Claudeは要約のあとも参照できます。"}}, {"@type": "Question", "name": "Claudeの自動コンテキスト管理を使うには？", "acceptedAnswer": {"@type": "Answer", "text": "コード実行を有効にします。設定の「機能」から「コード実行とファイル作成」をオンにしてください。Free・Pro・Maxではコード実行は初めから有効です（エラーのヘルプでは、自動の管理の対象を有料プランとしています）。"}}, {"@type": "Question", "name": "長い会話を続けると使用制限は早く減りますか？", "acceptedAnswer": {"@type": "Answer", "text": "減ります。自動コンテキスト管理が働くほど長い会話は使用制限をより多く消費する、とヘルプに書かれています。"}}, {"@type": "Question", "name": "Claude Codeで会話を圧縮するには？", "acceptedAnswer": {"@type": "Answer", "text": "/compactと入力します。残したい内容を続けて書くと、要約のときにそれを残すよう指示できます。"}}, {"@type": "Question", "name": "Claudeの会話を別の会話に引き継ぐには？", "acceptedAnswer": {"@type": "Answer", "text": "新しい会話を始め、前の会話の要点をまとめて最初に渡します。大量の資料を続けて使うなら、プロジェクトに入れると毎回渡さずに済みます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claudeの会話の長…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.28</span>
+        </div>
+        <h1 class="post-title">【2026年9月】Claudeの会話の長さ制限と圧縮を解説｜長さ制限のエラー・考えを整理・Claude Codeのcompact</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの会話の長さ制限と圧縮"><defs><linearGradient id="ecg-62bf056a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-62bf056a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="86.4" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの会話の</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">長さ制限と圧縮</text><line x1="311.2" y1="378.0" x2="888.8" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">エラーの対処とClaude Codeのcompact</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Claudeで長く話し続けると、1つの会話に入る量の上限に近づきます。上限に達すると「長さ制限」のエラーが出て、その会話では先に進めなくなります。</p>
+<p><strong>2025年11月24日、Anthropicは会話が上限に近づいたときに前のメッセージを要約して続ける仕組みを入れました。</strong>リリースノートによると、この変更で長さ制限のエラーは大幅に減り、いくつかの例外を除いて無限の長さの会話ができるようになりました。一方で、この仕組みにはコード実行をオンにしておく条件があり、長い会話は使用量を多く消費するという注意もヘルプに書かれています。</p>
+<p>この記事ではAnthropicのヘルプ「<a href="https://support.claude.com/ja/articles/11647753-how-do-usage-and-length-limits-work">使用量と長さの制限はどのように機能しますか？</a>」とリリースノートをもとに、長さ制限と圧縮の仕組み、設定、エラーが出たときの対処を整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>長さ制限は<strong>1つの会話に入る量（コンテキストウィンドウ）</strong>の上限で、5時間や週間の使用制限とは別の仕組み</li>
+<li>2025年11月から、上限に近づくと<strong>Claudeが前のメッセージを要約して会話を続ける</strong>。「考えを整理している」と出ることがある</li>
+<li>この自動の管理には<strong>コード実行を有効にする必要がある</strong>。設定の「機能」の「コード実行とファイル作成」</li>
+<li>要約する長い会話は<strong>使用量を多く消費する</strong>。使用制限に近いなら新しい会話に移る</li>
+<li>Claude Codeでは上限に近づくと自動で圧縮され、<strong>/compactで手動でも圧縮できる</strong></li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>長さ制限と使用制限の違い</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>会話を自動で要約する仕組み</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>使用量を多く消費する</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>自動の要約をオンにする設定</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>長さ制限のエラーが出たとき</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>会話を圧迫するものを減らす</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Claude Codeでの圧縮</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">長さ制限と使用制限の違い</h2>
+<p>「制限に達した」と出たときは、まずどちらの制限かを見分けます。ヘルプによると、<strong>使用制限はすべての会話を通してどれだけ使えるか、長さ制限は1つの会話がどれだけ長くなれるか</strong>を決めています。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>使用制限</th>
+<th>長さ制限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>何の上限か</td>
+<td>一定の時間に使える量</td>
+<td>1つの会話に入る量</td>
+</tr>
+<tr>
+<td>戻り方</td>
+<td>リセットを待つ・プランを上げる・使用量クレジットを買う</td>
+<td>新しい会話にする・プロジェクトを使う</td>
+</tr>
+<tr>
+<td>詳しい記事</td>
+<td><a href="/media/claude-usage-limits/">Claudeの使用制限とリセット時間</a></td>
+<td>この記事</td>
+</tr>
+</tbody>
+</table>
+<p>長さ制限の元になっているのは、Claudeのコンテキストウィンドウです。ヘルプはこれをClaudeの作業用の記憶にたとえています。有料プランでチャットするときの大きさは、モデルによって100万・50万・20万トークンに分かれます。</p>
+<table>
+<thead>
+<tr>
+<th>モデル（有料プランのチャット）</th>
+<th>コンテキストウィンドウ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Fable 5.1・Opus 5.5・Opus 5・Sonnet 5</td>
+<td>100万トークン</td>
+</tr>
+<tr>
+<td>Claude Fable 5・Opus 4.8・Opus 4.7・Opus 4.6・Sonnet 4.6</td>
+<td>50万トークン</td>
+</tr>
+<tr>
+<td>それ以外のモデル</td>
+<td>20万トークン（約500ページ以上のテキスト）</td>
+</tr>
+</tbody>
+</table>
+<p>表はヘルプ「<a href="https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans">How large is the context window on paid Claude plans?</a>」（2026年9月28日取得）の内容です。<strong>コンテキストウィンドウの一部は、常にClaudeの回答のために取っておかれます。</strong></p>
+<h2 id="s2">会話を自動で要約する仕組み</h2>
+<p>2025年11月24日のリリースノートには「Context window compaction」という項目があります。チャットが上限に近づくと以前のメッセージを要約することで、長さ制限のエラーを大幅に減らしたという内容です。</p>
+<figure class="post-figure"><img src="/media/images/claude-conversation-length/ccl_03_rn_2025.png" alt="AnthropicのClaudeのリリースノートの2025年11月の項目。Context window compactionという見出しと、コンテキストウィンドウの機能を変更して、いくつかの例外を除いて無限の長さの会話を可能にし、チャットがコンテキストの上限に近づいたときに以前のメッセージを要約することで長さ制限のエラーを大幅に減らしたという段落が赤枠で囲まれている" loading="lazy"><figcaption>2025年11月24日のリリースノートの「Context window compaction」（2026年9月28日取得）</figcaption></figure>
+
+<p>ヘルプではこの仕組みを「自動コンテキスト管理」と呼んでいます。流れは次のとおりです。</p>
+<figure class="post-figure"><img src="/media/images/claude-conversation-length/00_fig_how.png" alt="Claudeのアプリで長い会話が続く仕組みの図。1は会話が長くなり、一度に読める量の上限に近づく。2はClaudeが以前のメッセージを要約して会話を続け、考えを整理していると出ることがある。3は全部の履歴が保存され要約のあとも参照でき、そのまま続けられるが、使用量を多く消費する。条件はコード実行が有効になっていることで、とても大きな最初のメッセージなどまれな場合は長さ制限に当たることがある" loading="lazy"><figcaption>アプリで長い会話が続く仕組み（Anthropicのヘルプ、2026年9月28日取得）</figcaption></figure>
+
+<p><strong>要約されても、会話の履歴は全部保存されていて、Claudeは要約のあとも参照できます。</strong>長い会話の途中でClaudeが「考えを整理している」と表示することがあり、ヘルプはこれを自動コンテキスト管理が動いている印と説明しています。</p>
+<figure class="post-figure"><img src="/media/images/claude-conversation-length/ccl_01_help_auto.png" alt="Anthropicのヘルプの自動コンテキスト管理の節。コード実行が有効になっているユーザーの場合、Claudeは長い会話を自動的に管理し、以前のメッセージを要約して会話を続けること、完全なチャット履歴は保存されること、Claudeが考えを整理していることがあること、長い会話は使用量制限をより多く消費することが書かれている。最後の注の、自動コンテキスト管理にはコード実行を有効にする必要があり、非常に大きな最初のメッセージなどまれな場合はコンテキスト制限に遭遇する可能性があるという囲みが赤枠で囲まれている" loading="lazy"><figcaption>ヘルプの「自動コンテキスト管理」。コード実行が条件になっている（2026年9月28日取得）</figcaption></figure>
+
+<h3 id="s2-1">使用量を多く消費する</h3>
+<p>ヘルプには、自動コンテキスト管理が働くほど長い会話は、使用制限をより多く消費すると書かれています。<strong>長いチャットで使用制限に近づいているなら、新しい会話を始めるよう勧めています。</strong></p>
+<h2 id="s3">自動の要約をオンにする設定</h2>
+<p>自動コンテキスト管理を使うには、コード実行を有効にしておく必要があります。ヘルプ「<a href="https://support.claude.com/ja/articles/12111783-create-and-edit-files-with-claude">Claudeでファイルを作成・編集する</a>」によると、Free・Pro・Maxプランではコード実行とファイル作成は初めから有効です。オフにしていたら、次の場所でオンにしてください。</p>
+<ol>
+<li><a href="https://claude.ai/">Claude</a>で「設定」を開く</li>
+<li>「機能」を選ぶ</li>
+<li>「コード実行とファイル作成」をオンにする</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/claude-conversation-length/ccl_02_help_code.png" alt="Anthropicのヘルプ、Claudeでファイルを作成・編集するのウェブとデスクトップで有効にするの節。Enterpriseプラン、Teamプランの説明の下に、Free、Pro、Maxプランは設定の機能からファイル作成を有効にし、コード実行とファイル作成をオンにしますという段落が赤枠で囲まれている。その下にコード実行とファイル作成の切り替えの画面の例がある" loading="lazy"><figcaption>ヘルプに書かれたコード実行のオンの仕方（2026年9月28日取得）</figcaption></figure>
+
+<p>スマホのアプリでは、左のサイドバーのイニシャルか名前を押して設定を開き、「機能」から切り替えます。TeamとEnterpriseでは組織の設定で初めから有効ですが、組織の所有者がオフにできます。<strong>会社のアカウントで設定が見当たらないときは、組織の所有者に確かめてください。</strong></p>
+<p>なお、エラーメッセージのヘルプでは、この仕組みの対象を「コード実行が有効になっている有料プランのユーザー」と書いています。使用量と長さの制限のヘルプでは「コード実行が有効になっているユーザー」で、プランの書き方がページによって違います（2026年9月28日時点）。</p>
+<h2 id="s4">長さ制限のエラーが出たとき</h2>
+<p>自動の要約があっても、まれに長さ制限に当たることがあります。ヘルプ「<a href="https://support.claude.com/ja/articles/12466728">Claudeのエラーメッセージのトラブルシューティング</a>」に載っている文言は「メッセージがこのチャットの長さ制限を超えます。ファイルを少なくするか、ファイルサイズを小さくするか、新しい会話を開始してください。」です。ヘルプが例に挙げているのは、とても大きな最初のメッセージを送った場合です。</p>
+<p>ヘルプが挙げている対処は次の4つです。</p>
+<ul>
+<li>内容を小さく分けて、1つずつ送る</li>
+<li>送る前に、主要な部分を要約するか抜き出す</li>
+<li>Claudeに、いちばん関係のある部分を先に選ばせる</li>
+<li>新しい会話を始める</li>
+</ul>
+<p><strong>長さ制限は待っても戻らないため、送る量を減らすか、会話を分けてください。</strong>大量の資料を扱うなら、プロジェクトに入れる手もあります。ヘルプによると、プロジェクトは関係のある内容だけを読み込む仕組み（検索拡張生成）を使うので、多くの情報を効率よく扱えます。</p>
+<h3 id="s4-1">会話を圧迫するものを減らす</h3>
+<p>コンテキストウィンドウの大きさは変えられないものの、空きを増やす方法はヘルプに載っていました。</p>
+<table>
+<thead>
+<tr>
+<th>減らすもの</th>
+<th>ヘルプの説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>プロジェクトの指示</td>
+<td>短く保ち、作業ごとの指示はチャットに書く</td>
+</tr>
+<tr>
+<td>プロジェクトのファイル</td>
+<td>使っていないファイルを削除する</td>
+</tr>
+<tr>
+<td>拡張思考</td>
+<td>深い推論が要らない作業ではオフにする</td>
+</tr>
+<tr>
+<td>努力レベル</td>
+<td>日常の作業では低い段階を選ぶ</td>
+</tr>
+<tr>
+<td>ツールとコネクタ</td>
+<td>要らない会話ではウェブ検索・リサーチ・MCPコネクタを切る</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s5">Claude Codeでの圧縮</h2>
+<p>Claude Codeにも、会話が上限に近づいたときに前の履歴を要約して空きを作る自動の圧縮があります。ドキュメント「<a href="https://code.claude.com/docs/en/costs">Manage costs effectively</a>」では、この上限に近いという警告は使用制限ではないと説明しています。</p>
+<figure class="post-figure"><img src="/media/images/claude-conversation-length/00_fig_where.png" alt="アプリとClaude Codeでの違いの図。Claudeのアプリはウェブ、デスクトップ、スマホで、コード実行がオンのとき上限に近づくと自動で要約する。長さ制限のエラーが出たら、ファイルを減らすか新しい会話にする。Claude Codeは上限に近づくと自動で会話を圧縮し、/compactで手動でも圧縮できる。/compactのあとに残したい内容を書き、作業を切り替えるなら/clear" loading="lazy"><figcaption>アプリとClaude Codeでの違い（Anthropicのヘルプとドキュメント、2026年9月28日取得）</figcaption></figure>
+
+<p>手動で圧縮するなら/compactです。<strong>「/compact Focus on code samples and API usage」のように、残したい内容を続けて書くと、要約のときにそれを残すよう指示できます。</strong>プロジェクトのCLAUDE.mdに圧縮のときの指示を書いておくこともできます。</p>
+<p>関係のない作業に移るときは、圧縮より/clearで始め直すほうが軽い処理です。/compactは要約する会話を読み込むので大きな会話の圧縮はそれ自体が大きな処理になり、/clearは何も消費しない、とドキュメントに書かれています。</p>
+<h2 id="s6">よくある質問</h2>
+<h3 id="s6-1">Claudeの長さ制限とは何ですか？</h3>
+<p>1つの会話に入る量の上限です。Claudeのコンテキストウィンドウに結びついていて、有料プランのチャットではモデルによって100万・50万・20万トークンです。</p>
+<h3 id="s6-2">Claudeの長さ制限は時間が経てば解除されますか？</h3>
+<p>解除されません。長さ制限は時間でリセットされる使用制限とは別の仕組みです。送る量を減らすか、新しい会話を始めてください。</p>
+<h3 id="s6-3">Claudeが考えを整理していると出るのはなぜですか？</h3>
+<p>会話が長くなり、前のメッセージを要約しているときの表示です。自動コンテキスト管理が動いている印だと、ヘルプは説明しています。</p>
+<h3 id="s6-4">Claudeで会話が要約されると前の内容は消えますか？</h3>
+<p>消えません。ヘルプによると、会話の履歴は全部保存されていて、Claudeは要約のあとも参照できます。</p>
+<h3 id="s6-5">Claudeの自動コンテキスト管理を使うには？</h3>
+<p>コード実行を有効にします。設定の「機能」から「コード実行とファイル作成」をオンにしてください。Free・Pro・Maxではコード実行は初めから有効です（エラーのヘルプでは、自動の管理の対象を有料プランとしています）。</p>
+<h3 id="s6-6">長い会話を続けると使用制限は早く減りますか？</h3>
+<p>減ります。自動コンテキスト管理が働くほど長い会話は使用制限をより多く消費する、とヘルプに書かれています。</p>
+<h3 id="s6-7">Claude Codeで会話を圧縮するには？</h3>
+<p>/compactと入力します。残したい内容を続けて書くと、要約のときにそれを残すよう指示できます。</p>
+<h3 id="s6-8">Claudeの会話を別の会話に引き継ぐには？</h3>
+<p>新しい会話を始め、前の会話の要点をまとめて最初に渡します。大量の資料を続けて使うなら、プロジェクトに入れると毎回渡さずに済みます。</p>
+<h2 id="s7">出典</h2>
+<ul>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/11647753-how-do-usage-and-length-limits-work">使用量と長さの制限はどのように機能しますか？</a>」（2026年9月28日取得）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans">How large is the context window on paid Claude plans?</a>」（2026年9月28日取得）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/12466728">Claudeのエラーメッセージのトラブルシューティング</a>」（2026年9月28日取得）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/12111783-create-and-edit-files-with-claude">Claudeでファイルを作成・編集する</a>」（2026年9月28日取得）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/en/articles/12138966-release-notes">Release notes</a>」の2025年11月24日の項目（2026年9月28日取得）</li>
+<li>Claude Code Docs「<a href="https://code.claude.com/docs/en/costs">Manage costs effectively</a>」（2026年9月28日取得）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-mode-english/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードが英語になるとき"><defs><linearGradient id="ecg-02ae2545" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-02ae2545)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードが英語になるとき</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】Google AIモードが英語になる原因と日本語に戻す方法｜回答が英語・表示が英語・出典が英語</div>
+            </a>
+            <a href="/media/chatgpt-memory-full/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのメモリがいっぱいのとき"><defs><linearGradient id="ecg-9cb2c548" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-9cb2c548)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのメモリ</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">がいっぱいのとき</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTのメモリがいっぱいのときの対処を解説｜自動の管理・削除・改善されたメモリ</div>
+            </a>
+            <a href="/media/gemini-live-not-working/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gemini Liveが使えないとき"><defs><linearGradient id="ecg-ab41a207" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ab41a207)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Gemini Liveが</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">使えないとき</text><line x1="311.2" y1="416.8" x2="888.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】Gemini Liveが使えない原因と対処を解説｜iPhone・Android・パソコン・カメラ・画面共有</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
