@@ -1,8 +1,8 @@
 ---
-title: 【2026年9月】「challenges.cloudflare.comのブロックを解除してください」の原因と対処を解説｜ChatGPT・Claude・障害の見分け方
+title: 【2026年9月】「challenges.cloudflare.comのブロックを解除してください」の原因と対処｜ChatGPT・Claude・障害の見分け方
 date: 2026-09-27
 category: AI検索対策
-description: ChatGPTやClaudeで出る「続行するには、challenges.cloudflare.comのブロックを解除してください」の原因と対処。Cloudflareの障害か手元の設定かの見分け方を、公式ドキュメントと検査ツールの実測で確かめました。
+description: ChatGPTやClaudeで出る「challenges.cloudflare.comのブロックを解除してください」の原因と対処。障害か手元の設定かの見分け方を、公式ドキュメントと検査ツールの実測で確かめました。
 cover_tag: 使い方
 cover_headline: challenges.cloudflare.comのブロック解除
 cover_sub: 障害か手元かの見分け方と対処
@@ -10,7 +10,7 @@ cover_sub: 障害か手元かの見分け方と対処
 
 「続行するには、challenges.cloudflare.com のブロックを解除してください。」を出しているのはChatGPTやClaudeそのものではなく、手前にあるCloudflareの確認画面です。英語の画面では「Please unblock challenges.cloudflare.com to proceed.」と表示されます。
 
-**2025年11月18日の夜には、Cloudflareの障害でこの表示がChatGPTやClaudeで一斉に出ました。**日本語で検索して上に出てくる記事の多くは、この日の障害について書かれたものです。ただ、障害が無い日でも、広告ブロックの拡張機能やVPN、会社のネットワークが確認を止めていると同じ表示になります。
+**2025年11月18日の夜には、Cloudflareの障害でChatGPTなど多くのサイトにこの表示が出ました。**Claudeで出たという質問も同じ日に投稿されていて、日本語で検索して上に出てくる記事の多くはこの日の障害について書かれたものです。ただ、障害が無い日でも、広告ブロックの拡張機能やVPN、会社のネットワークが確認を止めていると同じ表示になります。
 
 この記事ではCloudflareの公式ドキュメントと、Cloudflareが公開している検査ツールを2026年9月27日に実際に動かした結果をもとに、障害か手元かの見分け方と、手元が原因だったときの直し方を整理します。
 
@@ -26,11 +26,11 @@ cover_sub: 障害か手元かの見分け方と対処
 
 ChatGPTやClaudeは、Cloudflareという会社のネットワークを通して配信されています。Cloudflareはアクセスが人かボットかを見ていて、怪しいと判断したときだけ、サイトを開く前に確認画面をはさむ仕組みです。
 
-確認画面は challenges.cloudflare.com から確認の仕組み（Turnstile）を読み込んで動きます。**この読み込みが途中で止まると、確認が終わらず「ブロックを解除してください」と表示されます。**Cloudflareの確認画面に組み込まれた日本語の案内文でも、インターネットやファイアウォールの設定が challenges.cloudflare.com へのアクセスを止めていないかを確かめるよう書かれています。
+確認画面が動くのは challenges.cloudflare.com から確認の仕組み（Turnstile）を読み込んだあとです。**この読み込みが途中で止まると、確認が終わらず「ブロックを解除してください」と表示されます。**Cloudflareの確認画面に組み込まれた日本語の案内文でも、インターネットやファイアウォールの設定が challenges.cloudflare.com へのアクセスを止めていないかを確かめるよう書かれています。
 
 <figure class="post-figure"><img src="/media/images/cloudflare-challenges-unblock/00_fig_where.png" alt="メッセージが出るまでの流れの図。1、ChatGPTやClaudeを開くと、手前のCloudflareがアクセスが人かボットかを見る。2、確認が必要と判断されると確認画面が出る。3、確認の仕組みを challenges.cloudflare.com から読み込み、届かないとメッセージが出る。止まる場所は2つで、手元ではブラウザ・ネットワーク・端末のどこかが通信を止めている。Cloudflare側では障害で確認の仕組みそのものが動かず、手元では直せない" loading="lazy"><figcaption>メッセージが出るまでの流れと、止まる場所（Cloudflareのドキュメントと確認画面の案内文から作成）</figcaption></figure>
 
-止まる場所は、手元とCloudflare側の2つに分かれます。手元なら設定を直せば開けるようになり、Cloudflare側なら復旧を待つしかありません。**どちらなのかで対処が正反対になるため、先に見分けます。**
+**どちらで止まっているかで対処が正反対になるため、先に見分けます。**
 
 ## 障害か手元かの見分け方
 
@@ -44,7 +44,7 @@ ChatGPTやClaudeは、Cloudflareという会社のネットワークを通して
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/cloudflare-challenges-unblock/ccu_01_sp_cfstatus.jpg" alt="スマホで開いたCloudflare System Statusのページ。Active incidentsに、アジア太平洋のネットワーク性能の低下、Cloudflare One Clientsが一部のサイトで誤って確認を求められる件、一部のWARP利用者の位置情報の誤りの3件が、Identifiedの表示で並んでいる" loading="lazy"><figcaption>Cloudflareのステータスページ（2026年9月27日、スマホ）</figcaption></figure>
 
-**2026年9月27日に開いたときは、「Cloudflare One Clients are incorrectly challenged on some sites」が対応中でした。**会社などで入れるCloudflareの接続アプリ（Cloudflare One Client）を使っている人が、一部のサイトで誤って確認を求められる不具合で、9月23日から「原因を特定し修正中」の表示が続いています。会社のパソコンでだけ確認画面が出るなら、この種類の不具合も疑えます。
+**2026年9月27日に開いたときは、「Cloudflare One Clients are incorrectly challenged on some sites」が対応中でした。**会社などで入れるCloudflareの接続アプリ（Cloudflare One Client）を使っている人が、一部のサイトで誤って確認を求められる不具合で、日本時間の9月23日から「原因を特定し修正中」の表示が続いています。会社のパソコンでだけ確認画面が出るなら、この種類の不具合も疑えます。
 
 ChatGPTなら[OpenAIのステータスページ](https://status.openai.com/)、Claudeなら[Claudeのステータスページ](https://status.claude.com/)も合わせて見てください。サービス側の障害でも画面が開かない症状は似ています。
 
@@ -64,7 +64,7 @@ Cloudflareは確認がうまく動くかを調べる[検査ツール（Turnstile
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/cloudflare-challenges-unblock/ccu_03_sp_debug_ok.jpg" alt="スマホで開いたCloudflareのTurnstile Troubleshooter。SECURITY CHECKに私はロボットではありませんのチェック欄が表示され、DIAGNOSTICSは4分の4でDiagnostics complete。Diagnostic resultsではAutomation Check、System Clock、Privacy Tools、Server Connectionの4項目がすべて緑" loading="lazy"><figcaption>通常の状態で開いた検査ツール。4項目すべて緑（2026年9月27日、スマホ）</figcaption></figure>
 
-2回目は、ブラウザから challenges.cloudflare.com に届かない状態を作ってから開きました。拡張機能やネットワークが通信を止めたときと同じ状態を、ブラウザの設定で再現したものです。**確認欄は「Loading security check...」のまま進まず、「Cannot Connect to Security Servers」という警告が出ました。**
+2回目は、challenges.cloudflare.com の名前解決だけを止めた Chrome で開きました。このドメインにだけ届かない状態です。**確認欄は「Loading security check...」のまま進まず、「Cannot Connect to Security Servers」という警告が出ました。**
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/cloudflare-challenges-unblock/ccu_04_sp_debug_block.jpg" alt="challenges.cloudflare.comに届かない状態で開いた検査ツール。SECURITY CHECKはLoading security checkのまま。ISSUE FOUNDの枠にCannot Connect to Security Serversと出て、ファイアウォール、VPN、プロキシ、広告ブロックで止められていると説明し、接続の確認、VPNやプロキシの停止、別のネットワーク、ファイアウォールの設定、広告ブロックの停止の5つの手順が並ぶ。Diagnostic resultsではServer Connectionだけが赤でCannot reach servers" loading="lazy"><figcaption>challenges.cloudflare.com に届かない状態で開いた検査ツール。Server Connectionだけが赤（2026年9月27日、スマホ）</figcaption></figure>
 
@@ -81,7 +81,7 @@ Cloudflareは確認がうまく動くかを調べる[検査ツール（Turnstile
 
 ## 手元の原因と対処
 
-Cloudflareのドキュメントと確認画面の案内文を合わせると、手元の原因は次の6つに分かれます。
+Cloudflareのドキュメントと確認画面の案内文を合わせると、手元の主な原因は次の7つです。
 
 | 原因 | 当てはまりやすい人 | 対処 |
 |---|---|---|
@@ -91,6 +91,7 @@ Cloudflareのドキュメントと確認画面の案内文を合わせると、�
 | セキュリティソフト・ファイアウォール | 通信を監視するソフトを入れている | 許可リストに challenges.cloudflare.com を加える |
 | JavaScriptやCookieがオフ | ブラウザの設定を変えている | 両方をオンにする |
 | 古いブラウザ・アプリ内ブラウザ | LINEやXのリンクから開いた、ブラウザを更新していない | 標準のブラウザで開く、最新版に更新する |
+| 端末のマルウェア感染 | ほかのサイトでも確認画面が続く | セキュリティソフトで端末をスキャンする |
 
 <figure class="post-figure"><img src="/media/images/cloudflare-challenges-unblock/ccu_05_docs_troubleshoot.jpg" alt="CloudflareのドキュメントのTroubleshootingの節。ブラウザの対応の確認と互換性チェックツール、拡張機能を止める、JavaScriptを有効にする、シークレットモードやプライベートモードで試す、別のブラウザや端末で試す、VPNやプロキシを避ける、モバイルのホットスポットなど別のネットワークに切り替える、の7つの手順が並ぶ" loading="lazy"><figcaption>Cloudflareのドキュメントのトラブルシューティング（2026年9月8日更新、2026年9月27日取得）</figcaption></figure>
 
@@ -121,7 +122,7 @@ Cloudflareのドキュメントでは、どの確認もJavaScriptとCookieが有
 - **障害中に設定をいじり続ける。**Cloudflare側の障害なら手元では直らず、変えた設定を戻し忘れる
 - **Cloudflareに確認を外してもらおうとする。**Cloudflareのドキュメントには、Cloudflareの社員は確認を外せず、外せるのはサイトの運営者だけと書かれている
 
-手元をすべて試しても開けないときは、OpenAIやAnthropicのサポートに連絡します。**Cloudflareのドキュメントは、エラーコードとRay ID（確認画面の下に出る英数字）をサイトの運営者に伝えるよう案内しています。**画面を撮っておくと伝えやすくなります。
+手元をすべて試しても開けないときは、OpenAIやAnthropicのサポートに連絡します。**Cloudflareのドキュメントは、エラーコードとRay ID（確認画面の下に出る英数字）をサイトの運営者に伝えるよう案内しています。**画面を撮っておけば、伝えるときに迷いません。
 
 ## 2025年11月18日の障害
 
@@ -141,7 +142,7 @@ Cloudflareの確認画面が、確認に使う challenges.cloudflare.com に届�
 
 ### Cloudflareの確認用ドメインは安全ですか？
 
-challenges.cloudflare.com は、Cloudflareが確認画面のために使う公式のドメインで、Cloudflareのドキュメントにも名前が出てきます。このドメインへの通信を許可しても、ウイルスを招くことにはなりません。
+challenges.cloudflare.com は、Cloudflareが確認画面のために使うドメインで、Cloudflareのドキュメントにも名前が出てきます。許可リストに足すのはこのドメインだけにして、セキュリティソフトを丸ごと止めないでください。
 
 ### Cloudflareの確認画面がループするのはなぜですか？
 
@@ -153,11 +154,11 @@ Cloudflareのドキュメントは、不安定な回線、拡張機能やブラ�
 
 ### ChatGPTだけで出てほかのサイトは開けるのはなぜですか？
 
-確認画面を出すかどうかはサイトごとの設定とアクセスの様子で決まります。ChatGPTで確認が求められ、そのときだけ通信が止められていると、ほかのサイトは開けるのにChatGPTだけ止まります。
+確認画面を出すかどうかを決めているのは、サイトの運営者がCloudflareで選んだ設定とアクセスの様子です。確認を求めないサイトは challenges.cloudflare.com を使わないため、同じ端末と回線でも普通に開けます。
 
 ### Cloudflareに解除を頼めますか？
 
-解除してもらえません。Cloudflareのドキュメントによると、確認を外せるのはサイトの運営者だけです。手元の対処で直らなければ、OpenAIやAnthropicのサポートにRay IDを添えて連絡します。
+解除してもらえません。Cloudflareのドキュメントによると、確認を外せるのはサイトの運営者だけで、Cloudflareの社員にはできないとされています。手元の対処で直らなければ、OpenAIやAnthropicのサポートにRay IDを添えて連絡します。
 
 ### Cloudflare Challengesとは何ですか？
 
