@@ -103,7 +103,7 @@ WindowsやmacOSのChatGPTアプリで「電話番号が必要です」と出た�
 
 ## ステータスページで障害を確かめる
 
-OpenAIの障害は[status.openai.com](https://status.openai.com/)に載ります。「System status」にAPIs・ChatGPT・Codexなどが並び、障害が起きているサービスは、その行の印で分かります。
+OpenAIの障害を載せているのは[status.openai.com](https://status.openai.com/)です。「System status」にAPIs・ChatGPT・Codexなどが並び、障害が起きているサービスは、その行の印で分かります。
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-error-messages/gem_02_sp_status.jpg" alt="スマホで開いたOpenAIのステータスページ。We're fully operationalの表示の下に、System statusとしてAPIs、ChatGPT、Codex、FedRAMP、Ads Platformが緑のチェックで並ぶ。一番下に、稼働率はすべてのプラン、モデル、エラーの種類をまとめた数字で、個々の利用者の可用性はプランやモデルや機能によって違うことがあるという注記がある" loading="lazy"><figcaption>OpenAIのステータスページ（2026年9月27日、スマホ）</figcaption></figure>
 
