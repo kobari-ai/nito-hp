@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】Geminiが途中で止まるときの原因と対処を解説｜回答が切れる・長文が短くなる・続きを書かせる | nito Column</title>
+    <meta name="description" content="Geminiの回答が途中で止まる・切れるときの原因を3つの型に分け、再生成と「続けて」の使い方、長い文章を分けて頼むコツ、読める量と使用量の上限の確かめ方を、実測とGoogleのヘルプで整理しました。">
+    <link rel="canonical" href="https://nito-0210.com/media/gemini-stops-midway/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】Geminiが途中で止まるときの原因と対処を解説｜回答が切れる・長文が短くなる・続きを書かせる">
+    <meta property="og:description" content="Geminiの回答が途中で止まる・切れるときの原因を3つの型に分け、再生成と「続けて」の使い方、長い文章を分けて頼むコツ、読める量と使用量の上限の確かめ方を、実測とGoogleのヘルプで整理しました。">
+    <meta property="og:url" content="https://nito-0210.com/media/gemini-stops-midway/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/gemini-stops-midway.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/gemini-stops-midway.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Geminiが途中で止まるときの原因と対処を解説｜回答が切れる・長文が短くなる・続きを書かせる", "description": "Geminiの回答が途中で止まる・切れるときの原因を3つの型に分け、再生成と「続けて」の使い方、長い文章を分けて頼むコツ、読める量と使用量の上限の確かめ方を、実測とGoogleのヘルプで整理しました。", "datePublished": "2026-09-28", "dateModified": "2026-09-28", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/gemini-stops-midway/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Geminiが途中で止まるときの原因と対処を解説｜回答が切れる・長文が短くなる・続きを書かせる"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Geminiの回答が途中で止まるのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "表示が途中で止まる、長い文章が短く終わる、長い会話で抜けが出る、の3つの型があります。途中で止まったなら、再生成するか、同じチャットで「続けて」と送ってください。"}}, {"@type": "Question", "name": "Geminiに続きを書いてもらうにはどうすればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "同じチャットで「続けて」と頼めます。ただし途中で止まった回答では試していません。2万字を頼んだ3回のうち、分割を提案された2回は「続けて」で3,000字台の別の小説が書かれ、約6,700字を書いた1回は「続けて」で同じ話の第五章が書き足されました。"}}, {"@type": "Question", "name": "Geminiで長い文章を最後まで書かせる方法はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "章や場面ごとに分けて頼みます。2万字を一度に頼んだ3回は、どれも2万字に届かず、2回は分割して書く形を提案されました。最後までつなぐところは試していません。"}}, {"@type": "Question", "name": "Geminiの回答を再生成するには？", "acceptedAnswer": {"@type": "Answer", "text": "回答の下にある再生成のアイコンを押します。再生成できるのは最新の回答だけで、ログインが必要です。"}}, {"@type": "Question", "name": "Geminiは一度にどれくらいの文字数を読めますか？", "acceptedAnswer": {"@type": "Answer", "text": "プランなしで3.2万トークン、Google AI Plusで12.8万トークン、Google AI ProとUltraで100万トークンです。100万トークンなら最大1,500ページのテキストを理解できる、とヘルプは説明しています。"}}, {"@type": "Question", "name": "Geminiの使用量の上限はどこで確認できますか？", "acceptedAnswer": {"@type": "Answer", "text": "gemini.google.comの左下の設定アイコンから、使用量上限を選んでください。上限に達したときの通知には、いつリセットされるかも出ます。"}}, {"@type": "Question", "name": "Geminiの長い会話で抜けが出るのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "一度に読める量を超えると、内容の一部が考慮されなかったり、詳細が抜けた回答が返ったりすることがあります。新しいチャットで要点から始め直してください。"}}, {"@type": "Question", "name": "Geminiの回答が毎回途中で止まるときは？", "acceptedAnswer": {"@type": "Answer", "text": "再生成しても止まるなら、回線とGoogle側の障害を確かめます。長い文章を頼んでいるなら、分けて頼んでください。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Geminiが途中で止…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.28</span>
+        </div>
+        <h1 class="post-title">【2026年9月】Geminiが途中で止まるときの原因と対処を解説｜回答が切れる・長文が短くなる・続きを書かせる</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Geminiが途中で止まるとき"><defs><linearGradient id="ecg-f4cda8c4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f4cda8c4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Geminiが途中で止まるとき</text><line x1="121.2" y1="327.1" x2="1078.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">3つの型と続きを書かせる方法</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Geminiに長い文章を頼むと、途中で回答が止まったり、頼んだより短く終わったりすることがあります。Googleのコミュニティや知恵袋にも「回答が途中で切れる」「続きが出てこない」という相談が並んでいます。</p>
+<p>2026年9月28日に、ログインしていないGeminiのウェブ版（Flash-Lite）で2万字の小説を頼んでみました。<strong>3回のうち2回はGeminiが「1回あたりの出力には制限がある」と答えて本文を書かず、数千字でなら書けると提案しました。</strong>そこで「続けて」と送ると、書かれたのは2万字ではなく、提案どおり3,000字台で完結する小説でした。残りの1回は最初から約6,700字の小説を書き、「続けて」で同じ話の第五章を書き足しています。3回とも2万字には届いていません。</p>
+<p>この記事では止まり方を3つの型に分け、型ごとに試すことをGoogleのヘルプと実測で整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>「途中で止まる」には<strong>書いている途中で止まる・長い文章が短くなる・長い会話で抜けが出る</strong>の3つの型がある</li>
+<li>途中で止まったら、<strong>再生成するか、同じチャットで「続けて」と送る</strong>。再生成できるのは最新の回答だけ</li>
+<li>2万字を一度に頼むと、<strong>3回のうち2回は出力の制限を理由に分割を提案</strong>し、3回とも2万字には届かなかった（実測）。長い文章は章ごとに頼む</li>
+<li>一度に読める量はプランで違い、<strong>プランなしは3.2万トークン、Plusは12.8万、Pro・Ultraは100万</strong></li>
+<li>使用量の上限は<strong>gemini.google.comの左下の設定から確かめられる</strong></li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>途中で止まる3つの型</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>書いている途中で止まったとき</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>長い文章が短く終わるとき</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>長い会話やファイルで抜けが出るとき</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>使用量の上限に達したとき</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">途中で止まる3つの型</h2>
+<p>「途中で止まる」と言っても、画面で起きていることは人によって違います。止まり方で、試すことが変わります。</p>
+<figure class="post-figure"><img src="/media/images/gemini-stops-midway/00_fig_types.png" alt="Geminiが途中で止まる3つの型の図。1は書いている途中で止まる型で、回答の途中で表示が止まり続きが出てこない。再生成するか続けてと送り、回線と障害も確かめる。2は長い文章が短くなる型で、頼んだ長さより短く終わる、分割を提案される。章ごとに分けて頼み、続けてでつなぐ。3は長い会話で抜けが出る型で、長い会話やファイルの一部が回答に反映されない。新しいチャットで要点から始め直し、読める量はプランで違う" loading="lazy"><figcaption>Geminiが「途中で止まる」3つの型と、まず試すこと（ヘルプと実測から作成）</figcaption></figure>
+
+<p>1の型は、回答の表示が途中で止まったまま動かなくなるものです。2と3は止まり方というより回答の中身の問題です。</p>
+<h2 id="s2">書いている途中で止まったとき</h2>
+<p>回答が途中で止まったら、まず回答の下にある再生成のアイコンを押します。ヘルプ「<a href="https://support.google.com/gemini/answer/14262426?hl=ja">Gemini アプリの回答を再生成する、書き換える</a>」によると、再生成できるのはチャットの最新の回答だけで、使うにはログインが必要です。古い回答なら、同じ内容を送り直す方法があります。</p>
+<p>会話を続けながら回答を書き換えられる、とヘルプにあります。止まった回答なら、同じチャットで「続けて」と頼めます（途中で止まった回答では試していません）。</p>
+<p>再生成しても止まるなら、手元の回線とGoogle側の障害を疑います。障害の確かめ方は<a href="/media/gemini-not-working/">Geminiが使えない原因の記事</a>の「障害を確かめる」にまとめました。</p>
+<h2 id="s3">長い文章が短く終わるとき</h2>
+<p>2万字の小説を一度に頼んだときの返事が、次の画面です。Geminiは本文を書かずに、1回あたりの出力には制限があるので2万字を一度に書き切ることはできない、と答えました。</p>
+<figure class="post-figure"><img src="/media/images/gemini-stops-midway/gsm_01_split.png" alt="ログインしていないGeminiのウェブ版で、江戸時代の商家を舞台にした短編小説を2万字で、要約や省略をせず最後まで本文だけを書いてと頼んだ画面。Geminiの返事の最初の段落が赤枠で囲まれていて、AIの1回あたりの出力トークン数や文字数の制限上、一度に2万字の本文を完全に書き切ることはシステム上物理的に不可能ですと書かれている。その下に、3,000字から5,000字程度か分割執筆なら書けること、商家の種類や主人公を尋ねる質問が続く。モデルの表示はFlash-Lite" loading="lazy"><figcaption>2万字を一度に頼んだときの返事（2026年9月28日、ログインなしのウェブ版・Flash-Lite）</figcaption></figure>
+
+<p>同じチャットで「続けて」と送ると、今度は小説の本文が始まりました。<strong>書かれたのは2万字ではなく、提案どおり約3,400字で完結する小説でした。</strong>スマホの表示で試した2回目も、最初は数千字での提案、「続けて」で約3,600字の完結した小説、という同じ流れでした。</p>
+<figure class="post-figure"><img src="/media/images/gemini-stops-midway/gsm_02_continue.png" alt="同じGeminiのチャットで続けてと送った画面。送った吹き出しが赤枠で囲まれ、その下に江戸時代の日本橋の老舗の呉服問屋越前屋を舞台にした短編小説が始まり、番頭のそろばんという題と本文が続いている" loading="lazy"><figcaption>「続けて」と送ると、小説の本文が始まった（2026年9月28日）</figcaption></figure>
+
+<p>3回目（スマホの表示）は、最初の返事で4章立て・約6,700字の小説を書いて話を閉じました。同じチャットで「続けて」と送ると、<strong>同じ話の続きとして第五章（約1,650字）を書き足しています。</strong></p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/gemini-stops-midway/gsm_04_sp_continue.png" alt="スマホで開いたGeminiのウェブ版で、同じチャットに続けてと送った画面。送った吹き出しが赤枠で囲まれ、その下に前の回答の続きとして第五章 新たな風という章の見出しが赤枠で囲まれ、中川藩の一件から一月ほどが過ぎという本文が続いている" loading="lazy"><figcaption>3回目は約6,700字を書いたあと、「続けて」で第五章から続けた（2026年9月28日、スマホ表示）</figcaption></figure>
+
+<p>同じ頼み方でも、分割を提案するか書き始めるかは回によって違いました。長い文章を書かせたいときは、<strong>最初から章や場面ごとに分けて頼みます。</strong>Gemini自身も、分割して書く形を提案していました。章を分けて頼み、2万字まで最後までつなぐところは試していません。あらすじと章立てを先に作らせておけば、分けて頼むときの目印になります。</p>
+<p>実測はログインなしで使えるFlash-Liteの結果です。ログインしてほかのモデルを選んだときに、どこまで長く書けるかは試していません。</p>
+<h2 id="s4">長い会話やファイルで抜けが出るとき</h2>
+<p>同じチャットで長く話し続けたり、大きなファイルを渡したりすると、回答の一部が抜けることがあります。ここで関係するのがGeminiが一度に読める量です。</p>
+<figure class="post-figure"><img src="/media/images/gemini-stops-midway/00_fig_context.png" alt="Geminiが一度に読める量、コンテキスト ウィンドウの図。プランなしは3.2万トークン、Google AI Plusは12.8万トークン、Google AI ProとUltraは100万トークン。ヘルプの例では100万トークンで最大1,500ページのテキストか3万行のコード" loading="lazy"><figcaption>プランごとの、一度に読める量（Geminiのヘルプ、2026年9月28日取得）</figcaption></figure>
+
+<p>ヘルプ「<a href="https://support.google.com/gemini/answer/16275805?hl=ja">Google AI のサブスクリプション プランに応じた Gemini アプリの使用量上限とアップグレード</a>」によると、プロンプトがこの量を超えると、渡した内容の一部が考慮されなかったり、つながりや詳細が抜けた回答が返ったりすることがあります。<strong>大きなファイルを何本も渡して、その全体に散らばった詳細を聞くときに影響がいちばん大きい</strong>とされています。</p>
+<p>抜けが目立ってきたら、新しいチャットを開き、それまでの要点を短くまとめてから始め直します。ファイルは必要な部分だけに絞って渡してください。</p>
+<h2 id="s5">使用量の上限に達したとき</h2>
+<p>止まったのではなく、上限に達して使えなくなっている場合もあります。Geminiの使用量の上限は、プロンプトの複雑さ・使うモデルと機能・チャットの長さなどから決まる、計算量に基づく上限だとヘルプに書かれています。</p>
+<figure class="post-figure"><img src="/media/images/gemini-stops-midway/gsm_03_help_limit.png" alt="Geminiのヘルプの上限到達とリセットのタイミングの確認方法の節。上限に近づくとGeminiアプリに通知が表示され、上限に達すると通知の内容が変わりいつリセットされるかがわかると書かれている。その下の使用量上限を確認するには、gemini.google.com にアクセスします、左下の設定アイコンから使用量上限アイコンを選択しますという2つの手順が赤枠で囲まれている" loading="lazy"><figcaption>ヘルプにある使用量上限の確かめ方（2026年9月28日取得）</figcaption></figure>
+
+<p><strong><a href="https://gemini.google.com/">gemini.google.com</a>の左下の設定から「使用量上限」を選ぶと、今の状況を確かめられます。</strong>Google AIのプランを使っていれば、上限に達してもFlash-Liteで会話を続けられます。5時間か1週間の上限に達したときの選択肢は、リセットを待つか、上限の大きいプランに変えるかの2つです。</p>
+<h2 id="s6">よくある質問</h2>
+<h3 id="s6-1">Geminiの回答が途中で止まるのはなぜですか？</h3>
+<p>表示が途中で止まる、長い文章が短く終わる、長い会話で抜けが出る、の3つの型があります。途中で止まったなら、再生成するか、同じチャットで「続けて」と送ってください。</p>
+<h3 id="s6-2">Geminiに続きを書いてもらうにはどうすればいいですか？</h3>
+<p>同じチャットで「続けて」と頼めます。ただし途中で止まった回答では試していません。2万字を頼んだ3回のうち、分割を提案された2回は「続けて」で3,000字台の別の小説が書かれ、約6,700字を書いた1回は「続けて」で同じ話の第五章が書き足されました。</p>
+<h3 id="s6-3">Geminiで長い文章を最後まで書かせる方法はありますか？</h3>
+<p>章や場面ごとに分けて頼みます。2万字を一度に頼んだ3回は、どれも2万字に届かず、2回は分割して書く形を提案されました。最後までつなぐところは試していません。</p>
+<h3 id="s6-4">Geminiの回答を再生成するには？</h3>
+<p>回答の下にある再生成のアイコンを押します。再生成できるのは最新の回答だけで、ログインが必要です。</p>
+<h3 id="s6-5">Geminiは一度にどれくらいの文字数を読めますか？</h3>
+<p>プランなしで3.2万トークン、Google AI Plusで12.8万トークン、Google AI ProとUltraで100万トークンです。100万トークンなら最大1,500ページのテキストを理解できる、とヘルプは説明しています。</p>
+<h3 id="s6-6">Geminiの使用量の上限はどこで確認できますか？</h3>
+<p>gemini.google.comの左下の設定アイコンから、使用量上限を選んでください。上限に達したときの通知には、いつリセットされるかも出ます。</p>
+<h3 id="s6-7">Geminiの長い会話で抜けが出るのはなぜですか？</h3>
+<p>一度に読める量を超えると、内容の一部が考慮されなかったり、詳細が抜けた回答が返ったりすることがあります。新しいチャットで要点から始め直してください。</p>
+<h3 id="s6-8">Geminiの回答が毎回途中で止まるときは？</h3>
+<p>再生成しても止まるなら、回線とGoogle側の障害を確かめます。長い文章を頼んでいるなら、分けて頼んでください。</p>
+<h2 id="s7">出典</h2>
+<ul>
+<li>Gemini アプリ ヘルプ「<a href="https://support.google.com/gemini/answer/14262426?hl=ja">Gemini アプリの回答を再生成する、書き換える</a>」（2026年9月28日取得）</li>
+<li>Gemini アプリ ヘルプ「<a href="https://support.google.com/gemini/answer/16275805?hl=ja">Google AI のサブスクリプション プランに応じた Gemini アプリの使用量上限とアップグレード</a>」（2026年9月28日取得）</li>
+<li>長い文章の実測は、2026年9月28日にログインしていないGeminiのウェブ版（Flash-Lite）で3回（パソコンの表示で1回、スマホの表示で2回）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-mode-english/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードが英語になるとき"><defs><linearGradient id="ecg-02ae2545" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-02ae2545)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードが英語になるとき</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】Google AIモードが英語になる原因と日本語に戻す方法｜回答が英語・表示が英語・出典が英語</div>
+            </a>
+            <a href="/media/chatgpt-memory-full/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのメモリがいっぱいのとき"><defs><linearGradient id="ecg-9cb2c548" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-9cb2c548)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのメモリ</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">がいっぱいのとき</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTのメモリがいっぱいのときの対処を解説｜自動の管理・削除・改善されたメモリ</div>
+            </a>
+            <a href="/media/gemini-live-not-working/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gemini Liveが使えないとき"><defs><linearGradient id="ecg-ab41a207" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ab41a207)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Gemini Liveが</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">使えないとき</text><line x1="311.2" y1="416.8" x2="888.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】Gemini Liveが使えない原因と対処を解説｜iPhone・Android・パソコン・カメラ・画面共有</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
