@@ -68,7 +68,7 @@ Geminiに長い文章を頼むと、途中で回答が止まったり、頼ん�
 
 <figure class="post-figure"><img src="/media/images/gemini-stops-midway/gsm_03_help_limit.png" alt="Geminiのヘルプの上限到達とリセットのタイミングの確認方法の節。上限に近づくとGeminiアプリに通知が表示され、上限に達すると通知の内容が変わりいつリセットされるかがわかると書かれている。その下の使用量上限を確認するには、gemini.google.com にアクセスします、左下の設定アイコンから使用量上限アイコンを選択しますという2つの手順が赤枠で囲まれている" loading="lazy"><figcaption>ヘルプにある使用量上限の確かめ方（2026年9月28日取得）</figcaption></figure>
 
-上限に近づくとGeminiのアプリに通知が出て、上限に達すると通知の内容が変わり、いつリセットされるかが分かります。**[gemini.google.com](https://gemini.google.com/)の左下の設定から「使用量上限」を選ぶと、今の状況を確かめられます。**Google AIのプランを使っていれば、上限に達してもFlash-Liteで会話を続けられます。5時間か1週間の上限に達したときの選択肢は、リセットを待つか、上限の大きいプランに変えるかの2つです。
+**[gemini.google.com](https://gemini.google.com/)の左下の設定から「使用量上限」を選ぶと、今の状況を確かめられます。**Google AIのプランを使っていれば、上限に達してもFlash-Liteで会話を続けられます。5時間か1週間の上限に達したときの選択肢は、リセットを待つか、上限の大きいプランに変えるかの2つです。
 
 ## よくある質問
 
