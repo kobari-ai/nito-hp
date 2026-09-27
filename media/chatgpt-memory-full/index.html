@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】ChatGPTのメモリがいっぱいのときの対処を解説｜自動の管理・削除・改善されたメモリ | nito Column</title>
+    <meta name="description" content="ChatGPTの「メモリがいっぱい」の原因と空け方を、OpenAIのヘルプとリリースノートで整理。2025年10月の自動の管理、2026年6月の改善されたメモリ、消しても残るもの、設定の場所までまとめました。">
+    <link rel="canonical" href="https://nito-0210.com/media/chatgpt-memory-full/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】ChatGPTのメモリがいっぱいのときの対処を解説｜自動の管理・削除・改善されたメモリ">
+    <meta property="og:description" content="ChatGPTの「メモリがいっぱい」の原因と空け方を、OpenAIのヘルプとリリースノートで整理。2025年10月の自動の管理、2026年6月の改善されたメモリ、消しても残るもの、設定の場所までまとめました。">
+    <meta property="og:url" content="https://nito-0210.com/media/chatgpt-memory-full/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/chatgpt-memory-full.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/chatgpt-memory-full.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】ChatGPTのメモリがいっぱいのときの対処を解説｜自動の管理・削除・改善されたメモリ", "description": "ChatGPTの「メモリがいっぱい」の原因と空け方を、OpenAIのヘルプとリリースノートで整理。2025年10月の自動の管理、2026年6月の改善されたメモリ、消しても残るもの、設定の場所までまとめました。", "datePublished": "2026-09-28", "dateModified": "2026-09-28", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/chatgpt-memory-full/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】ChatGPTのメモリがいっぱいのときの対処を解説｜自動の管理・削除・改善されたメモリ"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTのメモリがいっぱいになるとどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "OpenAIのヘルプとリリースノートには、いっぱいになったあとの動きは書かれていません（2026年9月28日に確認した範囲）。要らない項目を消して空けるか、使える環境なら自動の管理や改善されたメモリを使ってください。"}}, {"@type": "Question", "name": "ChatGPTのメモリの上限は何件ですか？", "acceptedAnswer": {"@type": "Answer", "text": "OpenAIのヘルプとリリースノートに、件数の上限は書かれていません。2026年6月の改善されたメモリで、Plus・Proは容量が2倍になったとされています。"}}, {"@type": "Question", "name": "ChatGPTのメモリはどこで確認できますか？", "acceptedAnswer": {"@type": "Answer", "text": "設定の「パーソナライズ」から「メモリ」を開きます。画面に出るコントロールはプランや地域によって違います。"}}, {"@type": "Question", "name": "チャットを削除すればメモリも消えますか？", "acceptedAnswer": {"@type": "Answer", "text": "消えるとは限りません。ヘルプによると、そのチャットから別に保存されたメモリは自動では削除されません。保存したメモリも消してください。"}}, {"@type": "Question", "name": "ChatGPTのメモリが削除できないときは？", "acceptedAnswer": {"@type": "Answer", "text": "設定のメモリで一覧から消せない場合は、ChatGPTに「〇〇を忘れて」と頼む方法もあります。削除やメモリの更新が反映されるまで時間がかかる場合がある、ともヘルプに書かれています。"}}, {"@type": "Question", "name": "無料版でもメモリの自動の管理は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "2025年10月15日のリリースノートでは、Plus・Proのウェブ版から配り始めたとされています。無料版への提供はその項目には書かれていません。"}}, {"@type": "Question", "name": "メモリをオフにすると過去のチャットは消えますか？", "acceptedAnswer": {"@type": "Answer", "text": "消えません。ヘルプによると、メモリをオフにしても過去のチャットは削除されません。オンに戻すと、残っているチャットから新しく覚える場合があります。"}}, {"@type": "Question", "name": "一時チャットはメモリに残りますか？", "acceptedAnswer": {"@type": "Answer", "text": "残りません。一時チャットではメモリの作成や更新は行われません。ただし一時チャットを保存すると通常のチャットになり、メモリがオンならあとの回答に使われることがあります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】ChatGPTのメモリ…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.28</span>
+        </div>
+        <h1 class="post-title">【2026年9月】ChatGPTのメモリがいっぱいのときの対処を解説｜自動の管理・削除・改善されたメモリ</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのメモリがいっぱいのとき"><defs><linearGradient id="ecg-3f77d369" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-3f77d369)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="86.4" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのメモリ</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">がいっぱいのとき</text><line x1="288.4" y1="378.0" x2="911.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">仕組みの変化と空け方</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>ChatGPTのメモリは、会話の中で伝えた好みや前提を覚えておき、次の回答に使う機能です。覚えた項目が増えて容量に達した状態が、いわゆる「メモリがいっぱい」です。</p>
+<p><strong>OpenAIはこの仕組みを2025年10月と2026年6月の2回変えています。</strong>2025年10月15日のリリースノートでは、Plus・Proのウェブ版で、保存したメモリを自動で管理して「memory full」の状態を避ける機能が始まりました。2026年6月4日には「改善されたメモリ」が米国のPlus・Proから配られ始め、改善されたメモリが届いたPlus・Proでは、メモリの容量が2倍になるとされています。検索の上位には変化の前の「不要なメモリを手で消す」だけの記事が今も多く並んでいます。</p>
+<p>この記事ではOpenAIのヘルプ「<a href="https://help.openai.com/ja-jp/articles/8590148-memory-faq">ChatGPT のメモリ</a>」とリリースノートをもとに、いっぱいになる仕組み、空け方、消しても残るものを整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>「メモリがいっぱい」は、覚えた項目を一覧で持つ<strong>保存したメモリが容量に達した状態</strong></li>
+<li>2025年10月から、Plus・Proのウェブ版では<strong>重要なメモリを優先し、残りを後ろに回す自動の管理</strong>が始まり、いっぱいになりにくくしている</li>
+<li>2026年6月からは<strong>改善されたメモリ</strong>が順次配られ、届いたPlus・Proは容量が2倍。従来の方式にも戻せる</li>
+<li>手で空けるなら<strong>設定の「パーソナライズ」の「メモリ」</strong>から、要らない項目を消す</li>
+<li><strong>チャットを消しても、そこから保存されたメモリは自動では消えない</strong>。両方を消す</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>メモリがいっぱいになる仕組み</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>今のメモリの設定を確かめる</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>いっぱいのときの空け方</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>保存したメモリを消す</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>自動の管理を使う</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>改善されたメモリに切り替える</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>消しても残るもの</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>メモリを増やさずに使う</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">メモリがいっぱいになる仕組み</h2>
+<p>ChatGPTに「覚えておいて」と頼んだことや、ChatGPTが役に立つと判断した情報は、保存したメモリとして一覧に残ります。ヘルプによると、保存したメモリはチャットの履歴とは別に保存されます。<strong>この一覧に入る量には上限があり、上限に達した状態が「メモリがいっぱい」です。</strong></p>
+<p>2025年10月15日のリリースノートは、自動の管理について「保存したメモリが容量に達するのを防ぎ、ChatGPTのアカウントで『memory full』の状態になるのを避ける助けになる」と説明しています。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-memory-full/cmf_01_rn_2025.png" alt="OpenAIのChatGPTのリリースノートの2025年10月15日の項目。ChatGPT can now automatically manage saved memoriesという見出しの下の段落が赤枠で囲まれている。保存したメモリを自動で管理し、関連の強いものを優先して重要度の低いものを後ろに回すことで、容量に達するのを防ぎ、memory fullの状態を避ける助けになると書かれている" loading="lazy"><figcaption>2025年10月15日のリリースノート。自動の管理で「memory full」を避ける（2026年9月28日取得）</figcaption></figure>
+
+<p>いっぱいになるかどうかは、どの方式のメモリを使っているかで変わります。2026年9月時点で、OpenAIの説明に出てくる方式は3つです。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-memory-full/00_fig_types.png" alt="ChatGPTのメモリの管理の変わり方を3つ並べた図。保存したメモリは覚えた項目を一覧で持つ従来の方式で、容量に達するとメモリがいっぱいになり、自分で消して空ける。自動の管理は2025年10月から、Plus・Proのウェブで、重要なものを優先し残りを後ろに回す。いっぱいになりにくくする仕組みで、設定でオフにもできる。改善されたメモリは2026年6月から、米国のPlus・Proを先に順次配られ、記憶を自動で更新する。Plus・Proは容量が2倍で、従来の方式にも戻せる" loading="lazy"><figcaption>メモリの管理の変わり方（OpenAIのリリースノートとヘルプ、2026年9月28日確認）</figcaption></figure>
+
+<p>自動の管理がオフの場合や、まだ配られていない場合は、従来どおり自分で消して空けることになります。ヘルプにも、メモリの機能やコントロールはプラン・地域・プラットフォーム・ワークスペースの設定で違い、説明どおりの設定が見えない場合はまだ使えない可能性があると書かれています。</p>
+<h2 id="s2">今のメモリの設定を確かめる</h2>
+<p>自分がどの方式を使っているかは、メモリの設定の画面で分かります。ヘルプの手順は次のとおりです。</p>
+<ol>
+<li><a href="https://chatgpt.com/">ChatGPT</a>で「設定」を開く</li>
+<li>「パーソナライズ」を選ぶ</li>
+<li>「メモリ」を選ぶ</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/chatgpt-memory-full/cmf_03_help_settings.png" alt="OpenAIのヘルプ、ChatGPT のメモリのメモリ設定の管理の節。設定を開きます、パーソナライズを選択します、メモリを選択しますという3つの手順が赤枠で囲まれている。その下に、利用環境に応じてメモリ、保存したメモリを参照する、チャット履歴を参照する、メモリの概要、管理、保存したメモリなどのコントロールが使えると書かれている" loading="lazy"><figcaption>ヘルプに書かれたメモリの設定の場所（2026年9月28日取得）</figcaption></figure>
+
+<p>ヘルプによると、この画面に出るコントロールは利用環境によって違い、メモリ・保存したメモリを参照する・チャット履歴を参照する・メモリの概要・管理・保存したメモリなどがあります。ヘルプの説明では<strong>改善されたメモリは広くまとめた概要を更新し続け、従来の保存したメモリは項目を一覧で管理します。</strong>設定に項目の一覧が並ぶなら、従来の方式です。</p>
+<h2 id="s3">いっぱいのときの空け方</h2>
+<p>使っている方式と画面に出ているコントロールによって、空け方が変わります。</p>
+<table>
+<thead>
+<tr>
+<th>画面に出ているもの</th>
+<th>空け方・避け方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保存したメモリの一覧</td>
+<td>要らない項目を消す。ChatGPTに「〇〇を忘れて」と頼んでもよい</td>
+</tr>
+<tr>
+<td>自動の管理の切り替え</td>
+<td>オンにする。重要なものが優先され、残りが後ろに回る</td>
+</tr>
+<tr>
+<td>改善されたメモリを試す</td>
+<td>改善されたメモリに切り替える</td>
+</tr>
+</tbody>
+</table>
+<h3 id="s3-1">保存したメモリを消す</h3>
+<p>保存したメモリはChatGPTに忘れるよう頼むか、メモリの設定から削除できるとヘルプに書かれています。<strong>保存したメモリを消すと今後の回答には使われなくなりますが、過去の会話の中の言及は消えません。</strong>2025年10月のリリースノートによると、自動の管理が使える環境では保存したメモリを検索でき、新しい順・古い順に並べ替えられるので、消す候補を探しやすくなりました。</p>
+<p>どのメモリを優先するかを自分で選べることや、保存したメモリの以前の版を見て戻せることも、同じリリースノートに書かれています。<strong>消すのが不安なら、優先度を下げれば消さずに後ろに回せます。</strong></p>
+<h3 id="s3-2">自動の管理を使う</h3>
+<p>自動の管理では話題の新しさや話す頻度を手がかりに、ChatGPTがどのメモリを優先するかを決めます。2025年10月15日の時点では、Plus・Proのウェブ版から配られ始めました。いつでもオフにできる、とリリースノートは説明しています。</p>
+<h3 id="s3-3">改善されたメモリに切り替える</h3>
+<p>2026年6月4日のリリースノートでは、メモリが自動で更新され、ChatGPTが重要だと判断した詳細を追い続けるようになったと説明されています。古くなったり食い違ったりした保存メモリを減らす狙いです。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-memory-full/cmf_02_rn_2026.png" alt="OpenAIのChatGPTのリリースノートの2026年6月4日の項目、Memory that stays more up to date。メモリが自動で更新され、ChatGPTが重要と判断した詳細を追い続けること、従来の保存したメモリに戻したい場合は設定のメモリの保存したメモリから戻せることを書いた段落が赤枠で囲まれている。その下に、米国のPlusとProから配り始め、FreeとGoと他の国にも数週間で広げること、PlusとProは2倍のメモリ容量になることが書かれている" loading="lazy"><figcaption>2026年6月4日のリリースノート。自動で更新され、従来の方式にも戻せる（2026年9月28日取得）</figcaption></figure>
+
+<p>同じ項目によると、配り始めは米国のPlus・Proで、FreeとGo、ほかの国へは数週間かけて広げるとされていました。<strong>Plus・Proではメモリの容量が2倍になるとも書かれていました。</strong>使えるようになると、ChatGPTの中で知らせが出ます。ヘルプによると、切り替えはメモリの設定から「改善されたメモリを試す」、戻すときは「保存したメモリ」を選びます。</p>
+<h2 id="s4">消しても残るもの</h2>
+<p>メモリを空けるときに気をつけたいのが、<strong>チャットとメモリが別々に保存されている</strong>点です。ヘルプの説明を消す操作ごとに並べました。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-memory-full/00_fig_delete.png" alt="消したときに消えるものと消えないものの図。保存したメモリを消すと、今後の回答には使われなくなるが、過去の会話の中のその話題への言及は消えない。チャットを消すと、チャットの履歴から消えるが、そのチャットから別に保存されたメモリは自動では消えない。メモリをオフにすると新しく覚えなくなるが、過去のチャットは消えず、オンに戻すと残った履歴から覚え直すことがある" loading="lazy"><figcaption>消す操作ごとに、消えるものと消えないもの（OpenAIのヘルプ「ChatGPT のメモリ」から作成）</figcaption></figure>
+
+<p>ある情報を完全に消したいときは、保存したメモリと、その情報を最初に話したチャットの両方を消します。ヘルプはこのほか、メモリの概要・アーカイブ済みのチャット・ライブラリのファイル・接続済みのアプリからも消すよう案内しています。<strong>削除した保存メモリのログは、安全とデバッグのために最長30日残ることがある</strong>とも書かれています。</p>
+<p>チャットの履歴が見当たらない場合の探し方は、<a href="/media/chatgpt-history-lost/">ChatGPTの履歴が消えたときの記事</a>にまとめました。</p>
+<h2 id="s5">メモリを増やさずに使う</h2>
+<p>これ以上メモリを増やしたくない会話には、一時チャットを使います。ヘルプによると、一時チャットではパーソナライズがオンでもメモリの作成や更新は行われません。<strong>始めるときに「パーソナライズなし」を選ぶと、既存のメモリも使われません。</strong>この選択は会話を始めたあとには変えられません。</p>
+<p>「チャット履歴を参照する」は、保存したメモリとは別の仕組みです。チャット履歴から参照できる情報に個別の保存容量の制限はないと、ヘルプに書かれています。いっぱいになるのは保存したメモリのほうです。</p>
+<h2 id="s6">よくある質問</h2>
+<h3 id="s6-1">ChatGPTのメモリがいっぱいになるとどうなりますか？</h3>
+<p>OpenAIのヘルプとリリースノートには、いっぱいになったあとの動きは書かれていません（2026年9月28日に確認した範囲）。要らない項目を消して空けるか、使える環境なら自動の管理や改善されたメモリを使ってください。</p>
+<h3 id="s6-2">ChatGPTのメモリの上限は何件ですか？</h3>
+<p>OpenAIのヘルプとリリースノートに、件数の上限は書かれていません。2026年6月の改善されたメモリで、Plus・Proは容量が2倍になったとされています。</p>
+<h3 id="s6-3">ChatGPTのメモリはどこで確認できますか？</h3>
+<p>設定の「パーソナライズ」から「メモリ」を開きます。画面に出るコントロールはプランや地域によって違います。</p>
+<h3 id="s6-4">チャットを削除すればメモリも消えますか？</h3>
+<p>消えるとは限りません。ヘルプによると、そのチャットから別に保存されたメモリは自動では削除されません。保存したメモリも消してください。</p>
+<h3 id="s6-5">ChatGPTのメモリが削除できないときは？</h3>
+<p>設定のメモリで一覧から消せない場合は、ChatGPTに「〇〇を忘れて」と頼む方法もあります。削除やメモリの更新が反映されるまで時間がかかる場合がある、ともヘルプに書かれています。</p>
+<h3 id="s6-6">無料版でもメモリの自動の管理は使えますか？</h3>
+<p>2025年10月15日のリリースノートでは、Plus・Proのウェブ版から配り始めたとされています。無料版への提供はその項目には書かれていません。</p>
+<h3 id="s6-7">メモリをオフにすると過去のチャットは消えますか？</h3>
+<p>消えません。ヘルプによると、メモリをオフにしても過去のチャットは削除されません。オンに戻すと、残っているチャットから新しく覚える場合があります。</p>
+<h3 id="s6-8">一時チャットはメモリに残りますか？</h3>
+<p>残りません。一時チャットではメモリの作成や更新は行われません。ただし一時チャットを保存すると通常のチャットになり、メモリがオンならあとの回答に使われることがあります。</p>
+<h2 id="s7">出典</h2>
+<ul>
+<li>OpenAI ヘルプ「<a href="https://help.openai.com/ja-jp/articles/8590148-memory-faq">ChatGPT のメモリ</a>」（2026年9月28日取得、英語版「<a href="https://help.openai.com/en/articles/8590148-memory-faq">Memory FAQ</a>」も確認）</li>
+<li>OpenAI ヘルプ「<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT — Release Notes</a>」の2025年10月15日と2026年6月4日の項目（2026年9月28日取得）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-mode-english/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードが英語になるとき"><defs><linearGradient id="ecg-02ae2545" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-02ae2545)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードが英語になるとき</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】Google AIモードが英語になる原因と日本語に戻す方法｜回答が英語・表示が英語・出典が英語</div>
+            </a>
+            <a href="/media/gemini-live-not-working/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gemini Liveが使えないとき"><defs><linearGradient id="ecg-ab41a207" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ab41a207)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Gemini Liveが</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">使えないとき</text><line x1="311.2" y1="416.8" x2="888.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】Gemini Liveが使えない原因と対処を解説｜iPhone・Android・パソコン・カメラ・画面共有</div>
+            </a>
+            <a href="/media/ai-mode-image-generation/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードで画像を生成する"><defs><linearGradient id="ecg-d58aff75" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d58aff75)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードで画像を生成する</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.27</div>
+                <div class="rel-card__ttl">【2026年9月】Google AIモードで画像を生成する方法｜作り方・編集・保存・1日の上限・できないとき</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
