@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年9月】Google AIモードを消す方法を解説｜Chromeのアドレスバー・新しいタブ・スマホ・Pixel | nito Column</title>
+    <meta name="description" content="Google AIモードの入口を消す方法を、Chromeのアドレスバー・新しいタブ・スマホ・Pixelに分けて解説。公式ヘルプとChrome 154のchrome://flagsで確かめた結果から、消せるもの・消せないものを整理しました。">
+    <link rel="canonical" href="https://nito-0210.com/media/ai-mode-remove/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年9月】Google AIモードを消す方法を解説｜Chromeのアドレスバー・新しいタブ・スマホ・Pixel">
+    <meta property="og:description" content="Google AIモードの入口を消す方法を、Chromeのアドレスバー・新しいタブ・スマホ・Pixelに分けて解説。公式ヘルプとChrome 154のchrome://flagsで確かめた結果から、消せるもの・消せないものを整理しました。">
+    <meta property="og:url" content="https://nito-0210.com/media/ai-mode-remove/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/ai-mode-remove.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/ai-mode-remove.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年9月】Google AIモードを消す方法を解説｜Chromeのアドレスバー・新しいタブ・スマホ・Pixel", "description": "Google AIモードの入口を消す方法を、Chromeのアドレスバー・新しいタブ・スマホ・Pixelに分けて解説。公式ヘルプとChrome 154のchrome://flagsで確かめた結果から、消せるもの・消せないものを整理しました。", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-mode-remove/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年9月】Google AIモードを消す方法を解説｜Chromeのアドレスバー・新しいタブ・スマホ・Pixel"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Google AIモードを完全にオフにできますか？", "acceptedAnswer": {"@type": "Answer", "text": "できません。2026年9月30日時点で、AIモードそのものを止める公式の設定はありません。パソコンのChromeのアドレスバーのボタンと、Pixelの検索バーのショートカットだけは、公式の手順で非表示にできます。"}}, {"@type": "Question", "name": "右クリックしても項目が出ないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "Chromeの機能は段階的に届くため、バージョンやアカウントによってはまだ項目がありません。右上の3点メニューの［ヘルプ］、［Google Chrome について］で最新版に更新してから、もう一度アドレスバーを右クリックしてください。"}}, {"@type": "Question", "name": "chrome://flags でAIモードを消せますか？", "acceptedAnswer": {"@type": "Answer", "text": "Chrome 154 では消せません。記事で紹介されている「AI mode」と「AI Mode Omnibox entrypoint」の項目は見つからず、残っている4項目はボタンの挙動を変えるものでした。"}}, {"@type": "Question", "name": "iPhoneでAIモードを消せますか？", "acceptedAnswer": {"@type": "Answer", "text": "iPhoneのChromeとSafariには、AIモードの入口を非表示にする設定がありません。検索結果の上のAIの要約を出したくない場合は、［ウェブ］タブを使うか、`udm=14` を付けたURLをブックマークしておく方法があります。"}}, {"@type": "Question", "name": "AndroidでAIモードのアイコンを消せますか？", "acceptedAnswer": {"@type": "Answer", "text": "Pixelなら、Googleアプリの［設定］から［Pixel Search Box をカスタマイズ］を開き、［AI モード］をオフにできます。Pixel以外のAndroidのChromeには、2026年9月30日時点で非表示にする手順がヘルプにありません。"}}, {"@type": "Question", "name": "Search LabsでAIモードをオフにすれば消えますか？", "acceptedAnswer": {"@type": "Answer", "text": "消えるのは試験運用版のAIモードだけです。［AI モード］の横に Search Labs のアイコンが出ていなければ、試験運用版を使っていないため、オフにしても検索のAIモードは残ります。"}}, {"@type": "Question", "name": "AIモードのボタンを消すと履歴も消えますか？", "acceptedAnswer": {"@type": "Answer", "text": "消えません。ボタンを非表示にしても、これまでAIモードで話した内容は履歴に残ります。履歴を消す手順は[Google AIモードの履歴の見方と消し方](/media/ai-mode-history/)にまとめています。"}}, {"@type": "Question", "name": "LINEのAIのボタンはGoogleのAIモードですか？", "acceptedAnswer": {"@type": "Answer", "text": "別の機能です。LINEの入力欄の下に出るのは「Agent i」で、トークルーム下部のプラスメニューから［トークルームのAgent iを表示］をオフにすると、30日間表示されなくなります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Google AIモー…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.09.30</span>
+        </div>
+        <h1 class="post-title">【2026年9月】Google AIモードを消す方法を解説｜Chromeのアドレスバー・新しいタブ・スマホ・Pixel</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google AIモードを消す"><defs><linearGradient id="ecg-2edebd8a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-2edebd8a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Google AIモードを消す</text><line x1="166.8" y1="327.1" x2="1033.2" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">アドレスバー・新しいタブ・スマホ・Pixel</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Google検索のAIモードには、機能そのものを止める公式の設定がありません。2026年9月30日にChrome・Pixel・Google検索のヘルプを読んだところ、非表示にする手順が書かれていたのは<strong>パソコンのChromeのアドレスバーに出るボタンと、Pixelの検索バーのショートカット</strong>の2つです。</p>
+<p>「AIモードを消す」と検索したときに出てくる手順には、今のChromeでは使えないものが混ざっています。ネットでよく紹介されている <code>chrome://flags</code> の項目は、9月30日に Chrome 154 で確かめたところ見つかりませんでした。この記事ではAIモードの入口を場所ごとに分けて、消せるもの・消せないもの・代わりの手を整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>AIモードそのものをオフにする公式の設定は無い。<strong>消せるのはボタンやショートカットなどの入口</strong></li>
+<li>パソコンのChromeは、<strong>アドレスバーを右クリックして［AI モードを常に表示する］の選択を外す</strong>とボタンが消える（Chromeの公式ヘルプ）</li>
+<li>Pixelは、Googleアプリの<strong>［設定］、［Pixel Search Box をカスタマイズ］で［AI モード］をオフ</strong>にする</li>
+<li><code>chrome://flags</code> の「AI mode」「AI Mode Omnibox entrypoint」は <strong>Chrome 154 にも無い</strong>。今ある4項目はボタンの挙動を変えるもので、消すスイッチではない</li>
+<li>検索結果のタブ列の［AI モード］は消せない。AIの要約を見たくないなら［ウェブ］タブか <code>udm=14</code> を使う</li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>AIモードの入口は5か所</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Chromeのアドレスバーのボタンを消す</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>新しいタブの検索ボックスのボタン</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>chrome://flags では消せない</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>スマホでは入口を消せるか</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>Pixelの検索バー</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>Googleアプリと Search Labs</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>SafariとiPhoneのブラウザ</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>検索結果のタブは消せない</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>LINEのAIボタンは別の機能</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>効かない方法</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>AI検索での見え方は別の話</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">AIモードの入口は5か所</h2>
+<p>AIモードに入る場所はブラウザと端末によって違います。消したいと感じているのがどの入口かで、取れる手が変わります。</p>
+<figure class="post-figure"><img src="/media/images/ai-mode-remove/01_fig_where.png" alt="AIモードの入口と消せるかどうかの図。Chromeのアドレスバーは右クリックでAIモードを常に表示するを外せば消せる。Pixelの検索バーはPixel Search Boxをカスタマイズでオフにできる。新しいタブの検索ボックスは非表示にする公式の設定が無い。検索結果のタブ列とAIモードそのものは消せない" loading="lazy"><figcaption>入口ごとの消せる・消せない（公式ヘルプとChrome 154で確認）</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>入口</th>
+<th>場所</th>
+<th>消し方</th>
+<th>公式の手順</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アドレスバーのボタン</td>
+<td>パソコンのChrome</td>
+<td>右クリックで［AI モードを常に表示する］を外す</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>検索バーのショートカット</td>
+<td>Pixelのホーム画面</td>
+<td>［Pixel Search Box をカスタマイズ］でオフ</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>新しいタブの検索ボックスのボタン</td>
+<td>Chrome（パソコン・スマホ）</td>
+<td>非表示にする設定は無い</td>
+<td>なし</td>
+</tr>
+<tr>
+<td>検索結果のタブ</td>
+<td>どのブラウザでも</td>
+<td>消せない。［ウェブ］タブや <code>udm=14</code> で避ける</td>
+<td>なし</td>
+</tr>
+<tr>
+<td>AIモードの画面</td>
+<td>google.com/ai など</td>
+<td>消せない</td>
+<td>なし</td>
+</tr>
+</tbody>
+</table>
+<p><strong>公式の手順があるのは上の2つだけです。</strong>それ以外は入口を使わずに済む形にするか、画面の見た目を拡張機能で変えることになります。</p>
+<h2 id="s2">Chromeのアドレスバーのボタンを消す</h2>
+<p>パソコンのChromeでは、アドレスバーの右端に［AI モード］のボタンが出ます。文字を打ち始めたときに目に入るため、邪魔に感じやすい入口です。Chromeのヘルプ「<a href="https://support.google.com/chrome/answer/16704170?hl=ja&amp;co=GENIE.Platform%3DDesktop">Chrome で AI モードを使用する</a>」に、非表示にする手順が書かれています。</p>
+<ol>
+<li>パソコンでChromeを開く</li>
+<li>アドレスバーの上で右クリックする</li>
+<li>出てきたメニューで［AI モードを常に表示する］のチェックを外す</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/ai-mode-remove/02_help_hide.jpg" alt="Google Chromeヘルプのアドレスバーから操作する場合の節。ヒントとして、アドレスバーのAIモードとタブなどを追加を非表示にするには、アドレスバーを右クリックして、AIモードを常に表示するの選択を解除すると書かれている" loading="lazy"><figcaption>Chromeのヘルプのヒント（2026年9月30日取得）</figcaption></figure>
+
+<p><strong>これで消えるのは、アドレスバーの［AI モード］と［タブなどを追加］のボタンです。</strong>ボタンを隠すだけで、AIモードそのものが止まるわけではありません。元に戻したいときは同じメニューで［AI モードを常に表示する］を選び直します。</p>
+<p>Chromeの機能はアカウントや地域ごとに段階的に届きます。nitoが9月17日に Chrome 153 で見たときは、このメニューの項目がありませんでした。9月30日の Chrome 154 では、このメニューを開いて確かめられていません。右クリックしても項目が出ない場合は、Chromeを最新版に更新してから、もう一度試してください。更新は右上の3点メニューの［ヘルプ］、［Google Chrome について］から行えます。</p>
+<h2 id="s3">新しいタブの検索ボックスのボタン</h2>
+<p>Chromeで新しいタブを開くと、検索ボックスの右にも［AI モード］のボタンが出ます。アドレスバーのボタンと違い、<strong>この入口を非表示にする手順はChromeのヘルプに書かれていません。</strong>同じヘルプには新しいタブから開く手順と、キーボードの Tab キーと Enter キーで開く手順だけが載っています。</p>
+<p>既定の検索エンジンをGoogle以外にすれば、新しいタブの検索ボックスもGoogleのものではなくなります。ボタンが消えるかどうかをnitoでは切り替えて試していません。</p>
+<p>ただし検索エンジンを変えると、検索結果そのものが変わります。<strong>ボタンを消すためだけに検索エンジンを替えるのは、代わりに失うものが大きい方法です。</strong>Googleの検索結果を使い続けたいなら、ボタンは残したまま押さない、という扱いが現実的です。</p>
+<h2 id="s4">chrome://flags では消せない</h2>
+<p>「AIモード 消し方」で上位に出る記事の多くが、<code>chrome://flags</code> で「AI mode」と「AI Mode Omnibox entrypoint」を Disabled にする手順を載せています。2025年12月から2026年8月に書かれたもので、当時の画面をもとにした手順です。</p>
+<p><strong>2026年9月30日に Chrome 154.0.8037.58 で <code>chrome://flags</code> を開き、検索窓に「AI mode」と入れたところ、この2つの項目は出てきませんでした。</strong>表示されたのは次の4つです。</p>
+<figure class="post-figure"><img src="/media/images/ai-mode-remove/03_chrome154_flags.png" alt="Chrome 154.0.8037.58 の chrome://flags で AI mode を検索した画面。AIM 3P entrypoint、Omnibox Dynamic AI Mode Button、NTP Realbox Dynamic AI Mode Button、Omnibox AI Mode Space Does Not Activate の4項目だけが表示されている" loading="lazy"><figcaption>Chrome 154 の chrome://flags（2026年9月30日）。記事で紹介されている2つの項目は無い</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>説明文の中身</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AIM 3P entrypoint</td>
+<td>Google以外の検索エンジンでもアドレスバーにAIモードの入口を出す</td>
+</tr>
+<tr>
+<td>Omnibox Dynamic AI Mode Button</td>
+<td>アドレスバーのAIモードのボタンを状況で出し分ける</td>
+</tr>
+<tr>
+<td>NTP Realbox Dynamic AI Mode Button</td>
+<td>新しいタブの検索ボックスのボタンを状況で出し分ける</td>
+</tr>
+<tr>
+<td>Omnibox AI Mode Space Does Not Activate</td>
+<td>ボタンにフォーカスがあるときにスペースキーで起動しない</td>
+</tr>
+</tbody>
+</table>
+<p>どれもボタンの挙動を変える項目で、入口を消すスイッチではありません。9月17日の Chrome 153 でも同じ4項目でした。<strong><code>chrome://flags</code> はChromeの更新で項目が予告なく消えるため、古い記事の手順は今の画面と合わないことがあります。</strong>アドレスバーのボタンを消したいなら、前の節の右クリックの設定を使ってください。</p>
+<h2 id="s5">スマホでは入口を消せるか</h2>
+<p>Chromeのヘルプを Android と iPhone の表示に切り替えると、新しいタブとアドレスバーからAIモードを開く手順は書かれていますが、<strong>非表示にする手順はどちらにもありません。</strong>パソコンの右クリックに当たる設定は、2026年9月30日時点のヘルプには見当たりませんでした。</p>
+<h3 id="s5-1">Pixelの検索バー</h3>
+<p>Pixelのホーム画面にある検索バーには、AIモードのショートカットが出ます。こちらは Google Pixel のヘルプ「<a href="https://support.google.com/pixelphone/answer/15629302?hl=ja">Google Pixel で検索する</a>」に、無効にする手順が載っています。</p>
+<ol>
+<li>検索バーの G アイコンをタップする</li>
+<li>プロフィールアイコンから［設定］、［Pixel Search Box をカスタマイズ］をタップする</li>
+<li>［AI モード］をオフにする</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/ai-mode-remove/04_help_pixel.jpg" alt="Google Pixelヘルプの AI モードを使用する の節。AIモードのショートカットを無効にするには、検索バーでGアイコンをタップし、プロフィールアイコン、設定、Pixel Search Box をカスタマイズ とタップして、AIモードをオンまたはオフにすると書かれている" loading="lazy"><figcaption>Google Pixelのヘルプ（2026年9月30日取得）</figcaption></figure>
+
+<h3 id="s5-2">Googleアプリと Search Labs</h3>
+<p>iPhoneやAndroidのGoogleアプリでは、画面上部のフラスコのアイコン（Search Labs）からAIモードをオフにする手順が紹介されることがあります。Googleのヘルプ「<a href="https://support.google.com/websearch/answer/16296315?hl=ja">Search Labs の「AI モード」</a>」によると、<strong>このスイッチが対象にしているのは試験運用版のAIモードだけです。</strong>［AI モード］の横に Search Labs のアイコンが出ていない人は試験運用版を使っていないため、オフにしても検索のAIモードは残ります。</p>
+<h3 id="s5-3">SafariとiPhoneのブラウザ</h3>
+<p>iPhoneのSafariには、AIモードに関わる設定はありません。Google検索の結果にはタブ列の［AI モード］が出ますが、これは次の節のとおり消せない入口です。Safariの設定の［検索エンジン］でGoogle以外を選べばGoogleの検索結果は出なくなりますが、検索結果そのものも変わります。</p>
+<h2 id="s6">検索結果のタブは消せない</h2>
+<p>Google検索の結果の上に並ぶタブ列には、［すべて］［画像］などと並んで［AI モード］が出ます。<strong>このタブを消す公式の設定はありません。9月30日にスマホの表示で試したところ、<code>udm=14</code> を付けた検索結果でも［AI モード］のタブは残りました。</strong></p>
+<p>混同しやすいのが、AIモードとAIによる概要です。検索結果の一番上に出るAIの要約は「AIによる概要」という別の機能で、こちらは［ウェブ］タブに切り替えるか、URLに <code>udm=14</code> を付けると出なくなります。AIモードのタブは押さなければ開かないため、<strong>邪魔に感じているのが検索結果の上のAIの文章なら、消したいのはAIによる概要のほうです。</strong>手順は<a href="/media/google-ai-mode-guide/">Google AIモードの使い方</a>の消し方の章にまとめています。</p>
+<figure class="post-figure"><img src="/media/images/ai-mode-remove/05_fig_choose.png" alt="消したいものごとの方法の図。AIモードのボタンはパソコンのChromeは右クリックの設定、Pixelは検索バーの設定で非表示にし、chrome://flagsでは消せない。AIによる概要はウェブタブかudm=14で出ない画面にし、AIモードとは別の機能。LINEのAIボタンはGoogleのAIモードではなくLINEのAgent iで、プラスメニューで表示をオフにすると30日間出ない" loading="lazy"><figcaption>消したいものごとの方法</figcaption></figure>
+
+<h2 id="s7">LINEのAIボタンは別の機能</h2>
+<p>「AIモード 消す」と一緒に「LINE」が検索されていますが、LINEのトーク画面の入力欄の下に出るAIのボタンは、GoogleのAIモードではありません。LINEの「Agent i」という機能で、返信の提案や話題の提案をするものです。</p>
+<p>LINEのヘルプ「<a href="https://help2.line.me/line/smartphone?contentId=200001143&amp;lang=ja">トークルームのAgent iとは？</a>」に表示の切り替えが載っています。トークルーム下部のプラスメニューを開き、［トークルームのAgent iを表示］をオフにします。<strong>オフにした表示は30日間出なくなり、その間はすべてのトークルームでAgent iの機能が使えません。</strong>設定はメッセージ入力欄の左側のボタンを押したときに反映されます。</p>
+<h2 id="s8">効かない方法</h2>
+<p>入口を消そうとして試されることが多いものの、効果が無い方法をまとめます。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>結果</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>chrome://flags</code> の「AI mode」「AI Mode Omnibox entrypoint」</td>
+<td>項目が無い</td>
+<td>Chrome 153・154 では見つからない</td>
+</tr>
+<tr>
+<td>ログインしないで検索する</td>
+<td>タブは残る</td>
+<td>9月30日にログインしていない状態で試してもタブが出た</td>
+</tr>
+<tr>
+<td>Search Labs のAIモードをオフ</td>
+<td>検索のAIモードは残る</td>
+<td>対象は試験運用版だけ</td>
+</tr>
+<tr>
+<td><code>udm=14</code> を付ける</td>
+<td>タブは残る</td>
+<td>9月30日に試したところ、消えたのはAIによる概要だけ</td>
+</tr>
+</tbody>
+</table>
+<p><strong>画面の見た目ごと消したいなら、拡張機能でページの表示を書き換える方法もあります。</strong>ただし拡張機能は開発者が更新を止めると効かなくなり、Chromeのアドレスバーのような画面の外枠には手が届きません。まずは右クリックの設定とPixelの設定を使い、それで消えない入口は押さない、という順で考えるのが安全です。</p>
+<h2 id="s9">AI検索での見え方は別の話</h2>
+<p>自分の画面から入口を消すことと、会社やお店がAIモードの回答にどう出てくるかは別の問題で、後者は<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。</p>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">Google AIモードを完全にオフにできますか？</h3>
+<p>できません。2026年9月30日時点で、AIモードそのものを止める公式の設定はありません。パソコンのChromeのアドレスバーのボタンと、Pixelの検索バーのショートカットだけは、公式の手順で非表示にできます。</p>
+<h3 id="s10-2">右クリックしても項目が出ないのはなぜですか？</h3>
+<p>Chromeの機能は段階的に届くため、バージョンやアカウントによってはまだ項目がありません。右上の3点メニューの［ヘルプ］、［Google Chrome について］で最新版に更新してから、もう一度アドレスバーを右クリックしてください。</p>
+<h3 id="s10-3">chrome://flags でAIモードを消せますか？</h3>
+<p>Chrome 154 では消せません。記事で紹介されている「AI mode」と「AI Mode Omnibox entrypoint」の項目は見つからず、残っている4項目はボタンの挙動を変えるものでした。</p>
+<h3 id="s10-4">iPhoneでAIモードを消せますか？</h3>
+<p>iPhoneのChromeとSafariには、AIモードの入口を非表示にする設定がありません。検索結果の上のAIの要約を出したくない場合は、［ウェブ］タブを使うか、<code>udm=14</code> を付けたURLをブックマークしておく方法があります。</p>
+<h3 id="s10-5">AndroidでAIモードのアイコンを消せますか？</h3>
+<p>Pixelなら、Googleアプリの［設定］から［Pixel Search Box をカスタマイズ］を開き、［AI モード］をオフにできます。Pixel以外のAndroidのChromeには、2026年9月30日時点で非表示にする手順がヘルプにありません。</p>
+<h3 id="s10-6">Search LabsでAIモードをオフにすれば消えますか？</h3>
+<p>消えるのは試験運用版のAIモードだけです。［AI モード］の横に Search Labs のアイコンが出ていなければ、試験運用版を使っていないため、オフにしても検索のAIモードは残ります。</p>
+<h3 id="s10-7">AIモードのボタンを消すと履歴も消えますか？</h3>
+<p>消えません。ボタンを非表示にしても、これまでAIモードで話した内容は履歴に残ります。履歴を消す手順は<a href="/media/ai-mode-history/">Google AIモードの履歴の見方と消し方</a>にまとめています。</p>
+<h3 id="s10-8">LINEのAIのボタンはGoogleのAIモードですか？</h3>
+<p>別の機能です。LINEの入力欄の下に出るのは「Agent i」で、トークルーム下部のプラスメニューから［トークルームのAgent iを表示］をオフにすると、30日間表示されなくなります。</p>
+<h2 id="s11">出典</h2>
+<ul>
+<li>Google Chrome ヘルプ「<a href="https://support.google.com/chrome/answer/16704170?hl=ja&amp;co=GENIE.Platform%3DDesktop">Chrome で AI モードを使用する</a>」（パソコン・Android・iPhone の表示、2026年9月30日取得）</li>
+<li>Google Pixel ヘルプ「<a href="https://support.google.com/pixelphone/answer/15629302?hl=ja">Google Pixel で検索する</a>」（2026年9月30日取得）</li>
+<li>Google 検索 ヘルプ「<a href="https://support.google.com/websearch/answer/16296315?hl=ja">Search Labs の「AI モード」</a>」（2026年9月30日取得）</li>
+<li>LINE ヘルプセンター「<a href="https://help2.line.me/line/smartphone?contentId=200001143&amp;lang=ja">トークルームのAgent iとは？</a>」（2026年9月30日取得）</li>
+<li><code>chrome://flags</code> の画面と項目の説明文は、2026年9月30日に Chrome 154.0.8037.58（macOS）で確認</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-mode-english/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードが英語になるとき"><defs><linearGradient id="ecg-02ae2545" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-02ae2545)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードが英語になるとき</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】Google AIモードが英語になる原因と日本語に戻す方法｜回答が英語・表示が英語・出典が英語</div>
+            </a>
+            <a href="/media/chatgpt-memory-full/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのメモリがいっぱいのとき"><defs><linearGradient id="ecg-9cb2c548" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-9cb2c548)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのメモリ</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">がいっぱいのとき</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】ChatGPTのメモリがいっぱいのときの対処を解説｜自動の管理・削除・改善されたメモリ</div>
+            </a>
+            <a href="/media/claude-conversation-length/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの会話の長さ制限と圧縮"><defs><linearGradient id="ecg-09881e43" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-09881e43)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの会話の</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">長さ制限と圧縮</text><line x1="311.2" y1="416.8" x2="888.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.28</div>
+                <div class="rel-card__ttl">【2026年9月】Claudeの会話の長さ制限と圧縮を解説｜長さ制限のエラー・考えを整理・Claude Codeのcompact</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
