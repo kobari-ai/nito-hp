@@ -85,7 +85,7 @@ AIによる概要とAIモードは別の機能です。検索結果の一番上�
 
 パソコンのブラウザなら、AIによる概要の部分を隠す拡張機能もあります。Chromeウェブストアの「[Hide Google AI Overviews](https://chromewebstore.google.com/detail/hide-google-ai-overviews/neibhohkbmfjninidnaoacabkjonbahn?hl=ja)」は、9月30日時点で評価4.1（1,155件）、ユーザー数60万人と表示されていました。ストアの［デベロッパー］欄は個人のメールアドレスだけで、取引業者としての申告はありません。ソースコードは GitHub の zbarnz のリポジトリで公開されています。Firefoxのアドオンのページにも同じ名前で作者が Zbarnz のものがありますが、同じ開発者かどうかはnitoでは確かめていません。
 
-<figure class="post-figure"><img src="/media/images/ai-overviews-off/07_cws_hide.jpg" alt="ChromeウェブストアのHide Google AI Overviewsのページ。評価4.1、1,155件の評価、600,000ユーザーと表示されている" loading="lazy"><figcaption>Chromeウェブストアのページ（2026年9月30日取得）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/ai-overviews-off/07_cws_hide.jpg" alt="ChromeウェブストアのHide Google AI Overviewsのページ。評価4.1、1,155件の評価と表示されている" loading="lazy"><figcaption>Chromeウェブストアのページ（2026年9月30日取得）</figcaption></figure>
 
 Microsoftのヘルプ「[Microsoft Edge で拡張機能を追加、オフ、または削除する](https://support.microsoft.com/ja-jp/microsoft-edge/microsoft-edge-%E3%81%A7%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E8%BF%BD%E5%8A%A0-%E3%82%AA%E3%83%95-%E3%81%BE%E3%81%9F%E3%81%AF%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B-9c0ec68c-2fbc-2f2c-9ff0-bdc76f46b026)」によると、Edgeでも［他のストアからの拡張機能を許可する］を許可すれば、Chromeウェブストアの拡張機能を入れられます。
 
