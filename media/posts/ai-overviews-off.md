@@ -15,7 +15,7 @@ Google検索の結果の一番上に出るAIの要約は「AIによる概要」�
 :::takeaways
 - AIによる概要を**オフにする設定は無い**。Googleのヘルプが案内しているのは検索後に［ウェブ］を選ぶ方法
 - ［ウェブ］タブと同じ画面は、URLに **`udm=14`** を付けても出せる。9月30日に試すとAIによる概要は消え、［AI モード］のタブは残った
-- パソコンのChromeは、`udm=14` 付きのURLを**検索エンジンとして登録してデフォルトにすれば**、アドレスバーからの検索で毎回効く
+- パソコンのChromeは、`udm=14` 付きのURLを**検索エンジンとして登録してデフォルトにできる**。アドレスバーからの検索がそのURLで開く
 - 検索語に `-ai` を付けてもAIによる概要は出なかったが、**aiという語を含むページも検索から外れる**
 - ログインしていなくても、AIによる概要は出た。Search Labs の［検索における AI］をオフにしても消えるのは試験運用版だけ
 :::
@@ -45,7 +45,7 @@ AIによる概要とAIモードは別の機能です。検索結果の一番上�
 
 ### ［ウェブ］タブを選ぶ
 
-検索したあと、検索窓の下のタブ列を左にスワイプすると［ウェブ］が出てきます。スマホではタブ列が画面に収まらないため、［すべて］［画像］［動画］より右に隠れていることが多いはずです。
+検索したあと、検索窓の下のタブ列を左にスワイプすると［ウェブ］が出てきます。スマホではタブ列が画面に収まらず、9月30日の画面では［ショート動画］と［書籍］のあいだにありました。タブの並びは検索語で変わります。
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/ai-overviews-off/02_sp_webtab.jpg" alt="スマホの検索結果でタブ列を左にスワイプした画面。ショート動画と書籍のあいだにあるウェブのタブを赤い枠で囲んでいる" loading="lazy"><figcaption>タブ列を左にスワイプすると［ウェブ］が出てくる</figcaption></figure>
 
@@ -57,7 +57,7 @@ AIによる概要とAIモードは別の機能です。検索結果の一番上�
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/ai-overviews-off/03_sp_udm14.jpg" alt="スマホの表示でudm=14を付けてお月見 いつと検索した結果。AIによる概要は無く、三幸製菓やISETAN DOORなどの検索結果のリンクが一番上から並んでいる。タブ列の左端にはAIモードが残っている" loading="lazy"><figcaption>udm=14 を付けた画面。AIによる概要は出ず、［AI モード］のタブは残る</figcaption></figure>
 
-スマホのChromeのヘルプを見ると、既定の検索エンジンは一覧から選ぶ形で、パソコンのようにURLを入力して登録する手順は書かれていません。スマホで毎回使いたいなら、[udm=14 を付けた検索画面](https://www.google.com/search?q=%E7%A5%9D%E6%97%A5%E3%81%AF%E3%81%84%E3%81%A4&udm=14)をブックマークしておき、そこから検索窓に語を入れ直す形がいちばん手数が少なく済みます。
+スマホのChromeのヘルプを見ると、既定の検索エンジンは一覧から選ぶ形です。最近使った検索エンジンが一覧に加わる仕組みはありますが、`udm=14` 付きのURLを入れて登録する手順は書かれていません。スマホで毎回使いたいなら、[udm=14 を付けた検索画面](https://www.google.com/search?q=%E3%81%8A%E6%9C%88%E8%A6%8B%20%E3%81%84%E3%81%A4&udm=14)をブックマークしておき、そこから検索窓に語を入れ直す形がいちばん手数が少なく済みます。
 
 ## パソコンのChromeで毎回消す
 
@@ -71,9 +71,7 @@ AIによる概要とAIモードは別の機能です。検索結果の一番上�
 
 <figure class="post-figure"><img src="/media/images/ai-overviews-off/06_pc_searchengines.jpg" alt="Chromeの設定の検索エンジンとサイト内検索を管理する画面。上に検索エンジンの一覧としてGoogle（既定）、Yahoo! JAPAN、Microsoft Bing、DuckDuckGo、Ecosiaが並び、下のサイト内検索の右にある追加のボタンを赤い枠で囲んでいる" loading="lazy"><figcaption>Chrome 154 の［検索エンジンとサイト内検索を管理する］。［サイト内検索］の［追加］から登録する</figcaption></figure>
 
-**登録したあとは、アドレスバーから検索するたびにAIによる概要の無い画面が開きます。**google.com のトップページの検索窓から検索したときは、これまでどおりの画面です。nitoでは登録までは試していないため、登録後の画面は9月30日に `udm=14` を付けて開いた画面と同じもの、として読んでください。
-
-Edgeも同じように使えます。Microsoftのヘルプ「[Microsoft Edge の既定の検索エンジンを変更する](https://support.microsoft.com/ja-jp/microsoft-edge/microsoft-edge-%E3%81%AE%E6%97%A2%E5%AE%9A%E3%81%AE%E6%A4%9C%E7%B4%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B-f863c519-5994-a8ed-6859-00fbc123b782)」では、アドレスバーで検索したサイトが選べる検索エンジンの一覧に加わると書かれています。
+**登録すると、アドレスバーからの検索は `udm=14` の付いたURLで開くため、上で試した画面と同じになります**（登録の操作はnitoでは試していません）。google.com のトップページの検索窓から検索したときは、これまでどおりの画面です。Chromeのヘルプには一部の国ではゲストのプロフィールでカスタムのサイト内検索をデフォルトにできないとも書かれています。
 
 ## 検索語に -ai を付ける
 
@@ -85,7 +83,7 @@ Edgeも同じように使えます。Microsoftのヘルプ「[Microsoft Edge の
 
 ## 拡張機能で隠す
 
-パソコンのブラウザなら、AIによる概要の部分を隠す拡張機能もあります。Chromeウェブストアの「[Hide Google AI Overviews](https://chromewebstore.google.com/detail/hide-google-ai-overviews/neibhohkbmfjninidnaoacabkjonbahn?hl=ja)」は、9月30日時点で評価4.1（1,155件）、ユーザー数60万人と表示されていました。Firefoxのアドオンのページにも同じ名前の拡張機能があります。
+パソコンのブラウザなら、AIによる概要の部分を隠す拡張機能もあります。Chromeウェブストアの「[Hide Google AI Overviews](https://chromewebstore.google.com/detail/hide-google-ai-overviews/neibhohkbmfjninidnaoacabkjonbahn?hl=ja)」は、9月30日時点で評価4.1（1,155件）、ユーザー数60万人と表示されていました。ストアの［デベロッパー］欄は個人のメールアドレスだけで、取引業者としての申告はありません。ソースコードは GitHub の zbarnz のリポジトリで公開されています。Firefoxのアドオンのページにも同じ名前で作者が Zbarnz のものがありますが、同じ開発者かどうかはnitoでは確かめていません。
 
 <figure class="post-figure"><img src="/media/images/ai-overviews-off/07_cws_hide.jpg" alt="ChromeウェブストアのHide Google AI Overviewsのページ。評価4.1、1,155件の評価、600,000ユーザーと表示されている" loading="lazy"><figcaption>Chromeウェブストアのページ（2026年9月30日取得）</figcaption></figure>
 
@@ -95,7 +93,7 @@ Microsoftのヘルプ「[Microsoft Edge で拡張機能を追加、オフ、ま�
 
 ## 効かない方法
 
-消そうとして試されることが多いものの、AIによる概要が消えない方法です。
+消そうとして試しても、AIによる概要が消えない方法です。
 
 | 方法 | 結果 | 根拠 |
 |---|---|---|
@@ -112,10 +110,10 @@ Googleのヘルプの Labs の節には、［検索における AI］をオフ�
 ## よくある質問
 
 ### AIによる概要をずっとオフにできますか？
-オフにする設定はありません。パソコンのChromeなら、`udm=14` を付けた検索を検索エンジンとして登録してデフォルトにすれば、アドレスバーからの検索では毎回AIによる概要の無い画面が開きます。
+オフにする設定はありません。パソコンのChromeなら、`udm=14` を付けた検索を検索エンジンとして登録してデフォルトにできます。アドレスバーからの検索がそのURLで開くため、［ウェブ］タブと同じ画面になります。
 
 ### スマホやiPhoneでAIによる概要を消せますか？
-検索したあとにタブ列を左にスワイプして［ウェブ］を選べば消えます。iPhoneのSafariでも同じで、検索のたびに選ぶのが手間なら `udm=14` を付けた検索画面をブックマークに入れておく手があります。
+検索したあとにタブ列を左にスワイプして［ウェブ］を選べば消えます。［ウェブ］タブはGoogleの検索結果の画面にあるものなので、iPhoneのSafariでも出し方は同じです（Safariでは試していません）。検索のたびに選ぶのが手間なら `udm=14` を付けた検索画面をブックマークに入れておく手があります。
 
 ### -ai を付けるとAIによる概要は消えますか？
 9月30日に試したところ出ませんでした。ただし「-ai」はaiという語を含むページを検索から外す指定なので、検索結果の中身も変わります。
@@ -134,6 +132,6 @@ Googleのヘルプの Labs の節には、［検索における AI］をオフ�
 - Google 検索 ヘルプ「[Google 検索の AI による概要で、情報をすばやく簡単に見つける](https://support.google.com/websearch/answer/14901683?hl=ja)」（2026年9月30日取得）
 - Google 検索 ヘルプ「[ウェブ検索の精度を高める](https://support.google.com/websearch/answer/2466433?hl=ja)」（2026年9月30日取得）
 - Google Chrome ヘルプ「[既定の検索エンジンとサイト内検索のショートカットを設定する](https://support.google.com/chrome/answer/95426?hl=ja&co=GENIE.Platform%3DDesktop)」（パソコン・Android・iPhone の表示、2026年9月30日取得）
-- Microsoft サポート「[Microsoft Edge の既定の検索エンジンを変更する](https://support.microsoft.com/ja-jp/microsoft-edge/microsoft-edge-%E3%81%AE%E6%97%A2%E5%AE%9A%E3%81%AE%E6%A4%9C%E7%B4%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B-f863c519-5994-a8ed-6859-00fbc123b782)」「[Microsoft Edge で拡張機能を追加、オフ、または削除する](https://support.microsoft.com/ja-jp/microsoft-edge/microsoft-edge-%E3%81%A7%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E8%BF%BD%E5%8A%A0-%E3%82%AA%E3%83%95-%E3%81%BE%E3%81%9F%E3%81%AF%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B-9c0ec68c-2fbc-2f2c-9ff0-bdc76f46b026)」（2026年9月30日取得）
+- Microsoft サポート「[Microsoft Edge で拡張機能を追加、オフ、または削除する](https://support.microsoft.com/ja-jp/microsoft-edge/microsoft-edge-%E3%81%A7%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E8%BF%BD%E5%8A%A0-%E3%82%AA%E3%83%95-%E3%81%BE%E3%81%9F%E3%81%AF%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B-9c0ec68c-2fbc-2f2c-9ff0-bdc76f46b026)」（2026年9月30日取得）
 - Chrome ウェブストア「[Hide Google AI Overviews](https://chromewebstore.google.com/detail/hide-google-ai-overviews/neibhohkbmfjninidnaoacabkjonbahn?hl=ja)」（2026年9月30日取得）
 - 検索結果の画面は、2026年9月30日にスマホの表示（Chrome 154、ログインなし）で撮影
