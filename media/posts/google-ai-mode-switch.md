@@ -6,6 +6,7 @@ description: Google AIモードと通常の検索を行き来する方法を、�
 cover_tag: 使い方
 cover_headline: AIモードの切り替え方
 cover_sub: 通常検索に戻す・スマホとPC・URLで固定
+redirect: /media/google-ai-mode-guide/#s3
 ---
 
 Google検索のAIモードと通常の検索は、検索結果の上に並ぶタブで切り替えます。「AI モード」を押せばAIモードへ、「すべて」を押せば通常の検索結果へ戻ります。Googleの公式ヘルプが案内している戻し方はこの1つで、設定画面にAIモードをオンとオフで切り替える項目はありません。
