@@ -40,7 +40,7 @@ ChatGPTで上限に達したと表示されても、多くの場合止まって�
 
 無料版とGoでは日常のテキストのチャットは、不正利用を防ぐ制限の範囲内で回数無制限です。[ChatGPT 無料版に関するよくある質問](https://help.openai.com/ja-jp/articles/9275245-chatgpt-free-tier-faq)によると、ファイルのアップロード、画像生成、音声、データ分析などのツールには、それぞれ別の上限があります。上限に達するとChatGPTから通知が出ます。
 
-<figure class="post-figure"><img src="/media/images/chatgpt-limit-reached/clr_04_help_free.jpg" alt="OpenAI公式ヘルプのChatGPT無料版に関するよくある質問のページ。無料プランのレート制限の仕組みとして、日常的なテキストチャットは回数無制限、ファイルのアップロードや画像生成などのツールにはそれぞれ個別の利用上限があると書かれ、下に画像作成の上限に達したときの通知の例が載っている" loading="lazy"><figcaption>無料版の上限の仕組みと、通知の例（2026年9月25日取得）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/chatgpt-limit-reached/clr_04_help_free.jpg" alt="OpenAI公式ヘルプのChatGPT無料版に関するよくある質問のページ。無料プランのレート制限の仕組みとして、日常的なテキストチャットは回数無制限、ファイルのアップロードや画像生成などのツールにはそれぞれ個別の利用上限があると書かれ、下に画像作成の上限に達したときの通知の例が載っている" loading="lazy"><figcaption>無料版の上限の仕組みと、通知の例（2026年9月25日に取得）</figcaption></figure>
 
 通知の例には「Plusにアップグレードするか、明日の9:17以降にもう一度試してください」という内容が書かれています。**同じFAQによると、無料版で上限に達したあとPlus・Pro・Businessに変えると、上限はその場でリセットされます。**Goはこの対象に書かれていません。
 
@@ -54,7 +54,7 @@ ChatGPTで上限に達したと表示されても、多くの場合止まって�
 
 ProプランとBusinessでは、GPT-6 ProとGPT-5.6 Sol Proに件数の上限があります。公式ヘルプには**Proの契約にGPT-6 Proの無制限の利用は含まれない**と明記されています。
 
-<figure class="post-figure"><img src="/media/images/chatgpt-limit-reached/clr_01_help_pro.jpg" alt="OpenAI公式ヘルプのChatGPTでのGPT-5.6とGPT-6 Proのページ。思考の利用上限と代替モデルの説明の下に、GPT-6 Pro and GPT-5.6 Sol Pro limitsの表があり、Pro 200ドルは週200件、Pro 100ドルは週50件、Business Standardは月15件、Business Premiumは週50件と書かれている" loading="lazy"><figcaption>Proモデルの件数が載っている公式ヘルプ（2026年9月25日取得）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/chatgpt-limit-reached/clr_01_help_pro.jpg" alt="OpenAI公式ヘルプのChatGPTでのGPT-5.6とGPT-6 Proのページ。思考の利用上限と代替モデルの説明の下に、GPT-6 Pro and GPT-5.6 Sol Pro limitsの表があり、Pro 200ドルは週200件、Pro 100ドルは週50件、Business Standardは月15件、Business Premiumは週50件と書かれている" loading="lazy"><figcaption>Proモデルの件数が載っている公式ヘルプ（2026年9月25日に取得）</figcaption></figure>
 
 | プラン | GPT-6 Proの件数（チャット） | GPT-5.6 Sol Proとの関係 |
 |---|---|---|
@@ -67,34 +67,9 @@ Pro $200でGPT-6 Proの週の上限に達すると、ChatGPTは自動で思考�
 
 ## WorkとCodexの上限
 
-WorkとCodexはプランに含まれる1つの利用枠を共有しています。プランによっては5時間枠と週間枠の両方があり、**続けて使うには両方に枠が残っている必要があります。**
+WorkとCodexはプランに含まれる1つの利用枠を共有していて、プランによっては5時間枠と週間枠の両方があります。**その場合は続けて使うには両方に枠が残っている必要があります。**現在の残りとリセットの時刻を見る場所は、設定の［使用状況］です。
 
-<figure class="post-figure"><img src="/media/images/chatgpt-limit-reached/01_fig_work.png" alt="WorkとCodexの枠がいつ戻るかの図。5時間の枠は前の枠が終わったあと最初のメッセージを送った時点から次の枠が始まり、週の枠が残っていても先に尽きることがある。週間の枠は1週間に使える作業量の上限で、残りと時刻は設定の使用状況で見られる。即時リセットの購入はPlusとProの個人アカウントが対象で、次の週の区切りは購入後の最初の依頼から7日後に変わる" loading="lazy"><figcaption>WorkとCodexの枠の戻り方</figcaption></figure>
-
-公式ヘルプによると、5時間枠は**前の枠が終わったあと、WorkかCodexで最初のメッセージを送った時点から次の枠が始まります。**しばらく使っていなければ、次に送った時点から新しい5時間の枠が始まります。週間枠が残っていても、5時間が経つ前に5時間枠を使い切ることはあります。
-
-現在の残りとリセットの時刻を見る場所は、設定の「使用状況」です。プランごとの枠の大きさは[ChatGPT Workのプランと上限の記事](/media/chatgpt-work-plans/)にまとめました。
-
-### 保存済みリセット
-
-GPT-6 Astraの提供開始に合わせて、OpenAIは対象のPlus・Pro・Businessのアカウントに**保存済みのリセット**を配りました。[保存済みCodexリセットの仕組み](https://help.openai.com/ja-jp/articles/20001498-how-banked-codex-resets-work)によると、これはCodexの5時間枠と週間枠を1回だけ戻せる特典で、使うか期限が切れるまでアカウントに残ります。
-
-設定の「使用状況」に「利用可能なリセット：1回」などと出ていれば、そこから選んで使えます。使うと週のリセット日が変わり、期限を過ぎると復元や再発行はできません。今後も配られるとは限らない、とも書かれています。9月7日に行われた一斉リセットはその場で適用されたもので、保存済みリセットとしては表示されません。
-
-## 即時リセットを購入する
-
-WorkとCodexの枠は、お金を払ってすぐに戻すこともできます。[Paid weekly Work and Codex rate limit resets](https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets)によると、対象はPlusとProの個人アカウントで、無料版・Go・Business・Enterprise・Eduでは使えません。**買った分の枠が別に足されるのではなく、次の週の枠を前倒しで使う仕組みです。**
-
-<figure class="post-figure"><img src="/media/images/chatgpt-limit-reached/clr_02_help_reset.jpg" alt="OpenAI公式ヘルプのPaid weekly Work and Codex rate limit resetsのページ。PlusとProの利用者はデスクトップ版の使用状況の設定か、週の上限に達したときのアプリ内の案内から即時リセットを購入でき、5時間と週間の両方の枠がすぐ戻ること、新しい週の期間はリセット後のWorkかCodexでの最初の依頼から始まり次の自動リセットはその7日後になることが書かれている" loading="lazy"><figcaption>即時リセットの購入を説明した公式ヘルプ（英語版のみ、2026年9月25日取得）</figcaption></figure>
-
-買う場所は2つあります。
-
-1. デスクトップ版の使用状況の設定で、使用量のメーターの横にある「Buy an instant reset」を選ぶ
-2. 週の上限に達したときにアプリ内に出る案内を選ぶ（ウェブ版でも表示される）
-
-**購入するとその場で5時間枠と週間枠が戻り、枠が残っていても待たずに適用されます。**後で使うために取っておくことはできません。次の週の区切りはリセット後にWorkかCodexで最初の依頼を送った時点から7日後に変わります。返金は原則として受けていないと書かれているので、残りの枠を使い切ってから買うかどうかを決めます。
-
-5時間枠だけに達した場合、アプリ内の案内は出ません。その場合でも、デスクトップ版の設定から買える場合があります。価格は画面に表示され、アカウントや請求の国によって買えるかどうかが変わります。
+枠の戻り方、配られた保存済みリセットの使い方、PlusとProの個人アカウントで買える即時リセットの違いは、[Codexの制限とリセット](/media/codex-limits/)にまとめました。プランごとの枠の大きさは[ChatGPT Workのプランと上限の記事](/media/chatgpt-work-plans/)で比べられます。
 
 ## 上限に達したときの対処
 
@@ -115,7 +90,7 @@ WorkとCodexの枠は、お金を払ってすぐに戻すこともできます�
 
 ChatGPT Proのヘルプには、**OpenAIのサポートはChatGPTやCodexの利用上限をリセットしない**とはっきり書かれています。問い合わせてよいのは使用量が誤って数えられたと思うときと、表示されたリセット時刻を過ぎても使えないときです。
 
-<figure class="post-figure"><img src="/media/images/chatgpt-limit-reached/clr_03_help_faq.jpg" alt="OpenAI公式ヘルプのChatGPT Proのページのよくある質問。サポートに利用上限をリセットしてもらえますか、という質問に、いいえ、OpenAIサポートではChatGPTまたはCodexの利用上限のリセットは行っていません、上限に達した場合はリセットされるまで待つかアカウントに表示されている別の利用可能なオプションを使用してください、と答えている" loading="lazy"><figcaption>サポートでのリセットはできないと書かれた公式ヘルプ（2026年9月25日取得）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/chatgpt-limit-reached/clr_03_help_faq.jpg" alt="OpenAI公式ヘルプのChatGPT Proのページのよくある質問。サポートに利用上限をリセットしてもらえますか、という質問に、いいえ、OpenAIサポートではChatGPTまたはCodexの利用上限のリセットは行っていません、上限に達した場合はリセットされるまで待つかアカウントに表示されている別の利用可能なオプションを使用してください、と答えている" loading="lazy"><figcaption>サポートでのリセットはできないと書かれた公式ヘルプ（2026年9月25日に取得）</figcaption></figure>
 
 ### 会話の長さで止まったとき
 
