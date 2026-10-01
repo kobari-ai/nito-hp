@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Codexの制限とリセットを解説｜5時間枠・週間枠・確認方法・保存済みリセット | nito Column</title>
+    <meta name="description" content="OpenAIのCodexの使用制限を、公式ヘルプから解説。5時間枠と週間枠の仕組み、残りとリセット時刻の確認方法、保存済みリセットと即時リセットの購入の違い、上限に達したときの選択肢までまとめました。">
+    <link rel="canonical" href="https://nito-0210.com/media/codex-limits/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Codexの制限とリセットを解説｜5時間枠・週間枠・確認方法・保存済みリセット">
+    <meta property="og:description" content="OpenAIのCodexの使用制限を、公式ヘルプから解説。5時間枠と週間枠の仕組み、残りとリセット時刻の確認方法、保存済みリセットと即時リセットの購入の違い、上限に達したときの選択肢までまとめました。">
+    <meta property="og:url" content="https://nito-0210.com/media/codex-limits/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/codex-limits.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/codex-limits.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Codexの制限とリセットを解説｜5時間枠・週間枠・確認方法・保存済みリセット", "description": "OpenAIのCodexの使用制限を、公式ヘルプから解説。5時間枠と週間枠の仕組み、残りとリセット時刻の確認方法、保存済みリセットと即時リセットの購入の違い、上限に達したときの選択肢までまとめました。", "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/codex-limits/"}, "articleSection": "AIエージェント", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Codexの制限とリセットを解説｜5時間枠・週間枠・確認方法・保存済みリセット"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Codexの5時間制限はいつリセットされますか？", "acceptedAnswer": {"@type": "Answer", "text": "前の5時間枠が終わったあと、WorkかCodexで最初のメッセージを送った時点から次の5時間が始まります。決まった時刻ではないため、正確な時刻は［設定］→［使用状況］の表示が頼りです。"}}, {"@type": "Question", "name": "Codexの使用量はどこで確認できますか？", "acceptedAnswer": {"@type": "Answer", "text": "デスクトップアプリ・CLI・ウェブの［設定］→［使用状況］で、残りの量とリセットの時刻が見られます。CLIの作業中なら `/status` でも確認できるので、画面を切り替える手間はありません。"}}, {"@type": "Question", "name": "Codexは無料版でも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。OpenAIのヘルプによると、Codexは無料版とGoを含むすべてのChatGPTのプランに含まれていて、使える量はプランで変わります。クラウドで動かすCodex Cloudは無料版とGoには含まれません。"}}, {"@type": "Question", "name": "Codexの保存済みリセットはいつまで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "期限は特典ごとに違い、アカウントや特典の案内に表示されます。使わずに期限を過ぎた分の復元や再発行はありません。"}}, {"@type": "Question", "name": "Codexのリセットを買うと週のリセット日は変わりますか？", "acceptedAnswer": {"@type": "Answer", "text": "変わります。購入後にWorkかCodexで最初の依頼を送った時点から新しい週が始まり、その7日後が次の自動リセットです。支払った時点からの7日後ではありません。"}}, {"@type": "Question", "name": "Codexの上限はモデルを変えれば戻りますか？", "acceptedAnswer": {"@type": "Answer", "text": "戻りません。WorkとCodexは同じ枠を共有していて、モデルを切り替えても使い切った枠の残りは回復しません。"}}, {"@type": "Question", "name": "Codexの上限をサポートに解除してもらえますか？", "acceptedAnswer": {"@type": "Answer", "text": "対象外です。サポートが調べるのは使用量の数え方がおかしい場合や、リセットの時刻を過ぎても使えない場合です。"}}, {"@type": "Question", "name": "Codexの即時リセットはBusinessでも買えますか？", "acceptedAnswer": {"@type": "Answer", "text": "買えません。即時リセットを買えるのはPlusとProの個人アカウントで、無料版・Go・Business・Enterprise・Eduは対象外です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Codexの制限とリ…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AIエージェント</span>
+            <span class="post-date">2026.10.01</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Codexの制限とリセットを解説｜5時間枠・週間枠・確認方法・保存済みリセット</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Codexの制限とリセット"><defs><linearGradient id="ecg-e2c23412" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e2c23412)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Codexの制限とリセット</text><line x1="182.0" y1="327.1" x2="1018.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">5時間枠・週間枠・確認方法・保存済みリセット</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>OpenAIのCodexは、無料版とGoを含むChatGPTのすべてのプランで使えますが、使える量には上限があります。プランによっては5時間ごとの枠と1週間の枠の2つで量が決まっていて、どちらかを使い切ると、リセットの時刻まで作業が止まります。</p>
+<p>2026年9月にはGPT-6 Astraの提供に合わせて「保存済みリセット」が配られ、お金を払ってすぐに枠を戻す「即時リセット」も用意されています。戻し方が増えたぶん、どれを使うと週のリセット日が変わるのか、あとで使うために取っておけるのかは分かりにくいところです。この記事ではOpenAIのヘルプをもとに、Codexの制限の仕組みと確認方法、上限に達したときの選択肢を順に整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>Codexの枠はChatGPT Workと共有。プランによっては5時間枠と週間枠の両方があり、<strong>その場合は両方に残りがないと続けられない</strong></li>
+<li>残りとリセットの時刻は、デスクトップアプリ・CLI・ウェブの［設定］→［使用状況］で見られる。CLIの作業中なら <strong>/status</strong> でも確認できる</li>
+<li>5時間で送れる量はPlusで<strong>GPT-5.6 Solなら10〜100、GPT-6 Astraなら5〜45</strong>のローカルメッセージが目安。モデルを切り替えても残りは戻らない</li>
+<li>保存済みリセットは配られた人だけが使える特典で、1つにつき1回使える。<strong>使うと週のリセット日が変わる</strong>。期限を過ぎると復元されない</li>
+<li>即時リセットはPlusとProの個人アカウントが買える。<strong>枠が増えるのではなく次の週の枠を前倒しで使う仕組み</strong>で、サポートに頼んでも上限は戻らない</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>5時間枠と週間枠</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>5時間で送れる量の目安</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>残りとリセット時刻の確認方法</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>作業中に上限に達したとき</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>上限に達したあとの4つの選択肢</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>保存済みリセット</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>即時リセットの購入</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>クレジット</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>サポートでは上限をリセットしない</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>枠を長持ちさせる使い方</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">5時間枠と週間枠</h2>
+<p>Codexの使える量はChatGPT Workと1つの枠を共有しています。OpenAIのヘルプ「<a href="https://help.openai.com/ja-jp/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex">Work と Codex での GPT-6 Astra の利用量管理</a>」によると、WorkとCodexはPlusとPro、Business のStandardとPremiumのシートに含まれ、<strong>プランによっては5時間枠と週間枠の両方が適用されます。両方が適用される場合、続けて使うには両方に残りが必要です。</strong></p>
+<figure class="post-figure"><img src="/media/images/codex-limits/01_fig_windows.png" alt="Codexの5時間枠と週間枠の図。5時間枠は5時間ごとに使える量で、前の枠が終わったあとWorkかCodexで最初のメッセージを送った時点から次の枠が始まり、週間枠が残っていても5時間が経つ前に使い切ることがある。週間枠は1週間に使える量で、残りとリセットの時刻は設定の使用状況に出る。両方が適用されるプランではどちらかが尽きると止まり、WorkとCodexで同じ枠を使い、モデルを切り替えても残りは戻らない" loading="lazy"><figcaption>Codexの5時間枠と週間枠</figcaption></figure>
+
+<p>5時間枠は時計の決まった時刻で区切られません。<strong>しばらく使っていなかった人は、次に送った1通目から新しい5時間が始まる</strong>ため、朝に使い始めた人と昼に使い始めた人ではリセットの時刻も同じになりません。夕方に大きな作業を控えているなら、昼のうちに小さな依頼で枠を始めておくと、夕方には次の枠が近づいている計算です。</p>
+<p>ChatGPT Workで長い調査をした日は、同じ枠からCodexの分も減っています。Codexをあまり使っていないのに上限が近いときは、Workの使い方も見直します。WorkとCodexの枠の大きさをプランごとに比べたい場合は、<a href="/media/chatgpt-work-plans/">ChatGPT Workのプランと上限</a>にまとめました。</p>
+<h3 id="s1-1">5時間で送れる量の目安</h3>
+<p>同じヘルプには5時間あたりに送れるローカルメッセージの数の目安が、モデルとプランごとに載っています。<strong>固定された上限ではなく、タスク・モデル・設定によって変わり、週間枠が先に尽きることもある</strong>と断ったうえでの幅です。</p>
+<figure class="post-figure"><img src="/media/images/codex-limits/02_help_table.jpg" alt="OpenAIのヘルプの5時間あたりのローカルメッセージ数の目安の表。Plusの列はGPT-6 Astraが5〜45、GPT-5.6 Solが10〜100、GPT-5.6 Terraが25〜200、GPT-5.6 Lunaが250〜2,000、GPT-5.5が15〜80、GPT-5.4が20〜100、GPT-5.4 miniが60〜350。Pro 5xはその5倍、Pro 20xは20倍の幅で、Standard BusinessはPlusと同じ幅、APIキーは従量課金" loading="lazy"><figcaption>5時間あたりのローカルメッセージ数の目安（OpenAIのヘルプ、2026年10月1日取得）</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>モデル</th>
+<th>Plus</th>
+<th>Pro 5x</th>
+<th>Pro 20x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT-6 Astra</td>
+<td>5〜45</td>
+<td>25〜225</td>
+<td>100〜900</td>
+</tr>
+<tr>
+<td>GPT-5.6 Sol</td>
+<td>10〜100</td>
+<td>50〜500</td>
+<td>200〜2,000</td>
+</tr>
+<tr>
+<td>GPT-5.6 Terra</td>
+<td>25〜200</td>
+<td>125〜1,000</td>
+<td>500〜4,000</td>
+</tr>
+<tr>
+<td>GPT-5.6 Luna</td>
+<td>250〜2,000</td>
+<td>1,250〜10,000</td>
+<td>5,000〜40,000</td>
+</tr>
+</tbody>
+</table>
+<p>Plusで比べると、<strong>GPT-6 AstraはGPT-5.6 Lunaの50分の1ほどの量で5時間枠が尽きる計算です。</strong>Pro 5xはPlusの5倍、Pro 20xは20倍の幅になっていて、Business のStandardのシートはPlusと同じ幅です。APIキーで使う場合は従量課金で、この枠の外です。</p>
+<h2 id="s2">残りとリセット時刻の確認方法</h2>
+<p>残りの量とリセットの時刻は、<strong>デスクトップアプリ・CLI・ウェブの［設定］→［使用状況］</strong>で見られます。OpenAIのヘルプ「<a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan">Using Codex with your ChatGPT plan</a>」は、上限が近いときや達したときに、どの枠が尽きたか、クレジットの残高、表示されたリセットの時刻を確かめるよう案内しています。</p>
+<p>CLIで作業している最中なら、入力欄に <code>/status</code> と打つと同じ情報が出ます。GPT-6 Astraの提供前の2026年8月にCodex CLIで試した人の解説記事には、<code>/usage</code> と打つと出るメニューから使用量の表示と保存済みリセットの利用を選べたと書かれていました。</p>
+<p>ヘルプの書き方は「プランによっては両方が適用される」で、<strong>全員に両方の枠があるとは限りません。</strong>自分のアカウントにどちらの枠があるかは、［使用状況］で確かめます。</p>
+<h3 id="s2-1">作業中に上限に達したとき</h3>
+<p>Codexが作業をしている途中で上限に達しても、<strong>その回の作業は公正な利用の範囲で最後まで続けられる</strong>とヘルプに書かれています。止まるのは次の依頼からです。作業が終わったら［使用状況］か上限の案内を開き、どの選択肢が出ているかを確かめます。</p>
+<h2 id="s3">上限に達したあとの4つの選択肢</h2>
+<p>上限に達したときにできることは、待つ・保存済みリセットを使う・即時リセットを買う・クレジットで続けるの4つです。<strong>どれが出るかはプランとアカウントで変わり、ヘルプは上限の案内に出た選択肢を確かめるよう書いています。</strong></p>
+<figure class="post-figure"><img src="/media/images/codex-limits/03_fig_ways.png" alt="Codexの上限に達したあとの4つの選択肢の図。リセットを待つ：使用状況に出る時刻になると自動で戻り、週のリセット日は変わらない。保存済みリセットを使う：配られた人だけで、5時間枠と週間枠を1回だけ戻し、週のリセット日が変わり期限を過ぎると消える。即時リセットを買う：PlusとProの個人アカウントが対象で、次の週の枠を前倒しで使い、買った時点で適用され取っておけない。クレジットで続ける：プランの枠を使い切ったあと残高から差し引いて使う、リセットとは別の従量の残高" loading="lazy"><figcaption>上限に達したあとの4つの選択肢</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>選択肢</th>
+<th>使える人</th>
+<th>週のリセット日</th>
+<th>取っておけるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>リセットを待つ</td>
+<td>全員</td>
+<td>変わらない</td>
+<td>関係なし</td>
+</tr>
+<tr>
+<td>保存済みリセット</td>
+<td>配られた人</td>
+<td>使った日を起点に変わる</td>
+<td>期限まで取っておける</td>
+</tr>
+<tr>
+<td>即時リセットの購入</td>
+<td>PlusとProの個人アカウント</td>
+<td>購入後の最初の依頼から7日後に変わる</td>
+<td>取っておけない</td>
+</tr>
+<tr>
+<td>クレジット</td>
+<td>対象のプラン</td>
+<td>変わらない</td>
+<td>残高として残る</td>
+</tr>
+</tbody>
+</table>
+<p>モデルを軽いものに切り替えても、<strong>使い切った枠の残りは戻りません。</strong>ヘルプはこの点をはっきり書いています。軽いモデルに替えるのは次の枠を長持ちさせるためです。</p>
+<h3 id="s3-1">保存済みリセット</h3>
+<p>OpenAIは2026年9月3日と4日、GPT-6 Astraの提供に合わせて、条件を満たすPlus・Pro・Businessのアカウントに、各日1回分の保存済みリセットを配りました。両日とも条件を満たした人は、2回分を受け取った計算です。ヘルプ「<a href="https://help.openai.com/ja-jp/articles/20001498-how-banked-codex-resets-work">保存済み Codex リセットの仕組み</a>」によると、<strong>1つの保存済みリセットはCodexの使用上限を1回だけリセットでき、使うか期限が切れるまでアカウントに残ります。</strong>友だちを招待する紹介の特典で配られることもあります。</p>
+<figure class="post-figure"><img src="/media/images/codex-limits/04_help_banked.jpg" alt="OpenAIのヘルプの保存済みリセットの確認と使用方法の節。デスクトップアプリ、CLI、またはウェブで設定から使用状況を開き、リセット1回利用可能や完全リセットなど利用可能なリセットが表示されている使用状況の概要を選択し、有効期限の詳細を確認してからリセットの使用を確定する。Codexの使用上限に達した後にこのオプションが表示される場合もあると書かれている" loading="lazy"><figcaption>保存済みリセットの使い方（OpenAIのヘルプ、2026年10月1日取得）</figcaption></figure>
+
+<p>使うと5時間枠と週間枠の両方が戻り、<strong>週のリセット日が使った日を起点に変わります。</strong>ヘルプの例だと、金曜に週のリセットが来る予定の人が火曜に使った場合、次の週のリセットは翌週の火曜ごろになり、元の金曜のリセットは来ません。週のリセットが翌日に来る日に使うと、1日待てば戻った枠のために保存済みリセットを使い切ることになります。</p>
+<p>リセットするものが無い状態で選んだ場合は、消費されずに残ります。期限を過ぎた分は復元も再発行もされず、今後また配られる保証もありません。9月7日に行われた全員向けのリセットはその場で適用されたもので、保存済みリセットとしては表示されません。</p>
+<h3 id="s3-2">即時リセットの購入</h3>
+<p>PlusとProの個人アカウントでは、お金を払って枠をすぐに戻せます。ヘルプ「<a href="https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets">Paid weekly Work and Codex rate limit resets</a>」（英語版のみ）によると、無料版・Go・Business・Enterprise・Eduでは買えません。</p>
+<figure class="post-figure"><img src="/media/images/codex-limits/05_help_paid.jpg" alt="OpenAIのヘルプのPaid weekly Work and Codex rate limit resetsのOverviewとAvailabilityの節。PlusとProの利用者はデスクトップ版の使用状況の設定か、週の上限に達したあとのアプリ内の案内から即時リセットを買え、5時間と週間の両方の枠がすぐ戻る。週の枠を前倒しで使う仕組みで別の枠が足されるわけではない。新しい週の期間はリセット後のWorkかCodexでの最初の依頼から始まり、次の自動リセットはその7日後。購入できるのはPlusとProの個人アカウントで、Free・Go・Business・Enterprise・Eduでは使えない" loading="lazy"><figcaption>即時リセットの購入を説明したヘルプ（英語版のみ、2026年10月1日取得）</figcaption></figure>
+
+<p><strong>買っても枠が増えるわけではなく、次の週の分を前倒しで使うことになります。</strong>週の自動リセットが2日後に来る日に買うと、その2日分の待ちを消すためにお金を払い、次のリセットはさらに7日先に延びます。残りの枠があっても買った瞬間に適用されるため、使い切ってから買うほうが損はありません。</p>
+<p>買う場所はデスクトップ版の［使用状況］の使用量のメーターの横に出る「Buy an instant reset」と、週間枠を使い切ったときにアプリ内に出る案内の2つです。5時間枠だけを使い切ったときはアプリ内の案内は出ませんが、デスクトップ版の設定からは買えることがあります。返金は原則として受け付けていないため、残りの枠を使い切ってから買うかどうかを決めます。価格は購入画面に表示され、買えるかどうかはアカウントや請求先の国で変わります。</p>
+<h3 id="s3-3">クレジット</h3>
+<p>クレジットはプランの枠とは別に買っておく従量の残高です。<strong>プランに含まれる枠を先に使い、上限に達したあとで対応する作業の分がクレジットから差し引かれます。</strong>リセットと違って週のリセット日は変わらず、PlusとProはプランを変えずにクレジットを買えます。</p>
+<h2 id="s4">サポートでは上限をリセットしない</h2>
+<p><strong>OpenAIのサポートはChatGPTとCodexの使用上限をリセットしません。</strong>前出の「Using Codex with your ChatGPT plan」によると、上限に達したらリセットを待つか、アカウントに表示されたほかの選択肢を使います。</p>
+<figure class="post-figure"><img src="/media/images/codex-limits/06_help_support.jpg" alt="OpenAIのヘルプのCan Support reset my usage limits?の節。OpenAIのサポートはChatGPTやCodexの使用上限をリセットしない、上限に達したらリセットを待つかアカウントに表示された別の選択肢を使う、使用量が正しく数えられていないと思う場合やリセット時刻を過ぎても使えない場合はサポートに連絡すると書かれている" loading="lazy"><figcaption>サポートは上限をリセットしない（OpenAIのヘルプ、2026年10月1日取得）</figcaption></figure>
+
+<p>サポートに連絡してよいのは、使用量の数え方がおかしいと思う場合と、表示されたリセットの時刻を過ぎても使えない場合です。連絡するときは疑問に思っている上限か残高、表示されたリセットの時刻、画面のスクリーンショット、使っていたCodexのクライアントとモデル、起きた日時とタイムゾーンを添えるようヘルプは書いています。保存済みリセットが見つからないときも、［使用状況］を開き直して、正しいアカウントかワークスペースを見ているかを先に確かめます。</p>
+<h2 id="s5">枠を長持ちさせる使い方</h2>
+<p>同じ作業でも、選ぶモデルと設定で減り方は同じではありません。ヘルプによると、入力と出力が大きいとき、推論のレベルが高いとき、Fastモードを使うとき、手順が多いタスクのときに使う量が増えます。</p>
+<ul>
+<li><strong>モデル</strong>: ヘルプはTerraをレポートの作成や定型的なコード変更、Lunaを情報の抜き出しや短い編集、Astraを難しいバグの調査や慣れない問題の検討に向くとしている。重いモデルは必要な作業にだけ使う</li>
+<li><strong>推論のレベル</strong>: ヘルプは、Solの「高」でうまくいっていた作業なら、まずAstraの「低」か「中」を試すよう書いている。高くしても結果がよくなるとは限らない</li>
+<li><strong>Fastモード</strong>: 応答は速くなるが、枠の減りは大きくなる</li>
+<li><strong>大きな作業の前</strong>: ［使用状況］で残りと次のリセット時刻を見てから始める</li>
+</ul>
+<p>モデルの選び方とCodexの入口ごとの違いは、<a href="/media/codex-guide/">Codexの使い方</a>にまとめました。ChatGPTの会話の上限やGPT-6 Proの回数など、Codex以外の上限は<a href="/media/chatgpt-limit-reached/">ChatGPTの上限に達したときの対処</a>で整理しました。</p>
+<h2 id="s6">よくある質問</h2>
+<h3 id="s6-1">Codexの5時間制限はいつリセットされますか？</h3>
+<p>前の5時間枠が終わったあと、WorkかCodexで最初のメッセージを送った時点から次の5時間が始まります。決まった時刻ではないため、正確な時刻は［設定］→［使用状況］の表示が頼りです。</p>
+<h3 id="s6-2">Codexの使用量はどこで確認できますか？</h3>
+<p>デスクトップアプリ・CLI・ウェブの［設定］→［使用状況］で、残りの量とリセットの時刻が見られます。CLIの作業中なら <code>/status</code> でも確認できるので、画面を切り替える手間はありません。</p>
+<h3 id="s6-3">Codexは無料版でも使えますか？</h3>
+<p>使えます。OpenAIのヘルプによると、Codexは無料版とGoを含むすべてのChatGPTのプランに含まれていて、使える量はプランで変わります。クラウドで動かすCodex Cloudは無料版とGoには含まれません。</p>
+<h3 id="s6-4">Codexの保存済みリセットはいつまで使えますか？</h3>
+<p>期限は特典ごとに違い、アカウントや特典の案内に表示されます。使わずに期限を過ぎた分の復元や再発行はありません。</p>
+<h3 id="s6-5">Codexのリセットを買うと週のリセット日は変わりますか？</h3>
+<p>変わります。購入後にWorkかCodexで最初の依頼を送った時点から新しい週が始まり、その7日後が次の自動リセットです。支払った時点からの7日後ではありません。</p>
+<h3 id="s6-6">Codexの上限はモデルを変えれば戻りますか？</h3>
+<p>戻りません。WorkとCodexは同じ枠を共有していて、モデルを切り替えても使い切った枠の残りは回復しません。</p>
+<h3 id="s6-7">Codexの上限をサポートに解除してもらえますか？</h3>
+<p>対象外です。サポートが調べるのは使用量の数え方がおかしい場合や、リセットの時刻を過ぎても使えない場合です。</p>
+<h3 id="s6-8">Codexの即時リセットはBusinessでも買えますか？</h3>
+<p>買えません。即時リセットを買えるのはPlusとProの個人アカウントで、無料版・Go・Business・Enterprise・Eduは対象外です。</p>
+<h2 id="s7">出典</h2>
+<ul>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex">Work と Codex での GPT-6 Astra の利用量管理</a>」（2026年10月1日取得）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/20001498-how-banked-codex-resets-work">保存済み Codex リセットの仕組み</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets">Paid weekly Work and Codex rate limit resets</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan">Using Codex with your ChatGPT plan</a>」（同）</li>
+<li>yamadatt「<a href="https://zenn.dev/yamadatt/articles/20260823-codex-banked-reset">Codexに使用量リセット権が1回分もらえた。5時間制限が消えた今、週次リミットの保険になる</a>」Zenn（2026年8月23日）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/company-memory-first/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会社の記憶を先に作る"><defs><linearGradient id="ecg-07df1178" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-07df1178)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="528.8" y="176.1" width="142.4" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">AI導入</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">会社の記憶を先に作る</text><line x1="220.0" y1="365.9" x2="980.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.15</div>
+                <div class="rel-card__ttl">AIエージェントを作る前に会社の記憶を作った話</div>
+            </a>
+            <a href="/media/ai-mode-error/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードのエラー"><defs><linearGradient id="ecg-8cb6143f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-8cb6143f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードのエラー</text><line x1="288.4" y1="365.9" x2="911.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.01</div>
+                <div class="rel-card__ttl">【2026年10月】Google AIモードのエラーを解説｜回答が生成されないときの直し方と原因</div>
+            </a>
+            <a href="/media/ai-mode-incognito/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードとシークレットモード"><defs><linearGradient id="ecg-e91338f0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e91338f0)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードとシー</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">クレットモード</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.30</div>
+                <div class="rel-card__ttl">【2026年9月】Google AIモードはシークレットモードで使える？｜履歴・ログイン・出ないときの見分け方</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
