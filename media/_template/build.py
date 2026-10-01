@@ -681,6 +681,20 @@ def lint_posts(md_files):
     return warnings
 
 
+def redirect_html(to: str) -> str:
+    """統合した記事の転送ページ。canonical は # を外した転送先、meta refresh は節の # 付き"""
+    url = to if to.startswith("http") else SITE + to
+    canon = html.escape(url.split("#")[0])
+    url = html.escape(url)
+    return (
+        '<!DOCTYPE html>\n<html lang="ja">\n<head>\n<meta charset="UTF-8">\n'
+        f'<title>移動しました</title>\n<link rel="canonical" href="{canon}">\n'
+        f'<meta http-equiv="refresh" content="0; url={url}">\n'
+        f'<script>location.replace("{url}");</script>\n</head>\n<body>\n'
+        f'<p>この記事は <a href="{url}">{url}</a> に移動しました。</p>\n</body>\n</html>\n'
+    )
+
+
 def main():
     article_tpl = (TEMPLATE_DIR / "article.html").read_text(encoding="utf-8")
     list_tpl = (TEMPLATE_DIR / "list.html").read_text(encoding="utf-8")
@@ -723,12 +737,18 @@ def main():
 
     posts = []
     errors = []
+    redirects = []  # (slug, 転送先)。front matter に redirect: を書いた記事（2026-10-02）
     for f in md_files:
         try:
             meta, body_md = parse_front_matter(f.read_text(encoding="utf-8"))
             date.fromisoformat(meta["date"])  # 形式チェック
         except ValueError as e:
             errors.append(f"{f.name}: {e}")
+            continue
+        # 統合した記事は転送ページだけを出す。一覧・トップ・sitemap・関連記事には載せない。
+        # GitHub Pages は 301 が使えないので canonical＋meta refresh で転送する
+        if meta.get("redirect"):
+            redirects.append((f.stem, meta["redirect"]))
             continue
         faqs = extract_faq(body_md)
         body_md = convert_takeaways_blocks(body_md)
@@ -771,11 +791,17 @@ def main():
     (ROOT / "index.html").write_text(bust(build_list(posts, list_tpl)), encoding="utf-8")
     print("✔ media/index.html （一覧）")
 
+    for slug, to in redirects:
+        out_dir = ROOT / slug
+        out_dir.mkdir(exist_ok=True)
+        (out_dir / "index.html").write_text(redirect_html(to), encoding="utf-8")
+        print(f"✔ media/{slug}/index.html （転送 → {to}）")
+
     update_top_page(posts)
     generate_sitemap(posts)
 
     # mdが削除された記事のディレクトリを掃除（非公開化に対応）
-    keep = {p["slug"] for p in posts} | {"_template", "posts", "images"}
+    keep = {p["slug"] for p in posts} | {s for s, _ in redirects} | {"_template", "posts", "images"}
     for d in ROOT.iterdir():
         if d.is_dir() and d.name not in keep and (d / "index.html").exists():
             import shutil
