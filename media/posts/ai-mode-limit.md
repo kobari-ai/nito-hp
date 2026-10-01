@@ -82,7 +82,7 @@ AIモードの画像の作成だけは、上限が枚数で書かれています
 
 <figure class="post-figure"><img src="/media/images/ai-mode-limit/02_fig_vs_app.png" alt="AIモードとGeminiアプリの上限の違いの図。Google検索のAIモードはgoogle.comの検索結果のAI モードのタブやgoogle.com/aiで使い、上限が書かれているのはProと画像の作成だけで区切りは1日（24時間）ごと。Geminiアプリはgemini.google.comとスマホのGeminiアプリで、コンピューティング量で決まる上限が週ごとの上限に達するまで5時間ごとにリセットされる" loading="lazy"><figcaption>AIモードとGeminiアプリは、上限の決まり方も区切りも違う</figcaption></figure>
 
-使う場所で見分けられます。google.comの検索結果の「AI モード」のタブや [google.com/ai](https://www.google.com/ai) で質問しているならAIモード、Geminiのアプリやgemini.google.comならGeminiアプリです。**2つのヘルプは別々の上限として書いていて、AIモードのヘルプにGeminiアプリの上限への言及はありません。**
+使う場所で見分けられます。google.comの検索結果の「AI モード」のタブや [google.com/ai](https://www.google.com/ai) で質問しているならAIモード、Geminiのアプリやgemini.google.comならGeminiアプリです。**2つのヘルプは別々の上限として書いていて、AIモードのヘルプにGeminiアプリの上限への言及はありません。**Geminiアプリの上限の決まり方とプランごとの倍率は、[Geminiの回数制限](/media/gemini-limits/)で扱っています。
 
 ## 上限に達したときの選択肢
 
