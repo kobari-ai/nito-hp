@@ -39,7 +39,7 @@ Copilotが理解するのに役立つものとして、次の4つが挙がって
 
 Work IQを使えるのは、Microsoft Copilotのアドオン ライセンスを持つ人です。サポート記事にはこう書かれていて、ライセンスを持っていれば**初期設定でオン**になっています。
 
-開発者向けのMicrosoft Learnでは、課金の説明に「Microsoft 365 Copilot ライセンス」という名前が使われています。あとの節の課金の図は、こちらの名前です。
+開発者向けのMicrosoft Learnでは、課金の説明に「Microsoft 365 Copilot ライセンス」という名前が使われています。あとの節の課金の図もこちらの名前です。
 
 別のサポート記事「[Microsoft Copilot Chatの回答のソースを制御および確認する](https://support.microsoft.com/ja-jp/Microsoft-365-Copilot/control-review-sources-copilot-chat)」にも、作業データにアクセスできるのはMicrosoft Copilotのサブスクリプションを持つユーザーだけ、とあります。ライセンスが無い人のCopilot Chatは、Webの情報と自分で添付したものを中心に答える形です。
 
