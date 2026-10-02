@@ -13,18 +13,18 @@ cover_sub: Windows・Office・Edge・会社のPC
 さらに、会社から配られたPCでは、個人向けの手順がそもそも使えないことがあります。この記事は2026年10月3日に取得したMicrosoftの公式ヘルプをもとに、場所ごとの消し方と、自分で消せないときに誰に何を頼めばよいかを整理します。
 
 :::takeaways
-- 消し方は場所ごとに別。**Windowsのアプリはアンインストール、Word・Excel・PowerPointは［Copilot を有効にする］をオフ、Outlookはトグル、Edgeはボタンの表示をオフ**
+- 消し方は場所ごとに別。**Windowsのアプリはアンインストール（戻らない設定は管理者向け）、Word・Excel・PowerPointは［Copilot を有効にする］をオフ、Outlookはトグル、Edgeはボタンの表示をオフ**
 - Word・Excel・PowerPointの設定は**アプリごと・端末ごと**。Outlookは同じアカウントの**すべての端末に反映**される
 - **リボンからCopilotのアイコンを外しても、Copilotはオフにならない**（公式ヘルプ）
 - Word・Excel・PowerPointのオフの手順は**個人のMicrosoftアカウントだけが対象**。職場・学校のアカウントでは使えない
-- Copilotキーを右Ctrlに戻す設定は、ヘルプでは**2026年後半の更新で追加予定**の書き方のまま
+- Copilotキーを右Ctrlに戻す設定は、ヘルプが**「今年後半にリリースされる予定」と書いたまま**（10月3日時点）
 :::
 
 ## 消したいCopilotがどれかを先に分ける
 
 Copilotは同じ名前で、別々の場所に入っています。どれを消したいかで、見る設定が変わります。
 
-<figure class="post-figure"><img src="/media/images/copilot-remove/01_fig_where.png" alt="Copilotが入っている5つの場所と消し方の図。Windowsのアプリはアンインストール、Word・Excel・PowerPointはCopilotを有効にするのチェックをオフ、Outlookは設定のトグル、Edgeはツールバーのボタンの表示をオフ、CopilotキーはWindowsの設定で割り当てを変える" loading="lazy"><figcaption>まず、どこに出ているCopilotかを確かめる</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/copilot-remove/01_fig_where.png" alt="Copilotが入っている5つの場所と消し方の図。Windowsのアプリはアンインストール（戻らない設定は管理者向け）、Word・Excel・PowerPointはCopilotを有効にするのチェックをオフ、Outlookは設定のトグル、Edgeはツールバーのボタンの表示をオフ、CopilotキーはWindowsの設定で割り当てを変える" loading="lazy"><figcaption>まず、どこに出ているCopilotかを確かめる</figcaption></figure>
 
 | 消したい場所 | 消し方 | 自分でできるか |
 |---|---|---|
@@ -54,7 +54,7 @@ Copilotは同じ名前で、別々の場所に入っています。どれを消�
 
 戻ってこないようにする方法として文書が挙げているのは、AppLockerというアプリの実行を制御する仕組みで、Copilotのアプリ（パッケージ名 MICROSOFT.COPILOT）を止める設定です。ただしこれは主に組織のPCの管理者が使うもので、家庭用のWindowsで気軽に触る設定ではありません。
 
-2026年4月の更新で管理者がCopilotのアプリを自動で消すための設定（グループポリシーの［Microsoft Copilot アプリの削除］）が正式に入った、とマイナビニュースが[Windows Latestの調査として報じています](https://news.mynavi.jp/techplus/article/20260527-4505438/)。消える条件は3つで、Microsoft 365 CopilotとMicrosoft Copilotの両方が入っている、利用者が自分でアプリを入れていない、過去28日間アプリを起動していない、のすべてを満たすときです。
+2026年4月の更新で管理者がCopilotのアプリを自動で消すための設定（グループポリシーの［Microsoft Copilot アプリの削除］）が正式に入った、とマイナビニュースが[Windows Latestの調査として報じています](https://news.mynavi.jp/techplus/article/20260527-4505438/)。報道によると、条件は3つで、Microsoft 365 CopilotとMicrosoft Copilotの両方が入っている、利用者が自分でアプリを入れていない、過去28日間アプリを起動していない、のすべてを満たすときです。
 
 ## WordとExcelのCopilotを消す
 
@@ -100,7 +100,7 @@ WordやExcelとの大きな違いは、**同じアカウントでサインイン
 
 Edgeの右上にあるCopilotのボタンは、Edgeの設定で表示を切り替えます。バージョン149の画面を解説した[初心者のためのOffice講座](https://hamachan.info/win11-edge-sidebar/)によれば、［設定］→［Copilot と AI］にある［ツールバーに［Copilot］ボタンを表示する］をオフにすると、ツールバーから消えます。
 
-ボタンを消しても、ショートカットキーの［Ctrl］+［Shift］+［.］（ピリオド）でCopilotのパネルは開きます。**消えるのはボタンだけで、Copilotの機能は残る**点はWordのリボンと同じです。
+同じ解説によれば、ボタンを消してもショートカットキーの［Ctrl］+［Shift］+［.］（ピリオド）でCopilotのパネルは開きます。**消えるのはボタンだけで、Copilotの機能は残る**点はWordのリボンと同じです（手元では試していません）。
 
 なお、Microsoftの公式ヘルプ「[Microsoft Edge で Copilot を使ってみる](https://support.microsoft.com/ja-jp/microsoft-copilot/getting-started-with-copilot-in-microsoft-edge)」の［Copilot と AI］の説明は、ページの内容を読ませるかどうかと新しいタブの設定が中心で、ボタンを消す手順は書かれていません（10月3日に確認）。
 
@@ -120,7 +120,7 @@ PCのメーカーが独自にキーの割り当てを変える設定を用意し
 
 ## 会社のPCで自分では消せないとき
 
-会社から配られたPCだと、ここまでの手順が使えないことがよくあります。理由は2つです。
+会社から配られたPCだと、ここまでの手順が使えないことがあります。理由は2つです。
 
 <figure class="post-figure"><img src="/media/images/copilot-remove/05_fig_work.png" alt="個人のアカウントと職場のアカウントでCopilotの消し方が違う図。個人のMicrosoftアカウントならWord・Excel・PowerPointのチェックやアプリのアンインストールを自分でできる。職場や学校のアカウントではチェックの手順が使えず、アプリの削除やピン留めは管理者がポリシーで決める" loading="lazy"><figcaption>職場のアカウントでは、管理者の設定が決め手になる</figcaption></figure>
 
@@ -128,7 +128,7 @@ PCのメーカーが独自にキーの割り当てを変える設定を用意し
 
 もうひとつの理由として、Copilotのアプリをタスクバーに置くかどうかや、Copilot Chatを使えるようにするかどうかを、**組織の管理者が決める仕組み**になっているからです。Microsoft Learnの文書では、管理者はMicrosoft 365 管理センターでピン留めの扱いを設定でき、アプリのインストールはAppLockerで止められる、と説明されています。
 
-「Copilotというソフトが勝手に会社のPCに入っていた」という質問は、Yahoo!知恵袋で[5万回以上閲覧されています](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q11293737631)。会社のPCなら、自分で設定を探す前に、社内の情報システムの担当者に「Copilotを使わない設定にしたい」と伝えるのが早道です。そのとき、上の設定の名前（Microsoft 365 管理センターのピン留め、AppLocker、［Microsoft Copilot アプリの削除］のポリシー）を添えると話が通りやすくなります。
+「Copilotというソフトが勝手に会社のPCに入っていた」という質問は、Yahoo!知恵袋で[5万回以上閲覧されています（2024年2月の質問）](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q11293737631)。会社のPCなら、自分で設定を探す前に、社内の情報システムの担当者に「Copilotを使わない設定にしたい」と伝えるのが早道です。そのとき、上の設定の名前（Microsoft 365 管理センターのピン留め、AppLocker、報道で伝えられている［Microsoft Copilot アプリの削除］のポリシー）を添えると話が通りやすくなります。
 
 ## AI検索での見え方は別の話
 
@@ -137,10 +137,10 @@ Copilotを自分の画面から消しても、Copilotが答えの中で自社を
 ## よくある質問
 
 ### Copilotを消すとOfficeは使えなくなりますか？
-Copilotのアプリはほかのアプリと同じようにアンインストールの一覧に並び、Word・Excel・PowerPointのCopilotはチェックひとつでオフにできる設計です。ただし、チェックが無いときに使うプライバシー設定の方法は、Outlookの返信の候補やWordの予測入力など、Copilot以外の機能も一緒に止めます。
+［Copilot を有効にする］のチェックで消すなら、止まるのはそのアプリのCopilotの機能です（公式ヘルプの説明）。ただし、チェックが無いときに使うプライバシー設定の方法は、Outlookの返信の候補やWordの予測入力など、Copilot以外の機能も一緒に止めます。
 
 ### Copilotが勝手にインストールされたのはなぜですか？
-Microsoft Learnの文書には、インストールを防ぐ設定をしていないPCでは、Windowsの更新プログラムを入れるとCopilotのアプリが自動で有効になると書かれています。自分で入れていなくても、更新で入ってくることがあります。
+Microsoft Learnの文書には、2024年9月からの更新について、インストールを防ぐ設定をしていないPCでは更新プログラムを入れるとCopilotのアプリが自動で有効になる、と書かれています。自分で入れていなくても、更新で入ってくることがあります。
 
 ### アンインストールしたCopilotがまた出てきますか？
 更新で戻ってくる可能性はゼロではありません。止めるにはAppLockerなどの管理者向けの設定が必要で、組織のPCなら情報システムの担当者に頼むのが確実です。
@@ -152,13 +152,13 @@ Microsoft Learnの文書には、インストールを防ぐ設定をしてい�
 同じアカウントでサインインしていれば、スマホのOutlookもオフです。Outlookのトグルはどの端末で切り替えても全部の端末に反映されます。
 
 ### Copilotキーを無効にできますか？
-Windowsの設定でCopilotキーを右Ctrlかアプリケーションキーとして動かせるようにする更新が、2026年後半に予定されています。10月3日時点の公式ヘルプは予定の書き方のままで、それより前はPCのメーカーの設定が頼りになります。
+公式ヘルプはCopilotキーを右Ctrlかアプリケーションキーとして動かせる設定を、Windows 11の更新で追加すると書いています。ただし10月3日時点でも「今年後半にリリースされる予定」と書いたままで、それまではPCのメーカーの設定が頼りになります。
 
 ### 会社のPCのCopilotを自分で消してもいいですか？
 Word・Excel・PowerPointのオフの手順は、職場や学校のアカウントでは使えません。アプリの削除も管理者の設定で決まることが多いので、社内の担当者に確かめてから進めてください。
 
 ### Edgeのボタンを消してもCopilotは開きますか？
-開きます。ボタンを消しても、［Ctrl］+［Shift］+［.］でCopilotのパネルが開きます。
+Edge 149の画面を解説した初心者のためのOffice講座によれば、開きます。ボタンを消しても、［Ctrl］+［Shift］+［.］でCopilotのパネルが開くと書かれています。
 
 ## 出典
 
