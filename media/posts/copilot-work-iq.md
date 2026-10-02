@@ -8,7 +8,7 @@ cover_headline: Work IQとは
 cover_sub: オン・オフ・ライセンス・APIの料金
 ---
 
-Work IQは、Microsoft 365 Copilotが社内のメールやファイル、会議、チャットを踏まえて答えるための仕組みです。Copilot Chatの画面では、左上の［Work IQ］ボタンとして目に入ります。以前あった［作業］と［Web］のタブは、このボタン1つに置き換えられました。
+Work IQは、Microsoft 365 Copilotが社内のメールやファイル、会議、チャットを踏まえて答えるための仕組みです。Copilot Chatの画面では、左上の［Work IQ］ボタンとして目に入ります（日本語のサポート記事には「仕事 IQ」と訳されている箇所もあります）。以前あった［作業］と［Web］のタブは、このボタン1つに置き換えられました。
 
 同じWork IQという名前で、開発者向けのWork IQ APIやCLIもあり、こちらはライセンスとは別の従量課金です。この記事は2026年10月3日に取得したMicrosoftの公式ドキュメントをもとに、使えるライセンス、オンとオフの違い、APIの課金、導入する側が先に決めることを整理します。
 
@@ -17,7 +17,7 @@ Work IQは、Microsoft 365 Copilotが社内のメールやファイル、会議�
 - 使えるのは**Microsoft Copilotのアドオン ライセンスを持つ人**。持っていれば**初期設定でオン**
 - オン・オフは**Microsoft CopilotアプリのChat画面の左上の［Work IQ］ボタン**。以前の［作業］［Web］のタブはこれに置き換わった
 - オフのときは、添付したもの・公開されているWebの情報・プロフィールと個人用設定だけで答える
-- **Work IQ API・CLI・MCPはライセンスとは別の従量課金**。2026年6月16日に一般提供になった
+- **Work IQ API・CLI・MCPはライセンスとは別の従量課金**。CLIは2026年6月16日に一般提供になった
 :::
 
 ## Work IQは何をしているか
@@ -33,11 +33,13 @@ Copilotが理解するのに役立つものとして、次の4つが挙がって
 
 <figure class="post-figure"><img src="/media/images/copilot-work-iq/01_fig_layers.png" alt="Work IQの3つの層の図。データはファイル・メール・会議・チャット・ビジネスアプリのシグナルをまとめる。メモリは利用者やチームの働き方を継続して理解する。推論はモデル・スキル・ツールをまとめてエージェントが動けるようにする" loading="lazy"><figcaption>Work IQはデータ・メモリ・推論の3層（Copilot Studioのドキュメントの説明）</figcaption></figure>
 
-この3層は、開発者がエージェントにWork IQを組み込むときの[Copilot Studioのドキュメント](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-work-iq)にある説明です。利用者が画面で意識するのは、次の節のオンとオフだけです。
+データ・メモリ・推論の3層は、開発者がエージェントにWork IQを組み込むときの[Copilot Studioのドキュメント](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-work-iq)にある説明です。利用者が画面で意識するのは、次の節のオンとオフだけです。
 
 ## 使える人とライセンス
 
 Work IQを使えるのは、Microsoft Copilotのアドオン ライセンスを持つ人です。サポート記事にはこう書かれていて、ライセンスを持っていれば**初期設定でオン**になっています。
+
+開発者向けのMicrosoft Learnでは、課金の説明に「Microsoft 365 Copilot ライセンス」という名前が使われています。あとの節の課金の図は、こちらの名前です。
 
 別のサポート記事「[Microsoft Copilot Chatの回答のソースを制御および確認する](https://support.microsoft.com/ja-jp/Microsoft-365-Copilot/control-review-sources-copilot-chat)」にも、作業データにアクセスできるのはMicrosoft Copilotのサブスクリプションを持つユーザーだけ、とあります。ライセンスが無い人のCopilot Chatは、Webの情報と自分で添付したものを中心に答える形です。
 
@@ -47,7 +49,7 @@ Work IQを使えるのは、Microsoft Copilotのアドオン ライセンスを�
 
 切り替えるボタンの場所は**Microsoft CopilotアプリのChat画面の左上**です。以前の［作業］タブと［Web］タブはこのボタンに置き換えられた、とサポート記事に書かれています。作業とWebを行き来する代わりに、作業データを見せるかどうかを1つのボタンで決める形になりました。
 
-<figure class="post-figure"><img src="/media/images/copilot-work-iq/02_help_toggle.jpg" alt="Microsoftのサポート記事の注。Copilotの個別の作業タブとWebタブは仕事IQボタンに置き換えられ、1つのオンオフのコントロールで作業データを参照できるかどうかを決められるようになったと書かれている。続く節にはCopilotは既存のアクセス許可を尊重し、会社のデータでパブリックモデルをトレーニングしないとある" loading="lazy"><figcaption>サポート記事「Copilot はプロンプトに応答するためにどのような情報を使用しますか?」の注</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/copilot-work-iq/02_help_toggle.jpg" alt="Microsoftのサポート記事の注。Copilotの個別の作業タブとWebタブは仕事 IQ（Work IQ）ボタンに置き換えられ、1つのオンオフのコントロールで作業データを参照できるかどうかを決められるようになったと書かれている。続く節にはCopilotは既存のアクセス許可を尊重し、会社のデータでパブリックモデルをトレーニングしないとある" loading="lazy"><figcaption>サポート記事「Copilot はプロンプトに応答するためにどのような情報を使用しますか?」の注</figcaption></figure>
 
 | | Work IQ オン | Work IQ オフ |
 |---|---|---|
@@ -92,7 +94,7 @@ Work IQがオンでも、Copilotが見に行けるのは、その人がもとも
 情報システムの担当者が決めることは、ドキュメントから拾うと次の4つです。
 
 1. **誰にアドオン ライセンスを割り当てるか**。Copilot ChatのWork IQは、ライセンスを持つ人に初期設定でオンになる
-2. **従量課金を使わせるか**。Work IQ APIやCoworkの課金は、Microsoft 365 管理センターで管理する
+2. **従量課金を使わせるか**。Work IQ APIの課金は、Microsoft 365 管理センターで管理する
 3. **CLIとMCPを許可するか**。組織のデータに触れるにはテナント管理者の同意が要る
 4. **書き込みを許可するか**。Copilot StudioのWork IQ（プレビュー）は、管理者が管理センターで書き込みを明示的にオンにしない限り読み取り専用で、利用には別の支出ポリシーを作る必要がある
 
@@ -117,10 +119,10 @@ Microsoft CopilotアプリのChat画面の左上にある［Work IQ］ボタン�
 Microsoft Copilotのアドオン ライセンスを持つ人は、Copilot ChatやMicrosoft 365 Copilotの画面で使えます。Work IQ APIやCLI、自社のエージェントからの利用は、使った分だけの従量課金です。
 
 ### Work IQのボタンが表示されません
-サポート記事によると、Work IQを使えるのはMicrosoft Copilotのアドオン ライセンスを持つ人です。ライセンスの割り当てを管理者に確かめてください。
+サポート記事に書かれている条件は、Microsoft Copilotのアドオン ライセンスを持っていることです。ライセンスの割り当てを管理者に確かめてください。
 
 ### Work IQで他人のファイルも見られますか？
-見られません。Copilotは既存のMicrosoft 365のアクセス許可を守り、その人が見る権限を持つ作業データだけを参照します。共有の範囲が広すぎるファイルは、権限の範囲として見えてしまう点に注意してください。
+その人が見る権限を持つファイルだけを参照します。共有の範囲が広すぎると、他人のファイルも権限の範囲として見えます。Copilotは既存のMicrosoft 365のアクセス許可を守るので、見えるかどうかは共有の設定で決まります。
 
 ### Work IQ CLIはいつから使えますか？
 Microsoft Learnのドキュメントによると、2026年6月16日に一般提供になりました。プレビュー版を使っていた場合は、一般提供版への更新が必要です。
