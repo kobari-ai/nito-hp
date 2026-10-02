@@ -78,9 +78,7 @@ Microsoft Graphが持ち込むのは、メール、ファイル、会議、予�
 
 <figure class="post-figure"><img src="/media/images/copilot-guide/cp_04_fig_workiq.png" alt="Work IQのオンとオフで回答の根拠に何が乗るかの図。オフではWebと自分で貼った内容だけ、オンではMicrosoft GraphとWork IQとCopilot検索とセマンティックインデックスが加わる" loading="lazy"><figcaption>Work IQのオンとオフで根拠に乗るもの</figcaption></figure>
 
-この差は依頼の文面を工夫しても埋まりません。**Work IQはオンとオフを切り替えられます**。オフにすると、回答はMicrosoft GraphとWork IQに基づかなくなります。答えは返ってきますが、仕事固有の文脈は乗りません。思ったより一般論しか返ってこないときに、まず見るべき設定です。
-
-なお、Work IQ APIは別物です。カスタムのアプリやエージェントや統合のために、独立して購入して使う従量課金のサービスと位置づけられています。
+この差は依頼の文面を工夫しても埋まりません。Work IQはChat画面の左上のボタンでオンとオフを切り替えられ、オフにすると仕事の文脈は乗らなくなります。思ったより一般論しか返ってこないときは、まずこのボタンを見てください。切り替えの場所、オフのときに使われる情報、Work IQ APIの従量課金は[Work IQの記事](/media/copilot-work-iq/)にまとめています。
 
 ## エージェントと従量課金の線
 
@@ -140,7 +138,7 @@ Copilot Chat（基本）だけの状態では、Word・Excel・PowerPoint・OneN
 
 ### Work IQのオン・オフはどこで切り替えますか？
 
-チャットの入力欄の上に出ている「Work IQ」の表示をクリックすると切り替わります。オフにすると文字に取り消し線が付き、その場で新しい会話が始まります。組織全体で使えなくしたい場合は、管理者がMicrosoft 365管理センターでCopilotのライセンスからGraphに接続するチャット機能を無効にします。
+Microsoft CopilotアプリのChat画面の左上にある［Work IQ］ボタンです。以前の［作業］と［Web］のタブは、このボタンに置き換えられました。オフのときに何が変わるかは[Work IQの記事](/media/copilot-work-iq/)にまとめています。
 
 ### Copilotは自分に権限のない資料まで見ますか？
 
