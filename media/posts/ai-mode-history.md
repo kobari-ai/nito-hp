@@ -65,7 +65,7 @@ Google検索のAIモードで交わしたやり取りは、通常の検索履歴
 
 ## 消しても戻ってくるとき
 
-「何回消しても数時間後に戻ってくる」「すべてを削除を押すと、消した履歴が復活する」という相談は、Yahoo!知恵袋に閲覧1万件を超えるものもあります（[2026年4月18日の質問](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12327330242)・[3月12日の質問](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12326195267)）。相談のような戻り方は、手元では再現できていません。テスト用の会話とヘルプから考えられるのは、次の3つです。
+「何回消しても数時間後に戻ってくる」「すべてを削除を押すと、消した履歴が復活する」という相談は、Yahoo!知恵袋に閲覧1万件を超えるものもあります（[2026年4月18日の質問](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12327330242)・[3月12日の質問](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12326195267)）。相談のような戻り方は手元では再現できていません。テスト用の会話とヘルプから考えられるのは、次の3つです。
 
 ### 消した場所によって反映のされ方が違う
 
