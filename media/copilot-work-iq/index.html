@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Work IQとは？Copilotのオン・オフ・ライセンス・Work IQ APIの料金 | nito Column</title>
+    <meta name="description" content="Microsoft 365 CopilotのWork IQを公式ドキュメントから解説。使えるライセンス、Chat画面の左上のボタンでのオン・オフ、オフのときの答え方、Work IQ APIとCLIの従量課金、管理者が決めることまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/copilot-work-iq/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Work IQとは？Copilotのオン・オフ・ライセンス・Work IQ APIの料金">
+    <meta property="og:description" content="Microsoft 365 CopilotのWork IQを公式ドキュメントから解説。使えるライセンス、Chat画面の左上のボタンでのオン・オフ、オフのときの答え方、Work IQ APIとCLIの従量課金、管理者が決めることまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/copilot-work-iq/">
+    <meta property="og:site_name" content="nito Column">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/copilot-work-iq.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/copilot-work-iq.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Work IQとは？Copilotのオン・オフ・ライセンス・Work IQ APIの料金", "description": "Microsoft 365 CopilotのWork IQを公式ドキュメントから解説。使えるライセンス、Chat画面の左上のボタンでのオン・オフ、オフのときの答え方、Work IQ APIとCLIの従量課金、管理者が決めることまで。", "datePublished": "2026-10-03", "dateModified": "2026-10-03", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/copilot-work-iq/"}, "articleSection": "AI活用", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Work IQとは？Copilotのオン・オフ・ライセンス・Work IQ APIの料金"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Work IQとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Microsoft 365 Copilotとエージェントが仕事を理解するのを助けるインテリジェンス層です。メール、ファイル、チャット、会議、接続したアプリに散らばった情報を結び付け、答えに仕事の文脈を乗せます。"}}, {"@type": "Question", "name": "Work IQのオンとオフはどこで切り替えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Microsoft CopilotアプリのChat画面の左上にある［Work IQ］ボタンです。以前の［作業］と［Web］のタブは、このボタンに置き換えられました。"}}, {"@type": "Question", "name": "Work IQをオフにすると何が変わりますか？", "acceptedAnswer": {"@type": "Answer", "text": "メールやファイルなどの作業データを見ずに答えます。添付したもの、公開されているWebの情報、プロフィールと個人用設定は使います。"}}, {"@type": "Question", "name": "Work IQは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Microsoft Copilotのアドオン ライセンスを持つ人は、Copilot ChatやMicrosoft 365 Copilotの画面で使えます。Work IQ APIやCLI、自社のエージェントからの利用は、使った分だけの従量課金です。"}}, {"@type": "Question", "name": "Work IQのボタンが表示されません", "acceptedAnswer": {"@type": "Answer", "text": "サポート記事に書かれている条件は、Microsoft Copilotのアドオン ライセンスを持っていることです。ライセンスの割り当てを管理者に確かめてください。"}}, {"@type": "Question", "name": "Work IQで他人のファイルも見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "その人が見る権限を持つファイルだけを参照します。共有の範囲が広すぎると、他人のファイルも権限の範囲として見えます。Copilotは既存のMicrosoft 365のアクセス許可を守るので、見えるかどうかは共有の設定で決まります。"}}, {"@type": "Question", "name": "Work IQ CLIはいつから使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Microsoft Learnのドキュメントによると、2026年6月16日に一般提供になりました。プレビュー版を使っていた場合は、一般提供版への更新が必要です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=006130c2">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Work IQとは？…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.03</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Work IQとは？Copilotのオン・オフ・ライセンス・Work IQ APIの料金</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Work IQとは"><defs><linearGradient id="ecg-227d15f4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-227d15f4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Work IQとは</text><line x1="364.4" y1="327.1" x2="835.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">オン・オフ・ライセンス・APIの料金</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Work IQは、Microsoft 365 Copilotが社内のメールやファイル、会議、チャットを踏まえて答えるための仕組みです。Copilot Chatの画面では、左上の［Work IQ］ボタンとして目に入ります（日本語のサポート記事には「仕事 IQ」と訳されている箇所もあります）。以前あった［作業］と［Web］のタブは、このボタン1つに置き換えられました。</p>
+<p>同じWork IQという名前で、開発者向けのWork IQ APIやCLIもあり、こちらはライセンスとは別の従量課金です。この記事は2026年10月3日に取得したMicrosoftの公式ドキュメントをもとに、使えるライセンス、オンとオフの違い、APIの課金、導入する側が先に決めることを整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>Work IQは、メール・ファイル・チャット・会議などを結び付けて、Copilotの答えに<strong>仕事の文脈を乗せる層</strong></li>
+<li>使えるのは<strong>Microsoft Copilotのアドオン ライセンスを持つ人</strong>。持っていれば<strong>初期設定でオン</strong></li>
+<li>オン・オフは<strong>Microsoft CopilotアプリのChat画面の左上の［Work IQ］ボタン</strong>。以前の［作業］［Web］のタブはこれに置き換わった</li>
+<li>オフのときは、添付したもの・公開されているWebの情報・プロフィールと個人用設定だけで答える</li>
+<li><strong>Work IQ API・CLI・MCPはライセンスとは別の従量課金</strong>。CLIは2026年6月16日に一般提供になった</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Work IQは何をしているか</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>使える人とライセンス</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>オンとオフを切り替える</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>社内のデータの一部だけを止める</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>社内のデータはどう扱われるか</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Work IQ APIとCLIは別の従量課金</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>導入する側が先に決めること</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>AI検索での見え方は別の話</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Work IQは何をしているか</h2>
+<p>Microsoftのサポート記事「<a href="https://support.microsoft.com/ja-jp/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt">Copilot はプロンプトに応答するためにどのような情報を使用しますか?</a>」は、Work IQを、Copilotとエージェントが仕事を理解するのを助けるインテリジェンス層と説明しています。Microsoft 365やビジネスアプリに散らばった情報を、Copilotが使える文脈に変える役割です。</p>
+<p>Copilotが理解するのに役立つものとして、次の4つが挙がっています。</p>
+<ul>
+<li>一緒に仕事をしている人</li>
+<li>いま重要なこと</li>
+<li>仕事の進み具合</li>
+<li>そのタスクに関係する情報</li>
+</ul>
+<figure class="post-figure"><img src="/media/images/copilot-work-iq/01_fig_layers.png" alt="Work IQの3つの層の図。データはファイル・メール・会議・チャット・ビジネスアプリのシグナルをまとめる。メモリは利用者やチームの働き方を継続して理解する。推論はモデル・スキル・ツールをまとめてエージェントが動けるようにする" loading="lazy"><figcaption>Work IQはデータ・メモリ・推論の3層（Copilot Studioのドキュメントの説明）</figcaption></figure>
+
+<p>データ・メモリ・推論の3層は、開発者がエージェントにWork IQを組み込むときの<a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-work-iq">Copilot Studioのドキュメント</a>にある説明です。利用者が画面で意識するのは、次の節のオンとオフだけです。</p>
+<h2 id="s2">使える人とライセンス</h2>
+<p>Work IQを使えるのは、Microsoft Copilotのアドオン ライセンスを持つ人です。サポート記事にはこう書かれていて、ライセンスを持っていれば<strong>初期設定でオン</strong>になっています。</p>
+<p>開発者向けのMicrosoft Learnでは、課金の説明に「Microsoft 365 Copilot ライセンス」という名前が使われています。あとの節の課金の図もこちらの名前です。</p>
+<p>別のサポート記事「<a href="https://support.microsoft.com/ja-jp/Microsoft-365-Copilot/control-review-sources-copilot-chat">Microsoft Copilot Chatの回答のソースを制御および確認する</a>」にも、作業データにアクセスできるのはMicrosoft Copilotのサブスクリプションを持つユーザーだけ、とあります。ライセンスが無い人のCopilot Chatは、Webの情報と自分で添付したものを中心に答える形です。</p>
+<p>ライセンスの3つの段（Copilot Chat、Microsoft 365 Copilotの基本、アドオンを足したプレミアム）の違いは、<a href="/media/copilot-guide/">Copilotの使い方の記事</a>にまとめています。</p>
+<h2 id="s3">オンとオフを切り替える</h2>
+<p>切り替えるボタンの場所は<strong>Microsoft CopilotアプリのChat画面の左上</strong>です。以前の［作業］タブと［Web］タブはこのボタンに置き換えられた、とサポート記事に書かれています。作業とWebを行き来する代わりに、作業データを見せるかどうかを1つのボタンで決める形になりました。</p>
+<figure class="post-figure"><img src="/media/images/copilot-work-iq/02_help_toggle.jpg" alt="Microsoftのサポート記事の注。Copilotの個別の作業タブとWebタブは仕事 IQ（Work IQ）ボタンに置き換えられ、1つのオンオフのコントロールで作業データを参照できるかどうかを決められるようになったと書かれている。続く節にはCopilotは既存のアクセス許可を尊重し、会社のデータでパブリックモデルをトレーニングしないとある" loading="lazy"><figcaption>サポート記事「Copilot はプロンプトに応答するためにどのような情報を使用しますか?」の注</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Work IQ オン</th>
+<th>Work IQ オフ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>作業データ（メール・ファイル・チャット・会議・人・プロジェクト）</td>
+<td>参照する</td>
+<td>参照しない</td>
+</tr>
+<tr>
+<td>添付したファイルや画像</td>
+<td>参照する</td>
+<td>参照する</td>
+</tr>
+<tr>
+<td>公開されているWebの情報</td>
+<td>参照する</td>
+<td>参照する</td>
+</tr>
+<tr>
+<td>プロフィールと個人用設定</td>
+<td>記載なし</td>
+<td>参照する</td>
+</tr>
+<tr>
+<td>向いている場面</td>
+<td>仕事の文脈を踏まえた答えが欲しい</td>
+<td>一般的な答えが欲しい、組織の外の作業</td>
+</tr>
+</tbody>
+</table>
+<p>オフにしても、Copilotは答えを返します。ただし社内の状況を知らない前提の答えになるので、<strong>思ったより一般論しか返ってこないときは、まずこのボタンを見てください</strong>。タスクに合わせて、いつでも切り替えられます。</p>
+<h3 id="s3-1">社内のデータの一部だけを止める</h3>
+<p>Work IQをオンにしたまま、特定のデータだけを使わせないこともできます。メッセージの入力欄の［+］から［ソースの追加と管理］を開き、下の［データ ソースの変更］で、ソースごとのトグルを切り替えます。サポート記事が例に挙げているのは、Viva Engageだけをオフにする使い方です。</p>
+<p>同じメニューの上の［すべて無効にする］を押すと、Web検索以外のデータソースがまとめてオフになります。</p>
+<h2 id="s4">社内のデータはどう扱われるか</h2>
+<p>Work IQがオンでも、Copilotが見に行けるのは、その人がもともと見る権限を持っている作業データだけです。サポート記事は次の3点を挙げています。</p>
+<ul>
+<li>Copilotは既存のMicrosoft 365のアクセス許可を守る</li>
+<li>会社のデータで公開モデルを学習させない。組織の外でモデルを学習させるためにプロンプトを保持しない</li>
+<li>コンテンツの過剰に共有されたコピーを別に作らない</li>
+</ul>
+<p>逆に言えば、<strong>共有の設定が広すぎるファイルは、Work IQ経由でも見えてしまいます</strong>。権限の範囲で見えるものが答えに入るからです。導入前に共有の範囲を見直す話は、<a href="/media/copilot-guide/">Copilotの使い方の記事の「管理側で先に整えるもの」</a>に書いています。</p>
+<h2 id="s5">Work IQ APIとCLIは別の従量課金</h2>
+<p>開発者向けの<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/">Work IQ の概要</a>（Microsoft Learn）によると、Work IQには、自社のアプリやエージェントから呼び出すための入口が3種類あります。エージェント同士で仕事を渡すA2A、AIアシスタントからツールとして呼ぶMCPサーバー、アプリから呼ぶREST APIです。</p>
+<figure class="post-figure"><img src="/media/images/copilot-work-iq/03_fig_billing.png" alt="Work IQの課金の図。Microsoft 365 Copilotのライセンスを持つ人は、Microsoft 365 Copilotの画面とエージェントでWork IQを使える。自社やほかの会社が作ったエージェントから使う場合と、ライセンスを持たない人は使った分の従量課金。Work IQ API・CLI・MCPはライセンスとは別の従量課金" loading="lazy"><figcaption>ライセンスに含まれる範囲と、従量課金になる範囲</figcaption></figure>
+
+<p>課金はライセンスと分かれていて、コストはMicrosoft 365 管理センターで管理します。</p>
+<figure class="post-figure"><img src="/media/images/copilot-work-iq/04_learn_billing.jpg" alt="Microsoft LearnのWork IQの概要のアクセスと価格の節。Work IQ APIアクセスはMicrosoft 365 Copilotライセンスとは無関係で使用量ベースの課金、ライセンスを持つユーザーはすべてのMicrosoft 365 CopilotエクスペリエンスとエージェントでWork IQを利用でき、カスタムとサードパーティのエージェントは使用量ベースの課金、ライセンスの無いユーザーは使用量に基づいて課金、コストはMicrosoft 365管理センターで管理と書かれている" loading="lazy"><figcaption>Microsoft Learn「Work IQ の概要」のアクセスと価格</figcaption></figure>
+
+<p>コマンドラインから使う<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-cli">Microsoft Work IQ CLI</a>は、<strong>2026年6月16日に一般提供</strong>になりました。使う条件はNode.js、Azureのサブスクリプションを割り当てたCopilot Studioの従量課金プラン、そのプランへの利用者の割り当て、テナントの管理者の同意の4つです。CLIのままターミナルで質問する使い方と、GitHub CopilotなどのAIアシスタントにMCPサーバーとしてつなぐ使い方があります。</p>
+<h2 id="s6">導入する側が先に決めること</h2>
+<p>情報システムの担当者が決めることは、ドキュメントから拾うと次の4つです。</p>
+<ol>
+<li><strong>誰にアドオン ライセンスを割り当てるか</strong>。Copilot ChatのWork IQは、ライセンスを持つ人に初期設定でオンになる</li>
+<li><strong>従量課金を使わせるか</strong>。Work IQ APIの課金は、Microsoft 365 管理センターで管理する</li>
+<li><strong>CLIとMCPを許可するか</strong>。組織のデータに触れるにはテナント管理者の同意が要る</li>
+<li><strong>書き込みを許可するか</strong>。Copilot StudioのWork IQ（プレビュー）は、管理者が管理センターで書き込みを明示的にオンにしない限り読み取り専用で、利用には別の支出ポリシーを作る必要がある</li>
+</ol>
+<p>4つ目はプレビューの機能についての記述で、管理センターでツールやMCPサーバーを許可・拒否する機能は、地域によってはまだ使えない場合がある、ともドキュメントに書かれています。</p>
+<h2 id="s7">AI検索での見え方は別の話</h2>
+<p>Work IQは社内のデータを答えに乗せる仕組みで、Copilotが社外の質問に答えるときに自社をどう紹介するかとは別の話です。そちらは<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Work IQとは何ですか？</h3>
+<p>Microsoft 365 Copilotとエージェントが仕事を理解するのを助けるインテリジェンス層です。メール、ファイル、チャット、会議、接続したアプリに散らばった情報を結び付け、答えに仕事の文脈を乗せます。</p>
+<h3 id="s8-2">Work IQのオンとオフはどこで切り替えますか？</h3>
+<p>Microsoft CopilotアプリのChat画面の左上にある［Work IQ］ボタンです。以前の［作業］と［Web］のタブは、このボタンに置き換えられました。</p>
+<h3 id="s8-3">Work IQをオフにすると何が変わりますか？</h3>
+<p>メールやファイルなどの作業データを見ずに答えます。添付したもの、公開されているWebの情報、プロフィールと個人用設定は使います。</p>
+<h3 id="s8-4">Work IQは無料で使えますか？</h3>
+<p>Microsoft Copilotのアドオン ライセンスを持つ人は、Copilot ChatやMicrosoft 365 Copilotの画面で使えます。Work IQ APIやCLI、自社のエージェントからの利用は、使った分だけの従量課金です。</p>
+<h3 id="s8-5">Work IQのボタンが表示されません</h3>
+<p>サポート記事に書かれている条件は、Microsoft Copilotのアドオン ライセンスを持っていることです。ライセンスの割り当てを管理者に確かめてください。</p>
+<h3 id="s8-6">Work IQで他人のファイルも見られますか？</h3>
+<p>その人が見る権限を持つファイルだけを参照します。共有の範囲が広すぎると、他人のファイルも権限の範囲として見えます。Copilotは既存のMicrosoft 365のアクセス許可を守るので、見えるかどうかは共有の設定で決まります。</p>
+<h3 id="s8-7">Work IQ CLIはいつから使えますか？</h3>
+<p>Microsoft Learnのドキュメントによると、2026年6月16日に一般提供になりました。プレビュー版を使っていた場合は、一般提供版への更新が必要です。</p>
+<h2 id="s9">出典</h2>
+<p>本文の内容は2026年10月3日に取得した次のページで確認しています。</p>
+<ul>
+<li><a href="https://support.microsoft.com/ja-jp/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt">Copilot はプロンプトに応答するためにどのような情報を使用しますか?</a>（Microsoft サポート。Work IQとは、使えるライセンス、オンとオフ、作業・Webのタブの置き換え、アクセス許可）</li>
+<li><a href="https://support.microsoft.com/ja-jp/Microsoft-365-Copilot/control-review-sources-copilot-chat">Microsoft Copilot Chatの回答のソースを制御および確認する</a>（Microsoft サポート。データソースの変更、すべて無効にする）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/">Work IQ の概要</a>（Microsoft Learn。A2A・MCP・REST、ライセンスと従量課金）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-cli">Microsoft Work IQ CLI</a>（Microsoft Learn。一般提供の日付、使う条件）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-work-iq">Microsoft Copilot Studio での Work IQ（プレビュー）</a>（Microsoft Learn。3つの層、読み取り専用、支出ポリシー）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/overview">Microsoft Copilot 従量課金制サービスの概要</a>（Microsoft Learn。Work IQ APIの課金を管理センターで管理）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chrome-gemini-remove/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chromeの「Geminiに相談」を消す"><defs><linearGradient id="ecg-c02c548c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-c02c548c)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Chromeの「Gemin</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">iに相談」を消す</text><line x1="273.2" y1="416.8" x2="926.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.03</div>
+                <div class="rel-card__ttl">【2026年10月】Chromeの「Geminiに相談」を消す方法｜ボタン・メニューバー・ショートカット・表示されないとき</div>
+            </a>
+            <a href="/media/copilot-remove/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilotを消す"><defs><linearGradient id="ecg-80004ae3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-80004ae3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilotを消す</text><line x1="326.4" y1="365.9" x2="873.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.03</div>
+                <div class="rel-card__ttl">【2026年10月】Copilotを消す方法｜Windows・Word・Excel・Edge・Copilotキー・会社のPC</div>
+            </a>
+            <a href="/media/chatgpt-file-upload-limit/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのファイルアップロード上限"><defs><linearGradient id="ecg-276a5d45" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-276a5d45)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="125.2" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのファイル</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">アップロード上限</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.02</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTのファイルアップロード上限を解説｜容量・回数・上限に達しました</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
