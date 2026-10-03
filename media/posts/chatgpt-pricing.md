@@ -110,7 +110,7 @@ Proで増えるのは利用枠で、公式の説明では**Plusの5倍**です�
 
 <figure class="post-figure"><img src="/media/images/chatgpt-pricing/02_fig_business_1004.png" alt="ChatGPT Businessの料金図。標準シートは年額課金で1人あたり月3,050円、月額課金なら3,850円。プレミアムシートは年額課金で15,250円から、月額課金なら125ドルで5時間ごとの利用上限なし。Enterpriseは金額非公開で問い合わせ" loading="lazy"><figcaption>Businessの2種類のシートとEnterprise</figcaption></figure>
 
-Enterpriseの金額は公開されておらず、営業への問い合わせになります。SAML SSOはBusinessにもあり、Enterpriseには管理コンソール、SCIM、ロールベースのアクセス制御、日本を含むデータレジデンシーといった管理機能はここに集まっています。非営利団体はBusinessとEnterpriseを最大75%の割引で契約できます。
+Enterpriseの金額は公開されておらず、営業への問い合わせになります。SAML SSOはBusinessにもあり、EnterpriseにはSCIM、ロールベースのアクセス制御、日本を含むデータレジデンシーといった管理機能はここに集まっています。非営利団体はBusinessとEnterpriseを最大75%の割引で契約できます。
 
 ## どのプランを選ぶか
 
