@@ -17,7 +17,7 @@ ChatGPTの料金は、公式の日本語ページに**円の金額がそのま�
 - **GPT-6 Astraが使えるのはPlus以上**。Plusは「上限あり」、Proは「拡張」。無料版とGoでは使えない
 - **Goには広告が表示される場合がある**と料金ページに明記されている
 - Proには$100と$200（Pro 20X）の2つがあり、**$200は2026年9月10日から新規登録とアップグレードを停止**している
-- 会社で使うBusinessは**標準シート3,050円・プレミアムシート15,250円**（いずれも年額課金時、1人あたり月額）
+- 会社で使うBusinessは**標準シート3,050円・プレミアムシート15,250円から**（いずれも年額課金時、1人あたり月額）
 :::
 
 ## 個人向け4プランの金額
@@ -102,15 +102,15 @@ Proで増えるのは利用枠で、公式の説明では**Plusの5倍**です�
 | シート | 年額課金の場合 | 月額課金の場合 | 中身 |
 |---|---|---|---|
 | 標準シート | 3,050円 | 3,850円 | 日常業務向け |
-| プレミアムシート | 15,250円 | 19,250円 | 標準の5倍の利用枠。5時間ごとの利用上限なし |
+| プレミアムシート | 15,250円から（$100） | $125 | 標準の5倍の利用枠。5時間ごとの利用上限なし |
 
-<figure class="post-figure"><img src="/media/images/chatgpt-pricing/cp_03_business.jpg" alt="ChatGPT公式料金ページのビジネス向けタブ。Businessの標準シートが￥3,050、プレミアムシートが￥15,250、Enterpriseはカスタム価格設定で営業への問い合わせと表示されている" loading="lazy"><figcaption>ビジネス向けタブの表示</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/chatgpt-pricing/cp_03_business.jpg" alt="ChatGPT公式料金ページのビジネス向けタブ。Businessの標準シートが￥3,050、プレミアムシートが￥15,250、Enterpriseはカスタム価格設定で営業への問い合わせと表示されている" loading="lazy"><figcaption>ビジネス向けタブの表示（2026年9月22日）。10月4日にはプレミアムシートの円の表示はタブから外れ、OpenAIのビジネス向け料金ページに15,250円からと出ている</figcaption></figure>
 
 金額はどちらも1人あたりの月額で、企業向けのプランは2ユーザーから契約できます。
 
-<figure class="post-figure"><img src="/media/images/chatgpt-pricing/02_fig_business.png" alt="ChatGPT Businessの料金図。標準シートは年額課金で1人あたり月3,050円、月額課金なら3,850円。プレミアムシートは年額課金で15,250円、月額課金なら19,250円で5時間ごとの利用上限なし。Enterpriseは金額非公開で問い合わせ" loading="lazy"><figcaption>Businessの2種類のシートとEnterprise</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/chatgpt-pricing/02_fig_business_1004.png" alt="ChatGPT Businessの料金図。標準シートは年額課金で1人あたり月3,050円、月額課金なら3,850円。プレミアムシートは年額課金で15,250円から、月額課金なら125ドルで5時間ごとの利用上限なし。Enterpriseは金額非公開で問い合わせ" loading="lazy"><figcaption>Businessの2種類のシートとEnterprise</figcaption></figure>
 
-Enterpriseの金額は公開されておらず、営業への問い合わせになります。SAML SSO、管理コンソール、SCIM、ロールベースのアクセス制御、日本を含むデータレジデンシーといった管理機能はここに集まっています。非営利団体はBusinessとEnterpriseを最大75%の割引で契約できます。
+Enterpriseの金額は公開されておらず、営業への問い合わせになります。SAML SSOはBusinessにもあり、Enterpriseには管理コンソール、SCIM、ロールベースのアクセス制御、日本を含むデータレジデンシーといった管理機能はここに集まっています。非営利団体はBusinessとEnterpriseを最大75%の割引で契約できます。
 
 ## どのプランを選ぶか
 
@@ -160,7 +160,7 @@ ChatGPTを自分で使うことと、自社がChatGPTの回答に登場するこ
 
 ### 会社で使うプランはどれですか？
 
-2ユーザー以上ならBusinessです。標準シートが1人あたり月3,050円（年額課金）、利用枠の大きいプレミアムシートが15,250円（年額課金）です。SSOや管理コンソールを含む全社導入はEnterpriseで、金額は問い合わせになります。
+2ユーザー以上ならBusinessです。標準シートが1人あたり月3,050円（年額課金）、利用枠の大きいプレミアムシートが15,250円から（年額課金）です。料金と Plus との違いは[ChatGPT Businessとは](/media/chatgpt-business/)にまとめました。SSOや管理コンソールを含む全社導入はEnterpriseで、金額は問い合わせになります。
 
 ### API料金とChatGPTの月額は別ですか？
 
