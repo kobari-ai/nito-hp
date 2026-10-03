@@ -123,7 +123,7 @@ AIによる概要の要約が出るのは、Gmail、Chat、Meet のスマート�
 
 ### GmailのGeminiは無料で使えますか？
 
-スレッドの要約（AIによる概要）は、ヘルプでは仕事用・学校用・個人のアカウントを問わず世界中のGmail利用者が対象で、対応言語に日本語も入っています。右上の「Gemini に相談」のパネルは、対象のGoogle WorkspaceかGoogle AIのプラン（Plus・Pro・Ultra）が条件です。米国に住む個人のアカウントには文書作成サポートや返信の候補も無料で提供されている、とGmailヘルプにあります。
+スレッドの要約（AIによる概要）は、ヘルプでは仕事用・学校用・個人のアカウントを問わず世界中のGmail利用者が対象で、[対応言語](https://support.google.com/mail/answer/14925782?hl=ja)に日本語も入っています。右上の「Gemini に相談」のパネルは、対象のGoogle WorkspaceかGoogle AIのプラン（Plus・Pro・Ultra）が条件です。米国に住む個人のアカウントには文書作成サポートや返信の候補も無料で提供されている、とGmailヘルプにあります。
 
 ### パソコンでオフにするとスマホでも止まりますか？
 
@@ -144,4 +144,5 @@ AIによる概要の要約が出るのは、Gmail、Chat、Meet のスマート�
 - Gmail ヘルプ「[Gemini in Gmail を活用する](https://support.google.com/mail/answer/14355636?hl=ja)」（同）
 - Gmail ヘルプ「[Google Workspace with Gemini を使ってみる](https://support.google.com/mail/answer/13952129?hl=ja)」（同）
 - Gmail ヘルプ「[Gemini in Workspace の会話の履歴を確認、管理する](https://support.google.com/mail/answer/16880047?hl=ja)」（同）
+- Gmail ヘルプ「[Google Workspace with Gemini の対応言語](https://support.google.com/mail/answer/14925782?hl=ja)」（同）
 - 設定の画面は、2026年10月4日にパソコンのGmailで撮影（スイッチは切り替えずに閉じた）
