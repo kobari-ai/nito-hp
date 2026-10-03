@@ -57,7 +57,7 @@ Gmailの中でGeminiが関わる場所は、ヘルプの説明を合わせると
 
 ## スマホのアプリでオフにする
 
-スマホのGmailアプリからも変えられます。手順はヘルプのAndroid版とiPhone版の説明で、アプリの画面は撮っていません。
+スマホのGmailアプリからも変えられます。手順はヘルプのAndroid版とiPhone版の説明で、iPhoneは実際の画面も載せています。
 
 | 端末 | 開く順番 |
 |---|---|
@@ -65,6 +65,10 @@ Gmailの中でGeminiが関わる場所は、ヘルプの説明を合わせると
 | iPhone・iPad | 左上のメニューから［設定］を開き、［全般］の［データのプライバシー］から［Google Workspace のスマート機能］に進む。スイッチをオフにして右上の［完了］を押す |
 
 Androidはアカウントごとに設定を開くので、複数のアカウントを入れているなら、Geminiを止めたいアカウントを選んでから切り替えます。
+
+<figure class="post-figure post-figure--sp"><img src="/media/images/gmail-gemini-off/ggo_03_sp_privacy.jpg" alt="iPhoneのGmailアプリの設定のデータのプライバシーの画面。Google利用状況ID、スマート機能のスイッチ、Google Workspaceのスマート機能、検索履歴を消去が並び、1のGoogle Workspaceのスマート機能が赤枠で囲まれている" loading="lazy"><figcaption>iPhoneの［データのプライバシー］（2026年10月4日、ダークモードの画面）。1を押す</figcaption></figure>
+
+<figure class="post-figure post-figure--sp"><img src="/media/images/gmail-gemini-off/ggo_04_sp_switch.jpg" alt="iPhoneのGmailアプリのGoogle Workspaceのスマート機能の画面。説明文の右に2のスイッチ、右上に3の完了があり、どちらも赤枠で囲まれている。説明の下にGmailからの予定をカレンダーに表示、パーソナライズされた検索、コンテンツの要約や下書きの作成などをGeminiに依頼できる、の3つが並ぶ" loading="lazy"><figcaption>開いた画面（2026年10月4日、iPhone）。2をオフにして3を押す</figcaption></figure>
 
 ## 2つのスマート機能の違い
 
