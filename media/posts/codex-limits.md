@@ -15,14 +15,17 @@ OpenAIのCodexは、無料版とGoを含むChatGPTのすべてのプランで使
 :::takeaways
 - Codexの枠はChatGPT Workと共有。プランによっては5時間枠と週間枠の両方があり、**その場合は両方に残りがないと続けられない**
 - 残りとリセットの時刻は、デスクトップアプリ・CLI・ウェブの［設定］→［使用状況］で見られる。CLIの作業中なら **/status** でも確認できる
-- 5時間で送れる量はPlusで**GPT-5.6 Solなら10〜100、GPT-6 Astraなら5〜45**のローカルメッセージが目安。モデルを切り替えても残りは戻らない
+- 5時間枠があるのはPlusとBusiness Standard。**Pro 100・Pro 200・Pro 500とBusiness Premiumには今は5時間枠がなく、週の枠だけ**
+- 5時間で送れる量はPlusで**GPT-6 Astraなら5〜45、GPT-6 Lunaなら350〜3,000**のローカルメッセージが目安。モデルを切り替えても残りは戻らない
 - 保存済みリセットは配られた人だけが使える特典で、1つにつき1回使える。**使うと週のリセット日が変わる**。期限を過ぎると復元されない
-- 即時リセットはPlusとProの個人アカウントが買える。**枠が増えるのではなく次の週の枠を前倒しで使う仕組み**で、サポートに頼んでも上限は戻らない
+- 即時リセットはPlusとProの個人アカウントがChatGPTのウェブ版とCodexのデスクトップアプリで買える。**枠が増えるのではなく次の週の枠を前倒しで使う仕組み**で、サポートに頼んでも上限は戻らない
 :::
 
 ## 5時間枠と週間枠
 
 Codexの使える量はChatGPT Workと1つの枠を共有しています。OpenAIのヘルプ「[Work と Codex での GPT-6 Astra の利用量管理](https://help.openai.com/ja-jp/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex)」によると、WorkとCodexはPlusとPro、Business のStandardとPremiumのシートに含まれ、**プランによっては5時間枠と週間枠の両方が適用されます。両方が適用される場合、続けて使うには両方に残りが必要です。**
+
+5時間枠が残っているのはPlusとBusiness Standardです。同じヘルプによると、Pro 100・Pro 200・Pro 500には今はWorkとCodexの5時間ごとの上限がありません。「[ChatGPT Business のモデルと制限](https://help.openai.com/ja-jp/articles/12003714-chatgpt-business-models-and-limits)」には、Business Premiumにも5時間の上限がないと書かれています。どちらもプランに含まれる週の枠は残ります。
 
 <figure class="post-figure"><img src="/media/images/codex-limits/01_fig_windows.png" alt="Codexの5時間枠と週間枠の図。5時間枠は5時間ごとに使える量で、前の枠が終わったあとWorkかCodexで最初のメッセージを送った時点から次の枠が始まり、週間枠が残っていても5時間が経つ前に使い切ることがある。週間枠は1週間に使える量で、残りとリセットの時刻は設定の使用状況に出る。両方が適用されるプランではどちらかが尽きると止まり、WorkとCodexで同じ枠を使い、モデルを切り替えても残りは戻らない" loading="lazy"><figcaption>Codexの5時間枠と週間枠</figcaption></figure>
 
@@ -32,18 +35,16 @@ ChatGPT Workで長い調査をした日は、同じ枠からCodexの分も減っ
 
 ### 5時間で送れる量の目安
 
-同じヘルプには5時間あたりに送れるローカルメッセージの数の目安が、モデルとプランごとに載っています。**固定された上限ではなく、タスク・モデル・設定によって変わり、週間枠が先に尽きることもある**と断ったうえでの幅です。
+同じヘルプにはPlusとBusiness Standardで5時間あたりに送れるローカルメッセージの数の目安がモデルごとに載っています。**目安であって保証ではなく、タスク・モデル・設定によって変わり、週間枠もかかる**と断ったうえでの幅です。
 
-<figure class="post-figure"><img src="/media/images/codex-limits/02_help_table.jpg" alt="OpenAIのヘルプの5時間あたりのローカルメッセージ数の目安の表。Plusの列はGPT-6 Astraが5〜45、GPT-5.6 Solが10〜100、GPT-5.6 Terraが25〜200、GPT-5.6 Lunaが250〜2,000、GPT-5.5が15〜80、GPT-5.4が20〜100、GPT-5.4 miniが60〜350。Pro 5xはその5倍、Pro 20xは20倍の幅で、Standard BusinessはPlusと同じ幅、APIキーは従量課金" loading="lazy"><figcaption>5時間あたりのローカルメッセージ数の目安（OpenAIのヘルプ、2026年10月1日取得）</figcaption></figure>
+| モデル | Plus | Business Standard |
+|---|---|---|
+| GPT-6 Astra | 5〜45 | 5〜45 |
+| GPT-6.1 Sol | 15〜160 | 15〜160 |
+| GPT-6 Sol | 15〜150 | 15〜150 |
+| GPT-6 Luna | 350〜3,000 | 350〜3,000 |
 
-| モデル | Plus | Pro 5x | Pro 20x |
-|---|---|---|---|
-| GPT-6 Astra | 5〜45 | 25〜225 | 100〜900 |
-| GPT-5.6 Sol | 10〜100 | 50〜500 | 200〜2,000 |
-| GPT-5.6 Terra | 25〜200 | 125〜1,000 | 500〜4,000 |
-| GPT-5.6 Luna | 250〜2,000 | 1,250〜10,000 | 5,000〜40,000 |
-
-Plusで比べると、**GPT-6 AstraはGPT-5.6 Lunaの50分の1ほどの量で5時間枠が尽きる計算です。**Pro 5xはPlusの5倍、Pro 20xは20倍の幅になっていて、Business のStandardのシートはPlusと同じ幅です。APIキーで使う場合は従量課金で、この枠の外です。
+Plusで比べると、**GPT-6 AstraはGPT-6 Lunaの数十分の1の量で5時間枠が尽きる計算です。**クラウドのタスクはローカルより多く枠を使うことがあります。Proの3プランとBusiness Premiumは5時間枠がないため、この表の対象外です。APIキーで使う場合は従量課金で、この枠の外です。
 
 ## 残りとリセット時刻の確認方法
 
@@ -84,13 +85,13 @@ OpenAIは2026年9月3日と4日、GPT-6 Astraの提供に合わせて、条件�
 
 ### 即時リセットの購入
 
-PlusとProの個人アカウントでは、お金を払って枠をすぐに戻せます。ヘルプ「[Paid weekly Work and Codex rate limit resets](https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets)」（英語版のみ）によると、無料版・Go・Business・Enterprise・Eduでは買えません。
+PlusとProの個人アカウントでは、お金を払って枠をすぐに戻せます。ヘルプ「[Work と Codex の週間レート制限の有料リセット](https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets)」によると、買えるのはChatGPTのウェブ版とCodexのデスクトップアプリで、無料版・Go・Business・Enterprise・Eduでは買えません。
 
-<figure class="post-figure"><img src="/media/images/codex-limits/05_help_paid.jpg" alt="OpenAIのヘルプのPaid weekly Work and Codex rate limit resetsのOverviewとAvailabilityの節。PlusとProの利用者はデスクトップ版の使用状況の設定か、週の上限に達したあとのアプリ内の案内から即時リセットを買え、5時間と週間の両方の枠がすぐ戻る。週の枠を前倒しで使う仕組みで別の枠が足されるわけではない。新しい週の期間はリセット後のWorkかCodexでの最初の依頼から始まり、次の自動リセットはその7日後。購入できるのはPlusとProの個人アカウントで、Free・Go・Business・Enterprise・Eduでは使えない" loading="lazy"><figcaption>即時リセットの購入を説明したヘルプ（英語版のみ、2026年10月1日取得）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/codex-limits/05_help_paid.jpg" alt="OpenAIのヘルプのPaid weekly Work and Codex rate limit resetsのOverviewとAvailabilityの節。PlusとProの利用者はデスクトップ版の使用状況の設定か、週の上限に達したあとのアプリ内の案内から即時リセットを買え、5時間と週間の両方の枠がすぐ戻る。週の枠を前倒しで使う仕組みで別の枠が足されるわけではない。新しい週の期間はリセット後のWorkかCodexでの最初の依頼から始まり、次の自動リセットはその7日後。購入できるのはPlusとProの個人アカウントで、場所はChatGPTのウェブ版とCodexのデスクトップアプリ。Free・Go・Business・Enterprise・Eduでは使えない" loading="lazy"><figcaption>即時リセットの購入を説明したヘルプ（英語版、2026年10月1日取得）</figcaption></figure>
 
 **買っても枠が増えるわけではなく、次の週の分を前倒しで使うことになります。**週の自動リセットが2日後に来る日に買うと、その2日分の待ちを消すためにお金を払い、次のリセットはさらに7日先に延びます。残りの枠があっても買った瞬間に適用されるため、使い切ってから買うほうが損はありません。
 
-買う場所はデスクトップ版の［使用状況］の使用量のメーターの横に出る「Buy an instant reset」と、週間枠を使い切ったときにアプリ内に出る案内の2つです。5時間枠だけを使い切ったときはアプリ内の案内は出ませんが、デスクトップ版の設定からは買えることがあります。返金は原則として受け付けていないため、残りの枠を使い切ってから買うかどうかを決めます。価格は購入画面に表示され、買えるかどうかはアカウントや請求先の国で変わります。
+ヘルプが手順を載せているのは、デスクトップアプリの［使用状況］の使用量のメーターの横に出る［即時リセットを購入］と、週間枠を使い切ったときにアプリ内に出る案内の2つです。5時間枠だけを使い切ったときはアプリ内の案内は出ませんが、デスクトップ版の設定からは買えることがあります。返金は原則として受け付けていないため、残りの枠を使い切ってから買うかどうかを決めます。価格は購入画面に表示され、買えるかどうかはアカウントや請求先の国で変わります。
 
 ### クレジット
 
@@ -119,7 +120,7 @@ PlusとProの個人アカウントでは、お金を払って枠をすぐに戻�
 
 ### Codexの5時間制限はいつリセットされますか？
 
-前の5時間枠が終わったあと、WorkかCodexで最初のメッセージを送った時点から次の5時間が始まります。決まった時刻ではないため、正確な時刻は［設定］→［使用状況］の表示が頼りです。
+前の5時間枠が終わったあと、WorkかCodexで最初のメッセージを送った時点から次の5時間が始まります。決まった時刻ではないため、正確な時刻は［設定］→［使用状況］の表示が頼りです。Pro 100・Pro 200・Pro 500とBusiness Premiumには、今は5時間ごとの上限がありません。
 
 ### Codexの使用量はどこで確認できますか？
 
@@ -151,8 +152,10 @@ PlusとProの個人アカウントでは、お金を払って枠をすぐに戻�
 
 ## 出典
 
-- OpenAI Help Center「[Work と Codex での GPT-6 Astra の利用量管理](https://help.openai.com/ja-jp/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex)」（2026年10月1日取得）
+- OpenAI Help Center「[Work と Codex での GPT-6 Astra の利用量管理](https://help.openai.com/ja-jp/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex)」（2026年10月5日取得）
+- OpenAI Help Center「[ChatGPT Business のモデルと制限](https://help.openai.com/ja-jp/articles/12003714-chatgpt-business-models-and-limits)」（同）
+- OpenAI Help Center「[ChatGPT Pro の各プランについて](https://help.openai.com/ja-jp/articles/9793128-about-chatgpt-pro-tiers)」（同）
 - OpenAI Help Center「[保存済み Codex リセットの仕組み](https://help.openai.com/ja-jp/articles/20001498-how-banked-codex-resets-work)」（同）
-- OpenAI Help Center「[Paid weekly Work and Codex rate limit resets](https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets)」（同）
+- OpenAI Help Center「[Work と Codex の週間レート制限の有料リセット](https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets)」（同）
 - OpenAI Help Center「[Using Codex with your ChatGPT plan](https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan)」（同）
 - yamadatt「[Codexに使用量リセット権が1回分もらえた。5時間制限が消えた今、週次リミットの保険になる](https://zenn.dev/yamadatt/articles/20260823-codex-banked-reset)」Zenn（2026年8月23日）
