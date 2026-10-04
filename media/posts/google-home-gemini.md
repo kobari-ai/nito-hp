@@ -22,7 +22,7 @@ Google HomeやGoogle Nestのスピーカーとディスプレイで使える新�
 
 ## Gemini for Homeとは
 
-これまでのGoogle Nestのスピーカーは「電気をつけて」のような決まった言い方で動かすのが基本でした。Japan BlogによればGeminiは会話の流れを覚えるので、例外を含む指示（「書斎以外の電気を全部消して」）や曲名を思い出せない音楽の注文にも応えられると説明しています。
+これまでのGoogle Nestのスピーカーは「電気をつけて」のような決まった言い方で動かすのが基本でした。Japan Blogは会話の流れを理解することに加えて、例外を含む指示（「書斎以外の電気を全部消して」）や、曲名が思い出せない音楽の注文にも応えられると説明しています。
 
 <figure class="post-figure"><img src="/media/images/google-home-gemini/01_fig_overview.jpg" alt="Gemini for Homeの概要の図。左の家にはスピーカーとディスプレイがありGoogleアシスタントと書かれている。右へ太い矢印が伸び、矢印の上に家ごとに切り替え、下に戻せないの札がある。右の家にはGemini for Homeと書かれ、下に基本機能は無料の札がある" loading="lazy"><figcaption>切り替えは家の単位で一方通行。基本の機能は追加の費用なしで使える</figcaption></figure>
 
@@ -94,7 +94,7 @@ Googleは、正式に全員へ配る日を公表していません。スピー�
 
 ### バナーが出ないときの確認
 
-案内が来ないときに確かめる点を、ヘルプは5つ挙げています。いちばん見落としやすいのは、仕事用のアカウントで家に入っている場合です。
+案内が来ないときに確かめる点を、ヘルプは5つ挙げています。とくに気づきにくいのは仕事用のアカウントで家に入っている場合です。
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/google-home-gemini/08_help_trouble.jpg" alt="ヘルプのGemini for Home 音声アシスタントへのアクセスに関するトラブルシューティング。アップグレードが完了していない場合に確認する点として、赤い枠の中にWorkspace アカウントではなく個人のGmail アカウントで家にアクセスしていること、これらのアカウントは現在サポートされていないことが書かれている。続けて早期アクセスに登録している、音声アシスタントの言語が利用可能な言語、お住まいの国で早期アクセスが開始された、アプリが最新でGoogle Home アプリはバージョン 4.1 以上、スピーカーはCast ファームウェア 3.76 以降が並ぶ" loading="lazy"><figcaption>仕事用のアカウントで家に入っていると切り替えられない（Google Home and Nest ヘルプ）</figcaption></figure>
 
@@ -108,7 +108,7 @@ Googleは、正式に全員へ配る日を公表していません。スピー�
 
 ### 切り替わったかを確かめる
 
-切り替えが済んだかどうかは、スピーカーに名前を聞くと分かります。Gemini for Homeなら、言語学習モデルであると答えます。
+切り替えが済んだかどうかは、スピーカーに名前を聞くと分かります。Gemini for Homeなら、AIの言語モデルだと答えます。
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/google-home-gemini/09_help_check.jpg" alt="ヘルプのアップグレード フローを完了している場合の確認手順。音声アシスタントに名前を尋ねると言語学習モデルであることが表示されると書かれ、赤い枠の中に、設定にGoogle アシスタントとGemini for Home 音声アシスタントのどちらが表示されるかを確認すること、音声の選択で音声が色と植物のどちらの名前で表示されるかを確認し、赤ならGoogle アシスタント、ポトスならGemini for Home 音声アシスタントを使っていると書かれている" loading="lazy"><figcaption>声の名前が色ならGoogleアシスタント、植物ならGemini for Home（Google Home and Nest ヘルプ）</figcaption></figure>
 
@@ -116,7 +116,7 @@ Googleは、正式に全員へ配る日を公表していません。スピー�
 
 ## Googleアシスタントに戻す方法はあるか
 
-**公式の方法はありません。**家をいったんGemini for Homeに切り替えるとGoogleアシスタントに戻すことはできない、とヘルプに書かれています。設定の中にも元に戻すボタンはありません。
+**公式の方法はありません。**家をいったんGemini for Homeに切り替えるとGoogleアシスタントに戻すことはできない、とヘルプに書かれています。ヘルプには元に戻す手順が載っていません。
 
 ネットには「家を作り直せば戻る」という手順が出回っています。写真家の[横田裕市さんのnote](https://note.yokoichi.jp/n/nd84672a493a4)や[HelenTech](https://helentech.jp/how-to-google-home-revert-gemini-to-assistant-87253/)は、今の家を削除し、スピーカーやディスプレイを初期化してから新しい家に登録し直す方法を紹介しています。[はてなブログの2026年5月の記事](https://mobilemobilesnotes.hatenablog.com/entry/2026/05/01/085549)は、新しい家を作って機器を移し、古い家を消すやり方でした。
 
@@ -126,11 +126,13 @@ Googleは、正式に全員へ配る日を公表していません。スピー�
 - 家を消すと、家族の共有・部屋の割り当て・自動化などの設定を作り直すことになる。紹介している記事によって、引き継げたものの説明が違う
 - noteで紹介されている初期化は、スピーカーごとに本体のボタンを長押しする作業で、台数が多いほど手間がかかる
 
-nitoではこの手順を試していません。**迷っているなら、切り替える前にGoogleアシスタントのまま待つほうが確実です。**早期アクセスに登録しても、案内の［始める］を押すまで家は切り替わりません。
+この記事ではこの手順を試していません。**迷っているなら、切り替える前にGoogleアシスタントのまま待つほうが確実です。**早期アクセスに登録しても、案内の［始める］を押すまで家は切り替わりません。
 
 ## 対応するスピーカーとディスプレイ
 
 対応機種は2つに分かれます。全部の機能が使える機種と、Gemini Live以外の大半の機能が使える古い機種です。
+
+Googleストアの注記では、Nest Mini・Nest Audio・Nest Hubなど以前のスピーカーとディスプレイは、Gemini for Homeを使える地域を順に広げる予定とされています。日本で以前の機種だけの家に今すぐ案内が届くとは限りません。
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/google-home-gemini/07_help_devices.jpg" alt="ヘルプの対応するスピーカーとディスプレイの節。スピーカーはCast ファームウェア バージョン 3.76 以降、ディスプレイはFuchsia ファームウェア バージョン 28 以降が必要と書かれている。赤い枠の1つ目に全機能が使えるGoogle Home スピーカー（2026）、Google Nest Hub（第 2 世代）、Google Nest Audio、Google Nest Mini（第 2 世代）、Google Nest Hub Maxが並び、2つ目の赤い枠にGemini Live 以外の大半の機能が使えるGoogle Nest Wifi 拡張ポイント、Google Home Max、Google Home、サードパーティ製スピーカーが並ぶ" loading="lazy"><figcaption>日本語のヘルプの対応機種（2026年10月5日取得）</figcaption></figure>
 
@@ -145,7 +147,7 @@ nitoではこの手順を試していません。**迷っているなら、切�
 | Google Home Mini（第1世代） | 記載なし | 全機能 |
 | Google Home Max・Google Home・Nest Wifi 拡張ポイント・他社製スピーカー | Gemini Live以外 | Gemini Live以外 |
 
-**第1世代のGoogle Home MiniとNest Hubは、日本語のヘルプには載っていませんが英語のヘルプでは全機能の側に入っています。**[英語版のヘルプ](https://support.google.com/googlehome/answer/16618650?hl=en)のほうが新しく、リリースノートでも2026年7月23日に第1世代の2機種でGemini Liveが使えるようになったと告知されています。どちらの機種も、家を切り替えれば一緒にGeminiになります。
+**第1世代のGoogle Home MiniとNest Hubは、日本語のヘルプには載っていませんが英語のヘルプでは全機能の側に入っています。**[英語版のヘルプ](https://support.google.com/googlehome/answer/16618650?hl=en)では全機能の側に入っており、リリースノートでも2026年7月23日に第1世代の2機種でGemini Liveが使えるようになったと告知されています。どちらの機種も、家を切り替えれば一緒にGeminiになります。
 
 必要なファームウェアはスピーカーがCast 3.76以降、ディスプレイがFuchsia 28以降です。ヘルプは案内が来ないときに確かめる点の1つに、このファームウェアの版を挙げています。
 
@@ -191,7 +193,7 @@ Googleは2026年4月8日に、日本向けの早期アクセスを順に始め�
 Google Homeアプリで右上のプロフィール写真、設定アイコン、［早期アクセス］の順に進んで登録します。家で使えるようになると「Gemini for Home のご紹介」の通知が届くので、［始める］をタップして案内に沿って設定してください。
 
 ### MiniのスピーカーでもGeminiは使えますか？
-使えます。第2世代のNest Miniは全機能の対象で、第1世代のGoogle Home Miniも英語のヘルプでは全機能の側に入っています。Mini単体ではなくMiniが入っている家をGemini for Homeに切り替える形で、ファームウェアはCast 3.76以降が必要です。
+対応機種には入っています。ただしGoogleストアの注記では、Nest Mini・Nest Audio・Nest Hubなど以前の機種は使える地域を順に広げる予定とされているので、家に案内が届くかで確かめてください。第2世代のNest Miniは全機能の対象で、第1世代のGoogle Home Miniも英語のヘルプでは全機能の側に入っています。Mini単体ではなくMiniが入っている家をGemini for Homeに切り替える形で、ファームウェアはCast 3.76以降が必要です。
 
 ### Gemini for Homeは元に戻せますか？
 公式には戻せません。ヘルプに、家をいったん切り替えるとGoogleアシスタントに戻すことはできないと書かれています。家を作り直す方法がブログで紹介されていますが、公式の手順ではなく、家の設定のやり直しになります。
@@ -201,7 +203,7 @@ Google Homeアプリで右上のプロフィール写真、設定アイコン、
 
 ## 出典
 
-本文の内容は2026年10月5日に取得した次のページで確認しています。切り替えの操作と家の作り直しは、nitoでは試していません。
+本文の内容は2026年10月5日に取得した次のページで確認しています。切り替えの操作と家の作り直しは、この記事では試していません。
 
 - [Gemini for Home 音声アシスタントの詳細](https://support.google.com/googlehome/answer/16618650?hl=ja)（Google Home and Nest ヘルプ。提供状況、戻せないこと、無料と有料の範囲、国と言語、登録と設定の手順、対応機種、トラブルシューティング）
 - [Learn about Gemini for Home voice assistant](https://support.google.com/googlehome/answer/16618650?hl=en)（英語版の同じヘルプ。第1世代のNest HubとGoogle Home Miniを含む対応機種）
