@@ -18,7 +18,7 @@ OpenAIのCodexは、無料版とGoを含むChatGPTのすべてのプランで使
 - 5時間枠があるのはPlusとBusiness Standard。**Pro 100・Pro 200・Pro 500とBusiness Premiumには今は5時間枠がなく、週の枠だけ**
 - 5時間で送れる量はPlusで**GPT-6 Astraなら5〜45、GPT-6 Lunaなら350〜3,000**のローカルメッセージが目安。モデルを切り替えても残りは戻らない
 - 保存済みリセットは配られた人だけが使える特典で、1つにつき1回使える。**使うと週のリセット日が変わる**。期限を過ぎると復元されない
-- 即時リセットはPlusとProの個人アカウントがChatGPTのウェブ版とCodexのデスクトップアプリで買える。**枠が増えるのではなく次の週の枠を前倒しで使う仕組み**で、サポートに頼んでも上限は戻らない
+- 即時リセットはPlusとProの個人アカウントがChatGPTのウェブ版とCodexのデスクトップアプリで買える（アカウントと請求先の国による）。**枠が増えるのではなく次の週の枠を前倒しで使う仕組み**で、サポートに頼んでも上限は戻らない
 :::
 
 ## 5時間枠と週間枠
@@ -87,7 +87,7 @@ OpenAIは2026年9月3日と4日、GPT-6 Astraの提供に合わせて、条件�
 
 PlusとProの個人アカウントでは、お金を払って枠をすぐに戻せます。ヘルプ「[Work と Codex の週間レート制限の有料リセット](https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets)」によると、買えるのはChatGPTのウェブ版とCodexのデスクトップアプリで、無料版・Go・Business・Enterprise・Eduでは買えません。
 
-<figure class="post-figure"><img src="/media/images/codex-limits/05_help_paid.jpg" alt="OpenAIのヘルプのPaid weekly Work and Codex rate limit resetsのOverviewとAvailabilityの節。PlusとProの利用者はデスクトップ版の使用状況の設定か、週の上限に達したあとのアプリ内の案内から即時リセットを買え、5時間と週間の両方の枠がすぐ戻る。週の枠を前倒しで使う仕組みで別の枠が足されるわけではない。新しい週の期間はリセット後のWorkかCodexでの最初の依頼から始まり、次の自動リセットはその7日後。購入できるのはPlusとProの個人アカウントで、場所はChatGPTのウェブ版とCodexのデスクトップアプリ。Free・Go・Business・Enterprise・Eduでは使えない" loading="lazy"><figcaption>即時リセットの購入を説明したヘルプ（英語版、2026年10月1日取得）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/codex-limits/05_help_paid.jpg" alt="OpenAIのヘルプのPaid weekly Work and Codex rate limit resetsのOverviewとAvailabilityの節。PlusとProの利用者はデスクトップ版の使用状況の設定か、週の上限に達したあとのアプリ内の案内から即時リセットを買え、5時間と週間の両方の枠がすぐ戻る。週の枠を前倒しで使う仕組みで別の枠が足されるわけではない。新しい週の期間はリセット後のWorkかCodexでの最初の依頼から始まり、次の自動リセットはその7日後。購入できるのはPlusとProの個人アカウント。Free・Go・Business・Enterprise・Eduでは使えない" loading="lazy"><figcaption>即時リセットの購入を説明したヘルプ（英語版、2026年10月1日取得）</figcaption></figure>
 
 **買っても枠が増えるわけではなく、次の週の分を前倒しで使うことになります。**週の自動リセットが2日後に来る日に買うと、その2日分の待ちを消すためにお金を払い、次のリセットはさらに7日先に延びます。残りの枠があっても買った瞬間に適用されるため、使い切ってから買うほうが損はありません。
 
@@ -157,5 +157,5 @@ PlusとProの個人アカウントでは、お金を払って枠をすぐに戻�
 - OpenAI Help Center「[ChatGPT Pro の各プランについて](https://help.openai.com/ja-jp/articles/9793128-about-chatgpt-pro-tiers)」（同）
 - OpenAI Help Center「[保存済み Codex リセットの仕組み](https://help.openai.com/ja-jp/articles/20001498-how-banked-codex-resets-work)」（同）
 - OpenAI Help Center「[Work と Codex の週間レート制限の有料リセット](https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets)」（同）
-- OpenAI Help Center「[Using Codex with your ChatGPT plan](https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan)」（同）
+- OpenAI Help Center「[Using Codex with your ChatGPT plan](https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan)」（2026年10月1日取得）
 - yamadatt「[Codexに使用量リセット権が1回分もらえた。5時間制限が消えた今、週次リミットの保険になる](https://zenn.dev/yamadatt/articles/20260823-codex-banked-reset)」Zenn（2026年8月23日）
