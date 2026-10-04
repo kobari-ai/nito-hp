@@ -108,7 +108,7 @@ Pro 200ドルで GPT-6 Pro の週の上限に達すると、ChatGPTは自動で 
 
 ### ChatGPT Work で使う
 
-Work は、資料を読んで調べて、スライドや表などのファイルを作るところまでを1回の依頼で進めるモードです。画面上部の「Chat／Work」の切り替えで開き、モデル一覧から GPT-6 Astra を選びます。Plus でも使えますが、通常チャットとは別の利用枠です。
+Work は資料を読んで調べて、スライドや表などのファイルを作るところまでを1回の依頼で進めるモードです。画面上部の「Chat／Work」の切り替えで開き、モデル一覧から GPT-6 Astra を選びます。Plus でも使えますが、通常チャットとは別の利用枠です。
 
 <figure class="post-figure"><img src="/media/images/gpt-6-astra-guide/astra_03_free_work_intro.jpg" alt="ChatGPTのWorkを無料プランで開いたときの紹介画面" loading="lazy"><figcaption>Work の紹介画面（2026年9月17日撮影）。背景情報を集めてドキュメント・スライド・スプレッドシートを作ると説明している</figcaption></figure>
 
