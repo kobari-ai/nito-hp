@@ -63,7 +63,7 @@ Geminiのヘルプにはログインやアクセスで止まったときの表�
 3. 「設定」から「Gemini」、「Gemini アプリ」の順に押す
 4. Gemini アプリをオンにする
 
-<figure class="post-figure"><img src="/media/images/gemini-not-working/gnw_03_help_kids.jpg" alt="Googleのヘルプのお子様によるGeminiアプリの利用を管理するの節。13歳未満のお子様が管理対象のアカウントでGeminiアプリを使うには保護者がアクセスを有効にする必要があり、初めて有効にすると保護者にメールが届くこと、familylink.google.comかファミリーリンクのアプリを開き、お子様を選び、設定からGemini、Geminiアプリを押してオンかオフにする手順が書かれている" loading="lazy"><figcaption>ファミリーリンクでGeminiをオンにする手順（2026年9月27日取得）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/gemini-not-working/gnw_03_help_kids.jpg" alt="Googleのヘルプのお子様によるGeminiアプリの利用を管理するの節。13歳未満のお子様が管理対象のアカウントでGeminiアプリを使うには保護者がアクセスを有効にする必要があり、初めて有効にすると保護者にメールが届くこと、familylink.google.comかファミリーリンクのアプリを開き、お子様を選び、設定からGemini、Geminiアプリを押してオンかオフにする手順が書かれている" loading="lazy"><figcaption>ファミリーリンクでGeminiをオンにする手順（Googleのヘルプ）</figcaption></figure>
 
 子供が初めてGeminiを使い始めると、保護者のメールアドレスに通知が届きます。オンとオフは保護者がいつでも切り替えられます。
 
@@ -85,7 +85,7 @@ Geminiのヘルプにはログインやアクセスで止まったときの表�
 
 [Gemini モバイルアプリの利用要件](https://support.google.com/gemini/answer/14579026?hl=ja&co=GENIE.Platform%3DAndroid)のヘルプには、アプリを使える端末と条件が書かれています。
 
-<figure class="post-figure"><img src="/media/images/gemini-not-working/gnw_04_help_req.jpg" alt="Googleのヘルプのgeminiモバイルアプリの利用要件のページ。150を超える国で利用できること、13歳以上であること、13歳未満は保護者の承認が必要なこと、仕事用や学校用のアカウントではGeminiアプリへのアクセス権が必要なこと、Androidの仕事用プロファイルでは使えないこと、Androidの端末は2GB以上のRAMとAndroid 9以降が必要なことが書かれている" loading="lazy"><figcaption>Geminiモバイルアプリの利用要件（2026年9月27日取得）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/gemini-not-working/gnw_04_help_req.jpg" alt="Googleのヘルプのgeminiモバイルアプリの利用要件のページ。150を超える国で利用できること、13歳以上であること、13歳未満は保護者の承認が必要なこと、仕事用や学校用のアカウントではGeminiアプリへのアクセス権が必要なこと、Androidの仕事用プロファイルでは使えないこと、Androidの端末は2GB以上のRAMとAndroid 9以降が必要なことが書かれている" loading="lazy"><figcaption>Geminiモバイルアプリの利用要件（Googleのヘルプ）</figcaption></figure>
 
 | 条件 | 内容 |
 |---|---|
@@ -95,7 +95,7 @@ Geminiのヘルプにはログインやアクセスで止まったときの表�
 | Androidの仕事用プロファイル | 使えない |
 | 国と地域 | 150を超える国で提供 |
 
-**会社のスマホで、仕事用プロファイルの中にGeminiを入れようとしている場合は使えません。**個人用のプロファイルで開くか、会社の管理者に確かめてください。古いAndroidの端末でアプリが入らないなら、ウェブ版をブラウザで開く手があります。ただし、ファミリーリンクで管理している子供のアカウントはウェブ版に入れません。
+**会社のスマホで、仕事用プロファイルの中にGeminiを入れようとしている場合は使えません。**個人用のプロファイルで開くか、会社の管理者に確かめてください。古いAndroidの端末でアプリが入らないなら、ウェブ版をブラウザで開く手があります。ただし、ファミリーリンクで管理している子供のアカウントはウェブ版に入れません。アプリは開けるのに声で話すGemini Liveだけが使えないなら、[Gemini Liveが使えない原因と対処](/media/gemini-live-not-working/)で端末ごとの条件を確かめられます。
 
 ## 障害を確かめる
 
