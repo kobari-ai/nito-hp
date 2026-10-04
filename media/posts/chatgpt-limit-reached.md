@@ -106,7 +106,7 @@ PlusとBusiness Standardで5時間に送れるローカルのメッセージ数�
 | クレジットで続ける | WorkとCodexなど（アカウントによる） | 含まれる枠を使い切ったあと、従量課金の残高から引かれる |
 | サポートに頼む | 使えない | 数え間違いや、時刻を過ぎても戻らないときの調査だけ |
 
-即時リセットを買えるのはPlusとProの個人アカウントです。[WorkとCodexの週間レート制限の有料リセット](https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets)では、購入できる場所としてChatGPTのウェブ版とCodexのデスクトップアプリが挙がっています。ただし買えるかどうかはアカウントと請求先の国によって違い、同じプランでも出ないことがあります。手順に出てくる押す場所は、デスクトップアプリの［使用状況］にある［即時リセットを購入］と、週の上限に達したときに出るバナーです。5時間の上限だけではバナーは出ません。クレジットはCodexとWorkのほか、ChatGPT for WordやExcel、PowerPointの対象の機能にも使えます。
+即時リセットを買えるのはPlusとProの個人アカウントです。[WorkとCodexの週間レート制限の有料リセット](https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets)では、購入できる場所としてChatGPTのウェブ版とCodexのデスクトップアプリが挙がっています。ただし買えるかどうかはアカウントと請求先の国によって違い、同じプランでも出ないことがあります。手順で押す場所はデスクトップアプリの［使用状況］にある［即時リセットを購入］と、週の上限に達したときに出るバナーです。5時間の上限だけではバナーは出ません。クレジットはCodexとWorkのほか、ChatGPT for WordやExcel、PowerPointの対象の機能にも使えます。
 
 ### サポートは上限をリセットしない
 
