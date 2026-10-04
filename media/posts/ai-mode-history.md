@@ -43,7 +43,7 @@ Google検索のAIモードで交わしたやり取りは、通常の検索履歴
 3. 別のアカウントでログインしている
 4. ブラウザの閲覧履歴データを削除した
 
-<figure class="post-figure"><img src="/media/images/ai-mode-history/00_fig_why.png" alt="AIモードの履歴が残らない4つの原因の図。ログアウトして使っていた、検索履歴の設定が無効、別のアカウント、閲覧履歴データを削除した。再開はログインだけでは足りず検索履歴の設定が有効である必要がある" loading="lazy"><figcaption>一覧が空なら、この4つのどれかに当たっている</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/ai-mode-history/00_fig_why_v2.jpg" alt="AIモードの履歴が残らない4つの原因の図。ログアウトしていた、検索履歴がオフ、別のアカウント、閲覧履歴を削除。再開にはログインと検索履歴のオンが要る" loading="lazy"><figcaption>一覧が空なら、この4つのどれかに当たっている</figcaption></figure>
 
 **再開できるのは、ログインしているだけでは足りません。**検索履歴の設定が有効になっている必要があります。設定はマイ アクティビティの設定画面から確認でき、オフにするときは「オフにする」と「アクティビティをオフにして削除」のどちらかを選ぶ形式です。
 
@@ -69,7 +69,7 @@ Google検索のAIモードで交わしたやり取りは、通常の検索履歴
 
 ### 消した場所によって反映のされ方が違う
 
-<figure class="post-figure"><img src="/media/images/ai-mode-history/00_fig_where.png" alt="AIモードの一覧で消すとマイ アクティビティからも1分以内に消えた。マイ アクティビティで消した直後にページを離れようとするとブラウザが確認を出し、そこで離れると開き直したときに項目が残っていた（9月28日、1回）" loading="lazy"><figcaption>AIモードの一覧から消した3回は、どれもマイ アクティビティからも消えた（2026年9月28日・10月3日、パソコンのChrome）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/ai-mode-history/00_fig_where_v2.jpg" alt="消した場所で結果が違った図。AIモードの一覧で削除すると両方から消えた（3回）。マイ アクティビティで削除してすぐ離れると残った（1回）。離脱の確認が出たらページに留まる" loading="lazy"><figcaption>AIモードの一覧から消した3回は、どれもマイ アクティビティからも消えた（2026年9月28日・10月3日、パソコンのChrome）</figcaption></figure>
 
 AIモードの一覧から消した会話は、マイ アクティビティからも1分以内に消えました。3回試して、どれももう一方に残りませんでした。
 
@@ -85,7 +85,7 @@ AIモードの一覧から消した会話は、マイ アクティビティか�
 
 ### AIによる概要から入った会話は2件に分かれる
 
-<figure class="post-figure"><img src="/media/images/ai-mode-history/00_fig_split.png" alt="AIによる概要から入ると履歴が2件に分かれる図。検索してAIによる概要が出た後にAIモードでさらに詳しくへ移ると、検索履歴に最初の検索が1件、AIモードの履歴に移動後の会話が1件記録される。完全に消すには検索履歴の側からも削除する" loading="lazy"><figcaption>AIモード側を消しても、元の検索は検索履歴に残る</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/ai-mode-history/00_fig_split_v2.jpg" alt="AIによる概要から入ると履歴が2件に分かれる図。検索してからAIモードで詳しく見ると、検索履歴に1件とAIモードの履歴に1件が残る。完全に消すなら検索履歴からも削除する" loading="lazy"><figcaption>AIモード側を消しても、元の検索は検索履歴に残る</figcaption></figure>
 
 消し忘れやすいのがこれです。完全に消すなら、AIモード側の履歴を消したあと、検索履歴の側からも削除してください。
 

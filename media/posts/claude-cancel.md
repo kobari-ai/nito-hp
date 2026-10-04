@@ -43,7 +43,7 @@ ClaudeのProやMaxは、契約した場所の手順でいつでも解約でき�
 2. 左下のイニシャルか名前を押し、メニューから［設定］を選ぶ
 3. ［請求］を開き、［キャンセル］を押す
 
-<figure class="post-figure"><img src="/media/images/claude-cancel/ccl_01_help.jpg" alt="Claudeヘルプセンターの、ProまたはMaxサブスクリプションをキャンセルするページ。キャンセルは現在の請求期間の終了時に有効になり、次の請求日の少なくとも24時間前にキャンセルするよう注意がある。ウェブとデスクトップの手順の中の、1の設定 > 請求が赤枠で囲まれている" loading="lazy"><figcaption>Claudeヘルプの解約のページ（2026年10月4日取得）。1が［請求］の画面</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/claude-cancel/ccl_02_billing.png" alt="claude.aiの設定画面。1は左のメニューの［請求］を赤枠で囲んだもの。2はその画面のいちばん下にある［解約］の欄で、プランをキャンセルの横の［キャンセル］ボタンを赤枠で囲んだもの" loading="lazy"><figcaption>claude.aiの［設定］→［請求］の画面（2026年10月4日に撮影。ボタンは押していない）</figcaption></figure>
 
 設定の中の名前は、ヘルプでは［請求］、[料金ページ](https://claude.com/ja/pricing)のFAQでは［お支払い］と書かれています。どちらも同じ画面です。
 
