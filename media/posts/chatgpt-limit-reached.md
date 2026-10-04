@@ -44,7 +44,7 @@ ChatGPTで上限に達したと表示されても、多くの場合止まって�
 
 通知の例には、Plusに変えるか翌朝の9時17分以降にもう一度試すよう英語で書かれています。**同じFAQによると、無料版で上限に達したあとPlus・Pro・Businessに変えると、上限はその場でリセットされます。**Goはこの対象に書かれていません。
 
-画像生成の上限は[ChatGPTの画像生成ができない原因の記事](/media/chatgpt-image-limit/)で、アップロードの回数と容量は[ChatGPTのファイルアップロード上限の記事](/media/chatgpt-file-upload-limit/)で詳しく扱っています。メモリの容量がいっぱいになったときの空け方は[ChatGPTのメモリがいっぱいのときの対処](/media/chatgpt-memory-full/)にまとめています。
+画像生成の上限は[ChatGPTの画像生成ができない原因の記事](/media/chatgpt-image-limit/)で、アップロードの回数と容量は[ChatGPTのファイルアップロード上限の記事](/media/chatgpt-file-upload-limit/)で詳しく扱っています。メモリの容量がいっぱいになったときの空け方は[ChatGPTのメモリがいっぱいのときの対処](/media/chatgpt-memory-full/)へ。
 
 ## 有料プランの思考とProモデルの上限
 
