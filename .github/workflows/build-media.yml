@@ -6,6 +6,7 @@ on:
     paths:
       - "media/posts/**"
       - "media/_template/**"
+      - "media/data/**"
   workflow_dispatch:
 
 permissions:

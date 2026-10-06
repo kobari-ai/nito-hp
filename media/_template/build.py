@@ -130,6 +130,79 @@ def convert_linkcard_blocks(md_text: str) -> str:
     return re.sub(r"^:::linkcard\s*\n(.*?)\n:::\s*$", repl, md_text, flags=re.DOTALL | re.MULTILINE)
 
 
+DATA_DIR = ROOT / "data"
+
+
+def load_post_data(slug: str):
+    """データつき記事の値（media/data/<slug>.json）。無ければ None。2026-10-06 比較ページ（ai-compare）"""
+    import json as _json
+    f = DATA_DIR / f"{slug}.json"
+    return _json.loads(f.read_text(encoding="utf-8")) if f.exists() else None
+
+
+def _jp_date(iso: str) -> str:
+    y, m, d = iso.split("-")
+    return f"{int(y)}年{int(m)}月{int(d)}日"
+
+
+def render_data_blocks(md_text: str, data) -> str:
+    """media/data/<slug>.json の値を本文に差し込む。値は JSON が正本で、md には書かない。
+    <!-- data:table ID --> 表／<!-- data:checked --> 確認日の帯／<!-- data:changelog --> 変更履歴／
+    <!-- data:sources --> 出典／{{data:表ID.行ID.AI}} セルの値（文中・FAQ 用）"""
+    ais = data["ais"]
+    ai_name = {a["id"]: a["name"] for a in ais}
+    src_no = {s["id"]: i + 1 for i, s in enumerate(data["sources"])}
+    tables = {t["id"]: t for t in data["tables"]}
+    esc = html.escape
+
+    def refs(ids):
+        return "".join(f'<sup class="cmp-ref"><a href="#src-{esc(i)}">[{src_no[i]}]</a></sup>' for i in ids or [] if i in src_no)
+
+    def table(tid):
+        t = tables[tid]
+        head = '<th scope="col">項目</th>' + "".join(f'<th scope="col">{esc(a["name"])}</th>' for a in ais)
+        rows = []
+        for r in t["rows"]:
+            cells = "".join(
+                f'<td data-ai="{esc(a["name"])}"><span>{esc(r["cells"][a["id"]]["text"])}{refs(r["cells"][a["id"]].get("src"))}</span></td>'
+                for a in ais)
+            rows.append(f'<tr><th scope="row">{esc(r["label"])}</th>{cells}</tr>')
+        return f'<div class="cmp-wrap"><table class="cmp"><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+
+    def checked():
+        days = " ／ ".join(f'{esc(ai_name[k])} {_jp_date(v)}' for k, v in data["checked"].items())
+        lc = data["last_changed"]
+        return ('<div class="cmp-checked">'
+                f'<p><span class="cmp-checked__ttl">公式ページを確認した日</span>{days}</p>'
+                f'<p><span class="cmp-checked__ttl">最後に内容が変わった日</span>{_jp_date(lc["date"])}　{esc(lc["text"])}</p>'
+                '</div>')
+
+    def changelog():
+        items = "".join(
+            f'<li><time datetime="{c["date"]}">{_jp_date(c["date"])}</time><span class="cmp-log__ai">{esc(ai_name.get(c["ai"], c["ai"]))}</span>{esc(c["text"])}{refs(c.get("src"))}</li>'
+            for c in data["changelog"])
+        return f'<ul class="cmp-log">{items}</ul>'
+
+    def sources():
+        items = "".join(
+            f'<li id="src-{esc(s["id"])}"><a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])}</a>'
+            f'<span class="cmp-sources__meta">{esc(ai_name.get(s["ai"], s["ai"]))}・{_jp_date(s["checked"])}確認</span></li>'
+            for s in data["sources"])
+        return f'<ol class="cmp-sources">{items}</ol>'
+
+    def inline(m):
+        tid, rid, aid = m.group(1).split(".")
+        row = next(r for r in tables[tid]["rows"] if r["id"] == rid)
+        return row["cells"][aid]["text"]
+
+    md_text = re.sub(r"\{\{data:([\w.]+)\}\}", inline, md_text)
+    md_text = re.sub(r"^<!-- data:table (\w+) -->$", lambda m: table(m.group(1)), md_text, flags=re.M)
+    md_text = re.sub(r"^<!-- data:checked -->$", lambda m: checked(), md_text, flags=re.M)
+    md_text = re.sub(r"^<!-- data:changelog -->$", lambda m: changelog(), md_text, flags=re.M)
+    md_text = re.sub(r"^<!-- data:sources -->$", lambda m: sources(), md_text, flags=re.M)
+    return md_text
+
+
 def expand_blogparts(body_html: str) -> str:
     """[blogparts:NAME] を _template/blogparts/NAME.html の中身に置換する。
     共通PRパートを1ファイルで管理し、更新すれば全記事に反映される。
@@ -432,7 +505,7 @@ def build_jsonld(post) -> str:
         "headline": meta["title"],
         "description": meta["description"],
         "datePublished": meta["date"],
-        "dateModified": meta["date"],
+        "dateModified": meta.get("modified", meta["date"]),
         "author": author_person,
         "publisher": publisher,
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
@@ -623,7 +696,7 @@ def post_lastmod(p) -> str:
     公開後に直した記事が lastmod 固定のままだと再クロールの優先度が上がらない（2026-09-17 実測:
     9/13 に直した記事の最終クロールが 8/11 のまま）。git が無い／shallow の場合は date にフォールバック。"""
     import subprocess
-    d = p["meta"]["date"]
+    d = max(p["meta"]["date"], p["meta"].get("modified", ""))
     try:
         out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(POSTS_DIR / f"{p['slug']}.md")],
                              capture_output=True, text=True, timeout=10, cwd=ROOT.parent).stdout.strip()
@@ -750,6 +823,13 @@ def main():
         if meta.get("redirect"):
             redirects.append((f.stem, meta["redirect"]))
             continue
+        data = load_post_data(f.stem)
+        if data:
+            body_md = render_data_blocks(body_md, data)
+            # 構造化データと sitemap の更新日は「内容が最後に変わった日」。毎朝の確認日では動かさない
+            lc = data.get("last_changed", {}).get("date", "")
+            if lc > meta["date"]:
+                meta["modified"] = lc
         faqs = extract_faq(body_md)
         body_md = convert_takeaways_blocks(body_md)
         body_md = convert_point_blocks(body_md)
