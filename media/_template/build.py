@@ -171,10 +171,8 @@ def render_data_blocks(md_text: str, data) -> str:
 
     def checked():
         days = " ／ ".join(f'{esc(ai_name[k])} {_jp_date(v)}' for k, v in data["checked"].items())
-        lc = data["last_changed"]
         return ('<div class="cmp-checked">'
                 f'<p><span class="cmp-checked__ttl">公式ページを確認した日</span>{days}</p>'
-                f'<p><span class="cmp-checked__ttl">最後に内容が変わった日</span>{_jp_date(lc["date"])}　{esc(lc["text"])}</p>'
                 '</div>')
 
     def changelog():
