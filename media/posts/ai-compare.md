@@ -78,7 +78,7 @@ ChatGPTで上限に当たったときのリセットの見方は[ChatGPTの上�
 Gemini（AIモードと共通）の{{data:paid.entry.gemini}}です。ChatGPTは{{data:paid.entry.chatgpt}}、Claudeは{{data:paid.entry.claude}}です。
 
 ### このページの値はいつ確かめたものですか？
-ページの上の帯に、AIごとの確認日を出しています。Gemini・Claude・AIモードは毎朝、ChatGPTは週に1回の確認です。値が変わった日は公式の変更履歴の節に残しています。
+ページの上の帯に、AIごとの確認日を出しています。Gemini・AIモード・Claudeの公式ページは毎朝確かめ、Claudeの日本の画面の金額とChatGPTは人がブラウザで確かめています。値が変わった日は公式の変更履歴の節に残しています。
 
 ## 出典
 
