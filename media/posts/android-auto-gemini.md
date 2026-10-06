@@ -43,9 +43,9 @@ Googleは国ごとの開始日を出していません。[2025年11月20日の�
 
 <figure class="post-figure"><img src="/media/images/android-auto-gemini/04_fig_timeline_v2.jpg" alt="Android AutoがGeminiに替わるまでの図。2025年11月にGoogleが45言語で提供開始を発表。2026年5月6日ごろに日本語で切り替わったという利用者の報告。2026年7月にGemini Liveも使えたという利用者の報告。2026年9月4日にスマホのアシスタントの削除が始まる" loading="lazy"><figcaption>5月と7月は利用者の報告で、Googleが日本向けに出した日付ではない</figcaption></figure>
 
-日本語の環境で切り替わった日は、利用者の報告で分かります。[HelenTech（2026年5月7日）](https://helentech.jp/news-android-auto-gemini-japan/)は、Pixel 10 ProとAndroid Auto 16.7の組み合わせで5月6日にGeminiへの切り替わりを確かめています。この時点ではGemini Liveの会話が続かず、Geminiの話の途中で割り込むこともできませんでした。
+日本語の環境で切り替わった日は、利用者の報告で分かります。[HelenTech（2026年5月7日）](https://helentech.jp/news-android-auto-gemini-japan/)は、Pixel 10 ProとAndroid Auto 16.7の組み合わせで5月6日にGeminiへの切り替わりを確かめています。この時点ではGemini Liveの会話が続かず、Geminiの話の途中で割り込むこともできませんでした。Googleは[2026年5月12日のブログ](https://blog.google/products-and-platforms/platforms/android/android-in-cars-updates/)で、Android AutoのGeminiは広く使えるようになったと書きました。国の名前は挙げていません。
 
-[Jetstream BLOG（2026年7月15日）](https://jetstream.blog/2026/07/15/android-auto-gemini-live-rollout/)は、7月上旬から中旬にかけて車の画面にGemini Liveのボタンが出たと伝えています。Googleも[2026年5月12日のブログ](https://blog.google/products-and-platforms/platforms/android/android-in-cars-updates/)で、Android AutoのGeminiは広く使えるようになったと書きました。
+[Jetstream BLOG（2026年7月15日）](https://jetstream.blog/2026/07/15/android-auto-gemini-live-rollout/)は、7月上旬から中旬にかけて車の画面にGemini Liveのボタンが出たと伝えています。
 
 | 時期 | 出来事 | 出どころ |
 |---|---|---|
@@ -78,8 +78,8 @@ Geminiが答えない・Googleアシスタントのまま、というときは�
 | 確かめること | 条件 | 出どころ |
 |---|---|---|
 | 端末 | Android 11以降・RAM 2GB以上。Android（Go エディション）はAndroid Autoが使えない | Gemini アプリ ヘルプ・Android Auto ヘルプ |
-| 既定のアシスタント | スマホの［デジタル アシスタント アプリ］がGeminiになっている | Gemini アプリ ヘルプ |
-| アカウント | 13歳以上。仕事用プロファイルではGeminiアプリが使えない。仕事用・学校用のアカウントは管理者の許可が要る | Gemini モバイルアプリの利用要件 |
+| 既定のアシスタント | スマホの［デジタル アシスタント アプリ］が「Google」になっている（GeminiもGoogleアシスタントも「Google」と表示される）。電源ボタンの長押しか「OK Google」でGeminiが開けば、Geminiになっている | Gemini アプリ ヘルプ |
+| アカウント | 13歳以上。13歳未満は保護者の承認が要る。仕事用プロファイルでは使えない。仕事用・学校用のアカウントはGeminiを使えるプランかライセンスが要る | Gemini モバイルアプリの利用要件 |
 | 国と言語 | 一部の言語や地域ではGeminiとAndroid Autoが使えない | Gemini アプリ ヘルプ |
 | 「OK Google」 | Voice Matchと「OK Google」がオンのときだけ声で呼べる | Gemini アプリ ヘルプ |
 
@@ -106,11 +106,9 @@ Geminiが答えない・Googleアシスタントのまま、というときは�
 
 ## 勝手に起動する・話が止まらないとき
 
-[Yahoo!知恵袋の質問](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10328258645)には、車内の会話にGeminiが割り込み、止めても話し続けるという相談があります。ヘルプにある3つの呼び出し方のうち、マイクのアイコンとハンドルのボタンは手で押す操作です。**ボタンや画面に触れていないのに答え始めるなら、「OK Google」の音声の呼び出しが反応しています**。
+[Yahoo!知恵袋の質問](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10328258645)には、車内の会話にGeminiが割り込み、止めても話し続けるという相談があります。ヘルプにある3つの呼び出し方のうち、マイクのアイコンとハンドルのボタンは手で押す操作です。**触れずに始まるのは「OK Google」だけです**。
 
-声で呼び出されるのを止めるには、スマホのGeminiアプリで「OK Google」を無効にします。ヘルプの手順ではGeminiアプリの左上のメニューからプロフィールの写真、［設定］、［Gemini とハンズフリーで話す］と進んで「OK Google」をオフにします。設定は車を止めてから変えてください。
-
-<figure class="post-figure"><img src="/media/images/gemini-auto-launch/05_help_okg.jpg" alt="Gemini アプリ ヘルプの「OK Google」をオフにして音声でGeminiが開かないようにするの手順。赤い枠の中に、Gemini モバイルアプリを開く、左側のメニュー アイコン、プロフィール写真またはイニシャル、設定、Gemini とハンズフリーで話すをタップ、「OK Google」を無効にする、と書かれている" loading="lazy"><figcaption>「OK Google」はGeminiアプリの設定で切る（Gemini アプリ ヘルプ）</figcaption></figure>
+声で呼び出されるのを止めるには、スマホのGeminiアプリで「OK Google」を無効にします。Geminiアプリの［設定］［Gemini とハンズフリーで話す］で切ります（手順は[Geminiが勝手に起動するときの記事](/media/gemini-auto-launch/)）。設定は車を止めてから変えてください。
 
 車のGeminiの声の呼び出しは、ヘルプ上**Voice Matchと「OK Google」がオンのときだけ**働きます。ヘルプの条件どおりなら、スマホで切ると車でも声では呼び出されません。車での動きは確かめていません。オフにしても、マイクのアイコンとハンドルのボタンからは呼び出せます。
 
@@ -126,11 +124,11 @@ Redditには「Android Autoのときだけ Geminiを切りたい」という投�
 |---|---|---|
 | Geminiアプリで「OK Google」をオフ | 声での呼び出し（ヘルプの条件から読める。車では未確認） | スマホでも声で呼べなくなる |
 | 既定のデジタル アシスタント アプリを「なし」 | Geminiを使う条件から外れる。車の画面での動きはヘルプに書かれていない | 電源ボタンなどからアシスタントが開かなくなる |
-| Googleアシスタントに戻す | 2026年9月4日から削除が進み、削除が済んだ端末では戻せない | スマホのアシスタントも替わる |
+| Googleアシスタントに戻す | 車の呼び出しもアシスタントに戻る（2026年9月4日から削除が進み、削除が済んだ端末では選べない） | スマホのアシスタントも替わる |
 
 既定のアシスタントの変え方はヘルプの「[Android デバイスで Gemini アプリを管理、削除する](https://support.google.com/gemini/answer/16938321?hl=ja)」にあります。［設定］［アプリ］［デフォルトのアプリ］［デジタル アシスタント アプリ］で「なし」を選びます。**「なし」にしたときに車の音声操作がどこまで使えるかはヘルプに書かれておらず、試してもいません**。電話やナビを声で頼む使い方を続けたいなら、「OK Google」だけを切る方が影響は小さくなります。
 
-Googleアシスタントに戻す方法は使えなくなりつつあります。[ITmedia Mobile（2026年8月6日）](https://www.itmedia.co.jp/mobile/articles/2608/06/news064.html)によると、Googleは8月4日から日本の利用者にもアシスタントの提供終了を知らせるメールを送り、9月4日からアクセスの削除を始めました。対象にはスマホから映すAndroid Autoも入っています。Geminiの最低要件を満たさない端末やGeminiが使えない地域では、引き続きアシスタントを使える場合があるとしています。
+Googleアシスタントに戻す方法は使えなくなりつつあります。[ITmedia Mobile（2026年8月6日）](https://www.itmedia.co.jp/mobile/articles/2608/06/news064.html)によると、Googleは8月4日から日本の利用者にもアシスタントの提供終了を知らせるメールを送り、9月4日から削除を始め、全員に届くまで数週間かかる見込み、と伝えています。対象にはスマホから映すAndroid Autoも入っています。Geminiの最低要件を満たさない端末やGeminiが使えない地域では、引き続きアシスタントを使える場合があるとしています。同じ記事によると、Google 搭載の自動車では9月4日以降もGoogleアシスタントが引き続き動きます。
 
 ## 車でGemini Liveを使う
 
@@ -152,7 +150,7 @@ Android Autoの設定やスマホとの接続は、シフトレバーをパー�
 ## よくある質問
 
 ### Android AutoでGeminiを使う方法は？
-スマホの既定のデジタル アシスタントをGeminiにし、Android 11以降・RAM 2GB以上のスマホを対応車につなぎます。使えるようになると車の画面に案内が出て、「OK Google」・マイクのアイコン・ハンドルのボタンで呼び出せます。
+スマホの［デジタル アシスタント アプリ］を「Google」にし（GeminiもGoogleアシスタントも「Google」と表示されます。電源ボタンの長押しか「OK Google」でGeminiが開けばGeminiになっています）、Android 11以降・RAM 2GB以上のスマホを対応車につなぎます。使えるようになると車の画面に案内が出て、「OK Google」・マイクのアイコン・ハンドルのボタンで呼び出せます。
 
 ### Android AutoのGeminiは日本でいつから？
 Googleは日本向けの開始日を出していません。Googleが45言語での提供開始を発表したのは2025年11月20日で、日本語の環境では2026年5月6日ごろから切り替わったという利用者の報告があります。
@@ -161,13 +159,13 @@ Googleは日本向けの開始日を出していません。Googleが45言語で
 よくあるのはスマホの既定のアシスタントがGeminiでない・Android 11より古い・RAMが2GB未満・仕事用プロファイルで使っている、のどれかです。声だけ反応しないなら、Geminiアプリの「OK Google」の設定を見てください。
 
 ### 車でGeminiが勝手に起動する原因は？
-ボタンや画面に触れていないのに答え始めるなら、「OK Google」の音声の呼び出しが反応しています。Geminiアプリの［Gemini とハンズフリーで話す］で「OK Google」をオフにすると声では呼ばれなくなり、マイクのアイコンとハンドルのボタンは残ります。
+ヘルプにある3つの呼び出し方のうち、触れずに始まるのは「OK Google」だけです。Geminiアプリの［Gemini とハンズフリーで話す］で「OK Google」をオフにすると声では呼ばれなくなり、マイクのアイコンとハンドルのボタンは残ります。
 
 ### Android AutoだけGeminiをオフにできますか？
 2026年10月7日時点のヘルプには、Android Autoの中でGeminiだけを切る設定は書かれていません。「OK Google」を切る方法も既定のアシスタントを「なし」にする方法も、スマホ全体の設定が変わります。
 
 ### Android Autoをアシスタントに戻せますか？
-2026年9月4日からスマホのGoogleアシスタントの削除が始まり、Android Autoも対象です。削除が済んだ端末では戻せません。
+2026年9月4日からスマホのGoogleアシスタントの削除が始まり、Android Autoも対象です。削除が済んだ端末では戻せません。Google 搭載の自動車では、9月4日以降もGoogleアシスタントが引き続き動くとITmedia Mobileは伝えています。
 
 ### Android AutoのGeminiで曲が流れないのは？
 Geminiアプリに音楽アプリが接続されていないか、アクティビティの保存がオフになっています。停車中にスマホのGeminiアプリで一度再生を頼み、接続の案内に沿って進めてください。
