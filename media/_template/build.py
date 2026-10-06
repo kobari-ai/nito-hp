@@ -415,7 +415,7 @@ def build_jsonld(post) -> str:
     import json as _json
     meta = post["meta"]
     url = f"{SITE}/media/{post['slug']}/"
-    publisher = {"@type": "Organization", "name": "nito", "url": f"{SITE}/"}
+    publisher = {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": f"{SITE}/"}
     author_name = meta.get("author", DEFAULT_AUTHOR)
     author_profile = AUTHORS.get(author_name, {"role": DEFAULT_AUTHOR_ROLE, "bio": DEFAULT_AUTHOR_BIO})
     author_person = {
