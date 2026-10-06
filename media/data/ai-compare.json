@@ -1,0 +1,903 @@
+{
+  "slug": "ai-compare",
+  "ais": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "maker": "OpenAI"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "maker": "Google"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "maker": "Anthropic"
+    },
+    {
+      "id": "ai_mode",
+      "name": "AIモード",
+      "maker": "Google"
+    }
+  ],
+  "checked": {
+    "chatgpt": "2026-10-06",
+    "gemini": "2026-10-06",
+    "claude": "2026-10-06",
+    "ai_mode": "2026-10-06"
+  },
+  "last_changed": {
+    "date": "2026-09-29",
+    "text": "ChatGPT Pro 200の新規契約は利用枠が以前より少なく。9/22〜9/29に有効だった契約は10/29まで従来の枠"
+  },
+  "tables": [
+    {
+      "id": "free",
+      "rows": [
+        {
+          "id": "limit_unit",
+          "label": "上限の決まり方",
+          "cells": {
+            "chatgpt": {
+              "text": "テキストは回数無制限。ツールごとに別の上限",
+              "src": [
+                "oa2"
+              ]
+            },
+            "gemini": {
+              "text": "使った量で決まる。5時間ごと＋週の上限",
+              "src": [
+                "g1"
+              ]
+            },
+            "claude": {
+              "text": "使った量で決まる5時間の枠",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "通常の質問は記載なし。Pro・画像に1日の上限",
+              "src": [
+                "m1",
+                "m2"
+              ]
+            }
+          }
+        },
+        {
+          "id": "models",
+          "label": "無料で使えるモデル",
+          "cells": {
+            "chatgpt": {
+              "text": "GPT-5.6 Luna",
+              "src": [
+                "oa1",
+                "oa2"
+              ]
+            },
+            "gemini": {
+              "text": "Flash-Lite・Flash・Pro（10/9からFlash-Liteのみ）",
+              "src": [
+                "g1",
+                "g2"
+              ]
+            },
+            "claude": {
+              "text": "Sonnet・Haiku（Opusは不可）",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "高速モード（Gemini 3 Proは有料プランのみ）",
+              "src": [
+                "m1"
+              ]
+            }
+          }
+        },
+        {
+          "id": "when_hit",
+          "label": "上限に達したとき",
+          "cells": {
+            "chatgpt": {
+              "text": "その機能だけ停止。リセット待ちか有料化で即リセット",
+              "src": [
+                "oa2"
+              ]
+            },
+            "gemini": {
+              "text": "リセット待ちか上位プランへ",
+              "src": [
+                "g1"
+              ]
+            },
+            "claude": {
+              "text": "リセット待ちか上位プランへ",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "リセット待ちかGoogle AIプランへ",
+              "src": [
+                "m1",
+                "m2"
+              ]
+            }
+          }
+        },
+        {
+          "id": "image",
+          "label": "画像の作成",
+          "cells": {
+            "chatgpt": {
+              "text": "可（上限あり。枚数は記載なし）",
+              "src": [
+                "oa1",
+                "oa6"
+              ]
+            },
+            "gemini": {
+              "text": "可（Nano Banana 2。枚数は記載なし）",
+              "src": [
+                "g1"
+              ]
+            },
+            "claude": {
+              "text": "写真・イラストは生成しない（図表は作成可）",
+              "src": [
+                "a3"
+              ]
+            },
+            "ai_mode": {
+              "text": "24時間に最大25枚",
+              "src": [
+                "m2"
+              ]
+            }
+          }
+        },
+        {
+          "id": "files",
+          "label": "ファイルの読み込み",
+          "cells": {
+            "chatgpt": {
+              "text": "1日3ファイルまで。1ファイル512MB",
+              "src": [
+                "oa5"
+              ]
+            },
+            "gemini": {
+              "text": "1回10個まで。1ファイル100MB（動画2GB）",
+              "src": [
+                "g4"
+              ]
+            },
+            "claude": {
+              "text": "1チャット20個まで。1ファイル500MB",
+              "src": [
+                "a2"
+              ]
+            },
+            "ai_mode": {
+              "text": "PDFなどを添付可。上限は公式に記載なし",
+              "src": [
+                "m1"
+              ]
+            }
+          }
+        },
+        {
+          "id": "ads",
+          "label": "広告",
+          "cells": {
+            "chatgpt": {
+              "text": "一部の国で表示の場合あり（Goも同じ）",
+              "src": [
+                "oa1",
+                "oa2"
+              ]
+            },
+            "gemini": {
+              "text": "公式に記載なし",
+              "src": [
+                "g1"
+              ]
+            },
+            "claude": {
+              "text": "広告なしを公式に表明",
+              "src": [
+                "a4"
+              ]
+            },
+            "ai_mode": {
+              "text": "公式に記載なし",
+              "src": [
+                "m1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "limit",
+      "rows": [
+        {
+          "id": "reset",
+          "label": "リセットまで",
+          "cells": {
+            "chatgpt": {
+              "text": "時刻が分かる場合は画面に表示",
+              "src": [
+                "oa2",
+                "oa3"
+              ]
+            },
+            "gemini": {
+              "text": "5時間ごと（週の上限に達するまで）",
+              "src": [
+                "g1"
+              ]
+            },
+            "claude": {
+              "text": "5時間のローリング枠。有料は週次も",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "1日の上限。時刻は公式に記載なし",
+              "src": [
+                "m1",
+                "m2"
+              ]
+            }
+          }
+        },
+        {
+          "id": "where",
+          "label": "残りの確認場所",
+          "cells": {
+            "chatgpt": {
+              "text": "チャットは上限の表示の中。設定の使用状況はWork・Codex",
+              "src": [
+                "oa4"
+              ]
+            },
+            "gemini": {
+              "text": "設定アイコン → 使用量上限",
+              "src": [
+                "g1"
+              ]
+            },
+            "claude": {
+              "text": "設定 ＞ 使用状況",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "公式に記載なし",
+              "src": [
+                "m1",
+                "m2"
+              ]
+            }
+          }
+        },
+        {
+          "id": "keep_going",
+          "label": "待たずに続ける方法",
+          "cells": {
+            "chatgpt": {
+              "text": "別のモデルを使う（有料）。有料化で即リセット",
+              "src": [
+                "oa2",
+                "oa3"
+              ]
+            },
+            "gemini": {
+              "text": "AIプラン利用者はFlash-Liteで続行",
+              "src": [
+                "g1"
+              ]
+            },
+            "claude": {
+              "text": "有料プランは使用クレジットで続行",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "Google AIプランに上げる",
+              "src": [
+                "m1",
+                "m2"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "paid",
+      "rows": [
+        {
+          "id": "entry",
+          "label": "いちばん安い有料プラン（月額）",
+          "cells": {
+            "chatgpt": {
+              "text": "Go 1,400円",
+              "src": [
+                "oa1"
+              ]
+            },
+            "gemini": {
+              "text": "Google AI Plus 725円",
+              "src": [
+                "g3"
+              ]
+            },
+            "claude": {
+              "text": "Pro $22（年払いなら月$18）",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "Geminiと共通のGoogle AI Plus 725円",
+              "src": [
+                "g3",
+                "m1"
+              ]
+            }
+          }
+        },
+        {
+          "id": "main",
+          "label": "主力の有料プラン（月額）",
+          "cells": {
+            "chatgpt": {
+              "text": "Plus 3,000円",
+              "src": [
+                "oa1"
+              ]
+            },
+            "gemini": {
+              "text": "Google AI Pro 2,900円",
+              "src": [
+                "g3"
+              ]
+            },
+            "claude": {
+              "text": "Pro $22（いちばん安いプランと同じ）",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "Geminiと共通のGoogle AI Pro 2,900円",
+              "src": [
+                "g3",
+                "m1"
+              ]
+            }
+          }
+        },
+        {
+          "id": "multiplier",
+          "label": "上限は無料の何倍か",
+          "cells": {
+            "chatgpt": {
+              "text": "公式に記載なし",
+              "src": [
+                "oa1",
+                "oa2"
+              ]
+            },
+            "gemini": {
+              "text": "Plus 2倍・Pro 4倍",
+              "src": [
+                "g1"
+              ]
+            },
+            "claude": {
+              "text": "Proは5時間あたり少なくとも5倍",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "画像はPlus 50枚・Pro 100枚（無料25枚）",
+              "src": [
+                "m2"
+              ]
+            }
+          }
+        },
+        {
+          "id": "top",
+          "label": "最上位プラン（月額）",
+          "cells": {
+            "chatgpt": {
+              "text": "Pro 500（月500ドル）",
+              "src": [
+                "oa3"
+              ]
+            },
+            "gemini": {
+              "text": "Google AI Ultra 14,500円〜32,000円",
+              "src": [
+                "g3"
+              ]
+            },
+            "claude": {
+              "text": "Max $110〜（20xの金額は記載なし）",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "Geminiと共通のUltra 14,500円〜",
+              "src": [
+                "g3",
+                "m2"
+              ]
+            }
+          }
+        },
+        {
+          "id": "business",
+          "label": "法人向け（1人あたり月額）",
+          "cells": {
+            "chatgpt": {
+              "text": "Business 3,050円〜（2名から）",
+              "src": [
+                "oa1"
+              ]
+            },
+            "gemini": {
+              "text": "Workspace Business Starter 800円（税別）",
+              "src": [
+                "g5"
+              ]
+            },
+            "claude": {
+              "text": "Team $22（年払い）・月払い$27.50",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "公式に記載なし",
+              "src": [
+                "m1"
+              ]
+            }
+          }
+        },
+        {
+          "id": "tax",
+          "label": "価格の表示",
+          "cells": {
+            "chatgpt": {
+              "text": "円表示。税込か税別かは公式に記載なし",
+              "src": [
+                "oa1"
+              ]
+            },
+            "gemini": {
+              "text": "円表示。税込か税別かは公式に記載なし",
+              "src": [
+                "g3"
+              ]
+            },
+            "claude": {
+              "text": "ドル表示。日本の画面は消費税10%込み",
+              "src": [
+                "a1"
+              ]
+            },
+            "ai_mode": {
+              "text": "Geminiと同じ（税の記載なし）",
+              "src": [
+                "g3"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "links": {
+    "chatgpt": [
+      {
+        "slug": "chatgpt-pricing",
+        "label": "ChatGPTの料金プラン"
+      },
+      {
+        "slug": "chatgpt-limit-reached",
+        "label": "ChatGPTの上限とリセット"
+      },
+      {
+        "slug": "chatgpt-image-limit",
+        "label": "ChatGPTの画像生成の制限"
+      },
+      {
+        "slug": "chatgpt-file-upload-limit",
+        "label": "ChatGPTのファイル上限"
+      }
+    ],
+    "gemini": [
+      {
+        "slug": "gemini-pricing",
+        "label": "Geminiの料金プラン"
+      },
+      {
+        "slug": "gemini-limits",
+        "label": "Geminiの回数制限"
+      }
+    ],
+    "claude": [
+      {
+        "slug": "claude-pricing",
+        "label": "Claudeの料金プラン"
+      },
+      {
+        "slug": "claude-usage-limits",
+        "label": "Claudeの使用制限とリセット"
+      }
+    ],
+    "ai_mode": [
+      {
+        "slug": "ai-mode-limit",
+        "label": "AIモードの回数制限"
+      },
+      {
+        "slug": "ai-mode-image-generation",
+        "label": "AIモードで画像を作る"
+      },
+      {
+        "slug": "google-ai-mode-guide",
+        "label": "AIモードの使い方"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "oa1",
+      "ai": "chatgpt",
+      "title": "料金｜ChatGPT",
+      "url": "https://chatgpt.com/ja-JP/pricing/",
+      "fetch_url": null,
+      "auto": false,
+      "watch": [],
+      "checked": "2026-10-06",
+      "note": "Cloudflare と OpenAI の規約により自動取得しない。アプリ内ブラウザで確認（個人向け: ￥0・￥1,400・￥3,000・Pro ￥16,800〜、ビジネス向けタブ: ￥3,050）。税の記載なし"
+    },
+    {
+      "id": "oa2",
+      "ai": "chatgpt",
+      "title": "ChatGPT 無料版に関するよくある質問（OpenAI ヘルプセンター）",
+      "url": "https://help.openai.com/ja-jp/articles/9275245-chatgpt-free-tier-faq",
+      "fetch_url": null,
+      "auto": false,
+      "watch": [],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "oa3",
+      "ai": "chatgpt",
+      "title": "ChatGPT Pro プランの概要（OpenAI ヘルプセンター）",
+      "url": "https://help.openai.com/ja-jp/articles/9793128-about-chatgpt-pro-tiers",
+      "fetch_url": null,
+      "auto": false,
+      "watch": [],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "oa4",
+      "ai": "chatgpt",
+      "title": "Work と Codex での GPT-6 Astra の利用量管理（OpenAI ヘルプセンター）",
+      "url": "https://help.openai.com/ja-jp/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex",
+      "fetch_url": null,
+      "auto": false,
+      "watch": [],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "oa5",
+      "ai": "chatgpt",
+      "title": "ファイルアップロード FAQ（OpenAI ヘルプセンター）",
+      "url": "https://help.openai.com/ja-jp/articles/8555545-file-uploads-faq",
+      "fetch_url": null,
+      "auto": false,
+      "watch": [],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "oa6",
+      "ai": "chatgpt",
+      "title": "ChatGPT の画像（OpenAI ヘルプセンター）",
+      "url": "https://help.openai.com/ja-jp/articles/11084440-images-in-chatgpt",
+      "fetch_url": null,
+      "auto": false,
+      "watch": [],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "oa7",
+      "ai": "chatgpt",
+      "title": "ChatGPT — リリースノート（OpenAI ヘルプセンター）",
+      "url": "https://help.openai.com/ja-jp/articles/6825453-chatgpt-release-notes",
+      "fetch_url": null,
+      "auto": false,
+      "watch": [],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "g1",
+      "ai": "gemini",
+      "title": "Google AI のサブスクリプション プランに応じた Gemini アプリの使用量上限とアップグレード（Gemini アプリ ヘルプ）",
+      "url": "https://support.google.com/gemini/answer/16275805?hl=ja",
+      "fetch_url": "https://support.google.com/gemini/answer/16275805?hl=ja",
+      "auto": true,
+      "watch": [
+        "週ごとの上限に達するまで 5 時間ごとにリセットされます",
+        "AI Plus 標準の 2 倍 AI Pro 標準の 4 倍",
+        "Flash-Lite で会話を続けることができます",
+        "左下の設定アイコン 使用量上限アイコン を選択します"
+      ],
+      "checked": "2026-10-06",
+      "note": "モデルと機能の表の ○・チェックは画像なので本文テキストに出ない。無料で Nano Banana 2 の画像生成が可、の根拠は機能表のチェック画像（alt=チェックマーク）"
+    },
+    {
+      "id": "g2",
+      "ai": "gemini",
+      "title": "Gemini モデルへのアクセスと使用量上限の変更（Gemini アプリ ヘルプ）",
+      "url": "https://support.google.com/gemini/answer/17004136?hl=ja",
+      "fetch_url": "https://support.google.com/gemini/answer/17004136?hl=ja",
+      "auto": true,
+      "watch": [
+        "ユーザーに対して 10 月 9 日より適用されます",
+        "2026 年 5 月 17 日より、18 歳以上の",
+        "18 歳未満のユーザーには、2026 年 7 月 24 日"
+      ],
+      "checked": "2026-10-06",
+      "note": "10/9 以降に使えるモデルの表はチェック画像（alt）で示される。プランなしは Flash-Lite のみ、AI Plus は Flash-Lite・Flash"
+    },
+    {
+      "id": "g3",
+      "ai": "gemini",
+      "title": "Google AI のプラン（Google One）",
+      "url": "https://one.google.com/about/google-ai-plans/?hl=ja",
+      "fetch_url": "https://one.google.com/intl/ALL_jp/about/feeds/pricing_2026_07_28.json",
+      "auto": true,
+      "watch": [
+        "PLUS_MONTHLY\": 725",
+        "AI_PRO_MONTHLY\": 2900",
+        "ULTRA_100_MONTHLY\": 14500",
+        "ULTRA_200_MONTHLY\": 32000"
+      ],
+      "checked": "2026-10-06",
+      "note": "プランのページは HTTP では価格が空（g1-localized-price を JS で埋める）。fetch_url はそのページの JS が読む日本向け価格の JSON（CURRENCY_CODE JPY）。ファイル名に日付が入っているので、ページ側の参照先が変わったら差し替えが必要。税込か税別かの記載はページにない ／ fetch_url はページの JS が読む日本向け価格の JSON。ファイル名に日付があり、参照先が変わったら差し替える"
+    },
+    {
+      "id": "g4",
+      "ai": "gemini",
+      "title": "Gemini アプリでファイルをアップロードして分析する（Gemini アプリ ヘルプ）",
+      "url": "https://support.google.com/gemini/answer/14903178?hl=ja",
+      "fetch_url": "https://support.google.com/gemini/answer/14903178?hl=ja",
+      "auto": true,
+      "watch": [
+        "最大 10 個のファイルを同一のプロンプト",
+        "1 ファイルにつき最大 2 GB です",
+        "それぞれ 100 MB まで対応しています"
+      ],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "g5",
+      "ai": "gemini",
+      "title": "Google Workspace の料金プラン",
+      "url": "https://workspace.google.com/intl/ja/pricing",
+      "fetch_url": "https://workspace.google.com/intl/ja/pricing",
+      "auto": true,
+      "watch": [
+        "すべてのユーザー ￥800 • 価格は",
+        "月額料金です（税別）"
+      ],
+      "checked": "2026-10-06",
+      "window": 0,
+      "note": "割引のキャンペーン表示（％オフ）は取得のたびに変わるので watch に入れない"
+    },
+    {
+      "id": "m1",
+      "ai": "ai_mode",
+      "title": "Google 検索の AI モードで AI による回答を取得する（Google 検索 ヘルプ）",
+      "url": "https://support.google.com/websearch/answer/16011537?hl=ja",
+      "fetch_url": "https://support.google.com/websearch/answer/16011537?hl=ja",
+      "auto": true,
+      "watch": [
+        "Gemini 3 Pro には、1 日ごとの使用量制限",
+        "Google AI Ultra 定期購入者",
+        "PDF などのファイルを使用して質問する"
+      ],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "m2",
+      "ai": "ai_mode",
+      "title": "Google 検索で画像を作成、編集する（Google 検索 ヘルプ）",
+      "url": "https://support.google.com/websearch/answer/16649374?hl=ja",
+      "fetch_url": "https://support.google.com/websearch/answer/16649374?hl=ja",
+      "auto": true,
+      "watch": [
+        "プランなし: 24 時間あたり最大 25 枚",
+        "Plus: 24 時間あたり最大 50 枚",
+        "Pro: 24 時間あたり最大 100 枚",
+        "Ultra: 24 時間あたり最大 1,000 枚"
+      ],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "m3",
+      "ai": "ai_mode",
+      "title": "Nano Banana 2: Combining Pro capabilities with lightning-fast speed（Google ブログ）",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
+      "fetch_url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
+      "auto": true,
+      "watch": [
+        "Feb 26, 2026",
+        "In AI Mode and Lens"
+      ],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "a1",
+      "ai": "claude",
+      "title": "プランと料金（Claude by Anthropic）",
+      "url": "https://claude.com/pricing",
+      "fetch_url": "https://claude.com/pricing",
+      "auto": true,
+      "watch": [
+        "年間サブスクリプション割引適用時の月額",
+        "月払いの場合は $20",
+        "Max 一日中Claudeと仕事をする方へ $100 から",
+        "表示価格には該当する税金は含まれていません",
+        "5時間のローリングセッションウィンドウでリセットされる",
+        "Proは5時間セッションあたりFreeの少なくとも5倍",
+        "設定 ＞ 使用状況 でいつでも現在の状態を確認できます",
+        "有料プランでは 使用クレジット をオンにして",
+        "Opus いいえ はい はい はい",
+        "年払い時のシートあたり月額。月払いの場合は $25"
+      ],
+      "checked": "2026-10-06",
+      "note": "価格は日本からブラウザで開いた画面の表示（2026-10-06 確認。Prices include 10% JCT の注記つき）。素の HTTP は米国の税別ドル表示（Pro $17/$20、Max $100〜）を返すので、毎朝の自動確認は米国の表示の変化を見るだけ"
+    },
+    {
+      "id": "a2",
+      "ai": "claude",
+      "title": "Claudeへのファイルアップロード（Anthropic ヘルプセンター）",
+      "url": "https://support.claude.com/ja/articles/8241126",
+      "fetch_url": "https://support.claude.com/ja/articles/8241126",
+      "auto": true,
+      "watch": [
+        "ファイルあたり500MB",
+        "チャットあたり最大20ファイル"
+      ],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "a3",
+      "ai": "claude",
+      "title": "Claudeは画像を生成できますか？（Anthropic ヘルプセンター）",
+      "url": "https://support.claude.com/ja/articles/9002504",
+      "fetch_url": "https://support.claude.com/ja/articles/9002504",
+      "auto": true,
+      "watch": [
+        "画像生成ツールのような方法で写真やイラストを生成しません",
+        "図表、グラフ、インタラクティブなビジュアルを会話内で直接作成"
+      ],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "a4",
+      "ai": "claude",
+      "title": "Claude is a space to think（Anthropic）",
+      "url": "https://www.anthropic.com/news/claude-is-a-space-to-think",
+      "fetch_url": "https://www.anthropic.com/news/claude-is-a-space-to-think",
+      "auto": true,
+      "watch": [
+        "Claude will remain ad-free",
+        "Feb 4, 2026"
+      ],
+      "checked": "2026-10-06"
+    },
+    {
+      "id": "a5",
+      "ai": "claude",
+      "title": "Higher usage limits for Claude and a compute deal with SpaceX（Anthropic）",
+      "url": "https://www.anthropic.com/news/higher-limits-spacex",
+      "fetch_url": "https://www.anthropic.com/news/higher-limits-spacex",
+      "auto": true,
+      "watch": [
+        "May 6, 2026",
+        "doubling Claude Code’s"
+      ],
+      "checked": "2026-10-06"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-09",
+      "ai": "gemini",
+      "text": "（予定）AIプランに入っていない人が使えるモデルが Flash-Lite だけに。Plus は Flash-Lite と Flash",
+      "src": [
+        "g2"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "ai": "chatgpt",
+      "text": "ChatGPT Pro 200の新規契約は利用枠が以前より少なく。9/22〜9/29に有効だった契約は10/29まで従来の枠",
+      "src": [
+        "oa3"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "ai": "chatgpt",
+      "text": "GPT-6 Astraの公開に合わせ、Plus・Pro・BusinessにWorkとCodexの保存済みリセットを付与（9/3・9/4）",
+      "src": [
+        "oa4"
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "ai": "chatgpt",
+      "text": "公式のDALL·E GPTが提供終了。画像はChatGPT 画像で作成",
+      "src": [
+        "oa7",
+        "oa6"
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "ai": "gemini",
+      "text": "Geminiアプリの使った量で決まる上限が18歳未満にも適用",
+      "src": [
+        "g2"
+      ]
+    },
+    {
+      "date": "2026-05-17",
+      "ai": "gemini",
+      "text": "Geminiアプリの上限が使った量で決まる方式に。週の上限まで5時間ごとにリセット（18歳以上）",
+      "src": [
+        "g2"
+      ]
+    },
+    {
+      "date": "2026-05-06",
+      "ai": "claude",
+      "text": "Claude Codeの5時間の上限が2倍に（Pro・Max・Team・シート制Enterprise）",
+      "src": [
+        "a5"
+      ]
+    },
+    {
+      "date": "2026-02-26",
+      "ai": "ai_mode",
+      "text": "画像のモデルNano Banana 2がAIモードとレンズに",
+      "src": [
+        "m3"
+      ]
+    }
+  ]
+}
