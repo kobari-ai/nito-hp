@@ -88,7 +88,7 @@ Googleのヘルプ「[Gemini アプリへのログインに必要なもの](http
 
 ## 使用量の上限で止まったとき
 
-使っている途中で止まり上限の通知が出たなら、使用量の上限に達した状態です。ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」によると、Geminiアプリの上限は回数ではなく使った量で決まり、週の上限に達するまで5時間ごとにリセットされます。同じページで使用量が多くなるものとして挙がっているのは、画像や動画の生成・Deep Research・Proモデルです。プランごとの倍率と残りの確かめ方は「[Geminiの回数制限を解説](/media/gemini-limits/)」にまとめています。
+使っている途中で止まり上限の通知が出たなら、使用量の上限に達した状態です。ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」によると、Geminiアプリの上限は回数ではなく使った量で決まり、週の上限に達するまで5時間ごとにリセットされます。同じページで使用量が多くなるものとして挙がっているのは、画像や動画・音楽の生成、Deep Research、Proモデル、拡張思考などです。プランごとの倍率と残りの確かめ方は「[Geminiの回数制限を解説](/media/gemini-limits/)」にまとめています。
 
 <figure class="post-figure"><img src="/media/images/gemini-not-working/gnw_06_help_model.jpg" alt="GoogleのヘルプのGeminiモデルへのアクセスと使用量上限の変更のページ。2026年10月より個人アカウントで利用できるモデルが変わり、AIサブスクリプションを利用していないユーザーには10月9日から適用されるという段落が赤枠で囲まれている。下の表も赤枠で囲まれ、プランなしはFlash-Liteだけ、AI PlusはFlash-LiteとFlash、AI ProとAI Ultraは3つすべてに印が付いている" loading="lazy"><figcaption>10月9日からの使えるモデルの表（2026年10月7日取得）</figcaption></figure>
 
