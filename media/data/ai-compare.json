@@ -685,8 +685,7 @@
         "ULTRA_200_MONTHLY\": 32000"
       ],
       "checked": "2026-10-06",
-      "notes": "プランのページは HTTP では価格が空（g1-localized-price を JS で埋める）。fetch_url はそのページの JS が読む日本向け価格の JSON（CURRENCY_CODE JPY）。ファイル名に日付が入っているので、ページ側の参照先が変わったら差し替えが必要。税込か税別かの記載はページにない",
-      "note": "fetch_url はページの JS が読む日本向け価格の JSON。ファイル名に日付があり、参照先が変わったら差し替える"
+      "note": "プランのページは HTTP では価格が空（g1-localized-price を JS で埋める）。fetch_url はそのページの JS が読む日本向け価格の JSON（CURRENCY_CODE JPY）。ファイル名に日付が入っているので、ページ側の参照先が変わったら差し替えが必要。税込か税別かの記載はページにない ／ fetch_url はページの JS が読む日本向け価格の JSON。ファイル名に日付があり、参照先が変わったら差し替える"
     },
     {
       "id": "g4",
