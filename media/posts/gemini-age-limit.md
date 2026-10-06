@@ -189,7 +189,7 @@ Googleアカウントにログインしている未成年には、全員向け�
 年齢制限を外すスイッチはありません。13歳未満なら保護者がファミリーリンクでオンにします。生年月日の登録が間違っているなら直し、求められたら年齢確認をします。
 
 ### Geminiの年齢制限はなぜ13歳なのですか？
-Geminiのヘルプは13歳（またはお住まいの国の該当する年齢）と書くだけで、理由は書いていません。日本では、Googleアカウントを自分で管理できる最低年齢も同じ13歳です。
+Geminiのヘルプは13歳（またはお住まいの国の該当する年齢）と書くだけで、理由は書いていません。日本ではGoogleアカウントを自分で管理できる最低年齢も同じ13歳です。
 
 ### Geminiの画像生成は何歳からできますか？
 画像の生成は13歳から、画像の編集は18歳からです。学校用のアカウントでも、18歳未満は画像の生成はできて編集はできません。
@@ -214,5 +214,4 @@ Geminiのヘルプは13歳（またはお住まいの国の該当する年齢）
 - [Google サービスへのアクセスを年齢別に管理する](https://knowledge.workspace.google.com/admin/getting-started/editions/control-access-to-google-services-by-age?hl=ja)（Google Workspace ナレッジセンター）
 - [Gemini API 追加利用規約](https://ai.google.dev/gemini-api/terms?hl=ja)（Google AI for Developers）
 - [教育向け「Gemini」年齢制限を撤廃 18歳未満も利用可能に](https://www.watch.impress.co.jp/docs/news/2031495.html)（Impress Watch、2025年7月16日）
-- [グーグル、18歳未満のユーザーを行動から推定して保護 米国で開始](https://www.watch.impress.co.jp/docs/news/2035645.html)（Impress Watch、2025年7月31日）
 - [高一です。Geminiを使いたいのですが…](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14316900339)（Yahoo!知恵袋、2025年6月29日）
