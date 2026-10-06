@@ -37,7 +37,7 @@ Yahoo!知恵袋の2025年6月の質問に、18歳未満は基本的にGeminiを�
 
 ### 日本の基準が13歳になる理由
 
-Geminiのヘルプは年齢を「13 歳（または お住まいの国の該当する年齢）」と書いています。この該当する年齢はGoogleアカウントを自分で管理できる最低年齢のことです。
+Geminiのヘルプは年齢を「13 歳（または お住まいの国の該当する年齢）」と書いています。Googleアカウントの最低年齢の一覧で、日本は13歳の側に入ります。
 
 <figure class="post-figure"><img src="/media/images/gemini-age-limit/02_help_account_age.jpg" alt="Google アカウント ヘルプのお住まいの国の年齢制限を調べるの節。赤い枠の中に、下記に記載されていないすべての国では13歳がGoogleアカウントをユーザー自身で管理できる最低年齢ですと書かれている。その下でアジアを開くと、韓国14歳以上、ベトナム15歳以上の2か国だけが並ぶ" loading="lazy"><figcaption>アジアで13歳と違う国は韓国とベトナムだけで、日本は載っていない（Google アカウント ヘルプ）</figcaption></figure>
 
@@ -107,7 +107,7 @@ Googleアカウントにログインしている未成年には、全員向け�
 
 年齢の下限はヘルプのページによって書き方がそろっていません。Geminiのログインのヘルプは個人と学校用のアカウントに13歳以上を求めています。一方で管理者向けの「[gemini.google.com へのアクセスを有効または無効にする](https://support.google.com/a/answer/14571493?hl=ja&co=DASHER._Family%3DEducation)」は、教育機関向けのGeminiアプリをすべての年齢のユーザーが利用できると書いています。2025年7月の[Impress Watchの記事](https://www.watch.impress.co.jp/docs/news/2031495.html)も、管理下のアカウントなら年齢制限なくすべての児童・生徒が使えるようになったと伝えました。学校で小学生が使えるかどうかは、学校の設定を確かめるのが確実です。
 
-<figure class="post-figure"><img src="/media/images/gemini-age-limit/06_help_school.jpg" alt="Google Workspace 管理者ヘルプの年齢別の教育サービスへのアクセスの表（最終更新日2025年12月19日）。Google Workspace for Educationのユーザーを18歳未満と18歳以上の列に分け、18歳未満にもチェックが付くのはPro、高速モード、Canvas、Google Workspaceアプリへの接続、Gem、画像生成、テスト、アクションのスケジュール設定、ガイド付き学習。思考モード、音声概要、GitHubへの接続、Deep Research、ファイルのアップロード、Gemini Live、画像編集、音楽生成、動画生成は18歳以上の列だけにチェックが付く" loading="lazy"><figcaption>学校用アカウントでは18歳未満は使える機能が絞られる（Google Workspace 管理者ヘルプ）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/gemini-age-limit/06_help_school.jpg" alt="Google Workspace 管理者ヘルプの年齢別の教育サービスへのアクセスの表（最終更新日2025年12月19日）。Google Workspace for Educationのユーザーを18歳未満と18歳以上の列に分け、18歳未満にもチェックが付くのはPro、高速モード、Canvas、Google Workspaceアプリへの接続、Gem、画像生成、テスト、アクションのスケジュール設定、ガイド付き学習。思考モード、音声概要、GitHubへの接続、Deep Research、ファイルのアップロード、Gemini Live、画像編集、音楽生成、動画生成は18歳以上の列だけにチェックが付く" loading="lazy"><figcaption>学校用アカウントでは18歳未満は使える機能が絞られる（Google Workspace 管理者ヘルプ、2025年12月19日更新の表）</figcaption></figure>
 
 | 学校用アカウントで使える機能 | 18歳未満 | 18歳以上 |
 |---|---|---|
@@ -115,7 +115,7 @@ Googleアカウントにログインしている未成年には、全員向け�
 | 思考モード・Deep Research・ファイルのアップロードなど | 使えない | 使える |
 | Gemini Live・画像編集・音楽生成・動画生成 | 使えない | 使える |
 
-**学校用では、個人のアカウントなら13歳から使えるGemini Liveも18歳未満は使えません。**ファイルのアップロードも18歳以上の列にだけ印が付いています。
+**学校用では、個人のアカウントなら13歳から使えるGemini Liveも18歳未満は使えません。**（2025年12月19日更新の管理者ヘルプの表による）ファイルのアップロードも18歳以上の列にだけ印が付いています。
 
 小中高校の場合は年齢の扱いにも決まりがあります。管理者向けの「[Google サービスへのアクセスを年齢別に管理する](https://knowledge.workspace.google.com/admin/getting-started/editions/control-access-to-google-services-by-age?hl=ja)」によると、初中等教育機関では18歳以上と特定されなかったユーザーは全員18歳未満として扱われます。
 
@@ -162,7 +162,6 @@ Googleアカウントにログインしている未成年には、全員向け�
 - クレジットカード: 有効かどうかの信用照会だけで請求は発生しない
 - デジタルID: 今はAndroidだけで、地域によっては使えない
 
-米国ではGoogleが検索やYouTubeの使い方から18歳未満かどうかを推定する仕組みを2025年7月に始めたと、[Impress Watch](https://www.watch.impress.co.jp/docs/news/2035645.html)が報じています。この報道は米国の一部の利用者が対象の話で、日本での導入はGoogleのヘルプでは確認できませんでした。
 
 ## 保護者が子どもと話しておくこと
 
@@ -190,7 +189,7 @@ Googleアカウントにログインしている未成年には、全員向け�
 年齢制限を外すスイッチはありません。13歳未満なら保護者がファミリーリンクでオンにします。生年月日の登録が間違っているなら直し、求められたら年齢確認をします。
 
 ### Geminiの年齢制限はなぜ13歳なのですか？
-Gemini個人アカウントの条件が、Googleアカウントを自分で管理できる最低年齢に合わせてあるためです。日本ではこの年齢が13歳です。法律上の理由はGeminiのヘルプには書かれていません。
+Geminiのヘルプは13歳（またはお住まいの国の該当する年齢）と書くだけで、理由は書いていません。日本では、Googleアカウントを自分で管理できる最低年齢も同じ13歳です。
 
 ### Geminiの画像生成は何歳からできますか？
 画像の生成は13歳から、画像の編集は18歳からです。学校用のアカウントでも、18歳未満は画像の生成はできて編集はできません。
