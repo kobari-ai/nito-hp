@@ -14,7 +14,7 @@ cover_sub: 一時チャットのやり方・72時間・出ないとき
 
 :::takeaways
 - Geminiに**シークレットモードという名前の機能はない**。いちばん近いのは**一時チャット**
-- 始め方は**画面右上の点線の丸とペンのアイコン**を押すだけ（スマホとパソコンの画面で確認）
+- 始め方は**画面右上の点線の丸とペンのアイコン**を押すだけ（スマホのブラウザとパソコンの画面で確認）
 - 一時チャットは**最近のチャットに出ず、GoogleのAIモデルの学習にも使われない**。ただし**72時間はGoogleアカウントに保持**される
 - 抜けたあとに**開き直す方法はない**。残したい回答は抜ける前にコピーする
 - ボタンが出ないときは**ログイン・アカウントの種類・使っている場所**の3つを確かめる
@@ -34,7 +34,7 @@ cover_sub: 一時チャットのやり方・72時間・出ないとき
 |---|---|---|---|
 | 効く範囲 | その会話だけ | オフにしたあとの会話すべて | そのウィンドウ |
 | 最近のチャット | 出ない | 保存されない | ログインしなければ使えない |
-| Google側の保持 | 72時間 | 最長72時間 | ログインしなければアカウントと結びつかない |
+| Google側の保持 | 最長72時間 | 最長72時間 | ログインしなければアカウントと結びつかない |
 | AIモデルの学習 | 使われない | フィードバックを送らなければ使われない | Googleのプライバシー ポリシーに沿って処理 |
 | 使えなくなる機能 | Gem・アプリ連携など | アプリ連携の大半 | 画像生成・Gem・ファイルのアップロードなど |
 
@@ -44,13 +44,13 @@ cover_sub: 一時チャットのやり方・72時間・出ないとき
 
 ### スマホで始める
 
-1. ブラウザで[gemini.google.com](https://gemini.google.com/)を開くか、Geminiアプリを開く
+1. スマホのブラウザで[gemini.google.com](https://gemini.google.com/)を開く
 2. 画面右上の**点線の丸とペンのアイコン**（一時チャット）を押す
 3. 「少し話しましょう」と出たら、下の欄に質問を入れて送る
 
 <figure class="post-figure"><img src="/media/images/gemini-temporary-chat/01_sp_header.jpg" alt="スマホ表示のブラウザで開いたGeminiの上部。左にメニューとモデル名、右にダウンロードのアイコンと点線の丸とペンのアイコンがあり、点線の丸とペンのアイコンを赤枠で囲んでいる" loading="lazy"><figcaption>点線の丸とペンのアイコンが一時チャット（2026年10月8日）</figcaption></figure>
 
-英語版のヘルプのスマホの手順は、メニューを開いて新しいチャットの横にある一時チャットを押す書き方です。**スマホ表示のブラウザで開いたときは、メニューを開かなくても右上にボタンが出ていました。**アプリで右上に見当たらないときは、左上のメニューも開いて探してください。
+英語版のヘルプのスマホの手順は、メニューを開いて新しいチャットの横にある一時チャットを押す書き方です。**スマホ表示のブラウザで開いたときは、メニューを開かなくても右上にボタンが出ていました。**アプリで右上に見当たらないときは、画面の上のメニューを開き、新しいチャットの横を探してください（英語版ヘルプの手順）。
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/gemini-temporary-chat/02_sp_temp_start.jpg" alt="一時チャットのボタンを押した直後のスマホの画面。右上のアイコンがバツ印に変わり、中央に点線の丸とペンのアイコンと少し話しましょうの見出しが出ている。バツ印を赤枠で囲んでいる" loading="lazy"><figcaption>押すと右上がバツ印に変わる</figcaption></figure>
 
@@ -112,13 +112,13 @@ cover_sub: 一時チャットのやり方・72時間・出ないとき
 
 <figure class="post-figure"><img src="/media/images/gemini-temporary-chat/06_help_en.jpg" alt="Gemini Apps Helpの英語版のStart a temporary chatの節。始めるのに必要なものとして、Geminiにログインしていること、個人のGoogleアカウントで仕事用や学校用のアカウントでは使えないこと、GeminiのWebかモバイルアプリで使いGemini in ChromeやGoogleメッセージのGeminiでは使えないことが書かれている" loading="lazy"><figcaption>英語版のGemini Apps Helpの一時チャットの条件</figcaption></figure>
 
-一方で、2026年6月16日の[Google Workspace Updates](https://workspaceupdates.googleblog.com/2026/06/temporary-chats-and-conversation-deletion-control-for-gemini.html)は、管理者が一時チャットを許可するかどうかを決められるようにしたと発表しました。利用者の画面には6月21日から順に出ています。管理者向けのヘルプ「[Gemini アプリで一時的なチャットとチャットの削除を管理する](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/enable-temporary-chats-in-gemini-app?hl=ja)」には、既定の値が組織によって逆になると書かれています。
+一方で、2026年6月16日の[Google Workspace Updates](https://workspaceupdates.googleblog.com/2026/06/temporary-chats-and-conversation-deletion-control-for-gemini.html)は、管理者が一時チャットを許可するかどうかを決められるようにしたと発表しました。利用者の画面には6月21日から5〜7日かけて出ました。管理者向けのヘルプ「[Gemini アプリで一時的なチャットとチャットの削除を管理する](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/enable-temporary-chats-in-gemini-app?hl=ja)」には、既定の値が組織によって逆になると書かれています。Updates は既定でオンとだけ書いていて、組織による区別はその後更新された管理者向けのヘルプ（2026年10月7日更新）にあります。
 
 <figure class="post-figure"><img src="/media/images/gemini-temporary-chat/08_help_workspace.jpg" alt="Google Workspace管理者ヘルプの表。GeminiにVaultを使用していない組織では一時チャットを許可するの既定がオンで、Geminiはこれらのチャットのデータを記録しない。Vault for Geminiを使用している組織では既定がオフで、オンにするとVaultのルールに基づいて記録し保持すると書かれている" loading="lazy"><figcaption>Google Workspace 管理者ヘルプの既定の値</figcaption></figure>
 
 | 組織の状態 | 一時チャットを許可する（既定） | 一時チャットのデータ |
 |---|---|---|
-| GeminiにVaultを使っていない | オン | Geminiは記録しない |
+| GeminiにVaultを使っていない | オン | 管理者向けのヘルプの言い方では、Geminiはこれらのチャットのデータを記録しない |
 | GeminiにVaultを使っている | オフ | Vaultのルールに基づいて記録・保持 |
 
 **仕事用のアカウントでボタンが出ないなら、管理者が許可していない可能性があります。**Vaultを使う組織では一時チャットのデータもVaultのルールで保持されるため、管理者やVaultの利用者が見られることがある、というメッセージが画面に出ると管理者向けのヘルプに書かれています。
@@ -179,7 +179,7 @@ Chromeのヘルプ「[シークレット モードでブラウジングする](h
 - Gemini Apps Help「[Use Gemini Apps](https://support.google.com/gemini/answer/13275745?hl=en)」、Gemini アプリ ヘルプ「[Gemini アプリを使用する](https://support.google.com/gemini/answer/13275745?hl=ja)」（2026年10月8日取得）
 - Gemini アプリ ヘルプ「[Gemini アプリのプライバシー ハブ](https://support.google.com/gemini/answer/13594961?hl=ja)」「[Gemini アプリのアクティビティを管理、削除する](https://support.google.com/gemini/answer/13278892?hl=ja)」（2026年10月8日取得）
 - Google Workspace 管理者ヘルプ「[Gemini アプリで一時的なチャットとチャットの削除を管理する](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/enable-temporary-chats-in-gemini-app?hl=ja)」（2026年10月8日取得、ページの最終更新は2026年10月7日）
-- Google Workspace Updates「[Temporary chats and conversation deletion control for Gemini](https://workspaceupdates.googleblog.com/2026/06/temporary-chats-and-conversation-deletion-control-for-gemini.html)」（2026年6月16日）
+- Google Workspace Updates「[Control whether your users can have temporary chats and delete conversations in the Gemini app](https://workspaceupdates.googleblog.com/2026/06/temporary-chats-and-conversation-deletion-control-for-gemini.html)」（2026年6月16日）
 - Google Chrome ヘルプ「[シークレット モードでブラウジングする](https://support.google.com/chrome/answer/95464?hl=ja&co=GENIE.Platform%3DDesktop)」（2026年10月8日取得）
 - YouTube「テックキャンプ AIカレッジ」の解説動画（一時チャットとアクティビティの保存の使い分け）
 - Geminiの画面は、2026年10月8日にスマホ表示とパソコンのブラウザ（Chrome 154）で撮影
