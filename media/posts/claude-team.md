@@ -152,6 +152,8 @@ App Storeで契約したProは、Appleの決まりで外から解約できない
 
 Team全体を解約するときは、オーナーが組織設定の請求から手続きします。解約しても今の請求期間の終わりまでは使えて、次の期間からは請求されません。月払いから年払いへの切り替えはすぐに始まり、月払いの使っていない期間の分は年払いの請求に充てられます。
 
+Google WorkspaceでGeminiを使う場合の料金と学習の扱いは、[Google WorkspaceのGemini](/media/google-workspace-gemini/)で同じ形で整理しています。
+
 ## よくある質問
 
 ### Claude Teamプランでは何ができますか？
