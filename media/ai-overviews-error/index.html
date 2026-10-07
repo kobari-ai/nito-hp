@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】AIによる概要のエラーを解説｜生成できません・表示されないときの直し方 | nito Column</title>
+    <meta name="description" content="AIによる概要に「現在、AI による概要を生成できません」と出たときの意味と直し方を、実際に再現した画面で解説。エラーが発生しましたとの違い、表示されないのが仕様の場合、拡張機能の影響も。">
+    <link rel="canonical" href="https://nito-0210.com/media/ai-overviews-error/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】AIによる概要のエラーを解説｜生成できません・表示されないときの直し方">
+    <meta property="og:description" content="AIによる概要に「現在、AI による概要を生成できません」と出たときの意味と直し方を、実際に再現した画面で解説。エラーが発生しましたとの違い、表示されないのが仕様の場合、拡張機能の影響も。">
+    <meta property="og:url" content="https://nito-0210.com/media/ai-overviews-error/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/ai-overviews-error.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/ai-overviews-error.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】AIによる概要のエラーを解説｜生成できません・表示されないときの直し方", "description": "AIによる概要に「現在、AI による概要を生成できません」と出たときの意味と直し方を、実際に再現した画面で解説。エラーが発生しましたとの違い、表示されないのが仕様の場合、拡張機能の影響も。", "datePublished": "2026-10-08", "dateModified": "2026-10-08", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-overviews-error/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】AIによる概要のエラーを解説｜生成できません・表示されないときの直し方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AIによる概要のエラーはスマホの故障ですか？", "acceptedAnswer": {"@type": "Answer", "text": "端末の故障とは限りません。試したときは要約を読み込む通信を止めただけで同じ文が出て、通信を戻して開き直すと要約が出ました。まずは開き直して、続くなら回線と拡張機能を確かめます。"}}, {"@type": "Question", "name": "AIによる概要のエラーはどのくらいで直りますか？", "acceptedAnswer": {"@type": "Answer", "text": "決まった時間はヘルプに書かれていません。通信の途切れが原因なら、回線が戻ってから開き直せばその場で出ます。何度開き直しても同じ文なら、待つより先に拡張機能やネットワークを切り分けます。"}}, {"@type": "Question", "name": "AIによる概要が急に出なくなったのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "調べた語が要約を出さない種類の検索になった可能性と、拡張機能やフィルタが隠している可能性があります。調べ方をたずねる語を10個試したときは、どれも要約の枠が出ました。"}}, {"@type": "Question", "name": "AIによる概要はログインしないと出ませんか？", "acceptedAnswer": {"@type": "Answer", "text": "ログインしなくても出ます。この記事の試行はすべてログインしていない状態で、要約が表示されました。提供状況の対象も、ヘルプでは一覧の国と言語のすべてのユーザーです。"}}, {"@type": "Question", "name": "AIによる概要はシークレットモードでも出ますか？", "acceptedAnswer": {"@type": "Answer", "text": "ログインも履歴も持ち込まない新しい画面で試したときは出ました。シークレットウィンドウでは許可していない拡張機能が動かないため、拡張機能が原因かどうかの切り分けにも使えます。"}}, {"@type": "Question", "name": "学校のアカウントだとAIによる概要が出ないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "18歳未満と特定されたWorkspace for Educationのユーザーは、国や地域によって使えるかが変わると管理者向けのヘルプに書かれています。個人のアカウントで出るなら、学校の管理者の設定を確かめてもらうのが近道です。"}}, {"@type": "Question", "name": "AIによる概要のエラーをGoogleに報告できますか？", "acceptedAnswer": {"@type": "Answer", "text": "要約が出たときなら、下の高評価と低評価のアイコンからフィードバックを送れます。送った内容に最近の検索とその検索結果が含まれることは、ヘルプに書かれているとおりです。要約が出ずにエラーの文だけのときは、開き直してから報告します。"}}, {"@type": "Question", "name": "AIによる概要とAIモードのエラーは同じものですか？", "acceptedAnswer": {"@type": "Answer", "text": "違う機能のエラーです。AIによる概要は検索結果の一番上の要約で、文に「概要」が入ります。AIモードは会話の形の検索で、エラーの文に「回答」が入ります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】AIによる概要のエラ…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.08</span>
+        </div>
+        <h1 class="post-title">【2026年10月】AIによる概要のエラーを解説｜生成できません・表示されないときの直し方</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIによる概要のエラー"><defs><linearGradient id="ecg-e30ad566" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e30ad566)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIによる概要のエラー</text><line x1="212.4" y1="327.1" x2="987.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">生成できません・表示されないときの直し方</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Google検索の結果の一番上には、AIが作った要約の「AIによる概要」が出ます。この枠に要約の代わりに「現在、AI による概要を生成できません。また後でお試しください。」とだけ出ることがあります。2025年10月のYahoo!知恵袋には、iPhoneで要約を作っている途中に機内モードにしたらこの文が出たという投稿もありました。</p>
+<p>この記事は2026年10月8日に確かめた画面をもとに書きます。ログインしていないスマホの表示で要約を読み込む通信を止め、同じ文が出てから元に戻るまでを試しました。似た文の「エラーが発生しました」との違い、そもそも要約が出ないのが仕様の場合、拡張機能が邪魔をしている場合まで、見分け方と直し方を順に並べます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>「現在、AI による概要を生成できません。」は、<strong>要約の中身を読み込む通信を止めると出た</strong>（試して確かめた）。Googleの説明は無い</li>
+<li>通信が戻っていれば、<strong>ページを開き直すだけで要約が出た</strong>。続くなら通信と拡張機能を疑う</li>
+<li>「エラーが発生しました。しばらくしてからもう一度お試しください。」は、<strong>試したときは関連する質問を開いたときに出た</strong></li>
+<li>天気や通販サイトの名前のように、<strong>要約が出ないのが仕様の検索もある</strong>。ヘルプは生成AIが特に役立つとシステムが判断した場合に表示すると書いている</li>
+<li>ClearURLsのような拡張機能で生成できませんの文が出た報告や、広告ブロックのフィルタで要約が消えた報告がある。<strong>シークレットウィンドウで出るなら拡張機能を1つずつ外して探す</strong></li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>3つの表示の見分け方</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>生成できませんと出るとき</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>開き直すと出た</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>エラーが発生しましたと出るとき</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>表示されないのが仕様のとき</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>質問の種類</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>国と言語</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>学校のアカウント</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>ログインとLabs</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>試す順番</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>再読み込みと通信</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>拡張機能</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>シークレットウィンドウと別のブラウザ</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>AIモードのエラーとの違い</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>消したいときと載せたいとき</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">3つの表示の見分け方</h2>
+<p>困って検索する人が見ている画面は、だいたい次の3つに分かれます。一番上の要約の枠に出る生成できませんの文と、関連する質問の中に出るエラーが発生しましたの文、そして枠そのものが無い状態です。<strong>文の中身よりも、どこに出たかで原因の見当がつきます。</strong></p>
+<figure class="post-figure"><img src="/media/images/ai-overviews-error/aoe_00_fig_overview.jpg" alt="スマホの検索結果の画面を3つ並べた図。1つ目は要約の枠に生成できませんと出ている。2つ目は開いた質問の下にエラーが発生しましたと出ている。3つ目は要約の枠が表示されない" loading="lazy"><figcaption>AIによる概要で困ったときに見る3つの表示</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>画面に出るもの</th>
+<th>出る場所</th>
+<th>何が起きたか</th>
+<th>最初にやること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>現在、AI による概要を生成できません。また後でお試しください。</td>
+<td>検索結果の一番上の枠</td>
+<td>要約の読み込みの失敗（通信を止めて再現）</td>
+<td>ページを開き直す</td>
+</tr>
+<tr>
+<td>エラーが発生しました。しばらくしてからもう一度お試しください。</td>
+<td>関連する質問を開いた中</td>
+<td>その質問の答えの読み込みの失敗（試したときの場所）</td>
+<td>質問を閉じて開き直す</td>
+</tr>
+<tr>
+<td>何も出ない</td>
+<td>一番上に枠が無い</td>
+<td>要約を出さない検索・拡張機能が隠している・国と言語・学校のアカウント</td>
+<td>別の言い方で検索する。続くなら拡張機能を疑う</td>
+</tr>
+</tbody>
+</table>
+<p>AIモードで質問したときに出る「エラーが発生したため、AI による回答が生成されませんでした。」はこの3つとは別の機能の表示です。違いは後半の「AIモードのエラーとの違い」で書きます。</p>
+<h2 id="s2">生成できませんと出るとき</h2>
+<p>10月8日に、ログインしていないChromeをスマホの表示にして検索の様子を見ると、要約の文章は検索結果のページが開いたあとに別の通信で読み込まれていました。その通信だけを止めて検索すると、枠には最初に「処理しています」と出て、そのあと次の文に変わりました。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/ai-overviews-error/aoe_01_sp_cannot.jpg" alt="スマホのGoogle検索で冬に窓の結露を減らす方法を調べた画面。一番上の枠に、現在、AI による概要を生成できません。また後でお試しくださいと表示され、その下にふつうの検索結果が並んでいる" loading="lazy"><figcaption>要約を読み込む通信を止めたときの画面（2026年10月8日、ログインしていない状態）</figcaption></figure>
+
+<p><strong>要約の中身を取りに行く通信を止めると、生成できませんの文が出ました。</strong>3回試すと、2秒ほどで切り替わった回もあれば、7秒たっても処理していますのままの回もありました。下の検索結果はふつうに読めるので、急いでいるなら要約を待たずに下のリンクを開けば用が足ります。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/ai-overviews-error/aoe_02_sp_processing.jpg" alt="スマホのGoogle検索でベランダの多肉植物について調べた画面。一番上の枠に処理していますとだけ表示され、要約の文章は出ていない" loading="lazy"><figcaption>文に変わる前は処理していますのまま止まる（2026年10月8日）</figcaption></figure>
+
+<p>知恵袋の投稿の機内モードも、同じ通信が切れた例です。電車の地下区間やWi-Fiの切り替わりのように、<strong>検索した直後に回線が途切れる場面が当てはまります。</strong>ただしこれは通信を止めた試行からの推測で、Googleのヘルプにこの文の説明は見当たりませんでした。</p>
+<h3 id="s2-1">開き直すと出た</h3>
+<p>通信を止めずに同じ語をもう一度検索すると、要約はふつうに出ました。<strong>通信が戻っていれば、ページの再読み込みか、同じ語での検索のし直しで直ります。</strong>スマホのブラウザなら画面を下に引いて再読み込みするか、検索窓の語をそのまま送り直します。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/ai-overviews-error/aoe_03_sp_reload.jpg" alt="同じ冬に窓の結露を減らす方法の検索を開き直した画面。一番上にAI による概要の見出しと、湿度の管理と窓の温度の低下を防ぐことが重要だという要約、その下に5つの対策の見出しが表示されている" loading="lazy"><figcaption>通信を戻して開き直すと要約が出た（2026年10月8日）</figcaption></figure>
+
+<p>何度開き直しても同じ文が出るなら、通信そのものか、通信の途中に入る拡張機能を疑います。順番は後の「試す順番」にまとめました。</p>
+<h2 id="s3">エラーが発生しましたと出るとき</h2>
+<p>検索結果の途中にある［関連する質問］は、質問を押すと答えが開く欄です。冬の窓の結露について調べたときは、開いた答えにも<strong>AI による概要</strong>のラベルが付いていました。つまりここの答えも、押した時点でAIが作った要約を読み込んでいます。</p>
+<p>同じ画面で回線を切ってから質問を押すと、答えの代わりに「エラーが発生しました。しばらくしてからもう一度お試しください。」と出ました。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/ai-overviews-error/aoe_04_sp_paa_error.jpg" alt="スマホのGoogle検索の関連する質問の欄。冬に結露がひどくなったらどうすればいいですかを開いた下に、エラーが発生しました。しばらくしてからもう一度お試しくださいと表示されている" loading="lazy"><figcaption>関連する質問を開いたときのエラー（2026年10月8日、回線を切った状態）</figcaption></figure>
+
+<p><strong>試したときは、エラーが発生しましたの文は関連する質問を開いたときに出ました。</strong>直し方は生成できませんと同じで、通信が戻ってから質問を閉じてもう一度押すか、ページを開き直します。ほかの質問の答えが開けるなら、その1問だけの失敗です。</p>
+<h2 id="s4">表示されないのが仕様のとき</h2>
+<p>エラーの文が出ずに、要約の枠そのものが出ないこともあります。こちらは失敗ではなく、<strong>Googleが要約を出さないと決めている検索もあります。</strong>ヘルプの「<a href="https://support.google.com/websearch/answer/14901683?hl=ja">Google 検索の AI による概要で、情報をすばやく簡単に見つける</a>」には、表示される条件として次のように書かれています。</p>
+<figure class="post-figure"><img src="/media/images/ai-overviews-error/aoe_05_help_shown.jpg" alt="Google検索ヘルプのAIによる概要のページ。検索結果におけるAIによる概要の節に、生成AIが特に有用であるとシステムが判断した場合に表示されると書かれ、その下にAIによる概要の提供状況として国と地域、言語の一覧がある" loading="lazy"><figcaption>AIによる概要のヘルプの表示の条件と提供状況（2026年10月8日取得）</figcaption></figure>
+
+<h3 id="s4-1">質問の種類</h3>
+<p>AIによる概要が出るのは<strong>生成AIが特に有用であるとシステムが判断した場合</strong>だと、ヘルプは書いています。さまざまな情報源から情報を手早くまとめられる場合が、その例です。言い換えると、要約が役に立たないと判断された検索では最初から出ません。</p>
+<p>スマホの表示で「東京 天気」「楽天市場」「ドル円」を調べると、どれも要約は出ず、天気なら天気の枠が一番上に来ました。答えが1つの枠で足りる検索や、行き先のサイトが決まっている検索がこれに当たると考えられます。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/ai-overviews-error/aoe_06_sp_weather.jpg" alt="スマホのGoogle検索で東京 天気と調べた画面。一番上に東京都の天気の枠があり、現在の気温と時間ごとの予報が並んでいて、AIによる概要の枠は出ていない" loading="lazy"><figcaption>天気を調べると要約の代わりに天気の枠が出る（2026年10月8日）</figcaption></figure>
+
+<p><strong>調べ方や理由をたずねる検索なら、要約は出やすくなります。</strong>「冬に窓の結露を防ぐには」のような調べ方をたずねる語を10個試すと、どれも要約の枠が出ました。</p>
+<h3 id="s4-2">国と言語</h3>
+<p>ヘルプにはAIによる概要を使える国と地域・言語の一覧があり、日本も日本語も入っています。日本で日本語の検索をしている限り、国と言語で止まることはまずありません。<strong>海外の旅行先や、一覧に無い言語の設定で検索しているときは、出ない理由がそこにあることがあります。</strong></p>
+<h3 id="s4-3">学校のアカウント</h3>
+<p>小学校から高校までのアカウントでは、年齢の扱いが変わります。Google Workspaceの管理者向けのヘルプ「<a href="https://support.google.com/a/answer/10651918?hl=ja">Google サービスへのアクセスを年齢別に管理する</a>」には、18歳未満と特定されたWorkspace for Educationのユーザーについての節があります。</p>
+<figure class="post-figure"><img src="/media/images/ai-overviews-error/aoe_07_help_edu.jpg" alt="Google Workspaceの管理者向けヘルプのAIによる概要とSearch Labsの節。18歳未満として特定されたGoogle Workspace for EducationユーザーはSearch Labsにアクセスできない、一部の国と地域では18歳未満として特定されたユーザーでもGoogle検索の検索結果に対してAIによる概要を利用できると書かれている" loading="lazy"><figcaption>年齢別の管理のヘルプのAIによる概要の節（2026年10月8日取得）</figcaption></figure>
+
+<p>日本語版は「一部の国と地域では」利用できると書き、英語版は「most countries」と書いていて、言い方がそろっていません。どちらにしても、<strong>学校のアカウントでだけ要約が出ないなら、学校の管理者の設定と年齢の扱いが理由の候補になります。</strong>個人のアカウントやログインしていない状態で同じ語を調べて、出るかどうかを比べると切り分けられます。</p>
+<h3 id="s4-4">ログインとLabs</h3>
+<p>ログアウトやシークレットモードでは出ないと書く記事も、検索の上位にあります。この記事の試行はすべてログインしていない状態で、要約は出ました。シークレットウィンドウと同じく履歴やログインを持ち込まない新しい画面で開いたときも、要約は表示されています。提供状況の対象も、ヘルプでは一覧の国と言語の「すべてのユーザー」です。</p>
+<p>Labsの［検索における AI］は、試験運用中の新しい機能を先に試すための設定です。ヘルプはAIによる概要をナレッジパネルと同じ検索の主要な機能とし、無効にはできないと書いています。<strong>AIによる概要が出る条件として、Labsの設定はヘルプに挙がっていません。</strong>出ない原因として疑うのは後回しで構いません。</p>
+<h2 id="s5">試す順番</h2>
+<p>生成できませんやエラーが発生しましたが何度も出るときは、次の順に試すと原因を絞れます。上から順に手間が小さく、1つ試すごとに同じ語で検索し直します。</p>
+<figure class="post-figure"><img src="/media/images/ai-overviews-error/aoe_08_fig_steps.jpg" alt="AIによる概要が出ないときに試す順番の図。1 再読み込み：通信が戻っていればそのまま表示される。2 通信を確かめる：Wi-Fiとモバイル回線を切り替えてもう一度。3 シークレットで試す：拡張機能が止まった状態で出るかを見る。4 拡張機能を止める：広告ブロックなどを1つずつ外して探す" loading="lazy"><figcaption>AIによる概要が出ないときに試す順番</figcaption></figure>
+
+<h3 id="s5-1">再読み込みと通信</h3>
+<p>まずページを開き直します。試したときも、通信が戻っていれば開き直すだけで要約が出ました。続けて同じ文が出るなら、Wi-Fiとモバイル回線を切り替えて検索します。会社や学校のWi-Fiでだけ出る場合は、そのネットワークの側で通信が止められている可能性もあります。</p>
+<h3 id="s5-2">拡張機能</h3>
+<p>パソコンのブラウザで同じ文が続くなら、拡張機能を疑います。2026年6月にはGitHubの「<a href="https://github.com/ClearURLs/Addon/issues/522">ClearURLs の報告 #522</a>」で、ClearURLsを入れていると英語版の同じ文（Can't generate an AI overview right now）が出て外すと直ったという報告がありました。2026年8月の返信にはClearURLsの設定の［Request types］から xmlhttprequest を外せば拡張機能を入れたまま直ったという書き込みも付きました。</p>
+<p>広告ブロックでは要約が丸ごと消える例があります。uBlock Originの「<a href="https://github.com/uBlockOrigin/uAssets/issues/32607">フィルタの報告 #32607</a>」では、2026年4月にAdGuardの迷惑要素のフィルタを入れたら要約が消えたという報告に、そのフィルタにはGoogle検索のAIによる概要を隠す項目があると返信が付いていました。<strong>要約が出ないのが拡張機能のせいなら、その拡張機能の設定で戻せます。</strong></p>
+<h3 id="s5-3">シークレットウィンドウと別のブラウザ</h3>
+<p>Chromeの拡張機能には、拡張機能ごとにシークレットモードでの実行を許可する設定があり（<a href="https://support.google.com/chrome_webstore/answer/2664769?hl=ja">Chrome ウェブストアのヘルプ</a>）、許可していないものはシークレットウィンドウで動きません。そのため<strong>シークレットウィンドウで同じ語を調べて要約が出るなら、拡張機能のどれかが原因の見込みが高くなります。</strong>拡張機能のページで1つずつオフにして、出るようになったものを探します。</p>
+<p>シークレットウィンドウでも出ないなら、別のブラウザや別の端末で同じ語を調べます。ほかの端末では出るのにその端末だけで出ないなら、その端末の設定か入れているアプリが原因の候補です。どの端末でも出ないなら、上の「表示されないのが仕様のとき」に当たる可能性が高くなります。</p>
+<h2 id="s6">AIモードのエラーとの違い</h2>
+<p>AIモードは検索結果の上の［AI モード］のタブや google.com/ai から開く、会話の形で質問する機能です。ここで回答が作れないときは「エラーが発生したため、AI による回答が生成されませんでした。」と出ます。<strong>どこで質問したか（検索結果の一番上の枠か、AIモードの会話か）で見分けます。</strong></p>
+<p>質問を変えても同じ文が続く・学校のアカウントで続くといった型で、AIモードのエラーはこの記事とは別に相談されています。直し方は<a href="/media/ai-mode-error/">Google AIモードのエラーを解説</a>にまとめました。</p>
+<h2 id="s7">消したいときと載せたいとき</h2>
+<p>エラーではなく、要約そのものを出したくない人もいます。ヘルプのとおりオフにする設定は無く、ヘルプが案内するのは［ウェブ］のタブです。URLに udm=14 を付ける方法もあります。手順は<a href="/media/ai-overviews-off/">Google検索のAIによる概要を消す方法</a>に、スマホとパソコンで試した画面つきで並べました。</p>
+<p>サイトを運営していて、自社のページが要約に出てこないという悩みは、検索する人のエラーとは別の話です。要約に引用される側の考え方は<a href="/media/cited-by-ai-overviews/">AI Overviewsに引用されるには？</a>、機能そのものの仕組みは<a href="/media/ai-overviews-guide/">AIによる概要（AI Overviews）とは？</a>で書いています。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">AIによる概要のエラーはスマホの故障ですか？</h3>
+<p>端末の故障とは限りません。試したときは要約を読み込む通信を止めただけで同じ文が出て、通信を戻して開き直すと要約が出ました。まずは開き直して、続くなら回線と拡張機能を確かめます。</p>
+<h3 id="s8-2">AIによる概要のエラーはどのくらいで直りますか？</h3>
+<p>決まった時間はヘルプに書かれていません。通信の途切れが原因なら、回線が戻ってから開き直せばその場で出ます。何度開き直しても同じ文なら、待つより先に拡張機能やネットワークを切り分けます。</p>
+<h3 id="s8-3">AIによる概要が急に出なくなったのはなぜですか？</h3>
+<p>調べた語が要約を出さない種類の検索になった可能性と、拡張機能やフィルタが隠している可能性があります。調べ方をたずねる語を10個試したときは、どれも要約の枠が出ました。</p>
+<h3 id="s8-4">AIによる概要はログインしないと出ませんか？</h3>
+<p>ログインしなくても出ます。この記事の試行はすべてログインしていない状態で、要約が表示されました。提供状況の対象も、ヘルプでは一覧の国と言語のすべてのユーザーです。</p>
+<h3 id="s8-5">AIによる概要はシークレットモードでも出ますか？</h3>
+<p>ログインも履歴も持ち込まない新しい画面で試したときは出ました。シークレットウィンドウでは許可していない拡張機能が動かないため、拡張機能が原因かどうかの切り分けにも使えます。</p>
+<h3 id="s8-6">学校のアカウントだとAIによる概要が出ないのはなぜですか？</h3>
+<p>18歳未満と特定されたWorkspace for Educationのユーザーは、国や地域によって使えるかが変わると管理者向けのヘルプに書かれています。個人のアカウントで出るなら、学校の管理者の設定を確かめてもらうのが近道です。</p>
+<h3 id="s8-7">AIによる概要のエラーをGoogleに報告できますか？</h3>
+<p>要約が出たときなら、下の高評価と低評価のアイコンからフィードバックを送れます。送った内容に最近の検索とその検索結果が含まれることは、ヘルプに書かれているとおりです。要約が出ずにエラーの文だけのときは、開き直してから報告します。</p>
+<h3 id="s8-8">AIによる概要とAIモードのエラーは同じものですか？</h3>
+<p>違う機能のエラーです。AIによる概要は検索結果の一番上の要約で、文に「概要」が入ります。AIモードは会話の形の検索で、エラーの文に「回答」が入ります。</p>
+<h2 id="s9">出典</h2>
+<ul>
+<li>Google 検索 ヘルプ「<a href="https://support.google.com/websearch/answer/14901683?hl=ja">Google 検索の AI による概要で、情報をすばやく簡単に見つける</a>」（2026年10月8日取得）</li>
+<li>Google Workspace 管理者ヘルプ「<a href="https://support.google.com/a/answer/10651918?hl=ja">Google サービスへのアクセスを年齢別に管理する</a>」（2026年10月8日取得）</li>
+<li>Chrome ウェブストア ヘルプ「<a href="https://support.google.com/chrome_webstore/answer/2664769?hl=ja">拡張機能をインストールして管理する</a>」（2026年10月8日取得）</li>
+<li>GitHub ClearURLs「<a href="https://github.com/ClearURLs/Addon/issues/522">google search is not giving AI Overview whenever ClearURLs enable #522</a>」（2026年6月）</li>
+<li>GitHub uBlock Origin uAssets「<a href="https://github.com/uBlockOrigin/uAssets/issues/32607">google.com: breakage #32607</a>」（2026年4月）</li>
+<li>Yahoo!知恵袋「<a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q11321421836">Google検索の鬱陶しいAI回答の存在意義ってなんですか?</a>」（2025年10月）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-mode-limit/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードの回数制限"><defs><linearGradient id="ecg-b0027c2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b0027c2b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードの回数制限</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.02</div>
+                <div class="rel-card__ttl">【2026年10月】Google AIモードの回数制限を解説｜1日の上限・Pro・画像の枚数</div>
+            </a>
+            <a href="/media/ai-mode-error/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードのエラー"><defs><linearGradient id="ecg-8cb6143f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-8cb6143f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードのエラー</text><line x1="288.4" y1="365.9" x2="911.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.01</div>
+                <div class="rel-card__ttl">【2026年10月】Google AIモードのエラーを解説｜回答が生成されないときの直し方と原因</div>
+            </a>
+            <a href="/media/ai-mode-incognito/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードとシークレットモード"><defs><linearGradient id="ecg-e91338f0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e91338f0)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードとシー</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">クレットモード</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.09.30</div>
+                <div class="rel-card__ttl">【2026年9月】Google AIモードはシークレットモードで使える？｜履歴・ログイン・出ないときの見分け方</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
