@@ -103,6 +103,8 @@ Googleのヘルプ「[Gemini アプリへのログインに必要なもの](http
 
 予定どおり適用されれば、無料のアカウントでFlashやProを選べなくなるのはこの変更によるもので、アカウントの不具合とは別です。
 
+Flash-LiteとFlashの違いや、無料のままFlashを使う方法は「[Gemini Flash-Liteとは](/media/gemini-flash-lite/)」で詳しく扱っています。
+
 ## 障害を確かめる
 
 アカウントも端末も条件に合っているのに使えないなら、Google側の障害も考えられます。仕事用のアカウントなら、[Google Workspace ステータス ダッシュボード](https://www.google.com/appsstatus/dashboard/)に「Gemini」の行があります。
