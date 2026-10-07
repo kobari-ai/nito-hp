@@ -29,7 +29,7 @@ Geminiは無料で使えます。有料プランに上げると何が変わる�
 | 無料 | 0円 | Googleアカウントの既定 | 標準 |
 | Google AI Plus | 725円 | 400GB | 標準の2倍 |
 | Google AI Pro | 2,900円 | 5TB | 標準の4倍 |
-| Google AI Ultra | 14,500円から | 20TBから | 最大20倍（ヘルプではAI Proの4倍または20倍と表記） |
+| Google AI Ultra | 14,500円から | 20TBから | 最大20倍（AI Proの5倍か20倍。使用量上限のページは4倍） |
 
 <figure class="post-figure"><img src="/media/images/gemini-pricing/gp_01_plans_page.jpg" alt="Google Oneの「Google AIのプラン」ページ。日本を選択した状態で、Google AI Plusが月額725円、Google AI Proが月額2,900円、Google AI Ultraが月額14,500円からと表示されている" loading="lazy"><figcaption>公式ページの日本価格（地域の選択は「日本」）</figcaption></figure>
 
