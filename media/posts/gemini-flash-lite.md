@@ -47,7 +47,7 @@ Googleは2026年10月、Geminiアプリのヘルプ「[Gemini モデルへのア
 
 Geminiの3つのモデルのうち、いちばん軽いのがFlash-Liteです。使用量上限のページは「スピードに最適化した効率的な主力モデル」と説明し、要約やブレインストーミングのような日常のタスクに向くとしています。
 
-10月8日にログインせずにGeminiのウェブ版を開くと、入力欄の右にFlash-Liteと表示されていました。押して開いた一覧の名前は**3.5 Flash-Lite**で、3.6 Flashと3.1 Proは灰色で選べず、下に「すべてのモデルにログイン」の案内が出ます。ログインしない使い方では、10月8日の時点でFlash-Liteだけでした。
+10月8日にログインせずにGeminiのウェブ版を開くと、入力欄の右にFlash-Liteと表示されていました。押して開いた一覧の名前は**3.5 Flash-Lite**で、3.6 Flashと3.1 Proは灰色で選べず、下に「すべてのモデルにログイン」の案内が出ます。10月8日の時点で、ログインしない使い方はFlash-Liteだけでした。
 
 <figure class="post-figure"><img src="/media/images/gemini-flash-lite/gfl_02_picker.jpg" alt="ログインしていないGeminiのウェブ版で、入力欄のFlash-Liteを押して開いたモデルの一覧。赤い枠1は選ばれている3.5 Flash-Lite、すばやく回答を得るのに最適。赤い枠2は灰色で選べない3.6 Flash、あらゆる場面でサポートと、3.1 Pro、高度な推論。その下にすべてのモデルにログイン、最新のFlashをお試しくださいとある" loading="lazy"><figcaption>ログインしないと3.5 Flash-Liteだけが選べる（10月8日）</figcaption></figure>
 
