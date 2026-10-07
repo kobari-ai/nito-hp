@@ -116,6 +116,8 @@ Businessのワークスペースがあとで無効になった場合は、移行
 
 Businessそのものを解約すると、ワークスペースは無効化される場合があります。一般FAQによると、無効化されてもデータは削除されませんが、メンバーは開けなくなり、再び有効にできるのは所有者だけです。
 
+Google WorkspaceでGeminiを使う場合の料金と学習の扱いは、[Google WorkspaceのGemini](/media/google-workspace-gemini/)で同じ形で整理しています。
+
 ## よくある質問
 
 ### ChatGPT BusinessとTeamは同じですか？
