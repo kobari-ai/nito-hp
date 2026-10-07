@@ -43,11 +43,11 @@ Google WorkspaceのBusinessプランには、追加料金なしでGeminiが入�
 
 年間プランは1年契約で、料金ページの表示ではフレキシブルプランより16%安くなります。Businessの3プランは**1つの契約で最大300人まで**です。取得した日の料金ページには、新しく契約する人向けに最初の3か月を割り引く表示も出ていました。割引率はプランと時期で変わるので、申し込む画面で確かめてください。
 
-<figure class="post-figure post-figure--sp"><img src="/media/images/google-workspace-gemini/gwg_01_starter_sp.jpg" alt="Google Workspaceの料金ページをスマホで開いた画面。年間プランのスイッチがオンで、Starterは3か月間20%オフの表示とともに640円と取り消し線の800円、ユーザーあたりの月額。Starterの機能に30GB、カスタムのビジネス用メールアドレス、GmailのGemini AIアシスタントが並ぶ" loading="lazy"><figcaption>Starterの機能欄にあるGeminiはGmailのアシスタントだけ</figcaption></figure>
+<figure class="post-figure post-figure--sp"><img src="/media/images/google-workspace-gemini/gwg_01_starter_sp.jpg" alt="Google Workspaceの料金ページをスマホで開いた画面。年間プランのスイッチがオンで、Starterは3か月間20%オフの表示とともに640円と取り消し線の800円、ユーザーあたりの月額。Starterの機能に30GB、カスタムのビジネス用メールアドレス、GmailのGemini AIアシスタントが並ぶ" loading="lazy"><figcaption>Starterの機能欄にあるGeminiはGmailのアシスタントだけ（10月8日の表示。割引率は時期で変わる）</figcaption></figure>
 
-<figure class="post-figure post-figure--sp"><img src="/media/images/google-workspace-gemini/gwg_02_standard_sp.jpg" alt="同じ料金ページのStandardのカード。3か月間50%オフの表示とともに800円と取り消し線の1,600円。Starterの全機能に加えて2TB、カスタムレイアウトとメールへの差し込み、Gmail・Googleドキュメント・Google MeetなどのGemini AIアシスタント" loading="lazy"><figcaption>Standardからドキュメントや Meet でもGeminiが使える</figcaption></figure>
+<figure class="post-figure post-figure--sp"><img src="/media/images/google-workspace-gemini/gwg_02_standard_sp.jpg" alt="同じ料金ページのStandardのカード。3か月間50%オフの表示とともに800円と取り消し線の1,600円。Starterの全機能に加えて2TB、カスタムレイアウトとメールへの差し込み、Gmail・Googleドキュメント・Google MeetなどのGemini AIアシスタント" loading="lazy"><figcaption>Standardからドキュメントや Meet でもGeminiが使える（10月8日の表示。割引率は時期で変わる）</figcaption></figure>
 
-個人のGoogle AIのプランと比べるときは、**税の表示がそろっていない**ことに気をつけます。Workspaceの金額は税別なので、請求では消費税が加わります。[Google AIのプランのページ](https://one.google.com/about/google-ai-plans/?hl=ja)はGoogle AI Plusを月額725円、Google AI Proを月額2,900円と表示していて、税の表記はありません。日本では消費者向けの価格に総額表示が義務づけられているため、比べるならWorkspaceの側に消費税10%を足し、Business Standardの年間プランを1,760円として見るとそろいます。
+個人のGoogle AIのプランと比べるときは、**税の表示がそろっていない**ことに気をつけます。Workspaceの金額は税別なので、請求では消費税が加わります。[Google AIのプランのページ](https://one.google.com/about/google-ai-plans/?hl=ja)はGoogle AI Plusを月額725円、Google AI Proを月額2,900円と表示していて、税の表記はありません。総額表示の決まりから税込の金額と考えられるため、比べるならWorkspaceの側に消費税10%を足し、Business Standardの年間プランを1,760円として見るとそろいます。
 
 ## プランで変わるGeminiの機能
 
@@ -77,7 +77,7 @@ Geminiアプリの差も同じ表に並んでいます。
 | 項目 | 個人のGoogle AI Plus・Pro | WorkspaceのBusiness Standard |
 |---|---|---|
 | 月額 | Plus 725円・Pro 2,900円（税の表記なし） | 1,600円（年間・税別） |
-| 会話の学習とレビュー | アクティビティの保存がオンなら使われる | 使われない（条件は次の節） |
+| 会話の学習とレビュー | アクティビティの保存がオンなら使われることがある | 使われない（条件は次の節） |
 | 履歴の設定 | 本人が決める | 管理者が決める（既定は18か月保存） |
 | 上限の数え方 | 使った量で決まり5時間と週で区切る | Proは4時間に25件・思考は1日300件 |
 | 一度に読ませられる長さ | Plus 128,000・Pro 100万トークン | 100万トークン |
@@ -118,7 +118,7 @@ Standard・PlusのGeminiアプリの上限は、[Geminiアプリ ヘルプ](http
 
 自分のアカウントでどこまで使えるかは、gemini.google.comを仕事用のアカウントで開くと分かります。Geminiアプリ ヘルプによると、画面の上部に**Pro・Expanded・Ultraのバッジ**が出ていれば、それぞれ拡張されたアクセス、さらに拡張されたアクセス、最上位のアクセスです。バッジが無ければ標準の機能とモデルで、Starterなどのエディションはこの扱いです。
 
-モデルの選び方は個人の画面と同じで、高速・思考・Proから選びます。Proや思考モードを選べない、上限にすぐ届くという場合は、自分では変えられないので管理者にライセンスを確かめてもらいます。
+Geminiアプリ ヘルプの表では、高速・思考・Proの3つから選びます。Proや思考モードを選べない、上限にすぐ届くという場合は、自分では変えられないので管理者にライセンスを確かめてもらいます。
 
 ## 管理者が有効・無効にする場所
 
