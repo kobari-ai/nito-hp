@@ -39,6 +39,8 @@ OpenAIのヘルプ「[ChatGPTのエラーメッセージのトラブルシュー
 
 このページに無いエラーは別の記事で扱っています。上限に達したという表示は「[ChatGPTの「上限に達しました」とリセット時間](/media/chatgpt-limit-reached/)」、画像が作れない場合は「[ChatGPTの画像生成ができない原因と制限](/media/chatgpt-image-limit/)」を見てください。「challenges.cloudflare.com のブロックを解除してください」は、「[challenges.cloudflare.com のブロック解除の原因と対処](/media/cloudflare-challenges-unblock/)」にまとめています。
 
+アプリに出る「ネットワーク構成の問題」（SSL証明書の警告）と、PythonやZIPで出る「ClientError」は「[ChatGPTのネットワーク構成の問題とClientError](/media/chatgpt-network-error/)」で扱っています。
+
 ## 問題が発生しましたと出たとき
 
 「問題が発生しました」は原因を特定しない一般的なエラーです。ヘルプは一時的なサーバーの問題か手元の環境の問題のどちらかを示している可能性がある、と説明しています。
