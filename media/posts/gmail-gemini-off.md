@@ -107,6 +107,8 @@ Gmailの設定にはスマート機能のスイッチが2つあり、止まる�
 
 会話の履歴はアプリごとに分かれていて、Gmailでの会話はGoogleドキュメントのGeminiには表示されません。GeminiアプリやGoogle検索の会話とも別です。Geminiアプリの履歴の消し方は[Geminiの履歴の削除](/media/gemini-history-delete/)にまとめています。
 
+GoogleフォトのGeminiはGmailとは別の設定で止めます。検索タブの戻し方は[Googleフォトの検索が変わった時の戻し方](/media/google-photos-ask-photos/)にまとめました。
+
 ## よくある質問
 
 ### GmailのGeminiはどこでオフにできますか？
