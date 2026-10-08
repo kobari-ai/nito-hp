@@ -40,6 +40,8 @@ ChatGPTで上限に達したと表示されても、多くの場合止まって�
 
 無料版とGoでは日常のテキストのチャットは、不正利用を防ぐ制限の範囲内で回数無制限です。[ChatGPT 無料版に関するよくある質問](https://help.openai.com/ja-jp/articles/9275245-chatgpt-free-tier-faq)によると、ファイルのアップロード、画像生成、音声、データ分析などのツールには、それぞれ別の上限があります。上限に達するとChatGPTから通知が出ます。
 
+音声会話の1日の上限と、途中で切れたときの見分け方は[ChatGPTの音声会話ができないときの記事](/media/chatgpt-voice-not-working/)にまとめています。
+
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-limit-reached/clr_04_help_free_v2.jpg" alt="OpenAI公式ヘルプのChatGPT無料版に関するよくある質問のページをスマホで開いた画面。無料プランのレート制限の仕組みの見出しの下に、日常的なテキストチャットは回数無制限、ファイルのアップロードや画像生成などのツールにはそれぞれ個別の利用上限があると書かれ、下に画像作成の上限に達したときの通知の例が載っている" loading="lazy"><figcaption>無料版の上限の仕組みと通知の例（2026年10月5日に取得）</figcaption></figure>
 
 通知の例には、Plusに変えるか翌朝の9時17分以降にもう一度試すよう英語で書かれています。**同じFAQによると、無料版で上限に達したあとPlus・Pro・Businessに変えると、上限はその場でリセットされます。**Goはこの対象に書かれていません。
