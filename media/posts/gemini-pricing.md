@@ -31,7 +31,7 @@ Geminiは無料で使えます。有料プランに上げると何が変わる�
 | 無料 | 0円 | Googleアカウントの既定 | 標準 |
 | Google AI Plus | 725円 | 400GB | 標準の2倍 |
 | Google AI Pro | 2,900円 | 5TB | 標準の4倍 |
-| Google AI Ultra | 14,500円から | 20TBから | 最大20倍（AI Proの5倍か20倍。使用量上限のページは4倍） |
+| Google AI Ultra | 14,500円から | 20TBから | 最大20倍（AI Proの5倍か20倍。日本語版の使用量上限のページは4倍） |
 
 <figure class="post-figure"><img src="/media/images/gemini-pricing/gp_01_plans_page.jpg" alt="Google Oneの「Google AIのプラン」ページ。日本を選択した状態で、Google AI Plusが月額725円、Google AI Proが月額2,900円、Google AI Ultraが月額14,500円からと表示されている" loading="lazy"><figcaption>公式ページの日本価格（地域の選択は「日本」）</figcaption></figure>
 
@@ -63,7 +63,7 @@ Geminiアプリの上限は、使った回数ではありません。公式ヘ�
 
 ### 一部の機能
 
-2026年10月9日から、選べるモデルはプランで分かれました。ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」の表では、**プランなしはFlash-Liteだけ、AI PlusはFlash-LiteとFlash、AI ProとUltraは3つすべて**です。AI Plusの適用日はメールで知らされ、10月10日の料金ページのPlusの欄にはまだ3.1 Proへのアクセスが載っています。10月10日の時点でも、使用量上限のページの表は全プランに3つとも○が付いたままです。変わった範囲は[Gemini Flash-Liteとは](/media/gemini-flash-lite/)で詳しく扱っています。
+2026年10月9日から順に、選べるモデルがプランで分かれます。ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」の表では、**プランなしはFlash-Liteだけ、AI PlusはFlash-LiteとFlash、AI ProとUltraは3つすべて**です。AI Plusの適用日はメールで知らされ、10月10日の料金ページのPlusの欄にはまだ3.1 Proへのアクセスが載っています。10月10日の時点でも、使用量上限のページの表は全プランに3つとも○が付いたままです。変わる範囲は[Gemini Flash-Liteとは](/media/gemini-flash-lite/)で詳しく扱っています。
 
 無料で使える機能も多く、Canvas、Gem、Deep Research、画像生成、音楽生成、アプリ連携は無料プランの列にもチェックが入っています。有料でないと使えないのは次のものです。
 
@@ -118,10 +118,10 @@ Geminiを自分で使うことと、自社がGeminiの回答に登場するこ�
 金額はすべて2026年9月21日時点の Google の公式ページの表示です。
 
 ### Geminiは無料で使えますか？
-使えます。Googleアカウントがあれば0円で、Flash-Liteのモデル、Deep Research、Canvas、Gem、画像生成まで利用できます。FlashとProは2026年10月9日から有料のプランが必要です。
+使えます。Googleアカウントがあれば0円で、Flash-Liteのモデル、Deep Research、Canvas、Gem、画像生成まで利用できます。2026年10月9日から、自分でFlashやProを選ぶには有料のプランが必要です。
 
 ### 無料と有料で何が違いますか？
-使用量の上限、一度に読ませられる長さ、一部の機能の3つです。2026年10月9日からは選べるモデルも分かれ、無料はFlash-Liteだけになりました。
+使用量の上限、一度に読ませられる長さ、一部の機能の3つです。2026年10月9日から順に選べるモデルも分かれ、無料のまま自分で選べるのはFlash-Liteだけになります。
 
 ### AI PlusとProはどちらを選びますか？
 長い資料を読ませるならProです。コンテキストウィンドウが100万トークンになるのはProからで、Plusは128,000トークンです。上限を増やしたいだけならPlusで足ります。
