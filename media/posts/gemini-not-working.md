@@ -10,14 +10,14 @@ cover_sub: エラー・アカウント・アプリ・上限
 
 Googleのヘルプ「[Gemini アプリへのログインに必要なもの](https://support.google.com/gemini/answer/13278668?hl=ja)」によると、Geminiにログインできるのは個人のGoogleアカウント、対象のWorkspaceの仕事用アカウント、管理者が許可した学校用アカウントのどれかです。年齢の条件は個人と学校のアカウントが13歳（国ごとの該当年齢）以上で、仕事用のアカウントは18歳以上です。開けない・ログインできないときは、障害を疑う前にこの条件から確かめるのが近道です。
 
-ヘルプには2026年10月の変更も載りました。有料のプランに入っていない個人のアカウントは、10月9日から使えるモデルがFlash-Liteだけになる予定です。この記事では2026年10月7日に取得したGoogleのヘルプをもとに、Geminiが使えない原因をアカウント・端末・使用量の上限・障害に分けて整理します。
+ヘルプには2026年10月の変更も載りました。有料のプランに入っていない個人のアカウントは、自分で選べるモデルがFlash-Liteだけになります。10月9日から順に適用が始まり、10月10日には料金ページの無料の欄もFlash-Liteに変わりました。この記事では2026年10月7日に取得したGoogleのヘルプをもとに、Geminiが使えない原因をアカウント・端末・使用量の上限・障害に分けて整理します。
 
 :::takeaways
 - ウェブ版で「このサービスにアクセスできない」と出たら、**アカウントの種類か年齢**が条件に合っていない
 - 「エラーが発生しました」は、**場所・年齢・アカウントの種類**などでそのアカウントが今は使えないという意味
 - ファミリーリンクで管理している子供のアカウントは、**ウェブ版に入れずモバイルアプリだけ**で使う
 - アプリはAndroid 9以降・iOS 16以降が条件で、**パソコンのアプリはRAM 8GB以上**が要る
-- 使用量の上限は**5時間ごとにリセット**される。プランなしは10月9日から**Flash-Liteだけ**になる予定
+- 使用量の上限は**5時間ごとにリセット**される。プランなしは10月9日から順に、自分で選べるモデルが**Flash-Liteだけ**になる
 :::
 
 ## 表示されるエラーで見分ける
@@ -92,16 +92,16 @@ Googleのヘルプ「[Gemini アプリへのログインに必要なもの](http
 
 <figure class="post-figure"><img src="/media/images/gemini-not-working/gnw_06_help_model.jpg" alt="GoogleのヘルプのGeminiモデルへのアクセスと使用量上限の変更のページ。2026年10月より個人アカウントで利用できるモデルが変わり、AIサブスクリプションを利用していないユーザーには10月9日から適用されるという段落が赤枠で囲まれている。下の表も赤枠で囲まれ、プランなしはFlash-Liteだけ、AI PlusはFlash-LiteとFlash、AI ProとAI Ultraは3つすべてに印が付いている" loading="lazy"><figcaption>10月9日からの使えるモデルの表（2026年10月7日取得）</figcaption></figure>
 
-**プランなしの個人のアカウントは、10月9日から使えるモデルがFlash-Liteだけになる予定です。**表の対象は個人のアカウントで、AI Plusの利用者には適用の時期をメールで知らせるとされています。10月7日の時点ではまだ適用前でした。
+**プランなしの個人のアカウントは、自分で選べるモデルがFlash-Liteだけになります。**10月9日から順に適用が始まり、10月10日には料金ページの無料の欄も「3.5 Flash-Lite へのアクセス」に変わりました。表の対象は個人のアカウントで、AI Plusの利用者には適用の時期をメールで知らせるとされています。プランなしでも深い推論が要る質問は自動でFlashやProに回ることがある、と英語版の告知は書いています。
 
-| プラン | 10月9日からの予定で使えるモデル |
+| プラン | 10月9日から選べるモデル |
 |---|---|
 | プランなし | Flash-Lite |
 | AI Plus | Flash-Lite・Flash（適用日はメールで案内） |
 | AI Pro | Flash-Lite・Flash・Pro |
 | AI Ultra | Flash-Lite・Flash・Pro |
 
-予定どおり適用されれば、無料のアカウントでFlashやProを選べなくなるのはこの変更によるもので、アカウントの不具合とは別です。
+無料のアカウントでFlashやProを選べないのはこの変更によるもので、アカウントの不具合とは別です。
 
 Flash-LiteとFlashの違いや、無料のままFlashを使う方法は「[Gemini Flash-Liteとは](/media/gemini-flash-lite/)」で詳しく扱っています。
 
@@ -135,7 +135,7 @@ AndroidはAndroid 9以降でRAMが2GB以上、iPhoneとiPadはiOS 16以降です
 
 ### Geminiは無料で使い続けられますか？
 
-プランなしでも使えます。ただしヘルプの予定では、10月9日から無料で使えるモデルはFlash-Liteだけになります。
+プランなしでも使えます。ただし10月9日から順に適用が始まり、無料のままだと自分で選べるモデルはFlash-Liteだけになります。
 
 ### Geminiはログインしなくても使えますか？
 
@@ -148,11 +148,12 @@ AndroidはAndroid 9以降でRAMが2GB以上、iPhoneとiPadはiOS 16以降です
 ## 出典
 
 - Google Gemini アプリ ヘルプ「[Gemini アプリへのログインに必要なもの](https://support.google.com/gemini/answer/13278668?hl=ja)」（2026年10月7日取得）
-- Google Gemini アプリ ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」（2026年10月7日取得）
+- Google Gemini アプリ ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」（2026年10月7日・10日取得）
 - Google Gemini アプリ ヘルプ「[お子様による Gemini アプリの利用をサポートする](https://support.google.com/gemini/answer/16109150?hl=ja)」（2026年10月7日取得）
 - Google Gemini アプリ ヘルプ「[Gemini モバイルアプリの利用要件](https://support.google.com/gemini/answer/14579026?hl=ja&co=GENIE.Platform%3DAndroid)」（Android・iPhone と iPad、2026年10月7日取得）
 - Google Gemini アプリ ヘルプ「[Mac で Gemini アプリを使用する](https://support.google.com/gemini/answer/17011627?hl=ja)」「[Windows 向け Gemini アプリを使用する](https://support.google.com/gemini/answer/18263854?hl=ja)」（2026年10月7日取得）
 - Google Gemini アプリ ヘルプ「[Gemini ウェブアプリを利用できる言語と国 / 地域](https://support.google.com/gemini/answer/13575153?hl=ja)」（2026年10月7日取得）
 - Google Gemini アプリ ヘルプ「[仕事用または学校用の Google アカウントで Gemini アプリを利用する](https://support.google.com/gemini/answer/14620100?hl=ja)」（2026年10月7日取得）
+- Google「[Google AI プラン](https://gemini.google/jp/subscriptions/?hl=ja)」（日本向け、2026年10月10日取得）
 - [Google Workspace ステータス ダッシュボード](https://www.google.com/appsstatus/dashboard/)（2026年10月7日取得）
 - ウェブ版の画面は、2026年10月7日にスマホ表示のブラウザでログインせずに撮影
