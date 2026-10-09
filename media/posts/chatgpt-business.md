@@ -154,6 +154,8 @@ BusinessのサブスクリプションにAPIの利用は含まれません。API
 
 1つの契約で、標準とプレミアムを合わせて200席までです。2026年8月24日より前に作ったワークスペースには、以前の上限がそのまま適用されます。200席を超えるならEnterpriseになります。
 
+Enterpriseとの違いと申し込みの手順は[ChatGPT Enterpriseの記事](/media/chatgpt-enterprise/)にまとめています。
+
 ## 出典
 
 - ChatGPT「[料金](https://chatgpt.com/ja-JP/pricing)」ビジネス・エンタープライズ向けと個人向けのタブ（2026年10月4日取得）
