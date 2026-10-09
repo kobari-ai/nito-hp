@@ -20,11 +20,9 @@ AndroidのGoogleメッセージに出るGeminiのボタンは、アプリの［�
 - 仕事用・学校用・ファミリーリンクのアカウント、18歳未満、RCSチャットがオフのときはGeminiが出ない
 :::
 
-<figure class="post-figure"><img src="/media/images/google-messages-gemini/00_fig_overview.png" alt="GoogleメッセージのGeminiの記事の概要図。Androidのメッセージアプリの一覧の右下に星形のボタンがあり、ボタンを非表示・チャットを削除・使われ方の3つのカードが並ぶ" loading="lazy"><figcaption>この記事で扱う3つのこと</figcaption></figure>
-
 ## GoogleメッセージにGeminiが出た理由
 
-Googleメッセージは、Pixelをはじめ多くのAndroidスマホに入っている標準のSMSアプリです。ITmediaの2024年10月1日の記事「[Google「メッセージ」アプリでGeminiと日本語で会話可能に](https://www.itmedia.co.jp/mobile/articles/2410/01/news097.html)」によると、この時期から日本語でGeminiと話せるようになり、使えるようになった端末にはGeminiからメッセージが届きました。一覧の右下にある新しい会話のボタンの上に、Geminiのアイコンが常に出るようになったとも書かれています。
+GoogleメッセージはPixelをはじめ多くのAndroidスマホに入っている標準のSMSアプリです。ITmediaの2024年10月1日の記事「[Google「メッセージ」アプリでGeminiと日本語で会話可能に](https://www.itmedia.co.jp/mobile/articles/2410/01/news097.html)」によると、この時期から日本語でGeminiと話せるようになり、使えるようになった端末にはGeminiからメッセージが届きました。一覧の右下にある新しい会話のボタンの上に、Geminiのアイコンが常に出るようになったとも書かれています。
 
 **自分で設定しなくても、条件を満たした端末にはGeminiが届く**ので、「Geminiへようこそ」という見覚えのない会話が一覧に並んで戸惑う人が出ました。Googleのコミュニティにも、2024年12月にこのメッセージが消せないという質問が投稿されています。
 
@@ -41,7 +39,7 @@ Googleメッセージは、Pixelをはじめ多くのAndroidスマホに入っ�
 | 年齢 | 18 歳以上 |
 | 通信 | RCS チャットがオン |
 
-上位の記事やITmediaの記事にはRAMが6GB以上という条件がありますが、2026年10月10日のヘルプの「必要なもの」にRAMの項目はありません。提供は段階的に進むとヘルプに書かれているので、条件を満たしていても届く時期は端末ごとに違います。
+2024年のITmediaの記事にはRAMが6GB以上という条件がありますが、2026年10月10日のヘルプの「必要なもの」にRAMの項目はありません。提供は段階的に進むとヘルプに書かれているので、条件を満たしていても届く時期は端末ごとに違います。
 
 ## Geminiのボタンを消す手順
 
@@ -53,7 +51,7 @@ Googleメッセージは、Pixelをはじめ多くのAndroidスマホに入っ�
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/google-messages-gemini/02_help_off_sp.jpg" alt="スマホで開いたGoogleのヘルプのGemini in Google メッセージを無効にする手順。1の赤枠はプロフィール写真またはイニシャルからメッセージの設定、Gemini in Google メッセージをタップする手順、2の赤枠はGeminiボタンを表示するをオフにする手順" loading="lazy"><figcaption>ヘルプの無効にする手順（スマホで表示）。1で設定を開き、2をオフにする</figcaption></figure>
 
-アプリの版によっては、［メッセージの設定］を開いたあと［全般］の下を下までたどると［Gemini in Messages］が出てきます。解説動画（WebPro Education）の画面ではこの並びで、オフにすると一覧の右下にあった星形のボタンが消えていました。別の解説動画（Datyell Close）では、オフにしたあとGeminiとのチャットが一覧からアーカイブに移っています。どちらも投稿者の端末での画面で、第三者の検証はありません。
+アプリの版によっては、［メッセージの設定］を開いたあと［全般］の下を下までたどると［Gemini in Messages］が出てきます。解説動画（WebPro Education）の画面ではこの並びで、オフにすると一覧の右下にあった星形のボタンが消えていました。別の解説動画（Datyell Close）では、オフにしたあとGeminiとのチャットが一覧からアーカイブに移っています（どちらも投稿者の端末の画面）。
 
 **ヘルプで「無効にする」と呼んでいるのは、このボタンの表示のスイッチ1つです。**Geminiとの会話の中身や、Geminiアプリ アクティビティに残った記録は、この操作では消えません。過去の会話も消したい人は次の節の手順に進みます。
 
@@ -89,7 +87,7 @@ Geminiに送った内容は普段の友だちとのメッセージとは別の�
 | 自動削除 | 既定は18か月。3か月・36か月・自動削除なしに変えられる |
 | 位置情報 | 正確な位置にはアクセスしない。IPアドレスやアカウントの自宅・職場の住所からおおよその場所を使う |
 
-**レビュアーに見られたくない内容は、Geminiとのチャットに入れない**のが、プライバシー ハブの案内です。Geminiの学習に使わせたくなければ、Geminiアプリ アクティビティで［アクティビティの保存］をオフにします。Geminiアプリには一時チャットもありますが、[Geminiのシークレットモード](/media/gemini-temporary-chat/)で書いたとおり、Googleメッセージからは使えないと英語版のヘルプにあります。
+**レビュアーに見られたくない内容は、Geminiとのチャットに入れない**のが、プライバシー ハブの案内です。Geminiの学習に使わせたくなければ、Geminiアプリ アクティビティで［アクティビティの保存］をオフにします（フィードバックを送った場合を除く）。Geminiアプリには一時チャットもありますが、[Geminiのシークレットモード](/media/gemini-temporary-chat/)で書いたとおり、Googleメッセージからは使えないと英語版のヘルプにあります。
 
 ヘルプで説明されているのはGeminiとのチャットに自分で書いた内容で、友だちとの会話の中身をGeminiに渡す設定や手順は、2026年10月10日のヘルプに見当たりませんでした。
 
@@ -97,13 +95,13 @@ Geminiに送った内容は普段の友だちとのメッセージとは別の�
 
 Googleメッセージの周りには、名前の似たAIの機能が3つあります。止める場所がそれぞれ違うので、どれのことかを先に分けておきます。
 
-<figure class="post-figure"><img src="/media/images/google-messages-gemini/07_fig_features.png" alt="メッセージまわりの3つのAI機能の表。Gemini in メッセージは内容がGoogleに送られ、メッセージの設定で止める。文章マジックは端末の中で処理され英語のみで、使わなければ動かない。Geminiアプリからの送信はGeminiアプリが送り、Geminiのアプリ連携で止める" loading="lazy"><figcaption>3つの機能の違い</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/google-messages-gemini/07_fig_features.png" alt="メッセージまわりの3つのAI機能の表。Gemini in メッセージは内容がGoogleに送られ、メッセージの設定で止める。文章マジックはAICoreを積んだ端末なら端末の中で処理され、書き換えの候補は英語のみで、使わなければ動かない。Geminiアプリからの送信はGeminiアプリが送り、Geminiのアプリ連携で止める" loading="lazy"><figcaption>3つの機能の違い</figcaption></figure>
 
-1つ目はこの記事で扱ってきたGemini in Google メッセージです。2つ目の[文章マジック](https://support.google.com/messages/answer/13632636?hl=ja)は、返信の候補を出したり下書きを書き換えたりする試験運用の機能で、ヘルプでは英語のみ・18歳以上・AICoreを積んだ端末に限られています。今のヘルプの条件のままなら、日本語では使えない機能です。
+1つ目はこの記事で扱ってきたGemini in Google メッセージです。2つ目の[文章マジック](https://support.google.com/messages/answer/13632636?hl=ja)は、返信の候補を出したり下書きを書き換えたりする試験運用の機能です。下書きを書き換える候補はヘルプでは英語のみ・18歳以上・AICoreを積んだ端末に限られています。
 
 <figure class="post-figure"><img src="/media/images/google-messages-gemini/06_help_magic.jpg" alt="Googleのヘルプの文章マジックの画面。データの取り扱いについてと会話のプライバシーの2つの見出しが並ぶ" loading="lazy"><figcaption>文章マジックのデータの扱い</figcaption></figure>
 
-**文章マジックはGemini Nanoで端末の中だけで処理され、メッセージはGoogleに送られません。**候補を作るときに直近の20件のメッセージを使う、とヘルプに書かれています。
+**AICoreを積んだ端末では、文章マジックはGemini Nanoで端末の中だけで処理され、メッセージはGoogleに送られません。**候補を作るときに直近の20件のメッセージを使う、とヘルプに書かれています。
 
 3つ目はGeminiアプリに「〇〇さんにメッセージを送って」と頼むと、Googleメッセージを通じて送る機能です。これはGeminiアプリ側の機能で、プライバシー ハブによると通話とメッセージのログ、連絡先を使います。止めるのはGoogleメッセージの設定ではなく、Geminiアプリの［アプリ連携］の設定です。電源ボタンの長押しで勝手にGeminiが起動する話は[Geminiが勝手に起動する原因と止め方](/media/gemini-auto-launch/)にまとめました。
 
@@ -113,7 +111,7 @@ Googleメッセージの周りには、名前の似たAIの機能が3つあり�
 
 <figure class="post-figure"><img src="/media/images/google-messages-gemini/09_fig_reasons.png" alt="Geminiが出ない主な条件の図。アカウントは仕事用・学校用・ファミリーリンク、年齢は18歳未満、RCSチャットはオフになっている、アプリと言語は古い版・対応外の言語、提供の順番は段階的なリリースでまだ届いていない" loading="lazy"><figcaption>Geminiが出ない主な条件</figcaption></figure>
 
-ファミリーリンクで管理しているアカウントとGoogle Workspaceのアカウントでは、Gemini in Google メッセージを使えないというのがヘルプの説明です。仕事のアカウントでスマホにログインしている人は、個人のアカウントに切り替えると出てくることがあります。
+ファミリーリンクで管理しているアカウントとGoogle Workspaceのアカウントでは、Gemini in Google メッセージを使えないというのがヘルプの説明です。ヘルプの条件は自分で管理している個人のアカウントなので、仕事のアカウントでは出ません。
 
 RCSチャットがオフでも出ませんが、**Geminiを消すためだけにRCSチャットを切るのはおすすめしません。**Googleメッセージの[RCSのヘルプ](https://support.google.com/messages/answer/7189714?hl=ja)には、オンとオフを切り替えるとグループ チャットから外れると書かれています。
 
@@ -145,7 +143,7 @@ Gemini in Google メッセージの料金について、ヘルプに記載はあ
 
 ### メッセージのGeminiは友だちとの会話を読みますか？
 
-Geminiとのチャットに自分で書いた内容の扱いはヘルプに説明がありますが、友だちとの会話をGeminiに渡す設定や手順は書かれていません。英語でのみ提供の文章マジックは直近の20件のメッセージを使いますが、端末の中だけで処理されます。
+Gemini in Google メッセージについては、友だちとの会話をGeminiに渡す設定や手順はヘルプにありません。別の機能のGeminiアプリは、メッセージを送るときに端末のメッセージのログを使うとプライバシー ハブにあり、これはGeminiアプリの［アプリ連携］で止められます。返信の候補を出す文章マジックは直近の20件のメッセージを使いますが、AICoreを積んだ端末では端末の中だけで処理されます。
 
 ### メッセージにGeminiのボタンが出ないのはなぜですか？
 
