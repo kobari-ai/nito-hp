@@ -37,6 +37,8 @@ Claude Codeや開発者向けのAPIでは、529 Overloaded・500・429といっ�
 
 使用量の枠の見方とリセットの時刻は「[Claudeの使用制限とリセット時間](/media/claude-usage-limits/)」、ログインで止まる場合は「[Claudeにログインできない原因と対処](/media/claude-login-error/)」で詳しく扱っています。
 
+返答の途中で「Claudeはこのターンのツール使用制限に達しました」と出た場合は使用量の枠とは別の仕組みで、続け方は「[Claudeのこのターンのツール使用制限](/media/claude-tool-use-limit/)」で扱っています。
+
 文言で見当がつかないときは、次の順で確かめます。
 
 <figure class="post-figure"><img src="/media/images/claude-error-messages/01_fig_check.png" alt="Claudeでエラーが出たときに確かめる4つの順番の図。1、制限やリセットの文字があれば自分の使用量の枠で、表示された時刻まで待つ。2、容量制約や529 Overloadedなら全体の混雑で、ステータスページには出ないので数分おいて送り直す。3、ステータスページに障害が出ていれば復旧を待つ。4、どれにも当たらずログインや読み込みで止まるなら、VPNや拡張機能やキャッシュを確かめる" loading="lazy"><figcaption>エラーが出たときに確かめる順番（Anthropicのヘルプとドキュメントから作成）</figcaption></figure>
