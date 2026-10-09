@@ -129,6 +129,8 @@ OpenAIの障害を載せているのは[status.openai.com](https://status.openai
 
 このページには、会社のネットワークで止めてはいけないドメインが並んでいます。chatgpt.com・openai.com のほか、ログインに使う auth.openai.com、確認画面の challenges.cloudflare.com なども含まれます。**ChatGPTの一部の機能は wss://ws.chatgpt.com へのWebSocketの接続を使うため、ポート443でのWebSocketも許可が必要です。**
 
+ログインの画面が繰り返す・認証コードが届かないといったログインだけの症状は「[ChatGPTにログインできない原因と直し方](/media/chatgpt-login-error/)」で扱っています。
+
 ヘルプはZscaler・Cisco Umbrella・McAfee Web GatewayといったセキュリティのソフトがWebの通信を絞っている場合があるとして、製品名を挙げています。ヘルプの確認事項にはスマホのホットスポットに切り替えて比べることと、同じネットワークのほかの人にも出ているかを確かめることが挙がっています。IT部門に相談するときはその結果を添えると話が早いです。
 
 ## よくある質問
