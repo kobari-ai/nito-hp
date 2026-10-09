@@ -1053,6 +1053,14 @@
                 document.getElementById('role-other-detail').style.display = 'none';
                 document.getElementById('referral-other-detail').style.display = 'none';
                 setStatus('送信が完了しました。お問い合わせありがとうございます。');
+                // GA4 キーイベント: 送信が保存できたときだけ1回送る（失敗時は送らない）
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        form_name: 'contact',
+                        lead_category: payload.category || '',
+                        lead_referral: payload.referral || ''
+                    });
+                }
             } catch (error) {
                 console.error('[contact] 送信失敗:', error);
                 setStatus('送信に失敗しました。時間をおいて再度お試しいただくか、お手数ですが直接ご連絡ください。', true);
