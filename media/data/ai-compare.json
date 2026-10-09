@@ -29,8 +29,8 @@
     "ai_mode": "2026-10-10"
   },
   "last_changed": {
-    "date": "2026-09-29",
-    "text": "ChatGPT Pro 200の新規契約は利用枠が以前より少なく。9/22〜9/29に有効だった契約は10/29まで従来の枠"
+    "date": "2026-10-09",
+    "text": "Geminiの無料版で選べるモデルが Flash-Lite だけに。Plus は Flash-Lite と Flash（適用日はメールで案内）"
   },
   "tables": [
     {
@@ -79,9 +79,8 @@
               ]
             },
             "gemini": {
-              "text": "Flash-Lite・Flash・Pro（10/9からFlash-Liteのみ）",
+              "text": "Flash-Liteのみ（10/9から）",
               "src": [
-                "g1",
                 "g2"
               ]
             },
@@ -768,7 +767,7 @@
       "watch": [
         "年間サブスクリプション割引適用時の月額",
         "月払いの場合は $20",
-        "Max 一日中Claudeと仕事をする方へ $100 から",
+        "と仕事をする方へ $100 から",
         "表示価格には該当する税金は含まれていません",
         "5時間のローリングセッションウィンドウでリセットされる",
         "Proは5時間セッションあたりFreeの少なくとも5倍",
@@ -837,7 +836,7 @@
     {
       "date": "2026-10-09",
       "ai": "gemini",
-      "text": "（予定）AIプランに入っていない人が使えるモデルが Flash-Lite だけに。Plus は Flash-Lite と Flash",
+      "text": "AIプランに入っていない人が選べるモデルが Flash-Lite だけに。Plus は Flash-Lite と Flash（適用日はメールで案内）",
       "src": [
         "g2"
       ]

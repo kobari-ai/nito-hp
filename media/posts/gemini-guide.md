@@ -14,7 +14,7 @@ Gemini（ジェミニ）は、Googleが提供するAIアシスタントです。
 
 :::takeaways
 - 始め方は**gemini.google.comにGoogleアカウントでログインするだけ**。ウェブ・Mac／Windowsアプリ・スマホアプリから使える。ログインなしでも一部の機能は動く
-- **モデルは無料でも有料でも同じ3つ**（Flash-Lite・Flash・Pro）。公式の表では4プランすべてに○が付く
+- **無料で選べるモデルは2026年10月9日からFlash-Liteだけ**。FlashはAI Plus、ProはAI Pro以上で選べる
 - 無料と有料で変わるのは**使用量の上限・コンテキストウィンドウ・一部の機能**の3つ。上限は回数ではなく**コンピューティング量で決まり、5時間ごとにリセット**して週の上限まで
 - **Deep Research・Canvas・Gem・画像生成は無料でも使える**。無料で使えないのは動画生成・時間指定アクション・今日のまとめ・Nano Banana Proでの再生成・Gemini Spark
 - 繰り返す作業は**Gem**、資料を積み上げる作業は**ノートブック**、毎朝届けてほしいものは**時間指定アクション**に置く
@@ -51,7 +51,7 @@ Geminiという言葉はGoogleのモデルを指すこともアプリを指す�
 
 ## モデルと思考レベルの選び方
 
-Geminiには性格の違う3つのモデルがあり、テキストボックスの中のモデル名をクリックすると切り替わります。公式ヘルプの説明はそれぞれ短く、選び分けの基準がはっきりしています。
+Geminiには性格の違う3つのモデルがあり、テキストボックスの中のモデル名をクリックすると切り替わります。公式ヘルプの説明はそれぞれ短く、選び分けの基準がはっきりしています。ただし2026年10月9日から、プランに入っていない人が選べるのはFlash-Liteだけになりました。
 
 | モデル | 向いている仕事 | 公式の説明 |
 |---|---|---|
@@ -59,7 +59,7 @@ Geminiには性格の違う3つのモデルがあり、テキストボックス�
 | Gemini 3 Flash | 簡単な問題から複雑な問題まで | スピードと推論のバランスが取れたモデル |
 | Gemini 3 Pro | 複雑な数学、コーディング、長いファイルの分析 | 高いパフォーマンスと推論機能を備えた最先端のモデル |
 
-<figure class="post-figure"><img src="/media/images/gemini-guide/00_fig_models.png" alt="Geminiの3つのモデルの比較図。Flash-Liteは要約やブレインストーミングで使用量の消費が最も少ない、Flashはスピードと推論のバランスで迷ったらここ、Proは複雑な数学やコーディング向けで回答が遅く消費が多い。3つとも無料プランからAI Ultraまでどのプランでも選べる" loading="lazy"><figcaption>3つのモデルの違いと、どのプランでも同じ3つが選べること（公式ヘルプ）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/gemini-guide/00_fig_models.png" alt="Geminiの3つのモデルの比較図。Flash-Liteは要約やブレインストーミングで使用量の消費が最も少ない、Flashはスピードと推論のバランスで迷ったらここ、Proは複雑な数学やコーディング向けで回答が遅く消費が多い。3つとも無料プランからAI Ultraまでどのプランでも選べる" loading="lazy"><figcaption>3つのモデルの違い（公式ヘルプ）。どのプランでも3つ選べたのは10月8日まで</figcaption></figure>
 
 Proは回答までの時間が他のモデルより長くなります。日常の要約でProを選ぶと待たされるだけで、使用量も多く消費するため、**軽い用件はFlash-Lite、迷ったらFlash、考えさせたいときだけPro**と決めておけば、待ち時間も使用量も無駄になりません。
 
@@ -82,11 +82,11 @@ Proは回答までの時間が他のモデルより長くなります。日常�
 | Google AI Pro | 標準の4倍 | 100万トークン |
 | Google AI Ultra | AI Proの4倍または20倍 | 100万トークン |
 
-<figure class="post-figure"><img src="/media/images/gemini-guide/00_fig_free_vs_paid.png" alt="無料と有料で変わる3つの図。1.使える量（AIプランなし標準、Plus2倍、Pro4倍、UltraはProの4倍か20倍）2.読ませられる長さ（32,000／128,000／100万トークン）3.一部の機能（動画生成・時間指定アクション・今日のまとめ・Gemini Spark）。モデル3つはどのプランでも選べる" loading="lazy"><figcaption>有料にして増えるのは量と長さと一部の機能で、モデルは同じ</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/gemini-guide/00_fig_free_vs_paid.png" alt="無料と有料で変わる3つの図。1.使える量（AIプランなし標準、Plus2倍、Pro4倍、UltraはProの4倍か20倍）2.読ませられる長さ（32,000／128,000／100万トークン）3.一部の機能（動画生成・時間指定アクション・今日のまとめ・Gemini Spark）。モデル3つはどのプランでも選べる" loading="lazy"><figcaption>有料にして増えるのは量と長さと一部の機能（10月8日までの図。10月9日から無料で選べるモデルはFlash-Liteだけ）</figcaption></figure>
 
 見落とされやすいのがコンテキストウィンドウです。無料の32,000トークンは、長い資料を読ませるには足りません。公式は100万トークンで最大1,500ページのテキストか3万行のコードを理解できると書いており、無料との差は約30倍あります。プロンプトがコンテキストウィンドウを超えると、渡した内容の一部が考慮されないまま回答が返ることがあります。
 
-モデルそのものに差はありません。公式の表ではGemini 3 Flash-Lite・Flash・Proの3つすべてに、無料からUltraまで4プラン分の○が並びます。**有料にすると、同じモデルを使える量と、一度に読ませられる長さが増えます。**
+選べるモデルも、2026年10月9日からプランで分かれました。ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」の表では、プランなしはFlash-Liteだけ、AI PlusはFlashまで、AI ProとUltraはProまで選べます。**有料にすると、使える量と一度に読ませられる長さに加えて、選べるモデルが増えます。**変わった範囲は[Gemini Flash-Liteとは](/media/gemini-flash-lite/)にまとめました。
 
 機能の提供状況は分かれます。
 
@@ -208,7 +208,7 @@ Geminiを自分で使うことと、自社がGeminiの回答に登場するこ�
 gemini.google.com をブラウザで開き、Googleアカウントでログインして、下部のテキストボックスに質問を入力します。スマホはGeminiアプリ、パソコンはMac版・Windows版のアプリからも使えます。
 
 ### Geminiは無料で使えますか？
-無料で使えます。Googleアカウントがあれば、3つのモデル、Deep Research、Canvas、Gem、画像生成まで利用できます。動画生成、時間指定アクション、今日のまとめ、Nano Banana Proでの再生成、Gemini Sparkは有料プランが必要です。
+無料で使えます。Googleアカウントがあれば、Flash-Liteのモデル、Deep Research、Canvas、Gem、画像生成まで利用できます。FlashとPro、動画生成、時間指定アクション、今日のまとめ、Nano Banana Proでの再生成、Gemini Sparkは有料プランが必要です。
 
 ### Geminiは何回まで無料ですか？
 回数では決まっていません。上限はプロンプトの複雑さ、使うモデルと機能、チャットの長さから計算されるコンピューティング量で決まり、週の上限に達するまで5時間ごとにリセットされます。現在の状況は左下の設定で確認できる形です。
@@ -217,7 +217,7 @@ gemini.google.com をブラウザで開き、Googleアカウントでログイ�
 答えは用途で変わります。GmailやGoogleドライブの中身を前提に頼む作業はGeminiが有利で、両者の回答の作られ方の違いは[AIモードとChatGPTを比べた記事](https://nito-0210.com/media/ai-mode-vs-chatgpt/)にまとめています。
 
 ### Proにすると賢くなりますか？
-モデルは変わりません。無料でもGemini 3 Proを選べます。変わるのは使える量、一度に読ませられる長さ（32,000トークンから100万トークン）、動画生成などの一部機能です。
+選べるモデルが増えます。2026年10月9日から無料で選べるのはFlash-Liteだけで、ProにはAI Pro以上が必要です。ほかに変わるのは使える量、一度に読ませられる長さ（32,000トークンから100万トークン）、動画生成などの一部機能です。
 
 ### Geminiに渡したファイルはどこまで読まれますか？
 ひとつのプロンプトに追加できるのは最大10個までで、読める量はコンテキストウィンドウの上限までです。上限を超えると、渡した内容の一部が考慮されないまま回答が返ることがあります。
@@ -230,10 +230,11 @@ gemini.google.com をブラウザで開き、Googleアカウントでログイ�
 
 ## 出典
 
-この記事の事実はGoogleの公式ヘルプとサービスページで確認しました（2026年9月21日取得）。
+この記事の事実はGoogleの公式ヘルプとサービスページで確認しました（2026年9月21日取得。無料で選べるモデルの記載は2026年10月10日に取り直し）。
 
 - [Geminiアプリを使用する](https://support.google.com/gemini/answer/13275745?hl=ja)
 - [Google AIのサブスクリプションプランに応じたGeminiアプリの使用量上限とアップグレード](https://support.google.com/gemini/answer/16275805?hl=ja)
+- [Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)
 - [GeminiアプリでGoogle AIのプランを管理する](https://support.google.com/gemini/answer/14517446?hl=ja)
 - [Geminiアプリへのログインに必要なもの](https://support.google.com/gemini/answer/13278668?hl=ja)
 - [GeminiアプリでDeep Researchを利用する](https://support.google.com/gemini/answer/15719111?hl=ja)
