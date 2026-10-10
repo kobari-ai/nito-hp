@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】ChatGPTにログインできない原因と直し方｜ループ・認証コード・Google | nito Column</title>
+    <meta name="description" content="ChatGPTにログインできないときの直し方を症状別に解説。画面のループ、認証コードが届かない、Google・Apple・Microsoftで入れない、アカウントが見つからない・停止をOpenAIのヘルプで確かめました。">
+    <link rel="canonical" href="https://nito-0210.com/media/chatgpt-login-error/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】ChatGPTにログインできない原因と直し方｜ループ・認証コード・Google">
+    <meta property="og:description" content="ChatGPTにログインできないときの直し方を症状別に解説。画面のループ、認証コードが届かない、Google・Apple・Microsoftで入れない、アカウントが見つからない・停止をOpenAIのヘルプで確かめました。">
+    <meta property="og:url" content="https://nito-0210.com/media/chatgpt-login-error/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/chatgpt-login-error.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/chatgpt-login-error.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】ChatGPTにログインできない原因と直し方｜ループ・認証コード・Google", "description": "ChatGPTにログインできないときの直し方を症状別に解説。画面のループ、認証コードが届かない、Google・Apple・Microsoftで入れない、アカウントが見つからない・停止をOpenAIのヘルプで確かめました。", "datePublished": "2026-10-10", "dateModified": "2026-10-10", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/chatgpt-login-error/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】ChatGPTにログインできない原因と直し方｜ループ・認証コード・Google"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTのパスワードを忘れたときはどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "ログイン画面でメールアドレスを入れて続行し、パスワードの画面の「パスワードをお忘れですか？」から再設定のメールを受け取ります。Google・Apple・Microsoftで登録したアカウントにはパスワードが無いので、同じ方法で続けてください。Microsoftのボタンが画面に無いときは、試したメールアドレスとMicrosoftで登録したことを添えてサポートへ問い合わせます。"}}, {"@type": "Question", "name": "ChatGPTにGoogleで入れないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "最初の登録がAppleやMicrosoft、電話番号だったか、登録とは別のGoogleアカウントを選んでいる可能性があります。メールアドレスとパスワードで作ったアカウントなら、同じメールアドレスのGoogleでも入れるとヘルプにあります。Appleで作ったアカウントの入り口はAppleだけです。Microsoftで作ったアカウントは、画面にボタンが無ければ、試したメールアドレスとMicrosoftで登録したことを添えてサポートへ問い合わせてください。"}}, {"@type": "Question", "name": "ChatGPTの認証コードが届かないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "迷惑メールや会社のメールの隔離に入っているか、遅れて届いて期限が切れていることが多いです。新しいコードを頼み、いちばん新しいメールのコードを入れてください。noreply@openai.comを許可リストに入れるとヘルプは勧めています。"}}, {"@type": "Question", "name": "ChatGPTの認証コードが勝手に届くのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "自分以外の誰かがそのメールアドレスでログインを試した可能性があります。コードを人に教えず、アプリの通知なら「いいえ、アクセスを拒否する」を押してください。そのうえでパスワードの再設定と多要素認証の設定をしてください。"}}, {"@type": "Question", "name": "ChatGPTのログイン画面がループするのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "Cloudflareの確認がVPNや広告ブロッカー、Cookieの設定で通らないことが原因に挙がっています。VPNを切り、chatgpt.com・openai.com・auth.openai.com のCookieとJavaScriptを許可して、シークレットウィンドウで試してください。"}}, {"@type": "Question", "name": "ChatGPTのログインボタンが反応しないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "Cookieの同意の表示や広告ブロッカーが、ボタンやログインの流れを止めていることがあります。拡張機能を切るか、Cookieを受け入れてから押し直してください。ボタンが出ないなら強制的に読み込み直すか、別のブラウザで開きます。"}}, {"@type": "Question", "name": "ChatGPTのアプリだけログインできないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "Androidのアプリはログインの途中でChromeかBraveを使うため、どちらも既定のブラウザになっていないとエラーになることがあるので、Androidの設定でChromeを既定にしてから試してください。"}}, {"@type": "Question", "name": "ChatGPTでアカウントが存在しないと出たらどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "自分で削除したか、OpenAIに無効化されたかのどちらかです。削除したアカウントは戻せません。無効化なら通知メールのリンクか受付フォームから異議申し立てができ、本人確認が残っているだけなら確認を済ませれば戻ります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTにログ…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.10</span>
+        </div>
+        <h1 class="post-title">【2026年10月】ChatGPTにログインできない原因と直し方｜ループ・認証コード・Google</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTにログインできない"><defs><linearGradient id="ecg-d2a0db17" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d2a0db17)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="86.4" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTにログ</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">インできない</text><line x1="326.4" y1="378.0" x2="873.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">ループ・認証コード・Google</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>OpenAIのヘルプ「<a href="https://help.openai.com/ja-jp/articles/7426629">ChatGPT にログインできないのはなぜですか？</a>」には、確認の画面が繰り返す・認証コードが遅れる・登録した方法と違うなど、症状ごとの対処が分けて書かれています（2026年10月10日取得）。</p>
+<p>ただ、ログインで止まったときの画面は「問題が発生しました」や確認の画面の繰り返しで、どれに当たるのかが分かりにくいものです。<strong>パスワードを疑う前に、登録した方法とブラウザの設定を見直すのがヘルプの対処の大半です。</strong>この記事では表示される症状から原因を絞り、ヘルプに書かれた直し方を試す順に並べました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>最初に<strong>ステータスページで障害が出ていないか</strong>を見る。障害が出ていなければ、ブラウザと登録した方法を見直す</li>
+<li><strong>登録したときと同じ方法で入る</strong>。Googleで作ったアカウントにはリセットするパスワードが無く、方法ごとに別のアカウントができることもある</li>
+<li>確認の画面が繰り返すのは<strong>Cloudflareの認証ループ</strong>。VPNと広告ブロッカーを切り、chatgpt.com・openai.com・auth.openai.com のCookieとJavaScriptを許可する</li>
+<li>認証コードは<strong>いちばん新しい1通を使う</strong>。迷惑メールと隔離のフォルダを探し、不審なログイン行動と出たら最大1時間待つ</li>
+<li>削除や無効化でアカウントが存在しないと出たら、<strong>削除は戻せず、無効化は通知メールのリンクから異議申し立て</strong>ができる</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/chatgpt-login-error/01_gem_overview.jpg" alt="ChatGPTにログインできないときの主な4つの症状の図。中央にログインのボタンが並んだスマホがあり、周りに画面がループ、コードが届かない、登録方法の違い、アカウント停止の4つのアイコンが置かれている" loading="lazy"><figcaption>ログインで止まる場面はおおむね4つに分かれる</figcaption></figure>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>症状別の原因と直し方の一覧</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>障害かどうかを先に確かめる</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>ログイン画面が繰り返すとき</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>Cloudflareの確認が終わらない</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>Cookieの同意バナーとボタンが反応しない</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>会社や学校のネットワーク</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>認証コードが届かないとき</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>メールのコードが来ない</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>アプリへの通知で承認する</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>頼んでいないコードが届いた</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>不審なログイン行動と出たとき</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Google・Apple・Microsoftで入れないとき</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>登録した方法で入る</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>ログイン画面のボタン</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>Appleのメールを非公開にしたとき</a></li>
+                    <li class="toc-h3"><a href="#s5-4"><span class="toc__n">5-4</span>Androidのアプリだけ入れないとき</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>アカウントが見つからない・停止と出たとき</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>見つからないとき</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>削除済みまたは無効化済みと出たとき</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>メールの受信箱に入れなくなったとき</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>多要素認証で止まったとき</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>それでも入れないときの問い合わせ</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">症状別の原因と直し方の一覧</h2>
+<p>ヘルプの項目を、読者の画面に出る症状で並べ直すと次のようになります。<strong>自分の症状の行を見つけたら、その節から読んでください。</strong></p>
+<table>
+<thead>
+<tr>
+<th>症状</th>
+<th>主な原因</th>
+<th>最初に試すこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「問題が発生しました」と出る</td>
+<td>障害かブラウザのキャッシュ・拡張機能</td>
+<td>ステータスページを見て60秒以上待つ</td>
+</tr>
+<tr>
+<td>ブラウザを確認していますが繰り返す</td>
+<td>Cloudflareの認証ループ</td>
+<td>VPN・広告ブロッカーを切る</td>
+</tr>
+<tr>
+<td>認証コードのメールが来ない</td>
+<td>迷惑メール・古いコード</td>
+<td>隔離フォルダを探しコードを再送する</td>
+</tr>
+<tr>
+<td>認証方法が正しくありませんと出る</td>
+<td>登録した方法と違う</td>
+<td>Google・Appleを試す（Microsoftのボタンは10月10日の画面に無い）</td>
+</tr>
+<tr>
+<td>アカウントが存在しないと出る</td>
+<td>削除か無効化</td>
+<td>OpenAIからのメールを探す</td>
+</tr>
+<tr>
+<td>多要素認証のコードが出せない</td>
+<td>認証アプリや電話が使えない</td>
+<td>サポートで復旧の確認を受ける</td>
+</tr>
+</tbody>
+</table>
+<p>ログイン以外で出るエラー（応答が止まる、ネットワークエラー）は「<a href="/media/chatgpt-error-messages/">ChatGPTのエラーメッセージ一覧</a>」で文言ごとに扱っています。</p>
+<h2 id="s2">障害かどうかを先に確かめる</h2>
+<p>ヘルプの一般的なログインエラーの手順は、60秒以上待ってから試し直すことと、<a href="https://status.openai.com/">OpenAIのステータスページ</a>で障害を確かめることから始まります。<strong>障害が出ているときは手元の設定をいくら変えても直りません。</strong></p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-login-error/02_sp_status.jpg" alt="スマホで開いたOpenAIのステータスページ。1の赤枠は上部の障害が起きていることを示す赤い帯、2の赤枠は個別の障害の下にある影響範囲の表示で、ChatGPTに影響と書かれている" loading="lazy"><figcaption>OpenAIのステータスページ（2026年10月10日、スマホ）。1が障害の有無、2が影響の表示（ログインと関係のない障害でもChatGPTと出る）</figcaption></figure>
+
+<p>ページの上に赤い帯（1）が出ていれば、何かしらの障害が起きています。ただし帯はChatGPT以外の障害でも出て、影響の表示（2）にChatGPTとあってもログインと関係のない障害のことがあります。<strong>障害の見出しにログイン（Login・Authentication）が入っているかまで見てください。</strong>2026年10月10日の朝に開いたときは、管理者向けのプラグインの設定やAndroidのアプリの表示など、ログインとは別の障害が並んでいました。</p>
+<p>障害が出ていないのに入れないなら、ブラウザと登録した方法を見直します。ここからは症状ごとに見ていきます。</p>
+<h2 id="s3">ログイン画面が繰り返すとき</h2>
+<p>ログインのボタンを押すと「ブラウザを確認しています…」の画面に戻る、ログインしたはずがまたログイン画面に戻る。ヘルプはこれをCloudflareの認証ループと呼び、専用の手順を載せています。</p>
+<h3 id="s3-1">Cloudflareの確認が終わらない</h3>
+<p>CloudflareはChatGPTの前でロボットかどうかを確かめる仕組みです。<strong>VPNやプロキシを使っていると、この確認が通らずに繰り返すことがあります。</strong></p>
+<figure class="post-figure"><img src="/media/images/chatgpt-login-error/03_help_cf.jpg" alt="OpenAIのヘルプのCloudflareの認証ループを解決する項目。VPNやプロキシを無効にする、広告ブロッカーやスクリプトブロッカーを一時的に無効にする、chatgpt.comとopenai.comとauth.openai.comでCookieとJavaScriptを許可する、シークレットウィンドウで試す、別のネットワークに切り替える、企業ネットワークではIT部門に相談する、と並んでいる" loading="lazy"><figcaption>ヘルプのCloudflareの認証ループの項目</figcaption></figure>
+
+<p>ヘルプの手順を試す順に並べると次のとおりです。</p>
+<ol>
+<li>VPNとプロキシをすべて切ってページを読み込み直す</li>
+<li>広告ブロッカーやスクリプトを止める拡張機能を一時的に切る</li>
+<li>chatgpt.com・openai.com・auth.openai.com でサードパーティのCookieとJavaScriptを許可する</li>
+<li>シークレットウィンドウか、拡張機能の入っていないブラウザのプロフィールで開く</li>
+<li>会社のWi-Fiからスマホのモバイルデータ通信に切り替える</li>
+</ol>
+<h3 id="s3-2">Cookieの同意バナーとボタンが反応しない</h3>
+<p>ログインのボタンを押しても何も起きないときは、Cookieの同意を求める表示や広告ブロッカーが、ボタンやログインの流れを止めていることがあるとヘルプに書かれています。その場合は拡張機能を切るか、help.openai.com・chatgpt.com・auth.openai.com のCookieを受け入れてから押し直してください。</p>
+<p>Google・Appleで続けるボタン自体が見えないときは、強制的に読み込み直す（パソコンならShiftを押しながら再読み込み）か、別のブラウザで開きます。</p>
+<h3 id="s3-3">会社や学校のネットワーク</h3>
+<p>家では入れるのに会社では繰り返すなら、ネットワーク側でCloudflareの確認が止められている可能性があります。<strong>企業のネットワークではIT部門がCloudflareの確認を許可リストに入れないと通らないことがあるとヘルプに書かれています。</strong>自分では直せないので、モバイルデータ通信で入れることを確かめてから相談してください。</p>
+<h2 id="s4">認証コードが届かないとき</h2>
+<p>新しい端末や普段と違う場所からログインすると、メールに届く6桁のコードか、ChatGPTのアプリへの通知で本人かどうかを聞かれることがあります。ヘルプ「<a href="https://help.openai.com/ja-jp/articles/9889414">ログイン情報の確認を求められるのはなぜですか？</a>」がこの仕組みと、よくある問題を表にしています。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-login-error/04_help_otp.jpg" alt="OpenAIのヘルプのワンタイムパスワードの節。送信元がnoreply@tm.openai.comかotp@tm1.openai.comであることを確かめるよう書かれ、下によくあるOTPの問題とその解決方法の表があり、OTPメールが届かない、入力したのに認証できない、有効期限が切れた、複数回の失敗でロックされた、の行が並んでいる" loading="lazy"><figcaption>ヘルプのワンタイムパスワードの節と、よくある問題の表</figcaption></figure>
+
+<h3 id="s4-1">メールのコードが来ない</h3>
+<p>まず迷惑メールと隔離のフォルダを探します。<strong>ヘルプはnoreply@openai.comを許可リストに入れるよう勧めていて、コードのメールの送信元はnoreply@tm.openai.comかotp@tm1.openai.comと書かれています。</strong>会社のメールでは隔離に入ることがあるので、届かないときはメールの管理者にも確かめてください。</p>
+<p>コードは有効な時間が短く、遅れて届いた古いコードは通りません。<strong>何度か再送したときに通るのは、いちばん新しいメールのコードだけです。</strong>別のネットワークに替える、VPNや広告ブロッカーを切ることもヘルプの対処に挙がっています。</p>
+<h3 id="s4-2">アプリへの通知で承認する</h3>
+<p>ChatGPTのアプリにログインしているスマホがあると、メールの代わりにアプリへ承認の通知が届くことがあります。自分のログインなら、押すのは「はい、私です」のほうです。通知が来ないときはログインしようとしている画面で「メールで試す」を選べばコードがメールで届きます。</p>
+<h3 id="s4-3">頼んでいないコードが届いた</h3>
+<p>自分がログインしていないのにコードや通知が届いたなら、誰かがそのメールアドレスでログインを試したおそれがあり、コードは人に教えてはいけません。<strong>アプリの通知は「いいえ、アクセスを拒否する」でその試行を止められます。</strong>ヘルプはあわせてパスワードの再設定と多要素認証の設定を勧めています。乗っ取りが疑われるときの手順は「<a href="https://help.openai.com/ja-jp/articles/8485685">私の OpenAI アカウントで不正な活動が確認されています。</a>」にあり、パスワードを変えたあと、他の端末のログインが残るのは最大30分です。</p>
+<h3 id="s4-4">不審なログイン行動と出たとき</h3>
+<p>「不審なログイン行動が検知されました」と出た場合、ヘルプはキャッシュとCookieの削除、Wi-Fiとモバイルデータ通信の切り替え、VPNを切ることを挙げています。<strong>何度も失敗すると一時的な制限がかかることがあり、最大1時間待ってから試し直すよう書かれています。</strong></p>
+<h2 id="s5">Google・Apple・Microsoftで入れないとき</h2>
+<p>ヘルプが挙げるログインの方法は、メールアドレス（とパスワード）、電話番号、Google・Apple・Microsoftのアカウントです（2026年10月10日の画面にMicrosoftのボタンはありませんでした）。<strong>初めて登録したときと同じ方法を使い続ける必要がある</strong>と、ヘルプは何度も書いています。</p>
+<h3 id="s5-1">登録した方法で入る</h3>
+<p>違う方法で入ろうとすると「すでに同じメールアドレスを持つユーザーが存在します…」か「認証方法が正しくありません」と出ます。どの方法で作ったか覚えていなければ、メールアドレスとパスワード・Google・Microsoft・Appleを1つずつ試すようヘルプは書いています。今の画面で試せるのはメールアドレス・電話番号・Google・Appleで、Microsoftで作った人の入り方は下のログイン画面のボタンの節に書きました。</p>
+<p>Googleなどで作ったアカウントには、リセットするパスワードがありません。ヘルプ「<a href="https://help.openai.com/ja-jp/articles/4936828">ChatGPT パスワードのリセットまたは変更</a>」も、その場合はGoogleなどで続けるよう書いています。<strong>方法ごとに別のアカウントやサブスクリプションができることがあり、OpenAIは自動でまとめません。</strong>例外はメールアドレスとパスワードで作ったアカウントで、同じメールアドレスのGoogle・Microsoft・Appleでもあとから入れるようになるとヘルプ「<a href="https://help.openai.com/ja-jp/articles/4936824">アカウントへのログイン方法（認証方法）を変更することはできますか？</a>」にあります。有料プランが見当たらないときは、別の方法で作ったもう1つのアカウントに入っていないかを疑ってください。</p>
+<h3 id="s5-2">ログイン画面のボタン</h3>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-login-error/05_sp_login.jpg" alt="ChatGPTのログインまたは新規登録の画面をスマホで開いたところ。上から並ぶ3つのボタンとメールアドレスの欄に、1から4の番号の赤枠が付いている" loading="lazy"><figcaption>ChatGPTのログイン画面（2026年10月10日、スマホのブラウザ）</figcaption></figure>
+
+<p><a href="https://chatgpt.com/auth/login">ChatGPTのログイン画面</a>を2026年10月10日にスマホとパソコンのブラウザで開くと、Googleで続行（1）・Appleで続行（2）・電話番号で続行（3）とメールアドレスの欄（4）が並び、Microsoftのボタンはありませんでした。ヘルプには、ボタンが出ないときはGoogleやMicrosoftの側で先にログインしてからログイン画面へ戻る手順が書かれています。</p>
+<p>Microsoftで登録した人は、画面にボタンが無いときは、試したメールアドレスとMicrosoftで登録したことを添えて<a href="https://help.openai.com/ja-jp/articles/6614161">サポート</a>へ問い合わせてください。</p>
+<h3 id="s5-3">Appleのメールを非公開にしたとき</h3>
+<p>Appleで登録するときにメールを非公開を選んでいると、アカウントは自分のメールアドレスではなく@privaterelay.appleid.comのアドレスに結び付いています。自分のメールアドレスで入ろうとすると、エラーが出るか、別の新しいアカウントが開いてしまいます。<strong>Appleで続行を押し、同じAppleアカウントで入ってください。</strong></p>
+<h3 id="s5-4">Androidのアプリだけ入れないとき</h3>
+<figure class="post-figure"><img src="/media/images/chatgpt-login-error/06_help_android.jpg" alt="OpenAIのヘルプのAndroidアプリとChromeのページ。Chromeが推奨される理由、ログイン対応ブラウザ、Chromeを既定にする手順の3つの節が見えている" loading="lazy"><figcaption>ヘルプのAndroidのアプリのログインとブラウザのページ</figcaption></figure>
+
+<p>AndroidのChatGPTのアプリは、ログインの途中でブラウザを使います。ヘルプ「<a href="https://help.openai.com/ja-jp/articles/8194942">ChatGPT Android アプリのデフォルトブラウザとしての Google Chrome</a>」によると、<strong>対応するのはChromeとBraveだけで、どちらも既定のブラウザになっていないとログインでエラーが出ることがあります。</strong></p>
+<p>Androidの設定のアプリから、デフォルトのアプリ、ブラウザアプリの順に開き、Chromeを選んでください。Galaxyなどメーカー独自の画面では、今の既定のブラウザ（Samsung Internetなど）を開いて既定の設定を消してから選び直すよう書かれています。</p>
+<h2 id="s6">アカウントが見つからない・停止と出たとき</h2>
+<p>メールアドレスを入れてもアカウントが見つからない、あるいは削除や無効化を告げる表示が出る場合です。ここは入力の仕方ではなく、アカウントの状態の問題です。</p>
+<h3 id="s6-1">見つからないとき</h3>
+<p><strong>ChatGPTに登録したメールアドレスは、請求書や領収書が届くアドレスと違うことがあります。</strong>ほかの端末でまだログインしているなら、設定のアカウントでメールアドレスを確かめられるとヘルプにあります。メールアドレスを変えたことがあるなら、新しい方で入ってください。</p>
+<p>登録の途中でやめていると「このユーザーはすでに存在します」と出ます。この場合は新しく登録し直さず、ログインのほうを試してください。ウェルカムメールは届いたのに確認のメールが来ないときも、ログイン画面から登録した方法で入れば、必要に応じて有効化の案内が出るとヘルプにあります。</p>
+<h3 id="s6-2">削除済みまたは無効化済みと出たとき</h3>
+<p>「アカウントは削除または無効化されているため、存在しません」と出るのは、自分で削除したか、OpenAIが無効化したかのどちらかです。ヘルプ「<a href="https://help.openai.com/ja-jp/articles/8958977">「削除済みまたは無効化済み」アカウントエラーのトラブルシューティング</a>」の内容は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>状態</th>
+<th>確かめること</th>
+<th>できること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自分で削除した</td>
+<td>削除の受付と完了のメール</td>
+<td>元のアカウントは戻せない</td>
+</tr>
+<tr>
+<td>規約違反などで無効化</td>
+<td>OpenAIからの通知メール</td>
+<td>メールのリンクか受付フォームから異議申し立て</td>
+</tr>
+<tr>
+<td>本人確認・年齢確認の未完了</td>
+<td>確認のメール</td>
+<td>確認を済ませるか確認リンクの再送を頼む</td>
+</tr>
+</tbody>
+</table>
+<p>削除したあと同じメールアドレスで作り直すときの扱いは「<a href="/media/chatgpt-account-delete/">ChatGPTのアカウント削除の方法</a>」に書いています。無効化の理由はヘルプ「<a href="https://help.openai.com/ja-jp/articles/10562188">なぜ私の OpenAI アカウントが無効化されたのですか？</a>」に並んでいて、通知メールが見つからなければ<a href="https://openai.com/form/appeal/">異議申し立てのフォーム</a>から送れます。</p>
+<h3 id="s6-3">メールの受信箱に入れなくなったとき</h3>
+<p>登録したメールアドレスの受信箱そのものに入れないと、ログインや確認、パスワードの再設定のメールを受け取れません。<strong>この場合は自分では解決できず、SMSもメールの代わりにならないとヘルプは書いています。</strong>まずメールの側（GmailやOutlook、会社のメール）のアカウントを取り戻してください。</p>
+<h2 id="s7">多要素認証で止まったとき</h2>
+<p>多要素認証（MFA）を有効にしていると、認証アプリのコードや通知、SMSなど2つ目の確認を求められます。機種変更で認証アプリが消えたときなどに、ここで止まります。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-login-error/07_help_mfa.jpg" alt="OpenAIのヘルプの多要素認証のページで、認証方法を利用できなくなった場合にアクセスを復旧する節を開いたところ。見出しの下に段落が4つ並んでいる" loading="lazy"><figcaption>ヘルプの多要素認証のアクセスを復旧する節</figcaption></figure>
+
+<p>ヘルプ「<a href="https://help.openai.com/ja-jp/articles/7967234">多要素認証（MFA）を管理する</a>」によると、<strong>メールは標準の多要素認証の方法としては使えません。</strong>設定した別の方法（SMSやパスキーなど）が残っていれば、そちらを選びます。どれも使えないときはサポートに連絡し、数日かかることがある確認を受けると、メールによる1回限りの復旧用ログインが届きます。</p>
+<p><strong>この復旧は一度しか使えないため、入れたらすぐに予備の方法を足すか、設定のセキュリティとログインで多要素認証を切ってください。</strong>多要素認証はそのときのログイン方法に結び付くので、ログイン方法を替えるなら先に多要素認証を切る必要があります。</p>
+<h2 id="s8">それでも入れないときの問い合わせ</h2>
+<p>ここまで試しても入れないときは、<a href="https://help.openai.com/ja-jp/articles/6614161">OpenAIのサポート</a>に問い合わせます。添えるよう求められているのは、試したメールアドレスとログインの方法・請求先のメールアドレス（違う場合）・関係するサブスクリプションの情報です。</p>
+<p>エラーを再現したときのブラウザの通信の記録（HARファイル）を作ってから問い合わせるようにも書かれています。ChatGPT BusinessやEnterpriseの招待やSSOで入れないときは、サポートではなく組織のIT管理者に招待の宛先とアカウントの設定を確かめてもらいます。</p>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">ChatGPTのパスワードを忘れたときはどうしますか？</h3>
+<p>ログイン画面でメールアドレスを入れて続行し、パスワードの画面の「パスワードをお忘れですか？」から再設定のメールを受け取ります。Google・Apple・Microsoftで登録したアカウントにはパスワードが無いので、同じ方法で続けてください。Microsoftのボタンが画面に無いときは、試したメールアドレスとMicrosoftで登録したことを添えてサポートへ問い合わせます。</p>
+<h3 id="s9-2">ChatGPTにGoogleで入れないのはなぜですか？</h3>
+<p>最初の登録がAppleやMicrosoft、電話番号だったか、登録とは別のGoogleアカウントを選んでいる可能性があります。メールアドレスとパスワードで作ったアカウントなら、同じメールアドレスのGoogleでも入れるとヘルプにあります。Appleで作ったアカウントの入り口はAppleだけです。Microsoftで作ったアカウントは、画面にボタンが無ければ、試したメールアドレスとMicrosoftで登録したことを添えてサポートへ問い合わせてください。</p>
+<h3 id="s9-3">ChatGPTの認証コードが届かないのはなぜですか？</h3>
+<p>迷惑メールや会社のメールの隔離に入っているか、遅れて届いて期限が切れていることが多いです。新しいコードを頼み、いちばん新しいメールのコードを入れてください。noreply@openai.comを許可リストに入れるとヘルプは勧めています。</p>
+<h3 id="s9-4">ChatGPTの認証コードが勝手に届くのはなぜですか？</h3>
+<p>自分以外の誰かがそのメールアドレスでログインを試した可能性があります。コードを人に教えず、アプリの通知なら「いいえ、アクセスを拒否する」を押してください。そのうえでパスワードの再設定と多要素認証の設定をしてください。</p>
+<h3 id="s9-5">ChatGPTのログイン画面がループするのはなぜですか？</h3>
+<p>Cloudflareの確認がVPNや広告ブロッカー、Cookieの設定で通らないことが原因に挙がっています。VPNを切り、chatgpt.com・openai.com・auth.openai.com のCookieとJavaScriptを許可して、シークレットウィンドウで試してください。</p>
+<h3 id="s9-6">ChatGPTのログインボタンが反応しないのはなぜですか？</h3>
+<p>Cookieの同意の表示や広告ブロッカーが、ボタンやログインの流れを止めていることがあります。拡張機能を切るか、Cookieを受け入れてから押し直してください。ボタンが出ないなら強制的に読み込み直すか、別のブラウザで開きます。</p>
+<h3 id="s9-7">ChatGPTのアプリだけログインできないのはなぜですか？</h3>
+<p>Androidのアプリはログインの途中でChromeかBraveを使うため、どちらも既定のブラウザになっていないとエラーになることがあるので、Androidの設定でChromeを既定にしてから試してください。</p>
+<h3 id="s9-8">ChatGPTでアカウントが存在しないと出たらどうしますか？</h3>
+<p>自分で削除したか、OpenAIに無効化されたかのどちらかです。削除したアカウントは戻せません。無効化なら通知メールのリンクか受付フォームから異議申し立てができ、本人確認が残っているだけなら確認を済ませれば戻ります。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/7426629">ChatGPT にログインできないのはなぜですか？</a>」（2026年10月10日取得）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/9889414">ログイン情報の確認を求められるのはなぜですか？</a>」（2026年10月10日取得）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/4936828">ChatGPT パスワードのリセットまたは変更</a>」（2026年10月10日取得）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/4936824">アカウントへのログイン方法（認証方法）を変更することはできますか？</a>」（2026年10月10日取得）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/7967234">多要素認証（MFA）を管理する</a>」（2026年10月10日取得）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/8485685">私の OpenAI アカウントで不正な活動が確認されています。</a>」（2026年10月10日取得）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/8194942">ChatGPT Android アプリのデフォルトブラウザとしての Google Chrome</a>」（2026年10月10日取得）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/8958977">「削除済みまたは無効化済み」アカウントエラーのトラブルシューティング</a>」（2026年10月10日取得）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/10562188">なぜ私の OpenAI アカウントが無効化されたのですか？</a>」（2026年10月10日取得）</li>
+<li><a href="https://status.openai.com/">OpenAIのステータスページ</a>（2026年10月10日取得）</li>
+<li><a href="https://chatgpt.com/auth/login">ChatGPTのログイン画面</a>（2026年10月10日、スマホとパソコンのブラウザで表示）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-network-error/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの接続エラー"><defs><linearGradient id="ecg-ae9cae28" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ae9cae28)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの接続エラー</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.09</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTのネットワーク構成の問題とClientErrorの直し方｜証明書とZIP</div>
+            </a>
+            <a href="/media/chatgpt-voice-not-working/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの音声会話ができない"><defs><linearGradient id="ecg-e4cc7da0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e4cc7da0)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの音声</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">会話ができない</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.09</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTの音声会話ができない原因を解説｜ボタンが無い・切れる・無料の制限</div>
+            </a>
+            <a href="/media/ai-overviews-error/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIによる概要のエラー"><defs><linearGradient id="ecg-6d6cffb8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6d6cffb8)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIによる概要のエラー</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.08</div>
+                <div class="rel-card__ttl">【2026年10月】AIによる概要のエラーを解説｜生成できません・表示されないときの直し方</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'chatgpt-login-error',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>

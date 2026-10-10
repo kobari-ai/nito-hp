@@ -90,7 +90,7 @@ Geminiアプリのアクティビティを消しても、ほかのサービス�
 
 ### 仕事用・学校用のアカウント
 
-[最近のチャットを管理するヘルプ](https://support.google.com/gemini/answer/13666746?hl=ja)には、仕事用・学校用のアカウントでは、Workspaceの管理者がGemini アプリ アクティビティを管理しているため、**自分でチャットを削除することはできない**と書かれています。
+[最近のチャットを管理するヘルプ](https://support.google.com/gemini/answer/13666746?hl=ja)には、仕事用・学校用のアカウントでは自分でチャットを削除できないと書かれています。一方で[Workspaceの管理者向けヘルプ](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/enable-temporary-chats-in-gemini-app)では、**管理者が許可していれば、利用者が自分で会話を削除できます**。GeminiにVaultを使っていない組織ではこの許可が既定でオン、GeminiにVaultを使う組織では既定でオフです。GeminiにVaultを使う組織では、画面から消した会話も管理者やVaultの利用者には見える場合があります。
 
 [仕事用または学校用のアカウントのヘルプ](https://support.google.com/gemini/answer/14620100?hl=ja)によると、仕事用・学校用のアカウントでは［アクティビティの保存］は初期設定でオンで、**オフにできるのはWorkspaceの管理者だけ**です。会話の履歴は初期設定で18か月保存され、管理者は3か月・18か月・36か月の自動削除や、履歴そのものをオフにする設定を選べます。
 
@@ -119,7 +119,7 @@ Geminiアプリのアクティビティを消しても、ほかのサービス�
 人間のレビュアーがすでにレビューしたチャットは、アクティビティを消しても最長3年残る、とプライバシー ハブに書かれています。これから先の会話をサービスの改良に使わせない方法は、［アクティビティの保存］をオフにするか、一時チャットを使うかの2つです。ただし保護のためのレビューは、どちらの場合でも行われることがあります。
 
 ### 仕事用のアカウントで履歴を消せないのはなぜですか？
-ヘルプによれば、仕事用・学校用のアカウントではWorkspaceの管理者がGemini アプリ アクティビティを管理しているため、自分でチャットを削除することはできません。保存と自動削除の設定も管理者が決めます。
+管理者が削除を許可していない可能性があります。仕事用・学校用のアカウントではWorkspaceの管理者がGemini アプリ アクティビティを管理し、GeminiにVaultを使っていない組織では削除の許可が既定でオンです。保存と自動削除の設定も管理者が決めます。
 
 ### スマホのGeminiアプリで履歴を消すには？
 左上のメニュー→プロフィール写真→［Gemini アプリ アクティビティ］から、パソコンと同じ単位で消せます。
@@ -136,5 +136,6 @@ Geminiアプリのアクティビティを消しても、ほかのサービス�
 
 - [Gemini アプリのアクティビティを管理、削除する](https://support.google.com/gemini/answer/13278892?hl=ja)（Gemini アプリ ヘルプ。削除の単位、スマホの手順、削除の影響、アクティビティの保存、72時間、自動削除）
 - [Gemini アプリのプライバシー ハブ](https://support.google.com/gemini/answer/13594961?hl=ja)（人間のレビュー、3年、一時チャット、ほかのサービスのデータ）
-- [Gemini アプリで最近のチャットを確認、管理する](https://support.google.com/gemini/answer/13666746?hl=ja)（サイドバーからの削除がアクティビティにも及ぶこと、仕事用・学校用のアカウントでは自分で削除できないこと）
+- [Gemini アプリで最近のチャットを確認、管理する](https://support.google.com/gemini/answer/13666746?hl=ja)（サイドバーからの削除がアクティビティにも及ぶこと、仕事用・学校用のアカウントについての記載）
+- Google Workspace 管理者ヘルプ「[Control temporary chats and chat deletion in the Gemini App](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/enable-temporary-chats-in-gemini-app)」（会話の削除を許可する設定とVaultの扱い。2026年10月10日取得）
 - [仕事用または学校用の Google アカウントで Gemini アプリを利用する](https://support.google.com/gemini/answer/14620100?hl=ja)（管理者の設定、18か月、Gemini for Google Workspaceとの違い）

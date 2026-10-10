@@ -16,7 +16,7 @@ Geminiは無料で使えます。有料プランに上げると何が変わる�
 
 :::takeaways
 - 日本の月額は**Plus 725円・Pro 2,900円・Ultra 14,500円から**。無料プランは0円
-- 有料で増えるのは**使用量の上限・一度に読ませられる長さ・一部の機能**の3つ。**モデルは無料でも同じ3つが選べる**
+- 有料で増えるのは**使用量の上限・一度に読ませられる長さ・一部の機能**の3つ。**無料で選べるモデルは2026年10月9日からFlash-Liteだけ**
 - 上限は回数ではなく**コンピューティング量**で決まる。AIプランなしとの比でPlusが2倍、Proが4倍、Ultraが最大20倍（実測ではなく公式の表記）
 - Pro・Ultraの説明にある**AI受信トレイ、Deep Search、Chromeの自動ブラウジングは米国のみ**と公式に明記されている。**Gemini Sparkも「一部の国」とだけ書かれ、日本での提供は明記がない**
 - **学生はGoogle AI Plusを1年間無料**で使える
@@ -31,7 +31,7 @@ Geminiは無料で使えます。有料プランに上げると何が変わる�
 | 無料 | 0円 | Googleアカウントの既定 | 標準 |
 | Google AI Plus | 725円 | 400GB | 標準の2倍 |
 | Google AI Pro | 2,900円 | 5TB | 標準の4倍 |
-| Google AI Ultra | 14,500円から | 20TBから | 最大20倍（AI Proの5倍か20倍。使用量上限のページは4倍） |
+| Google AI Ultra | 14,500円から | 20TBから | 最大20倍（AI Proの5倍か20倍。日本語版の使用量上限のページは4倍） |
 
 <figure class="post-figure"><img src="/media/images/gemini-pricing/gp_01_plans_page.jpg" alt="Google Oneの「Google AIのプラン」ページ。日本を選択した状態で、Google AI Plusが月額725円、Google AI Proが月額2,900円、Google AI Ultraが月額14,500円からと表示されている" loading="lazy"><figcaption>公式ページの日本価格（地域の選択は「日本」）</figcaption></figure>
 
@@ -63,7 +63,7 @@ Geminiアプリの上限は、使った回数ではありません。公式ヘ�
 
 ### 一部の機能
 
-モデルそのものに差はありません。公式ヘルプの「モデルへのアクセス」の表では、Gemini 3 Flash-Lite・Flash・Proの3つすべてに、無料からUltraまで4プラン分の○が並びます。なおプランページ側は有料の特典を「Gemini 3.1 Proへのアクセスの拡大」と書いており、ヘルプのモデル表とは呼び方が揃っていません。ここで言う「同じ3つが選べる」はヘルプの表に基づく記載です。
+2026年10月9日から順に、選べるモデルがプランで分かれます。ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」の表では、**プランなしはFlash-Liteだけ、AI PlusはFlash-LiteとFlash、AI ProとUltraは3つすべて**です。AI Plusの適用日はメールで知らされ、10月10日の料金ページのPlusの欄にはまだ3.1 Proへのアクセスが載っています。10月10日の時点でも、使用量上限のページの表は全プランに3つとも○が付いたままです。変わる範囲は[Gemini Flash-Liteとは](/media/gemini-flash-lite/)で詳しく扱っています。
 
 無料で使える機能も多く、Canvas、Gem、Deep Research、画像生成、音楽生成、アプリ連携は無料プランの列にもチェックが入っています。有料でないと使えないのは次のものです。
 
@@ -92,7 +92,7 @@ Ultraのプランそのものは150か国以上で提供されており、日本
 
 金額ではなく、詰まる場所で選ぶと外しません。
 
-調べものと文章の下書きが中心で、読ませる資料がそれほど長くないなら、**無料のままで足ります**。モデルは3つとも選べますし、Deep ResearchもCanvasもGemも使えます。
+調べものと文章の下書きが中心で、読ませる資料がそれほど長くないなら、**無料のままで足ります**。選べるモデルはFlash-Liteだけですが、Deep ResearchもCanvasもGemも使えます。
 無料で上限に当たるようになったものの100万トークンまでは要らない、という段階に**Plusが向きます**。月725円で上限が2倍、コンテキストが4倍になります。
 
 長い資料を読ませる、動画を生成する。このどちらかに当たるなら**Proです**。コンテキストが100万トークンになるのはProからで、ここが無料・Plusとの決定的な差になります。
@@ -118,10 +118,10 @@ Geminiを自分で使うことと、自社がGeminiの回答に登場するこ�
 金額はすべて2026年9月21日時点の Google の公式ページの表示です。
 
 ### Geminiは無料で使えますか？
-使えます。Googleアカウントがあれば0円で、3つのモデル、Deep Research、Canvas、Gem、画像生成まで利用できます。
+使えます。Googleアカウントがあれば0円で、Flash-Liteのモデル、Deep Research、Canvas、Gem、画像生成まで利用できます。2026年10月9日から、自分でFlashやProを選ぶには有料のプランが必要です。
 
 ### 無料と有料で何が違いますか？
-使用量の上限、一度に読ませられる長さ、一部の機能の3つです。モデルは無料でもPro相当のものまで選べます。
+使用量の上限、一度に読ませられる長さ、一部の機能の3つです。2026年10月9日から順に選べるモデルも分かれ、無料のまま自分で選べるのはFlash-Liteだけになります。
 
 ### AI PlusとProはどちらを選びますか？
 長い資料を読ませるならProです。コンテキストウィンドウが100万トークンになるのはProからで、Plusは128,000トークンです。上限を増やしたいだけならPlusで足ります。
@@ -143,8 +143,10 @@ Pro限定の機能とProでの会話が使えなくなり、Google One側の追�
 
 ## 出典
 
-本文の価格と機能の記載はGoogleの公式ページで確認しています（2026年9月21日取得）。
+本文の価格と機能の記載はGoogleの公式ページで確認しています（2026年9月21日取得。選べるモデルの記載は2026年10月10日に取り直し）。
 
 - [Google AI のプラン（Google One）](https://one.google.com/about/google-ai-plans/?hl=ja)
 - [Google AI のサブスクリプションプランに応じたGeminiアプリの使用量上限とアップグレード](https://support.google.com/gemini/answer/16275805?hl=ja)
+- [Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)
+- [Google AI プラン](https://gemini.google/jp/subscriptions/?hl=ja)（日本向け）
 - [GeminiアプリでGoogle AIのプランを管理する](https://support.google.com/gemini/answer/14517446?hl=ja)
