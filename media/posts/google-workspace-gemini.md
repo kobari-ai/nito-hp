@@ -139,7 +139,7 @@ Geminiアプリを組織で使えるようにするか止めるかは、[Gemini�
 
 会話履歴は**既定でオンで、18か月で自動的に消えます**。管理者は3か月・18か月・36か月から選ぶか、履歴をオフにできます。利用者はこの設定を変えられません。履歴をオフにするとGeminiからGmailやドライブを呼び出す連携も使えなくなるので、止める前に影響を確かめておきます。
 
-スマホのGeminiアプリは管理コンソールに専用の設定がなく、止めたいときはデバイス管理でアプリをブロックします。Gemini in Chromeは、米国でChromeにログインしていて既定の言語が英語（米国）の人だけが対象です。個人の側でGmailのGeminiを止める方法は[GmailのGeminiをオフにする方法](/media/gmail-gemini-off/)にまとめています。
+スマホのGeminiアプリは管理コンソールに専用の設定がなく、止めたいときはデバイス管理でアプリをブロックします。Gemini in Chromeは、米国でChromeにログインしていて既定の言語が英語（米国）の人だけが対象です。個人の側でGmailのGeminiを止める方法は[GmailのGeminiをオフにする方法](/media/gmail-gemini-off/)にまとめています。組織部門ごとの分け方やGmailなどのGeminiを止められるエディションは、[Google WorkspaceのGeminiを無効化する方法](/media/google-workspace-gemini-admin/)に分けて書きました。
 
 ## 1人で契約するときの注意
 
