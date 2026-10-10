@@ -1,5 +1,5 @@
 ---
-title: 【2026年10月】Google WorkspaceのGeminiを無効化する方法 管理コンソール・組織部門・Gmail
+title: 【2026年10月】WorkspaceのGeminiを無効化する方法 管理コンソール・組織部門・Gmail
 date: 2026-10-10
 category: AI活用
 description: Google WorkspaceのGeminiを管理者が止める・許可する方法を管理者ヘルプで解説。Geminiアプリのオンとオフ、Gmailなどで止められるエディション、組織部門ごとの設定、日本の既定の状態、利用者の見え方まで。
@@ -17,8 +17,8 @@ Google Workspaceの管理コンソールには、Geminiを止めるスイッチ�
 :::takeaways
 - Geminiアプリは**［生成AI］［Geminiアプリ］の［サービスのステータス］**で切り替える
 - GmailなどのGeminiをアプリごとに止める［機能へのアクセス］は、**対応エディションにBusinessが含まれない**
-- ドメインの拠点が日本の組織は**スマート機能が既定でオフ**で、GmailなどのGeminiは利用者がオンにするまで動かない
-- Geminiアプリと［Gemini for Workspace］の設定は組織部門かグループごとに分けられ、**グループの設定が組織部門より優先**される。反映には最長24時間かかる
+- ドメインの拠点が日本の組織は**スマート機能が既定でオフ**で、GmailなどのGeminiは管理者か利用者がオンにするまで動かない
+- Geminiアプリと［Gemini for Workspace］の設定は組織部門かグループごとに分けられ、**グループの設定が組織部門より優先**される。Geminiアプリの設定の反映は最長24時間
 - **ライセンスの無い人に使わせる設定をオンにすると、その人には個人と同じ規約が適用される**
 :::
 
@@ -70,17 +70,17 @@ Gmailの右上のGeminiのアイコンやドキュメントのサイドパネル
 
 ### Businessで止めたいとき
 
-Google Workspaceの販売代理店のヘルプ記事も、Businessエディションでは［機能へのアクセス］が表示されず、サイドパネルを制御できないと案内しています。
+2025年2月時点の販売代理店の記事も、Businessエディションでは［機能へのアクセス］が表示されず、サイドパネルを制御できないと案内しています。
 
 Businessで打てる手は、次の節のスマート機能の既定の設定です。ただしこれは利用者が自分で変えられるので、強制的に止める手段にはなりません。アプリの中のGeminiを部署ごとに確実に止めたいなら、Enterpriseへの切り替えを検討することになります。
 
 ## 日本の組織の既定の状態
 
-GmailなどのGeminiが動くには、利用者の［Google Workspace のスマート機能］がオンになっている必要があります。管理者ヘルプ「[ユーザー向けに Google Workspace のスマート機能を管理する](https://knowledge.workspace.google.com/admin/security/manage-google-workspace-smart-features-for-your-users?hl=ja)」は、この設定の既定が地域で違うと書いています。
+GmailなどのGeminiが動く条件は、利用者の［Google Workspace のスマート機能］がオンになっていることです。［機能へのアクセス］のヘルプにも「注: Gemini in Workspace を利用するには、スマート機能とカスタマイズを有効にする必要があります。」と書かれています。管理者ヘルプ「[ユーザー向けに Google Workspace のスマート機能を管理する](https://knowledge.workspace.google.com/admin/security/manage-google-workspace-smart-features-for-your-users?hl=ja)」は、この設定の既定が地域で違うと書いています。
 
 <figure class="post-figure"><img src="/media/images/google-workspace-gemini-admin/gwa_04_smart_japan.jpg" alt="管理者ヘルプの重要という注記が赤枠で囲まれている。Workspaceのスマート機能とコントロールは、ドメインの拠点が欧州経済領域、日本、スイス、英国にある場合はデフォルトでオフ、その他の地域ではオン。管理者はこのデフォルト設定を全員に適用するかを決められるが、ユーザーは各自の設定で上書きできる" loading="lazy"><figcaption>スマート機能の既定は地域で違う（2026年10月10日）</figcaption></figure>
 
-**ドメインの拠点が日本にある組織では、スマート機能が最初からオフです。**そのため契約しただけでは、GmailやドキュメントのGeminiは利用者が自分でオンにするまで使われません。社員から「スマート機能を両方オンにしてと出る」と聞かれるのはこのためで、利用者側の手順は[スマート機能の設定を両方ともオンにする方法](/media/gmail-smart-features-on/)で説明しています。
+**ドメインの拠点が日本にある組織では、スマート機能が最初からオフです。**そのため契約しただけでは、GmailやドキュメントのGeminiは管理者か利用者がオンにするまで動きません。社員から「スマート機能を両方オンにしてと出る」と聞かれるのはこのためで、利用者側の手順は[スマート機能の設定を両方ともオンにする方法](/media/gmail-smart-features-on/)で説明しています。
 
 管理者は［アカウント］［アカウント設定］［Google Workspace のスマート機能］で、既定のオンかオフを全員に適用できます。操作できるのは特権管理者だけです。ただし利用者は後から自分の設定で切り替えられるので、ここで止めても社員がオンに戻せば使えます。個人の側でGmailのGeminiを止める手順は[GmailのGeminiをオフにする方法](/media/gmail-gemini-off/)にまとめました。
 
@@ -90,7 +90,9 @@ GmailなどのGeminiが動くには、利用者の［Google Workspace のスマ�
 
 両方に設定があると、**グループの設定が組織部門の設定より優先**されます。たとえば会社全体の組織部門ではGeminiアプリをオフにし、試験導入のグループだけオンにすると、そのグループの人は所属の部署に関係なく使えます。逆に、グループでオフにした人は部署の設定がオンでも使えません。
 
-止めたつもりの人が使えている、というときは、その人が許可したグループに入っていないかを先に見ます。設定を変えたあとは最長24時間待ってから確かめてください。組織の利用状況は［生成AI］［Gemini レポート］［組織レベルの使用状況］で、組織部門やグループごとのアクティブなユーザーの数を見られます。
+止めたつもりの人が使えている、というときは、その人が許可したグループに入っていないかを先に見ます。Geminiアプリの設定を変えたあとは最長24時間待ってから確かめてください。組織の利用状況は［生成AI］［Gemini レポート］［組織レベルの使用状況］で、組織部門やグループごとのアクティブなユーザーの数を見られます。
+
+試す部署で使い方が固まり、業務の一部をAIに任せる仕組みまで作りたくなったら、進め方を[AIエージェント構築支援](/ai-agent/)のページにまとめました。
 
 ## Workspaceとの連携と会話履歴
 
@@ -128,9 +130,9 @@ Gemini in Chromeの対象は、米国でChromeにログインし既定の言語�
 
 <figure class="post-figure"><img src="/media/images/google-workspace-gemini-admin/gwa_07_retention.jpg" alt="プライバシーハブのGeminiデータの保持の表。Gemini in Workspaceはプロンプトと回答を90日から無期限まで管理者が設定し、管理者が禁止していなければユーザーが手で削除でき、VaultでWorkspaceデータの保持を管理できる。Geminiアプリは最大36か月まで管理者が設定する。Gemini Notebookはセッション終了後に保持されない" loading="lazy"><figcaption>プライバシーハブのGeminiデータの保持の表（2026年10月10日）</figcaption></figure>
 
-組織で記録を残す必要があるなら、Google Vaultが使えます。Vaultのヘルプによると、**Geminiアプリのメッセージは保持・記録保持・検索・書き出しの対象**で、Vaultの権限を持つ人はアカウントや組織部門を指定して会話を検索できます。使うには管理者と対象の人の両方にVaultを含むライセンスが要り、エディションに含まれていなければアドオンで追加します。
+組織で記録を残す必要があるなら、Google Vaultが使えます。Vaultのヘルプによると、**Geminiアプリのメッセージは保持・記録保持・検索・書き出しの対象**で、Vaultの権限を持つ人はアカウントや組織部門を指定して会話を検索できます。使うには管理者と対象の人の両方にVaultを含むライセンスが要り、エディションに含まれていないなら、アドオンの対象は営業担当に確かめます。
 
-業務の一部をAIに任せる仕組みまで作りたいなら、進め方を[AIエージェント構築支援](/ai-agent/)のページで説明しています。プランごとの料金や上限、個人のGoogle AI Proとの違いは[Google WorkspaceのGeminiとは](/media/google-workspace-gemini/)で扱っています。
+プランごとの料金や上限、個人のGoogle AI Proとの違いは[Google WorkspaceのGeminiとは](/media/google-workspace-gemini/)にまとめました。
 
 ## よくある質問
 
@@ -156,7 +158,7 @@ gemini.google.com・スマホのアプリ・Gemini in Chromeで仕事用のア�
 
 ### 管理者はGeminiの会話を見られますか？
 
-管理コンソールのGeminiレポートで分かるのは、使っている人の数や1日の使用量です。会話の中身はVaultの権限を持つ人が検索して書き出せます。Vaultを含むライセンスが要ります。
+管理コンソールのGeminiレポートで分かるのは、使っている人の数や1日の使用量と、［ユーザーレベルの使用状況］での利用者ごとの使用レベル（高・中・低・ゼロ）とアクティブな日数です。Geminiアプリの会話は、Vaultの権限を持つ人が検索して書き出せます。Vaultを含むライセンスが要ります。
 
 ### WorkspaceのGeminiの入力は学習されますか？
 
@@ -178,6 +180,9 @@ gemini.google.com・スマホのアプリ・Gemini in Chromeで仕事用のア�
 - Google Workspace 管理者ヘルプ「[組織での Gemini の使用状況を確認する](https://knowledge.workspace.google.com/admin/generative-ai/review-gemini-usage-in-your-organization?hl=ja)」
 - Google Workspace 管理者ヘルプ「[Google Workspace with Gemini for Business に関するよくある質問](https://knowledge.workspace.google.com/admin/generative-ai/workspace-with-gemini/gemini-for-google-workspace-faq-business?hl=ja)」
 - Google Workspace 管理者ヘルプ「[Google Workspace の生成 AI に関するプライバシー ハブ](https://knowledge.workspace.google.com/admin/generative-ai/generative-ai-in-google-workspace-privacy-hub?hl=ja)」
+- Google Workspace 管理者ヘルプ「[ユーザーに対して Gemini Notebook を有効または無効にする](https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/turn-gemini-notebook-on-or-off-for-users?hl=ja)」
+- Google Workspace 管理者ヘルプ「[Google Meet の AI がユーザーに代わってメモを作成できるようにする](https://knowledge.workspace.google.com/admin/meet/let-google-meet-ai-take-notes-for-my-users?hl=ja)」
+- Google Workspace 管理者ヘルプ「[Google Workspace with Gemini ベータ版へのアクセスを有効または無効にする](https://knowledge.workspace.google.com/admin/generative-ai/workspace-with-gemini/turn-access-to-google-workspace-with-gemini-beta-on-or-off?hl=ja)」
 - Google Vault ヘルプ「[Google Vault](https://support.google.com/vault/answer/2462365?hl=ja)」「[Vault を使用して Gemini アプリを検索する](https://knowledge.workspace.google.com/vault/search/use-vault-to-search-gemini-app?hl=ja)」
 - Gemini アプリ ヘルプ「[仕事用または学校用の Google アカウントで Gemini アプリを利用する](https://support.google.com/gemini/answer/14620100?hl=ja)」
 - フライト「[Google Workspace に標準搭載された Gemini の管理コンソール上の設定について](https://clo-support.flight.co.jp/hc/ja/articles/43732620397465)」
