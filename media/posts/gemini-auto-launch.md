@@ -105,6 +105,8 @@ Galaxyは設定の場所が違い、サムスンのFAQ「[(Galaxy) 電源メニ�
 
 GoogleメッセージのアプリにGeminiのボタンやチャットが出る場合は起動の設定とは別なので、[GoogleメッセージのGeminiを消す方法](/media/google-messages-gemini/)を見てください。
 
+Googleマップのナビ中やマップに相談のGeminiで、止められる所と止められない所は[GoogleマップのGeminiはオフにできる？](/media/google-maps-gemini/)で扱っています。
+
 ## Googleアシスタントに戻す方法が使えなくなった
 
 検索で見つかる止め方にはGeminiアプリのメニューから「Googleアシスタントに切り替える」を選ぶものがあります。Googleのヘルプも、2026年10月2日の時点でこの手順を載せたままです。
