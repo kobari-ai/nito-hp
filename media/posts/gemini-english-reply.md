@@ -12,7 +12,7 @@ Geminiのヘルプ「[Gemini の言語設定を変更する](https://support.goo
 
 それでも知恵袋やGoogleのコミュニティには、日本語で使っているのに急に英語で返ってきた、メニューが英語になったという相談が続いています。**2026年10月13日に条件を変えてGeminiに送ってみると、返事の言語を決めていたのはブラウザの言語ではなく、送った文の言語でした。**
 
-この記事では英語になった場所を4つに分け、それぞれの原因と日本語に戻す手順を、試した結果とヘルプの記述で確かめます。
+この記事では英語になった場所を4つに分けて、原因と日本語に戻す手順を書きます。
 
 :::takeaways
 - 英語になるのは**返事・画面・音声・会議メモなどの特定の機能**の4か所で、見る設定がそれぞれ違う
@@ -35,15 +35,13 @@ Geminiのヘルプ「[Gemini の言語設定を変更する](https://support.goo
 | 声の聞き取りや読み上げ | Geminiの言語設定と音声の設定 | アプリの言語設定 |
 | 会議メモなど特定の機能 | その機能の言語設定・英語でだけの機能 | 機能ごとの設定 |
 
-いちばん相談が多いのは返事が英語になる場合です。次の節で、条件を変えて送った結果から原因を見ていきます。
-
 ## 返事が英語になる原因
 
 2026年10月13日の早朝に、ログインしていないスマホ表示のブラウザでGeminiを開き、同じ内容を6通りの条件で送りました。どれも1回ずつの結果です。
 
 <figure class="post-figure"><img src="/media/images/gemini-english-reply/00_fig_tests.png" alt="条件を変えてGeminiに送った結果の図。1はブラウザの言語が日本語で日本でいちばん大きい湖は？と聞くと日本語で回答。2は同じブラウザでWhat is the largest lake in Japan?と聞くと英語で回答。3は2の会話に日本語で答えてと送るとその回から日本語で回答。4はブラウザの言語を英語にして日本語で聞くと画面は英語で回答は日本語。5は次の文を要約して。のあとに英文を貼ると日本語で回答。6は指示を付けずに英文だけを貼ると英語で回答" loading="lazy"><figcaption>条件を変えて同じ内容を送った結果（2026年10月13日、ログインなし・スマホ表示、各1回）</figcaption></figure>
 
-**ブラウザの言語が日本語でも英語で聞けば英語で答え、ブラウザを英語にしても日本語で聞けば日本語で答えました。**ヘルプの記述どおり、Geminiは設定ではなく送られた文の言語に合わせて返事を書いています。
+**ブラウザの言語が日本語でも英語で聞けば英語で答え、ブラウザを英語にしても日本語で聞けば日本語で答えました。**試した範囲でのGeminiは、設定ではなく送られた文の言語に合わせて返事を書いていました。ヘルプの記述とも合います。
 
 <figure class="post-figure"><img src="/media/images/gemini-english-reply/ger_01_compare.jpg" alt="スマホで開いたGeminiの画面を2つ並べたもの。左は日本でいちばん大きい湖は？と日本語で聞き、日本で一番大きい湖は滋賀県にある琵琶湖（びわこ）ですと日本語で答えている。右は同じ日本語の画面でWhat is the largest lake in Japan?と英語で聞き、Lake Biwa is the largest freshwater lake in Japanと英語で答えている。どちらも質問の吹き出しと回答の1行目が赤枠で囲まれている" loading="lazy"><figcaption>左は日本語、右は英語で質問した結果。画面の言語はどちらも日本語（2026年10月13日）</figcaption></figure>
 
@@ -67,9 +65,9 @@ Geminiのヘルプ「[Gemini の言語設定を変更する](https://support.goo
 
 ### 毎回日本語で答えてほしいとき
 
-英文を扱うことが多いなら、チャットごとに指示を書くより、すべてのチャットに効く指示を入れておくほうが楽です。Geminiには**Gemini へのカスタム指示**という設定があり、ヘルプ「[カスタム指示で Gemini の回答をカスタマイズする](https://support.google.com/gemini/answer/16598625?hl=ja)」によると、すべてのチャットに適用する指示を追加できます。
+英文を扱うことが多いなら、チャットごとに指示を書くより、すべてのチャットに効く指示を入れておくほうが楽です。Geminiには**Gemini へのカスタム指示**という設定があり、ヘルプ「[Gemini が記憶するユーザーに関する情報を管理し、回答をカスタマイズする](https://support.google.com/gemini/answer/16598625?hl=ja)」によると、すべてのチャットに適用する指示を追加できます。
 
-ここに「回答は日本語で書く」と入れておく方法です。カスタム指示が使えるのは個人のGoogleアカウントだけで、今回はログインなしで試したため、この指示の効き方は試していません。設定の開き方は[Geminiの保存された情報の記事](/media/gemini-saved-info/)にまとめました。
+ここに「回答は日本語で書く」と入れておく方法です。同じヘルプの必要なものの欄には、仕事用や学校用のアカウントでは使えないとあります。今回はログインなしで試したため、この指示の効き方は確かめていません。設定の開き方は[Geminiの保存された情報の記事](/media/gemini-saved-info/)にまとめました。
 
 ## 画面が英語のとき
 
@@ -105,7 +103,7 @@ iPhoneのGeminiアプリには、アプリの中に言語を選ぶ項目があ�
 
 ログインして使っているなら、Googleアカウントの言語も日本語にそろえておくと迷いません。Googleアカウントのヘルプ「[ウェブの言語を変更する](https://support.google.com/accounts/answer/32047?hl=ja)」では、ウェブのGoogleサービスの言語は[myaccount.google.com/language](https://myaccount.google.com/language)で変えるとされています。言語の横の編集アイコンから日本語を選び、ブラウザを開き直してください。
 
-Geminiのヘルプにはアカウントの言語の話は出てきません。ただ、アカウントのヘルプには言語が変わらないときはキャッシュとCookieを消してから設定し直すようにとあり、ブラウザを変えても英語のままならこの手順を試す価値があります。
+Geminiのヘルプにはアカウントの言語の話は出てきません。アカウントの画面が選んだ言語に変わらないときは、キャッシュとCookieを消してから設定し直すようにアカウントのヘルプにあります。Geminiの画面についての記述ではないので、アカウントの言語を変えても表示が戻らないときの次の手として使ってください。
 
 ## 音声だけ英語のとき
 
@@ -113,7 +111,7 @@ Geminiのヘルプにはアカウントの言語の話は出てきません。�
 
 Gemini Liveで話すときは少し事情が違います。ヘルプ「[Gemini Live で自然に会話する](https://support.google.com/gemini/answer/15274899?hl=ja&co=GENIE.Platform%3DAndroid)」によると、Liveの字幕の言語は表示の言語に合わせて変わり、声の種類は音声の設定で選びます。音声の設定はLiveと読み上げのボタンで使われ、一部の言語では声を変えられません。
 
-Liveでの返事の言語も、言語設定にかかわらず話した言語に合わせて理解するとヘルプにあります。**Liveが英語で返してきたら、日本語で「日本語で話して」と伝えてください。**Liveは今回試していないため、この頼み方で戻るかは確かめていません。Liveが動かないときの確認は[Gemini Liveが使えない原因の記事](/media/gemini-live-not-working/)にあります。
+Liveで話すときも、言語設定にかかわらず対応する言語で理解して答えられるとヘルプにあります。**Liveが英語で返してきたら、日本語で「日本語で話して」と伝えてください。**Liveは今回試していないため、この頼み方で戻るかは確かめていません。Liveが動かないときの確認は[Gemini Liveが使えない原因の記事](/media/gemini-live-not-working/)にあります。
 
 ## 特定の機能だけ英語のとき
 
@@ -121,11 +119,11 @@ Liveでの返事の言語も、言語設定にかかわらず話した言語に�
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/gemini-english-reply/ger_06_sp_map.jpg" alt="Geminiの日本語の回答の中に出た彦根城の場所のカード。評価4.3と城の表示の下にある営業時間の行がClosed · Opens 8:30 AMと英語で表示され、赤枠で囲まれている。上下の説明文は日本語" loading="lazy"><figcaption>返事は日本語で、場所のカードの営業時間だけ英語（2026年10月13日、ログインなし）</figcaption></figure>
 
-この表示が出たのは1回で、どの設定で変わるかはヘルプに書かれていません。カードの中身は地図の情報なので、営業時間を確かめるならカードを開いてGoogleマップで見るほうが確実です。
+この表示が出たのは1回だけで、ブラウザの言語は日本語のままでした。どの設定で変わるのかはGeminiのヘルプに書かれていません。
 
 ### Meetの会議メモが英語になるとき
 
-議事録が英語になる相談で多いのは、Google MeetでGeminiが自動で取るメモです。Meetのヘルプ「[Google Meet の「自動メモ生成」](https://support.google.com/meet/answer/14754931?hl=ja)」によると、この機能は日本語に対応していますが、**一度に1つの言語にしか対応せず、複数の言語で話す会議には対応していません。**
+議事録が英語になるという相談で出てくるのが、Google MeetでGeminiが自動で取るメモです。Meetのヘルプ「[Google Meet の「自動メモ生成」](https://support.google.com/meet/answer/14754931?hl=ja)」によると、この機能は日本語に対応していますが、**メモを取れるのは一度に1つの言語だけです。**
 
 <figure class="post-figure"><img src="/media/images/gemini-english-reply/ger_07_help_meet.jpg" alt="Google MeetヘルプのGoogle Meet の自動メモ生成のページの重要の節。使うには対象のGoogle WorkspaceエディションかGoogle AIプランへの登録が必要で、対応する言語として英語、フランス語、ドイツ語、イタリア語、日本語、韓国語、ポルトガル語、スペイン語が並ぶ。その下のヒントに、この機能は一度に1つの言語にのみ対応し、複数の言語で行われる会議には対応していないと書かれている" loading="lazy"><figcaption>自動メモ生成の対応言語と、一度に1つの言語という条件（2026年10月13日取得）</figcaption></figure>
 
@@ -135,17 +133,17 @@ Liveでの返事の言語も、言語設定にかかわらず話した言語に�
 
 ### 仕事用アカウントで使える機能の言語
 
-会社や学校のGoogle Workspaceで使っている場合、管理者向けの「[Google Workspace with Gemini の対応言語](https://knowledge.workspace.google.com/admin/gemini/google-workspace-with-gemini-language-support?hl=ja)」で機能ごとの対応言語が分かります。冒頭にはGeminiのすべての機能は英語で提供され、一部の機能がほかの言語でも使えるという書き方です。
+会社や学校のGoogle Workspaceで使っている場合、管理者向けの「[Google Workspace with Gemini の対応言語](https://knowledge.workspace.google.com/admin/gemini/google-workspace-with-gemini-language-support?hl=ja)」に機能ごとの対応言語の一覧があります。Geminiのすべての機能は英語で提供され、一部の機能がほかの言語でも使える、というのがページの冒頭の説明です。
 
-日本語の欄にはGeminiアプリ・Meetの自動メモ生成・GmailとGoogleドキュメントの文書作成サポート・スプレッドシートのAI関数などが並んでいます。**使いたい機能がこの一覧に無ければ、その機能は日本語では提供されていません。**
+日本語の欄にはGeminiアプリ・Meetの自動メモ生成・GmailとGoogleドキュメントの文書作成サポート・スプレッドシートのAI関数などが並びます。**使いたい機能が日本語の欄に無いなら、その機能は日本語の提供に入っていないと読めます。**
 
-スマートスピーカーのGemini for Homeが英語でしか答えないときは、音声アシスタントの言語と早期アクセスの条件を見ます。手順は[Google HomeのGeminiの記事](/media/google-home-gemini/)で扱っています。
+スマートスピーカーのGemini for Homeが英語でしか答えないときは、音声アシスタントの言語と早期アクセスの条件を見ます。手順は[Google HomeのGeminiの記事](/media/google-home-gemini/)にまとめました。
 
 ## よくある質問
 
 ### Geminiが英語で答えるのはなぜですか？
 
-英語で質問したか、英文だけを貼って送ったときに英語で返ってきます。試したときも、ブラウザの言語が日本語のままでも英語の質問には英語で答えました。ヘルプにも、入力したプロンプトは言語設定にかかわらず理解して回答すると書かれています。
+試した範囲で英語になったのは、英語で質問したときと英文だけを貼って送ったときでした。ブラウザの言語が日本語のままでも、英語の質問には英語で答えています。ヘルプにも、入力したプロンプトは言語設定にかかわらず理解して回答すると書かれています。
 
 ### Geminiの返事を日本語に戻すにはどうしますか？
 
@@ -161,7 +159,7 @@ AndroidのGeminiアプリは、左上のメニューからプロフィール写�
 
 ### Geminiに毎回日本語で答えてもらう方法はありますか？
 
-個人のGoogleアカウントなら、Gemini へのカスタム指示に「回答は日本語で書く」と入れておく方法があります。英文を送るときに「次の文を要約して」のような日本語の指示を先頭に付けても、日本語で返ってきました。
+Gemini へのカスタム指示に「回答は日本語で書く」と入れておく方法があります。英文を送るときに「次の文を要約して」のような日本語の指示を先頭に付けても、日本語で返ってきました。
 
 ### iPhoneのGeminiアプリだけ英語なのはなぜですか？
 
@@ -169,7 +167,7 @@ iPhoneのGeminiアプリは、iPhoneで設定されたメインの言語で表�
 
 ### Gemini Liveが英語で話すときはどうしますか？
 
-Liveの字幕は表示の言語に、声は音声の設定に従います。ヘルプではLiveは言語設定にかかわらず話した言語を理解するとされています。今回Liveは試していないので、まずアプリの言語が日本語かを確かめてから、日本語で話しかけ直してください。
+Liveの字幕は表示の言語に、声は音声の設定に従います。ヘルプではLiveは言語設定にかかわらず、対応する言語で理解して答えられるとされています。今回Liveは試していないので、まずアプリの言語が日本語かを確かめてから、日本語で話しかけ直してください。
 
 ### GeminiのMeetの議事録が英語になるのはなぜですか？
 
@@ -180,7 +178,7 @@ Meetの自動メモ生成は開始前に選ぶ会議の言語でメモを書き�
 - Gemini アプリ ヘルプ「[Gemini の言語設定を変更する](https://support.google.com/gemini/answer/15984485?hl=ja&co=GENIE.Platform%3DAndroid)」（Android・iPhone・パソコン、2026年10月13日取得）
 - Gemini アプリ ヘルプ「[Gemini ウェブアプリを利用できる言語と国 / 地域](https://support.google.com/gemini/answer/13575153?hl=ja)」（2026年10月13日取得）
 - Gemini アプリ ヘルプ「[Gemini Live で自然に会話する](https://support.google.com/gemini/answer/15274899?hl=ja&co=GENIE.Platform%3DAndroid)」「[Gemini の音声を変更する](https://support.google.com/gemini/answer/15277943?hl=ja&co=GENIE.Platform%3DAndroid)」（2026年10月13日取得）
-- Gemini アプリ ヘルプ「[カスタム指示で Gemini の回答をカスタマイズする](https://support.google.com/gemini/answer/16598625?hl=ja)」
+- Gemini アプリ ヘルプ「[Gemini が記憶するユーザーに関する情報を管理し、回答をカスタマイズする](https://support.google.com/gemini/answer/16598625?hl=ja)」（2026年10月13日取得）
 - Google アカウント ヘルプ「[ウェブの言語を変更する](https://support.google.com/accounts/answer/32047?hl=ja)」（2026年10月13日取得）
 - Google Chrome ヘルプ「[ページを翻訳する、Chrome の言語を変更する](https://support.google.com/chrome/answer/173424?hl=ja&co=GENIE.Platform%3DDesktop)」（2026年10月13日取得）
 - Google Meet ヘルプ「[Google Meet の「自動メモ生成」](https://support.google.com/meet/answer/14754931?hl=ja)」（2026年10月13日取得）
