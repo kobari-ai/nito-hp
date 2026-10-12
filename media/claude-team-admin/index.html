@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Claude Teamのメンバー招待と管理｜役割・席の切り替え・Proからの移行 | nito Column</title>
+    <meta name="description" content="Claude Teamのメンバー招待の手順と招待リンク、オーナーと管理者でできること、削除しても請求が減らない理由、StandardとPremiumの切り替え、個人のProから移るときの会話の扱いを公式ヘルプで整理しました。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-team-admin/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Claude Teamのメンバー招待と管理｜役割・席の切り替え・Proからの移行">
+    <meta property="og:description" content="Claude Teamのメンバー招待の手順と招待リンク、オーナーと管理者でできること、削除しても請求が減らない理由、StandardとPremiumの切り替え、個人のProから移るときの会話の扱いを公式ヘルプで整理しました。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-team-admin/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-team-admin.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-team-admin.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Claude Teamのメンバー招待と管理｜役割・席の切り替え・Proからの移行", "description": "Claude Teamのメンバー招待の手順と招待リンク、オーナーと管理者でできること、削除しても請求が減らない理由、StandardとPremiumの切り替え、個人のProから移るときの会話の扱いを公式ヘルプで整理しました。", "datePublished": "2026-10-13", "dateModified": "2026-10-13", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-team-admin/"}, "articleSection": "AI活用", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Claude Teamのメンバー招待と管理｜役割・席の切り替え・Proからの移行"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude Teamでメンバーを追加するには？", "acceptedAnswer": {"@type": "Answer", "text": "組織設定の［Members］で［Add member］を押し、メールアドレス・席の種類・ロールを決めて［Add members］を押します。管理者・オーナー・プライマリオーナーが操作でき、招待メールの期限は21日です。"}}, {"@type": "Question", "name": "Claude Teamに招待リンクはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "あります。新しいTeamの組織では既定でオンで、管理者以上が発行できます。期限は作成から90日で、リンクで参加した人は承認なしで加わります。SSOを設定した組織では使えません。"}}, {"@type": "Question", "name": "Claude Teamのオーナーと管理者の違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "管理者はメンバーの招待・削除と席の種類の割り当てまでで、請求の画面には入れません。オーナーはそれに加えて請求書と支払い方法、ロールの変更、管理者とオーナーの招待、連携や機能の有効化ができます。"}}, {"@type": "Question", "name": "Claude Teamは削除で料金が下がりますか？", "acceptedAnswer": {"@type": "Answer", "text": "下がりません。席が空くだけで、契約の席数と請求はそのままです。オーナーが席数を減らすと次の更新日から反映され、日割りの返金はありません。"}}, {"@type": "Question", "name": "Claude Teamの席の種類は変えられますか？", "acceptedAnswer": {"@type": "Answer", "text": "［Members］の［Tier］で人ごとに切り替えられます。Premiumに上げるとすぐ差額の日割りが請求され、Standardに下げる変更は次の更新日に反映されます。"}}, {"@type": "Question", "name": "Claude Teamで削除した人の会話は？", "acceptedAnswer": {"@type": "Answer", "text": "組織に入れなくなりますが、同じメールアドレスで招待し直すとアカウントの履歴は残ったまま戻ります。会話を含むデータのエクスポートを申し込めるのはプライマリオーナーだけです。"}}, {"@type": "Question", "name": "Claude ProからTeamに会話は移せますか？", "acceptedAnswer": {"@type": "Answer", "text": "組織だけにしてデータを持ち込むを選ぶと、チャット・プロジェクト・アップロードしたファイル・メモリが組織に移ります。カスタムスキルや公開の共有リンクは移らず、持ち込んだ中身は個人のアカウントに戻せません。"}}, {"@type": "Question", "name": "Claude Teamで別のドメインの人を招待できますか？", "acceptedAnswer": {"@type": "Answer", "text": "そのドメインを許可に足せば招待できます。足す人と場所はヘルプのページで書き方が違い、アカウント管理のFAQはドメインキャプチャを使っていない組織のオーナーが［Identity and access］の［Domains］で、組織ディスカバリーのページは管理者が［組織とアクセス］の［+ ドメインを追加］で足すとしています。@gmail.comなどのフリーメールのドメインを足せるかも、2つのページで書き方が違います。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Claude Tea…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.13</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Claude Teamのメンバー招待と管理｜役割・席の切り替え・Proからの移行</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Teamの招待と管理"><defs><linearGradient id="ecg-97a5b514" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-97a5b514)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Teamの招待と管理</text><line x1="121.2" y1="327.1" x2="1078.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">役割・席と請求・Proからの移行</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Claude Teamを契約したあとの管理は、組織設定（Organization settings）の［Members］にほぼ集まっています。Anthropicのヘルプ「<a href="https://support.claude.com/ja/articles/13133750">Team プランと Enterprise プランでメンバーを管理する</a>」によると、メンバーの追加と削除は管理者以上が行えますが、請求の画面（Billing）に入れるのはオーナーとプライマリオーナーだけです。</p>
+<p>招待と席と請求がそれぞれ違うタイミングで動くため、契約した直後につまずきやすくなります。<strong>招待を送った時点で席が1つ埋まり、メンバーを外しても請求の席数は減りません。</strong>この記事は2026年10月13日に取得したClaudeのヘルプセンターをもとに、招待・役割・席の変え方・個人のProからの移行を、契約した直後に触る順に説明します。管理画面そのものは撮っていないため、画像はヘルプのページと記述をもとにした図です。料金の金額やProとの違いは<a href="/media/claude-team/">Claude Teamプランの料金の記事</a>にまとめています。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>招待は<strong>［Members］から［Add member］でメールアドレスを入れる</strong>。期限は21日で、保留中の招待もすぐに席を1つ使う</li>
+<li>メールのほかに<strong>招待リンク（期限90日）・組織ディスカバリー・メンバー同士の招待</strong>で人が入れる。リンクで入った人は承認なしで加わる</li>
+<li>役割は4つ。<strong>招待と削除は管理者から、請求とロールの変更はオーナーから、データのエクスポートはプライマリオーナーだけ</strong></li>
+<li><strong>メンバーを外しても席数と料金は減らない</strong>。オーナーが席数を減らし、反映は次の更新日。日割りの返金はない</li>
+<li>個人のProを持つ人が加わると、<strong>両方残すか組織だけにするかを選ぶ</strong>。組織へ持ち込んだ会話は個人に戻せない</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/claude-team-admin/cta_00_overview.jpg" alt="Claude Teamの管理の全体を示すイラスト。招待・席・請求の3つの箱が左から矢印でつながり、上に役割、右下に移行の文字がある" loading="lazy"><figcaption>招待・席・請求がつながり、その上に役割の分担がある</figcaption></figure>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>メンバーを招待する手順</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>招待できるメールアドレス</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>招待メール以外の参加の方法</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>招待リンクは審査なしで加わる</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>ディスカバリーの自動承認は席を買い足す</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>4つの役割でできること</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>プライマリオーナーの譲渡</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>メンバーを削除する手順と請求</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>StandardとPremiumの切り替え</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>個人のProから移るときの会話</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>参加できないときの確認</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">メンバーを招待する手順</h2>
+<p>ヘルプの手順でいちばん先に出てくるのが、メールアドレスを指定する招待です。「招待によってメンバーを追加する」の節には次の5つの手順があり、管理者・オーナー・プライマリオーナーのどれでも操作できます。</p>
+<ol>
+<li>Organization settings の［Members］を開き、［Add member］を押す</li>
+<li>相手のメールアドレスを入れる（組織が許可したメールドメインのものだけ）</li>
+<li>席の種類（Standard か Premium）を選ぶ</li>
+<li>ロール（役割）と権限を決める</li>
+<li>［Add members］を押すと招待メールが届く</li>
+</ol>
+<figure class="post-figure post-figure--sp"><img src="/media/images/claude-team-admin/cta_02_help_invite_sp.jpg" alt="Claudeのヘルプで招待によってメンバーを追加する節をスマホで開いた画面。保留中の招待はすぐにシートを占有するという注記と、Add memberからAdd membersまでの手順を赤枠で囲んでいる" loading="lazy"><figcaption>Claudeのヘルプセンター（2026年10月13日、スマホ表示）</figcaption></figure>
+
+<p><strong>招待メールの期限は21日で、過ぎたら送り直しが必要です。</strong>送り直しは［Members］の［Pending］タブで相手を探して行い、同じタブの［Remove from team］で招待の取り消しもできます。人数が多いときは［Bulk add］を使い、メールアドレスをカンマか改行で区切って貼り付ければまとめて送れます。</p>
+<p>見落としやすいのが、ヘルプの冒頭の注記です。<strong>保留中の招待は相手が受け入れる前から空いている席を占有します。</strong>10席の契約で10人に招待を送れば、誰も参加していなくても席は満杯の扱いになります。席の種類の選択肢には契約にある種類だけが出て、その種類の席が全部埋まっていると、その場で買い足すよう求められます。</p>
+<h3 id="s1-1">招待できるメールアドレス</h3>
+<p>Teamに招待できるのは組織が許可したメールドメインのアドレスだけです。最初に許可されるのは組織を作った人のドメインですが、別のドメインを足す人と場所はヘルプの2つのページで書き方が違います。<a href="https://support.claude.com/ja/articles/13325567">アカウント管理に関するよくある質問</a>は、ドメインキャプチャを使っていない組織ではオーナーが足せるとしていて、手順は［Identity and access］の［Domains］で［Add or edit domains］を押し、ドメインを入れて保存する流れです。<a href="https://support.claude.com/ja/articles/13566435">組織ディスカバリーのヘルプ</a>は、［組織とアクセス］の［ドメイン］の下にある［+ ドメインを追加］から管理者が足せると書いています。</p>
+<p>組織を作る本人は会社のドメインのメールアドレスが必須です。<strong>メンバー用に@gmail.comのようなフリーメールのドメインを足せるかは、ヘルプの2つのページで書き方が違います。</strong>アカウント管理のFAQは足せるとし、組織ディスカバリーのページはGmailなどの個人用ドメインは許可リストに追加できないとしています。足せた組織なら、業務委託の人を個人のGmailで入れる使い方もできます。ただし後で出てくる招待リンクと組み合わせると、リンクを手に入れたGmailの利用者なら誰でも参加できてしまうため、フリーメールを足せた組織ではリンクを止めておくほうが安全です。</p>
+<h2 id="s2">招待メール以外の参加の方法</h2>
+<p>メール招待のほかに、Teamには招待リンク・ディスカバリー・メンバー同士の招待の3つの経路があります。SSOを設定した組織ならIDプロバイダーからのJITプロビジョニングでも人が入ります。</p>
+<table>
+<thead>
+<tr>
+<th>参加の方法</th>
+<th>Teamの既定</th>
+<th>審査</th>
+<th>入ったときの席</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>招待リンク</td>
+<td>新しい組織ではオン</td>
+<td>なし（リンクを開けば加わる）</td>
+<td>空いている中でいちばん下の種類</td>
+</tr>
+<tr>
+<td>組織ディスカバリー</td>
+<td>新しい組織ではオン、前からある組織ではオフ</td>
+<td>自動承認か管理者の承認を選ぶ</td>
+<td>自動承認は空いている中でいちばん下の種類。管理者承認は承認時に空きが無ければ席を購入</td>
+</tr>
+<tr>
+<td>メンバー同士の招待</td>
+<td>新しい組織ではオン</td>
+<td>既定は1件ずつ管理者が承認</td>
+<td>空いている中でいちばん下の種類</td>
+</tr>
+<tr>
+<td>SSOのJITプロビジョニング</td>
+<td>SSOを設定した組織だけ</td>
+<td>IDプロバイダー側で割り当て</td>
+<td>空いている中でいちばん上の種類</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/claude-team-admin/cta_01_join_ways.jpg" alt="Claude Teamに人が入る4つの方法を並べた図。メール招待と招待リンクとディスカバリーとメンバー同士の招待のそれぞれに、審査の有無と期限を書いている" loading="lazy"><figcaption>参加の方法ごとの審査と期限（Claudeのヘルプセンターの記述から作成）</figcaption></figure>
+
+<p>SSOを入れた組織では、招待リンクと組織ディスカバリーは使えません。メンバーはIDプロバイダーの割り当てで入る仕組みに切り替わります。</p>
+<h3 id="s2-1">招待リンクは審査なしで加わる</h3>
+<p><a href="https://support.claude.com/ja/articles/13776697">招待リンク経由で組織に参加する</a>のヘルプによると、リンクは管理者以上が発行・コピー・無効化・再生成できます。置き場所はこのページでは［ID とアクセス］のグローバルアクセス設定、メンバー管理のページでは［Organization and access］と書かれていて、2つのページで名前がそろっていません。</p>
+<p><strong>リンクで参加した人は組織の承認の設定に関係なくいつも自動で追加されます。</strong>加われるのは許可されたドメインのアドレスを持つ人だけですが、Slackのチャンネルに貼ったリンクが転送されれば、同じドメインの誰でも入れてしまいます。参加の前に確かめたい相手がいるなら、リンクではなく個別のメール招待を送るのがヘルプのすすめです。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/claude-team-admin/cta_03_help_link_sp.jpg" alt="Claudeのヘルプで招待リンクの節をスマホで開いた画面。招待リンクは作成から90日後に自動的に期限切れになるという注意を赤枠で囲んでいる" loading="lazy"><figcaption>招待リンクの期限は作成から90日（Claudeのヘルプセンター、スマホ表示）</figcaption></figure>
+
+<p>期限が切れたら再生成して貼り直します。無効にすると既存のリンクがすべてすぐに止まり、再生成すると前のリンクは使えなくなる仕組みです。空きの席が無いときの動きは、同じページの別の節で書き方が違い、「シート割り当ての仕組み」の節には「利用可能なシートがない場合、標準シートが自動的に作成されます。」、「セキュリティ」の節には「シート制限：組織がシート制限に達している場合、リンク経由の参加者にはエラーが表示され、管理者に連絡するよう促されます。」と書かれています。どちらの動きになっても困らないよう、リンクを配る前に席の空きを確かめておくのが確実です。</p>
+<h3 id="s2-2">ディスカバリーの自動承認は席を買い足す</h3>
+<p>会社のメールアドレスでClaudeに登録しようとした人に、既存のTeamの組織を見つけて参加をリクエストさせる機能が組織ディスカバリーです。<a href="https://support.claude.com/ja/articles/13566435">組織ディスカバリーのヘルプ</a>では、組織設定の［組織とアクセス］でドメインごとに検出可能のトグルを入れ、新規メンバーの承認を「自動承認」か「管理者承認が必要」から選びます。</p>
+<p><strong>自動承認にすると、空きの席が無いときは請求が自動で広がり、新しい席がその場で購入されます。</strong>社員が自分で登録するたびに席が増えるため、人数を予算で区切りたい組織は管理者承認を選ぶほうが安全です。管理者承認でも、承認した時点で空きが無ければ席は買われます。このページはGmailなどの個人用ドメインと.eduのドメインを許可リストに追加できないとしていますが、アカウント管理のFAQは@gmail.comなどのパブリックドメインを許可されたドメインとして追加できると書いていて、前の「招待できるメールアドレス」の節で触れたとおり2つのページの書き方がそろっていません。</p>
+<h2 id="s3">4つの役割でできること</h2>
+<p>Teamの役割はユーザー・管理者・オーナー・プライマリオーナーの4つです。<a href="https://support.claude.com/ja/articles/9267276">ロールと権限</a>の表から、管理の操作に関係する行を抜き出しました。</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>ユーザー</th>
+<th>管理者</th>
+<th>オーナー</th>
+<th>プライマリオーナー</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新しいメンバーの招待</td>
+<td></td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td>メンバーの削除・招待の取り消し</td>
+<td></td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td>管理者・オーナーの招待と削除</td>
+<td></td>
+<td></td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td>ロールの変更</td>
+<td></td>
+<td></td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td>請求書の表示と支払い・支払い方法の変更</td>
+<td></td>
+<td></td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td>連携・機能・プロジェクト共有の有効化</td>
+<td></td>
+<td></td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td>利用状況の分析を見る</td>
+<td></td>
+<td></td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td>データのエクスポートの依頼</td>
+<td></td>
+<td></td>
+<td></td>
+<td>○</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/claude-team-admin/cta_04_roles.jpg" alt="Claude Teamの4つの役割を階段状に並べた図。管理者は招待と削除、オーナーは請求とロールの変更、プライマリオーナーはデータのエクスポートが加わる" loading="lazy"><figcaption>上の役割ほどできることが増える（ロールと権限のヘルプから作成）</figcaption></figure>
+
+<p><strong>管理者は人の出入りを受け持つ役で、お金と権限の設定には触れません。</strong>人の出入りだけを任せる担当者には管理者を、請求書を受け取る担当者にはオーナーを割り当てると、請求の画面を見せる相手を絞れます。メンバーの一覧は管理者以上が［Members］の［Export CSV］で書き出せて、名前・メールアドレス・ロール・席の種類が入ります。</p>
+<p>ヘルプのページ同士で、席を買える役割の書き方がそろっていません。ロールの表では「新しいシートのプロビジョニング」にチェックがあるのはプライマリオーナーだけですが、<a href="https://support.claude.com/ja/articles/12004354">シートの購入と管理</a>のページは「オーナーとプライマリオーナーのみがシートを購入」と書いています。英語版のロールの表も同じ並びでした。</p>
+<h3 id="s3-1">プライマリオーナーの譲渡</h3>
+<p>プライマリオーナーは組織に1人だけで、その席も契約の1席に含まれる決まりです。メンバーの会話やファイルを含むデータのエクスポートを申し込めるのはこの役だけで、<a href="https://support.claude.com/ja/articles/9265372">チームのデータの所有者のヘルプ</a>では、メンバーの業務用アカウントと関連するデータをプライマリオーナーが管理すると説明しています。</p>
+<p><strong>担当者の異動や退職が決まったら、最初の作業はプライマリオーナーの譲渡です。</strong>譲渡は今のプライマリオーナーが［Members］で相手のロールの選択肢から［Primary Owner］を選び、確認の画面に相手のメールアドレスを入れて行います。オーナーとプライマリオーナーは自分で自分を組織から外せないため、本人が辞めてから気づくと別のオーナーの手が要ります。誰がプライマリオーナーかは設定の［アカウント］に表示されるので、まずそこを見てください。</p>
+<h2 id="s4">メンバーを削除する手順と請求</h2>
+<p>退職者が出たときの操作は2つに分かれます。最初はメンバーを外す作業で、［Members］で相手の右側のメニューから［Remove from team］を選びます。外れた人はその場で組織に入れなくなり、使っていた席は空席です。</p>
+<p><strong>ただし外しただけでは契約の席数は変わらず、請求も日割りの返金もありません。</strong>料金を下げるには2つ目の操作として、オーナーかプライマリオーナーが［Organization and access］の［Total seats］から［Manage］を開き、［Add or change seats］で減らしたい種類の「-」を押して確定します。減らした分が反映されるのは次の更新日で、年払いなら年の更新日です。</p>
+<figure class="post-figure"><img src="/media/images/claude-team-admin/cta_05_remove_billing.jpg" alt="メンバーを外してから請求が下がるまでの流れの図。メンバーを外すと席が空くだけで請求はそのまま、席数を減らすと次の更新日から請求が下がる" loading="lazy"><figcaption>外す操作と席数を減らす操作は別（シートの購入と管理のヘルプから作成）</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>誰ができるか</th>
+<th>請求への反映</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>メンバーを外す</td>
+<td>管理者以上</td>
+<td>変わらない（席が空くだけ）</td>
+</tr>
+<tr>
+<td>席を増やす</td>
+<td>オーナー以上</td>
+<td>すぐ。残りの期間の日割りを請求</td>
+</tr>
+<tr>
+<td>席を減らす</td>
+<td>オーナー以上</td>
+<td>次の更新日から。返金なし</td>
+</tr>
+</tbody>
+</table>
+<p>外した人を同じメールアドレスで招待し直すと、アカウントの履歴は残ったまま戻るとヘルプに書かれています。Teamを解約したあとは［Members］から外す操作ができなくなり、ヘルプは少ない席数で契約し直す前に外したいときはサポートに連絡するよう案内しています（<a href="https://support.claude.com/ja/articles/9267323">組織のTeamプラン購読をキャンセルする</a>）。</p>
+<h2 id="s5">StandardとPremiumの切り替え</h2>
+<p>契約の総数の中であれば、席の種類は人ごとに入れ替え自由です。手順は［Members］で相手の［Tier］の選択肢から［Standard］か［Premium］を選ぶだけで、管理者以上が操作できます。Premiumの空きがあれば、StandardからPremiumへの変更は新しい購入ではなく割り当ての変更になります。</p>
+<p><strong>上げる変更はすぐ反映されて差額の日割りがその場で請求され、下げる変更が効くのは次の更新日からです。</strong>下げたときも日割りの返金はありません。請求額の計算のヘルプの年払いの例では、4月1日にStandard 5席をPremiumに上げると、残り275日分の差額として$3,616.44がその日に請求されています（米国向けの税抜き価格での計算例）（<a href="https://support.claude.com/ja/articles/9267289">Team プランの請求額はどのように計算されますか？</a>）。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/claude-team-admin/cta_06_help_tier_sp.jpg" alt="Claudeのヘルプでシートタイプ間でユーザーをスワップする節をスマホで開いた画面。No seat assignedを選んでPremiumの席を空け、別の人に割り当てる手順を赤枠で囲んでいる" loading="lazy"><figcaption>席を買わずに入れ替える手順（Claudeのヘルプセンター、スマホ表示）</figcaption></figure>
+
+<p>Premiumが全部埋まっていて、席を買わずにAさんとBさんの種類を入れ替えたいときは、［No seat assigned］を使います。Aさんを［No seat assigned］にしてPremiumを1つ空け、BさんをPremiumに、最後にAさんをStandardにする順番です。席の無い状態の人は組織に残りますが、席を戻すまでClaudeを使えません。</p>
+<p>複数の人をまとめてPremiumからStandardに下げるなら、1人ずつ［Tier］を変えずに［Add or change seats］で種類ごとの合計を決めます。<strong>予約できる席の変更は一度に1つだけで、新しい変更を出したり席を足したり招待が受け入れられたりすると、保留中の変更は置き換わります。</strong>更新日の直前に新しい人を招待するときは、予約した減らす変更が残っているかを確かめ直してください。</p>
+<h2 id="s6">個人のProから移るときの会話</h2>
+<p>会社のメールアドレスで個人のProやMaxを使っていた人がTeamに加わると、同じアドレスに個人用と組織用の2つのアカウントができます。<a href="https://support.claude.com/ja/articles/9267400">個人用のClaudeアカウントを組織に移動する</a>のヘルプによると、選べるのは次の3つです。</p>
+<table>
+<thead>
+<tr>
+<th>選ぶもの</th>
+<th>個人のアカウント</th>
+<th>今までの会話</th>
+<th>Proの契約</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>両方のアカウントを保持</td>
+<td>残る</td>
+<td>個人のほうに残る</td>
+<td>続く</td>
+</tr>
+<tr>
+<td>組織だけにしてデータを持ち込む</td>
+<td>閉じる</td>
+<td>組織に移る</td>
+<td>自動で解約、日割りで返金</td>
+</tr>
+<tr>
+<td>組織だけにしてデータを削除</td>
+<td>閉じる</td>
+<td>移らない</td>
+<td>自動で解約、日割りで返金</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/claude-team-admin/cta_07_migrate.jpg" alt="個人のProを持つ人がTeamに加わるときの3つの選択肢の図。両方を保持、データを持ち込む、データを削除に分かれ、データを持ち込むは戻せないと書いている" loading="lazy"><figcaption>持ち込みは一方通行（個人用アカウントの移動のヘルプから作成）</figcaption></figure>
+
+<p>Teamでは招待を受け入れるときに選ぶ画面が出て、その場で決めなくても7日ほど案内の帯が表示されます。あとから移すなら組織のアカウントに切り替えてから設定の［アカウント］で［個人用アカウントを閉じる］へ進みます。<strong>データを持ち込むと、移った中身は個人のアカウントに戻せません。</strong></p>
+<table>
+<thead>
+<tr>
+<th>組織に移るもの</th>
+<th>移らないもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>チャットとチャット内のアーティファクト</td>
+<td>カスタムスキル（先に書き出す）</td>
+</tr>
+<tr>
+<td>プロジェクトと指示・ファイル</td>
+<td>連携したアプリのサインイン（入れ直す）</td>
+</tr>
+<tr>
+<td>アップロードしたファイル</td>
+<td>自分で足したカスタムコネクタ</td>
+</tr>
+<tr>
+<td>チャットとプロジェクトのメモリ（組織がメモリを切っている場合を除く）</td>
+<td>公開したアーティファクトと公開の共有リンク</td>
+</tr>
+<tr>
+<td>Claude Codeのメモリと個人設定（組織アカウントに独自の値が既に設定されている場合を除く）</td>
+<td>Claude Codeのクラウドのセッション</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure post-figure--sp"><img src="/media/images/claude-team-admin/cta_08_help_moved_sp.jpg" alt="Claudeのヘルプで移動時に移動されるものの節をスマホで開いた画面。チャット、プロジェクト、アップロードされたファイル、メモリなどの移動されるものの一覧を赤枠で囲んでいる" loading="lazy"><figcaption>移動されるものの一覧（Claudeのヘルプセンター、スマホ表示）</figcaption></figure>
+
+<p>デスクトップのCoworkのセッションは組織に移らず、ヘルプでは「コンピュータに残ります」と書かれています。公開の共有リンクはずっと使えなくなるため、社外に会話のリンクを渡している人は移る前に別の方法で共有し直しておきます。App StoreでProを契約した人は、Appleの決まりで自動の解約ができず、選べるのは「両方のアカウントを保持」だけです。移った直後はチャットの一覧が出そろうまで時間がかかり、見つからないときはサインアウトして入り直すようヘルプに書かれています。</p>
+<p>組織を作る本人が個人のProから申し込むときの流れは少し別です。<a href="https://support.claude.com/ja/articles/9267247">Team プランを始める</a>のヘルプによると、個人アカウントを別に保つチェックボックスが表示される場合は、既定でそのアカウントがその場でTeamに切り替わります。App Storeで購入したプラン・一時停止中のプラン・対応していない通貨のときはチェックボックスが出ず、別の組織が新しくできます。その手順は<a href="/media/claude-team/">Claude Teamの料金の記事のProから移る節</a>に載せました。</p>
+<h2 id="s7">参加できないときの確認</h2>
+<p>招待したのに相手が入れないときは、ここまでに書いた招待メールの21日の期限・ドメインの許可・招待リンクの90日の期限のほかに、次の2つを確かめます。</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>確かめること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>席が空いているのに［Add member］が押せない</td>
+<td>受け入れられていない保留中の招待が席を使っていないか。取り消すか席を足す</td>
+</tr>
+<tr>
+<td>加わったのに会社の画面にならない</td>
+<td>左下の名前から組織のアカウントに切り替える（青いチェックが今のアカウント）</td>
+</tr>
+</tbody>
+</table>
+<p>個人用と組織用のアカウントは同じメールアドレスでも会話とプロジェクトが別々です。<strong>仕事の相談を始める前に左下のチェックが組織のほうに付いているかを確かめるよう社内で伝えておくと、業務の会話が個人のアカウントに残る事故を減らせます。</strong></p>
+<p>席と役割を整えたあと、日々の業務の一部をAIに任せる仕組みづくりまで進めるときの進め方は、<a href="/ai-agent/">AIエージェント構築支援</a>のページにまとめています。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Claude Teamでメンバーを追加するには？</h3>
+<p>組織設定の［Members］で［Add member］を押し、メールアドレス・席の種類・ロールを決めて［Add members］を押します。管理者・オーナー・プライマリオーナーが操作でき、招待メールの期限は21日です。</p>
+<h3 id="s8-2">Claude Teamに招待リンクはありますか？</h3>
+<p>あります。新しいTeamの組織では既定でオンで、管理者以上が発行できます。期限は作成から90日で、リンクで参加した人は承認なしで加わります。SSOを設定した組織では使えません。</p>
+<h3 id="s8-3">Claude Teamのオーナーと管理者の違いは何ですか？</h3>
+<p>管理者はメンバーの招待・削除と席の種類の割り当てまでで、請求の画面には入れません。オーナーはそれに加えて請求書と支払い方法、ロールの変更、管理者とオーナーの招待、連携や機能の有効化ができます。</p>
+<h3 id="s8-4">Claude Teamは削除で料金が下がりますか？</h3>
+<p>下がりません。席が空くだけで、契約の席数と請求はそのままです。オーナーが席数を減らすと次の更新日から反映され、日割りの返金はありません。</p>
+<h3 id="s8-5">Claude Teamの席の種類は変えられますか？</h3>
+<p>［Members］の［Tier］で人ごとに切り替えられます。Premiumに上げるとすぐ差額の日割りが請求され、Standardに下げる変更は次の更新日に反映されます。</p>
+<h3 id="s8-6">Claude Teamで削除した人の会話は？</h3>
+<p>組織に入れなくなりますが、同じメールアドレスで招待し直すとアカウントの履歴は残ったまま戻ります。会話を含むデータのエクスポートを申し込めるのはプライマリオーナーだけです。</p>
+<h3 id="s8-7">Claude ProからTeamに会話は移せますか？</h3>
+<p>組織だけにしてデータを持ち込むを選ぶと、チャット・プロジェクト・アップロードしたファイル・メモリが組織に移ります。カスタムスキルや公開の共有リンクは移らず、持ち込んだ中身は個人のアカウントに戻せません。</p>
+<h3 id="s8-8">Claude Teamで別のドメインの人を招待できますか？</h3>
+<p>そのドメインを許可に足せば招待できます。足す人と場所はヘルプのページで書き方が違い、アカウント管理のFAQはドメインキャプチャを使っていない組織のオーナーが［Identity and access］の［Domains］で、組織ディスカバリーのページは管理者が［組織とアクセス］の［+ ドメインを追加］で足すとしています。@gmail.comなどのフリーメールのドメインを足せるかも、2つのページで書き方が違います。</p>
+<h2 id="s9">出典</h2>
+<ul>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/13133750">Team プランと Enterprise プランでメンバーを管理する</a>」（2026年10月13日取得）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/9267276">ロールと権限</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/12004354">Team プランのシートを購入して管理する</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/13776697">招待リンク経由で組織に参加する</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/13566435">組織ディスカバリー</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/13325567">アカウント管理に関するよくある質問</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/9267400">個人用 Claude アカウントを Team または Enterprise 組織に移動する</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/9267247">Team プランを始める</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/9267289">Team プランの請求額はどのように計算されますか？</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/9267323">組織のTeamプラン購読をキャンセルする</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/9265372">私のチームのデータは誰が所有・管理していますか？</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-enterprise/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT Enterpriseとは"><defs><linearGradient id="ecg-7f99274d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7f99274d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT Enterpriseとは</text><line x1="113.6" y1="365.9" x2="1086.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.10</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPT Enterpriseとは？Businessとの違い・料金・何人から</div>
+            </a>
+            <a href="/media/google-messages-gemini/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GoogleメッセージのGeminiを消す"><defs><linearGradient id="ecg-e8f86d89" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e8f86d89)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Googleメッセージ</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">のGeminiを消す</text><line x1="273.2" y1="416.8" x2="926.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.10</div>
+                <div class="rel-card__ttl">【2026年10月】GoogleメッセージのGeminiを消す方法｜ボタン・チャット削除・データの扱い</div>
+            </a>
+            <a href="/media/google-workspace-gemini-admin/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WorkspaceのGeminiを止める"><defs><linearGradient id="ecg-74b1e81c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-74b1e81c)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">WorkspaceのG</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">eminiを止める</text><line x1="334.0" y1="416.8" x2="866.0" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.10</div>
+                <div class="rel-card__ttl">【2026年10月】WorkspaceのGeminiを無効化する方法 管理コンソール・組織部門・Gmail</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'claude-team-admin',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
