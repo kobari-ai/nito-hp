@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Claude Enterpriseとは？料金の仕組み・Teamとの違い・20席から | nito Column</title>
+    <meta name="description" content="Claude EnterpriseとTeamの違いを公式の料金ページとヘルプで整理。席料US$20に使った分のAPI料金が乗る仕組み、20席からの条件、SCIM・監査ログ・データ保持の差、申し込みと移行の注意まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-enterprise/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Claude Enterpriseとは？料金の仕組み・Teamとの違い・20席から">
+    <meta property="og:description" content="Claude EnterpriseとTeamの違いを公式の料金ページとヘルプで整理。席料US$20に使った分のAPI料金が乗る仕組み、20席からの条件、SCIM・監査ログ・データ保持の差、申し込みと移行の注意まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-enterprise/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-enterprise.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-enterprise.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Claude Enterpriseとは？料金の仕組み・Teamとの違い・20席から", "description": "Claude EnterpriseとTeamの違いを公式の料金ページとヘルプで整理。席料US$20に使った分のAPI料金が乗る仕組み、20席からの条件、SCIM・監査ログ・データ保持の差、申し込みと移行の注意まで。", "datePublished": "2026-10-13", "dateModified": "2026-10-13", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-enterprise/"}, "articleSection": "AI活用", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Claude Enterpriseとは？料金の仕組み・Teamとの違い・20席から"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude Enterpriseの料金はいくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "1席あたり月US$20（年払い）の席の料金と、使った分のAPI料金の合計です。席に含まれる使用量はなく、チャット・Claude Code・Coworkで使ったトークンは標準のAPIレートで請求されます。料金ページの日本の表示には、TeamとEnterpriseの下に共通で「Prices include 10% JCT」とありますが、EnterpriseのUS$20は米国の表示と同じ額で、消費税を含むかは読み取れません。見積もりで確かめてください。"}}, {"@type": "Question", "name": "Claude Enterpriseは何人から契約できますか？", "acceptedAnswer": {"@type": "Answer", "text": "セルフサービスは最低20席、営業担当経由は最低50席です。申し込み画面では500席以上なら営業への問い合わせを案内しています（2026年10月13日）。20席より少ないならTeam（2〜150席）を選びます。"}}, {"@type": "Question", "name": "Claude EnterpriseとTeamの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "お金のかかり方と管理機能です。Teamは席の料金に使える量が含まれ、Enterpriseは席の料金とは別に使った分を払います。SSOとドメイン確認はTeamにもあり、SCIM・監査ログ・カスタムデータ保持・コンプライアンスAPIは比較表でEnterpriseだけです。ロールベースの権限も比較表ではEnterpriseだけですが、Teamのヘルプにも項目があります。"}}, {"@type": "Question", "name": "Claude TeamでもSSOは使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。料金ページの比較表でもSSOのヘルプでも、SSOとドメイン確認はTeamとEnterpriseの両方の機能です。ID管理から外した人を自動で組織から消すSCIMは、Enterpriseだけです。"}}, {"@type": "Question", "name": "Claude Enterpriseの会話は学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "比較表によると、TeamとEnterpriseのどちらも会話は既定でモデルの学習に使われません。Enterpriseにするとさらに、会話とプロジェクトを残す期間を30日以上の範囲で決められます。"}}, {"@type": "Question", "name": "Claude Enterpriseに使用量の上限はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "プランや席ごとの使用量の上限はありません。かわりに管理者が、組織全体と人ごとに支出上限を決められます。セルフサービスは前払いのクレジットが尽きたときにも止まります。"}}, {"@type": "Question", "name": "Claude Enterpriseは請求書払いできますか？", "acceptedAnswer": {"@type": "Answer", "text": "営業担当経由のEnterpriseならできます。セルフサービスはクレジットカード・デビットカード・ACHで、通貨は米ドルだけです。Teamは請求書払いに対応していません。"}}, {"@type": "Question", "name": "Claude EnterpriseにAPIクレジットは付きますか？", "acceptedAnswer": {"@type": "Answer", "text": "付きません。毎月のAPIクレジットの対象はMaxとTeamで、Enterpriseは対象外です。TeamからEnterpriseに移ると、新しいクレジットは止まります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Claude Ent…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.13</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Claude Enterpriseとは？料金の仕組み・Teamとの違い・20席から</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Enterpriseとは"><defs><linearGradient id="ecg-3e4c100c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-3e4c100c)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Enterpriseとは</text><line x1="136.4" y1="327.1" x2="1063.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">料金の仕組み・Teamとの違い・申し込み</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Claude Enterpriseは、Anthropicの<a href="https://claude.com/ja/pricing">料金ページ</a>のTeam &amp; Enterpriseタブで「大規模に事業を展開する大企業向け」とされている法人向けのプランです。金額の欄には1席あたり月US$20（年払い）と、APIレートでの使用量が並んでいます。席の料金に使える量が含まれるTeamとは、お金のかかり方が根本から違います。</p>
+<p>検討する側が迷うのはTeamとEnterpriseのどちらにするかです。<strong>会社で毎月の金額を席の数で固定できるのはTeamだけで、Enterpriseは席の料金とは別に、使った分を全員分まとめて払う契約です。</strong>この記事は2026年10月13日に取得した料金ページの比較表とヘルプセンターをもとに、料金の数え方・何人から契約できるか・Enterpriseにしかない管理機能・申し込みと移行の注意を整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>Enterpriseは<strong>1席あたり月US$20（年払いのみ）に、使った分のAPI料金が乗る</strong>。席に含まれる使用量はない</li>
+<li><strong>毎月の金額を席の数で決められるのはTeamだけ</strong>。Enterpriseの費用は管理者が決める支出上限で抑える</li>
+<li>最低席数は<strong>セルフサービスが20席、営業担当経由が50席</strong>。Teamは2〜150席</li>
+<li>SSOとドメイン確認はTeamにもある。<strong>SCIM・監査ログ・カスタムデータ保持・コンプライアンスAPIは比較表でEnterpriseだけ</strong>（ロールベースの権限は、Teamのヘルプにも項目がある）</li>
+<li>セルフサービスは<strong>米ドル払いで使用量は前払いのクレジット</strong>。期中に席を減らせず、Teamからの移行は元に戻せない</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/claude-enterprise/cent_01_overview.jpg" alt="TeamとEnterpriseの関係を示した概要図。左の青緑のカードにTeamと使用量込みの定額、右のオレンジのカードにEnterpriseと席料と使った分、右下に20席からのバッジがあり、左から右へ矢印が向いている" loading="lazy"><figcaption>TeamとEnterpriseの違い（Claudeの料金ページとヘルプから作成）</figcaption></figure>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Claude Enterpriseとは</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>料金は席料と使った分</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>定額の枠がない</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>日本の料金ページの税の表示</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>コンテキストの長さの書き方の違い</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>何人から契約できるか</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>Teamとの違い</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>SSOはTeamにもある</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>監査ログとデータ保持</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>申し込みの流れ</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>Teamから移るとき</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>Enterpriseにするかの目安</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Claude Enterpriseとは</h2>
+<p>ヘルプ「<a href="https://support.claude.com/ja/articles/9797531">エンタープライズプランとは何ですか？</a>」は、Enterpriseを高度なセキュリティとコンプライアンスの管理が要る組織向けのプランと説明しています。Teamのすべての機能に、監査ログやSCIMなどの管理機能が加わります。1つの席でウェブ・デスクトップ・モバイルのClaudeに加えて、Claude CodeとCoworkも使えます。</p>
+<p>Teamにはスタンダードとプレミアムの2種類の席がありますが、今のEnterpriseの席は1種類だけです。以前のEnterpriseにはスタンダード・プレミアムの席や、チャットだけの席とClaude Code付きの席がありました。<strong>これらは新しい契約では選べず、今使っている組織も次の契約更新で1種類の席に切り替わります。</strong>HIPAA対応の組織は例外です。</p>
+<p>買い方はセルフサービスと営業担当経由の2つです。ヘルプによると、どちらも機能と席の単価は同じで、違うのは購入の方法・支払い方法・プランの管理の仕方です。</p>
+<h2 id="s2">料金は席料と使った分</h2>
+<p>料金ページのEnterpriseの欄には「シート料金 + APIレートでの使用量」と書かれ、その下に1席あたり月US$20（年払い）と、使用コストはモデルとタスクに応じて変動するという注記があります。月払いの選択肢はありません。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/claude-enterprise/cent_02_pricing_sp.jpg" alt="Claudeの料金ページのTeam & Enterpriseタブをスマホで開き、Enterpriseのカードを表示した画面。Enterprise plan を申し込むと購入スペシャリストとチャットのボタンの下に、シート料金とAPIレートでの使用量、US$20/シート/月（年払い）の表示があり、そこを赤枠1で囲んでいる" loading="lazy"><figcaption>料金ページのEnterpriseの欄（2026年10月13日、スマホ表示）</figcaption></figure>
+
+<h3 id="s2-1">定額の枠がない</h3>
+<p>ヘルプ「<a href="https://support.claude.com/ja/articles/11526368">Enterprise プランの請求方法について</a>」によると、席の料金はClaudeを使える権利の分だけです。チャット・Claude Code・Coworkで使ったトークンは、すべて標準のAPIレートで別に請求されます。<strong>席ごとの使用量の上限も、席に含まれるトークンの枠もないため、同じ人数でも毎月の金額は使い方で変わります。</strong></p>
+<figure class="post-figure"><img src="/media/images/claude-enterprise/cent_03_cost.jpg" alt="TeamとEnterpriseの毎月の請求の中身を比べた図。Teamは席の料金に使える量を含み、超えた分は任意で使用クレジット。Enterpriseは使える量を含まない席の料金US$20に、APIの単価で全員分を合算した使った分が加わる。下にEnterpriseの金額を抑えるのは管理者が決める支出上限と書かれている" loading="lazy"><figcaption>席の料金に何が含まれるか（Claudeの料金ページとヘルプから作成）</figcaption></figure>
+
+<p>費用を抑える手段は支出上限です。オーナーなどの権限を持つ人が、組織全体と人ごとの2段階で上限を決められ、低いほうの上限で止まります。上限を「無制限」にもできますが、使用量の請求そのものを切ることはできません。</p>
+<p>セルフサービスでは使用量を前払いのクレジットで買います。<strong>クレジットは組織で1つの残高を共有しているので、1人が多く使えば全員の残高が早く減り、ゼロになると追加で買うまで組織の全員が使えなくなります。</strong>営業担当経由は月ごとの後払いで、使った分が請求書に積み上がる形です。</p>
+<p>使用量の単価は<a href="https://platform.claude.com/docs/ja/about-claude/pricing">APIの料金ページ</a>のモデルごとの金額です。処理を米国内に限る設定をオンにすると、Claude Opus 4.6・Sonnet 4.6とそれ以降のモデルの使用量は標準の1.1倍で請求されます。</p>
+<h3 id="s2-2">日本の料金ページの税の表示</h3>
+<p>日本向けの料金ページには「Prices include 10% JCT」という注記があり、Teamのスタンダードシートは年払いで$22と出ています。米国向けの<a href="https://claude.com/pricing">料金ページ</a>では同じ席が$20で、表示に税を含まないと書かれています。<strong>Teamの金額は日本の消費税込みに直してある一方、Enterpriseの欄は日本向けも米国向けも同じUS$20です。</strong></p>
+<p>料金ページの日本の表示には、TeamとEnterpriseの下に共通で「Prices include 10% JCT」とありますが、EnterpriseのUS$20は米国の表示と同じ額で、消費税を含むかは読み取れません。予算を組むときは見積もりか最初の請求書で税の扱いを確かめてください。請求書の消費税の表示は<a href="/media/claude-invoice/">Claudeの領収書と請求書の記事</a>で扱っています。</p>
+<h3 id="s2-3">コンテキストの長さの書き方の違い</h3>
+<p>料金ページの比較表でコンテキストウィンドウを見ると、TeamとEnterpriseの3列とも「最大100万（モデルによって異なる）」です。Teamのヘルプ「<a href="https://support.claude.com/ja/articles/9266767">Team プランとは何ですか？</a>」には「200k コンテキストウィンドウ」とあります。今のEnterpriseは長い文章を読めることが売りのプランではないので、選ぶ理由は管理機能と人数で考えます。</p>
+<h2 id="s3">何人から契約できるか</h2>
+<p>Enterpriseのシートのヘルプ「<a href="https://support.claude.com/ja/articles/13393991">エンタープライズプランでシートを購入・管理する</a>」には、最低20席が必要とあります。営業担当経由は最低50席です。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>Team</th>
+<th>Enterprise（セルフサービス）</th>
+<th>Enterprise（営業担当経由）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>席の数</td>
+<td>2〜150席</td>
+<td>20席から</td>
+<td>50席から</td>
+</tr>
+<tr>
+<td>支払い方法</td>
+<td>クレジットカード</td>
+<td>クレジットカード・ACH（米ドルのみ）</td>
+<td>クレジットカード・ACH・請求書（複数の通貨）</td>
+</tr>
+<tr>
+<td>請求の周期</td>
+<td>月払い・年払い</td>
+<td>年払い</td>
+<td>年払い</td>
+</tr>
+<tr>
+<td>使用量の請求</td>
+<td>席に含まれる</td>
+<td>前払いのクレジット</td>
+<td>月ごとの後払い</td>
+</tr>
+<tr>
+<td>トライアル</td>
+<td>なし</td>
+<td>なし</td>
+<td>あり</td>
+</tr>
+</tbody>
+</table>
+<p><strong>20席から150席までの組織はTeamとEnterpriseのどちらも選べ、150席を超えるならEnterpriseしかありません。</strong>20席より少ないなら、選べるのはTeamだけです。Teamの料金と席の数え方は<a href="/media/claude-team/">Claude Teamプランの記事</a>にまとめました。</p>
+<p>席はいつでも足せて、残りの期間の分が日割りですぐに請求されます。<strong>セルフサービスでは年間の契約期間の途中で席を減らせず、減らせるのは更新のときだけです。</strong>メンバーを組織から外しても席の数と請求は変わらず、空いた席をほかの人に割り当てられるだけです。</p>
+<h2 id="s4">Teamとの違い</h2>
+<p>料金ページの「プラン間の機能を比較」には、Team・Enterprise（セルフサービス）・Enterprise（営業担当経由）の3列が並んでいます。チャットやClaude Code、Claude in Chromeなどの使える機能は3列ともほぼ同じです。違いが集まっているのはセキュリティと管理の行です。</p>
+<figure class="post-figure"><img src="/media/images/claude-enterprise/cent_04_compare.jpg" alt="Claudeの料金ページのプラン比較表のセキュリティと管理の部分。シングルサインオン、ドメイン確認、組織の作成を制限、一元的な請求と管理などは3列とも黒丸で、ドメインキャプチャ、ロールベースのアクセス制御、SCIM、監査ログ、コンプライアンスAPI、カスタムデータ保持コントロール、HIPAA対応オプションはTeamの列だけがバツになっている。ただしドメインキャプチャとロールベースの権限は、Teamのヘルプにも項目がある" loading="lazy"><figcaption>比較表のセキュリティと管理（2026年10月13日）</figcaption></figure>
+
+<p>TeamとEnterpriseで印が違う行だけを抜き出すと、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>Team</th>
+<th>Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCIM（名簿との自動同期）</td>
+<td>なし</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>監査ログ・コンプライアンスAPI</td>
+<td>なし</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>カスタムデータ保持</td>
+<td>なし</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>ロールベースのアクセス制御</td>
+<td>比較表は「いいえ」（ヘルプに権限設定の項目あり）</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>ドメインキャプチャ・ドメインのアカウントの移行</td>
+<td>比較表は「いいえ」（ヘルプにドメインキャプチャの記載あり）</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>HIPAA対応のオプション</td>
+<td>なし</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>Claude Security（ベータ）・Inference hooks</td>
+<td>なし</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>毎月のAPIクレジット</td>
+<td>組織で月$500まで</td>
+<td>なし</td>
+</tr>
+</tbody>
+</table>
+<p>料金ページのEnterpriseのカードには、このほかにネットワークレベルのアクセス制御とIPアローリストが挙がっています。顧客が管理する暗号化キーと処理を米国内に限る設定も、ヘルプにEnterpriseの機能として書かれています。</p>
+<h3 id="s4-1">SSOはTeamにもある</h3>
+<p>シングルサインオン（SSO）・ドメイン確認・組織の作成を制限の3つは、比較表でもTeamで使える機能です。<a href="https://support.claude.com/ja/articles/13132885">SSOの設定のヘルプ</a>も、SSOはTeamプランとEnterpriseプランの両方で使えると書いています。<strong>SSOが要るという理由だけなら、Enterpriseにする必要はありません。</strong></p>
+<p>差が出るのはアカウントの作り方と消し方です。ログインしたときに自動でアカウントを作るJITは、<a href="https://support.claude.com/ja/articles/13133195">JITとSCIMのヘルプ</a>でTeamでも使えるとされています。ただしJITでは、社内のID管理（OktaやMicrosoft Entra IDなど）から外した人はログインできなくなるだけで、メンバーの一覧に残ります。<strong>ID管理から外した人を自動で組織から消せるのはSCIMで、SCIMはEnterpriseだけです。</strong></p>
+<p>役割の設定も分かれます。Teamのヘルプにも「ロールベースの権限設定」という項目がありますが、比較表ではロールベースのアクセス制御のTeamの列は「いいえ」です。機能ごとに使える人を分けるカスタムロールのヘルプは、Enterpriseのプランで使えると書いています。</p>
+<h3 id="s4-2">監査ログとデータ保持</h3>
+<p>監査ログを使えるのはEnterpriseの組織だけです（<a href="https://support.claude.com/ja/articles/9970975">監査ログのヘルプ</a>）。書き出せるのはオーナーとプライマリオーナーで、場所は組織設定のデータとプライバシーです。記録されるのは誰がいつどの操作をしたかで、日時・IPアドレス・端末の情報が付きます。チャットとプロジェクトのタイトルや中身は含まれず、出るのは識別子だけです。会話の中身まで社内の監視の仕組みに取り込むなら、コンプライアンスAPIを使います。</p>
+<p><a href="https://support.claude.com/ja/articles/10440198">データ保持のヘルプ</a>では、Enterpriseのオーナーが会話とプロジェクトを残す期間を決められます。既定は無期限で、短くできるのは30日までです。数え始めは最後のやり取りからで、期間を過ぎたデータは消えて戻せません。Claude DesignやClaude Codeのウェブ版をもとにした機能など、この設定が効かないものもあります。</p>
+<p>会話をモデルの学習に使わないのは、比較表ではTeamを含む3列とも既定の扱いです。学習の設定はTeamとEnterpriseで差がつく項目ではありません。</p>
+<h2 id="s5">申し込みの流れ</h2>
+<p>セルフサービスは料金ページの「Enterprise plan を申し込む」か<a href="https://claude.ai/create/enterprise">claude.ai/create/enterprise</a>から始めます。ログインせずに開くと、最初に「チームにこれらのいずれかが必要ですか？」という確認が出ます。2026年10月13日に開いたときの選択肢は「500シート以上」「カスタム契約（使用量コミットメント、製品バンドル）」「上記のいずれでもない」の3つでした。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/claude-enterprise/cent_06_create_sp.jpg" alt="claude.aiのEnterpriseの申し込み画面をスマホで開いた画面。チームにこれらのいずれかが必要ですか、はいの場合は営業チームにお問い合わせくださいという見出しの下に、500シート以上、カスタム契約（使用量コミットメント、製品バンドル）、上記のいずれでもない、の3つのチェック欄が赤枠1、続けるボタンが赤枠2で囲まれている" loading="lazy"><figcaption>Enterpriseの申し込みの最初の画面（2026年10月13日、スマホ表示）</figcaption></figure>
+
+<ol>
+<li>当てはまる項目にチェックを入れる（画面には、当てはまるなら営業チームに問い合わせるよう書かれている）</li>
+<li>「続ける」を押し、席の数と支払い方法を決める（ヘルプの説明による）</li>
+</ol>
+<p>支払いはクレジットカード・デビットカード・ACH（米国の銀行振込）で、通貨は米ドルだけです。ACHを選んだ場合、入金が届くまでプランは有効にならず、最大5営業日かかることがあります。この記事ではこの先の画面には進んでいません。</p>
+<figure class="post-figure"><img src="/media/images/claude-enterprise/cent_05_selfserve.jpg" alt="Claudeのヘルプのセルフサービス対営業支援エンタープライズの表。購入方法はオンラインと営業チーム、最小シート数は20と50、支払い方法はクレジットカードとACHに対し営業支援は請求書も可、受け入れ通貨はUSDのみと複数通貨対応、使用量請求は事前購入クレジットと月次後払い請求、HIPAA対応はどちらも利用可能" loading="lazy"><figcaption>ヘルプのセルフサービスと営業担当経由の比較（2026年10月13日）</figcaption></figure>
+
+<p>営業担当経由にするのは、請求書払い・一定の支出基準に達した場合のカスタマーサクセスサポート・米ドル以外の通貨が要るときです。料金ページの「購入スペシャリストとチャット」か営業への問い合わせから始めます。$50,000以上の請求書は銀行振込でしか払えません。トライアル・コンサルテーション・AWS Marketplaceでの購入も、比較表では営業担当経由だけに付いています。</p>
+<h3 id="s5-1">Teamから移るとき</h3>
+<p><a href="https://support.claude.com/en/articles/13779868">Teamから移行するヘルプ</a>（英語）は、今のTeamの組織のまま上げることを勧めています。同じ組織なら会話・プロジェクト・メンバーと役割が残り、新しく組織を作ると移りません。セルフサービスの手順は、claude.ai/upgradeからEnterpriseを選び、既存の組織を選んで、20席以上の席数と1人あたりの支出上限、最初の使用量の残高を決めて確定する流れです。</p>
+<p><strong>この経路での移行は元に戻せません。</strong>移った直後はスキル・コード実行とファイル作成・Claude Design・Claude in ChromeなどがEnterpriseでは既定でオフになり、席が割り当てられないメンバーが出ることもあります。ヘルプは切り替えのあとに機能の設定と席の割り当てを見直すよう書いています。</p>
+<p><a href="https://platform.claude.com/docs/ja/about-claude/api-credits-for-subscribers">MaxとTeamのAPIクレジットのドキュメント</a>のとおり、毎月のAPIクレジットはMaxとTeamだけが対象で、Enterpriseは含まれません。Teamで受け取っていた組織は、移行すると新しいクレジットが止まります。手元に残っている分は期限まで使えて、Teamで買った使用クレジットの残りも引き継がれます。</p>
+<h2 id="s6">Enterpriseにするかの目安</h2>
+<p>決め手になるのは人数よりも、社内の規程が求める管理と、毎月の金額をどこまで読めるかです。Teamの席には使える量が含まれるので、予算は席の数でほぼ決まります。Enterpriseは使った分の請求になるため、Claude Codeを長く使う人が多い組織ほど、席の料金との差が開きやすくなります。</p>
+<figure class="post-figure"><img src="/media/images/claude-enterprise/cent_07_when.jpg" alt="条件ごとに向くプランを並べた図。毎月の金額を席の数で決めたい、使う人が20人より少ないはTeam。150人を超えて配る、SCIMや監査ログが社内の規程で要るはEnterprise。請求書払いや米ドル以外で払いたい、500席以上や使用量を約束する契約はEnterpriseの営業担当経由" loading="lazy"><figcaption>条件ごとの選び方（Claudeの料金ページ・ヘルプ・申し込み画面から作成）</figcaption></figure>
+
+<p>社員のID管理と連動させたい、操作の記録を残す決まりがある、会話の保存期間を短くしたいといった要件があれば、20席以上でEnterpriseを考える段階です。こうした要件がなく、全員が同じくらい使うなら、Teamのほうが予算を立てやすくなります。</p>
+<p>SCIMや権限、使用量の上限を整えたあと、決まった仕事をClaudeに任せる仕組みづくりは、<a href="/ai-agent/">AIエージェント構築支援</a>で相談を受けています。</p>
+<h2 id="s7">よくある質問</h2>
+<h3 id="s7-1">Q. Claude Enterpriseの料金はいくらですか？</h3>
+<p>1席あたり月US$20（年払い）の席の料金と、使った分のAPI料金の合計です。席に含まれる使用量はなく、チャット・Claude Code・Coworkで使ったトークンは標準のAPIレートで請求されます。料金ページの日本の表示には、TeamとEnterpriseの下に共通で「Prices include 10% JCT」とありますが、EnterpriseのUS$20は米国の表示と同じ額で、消費税を含むかは読み取れません。見積もりで確かめてください。</p>
+<h3 id="s7-2">Q. Claude Enterpriseは何人から契約できますか？</h3>
+<p>セルフサービスは最低20席、営業担当経由は最低50席です。申し込み画面では500席以上なら営業への問い合わせを案内しています（2026年10月13日）。20席より少ないならTeam（2〜150席）を選びます。</p>
+<h3 id="s7-3">Q. Claude EnterpriseとTeamの違いは何ですか？</h3>
+<p>お金のかかり方と管理機能です。Teamは席の料金に使える量が含まれ、Enterpriseは席の料金とは別に使った分を払います。SSOとドメイン確認はTeamにもあり、SCIM・監査ログ・カスタムデータ保持・コンプライアンスAPIは比較表でEnterpriseだけです。ロールベースの権限も比較表ではEnterpriseだけですが、Teamのヘルプにも項目があります。</p>
+<h3 id="s7-4">Q. Claude TeamでもSSOは使えますか？</h3>
+<p>使えます。料金ページの比較表でもSSOのヘルプでも、SSOとドメイン確認はTeamとEnterpriseの両方の機能です。ID管理から外した人を自動で組織から消すSCIMは、Enterpriseだけです。</p>
+<h3 id="s7-5">Q. Claude Enterpriseの会話は学習に使われますか？</h3>
+<p>比較表によると、TeamとEnterpriseのどちらも会話は既定でモデルの学習に使われません。Enterpriseにするとさらに、会話とプロジェクトを残す期間を30日以上の範囲で決められます。</p>
+<h3 id="s7-6">Q. Claude Enterpriseに使用量の上限はありますか？</h3>
+<p>プランや席ごとの使用量の上限はありません。かわりに管理者が、組織全体と人ごとに支出上限を決められます。セルフサービスは前払いのクレジットが尽きたときにも止まります。</p>
+<h3 id="s7-7">Q. Claude Enterpriseは請求書払いできますか？</h3>
+<p>営業担当経由のEnterpriseならできます。セルフサービスはクレジットカード・デビットカード・ACHで、通貨は米ドルだけです。Teamは請求書払いに対応していません。</p>
+<h3 id="s7-8">Q. Claude EnterpriseにAPIクレジットは付きますか？</h3>
+<p>付きません。毎月のAPIクレジットの対象はMaxとTeamで、Enterpriseは対象外です。TeamからEnterpriseに移ると、新しいクレジットは止まります。</p>
+<h2 id="s8">出典</h2>
+<p>すべて2026年10月13日に取得。</p>
+<ul>
+<li>Claude「<a href="https://claude.com/ja/pricing">料金</a>」Team &amp; Enterpriseタブ、プラン間の機能の比較表、FAQ</li>
+<li>Claude「<a href="https://claude.com/pricing">Pricing</a>」（米国向け）Team &amp; Enterpriseタブ</li>
+<li>Anthropic ヘルプセンター「<a href="https://support.claude.com/ja/articles/9797531">エンタープライズプランとは何ですか？</a>」</li>
+<li>Anthropic ヘルプセンター「<a href="https://support.claude.com/ja/articles/11526368">Enterprise プランの請求方法について</a>」</li>
+<li>Anthropic ヘルプセンター「<a href="https://support.claude.com/ja/articles/13393991">エンタープライズプランでシートを購入・管理する</a>」</li>
+<li>Anthropic ヘルプセンター「<a href="https://support.claude.com/en/articles/13779868">Migrate your organization from Team to Enterprise</a>」</li>
+<li>Anthropic ヘルプセンター「<a href="https://support.claude.com/ja/articles/9266767">Team プランとは何ですか？</a>」</li>
+<li>Anthropic ヘルプセンター「<a href="https://support.claude.com/ja/articles/13132885">シングルサインオン（SSO）の設定</a>」</li>
+<li>Anthropic ヘルプセンター「<a href="https://support.claude.com/ja/articles/13133195">JIT または SCIM プロビジョニングの設定</a>」</li>
+<li>Anthropic ヘルプセンター「<a href="https://support.claude.com/ja/articles/13930452">エンタープライズプランでカスタムロールを管理する</a>」</li>
+<li>Anthropic ヘルプセンター「<a href="https://support.claude.com/ja/articles/9970975">監査ログへのアクセス</a>」</li>
+<li>Anthropic ヘルプセンター「<a href="https://support.claude.com/ja/articles/10440198">エンタープライズプランのカスタムデータ保持制御を設定する</a>」</li>
+<li>Claude Platform ドキュメント「<a href="https://platform.claude.com/docs/ja/about-claude/api-credits-for-subscribers">MaxプランおよびTeamプランのAPIクレジット</a>」</li>
+<li>Claude Platform ドキュメント「<a href="https://platform.claude.com/docs/ja/about-claude/pricing">料金</a>」</li>
+<li>claude.ai「<a href="https://claude.ai/create/enterprise">Enterpriseの申し込み</a>」（ログインせずに表示した最初の画面）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/claude-team-admin/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Teamの招待と管理"><defs><linearGradient id="ecg-5c00bf81" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5c00bf81)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Teamの招待と管理</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.13</div>
+                <div class="rel-card__ttl">【2026年10月】Claude Teamのメンバー招待と管理｜役割・席の切り替え・Proからの移行</div>
+            </a>
+            <a href="/media/chatgpt-enterprise/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT Enterpriseとは"><defs><linearGradient id="ecg-7f99274d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7f99274d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT Enterpriseとは</text><line x1="113.6" y1="365.9" x2="1086.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.10</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPT Enterpriseとは？Businessとの違い・料金・何人から</div>
+            </a>
+            <a href="/media/google-messages-gemini/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GoogleメッセージのGeminiを消す"><defs><linearGradient id="ecg-e8f86d89" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e8f86d89)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Googleメッセージ</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">のGeminiを消す</text><line x1="273.2" y1="416.8" x2="926.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.10</div>
+                <div class="rel-card__ttl">【2026年10月】GoogleメッセージのGeminiを消す方法｜ボタン・チャット削除・データの扱い</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'claude-enterprise',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
