@@ -105,6 +105,8 @@ Galaxyは設定の場所が違い、サムスンのFAQ「[(Galaxy) 電源メニ�
 
 GoogleメッセージのアプリにGeminiのボタンやチャットが出る場合は起動の設定とは別なので、[GoogleメッセージのGeminiを消す方法](/media/google-messages-gemini/)を見てください。
 
+Googleマップのナビ中やマップに相談のGeminiで、止められる所と止められない所は[GoogleマップのGeminiはオフにできる？](/media/google-maps-gemini/)で扱っています。
+
 ## Googleアシスタントに戻す方法が使えなくなった
 
 検索で見つかる止め方にはGeminiアプリのメニューから「Googleアシスタントに切り替える」を選ぶものがあります。Googleのヘルプも、2026年10月2日の時点でこの手順を載せたままです。
@@ -114,8 +116,6 @@ GoogleメッセージのアプリにGeminiのボタンやチャットが出る�
 <figure class="post-figure"><img src="/media/images/gemini-auto-launch/08_fig_timeline.png" alt="スマホのGoogleアシスタントがGeminiに置き換わるまでの図。2025年3月に移行を予告し、2025年12月に2026年へ延期。2026年8月4日に終了の告知メールが日本でも配信され、対象はスマホ・タブレット・ペアの機器。2026年9月4日にアクセスの削除が始まり、削除されるとGeminiからアシスタントに切り替え直せない" loading="lazy"><figcaption>Googleアシスタントのスマホでの提供は2026年9月4日から順に終わっている</figcaption></figure>
 
 [Android Headlinesの2026年9月の記事](https://www.androidheadlines.com/2026/09/google-assistant-killed-android-gemini.html)は、Googleアプリの17.60以降でGeminiのメニューから切り替えの項目が消えたと伝えています。nitoでは切り替えの項目が消えた画面を確かめていません。9月4日からの削除は順に進むため、メニューに項目が残っている端末なら切り替えられる可能性はあります。それでも**これから止めるなら、アシスタントを戻すのではなく、上の入口ごとの設定で止める**ほうが確実です。
-
-Googleマップのナビ中や検索バーの下に出るGeminiの止め方は「[GoogleマップのGeminiはオフにできる？](/media/google-maps-gemini/)」で扱っています。
 
 ## よくある質問
 
