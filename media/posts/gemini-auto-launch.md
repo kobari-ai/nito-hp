@@ -115,6 +115,8 @@ GoogleメッセージのアプリにGeminiのボタンやチャットが出る�
 
 [Android Headlinesの2026年9月の記事](https://www.androidheadlines.com/2026/09/google-assistant-killed-android-gemini.html)は、Googleアプリの17.60以降でGeminiのメニューから切り替えの項目が消えたと伝えています。nitoでは切り替えの項目が消えた画面を確かめていません。9月4日からの削除は順に進むため、メニューに項目が残っている端末なら切り替えられる可能性はあります。それでも**これから止めるなら、アシスタントを戻すのではなく、上の入口ごとの設定で止める**ほうが確実です。
 
+Googleマップのナビ中や検索バーの下に出るGeminiの止め方は「[GoogleマップのGeminiはオフにできる？](/media/google-maps-gemini/)」で扱っています。
+
 ## よくある質問
 
 ### Geminiが勝手に起動するのはなぜですか？
