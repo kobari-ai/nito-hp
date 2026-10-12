@@ -30,6 +30,8 @@ Anthropicはこの種の契約をClaude for Workと呼び、TeamとEnterpriseが
 
 人数の上限は150席です。150席を超えるなら、上位のEnterpriseプランに移ります。Enterpriseは席の料金にAPIレートの使用量を足す契約で、SCIMや監査ログ、データ保持期間の設定はEnterpriseにしかありません。
 
+Enterpriseの最低席数や料金の数え方、申し込みの流れは[Claude Enterpriseの記事](/media/claude-enterprise/)にまとめました。
+
 ## 料金はシートごとの月額
 
 [Claudeの料金ページ](https://claude.com/ja/pricing)のTeam & Enterpriseタブには、Teamの2種類の席の金額が並んでいます。
