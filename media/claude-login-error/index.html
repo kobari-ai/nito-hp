@@ -63,10 +63,10 @@
 
         <div class="post-content">
 <p>Claudeにはパスワードがありません。Anthropicのヘルプ「<a href="https://support.claude.com/ja/articles/13189465-log-in-to-your-claude-account">Claudeアカウントにログインする</a>」によると、ログインはGoogleのアカウントで続けるか、メールに届くログインリンクを使う形で、専用のパスワードを作ることはできないとされています。</p>
-<p>そのため、ログインできないときはパスワードの再設定ではなく、ログインメールの受信箱と、登録したときのメールアドレスから確かめます。<strong>2026年9月26日のスマホのログイン画面には「Googleで続ける」「Appleで続ける」「メールで続ける」の3つが並んでいました。</strong>この記事ではAnthropicのヘルプと実際の画面をもとに、ログインできない原因と対処を整理します。</p>
+<p>そのため、ログインできないときはパスワードの再設定ではなく、ログインメールの受信箱と、登録したときのメールアドレスから確かめます。**2026年9月26日のスマホのログイン画面には「Googleで続ける」「Appleで続ける」「メールで続ける」の3つが並んでいました。**この記事ではAnthropicのヘルプと実際の画面をもとに、ログインできない原因と対処を整理します。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
 <li>Claudeには<strong>パスワードが無い</strong>。ログインはGoogle・Apple・メールのリンクのどれか</li>
-<li>メールが届かないときは<strong>@mail.anthropic.com</strong>からのメールを迷惑メールと隔離の中から探す。会社や学校のメールはIT部門の設定で止まることがある</li>
+<li>メールが届かないときは**@mail.anthropic.com**からのメールを迷惑メールと隔離の中から探す。会社や学校のメールはIT部門の設定で止まることがある</li>
 <li>別の端末でリンクを開くと<strong>検証コード</strong>が出る。そのコードは、ログインメールを頼んだ元の端末に入れる</li>
 <li>Googleで続けられないときは、Googleアカウントの接続から「Claude by Anthropic」を外してからやり直す</li>
 <li>新しく作るときは<strong>電話番号の確認</strong>が必要。同じ番号で確認できるアカウントは3つまで</li>
@@ -129,12 +129,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table>
-<p><strong>原因の見当がつかないときは、先に<a href="https://status.claude.com/">Claudeのステータスページ</a>で障害が出ていないかを見てください。</strong>ヘルプも、システム全体の障害が出ているなら、ほかの対処を試す前に復旧を待つよう勧めています。</p>
+<p>**原因の見当がつかないときは、先に<a href="https://status.claude.com/">Claudeのステータスページ</a>で障害が出ていないかを見てください。**ヘルプも、システム全体の障害が出ているなら、ほかの対処を試す前に復旧を待つよう勧めています。</p>
 <h2 id="s2">ログイン画面の3つの入り口</h2>
 <p><a href="https://claude.ai/login">Claudeのログイン画面</a>を開くと、入り口が3つ並びます。ヘルプの本文は「Googleで続行」と「メールで続行」の2つを案内していますが、2026年9月26日のスマホのブラウザでは「Appleで続ける」も表示されていました。ヘルプのよくある質問には、Appleで登録した場合の手順があります。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/claude-login-error/cle_01_sp_login.jpg" alt="スマホのブラウザで開いたClaudeのログイン画面。1のGoogleで続ける、2のAppleで続ける、メールアドレスの入力欄の下の3のメールで続けるが赤枠で囲まれている" loading="lazy"><figcaption>ログイン画面（2026年9月26日、スマホ）。1がGoogle、2がApple、3がメール</figcaption></figure>
 
-<p>ヘルプの案内どおり、<strong>別の端末でも、いつもログインに使っているのと同じメールアドレスで入るのが確実です。</strong>Appleの非公開メールで登録したなら、そのアドレスは @privaterelay.appleid.com で終わるものです。</p>
+<p>ヘルプの案内どおり、**別の端末でも、いつもログインに使っているのと同じメールアドレスで入るのが確実です。**Appleの非公開メールで登録したなら、そのアドレスは @privaterelay.appleid.com で終わるものです。</p>
 <h2 id="s3">ログインメールが届かないとき</h2>
 <p>メールで続けると、件名「Claude.aiへのセキュアログインリンク」のメールが届きます。届かないときにヘルプが挙げている確認は次の4つです。</p>
 <ol>
@@ -143,14 +143,14 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li>メールの設定で @mail.anthropic.com を受信を許可する差出人に登録する</li>
 <li>数分おいてから、もう一度ログインを試す</li>
 </ol>
-<p><strong>ヘルプの注記では、会社や政府機関、.edu のメールアドレスを使っている人は、メールのセキュリティ設定を変えるためにIT部門への連絡が必要な場合があるとされています。</strong>個人のGmailでは届くのに会社のメールでは届かないなら、受信側で止められている可能性があります。</p>
+<p>**ヘルプの注記では、会社や政府機関、.edu のメールアドレスを使っている人は、メールのセキュリティ設定を変えるためにIT部門への連絡が必要な場合があるとされています。**個人のGmailでは届くのに会社のメールでは届かないなら、受信側で止められている可能性があります。</p>
 <figure class="post-figure"><img src="/media/images/claude-login-error/cle_02_help_trouble.jpg" alt="Anthropicのヘルプのトラブルシューティングの節。ログインメールを受け取っていないときは、mail.anthropic.comからのメールをスパムと迷惑メールのフォルダで確認、サーバーの隔離を確認、ホワイトリストに登録、数分後に再度試す。ビジネス、政府、eduのメールはIT部門への連絡が必要な場合がある。メールを受け取ったがログインできないときはエラーメッセージをメモし、電話番号の確認やステータスページを見る" loading="lazy"><figcaption>Anthropicのヘルプのトラブルシューティング（2026年9月26日取得）</figcaption></figure>
 
 <h2 id="s4">別の端末でリンクを開いたとき</h2>
 <p>パソコンでログインメールを頼み、スマホでメールのリンクを押した場合は、そのままログインにはなりません。ヘルプによると、別の端末でリンクを押すと検証コードが表示されます。</p>
 <figure class="post-figure"><img src="/media/images/claude-login-error/01_fig_device.png" alt="Claudeのログインメールのリンクを開く端末による違いの図。同じ端末でリンクを押すと、ログインした状態のClaudeにそのまま移る。別の端末でリンクを押すと検証コードが表示され、そのコードをログインメールを頼んだ元の端末に入力する" loading="lazy"><figcaption>リンクを開く端末で動きが変わる（Anthropicのヘルプから作成）</figcaption></figure>
 
-<p><strong>コードを入れるのは、ログインメールを頼んだ元の端末です。</strong>パソコンで頼んだなら、パソコンのログイン画面に戻ってコードを入れてください。</p>
+<p>**コードを入れるのは、ログインメールを頼んだ元の端末です。**パソコンで頼んだなら、パソコンのログイン画面に戻ってコードを入れてください。</p>
 <h2 id="s5">Googleで続けられないとき</h2>
 <p>Googleで続けるでうまく入れない場合は、GoogleアカウントとClaudeの接続を一度外してからやり直します。ヘルプの手順は次のとおりです。</p>
 <ol>
@@ -191,7 +191,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table>
-<p><strong>確認に使った電話番号はあとから変えられません。</strong>長く使う番号で確認してください。</p>
+<p>**確認に使った電話番号はあとから変えられません。**長く使う番号で確認してください。</p>
 <h2 id="s8">よくある質問</h2>
 <h3 id="s8-1">Claudeのパスワードを忘れたときはどうしますか？</h3>
 <p>Claudeにはパスワードがありません。Anthropicのヘルプでも、専用のパスワードは作れないとされています。Google、Apple、メールのリンクのうち、登録したときと同じ方法で入ってください。</p>

@@ -67,7 +67,7 @@
 <figure class="post-figure"><img src="/media/images/google-workspace-gemini-admin/gwa_00_overview.jpg" alt="管理コンソールの3つのスイッチと題した図。管理画面のパネルに、Geminiアプリ、GmailなどのGemini（Enterpriseのみ）、Workspaceとの連携の3つのスイッチが縦に並び、3つともオンになっている" loading="lazy"><figcaption>Geminiを止める設定は3か所に分かれている。どれも最初はオン</figcaption></figure>
 
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
-<li>Geminiアプリは<strong>［生成AI］［Geminiアプリ］の［サービスのステータス］</strong>で切り替える</li>
+<li>Geminiアプリは**［生成AI］［Geminiアプリ］の［サービスのステータス］**で切り替える</li>
 <li>GmailなどのGeminiをアプリごとに止める［機能へのアクセス］は、<strong>対応エディションにBusinessが含まれない</strong></li>
 <li>ドメインの拠点が日本の組織は<strong>スマート機能が既定でオフ</strong>で、GmailなどのGeminiは管理者か利用者がオンにするまで動かない</li>
 <li>Geminiアプリと［Gemini for Workspace］の設定は組織部門かグループごとに分けられ、<strong>グループの設定が組織部門より優先</strong>される。Geminiアプリの設定の反映は最長24時間</li>
@@ -155,7 +155,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/generative-ai/workspace-with-gemini/manage-access-to-gemini-features-in-workspace-services?hl=ja">Workspace サービスでの Gemini 機能へのアクセスを管理する</a>」の手順では、［生成AI］［Gemini for Workspace］の［機能へのアクセス］で、アプリごとに［編集］から［オン］か［オフ］を選んで保存します。対象はGmail・カレンダー・ドライブとドキュメント類・Meet・チャット・Workspace Studioで、既定はオンです。</p>
 <figure class="post-figure"><img src="/media/images/google-workspace-gemini-admin/gwa_03_feature_access.jpg" alt="管理者ヘルプのWorkspaceサービスでのGemini機能へのアクセスを管理するページの冒頭。対応エディションがEnterprise Standard、Enterprise Plus、Teaching and Learningアドオン、Education Plus、Google AI Pro for Educationであることと、WorkspaceサービスでのGemini機能のデフォルト設定はオンであることの2か所が赤枠。対象のサービスとしてGmail、カレンダー、ドライブとドキュメント類、Meet、チャット、Workspace Studioが並ぶ" loading="lazy"><figcaption>対応エディションと既定の状態（2026年10月10日）</figcaption></figure>
 
-<p><strong>このページの対応エディションはEnterprise StandardとEnterprise Plus、教育機関向けの一部だけです。</strong>あるアプリでGeminiを止めても、ほかのアプリのGeminiからそのデータを読める点にもヘルプは注意を促しています。たとえばドライブのGeminiをオフにしても、GmailのGeminiにはドライブのファイルについて質問できます。そのデータをGeminiに読ませたくないなら、アプリの中のGeminiを止めるだけでなく、すべてのアプリで止めるか、ファイルの側で閲覧を制限します。</p>
+<p>**このページの対応エディションはEnterprise StandardとEnterprise Plus、教育機関向けの一部だけです。**あるアプリでGeminiを止めても、ほかのアプリのGeminiからそのデータを読める点にもヘルプは注意を促しています。たとえばドライブのGeminiをオフにしても、GmailのGeminiにはドライブのファイルについて質問できます。そのデータをGeminiに読ませたくないなら、アプリの中のGeminiを止めるだけでなく、すべてのアプリで止めるか、ファイルの側で閲覧を制限します。</p>
 <h3 id="s3-2">Businessで止めたいとき</h3>
 <p>2025年2月時点の販売代理店の記事も、Businessエディションでは［機能へのアクセス］が表示されず、サイドパネルを制御できないと案内しています。</p>
 <p>Businessで打てる手は、次の節のスマート機能の既定の設定です。ただしこれは利用者が自分で変えられるので、強制的に止める手段にはなりません。アプリの中のGeminiを部署ごとに確実に止めたいなら、Enterpriseへの切り替えを検討することになります。</p>
@@ -163,7 +163,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>GmailなどのGeminiが動く条件は、利用者の［Google Workspace のスマート機能］がオンになっていることです。［機能へのアクセス］のヘルプにも「注: Gemini in Workspace を利用するには、スマート機能とカスタマイズを有効にする必要があります。」と書かれています。管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/security/manage-google-workspace-smart-features-for-your-users?hl=ja">ユーザー向けに Google Workspace のスマート機能を管理する</a>」は、この設定の既定が地域で違うと書いています。</p>
 <figure class="post-figure"><img src="/media/images/google-workspace-gemini-admin/gwa_04_smart_japan.jpg" alt="管理者ヘルプの重要という注記が赤枠で囲まれている。Workspaceのスマート機能とコントロールは、ドメインの拠点が欧州経済領域、日本、スイス、英国にある場合はデフォルトでオフ、その他の地域ではオン。管理者はこのデフォルト設定を全員に適用するかを決められるが、ユーザーは各自の設定で上書きできる" loading="lazy"><figcaption>スマート機能の既定は地域で違う（2026年10月10日）</figcaption></figure>
 
-<p><strong>ドメインの拠点が日本にある組織では、スマート機能が最初からオフです。</strong>そのため契約しただけでは、GmailやドキュメントのGeminiは管理者か利用者がオンにするまで動きません。社員から「スマート機能を両方オンにしてと出る」と聞かれるのはこのためで、利用者側の手順は<a href="/media/gmail-smart-features-on/">スマート機能の設定を両方ともオンにする方法</a>で説明しています。</p>
+<p>**ドメインの拠点が日本にある組織では、スマート機能が最初からオフです。**そのため契約しただけでは、GmailやドキュメントのGeminiは管理者か利用者がオンにするまで動きません。社員から「スマート機能を両方オンにしてと出る」と聞かれるのはこのためで、利用者側の手順は<a href="/media/gmail-smart-features-on/">スマート機能の設定を両方ともオンにする方法</a>で説明しています。</p>
 <p>管理者は［アカウント］［アカウント設定］［Google Workspace のスマート機能］で、既定のオンかオフを全員に適用できます。操作できるのは特権管理者だけです。ただし利用者は後から自分の設定で切り替えられるので、ここで止めても社員がオンに戻せば使えます。個人の側でGmailのGeminiを止める手順は<a href="/media/gmail-gemini-off/">GmailのGeminiをオフにする方法</a>にまとめました。</p>
 <h2 id="s5">組織部門とグループで分ける</h2>
 <p>全社で一度に止めるか許可するかを決めなくても、試す部署から始められます。Geminiアプリと［Gemini for Workspace］の設定には、画面の横に組織部門とグループを選ぶ一覧があります。組織部門は主に部署に使う単位で、グループは部署をまたいで人を集める単位です。</p>
@@ -175,7 +175,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Geminiアプリは使わせてもメールやファイルを読ませたくないなら、この連携だけをオフにします。</p>
 <figure class="post-figure"><img src="/media/images/google-workspace-gemini-admin/gwa_05_history.jpg" alt="管理者ヘルプのGeminiとの会話履歴を管理する節。会話履歴がオフのときユーザーは以前の会話にアクセスできず、会話は最長72時間ほど保存されること、会話履歴がオフのときWorkspaceアプリの連携は使えないこと、会話履歴の設定は管理者だけが変更でき既定でオンであることが書かれ、最後の文が赤枠。手順では保持期間を3か月、18か月、36か月から選び、デフォルトは18か月" loading="lazy"><figcaption>Geminiアプリの会話履歴の設定（2026年10月10日）</figcaption></figure>
 
-<p>会話履歴は［Gemini 会話履歴］で決め、<strong>既定はオンで18か月たつと自動で消えます。</strong>保存期間は3か月・18か月・36か月から選べます。オフにすると利用者は過去の会話を開けず、Gmailやドライブとの連携も止まります。反映は最長72時間です。</p>
+<p>会話履歴は［Gemini 会話履歴］で決め、**既定はオンで18か月たつと自動で消えます。**保存期間は3か月・18か月・36か月から選べます。オフにすると利用者は過去の会話を開けず、Gmailやドライブとの連携も止まります。反映は最長72時間です。</p>
 <p>サイドパネルのGeminiの履歴は、［Gemini for Workspace］の［会話の履歴と削除］で別に決めます（Business Starterから）。</p>
 <h2 id="s7">止めたときの利用者の画面</h2>
 <p>Geminiアプリを止めると、その人はgemini.google.com・スマホのアプリ・Gemini in Chromeで仕事用のアカウントのGeminiを使えなくなります。止めていないアプリの中のGeminiはそのまま残るため、Gmailのサイドパネルが消えるわけではありません。</p>

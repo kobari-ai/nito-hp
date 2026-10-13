@@ -66,7 +66,7 @@
 <p>発表から1か月で周りの状況はかなり動きました。9月22日に弟分のGPT-6 SolとGPT-6 Lunaが加わり、29日にはGPT-6.1 Solと月500ドルの新しいProプランが出ています。一方でヘルプからはProのチャットの回数が消え、Plusの扱いも「チャットでは使えない」のまま変わっていません。</p>
 <p>OpenAIの<a href="https://openai.com/ja-JP/index/gpt-6-astra/">発表ページ</a>・<a href="https://help.openai.com/ja-jp/articles/20001354-gpt-56-and-gpt-6-pro-in-chatgpt">ヘルプセンター</a>・<a href="https://developers.openai.com/api/docs/models/gpt-6-astra">モデルページ</a>を2026年10月5日に取り直し、GPT-6 Astraが何を変えたのか、ChatGPTのどのプランでどこに出るのか、上限と料金、GPT-5.6やGPT-6.1 Solとどう使い分けるかを書きます。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
-<li>ChatGPTの通常チャットでは<strong>「GPT-6 Pro」という名前</strong>で出る。思考レベルの「Pro」を選ぶと使える</li>
+<li>ChatGPTの通常チャットでは**「GPT-6 Pro」という名前**で出る。思考レベルの「Pro」を選ぶと使える</li>
 <li>通常チャットで使えるのは<strong>Pro・Business・Enterprise</strong>。Plusは Work と Codex でだけ使える</li>
 <li>チャットの回数が公開されているのは Business だけで、Standard は<strong>月15回</strong>、Premium は週50回</li>
 <li>API は入力$10・出力$50（100万トークン）。9月29日に出た GPT-6.1 Sol は同じ作業を<strong>5分の1の単価</strong>で受ける</li>
@@ -113,7 +113,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure post-figure--sp"><img src="/media/images/gpt-6-astra-guide/astra_05_announce_v2.jpg" alt="OpenAIの発表ページの冒頭。2026年9月22日更新としてGPT-6 SolとGPT-6 Lunaを追加しGPT-6ファミリーを拡充すると書かれている" loading="lazy"><figcaption>発表ページの冒頭（2026年10月5日撮影）。9月22日の更新の告知が足されている</figcaption></figure>
 
 <h3 id="s1-1">名前が2つある</h3>
-<p>GPT-6 Astra には呼び名が2つあります。APIのモデルIDと ChatGPT Work・Codex での表示は「GPT-6 Astra」、<strong>ChatGPTの通常チャットでの表示は「GPT-6 Pro」</strong>です。OpenAIのヘルプは「GPT-6 Astra を搭載した GPT-6 Pro」と書いており、中身は同じモデルです。</p>
+<p>GPT-6 Astra には呼び名が2つあります。APIのモデルIDと ChatGPT Work・Codex での表示は「GPT-6 Astra」、**ChatGPTの通常チャットでの表示は「GPT-6 Pro」**です。OpenAIのヘルプは「GPT-6 Astra を搭載した GPT-6 Pro」と書いており、中身は同じモデルです。</p>
 <h3 id="s1-2">基本スペック</h3>
 <table>
 <thead>
@@ -260,7 +260,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/gpt-6-astra-guide/astra_00_where_v2.jpg" alt="GPT-6 Astraの4つの入口の図。チャット、ワーク、Codex、APIの4枚のカードがあり、チャットには表示名はGPT-6 Proという吹き出しが付いている" loading="lazy"><figcaption>4つの入口。チャットだけ名前が GPT-6 Pro になる</figcaption></figure>
 
 <h3 id="s4-1">通常チャットで使う</h3>
-<p>入力欄の右にある思考レベル（Instant・Medium・High・Extra High・Pro）で<strong>「Pro」を選ぶ</strong>と、対象プランでは GPT-6 Pro が使えます。GPT-5.6 Sol Pro を使いたいときはモデルメニューで GPT-5.6 Sol を選んでから Pro を選びます。9月14日に自動の切り替えが廃止されたので、「もっと考えて」と頼んでも思考レベルは上がりません（安全上の理由を除く）。</p>
+<p>入力欄の右にある思考レベル（Instant・Medium・High・Extra High・Pro）で**「Pro」を選ぶ**と、対象プランでは GPT-6 Pro が使えます。GPT-5.6 Sol Pro を使いたいときはモデルメニューで GPT-5.6 Sol を選んでから Pro を選びます。9月14日に自動の切り替えが廃止されたので、「もっと考えて」と頼んでも思考レベルは上がりません（安全上の理由を除く）。</p>
 <p>無料と Go では Think（GPT-5.6 Luna）は選べますが、Pro の選択肢はありません。</p>
 <h3 id="s4-2">ChatGPT Work で使う</h3>
 <p>Work は資料を読んで調べて、スライドや表などのファイルを作るところまでを1回の依頼で進めるモードです。画面上部の「Chat／Work」の切り替えで開き、モデル一覧から GPT-6 Astra を選びます。Plus でも使えますが、通常チャットとは別の利用枠です。</p>
@@ -314,7 +314,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s6">料金</h2>
 <p>ChatGPT側とAPI側で考え方が違います。</p>
 <h3 id="s6-1">ChatGPT は月額据え置き</h3>
-<p>Astra の追加で Plus と Pro の月額は変わっていません。日本の料金ページ（2026年10月5日）では、無料0円・Go 1,400円・Plus 3,000円・Pro 16,800円からで、<strong>Pro の項目に「GPT-6 Astra による Pro 推論」と「3段階から選べる利用枠」</strong>が並んでいます。「常時稼働のエージェント dot」も Pro の項目に加わりました。プラン全体の違いは<a href="/media/chatgpt-pricing/">ChatGPTの料金プランを比較</a>にまとめています。</p>
+<p>Astra の追加で Plus と Pro の月額は変わっていません。日本の料金ページ（2026年10月5日）では、無料0円・Go 1,400円・Plus 3,000円・Pro 16,800円からで、**Pro の項目に「GPT-6 Astra による Pro 推論」と「3段階から選べる利用枠」**が並んでいます。「常時稼働のエージェント dot」も Pro の項目に加わりました。プラン全体の違いは<a href="/media/chatgpt-pricing/">ChatGPTの料金プランを比較</a>にまとめています。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/gpt-6-astra-guide/astra_04_pricing_pro_v2.jpg" alt="ChatGPTの日本の料金ページのProの項目。月額16,800円からで、3段階から選べる利用枠、GPT-6 AstraによるPro推論、常時稼働のエージェントDotなどが並んでいる" loading="lazy"><figcaption>料金ページの Pro の項目（2026年10月5日撮影）</figcaption></figure>
 
 <p>ドルでは Pro 100・Pro 200・Pro 500 の3つで、Ultrafast（Astra を速く動かす設定）が付くのは Pro の中では Pro 500 だけです。Ultrafast は通常（Standard）の8倍の速さで利用枠を減らすため、<strong>同じ Pro でも速度を選ぶと使える量は大きく減ります</strong>。</p>
