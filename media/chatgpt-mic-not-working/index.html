@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】ChatGPTの音声入力ができない原因と直し方｜マイク許可・文字にならない・PC | nito Column</title>
+    <meta name="description" content="ChatGPTの入力欄のマイク（音声入力）が使えない原因を、ボタンが無い・マイクのアクセス・文字にならない・長く話すと失敗・誤りが多いに分けて解説。Windows 11とMacの設定、公式の更新履歴も確認。">
+    <link rel="canonical" href="https://nito-0210.com/media/chatgpt-mic-not-working/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】ChatGPTの音声入力ができない原因と直し方｜マイク許可・文字にならない・PC">
+    <meta property="og:description" content="ChatGPTの入力欄のマイク（音声入力）が使えない原因を、ボタンが無い・マイクのアクセス・文字にならない・長く話すと失敗・誤りが多いに分けて解説。Windows 11とMacの設定、公式の更新履歴も確認。">
+    <meta property="og:url" content="https://nito-0210.com/media/chatgpt-mic-not-working/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/chatgpt-mic-not-working.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/chatgpt-mic-not-working.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】ChatGPTの音声入力ができない原因と直し方｜マイク許可・文字にならない・PC", "description": "ChatGPTの入力欄のマイク（音声入力）が使えない原因を、ボタンが無い・マイクのアクセス・文字にならない・長く話すと失敗・誤りが多いに分けて解説。Windows 11とMacの設定、公式の更新履歴も確認。", "datePublished": "2026-10-15", "dateModified": "2026-10-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/chatgpt-mic-not-working/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】ChatGPTの音声入力ができない原因と直し方｜マイク許可・文字にならない・PC"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTの音声入力は無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。2026年6月26日の新しい文字起こしのモデルは、リリースノートで全プランが対象とされています。ログインしていないスマホのブラウザではマイクが見えなかったので（2026年10月15日に試した結果）、ログインするかアプリで使ってください。"}}, {"@type": "Question", "name": "ChatGPTの音声入力はパソコンでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。chatgpt.comの入力欄のマイクから録音でき、試した日はログインしていないパソコンの幅のChromeにもボタンがありました。Windows 11ならOSのマイクの許可、Chromeならサイトのマイクの許可の両方がオンになっている必要があります。"}}, {"@type": "Question", "name": "ChatGPTの音声入力に時間の上限はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "音声入力 - FAQとリリースノートには上限の記載がありません。2024年12月にはモバイルのアプリで2〜3分を超える録音が失敗したという利用者の投稿があるため、長い依頼は区切って録音するほうが失敗に強くなります。"}}, {"@type": "Question", "name": "ChatGPTの音声入力の録音は保存されますか？", "acceptedAnswer": {"@type": "Answer", "text": "音声入力 - FAQによると、録音はそのチャットが履歴にある間は保持され、チャットを消すと30日以内に削除されます（セキュリティ上・法律上の理由で残す場合などを除く）。モデルの改善に音声の共有を選んでいる個人の利用者は、学習に使われることがあります。共有を止めたいときは設定のデータコントロールで［音声録音を含める］をオフにしてください。"}}, {"@type": "Question", "name": "ChatGPTの音声入力にショートカットはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "chatgpt.comやアプリの音声入力を始めるキーボードショートカットは、OpenAIのヘルプでは見つかりませんでした（2026年10月15日に確認）。キーで始めたいなら、WindowsはWindowsキー＋H、Macはマイクキーで使えるOSの音声入力が代わりになります。"}}, {"@type": "Question", "name": "ChatGPTで音声入力ができないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "OSとブラウザのマイクの許可・ログインとアプリのバージョン・使うマイクの選択・回線の順に確かめます。「マイクのアクセスを有効にしてください」と出るなら許可の問題で、録音中の表示が出るのに文字にならないなら許可より後ろの問題です。"}}, {"@type": "Question", "name": "ChatGPTの音声入力が文字にならないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "空の文字起こし、別のマイクの音を拾っている、回線の途切れの3つを疑います。OpenAIは2026年1月12日に空の文字起こしを減らす更新を出しているので、アプリを最新にしたうえで、Chromeやシステムの設定で使うマイクを1つに決めてから試し直してください。"}}, {"@type": "Question", "name": "ChatGPTの音声入力と音声会話の違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "音声入力は録音を文字にして、送る前に直せる機能です。音声会話は声で話して声で返事を聞く機能で、ヘルプによると会話の文字起こしは逐語の記録ではなく、話した内容と完全には一致しないことがあります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTの音声…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.15</span>
+        </div>
+        <h1 class="post-title">【2026年10月】ChatGPTの音声入力ができない原因と直し方｜マイク許可・文字にならない・PC</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの音声入力ができない"><defs><linearGradient id="ecg-ca7ca4e3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ca7ca4e3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="86.4" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの音声</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">入力ができない</text><line x1="326.4" y1="378.0" x2="873.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">マイク許可・文字にならないの直し方</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>OpenAIは2026年6月26日、ChatGPTの音声入力（入力欄のマイク）の文字起こしを新しいモデルに切り替え始め、対象を全プランとしました。その前の1月12日にも、話したのに文字起こしが空で返る失敗を大きく減らす更新が入っています。それでもマイクが反応しない・文字にならないという症状は、OSやブラウザの設定、アプリのバージョン、回線の側で起きます。</p>
+<p>音声入力の不具合はボタンが無い・マイクのアクセスを求められる・録音されるのに文字にならない・長く話すと失敗する・誤りが多いの5つに分けると、原因を絞れます。<strong>声で返事が来る音声会話とは別の機能</strong>なので、確かめる場所も別です。</p>
+<p>この記事ではOpenAIの<a href="https://help.openai.com/ja-jp/articles/12168547-voice-dictation-faq">音声入力 - FAQ</a>と<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT Release Notes</a>（2026年10月15日取得）、Windows・Mac・Chromeのヘルプを並べ、症状ごとに確かめる順番を書きます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>入力欄のマイクは<strong>音声入力（Dictation）</strong>。声を文字にして、送る前に直せる。音声会話とは入口が別</li>
+<li>「マイクのアクセスを有効に」と出たら、<strong>OS（Windows 11・Mac・スマホ）とブラウザの両方</strong>の許可を確かめる</li>
+<li>録音されるのに文字にならないなら、<strong>アプリの更新・使うマイクの選び直し・回線</strong>の順に見る</li>
+<li>1回に録音できる長さの上限は<strong>公式ヘルプに書かれていない</strong>。長い依頼は区切って録音する</li>
+<li>ChatGPTの側で直らないときは、<strong>Windowsキー＋HやMacのマイクキー</strong>で使えるOSの音声入力で代えられる</li>
+</ul></div></div>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>音声入力と音声会話の違い</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>症状ごとの原因と最初の一手</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>マイクのボタンが無いとき</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>マイクのアクセスを求められるとき</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>Windows 11の設定</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>Macの設定</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>ブラウザの設定</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>iPhoneとAndroidの設定</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>録音されるのに文字にならないとき</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>空の文字起こし</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>マイクが複数あるとき</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>回線と障害</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>長く話すと失敗するとき</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>文字の誤りが多いとき</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>音声入力しかできないとき</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>OSの音声入力で代える</a></li>
+                    <li class="toc-h3"><a href="#s9-1"><span class="toc__n">9-1</span>Windowsの音声入力</a></li>
+                    <li class="toc-h3"><a href="#s9-2"><span class="toc__n">9-2</span>Macの音声入力</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">音声入力と音声会話の違い</h2>
+<p>ChatGPTの画面には声を使う入口が2つあります。入力欄の中にあるマイクのアイコンが音声入力で、音声入力 - FAQによると、録音した声は文字起こしのためにOpenAIのモデルへ送られ、テキストになって戻ってきます。<strong>戻った文字は送る前に入力欄で直せる</strong>のが、音声会話との大きな違いです。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-mic-not-working/01_fig_overview.jpg" alt="ChatGPTの音声入力と音声会話を左右に並べた図。左は入力欄のマイクで、話した声が文字の行になり入力欄に入り、文字にして送る前に直せると書かれている。右は音声会話で、声で返事が返ってくると書かれている" loading="lazy"></figure>
+
+<p>音声会話のヘルプ（<a href="https://help.openai.com/ja-jp/articles/20001274-chatgpt-voice">ChatGPT 音声モード</a>）も、録音した依頼を確認・編集してから送りたいときは音声入力、話しながら考えを整理したいときは音声会話と書き分けています。音声会話のボタンが無い・途中で切れるといった症状は、<a href="/media/chatgpt-voice-not-working/">ChatGPTの音声会話ができない原因の記事</a>で扱いました。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-mic-not-working/cmn_02_composer_pc.jpg" alt="chatgpt.comをパソコンのChromeで開いた画面。どこから始めますか？の下に入力欄があり、右端の送信ボタンの左にあるマイクのアイコンに赤枠が付いている" loading="lazy"><figcaption>赤枠のマイクが音声入力のボタン（2026年10月15日に撮影）</figcaption></figure>
+
+<h2 id="s2">症状ごとの原因と最初の一手</h2>
+<p>自分の画面で何が起きているかを先に見分けると、確かめる場所は1つか2つに絞れます。この記事で扱う症状と最初に見るところを、下の表に並べました。</p>
+<table>
+<thead>
+<tr>
+<th>症状</th>
+<th>主な原因</th>
+<th>最初に確かめること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>マイクのボタンが無い</td>
+<td>ログインしていない（スマホのブラウザ）・アプリが古い</td>
+<td>ログインしてアプリを最新にする</td>
+</tr>
+<tr>
+<td>マイクのアクセスを求められる</td>
+<td>OSかブラウザの許可がオフ</td>
+<td>OSの設定とブラウザのサイトの設定</td>
+</tr>
+<tr>
+<td>録音されるのに文字にならない</td>
+<td>空の文字起こし・別のマイクの音を拾っている・回線</td>
+<td>アプリの更新と既定のマイク</td>
+</tr>
+<tr>
+<td>長く話すと失敗する</td>
+<td>回線の途切れ・時間切れ</td>
+<td>短く区切って録音する</td>
+</tr>
+<tr>
+<td>文字の誤りが多い</td>
+<td>背景の音・聞き取りの誤り</td>
+<td>送る前に入力欄で直す</td>
+</tr>
+<tr>
+<td>音声入力しかできない</td>
+<td>音声会話の画面に入っている</td>
+<td>終了のボタンで戻る</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3">マイクのボタンが無いとき</h2>
+<p>2026年10月15日に、ログインしていないChromeでchatgpt.comを開いて試しました。パソコンの幅（横1400ピクセル）では入力欄に［音声入力を開始］のボタンがありましたが、スマホの幅（横390ピクセル）では＋と送信のボタンだけで、マイクは見えませんでした。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-mic-not-working/cmn_03_mobileweb_sp.jpg" alt="chatgpt.comをスマホの幅で開いた画面。今日は何をしますか？の下の入力欄にはプラスのボタンとChatGPTに聞くの文字と送信のボタンだけがあり、マイクのアイコンは無い。入力欄に赤枠が付いている" loading="lazy"><figcaption>ログインしていないスマホの幅では入力欄にマイクが無かった</figcaption></figure>
+
+<p><strong>スマホのブラウザでマイクが見当たらないなら、ログインするか、ChatGPTのアプリで開き直す</strong>のが早道です。ログインした状態のスマホのブラウザは、この日は確かめていません。アプリでもマイクが無ければ、App StoreかGoogle Playで最新のバージョンにしてから探し直してください。</p>
+<h2 id="s4">マイクのアクセスを求められるとき</h2>
+<p>2026年3月のYahoo!知恵袋には、Windows 11のパソコンでChatGPTに「音声入力をするにはマイクのアクセスを有効にしてください」と表示されるという相談がありました。この表示が出ている間、ChatGPTはマイクを使えていません。<strong>許可はOSとブラウザ（アプリ）の2段になっている</strong>ため、上の段から順に確かめます。</p>
+<h3 id="s4-1">Windows 11の設定</h3>
+<p>Microsoftの<a href="https://support.microsoft.com/ja-jp/windows/privacy/windows-camera-microphone-and-privacy">Windows カメラ、マイク、プライバシー</a>の手順では、［スタート］＞［設定］＞［プライバシーとセキュリティ］＞［マイク］を開きます。そこで次の3つがオンになっているかを見ます。</p>
+<ol>
+<li>［マイク アクセス］</li>
+<li>［アプリがマイクにアクセスできるようにする］</li>
+<li>使うMicrosoft Storeアプリの個別の切り替え</li>
+</ol>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-mic-not-working/cmn_04_windows_help_sp.jpg" alt="Microsoftサポートのページをスマホで開いた画面。マイクを使うことができるアプリを管理する方法の見出しの下に、スタートから設定のプライバシーとセキュリティのマイクを選ぶ手順と、マイク アクセスとアプリがマイクにアクセスできるようにするとMicrosoft Storeアプリの切り替えを確かめる手順があり、2つに赤枠と番号が付いている" loading="lazy"><figcaption>①で［マイク］を開き、②の切り替えを確かめる</figcaption></figure>
+
+<p>同じヘルプによると、一覧に出てこないアプリはデスクトップ アプリの可能性があり、個別には切り替えられません。その場合は［デスクトップ アプリにマイクへのアクセスを許可する］で扱います。<strong>ChromeやEdgeで使っていて一覧にブラウザが無いなら、このスイッチがオフになっていないか</strong>を見てください。ChatGPTのアプリをMicrosoft Storeから入れたなら、一覧のChatGPTをオンにします。</p>
+<h3 id="s4-2">Macの設定</h3>
+<p>Appleの<a href="https://support.apple.com/ja-jp/guide/mac-help/mchla1b1e1fe/mac">Macのマイクへのアクセスを制御する</a>の手順は3段です。</p>
+<ol>
+<li>アップルメニュー＞［システム設定］＞［プライバシーとセキュリティ］を開く</li>
+<li>［マイク］をクリックする</li>
+<li>一覧のアプリごとにオンとオフを切り替える</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/chatgpt-mic-not-working/cmn_05_mac_help.jpg" alt="AppleサポートのMacのマイクへのアクセスを制御するのページ。アップルメニューからシステム設定のプライバシーとセキュリティを選ぶ手順、マイクをクリックする手順、リストのアプリごとにマイクへのアクセスのオンとオフを切り替える手順に赤枠と番号が付いている" loading="lazy"><figcaption>①［プライバシーとセキュリティ］②［マイク］③アプリごとの切り替えの順に進む</figcaption></figure>
+
+<p>Chromeで使うならGoogle Chromeを、ChatGPTのデスクトップアプリで使うならChatGPTを一覧でオンにします。Chromeのヘルプによると、パソコンの設定で許可を変えたあとに終了を求められたら画面の指示に沿って終了するか、Chromeを再起動します。<strong>許可を変えたのに直らないときは、ブラウザやアプリを一度終了して開き直してから試してください</strong>。</p>
+<h3 id="s4-3">ブラウザの設定</h3>
+<p>OSで許可していても、ブラウザがchatgpt.comのマイクを止めていると録音は始まりません。Googleの<a href="https://support.google.com/chrome/answer/2693767?hl=ja">Chrome でカメラとマイクを使用する</a>では、［設定］＞［プライバシーとセキュリティ］＞［サイトの設定］＞［権限］の［マイク］を開き、許可しないサイトにchatgpt.comが入っていないかを見ます。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-mic-not-working/cmn_06_chrome_help.jpg" alt="Google ChromeヘルプのChrome でカメラとマイクを使用するのページ。サイトに対するカメラやマイクへのアクセスを変更する手順のうち、プライバシーとセキュリティからサイトの設定を選ぶ手順と、権限でマイクを選ぶ手順、開いた既定のマイクを選択するの手順に赤枠と番号が付いている" loading="lazy"><figcaption>①②でマイクの権限を開き、③で使うマイクを選べる</figcaption></figure>
+
+<p>同じヘルプには、許可したサイトでも<strong>別のタブや別のアプリを使っている間は録音を始められない</strong>と書かれています。音声入力のボタンはchatgpt.comのタブを表示した状態で押してください。職場や学校のChromeは管理者がカメラとマイクの設定を決めていることがあり、その場合は自分で変えられません。</p>
+<h3 id="s4-4">iPhoneとAndroidの設定</h3>
+<p>スマホのアプリで初めてマイクを使うときの確認に［許可しない］を選ぶと、OSの設定で許可し直すまで録音できません。iPhoneは［設定］＞［プライバシーとセキュリティ］＞［マイク］、Androidは［設定］＞［アプリ］＞ChatGPT＞［権限］＞［マイク］が入口です。画面つきの手順は<a href="/media/chatgpt-voice-not-working/">音声会話の記事のマイクの許可の節</a>にあり、アプリのマイクの許可は音声入力と音声会話で共通です。</p>
+<h2 id="s5">録音されるのに文字にならないとき</h2>
+<p>2025年にredditへ投稿された相談では、Windows 11のアプリやChromeで録音中の表示は出るのに、止めても入力欄に何も入らないという症状が書かれていました。マイクは音を拾っているので、許可の問題とは切り分けて考えます。</p>
+<h3 id="s5-1">空の文字起こし</h3>
+<p>OpenAIは2026年1月12日のリリースノートで、音声入力を改善し、<strong>空の文字起こしを大きく減らした</strong>と書いています。アプリが古いバージョンのまま、またはブラウザのタブを長く開いたままなら、アプリの更新かページの再読み込みをしてから試し直すのが先です。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-mic-not-working/cmn_07_release_jan.jpg" alt="OpenAIのChatGPTリリースノートの英語のページ。January 12, 2026の見出しの下にDictation Updatesの項があり、ログインしているすべてのユーザー向けに音声入力を改善し空の文字起こしを大きく減らしたという文に赤枠が付いている" loading="lazy"><figcaption>2026年1月12日の項。空の文字起こしを減らした</figcaption></figure>
+
+<h3 id="s5-2">マイクが複数あるとき</h3>
+<p>2025年にredditへ投稿された解決の報告では、WebカメラのマイクでだけChatGPTの音声入力が文字にならず、Windowsのサウンドの設定でほかのマイクを無効にしたら直ったとありました。投稿者1人の報告なので、ほかの環境でも同じ直し方が効くとは限りません。</p>
+<p>Chromeなら、さきほどのヘルプの［既定のマイクを選択する］で、サイトが使うマイクを1つに決められます。同じヘルプのマイクのトラブルシューティングにも、<strong>システムの設定で既定の録音デバイスに正しいマイクが選ばれているか</strong>を確かめる手順があります。ヘッドセットを使うなら、コードのミュートスイッチが入っていないかも見てください。</p>
+<h3 id="s5-3">回線と障害</h3>
+<p>2026年8月7日のリリースノートによると、iPhoneのアプリは接続の問題や時間切れで音声入力が失敗したとき<strong>自動で1回だけ再試行する</strong>ようになりました。それでも失敗するなら、Wi-Fiとモバイル回線を切り替えて試します。<a href="https://status.openai.com/">OpenAIのステータスページ</a>でChatGPTに障害が出ていなければ、残るのは自分の側の回線や端末です。</p>
+<h2 id="s6">長く話すと失敗するとき</h2>
+<p>音声入力 - FAQとリリースノートには、1回に録音できる長さの上限は書かれていません（2026年10月15日に確認）。<a href="https://community.openai.com/t/voice-recording-useless-over-2-and-a-half-minutes/1064914">OpenAI Developer Community</a>には2024年12月に、モバイルのアプリで2〜3分を超える録音がネットワークや文字起こしのエラーで失敗するという投稿があります。今のバージョンでも同じかは確かめていません。</p>
+<p><strong>長い依頼は短く区切って録音し、文字になったのを確かめてから続きを話す</strong>と、失敗したときの言い直しが少なくて済みます。Androidのアプリは2026年8月14日の更新で、文字や添付を入れたあとも音声入力のボタンが残るようになりました。同じメッセージに、打った文字と録音を足していけます。</p>
+<h2 id="s7">文字の誤りが多いとき</h2>
+<p>2026年6月26日のリリースノートによると、音声入力の文字起こしは新しいモデルに替わり、OpenAIの評価では日本語を含む言語で精度が上がりました。主な言語の単語誤り率は以前のモデルより10%以上低かったとされています（OpenAIの社内評価の実測値）。騒がしい場所や小さな声、英字と数字の組み合わせにも強くなったと書かれています。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-mic-not-working/cmn_08_release_jun.jpg" alt="OpenAIのChatGPTリリースノートのImproved dictation in ChatGPTの項。複数の言語やなまりで文字起こしの精度が上がり、日本語・韓国語・中国語などで改善したという段落に赤枠が付いている" loading="lazy"><figcaption>2026年6月26日の項。評価で改善した言語に日本語が入っている</figcaption></figure>
+
+<p>新しいモデルでも、聞き取った文字が話した内容と合わないことは避けられません。そのため<strong>送る前に入力欄の文字を読み直す</strong>のが確実で、音声入力 - FAQも、文字起こしはユーザーメッセージとして送信する前に編集できると説明しています。誤りが続くなら、静かな場所に移るかマイクを口に近づけてから録音し直してください。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-mic-not-working/cmn_09_faq_sp.jpg" alt="OpenAI公式ヘルプの音声入力 - FAQのページをスマホで開いた画面。音声入力はどのように機能しますかの答えとして、マイクアイコンを押して録音した音声は文字起こしのためにモデルに送られ、テキストとして返され、送信する前に編集できるという段落に赤枠が付いている" loading="lazy"><figcaption>文字起こしは送信の前に編集できる</figcaption></figure>
+
+<h2 id="s8">音声入力しかできないとき</h2>
+<p>声の画面から文字の入力に戻れないなら、開いているのは音声入力ではなく音声会話のほうです。<a href="https://help.openai.com/ja-jp/articles/20001274-chatgpt-voice">ChatGPT 音声モード</a>のヘルプでは、会話中はマイクのコントロールでミュートでき、終了のコントロールで音声会話を終えられます。</p>
+<p>同じヘルプによると、音声モードはチャットの中で動くため、話せないときは文字で入力することもできます。<strong>文字だけでやり取りしたいなら、終了のボタンで音声会話を終えてから入力欄に打ちます</strong>。入力欄のマイクは録音を文字にするだけで、声の返事は返ってきません。</p>
+<h2 id="s9">OSの音声入力で代える</h2>
+<p>ChatGPTの側で直らないときの代わりの手が、入力欄にOSの音声入力で文字を入れる方法です。ChatGPTの文字起こしは使わず、OSが文字にしたものがそのまま入力欄に入ります。</p>
+<h3 id="s9-1">Windowsの音声入力</h3>
+<p>Microsoftの<a href="https://support.microsoft.com/ja-jp/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc">音声入力を使用して、PC 上でタイプをする代わりに話す</a>によると、テキストボックスにカーソルを置いて<strong>Windowsキー＋H</strong>を押すと聞き取りが始まります。インターネットへの接続と動くマイクが必要で、Azure Speechサービスのオンライン音声認識を使います。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-mic-not-working/cmn_10_voice_typing_sp.jpg" alt="Microsoftサポートの音声入力を使用して、PC上でタイプをする代わりに話すのページをスマホで開いた画面。インターネットに接続しマイクを動作させテキストボックスにカーソルを置く必要があるという段落と、ハードウェアキーボードでWindowsキーとHキーを押す手順に赤枠と番号が付いている" loading="lazy"><figcaption>①の条件をそろえ、②のWindowsキー＋Hで始める</figcaption></figure>
+
+<p>Microsoftのプライバシーのヘルプには、［デスクトップ アプリにマイクへのアクセスを許可する］をオフにすると、Windowsのディクテーションにも影響が出る場合があると書かれています。Windowsの音声入力まで反応しないなら、先にWindows 11の設定の節を見直してください。</p>
+<h3 id="s9-2">Macの音声入力</h3>
+<p>Appleの<a href="https://support.apple.com/ja-jp/guide/mac-help/mh40584/mac">Macでメッセージや書類を音声入力する</a>では、［システム設定］＞［キーボード］で［音声入力］をオンにし、マイクキーか音声入力のキーボードショートカットで始めます。同じページには<strong>音声入力できるテキストの長さに制限はなく、タイムアウトもない</strong>とあり、30秒間声が検出されないと自動で止まります。ChatGPTの音声入力で長い依頼が途中で失敗する人に向いた方法です。</p>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">ChatGPTの音声入力は無料で使えますか？</h3>
+<p>使えます。2026年6月26日の新しい文字起こしのモデルは、リリースノートで全プランが対象とされています。ログインしていないスマホのブラウザではマイクが見えなかったので（2026年10月15日に試した結果）、ログインするかアプリで使ってください。</p>
+<h3 id="s10-2">ChatGPTの音声入力はパソコンでも使えますか？</h3>
+<p>使えます。chatgpt.comの入力欄のマイクから録音でき、試した日はログインしていないパソコンの幅のChromeにもボタンがありました。Windows 11ならOSのマイクの許可、Chromeならサイトのマイクの許可の両方がオンになっている必要があります。</p>
+<h3 id="s10-3">ChatGPTの音声入力に時間の上限はありますか？</h3>
+<p>音声入力 - FAQとリリースノートには上限の記載がありません。2024年12月にはモバイルのアプリで2〜3分を超える録音が失敗したという利用者の投稿があるため、長い依頼は区切って録音するほうが失敗に強くなります。</p>
+<h3 id="s10-4">ChatGPTの音声入力の録音は保存されますか？</h3>
+<p>音声入力 - FAQによると、録音はそのチャットが履歴にある間は保持され、チャットを消すと30日以内に削除されます（セキュリティ上・法律上の理由で残す場合などを除く）。モデルの改善に音声の共有を選んでいる個人の利用者は、学習に使われることがあります。共有を止めたいときは設定のデータコントロールで［音声録音を含める］をオフにしてください。</p>
+<h3 id="s10-5">ChatGPTの音声入力にショートカットはありますか？</h3>
+<p>chatgpt.comやアプリの音声入力を始めるキーボードショートカットは、OpenAIのヘルプでは見つかりませんでした（2026年10月15日に確認）。キーで始めたいなら、WindowsはWindowsキー＋H、Macはマイクキーで使えるOSの音声入力が代わりになります。</p>
+<h3 id="s10-6">ChatGPTで音声入力ができないのはなぜですか？</h3>
+<p>OSとブラウザのマイクの許可・ログインとアプリのバージョン・使うマイクの選択・回線の順に確かめます。「マイクのアクセスを有効にしてください」と出るなら許可の問題で、録音中の表示が出るのに文字にならないなら許可より後ろの問題です。</p>
+<h3 id="s10-7">ChatGPTの音声入力が文字にならないのはなぜですか？</h3>
+<p>空の文字起こし、別のマイクの音を拾っている、回線の途切れの3つを疑います。OpenAIは2026年1月12日に空の文字起こしを減らす更新を出しているので、アプリを最新にしたうえで、Chromeやシステムの設定で使うマイクを1つに決めてから試し直してください。</p>
+<h3 id="s10-8">ChatGPTの音声入力と音声会話の違いは何ですか？</h3>
+<p>音声入力は録音を文字にして、送る前に直せる機能です。音声会話は声で話して声で返事を聞く機能で、ヘルプによると会話の文字起こしは逐語の記録ではなく、話した内容と完全には一致しないことがあります。</p>
+<h2 id="s11">出典</h2>
+<ul>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/12168547-voice-dictation-faq">音声入力 - FAQ</a>」（2026年10月15日取得）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT Release Notes</a>」（同。2026年1月12日のDictation Updates、6月26日のImproved dictation in ChatGPT、8月7日と8月14日のアプリの更新の項）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/20001274-chatgpt-voice">ChatGPT 音声モード</a>」（同）</li>
+<li>Microsoft サポート「<a href="https://support.microsoft.com/ja-jp/windows/privacy/windows-camera-microphone-and-privacy">Windows カメラ、マイク、プライバシー</a>」（同）</li>
+<li>Microsoft サポート「<a href="https://support.microsoft.com/ja-jp/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc">音声入力を使用して、PC 上でタイプをする代わりに話す</a>」（同）</li>
+<li>Apple サポート「<a href="https://support.apple.com/ja-jp/guide/mac-help/mchla1b1e1fe/mac">Macのマイクへのアクセスを制御する</a>」（同）</li>
+<li>Apple サポート「<a href="https://support.apple.com/ja-jp/guide/mac-help/mh40584/mac">Macでメッセージや書類を音声入力する</a>」（同）</li>
+<li>Google Chrome ヘルプ「<a href="https://support.google.com/chrome/answer/2693767?hl=ja">Chrome でカメラとマイクを使用する</a>」（同）</li>
+<li>OpenAI「<a href="https://status.openai.com/">ステータスページ</a>」（同）</li>
+<li>OpenAI Developer Community「<a href="https://community.openai.com/t/voice-recording-useless-over-2-and-a-half-minutes/1064914">Voice Recording Useless over 2 and a half minutes</a>」（2024年12月22日の投稿）</li>
+<li>reddit r/ChatGPT「<a href="https://www.reddit.com/r/ChatGPT/comments/1kox5mt/chatgpt_dictate_not_working_solved/">ChatGPT Dictate Not Working – Solved</a>」「<a href="https://www.reddit.com/r/ChatGPT/comments/1nysa6f/chatgpt_voice_input_issue/">ChatGPT Voice Input Issue</a>」（2025年の投稿）</li>
+<li>Yahoo!知恵袋「<a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13326370408">chatgptで音声入力をしようとすると…</a>」（2026年3月18日の質問）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-mode-cant-send/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードで送信できない"><defs><linearGradient id="ecg-55a6e73a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-55a6e73a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードで送信できない</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】Google AIモードで質問を送信できない原因を解説｜送信ボタン・追加質問</div>
+            </a>
+            <a href="/media/demolition-aio-companies/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="解体工事のAIO対策会社"><defs><linearGradient id="ecg-53f9738e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-53f9738e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="477.5" y="176.1" width="245.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">支援会社の比較</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">解体工事のAIO対策会社</text><line x1="189.6" y1="365.9" x2="1010.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】解体工事会社におすすめのAIO対策（AI検索対策）会社7選・選び方</div>
+            </a>
+            <a href="/media/dental-aio-companies/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="歯科医院のAIO対策会社"><defs><linearGradient id="ecg-1e8c9ed9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1e8c9ed9)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="477.5" y="176.1" width="245.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">支援会社の比較</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">歯科医院のAIO対策会社</text><line x1="189.6" y1="365.9" x2="1010.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】歯科医院におすすめのAIO対策（AI検索対策）会社7選・選び方</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'chatgpt-mic-not-working',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
