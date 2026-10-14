@@ -108,8 +108,6 @@ AI検索対策（AIO・LLMO・GEO）を独立したサービスとして公式�
 
 月額や年額で契約が続くSaaSでは、受注1件の価値が継続する期間の分だけ積み上がります。そのため名前が挙がる質問をむやみに増やすより、他社と比べられる場面で理由つきで挙がる状態をつくることを優先します。
 
-**SaaS企業の支援では取り組み3ヶ月でAIでの言及率が10%から45%に上がり、AI経由のコンバージョンは3.8倍になりました。** AI経由のコンバージョンは登録のときに何で知ったかを聞いて数えており、言及率だけでなく申し込みの側で効き目を確かめています。
-
 ### SaaS企業に合う理由
 
 - **検討の段階ごとに質問を組む。** 課題・カテゴリ・他社比較・要件・料金の質問を作り、検索の数（Ahrefsの月間検索数）と勝ちたい比較相手から順番を決めます
@@ -223,6 +221,6 @@ nitoでは製品を探す担当者が聞きそうな質問をChatGPT・Gemini・
 
 - 総務省「[令和7年通信利用動向調査の結果](https://www.soumu.go.jp/menu_news/s-news/01tsushin02_02000183.html)」（2026年5月29日公表、調査時点は2025年8月末）
 - 総務省「[ASP・SaaSの安全・信頼性に係る情報開示指針（ASP・SaaS編）第3版の公表](https://www.soumu.go.jp/menu_news/s-news/01cyber01_02000001_00149.html)」（2022年10月31日）
-- 中小企業庁「[デジタル化・AI導入補助金2026の概要](https://www.chusho.meti.go.jp/koukai/yosan/r8/digital_ai_summary.pdf)」（2026年4月）
+- 中小企業庁「[デジタル化・AI導入補助金2026の概要](https://www.chusho.meti.go.jp/koukai/yosan/r8/digital_ai_summary.pdf)」（2026年3月）
 - 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）
