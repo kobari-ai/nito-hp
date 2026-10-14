@@ -15,7 +15,7 @@ Microsoft 365 Copilotのライセンスは、Microsoft 365 管理センターの
 :::takeaways
 - 割り当ては**管理センターの［課金］＞［ライセンス］で［Microsoft Copilot］を選び、［ライセンスの割り当て］**。一度に追加できるのは20人またはグループまで
 - 割り当てられるのは**ライセンス管理者かユーザー管理者以上**。AI 管理者はライセンスを管理しない
-- グループで割り当てても、**入れ子のグループの下にいる人には届かない**。異動は新しいグループに先に入れてから元のグループを外す
+- グループで割り当てても、**入れ子のグループの下にいる人にはライセンスが付かない**。異動は新しいグループに先に入れてから元のグループを外す
 - 一部のアプリでは**表示まで最大24時間**。待っても出なければ、利用者のアプリで［ライセンスの更新］をしてから再起動する
 - 出ないときは**管理センター・利用者の端末・社内の回線**の順に見る。1人ずつ要件を調べるならCopilot ライセンス詳細診断
 :::
@@ -24,7 +24,7 @@ Microsoft 365 Copilotのライセンスは、Microsoft 365 管理センターの
 
 ## 割り当てる前にそろえるもの
 
-Copilotのライセンスは単体では使えず、土台になるMicrosoft 365などのライセンスに足すアドオンです。[Microsoft Copilot のライセンス オプション](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing)には前提のプランとしてMicrosoft 365 E3・E5やBusiness Standardなどが並び、Microsoft 365 E7だけは最初からCopilotを含みます。
+Copilotのライセンスは単体では使えず、土台になるMicrosoft 365などのライセンスに足すアドオンです。[Microsoft Copilot のライセンス オプション](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing)には前提のプランとしてMicrosoft 365 E3・E5やBusiness Standardなどが並び、Microsoft 365 E7には最初からCopilotが含まれます。
 
 [セットアップの手順](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-setup)は、**Copilotのライセンスより先に、利用者をテナントに追加してMicrosoft 365のライセンスを割り当てておく**順番です。割り当ての前に確かめることを、公式の記事ごとに並べると次のとおりです。
 
@@ -41,7 +41,7 @@ Copilotのライセンスは単体では使えず、土台になるMicrosoft 365
 
 ### 名前がMicrosoft Copilotに変わった
 
-[Microsoft Copilot の要件](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements)によると、Microsoft 365 Copilotは**Microsoft Copilot**に、Microsoft 365 Copilot ChatはMicrosoft Copilot Chatに名前が変わりました。製品の一覧で選ぶのも［Microsoft Copilot］です。
+[Microsoft Copilot の要件](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements)によると、Microsoft 365 Copilotは**Microsoft Copilot**に、Microsoft 365 Copilot ChatはMicrosoft Copilot Chatに名前が変わりました。セットアップの手順で製品の一覧から選ぶのも［Microsoft Copilot］です。
 
 ## 管理センターで割り当てる手順
 
@@ -81,11 +81,11 @@ Copilotのライセンスは単体では使えず、土台になるMicrosoft 365
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/copilot-license-assign/cla_04_learn_group_sp.jpg" alt="Microsoft Learnのグループベースのライセンスの制限事項と手順。ライセンスは一度に最大20グループに割り当てられる。再処理は一度に最大20人のユーザーまで。正常に割り当てられないユーザーの一覧は一度に999人ずつ表示される。続けてグループにライセンスを割り当てる7つの手順" loading="lazy"><figcaption>Microsoft Learn「グループにライセンスを割り当てるか、割り当て解除する」の制限事項（赤枠）と手順</figcaption></figure>
 
-グループで割り当てた人は、ライセンスのページの一覧には個人の名前ではなくグループ名で出ます。誰に届いているかは［チームとグループ］＞［アクティブなチームとグループ］でメンバーを開いて確かめます。
+グループで割り当てた人は、ライセンスのページの一覧には個人の名前ではなくグループ名で出ます。誰に付いているかは［チームとグループ］＞［アクティブなチームとグループ］でメンバーを開いて確かめます。
 
-### 入れ子のグループには届かない
+### 入れ子のグループには付かない
 
-グループベースのライセンスは、入れ子のグループ（グループの中に別のグループがある形）に対応していません。入れ子のグループに割り当てると、**ライセンスが付くのは第1レベルのグループに直接いる人だけ**です。部署のグループの中に課のグループを入れている組織では、課のメンバーに届きません。
+グループベースのライセンスは、入れ子のグループ（グループの中に別のグループがある形）に対応していません。入れ子のグループに割り当てると、**ライセンスが付くのは第1レベルのグループに直接いる人だけ**です。部署のグループの中に課のグループを入れている組織では、課のメンバーにはライセンスが付きません。
 
 ### 異動のときは足してから外す
 
@@ -160,7 +160,7 @@ Microsoftのトラブルシューティングの記事「[Copilot が見つか�
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/copilot-license-assign/cla_09_help_labels_sp.jpg" alt="Microsoftサポートの職場または学校アカウントでCopilotライセンスをチェックする方法。Microsoft 365にサインインしてホームページの一番下までスクロールすると、名前の下にCopilot Chat（基本）、M365 Copilot（基本）、M365 Copilot（プレミアム）のどれかのラベルが表示される。3つのラベルの見本の画像が並ぶ" loading="lazy"><figcaption>サポート記事のラベルの見本（名前はMicrosoftの例）</figcaption></figure>
 
-アドオンを割り当てた人は、プレミアムのラベルになるはずです。**社内の案内に、確かめる場所としてこのラベルを書いておくと、利用者が自分で状態を見られます**。3つの段でできることの違いは、[Copilotの使い方の記事](/media/copilot-guide/)にまとめています。
+サポート記事の説明では、アドオンのライセンスを持つ人のラベルはプレミアムです。**社内の案内に、確かめる場所としてこのラベルを書いておくと、利用者が自分で状態を見られます**。3つのラベルの状態でできることの違いは、[Copilotの使い方の記事](/media/copilot-guide/)にまとめています。
 
 ## 外すときと付け替えるとき
 
@@ -170,7 +170,7 @@ Microsoftのトラブルシューティングの記事「[Copilot が見つか�
 
 利用者が自分でセルフサービスで買ったサブスクリプションのライセンスは、管理者が割り当てたり外したりできません。管理するにはそのサブスクリプションを引き継ぎます。
 
-席を配ったあと、業務の一部をCopilotやほかのAIに任せる仕組みまで作るときの進め方は、[AIエージェント構築支援](/ai-agent/)のページにまとめています。
+ライセンスを割り当てたあと、業務の一部をCopilotやほかのAIに任せる仕組みまで作るときの進め方は、[AIエージェント構築支援](/ai-agent/)のページにまとめています。
 
 ## よくある質問
 
