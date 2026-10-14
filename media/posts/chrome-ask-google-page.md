@@ -90,7 +90,7 @@ Chromeのアドレスバーを押すと、候補の一番上に［このペー�
 |---|---|---|---|
 | SearchContentSharingSettings | ページやファイルの内容をAIモードとレンズに渡す入口とサイドパネル | 1 | Chrome 144以降 |
 | AIModeSettings | アドレスバーと新しいタブの検索ボックスのAIモード | 1 | Chrome 138以降 |
-| GenAiDefaultSettings | 個別に決めていない生成AIの機能（Gemini in Chrome・レンズ・AIモード）の既定 | 2 | Chrome 130以降 |
+| GenAiDefaultSettings | 個別に決めていない生成AIの機能（対象の一覧はポリシーの説明のリンク先）の既定 | 2 | Chrome 130以降 |
 | LensOverlaySettings | レンズのオーバーレイ | 1 | Chrome 147から非推奨 |
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/chrome-ask-google-page/05_policy_scs.jpg" alt="Chrome Enterpriseのポリシー一覧のSearchContentSharingSettingsの説明。赤い枠の1つ目に、1 = ユーザーはページやファイルのコンテンツを Google AI Mode と共有できません、コンテキストを共有するためのエントリ ポイントとサイドパネルは無効になるか非表示になります、とある。2つ目の赤い枠に、Google Search がユーザーのデフォルトの検索エンジンでない場合この機能は無効になっているため、このポリシーは無視されます、とある" loading="lazy"><figcaption>SearchContentSharingSettingsの説明（Chrome Enterprise）</figcaption></figure>
@@ -116,10 +116,6 @@ Chromeのアドレスバーを押すと、候補の一番上に［このペー�
 2026年5月19日の[Yahoo!知恵袋の質問](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13328211688)には、Androidで画面の下に出る「質問する」という表示を消したい、という相談があります。ベストアンサーはChromeの新しい表示だとして、flagsのOmnibox contextual suggestionsを無効にする方法を挙げていました。**Mac版のChrome 155のflagsにこの項目はありませんでしたが、Android版で残っているかは確かめられていません。**Android版のflagsはパソコン版と項目が違うことがあり、スマホの画面では試していないためです。Androidのヘルプにも、この表示を切る手順は見当たりませんでした。
 
 会社が管理するスマホなら、SearchContentSharingSettingsはAndroidとiPhoneのChrome 144以降にも対応しています。
-
-## AI検索での見え方は別の話
-
-Chromeの入口を止めても、AIモードやGeminiが答えの中で自社をどう紹介するかは変わりません。そちらは[AI検索対策](https://nito-0210.com/llmo/)として扱います。
 
 ## よくある質問
 
