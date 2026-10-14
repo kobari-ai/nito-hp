@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Chromeの「このページについてGoogleに質問する」を消す方法・flags以外の止め方 | nito Column</title>
+    <meta name="description" content="Chromeのアドレスバーに出る「このページについてGoogleに質問する」の止め方。広まったflagsの項目はChrome 155に無く、今使えるのは検索エンジンの変更とポリシー。AIモードのボタンとの違いも。">
+    <link rel="canonical" href="https://nito-0210.com/media/chrome-ask-google-page/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Chromeの「このページについてGoogleに質問する」を消す方法・flags以外の止め方">
+    <meta property="og:description" content="Chromeのアドレスバーに出る「このページについてGoogleに質問する」の止め方。広まったflagsの項目はChrome 155に無く、今使えるのは検索エンジンの変更とポリシー。AIモードのボタンとの違いも。">
+    <meta property="og:url" content="https://nito-0210.com/media/chrome-ask-google-page/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/chrome-ask-google-page.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/chrome-ask-google-page.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Chromeの「このページについてGoogleに質問する」を消す方法・flags以外の止め方", "description": "Chromeのアドレスバーに出る「このページについてGoogleに質問する」の止め方。広まったflagsの項目はChrome 155に無く、今使えるのは検索エンジンの変更とポリシー。AIモードのボタンとの違いも。", "datePublished": "2026-10-15", "dateModified": "2026-10-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/chrome-ask-google-page/"}, "articleSection": "AI活用", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Chromeの「このページについてGoogleに質問する」を消す方法・flags以外の止め方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChromeのGoogleに質問するの表示は消せますか？", "acceptedAnswer": {"@type": "Answer", "text": "設定画面に、この表示だけを消すスイッチは見当たりません。入口ごと止めるなら、既定の検索エンジンをGoogle以外にするか、管理者のポリシー（SearchContentSharingSettings）を使います。"}}, {"@type": "Question", "name": "Chromeのflagsで消す方法は今も使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年10月15日にMacのChrome 155で確かめたところ、Omnibox contextual suggestionsの項目はありませんでした。項目があっても効かなかったという報告も、2025年11月にChromeヘルプ コミュニティに出ていました。"}}, {"@type": "Question", "name": "ChromeのGoogleに質問するでページは送られますか？", "acceptedAnswer": {"@type": "Answer", "text": "レンズでページの内容を検索すると、ページのスクリーンショットとデータがGoogleに送られるとヘルプにあります。処理のための一時的な保存を除いて保存されず、学習にも使われないと書かれています。"}}, {"@type": "Question", "name": "Googleに質問するとGeminiに相談は同じですか？", "acceptedAnswer": {"@type": "Answer", "text": "別の機能です。前者はGoogleレンズで、続きの質問はAIモードに進みます。後者はGemini in Chromeで、右クリックの［Gemini の固定を解除］でボタンを消せます。"}}, {"@type": "Question", "name": "ChromeのAIモードのボタンは消せますか？", "acceptedAnswer": {"@type": "Answer", "text": "アドレスバーを右クリックして［AI モードを常に表示する］を外すと、［AI モード］と［タブなどを追加］が隠れる、というのがヘルプの説明です。"}}, {"@type": "Question", "name": "検索エンジンを変えてもGoogle検索できますか？", "acceptedAnswer": {"@type": "Answer", "text": "google.com を開けば今までどおり検索できます。変わるのはアドレスバーに打った言葉の検索先と、Googleが既定であることを前提にしたレンズやAIモードの入口です。"}}, {"@type": "Question", "name": "Chromeで質問するの項目が出ないことはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "あります。管理者がポリシーで止めている場合と、既定の検索エンジンがGoogle以外になっている場合です。chrome://policy を開くと、SearchContentSharingSettingsやGenAiDefaultSettingsが入っているかを確かめられます。"}}, {"@type": "Question", "name": "スマホのChromeでもGoogleに質問するを消せますか？", "acceptedAnswer": {"@type": "Answer", "text": "Androidのヘルプに、表示を切る手順は見当たりません。会社が管理するAndroidとiPhoneなら、SearchContentSharingSettings（Chrome 144以降）で止められます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Chromeの「この…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.15</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Chromeの「このページについてGoogleに質問する」を消す方法・flags以外の止め方</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chromeの「Googleに質問」を止める"><defs><linearGradient id="ecg-2e877637" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-2e877637)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="86.4" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Chromeの「Googl</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">eに質問」を止める</text><line x1="273.2" y1="378.0" x2="926.8" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">flagsが無い今の止め方</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Chromeのアドレスバーを押すと、候補の一番上に［このページについて Google に質問］が出ることがあります。正体はGoogleレンズで、選ぶと開いているページの内容をもとにサイドパネルで答えが返ってきます。</p>
+<p>2025年の夏から秋にかけて、消し方として chrome://flags の「Omnibox contextual suggestions」を無効にする手順が広まりました。ところが2026年10月15日にMacのChrome 155.0.8059.40でflagsを検索すると、この項目は見つかりません。</p>
+<p>この記事はChromeのヘルプと管理者向けのChrome Enterpriseのポリシーの説明をもとに、<strong>今のChromeで使える止め方を止まる範囲ごとに</strong>並べます。flagsと設定画面は実際に開いて確かめましたが、検索エンジンの変更とポリシーで表示が消えるところまでは試していません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>正体は<strong>Googleレンズの入口</strong>。選ぶとページのスクリーンショットとデータがGoogleに送られ、続きの質問はAIモードに進む</li>
+<li>2025年に広まった<strong>flagsの「Omnibox contextual suggestions」はChrome 155には無い</strong>（2026年10月15日にMacで確認）</li>
+<li>Chromeの設定画面には、この表示だけを消すスイッチが見当たらない</li>
+<li>入口ごと止める条件は<strong>既定の検索エンジンをGoogle以外にすること</strong>。ヘルプとポリシーの説明は、Googleが既定であることを前提にしている</li>
+<li>会社のパソコンは管理者が**SearchContentSharingSettings（Chrome 144以降）**で止められる。AIモードのボタンは右クリックで隠せる</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>このページについてGoogleに質問するの正体</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Chromeに増えた3つのAIの入口</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>flagsで消す方法が使えなくなった</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>今のChromeでの止め方</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>① 既定の検索エンジンを変える</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>② ポリシーで止める</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>③ AIモードのボタンだけ隠す</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>AndroidとiPhoneのChrome</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">このページについてGoogleに質問するの正体</h2>
+<p>アドレスバーの候補に見慣れない1行が増えたなら、それがこの項目です。Chromeヘルプの「<a href="https://support.google.com/chrome/answer/15086890?hl=ja">Google レンズ in Chrome を使用して検索する</a>」は、アドレスバーから選ぶ手順の中でこの項目を案内しています。**ヒントには特定のページではアドレスバーに既定で表示されることがある、と書かれています。**頼んでいないのに出てくるのはこのためです。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chrome-ask-google-page/02_help_lens.jpg" alt="Chromeヘルプ「Google レンズ in Chrome を使用して検索する」のアドレスバーから検索するの節。赤い枠に、アドレスバーでこのページについて Google に質問を選択します、質問にタブやファイルを追加するには AI モードを選択します、とある。もう1つの赤い枠はヒントで、特定のページでアドレスバーにこのページについて Google に質問がデフォルトで表示されることがあります、と書かれている" loading="lazy"><figcaption>アドレスバーの項目はGoogleレンズの入口（Chromeヘルプ）</figcaption></figure>
+
+<p>選ぶとGoogleレンズがページの内容をもとに答えを返し、結果はサイドパネルに出ます。続けて聞きたいことはサイドパネルの下の［もっと聞く］に入力し、そこからAIモードに切り替わります。</p>
+<p>ページのデータの扱いは同じヘルプの最後の節です。**レンズでページの内容を検索すると、ページのスクリーンショットとデータがGoogleに送られます。**処理のための一時的な保存を除いてGoogleはデータを保存せず、ページも画像も学習には使わない、とヘルプは説明しています。ここで書かれているのはレンズを使ったときの話で、項目が候補に表示されているだけの状態については記載がありません。</p>
+<h2 id="s2">Chromeに増えた3つのAIの入口</h2>
+<p>いまのChromeにはAIを呼ぶ入口が見た目の違う形で3つあります。名前が似ているため、別の入口の消し方を読んでしまわないように表で分けておきました。</p>
+<figure class="post-figure"><img src="/media/images/chrome-ask-google-page/01_fig_overview.png" alt="ChromeのAIの入口を描いたイラスト（実際の画面ではない）。ブラウザのアドレスバーの下に候補の一覧が開き、周りにGoogleレンズ、AIモード、Geminiの3つの吹き出しが並んでいる" loading="lazy"><figcaption>アドレスバーまわりにはレンズ・AIモード・Geminiの入口がある（イラスト）</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>入口</th>
+<th>出る場所</th>
+<th>中身</th>
+<th>消し方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>［このページについて Google に質問］</td>
+<td>アドレスバーの候補</td>
+<td>Googleレンズ（続きはAIモード）</td>
+<td>この記事の方法</td>
+</tr>
+<tr>
+<td>［AI モード］</td>
+<td>アドレスバーの右・新しいタブの検索ボックス</td>
+<td>Google検索のAIモード</td>
+<td>アドレスバーを右クリックして［AI モードを常に表示する］を外す</td>
+</tr>
+<tr>
+<td>［Gemini に相談］</td>
+<td>ブラウザの上部のボタン</td>
+<td>Gemini in Chrome</td>
+<td>右クリックで［Gemini の固定を解除］</td>
+</tr>
+</tbody>
+</table>
+<p>［Gemini に相談］は別の仕組みで、消し方は<a href="/media/chrome-gemini-remove/">Chromeの「Geminiに相談」を消す方法</a>にまとめています。<strong>レンズとAIモードはGoogle検索の機能、Gemini in ChromeはGeminiの機能</strong>で、管理者向けのポリシーも別々に用意されています。</p>
+<h2 id="s3">flagsで消す方法が使えなくなった</h2>
+<p>日本語で読める手順の多くは、2025年8月から11月に書かれたものです。<a href="https://qiita.com/rana_kualu/items/83d1272a2f92422f9304">Qiitaの記事</a>（2025年8月24日）と<a href="https://note.com/gamecentergx/n/n552415151d7c">noteの記事</a>（2025年11月19日）は、chrome://flags で「Omnibox contextual suggestions」を探して［Disabled］にし、再起動する手順です。<a href="https://www.724685.com/blog/2025/09/01111545.html">なにしろパソコン</a>も2025年9月1日に同じ方法で消えたことを確かめたうえで、flagsの設定はいつ使えなくなるか分からないと書いていました。</p>
+<p>2025年11月12日に<a href="https://support.google.com/chrome/thread/387019511?hl=ja">Chromeヘルプ コミュニティ</a>へ投稿された質問では、Windowsの安定版で「Omnibox contextual suggestions」も「Omnibox contextual search on focus suggestions」も効かなかったと報告されています。回答したプロダクト エキスパートは、Chromeの仕様で削除できないと答えました。</p>
+<p>2026年10月15日に新しいプロファイルでMacのChrome 155.0.8059.40を開き、chrome://flags の検索欄に Omnibox contextual suggestions と入れた結果が次の画面です。</p>
+<figure class="post-figure"><img src="/media/images/chrome-ask-google-page/03_flags_nomatch.jpg" alt="Chrome 155.0.8059.40のchrome://flagsの画面。検索欄にOmnibox contextual suggestionsと入力してあり、使用可能のタブの下に赤い枠でNo matching experimentsと表示されている" loading="lazy"><figcaption>Chrome 155のflagsでは項目が見つからない（2026年10月15日）</figcaption></figure>
+
+<p>**このMacで使えない項目が並ぶ［利用不可］のタブまで含めても、637ある項目の中に omnibox-contextual-suggestions はありませんでした。**flagsは試験運用の機能なので、予告なく消えることがあります。</p>
+<p>名前の近い「WebUI Omnibox Ask G About This Page」という項目は残っています。この項目を選んだときの行き先を別の画面に切り替えるという説明で、表示を消すものではありません。</p>
+<h2 id="s4">今のChromeでの止め方</h2>
+<p>設定画面も確かめました。Chrome 155の［AI イノベーション］［検索エンジン］［サイトの設定］を開いた範囲では、この項目だけを消すスイッチは見当たりません。海外の解説には［サイトの設定］の「ページのコンテンツ」をオフにする方法を挙げるものがありますが、パソコン版の［サイトの設定］の一覧にその名前はありませんでした。</p>
+<p>そのため止め方は、何を止めたいかで選ぶことになります。表示が出るだけで困っていないなら、設定を変えない手もあります。項目は候補の1行にすぎず、選ばなければレンズは起動しません。</p>
+<figure class="post-figure"><img src="/media/images/chrome-ask-google-page/07_fig_choose.png" alt="このページについてGoogleに質問するの止め方を4つに分けた図。表示が出るだけで困っていないなら設定は変えない。AIモードのボタンも気になるならアドレスバーの右クリックでAIモードを常に表示するを外す。自分のパソコンで入口ごと止めたいなら既定の検索エンジンをGoogle以外にする。会社のパソコンをまとめて止めたいなら管理者がSearchContentSharingSettingsを1にする。アドレスバーのAIモードはAIModeSettings" loading="lazy"></figure>
+
+<h3 id="s4-1">① 既定の検索エンジンを変える</h3>
+<p>レンズのヘルプは、使う前提として「Google を既定の検索エンジンとして設定します」と最初に書いています。管理者向けのポリシーの説明はもっとはっきりしていて、<strong>Google検索が既定の検索エンジンでない場合、ページの内容をAIモードやレンズと共有する機能は無効になる</strong>と書かれていました。</p>
+<ol>
+<li>Chromeの右上の︙（その他）から［設定］を開く</li>
+<li>左のメニューの［検索エンジン］を選ぶ</li>
+<li>検索エンジンの欄の［変更］を押し、Google以外を選ぶ</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/chrome-ask-google-page/04_set_search.jpg" alt="Chromeの設定の検索エンジンの画面。検索エンジンの欄にGoogleと表示され、右端の変更ボタンが赤い枠と番号1で示されている" loading="lazy"><figcaption>［設定］の［検索エンジン］で［変更］を押す</figcaption></figure>
+
+<p>代わりに、アドレスバーに打った言葉の検索先はGoogle以外の検索エンジンになります。Googleで調べたいときは、google.com を開けば今までどおりです。<strong>アドレスバーのAIモードもGoogleが既定であることが条件</strong>なので、こちらも一緒に使えなくなります。</p>
+<p>画面から項目が消えるところまでは試していません。ヘルプとポリシーの説明から言えるのは、Googleが既定でなければこの機能が動かない、というところまでです。</p>
+<h3 id="s4-2">② ポリシーで止める</h3>
+<p>会社のパソコンなら、管理者がChromeのポリシーで止められます。<a href="https://chromeenterprise.google/policies/#SearchContentSharingSettings">Chrome Enterpriseのポリシー一覧</a>で、この入口にかかわるのは次の4つです。</p>
+<table>
+<thead>
+<tr>
+<th>ポリシー</th>
+<th>止める対象</th>
+<th>止める値</th>
+<th>対応する版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SearchContentSharingSettings</td>
+<td>ページやファイルの内容をAIモードとレンズに渡す入口とサイドパネル</td>
+<td>1</td>
+<td>Chrome 144以降</td>
+</tr>
+<tr>
+<td>AIModeSettings</td>
+<td>アドレスバーと新しいタブの検索ボックスのAIモード</td>
+<td>1</td>
+<td>Chrome 138以降</td>
+</tr>
+<tr>
+<td>GenAiDefaultSettings</td>
+<td>個別に決めていない生成AIの機能（対象の一覧はポリシーの説明のリンク先）の既定</td>
+<td>2</td>
+<td>Chrome 130以降</td>
+</tr>
+<tr>
+<td>LensOverlaySettings</td>
+<td>レンズのオーバーレイ</td>
+<td>1</td>
+<td>Chrome 147から非推奨</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chrome-ask-google-page/05_policy_scs.jpg" alt="Chrome Enterpriseのポリシー一覧のSearchContentSharingSettingsの説明。赤い枠の1つ目に、1 = ユーザーはページやファイルのコンテンツを Google AI Mode と共有できません、コンテキストを共有するためのエントリ ポイントとサイドパネルは無効になるか非表示になります、とある。2つ目の赤い枠に、Google Search がユーザーのデフォルトの検索エンジンでない場合この機能は無効になっているため、このポリシーは無視されます、とある" loading="lazy"><figcaption>SearchContentSharingSettingsの説明（Chrome Enterprise）</figcaption></figure>
+
+<p>**SearchContentSharingSettingsを1にすると、ページの内容を共有する入口とサイドパネルは無効になるか、非表示になります。**LensOverlaySettingsの説明には、開いているページの内容について質問する機能が含まれています。そのLensOverlaySettingsはChrome 147から非推奨になり、代わりにSearchContentSharingSettingsを使うよう案内されています。AIModeSettingsとは別に動き、Gemini in Chromeには影響しないことも説明にありました。</p>
+<p>自分のパソコンにも同じ設定は入れられます。Windowsはレジストリの Software\Policies\Google\Chrome に SearchContentSharingSettings をREG_DWORDの1で作り、Macは構成プロファイルで同じ名前の設定に1を入れます。<a href="https://www.lifehacker.jp/article/2601script-removes-ai-features-from-chrome-edge-firefox/">ライフハッカーが2026年1月に紹介した</a>オープンソースのスクリプト「JustTheBrowser」も、このポリシーの仕組みを使ってブラウザのAI機能をまとめて止めるものです。</p>
+<p>入れたあとは chrome://policy を開くと、効いているポリシーを一覧で確かめられます。ポリシーが入ったChromeは、設定画面に「お使いのブラウザは組織によって管理されています」と出るようになります。この方法も手元では試していません。</p>
+<h3 id="s4-3">③ AIモードのボタンだけ隠す</h3>
+<p>アドレスバーの右にあるAIモードのボタンは、右クリックで隠せます。Chromeヘルプの「<a href="https://support.google.com/chrome/answer/16704170?hl=ja">Chrome で AI モードを使用する</a>」には、<strong>アドレスバーを右クリックして［AI モードを常に表示する］の選択を外すと、［AI モード］と［タブなどを追加］が非表示になる</strong>とあります。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/chrome-ask-google-page/06_help_aimode.jpg" alt="Chromeヘルプ「Chrome で AI モードを使用する」のアドレスバーから操作する場合の節。手順のあとのヒントに赤い枠があり、アドレスバーの AI モードとタブなどを追加を非表示にするには、アドレスバーを右クリックして AI モードを常に表示するの選択を解除します、と書かれている" loading="lazy"><figcaption>AIモードのボタンは右クリックで隠せる（Chromeヘルプ）</figcaption></figure>
+
+<p>ヘルプがこの操作で隠れると書いているのは、［AI モード］と［タブなどを追加］の2つです。［このページについて Google に質問］も一緒に消えるという記載はありません。</p>
+<h2 id="s5">AndroidとiPhoneのChrome</h2>
+<p>スマホのChromeにも、開いているページについてAIに聞く入口があります。Androidのヘルプ「Chrome で AI モードを使用する」は、アドレスバーの［AI モード］から質問し、メニューの［現在のタブを追加］で開いているタブについて聞く手順を案内しています。iPhone版の<a href="https://support.google.com/chrome/answer/15086890?hl=en&amp;co=GENIE.Platform%3DiOS">レンズのヘルプ</a>（英語版）は、アドレスバーの左のGoogleレンズのアイコンからページを検索する手順です。</p>
+<p>2026年5月19日の<a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13328211688">Yahoo!知恵袋の質問</a>には、Androidで画面の下に出る「質問する」という表示を消したい、という相談があります。ベストアンサーはChromeの新しい表示だとして、flagsのOmnibox contextual suggestionsを無効にする方法を挙げていました。**Mac版のChrome 155のflagsにこの項目はありませんでしたが、Android版で残っているかは確かめられていません。**Android版のflagsはパソコン版と項目が違うことがあり、スマホの画面では試していないためです。Androidのヘルプにも、この表示を切る手順は見当たりませんでした。</p>
+<p>会社が管理するスマホなら、SearchContentSharingSettingsはAndroidとiPhoneのChrome 144以降にも対応しています。</p>
+<h2 id="s6">よくある質問</h2>
+<h3 id="s6-1">ChromeのGoogleに質問するの表示は消せますか？</h3>
+<p>設定画面に、この表示だけを消すスイッチは見当たりません。入口ごと止めるなら、既定の検索エンジンをGoogle以外にするか、管理者のポリシー（SearchContentSharingSettings）を使います。</p>
+<h3 id="s6-2">Chromeのflagsで消す方法は今も使えますか？</h3>
+<p>2026年10月15日にMacのChrome 155で確かめたところ、Omnibox contextual suggestionsの項目はありませんでした。項目があっても効かなかったという報告も、2025年11月にChromeヘルプ コミュニティに出ていました。</p>
+<h3 id="s6-3">ChromeのGoogleに質問するでページは送られますか？</h3>
+<p>レンズでページの内容を検索すると、ページのスクリーンショットとデータがGoogleに送られるとヘルプにあります。処理のための一時的な保存を除いて保存されず、学習にも使われないと書かれています。</p>
+<h3 id="s6-4">Googleに質問するとGeminiに相談は同じですか？</h3>
+<p>別の機能です。前者はGoogleレンズで、続きの質問はAIモードに進みます。後者はGemini in Chromeで、右クリックの［Gemini の固定を解除］でボタンを消せます。</p>
+<h3 id="s6-5">ChromeのAIモードのボタンは消せますか？</h3>
+<p>アドレスバーを右クリックして［AI モードを常に表示する］を外すと、［AI モード］と［タブなどを追加］が隠れる、というのがヘルプの説明です。</p>
+<h3 id="s6-6">検索エンジンを変えてもGoogle検索できますか？</h3>
+<p>google.com を開けば今までどおり検索できます。変わるのはアドレスバーに打った言葉の検索先と、Googleが既定であることを前提にしたレンズやAIモードの入口です。</p>
+<h3 id="s6-7">Chromeで質問するの項目が出ないことはありますか？</h3>
+<p>あります。管理者がポリシーで止めている場合と、既定の検索エンジンがGoogle以外になっている場合です。chrome://policy を開くと、SearchContentSharingSettingsやGenAiDefaultSettingsが入っているかを確かめられます。</p>
+<h3 id="s6-8">スマホのChromeでもGoogleに質問するを消せますか？</h3>
+<p>Androidのヘルプに、表示を切る手順は見当たりません。会社が管理するAndroidとiPhoneなら、SearchContentSharingSettings（Chrome 144以降）で止められます。</p>
+<h2 id="s7">出典</h2>
+<p>本文の手順と条件は2026年10月15日に取得した次のページで確認しています。flagsと設定画面はMacのChrome 155.0.8059.40で開いて確かめました。</p>
+<ul>
+<li><a href="https://support.google.com/chrome/answer/15086890?hl=ja">Google レンズ in Chrome を使用して検索する</a>（Chrome ヘルプ。アドレスバーの［このページについて Google に質問］とページのデータの処理）</li>
+<li><a href="https://support.google.com/chrome/answer/15086890?hl=en&amp;co=GENIE.Platform%3DiOS">Search with Google Lens in Chrome</a>（Chrome Help、英語版。iPhoneの手順）</li>
+<li><a href="https://support.google.com/chrome/answer/16704170?hl=ja">Chrome で AI モードを使用する</a>（Chrome ヘルプ。AIモードのボタンの隠し方とAndroidの手順）</li>
+<li><a href="https://chromeenterprise.google/policies/#SearchContentSharingSettings">SearchContentSharingSettings</a>・<a href="https://chromeenterprise.google/policies/#AIModeSettings">AIModeSettings</a>・<a href="https://chromeenterprise.google/policies/#GenAiDefaultSettings">GenAiDefaultSettings</a>・<a href="https://chromeenterprise.google/policies/#LensOverlaySettings">LensOverlaySettings</a>（Chrome Enterprise のポリシー一覧）</li>
+<li><a href="https://support.google.com/chrome/thread/387019511?hl=ja">『Googleで調べる』『このページについてGoogleに質問する』を消す方法</a>（Chrome ヘルプ コミュニティ、2025年11月12日）</li>
+<li><a href="https://qiita.com/rana_kualu/items/83d1272a2f92422f9304">【Chrome】『このページについてGoogleに質問する』を削除する</a>（Qiita、2025年8月24日）</li>
+<li><a href="https://note.com/gamecentergx/n/n552415151d7c">「このページについてGoogleに質問する」消す方法（無効化・削除）</a>（note、2025年11月19日）</li>
+<li><a href="https://www.724685.com/blog/2025/09/01111545.html">Chrome で「このページについて Google に質問する」表示</a>（なにしろパソコン、2025年9月1日）</li>
+<li><a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13328211688">下に出てくる「質問する」という表示を消したいです</a>（Yahoo!知恵袋、2026年5月19日）</li>
+<li><a href="https://www.lifehacker.jp/article/2601script-removes-ai-features-from-chrome-edge-firefox/">「ChromeのAI機能」すら消える。ブラウザのお節介な通知とAIを一掃してみた</a>（ライフハッカー・ジャパン、2026年1月29日）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/copilot-license-assign/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilotのライセンスの割り当て"><defs><linearGradient id="ecg-e3944981" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e3944981)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="125.2" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilotのライセ</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ンスの割り当て</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】Copilotのライセンスを割り当てる方法｜グループ・反映時間・使えないとき</div>
+            </a>
+            <a href="/media/notebooklm-workspace-admin/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WorkspaceでNotebookLMを有効に"><defs><linearGradient id="ecg-4473172d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4473172d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">WorkspaceでNot</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ebookLMを有効に</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】WorkspaceでNotebookLMを有効にする方法・管理コンソールの場所と使えない原因</div>
+            </a>
+            <a href="/media/chatgpt-stops-midway/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTが途中で止まるとき"><defs><linearGradient id="ecg-4d85c8f0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4d85c8f0)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="125.2" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTが途中</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">で止まるとき</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.13</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTが途中で止まる原因と続きを出す方法｜長文・続けるボタン・考え中</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'chrome-ask-google-page',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
