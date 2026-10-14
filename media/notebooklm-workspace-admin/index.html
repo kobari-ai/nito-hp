@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】WorkspaceでNotebookLMを有効にする方法・管理コンソールの場所と使えない原因 | nito Column</title>
+    <meta name="description" content="Google WorkspaceでNotebookLM（Gemini Notebook）を有効にする手順を管理者ヘルプで解説。設定の今の場所、部署ごとの許可、エディション別の上限、使えないときの確認、組織外との共有と監査ログまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/notebooklm-workspace-admin/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】WorkspaceでNotebookLMを有効にする方法・管理コンソールの場所と使えない原因">
+    <meta property="og:description" content="Google WorkspaceでNotebookLM（Gemini Notebook）を有効にする手順を管理者ヘルプで解説。設定の今の場所、部署ごとの許可、エディション別の上限、使えないときの確認、組織外との共有と監査ログまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/notebooklm-workspace-admin/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/notebooklm-workspace-admin.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/notebooklm-workspace-admin.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】WorkspaceでNotebookLMを有効にする方法・管理コンソールの場所と使えない原因", "description": "Google WorkspaceでNotebookLM（Gemini Notebook）を有効にする手順を管理者ヘルプで解説。設定の今の場所、部署ごとの許可、エディション別の上限、使えないときの確認、組織外との共有と監査ログまで。", "datePublished": "2026-10-15", "dateModified": "2026-10-15", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/notebooklm-workspace-admin/"}, "articleSection": "AI活用", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】WorkspaceでNotebookLMを有効にする方法・管理コンソールの場所と使えない原因"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "NotebookLMはWorkspaceで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。Business StarterからEnterprise Plusまでの多くのエディションにコアサービスとして含まれ、Business Baseなどでは追加サービスの扱いです。今の名前はGemini Notebookです。"}}, {"@type": "Question", "name": "NotebookLMを管理コンソールで有効にするには？", "acceptedAnswer": {"@type": "Answer", "text": "［生成AI］［Gemini Notebook］［サービスのステータス］で［オン（すべてのユーザー）］を選び、［保存］を押します。Geminiの「設定」の管理者権限が要ります。"}}, {"@type": "Question", "name": "NotebookLMを一部の社員だけに使わせられますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。左側で組織部門を選んでオンにするか、部署をまたぐならアクセスグループを使います。会社全体はオフのままでも構いません。"}}, {"@type": "Question", "name": "NotebookLMで社外と共有できないのは？", "acceptedAnswer": {"@type": "Answer", "text": "［組織名の外部との共有］がオフになっていると、組織の外の人とは共有できません。許可リストに相手のドメインを入れるか、オンに変えると共有できます。"}}, {"@type": "Question", "name": "NotebookLMの入力は学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "フィードバックを送らない限り学習には使われません。Business Starter以上のコアサービスでは、人のレビュアーが内容を見ることもないとヘルプに書かれています。"}}, {"@type": "Question", "name": "管理者はNotebookLMの利用状況を確認できますか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年9月3日から順次、［レポート］［監査と調査］［Gemini Notebookのログイベント］で操作の記録を検索できるようになりました。監査と調査の管理者権限が要ります。"}}, {"@type": "Question", "name": "WorkspaceのNotebookLMの上限は？", "acceptedAnswer": {"@type": "Answer", "text": "Business Starterはノートブック100件・1冊にソース50件・チャット1日50回です。Business StandardとBusiness Plusは500件・300件・1日500回に増えます。"}}, {"@type": "Question", "name": "NotebookLM Enterpriseとの違いは？", "acceptedAnswer": {"@type": "Answer", "text": "WorkspaceのGemini Notebookは管理コンソールで管理し、EnterpriseはGoogle Cloudのプロジェクトで管理します。Enterpriseは外部のIdPでのログインやWord・Excelのファイルのソースにも対応しています。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Workspaceで…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.15</span>
+        </div>
+        <h1 class="post-title">【2026年10月】WorkspaceでNotebookLMを有効にする方法・管理コンソールの場所と使えない原因</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WorkspaceでNotebookLMを有効に"><defs><linearGradient id="ecg-a926db08" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a926db08)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="86.4" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">WorkspaceでNot</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ebookLMを有効に</text><line x1="288.4" y1="378.0" x2="911.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">管理コンソール・使えない原因・共有</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>NotebookLMは2026年7月16日から順次Gemini Notebookへ名前が変わり、Google Workspaceの管理コンソールでも［生成AI］の下の［Gemini Notebook］で設定する形になりました。Googleの告知「<a href="https://workspaceupdates.googleblog.com/2026/07/notebooklm-now-gemini-notebook.html">NotebookLM is now Gemini Notebook</a>」によると、改名で管理者がやることはなく、共有済みのノートブックとリンクは自動で転送されます。</p>
+<p>困るのは改名より前に書かれた解説の手順をなぞったときです。この記事は2026年10月15日に取得した管理者ヘルプをもとに、Gemini Notebookをオンにする場所と手順・部署ごとの分け方・エディションで変わる上限・オンにしても使えないときの確かめ方・組織外との共有・監査ログを説明します。管理コンソールにはログインしていないため、手順はヘルプの記述とヘルプの画面で示します。</p>
+<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_00_overview.jpg" alt="Gemini Notebookを使えるまでと題した図。エディション、サービスのステータス、共有設定の3つの確認が順に並び、最後に社員が使える状態になる流れ" loading="lazy"><figcaption>有効にする前後に見る3つの設定</figcaption></figure>
+
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>設定の場所は**［生成AI］［Gemini Notebook］［サービスのステータス］**。開くにはGeminiの「設定」の管理者権限が要る</li>
+<li>組織部門ごとにオンとオフを分けられ、<strong>部署をまたぐならアクセスグループ</strong>を使う</li>
+<li>上限はエディションで6段階に分かれ、Business Starterは<strong>ノートブック100件・1冊にソース50件・チャット1日50回</strong></li>
+<li>組織外との共有は<strong>オフ・許可したドメインだけ・オン</strong>の3択で、一般公開は別のスイッチ</li>
+<li>2026年9月3日から順次<strong>Gemini Notebookのログイベント</strong>を管理コンソールで検索できる。ノートブックの中身はデータリージョンの対象外</li>
+</ul></div></div>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>NotebookLMの設定がある場所</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Gemini Notebookをオンにする手順</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>一部の部署だけで使う</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>エディションで変わる上限と規約</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>オンにしたのに使えないとき</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>組織外との共有の設定</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>データの扱いと監査ログ</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>Gemini Notebook Enterpriseとの違い</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>社内で使い始める前に決めること</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">NotebookLMの設定がある場所</h2>
+<p>管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/turn-gemini-notebook-on-or-off-for-users?hl=ja">ユーザーに対して Gemini Notebook を有効または無効にする</a>」の冒頭には、NotebookLMはGemini Notebookに名称変更されると書かれています。ヘルプの手順にもNotebookLMという名前の項目は無く、<strong>オンとオフも共有の設定も［Gemini Notebook］の画面で行います</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>管理コンソールの場所</th>
+<th>必要な管理者権限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>使える人をオンまたはオフにする</td>
+<td>［生成AI］［Gemini Notebook］［サービスのステータス］</td>
+<td>Geminiの「設定」</td>
+</tr>
+<tr>
+<td>組織外との共有を決める</td>
+<td>［生成AI］［Gemini Notebook］の［組織名の外部との共有］</td>
+<td>Geminiの「設定」</td>
+</tr>
+<tr>
+<td>利用の記録を見る</td>
+<td>［レポート］［監査と調査］［Gemini Notebookのログイベント］</td>
+<td>監査と調査</td>
+</tr>
+</tbody>
+</table>
+<p>GmailやドキュメントのGemini、gemini.google.comのGeminiアプリは別のサービスとして扱われ、設定の画面も別です。そちらを止めたり許可したりする手順は<a href="/media/google-workspace-gemini-admin/">WorkspaceのGeminiを無効化する方法</a>で説明しています。</p>
+<h2 id="s2">Gemini Notebookをオンにする手順</h2>
+<p>手順には全員を一度に切り替える方法と、組織部門ごとに切り替える方法の2通りがあります。どちらも最後に［保存］を押すまで反映されません。</p>
+<ol>
+<li><a href="https://admin.google.com/">Google管理コンソール</a>のメニューから［生成AI］［Gemini Notebook］に進む</li>
+<li>［サービスのステータス］を押す</li>
+<li>全員に使わせるなら［オン（すべてのユーザー）］、止めるなら［オフ（すべてのユーザー）］を選ぶ</li>
+<li>一部だけにするなら、左側で組織部門を選んでから［オン］か［オフ］を選ぶ</li>
+<li>［保存］を押す</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_01_onoff.jpg" alt="管理者ヘルプのGemini Notebookをオンまたはオフにする節。管理コンソールで生成AIからGemini Notebookに移動し、Geminiの設定の管理者権限が要ること、サービスのステータスを押してオン（すべてのユーザー）かオフ（すべてのユーザー）を選んで保存する手順が書かれ、サービスのステータスとオンとオフの行が赤枠" loading="lazy"><figcaption>管理者ヘルプの手順（2026年10月15日）。押す2か所に赤枠</figcaption></figure>
+
+<p>オンとオフのページには、反映までの時間は書かれていません。同じ［Gemini Notebook］の共有設定のページには<strong>変更の反映に最長24時間ほど</strong>とあるため、保存した直後に社員が使えなくても、翌日まで待ってから確かめるほうが確実です。</p>
+<h3 id="s2-1">一部の部署だけで使う</h3>
+<p>組織部門を選んで切り替えた画面で、［サービスのステータス］が［継承］になっていれば親の組織と同じ設定です。親の設定が後で変わっても今の設定を保ちたいなら［オーバーライド］を押し、親と同じに戻すなら［継承］を押します。</p>
+<p>部署をまたいで試す人を集めたいときは、ヘルプは<strong>アクセスグループ</strong>を使う方法を案内しています。会社全体はオフのまま、試験導入のグループだけオンにする使い方です。組織部門とグループの分け方は、<a href="/media/google-workspace-gemini-admin/">WorkspaceのGeminiの記事の組織部門の節</a>と同じ考え方で組めます。</p>
+<h2 id="s3">エディションで変わる上限と規約</h2>
+<p>**使える機能と上限はWorkspaceのエディションで決まります。**ヘルプはエディションを6段階に分けていて、BusinessやEnterpriseの多くはGemini Notebookがコアサービスとして含まれます。</p>
+<table>
+<thead>
+<tr>
+<th>段階</th>
+<th>主なエディション</th>
+<th>規約</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>標準</td>
+<td>Business Base・Essentials Starter・Workspace Individualなど（追加サービス）</td>
+<td>Google利用規約</td>
+</tr>
+<tr>
+<td>標準（エンタープライズ向けの保護）</td>
+<td>Business Starter・Enterprise Starter・Frontline・Nonprofitsなど</td>
+<td>Google Cloud利用規約</td>
+</tr>
+<tr>
+<td>より広範</td>
+<td>Education Plus・Teaching and Learningアドオン</td>
+<td>Workspace for Education利用規約</td>
+</tr>
+<tr>
+<td>高レベル</td>
+<td>Business Standard・Business Plus・Enterprise Standard・Enterprise Plus</td>
+<td>Google Cloud利用規約</td>
+</tr>
+<tr>
+<td>拡張</td>
+<td>AI Expanded Accessアドオン</td>
+<td>Google Cloud利用規約</td>
+</tr>
+<tr>
+<td>最高</td>
+<td>AI Ultra Accessアドオン</td>
+<td>Google Cloud利用規約</td>
+</tr>
+</tbody>
+</table>
+<p>違いが大きいのはデータの扱いです。追加サービスとして使う段階では、フィードバックを送らない限り学習には使われないものの、Googleの利用規約が適用されます。2段目より上は<strong>アップロードしたファイル・チャット・回答を人のレビュアーが見ることも、モデルの改善に使うこともない</strong>と書かれています。</p>
+<p>上限は5列の表で示されていて、標準の2段は同じ数字です。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>標準</th>
+<th>より広範</th>
+<th>高レベル</th>
+<th>拡張</th>
+<th>最高</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ノートブック</td>
+<td>100件</td>
+<td>200件</td>
+<td>500件</td>
+<td>500件</td>
+<td>500件</td>
+</tr>
+<tr>
+<td>1冊のソース</td>
+<td>50件</td>
+<td>100件</td>
+<td>300件</td>
+<td>400件</td>
+<td>600件</td>
+</tr>
+<tr>
+<td>チャット</td>
+<td>1日50回</td>
+<td>1日200回</td>
+<td>1日500回</td>
+<td>1日1,000回</td>
+<td>1日5,000回</td>
+</tr>
+<tr>
+<td>音声解説</td>
+<td>1日3件</td>
+<td>1日6件</td>
+<td>1日20件</td>
+<td>1日40件</td>
+<td>1日200件</td>
+</tr>
+<tr>
+<td>Deep Research</td>
+<td>月10回</td>
+<td>1日3件</td>
+<td>1日20件</td>
+<td>1日30件</td>
+<td>1日200件</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_03_limits.jpg" alt="管理者ヘルプの使用量上限の内訳の表。標準アクセス、アクセス権の追加、上位レベル、Expanded Level Access、最高レベルの5列で、ノートブック、出典、チャット、音声概要、動画の概要、レポートなどの上限が並ぶ" loading="lazy"><figcaption>使用量上限の表（2026年10月15日、ヘルプの表記のまま）</figcaption></figure>
+
+<p>社員が自分のアカウントの段階を確かめる方法は、Gemini Notebookのヘルプ「<a href="https://support.google.com/gemininotebook/answer/16337734?hl=ja">仕事用または学校用の Google アカウントで Gemini Notebook を使用する</a>」にあります。Gemini Notebookを開き、画面上部のプロフィール画像の横に<strong>Pro・Plus・Expanded・Ultraのどれかのバッジ</strong>があれば、上限が引き上げられた段階です。上限を上げたい社員には管理者にライセンスのアップグレードを頼むよう同じヘルプが案内しています。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/notebooklm-workspace-admin/nwa_04_badge.jpg" alt="Gemini Notebookのヘルプのアップグレードされたアクセス権の確認方法。ブラウザでGemini Notebookを開き、仕事用または学校用のアカウントでログインしていることを確かめ、プロフィール画像の横にPro、Plus、Expanded、Ultraのバッジがあるかを見る3つの手順で、3つ目が赤枠" loading="lazy"><figcaption>社員がバッジで段階を確かめる手順（2026年10月15日、スマホ）</figcaption></figure>
+
+<h2 id="s4">オンにしたのに使えないとき</h2>
+<p>「管理コンソールでオンにしたのに使えない」と言われたら、社員の側と管理者の側を順に切り分けます。ヘルプの記述から拾った原因を、確かめる順に並べました。</p>
+<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_05_check.jpg" alt="オンにしたのに使えないときの確認の順番の図。ログイン中のアカウント、所属する組織部門の設定、保存からの経過時間、エディション、ドメインを登録した国の5つを左から順に確かめる" loading="lazy"></figure>
+
+<table>
+<thead>
+<tr>
+<th>症状</th>
+<th>確かめる所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上限が個人と同じで、会社の資料も見えない</td>
+<td>個人のGoogleアカウントでログインしていないか</td>
+</tr>
+<tr>
+<td>一部の社員だけ使えない</td>
+<td>その人の組織部門が［オーバーライド］でオフになっていないか</td>
+</tr>
+<tr>
+<td>保存した直後から変わらない</td>
+<td>保存から24時間ほどたったか（共有設定のページの目安）</td>
+</tr>
+<tr>
+<td>管理コンソールに［Gemini Notebook］が無い</td>
+<td>自分にGeminiの「設定」の管理者権限があるか</td>
+</tr>
+<tr>
+<td>［オン］にできない</td>
+<td>ドメインを最初に登録した国でサービスが制限されていないか</td>
+</tr>
+<tr>
+<td>ドライブのファイルを入れられない</td>
+<td>その社員が元のファイルを閲覧できるか</td>
+</tr>
+</tbody>
+</table>
+<p>最後の行は、Gemini Notebookがドライブのファイルに組織の共有設定をそのまま当てるためです。ヘルプには<strong>元のファイルを閲覧以上の権限で開ける人だけがソースに使える</strong>と書かれています。オンにできないケースは管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/support/troubleshooting/unable-to-turn-on-a-service?hl=ja">サービスを有効にできない</a>」の説明のとおり、Workspaceのドメインを最初に登録した国の設定が関わる場合があります。</p>
+<p>学校で使う場合は年齢の設定も関わります。Workspace for Educationで18歳未満とされた人は、Gemini Notebook自体は使えますが、Deep Research・インフォグラフィック・シネマティック動画解説・Googleスライドなどが使えません。</p>
+<h2 id="s5">組織外との共有の設定</h2>
+<p>取引先とノートブックを共有できないときに見るのは、この設定です。管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/manage-gemini-notebook-sharing-settings?hl=ja">Gemini Notebook の共有設定を管理する</a>」によると、［組織名の外部との共有］は次の3つから選びます。</p>
+<ul>
+<li>オフ: 組織の外の人とは共有できない</li>
+<li>許可リスト登録済みドメイン: 入力したドメインの個々のアカウントとだけ共有できる。Googleグループとの共有は使えない</li>
+<li>オン: どの外部のメールアドレスとも共有できる</li>
+</ul>
+<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_06_sharing.jpg" alt="管理者ヘルプのGemini Notebookの共有オプションを設定する節。組織名の外部との共有で、オフ、許可リスト登録済みドメイン、オンの3つの選択肢と、一般公開の共有をオンにする任意の手順が書かれ、3つの選択肢の行が赤枠" loading="lazy"><figcaption>共有の3択と一般公開（2026年10月15日）</figcaption></figure>
+
+<p>外部との共有を［オン］にしたときだけ、［一般公開の共有］をオンにできます。こちらを許可すると、<strong>リンクを知っている人なら誰でもノートブックを開ける</strong>ようになります。社外秘の資料を入れる部署では、外部共有を許可リストにとどめ、一般公開はオフのままにしておくのが無難です。</p>
+<h2 id="s6">データの扱いと監査ログ</h2>
+<p>導入の稟議で確かめておきたいのは、入れた資料がどこに置かれ、誰が何をしたかを後から追えるかです。ヘルプによるとGemini Notebookはドライブのファイルを性能のためにキャッシュしていて、<strong>組織のデータリージョンの設定はGemini Notebookで処理およびキャッシュ保存されるデータには適用されません</strong>。</p>
+<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_02_data.jpg" alt="管理者ヘルプのGemini Notebookでのデータの保存方法と提供状況とコンプライアンスの節。ドライブのファイルは自動で同期され組織の共有設定が適用されること、組織のデータリージョンの設定はGemini Notebookで処理とキャッシュ保存されるデータに適用されないことの段落が赤枠。対応するコンプライアンス認証としてSOC、ISO、BSI C5、MTCS、OSPAR、ISMAPが並び、ISMAPの行が赤枠" loading="lazy"><figcaption>データの保存方法と対応する認証（2026年10月15日）</figcaption></figure>
+
+<p>ヘルプの次の節には対応する認証が並んでいて、SOC 1〜3やISO/IEC 27001に加えて<strong>ISMAP</strong>が入っています。</p>
+<p>Googleの告知「<a href="https://workspaceupdates.googleblog.com/2026/08/introducing-comprehensive-audit-logs-for-Gemini-Notebook-in-the-Workspace-Admin-console.html">Introducing comprehensive audit logs for Gemini Notebook</a>」には、ノートブック・ソース・チャット履歴はグローバルに保存され、今はデータのリージョン指定に対応していないと書かれています。</p>
+<p>利用の記録は2026年9月3日から段階的に管理コンソールで見られるようになりました。［レポート］［監査と調査］［Gemini Notebookのログイベント］を開くと、既定で過去7日間のイベントが表示されます。操作した人のメールアドレスや、ノートブックの公開設定が変わる前と後の状態を検索できます。</p>
+<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_07_audit.jpg" alt="管理者ヘルプのGemini Notebookのログイベントのページ。管理コンソールでレポート、監査と調査、Gemini Notebookのログイベントに移動する手順と、監査と調査の管理者権限が要ること、既定で過去7日間のイベントが表示されることが書かれ、移動先の行が赤枠" loading="lazy"><figcaption>ログイベントを開く場所（2026年10月15日）</figcaption></figure>
+
+<p>ログはBigQueryへ書き出せますが、管理者がオンにするまで書き出しはオフです。セキュリティ調査ツールで同じログを調べられるのは、Enterprise Standard・Enterprise Plus・Frontline Standardなどに限られます。</p>
+<h2 id="s7">Gemini Notebook Enterpriseとの違い</h2>
+<p>名前の似た製品に、Google Cloudで契約するGemini Notebook Enterpriseがあります。WorkspaceのGemini Notebookとは管理する場所も契約も別です。</p>
+<p>WorkspaceのGemini Notebookは管理コンソールで設定し、EnterpriseはGoogle Cloudのプロジェクトで管理します。Google Cloudのドキュメントが挙げるEnterpriseの特徴は次のとおりです（このドキュメントの比較表は個人向けのGemini Notebookとの比較で、Workspace版との比較表はありません）。</p>
+<ul>
+<li>Cloud IdentityのほかEntra ID・Oktaなどの外部のIdPでログインできる</li>
+<li>Word・PowerPoint・Excelのファイルもソースに使える</li>
+<li>データはGoogle Cloudのプロジェクトの中に置かれる</li>
+</ul>
+<p>Google Cloudのドキュメント「<a href="https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview?hl=ja">Gemini Notebook Enterprise とは</a>」には、Enterpriseの上限としてノートブック500個・1冊にソース300個・1日500件のクエリが載っています。Google Cloud Japanの解説動画「<a href="https://www.youtube.com/watch?v=orKp7G8gwtU">NotebookLM Enterprise 管理者向けセットアップ手順</a>」では、IDプロバイダの設定・プロジェクトの作成・ライセンスの払い出し・IAMのロールの付与・ユーザーへの割り当ての順に進めています。データの置き場所の指定・外部のIdPでのログイン・Officeのファイルのソースのどれも要らなければ、WorkspaceのGemini Notebookで足ります。</p>
+<h2 id="s8">社内で使い始める前に決めること</h2>
+<p>オンにするのは数分で終わるので、手間がかかるのは社内での決めごとのほうです。最初に決めておくと問い合わせが減る項目は4つあります。</p>
+<ul>
+<li>試す範囲: 全社か、組織部門かアクセスグループか</li>
+<li>外部との共有: オフか許可リストか。一般公開を許すか</li>
+<li>案内するアカウント: 会社のアカウントでログインすること。個人のアカウントで業務の資料を入れない</li>
+<li>記録の見方: ログイベントを誰がどの頻度で見るか</li>
+</ul>
+<p>ノートブックの作り方やStudioの機能など社員向けの使い方は、<a href="/media/gemini-notebook-guide/">NotebookLM（Gemini Notebook）の使い方</a>にまとめています。社内の資料を読ませる使い方が定着し、問い合わせ対応などの業務をAIに任せる段階に進むときの組み立て方は、<a href="/ai-agent/">AIエージェント構築支援</a>のページで紹介しています。</p>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">NotebookLMはWorkspaceで使えますか？</h3>
+<p>使えます。Business StarterからEnterprise Plusまでの多くのエディションにコアサービスとして含まれ、Business Baseなどでは追加サービスの扱いです。今の名前はGemini Notebookです。</p>
+<h3 id="s9-2">NotebookLMを管理コンソールで有効にするには？</h3>
+<p>［生成AI］［Gemini Notebook］［サービスのステータス］で［オン（すべてのユーザー）］を選び、［保存］を押します。Geminiの「設定」の管理者権限が要ります。</p>
+<h3 id="s9-3">NotebookLMを一部の社員だけに使わせられますか？</h3>
+<p>できます。左側で組織部門を選んでオンにするか、部署をまたぐならアクセスグループを使います。会社全体はオフのままでも構いません。</p>
+<h3 id="s9-4">NotebookLMで社外と共有できないのは？</h3>
+<p>［組織名の外部との共有］がオフになっていると、組織の外の人とは共有できません。許可リストに相手のドメインを入れるか、オンに変えると共有できます。</p>
+<h3 id="s9-5">NotebookLMの入力は学習に使われますか？</h3>
+<p>フィードバックを送らない限り学習には使われません。Business Starter以上のコアサービスでは、人のレビュアーが内容を見ることもないとヘルプに書かれています。</p>
+<h3 id="s9-6">管理者はNotebookLMの利用状況を確認できますか？</h3>
+<p>2026年9月3日から順次、［レポート］［監査と調査］［Gemini Notebookのログイベント］で操作の記録を検索できるようになりました。監査と調査の管理者権限が要ります。</p>
+<h3 id="s9-7">WorkspaceのNotebookLMの上限は？</h3>
+<p>Business Starterはノートブック100件・1冊にソース50件・チャット1日50回です。Business StandardとBusiness Plusは500件・300件・1日500回に増えます。</p>
+<h3 id="s9-8">NotebookLM Enterpriseとの違いは？</h3>
+<p>WorkspaceのGemini Notebookは管理コンソールで管理し、EnterpriseはGoogle Cloudのプロジェクトで管理します。Enterpriseは外部のIdPでのログインやWord・Excelのファイルのソースにも対応しています。</p>
+<h2 id="s10">出典</h2>
+<p>ヘルプとドキュメントは2026年10月15日に取得しました。管理コンソールの項目名はヘルプの表記に合わせています。</p>
+<ul>
+<li>Google Workspace 管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/turn-gemini-notebook-on-or-off-for-users?hl=ja">ユーザーに対して Gemini Notebook を有効または無効にする</a>」</li>
+<li>Google Workspace 管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/manage-gemini-notebook-sharing-settings?hl=ja">Gemini Notebook の共有設定を管理する</a>」</li>
+<li>Google Workspace 管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/reports/gemini-notebook-log-events?hl=ja">Gemini Notebook のログイベント</a>」</li>
+<li>Google Workspace 管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/support/troubleshooting/unable-to-turn-on-a-service?hl=ja">サービスを有効にできない</a>」</li>
+<li>Google Workspace 管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/getting-started/editions/control-access-to-google-services-by-age?hl=ja">Google サービスへのアクセスを年齢別に管理する</a>」</li>
+<li>Google Workspace 管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/users/advanced/customize-service-access-using-access-groups?hl=ja">アクセス グループを使用してサービスへのアクセスをカスタマイズする</a>」</li>
+<li>Gemini Notebook ヘルプ「<a href="https://support.google.com/gemininotebook/answer/16337734?hl=ja">仕事用または学校用の Google アカウントで Gemini Notebook を使用する</a>」</li>
+<li>Google Workspace Updates「<a href="https://workspaceupdates.googleblog.com/2026/07/notebooklm-now-gemini-notebook.html">NotebookLM is now Gemini Notebook</a>」（2026年7月16日）</li>
+<li>Google Workspace Updates「<a href="https://workspaceupdates.googleblog.com/2026/08/introducing-comprehensive-audit-logs-for-Gemini-Notebook-in-the-Workspace-Admin-console.html">Introducing comprehensive audit logs for Gemini Notebook in the Workspace Admin console</a>」（2026年9月3日）</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview?hl=ja">Gemini Notebook Enterprise とは何ですか？</a>」</li>
+<li>YouTube「<a href="https://www.youtube.com/watch?v=orKp7G8gwtU">NotebookLM Enterprise 管理者向けセットアップ手順</a>」（Google Cloud Japan）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-stops-midway/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTが途中で止まるとき"><defs><linearGradient id="ecg-4d85c8f0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4d85c8f0)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="125.2" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTが途中</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">で止まるとき</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.13</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTが途中で止まる原因と続きを出す方法｜長文・続けるボタン・考え中</div>
+            </a>
+            <a href="/media/claude-enterprise/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Enterpriseとは"><defs><linearGradient id="ecg-cab16354" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-cab16354)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Enterpriseとは</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.13</div>
+                <div class="rel-card__ttl">【2026年10月】Claude Enterpriseとは？料金の仕組み・Teamとの違い・20席から</div>
+            </a>
+            <a href="/media/claude-team-admin/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Teamの招待と管理"><defs><linearGradient id="ecg-5c00bf81" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5c00bf81)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="176.1" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Teamの招待と管理</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.13</div>
+                <div class="rel-card__ttl">【2026年10月】Claude Teamのメンバー招待と管理｜役割・席の切り替え・Proからの移行</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'notebooklm-workspace-admin',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
