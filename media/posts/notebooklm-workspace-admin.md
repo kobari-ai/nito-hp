@@ -24,7 +24,7 @@ NotebookLMは2026年7月16日にGemini Notebookへ名前が変わり、Google Wo
 
 ## NotebookLMの設定がある場所
 
-管理者ヘルプ「[ユーザーに対して Gemini Notebook を有効または無効にする](https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/turn-gemini-notebook-on-or-off-for-users?hl=ja)」の冒頭には、NotebookLMはGemini Notebookに名称変更されると書かれています。**管理コンソールでNotebookLMの名前を探しても出てこないのはこのため**で、オンとオフも共有の設定も同じ［Gemini Notebook］の画面にまとまっています。
+管理者ヘルプ「[ユーザーに対して Gemini Notebook を有効または無効にする](https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/turn-gemini-notebook-on-or-off-for-users?hl=ja)」の冒頭には、NotebookLMはGemini Notebookに名称変更されると書かれています。ヘルプの手順にもNotebookLMという名前の項目は無く、**オンとオフも共有の設定も［Gemini Notebook］の画面で行います**。
 
 | やりたいこと | 管理コンソールの場所 | 必要な管理者権限 |
 |---|---|---|
@@ -44,7 +44,7 @@ GmailやドキュメントのGemini、gemini.google.comのGeminiアプリは別�
 4. 一部だけにするなら、左側で組織部門を選んでから［オン］か［オフ］を選ぶ
 5. ［保存］を押す
 
-<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_01_onoff.jpg" alt="管理者ヘルプのGemini Notebookをオンまたはオフにする節。管理コンソールで生成AIからGemini Notebookに移動し、Geminiの設定の管理者権限が要ること、サービスのステータスを押してオン（すべてのユーザー）かオフ（すべてのユーザー）を選んで保存する手順が書かれ、サービスのステータスとオンとオフの行が赤枠" loading="lazy"><figcaption>管理者ヘルプの手順（2026年10月15日）。赤枠の順に押す</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_01_onoff.jpg" alt="管理者ヘルプのGemini Notebookをオンまたはオフにする節。管理コンソールで生成AIからGemini Notebookに移動し、Geminiの設定の管理者権限が要ること、サービスのステータスを押してオン（すべてのユーザー）かオフ（すべてのユーザー）を選んで保存する手順が書かれ、サービスのステータスとオンとオフの行が赤枠" loading="lazy"><figcaption>管理者ヘルプの手順（2026年10月15日）。押す2か所に赤枠</figcaption></figure>
 
 オンとオフのページには、反映までの時間は書かれていません。同じ［Gemini Notebook］の共有設定のページには**変更の反映に最長24時間ほど**とあるため、保存した直後に社員が使えなくても、翌日まで待ってから確かめるほうが確実です。
 
@@ -56,7 +56,7 @@ GmailやドキュメントのGemini、gemini.google.comのGeminiアプリは別�
 
 ## エディションで変わる上限と規約
 
-**使えるかどうかと、どこまで使えるかは、Workspaceのエディションで決まります。**ヘルプはエディションを6段階に分けていて、BusinessやEnterpriseの多くはGemini Notebookがコアサービスとして含まれます。
+**使える機能と上限はWorkspaceのエディションで決まります。**ヘルプはエディションを6段階に分けていて、BusinessやEnterpriseの多くはGemini Notebookがコアサービスとして含まれます。
 
 | 段階 | 主なエディション | 規約 |
 |---|---|---|
@@ -67,7 +67,6 @@ GmailやドキュメントのGemini、gemini.google.comのGeminiアプリは別�
 | 拡張 | AI Expanded Accessアドオン | Google Cloud利用規約 |
 | 最高 | AI Ultra Accessアドオン | Google Cloud利用規約 |
 
-<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_02_editions.jpg" alt="管理者ヘルプのGemini Notebookの機能（Workspaceエディション別）の表。左から標準、エンタープライズグレードの保護つきの標準、より広範、高レベル、拡張、最高の6列があり、追加サービスとしてBusiness BaseやEssentials Starter、コアサービスとしてBusiness Starter、Business StandardやEnterprise Plusなどのエディション名が並ぶ" loading="lazy"><figcaption>エディション別の表（2026年10月15日）</figcaption></figure>
 
 違いが大きいのはデータの扱いです。追加サービスとして使う段階では、フィードバックを送らない限り学習には使われないものの、Googleの利用規約が適用されます。2段目より上は**アップロードしたファイル・チャット・回答を人のレビュアーが見ることも、モデルの改善に使うこともない**と書かれています。
 
@@ -91,7 +90,7 @@ GmailやドキュメントのGemini、gemini.google.comのGeminiアプリは別�
 
 「管理コンソールでオンにしたのに使えない」と言われたら、社員の側と管理者の側を順に切り分けます。ヘルプの記述から拾った原因を、確かめる順に並べました。
 
-<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_05_check.jpg" alt="オンにしたのに使えないときの確認の順番の図。ログイン中のアカウント、所属する組織部門の設定、保存からの経過時間、エディション、ドメインを登録した国の5つを上から順に確かめる" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_05_check.jpg" alt="オンにしたのに使えないときの確認の順番の図。ログイン中のアカウント、所属する組織部門の設定、保存からの経過時間、エディション、ドメインを登録した国の5つを左から順に確かめる" loading="lazy"></figure>
 
 | 症状 | 確かめる所 |
 |---|---|
@@ -108,7 +107,7 @@ GmailやドキュメントのGemini、gemini.google.comのGeminiアプリは別�
 
 ## 組織外との共有の設定
 
-取引先とノートブックを共有できない、という相談の多くはこの設定です。管理者ヘルプ「[Gemini Notebook の共有設定を管理する](https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/manage-gemini-notebook-sharing-settings?hl=ja)」によると、［組織名の外部との共有］は次の3つから選びます。
+取引先とノートブックを共有できないときに見るのは、この設定です。管理者ヘルプ「[Gemini Notebook の共有設定を管理する](https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/manage-gemini-notebook-sharing-settings?hl=ja)」によると、［組織名の外部との共有］は次の3つから選びます。
 
 - オフ: 組織の外の人とは共有できない
 - 許可リスト登録済みドメイン: 入力したドメインの個人のアカウントとだけ共有できる。Googleグループとの共有は使えない
@@ -120,9 +119,13 @@ GmailやドキュメントのGemini、gemini.google.comのGeminiアプリは別�
 
 ## データの扱いと監査ログ
 
-導入の稟議でよく聞かれるのは、入れた資料がどこに置かれ、誰が何をしたかを後から追えるかです。ヘルプによるとGemini Notebookはドライブのファイルを性能のためにキャッシュしていて、**組織のデータリージョンの設定はGemini Notebookで処理・保存されるデータには適用されません**。
+導入の稟議で確かめておきたいのは、入れた資料がどこに置かれ、誰が何をしたかを後から追えるかです。ヘルプによるとGemini Notebookはドライブのファイルを性能のためにキャッシュしていて、**組織のデータリージョンの設定はGemini Notebookで処理・保存されるデータには適用されません**。
 
-Googleの告知「[Introducing comprehensive audit logs for Gemini Notebook](https://workspaceupdates.googleblog.com/2026/08/introducing-comprehensive-audit-logs-for-Gemini-Notebook-in-the-Workspace-Admin-console.html)」も同じ点に触れています。ノートブック・ソース・チャット履歴はグローバルに保存され、今はデータのリージョン指定に対応していません。
+<figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_02_data.jpg" alt="管理者ヘルプのGemini Notebookでのデータの保存方法と提供状況とコンプライアンスの節。ドライブのファイルは自動で同期され組織の共有設定が適用されること、組織のデータリージョンの設定はGemini Notebookで処理とキャッシュ保存されるデータに適用されないことの段落が赤枠。対応するコンプライアンス認証としてSOC、ISO、BSI C5、MTCS、OSPAR、ISMAPが並び、ISMAPの行が赤枠" loading="lazy"><figcaption>データの保存方法と対応する認証（2026年10月15日）</figcaption></figure>
+
+ヘルプの次の節には対応する認証が並んでいて、SOC 1〜3やISO/IEC 27001に加えて**ISMAP**が入っています。
+
+Googleの告知「[Introducing comprehensive audit logs for Gemini Notebook](https://workspaceupdates.googleblog.com/2026/08/introducing-comprehensive-audit-logs-for-Gemini-Notebook-in-the-Workspace-Admin-console.html)」には、ノートブック・ソース・チャット履歴はグローバルに保存され、今はデータのリージョン指定に対応していないと書かれています。
 
 利用の記録は2026年9月3日から段階的に管理コンソールで見られるようになりました。［レポート］［監査と調査］［Gemini Notebookのログイベント］を開くと、既定で過去7日間のイベントが表示されます。操作した人のメールアドレスや、ノートブックの公開設定が変わる前と後の状態を検索できます。
 
@@ -141,7 +144,7 @@ Googleの告知「[Introducing comprehensive audit logs for Gemini Notebook](htt
 | ソースの形式 | PDF・ドキュメント・スライド・URLなど | 左に加えてWord・PowerPoint・Excelのファイル |
 | データの置き場所 | 指定できない | Google Cloudのプロジェクトの中 |
 
-Google Cloudのドキュメント「[Gemini Notebook Enterprise とは](https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview?hl=ja)」には、Enterpriseの上限としてノートブック500個・1冊にソース300個・1日500件のクエリが載っています。Google Cloud Japanの解説動画「[NotebookLM Enterprise 管理者向けセットアップ手順](https://www.youtube.com/watch?v=orKp7G8gwtU)」では、IDプロバイダの設定・プロジェクトの作成・ライセンスの払い出し・IAMのロールの付与・ユーザーへの割り当ての順に進めています。データの置き場所まで指定したい組織でなければ、WorkspaceのGemini Notebookで足ります。
+Google Cloudのドキュメント「[Gemini Notebook Enterprise とは](https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview?hl=ja)」には、Enterpriseの上限としてノートブック500個・1冊にソース300個・1日500件のクエリが載っています。Google Cloud Japanの解説動画「[NotebookLM Enterprise 管理者向けセットアップ手順](https://www.youtube.com/watch?v=orKp7G8gwtU)」では、IDプロバイダの設定・プロジェクトの作成・ライセンスの払い出し・IAMのロールの付与・ユーザーへの割り当ての順に進めています。データの置き場所の指定・外部のIdPでのログイン・Officeのファイルのソースのどれも要らなければ、WorkspaceのGemini Notebookで足ります。
 
 ## 社内で使い始める前に決めること
 
@@ -152,7 +155,7 @@ Google Cloudのドキュメント「[Gemini Notebook Enterprise とは](https://
 - 案内するアカウント: 会社のアカウントでログインすること。個人のアカウントで業務の資料を入れない
 - 記録の見方: ログイベントを誰がどの頻度で見るか
 
-社員向けの使い方の案内には、ノートブックの作り方やStudioの機能をまとめた[NotebookLM（Gemini Notebook）の使い方](/media/gemini-notebook-guide/)を渡せます。社内の資料を読ませる使い方が定着し、問い合わせ対応などの業務をAIに任せる段階に進むときの組み立て方は、[AIエージェント構築支援](/ai-agent/)のページで紹介しています。
+ノートブックの作り方やStudioの機能など社員向けの使い方は、[NotebookLM（Gemini Notebook）の使い方](/media/gemini-notebook-guide/)にまとめています。社内の資料を読ませる使い方が定着し、問い合わせ対応などの業務をAIに任せる段階に進むときの組み立て方は、[AIエージェント構築支援](/ai-agent/)のページで紹介しています。
 
 ## よくある質問
 
