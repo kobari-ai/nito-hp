@@ -12,7 +12,7 @@ Googleは2026年10月、Geminiアプリのヘルプ「[Gemini モデルへのア
 
 ただ、Flash-Liteが何なのかも、今まで使っていたFlashとどれだけ違うのかも告知には書かれていません。使用量上限のページはまだ前の表のままで、公式のページどうしの書き方はそろっていません。
 
-10月8日にGoogleのヘルプと料金ページを取得し、ログインせずにGeminiの画面も開いて、変わる範囲とFlash-Liteの中身、無料のままFlashを使える場所を確かめました。適用後の10月10日にも同じページを取り直しています。
+10月8日にGoogleのヘルプと料金ページを取得し、ログインせずにGeminiの画面も開いて、変わる範囲とFlash-Liteの中身、無料のままFlashを使える場所を確かめました。適用後の10月10日と15日にも同じページを取り直しています。
 
 :::takeaways
 - 10月9日から順に、**AIのプランに入っていない個人のアカウントが自分で選べるモデルはFlash-Liteだけ**になる。AI Plusの利用者はFlashまでで、適用の時期はメールで届く
@@ -32,7 +32,7 @@ Googleは2026年10月、Geminiアプリのヘルプ「[Gemini モデルへのア
 
 | プラン | 10月8日まで | 10月9日から | 月額（税込） |
 |---|---|---|---|
-| プランなし | Flash-Lite・Flash・Pro | Flash-Liteだけ | 0円 |
+| プランなし | Flash-Lite・Flash・Pro | 自動（選べるのはFlash-Liteだけ） | 0円 |
 | Google AI Plus | Flash-Lite・Flash・Pro | Flash-Lite・Flash（適用日はメールで案内） | 725円 |
 | Google AI Pro | Flash-Lite・Flash・Pro | Flash-Lite・Flash・Pro | 2,900円 |
 | Google AI Ultra | Flash-Lite・Flash・Pro | Flash-Lite・Flash・Pro | 14,500円か32,000円 |
@@ -83,25 +83,25 @@ Geminiの3つのモデルのうち、いちばん軽いのがFlash-Liteです。
 
 ## 公式ページで食い違っている点
 
-告知と同じ日に読んでも、Googleのほかのページは前の内容のままでした。10月8日に取得した時点で次の3つが合っておらず、10月10日に取り直すと料金ページの無料の欄がFlash-Liteに変わっていました。
+告知と同じ日に読んでも、Googleのほかのページは前の内容のままでした。10月8日に取得した時点で次の3つが合っておらず、10月10日に取り直すと料金ページの無料の欄がFlash-Liteに変わっていました。10月14日には使用量上限のページからモデルの表が消え、日本語版の告知もプランなしを「自動」と書くようになっています。
 
 <figure class="post-figure"><img src="/media/images/gemini-flash-lite/gfl_04_help_limits.jpg" alt="Googleのヘルプの使用量上限のページ。赤い枠1はDeep ThinkをAI Ultraのみと書いた行。赤い枠2はモデルへのアクセスの表のAIプランなしの行で、Gemini 3 Flash-lite・Gemini 3 Flash・Gemini 3 Proのすべてに丸が付いている" loading="lazy"><figcaption>使用量上限のページはプランなしにも3つとも丸が付いたまま（10月8日）</figcaption></figure>
 
 | 項目 | 変更の告知 | ほかの公式ページ |
 |---|---|---|
-| プランなしのモデル | 日本語版はFlash-Liteだけ。英語版は10月10日の時点で「Auto」（自動で選ぶ） | 料金ページの無料欄は10月10日に3.5 Flash-Liteへ変わった（10月8日は3.6 Flashと3.1 Pro）。使用量上限のページは3つとも○のまま |
-| Deep Think | 日本語版はAI ProかAI Ultra。英語版は10月8日はAI Ultraだけで、10月10日は対象のプランの記載なし | 使用量上限のページは「AI Ultra のみ」 |
+| プランなしのモデル | 日本語版も10月14日から「自動」（英語版は10月10日の時点で「Auto」） | 料金ページの無料欄は10月10日に3.5 Flash-Liteへ変わった（10月8日は3.6 Flashと3.1 Pro）。使用量上限のページのモデルの表は10月14日に消えた |
+| Deep Think | 10月15日の時点で日本語版・英語版とも対象のプランの記載なし（英語版は10月8日はAI Ultraだけ） | 使用量上限のページの「AI Ultra のみ」は10月14日に消えた |
 | AI Ultraの上限 | AI Proの5倍か20倍（告知のページの「以前の変更内容」の節） | 使用量上限のページは日本語版だけ4倍か20倍。料金ページは5倍と20倍 |
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/gemini-flash-lite/gfl_05_plans_sp.jpg" alt="スマホで開いたGoogle AIプランの料金ページの無料の欄。0円の下のGeminiアプリの特典に、赤い枠で3.6 Flashへのアクセスと3.1 Proへのアクセス（制限あり）が囲まれている。その下に画像の生成と編集、Deep Research、Gemini Liveが続く" loading="lazy"><figcaption>10月8日の料金ページの無料欄。10月10日には3.5 Flash-Liteに変わった</figcaption></figure>
 
-**モデルとAI Ultraの倍率は、日付の入った変更の告知のほうを正として読むのが無難です。**英語版の告知は10月10日の時点で、プランなしの既定を「Auto」と書いています。質問ごとにGeminiがモデルを選び、大半はFlash-Liteで答え、深い推論が要る質問はFlashやProに回ることがある、という説明です。自動の選択をオフにすると、すべてFlash-Liteで答えます。日本語版にはこの説明がなく、表はFlash-Liteだけに印が付いています。
+**モデルとAI Ultraの倍率は、日付の入った変更の告知のほうを正として読むのが無難です。**英語版の告知は10月10日の時点で、プランなしの既定を「Auto」と書いています。質問ごとにGeminiがモデルを選び、大半はFlash-Liteで答え、深い推論が要る質問はFlashやProに回ることがある、という説明です。自動の選択をオフにすると、すべてFlash-Liteで答えます。日本語版も10月14日から同じ説明になり、表のプランなしの行は「自動」です。
 
-Deep Thinkの対象は日本語版がAI ProかAI Ultraで、英語版は対象のプランを書かなくなりました。AI Proで使えるかはアプリの画面で確かめてください。使用量上限のページは告知の前に書かれたもので、これから書き換わる可能性があります。
+Deep Thinkの対象は、10月15日の時点で日本語版・英語版とも告知に書かれていません。AI Proで使えるかはアプリの画面で確かめてください。10月14日には使用量上限のページからモデルとDeep Thinkの記載が消えました。
 
 ## 無料のままFlashを使う方法
 
-Geminiアプリの中では、無料のままFlashやProを選ぶ道はありません。英語版の告知にある自動の選択でFlashやProに回ることはあっても自分では選べず、使用量の上限に余裕があってもモデルの選択肢は増えません。アプリの外まで広げると、条件つきで2つの道があります。
+Geminiアプリの中では、無料のままFlashやProを選ぶ道はありません。告知にある自動の選択でFlashやProに回ることはあっても自分では選べず、使用量の上限に余裕があってもモデルの選択肢は増えません。アプリの外まで広げると、条件つきで2つの道があります。
 
 <figure class="post-figure"><img src="/media/images/gemini-flash-lite/gfl_06_fig_ways.jpg" alt="Geminiアプリの外で無料のFlashを使う2つの道の図。左はGoogle AI Studioで、開発者向けの画面、Flash系は無料枠あり、Proは無料枠なし、条件は18歳以上で入力を人が読むことがある。右は学生向けの特典で、対象の学生はAI Plusが1年間無料でFlashまで使え、申し込みは12月31日まで、1年後は月額に切り替わる" loading="lazy"><figcaption>アプリの外で無料のFlashを使う道は2つ</figcaption></figure>
 
@@ -127,7 +127,7 @@ FlashかProのどちらが要るかで、選ぶプランが決まります。**F
 
 | プラン | 月額（税込） | 使えるモデル | 使用量の上限 | 読める量 |
 |---|---|---|---|---|
-| プランなし | 0円 | Flash-Lite | 標準 | 32,000トークン |
+| プランなし | 0円 | 自動（選べるのはFlash-Liteだけ） | 標準 | 32,000トークン |
 | Google AI Plus | 725円 | Flash-Lite・Flash | 標準の2倍 | 128,000トークン |
 | Google AI Pro | 2,900円 | Flash-Lite・Flash・Pro | 標準の4倍 | 100万トークン |
 | Google AI Ultra | 14,500円か32,000円 | Flash-Lite・Flash・Pro | AI Proの5倍か20倍（日本語版の上限のページは4倍のまま） | 100万トークン |
@@ -170,8 +170,8 @@ Geminiアプリの中にはありません。アプリの外なら、18歳以上
 
 ## 出典
 
-- Google Gemini アプリ ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」（日本語版・[英語版](https://support.google.com/gemini/answer/17004136?hl=en)、2026年10月8日・10日取得）
-- Google Gemini アプリ ヘルプ「[Google AI のサブスクリプション プランに応じた Gemini アプリの使用量上限とアップグレード](https://support.google.com/gemini/answer/16275805?hl=ja)」（日本語版・[英語版](https://support.google.com/gemini/answer/16275805?hl=en)、2026年10月8日・10日取得）
+- Google Gemini アプリ ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」（日本語版・[英語版](https://support.google.com/gemini/answer/17004136?hl=en)、2026年10月8日・10日・15日取得）
+- Google Gemini アプリ ヘルプ「[Google AI のサブスクリプション プランに応じた Gemini アプリの使用量上限とアップグレード](https://support.google.com/gemini/answer/16275805?hl=ja)」（日本語版・[英語版](https://support.google.com/gemini/answer/16275805?hl=en)、2026年10月8日・10日・15日取得）
 - Google Gemini アプリ ヘルプ「[仕事用または学校用の Google アカウントで Gemini アプリを利用する](https://support.google.com/gemini/answer/14620100?hl=ja)」（2026年10月8日取得）
 - Google「[Google AI プラン](https://gemini.google/jp/subscriptions/?hl=ja)」（日本向け、2026年10月8日・10日取得）
 - Google「[Gemini アプリのリリースノート](https://gemini.google/release-notes/)」（2026年10月8日取得）
