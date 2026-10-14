@@ -128,6 +128,8 @@ Microsoft Graphが持ち込むのは、メール、ファイル、会議、予�
 
 Copilot Chat（基本）だけの状態では、Word・Excel・PowerPoint・OneNoteのCopilotにはアクセスできません。アプリ内で使うには標準アクセスがある状態かアドオンのライセンスが必要です。
 
+管理者がライセンスを割り当てる手順と、割り当てたのに出ないときに見るところは[Copilotのライセンスの割り当ての記事](/media/copilot-license-assign/)にまとめました。
+
 ### Copilotが社内のファイルを見てくれません
 
 組織データの根拠付けが付くのはMicrosoft 365 Copilot（プレミアム）です。そのうえでWork IQがオフになっていると、回答はMicrosoft GraphとWork IQに基づかなくなります。Copilot Chatの場合は、ファイルを貼るかアップロードして渡します。
