@@ -94,11 +94,11 @@ Geminiは使えるのに返事やメニューが英語になるときは、[Gemi
 
 <figure class="post-figure"><img src="/media/images/gemini-not-working/gnw_06_help_model.jpg" alt="GoogleのヘルプのGeminiモデルへのアクセスと使用量上限の変更のページ。2026年10月より個人アカウントで利用できるモデルが変わり、AIサブスクリプションを利用していないユーザーには10月9日から適用されるという段落が赤枠で囲まれている。下の表も赤枠で囲まれ、プランなしはFlash-Liteだけ、AI PlusはFlash-LiteとFlash、AI ProとAI Ultraは3つすべてに印が付いている" loading="lazy"><figcaption>10月9日からの使えるモデルの表（2026年10月7日取得）</figcaption></figure>
 
-**プランなしの個人のアカウントは、自分で選べるモデルがFlash-Liteだけになります。**10月9日から順に適用が始まり、10月10日には料金ページの無料の欄も「3.5 Flash-Lite へのアクセス」に変わりました。表の対象は個人のアカウントで、AI Plusの利用者には適用の時期をメールで知らせるとされています。プランなしでも深い推論が要る質問は自動でFlashやProに回ることがある、と英語版の告知は書いています。
+**プランなしの個人のアカウントは、自分で選べるモデルがFlash-Liteだけになります。**10月9日から順に適用が始まり、10月10日には料金ページの無料の欄も「3.5 Flash-Lite へのアクセス」に変わりました。表の対象は個人のアカウントで、AI Plusの利用者には適用の時期をメールで知らせるとされています。プランなしでも深い推論が要る質問は自動でFlashやProに回ることがある、と告知は書いています（日本語版は10月14日から）。
 
 | プラン | 10月9日から選べるモデル |
 |---|---|
-| プランなし | Flash-Lite |
+| プランなし | Flash-Lite（既定は自動） |
 | AI Plus | Flash-Lite・Flash（適用日はメールで案内） |
 | AI Pro | Flash-Lite・Flash・Pro |
 | AI Ultra | Flash-Lite・Flash・Pro |
@@ -150,7 +150,7 @@ AndroidはAndroid 9以降でRAMが2GB以上、iPhoneとiPadはiOS 16以降です
 ## 出典
 
 - Google Gemini アプリ ヘルプ「[Gemini アプリへのログインに必要なもの](https://support.google.com/gemini/answer/13278668?hl=ja)」（2026年10月7日取得）
-- Google Gemini アプリ ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」（2026年10月7日・10日取得）
+- Google Gemini アプリ ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」（2026年10月7日・10日・15日取得）
 - Google Gemini アプリ ヘルプ「[お子様による Gemini アプリの利用をサポートする](https://support.google.com/gemini/answer/16109150?hl=ja)」（2026年10月7日取得）
 - Google Gemini アプリ ヘルプ「[Gemini モバイルアプリの利用要件](https://support.google.com/gemini/answer/14579026?hl=ja&co=GENIE.Platform%3DAndroid)」（Android・iPhone と iPad、2026年10月7日取得）
 - Google Gemini アプリ ヘルプ「[Mac で Gemini アプリを使用する](https://support.google.com/gemini/answer/17011627?hl=ja)」「[Windows 向け Gemini アプリを使用する](https://support.google.com/gemini/answer/18263854?hl=ja)」（2026年10月7日取得）

@@ -63,7 +63,7 @@ Geminiアプリの上限は、使った回数ではありません。公式ヘ�
 
 ### 一部の機能
 
-2026年10月9日から順に、選べるモデルがプランで分かれます。ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」の表では、**プランなしはFlash-Liteだけ、AI PlusはFlash-LiteとFlash、AI ProとUltraは3つすべて**です。AI Plusの適用日はメールで知らされ、10月10日の料金ページのPlusの欄にはまだ3.1 Proへのアクセスが載っています。10月10日の時点でも、使用量上限のページの表は全プランに3つとも○が付いたままです。変わる範囲は[Gemini Flash-Liteとは](/media/gemini-flash-lite/)で詳しく扱っています。
+2026年10月9日から順に、選べるモデルがプランで分かれます。ヘルプ「[Gemini モデルへのアクセスと使用量上限の変更](https://support.google.com/gemini/answer/17004136?hl=ja)」の表では、**プランなしは「自動」（自分で選べるのはFlash-Liteだけ）、AI PlusはFlash-LiteとFlash、AI ProとUltraは3つすべて**です。AI Plusの適用日はメールで知らされ、10月10日の料金ページのPlusの欄にはまだ3.1 Proへのアクセスが載っています。使用量上限のページにあったモデルの表は、10月14日に消えました。変わる範囲は[Gemini Flash-Liteとは](/media/gemini-flash-lite/)で詳しく扱っています。
 
 無料で使える機能も多く、Canvas、Gem、Deep Research、画像生成、音楽生成、アプリ連携は無料プランの列にもチェックが入っています。有料でないと使えないのは次のものです。
 
@@ -143,7 +143,7 @@ Pro限定の機能とProでの会話が使えなくなり、Google One側の追�
 
 ## 出典
 
-本文の価格と機能の記載はGoogleの公式ページで確認しています（2026年9月21日取得。選べるモデルの記載は2026年10月10日に取り直し）。
+本文の価格と機能の記載はGoogleの公式ページで確認しています（2026年9月21日取得。選べるモデルの記載は2026年10月15日に取り直し）。
 
 - [Google AI のプラン（Google One）](https://one.google.com/about/google-ai-plans/?hl=ja)
 - [Google AI のサブスクリプションプランに応じたGeminiアプリの使用量上限とアップグレード](https://support.google.com/gemini/answer/16275805?hl=ja)

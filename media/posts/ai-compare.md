@@ -8,7 +8,7 @@ cover_headline: 4つのAIを比較
 cover_sub: 無料でできること・上限・料金
 ---
 
-ChatGPT・Gemini・Claude・GoogleのAIモードは、どれも無料で使い始められます。ただ、無料の上限の決まり方も、有料プランの値段の出し方も4つで違います。Geminiでは10月9日から、AIプランに入っていない人が使えるモデルがFlash-Liteだけになると公式ヘルプが告知しています。
+ChatGPT・Gemini・Claude・GoogleのAIモードは、どれも無料で使い始められます。ただ、無料の上限の決まり方も、有料プランの値段の出し方も4つで違います。Geminiでは10月9日から、AIプランに入っていない人のモデルは既定が「自動」になり、自分で選べるのはFlash-Liteだけだと公式ヘルプが告知しています。
 
 このページは4つの公式ページで確かめた値を、同じ項目で1枚の表に並べたものです。確かめた日はAIごとに下の帯に出し、値の横の番号は末尾の出典の番号です。
 
@@ -17,7 +17,7 @@ ChatGPT・Gemini・Claude・GoogleのAIモードは、どれも無料で使い�
 :::takeaways
 - 無料の上限は、GeminiとClaudeが**使った量**で決まる。ChatGPTはテキストに回数の上限がなく、画像やファイルなど機能ごとに上限がある
 - GoogleのAIモードは、**ふだんの質問に上限の記載がない**。1日の上限があるのはProのモデルと画像の作成
-- **Geminiの無料版は10月9日からFlash-Liteだけ**になる（公式ヘルプの告知）
+- **Geminiの無料版は10月9日から、自分で選べるモデルがFlash-Liteだけ**になる（既定は「自動」。公式ヘルプの告知）
 - Claudeは写真やイラストを作らない。画像を作るならChatGPT・Gemini・AIモード
 - いちばん安い有料プランは、Gemini（AIモードと共通）が{{data:paid.entry.gemini}}、ChatGPTが{{data:paid.entry.chatgpt}}、Claudeが{{data:paid.entry.claude}}
 :::
@@ -28,7 +28,7 @@ ChatGPT・Gemini・Claude・GoogleのAIモードは、どれも無料で使い�
 
 <!-- data:table free -->
 
-Geminiの無料版で使えるモデルは10月9日に変わる予定です。公式ヘルプ「Gemini モデルへのアクセスと使用量上限の変更」によると、個人のアカウントでAIプランに入っていない人はFlash-Liteだけになります。Plusの人はFlash-LiteとFlashになり、適用の時期はメールで知らせると書かれています。プランごとの細かい上限は[Geminiの回数制限の記事](/media/gemini-limits/)で、ChatGPTの画像の上限は[ChatGPTの画像生成の制限の記事](/media/chatgpt-image-limit/)にまとめました。
+Geminiの無料版で使えるモデルは10月9日から変わりました。公式ヘルプ「Gemini モデルへのアクセスと使用量上限の変更」によると、個人のアカウントでAIプランに入っていない人は既定が「自動」になり、大半の質問はFlash-Lite、深い推論が要る質問はFlashやProで答えます。自動をオフにするとすべてFlash-Liteです。Plusの人はFlash-LiteとFlashになり、適用の時期はメールで知らせると書かれています。プランごとの細かい上限は[Geminiの回数制限の記事](/media/gemini-limits/)で、ChatGPTの画像の上限は[ChatGPTの画像生成の制限の記事](/media/chatgpt-image-limit/)にまとめました。
 
 ## 上限に当たったときの続け方
 
@@ -69,7 +69,7 @@ ChatGPTで上限に当たったときのリセットの見方は[ChatGPTの上�
 画像やファイルの上限に当たったなら、テキストのやり取りはそのまま続けられます。待たずに別のAIを使うなら、ふだんの質問に上限の記載がないGoogleのAIモードか、上限の数え方が違うGeminiやClaudeに移るのも手です。
 
 ### Geminiの無料版は10月9日から何が変わりますか？
-個人のアカウントでAIプランに入っていない人が使えるモデルが、Flash-Liteだけになります。Google AI Plusの人はFlash-LiteとFlashになり、いつから適用されるかはメールで知らせると公式ヘルプに書かれています。
+個人のアカウントでAIプランに入っていない人は、モデルの既定が「自動」になります。大半の質問はFlash-Liteで答え、自分で選べるのもFlash-Liteだけです。Google AI Plusの人はFlash-LiteとFlashになり、いつから適用されるかはメールで知らせると公式ヘルプに書かれています。
 
 ### Claudeの無料版で画像は作れますか？
 写真やイラストは作れません。グラフや図表のような、コードで描けるものは作れます。画像を作るなら、ChatGPT・Gemini・AIモードのどれかを使います。
