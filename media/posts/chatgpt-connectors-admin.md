@@ -20,7 +20,7 @@ OpenAIのヘルプ「[プラグインとアプリ向けの管理機能、セキ�
 - OutlookやSharePointは**Microsoft Entraの管理者の同意が別に要る**。同意してもChatGPT側の操作は有効にならない
 :::
 
-<!-- SHOT: 概要図（gen_gemini_web.py）。文字は「プラグイン」「アプリ」「アクション」「権限」「ドメイン」の5か所。左から右へ、使えるかから何ができるかからいつ確認するかからどのアカウントか の4段の関門。幅800の倍の解像度・縦横比2:1以内 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/01_fig_overview.jpg" alt="書類からチャットの画面までの間に4つの門が並ぶ図。門の名前は左からプラグインとアプリ、アクション、権限、ドメイン" loading="lazy"><figcaption>アプリが動くまでに通る4つの関門</figcaption></figure>
 
 ## コネクタとアプリとプラグイン
 
@@ -30,7 +30,7 @@ OpenAIのヘルプ「[プラグインとアプリ向けの管理機能、セキ�
 
 管理の入口は**管理コンソールでワークスペースを選んで開く［プラグイン］**で、従来の［アプリ］ページも［レガシーアプリの管理］から開けます。ヘルプは両方の手順を並べていて、この記事は今の入口で書きます。
 
-<!-- SHOT: ヘルプ 11509118 の冒頭（概要の節、管理コンソールでプラグインを開くと書かれた部分）。https://help.openai.com/ja-jp/articles/11509118 ・PC幅・赤枠は「管理コンソール」「プラグイン」「レガシーアプリの管理」の文 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/02_help_overview.jpg" alt="OpenAIヘルプの概要の節。対象のワークスペースを選んでプラグインを開く。プラグインページ内のレガシーアプリの管理の設定からもアプリを管理できる" loading="lazy"><figcaption>管理機能のヘルプの概要（OpenAIヘルプ）</figcaption></figure>
 
 ## 止めたい範囲で選ぶ設定
 
@@ -47,7 +47,7 @@ OpenAIのヘルプ「[プラグインとアプリ向けの管理機能、セキ�
 
 **どれか1つを切れば全部が止まる作りではありません。**プラグインのインストール・アプリの有効化・ロール・アクション・権限は別々に評価され、GoogleやMicrosoftの側の承認もまた別の関門です。
 
-<!-- SHOT: 上の表を図にしたもの（HTML の図、scripts/seo/fig の800幅の型。800幅を2倍で書き出し・文字は最小24px・縦横比は2:1〜4:3）。6行を「止めたいこと」と「使う設定」の2列で。読点なし -->
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/03_fig_choose.png" alt="止めたいこと6つと使う設定の対応。社内で使わせないはアプリの有効と無効、一部の部署だけはカスタムロール、書き込みはアクション、毎回の確認は権限、個人のメールのアカウントはドメインを管理、個人のChatGPTからの接続は検証済みドメインによる制限" loading="lazy"><figcaption>止めたいことと使う設定の対応</figcaption></figure>
 
 ## BusinessとEnterpriseの既定の違い
 
@@ -121,7 +121,7 @@ Enterprise・Eduでは、ロールベースのアクセス制御（RBAC）で部
 
 追加の確認や拒否の対象になる例として、権限管理のヘルプはメールやメッセージの送信・ファイルの削除・共有やセキュリティの設定の変更・購入を挙げています。
 
-<!-- SHOT: ヘルプ 20001495 の「権限の選択肢について」の4項目。https://help.openai.com/ja-jp/articles/20001495 ・PC幅・赤枠は4つの選択肢の箇条書き全体 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/04_help_permissions.jpg" alt="アプリの権限管理のヘルプにある権限の選択肢。常に確認、読み取りアクションを許可、低リスクのアクションを許可、すべてのアクションを許可の4つ" loading="lazy"><figcaption>権限の4つの選択肢（ChatGPT でのアプリの権限管理）</figcaption></figure>
 
 ## 会社のアカウントのつなぎ先を絞る
 
@@ -152,7 +152,7 @@ ChatGPT Enterpriseの組織は、検証済みの会社のドメインを使う�
 
 対象はGoogleドライブ・Gmail・SharePoint・Teams・Slack・Notion・GitHubなど29個のアプリです（ヘルプの一覧を数えました）。すでにつないでいる社員がいるなら、有効にしたあと本人に接続を外してもらう段取りが要ります。
 
-<!-- SHOT: ヘルプ 11509118 の「検証済みドメインによる制限に対応しているアプリ」の一覧。https://help.openai.com/ja-jp/articles/11509118 ・PC幅・赤枠は一覧の表全体 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/05_help_domain_apps.jpg" alt="検証済みドメインによる制限に対応しているアプリの表。AirtableやAsanaからZoomInfoまでが4列で並ぶ" loading="lazy"><figcaption>検証済みドメインによる制限に対応しているアプリ（管理機能のヘルプ）</figcaption></figure>
 
 ## GoogleとMicrosoftの側の承認
 
@@ -171,7 +171,7 @@ OutlookのメールとカレンダーやTeams、SharePointの一部のアクシ�
 
 同意を済ませても、ChatGPTのアクションは有効にならず、社員のMicrosoftアカウントも自動ではつながりません。使わせたいアクションはオーナーか管理者が1つずつ有効にします。テナント全体の同意の仕組みは、Microsoft Learnの「[アプリケーションに対してテナント全体の管理者の同意を付与する](https://learn.microsoft.com/ja-jp/entra/identity/enterprise-apps/grant-admin-consent)」にあります。
 
-<!-- SHOT: Microsoft Learn「アプリケーションに対してテナント全体の管理者の同意を付与する」の手順の節。https://learn.microsoft.com/ja-jp/entra/identity/enterprise-apps/grant-admin-consent ・PC幅・赤枠は「管理者の同意を付与」の手順 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/06_learn_admin_consent.jpg" alt="Microsoft Learnの手順。Microsoft Entra管理センターのエンタープライズアプリでアプリを選び、セキュリティのアクセス許可を開き、管理者の同意の付与を選ぶ" loading="lazy"><figcaption>テナント全体の管理者の同意を付与する手順（Microsoft Learn）</figcaption></figure>
 
 ### Google Workspaceの承認
 
@@ -192,7 +192,7 @@ Googleドライブのアプリは、ドキュメント・スプレッドシー�
 
 管理者が先に確かめるのは意図したワークスペースとプラグインで変えたかと、変えたのがワークスペースの既定かカスタムロールかです。Enterpriseなら、その人に付いている全部のロールも見ます。
 
-<!-- SHOT: ヘルプ 20001497 の「プラグインに管理者によって無効化と表示される場合」の節。https://help.openai.com/ja-jp/articles/20001497 ・PC幅・赤枠は節の見出しと最初の段落 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/07_help_disabled.jpg" alt="トラブルシューティングのヘルプの節。アクセスが制限されていてもプラグインはディレクトリに表示されることがあり、表示されていても中のアプリを使えるとは限らない" loading="lazy"><figcaption>プラグインに管理者によって無効化と出る場合（OpenAIヘルプ）</figcaption></figure>
 
 ## 設定を広げる順番
 
