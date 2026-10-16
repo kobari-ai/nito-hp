@@ -20,7 +20,7 @@ Microsoft 365 Business StandardやE3などの対象プランを契約してい�
 - 社内データを読むエージェントは**従量課金で既定オフ**。課金の設定をしなければ費用は出ない
 :::
 
-<!-- SHOT: 01_fig_scope 概要図（HTML図）。止まる範囲を3段で: 見えなくする（ピン留めを外す）／一部だけ止める（特定のユーザー・Web検索・エージェント）／使えなくする（統合アプリでブロック）。PC 幅800・DPR2、文字は5か所まで -->
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/01_fig_scope.png" alt="Copilot Chatを止める3段階の図。ピン留めを外すのは見えなくするだけ、特定の人・Web検索・エージェントは一部だけ止める、統合アプリでブロックすると使えなくなる。止まる範囲はこの順に広がる" loading="lazy"><figcaption>止まる範囲は3段階</figcaption></figure>
 
 ## 止めたい範囲を先に決める
 
@@ -41,7 +41,7 @@ Microsoft 365 Business StandardやE3などの対象プランを契約してい�
 
 TeamsのアイコンからCopilotが消えれば止まった、と考えたくなります。しかしLearnの管理のページは、ピン留めを外してもCopilot Chatへのアクセスは削除されず、Copilotアプリなどから引き続き使える可能性がある、と注意書きを置いています。**ピン留めは表示の設定で、利用の可否は決めません。**
 
-<!-- SHOT: 02_pin_options Learn「Microsoft 365 アプリでMicrosoft Copilot Chatをピン留めする」の「ピン留めオプション」の節（https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pin-copilot-chat-navbar#pinning-options）。PC幅。赤枠1: 2つの選択肢の箇条書き、赤枠2: 「最大 48 時間」の文 -->
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/02_pin_options.jpg" alt="Microsoft Learnのピン留めオプションの節。推奨のピン留めする設定と、ピン留めしない設定の説明が並び、ピン留めしない場合も利用者はアプリストアからCopilotを自分で追加できると書かれている（赤枠1）。赤枠2は設定の変更が反映されるまでの時間" loading="lazy"><figcaption>Microsoft Learn「Microsoft 365 アプリでMicrosoft Copilot Chatをピン留めする」のピン留めオプション</figcaption></figure>
 
 ### ピン留めの設定の場所
 
@@ -57,7 +57,7 @@ Microsoft Copilotアプリ（旧Microsoft 365 Copilotアプリ）のナビゲー
 
 社員がCopilot Chatを使えない状態にしたいときは、ブロックを使います。Learnの管理のページには、すべてのユーザー、または特定のユーザーとグループのCopilot Chatへのアクセスをブロックでき、そこには対象となるMicrosoft Copilotライセンスを持つ人も含まれる、と書かれています。
 
-<!-- SHOT: 03_learn_block Learn「Microsoft Copilot Chatの管理」の「Microsoft Copilot Chatへのアクセスを制限する」の節（https://learn.microsoft.com/ja-jp/copilot/manage）。PC幅。赤枠1: 3つの箇条書き（ピン留め・ユーザーまたはグループ・ブロック）、赤枠2: 「Copilot Chat へのアクセスをブロックする」の本文 -->
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/03_learn_block.jpg" alt="Microsoft LearnのMicrosoft Copilot Chatへのアクセスを制限する節。ピン留めを外す、特定のユーザーまたはグループに制限する、アクセスのブロックの3つが並ぶ（赤枠1）。ブロックの項には対象となるライセンスを持つユーザーも含めてブロックでき、ブロックされるとCopilotアプリ・Outlook・Teams・Web版などで使えなくなると書かれている（赤枠2）" loading="lazy"><figcaption>Microsoft Learn「Microsoft Copilot Chatの管理」のアクセスを制限する節</figcaption></figure>
 
 ### ブロックの手順
 
@@ -66,6 +66,8 @@ Learnの管理のページは、ブロックできることと利用者の画面
 1. Microsoft 365 管理センターで［設定］＞［統合アプリ］を開く
 2. ［利用可能なアプリ］で［Copilot］を選ぶ
 3. ［アプリをブロックする］を選ぶ
+
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/09_blog_block.jpg" alt="Microsoftの日本のサポートブログに載っている、Microsoft 365 管理センターの統合アプリの画面。設定の下の統合アプリ（赤枠1）、利用可能なアプリのタブ（赤枠2）、Copilotの詳細パネルの処理にあるアプリをブロックする（赤枠3）" loading="lazy"><figcaption>サポートブログの統合アプリの画面。赤枠の番号は手順の番号と同じ</figcaption></figure>
 
 表記が見つからないときは、統合アプリの一覧で「Copilot」を検索してください。
 
@@ -79,7 +81,7 @@ Learnの管理のページは、ブロックできることと利用者の画面
 | 組織のユーザーはインストールできません | 使えない・追加もできない | 使える |
 | アプリをブロックする | 使えない | 使えない |
 
-<!-- SHOT: 04_fig_block_matrix 比較図（HTML図）。上の表と同じ3行×2列で使える=緑・使えない=灰に塗る。PC 幅800・DPR2、図の中に見出しを入れるならキャプションは付けない -->
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/04_fig_block_matrix.png" alt="統合アプリの3つの設定でCopilot Chatを使えるかの図。展開対象から外すと、組織のユーザーはインストールできませんの2つは、ライセンスなしの人は使えず、ライセンスありの人は使える。アプリをブロックするはどちらも使えない" loading="lazy"><figcaption>ライセンスを持つ人まで止まるのはブロックだけ</figcaption></figure>
 
 有料のCopilotを入れた部署は残し、それ以外を止めたいなら、［展開対象から外す］か［組織のユーザーはインストールできません］が合います。全員を止めるならブロックです。ブロックしたあとのアイコンの見え方はOutlookの種類によってそろわない場合がある、とブログは書いています。
 
@@ -101,7 +103,7 @@ Learnの管理のページは、ブロックできることと利用者の画面
 
 Copilot Chatは、答えを作るときにBingへ検索クエリを送り、Webの新しい情報を使います。社外に検索の語が出ることを避けたい会社では、Chatは残してWeb検索だけ切る選択肢があります。
 
-<!-- SHOT: 05_web_search_policy Learn「Microsoft Copilot と Microsoft Copilot Chat での Web 検索のデータ、プライバシー、セキュリティ」の「IT 管理者の制御」の節（https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access）。PC幅。赤枠: 3つの選択肢の箇条書き -->
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/05_web_search_policy.jpg" alt="Microsoft LearnのIT 管理者の制御の節。管理者が選ぶ設定はMicrosoft CopilotとCopilot Chatの両方に効く。有効、無効、作業モードだけ無効の3つの選択肢が赤枠で囲まれている" loading="lazy"><figcaption>Microsoft Learn「Web 検索のデータ、プライバシー、セキュリティ」のIT 管理者の制御</figcaption></figure>
 
 使うのは「Copilot での Web 検索を許可する」ポリシーです。Microsoft 365 のクラウドポリシー サービスで設定し、グループやユーザーごとに変えられます。管理センターでの置き場所は［Copilot］＞［設定］＞［データ アクセス］＞［Web 検索］だと、Learnの設定管理のページは書いています。Web検索のページは「クラウド ポリシー サービスでのみ」としていて、Learnの中でも説明がそろっていません。選択肢は次の3つです。
 
@@ -121,7 +123,7 @@ Copilot Chatは、答えを作るときにBingへ検索クエリを送り、Web�
 
 Learnの「[Copilot Chatでのエージェントの使用](https://learn.microsoft.com/ja-jp/copilot/agents)」によると、指示と公開Webサイトだけで動く宣言型のエージェントは追加料金なしで、既定で使えます。**SharePointやGraph コネクタの社内データを読むエージェントは従量課金で、既定でオフ**です。オンにするには管理者がCopilot Studioのサブスクリプションか従量課金の課金ポリシーを用意する必要があります。
 
-<!-- SHOT: 06_agents_billing Learn「Microsoft 365 Copilot Chatでのエージェントの使用」の「エージェントを有効にする」の節（https://learn.microsoft.com/ja-jp/copilot/agents）。PC幅。赤枠: 「従量制課金を利用するエージェントは、Copilot Chatのユーザーに対して既定でオフ」の文 -->
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/06_agents_billing.jpg" alt="Microsoft Learnのエージェントを有効にする節。指示と公開Webサイトだけで動く宣言型エージェントは追加料金なし。赤枠はSharePointやGraph コネクタの共有データを読むエージェントが従量課金で、Copilot Chatのユーザーには既定でオフという記述" loading="lazy"><figcaption>Microsoft Learn「Copilot Chatでのエージェントの使用」</figcaption></figure>
 
 つまり、課金の設定をしていなければ社内データを読むエージェントで費用は出ません。用意する場合は容量パックと従量課金の組み合わせを選べます。容量パックは1パックあたり月25,000 Copilot クレジットの前払いです。クレジットのポリシーだけにすると、使い切った時点で補充まで対象の社員はCopilot Chatを使えなくなり、従量課金の請求は出ません。
 
@@ -133,7 +135,7 @@ Learnの「[Copilot Chatでのエージェントの使用](https://learn.microso
 
 Edgeのツールバーに出るCopilotのボタンは、Edgeのポリシー「[Microsoft365CopilotChatIconEnabled](https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-browser-policies/microsoft365copilotchaticonenabled)」で消せます。対象はWindowsとmacOSのEdge 139以降で、職場のアカウント（Entra ID）のプロファイルに効きます。開いているページの内容・閲覧履歴・動画の文字起こしをCopilot Chatに渡すかどうかは、EdgeEntraCopilotPageContext（Edge 130以降）で決めます。どちらもボタンや渡す情報の設定で、Copilot Chat自体の利用を止める設定ではありません。
 
-<!-- SHOT: 07_edge_policy Learn「Microsoft365CopilotChatIconEnabled」のポリシーの説明（https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-browser-policies/microsoft365copilotchaticonenabled）。PC幅。赤枠: 有効・無効・未構成の3行 -->
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/07_edge_policy.jpg" alt="Edgeのポリシーの説明。有効ならツールバーにCopilotが表示され、無効なら表示されない。構成しない場合は表示され、ユーザーが設定で切り替えられる（赤枠）" loading="lazy"><figcaption>Microsoft Learn「Microsoft365CopilotChatIconEnabled」の説明</figcaption></figure>
 
 ### WindowsのCopilotアプリ
 
@@ -149,7 +151,7 @@ Copilotアプリには職場のアカウントと個人のMicrosoftアカウン�
 
 止める前に、誰がどれだけ使っているかを数えておくと、社内の説明がしやすくなります。管理センターの［レポート］＞［使用状況］で［Microsoft Copilot］＞［Copilot Chat］を開くと、アクティブなユーザーの数やプロンプトの数を7日・28日・90日・180日の範囲で見られます。
 
-<!-- SHOT: 08_usage_report Learn「Microsoft Copilot Chat使用状況レポート」の表示手順の節（https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage）。PC幅。赤枠: 4つの手順の番号付きリスト -->
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/08_usage_report.jpg" alt="Microsoft Learnの使用状況レポートを表示する手順。管理センターに戻り、レポート、使用状況を選び、レポートでMicrosoft CopilotとCopilot Chatを順に選ぶ4つの手順が赤枠で囲まれている" loading="lazy"><figcaption>Microsoft Learn「Microsoft Copilot Chat使用状況レポート」の表示手順</figcaption></figure>
 
 このレポートが数えるのは、今のところCopilotライセンスを持たない社員の利用だけです。
 
