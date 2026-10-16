@@ -24,7 +24,7 @@ Microsoft 365 Business StandardやE3などの対象プランを契約してい�
 
 ## 止めたい範囲を先に決める
 
-よく混ざるのが、画面から消したいのか、使えなくしたいのか、という2つの目的です。Copilot Chatの入口はCopilotアプリ（Web・デスクトップ・モバイル）、Edge、Outlook、Teams、WordやExcelのエージェントと複数あり、**どこか1つを閉じても別の入口から開ける**ように作られています。そのため、設定は止めたい範囲から選びます。
+画面から消したいのか使えなくしたいのかで、選ぶ設定は変わります。Copilot Chatの入口はCopilotアプリ（Web・デスクトップ・モバイル）、Edge、Outlook、Teams、WordやExcelのエージェントと複数あり、**どこか1つを閉じても別の入口から開ける**ように作られています。
 
 | やりたいこと | 使う設定 | 止まる範囲 |
 |---|---|---|
@@ -45,7 +45,7 @@ TeamsのアイコンからCopilotが消えれば止まった、と考えたく�
 
 ### ピン留めの設定の場所
 
-設定にはAI 管理者のロールが要ります。[Microsoft 365 管理センター](https://admin.microsoft.com/)にサインインし、［Copilot］＞［設定］から［Microsoft Copilot Chatをピン留めする］を開くと、ピン留めする（推奨・既定）と、ピン留めしない、の2つから選べます。変更が有効になるまで最大48時間かかる場合がある、とLearnに書かれているので、翌日にまだ出ていても慌てなくて大丈夫です。
+設定にはAI 管理者のロールが要ります。[Microsoft 365 管理センター](https://admin.microsoft.com/)にサインインし、［Copilot］＞［設定］から［Microsoft Copilot Chatをピン留めする］を開くと、ピン留めする（推奨・既定）と、ピン留めしない、の2つから選べます。変更が有効になるまで最大48時間かかる場合がある、とLearnに書かれています。
 
 ### 2026年1月からCopilotアプリには効かない
 
@@ -61,7 +61,7 @@ Microsoft Copilotアプリ（旧Microsoft 365 Copilotアプリ）のナビゲー
 
 ### ブロックの手順
 
-Learnの管理のページは、ブロックできることと利用者の画面は説明していますが、ブロックの設定画面の手順は載せていません（2026年10月17日に確認）。手順はMicrosoftの日本のサポートチームのブログ「[Microsoft 365 Copilot Chat のピン留めの制御方法](https://jpmessaging.github.io/blog/Outlook-microsoft365-copilot-chat-pin-admin-control/)」（2025年12月23日）に載っています。
+Learnの管理のページは、ブロックできることと利用者の画面は説明していますが、ブロックの設定画面の手順は載せていません（2026年10月17日に確認）。手順はMicrosoftの日本のサポートチームのブログ「[Microsoft 365 Copilot Chat のピン留めの制御方法](https://jpmessaging.github.io/blog/Outlook-microsoft365-copilot-chat-pin-admin-control/)」（2025年12月23日）に載っています。統合アプリでCopilotをブロックするとライセンスの有無にかかわらずOutlookなどでCopilot Chatが使えなくなったことも、ブログの検証で示されています。
 
 1. Microsoft 365 管理センターで［設定］＞［統合アプリ］を開く
 2. ［利用可能なアプリ］で［Copilot］を選ぶ
@@ -91,7 +91,7 @@ Learnの管理のページは、ブロックできることと利用者の画面
 
 ## 一部の人だけに使わせる
 
-試験導入の部署だけに使わせる使い方も可能です。Microsoft 365 管理センターのアプリ管理の設定で選んだユーザーだけがCopilotを使えるようにできる、とLearnは説明しています。
+試験導入の部署だけに使わせるときも、使うのは統合アプリの設定です。Microsoft 365 管理センターのアプリ管理の設定で選んだユーザーだけがCopilotを使えるようにできる、とLearnは説明しています。
 
 具体的には統合アプリの［Copilot］の［ユーザー］タブで［特定のユーザー/グループがインストールできる］を選び、対象のグループを指定します。先ほどのブログの表のとおり、**対象から外れた人のうちライセンスを持たない人は使えず、自分で追加もできません。**ライセンスを持つ人は対象に入れなくても使えます。
 
@@ -129,7 +129,7 @@ Learnの「[Copilot Chatでのエージェントの使用](https://learn.microso
 
 ## EdgeとWindowsと個人アカウントの入口
 
-統合アプリのブロックで止まるのは、Copilotアプリ・Outlook・Teams・Web版のCopilot Chatです。それ以外の入口は別の設定です。
+ブロックで止まる場所としてLearnが挙げているのは、Copilotアプリ・Outlook・Teams・Web版のCopilot Chatです。それ以外の入口は別の設定です。
 
 ### Edgeのボタン
 
@@ -145,7 +145,7 @@ Windowsに入っている個人向けのCopilotアプリは、Copilot Chatとは
 
 Copilotアプリには職場のアカウントと個人のMicrosoftアカウントのどちらでもサインインできます。社員が会社のPCで個人のアカウントに切り替えれば、職場のブロックは関係なくなります。
 
-ここで copilot.cloud.microsoft のURLをブロックしたくなりますが、Learnは、個人アカウントを止める目的でこのURLをブロックしないよう書いています。代わりに使うのが、Microsoft Entraの「[テナント制限 v2](https://learn.microsoft.com/ja-jp/entra/external-id/tenant-restrictions-v2)」です。会社のネットワークや端末から、外部のアカウントでサインインできる範囲を絞れます。**URLやIPアドレスでの遮断は、Microsoft 365のアプリまで止まる恐れがあるとしてMicrosoftは勧めていません。**
+個人アカウントを止める目的で copilot.cloud.microsoft のURLをブロックしないよう、Learnは書いています。代わりに使うのが、Microsoft Entraの「[テナント制限 v2](https://learn.microsoft.com/ja-jp/entra/external-id/tenant-restrictions-v2)」です。会社のネットワークや端末から、外部のアカウントでサインインできる範囲を絞れます。**URLやIPアドレスでの遮断は、Microsoft 365のアプリまで止まる恐れがあるとしてMicrosoftは勧めていません。**
 
 ## 止める前と止めたあとに見るもの
 
@@ -157,12 +157,12 @@ Copilotアプリには職場のアカウントと個人のMicrosoftアカウン�
 
 ブロックやWeb検索の停止を始めるときは、社員に先に知らせます。止める範囲・理由・代わりに使ってよいツール・いつ見直すかの4つを書き、同じ内容をカスタムリンクの先に置いておくと、問い合わせへの答えが1か所にまとまるのも利点です。
 
-止めている間に、社内のどの業務ならAIに任せられるかを整理しておくと、解禁するときの判断が早くなります。業務の一部をAIエージェントに任せる仕組みづくりの相談先は、[AIエージェント構築支援](/ai-agent/)のページです。
+どの業務をAIに任せるかを決めて仕組みとして組む段階の相談先は、[AIエージェント構築支援](/ai-agent/)のページです。
 
 ## よくある質問
 
 ### Copilot Chatは管理者が無効にできますか？
-できます。Microsoft 365 管理センターの［設定］＞［統合アプリ］でCopilotをブロックすると、Copilotアプリ・Outlook・Teams・Web版でCopilot Chatを使えなくなります。全員にも、特定のユーザーやグループにもかけられます。
+できます。Learnによると、ブロックした社員はCopilotアプリ・Outlook・Teams・Web版でCopilot Chatを使えなくなります。全員にも、特定のユーザーやグループにもかけられ、日本のサポートブログは統合アプリでCopilotをブロックする手順を載せています。
 
 ### Copilot Chatはピン留めを外せば止まりますか？
 止まりません。ピン留めはTeamsやOutlookのナビゲーションに出すかどうかの設定です。2026年1月28日からはCopilotアプリにも効かず、社員はCopilotアプリやブラウザから使えます。
