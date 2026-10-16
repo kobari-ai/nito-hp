@@ -89,6 +89,8 @@ Pixelのホーム画面にある検索バーには、AIモードのショート�
 
 <figure class="post-figure"><img src="/media/images/ai-mode-remove/04_help_pixel.jpg" alt="Google Pixelヘルプの AI モードを使用する の節。AIモードのショートカットを無効にするには、検索バーでGアイコンをタップし、プロフィールアイコン、設定、Pixel Search Box をカスタマイズ とタップして、AIモードをオンまたはオフにすると書かれている" loading="lazy"><figcaption>Google Pixelのヘルプ（2026年9月30日取得）</figcaption></figure>
 
+画面の下のバーやホームボタンを長押ししたときに出る検索の画面はAIモードとは別の［かこって検索］で、止め方は[かこって検索をオフにする方法](/media/circle-to-search-off/)にまとめました。
+
 ### Googleアプリと Search Labs
 
 iPhoneやAndroidのGoogleアプリでは、画面上部のフラスコのアイコン（Search Labs）からAIモードをオフにする手順が紹介されることがあります。Googleのヘルプ「[Search Labs の「AI モード」](https://support.google.com/websearch/answer/16296315?hl=ja)」によると、**このスイッチが対象にしているのは試験運用版のAIモードだけです。**［AI モード］の横に Search Labs のアイコンが出ていない人は試験運用版を使っていないため、オフにしても検索のAIモードは残ります。
