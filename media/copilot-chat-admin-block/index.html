@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Copilot Chatを社内で止める方法｜ブロック・Web検索・エージェント | nito Column</title>
+    <meta name="description" content="無料のCopilot Chatを管理者が止める・絞る方法を公式ドキュメントから解説。ピン留めを外すだけでは止まらない理由、統合アプリでのブロック、Web検索やエージェントだけ止める設定、私用アカウントへの抜け道まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/copilot-chat-admin-block/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Copilot Chatを社内で止める方法｜ブロック・Web検索・エージェント">
+    <meta property="og:description" content="無料のCopilot Chatを管理者が止める・絞る方法を公式ドキュメントから解説。ピン留めを外すだけでは止まらない理由、統合アプリでのブロック、Web検索やエージェントだけ止める設定、私用アカウントへの抜け道まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/copilot-chat-admin-block/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/copilot-chat-admin-block.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/copilot-chat-admin-block.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Copilot Chatを社内で止める方法｜ブロック・Web検索・エージェント", "description": "無料のCopilot Chatを管理者が止める・絞る方法を公式ドキュメントから解説。ピン留めを外すだけでは止まらない理由、統合アプリでのブロック、Web検索やエージェントだけ止める設定、私用アカウントへの抜け道まで。", "datePublished": "2026-10-17", "dateModified": "2026-10-17", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/copilot-chat-admin-block/"}, "articleSection": "AI活用", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Copilot Chatを社内で止める方法｜ブロック・Web検索・エージェント"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Copilot Chatは管理者が無効にできますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。Learnによると、ブロックした社員はCopilotアプリ・Outlook・Teams・Web版でCopilot Chatを使えなくなります。全員にも、特定のユーザーやグループにもかけられ、日本のサポートブログは統合アプリでCopilotをブロックする手順を載せています。"}}, {"@type": "Question", "name": "Copilot Chatはピン留めを外せば止まりますか？", "acceptedAnswer": {"@type": "Answer", "text": "止まりません。ピン留めはTeamsやOutlookのナビゲーションに出すかどうかの設定です。2026年1月28日からはCopilotアプリにも効かず、社員はCopilotアプリやブラウザから使えます。"}}, {"@type": "Question", "name": "Copilot Chatのブロックは有料の人も止まりますか？", "acceptedAnswer": {"@type": "Answer", "text": "止まります。統合アプリで［アプリをブロックする］を選ぶと、ライセンスの有無にかかわらずCopilot Chatを使えません。ライセンスを持つ人を残したいなら［展開対象から外す］か［組織のユーザーはインストールできません］を選びます。"}}, {"@type": "Question", "name": "Copilot ChatのWeb検索だけを止められますか？", "acceptedAnswer": {"@type": "Answer", "text": "止められます。「Copilot での Web 検索を許可する」ポリシーで無効を選ぶと、社員の［Web コンテンツ］の切り替えが淡色になり、オンにできなくなります。"}}, {"@type": "Question", "name": "Copilot Chatのエージェントに費用はかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "指示と公開Webサイトだけで動くエージェントは追加料金なしです。社内データを読むエージェントは従量課金で既定でオフのため、管理者が課金を設定しない限り費用は出ません。"}}, {"@type": "Question", "name": "Copilot Chatの設定はいつ反映されますか？", "acceptedAnswer": {"@type": "Answer", "text": "ピン留めの変更は最大48時間かかる場合がある、とLearnに書かれています。ブロックなど他の設定の反映時間は、Learnには書かれていません。"}}, {"@type": "Question", "name": "Copilot Chatは個人アカウントでも止まりますか？", "acceptedAnswer": {"@type": "Answer", "text": "止まりません。個人のMicrosoftアカウントでCopilotアプリにサインインすれば、職場のブロックとは関係なく使えます。会社の端末やネットワークから外部のアカウントで入れないようにするには、Microsoft Entraのテナント制限 v2を使います。"}}, {"@type": "Question", "name": "Copilot Chatの利用者数はどこで分かりますか？", "acceptedAnswer": {"@type": "Answer", "text": "管理センターの［レポート］＞［使用状況］＞［Microsoft Copilot］＞［Copilot Chat］です。今のところCopilotライセンスを持たない社員の利用だけが数えられます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Copilot Ch…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.17</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Copilot Chatを社内で止める方法｜ブロック・Web検索・エージェント</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilot Chatを社内で止める"><defs><linearGradient id="ecg-53450a90" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-53450a90)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="86.4" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilot Chat</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">を社内で止める</text><line x1="326.4" y1="378.0" x2="873.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">ブロック・ピン留め・Web検索・エージェント</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Microsoft 365 Business StandardやE3などの対象プランを契約している会社では、職場のアカウント（Microsoft Entra ID）でサインインした社員が、追加料金なしでCopilot Chatを使えます。TeamsとOutlookのナビゲーションには既定でピン留めされているため、導入を決める前から社員の画面に出ていることがあります。名前は「Microsoft 365 Copilot Chat」から「Microsoft Copilot Chat」に変わりました。</p>
+<p>社内のルールが決まるまで止めたい、一部の部署だけ使わせたい、Web検索だけ切りたい、という相談は管理者に集まります。Microsoft Learnの「<a href="https://learn.microsoft.com/ja-jp/copilot/manage">Microsoft Copilot Chatの管理</a>」（2026年10月12日更新）は、アクセスを絞る方法としてピン留めを外す・特定のユーザーやグループに限る・ブロックする、の3つを挙げています。この記事は2026年10月17日に取得したMicrosoft LearnとMicrosoftの日本のサポートブログをもとに、どの設定で何が止まるかを整理したものです。管理センターの操作はこちらでは試していないので、手順と画面の動きは公式の説明に沿って書いています。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>ピン留めを外しても、Copilot Chatは使えるまま</strong>。Copilotアプリやブラウザからたどり着ける</li>
+<li><strong>使えなくするのは統合アプリでのブロック</strong>。対象となるCopilotライセンスを持つ人も止まる</li>
+<li>一部の人だけ使わせるなら、統合アプリの［ユーザー］タブで<strong>特定のユーザーやグループ</strong>を選ぶ</li>
+<li><strong>Web検索だけ</strong>は「Copilot での Web 検索を許可する」ポリシーで切れる。オプションの接続エクスペリエンスを切ると他の機能まで止まる</li>
+<li>社内データを読むエージェントは<strong>従量課金で既定オフ</strong>。課金の設定をしなければ費用は出ない</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/01_fig_scope.png" alt="Copilot Chatを止める3段階の図。ピン留めを外すのは見えなくするだけ、特定の人・Web検索・エージェントは一部だけ止める、統合アプリでブロックすると使えなくなる。止まる範囲はこの順に広がる" loading="lazy"><figcaption>止まる範囲は3段階</figcaption></figure>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>止めたい範囲を先に決める</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>ピン留めを外しても使える</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>ピン留めの設定の場所</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>2026年1月からCopilotアプリには効かない</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>統合アプリでCopilotをブロックする</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>ブロックの手順</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>ライセンスを持つ人も止まる</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>ブロックされた社員の画面</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>一部の人だけに使わせる</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Web検索だけを止める</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>接続エクスペリエンスを切る副作用</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>エージェントと従量課金を止める</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>EdgeとWindowsと個人アカウントの入口</a></li>
+                    <li class="toc-h3"><a href="#s7-1"><span class="toc__n">7-1</span>Edgeのボタン</a></li>
+                    <li class="toc-h3"><a href="#s7-2"><span class="toc__n">7-2</span>WindowsのCopilotアプリ</a></li>
+                    <li class="toc-h3"><a href="#s7-3"><span class="toc__n">7-3</span>個人アカウントへの抜け道</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>止める前と止めたあとに見るもの</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">止めたい範囲を先に決める</h2>
+<p>画面から消したいのか使えなくしたいのかで、選ぶ設定は変わります。Copilot Chatの入口はCopilotアプリ（Web・デスクトップ・モバイル）、Edge、Outlook、Teams、WordやExcelのエージェントと複数あり、<strong>どこか1つを閉じても別の入口から開ける</strong>ように作られています。</p>
+<table>
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>使う設定</th>
+<th>止まる範囲</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TeamsとOutlookから見えなくする</td>
+<td>Copilot＞設定のピン留め</td>
+<td>ナビゲーションの表示だけ</td>
+</tr>
+<tr>
+<td>全員が使えないようにする</td>
+<td>統合アプリでCopilotをブロック</td>
+<td>Copilotアプリ・Outlook・Teams・Web版のChat</td>
+</tr>
+<tr>
+<td>一部の人だけに使わせる</td>
+<td>統合アプリの［ユーザー］タブ</td>
+<td>選ばなかった人（ライセンスなし）</td>
+</tr>
+<tr>
+<td>Web検索だけ止める</td>
+<td>Copilot での Web 検索を許可する</td>
+<td>Bingへの検索クエリ</td>
+</tr>
+<tr>
+<td>有料のエージェントを止める</td>
+<td>従量課金を設定しない・エージェントのブロック</td>
+<td>社内データを読むエージェント</td>
+</tr>
+<tr>
+<td>Edgeのボタンを消す</td>
+<td>Microsoft365CopilotChatIconEnabled</td>
+<td>Edgeのツールバーの表示</td>
+</tr>
+</tbody>
+</table>
+<p>迷ったら、<strong>表示を消す設定と利用を止める設定を分けて考える</strong>と整理しやすくなります。前者はピン留めとEdgeのボタン、後者は統合アプリでのブロックと各機能のポリシーです。</p>
+<h2 id="s2">ピン留めを外しても使える</h2>
+<p>TeamsのアイコンからCopilotが消えれば止まった、と考えたくなります。しかしLearnの管理のページは、ピン留めを外してもCopilot Chatへのアクセスは削除されず、Copilotアプリなどから引き続き使える可能性がある、と注意書きを置いています。<strong>ピン留めは表示の設定で、利用の可否は決めません。</strong></p>
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/02_pin_options.jpg" alt="Microsoft Learnのピン留めオプションの節。推奨のピン留めする設定と、ピン留めしない設定の説明が並び、ピン留めしない場合も利用者はアプリストアからCopilotを自分で追加できると書かれている（赤枠1）。赤枠2は設定の変更が反映されるまでの時間" loading="lazy"><figcaption>Microsoft Learn「Microsoft 365 アプリでMicrosoft Copilot Chatをピン留めする」のピン留めオプション</figcaption></figure>
+
+<h3 id="s2-1">ピン留めの設定の場所</h3>
+<p>設定にはAI 管理者のロールが要ります。<a href="https://admin.microsoft.com/">Microsoft 365 管理センター</a>にサインインし、［Copilot］＞［設定］から［Microsoft Copilot Chatをピン留めする］を開くと、ピン留めする（推奨・既定）と、ピン留めしない、の2つから選べます。変更が有効になるまで最大48時間かかる場合がある、とLearnに書かれています。</p>
+<h3 id="s2-2">2026年1月からCopilotアプリには効かない</h3>
+<p>Microsoft Copilotアプリ（旧Microsoft 365 Copilotアプリ）のナビゲーションには、ピン留めの設定が効かなくなりました。Learnの管理のページによると、欧州経済領域とスイスのテナントは2025年7月25日から、それ以外のテナントは2026年1月28日からです。<strong>ピン留めしない設定にしても、Copilotアプリを開けばChatは並んでいます。</strong></p>
+<p>ピン留めしない設定でも、利用者はTeamsやOutlookのアプリストアからCopilotを自分で追加できます。ピン留めを外す手は社員を急に戸惑わせずに入口を目立たなくしたいとき向けで、利用を止める手ではありません。</p>
+<h2 id="s3">統合アプリでCopilotをブロックする</h2>
+<p>社員がCopilot Chatを使えない状態にしたいときは、ブロックを使います。Learnの管理のページには、すべてのユーザー、または特定のユーザーとグループのCopilot Chatへのアクセスをブロックでき、そこには対象となるMicrosoft Copilotライセンスを持つ人も含まれる、と書かれています。</p>
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/03_learn_block.jpg" alt="Microsoft LearnのMicrosoft Copilot Chatへのアクセスを制限する節。ピン留めを外す、特定のユーザーまたはグループに制限する、アクセスのブロックの3つが並ぶ（赤枠1）。ブロックの項には対象となるライセンスを持つユーザーも含めてブロックでき、ブロックされるとCopilotアプリ・Outlook・Teams・Web版などで使えなくなると書かれている（赤枠2）" loading="lazy"><figcaption>Microsoft Learn「Microsoft Copilot Chatの管理」のアクセスを制限する節</figcaption></figure>
+
+<h3 id="s3-1">ブロックの手順</h3>
+<p>Learnの管理のページは、ブロックできることと利用者の画面は説明していますが、ブロックの設定画面の手順は載せていません（2026年10月17日に確認）。手順はMicrosoftの日本のサポートチームのブログ「<a href="https://jpmessaging.github.io/blog/Outlook-microsoft365-copilot-chat-pin-admin-control/">Microsoft 365 Copilot Chat のピン留めの制御方法</a>」（2025年12月23日）に載っています。統合アプリでCopilotをブロックするとライセンスの有無にかかわらずOutlookなどでCopilot Chatが使えなくなったことも、ブログが説明しています。</p>
+<ol>
+<li>Microsoft 365 管理センターで［設定］＞［統合アプリ］を開く</li>
+<li>［利用可能なアプリ］で［Copilot］を選ぶ</li>
+<li>［アプリをブロックする］を選ぶ</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/09_blog_block.jpg" alt="Microsoftの日本のサポートブログに載っている、Microsoft 365 管理センターの統合アプリの画面。設定の下の統合アプリ（赤枠1）、利用可能なアプリのタブ（赤枠2）、Copilotの詳細パネルの処理にあるアプリをブロックする（赤枠3）" loading="lazy"><figcaption>サポートブログの統合アプリの画面。赤枠の番号は手順の番号と同じ</figcaption></figure>
+
+<p>表記が見つからないときは、統合アプリの一覧で「Copilot」を検索してください。</p>
+<h3 id="s3-2">ライセンスを持つ人も止まる</h3>
+<p>統合アプリの3つの設定でCopilotライセンスの有無によって動きが変わることも、同じブログが表で示しています。違いが出るのは**［アプリをブロックする］以外の2つ**で、ライセンスを持つ人のCopilot Chatは使えるままです。</p>
+<table>
+<thead>
+<tr>
+<th>統合アプリの設定</th>
+<th>ライセンスなしの人</th>
+<th>ライセンスありの人</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>展開対象から外す</td>
+<td>使えない・追加もできない</td>
+<td>使える</td>
+</tr>
+<tr>
+<td>組織のユーザーはインストールできません</td>
+<td>使えない・追加もできない</td>
+<td>使える</td>
+</tr>
+<tr>
+<td>アプリをブロックする</td>
+<td>使えない</td>
+<td>使えない</td>
+</tr>
+</tbody>
+</table>
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/04_fig_block_matrix.png" alt="統合アプリの3つの設定でCopilot Chatを使えるかの図。展開対象から外すと、組織のユーザーはインストールできませんの2つは、ライセンスなしの人は使えず、ライセンスありの人は使える。アプリをブロックするはどちらも使えない" loading="lazy"><figcaption>ライセンスを持つ人まで止まるのはブロックだけ</figcaption></figure>
+
+<p>有料のCopilotを入れた部署は残し、それ以外を止めたいなら、［展開対象から外す］か［組織のユーザーはインストールできません］が合います。全員を止めるならブロックです。ブロックしたあとのアイコンの見え方はOutlookの種類によってそろわない場合がある、とブログは書いています。</p>
+<h3 id="s3-3">ブロックされた社員の画面</h3>
+<p>ブロックされた社員がCopilotアプリでChatを選ぶと、組織のポリシーでアクセスが無効になっている、という説明が出ます。ナビゲーションからChatの項目がすぐ消えるとは限らないため、社員から壊れているのでは、と問い合わせが来るかもしれません。</p>
+<p>その画面には社内のルールのページへのリンクを出せます。Learnの手順では管理センターの［Copilot］＞［設定］で［すべて表示］を選び、ブロックされた Microsoft Copilot アプリの［カスタム リンク］に社内のページのURLを入れます。**社員の画面に出るのは「View info from your organization」というリンクです。**リンク先に止めている理由・代わりに使ってよいツール・問い合わせ先を書いておくと、情報システムへの問い合わせが減ります。</p>
+<h2 id="s4">一部の人だけに使わせる</h2>
+<p>試験導入の部署だけに使わせるときも、使うのは統合アプリの設定です。組織の構成に応じて、Microsoft 365 管理センターのアプリ管理の設定で選んだユーザーだけがCopilotを使えるようにできる、とLearnは説明しています。</p>
+<p>具体的には統合アプリの［Copilot］の［ユーザー］タブで［特定のユーザー/グループがインストールできる］を選び、対象のグループを指定します。先ほどのブログの表のとおり、**対象から外れた人のうちライセンスを持たない人は使えず、自分で追加もできません。**ライセンスを持つ人は対象に入れなくても使えます。</p>
+<p>社員が自分で有料のCopilotを買ってしまうのを防ぐ設定も、同じ［Copilot］＞［設定］にあります。［Microsoft Copilot セルフサービス購入］の選択肢は、許可・試用版のみを許可・許可しない、の3つです。有料ライセンスを外す手順は<a href="/media/copilot-license-assign/">Copilotのライセンスを割り当てる方法</a>の「外すときと付け替えるとき」に書いています。</p>
+<h2 id="s5">Web検索だけを止める</h2>
+<p>Copilot Chatは、答えを作るときにBingへ検索クエリを送り、Webの新しい情報を使います。社外に検索の語が出ることを避けたい会社では、Chatは残してWeb検索だけ切る選択肢があります。</p>
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/05_web_search_policy.jpg" alt="Microsoft LearnのIT 管理者の制御の節。管理者が選ぶ設定はMicrosoft CopilotとCopilot Chatの両方に効く。有効、無効、作業モードだけ無効の3つの選択肢が赤枠で囲まれている" loading="lazy"><figcaption>Microsoft Learn「Web 検索のデータ、プライバシー、セキュリティ」のIT 管理者の制御</figcaption></figure>
+
+<p>使うのは「Copilot での Web 検索を許可する」ポリシーです。Microsoft 365 のクラウドポリシー サービスで設定し、グループやユーザーごとに変えられます。管理センターでの置き場所は［Copilot］＞［設定］＞［データ アクセス］＞［Web 検索］だと、Learnの設定管理のページは書いています。Web検索のページは「クラウド ポリシー サービスでのみ」としていて、Learnの中でも説明がそろっていません。選択肢は次の3つです。</p>
+<ul>
+<li>Microsoft Copilot および Microsoft Copilot Chat で有効</li>
+<li>Microsoft Copilot と Microsoft Copilot Chat で無効にする</li>
+<li>Microsoft Copilot 作業モードで無効になっています。Microsoft Copilot Web モードと Microsoft Copilot Chat で有効</li>
+</ul>
+<p>無効にすると、社員の画面の［Web コンテンツ］の切り替えがオフになって淡色になり、社員がオンに戻すことはできません。Learnによると、このときCopilot Chatは基になる大規模言語モデルだけで答えを作ります。最新のニュースや料金のような質問には弱くなります。</p>
+<h3 id="s5-1">接続エクスペリエンスを切る副作用</h3>
+<p>ポリシーを何も構成していなければ、Web検索は既定でオンです。Officeのポリシーで［追加のオプションの接続エクスペリエンスの使用を許可する］を無効にしても止まりますが、Learnは、これはMicrosoft 365全体で複数の機能を制限すると書いています。<strong>Web検索だけを止めたいなら、使うのは専用のポリシーです。</strong></p>
+<h2 id="s6">エージェントと従量課金を止める</h2>
+<p>無料のCopilot Chatでもエージェントは使えるものの、費用が出るかどうかはエージェントが何を読むかで分かれます。</p>
+<p>Learnの「<a href="https://learn.microsoft.com/ja-jp/copilot/agents">Copilot Chatでのエージェントの使用</a>」によると、指示と公開Webサイトだけで動く宣言型のエージェントは追加料金なしで、既定で使えます。<strong>SharePointやGraph コネクタの社内データを読むエージェントは従量課金で、既定でオフ</strong>です。オンにするには管理者がCopilot Studioのサブスクリプションか従量課金の課金ポリシーを用意する必要があります。</p>
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/06_agents_billing.jpg" alt="Microsoft Learnのエージェントを有効にする節。指示と公開Webサイトだけで動く宣言型エージェントは追加料金なし。赤枠はSharePointやGraph コネクタの共有データを読むエージェントが従量課金で、Copilot Chatのユーザーには既定でオフという記述" loading="lazy"><figcaption>Microsoft Learn「Copilot Chatでのエージェントの使用」</figcaption></figure>
+
+<p>つまり、課金の設定をしていなければ社内データを読むエージェントで費用は出ません。用意する場合は容量パックと従量課金の組み合わせを選べます。容量パックは1パックあたり月25,000 Copilot クレジットの前払いです。クレジットのポリシーだけにすると、使い切った時点で補充まで対象の社員はCopilot Chatを使えなくなり、従量課金の請求は出ません。</p>
+<h2 id="s7">EdgeとWindowsと個人アカウントの入口</h2>
+<p>ブロックで止まる場所としてLearnが挙げているのは、Copilotアプリ・Outlook・Teams・Web版のCopilot Chatです。それ以外の入口は別の設定です。</p>
+<h3 id="s7-1">Edgeのボタン</h3>
+<p>Edgeのツールバーに出るCopilotのボタンは、Edgeのポリシー「<a href="https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-browser-policies/microsoft365copilotchaticonenabled">Microsoft365CopilotChatIconEnabled</a>」で消せます。対象はWindowsとmacOSのEdge 139以降で、職場のアカウント（Entra ID）のプロファイルに効きます。開いているページの内容・閲覧履歴・動画の文字起こしをCopilot Chatに渡すかどうかは、EdgeEntraCopilotPageContext（Edge 130以降）で決めます。どちらもボタンや渡す情報の設定で、Copilot Chat自体の利用を止める設定ではありません。</p>
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/07_edge_policy.jpg" alt="Edgeのポリシーの説明。有効ならツールバーにCopilotが表示され、無効なら表示されない。構成しない場合は表示され、ユーザーが設定で切り替えられる（赤枠）" loading="lazy"><figcaption>Microsoft Learn「Microsoft365CopilotChatIconEnabled」の説明</figcaption></figure>
+
+<h3 id="s7-2">WindowsのCopilotアプリ</h3>
+<p>Windowsに入っている個人向けのCopilotアプリは、Copilot Chatとは別のアプリです。インストールの防止にはAppLockerを使うよう、Learnは案内しています。社員側から見た消し方と管理者に頼むときの設定名は、<a href="/media/copilot-remove/">Copilotを消す方法</a>の記事が扱う範囲です。</p>
+<h3 id="s7-3">個人アカウントへの抜け道</h3>
+<p>Copilotアプリには職場のアカウントと個人のMicrosoftアカウントのどちらでもサインインできます。社員が会社のPCで個人のアカウントに切り替えれば、職場のブロックは関係なくなります。</p>
+<p>個人アカウントを止める目的で copilot.cloud.microsoft のURLをブロックしないよう、Learnは書いています。代わりに使うのが、Microsoft Entraの「<a href="https://learn.microsoft.com/ja-jp/entra/external-id/tenant-restrictions-v2">テナント制限 v2</a>」です。会社のネットワークや端末から、外部のアカウントでサインインできる範囲を絞れます。<strong>URLやIPアドレスでの遮断は、Microsoft 365のアプリまで止まる恐れがあるとしてMicrosoftは勧めていません。</strong></p>
+<h2 id="s8">止める前と止めたあとに見るもの</h2>
+<p>止める前に、誰がどれだけ使っているかを数えておくと、社内の説明がしやすくなります。管理センターの［レポート］＞［使用状況］で［Microsoft Copilot］＞［Copilot Chat］を開くと、アクティブなユーザーの数やプロンプトの数を7日・28日・90日・180日の範囲で見られます。</p>
+<figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/08_usage_report.jpg" alt="Microsoft Learnの使用状況レポートを表示する手順。管理センターに戻り、レポート、使用状況を選び、レポートでMicrosoft CopilotとCopilot Chatを順に選ぶ4つの手順が赤枠で囲まれている" loading="lazy"><figcaption>Microsoft Learn「Microsoft Copilot Chat使用状況レポート」の表示手順</figcaption></figure>
+
+<p>このレポートが数えるのは、今のところCopilotライセンスを持たない社員の利用だけです。</p>
+<p>ブロックやWeb検索の停止を始めるときは、社員に先に知らせます。止める範囲・理由・代わりに使ってよいツール・いつ見直すかの4つを書き、同じ内容をカスタムリンクの先に置いておくと、問い合わせへの答えが1か所にまとまるのも利点です。</p>
+<p>止めて社内のルールが決まったら、次はどの業務でAIを使うかです。業務を決めてAIを仕組みとして組む段階の相談先は、<a href="/ai-agent/">AIエージェント構築支援</a>のページです。</p>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">Copilot Chatは管理者が無効にできますか？</h3>
+<p>できます。Learnによると、ブロックした社員はCopilotアプリ・Outlook・Teams・Web版でCopilot Chatを使えなくなります。全員にも、特定のユーザーやグループにもかけられ、日本のサポートブログは統合アプリでCopilotをブロックする手順を載せています。</p>
+<h3 id="s9-2">Copilot Chatはピン留めを外せば止まりますか？</h3>
+<p>止まりません。ピン留めはTeamsやOutlookのナビゲーションに出すかどうかの設定です。2026年1月28日からはCopilotアプリにも効かず、社員はCopilotアプリやブラウザから使えます。</p>
+<h3 id="s9-3">Copilot Chatのブロックは有料の人も止まりますか？</h3>
+<p>止まります。統合アプリで［アプリをブロックする］を選ぶと、ライセンスの有無にかかわらずCopilot Chatを使えません。ライセンスを持つ人を残したいなら［展開対象から外す］か［組織のユーザーはインストールできません］を選びます。</p>
+<h3 id="s9-4">Copilot ChatのWeb検索だけを止められますか？</h3>
+<p>止められます。「Copilot での Web 検索を許可する」ポリシーで無効を選ぶと、社員の［Web コンテンツ］の切り替えが淡色になり、オンにできなくなります。</p>
+<h3 id="s9-5">Copilot Chatのエージェントに費用はかかりますか？</h3>
+<p>指示と公開Webサイトだけで動くエージェントは追加料金なしです。社内データを読むエージェントは従量課金で既定でオフのため、管理者が課金を設定しない限り費用は出ません。</p>
+<h3 id="s9-6">Copilot Chatの設定はいつ反映されますか？</h3>
+<p>ピン留めの変更は最大48時間かかる場合がある、とLearnに書かれています。ブロックなど他の設定の反映時間は、Learnには書かれていません。</p>
+<h3 id="s9-7">Copilot Chatは個人アカウントでも止まりますか？</h3>
+<p>止まりません。個人のMicrosoftアカウントでCopilotアプリにサインインすれば、職場のブロックとは関係なく使えます。会社の端末やネットワークから外部のアカウントで入れないようにするには、Microsoft Entraのテナント制限 v2を使います。</p>
+<h3 id="s9-8">Copilot Chatの利用者数はどこで分かりますか？</h3>
+<p>管理センターの［レポート］＞［使用状況］＞［Microsoft Copilot］＞［Copilot Chat］です。今のところCopilotライセンスを持たない社員の利用だけが数えられます。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/copilot/manage">Microsoft Copilot Chatの管理</a>」（2026年10月17日取得）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pin-copilot-chat-navbar">Microsoft 365 アプリでMicrosoft Copilot Chatをピン留めする</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-page">Microsoft 365 管理センターで Microsoft Copilot 設定を管理する</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-app-admin-settings">管理者が制御できる Microsoft Copilot アプリの機能</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access">Microsoft Copilot と Microsoft Copilot Chat での Web 検索のデータ、プライバシー、セキュリティ</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/copilot/agents">Microsoft 365 Copilot Chatでのエージェントの使用</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/copilot-capacity-packs">Microsoft Copilot Chat エージェントと SharePoint エージェントに Copilot Studio 容量パックを使用する</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot">更新された Windows および Microsoft Copilot Chat エクスペリエンス</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage">Microsoft Copilot Chat使用状況レポート</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-browser-policies/microsoft365copilotchaticonenabled">Microsoft365CopilotChatIconEnabled</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/entra/external-id/tenant-restrictions-v2">テナント制限 v2 を設定する</a>」（同）</li>
+<li>Japan Exchange &amp; Outlook Support Blog「<a href="https://jpmessaging.github.io/blog/Outlook-microsoft365-copilot-chat-pin-admin-control/">Microsoft 365 Copilot Chat のピン留めの制御方法</a>」（2025年12月23日公開、2026年10月17日取得）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/circle-to-search-off/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="かこって検索をオフにする"><defs><linearGradient id="ecg-beb4de1a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-beb4de1a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">かこって検索をオフにする</text><line x1="144.0" y1="365.9" x2="1056.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.17</div>
+                <div class="rel-card__ttl">【2026年10月】かこって検索をオフにする方法｜Pixel・Galaxy・AQUOS・勝手に起動するとき</div>
+            </a>
+            <a href="/media/chrome-ask-google-page/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chromeの「Googleに質問」を止める"><defs><linearGradient id="ecg-2da7d78b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-2da7d78b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Chromeの「Googl</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">eに質問」を止める</text><line x1="273.2" y1="416.8" x2="926.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】Chromeの「このページについてGoogleに質問する」を消す方法・flags以外の止め方</div>
+            </a>
+            <a href="/media/copilot-license-assign/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilotのライセンスの割り当て"><defs><linearGradient id="ecg-e3944981" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e3944981)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="125.2" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilotのライセ</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ンスの割り当て</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】Copilotのライセンスを割り当てる方法｜グループ・反映時間・使えないとき</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'copilot-chat-admin-block',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
