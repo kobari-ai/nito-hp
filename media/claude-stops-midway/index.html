@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ | nito Column</title>
+    <meta name="description" content="Claudeの回答が途中で止まる・切れるときを画面の表示で見分け、続きを出す送り方、長さ制限が出たときの移り方、Claude CodeとAPIでの直し方までをAnthropicのヘルプとドキュメントで整理しました。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-stops-midway/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ">
+    <meta property="og:description" content="Claudeの回答が途中で止まる・切れるときを画面の表示で見分け、続きを出す送り方、長さ制限が出たときの移り方、Claude CodeとAPIでの直し方までをAnthropicのヘルプとドキュメントで整理しました。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-stops-midway/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-stops-midway.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-stops-midway.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ", "description": "Claudeの回答が途中で止まる・切れるときを画面の表示で見分け、続きを出す送り方、長さ制限が出たときの移り方、Claude CodeとAPIでの直し方までをAnthropicのヘルプとドキュメントで整理しました。", "datePublished": "2026-10-17", "dateModified": "2026-10-17", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-stops-midway/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claudeの回答が途中で止まるのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "1回の回答の長さの上限・会話全体の長さの上限・使用量の枠・通信の切断のどれかです。長さや使用量の上限にはそれぞれ画面に出る案内があります。表示が無いときはまず通信とブラウザやアプリの不具合を疑います。"}}, {"@type": "Question", "name": "Claudeに続きを書いてもらうにはどうすればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "同じチャットで続きを頼むのが基本です。「〇〇の段落の頭から続けてください」のように、止まった位置を見出し名や関数名で指定すると書き直しになりにくくなります。"}}, {"@type": "Question", "name": "Claudeの続けるボタンを押しても進まないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "会話全体が長さの上限に近いと、続けようとした時点で長さ制限の警告が出ることがあります（GitHubの報告）。まず添付のファイルを減らすか小さくし、それでも出るなら要点を書き出して新しいチャットに移ります。"}}, {"@type": "Question", "name": "Claudeは有料プランなら途中で止まりませんか？", "acceptedAnswer": {"@type": "Answer", "text": "有料プランでも1回の回答と会話の長さには上限があります。コード実行をオンにしている有料プランでは、長い会話を自動で要約する仕組みが働くため、長さ制限のエラーはめったにないと[エラーメッセージのヘルプ](https://support.claude.com/ja/articles/12466728)に書かれています。"}}, {"@type": "Question", "name": "Claudeが考えを整理している状態のまま動かないときは？", "acceptedAnswer": {"@type": "Answer", "text": "自動コンテキスト管理が古いやりとりを要約している途中です。送り直さずに待ってください。使用量を多く使うので、枠が気になるなら新しいチャットに移ります。"}}, {"@type": "Question", "name": "Claudeで長い文章を一度に書かせるコツはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "一度に書かせず、先に目次を出させてから見出しごとに頼みます。1か所あたりの字数も添えてください。"}}, {"@type": "Question", "name": "Claude Codeで回答が途中で切れたらどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "「The response above may be incomplete」と出ていれば continue と送ります。最後に完成した部分から続きが始まります。画面が固まったときの戻り方は、Ctrl+C で止めてから claude --resume です。"}}, {"@type": "Question", "name": "ChatGPTやGeminiでも同じ止まり方をしますか？", "acceptedAnswer": {"@type": "Answer", "text": "長い回答が途中で切れることはどちらにもありますが、画面の表示と続け方が違います。[ChatGPTが途中で止まるとき](/media/chatgpt-stops-midway/)と[Geminiが途中で止まるとき](/media/gemini-stops-midway/)にそれぞれまとめています。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Claudeの回答が…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.17</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeが途中で止まるとき"><defs><linearGradient id="ecg-25fd9aaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-25fd9aaf)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeが途中で止まるとき</text><line x1="121.2" y1="327.1" x2="1078.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">一時停止・長さ制限・接続切れ</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Claudeに長い文章やコードを頼むと、回答が文の途中で止まったり、画面に英語の案内が出て進まなくなったりします。2025年4月にGitHubへ出された報告では、長いコードを書かせている最中に「This response paused because Claude reached its max length for a message. Hit Continue to nudge Claude along」と出て、続けるボタンを押すと今度は長さ制限の警告が出たと書かれています。「1回の出力は8,192トークンまで」という古い数字もまだ見かけます。今のモデルの最大出力はAPIで12万8,000トークンです。</p>
+<p>止まって見える原因は1回の回答の長さ・会話全体の長さ・使用量の枠・通信の4つにまたがります。<strong>どれに当たるかは止まったときの画面の表示でほぼ見分けられます。</strong></p>
+<p>この記事では表示ごとに起きていることと試す順番を、Anthropicのヘルプセンターと開発者向けドキュメント、GitHubの報告で整理します。ウェブ版のClaudeで回答を止める試しはしておらず、手順は公式の説明と報告をもとにしています。ヘルプとドキュメントは2026年10月17日に取得しました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>止まったら最初に<strong>画面の表示を読む</strong>。表示ごとに続け方が分かれる（ほかに使用制限・混雑・ツールの回数の表示もある）</li>
+<li>1回の回答が長さの上限で切れたときは、<strong>同じチャットで続きを頼む</strong>。どこから続けるかを見出し名や関数名で指定すると、つなぎ目が分かりやすくなる</li>
+<li>続けようとして長さ制限の警告が出たら、<strong>添付のファイルを減らすか、要点を書き出して新しいチャットに移る</strong></li>
+<li>ヘルプの言う「考えを整理している」状態は、止まったのではなく、<strong>古いやりとりを自動で要約している途中</strong>。待てば続く</li>
+<li>Claude Codeの「The response above may be incomplete」は<strong>continueと送れば最後に完成した部分から再開</strong>する</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_00_overview.png" alt="止まったチャットの吹き出しを囲むように、一時停止、長さ制限、考えを整理、使用制限、表示なしの5枚のカードが並んだ図" loading="lazy"><figcaption>止まったときは画面の表示で5つに分かれる</figcaption></figure>
+
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>画面に出る表示で見分ける</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>1回の回答で書ける量</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>一時停止で止まったとき</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>再開する位置を指定する</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>続けたら長さ制限が出たとき</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>考えを整理していると出たとき</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>表示なしで文の途中で止まったとき</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>長い文章を止まらずに受け取る頼み方</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>Claude Codeで止まったとき</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>APIで回答が切れたとき</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">画面に出る表示で見分ける</h2>
+<p>途中で止まったときに画面に出るものは、ヘルプ・ドキュメントとGitHubの報告にある文言で、おおよそ7つに分かれます。表の「詳しい記事」はこのサイトでその表示だけを扱った記事です。</p>
+<table>
+<thead>
+<tr>
+<th>画面の表示</th>
+<th>起きていること</th>
+<th>まず試すこと</th>
+<th>詳しい記事</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hit Continue to nudge Claude along（一時停止）</td>
+<td>1回の回答の長さの上限に達した</td>
+<td>同じチャットで続きを頼む</td>
+<td>この記事</td>
+</tr>
+<tr>
+<td>メッセージがこのチャットの長さ制限を超えます</td>
+<td>会話全体が読める量を超えた</td>
+<td>要点を持って新しいチャットへ</td>
+<td><a href="/media/claude-conversation-length/">会話の長さ制限と圧縮</a></td>
+</tr>
+<tr>
+<td>考えを整理している（ヘルプの表記）</td>
+<td>古いやりとりを自動で要約中</td>
+<td>待つ</td>
+<td>この記事</td>
+</tr>
+<tr>
+<td>Claude reached its tool-use limit for this turn</td>
+<td>1回の返答で使える検索や操作の回数の上限</td>
+<td>［続ける］を押す</td>
+<td><a href="/media/claude-tool-use-limit/">ツール使用制限</a></td>
+</tr>
+<tr>
+<td>5時間制限に達しました・週間制限に達しました</td>
+<td>プランの使用量の枠を使い切った</td>
+<td>リセットの時刻まで待つ</td>
+<td><a href="/media/claude-usage-limits/">使用制限とリセット時間</a></td>
+</tr>
+<tr>
+<td>予期しない容量制約により〜応答できません</td>
+<td>全体の混雑</td>
+<td>数分おいて送り直す</td>
+<td><a href="/media/claude-error-messages/">エラーの原因と対処</a></td>
+</tr>
+<tr>
+<td>表示なしで文の途中で止まる</td>
+<td>通信の切断・画面の不具合・障害</td>
+<td>状況ページを見て再読み込み</td>
+<td>この記事</td>
+</tr>
+</tbody>
+</table>
+<p>一時停止の表示は2025年のGitHubの報告にある英語の文言です。日本語の画面でどう訳されて出るかは確かめていません。**表のうち、この記事で扱うのは一時停止・考えを整理・表示なしの3つです。**ほかの4つはリンク先の記事のほうが詳しく書いています。</p>
+<h2 id="s2">1回の回答で書ける量</h2>
+<p>Claudeが1回の回答で書ける量には上限があり、これを最大出力と呼びます。<a href="https://platform.claude.com/docs/ja/about-claude/models/overview">Claude Platformのモデル一覧</a>では、Fable 5.1・Opus 5.5・Sonnet 5.5・Haiku 5.5の4つとも最大出力は12万8,000トークンです。これはAPIで1回に頼める上限で、claude.aiのチャット画面で1回にどこまで書くかは公開されていません。</p>
+<p>ネットで見かける「8,192トークン（日本語で4,000〜5,000字）」は、2024年ごろのモデルの数字です。APIの上限は大きくなっていますが、チャット画面の上限は公開されていません。<strong>8,192トークンを前提にした説明は、今のモデルには当てはまりません。</strong></p>
+<p>会話全体で読める量（コンテキストウィンドウ）は別の数字です。<a href="https://support.claude.com/ja/articles/8606394">有料プランのコンテキストウィンドウ</a>のページによると、チャットで読める量はFable 5.1・Opus 5.5・Opus 5・Sonnet 5.5・Sonnet 5・Haiku 5.5が100万トークン、Fable 5・Opus 4.8・4.7・4.6・Sonnet 4.6が50万トークンで、これら以外のモデルは20万トークンです。<a href="https://support.claude.com/ja/articles/11647753">使用量と長さの制限</a>のページには、ウィンドウの一部は回答用に取ってあるため、実際に続けられる会話はウィンドウより少し短いとあります。</p>
+<h2 id="s3">一時停止で止まったとき</h2>
+<p>GitHubの<a href="https://github.com/anthropics/claude-code/issues/861">#861</a>は、2025年4月にウェブ版のClaude（3.7 Sonnet）で起きたこととして、次の流れを報告しています。</p>
+<ol>
+<li>長いPythonのコードを書かせる</li>
+<li>「This response paused because Claude reached its max length for a message. Hit Continue to nudge Claude along」と出る</li>
+<li>案内どおりContinueを押す</li>
+<li>「Your message will exceed the length limit for this chat」と出て、新しい会話を勧められる</li>
+</ol>
+<p>この報告は60日動きが無く、2026年1月に自動で閉じられました。直ったという記載はありません。</p>
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_03_github_861.png" alt="GitHubのissue 861のSteps to Reproduceの節。手順2の、This response pausedで始まりHit Continue to nudge Claude alongで終わる通知と、手順4の、Your message will exceed the length limit for this chatで始まる警告が赤枠で囲まれている" loading="lazy"><figcaption>GitHub #861の再現手順。手順2が一時停止、手順4が長さ制限の文言</figcaption></figure>
+
+<p><strong>一時停止の表示が出たら、まず同じチャットでContinueを押すか「続けて」と送ります。</strong><a href="https://support.claude.com/ja/articles/8114518">応答が短すぎる場合のヘルプ</a>も、応答が不完全なときは前のプロンプトと応答をClaudeに渡して、中断したところから続けるよう勧めています。同じチャットならどちらももう会話の中にあるので、送るのは続きの指示だけです。</p>
+<h3 id="s3-1">再開する位置を指定する</h3>
+<p>「続けて」だけだと、Claudeが区切りのいい所まで戻って書き直すことがあります。続きが関係のない位置に足されたという報告も、コードについてGitHubの<a href="https://github.com/anthropics/claude-code/issues/7849">#7849</a>に出ています。</p>
+<p>続きを頼むときは止まった位置を言葉で指定しましょう。</p>
+<ul>
+<li>文章: 「『3. 費用の目安』の2段落目の途中で止まっています。その段落の頭から続けてください」</li>
+<li>コード: 「parse_rows 関数の途中で止まっています。この関数を最初から書き直し、その下の関数へ進んでください」</li>
+<li>表: 「表の12行目まで出ています。13行目から、見出しの行を付けずに続けてください」</li>
+</ul>
+<p>**区切りを段落や関数の頭にしておけば、前の回答とのつなぎ目で迷いません。**文の途中からつながせるより、少し戻って重ねたほうが貼り合わせは楽です。</p>
+<h3 id="s3-2">続けたら長さ制限が出たとき</h3>
+<p><a href="https://support.claude.com/ja/articles/12466728">エラーメッセージのヘルプ</a>にある長さ制限の文言は「メッセージがこのチャットの長さ制限を超えます。ファイルを少なくするか、ファイルサイズを小さくするか、新しい会話を開始してください。」です。添付のファイルを減らせば同じ会話で続けられることがあり、新しいチャットに移るのはそれでも警告が出たときです。</p>
+<p>新しいチャットに移るときは、何も持たずに始めると前提が消えます。移る前に、今のチャットで「ここまでの目的・決めたこと・書き終えた部分の見出し・残りの作業を箇条書きで」と頼み、その箇条書きと書き終えた本文の最後の段落を新しいチャットに貼ります。**本文を全部貼り直すと、新しいチャットもすぐ同じ長さに近づきます。**残りの作業に要る部分だけを渡してください。</p>
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_01_help_length.png" alt="Claudeのヘルプセンターのエラーメッセージのページにある長さ制限エラーの節。許可される最大入力長を超えると出るエラーの文言と、メッセージが長すぎて送る前に短くする必要があるという説明の段落が赤枠で囲まれている" loading="lazy"><figcaption>ヘルプの「長さ制限エラー」の節</figcaption></figure>
+
+<h2 id="s4">考えを整理していると出たとき</h2>
+<p>長いチャットでClaudeの返事が始まらず、ヘルプの言い方では「考えを整理している」状態のまま待たされることがあります（画面の表示の文言は確かめていません）。<a href="https://support.claude.com/ja/articles/11647753">使用量と長さの制限のヘルプ</a>によると、これは自動コンテキスト管理が働いている印です。会話が読める量の上限に近づくと、Claudeは前のメッセージを要約して会話を続けます。</p>
+<p>この仕組みはコード実行がオンになっていることが条件です。要約のあとも元のチャット履歴は残り、Claudeは参照できます。<strong>止まったわけではないので、送り直さずに待つ</strong>のが基本です。</p>
+<p>ただし同じヘルプは、この要約が起きるほど長い会話は使用量を多く使うとも書いています。長いチャットで使用量の枠に近いなら、新しい会話を始めるほうがよい、とも書かれています。設定の場所は<a href="/media/claude-conversation-length/">会話の長さ制限と圧縮</a>の記事に書きました。</p>
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_02_code_exec.png" alt="Claudeの設定の機能の画面にある、コードの実行とファイルの作成の欄。クラウドでのコード実行とファイル作成という項目のオンになったスイッチが赤枠で囲まれている" loading="lazy"><figcaption>設定の［機能］にある「クラウドでのコード実行とファイル作成」（2026年10月17日時点）</figcaption></figure>
+
+<h2 id="s5">表示なしで文の途中で止まったとき</h2>
+<p>何の表示も出ずに文の途中で止まったときは、長さの上限より通信や画面の側を先に疑います。長さの上限では一時停止の案内が出たという報告があり、表示が無いこと自体が手がかりになるからです。</p>
+<p>試す順番は次のとおりです。</p>
+<ol>
+<li><a href="https://status.claude.com">Claudeの状況ページ</a>でclaude.aiに障害が出ていないかを見る</li>
+<li>ページを再読み込みし、会話を開き直して回答の続きが出ていないかを見る</li>
+<li>回答が欠けたままなら、最後の行を指定して続きを頼む</li>
+<li>同じ所で何度も止まるなら、別のブラウザかアプリで同じ会話を開く</li>
+</ol>
+<p>エラーのヘルプには、使用量の枠を使い切って使用クレジットに切り替わる瞬間について「切断されたように見えるかもしれませんが、作業は継続され」るとあります。**使用クレジットに切り替わる瞬間に止まって見えても、作業は続いています。**次の処理が終わると、表示は「現在クレジットを使用しています」に変わります。容量制約の表示が状況ページに載らないことも、同じヘルプの記載です。</p>
+<figure class="post-figure post-figure--sp"><img src="/media/images/claude-stops-midway/clsm_05_status_sp.png" alt="スマホで開いたClaude Statusのページ。All Systems Operationalの帯の下に、過去30日の稼働状況がサービスごとに並び、一番上のclaude.aiの行が赤枠で囲まれている" loading="lazy"><figcaption>Claudeの状況ページ。一番上がclaude.aiの行</figcaption></figure>
+
+<h2 id="s6">長い文章を止まらずに受け取る頼み方</h2>
+<p>途中で止まるのを何度も直すより、最初から1回の回答を短くしたほうが早く終わります。分け方の型は次の4つです。</p>
+<ul>
+<li><strong>先に目次だけを出させる</strong>: 「本文は書かず、見出しと各見出しで書く内容を1行ずつ」</li>
+<li><strong>1回に頼む範囲を見出しで切る</strong>: 「目次の1〜3だけ書いてください。4以降は次で頼みます」</li>
+<li><strong>長さを数で伝える</strong>: 「各見出し800字前後」。合計の字数ではなく、1か所あたりの量で伝える</li>
+<li><strong>コードはファイルか関数ごと</strong>: 「まず utils.py だけ。終わったら次のファイル名を書いて止まってください」</li>
+</ul>
+<p>止める位置をClaudeに決めさせず、こちらで区切っておくと、前の回答と次の回答の境目がはっきりします。<strong>目次を最初に固めておけば、途中で新しいチャットに移るときも目次を貼るだけで続きを頼めます。</strong></p>
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_06_split.png" alt="長い文章を3段階で受け取る流れの図。1は本文を書かせずに見出しを並べさせる、2は見出しで範囲を切って字数を添えて頼む、3は最後の見出しまで出たのを見てから次を頼む。下に、新しいチャットへ移るときも固めた目次を貼れば続けられるとある" loading="lazy"><figcaption>長い文章を分けて受け取る流れ</figcaption></figure>
+
+<h2 id="s7">Claude Codeで止まったとき</h2>
+<p>Claude Codeでは、回答が途中で切れると末尾に「The response above may be incomplete」で終わる文が出ます。<a href="https://code.claude.com/docs/ja/errors">Claude Codeのエラーのドキュメント</a>には、前半の文言で原因が分かる6種類が載っています。</p>
+<table>
+<thead>
+<tr>
+<th>前半の文言</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server error mid-response</td>
+<td>回答の途中でサーバーのエラー</td>
+</tr>
+<tr>
+<td>Connection lost mid-response</td>
+<td>接続が切れた</td>
+</tr>
+<tr>
+<td>Your computer went to sleep mid-response</td>
+<td>パソコンがスリープした</td>
+</tr>
+<tr>
+<td>The response stopped arriving</td>
+<td>接続は開いたまま中身が届かなくなった</td>
+</tr>
+<tr>
+<td>Part of the response never arrived</td>
+<td>回答の一部が届かなかった</td>
+</tr>
+<tr>
+<td>The response stream was malformed</td>
+<td>届いた中身が壊れていた</td>
+</tr>
+</tbody>
+</table>
+<p>どれも、**対話の画面で continue と送れば、最後に完成した部分から続きが始まります。**ドキュメントによると、Claude Codeは完成した部分を残し、途中まで書いていた最後の部分だけを捨てる仕組みです。最後の数文が欠けていることがあるので、再開の前に画面で確かめてください。</p>
+<p>回答が長すぎて切れたときは「Claude's response exceeded the ... output token maximum」と出ます。ここでも残りの頼み方は continue です。上限は環境変数 CLAUDE_CODE_MAX_OUTPUT_TOKENS で変えられますが、ドキュメントは1回の回答を1ファイル・1節ずつに分けて頼む方法も挙げています。</p>
+<p>画面ごと固まって何も受け付けないときは、Ctrl+Cで止め、それでもだめならターミナルを閉じます。<a href="https://code.claude.com/docs/ja/troubleshooting">トラブルシューティングのドキュメント</a>によると、同じフォルダで claude --resume を実行すれば会話は戻ります。Claude Codeそのものの使い方の記事は<a href="/media/claude-code-guide/">Claude Codeの使い方</a>です。</p>
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_07_code_errors.png" alt="Claude Codeのエラーのドキュメントにある、The response above may be incompleteの節。ストリーミングが途中で失敗したときの説明の下に、API Errorで始まる6行のコードブロックがあり、そのブロックが赤枠で囲まれている" loading="lazy"><figcaption>Claude Codeのドキュメントにある6つの文言</figcaption></figure>
+
+<h2 id="s8">APIで回答が切れたとき</h2>
+<p>APIで回答が途中で終わったときは、返ってきた stop_reason の値を見ます。<a href="https://platform.claude.com/docs/ja/build-with-claude/handling-stop-reasons">停止理由のドキュメント</a>では、回答が切れたものとして扱う値は max_tokens と model_context_window_exceeded の2つで、pause_turn は切れたのではなく一時停止したターンとして別に扱われています。途中で終わる値として3つを並べます。</p>
+<table>
+<thead>
+<tr>
+<th>stop_reason</th>
+<th>意味</th>
+<th>対処</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>max_tokens</td>
+<td>リクエストで指定した max_tokens に達した</td>
+<td>max_tokens を上げるか、続きを頼む</td>
+</tr>
+<tr>
+<td>model_context_window_exceeded</td>
+<td>回答がモデルのコンテキストウィンドウを埋めた</td>
+<td>回答は切れたものとして扱う</td>
+</tr>
+<tr>
+<td>pause_turn</td>
+<td>サーバー側のツールの繰り返しが上限に達した</td>
+<td>返ってきた内容を戻して続ける</td>
+</tr>
+</tbody>
+</table>
+<p>max_tokens で切れた回答の最後がツールの呼び出しの途中なら、続きを頼むのではなく max_tokens を上げて送り直す、というのがドキュメントの指示です。<strong>チャット画面の一時停止と違い、APIでは上限を自分で決めているので、まず max_tokens の値を見直します。</strong></p>
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_08_stop_reasons.png" alt="Claude Platformの停止理由のドキュメントのクイックリファレンスの表。値、発生するタイミング、対処方法の3列で、max_tokensの行とmodel_context_window_exceededの行が赤枠で囲まれている" loading="lazy"><figcaption>停止理由のクイックリファレンス</figcaption></figure>
+
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">Claudeの回答が途中で止まるのはなぜですか？</h3>
+<p>1回の回答の長さの上限・会話全体の長さの上限・使用量の枠・通信の切断のどれかです。長さや使用量の上限にはそれぞれ画面に出る案内があります。表示が無いときはまず通信とブラウザやアプリの不具合を疑います。</p>
+<h3 id="s9-2">Claudeに続きを書いてもらうにはどうすればいいですか？</h3>
+<p>同じチャットで続きを頼むのが基本です。「〇〇の段落の頭から続けてください」のように、止まった位置を見出し名や関数名で指定すると書き直しになりにくくなります。</p>
+<h3 id="s9-3">Claudeの続けるボタンを押しても進まないのはなぜですか？</h3>
+<p>会話全体が長さの上限に近いと、続けようとした時点で長さ制限の警告が出ることがあります（GitHubの報告）。まず添付のファイルを減らすか小さくし、それでも出るなら要点を書き出して新しいチャットに移ります。</p>
+<h3 id="s9-4">Claudeは有料プランなら途中で止まりませんか？</h3>
+<p>有料プランでも1回の回答と会話の長さには上限があります。コード実行をオンにしている有料プランでは、長い会話を自動で要約する仕組みが働くため、長さ制限のエラーはめったにないと<a href="https://support.claude.com/ja/articles/12466728">エラーメッセージのヘルプ</a>に書かれています。</p>
+<h3 id="s9-5">Claudeが考えを整理している状態のまま動かないときは？</h3>
+<p>自動コンテキスト管理が古いやりとりを要約している途中です。送り直さずに待ってください。使用量を多く使うので、枠が気になるなら新しいチャットに移ります。</p>
+<h3 id="s9-6">Claudeで長い文章を一度に書かせるコツはありますか？</h3>
+<p>一度に書かせず、先に目次を出させてから見出しごとに頼みます。1か所あたりの字数も添えてください。</p>
+<h3 id="s9-7">Claude Codeで回答が途中で切れたらどうしますか？</h3>
+<p>「The response above may be incomplete」と出ていれば continue と送ります。最後に完成した部分から続きが始まります。画面が固まったときの戻り方は、Ctrl+C で止めてから claude --resume です。</p>
+<h3 id="s9-8">ChatGPTやGeminiでも同じ止まり方をしますか？</h3>
+<p>長い回答が途中で切れることはどちらにもありますが、画面の表示と続け方が違います。<a href="/media/chatgpt-stops-midway/">ChatGPTが途中で止まるとき</a>と<a href="/media/gemini-stops-midway/">Geminiが途中で止まるとき</a>にそれぞれまとめています。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/12466728">Claudeのエラーメッセージのトラブルシューティング</a>」（2026年10月17日取得）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/11647753">使用量と長さの制限はどのように機能しますか？</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/8114518">私のプロンプトに対するClaudeの応答が短すぎます</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/8606394">有料Claudeプランのコンテキストウィンドウはどのくらい大きいですか</a>」（同）</li>
+<li>Claude Platform Docs「<a href="https://platform.claude.com/docs/ja/about-claude/models/overview">モデルの概要</a>」「<a href="https://platform.claude.com/docs/ja/build-with-claude/handling-stop-reasons">停止理由の処理</a>」（同）</li>
+<li>Claude Code Docs「<a href="https://code.claude.com/docs/ja/errors">エラー</a>」「<a href="https://code.claude.com/docs/ja/troubleshooting">トラブルシューティング</a>」（同）</li>
+<li>Claude Status「<a href="https://status.claude.com">status.claude.com</a>」（同）</li>
+<li>GitHub anthropics/claude-code「<a href="https://github.com/anthropics/claude-code/issues/861">#861</a>」（2025年4月24日投稿、2026年1月6日クローズ）「<a href="https://github.com/anthropics/claude-code/issues/7849">#7849</a>」（2025年9月19日投稿）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-mode-cant-send/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードで送信できない"><defs><linearGradient id="ecg-55a6e73a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-55a6e73a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードで送信できない</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】Google AIモードで質問を送信できない原因を解説｜送信ボタン・追加質問</div>
+            </a>
+            <a href="/media/chatgpt-mic-not-working/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの音声入力ができない"><defs><linearGradient id="ecg-46ef0014" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-46ef0014)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="125.2" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの音声</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">入力ができない</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTの音声入力ができない原因と直し方｜マイク許可・文字にならない・PC</div>
+            </a>
+            <a href="/media/demolition-aio-companies/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="解体工事のAIO対策会社"><defs><linearGradient id="ecg-53f9738e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-53f9738e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="477.5" y="176.1" width="245.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">支援会社の比較</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">解体工事のAIO対策会社</text><line x1="189.6" y1="365.9" x2="1010.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】解体工事会社におすすめのAIO対策（AI検索対策）会社7選・選び方</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'claude-stops-midway',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
