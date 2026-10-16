@@ -130,6 +130,8 @@ PCのメーカーが独自にキーの割り当てを変える設定を用意し
 
 「Copilotというソフトが勝手に会社のPCに入っていた」という質問は、Yahoo!知恵袋で[5万回以上閲覧されています（2024年2月の質問）](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q11293737631)。会社のPCなら、自分で設定を探す前に、社内の情報システムの担当者に「Copilotを使わない設定にしたい」と伝えるのが早道です。そのとき、上の設定の名前（Microsoft 365 管理センターのピン留め、AppLocker、報道で伝えられている［Microsoft Copilot アプリの削除］のポリシー）を添えると話が通りやすくなります。
 
+管理者の側でCopilot Chatを止める・一部の人に絞る設定は、[Copilot Chatを社内で止める方法](/media/copilot-chat-admin-block/)にまとめています。
+
 ## AI検索での見え方は別の話
 
 Copilotを自分の画面から消しても、Copilotが答えの中で自社をどう紹介するかは変わりません。そちらは[AI検索対策](https://nito-0210.com/llmo/)として扱います。
