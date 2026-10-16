@@ -102,7 +102,7 @@ Googleのコミュニティでは、2026年7月にAndroidの利用者が「2枚�
 
 「画像を作成」の条件は、Googleのヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」に書かれています。日本語にも対応していますが、使えるのは18歳以上で、自分で管理する個人のGoogleアカウントにログインしている人です。
 
-作れる枚数には1日の上限があり、Google AIのプランなしで24時間あたり最大25枚です。Google AI Plusは50枚、Google AI Proは100枚、Google AI Ultraは1,000枚まで上がります。Proのモデルで使うNano Banana Proは、日本では英語で、Google AI ProかGoogle AI Ultraの利用者に限られます。
+作れる枚数には1日の上限があり、Google AIのプランなしで24時間あたり最大25枚です。Google AI Plusは50枚、Google AI Proは100枚、Google AI Ultraは1,000枚まで上がります。Proのモデルで使うNano Banana 2.1は、日本では英語で、Google AI ProかGoogle AI Ultraの利用者に限られます（ヘルプの表記は2026年10月17日にNano Banana Proから変わりました）。
 
 ## 送った写真はどこに残るか
 
@@ -173,7 +173,7 @@ AIモードに送った写真はGoogleアカウントの検索サービス履歴
 ## 出典
 
 - Google 検索 ヘルプ「[Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)」（2026年10月4日取得）
-- Google 検索 ヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」（同）
+- Google 検索 ヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」（同。Nano Banana 2.1の表記は2026年10月17日取得）
 - Google Chrome ヘルプ「[Chrome で AI モードを使用する](https://support.google.com/chrome/answer/16704170?hl=ja)」（同）
 - Google 検索 ヘルプ「[検索サービス履歴とパーソナライズされたおすすめ表示を使ってみる](https://support.google.com/websearch/answer/17025248?hl=ja)」（同）
 - Google 検索 ヘルプ「[検索サービス履歴に保存されるメディアを管理する](https://support.google.com/websearch/answer/17028154?hl=ja)」（同）
