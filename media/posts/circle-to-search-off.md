@@ -22,7 +22,7 @@ Androidスマホの画面の下を長押ししたとき、画面が暗くなっ�
 - Android 17 の Pixel で勝手に起動するという報告が2026年7月から出ている。**8月と10月の月例アップデートの修正一覧には入っていない**
 :::
 
-<!-- SHOT: 記事の概要図（gen_gemini_web）。スマホの画面下のバーを指で長押しし、画面が暗くなって上に検索バーが出ている様子と、設定のスイッチがオフになっている様子を左右に。図の文字は「長押しで起動」「スイッチでオフ」の2か所だけ・PC幅の図（800幅・DPR2・縦横比2:1以内） -->
+<figure class="post-figure"><img src="/media/images/circle-to-search-off/01_overview.png" alt="左のスマホは画面下の線に指を置いたまま止めていて、画面が暗くなり上部にGの検索バーが出ている。右のスマホは設定の一覧でトグルを指で灰色に切り替えている。下に長押しで起動とスイッチでオフの文字" loading="lazy"><figcaption>かこって検索が出るときと止めるときのイメージ</figcaption></figure>
 
 ## かこって検索が出るのは長押しのとき
 
@@ -32,6 +32,8 @@ Androidスマホの画面の下を長押ししたとき、画面が暗くなっ�
 |---|---|
 | ジェスチャー ナビゲーション | 画面の一番下の横長の線（ナビゲーション ハンドル）を長押し |
 | 3ボタン ナビゲーション | 真ん中のホームボタンを長押し |
+
+<figure class="post-figure"><img src="/media/images/circle-to-search-off/02_fig_longpress.png" alt="ジェスチャー操作と3ボタン操作の2つの枠。左は画面の一番下の青い線を点線の丸で囲み、右は戻る、ホーム、履歴のうち真ん中の丸いボタンを囲んでいる" loading="lazy"><figcaption>長押しする場所は操作のしかたで変わる</figcaption></figure>
 
 **どちらの操作のしかたでも長押しで開くので、止める手はスイッチを切ることです。**開いたあとは画面の文字や画像を指で囲むと、下半分にGoogleの検索結果が出ます。下にスワイプするか、［戻る］の操作か、左上の［X］で元のアプリに戻れます。
 
@@ -46,8 +48,7 @@ Androidスマホの画面の下を長押ししたとき、画面が暗くなっ�
 3. ［かこって検索］をタップする
 4. かこって検索をオフにする
 
-<!-- SHOT: Googleヘルプ「かこって検索で画面を検索する」の「かこって検索をオフにする」の節（https://support.google.com/websearch/answer/14508957?hl=ja）。PC幅でよい（根拠の画像）。赤枠は4手順のリストと、その下の「Google Pixel でかこって検索をオフにする」の3手順 -->
-
+<figure class="post-figure"><img src="/media/images/circle-to-search-off/03_help_off.jpg" alt="Google 検索ヘルプの節。デバイスの設定アプリを開き、かこって検索を探してタップし、オフにする4手順と、Google Pixel 向けの設定アプリ、システム、かこって検索をオフの3手順に赤枠" loading="lazy"><figcaption>Googleのヘルプの「「かこって検索」をオフにする」</figcaption></figure>
 
 ## 機種ごとのスイッチの場所
 
@@ -59,15 +60,13 @@ Androidスマホの画面の下を長押ししたとき、画面が暗くなっ�
 | Galaxy | ［設定］>［ディスプレイ］>［ナビゲーションバー］>［かこって検索］ | Samsungのサポート |
 | AQUOS | ［設定］>［システム］>［ジェスチャー］>［ナビゲーションモード］>［かこって検索］ | シャープのFAQ（AQUOS wish6） |
 
-<!-- SHOT: 図（HTML の図、fig/*.html の型）。3機種のスイッチの場所を3列で。Pixel「設定・システム・かこって検索」、Galaxy「設定・ディスプレイ・ナビゲーションバー」、AQUOS「設定・システム・ジェスチャー・ナビゲーションモード」。上の表と同じ中身で、スマホで読める文字の大きさ -->
+<figure class="post-figure"><img src="/media/images/circle-to-search-off/04_fig_models.png" alt="Google Pixel、Galaxy、AQUOSの3列。Pixelは設定からシステムへ。Galaxyは設定からディスプレイ、ナビゲーションバーへ。AQUOSは設定からシステム、ジェスチャー、ナビゲーションモードへ。どの列も最後がかこって検索" loading="lazy"><figcaption>機種ごとの設定の階層</figcaption></figure>
 
 ### Google Pixel
 
 Googleのヘルプの「Google Pixel で「かこって検索」をオフにする」は、設定アプリを開き［システム］をタップして［かこって検索］をオフにする3手順です。楽天モバイルが2026年9月25日に公開した[かこって検索の解説](https://network.mobile.rakuten.co.jp/sumakatsu/contents/articles/2026/00619/)も、Pixel 8（Android 17）で同じ場所を案内しています。
 
 2024年10月の個人ブログ「[【Android】「かこって検索」をオフにする方法](https://usedoor.jp/howto/digital/android-smartphone/kakotte-kensaku-off-mukouka)」（機種名の記載なし）には、［ディスプレイとタップ］から［ナビゲーションモード］に進んだ画面の下にスイッチがある手順が載っています。今のヘルプとは場所が違うため、**［システム］の直下に無ければ［ナビゲーションモード］の画面も開いてみてください。**Pixelのヘルプ「[Google Pixel を使いこなす](https://support.google.com/pixelphone/answer/6073614?hl=ja)」では、ナビゲーションモードは［システム］の中にあります。
-
-<!-- SHOT: Pixel 実機の［設定］>［システム］の画面で［かこって検索］の行（スマホ・ライト）。赤枠1が［システム］、赤枠2が［かこって検索］のスイッチ。実機が無ければこの SHOT は外し、上のヘルプのスクショで足りる -->
 
 ### Galaxy
 
@@ -77,11 +76,13 @@ Samsungのサポート「[(GalaxyAI機能) 『かこって検索』機能につ�
 
 Galaxyには長押しと別に、画面の左下か右下から内側にスワイプするとアシスタントが開く操作もあります。Samsungの「[(Galaxy) ナビゲーションバー機能について教えてください](https://www.samsung.com/jp/support/mobile-devices/optimised-navigation-bar-functions-on-galaxy-devices/)」は、この操作をかこって検索とは別の項目として説明しています。
 
-<!-- SHOT: Samsung サポートページの手順3（「かこって検索」スイッチがオンになっている画面の画像）を含む範囲（https://www.samsung.com/jp/support/mobile-devices/how-to-use-the-circle-to-search-feature-on-the-galaxy-s24/）。PC幅でよい。赤枠は手順1〜3 -->
+<figure class="post-figure"><img src="/media/images/circle-to-search-off/05_samsung_steps.jpg" alt="Samsungのサポートページにある3枚の画面。設定でディスプレイ、ディスプレイでナビゲーションバー、ナビゲーションバーの画面の下のほうにかこって検索のトグルがあり、それぞれの手順の説明文に赤枠" loading="lazy"><figcaption>Samsungのサポートページの手順1〜3</figcaption></figure>
 
 ### AQUOS
 
 シャープのFAQ「[【AQUOS wish6】かこって検索は使えますか？使わない時はオフにできますか？](https://sharpmobile.zendesk.com/hc/ja/articles/61886029294489)」は、［設定］、［システム］、［ジェスチャー］、［ナビゲーションモード］と進んで［かこって検索］を切り替える手順です。**FAQは誤操作が気になるときにオフにできると明記しています。**このFAQは AQUOS wish6 のもので、ほかのAQUOSで同じ場所かは確かめていません。
+
+<figure class="post-figure"><img src="/media/images/circle-to-search-off/06_sharp_faq.jpg" alt="シャープのよくあるご質問の回答。かこって検索の使い方の操作方法に続き、有効／無効にする操作方法として設定、システム、ジェスチャー、ナビゲーションモードと進んでON／OFFを切り替える2行に赤枠" loading="lazy"><figcaption>シャープのFAQ（AQUOS wish6）</figcaption></figure>
 
 ## オフにしたあとに変わること
 
@@ -96,6 +97,8 @@ Galaxyには長押しと別に、画面の左下か右下から内側にスワ�
 | 画面の隅からのスワイプでアシスタント | 別の設定。Pixelは［スワイプしてアシスタントを起動］ |
 | ホーム画面の検索バーのAIモード | 別の設定。Pixelは検索バーの設定から外す |
 
+<figure class="post-figure"><img src="/media/images/circle-to-search-off/07_help_pixel_gesture.jpg" alt="Google Pixel ヘルプのアシスタントに話しかけるの節。画面の隅からスワイプする設定を開く3手順と、電源ボタンを長押しする時間を変えるヒントと4手順に赤枠" loading="lazy"><figcaption>Pixelのヘルプの「アシスタントに話しかける」</figcaption></figure>
+
 ホーム画面の検索バーに出るAIモードのボタンの外し方は、[Google AIモードを消す方法](/media/ai-mode-remove/)の「Pixelの検索バー」の節にまとめました。オフにしたあとで長押しに何が割り当てられるかは、取得したGoogleのヘルプには見当たりません。
 
 ## 勝手に起動するとき
@@ -109,6 +112,8 @@ Galaxyには長押しと別に、画面の左下か右下から内側にスワ�
 ## 画面検索を利用できませんと出るとき
 
 かこって検索を開いたときに［画面検索を利用できません］と出るのは、オフになった状態ではありません。Googleのヘルプはこのエラーの原因として、既定のデジタル アシスタント アプリが Google になっていないこと、［画面とアプリのデータの使用］がオフになっていること、Googleアプリが古いことを挙げています。
+
+<figure class="post-figure"><img src="/media/images/circle-to-search-off/08_help_error.jpg" alt="Google 検索ヘルプのエラーを解決する節。アプリ、デフォルトのアプリ、デジタル アシスタント アプリと進んで見る2点と、Google Play でGoogle アプリを更新する点に1から3の番号" loading="lazy"><figcaption>Googleのヘルプの［画面検索を利用できません］の節。番号は確かめる3点</figcaption></figure>
 
 GalaxyについてはSamsungのページが［設定］の［アプリ］から［標準アプリを選択］、［デジタル アシスタント アプリ］と進み、［画面上の画像を分析］を有効にする手順を載せています。**止めたいだけなら、アシスタントの権限を外すよりかこって検索のスイッチを切るほうが、何を変えたかを後でたどれるので確実です。**
 
