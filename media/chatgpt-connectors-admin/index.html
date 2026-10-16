@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】ChatGPTコネクタの管理者設定・BusinessとEnterpriseの違い | nito Column</title>
+    <meta name="description" content="ChatGPTのコネクタ（今はアプリ）を管理者が許可・制限する手順を公式ヘルプで整理。BusinessとEnterpriseの既定の違い、ロール別の許可、読み取りだけに絞る設定、会社のアカウントを個人のChatGPTにつながせない制限まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/chatgpt-connectors-admin/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】ChatGPTコネクタの管理者設定・BusinessとEnterpriseの違い">
+    <meta property="og:description" content="ChatGPTのコネクタ（今はアプリ）を管理者が許可・制限する手順を公式ヘルプで整理。BusinessとEnterpriseの既定の違い、ロール別の許可、読み取りだけに絞る設定、会社のアカウントを個人のChatGPTにつながせない制限まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/chatgpt-connectors-admin/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/chatgpt-connectors-admin.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/chatgpt-connectors-admin.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】ChatGPTコネクタの管理者設定・BusinessとEnterpriseの違い", "description": "ChatGPTのコネクタ（今はアプリ）を管理者が許可・制限する手順を公式ヘルプで整理。BusinessとEnterpriseの既定の違い、ロール別の許可、読み取りだけに絞る設定、会社のアカウントを個人のChatGPTにつながせない制限まで。", "datePublished": "2026-10-17", "dateModified": "2026-10-17", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/chatgpt-connectors-admin/"}, "articleSection": "AI活用", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】ChatGPTコネクタの管理者設定・BusinessとEnterpriseの違い"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTのコネクタは管理者が止められますか？", "acceptedAnswer": {"@type": "Answer", "text": "止められます。Business・Enterprise・Eduでは、管理コンソールの［プラグイン］でアプリごとに無効にできます。"}}, {"@type": "Question", "name": "ChatGPTのアプリとコネクターの関係は？", "acceptedAnswer": {"@type": "Answer", "text": "同じ機能です。2025年12月18日のリリースノートで、コネクタはアプリとして表示されるようになり、ヘルプの表記もアプリに改められました。"}}, {"@type": "Question", "name": "ChatGPT Businessでロールごとにコネクタを分けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "分けられません。ロール単位のアプリの許可はEnterpriseとEduの機能で、Businessはワークスペース全体のオンとオフだけです。"}}, {"@type": "Question", "name": "ChatGPTのコネクタを読み取りだけにできますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。アプリのアクションで書き込みを外し、権限を［読み取りアクションを許可］にします。すでに有効な書き込みのアクションは、［新しいアクションを無効にする］では止まらないため、1つずつ外します。"}}, {"@type": "Question", "name": "社員が個人のChatGPTに会社のGoogleアカウントをつなぐのを止められますか？", "acceptedAnswer": {"@type": "Answer", "text": "Enterpriseなら、検証済みのドメインを使う接続を組織のワークスペースに限る制限を、OpenAIサポートに依頼できます。新しい接続だけが止まり、すでにある接続は自動では切れません。"}}, {"@type": "Question", "name": "ChatGPTのコネクターは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "アプリごとに違い、使えるアプリはプラン・地域・ワークスペースで変わるとヘルプは書いています。また、無料版やPlusなど個人向けのプランで［すべての人のためにモデルを改善する］がオンなら、アプリから取った情報が学習に使われることがあります。"}}, {"@type": "Question", "name": "ChatGPTにSharePointをつなぐのにMicrosoft側の設定は要りますか？", "acceptedAnswer": {"@type": "Answer", "text": "要ります。アクションによってはMicrosoft Entraの管理者が組織に与える権限が必要です。同意したあと、ChatGPT側のアクションはワークスペースの管理者が別に有効にします。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTコネク…
+    </nav>
+
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.17</span>
+        </div>
+        <h1 class="post-title">【2026年10月】ChatGPTコネクタの管理者設定・BusinessとEnterpriseの違い</h1>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのコネクタの管理"><defs><linearGradient id="ecg-5d37aa96" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5d37aa96)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのコネクタの管理</text><line x1="136.4" y1="327.1" x2="1063.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">止める範囲ごとの設定と場所</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>OpenAIのヘルプ「<a href="https://help.openai.com/ja-jp/articles/11509118">プラグインとアプリ向けの管理機能、セキュリティ、コンプライアンス</a>」は、2026年10月16日に更新されました。Googleドライブ・SharePoint・Slackなどにつなぐコネクタは、2025年12月18日の<a href="https://help.openai.com/ja-jp/articles/6825453">リリースノート</a>でアプリとして表示されるようになり、ヘルプの表記もアプリに改められています。管理する場所も、管理コンソールの［プラグイン］が入口になりました。</p>
+<p>管理する側が迷うのは<strong>アプリにかかわる設定がいくつにも分かれていて、1つを切っても全部が止まるわけではない</strong>ことです。この記事は2026年10月17日に取得したOpenAIのヘルプをもとに、止めたい範囲ごとにどの設定をどこで変えるかを整理します。管理画面は撮影しておらず、画面の名前はヘルプの日本語版の表記に合わせました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>コネクタは今のヘルプでは<strong>アプリ</strong>。管理の入口は<strong>管理コンソールの［プラグイン］</strong></li>
+<li><strong>Businessはアプリが最初から有効</strong>で、管理者が変えられるのはワークスペース全体のオンとオフ。<strong>ロールごとに分けられるのはEnterpriseとEdu</strong></li>
+<li>読み取りだけに絞るなら<strong>アクションで書き込みを外し、権限を［常に確認］か［読み取りアクションを許可］に</strong>する</li>
+<li>会社のメールのアカウントを<strong>個人のChatGPTからつなげなくする制限はEnterprise向けで、OpenAIサポートへの依頼が要る</strong>。ドメインを確認しただけでは効かない</li>
+<li>OutlookやSharePointは<strong>Microsoft Entraの管理者の同意が別に要る</strong>。同意してもChatGPT側の操作は有効にならない</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/01_fig_overview.jpg" alt="書類からチャットの画面までの間に4つの門が並ぶ図。門の名前は左からプラグインとアプリ、アクション、権限、ドメイン" loading="lazy"><figcaption>アプリが動くまでに通る4つの関門</figcaption></figure>
+
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>コネクタとアプリとプラグイン</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>止めたい範囲で選ぶ設定</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>BusinessとEnterpriseの既定の違い</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>ワークスペース全体で止める手順</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>ロールごとに使えるアプリを分ける</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>読み取りだけに絞る設定</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>アクションで書き込みを外す</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>権限で確認のタイミングを決める</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>会社のアカウントのつなぎ先を絞る</a></li>
+                    <li class="toc-h3"><a href="#s7-1"><span class="toc__n">7-1</span>ドメインを管理で接続できるアカウントを決める</a></li>
+                    <li class="toc-h3"><a href="#s7-2"><span class="toc__n">7-2</span>検証済みドメインで個人のChatGPTからの接続を止める</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>GoogleとMicrosoftの側の承認</a></li>
+                    <li class="toc-h3"><a href="#s8-1"><span class="toc__n">8-1</span>Microsoft Entraの同意</a></li>
+                    <li class="toc-h3"><a href="#s8-2"><span class="toc__n">8-2</span>Google Workspaceの承認</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>管理者によって無効化と出たとき</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>設定を広げる順番</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">コネクタとアプリとプラグイン</h2>
+<p><a href="https://help.openai.com/ja-jp/articles/11487775">ChatGPT の接続済みアプリ</a>では、アプリをGoogleドライブやSlackなどのサービスにChatGPTをつなぐ機能と説明しています。<strong>コネクタと書かれた古い記事の手順は、今のアプリの設定に読み替えが必要です。</strong></p>
+<p>アプリの上にはプラグインがあります。プラグインは1つ以上のアプリやスキルをまとめたもので、スキルだけで外部につながないプラグインもあります。管理機能のヘルプは<strong>プラグインを入れることと中のアプリを使えることを別の設定</strong>として扱っています。メンバーがプラグインを入れていても、中のアプリを使えるとは限りません。</p>
+<p>管理の入口は**管理コンソールでワークスペースを選んで開く［プラグイン］**で、従来の［アプリ］ページも［レガシーアプリの管理］から開けます。ヘルプは両方の手順を並べていて、この記事は今の入口で書きます。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/02_help_overview.jpg" alt="OpenAIヘルプの概要の節。対象のワークスペースを選んでプラグインを開く。プラグインページ内のレガシーアプリの管理の設定からもアプリを管理できる" loading="lazy"><figcaption>管理機能のヘルプの概要（OpenAIヘルプ）</figcaption></figure>
+
+<h2 id="s2">止めたい範囲で選ぶ設定</h2>
+<p>アプリまわりの設定は、何を止めたいかで使い分けます。管理機能のヘルプの説明を止めたい範囲ごとに並べると、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>止めたいこと</th>
+<th>使う設定</th>
+<th>場所</th>
+<th>プラン</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>そのアプリを社内で使わせない</td>
+<td>アプリの有効・無効</td>
+<td>管理コンソール［プラグイン］</td>
+<td>Business・Enterprise・Edu</td>
+</tr>
+<tr>
+<td>一部の部署だけに使わせる</td>
+<td>カスタムロールのアプリの選択</td>
+<td>ワークスペース設定［権限とロール］</td>
+<td>Enterprise・Edu</td>
+</tr>
+<tr>
+<td>書き込みをさせない</td>
+<td>アクション（読み取り・書き込み）</td>
+<td>プラグインの中のアプリの設定</td>
+<td>アプリによる</td>
+</tr>
+<tr>
+<td>実行の前に毎回確かめさせる</td>
+<td>権限（4段階）</td>
+<td>ワークスペース設定［一般］とアプリごと</td>
+<td>Business・Enterprise・Edu</td>
+</tr>
+<tr>
+<td>個人のメールのアカウントでつながせない</td>
+<td>ドメインを管理</td>
+<td>プラグインの中のアプリ</td>
+<td>ヘルプに限定の記載なし</td>
+</tr>
+<tr>
+<td>会社のアカウントを個人のChatGPTでつながせない</td>
+<td>検証済みドメインによる制限</td>
+<td>OpenAIサポートに依頼</td>
+<td>Enterprise</td>
+</tr>
+</tbody>
+</table>
+<p>**どれか1つを切れば全部が止まる作りではありません。**プラグインのインストール・アプリの有効化・ロール・アクション・権限は別々に評価され、GoogleやMicrosoftの側の承認もまた別の関門です。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/03_fig_choose.png" alt="止めたいこと6つと使う設定の対応。社内で使わせないはアプリの有効と無効、一部の部署だけはカスタムロール、書き込みはアクション、毎回の確認は権限、個人のメールのアカウントはドメインを管理、個人のChatGPTからの接続は検証済みドメインによる制限" loading="lazy"><figcaption>止めたいことと使う設定の対応</figcaption></figure>
+
+<h2 id="s3">BusinessとEnterpriseの既定の違い</h2>
+<p>同じ管理コンソールでも、最初の状態と変えられる範囲はプランで違います。管理機能のヘルプにあるプランごとの既定を並べました。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>Business</th>
+<th>Enterprise・Edu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アプリの最初の状態</td>
+<td>有効</td>
+<td>作成時に所定のアプリだけ有効</td>
+</tr>
+<tr>
+<td>新しく出たプラグインとアプリ</td>
+<td>ヘルプに記載なし</td>
+<td>一般に無効</td>
+</tr>
+<tr>
+<td>ロールごとのアプリの許可</td>
+<td>なし（全体のオンとオフ）</td>
+<td>あり（RBAC）</td>
+</tr>
+<tr>
+<td>Googleドキュメント・スプレッドシート・スライドの操作</td>
+<td>最初からオン</td>
+<td>管理者が有効にするまでオフ</td>
+</tr>
+<tr>
+<td>会社ドメインのアカウントの接続先の制限</td>
+<td>ヘルプの対象外</td>
+<td>サポートに依頼して有効化</td>
+</tr>
+</tbody>
+</table>
+<p>**Businessで気をつけたいのは、アプリが有効な状態から始まることです。**社員は管理者が何もしなくても、GoogleドライブやSlackを自分のアカウントでつなげます。止めたいアプリがあるなら、社員に使わせ始める前に管理者が無効にしておきます。Enterpriseは反対に、新しいプラグインやアプリが出ても、一般に管理者が有効にするまで使えません。</p>
+<h2 id="s4">ワークスペース全体で止める手順</h2>
+<p>Businessで管理者が決められるのは、アプリをワークスペースで使えるかどうかです。ヘルプの手順は次のとおりです。</p>
+<ol>
+<li>管理コンソールに移動し、対象のChatGPTワークスペースを選ぶ</li>
+<li>［プラグイン］を開く</li>
+<li>止めたいアプリ、またはアプリを含むプラグインを選ぶ</li>
+<li>アプリの状態に応じて出る［無効化］などを選ぶ</li>
+</ol>
+<p>無効にしたアプリの機能は止まりますが、<strong>プラグインがアンインストールされるとは限らず、そのアプリに頼らないスキルも残ります</strong>。</p>
+<p>管理者が設定した同期（Googleドライブなどを事前に読み込ませておく機能）を使っているなら、止める前に警告を読みます。<strong>アプリの無効化や同期の接続の削除で、読み込ませたデータは完全に削除されます。</strong></p>
+<h2 id="s5">ロールごとに使えるアプリを分ける</h2>
+<p>Enterprise・Eduでは、ロールベースのアクセス制御（RBAC）で部署ごとに使えるアプリを変えられます。ヘルプの手順は次のとおりです。</p>
+<ol>
+<li>［ワークスペース設定］＞［権限とロール］に移動する</li>
+<li>［カスタムロール］を選び、編集したいロールを選ぶ</li>
+<li>［プラグインと接続されたデータ］までスクロールする</li>
+<li>［プラグインの使用をメンバーに許可する］（表示によっては［プラグインを使用する］）をオンにする</li>
+<li>［選択］から、そのロールで使えるアプリを選ぶ</li>
+</ol>
+<p><a href="https://help.openai.com/ja-jp/articles/11750701-rbac">RBACのヘルプ</a>によると、カスタムロールを作って割り当てられるのはワークスペースのオーナーだけで、変更の反映には最大5分かかることがあります。</p>
+<p>**ロールの権限は足し算です。**あるロールでアプリをオフにしても、同じ人に割り当てた別のロールが許していれば、その人は使えます。止めたい人が使えてしまうときは、その人に割り当てたロールをすべて確かめます。</p>
+<p>ロールの多くの項目は［デフォルト］［オン］［オフ］から選び（オンとオフだけの項目もあります）、<strong>付いているロールがすべて［デフォルト］なら、ワークスペースの既定がそのまま効きます。</strong></p>
+<h2 id="s6">読み取りだけに絞る設定</h2>
+<p>アプリを使わせたいものの、メールの送信やファイルの書き換えまではさせたくない。そんなときはアクションと権限の2つを組み合わせます。</p>
+<h3 id="s6-1">アクションで書き込みを外す</h3>
+<p>管理者はアプリごとに許す読み取りと書き込みのアクションを選べ、あとから増えるアクションの扱いも次の3つから決めます。</p>
+<ul>
+<li>すべての新しいアクションを有効にする</li>
+<li>新しい読み取りアクションのみ有効にする</li>
+<li>新しいアクションを無効にする</li>
+</ul>
+<p>**［新しいアクションを無効にする］が効くのは、選んだあとに増えたアクションだけです。**すでに有効なアクションは止まらないため、今ある書き込みのアクションは1つずつ外します。アクションを選ぶ項目そのものが無いアプリもあります。</p>
+<h3 id="s6-2">権限で確認のタイミングを決める</h3>
+<p>権限はChatGPTがアプリを使う前にいつ利用者に確認を求めるかの設定で、4段階あります。<a href="https://help.openai.com/ja-jp/articles/20001495">アプリの権限管理のヘルプ</a>の説明は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>権限</th>
+<th>ヘルプの説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>常に確認</td>
+<td>読み取りの前も変更の前も確認する</td>
+</tr>
+<tr>
+<td>読み取りアクションを許可</td>
+<td>読み取りは確認なし、変更の前は確認する</td>
+</tr>
+<tr>
+<td>低リスクのアクションを許可</td>
+<td>低リスクは自動で承認、高リスクは確認か拒否</td>
+</tr>
+<tr>
+<td>すべてのアクションを許可</td>
+<td>対応するアクションを追加の確認なしで実行</td>
+</tr>
+</tbody>
+</table>
+<p>管理機能のヘルプによると、ワークスペース全体の既定を選ぶ場所は［ワークスペース設定］＞［一般］＞［設定］の［プラグイン権限］です。アプリごとに変えるなら管理コンソールの［プラグイン］でアプリを含むプラグインを開き、アプリの［権限］から選びます。**ワークスペース全体の選択肢に［すべてのアクションを許可］は出てきません。**リスクが高いため、出てくるのは個々のアプリの設定だけです。ただし既存のポリシー設定によっては異なる場合がある、とヘルプは書いています。</p>
+<p>追加の確認や拒否の対象になる例として、権限管理のヘルプはメールやメッセージの送信・ファイルの削除・共有やセキュリティの設定の変更・購入を挙げています。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/04_help_permissions.jpg" alt="アプリの権限管理のヘルプにある権限の選択肢。常に確認、読み取りアクションを許可、低リスクのアクションを許可、すべてのアクションを許可の4つ" loading="lazy"><figcaption>権限の4つの選択肢（ChatGPT でのアプリの権限管理）</figcaption></figure>
+
+<h2 id="s7">会社のアカウントのつなぎ先を絞る</h2>
+<p>社員が個人のChatGPTに、会社のGoogleアカウントやMicrosoftアカウントをつなぐ使い方も止められます。<strong>個人向けのプランで［すべての人のためにモデルを改善する］がオンだと、アプリから取った情報が学習に使われることがある</strong>と、接続済みアプリのヘルプに書かれています。Business・Enterprise・Eduのワークスペースでは、既定で学習に使われません。</p>
+<h3 id="s7-1">ドメインを管理で接続できるアカウントを決める</h3>
+<p>ワークスペースのオーナーと管理者は、アプリごとに、つなぐときに使えるアカウントのメールドメインを決められます。手順は次のとおりです。</p>
+<ol>
+<li>管理コンソールでワークスペースを選び、［プラグイン］でアプリを含むプラグインを開く</li>
+<li>アプリを見つけて［ドメインを管理］を選ぶ</li>
+<li>許可するドメイン（例: acme.com）を追加して［保存］を押す</li>
+</ol>
+<p>従来の画面で管理しているアプリは、有効にしたアプリの［•••］メニューから［ドメインを管理］を選びます。**許可するドメインの一覧が空のときは、どのドメインのアカウントでもつなげます。**社員が個人のGmailで会社のワークスペースにGoogleドライブをつなぐのを防ぐのが、この設定です。</p>
+<h3 id="s7-2">検証済みドメインで個人のChatGPTからの接続を止める</h3>
+<p>ドメインを管理で絞れるのは会社のワークスペースの中でつなげるアカウントです。会社のアカウントを社外のワークスペースでつながせない設定は別です。</p>
+<p>ChatGPT Enterpriseの組織は、検証済みの会社のドメインを使うアカウントが対応アプリにつなげる先を、組織が許したワークスペースに限るよう依頼できます。**依頼先はOpenAIサポートで、検証済みのドメインと、制限したいアプリの名前を書いて送ります。**有効になると、たとえば個人のワークスペースから会社のメールのアカウントでGoogleドライブにつなごうとしても、新しい接続はブロックされます。</p>
+<p>ヘルプに書かれた条件は次のとおりです。</p>
+<ul>
+<li><strong>すでにある接続は自動では切れない</strong></li>
+<li>ドメインを検証しただけでは有効にならない</li>
+<li>個人のChatGPTアカウントを制限するためのドメインの申請（ドメインクレーム）は要らない</li>
+<li>有効にしても［ドメインを管理］はオンにならない</li>
+</ul>
+<p>対象はGoogleドライブ・Gmail・SharePoint・Teams・Slack・Notion・GitHubなど29個のアプリです（ヘルプの一覧を数えました）。すでにつないでいる社員がいるなら、有効にしたあと本人に接続を外してもらう段取りが要ります。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/05_help_domain_apps.jpg" alt="検証済みドメインによる制限に対応しているアプリの表。AirtableやAsanaからZoomInfoまでが4列で並ぶ" loading="lazy"><figcaption>検証済みドメインによる制限に対応しているアプリ（管理機能のヘルプ）</figcaption></figure>
+
+<h2 id="s8">GoogleとMicrosoftの側の承認</h2>
+<p>ChatGPTの管理者とGoogle WorkspaceやMicrosoft 365の管理者が別の人なら、両方の段取りが要ります。接続先で認めても、ChatGPTのアクションは自動では有効になりません。</p>
+<h3 id="s8-1">Microsoft Entraの同意</h3>
+<p>OutlookのメールとカレンダーやTeams、SharePointの一部のアクションには、Microsoft Entraの管理者が組織に与えるMicrosoft Graphの権限が要ります。ヘルプの流れは次のとおりです。</p>
+<ol>
+<li>管理コンソールの［プラグイン］で［Microsoft の権限を設定］を選び、有効なMicrosoftのアプリの権限の要求をまとめて確かめる</li>
+<li>［Microsoft Entra で権限を確認する］を選ぶ</li>
+<li>組織全体の同意を与えられるEntraの管理者アカウントでサインインし、組織とOpenAIのアプリケーションの名前を確かめる</li>
+<li>［許可］か［キャンセル］を選び、ChatGPTに戻って完了を確かめる</li>
+</ol>
+<p>**Entraの確認画面には、権限ごとのチェックボックスがありません。**選んだ要求の全体を許可するか、やめるかの2択です。許したくない権限があるなら、手順1で要求から外し、それに頼るアクションを無効のままにしておきます。</p>
+<p>同意を済ませても、ChatGPTのアクションは有効にならず、社員のMicrosoftアカウントも自動ではつながりません。使わせたいアクションはオーナーか管理者が1つずつ有効にします。テナント全体の同意の仕組みは、Microsoft Learnの「<a href="https://learn.microsoft.com/ja-jp/entra/identity/enterprise-apps/grant-admin-consent">アプリケーションに対してテナント全体の管理者の同意を付与する</a>」にあります。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/06_learn_admin_consent.jpg" alt="Microsoft Learnの手順。Microsoft Entra管理センターのエンタープライズアプリでアプリを選び、セキュリティのアクセス許可を開き、管理者の同意の付与を選ぶ" loading="lazy"><figcaption>テナント全体の管理者の同意を付与する手順（Microsoft Learn）</figcaption></figure>
+
+<h3 id="s8-2">Google Workspaceの承認</h3>
+<p>Googleドライブのアプリは、ドキュメント・スプレッドシート・スライドの操作もまとめて受け持つようになりました。管理機能のヘルプによると、これらの操作を有効にしたあと<strong>Google Workspaceの管理者がドライブの新しいスコープを承認し直す必要がある場合があります</strong>。社員がつなげないときに確かめる場所として挙がっているのも、Google側のスコープの承認です。</p>
+<h2 id="s9">管理者によって無効化と出たとき</h2>
+<p>社員から「プラグインに管理者によって無効化と出る」と言われたときに見る順番も、<a href="https://help.openai.com/ja-jp/articles/20001497">アプリのトラブルシューティング</a>にあります。画面に出る文言ごとに意味が違います。</p>
+<table>
+<thead>
+<tr>
+<th>画面の文言</th>
+<th>止まっている場所・対処</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>管理者によって無効化</td>
+<td>ワークスペース・ロール・中のアプリのどれか</td>
+</tr>
+<tr>
+<td>管理者の承認が必要です</td>
+<td>管理者がプラグインと中のアプリを確かめていない</td>
+</tr>
+<tr>
+<td>ワークスペースでの設定が必要です</td>
+<td>アプリの設定が済んでいない</td>
+</tr>
+<tr>
+<td>ワークスペースが必要です</td>
+<td>会社などのワークスペースに切り替えて使う</td>
+</tr>
+</tbody>
+</table>
+<p>**［管理者の承認が必要です］は、依頼がもう送られたという意味ではありません。**依頼が送られたとは限らないため、社内の連絡でも頼んでもらいます。</p>
+<p>管理者が先に確かめるのは意図したワークスペースとプラグインで変えたかと、変えたのがワークスペースの既定かカスタムロールかです。Enterpriseなら、その人に付いている全部のロールも見ます。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/07_help_disabled.jpg" alt="トラブルシューティングのヘルプの節。アクセスが制限されていてもプラグインはディレクトリに表示されることがあり、表示されていても中のアプリを使えるとは限らない" loading="lazy"><figcaption>プラグインに管理者によって無効化と出る場合（OpenAIヘルプ）</figcaption></figure>
+
+<h2 id="s10">設定を広げる順番</h2>
+<p>最初から全部のアプリと書き込みを開けると、何かあったときにどの設定が効いたのか追えなくなります。ヘルプの既定と注意書きから組んだ順番は次のとおりです。</p>
+<ol>
+<li>使わせるアプリを決め、ほかを無効にする</li>
+<li>アクションは読み取りだけ、権限は［常に確認］か［読み取りアクションを許可］にする</li>
+<li>［ドメインを管理］で会社のドメインだけを許し、Enterpriseなら検証済みドメインの制限も依頼する</li>
+<li>使い方が固まってから、書き込みのアクションやロールごとの許可を広げる</li>
+</ol>
+<p>社内で作るカスタムアプリ（MCPのサーバーにつなぐアプリ）は、OpenAIが検証していないとヘルプは書いています。中身の分かるアプリだけを入れます。プランごとの機能の差は<a href="/media/chatgpt-enterprise/">ChatGPT Enterpriseとは</a>に、メンバーの招待と役割は<a href="/media/chatgpt-business-admin/">ChatGPT Businessのメンバー招待と管理</a>にまとめました。アプリでつないだ社内の資料をもとに、決まった業務の一部をAIに任せる仕組みは、<a href="/ai-agent/">AIエージェント構築支援</a>で組めます。</p>
+<h2 id="s11">よくある質問</h2>
+<h3 id="s11-1">Q. ChatGPTのコネクタは管理者が止められますか？</h3>
+<p>止められます。Business・Enterprise・Eduでは、管理コンソールの［プラグイン］でアプリごとに無効にできます。</p>
+<h3 id="s11-2">Q. ChatGPTのアプリとコネクターの関係は？</h3>
+<p>同じ機能です。2025年12月18日のリリースノートで、コネクタはアプリとして表示されるようになり、ヘルプの表記もアプリに改められました。</p>
+<h3 id="s11-3">Q. ChatGPT Businessでロールごとにコネクタを分けられますか？</h3>
+<p>分けられません。ロール単位のアプリの許可はEnterpriseとEduの機能で、Businessはワークスペース全体のオンとオフだけです。</p>
+<h3 id="s11-4">Q. ChatGPTのコネクタを読み取りだけにできますか？</h3>
+<p>できます。アプリのアクションで書き込みを外し、権限を［読み取りアクションを許可］にします。すでに有効な書き込みのアクションは、［新しいアクションを無効にする］では止まらないため、1つずつ外します。</p>
+<h3 id="s11-5">Q. 社員が個人のChatGPTに会社のGoogleアカウントをつなぐのを止められますか？</h3>
+<p>Enterpriseなら、検証済みのドメインを使う接続を組織のワークスペースに限る制限を、OpenAIサポートに依頼できます。新しい接続だけが止まり、すでにある接続は自動では切れません。</p>
+<h3 id="s11-6">Q. ChatGPTのコネクターは無料で使えますか？</h3>
+<p>アプリごとに違い、使えるアプリはプラン・地域・ワークスペースで変わるとヘルプは書いています。また、無料版やPlusなど個人向けのプランで［すべての人のためにモデルを改善する］がオンなら、アプリから取った情報が学習に使われることがあります。</p>
+<h3 id="s11-7">Q. ChatGPTにSharePointをつなぐのにMicrosoft側の設定は要りますか？</h3>
+<p>要ります。アクションによってはMicrosoft Entraの管理者が組織に与える権限が必要です。同意したあと、ChatGPT側のアクションはワークスペースの管理者が別に有効にします。</p>
+<h2 id="s12">出典</h2>
+<ul>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/11509118">プラグインとアプリ向けの管理機能、セキュリティ、コンプライアンス</a>」（2026年10月17日取得）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/11487775">ChatGPT の接続済みアプリ</a>」（同）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/6825453">ChatGPT リリースノート</a>」2025年12月18日の項（同）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/20001495">ChatGPT でのアプリの権限管理</a>」（同）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/20001497">ChatGPT のアプリに関するトラブルシューティング</a>」（同）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/11750701-rbac">ChatGPT のロールベースのアクセス制御（RBAC）による機能アクセス管理</a>」（同）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/12143177">ChatGPT の SharePoint アプリとセットアップ</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/entra/identity/enterprise-apps/grant-admin-consent">アプリケーションに対してテナント全体の管理者の同意を付与する</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="post-cta">
+            <div class="post-cta__label">CONTACT</div>
+            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
+            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
+            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
+        </div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/circle-to-search-off/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="かこって検索をオフにする"><defs><linearGradient id="ecg-beb4de1a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-beb4de1a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">かこって検索をオフにする</text><line x1="144.0" y1="365.9" x2="1056.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.17</div>
+                <div class="rel-card__ttl">【2026年10月】かこって検索をオフにする方法｜Pixel・Galaxy・AQUOS・勝手に起動するとき</div>
+            </a>
+            <a href="/media/copilot-chat-admin-block/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilot Chatを社内で止める"><defs><linearGradient id="ecg-116e0872" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-116e0872)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="125.2" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilot Chat</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">を社内で止める</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.17</div>
+                <div class="rel-card__ttl">【2026年10月】Copilot Chatを社内で止める方法｜ブロック・Web検索・エージェント</div>
+            </a>
+            <a href="/media/chrome-ask-google-page/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chromeの「Googleに質問」を止める"><defs><linearGradient id="ecg-2da7d78b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-2da7d78b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Chromeの「Googl</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">eに質問」を止める</text><line x1="273.2" y1="416.8" x2="926.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.15</div>
+                <div class="rel-card__ttl">【2026年10月】Chromeの「このページについてGoogleに質問する」を消す方法・flags以外の止め方</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'chatgpt-connectors-admin',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
