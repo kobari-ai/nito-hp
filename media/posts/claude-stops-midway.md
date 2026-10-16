@@ -22,7 +22,7 @@ Claudeに長い文章やコードを頼むと、回答が文の途中で止ま�
 - Claude Codeの「The response above may be incomplete」は**continueと送れば最後に完成した部分から再開**する
 :::
 
-<!-- SHOT: 00 概要図。表示で見分ける5つ（一時停止・長さ制限・考えを整理・使用制限・表示なし）とまず試すこと。gen_gemini_web.py か HTML の図。800幅の型・縦横比2:1以内・文字5か所まで -->
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_00_overview.png" alt="止まったチャットの吹き出しを囲むように、一時停止、長さ制限、考えを整理、使用制限、表示なしの5枚のカードが並んだ図" loading="lazy"><figcaption>止まったときは画面の表示で5つに分かれる</figcaption></figure>
 
 ## 画面に出る表示で見分ける
 
@@ -59,7 +59,7 @@ GitHubの[#861](https://github.com/anthropics/claude-code/issues/861)は、2025�
 
 この報告は60日動きが無く、2026年1月に自動で閉じられました。直ったという記載はありません。
 
-<!-- SHOT: 03 GitHub #861 の Steps to Reproduce。https://github.com/anthropics/claude-code/issues/861 PC 幅。赤枠は手順2（paused の文言）と手順4（length limit の文言）。名前・アイコンは写さない -->
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_03_github_861.png" alt="GitHubのissue 861のSteps to Reproduceの節。手順2の、This response pausedで始まりHit Continue to nudge Claude alongで終わる通知と、手順4の、Your message will exceed the length limit for this chatで始まる警告が赤枠で囲まれている" loading="lazy"><figcaption>GitHub #861の再現手順。手順2が一時停止、手順4が長さ制限の文言</figcaption></figure>
 
 **一時停止の表示が出たら、まず同じチャットでContinueを押すか「続けて」と送ります。**[応答が短すぎる場合のヘルプ](https://support.claude.com/ja/articles/8114518)も、応答が不完全なときは前のプロンプトと応答をClaudeに渡して、中断したところから続けるよう勧めています。同じチャットならどちらももう会話の中にあるので、送るのは続きの指示だけです。
 
@@ -82,7 +82,7 @@ GitHubの[#861](https://github.com/anthropics/claude-code/issues/861)は、2025�
 
 新しいチャットに移るときは、何も持たずに始めると前提が消えます。移る前に、今のチャットで「ここまでの目的・決めたこと・書き終えた部分の見出し・残りの作業を箇条書きで」と頼み、その箇条書きと書き終えた本文の最後の段落を新しいチャットに貼ります。**本文を全部貼り直すと、新しいチャットもすぐ同じ長さに近づきます。**残りの作業に要る部分だけを渡してください。
 
-<!-- SHOT: 01 ヘルプ 12466728 の「長さ制限エラー」の節。https://support.claude.com/ja/articles/12466728 PC 幅。赤枠はエラーの文言 -->
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_01_help_length.png" alt="Claudeのヘルプセンターのエラーメッセージのページにある長さ制限エラーの節。許可される最大入力長を超えると出るエラーの文言と、メッセージが長すぎて送る前に短くする必要があるという説明の段落が赤枠で囲まれている" loading="lazy"><figcaption>ヘルプの「長さ制限エラー」の節</figcaption></figure>
 
 ## 考えを整理していると出たとき
 
@@ -92,7 +92,7 @@ GitHubの[#861](https://github.com/anthropics/claude-code/issues/861)は、2025�
 
 ただし同じヘルプは、この要約が起きるほど長い会話は使用量を多く使うとも書いています。長いチャットで使用量の枠に近いなら、新しい会話を始めるほうがよい、とも書かれています。設定の場所は[会話の長さ制限と圧縮](/media/claude-conversation-length/)の記事に書きました。
 
-<!-- SHOT: 02 設定の［機能］の「コード実行」のスイッチ（場所は 11647753 か claude-conversation-length で確かめる）。スマホ幅。赤枠はスイッチ。ログインが要る・個人情報を写さない -->
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_02_code_exec.png" alt="Claudeの設定の機能の画面にある、コードの実行とファイルの作成の欄。クラウドでのコード実行とファイル作成という項目のオンになったスイッチが赤枠で囲まれている" loading="lazy"><figcaption>設定の［機能］にある「クラウドでのコード実行とファイル作成」（2026年10月17日時点）</figcaption></figure>
 
 ## 表示なしで文の途中で止まったとき
 
@@ -107,7 +107,7 @@ GitHubの[#861](https://github.com/anthropics/claude-code/issues/861)は、2025�
 
 エラーのヘルプには、使用量の枠を使い切って使用クレジットに切り替わる瞬間について「切断されたように見えるかもしれませんが、作業は継続され」るとあります。**使用クレジットに切り替わる瞬間に止まって見えても、作業は続いています。**次の処理が終わると、表示は「現在クレジットを使用しています」に変わります。容量制約の表示が状況ページに載らないことも、同じヘルプの記載です。
 
-<!-- SHOT: 05 status.claude.com のスマホ幅（shot.py --mobile）。赤枠は claude.ai の行 -->
+<figure class="post-figure post-figure--sp"><img src="/media/images/claude-stops-midway/clsm_05_status_sp.png" alt="スマホで開いたClaude Statusのページ。All Systems Operationalの帯の下に、過去30日の稼働状況がサービスごとに並び、一番上のclaude.aiの行が赤枠で囲まれている" loading="lazy"><figcaption>Claudeの状況ページ。一番上がclaude.aiの行</figcaption></figure>
 
 ## 長い文章を止まらずに受け取る頼み方
 
@@ -120,7 +120,7 @@ GitHubの[#861](https://github.com/anthropics/claude-code/issues/861)は、2025�
 
 止める位置をClaudeに決めさせず、こちらで区切っておくと、前の回答と次の回答の境目がはっきりします。**目次を最初に固めておけば、途中で新しいチャットに移るときも目次を貼るだけで続きを頼めます。**
 
-<!-- SHOT: 06 HTML の図。目次を出させる、範囲を区切って頼む、境目を確かめて次を頼む、の流れ。800幅の型・縦横比2:1以内 -->
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_06_split.png" alt="長い文章を3段階で受け取る流れの図。1は本文を書かせずに見出しを並べさせる、2は見出しで範囲を切って字数を添えて頼む、3は最後の見出しまで出たのを見てから次を頼む。下に、新しいチャットへ移るときも固めた目次を貼れば続けられるとある" loading="lazy"><figcaption>長い文章を分けて受け取る流れ</figcaption></figure>
 
 ## Claude Codeで止まったとき
 
@@ -141,7 +141,7 @@ Claude Codeでは、回答が途中で切れると末尾に「The response above
 
 画面ごと固まって何も受け付けないときは、Ctrl+Cで止め、それでもだめならターミナルを閉じます。[トラブルシューティングのドキュメント](https://code.claude.com/docs/ja/troubleshooting)によると、同じフォルダで claude --resume を実行すれば会話は戻ります。Claude Codeそのものの使い方の記事は[Claude Codeの使い方](/media/claude-code-guide/)です。
 
-<!-- SHOT: 07 code.claude.com/docs/ja/errors の「The response above may be incomplete」の節。PC 幅（ダークのまま可）。赤枠は6つの文言のコードブロック -->
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_07_code_errors.png" alt="Claude Codeのエラーのドキュメントにある、The response above may be incompleteの節。ストリーミングが途中で失敗したときの説明の下に、API Errorで始まる6行のコードブロックがあり、そのブロックが赤枠で囲まれている" loading="lazy"><figcaption>Claude Codeのドキュメントにある6つの文言</figcaption></figure>
 
 ## APIで回答が切れたとき
 
@@ -155,7 +155,7 @@ APIで回答が途中で終わったときは、返ってきた stop_reason の�
 
 max_tokens で切れた回答の最後がツールの呼び出しの途中なら、続きを頼むのではなく max_tokens を上げて送り直す、というのがドキュメントの指示です。**チャット画面の一時停止と違い、APIでは上限を自分で決めているので、まず max_tokens の値を見直します。**
 
-<!-- SHOT: 08 platform.claude.com/docs/ja/build-with-claude/handling-stop-reasons の早見表。PC 幅。赤枠は max_tokens と model_context_window_exceeded の行 -->
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_08_stop_reasons.png" alt="Claude Platformの停止理由のドキュメントのクイックリファレンスの表。値、発生するタイミング、対処方法の3列で、max_tokensの行とmodel_context_window_exceededの行が赤枠で囲まれている" loading="lazy"><figcaption>停止理由のクイックリファレンス</figcaption></figure>
 
 ## よくある質問
 
