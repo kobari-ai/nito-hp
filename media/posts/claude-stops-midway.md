@@ -1,0 +1,203 @@
+---
+title: 【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ
+date: 2026-10-17
+category: AI検索対策
+description: Claudeの回答が途中で止まる・切れるときを画面の表示で見分け、続きを出す送り方、長さ制限が出たときの移り方、Claude CodeとAPIでの直し方までをAnthropicのヘルプとドキュメントで整理しました。
+cover_tag: トラブル
+cover_headline: Claudeが途中で止まるとき
+cover_sub: 一時停止・長さ制限・接続切れ
+---
+
+Claudeに長い文章やコードを頼むと、回答が文の途中で止まったり、画面に英語の案内が出て進まなくなったりします。2025年4月にGitHubへ出された報告では、長いコードを書かせている最中に「This response paused because Claude reached its max length for a message. Hit Continue to nudge Claude along」と出て、続けるボタンを押すと今度は長さ制限の警告が出たと書かれています。「1回の出力は8,192トークンまで」という古い数字もまだ見かけます。今のモデルの最大出力はAPIで12万8,000トークンです。
+
+止まって見える原因は1回の回答の長さ・会話全体の長さ・使用量の枠・通信の4つにまたがります。**どれに当たるかは止まったときの画面の表示でほぼ見分けられます。**
+
+この記事では表示ごとに起きていることと試す順番を、Anthropicのヘルプセンターと開発者向けドキュメント、GitHubの報告で整理します。ウェブ版のClaudeで回答を止める試しはしておらず、手順は公式の説明と報告をもとにしています。ヘルプとドキュメントは2026年10月17日に取得しました。
+
+:::takeaways
+- 止まったら最初に**画面の表示を読む**。表示ごとに続け方が分かれる（ほかに使用制限・混雑・ツールの回数の表示もある）
+- 1回の回答が長さの上限で切れたときは、**同じチャットで続きを頼む**。どこから続けるかを見出し名や関数名で指定すると、つなぎ目が分かりやすくなる
+- 続けようとして長さ制限の警告が出たら、**添付のファイルを減らすか、要点を書き出して新しいチャットに移る**
+- ヘルプの言う「考えを整理している」状態は、止まったのではなく、**古いやりとりを自動で要約している途中**。待てば続く
+- Claude Codeの「The response above may be incomplete」は**continueと送れば最後に完成した部分から再開**する
+:::
+
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_00_overview.png" alt="止まったチャットの吹き出しを囲むように、一時停止、長さ制限、考えを整理、使用制限、表示なしの5枚のカードが並んだ図" loading="lazy"><figcaption>止まったときは画面の表示で5つに分かれる</figcaption></figure>
+
+## 画面に出る表示で見分ける
+
+途中で止まったときに画面に出るものは、ヘルプ・ドキュメントとGitHubの報告にある文言で、おおよそ7つに分かれます。表の「詳しい記事」はこのサイトでその表示だけを扱った記事です。
+
+| 画面の表示 | 起きていること | まず試すこと | 詳しい記事 |
+|---|---|---|---|
+| Hit Continue to nudge Claude along（一時停止） | 1回の回答の長さの上限に達した | 同じチャットで続きを頼む | この記事 |
+| メッセージがこのチャットの長さ制限を超えます | 会話全体が読める量を超えた | 要点を持って新しいチャットへ | [会話の長さ制限と圧縮](/media/claude-conversation-length/) |
+| 考えを整理している（ヘルプの表記） | 古いやりとりを自動で要約中 | 待つ | この記事 |
+| Claude reached its tool-use limit for this turn | 1回の返答で使える検索や操作の回数の上限 | ［続ける］を押す | [ツール使用制限](/media/claude-tool-use-limit/) |
+| 5時間制限に達しました・週間制限に達しました | プランの使用量の枠を使い切った | リセットの時刻まで待つ | [使用制限とリセット時間](/media/claude-usage-limits/) |
+| 予期しない容量制約により〜応答できません | 全体の混雑 | 数分おいて送り直す | [エラーの原因と対処](/media/claude-error-messages/) |
+| 表示なしで文の途中で止まる | 通信の切断・画面の不具合・障害 | 状況ページを見て再読み込み | この記事 |
+
+一時停止の表示は2025年のGitHubの報告にある英語の文言です。日本語の画面でどう訳されて出るかは確かめていません。**表のうち、この記事で扱うのは一時停止・考えを整理・表示なしの3つです。**ほかの4つはリンク先の記事のほうが詳しく書いています。
+
+## 1回の回答で書ける量
+
+Claudeが1回の回答で書ける量には上限があり、これを最大出力と呼びます。[Claude Platformのモデル一覧](https://platform.claude.com/docs/ja/about-claude/models/overview)では、Fable 5.1・Opus 5.5・Sonnet 5.5・Haiku 5.5の4つとも最大出力は12万8,000トークンです。これはAPIで1回に頼める上限で、claude.aiのチャット画面で1回にどこまで書くかは公開されていません。
+
+ネットで見かける「8,192トークン（日本語で4,000〜5,000字）」は、2024年ごろのモデルの数字です。APIの上限は大きくなっていますが、チャット画面の上限は公開されていません。**8,192トークンを前提にした説明は、今のモデルには当てはまりません。**
+
+会話全体で読める量（コンテキストウィンドウ）は別の数字です。[有料プランのコンテキストウィンドウ](https://support.claude.com/ja/articles/8606394)のページによると、チャットで読める量はFable 5.1・Opus 5.5・Opus 5・Sonnet 5.5・Sonnet 5・Haiku 5.5が100万トークン、Fable 5・Opus 4.8・4.7・4.6・Sonnet 4.6が50万トークンで、これら以外のモデルは20万トークンです。[使用量と長さの制限](https://support.claude.com/ja/articles/11647753)のページには、ウィンドウの一部は回答用に取ってあるため、実際に続けられる会話はウィンドウより少し短いとあります。
+
+## 一時停止で止まったとき
+
+GitHubの[#861](https://github.com/anthropics/claude-code/issues/861)は、2025年4月にウェブ版のClaude（3.7 Sonnet）で起きたこととして、次の流れを報告しています。
+
+1. 長いPythonのコードを書かせる
+2. 「This response paused because Claude reached its max length for a message. Hit Continue to nudge Claude along」と出る
+3. 案内どおりContinueを押す
+4. 「Your message will exceed the length limit for this chat」と出て、新しい会話を勧められる
+
+この報告は60日動きが無く、2026年1月に自動で閉じられました。直ったという記載はありません。
+
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_03_github_861.png" alt="GitHubのissue 861のSteps to Reproduceの節。手順2の、This response pausedで始まりHit Continue to nudge Claude alongで終わる通知と、手順4の、Your message will exceed the length limit for this chatで始まる警告が赤枠で囲まれている" loading="lazy"><figcaption>GitHub #861の再現手順。手順2が一時停止、手順4が長さ制限の文言</figcaption></figure>
+
+**一時停止の表示が出たら、まず同じチャットでContinueを押すか「続けて」と送ります。**[応答が短すぎる場合のヘルプ](https://support.claude.com/ja/articles/8114518)も、応答が不完全なときは前のプロンプトと応答をClaudeに渡して、中断したところから続けるよう勧めています。同じチャットならどちらももう会話の中にあるので、送るのは続きの指示だけです。
+
+### 再開する位置を指定する
+
+「続けて」だけだと、Claudeが区切りのいい所まで戻って書き直すことがあります。続きが関係のない位置に足されたという報告も、コードについてGitHubの[#7849](https://github.com/anthropics/claude-code/issues/7849)に出ています。
+
+続きを頼むときは止まった位置を言葉で指定しましょう。
+
+- 文章: 「『3. 費用の目安』の2段落目の途中で止まっています。その段落の頭から続けてください」
+- コード: 「parse_rows 関数の途中で止まっています。この関数を最初から書き直し、その下の関数へ進んでください」
+- 表: 「表の12行目まで出ています。13行目から、見出しの行を付けずに続けてください」
+
+**区切りを段落や関数の頭にしておけば、前の回答とのつなぎ目で迷いません。**文の途中からつながせるより、少し戻って重ねたほうが貼り合わせは楽です。
+
+
+### 続けたら長さ制限が出たとき
+
+[エラーメッセージのヘルプ](https://support.claude.com/ja/articles/12466728)にある長さ制限の文言は「メッセージがこのチャットの長さ制限を超えます。ファイルを少なくするか、ファイルサイズを小さくするか、新しい会話を開始してください。」です。添付のファイルを減らせば同じ会話で続けられることがあり、新しいチャットに移るのはそれでも警告が出たときです。
+
+新しいチャットに移るときは、何も持たずに始めると前提が消えます。移る前に、今のチャットで「ここまでの目的・決めたこと・書き終えた部分の見出し・残りの作業を箇条書きで」と頼み、その箇条書きと書き終えた本文の最後の段落を新しいチャットに貼ります。**本文を全部貼り直すと、新しいチャットもすぐ同じ長さに近づきます。**残りの作業に要る部分だけを渡してください。
+
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_01_help_length.png" alt="Claudeのヘルプセンターのエラーメッセージのページにある長さ制限エラーの節。許可される最大入力長を超えると出るエラーの文言と、メッセージが長すぎて送る前に短くする必要があるという説明の段落が赤枠で囲まれている" loading="lazy"><figcaption>ヘルプの「長さ制限エラー」の節</figcaption></figure>
+
+## 考えを整理していると出たとき
+
+長いチャットでClaudeの返事が始まらず、ヘルプの言い方では「考えを整理している」状態のまま待たされることがあります（画面の表示の文言は確かめていません）。[使用量と長さの制限のヘルプ](https://support.claude.com/ja/articles/11647753)によると、これは自動コンテキスト管理が働いている印です。会話が読める量の上限に近づくと、Claudeは前のメッセージを要約して会話を続けます。
+
+この仕組みはコード実行がオンになっていることが条件です。要約のあとも元のチャット履歴は残り、Claudeは参照できます。**止まったわけではないので、送り直さずに待つ**のが基本です。
+
+ただし同じヘルプは、この要約が起きるほど長い会話は使用量を多く使うとも書いています。長いチャットで使用量の枠に近いなら、新しい会話を始めるほうがよい、とも書かれています。設定の場所は[会話の長さ制限と圧縮](/media/claude-conversation-length/)の記事に書きました。
+
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_02_code_exec.png" alt="Claudeの設定の機能の画面にある、コードの実行とファイルの作成の欄。クラウドでのコード実行とファイル作成という項目のオンになったスイッチが赤枠で囲まれている" loading="lazy"><figcaption>設定の［機能］にある「クラウドでのコード実行とファイル作成」（2026年10月17日時点）</figcaption></figure>
+
+## 表示なしで文の途中で止まったとき
+
+何の表示も出ずに文の途中で止まったときは、長さの上限より通信や画面の側を先に疑います。長さの上限では一時停止の案内が出たという報告があり、表示が無いこと自体が手がかりになるからです。
+
+試す順番は次のとおりです。
+
+1. [Claudeの状況ページ](https://status.claude.com)でclaude.aiに障害が出ていないかを見る
+2. ページを再読み込みし、会話を開き直して回答の続きが出ていないかを見る
+3. 回答が欠けたままなら、最後の行を指定して続きを頼む
+4. 同じ所で何度も止まるなら、別のブラウザかアプリで同じ会話を開く
+
+エラーのヘルプには、使用量の枠を使い切って使用クレジットに切り替わる瞬間について「切断されたように見えるかもしれませんが、作業は継続され」るとあります。**使用クレジットに切り替わる瞬間に止まって見えても、作業は続いています。**次の処理が終わると、表示は「現在クレジットを使用しています」に変わります。容量制約の表示が状況ページに載らないことも、同じヘルプの記載です。
+
+<figure class="post-figure post-figure--sp"><img src="/media/images/claude-stops-midway/clsm_05_status_sp.png" alt="スマホで開いたClaude Statusのページ。All Systems Operationalの帯の下に、過去30日の稼働状況がサービスごとに並び、一番上のclaude.aiの行が赤枠で囲まれている" loading="lazy"><figcaption>Claudeの状況ページ。一番上がclaude.aiの行</figcaption></figure>
+
+## 長い文章を止まらずに受け取る頼み方
+
+途中で止まるのを何度も直すより、最初から1回の回答を短くしたほうが早く終わります。分け方の型は次の4つです。
+
+- **先に目次だけを出させる**: 「本文は書かず、見出しと各見出しで書く内容を1行ずつ」
+- **1回に頼む範囲を見出しで切る**: 「目次の1〜3だけ書いてください。4以降は次で頼みます」
+- **長さを数で伝える**: 「各見出し800字前後」。合計の字数ではなく、1か所あたりの量で伝える
+- **コードはファイルか関数ごと**: 「まず utils.py だけ。終わったら次のファイル名を書いて止まってください」
+
+止める位置をClaudeに決めさせず、こちらで区切っておくと、前の回答と次の回答の境目がはっきりします。**目次を最初に固めておけば、途中で新しいチャットに移るときも目次を貼るだけで続きを頼めます。**
+
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_06_split.png" alt="長い文章を3段階で受け取る流れの図。1は本文を書かせずに見出しを並べさせる、2は見出しで範囲を切って字数を添えて頼む、3は最後の見出しまで出たのを見てから次を頼む。下に、新しいチャットへ移るときも固めた目次を貼れば続けられるとある" loading="lazy"><figcaption>長い文章を分けて受け取る流れ</figcaption></figure>
+
+## Claude Codeで止まったとき
+
+Claude Codeでは、回答が途中で切れると末尾に「The response above may be incomplete」で終わる文が出ます。[Claude Codeのエラーのドキュメント](https://code.claude.com/docs/ja/errors)には、前半の文言で原因が分かる6種類が載っています。
+
+| 前半の文言 | 原因 |
+|---|---|
+| Server error mid-response | 回答の途中でサーバーのエラー |
+| Connection lost mid-response | 接続が切れた |
+| Your computer went to sleep mid-response | パソコンがスリープした |
+| The response stopped arriving | 接続は開いたまま中身が届かなくなった |
+| Part of the response never arrived | 回答の一部が届かなかった |
+| The response stream was malformed | 届いた中身が壊れていた |
+
+どれも、**対話の画面で continue と送れば、最後に完成した部分から続きが始まります。**ドキュメントによると、Claude Codeは完成した部分を残し、途中まで書いていた最後の部分だけを捨てる仕組みです。最後の数文が欠けていることがあるので、再開の前に画面で確かめてください。
+
+回答が長すぎて切れたときは「Claude's response exceeded the ... output token maximum」と出ます。ここでも残りの頼み方は continue です。上限は環境変数 CLAUDE_CODE_MAX_OUTPUT_TOKENS で変えられますが、ドキュメントは1回の回答を1ファイル・1節ずつに分けて頼む方法も挙げています。
+
+画面ごと固まって何も受け付けないときは、Ctrl+Cで止め、それでもだめならターミナルを閉じます。[トラブルシューティングのドキュメント](https://code.claude.com/docs/ja/troubleshooting)によると、同じフォルダで claude --resume を実行すれば会話は戻ります。Claude Codeそのものの使い方の記事は[Claude Codeの使い方](/media/claude-code-guide/)です。
+
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_07_code_errors.png" alt="Claude Codeのエラーのドキュメントにある、The response above may be incompleteの節。ストリーミングが途中で失敗したときの説明の下に、API Errorで始まる6行のコードブロックがあり、そのブロックが赤枠で囲まれている" loading="lazy"><figcaption>Claude Codeのドキュメントにある6つの文言</figcaption></figure>
+
+## APIで回答が切れたとき
+
+APIで回答が途中で終わったときは、返ってきた stop_reason の値を見ます。[停止理由のドキュメント](https://platform.claude.com/docs/ja/build-with-claude/handling-stop-reasons)では、回答が切れたものとして扱う値は max_tokens と model_context_window_exceeded の2つで、pause_turn は切れたのではなく一時停止したターンとして別に扱われています。途中で終わる値として3つを並べます。
+
+| stop_reason | 意味 | 対処 |
+|---|---|---|
+| max_tokens | リクエストで指定した max_tokens に達した | max_tokens を上げるか、続きを頼む |
+| model_context_window_exceeded | 回答がモデルのコンテキストウィンドウを埋めた | 回答は切れたものとして扱う |
+| pause_turn | サーバー側のツールの繰り返しが上限に達した | 返ってきた内容を戻して続ける |
+
+max_tokens で切れた回答の最後がツールの呼び出しの途中なら、続きを頼むのではなく max_tokens を上げて送り直す、というのがドキュメントの指示です。**チャット画面の一時停止と違い、APIでは上限を自分で決めているので、まず max_tokens の値を見直します。**
+
+<figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_08_stop_reasons.png" alt="Claude Platformの停止理由のドキュメントのクイックリファレンスの表。値、発生するタイミング、対処方法の3列で、max_tokensの行とmodel_context_window_exceededの行が赤枠で囲まれている" loading="lazy"><figcaption>停止理由のクイックリファレンス</figcaption></figure>
+
+## よくある質問
+
+### Claudeの回答が途中で止まるのはなぜですか？
+
+1回の回答の長さの上限・会話全体の長さの上限・使用量の枠・通信の切断のどれかです。長さや使用量の上限にはそれぞれ画面に出る案内があります。表示が無いときはまず通信とブラウザやアプリの不具合を疑います。
+
+### Claudeに続きを書いてもらうにはどうすればいいですか？
+
+同じチャットで続きを頼むのが基本です。「〇〇の段落の頭から続けてください」のように、止まった位置を見出し名や関数名で指定すると書き直しになりにくくなります。
+
+### Claudeの続けるボタンを押しても進まないのはなぜですか？
+
+会話全体が長さの上限に近いと、続けようとした時点で長さ制限の警告が出ることがあります（GitHubの報告）。まず添付のファイルを減らすか小さくし、それでも出るなら要点を書き出して新しいチャットに移ります。
+
+### Claudeは有料プランなら途中で止まりませんか？
+
+有料プランでも1回の回答と会話の長さには上限があります。コード実行をオンにしている有料プランでは、長い会話を自動で要約する仕組みが働くため、長さ制限のエラーはめったにないと[エラーメッセージのヘルプ](https://support.claude.com/ja/articles/12466728)に書かれています。
+
+### Claudeが考えを整理している状態のまま動かないときは？
+
+自動コンテキスト管理が古いやりとりを要約している途中です。送り直さずに待ってください。使用量を多く使うので、枠が気になるなら新しいチャットに移ります。
+
+### Claudeで長い文章を一度に書かせるコツはありますか？
+
+一度に書かせず、先に目次を出させてから見出しごとに頼みます。1か所あたりの字数も添えてください。
+
+### Claude Codeで回答が途中で切れたらどうしますか？
+
+「The response above may be incomplete」と出ていれば continue と送ります。最後に完成した部分から続きが始まります。画面が固まったときの戻り方は、Ctrl+C で止めてから claude --resume です。
+
+### ChatGPTやGeminiでも同じ止まり方をしますか？
+
+長い回答が途中で切れることはどちらにもありますが、画面の表示と続け方が違います。[ChatGPTが途中で止まるとき](/media/chatgpt-stops-midway/)と[Geminiが途中で止まるとき](/media/gemini-stops-midway/)にそれぞれまとめています。
+
+## 出典
+
+- Claude ヘルプセンター「[Claudeのエラーメッセージのトラブルシューティング](https://support.claude.com/ja/articles/12466728)」（2026年10月17日取得）
+- Claude ヘルプセンター「[使用量と長さの制限はどのように機能しますか？](https://support.claude.com/ja/articles/11647753)」（同）
+- Claude ヘルプセンター「[私のプロンプトに対するClaudeの応答が短すぎます](https://support.claude.com/ja/articles/8114518)」（同）
+- Claude ヘルプセンター「[有料Claudeプランのコンテキストウィンドウはどのくらい大きいですか](https://support.claude.com/ja/articles/8606394)」（同）
+- Claude Platform Docs「[モデルの概要](https://platform.claude.com/docs/ja/about-claude/models/overview)」「[停止理由の処理](https://platform.claude.com/docs/ja/build-with-claude/handling-stop-reasons)」（同）
+- Claude Code Docs「[エラー](https://code.claude.com/docs/ja/errors)」「[トラブルシューティング](https://code.claude.com/docs/ja/troubleshooting)」（同）
+- Claude Status「[status.claude.com](https://status.claude.com)」（同）
+- GitHub anthropics/claude-code「[#861](https://github.com/anthropics/claude-code/issues/861)」（2025年4月24日投稿、2026年1月6日クローズ）「[#7849](https://github.com/anthropics/claude-code/issues/7849)」（2025年9月19日投稿）
