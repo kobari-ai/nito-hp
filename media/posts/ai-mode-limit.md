@@ -8,14 +8,14 @@ cover_headline: AIモードの回数制限
 cover_sub: 1日の上限・Pro・画像の枚数・Geminiとの違い
 ---
 
-Google検索のAIモードは無料で使え、ふだんの質問に答える「高速モード」のモデルには、Googleのヘルプに回数の上限が書かれていません。ヘルプが1日の上限を書いているのは、上位のモデルのPro（Gemini 3 Pro）、画像の作成、画像のモデルのNano Banana Proの3つです。
+Google検索のAIモードは無料で使え、ふだんの質問に答える「高速モード」のモデルには、Googleのヘルプに回数の上限が書かれていません。ヘルプが1日の上限を書いているのは、上位のモデルのPro（Gemini 3 Pro）、画像の作成、画像のモデルのNano Banana 2.1の3つです。
 
-この記事は2026年10月2日に取得したGoogle 検索ヘルプとGeminiアプリのヘルプをもとに、AIモードで上限があるものと無いものを分け、同じ日に日本語の画面で質問欄のメニューを確かめた結果を載せます。
+この記事は2026年10月2日に取得したGoogle 検索ヘルプとGeminiアプリのヘルプ（Nano Banana 2.1の表記は10月17日に確認）をもとに、AIモードで上限があるものと無いものを分け、同じ日に日本語の画面で質問欄のメニューを確かめた結果を載せます。
 
 :::takeaways
 - ふだんの質問（高速モード）は、**ヘルプに回数の上限が書かれていない**
-- 1日の上限が書かれているのは**Pro・画像の作成・Nano Banana Proの3つ**。枚数まで書かれているのは画像の作成だけで、プランなしは24時間に25枚
-- 日本ではProもNano Banana Proも英語で使うプランの利用者向け。**日本語の画面で質問欄の＋を開くと、出たのは画像の追加・ファイルの追加・画像を作成の3つだった**
+- 1日の上限が書かれているのは**Pro・画像の作成・Nano Banana 2.1の3つ**。枚数まで書かれているのは画像の作成だけで、プランなしは24時間に25枚
+- 日本ではProもNano Banana 2.1も英語で使うプランの利用者向け。**日本語の画面で質問欄の＋を開くと、出たのは画像の追加・ファイルの追加・画像を作成の3つだった**
 - **Geminiアプリの5時間ごと・週ごとの上限は、AIモードとは別のヘルプに書かれた別の上限**
 - 「次の質問をすると、新しい検索が開始します。」は上限の表示ではなく、ヘルプにも説明がない
 :::
@@ -24,14 +24,14 @@ Google検索のAIモードは無料で使え、ふだんの質問に答える「
 
 AIモードの上限は使う機能ごとに決まっています。2026年10月2日にGoogle 検索ヘルプの「[Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)」と「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」を読み、上限に触れている箇所を4つに分けました。
 
-<figure class="post-figure"><img src="/media/images/ai-mode-limit/01_fig_where.png" alt="AIモードで上限がヘルプに書かれているものの図。高速モードは回数の上限の記載がない。Pro（Gemini 3 Pro）は1日ごとの上限があり、英語で18歳以上のGoogle AI Plus・Pro・Ultraの利用者向けで、上限の数は書かれていない。画像を作成は24時間ごとにプランなし25枚・Plus 50枚・Pro 100枚・Ultra 1,000枚。Nano Banana Proは1日ごとの上限があり、日本では英語でGoogle AI ProとUltraの利用者向け" loading="lazy"><figcaption>AIモードの上限は機能ごと。数まで書かれているのは画像の作成だけ</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/ai-mode-limit/01_fig_where.png" alt="AIモードで上限がヘルプに書かれているものの図。高速モードは回数の上限の記載がない。Pro（Gemini 3 Pro）は1日ごとの上限があり、英語で18歳以上のGoogle AI Plus・Pro・Ultraの利用者向けで、上限の数は書かれていない。画像を作成は24時間ごとにプランなし25枚・Plus 50枚・Pro 100枚・Ultra 1,000枚。Nano Banana 2.1は1日ごとの上限があり、日本では英語でGoogle AI ProとUltraの利用者向け" loading="lazy"><figcaption>AIモードの上限は機能ごと。数まで書かれているのは画像の作成だけ</figcaption></figure>
 
 | 機能 | ヘルプにある上限 | 使える人 |
 |---|---|---|
 | 高速モード（ふだんの質問） | 記載なし | だれでも |
 | Pro（Gemini 3 Pro） | 1日ごと。数は書かれていない | 英語で使う18歳以上のGoogle AI Plus・Pro・Ultraの利用者 |
 | 画像を作成 | 24時間に25〜1,000枚（プランで変わる） | ログインした18歳以上の利用者 |
-| Nano Banana Pro | 1日ごと。数は書かれていない | 日本では英語で使うGoogle AI ProとUltraの利用者 |
+| Nano Banana 2.1 | 1日ごと。数は書かれていない | 日本では英語で使うGoogle AI ProとUltraの利用者 |
 
 ### 高速モードには上限の記載がない
 
@@ -58,7 +58,7 @@ AIモードの画像の作成だけは、上限が枚数で書かれています
 | Google AI Pro | 100枚 |
 | Google AI Ultra | 1,000枚 |
 
-上限に達したあとの案内はProと同じで、リセットを待つかプランを上げるかです。図やインフォグラフィックに向いた画像のモデルのNano Banana Proにも別に1日の上限があり、日本では英語で使うGoogle AI ProとUltraの利用者だけが選べます。作り方や保存のしかたは[Google AIモードで画像を生成する方法](/media/ai-mode-image-generation/)にまとめました。
+上限に達したあとの案内はProと同じで、リセットを待つかプランを上げるかです。図やインフォグラフィックに向いた画像のモデルのNano Banana 2.1にも別に1日の上限があり、日本では英語で使うGoogle AI ProとUltraの利用者だけが選べます。ヘルプでのこのモデルの名前は、2026年10月17日にNano Banana ProからNano Banana 2.1に変わりました。作り方や保存のしかたは[Google AIモードで画像を生成する方法](/media/ai-mode-image-generation/)にまとめました。
 
 ## 日本語の画面で質問欄を確かめた結果
 
@@ -92,7 +92,7 @@ ProでもGeminiアプリでもない、ふだんのAIモードの質問で止ま
 |---|---|
 | Pro（Gemini 3 Pro） | 1日の上限のリセットを待つか、Google AIのプランを上げる |
 | 画像の作成 | 24時間の上限のリセットを待つか、Plus・Pro・Ultraにする |
-| Nano Banana Pro | 1日の上限のリセットを待つか、Google AIのプランを上げる |
+| Nano Banana 2.1 | 1日の上限のリセットを待つか、Google AIのプランを上げる |
 
 **リセットの時刻はどの機能のヘルプにも書かれていません。**画像の作成は24時間あたりの枚数なので、たくさん作った時間から1日たつのを目安にします。プランを上げても枚数の上限が上がるだけで、上限そのものがなくなるわけではありません。プランごとの料金は[Geminiの料金プラン](/media/gemini-pricing/)で比べています。
 
@@ -111,7 +111,7 @@ Yahoo!知恵袋には2026年3月から6月にかけて、AIモードで会話を
 ## よくある質問
 
 ### Google AIモードに1日の回数制限はありますか？
-ふだんの質問に答える高速モードには、ヘルプに回数の上限は書かれていません。1日の上限があるのはPro（Gemini 3 Pro）・画像の作成・Nano Banana Proの3つです。
+ふだんの質問に答える高速モードには、ヘルプに回数の上限は書かれていません。1日の上限があるのはPro（Gemini 3 Pro）・画像の作成・Nano Banana 2.1の3つです。
 
 ### Google AIモードは何回まで無料で使えますか？
 ふだんの質問は無料で、回数の上限の記載はありません。画像の作成はGoogle AIのプランに入っていなくても24時間に25枚まで作れます。
@@ -123,7 +123,7 @@ Yahoo!知恵袋には2026年3月から6月にかけて、AIモードで会話を
 日本は対応国に入っていますが、言語は英語だけで、18歳以上のGoogle AI Plus・Pro・Ultraの利用者が対象です。2026年10月2日に日本語の画面で質問欄の＋を開いたときは、Proを選ぶ項目は出ませんでした。
 
 ### AIモードの上限はいつリセットされますか？
-ヘルプにリセットの時刻は書かれていません。ProとNano Banana Proは1日ごと、画像の作成は24時間あたりの上限です。
+ヘルプにリセットの時刻は書かれていません。ProとNano Banana 2.1は1日ごと、画像の作成は24時間あたりの上限です。
 
 ### AIモードとGeminiアプリの上限は同じですか？
 別のものです。Geminiアプリには使った量で決まる上限があり、週ごとの上限に達するまで5時間ごとにリセットされます。AIモードのヘルプには5時間や週の区切りはありません。
@@ -139,7 +139,7 @@ Yahoo!知恵袋には2026年3月から6月にかけて、AIモードで会話を
 本文の上限と条件は2026年10月2日に取得した次のヘルプとプランのページで確認しています。質問欄のメニューは同じ日にパソコンとスマホの画面で確かめました。
 
 - [Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)（Google 検索ヘルプ。高速モード、Gemini 3 Proの提供状況と1日ごとの使用量制限）
-- [Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)（Google 検索ヘルプ。画像の作成の24時間あたりの上限、Nano Banana Proの1日ごとの上限）
+- [Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)（Google 検索ヘルプ。画像の作成の24時間あたりの上限、Nano Banana 2.1の1日ごとの上限。Nano Banana 2.1の表記は2026年10月17日取得）
 - [Google AI のサブスクリプション プランに応じた Gemini アプリの使用量上限とアップグレード](https://support.google.com/gemini/answer/16275805?hl=ja)（Geminiアプリ ヘルプ。5時間ごと・週ごとの上限）
 - [Google AI のプラン](https://one.google.com/about/google-ai-plans/?hl=ja)（Google One。プランごとのAIモードとDeep Searchの扱い）
 - [Googleのaiモードで会話をしていたら急に、エラーが発生したため…](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10326493840)（Yahoo!知恵袋、2026年3月22日）

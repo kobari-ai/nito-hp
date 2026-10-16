@@ -19,7 +19,7 @@ Google検索のAIモードは日本語で使えます。Googleのヘルプ「[Go
 - 回答が英語になるのは、**英語で質問したとき**。表示言語を英語にしても、日本語の質問には日本語で答えた（実測）
 - 英語で始めた会話でも、**「日本語で答えて」と送ると、その回から日本語**に戻った（実測）
 - ボタンや見出しが英語なら、**検索の設定の「言語と地域」で表示言語を日本語に**する
-- AIモードのProやNano Banana Proなど、**日本では英語でだけ提供される機能**がある
+- AIモードのProやNano Banana 2.1など、**日本では英語でだけ提供される機能**がある
 :::
 
 ## 英語になる3つの場所
@@ -91,7 +91,7 @@ iPhoneのGoogleアプリは、端末の言語に合わせて表示が決まり�
 | 機能 | ヘルプに書かれた提供範囲 |
 |---|---|
 | AIモードのGemini 3 Pro（メニューの「Pro」） | 日本を含む対象の国で、18歳以上のGoogle AI Plus・Pro・Ultraの利用者に英語で提供 |
-| AIモードのNano Banana Pro（画像） | 米国の18歳以上と、日本を含む対象の国のGoogle AI Pro・Ultraの利用者に英語で提供 |
+| AIモードのNano Banana 2.1（画像） | 米国の18歳以上と、日本を含む対象の国のGoogle AI Pro・Ultraの利用者に英語で提供 |
 | インタラクティブなビジュアル | ログインしている利用者に英語で提供 |
 | ファイルの生成（PDFなど） | 18歳以上の利用者に英語で提供 |
 | AIで料金を確認・AIモードからの購入 | 米国の18歳以上に英語で提供 |
@@ -146,7 +146,7 @@ AIによる概要も、日本語に対応しています。英語で検索する
 - Google 検索ヘルプ「[Google が検索結果に表示する言語を判断する方法](https://support.google.com/websearch/answer/13511324?hl=ja)」（2026年9月28日取得）
 - Google 検索ヘルプ「[Google の表示言語を変更する](https://support.google.com/websearch/answer/3333234?hl=ja)」（パソコン・Android・iPhone、2026年9月28日取得）
 - Google 検索ヘルプ「[Google 検索の AI による概要で、情報をすばやく簡単に見つける](https://support.google.com/websearch/answer/14901683?hl=ja)」（2026年9月28日取得）
-- Google 検索ヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」（2026年9月28日取得）
+- Google 検索ヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」（2026年9月28日取得。Nano Banana 2.1の表記は10月17日取得）
 - Google 検索ヘルプ「[Google 検索でファイルを生成する](https://support.google.com/websearch/answer/17586477?hl=ja)」（2026年9月28日取得）
 - Google 検索ヘルプ「[Google 検索で AI を使用してローカル ビジネスの料金を確認する方法](https://support.google.com/websearch/answer/16421135?hl=ja)」「[Google 検索の AI モードから直接購入と注文の管理を行う](https://support.google.com/websearch/answer/16833721?hl=ja)」（2026年9月28日取得）
 - AIモードの画面は、2026年9月28日にスマホ表示のブラウザ（ログインなし）で撮影
