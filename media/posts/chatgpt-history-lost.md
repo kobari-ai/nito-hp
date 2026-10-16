@@ -91,6 +91,39 @@ OpenAIのヘルプ「[ChatGPT でのチャットの削除とアーカイブ](htt
 
 Androidのアプリについては[ChatGPT のリリースノート](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)の2026年8月21日の項によると、版1.2026.216からサイドバーに出す最近の会話を最大8件にしました。一覧に見当たらない会話も検索なら探せます。
 
+## プロジェクトごと見当たらないとき
+
+中の会話だけでなく、プロジェクトそのものがサイドバーの一覧から消えたという相談もあります。[ChatGPT のリリースノート](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)の2026年6月18日の項によると、ウェブ版のサイドバーからチャットとプロジェクトをピン留めできるようになり、ピン留めの欄にプロジェクトも並ぶようになりました。同じ更新で、最近の項目を1つの一覧にまとめるか、プロジェクトごとにまとめるかも選べるようになっています。**いつもの場所に無いときはピン留めの欄と最近の項目の並べ方を先に確かめてください。**この記事ではこの画面を試していないため、項目の名前は端末によって違うことがあります。
+
+<!-- SHOT: ChatGPT のサイドバーのピン留めの欄とプロジェクトの並び（最近の項目をプロジェクトごとにまとめる切り替えがあればそこも）・https://chatgpt.com/ ・PC（ログイン要。テスト用のプロジェクトだけ写す）・赤枠はピン留めの欄と並べ方の切り替え -->
+
+サイドバーの検索でフィルターを［プロジェクト］にすると、プロジェクトだけを探せます。あとからプロジェクトに移した会話は、プロジェクトのページには出るのにサイドバーのプロジェクトの下には出なかった、という利用者の報告も[10月6日のコミュニティの投稿](https://community.openai.com/t/project-sidebar-does-not-show-chats-added-to-a-project-afterward/1403758)にあります。サイドバーで見当たらなくても、プロジェクトを開いて中を見てください。
+
+共有プロジェクトなら、所有者がプロジェクトごと削除したことも考えられます。その場合は上のプロジェクトの中を見る節のとおり、抜ける前にコピーしていない限り中の会話は見られません。
+
+### 削除していないのに消えた報告
+
+削除した覚えがないのにプロジェクトが消えたという報告もあります。2026年9月4日に[OpenAIのコミュニティに投稿したPlusの利用者](https://community.openai.com/t/entire-chatgpt-project-disappeared-chats-still-searchable-but-show-conversation-deleted-404/1394754)は、ウェブとWindowsのデスクトップアプリとiPhoneのどれでも、プロジェクトが一覧から消えたと書いています。中の会話は検索には出るものの、開くと会話が削除されたという表示か404のエラーになったそうです。9月3日の障害のころに起きたという投稿で、10月17日に確かめた時点ではOpenAIの回答は付いていませんでした。
+
+Windowsのデスクトップアプリでは、更新のあとにプロジェクトの一覧が空になったという報告が[8月27日](https://community.openai.com/t/windows-projects-disappeared-after-update-to-26-820-60940-but-chats-remain-intact/1392901)と[10月10日](https://community.openai.com/t/local-projects-disappear-from-sidebar-after-windows-desktop-update/1405156)に出ています。どちらもパソコンのフォルダとひも付けて使うCodexのプロジェクトの話です。8月27日の報告者は会話そのものは消えておらず、アプリが手元に持つプロジェクトの一覧が作り直せなくなっていたと書いています。OpenAIのサポートは9月7日に、一覧を作り直す機能の要望を担当に伝えると返信しましたが、時期は示していません。
+
+**どの報告でも、会話そのものはサイドバーの検索で見つかっています。**プロジェクトが見えなくても、まず検索で中の会話を探してください。開けないときはデータ コントロールの［データをエクスポート］で控えを取り、プロジェクトの名前と見えなくなった日時を添えてサポートに伝えます。
+
+## 会話が削除されたと出るとき
+
+検索で見つけた会話や保存しておいたURLを開くと、会話が削除されたという表示が出ることがあります。英語の画面では「The conversation has been deleted. Start a new chat.」と出たという報告があり、日本語の画面の文言はこの記事では確かめていません。出る場面はヘルプと利用者の報告から次の4つが分かっています。
+
+| 場面 | 根拠 | 会話は戻るか |
+|---|---|---|
+| 自分で削除した会話が古い検索結果に残っていた | ヘルプ | 戻らない |
+| 人から受け取った共有リンクの元の会話が削除された | ヘルプ | リンクは開けない |
+| Macのアプリで別の端末で消した会話が一覧に残った | 利用者の報告 | すでに削除されている |
+| 削除していないのにプロジェクトごと消えた | 利用者の報告 | 10月17日の時点で不明 |
+
+検索のヘルプによると、削除したチャットが古い検索結果に一時的に残っていても開いて復元されることはありません。共有リンクのヘルプ「[ChatGPT での会話とスケジュール済みタスクの共有](https://help.openai.com/ja-jp/articles/7925741-chatgpt-shared-links-faq)」によると、会話を削除するとその共有リンクも削除されます。**受け取ったリンクが開けないなら、共有した人が元の会話を消した可能性があります。**
+
+Macのデスクトップアプリでは、スマホや別のパソコンで削除した会話が最近の項目に残り、開くと読み込めないと出たという報告が[9月8日](https://community.openai.com/t/deleted-conversations-remain-in-recents-on-chatgpt-macos-app/1395892)にありました。ウェブ版の一覧にその会話が無ければ、削除は済んでいてアプリの表示だけが古いままだと考えられます。削除した覚えが無いのに出る場合は、上のプロジェクトの報告と同じく、エクスポートで控えを取ってからサポートに伝えてください。
+
 ## 履歴に残らない2つのケース
 
 探しても見つからない会話のうち、最初から履歴に保存されていなかったものが2種類あります。
@@ -116,6 +149,16 @@ OpenAIは安全上の目的で一時チャットのコピーを最長30日間保
 「すべてのチャットを削除」は同じデータ コントロールの中で「すべてのチャットをアーカイブ」と並び、プロジェクト内のチャットも対象になることがあります。押す前に確認のメッセージを読んでください。
 
 削除とアーカイブの違いや消す手順、会話を消しても残るメモリとライブラリのファイルは[ChatGPTの履歴を削除する方法](/media/chatgpt-history-delete/)にまとめました。メモリの容量がいっぱいになったときの空け方は[ChatGPTのメモリがいっぱいのときの対処](/media/chatgpt-memory-full/)にまとめています。
+
+## もう一度試すで前の回答が消えたとき
+
+会話は残っているのに、回答の下の［もう一度試す］を押したら前の回答に戻れなくなった、という相談もあります。OpenAIのサポートは[2026年2月27日のコミュニティの返信](https://community.openai.com/t/where-are-options-for-choosing-better-answers-in-chatgpt/1375312)で、今の［もう一度試す］は新しい回答を作って前の回答を置き換えると説明しました。前の動きに戻す設定は無いとも書いています。**前の回答を残したまま別の答えも見たいなら、同じチャットに新しいメッセージとして頼み直します。**サポートは「regenerate」と送れば前の回答を残したまま新しい回答が出ると案内していますが、この記事では試していません。
+
+<!-- SHOT: ChatGPT の回答の下の［もう一度試す］のアイコン・https://chatgpt.com/ ・スマホ（ログイン要。テスト用の中立な会話を新しく作る。サイドバーと名前は写さない）・赤枠は［もう一度試す］のアイコン -->
+
+以前は回答の下に1/2のような番号と左右の矢印が出て、前の版に切り替えられました。この矢印が消えたという報告は[2月19日のスレッド](https://community.openai.com/t/chatgpt-web-update-removed-message-version-arrows-cannot-access-edited-message-history/1374666)から続いています。[8月21日のスレッド](https://community.openai.com/t/urgent-regression-message-version-arrows-disappear-after-reload-including-newly-created-versions/1391636)には、再読み込みすると矢印が消えるという報告に40件を超える返信が付きました。[9月3日の投稿](https://community.openai.com/t/restore-the-ability-to-use-version-arrows-in-chatgpt/1394714)は、矢印が版の履歴に置き換わり、別の版を見るには新しいチャットに分岐する必要があると書いています。サポートは9月8日に、1つの会話の中で別の版を残す要望を担当に伝えると返信しましたが、時期は示していません。
+
+**残したい回答は［もう一度試す］を押す前にコピーしておくのが確実です。**データのエクスポートに入っていたJSONのファイルに見えなくなった版が残っていたという利用者の報告も、8月22日にありました。同じ報告によると、エクスポートのHTMLのファイルには出ていなかったそうです。
 
 ## 会話を消さないための設定と習慣
 
@@ -153,6 +196,18 @@ OpenAIは安全上の目的で一時チャットのコピーを最長30日間保
 
 一部の会話だけなら、アーカイブかプロジェクトへの移動を疑ってください。アーカイブは確認の画面が出ずに実行されます。プロジェクトに移した会話はプロジェクトの中に表示されます。
 
+### ChatGPTのプロジェクトが消えたのはなぜですか？
+
+6月18日のウェブ版の更新でプロジェクトをピン留めの欄に置けるようになり、最近の項目の並べ方も選べるようになったため、まずその2か所を見てください。共有プロジェクトなら所有者が削除したことも考えられます。削除していないのに消えたという利用者の報告もありますが、どの報告でも中の会話はサイドバーの検索で見つかっています。
+
+### ChatGPTで会話が削除されたと出るのはなぜですか？
+
+自分で削除した会話が古い検索結果に残っていたか、共有リンクの元の会話が削除されたことが考えられます。どちらもヘルプのとおり会話は戻りません。削除した覚えが無いなら、エクスポートで控えを取ってサポートに伝えてください。
+
+### ChatGPTでもう一度試すを押すと前の回答は消えますか？
+
+OpenAIのサポートは2026年2月に、［もう一度試す］は前の回答を置き換えると説明しています。残したい回答は押す前にコピーし、別の答えは新しいメッセージとして頼み直します。
+
 ### ChatGPTの一時チャットは後から見られますか？
 
 保存しなかった一時チャットは見られません。OpenAIが安全上の目的で最長30日間コピーを保持する場合がありますが、利用者が開き直すことはできません。
@@ -171,4 +226,6 @@ OpenAIは安全上の目的で一時チャットのコピーを最長30日間保
 - OpenAI ヘルプセンター「[ChatGPT ホームページ](https://help.openai.com/ja-jp/articles/9125172-the-chatgpt-home-page)」（同）
 - OpenAI ヘルプセンター「[ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)」（英語版、同）
 - GitHub「[openai/codex issue #46800](https://github.com/openai/codex/issues/46800)」（利用者の報告。同）
+- OpenAI ヘルプセンター「[ChatGPT での会話とスケジュール済みタスクの共有](https://help.openai.com/ja-jp/articles/7925741-chatgpt-shared-links-faq)」（2026年10月17日取得。プロジェクトのヘルプとリリースノートも同じ日に取り直し）
+- OpenAI Developer Community のスレッド（利用者の報告とサポートの返信。2026年10月17日取得）: [プロジェクトが消えて会話が削除と出る](https://community.openai.com/t/entire-chatgpt-project-disappeared-chats-still-searchable-but-show-conversation-deleted-404/1394754)、[Windowsでプロジェクトの一覧が消えた（8月27日）](https://community.openai.com/t/windows-projects-disappeared-after-update-to-26-820-60940-but-chats-remain-intact/1392901)、[同（10月10日）](https://community.openai.com/t/local-projects-disappear-from-sidebar-after-windows-desktop-update/1405156)、[あとから移した会話がサイドバーに出ない](https://community.openai.com/t/project-sidebar-does-not-show-chats-added-to-a-project-afterward/1403758)、[Macのアプリに削除した会話が残る](https://community.openai.com/t/deleted-conversations-remain-in-recents-on-chatgpt-macos-app/1395892)、[もう一度試すは前の回答を置き換える](https://community.openai.com/t/where-are-options-for-choosing-better-answers-in-chatgpt/1375312)、[版の矢印が消えた（2月）](https://community.openai.com/t/chatgpt-web-update-removed-message-version-arrows-cannot-access-edited-message-history/1374666)、[再読み込みで矢印が消える（8月）](https://community.openai.com/t/urgent-regression-message-version-arrows-disappear-after-reload-including-newly-created-versions/1391636)、[矢印を戻す要望（9月）](https://community.openai.com/t/restore-the-ability-to-use-version-arrows-in-chatgpt/1394714)
 - ログアウトの状態の画面は、2026年10月5日にスマホ表示のブラウザで撮影
