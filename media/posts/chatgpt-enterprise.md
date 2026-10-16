@@ -75,6 +75,8 @@ ChatGPTの契約とAPIの契約は別物です。**Enterpriseのワークスペ�
 
 GPT Instantの文脈の上限はBusinessが54K、Enterpriseが128Kです。推論モデルのほうはどちらも256K（約320ページ分）で差がありません。このほか、iOS用のIntune・ブランド付きワークスペースもEnterpriseの列だけにチェックがあります。
 
+コネクタ（今の名称はアプリ）をロールごとに許可できるのもEnterpriseで、Businessはワークスペース全体のオンとオフまでです。設定の場所は[ChatGPTコネクタの管理者設定](/media/chatgpt-connectors-admin/)にまとめました。
+
 ### SSOはBusinessにもある
 
 SSOの有無でプランを分けたくなりますが、**比較表ではSAML SSOとドメイン認証はBusinessにもチェックが付いています。**Businessに無いのはSCIMのほうです。SCIMのヘルプ（[SCIM プロビジョニングと管理](https://help.openai.com/ja-jp/articles/10011769)）は、単体のBusinessにはSCIMが含まれないとしています。
