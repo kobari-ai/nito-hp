@@ -6,6 +6,10 @@ description: ChatGPTの回答が途中で止まるときを、長い文章が切
 cover_tag: トラブル
 cover_headline: ChatGPTが途中で止まるとき
 cover_sub: 長文・続けるボタン・考え中・エラー
+fork_q: 止まった回答の続きを今すぐ出したい
+fork_go: 2章を読む
+fork_href: #s2
+cta_title: 長い資料の要約や議事録の整理を毎回分けて頼んでいませんか
 ---
 
 ChatGPTに長い文章を頼むと、回答が途中で止まったり、区切りのいいところで「続きは次で」と書いて終わったりします。ネットの解説記事には回答の下の「Continue generating（生成を続ける）」ボタンを押すよう書いたものが今も残っています。このボタンは2023年5月に入った機能で、2026年10月13日にログインしていないChatGPTで試したときは、回答の下にあったのはコピーと共有のボタンだけでした。
@@ -26,7 +30,7 @@ ChatGPTに長い文章を頼むと、回答が途中で止まったり、区切�
 
 文字が出ている途中で止まったのか、何も出ないまま考え中が続いているのかで、試すことは変わります。まず自分の画面がどれに近いかを見てください。
 
-<figure class="post-figure"><img src="/media/images/chatgpt-stops-midway/csm_00_fig_types.png" alt="ChatGPTが止まる4つの症状の図。長い文章が切れる、続けるボタンがない、考え中のまま止まる、エラーで止まる、の4枚のカードが並ぶ" loading="lazy"><figcaption>ChatGPTが途中で止まるときの4つの症状</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/chatgpt-stops-midway/csm_00_fig_types_v.png" alt="ChatGPTが止まる4つの症状の図。長い文章が切れる、続けるボタンがない、考え中のまま止まる、エラーで止まる、の4つを縦に並べ、それぞれ画面で起きていることを添えている" loading="lazy"><figcaption>ChatGPTが途中で止まるときの4つの症状</figcaption></figure>
 
 | 症状 | 画面で起きていること | 最初に試すこと |
 |---|---|---|

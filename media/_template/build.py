@@ -39,6 +39,9 @@ from pathlib import Path
 
 import markdown
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import article_cta  # 記事の主題で切り替える CTA（2026-10-17）
+
 ROOT = Path(__file__).resolve().parent.parent  # media/
 TEMPLATE_DIR = ROOT / "_template"
 POSTS_DIR = ROOT / "posts"
@@ -216,6 +219,28 @@ def expand_blogparts(body_html: str) -> str:
     # パーツ内に別トークンがあっても二重展開されない）。任意で <p> ラッパを飲み込む。
     pattern = r"(?:<p>\s*)?\[blogparts:([a-z0-9\-_]+)\](?:\s*</p>)?"
     return re.sub(pattern, repl, body_html)
+
+
+def stack_tables(body_html: str) -> str:
+    """Markdown の表に列名（data-label）を付け、スマホでは行ごとのまとまりに組み替えられるようにする。
+    2026-10-17 希一さん: 表が画面幅を超えてページ全体が右にずれる・1列目が1行3文字で折れる。横スクロールにしない。
+    クラス付きの表（比較表 .cmp など）は触らない。"""
+    def repl(m):
+        tbl = m.group(0)
+        heads = [re.sub(r"<[^>]+>", "", h).strip() for h in re.findall(r"<th[^>]*>(.*?)</th>", tbl.split("</thead>")[0], re.S)] if "<thead>" in tbl else []
+        if not heads:
+            return tbl
+        def row(rm):
+            cells = iter(range(len(heads)))
+            def cell(cm):
+                i = next(cells, None)
+                if i is None:
+                    return cm.group(0)
+                return f'<td data-label="{html.escape(heads[i], quote=True)}"{cm.group(1)}>'
+            return re.sub(r"<td([^>]*)>", cell, rm.group(0))
+        tbl = re.sub(r"<tr>.*?</tr>", row, tbl, flags=re.S)
+        return f'<div class="tbl">{tbl.replace("<table>", "<table class=\"stack\">", 1)}</div>'
+    return re.sub(r"<table>.*?</table>", repl, body_html, flags=re.S)
 
 
 def add_heading_ids_and_toc(body_html: str):
@@ -581,6 +606,16 @@ def build_article(post, posts, template: str) -> str:
         "{{AUTHOR_IMAGE}}": profile["image"],
         "{{OG_IMAGE}}": og_image_url(meta, post["slug"]),
     }
+    # CTA（2026-10-17 希一さん OK）: 主題で文面と行き先を切り替える
+    theme = article_cta.theme_of(meta, post["body"])
+    body = post["body"]
+    if theme == "ai_agent":
+        body = article_cta.insert_mid(body, article_cta.mid_cta(meta, post["slug"]))
+    replacements["{{BODY}}"] = body
+    replacements["{{BYLINE}}"] = article_cta.byline(author, profile.get("role", DEFAULT_AUTHOR_ROLE), profile["image"])
+    replacements["{{FORK}}"] = article_cta.fork(meta, post["slug"], theme) if post["toc"] else ""
+    replacements["{{END_CTA}}"] = article_cta.end_cta(post["slug"], theme)
+    replacements["{{RAIL}}"] = article_cta.rail(post["toc"], theme)
     for key, val in replacements.items():
         out = out.replace(key, val)
     return out
@@ -834,6 +869,7 @@ def main():
         body_md = convert_linkcard_blocks(body_md)
         body_html = markdown.markdown(body_md, extensions=["tables", "sane_lists"])
         body_html = expand_blogparts(body_html)
+        body_html = stack_tables(body_html)
         body_html, toc = add_heading_ids_and_toc(body_html)
         lead, body_html = split_lead(body_html)
         posts.append({
