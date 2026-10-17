@@ -239,7 +239,8 @@ def stack_tables(body_html: str) -> str:
                 return f'<td data-label="{html.escape(heads[i], quote=True)}"{cm.group(1)}>'
             return re.sub(r"<td([^>]*)>", cell, rm.group(0))
         tbl = re.sub(r"<tr>.*?</tr>", row, tbl, flags=re.S)
-        return f'<div class="tbl">{tbl.replace("<table>", "<table class=\"stack\">", 1)}</div>'
+        tbl = tbl.replace("<table>", '<table class="stack">', 1)
+        return '<div class="tbl">' + tbl + "</div>"
     return re.sub(r"<table>.*?</table>", repl, body_html, flags=re.S)
 
 
