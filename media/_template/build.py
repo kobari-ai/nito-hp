@@ -608,10 +608,12 @@ def build_article(post, posts, template: str) -> str:
         "{{OG_IMAGE}}": og_image_url(meta, post["slug"]),
     }
     # CTA（2026-10-17 希一さん OK）: 主題で文面と行き先を切り替える
-    theme = article_cta.theme_of(meta, post["body"])
+    theme = article_cta.theme_of(meta, post["body"], post["slug"])
     body = post["body"]
     if theme == "ai_agent":
         body = article_cta.insert_mid(body, article_cta.mid_cta(meta, post["slug"]))
+    elif 'class="bp-cta"' not in body:
+        body = article_cta.insert_mid(body, article_cta.mid_cta_llmo(meta, post["slug"]))
     replacements["{{BODY}}"] = body
     replacements["{{BYLINE}}"] = article_cta.byline(author, profile.get("role", DEFAULT_AUTHOR_ROLE), profile["image"])
     replacements["{{FORK}}"] = article_cta.fork(meta, post["slug"], theme) if post["toc"] else ""
