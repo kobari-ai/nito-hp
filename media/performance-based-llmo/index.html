@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>成果報酬型のLLMO対策とは？成果地点で…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.07.27</span>
         </div>
         <h1 class="post-title">成果報酬型のLLMO対策とは？成果地点で見抜く、損しない選び方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="成果報酬型LLMOの選び方"><defs><linearGradient id="ecg-69874e47" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-69874e47)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">成果報酬型LLMOの選び方</text><line x1="166.8" y1="327.1" x2="1033.2" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">成果地点で見抜く、損しない選び方</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li>AIの回答は変動するため、判定条件（どのAI・どの質問・どう出たら成果か）を契約前に詰めておく</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -96,7 +104,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s1">そもそも成果報酬型のLLMOとは</h2>
 <p>成果報酬型のLLMOとは、支援会社への報酬を、稼働時間ではなく成果に連動させる料金モデルです。月額固定のコンサル型が「動いたぶん」に払うのに対し、成果報酬型は「成果が出たぶん」に払います。</p>
 <p>違いを整理すると、こうなります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>観点</th>
@@ -106,27 +114,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>報酬の決まり方</td>
-<td>稼働・人月で固定</td>
-<td>成果に連動</td>
+<td data-label="観点">報酬の決まり方</td>
+<td data-label="月額固定コンサル型">稼働・人月で固定</td>
+<td data-label="成果報酬型">成果に連動</td>
 </tr>
 <tr>
-<td>目標になりやすい指標</td>
-<td>言及率など中間指標</td>
-<td>問い合わせ・流入などの成果</td>
+<td data-label="観点">目標になりやすい指標</td>
+<td data-label="月額固定コンサル型">言及率など中間指標</td>
+<td data-label="成果報酬型">問い合わせ・流入などの成果</td>
 </tr>
 <tr>
-<td>初期のリスク</td>
-<td>発注側が先に負う</td>
-<td>支援側とも分け合う</td>
+<td data-label="観点">初期のリスク</td>
+<td data-label="月額固定コンサル型">発注側が先に負う</td>
+<td data-label="成果報酬型">支援側とも分け合う</td>
 </tr>
 <tr>
-<td>向きやすい相手</td>
-<td>体制が整った企業</td>
-<td>リスクを抑えたい企業</td>
+<td data-label="観点">向きやすい相手</td>
+<td data-label="月額固定コンサル型">体制が整った企業</td>
+<td data-label="成果報酬型">リスクを抑えたい企業</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>魅力は分かりやすくて、<strong>成果が出なければ費用を抑えられる</strong>ことです。未知の領域であるLLMOに大きな固定費を先払いするのは、正直こわい。その不安を減らせるのが成果報酬型の一番の価値です。</p>
 <h2 id="s2">成果報酬型を掲げるLLMO会社はまだ少ない</h2>
 <p>探すと拍子抜けするのですが、成果報酬型を掲げるLLMO会社はまだ多くありません。LLMO対策会社を20社、30社とまとめた比較記事を見ても、料金はほとんどが月額固定かスポットで、成果報酬型はほぼ出てきません。</p>
@@ -134,7 +142,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>裏を返すと、選ぶ側が「成果地点」という物差しさえ持っていれば、少ない選択肢の中でも中身を見抜けます。次でその物差しを説明します。</p>
 <h2 id="s3">「成果」には主に4つのタイプがある</h2>
 <p>成果報酬型を比べるときに一番大事なのが、<strong>何を成果地点（課金の基準）に置いているか</strong>です。ここが同じ「成果報酬」でも中身を分けます。大きく4タイプあります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>成果地点</th>
@@ -144,27 +152,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>① AIでの引用・露出回数</td>
-<td>指定した質問でAIが自社を引用/言及した回数</td>
-<td>遠い（中間指標）</td>
+<td data-label="成果地点">① AIでの引用・露出回数</td>
+<td data-label="何を成果とするか">指定した質問でAIが自社を引用/言及した回数</td>
+<td data-label="ビジネス成果との距離">遠い（中間指標）</td>
 </tr>
 <tr>
-<td>② AI経由の流入数</td>
-<td>AIや検索から自社サイトへ来たセッション数</td>
-<td>やや近い</td>
+<td data-label="成果地点">② AI経由の流入数</td>
+<td data-label="何を成果とするか">AIや検索から自社サイトへ来たセッション数</td>
+<td data-label="ビジネス成果との距離">やや近い</td>
 </tr>
 <tr>
-<td>③ 記事の制作本数</td>
-<td>公開したコンテンツの本数（実質は出来高制）</td>
-<td>成果ではない</td>
+<td data-label="成果地点">③ 記事の制作本数</td>
+<td data-label="何を成果とするか">公開したコンテンツの本数（実質は出来高制）</td>
+<td data-label="ビジネス成果との距離">成果ではない</td>
 </tr>
 <tr>
-<td>④ 問い合わせ・登録・売上</td>
-<td>実際のビジネス成果</td>
-<td>近い</td>
+<td data-label="成果地点">④ 問い合わせ・登録・売上</td>
+<td data-label="何を成果とするか">実際のビジネス成果</td>
+<td data-label="ビジネス成果との距離">近い</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>①と③を成果地点にした成果報酬型は、あまりおすすめしません</strong>。①の引用回数は、AIの気分やアップデートで大きく揺れる中間指標です。増えても問い合わせが増えるとは限りません。③の制作本数にいたっては、成果というより作業量です。本数に応じて課金されるなら、それは成果報酬というより出来高制です。</p>
 <p>②の流入はまだマシですが、サイトに来た人が必ず買うわけではありません。<strong>成果報酬の「成果」が問い合わせや売上（④）に近いほど、支払う意味がある</strong>、というのが私たちの考えです。</p>
 <div class="box-point"><span class="box-point__ttl">POINT</span><div class="box-point__body"><p>「完全成果報酬」という言葉の強さに引っ張られないでください。大事なのは"完全かどうか"より"何を成果にするか"です。完全成果報酬でも、成果地点が引用回数や制作本数なら、費用は発生してもビジネスは動かないことがあります。</p></div></div>
@@ -229,12 +237,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>成果地点（何を成果とするか）、判定条件（どのAI・どの質問・どう出たら成果か）、実行の範囲（手を動かす部分まで含むか）、計測方法（成果をどう測って見せるか）の4点です。AIの回答は変動するため、判定条件を文章で決めておくと後の食い違いを防げます。</p>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -243,9 +252,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">そもそも成果報酬型のLLMOとは</a><a href="#s2">成果報酬型を掲げるLLMO会社はまだ少ない</a><a href="#s3">「成果」には主に4つのタイプがある</a><a href="#s4">実際にあるプランの例</a><a href="#s5">成果報酬型のメリットと落とし穴</a><a href="#s6">損しない会社の選び方</a><a href="#s7">向いている会社と向かない会社</a><a href="#s8">成果報酬 × 実行支援で伴走するなら</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -278,11 +290,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

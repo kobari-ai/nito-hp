@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Workspaceで…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.15</span>
         </div>
         <h1 class="post-title">【2026年10月】WorkspaceでNotebookLMを有効にする方法・管理コンソールの場所と使えない原因</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WorkspaceでNotebookLMを有効に"><defs><linearGradient id="ecg-a926db08" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a926db08)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="86.4" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">WorkspaceでNot</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ebookLMを有効に</text><line x1="288.4" y1="378.0" x2="911.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">管理コンソール・使えない原因・共有</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -74,6 +76,12 @@
 <li>2026年9月3日から順次<strong>Gemini Notebookのログイベント</strong>を管理コンソールで検索できる。ノートブックの中身はデータリージョンの対象外</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -97,7 +105,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">NotebookLMの設定がある場所</h2>
 <p>管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/turn-gemini-notebook-on-or-off-for-users?hl=ja">ユーザーに対して Gemini Notebook を有効または無効にする</a>」の冒頭には、NotebookLMはGemini Notebookに名称変更されると書かれています。ヘルプの手順にもNotebookLMという名前の項目は無く、<strong>オンとオフも共有の設定も［Gemini Notebook］の画面で行います</strong>。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>やりたいこと</th>
@@ -107,22 +115,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>使える人をオンまたはオフにする</td>
-<td>［生成AI］［Gemini Notebook］［サービスのステータス］</td>
-<td>Geminiの「設定」</td>
+<td data-label="やりたいこと">使える人をオンまたはオフにする</td>
+<td data-label="管理コンソールの場所">［生成AI］［Gemini Notebook］［サービスのステータス］</td>
+<td data-label="必要な管理者権限">Geminiの「設定」</td>
 </tr>
 <tr>
-<td>組織外との共有を決める</td>
-<td>［生成AI］［Gemini Notebook］の［組織名の外部との共有］</td>
-<td>Geminiの「設定」</td>
+<td data-label="やりたいこと">組織外との共有を決める</td>
+<td data-label="管理コンソールの場所">［生成AI］［Gemini Notebook］の［組織名の外部との共有］</td>
+<td data-label="必要な管理者権限">Geminiの「設定」</td>
 </tr>
 <tr>
-<td>利用の記録を見る</td>
-<td>［レポート］［監査と調査］［Gemini Notebookのログイベント］</td>
-<td>監査と調査</td>
+<td data-label="やりたいこと">利用の記録を見る</td>
+<td data-label="管理コンソールの場所">［レポート］［監査と調査］［Gemini Notebookのログイベント］</td>
+<td data-label="必要な管理者権限">監査と調査</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>GmailやドキュメントのGemini、gemini.google.comのGeminiアプリは別のサービスとして扱われ、設定の画面も別です。そちらを止めたり許可したりする手順は<a href="/media/google-workspace-gemini-admin/">WorkspaceのGeminiを無効化する方法</a>で説明しています。</p>
 <h2 id="s2">Gemini Notebookをオンにする手順</h2>
 <p>手順には全員を一度に切り替える方法と、組織部門ごとに切り替える方法の2通りがあります。どちらも最後に［保存］を押すまで反映されません。</p>
@@ -139,9 +147,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s2-1">一部の部署だけで使う</h3>
 <p>組織部門を選んで切り替えた画面で、［サービスのステータス］が［継承］になっていれば親の組織と同じ設定です。親の設定が後で変わっても今の設定を保ちたいなら［オーバーライド］を押し、親と同じに戻すなら［継承］を押します。</p>
 <p>部署をまたいで試す人を集めたいときは、ヘルプは<strong>アクセスグループ</strong>を使う方法を案内しています。会社全体はオフのまま、試験導入のグループだけオンにする使い方です。組織部門とグループの分け方は、<a href="/media/google-workspace-gemini-admin/">WorkspaceのGeminiの記事の組織部門の節</a>と同じ考え方で組めます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Gemini を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">エディションで変わる上限と規約</h2>
 <p>**使える機能と上限はWorkspaceのエディションで決まります。**ヘルプはエディションを6段階に分けていて、BusinessやEnterpriseの多くはGemini Notebookがコアサービスとして含まれます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>段階</th>
@@ -151,40 +173,40 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>標準</td>
-<td>Business Base・Essentials Starter・Workspace Individualなど（追加サービス）</td>
-<td>Google利用規約</td>
+<td data-label="段階">標準</td>
+<td data-label="主なエディション">Business Base・Essentials Starter・Workspace Individualなど（追加サービス）</td>
+<td data-label="規約">Google利用規約</td>
 </tr>
 <tr>
-<td>標準（エンタープライズ向けの保護）</td>
-<td>Business Starter・Enterprise Starter・Frontline・Nonprofitsなど</td>
-<td>Google Cloud利用規約</td>
+<td data-label="段階">標準（エンタープライズ向けの保護）</td>
+<td data-label="主なエディション">Business Starter・Enterprise Starter・Frontline・Nonprofitsなど</td>
+<td data-label="規約">Google Cloud利用規約</td>
 </tr>
 <tr>
-<td>より広範</td>
-<td>Education Plus・Teaching and Learningアドオン</td>
-<td>Workspace for Education利用規約</td>
+<td data-label="段階">より広範</td>
+<td data-label="主なエディション">Education Plus・Teaching and Learningアドオン</td>
+<td data-label="規約">Workspace for Education利用規約</td>
 </tr>
 <tr>
-<td>高レベル</td>
-<td>Business Standard・Business Plus・Enterprise Standard・Enterprise Plus</td>
-<td>Google Cloud利用規約</td>
+<td data-label="段階">高レベル</td>
+<td data-label="主なエディション">Business Standard・Business Plus・Enterprise Standard・Enterprise Plus</td>
+<td data-label="規約">Google Cloud利用規約</td>
 </tr>
 <tr>
-<td>拡張</td>
-<td>AI Expanded Accessアドオン</td>
-<td>Google Cloud利用規約</td>
+<td data-label="段階">拡張</td>
+<td data-label="主なエディション">AI Expanded Accessアドオン</td>
+<td data-label="規約">Google Cloud利用規約</td>
 </tr>
 <tr>
-<td>最高</td>
-<td>AI Ultra Accessアドオン</td>
-<td>Google Cloud利用規約</td>
+<td data-label="段階">最高</td>
+<td data-label="主なエディション">AI Ultra Accessアドオン</td>
+<td data-label="規約">Google Cloud利用規約</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>違いが大きいのはデータの扱いです。追加サービスとして使う段階では、フィードバックを送らない限り学習には使われないものの、Googleの利用規約が適用されます。2段目より上は<strong>アップロードしたファイル・チャット・回答を人のレビュアーが見ることも、モデルの改善に使うこともない</strong>と書かれています。</p>
 <p>上限は5列の表で示されていて、標準の2段は同じ数字です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>項目</th>
@@ -197,47 +219,47 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ノートブック</td>
-<td>100件</td>
-<td>200件</td>
-<td>500件</td>
-<td>500件</td>
-<td>500件</td>
+<td data-label="項目">ノートブック</td>
+<td data-label="標準">100件</td>
+<td data-label="より広範">200件</td>
+<td data-label="高レベル">500件</td>
+<td data-label="拡張">500件</td>
+<td data-label="最高">500件</td>
 </tr>
 <tr>
-<td>1冊のソース</td>
-<td>50件</td>
-<td>100件</td>
-<td>300件</td>
-<td>400件</td>
-<td>600件</td>
+<td data-label="項目">1冊のソース</td>
+<td data-label="標準">50件</td>
+<td data-label="より広範">100件</td>
+<td data-label="高レベル">300件</td>
+<td data-label="拡張">400件</td>
+<td data-label="最高">600件</td>
 </tr>
 <tr>
-<td>チャット</td>
-<td>1日50回</td>
-<td>1日200回</td>
-<td>1日500回</td>
-<td>1日1,000回</td>
-<td>1日5,000回</td>
+<td data-label="項目">チャット</td>
+<td data-label="標準">1日50回</td>
+<td data-label="より広範">1日200回</td>
+<td data-label="高レベル">1日500回</td>
+<td data-label="拡張">1日1,000回</td>
+<td data-label="最高">1日5,000回</td>
 </tr>
 <tr>
-<td>音声解説</td>
-<td>1日3件</td>
-<td>1日6件</td>
-<td>1日20件</td>
-<td>1日40件</td>
-<td>1日200件</td>
+<td data-label="項目">音声解説</td>
+<td data-label="標準">1日3件</td>
+<td data-label="より広範">1日6件</td>
+<td data-label="高レベル">1日20件</td>
+<td data-label="拡張">1日40件</td>
+<td data-label="最高">1日200件</td>
 </tr>
 <tr>
-<td>Deep Research</td>
-<td>月10回</td>
-<td>1日3件</td>
-<td>1日20件</td>
-<td>1日30件</td>
-<td>1日200件</td>
+<td data-label="項目">Deep Research</td>
+<td data-label="標準">月10回</td>
+<td data-label="より広範">1日3件</td>
+<td data-label="高レベル">1日20件</td>
+<td data-label="拡張">1日30件</td>
+<td data-label="最高">1日200件</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_03_limits.jpg" alt="管理者ヘルプの使用量上限の内訳の表。標準アクセス、アクセス権の追加、上位レベル、Expanded Level Access、最高レベルの5列で、ノートブック、出典、チャット、音声概要、動画の概要、レポートなどの上限が並ぶ" loading="lazy"><figcaption>使用量上限の表（2026年10月15日、ヘルプの表記のまま）</figcaption></figure>
 
 <p>社員が自分のアカウントの段階を確かめる方法は、Gemini Notebookのヘルプ「<a href="https://support.google.com/gemininotebook/answer/16337734?hl=ja">仕事用または学校用の Google アカウントで Gemini Notebook を使用する</a>」にあります。Gemini Notebookを開き、画面上部のプロフィール画像の横に<strong>Pro・Plus・Expanded・Ultraのどれかのバッジ</strong>があれば、上限が引き上げられた段階です。上限を上げたい社員には管理者にライセンスのアップグレードを頼むよう同じヘルプが案内しています。</p>
@@ -247,7 +269,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>「管理コンソールでオンにしたのに使えない」と言われたら、社員の側と管理者の側を順に切り分けます。ヘルプの記述から拾った原因を、確かめる順に並べました。</p>
 <figure class="post-figure"><img src="/media/images/notebooklm-workspace-admin/nwa_05_check.jpg" alt="オンにしたのに使えないときの確認の順番の図。ログイン中のアカウント、所属する組織部門の設定、保存からの経過時間、エディション、ドメインを登録した国の5つを左から順に確かめる" loading="lazy"></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>症状</th>
@@ -256,31 +278,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>上限が個人と同じで、会社の資料も見えない</td>
-<td>個人のGoogleアカウントでログインしていないか</td>
+<td data-label="症状">上限が個人と同じで、会社の資料も見えない</td>
+<td data-label="確かめる所">個人のGoogleアカウントでログインしていないか</td>
 </tr>
 <tr>
-<td>一部の社員だけ使えない</td>
-<td>その人の組織部門が［オーバーライド］でオフになっていないか</td>
+<td data-label="症状">一部の社員だけ使えない</td>
+<td data-label="確かめる所">その人の組織部門が［オーバーライド］でオフになっていないか</td>
 </tr>
 <tr>
-<td>保存した直後から変わらない</td>
-<td>保存から24時間ほどたったか（共有設定のページの目安）</td>
+<td data-label="症状">保存した直後から変わらない</td>
+<td data-label="確かめる所">保存から24時間ほどたったか（共有設定のページの目安）</td>
 </tr>
 <tr>
-<td>管理コンソールに［Gemini Notebook］が無い</td>
-<td>自分にGeminiの「設定」の管理者権限があるか</td>
+<td data-label="症状">管理コンソールに［Gemini Notebook］が無い</td>
+<td data-label="確かめる所">自分にGeminiの「設定」の管理者権限があるか</td>
 </tr>
 <tr>
-<td>［オン］にできない</td>
-<td>ドメインを最初に登録した国でサービスが制限されていないか</td>
+<td data-label="症状">［オン］にできない</td>
+<td data-label="確かめる所">ドメインを最初に登録した国でサービスが制限されていないか</td>
 </tr>
 <tr>
-<td>ドライブのファイルを入れられない</td>
-<td>その社員が元のファイルを閲覧できるか</td>
+<td data-label="症状">ドライブのファイルを入れられない</td>
+<td data-label="確かめる所">その社員が元のファイルを閲覧できるか</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>最後の行は、Gemini Notebookがドライブのファイルに組織の共有設定をそのまま当てるためです。ヘルプには<strong>元のファイルを閲覧以上の権限で開ける人だけがソースに使える</strong>と書かれています。オンにできないケースは管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/support/troubleshooting/unable-to-turn-on-a-service?hl=ja">サービスを有効にできない</a>」の説明のとおり、Workspaceのドメインを最初に登録した国の設定が関わる場合があります。</p>
 <p>学校で使う場合は年齢の設定も関わります。Workspace for Educationで18歳未満とされた人は、Gemini Notebook自体は使えますが、Deep Research・インフォグラフィック・シネマティック動画解説・Googleスライドなどが使えません。</p>
 <h2 id="s5">組織外との共有の設定</h2>
@@ -355,12 +377,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -369,9 +392,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">NotebookLMの設定がある場所</a><a href="#s2">Gemini Notebookをオンにする手順</a><a href="#s3">エディションで変わる上限と規約</a><a href="#s4">オンにしたのに使えないとき</a><a href="#s5">組織外との共有の設定</a><a href="#s6">データの扱いと監査ログ</a><a href="#s7">Gemini Notebook Enterpriseとの違い</a><a href="#s8">社内で使い始める前に決めること</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -404,11 +430,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

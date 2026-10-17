@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claude（クロード…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.19</span>
         </div>
         <h1 class="post-title">【2026年9月】Claude（クロード）の使い方を初心者向けに解説｜始め方・機能の使い分け・プロジェクト・ファイル作成・上級編</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの使い方"><defs><linearGradient id="ecg-f157380b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f157380b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの使い方</text><line x1="311.2" y1="327.1" x2="888.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">始め方から機能の使い分け、上級編まで</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>機密データは<strong>シークレットチャット</strong>か<strong>プライバシー設定</strong>で学習に使われない状態にできる。政府ID・口座番号などは頼んでもメモリに保存されない</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -101,7 +109,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">Claudeとは何か</h2>
 <p>ClaudeはAnthropicが開発した言語モデルと、それを使うチャット製品の両方を指す名前です。公式ヘルプの「<a href="https://support.claude.com/ja/articles/7996845">Claudeで何ができますか？</a>」では、執筆、学習、要約、コーディング、ブレインストーミング、翻訳、画像分析が用途として挙げられています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>製品</th>
@@ -111,22 +119,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Claude（この記事）</td>
-<td>チャット型のAI。文章・調査・ファイル作成</td>
-<td>claude.ai、デスクトップアプリ、スマホアプリ</td>
+<td data-label="製品">Claude（この記事）</td>
+<td data-label="何か">チャット型のAI。文章・調査・ファイル作成</td>
+<td data-label="使う場所">claude.ai、デスクトップアプリ、スマホアプリ</td>
 </tr>
 <tr>
-<td>Claude Code</td>
-<td>ターミナルやエディタで動くコーディングエージェント</td>
-<td>ターミナル、VS Code、デスクトップアプリのCodeタブ</td>
+<td data-label="製品">Claude Code</td>
+<td data-label="何か">ターミナルやエディタで動くコーディングエージェント</td>
+<td data-label="使う場所">ターミナル、VS Code、デスクトップアプリのCodeタブ</td>
 </tr>
 <tr>
-<td>Claude API</td>
-<td>開発者が自社のアプリに組み込むためのもの</td>
-<td>Claude Console</td>
+<td data-label="製品">Claude API</td>
+<td data-label="何か">開発者が自社のアプリに組み込むためのもの</td>
+<td data-label="使う場所">Claude Console</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>料金は無料プランのほかにPro（月$22）・Max・Team・Enterpriseがあり、日本向け料金ページは消費税込みの表示です。プランの違いは<a href="https://nito-0210.com/media/claude-code-pricing/">Claude Codeの料金プランの記事</a>に表でまとめています。</p>
 <h2 id="s2">Claudeの始め方</h2>
 <p>必要なのはメールアドレス（またはGoogle／Appleのアカウント）だけです。公式ヘルプの「<a href="https://support.claude.com/ja/articles/8114491-claude%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B">Claudeを始める</a>」に沿うと、手順は3つに収まります。</p>
@@ -138,7 +146,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/claude-guide/cg_01_help_getting_started.jpg" alt="Anthropicヘルプセンター「Claudeを始める」の記事。Web・Desktop・Mobileの3つのアクセス方法と、チャットの始め方" loading="lazy"><figcaption>公式ヘルプ「Claudeを始める」</figcaption></figure>
 
 <p>使える場所は3つで、どれも同じアカウントで履歴が共有されます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>場所</th>
@@ -148,28 +156,42 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ウェブ</td>
-<td>claude.ai</td>
-<td>最初はここ。すべての機能が使える</td>
+<td data-label="場所">ウェブ</td>
+<td data-label="入手先">claude.ai</td>
+<td data-label="向いている使い方">最初はここ。すべての機能が使える</td>
 </tr>
 <tr>
-<td>デスクトップアプリ</td>
-<td><a href="https://claude.ai/download">claude.ai/download</a>（Mac／Windows）</td>
-<td>常に開いておく人。Chat・Cowork・Codeの3タブ</td>
+<td data-label="場所">デスクトップアプリ</td>
+<td data-label="入手先"><a href="https://claude.ai/download">claude.ai/download</a>（Mac／Windows）</td>
+<td data-label="向いている使い方">常に開いておく人。Chat・Cowork・Codeの3タブ</td>
 </tr>
 <tr>
-<td>スマホアプリ</td>
-<td>App Store／Google Play</td>
-<td>音声入力や写真の読み取り。外出先の調べもの</td>
+<td data-label="場所">スマホアプリ</td>
+<td data-label="入手先">App Store／Google Play</td>
+<td data-label="向いている使い方">音声入力や写真の読み取り。外出先の調べもの</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>入力欄の左下の「+」をクリックするか「/」と打つと、ファイルの添付やウェブ検索・リサーチなどの機能の一覧が出ます。入力欄の下に表示されているのが今使っているモデルで、クリックすると切り替えられます。まずは「この文章を3行に要約して」「この画像に写っているものを説明して」のように、手元にあるもので試すのが早いです。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">無料と有料で使える機能</h2>
 <p>「無料で何回まで使えるか」は決まった回数ではなく、<strong>5時間ごとにリセットされる使用量の枠</strong>で管理されています。公式ヘルプには「送信できるメッセージ数は需要によって変わる」と書かれており、長い文書を読ませたりファイルを作らせたりすると、枠は早く減ります。機能そのものは無料プランでもほとんど使えます。</p>
 <figure class="post-figure"><img src="/media/images/claude-guide/00_fig_features.png" alt="Claudeの機能を無料プランで使えるものと有料プランで増えるものに分けた図。無料: チャット・ファイル読み込み・アーティファクト・プロジェクト5つ・ファイル作成・メモリ・シークレットチャット。有料で増える: 使用量・過去チャット検索・リサーチ・プロジェクトの拡張ナレッジ・Design/Slides/Docs" loading="lazy"><figcaption>無料でも機能はほぼ使える。有料で変わるのは使用量と一部の機能（公式ヘルプ各記事）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>機能</th>
@@ -180,67 +202,67 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>チャット・画像の読み取り・ファイルの添付</td>
-<td>○</td>
-<td>○</td>
-<td>Claudeを始める</td>
+<td data-label="機能">チャット・画像の読み取り・ファイルの添付</td>
+<td data-label="無料">○</td>
+<td data-label="有料（Pro以上）">○</td>
+<td data-label="出典">Claudeを始める</td>
 </tr>
 <tr>
-<td>アーティファクト（右側の作業ウィンドウ）</td>
-<td>○</td>
-<td>○（Design・Slides・Docsのベータは有料のみ）</td>
-<td>アーティファクトとは</td>
+<td data-label="機能">アーティファクト（右側の作業ウィンドウ）</td>
+<td data-label="無料">○</td>
+<td data-label="有料（Pro以上）">○（Design・Slides・Docsのベータは有料のみ）</td>
+<td data-label="出典">アーティファクトとは</td>
 </tr>
 <tr>
-<td>プロジェクト</td>
-<td>○（5つまで）</td>
-<td>○（拡張ナレッジで容量最大10倍）</td>
-<td>プロジェクトとは</td>
+<td data-label="機能">プロジェクト</td>
+<td data-label="無料">○（5つまで）</td>
+<td data-label="有料（Pro以上）">○（拡張ナレッジで容量最大10倍）</td>
+<td data-label="出典">プロジェクトとは</td>
 </tr>
 <tr>
-<td>コード実行とファイル作成（Excel・PowerPoint・Word・PDF）</td>
-<td>○</td>
-<td>○</td>
-<td>ファイルを作成・編集する</td>
+<td data-label="機能">コード実行とファイル作成（Excel・PowerPoint・Word・PDF）</td>
+<td data-label="無料">○</td>
+<td data-label="有料（Pro以上）">○</td>
+<td data-label="出典">ファイルを作成・編集する</td>
 </tr>
 <tr>
-<td>メモリ</td>
-<td>○</td>
-<td>○</td>
-<td>チャット検索とメモリ</td>
+<td data-label="機能">メモリ</td>
+<td data-label="無料">○</td>
+<td data-label="有料（Pro以上）">○</td>
+<td data-label="出典">チャット検索とメモリ</td>
 </tr>
 <tr>
-<td>過去のチャットを検索</td>
-<td>×</td>
-<td>○</td>
-<td>チャット検索とメモリ</td>
+<td data-label="機能">過去のチャットを検索</td>
+<td data-label="無料">×</td>
+<td data-label="有料（Pro以上）">○</td>
+<td data-label="出典">チャット検索とメモリ</td>
 </tr>
 <tr>
-<td>リサーチ</td>
-<td>×</td>
-<td>○</td>
-<td>ウェブ検索・拡張思考・リサーチ</td>
+<td data-label="機能">リサーチ</td>
+<td data-label="無料">×</td>
+<td data-label="有料（Pro以上）">○</td>
+<td data-label="出典">ウェブ検索・拡張思考・リサーチ</td>
 </tr>
 <tr>
-<td>スキル</td>
-<td>○（コード実行を有効にする）</td>
-<td>○</td>
-<td>スキルとは</td>
+<td data-label="機能">スキル</td>
+<td data-label="無料">○（コード実行を有効にする）</td>
+<td data-label="有料（Pro以上）">○</td>
+<td data-label="出典">スキルとは</td>
 </tr>
 <tr>
-<td>シークレットチャット</td>
-<td>○</td>
-<td>○</td>
-<td>シークレットチャットを使用する</td>
+<td data-label="機能">シークレットチャット</td>
+<td data-label="無料">○</td>
+<td data-label="有料（Pro以上）">○</td>
+<td data-label="出典">シークレットチャットを使用する</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>有料プランで変わるのは、機能の解放より<strong>使用量の枠の大きさ</strong>です。公式の案内ではProの枠は無料の5倍以上と書かれています。</p>
 <h2 id="s4">ウェブ検索・拡張思考・リサーチの使い分け</h2>
 <p>調べものの機能は3つあり、公式ヘルプ「<a href="https://support.claude.com/ja/articles/11095361">ウェブ検索、拡張思考、リサーチはいつ使うべき？</a>」がそれぞれの使いどころを書いています。</p>
 <figure class="post-figure"><img src="/media/images/claude-guide/00_fig_search_modes.png" alt="ウェブ検索・拡張思考・リサーチの使い分けの図。ウェブ検索は1〜2回の検索で答えが出る事実確認、拡張思考は最新情報が要らない複雑な推論、リサーチは5回以上の検索と1〜3分かけて複数ソースをまとめるレポート" loading="lazy"><figcaption>公式ヘルプの使い分け。かける時間と検索回数で選ぶ</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>機能</th>
@@ -250,22 +272,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ウェブ検索</td>
-<td>1〜2回のツール呼び出しで答えられる、シンプルで事実的な質問</td>
-<td>天気、企業情報、最新のニュース、試合結果</td>
+<td data-label="機能">ウェブ検索</td>
+<td data-label="公式の位置づけ">1〜2回のツール呼び出しで答えられる、シンプルで事実的な質問</td>
+<td data-label="例">天気、企業情報、最新のニュース、試合結果</td>
 </tr>
 <tr>
-<td>拡張思考</td>
-<td>ウェブの最新情報が要らない複雑な推論。結論の前に複数の角度から検討する</td>
-<td>アルゴリズムの最適化、コードのデバッグ、概念の分析</td>
+<td data-label="機能">拡張思考</td>
+<td data-label="公式の位置づけ">ウェブの最新情報が要らない複雑な推論。結論の前に複数の角度から検討する</td>
+<td data-label="例">アルゴリズムの最適化、コードのデバッグ、概念の分析</td>
 </tr>
 <tr>
-<td>リサーチ</td>
-<td>1〜3分に5回以上のツール呼び出しが要る包括的な情報収集。複数ソースを統合して引用つきのレポートを作る</td>
-<td>競合他社の比較、古い社内文書の更新</td>
+<td data-label="機能">リサーチ</td>
+<td data-label="公式の位置づけ">1〜3分に5回以上のツール呼び出しが要る包括的な情報収集。複数ソースを統合して引用つきのレポートを作る</td>
+<td data-label="例">競合他社の比較、古い社内文書の更新</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>ウェブ検索は「何を検索するかは自分で指示したいが、検索と結果の読み込みはClaudeに任せたい」場面向けだと書かれています。リサーチは拡張思考と組み合わせると「アプローチを慎重に計画してから情報収集する」ようになり、より長いレポートになります。公式ヘルプの区分に沿って、まず質問を打ち、事実確認が要ればウェブ検索、数分待ってよい調査ならリサーチ、と上げていきます。</p>
 <h2 id="s5">プロジェクトで資料と指示をまとめる</h2>
 <p>同じ資料を毎回添付し、同じ前置きを毎回書いているなら、プロジェクトの出番です。公式ヘルプ「<a href="https://support.claude.com/ja/articles/9517075">プロジェクトとは何ですか？</a>」では、独自のチャット履歴とナレッジベースを持つ自己完結型のワークスペースと説明されています。</p>
@@ -283,7 +305,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/claude-guide/cg_02_help_artifacts.jpg" alt="Anthropicヘルプセンター「アーティファクトとは何か、どのように使用するのか？」の記事。アーティファクトの説明と有効化の手順" loading="lazy"><figcaption>公式ヘルプ「アーティファクトとは何か」</figcaption></figure>
 
 <p>Excel・PowerPoint・Word・PDFのファイルそのものが欲しいときは<strong>コード実行とファイル作成</strong>を使います。「設定」→「機能」で「コード実行とファイル作成」をオンにしてから、「月間経費を追跡するExcelを作って」のように構造と内容を具体的に頼みます。Claudeはサンドボックスの中でPythonなどを動かしてファイルを作り、会話からダウンロードするかGoogle Driveに保存できます。ファイルは1つ30MBまでで、通常のチャットより使用量の枠を多く使う点が注意点です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>欲しいもの</th>
@@ -293,17 +315,17 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>画面の中で編集したい文書・コード・図</td>
-<td>アーティファクト</td>
-<td>提案文の下書き、簡単なウェブページ、図解</td>
+<td data-label="欲しいもの">画面の中で編集したい文書・コード・図</td>
+<td data-label="使う機能">アーティファクト</td>
+<td data-label="例">提案文の下書き、簡単なウェブページ、図解</td>
 </tr>
 <tr>
-<td>手元に置くファイル</td>
-<td>コード実行とファイル作成</td>
-<td>集計表（.xlsx）、スライド（.pptx）、報告書（.docx）、PDF</td>
+<td data-label="欲しいもの">手元に置くファイル</td>
+<td data-label="使う機能">コード実行とファイル作成</td>
+<td data-label="例">集計表（.xlsx）、スライド（.pptx）、報告書（.docx）、PDF</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s7">メモリと過去のチャットの検索</h2>
 <p>チャットの中で出てきたあなたの役割・進行中の仕事・好みは、<strong>メモリ</strong>として保存され、次の会話から使われる仕組みです。公式ヘルプ「<a href="https://support.claude.com/ja/articles/11817273">チャット検索とメモリ</a>」によると、会話が終わってから要約するのではなく、チャット中にトピックごとに保存する方式で、無料・Pro・Maxでは既定でオンです。</p>
 <ul>
@@ -367,12 +389,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -381,9 +404,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Claudeとは何か</a><a href="#s2">Claudeの始め方</a><a href="#s3">無料と有料で使える機能</a><a href="#s4">ウェブ検索・拡張思考・リサーチの使い分け</a><a href="#s5">プロジェクトで資料と指示をまとめる</a><a href="#s6">アーティファクトとファイル作成</a><a href="#s7">メモリと過去のチャットの検索</a><a href="#s8">スキルで定型作業を任せる</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -416,11 +442,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

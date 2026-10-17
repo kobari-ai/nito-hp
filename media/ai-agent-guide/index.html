@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】AIエージェントとは？…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.19</span>
         </div>
         <h1 class="post-title">【2026年9月】AIエージェントとは？生成AI・ChatGPTとの違いと仕組みをわかりやすく解説｜身近な例・種類・使いどころ</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIエージェントとは"><defs><linearGradient id="ecg-7a51dc39" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7a51dc39)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">用語解説</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIエージェントとは</text><line x1="250.4" y1="327.1" x2="949.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">定義・生成AIとの違い・仕組み・身近な例・使いどころ</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>向いているのは手順が読めない調査・複数ファイルの変更・定型の連続作業。<strong>責任の重い判断や、決まった手順の反復はエージェントでなくてよい</strong></li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -100,7 +108,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">AIエージェントとは</h2>
 <p>各社の定義を並べると、言い方は違っても同じ3つの要素が入っています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>出典</th>
@@ -109,34 +117,34 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td><a href="https://cloud.google.com/discover/what-are-ai-agents?hl=ja">Google Cloud</a></td>
-<td>AIを使ってユーザーの代わりに目標を追求し、タスクを完了させるソフトウェアシステム。推論・計画・メモリーを持ち、意思決定・学習・適応を行う自律性を備える</td>
+<td data-label="出典"><a href="https://cloud.google.com/discover/what-are-ai-agents?hl=ja">Google Cloud</a></td>
+<td data-label="定義（要約）">AIを使ってユーザーの代わりに目標を追求し、タスクを完了させるソフトウェアシステム。推論・計画・メモリーを持ち、意思決定・学習・適応を行う自律性を備える</td>
 </tr>
 <tr>
-<td><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic</a></td>
-<td>LLMが自分のプロセスとツールの使い方を動的に決め、タスクをどう達成するかの制御を自ら持つシステム</td>
+<td data-label="出典"><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic</a></td>
+<td data-label="定義（要約）">LLMが自分のプロセスとツールの使い方を動的に決め、タスクをどう達成するかの制御を自ら持つシステム</td>
 </tr>
 <tr>
-<td><a href="https://openai.com/index/new-tools-for-building-agents/">OpenAI</a></td>
-<td>ユーザーに代わって独立してタスクを達成するシステム</td>
+<td data-label="出典"><a href="https://openai.com/index/new-tools-for-building-agents/">OpenAI</a></td>
+<td data-label="定義（要約）">ユーザーに代わって独立してタスクを達成するシステム</td>
 </tr>
 <tr>
-<td><a href="https://www.gartner.co.jp/ja/articles/ai-agents">Gartner</a></td>
-<td>デジタル環境や物理環境で、AIの手法を使って状況を把握し、判断し、行動し、目標を達成できる自律（または半自律）のソフトウェア</td>
+<td data-label="出典"><a href="https://www.gartner.co.jp/ja/articles/ai-agents">Gartner</a></td>
+<td data-label="定義（要約）">デジタル環境や物理環境で、AIの手法を使って状況を把握し、判断し、行動し、目標を達成できる自律（または半自律）のソフトウェア</td>
 </tr>
 <tr>
-<td><a href="https://aws.amazon.com/jp/what-is/ai-agents/">AWS</a></td>
-<td>環境と対話し、データを収集し、そのデータを使って自己決定タスクを実行し、目標を達成するソフトウェアプログラム</td>
+<td data-label="出典"><a href="https://aws.amazon.com/jp/what-is/ai-agents/">AWS</a></td>
+<td data-label="定義（要約）">環境と対話し、データを収集し、そのデータを使って自己決定タスクを実行し、目標を達成するソフトウェアプログラム</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>共通しているのは<strong>目標</strong>を与えられること、<strong>自律</strong>して動くこと、そして答えを返すだけでなく<strong>行動</strong>することの3点です。Google CloudとGartnerは「推論・計画・メモリー」「状況把握・判断・行動」のように内部の働きまで書き、AnthropicとOpenAIは「誰が制御を持つか」に絞って定義しています。</p>
 <figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_definition.png" alt="AIエージェントの定義を5社で比べた図。共通する3要素（目標・自律・行動）を中央に置き、Google Cloud・Anthropic・OpenAI・Gartner・AWSの定義の要点を周囲に配置" loading="lazy"><figcaption>5社の定義に共通するのは「目標」「自律」「行動」の3つ（各社の公開ページ）</figcaption></figure>
 
 <p>「AI」と「AIエージェント」は別のものではなく、AIエージェントはAIの使い方の一つです。画像認識も翻訳もAIですが、それらは入力に対して出力を返して終わります。AIエージェントはその出力を見て次に何をするかを自分で決め、必要なら別のツールを使い、目標に届くまで続けるところが違います。</p>
 <h2 id="s2">生成AI・ChatGPTとの違い</h2>
 <p>中身の言語モデルは同じものが使われていることが多く、違いはモデルの賢さではなく、<strong>周りに何が付いているか</strong>と<strong>誰が次の一手を決めるか</strong>にあります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>観点</th>
@@ -146,41 +154,55 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>動き方</td>
-<td>質問に答えて終わる（1問1答）</td>
-<td>目標に向けて複数の手順を続けて実行する</td>
+<td data-label="観点">動き方</td>
+<td data-label="生成AI（チャット）">質問に答えて終わる（1問1答）</td>
+<td data-label="AIエージェント">目標に向けて複数の手順を続けて実行する</td>
 </tr>
 <tr>
-<td>次の一手</td>
-<td>人が決めて、次の指示を打つ</td>
-<td>AIが結果を見て自分で決める</td>
+<td data-label="観点">次の一手</td>
+<td data-label="生成AI（チャット）">人が決めて、次の指示を打つ</td>
+<td data-label="AIエージェント">AIが結果を見て自分で決める</td>
 </tr>
 <tr>
-<td>ツール</td>
-<td>基本は文章・画像の生成</td>
-<td>検索・ファイル操作・API・ブラウザ操作などを自分で呼ぶ</td>
+<td data-label="観点">ツール</td>
+<td data-label="生成AI（チャット）">基本は文章・画像の生成</td>
+<td data-label="AIエージェント">検索・ファイル操作・API・ブラウザ操作などを自分で呼ぶ</td>
 </tr>
 <tr>
-<td>記憶</td>
-<td>その会話の中だけ</td>
-<td>会話をまたいだ記憶を持てる</td>
+<td data-label="観点">記憶</td>
+<td data-label="生成AI（チャット）">その会話の中だけ</td>
+<td data-label="AIエージェント">会話をまたいだ記憶を持てる</td>
 </tr>
 <tr>
-<td>人の役割</td>
-<td>良い質問を書き、結果を判断する</td>
-<td>目標とルールを決め、要所で承認する</td>
+<td data-label="観点">人の役割</td>
+<td data-label="生成AI（チャット）">良い質問を書き、結果を判断する</td>
+<td data-label="AIエージェント">目標とルールを決め、要所で承認する</td>
 </tr>
 <tr>
-<td>例</td>
-<td>ChatGPTのチャット、Geminiのチャット</td>
-<td>ChatGPTのエージェントモード、Claude Code、Deep Research</td>
+<td data-label="観点">例</td>
+<td data-label="生成AI（チャット）">ChatGPTのチャット、Geminiのチャット</td>
+<td data-label="AIエージェント">ChatGPTのエージェントモード、Claude Code、Deep Research</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>解説動画（PIVOT「AIエージェント活用術」、キノコード「AIエージェントとは？」）では、この違いを「副操縦士から操縦士へ」「賢い検索エンジンから優秀な部下へ」という比喩で説明していました。チャットは人が操縦して横で手伝ってもらい、エージェントには目的地を伝えて操縦を任せる、という違いです。</p>
 <figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_vs_chat.png" alt="生成AIのチャットとAIエージェントの違いを、同じ「競合3社を調べて資料にして」という依頼で比べた図。チャットは1回答えて人が次を指示する、エージェントは検索・比較・資料作成を続けて実行する" loading="lazy"><figcaption>同じ依頼でも、チャットは1回答えて止まり、エージェントは終わるまで続ける</figcaption></figure>
 
 <p>ChatGPT自体にも2025年7月から「エージェントモード」があり、<a href="https://openai.com/index/introducing-chatgpt-agent/">OpenAIの発表</a>では「カレンダーを確認して今後の会議を説明する」「競合3社を分析してスライドを作る」といった例が挙げられています。同じChatGPTが、チャットとして使えば生成AI、エージェントモードで使えばAIエージェントになります。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">AIエージェントの仕組み</h2>
 <p>Gartner・Google Cloud・Anthropicの説明を重ねると、中身は<strong>ループ</strong>と<strong>4つの部品</strong>に整理できます。</p>
 <figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_loop.png" alt="AIエージェントの仕組みの図。観測→計画→行動→結果の確認のループを中央に、周囲にモデル・ツール・メモリー・指示（ルール）の4つの構成要素" loading="lazy"><figcaption>観測→計画→行動→確認を目標に届くまで繰り返す。周りの4つが部品</figcaption></figure>
@@ -188,7 +210,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s3-1">観測・計画・行動・確認のループ</h3>
 <p>Gartnerは仕組みを「観測 → 判断 → 行動 → 再観測」を繰り返して目的に近づく、と説明しています。「競合3社を調べて資料にして」と頼まれたエージェントは、まず何を調べるべきかを計画し、検索という行動を取り、結果を観測して足りないものを判断し、また検索し、集まったら資料を作る、という流れを自分で回します。人が毎回「次はこれを調べて」と言わなくてよいのは、このループが中にあるからです。</p>
 <h3 id="s3-2">4つの構成要素</h3>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>部品</th>
@@ -198,27 +220,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>モデル（LLM）</td>
-<td>頭脳。状況を理解し、次の一手を考える</td>
-<td>GPT、Claude、Geminiなど</td>
+<td data-label="部品">モデル（LLM）</td>
+<td data-label="役割">頭脳。状況を理解し、次の一手を考える</td>
+<td data-label="例">GPT、Claude、Geminiなど</td>
 </tr>
 <tr>
-<td>ツール</td>
-<td>手足。外の世界に働きかける</td>
-<td>ウェブ検索、ファイルの読み書き、コードの実行、社内システムのAPI、ブラウザ操作</td>
+<td data-label="部品">ツール</td>
+<td data-label="役割">手足。外の世界に働きかける</td>
+<td data-label="例">ウェブ検索、ファイルの読み書き、コードの実行、社内システムのAPI、ブラウザ操作</td>
 </tr>
 <tr>
-<td>メモリー</td>
-<td>記憶。今の会話と過去の経験を保持する</td>
-<td>Google Cloudは短期・長期・エピソード・コンセンサスの4層に分けている</td>
+<td data-label="部品">メモリー</td>
+<td data-label="役割">記憶。今の会話と過去の経験を保持する</td>
+<td data-label="例">Google Cloudは短期・長期・エピソード・コンセンサスの4層に分けている</td>
 </tr>
 <tr>
-<td>指示（ルール・ペルソナ）</td>
-<td>何を目標にどう振る舞うか</td>
-<td>役割、禁止事項、どこで人に確認するか</td>
+<td data-label="部品">指示（ルール・ペルソナ）</td>
+<td data-label="役割">何を目標にどう振る舞うか</td>
+<td data-label="例">役割、禁止事項、どこで人に確認するか</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Anthropicはこの「モデルに検索・ツール・メモリーを足したもの」を**augmented LLM（拡張されたLLM）**と呼び、あらゆるエージェントの基本の部品だと説明しています。チャットのAIとエージェントの差は、この部品が付いているかどうかです。</p>
 <h2 id="s4">ワークフローとエージェントの違い</h2>
 <p>実際に作る・頼むときに判断を分ける線が、ここにあります。Anthropicの<a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a>は、自律的に動くシステムをまとめて「エージェント的システム」と呼んだうえで、2つに分けています。</p>
@@ -229,7 +251,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_workflow_vs_agent.png" alt="ワークフローとエージェントの違いの図。ワークフローは人が決めた手順をLLMが順番に実行、エージェントはLLMが結果を見て次の手順を自分で決める。Anthropicの5つのワークフローパターン（プロンプト連鎖・ルーティング・並列化・オーケストレーター＝ワーカー・評価者＝最適化者）を下に並べる" loading="lazy"><figcaption>手順を人が決めるのがワークフロー、AIが決めるのがエージェント（Anthropic「Building effective agents」を元に作成）</figcaption></figure>
 
 <p>Anthropicが挙げるワークフローの型は5つです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>型</th>
@@ -239,36 +261,36 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>プロンプト連鎖</td>
-<td>作業を固定の段階に分け、前の出力を次に渡す</td>
-<td>下書き→翻訳→校正のように順番が決まっている</td>
+<td data-label="型">プロンプト連鎖</td>
+<td data-label="動き">作業を固定の段階に分け、前の出力を次に渡す</td>
+<td data-label="向いている場面">下書き→翻訳→校正のように順番が決まっている</td>
 </tr>
 <tr>
-<td>ルーティング</td>
-<td>入力を分類して、担当のプロンプトやモデルに振り分ける</td>
-<td>問い合わせを種類別に処理する</td>
+<td data-label="型">ルーティング</td>
+<td data-label="動き">入力を分類して、担当のプロンプトやモデルに振り分ける</td>
+<td data-label="向いている場面">問い合わせを種類別に処理する</td>
 </tr>
 <tr>
-<td>並列化</td>
-<td>複数のLLMを同時に走らせて結果を合わせる</td>
-<td>観点ごとに分けて評価する、多数決を取る</td>
+<td data-label="型">並列化</td>
+<td data-label="動き">複数のLLMを同時に走らせて結果を合わせる</td>
+<td data-label="向いている場面">観点ごとに分けて評価する、多数決を取る</td>
 </tr>
 <tr>
-<td>オーケストレーター＝ワーカー</td>
-<td>中央のLLMが作業を分解して配り、結果を統合する</td>
-<td>何ファイル変えるか事前に分からない修正</td>
+<td data-label="型">オーケストレーター＝ワーカー</td>
+<td data-label="動き">中央のLLMが作業を分解して配り、結果を統合する</td>
+<td data-label="向いている場面">何ファイル変えるか事前に分からない修正</td>
 </tr>
 <tr>
-<td>評価者＝最適化者</td>
-<td>一方が作り、もう一方が評価して直しを繰り返す</td>
-<td>基準が明確な文章や翻訳の改善</td>
+<td data-label="型">評価者＝最適化者</td>
+<td data-label="動き">一方が作り、もう一方が評価して直しを繰り返す</td>
+<td data-label="向いている場面">基準が明確な文章や翻訳の改善</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>そして、いつエージェントにするかについては、<strong>必要な手順の数を予測できず、固定の経路を書けない問題</strong>にだけ使うと書かれています。同じ文書では「最も成功している実装は、複雑なフレームワークではなく、シンプルで組み合わせ可能なパターンを使っている」「まずは最もシンプルな解決策を探し、必要なときだけ複雑さを足す。それはエージェント的システムをまったく作らないことを意味する場合もある」とも述べられています。エージェントを作る側の会社が、作らずに済むならそれでよいと書いているわけです。</p>
 <h2 id="s5">AIエージェントの種類</h2>
 <p>種類の分け方は2通りあります。AWSやIBMが使う<strong>判断の仕方</strong>による分類と、Google Cloudが使う<strong>役割</strong>による分類です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>分類</th>
@@ -278,53 +300,53 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>判断の仕方（AWS・IBM）</td>
-<td>単純反射型</td>
-<td>「この条件ならこの行動」のルールで即座に動く。サーモスタットに近い</td>
+<td data-label="分類">判断の仕方（AWS・IBM）</td>
+<td data-label="種類">単純反射型</td>
+<td data-label="動き">「この条件ならこの行動」のルールで即座に動く。サーモスタットに近い</td>
 </tr>
 <tr>
-<td></td>
-<td>モデルベース反射型</td>
-<td>周囲の状態を内部モデルとして持ち、見えていない部分も推定して動く。部屋の地図を覚える掃除ロボット</td>
+<td data-label="分類"></td>
+<td data-label="種類">モデルベース反射型</td>
+<td data-label="動き">周囲の状態を内部モデルとして持ち、見えていない部分も推定して動く。部屋の地図を覚える掃除ロボット</td>
 </tr>
 <tr>
-<td></td>
-<td>目標ベース型</td>
-<td>目標に届く行動を先読みして選ぶ。経路探索</td>
+<td data-label="分類"></td>
+<td data-label="種類">目標ベース型</td>
+<td data-label="動き">目標に届く行動を先読みして選ぶ。経路探索</td>
 </tr>
 <tr>
-<td></td>
-<td>効用ベース型</td>
-<td>複数の選択肢を「どれがより望ましいか」の点数で比べて選ぶ。コストと時間の両方を見る配車</td>
+<td data-label="分類"></td>
+<td data-label="種類">効用ベース型</td>
+<td data-label="動き">複数の選択肢を「どれがより望ましいか」の点数で比べて選ぶ。コストと時間の両方を見る配車</td>
 </tr>
 <tr>
-<td></td>
-<td>学習型</td>
-<td>経験から学んで行動を改善する</td>
+<td data-label="分類"></td>
+<td data-label="種類">学習型</td>
+<td data-label="動き">経験から学んで行動を改善する</td>
 </tr>
 <tr>
-<td>役割（Google Cloud）</td>
-<td>対話型（サーフェスエージェント）</td>
-<td>人と直接やり取りし、質問に答えたり手続きを進めたりする</td>
+<td data-label="分類">役割（Google Cloud）</td>
+<td data-label="種類">対話型（サーフェスエージェント）</td>
+<td data-label="動き">人と直接やり取りし、質問に答えたり手続きを進めたりする</td>
 </tr>
 <tr>
-<td></td>
-<td>バックグラウンド型</td>
-<td>人と対話せず、イベントをきっかけに裏で定型の処理を回す</td>
+<td data-label="分類"></td>
+<td data-label="種類">バックグラウンド型</td>
+<td data-label="動き">人と対話せず、イベントをきっかけに裏で定型の処理を回す</td>
 </tr>
 <tr>
-<td>数</td>
-<td>単一エージェント／マルチエージェント</td>
-<td>1つで完結するか、役割の違う複数が連携するか</td>
+<td data-label="分類">数</td>
+<td data-label="種類">単一エージェント／マルチエージェント</td>
+<td data-label="動き">1つで完結するか、役割の違う複数が連携するか</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>いま「AIエージェント」と呼ばれている製品の多くは、言語モデルを頭脳にした目標ベース型か学習型で、ツールを持ち、会話をまたぐ記憶を持つものです。Gartnerはさらに、チャットボット→RPA→AIエージェント→エージェント型AI（Agentic AI）の順に自律性が上がる段階として整理しています。</p>
 <h2 id="s6">AIエージェントの身近な例</h2>
 <p>「身近な例は？」という質問には、すでに月額プランの中で使える製品を挙げるのが一番早いです。</p>
 <figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_examples.png" alt="身近なAIエージェントの例4つ。ChatGPTのエージェントモード、Claude Code、GeminiのDeep Research、Microsoft 365 Copilotのエージェント。それぞれの得意な作業と入口" loading="lazy"><figcaption>いま使える身近なAIエージェント（各社の公開情報）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>例</th>
@@ -334,33 +356,33 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ChatGPTのエージェントモード</td>
-<td>自分の仮想コンピューターでブラウザを操作し、調査・比較・スライドや表の作成までを一続きで行う</td>
-<td>ChatGPTの有料プラン。ツールの選択から「エージェントモード」</td>
+<td data-label="例">ChatGPTのエージェントモード</td>
+<td data-label="何をするか">自分の仮想コンピューターでブラウザを操作し、調査・比較・スライドや表の作成までを一続きで行う</td>
+<td data-label="入口">ChatGPTの有料プラン。ツールの選択から「エージェントモード」</td>
 </tr>
 <tr>
-<td><a href="https://www.anthropic.com/claude-code">Claude Code</a></td>
-<td>フォルダの中のファイルを読み、複数ファイルを編集し、コマンドを実行してテストまで回すコーディングエージェント</td>
-<td>ターミナル・VS Code・デスクトップアプリ。使い方は<a href="https://nito-0210.com/media/claude-code-guide/">別記事</a></td>
+<td data-label="例"><a href="https://www.anthropic.com/claude-code">Claude Code</a></td>
+<td data-label="何をするか">フォルダの中のファイルを読み、複数ファイルを編集し、コマンドを実行してテストまで回すコーディングエージェント</td>
+<td data-label="入口">ターミナル・VS Code・デスクトップアプリ。使い方は<a href="https://nito-0210.com/media/claude-code-guide/">別記事</a></td>
 </tr>
 <tr>
-<td><a href="https://gemini.google/overview/deep-research/">GeminiのDeep Research</a></td>
-<td>調査計画を立て、何十ものサイトを回って読み、出典つきのレポートにまとめる</td>
-<td>Geminiアプリの「Deep Research」</td>
+<td data-label="例"><a href="https://gemini.google/overview/deep-research/">GeminiのDeep Research</a></td>
+<td data-label="何をするか">調査計画を立て、何十ものサイトを回って読み、出典つきのレポートにまとめる</td>
+<td data-label="入口">Geminiアプリの「Deep Research」</td>
 </tr>
 <tr>
-<td>Microsoft 365 Copilotのエージェント</td>
-<td>メール・Teams・ファイルを横断して、定型の業務（議事録作成・タスク整理など）を代行する</td>
-<td>Microsoft 365のCopilot</td>
+<td data-label="例">Microsoft 365 Copilotのエージェント</td>
+<td data-label="何をするか">メール・Teams・ファイルを横断して、定型の業務（議事録作成・タスク整理など）を代行する</td>
+<td data-label="入口">Microsoft 365のCopilot</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>このほか、Perplexityやその他の検索サービスにもDeep Research型の機能があり、Googleの検索結果に出るAIモードも、複数の検索を裏で回して答えを組み立てる点ではエージェントの仕組みを使っています（<a href="https://nito-0210.com/media/google-ai-mode-guide/">AIモードの記事</a>）。「AIエージェント」と名乗っていなくても、裏で観測と行動のループを回している製品は増えています。</p>
 <figure class="post-figure"><img src="/media/images/ai-agent-guide/aag_01_openai_agent.jpg" alt="OpenAIの「ChatGPT エージェントが登場」の発表ページ。2025年7月17日、自ら思考して行動し、タスク達成のためのスキルを自律的に選択すると説明" loading="lazy"><figcaption>OpenAIの発表ページ（2025年7月17日公開）。Operatorとdeep researchを統合したと説明している</figcaption></figure>
 
 <h2 id="s7">向いている仕事と向いていない仕事</h2>
 <p>Anthropicの「手順を予測できない問題に使う」という基準と、解説動画で紹介されていた失敗例を合わせると、次のように分かれます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>向いている</th>
@@ -369,23 +391,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>何を何回調べるか事前に分からない調査・比較</td>
-<td>毎回同じ手順を同じ順番で繰り返す作業（ワークフローやRPAで足りる）</td>
+<td data-label="向いている">何を何回調べるか事前に分からない調査・比較</td>
+<td data-label="向いていない">毎回同じ手順を同じ順番で繰り返す作業（ワークフローやRPAで足りる）</td>
 </tr>
 <tr>
-<td>何ファイル変えるか分からないコードの修正</td>
-<td>1回の質問で答えが出る作業（チャットで足りる）</td>
+<td data-label="向いている">何ファイル変えるか分からないコードの修正</td>
+<td data-label="向いていない">1回の質問で答えが出る作業（チャットで足りる）</td>
 </tr>
 <tr>
-<td>途中の結果で次の手が変わる作業</td>
-<td>間違えたときの損失が大きく、取り消せない操作（送金・削除・契約）</td>
+<td data-label="向いている">途中の結果で次の手が変わる作業</td>
+<td data-label="向いていない">間違えたときの損失が大きく、取り消せない操作（送金・削除・契約）</td>
 </tr>
 <tr>
-<td>人が張り付いていられない長時間の処理</td>
-<td>判断の根拠を人が説明する責任がある決定</td>
+<td data-label="向いている">人が張り付いていられない長時間の処理</td>
+<td data-label="向いていない">判断の根拠を人が説明する責任がある決定</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>解説動画（ユースフル「10分でわかるAIエージェント」）では、売上データの分析からグラフとレポートを作らせる例が紹介されていましたが、同時に「ツールのインストールに失敗して止まる」「途中で前提を誤解したまま進む」といった様子も映っていました。エージェントは止まらずに進む分、間違った方向にも止まらずに進みます。だから、取り消せない操作の前には人の承認を挟む設計が要ります。</p>
 <figure class="post-figure"><img src="/media/images/ai-agent-guide/00_fig_when.png" alt="チャット・ワークフロー・エージェントのどれを使うかの判断の図。1回で答えが出るならチャット、手順が決まっているならワークフロー（自動化）、手順が読めないならエージェント。取り消せない操作の前には人の承認を挟む" loading="lazy"><figcaption>まずはチャット、次にワークフロー、手順が読めないときだけエージェント。取り消せない操作の前は人が承認</figcaption></figure>
 
@@ -426,12 +448,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -440,9 +463,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">AIエージェントとは</a><a href="#s2">生成AI・ChatGPTとの違い</a><a href="#s3">AIエージェントの仕組み</a><a href="#s4">ワークフローとエージェントの違い</a><a href="#s5">AIエージェントの種類</a><a href="#s6">AIエージェントの身近な例</a><a href="#s7">向いている仕事と向いていない仕事</a><a href="#s8">導入で失敗しないための3つの考え方</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -475,11 +501,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

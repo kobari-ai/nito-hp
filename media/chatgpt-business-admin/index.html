@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPT Bu…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.09</span>
         </div>
         <h1 class="post-title">【2026年10月】ChatGPT Businessのメンバー招待と管理｜権限・削除・Plus移行</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT Businessの招待と管理"><defs><linearGradient id="ecg-c4db291e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-c4db291e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="86.4" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT Busin</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">essの招待と管理</text><line x1="303.6" y1="378.0" x2="896.4" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">管理者の権限・削除・Plusからの移行</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 </ul></div></div>
 <figure class="post-figure"><img src="/media/images/chatgpt-business-admin/01_fig_flow.jpg" alt="ChatGPT Businessのメンバー管理の流れを5つの箱で示した図。招待を送る、本人が承諾、席を割り当て、メンバーを削除、席数を減らすの順に矢印でつながっている" loading="lazy"><figcaption>招待から席を減らすまでの流れ（OpenAIのヘルプセンターの記述から作成、2026年10月9日時点）</figcaption></figure>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -128,7 +136,7 @@ it@company.com,owner,premium</code></p>
 <h3 id="s1-2">招待しても席は確保されない</h3>
 <p>招待を送っただけでは席を買ったことにも予約したことにもなりません。**席の空きが確かめられるのは招待された人が承諾したときです。**希望のシートタイプに空きが無ければ、招待された人は［参加をリクエスト］を選び、所有者が席を空けるか買い足してから承認します。</p>
 <p>保留中の招待とリクエストは［メンバー］の［保留中の招待］［保留中のリクエスト］で見られます。役割の分担はロールごとに違います。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>操作</th>
@@ -137,30 +145,30 @@ it@company.com,owner,premium</code></p>
 </thead>
 <tbody>
 <tr>
-<td>保留中の招待の取り消し・再送</td>
-<td>管理者・所有者</td>
+<td data-label="操作">保留中の招待の取り消し・再送</td>
+<td data-label="できるロール">管理者・所有者</td>
 </tr>
 <tr>
-<td>参加リクエストの却下</td>
-<td>管理者・所有者</td>
+<td data-label="操作">参加リクエストの却下</td>
+<td data-label="できるロール">管理者・所有者</td>
 </tr>
 <tr>
-<td>参加リクエストの承認</td>
-<td>所有者だけ</td>
+<td data-label="操作">参加リクエストの承認</td>
+<td data-label="できるロール">所有者だけ</td>
 </tr>
 <tr>
-<td>保留中の招待のロールとシートタイプの変更</td>
-<td>所有者だけ</td>
+<td data-label="操作">保留中の招待のロールとシートタイプの変更</td>
+<td data-label="できるロール">所有者だけ</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>ヘルプの招待の手順に、招待リンクを発行する方法は載っていません（2026年10月9日時点）。メールを1通ずつ送らずに社員を集めたいなら、次の節のワークスペースの検出を使います。</p>
 <h2 id="s2">所有者・管理者・メンバーの違い</h2>
 <p>ヘルプの説明によると所有者は請求・ID管理・ワークスペース設定を含むすべての権限を持ち、管理者はユーザーの管理と日常的な管理作業を受け持ちます。メンバーはChatGPTを全部使えてGPTも作れますが、管理の権限はありません。分析閲覧者はワークスペースの情報と分析データを見る役です。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-business-admin/02_fig_roles.jpg" alt="ChatGPT Businessの4つのロールを並べた図。所有者は請求と席、管理者は招待と削除、メンバーは招待もできる、分析閲覧者は見るだけ" loading="lazy"><figcaption>4つのロールの受け持ち（OpenAIのヘルプセンターの権限表から作成、2026年10月9日時点）</figcaption></figure>
 
 <p>ヘルプの権限表を、管理の操作に絞って並べ直すと次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>操作</th>
@@ -172,111 +180,125 @@ it@company.com,owner,premium</code></p>
 </thead>
 <tbody>
 <tr>
-<td>ワークスペース分析を見る</td>
-<td>○</td>
-<td>×</td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">ワークスペース分析を見る</td>
+<td data-label="分析閲覧者">○</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">○</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>新しいメンバーを招待する</td>
-<td>×</td>
-<td>○</td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">新しいメンバーを招待する</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">○</td>
+<td data-label="管理者">○</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>管理者・所有者を招待する</td>
-<td>×</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
+<td data-label="操作">管理者・所有者を招待する</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">×</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>招待を取り消す</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">招待を取り消す</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">○</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>ユーザーを削除する</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">ユーザーを削除する</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">○</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>ロールを変える</td>
-<td>×</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
+<td data-label="操作">ロールを変える</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">×</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>シートタイプを切り替える</td>
-<td>×</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
+<td data-label="操作">シートタイプを切り替える</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">×</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>請求のプラン情報を見る</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">請求のプラン情報を見る</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">○</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>請求書を見る</td>
-<td>×</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
+<td data-label="操作">請求書を見る</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">×</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>支出管理を設定する</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">支出管理を設定する</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">○</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>IDとプロビジョニング（ドメイン・SSO）</td>
-<td>×</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
+<td data-label="操作">IDとプロビジョニング（ドメイン・SSO）</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">×</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>ワークスペース設定を見る・変える</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">ワークスペース設定を見る・変える</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">○</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>アプリを見る・管理する</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">アプリを見る・管理する</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">○</td>
+<td data-label="所有者">○</td>
 </tr>
 <tr>
-<td>GPT設定を見る・変える</td>
-<td>×</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
+<td data-label="操作">GPT設定を見る・変える</td>
+<td data-label="分析閲覧者">×</td>
+<td data-label="メンバー">×</td>
+<td data-label="管理者">×</td>
+<td data-label="所有者">○</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>チャットとGPTの作成、全ユーザーの一覧を見ることは4つのロールすべてでできます。<strong>ロールとシートタイプは別の設定</strong>で、ロールを変えても席の種類は変わりません。</p>
 <p>アプリ（旧コネクタ）をワークスペースで止める手順と、読み取りだけに絞る設定は<a href="/media/chatgpt-connectors-admin/">ChatGPTコネクタの管理者設定</a>にまとめました。</p>
 <h3 id="s2-1">メンバーも招待を送れる</h3>
 <p>表で見落としやすいのが、メンバーにも招待の権限があることです。ワークスペースに空きの席があるとき、メンバーが他の人を招待するのを今は制限できないと一般FAQに書かれています。<strong>送られた招待は管理者と所有者が［保留中の招待］から取り消せる</strong>ので、知らない名前が増えていないかの確認もこの画面です。</p>
 <h3 id="s2-2">所有者は2人以上にしておく</h3>
 <p>所有者が1人だけだとその人は抜けられず、請求や席を触れる人もほかにいません。残っている所有者が1人だけの状態は、ヘルプの退出の節でエラーの例の1つ目に挙がっていました。SSOのヘルプでも、唯一の所有者が離れる前に所有権を譲るよう案内されています。新しい所有者を招待できるのは所有者だけなので、最初の設定のうちに2人目を所有者にしておきます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">招待リンクの代わりになる参加の方法</h2>
 <p>会社のメールアドレスを使う社員なら、1人ずつ招待しなくても参加してもらえます。ヘルプではワークスペースの検出と呼ばれる仕組みです。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-business-admin/04_help_discovery_sp.jpg" alt="OpenAIのヘルプでChatGPT Businessにおけるワークスペースの検出の節をスマホで開いた画面。所有者がワークスペース設定のIDとアクセスから検出の可否と表示名と参加できるユーザーを管理できること、認証済みの会社メールアドレスで登録したユーザーが参加リクエストを送れ承認なしで参加させる設定もあることの2段落を赤枠で囲んでいる" loading="lazy"><figcaption>OpenAIのヘルプセンター（2026年10月9日、スマホ表示）</figcaption></figure>
@@ -320,7 +342,7 @@ it@company.com,owner,premium</code></p>
 <p>統合したときの個人のサブスクの扱いは、申し込んだ場所で分かれます。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-business-admin/08_help_subscription_sp.jpg" alt="OpenAIのヘルプで個人向けサブスクリプションの確認の節をスマホで開いた画面。Businessに統合すると有効な個人向けサブスクリプションは自動的に解約され未利用期間分が返金されるが、モバイルアプリストアで購入したものは除き、App StoreやGoogle Playで登録した場合は各ストアで解約するという段落を赤枠で囲んでいる" loading="lazy"><figcaption>OpenAIのヘルプセンター（2026年10月9日、スマホ表示）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>申し込んだ場所</th>
@@ -329,18 +351,18 @@ it@company.com,owner,premium</code></p>
 </thead>
 <tbody>
 <tr>
-<td>ウェブ（chatgpt.com）</td>
-<td>自動で解約され、使っていない期間の分が返金される</td>
+<td data-label="申し込んだ場所">ウェブ（chatgpt.com）</td>
+<td data-label="統合したとき">自動で解約され、使っていない期間の分が返金される</td>
 </tr>
 <tr>
-<td>App Store・Google Play</td>
-<td>自動では止まらない。各ストアで確かめて解約する</td>
+<td data-label="申し込んだ場所">App Store・Google Play</td>
+<td data-label="統合したとき">自動では止まらない。各ストアで確かめて解約する</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="s5-3">移るものと移らないもの</h3>
 <p>移行のヘルプに並ぶ項目を、移るものと移らないものに分けました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>種類</th>
@@ -349,31 +371,31 @@ it@company.com,owner,premium</code></p>
 </thead>
 <tbody>
 <tr>
-<td>会話とファイル</td>
-<td>対応する会話とファイルが移る</td>
+<td data-label="種類">会話とファイル</td>
+<td data-label="統合したとき">対応する会話とファイルが移る</td>
 </tr>
 <tr>
-<td>自分で作ったGPT・プロジェクト</td>
-<td>設定や指示ごと移る。GPTは非公開のまま</td>
+<td data-label="種類">自分で作ったGPT・プロジェクト</td>
+<td data-label="統合したとき">設定や指示ごと移る。GPTは非公開のまま</td>
 </tr>
 <tr>
-<td>他の人が作ったGPT・プロジェクト</td>
-<td>移らない</td>
+<td data-label="種類">他の人が作ったGPT・プロジェクト</td>
+<td data-label="統合したとき">移らない</td>
 </tr>
 <tr>
-<td>保存済みメモリ</td>
-<td>移せる。移行先のメモリは置き換えず足される</td>
+<td data-label="種類">保存済みメモリ</td>
+<td data-label="統合したとき">移せる。移行先のメモリは置き換えず足される</td>
 </tr>
 <tr>
-<td>カスタム指示などのパーソナライズ</td>
-<td>移る。移行先に設定があればそちらが優先</td>
+<td data-label="種類">カスタム指示などのパーソナライズ</td>
+<td data-label="統合したとき">移る。移行先に設定があればそちらが優先</td>
 </tr>
 <tr>
-<td>Sites・カスタムプラグイン・カスタムコネクタ</td>
-<td>移らない</td>
+<td data-label="種類">Sites・カスタムプラグイン・カスタムコネクタ</td>
+<td data-label="統合したとき">移らない</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>公開リンクで共有していたGPTやGPTストアに出していたGPTは、移行先で許可されているかを確かめて共有し直します。統合したあとも個人用ワークスペースのデータ自体は消えず、Businessが無効になったときは元の個人用ワークスペースを戻せます。ただしBusinessで続けた会話は個人用に写りません。</p>
 <p>Proを使っていた人がプレミアムシートに移る場合も手順は同じで、所有者にプレミアムの席を割り当ててもらいます。プレミアムはBusinessの席の種類で、個人のProの名前が変わったものではないと一般FAQで説明されています。</p>
 <h2 id="s6">メンバーを削除する手順と請求</h2>
@@ -390,7 +412,7 @@ it@company.com,owner,premium</code></p>
 <figure class="post-figure"><img src="/media/images/chatgpt-business-admin/06_fig_seats.jpg" alt="メンバーを削除してから料金が下がるまでを3つの箱で示した図。メンバーを削除、席は空いたまま、次の請求で減らすの順に矢印でつながっている" loading="lazy"><figcaption>削除と席数の削減は別の操作（OpenAIのヘルプセンターの記述から作成、2026年10月9日時点）</figcaption></figure>
 
 <p><a href="https://help.openai.com/ja-jp/articles/8792536">請求とシートの管理のヘルプ</a>の決まりは次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>操作</th>
@@ -399,23 +421,23 @@ it@company.com,owner,premium</code></p>
 </thead>
 <tbody>
 <tr>
-<td>メンバーを削除する</td>
-<td>席は空いて別の人に割り当てられるが、有料の席の数は変わらない</td>
+<td data-label="操作">メンバーを削除する</td>
+<td data-label="請求への反映">席は空いて別の人に割り当てられるが、有料の席の数は変わらない</td>
 </tr>
 <tr>
-<td>席数の削減を予約する</td>
-<td>次の請求期間の初めから下がる。使っている席の数より少なくはできない</td>
+<td data-label="操作">席数の削減を予約する</td>
+<td data-label="請求への反映">次の請求期間の初めから下がる。使っている席の数より少なくはできない</td>
 </tr>
 <tr>
-<td>席を増やす</td>
-<td>すぐに追加され、残りの期間の日割りがすぐ請求される</td>
+<td data-label="操作">席を増やす</td>
+<td data-label="請求への反映">すぐに追加され、残りの期間の日割りがすぐ請求される</td>
 </tr>
 <tr>
-<td>年払いで席を増やす</td>
-<td>追加した席はその年の契約期間の終わりまで続く</td>
+<td data-label="操作">年払いで席を増やす</td>
+<td data-label="請求への反映">追加した席はその年の契約期間の終わりまで続く</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>各請求期間の初めには、割り当ての有無に関係なく買ってある席すべてに料金がかかります。退職者が出たら、削除と同じ日に席数の削減も予約しておくと、空いた席の料金を払い続けずに済みます。入れ替わりですぐ次の人が来るなら、空いた席にそのまま割り当てれば追加の料金はかかりません。</p>
 <h3 id="s6-1">削除した人の会話はどうなるか</h3>
 <p><a href="https://help.openai.com/ja-jp/articles/8266418">メンバー削除時のデータ保持のヘルプ</a>では、Businessのワークスペースで削除した人のチャット・ファイル・キャンバスは無期限に保持され、同じ人を追加し直すと元に戻ります。**その人のプロジェクトとGPTは所有者に移りますが、中の会話とファイルは移らず、所有者からも見えません。**引き継ぎたい資料があるなら、削除の前に本人から共有してもらいます。</p>
@@ -424,7 +446,7 @@ it@company.com,owner,premium</code></p>
 <p>抜けたあとは招待し直されない限り、そのワークスペースのデータを開けなくなります。Businessの会話が個人用ワークスペースに移ることもありません。管理者が自分で抜けようとするとエラーになることがあり、その場合は所有者にロールをメンバーへ変えてもらうか、削除してもらう順番です。</p>
 <h2 id="s7">参加できないときの確認</h2>
 <p>招待したのに相手が入れないときは、原因はヘルプの記述からおおよそ次の4つです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>状況</th>
@@ -433,23 +455,23 @@ it@company.com,owner,premium</code></p>
 </thead>
 <tbody>
 <tr>
-<td>参加をリクエストする画面になる</td>
-<td>希望のシートタイプに空きの席があるか。所有者が席を用意して承認する</td>
+<td data-label="状況">参加をリクエストする画面になる</td>
+<td data-label="確かめること">希望のシートタイプに空きの席があるか。所有者が席を用意して承認する</td>
 </tr>
 <tr>
-<td>会社のワークスペースが見つからない</td>
-<td>招待が届いたメールアドレスでサインインしているか。同じ名前の別のワークスペースを選んでいないか</td>
+<td data-label="状況">会社のワークスペースが見つからない</td>
+<td data-label="確かめること">招待が届いたメールアドレスでサインインしているか。同じ名前の別のワークスペースを選んでいないか</td>
 </tr>
 <tr>
-<td>SSOでサインインできない</td>
-<td>招待したアドレスとIDプロバイダーが返すアドレスが同じか（例: user@company.com と user@subsidiary.com は別扱い）</td>
+<td data-label="状況">SSOでサインインできない</td>
+<td data-label="確かめること">招待したアドレスとIDプロバイダーが返すアドレスが同じか（例: user@company.com と user@subsidiary.com は別扱い）</td>
 </tr>
 <tr>
-<td>一度削除した人が入れない</td>
-<td>アカウントの自動作成では戻らない。所有者か管理者が招待し直す</td>
+<td data-label="状況">一度削除した人が入れない</td>
+<td data-label="確かめること">アカウントの自動作成では戻らない。所有者か管理者が招待し直す</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>トラブルシューティングのヘルプは、ワークスペースが見つからないとき、DNSやSSOの設定を変える前に招待とメンバーの状態を所有者か管理者に確かめるよう勧めています。</p>
 <h2 id="s8">よくある質問</h2>
 <h3 id="s8-1">ChatGPT Businessでメンバーを追加するには？</h3>
@@ -484,12 +506,13 @@ it@company.com,owner,premium</code></p>
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -498,9 +521,12 @@ it@company.com,owner,premium</code></p>
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">メンバーを招待する手順</a><a href="#s2">所有者・管理者・メンバーの違い</a><a href="#s3">招待リンクの代わりになる参加の方法</a><a href="#s4">招待された側の流れ</a><a href="#s5">個人のPlusから移るときの会話</a><a href="#s6">メンバーを削除する手順と請求</a><a href="#s7">参加できないときの確認</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -533,11 +559,25 @@ it@company.com,owner,premium</code></p>
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

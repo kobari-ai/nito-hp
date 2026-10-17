@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>LLMO対策にWordPressプラグイ…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.07.28</span>
         </div>
         <h1 class="post-title">LLMO対策にWordPressプラグインは必要？入れる前に確認すること</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WPプラグインは必要？"><defs><linearGradient id="ecg-30c06794" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-30c06794)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">課題解決</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">WPプラグインは必要？</text><line x1="212.4" y1="327.1" x2="987.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">入れる前に確認すること</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>llms.txtは設置しても構わないが、<strong>優先度は高くない</strong></li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -103,7 +111,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ただし、ここで押さえておきたいのは、<strong>これらはあくまで「情報の渡し方」を整える作業</strong>だということです。渡す中身そのものを良くしてくれるわけではありません。</p>
 <h3 id="s1-1">どんなプラグインがあるか</h3>
 <p>2026年時点で、LLMO専用をうたうプラグインはまだ多くありません。実際に使われているのは、次の3種類に分かれます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>種類</th>
@@ -113,27 +121,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>llms.txt特化</td>
-<td>Website LLMs.txt など</td>
-<td>llms.txtの生成と更新に絞った軽量なもの</td>
+<td data-label="種類">llms.txt特化</td>
+<td data-label="例">Website LLMs.txt など</td>
+<td data-label="何ができるか">llms.txtの生成と更新に絞った軽量なもの</td>
 </tr>
 <tr>
-<td>SEOプラグインの機能追加</td>
-<td>Yoast SEO、Rank Math、All in One SEO など</td>
-<td>主要なSEOプラグインがllms.txt生成やAI向けメタ情報の追加に対応し始めている</td>
+<td data-label="種類">SEOプラグインの機能追加</td>
+<td data-label="例">Yoast SEO、Rank Math、All in One SEO など</td>
+<td data-label="何ができるか">主要なSEOプラグインがllms.txt生成やAI向けメタ情報の追加に対応し始めている</td>
 </tr>
 <tr>
-<td>構造化データ系</td>
-<td>Schema系プラグイン全般</td>
-<td>JSON-LDの自動出力。LLMO専用ではないが基盤になる</td>
+<td data-label="種類">構造化データ系</td>
+<td data-label="例">Schema系プラグイン全般</td>
+<td data-label="何ができるか">JSON-LDの自動出力。LLMO専用ではないが基盤になる</td>
 </tr>
 <tr>
-<td>AIクローラー追跡系</td>
-<td>アクセスログ系プラグイン</td>
-<td>ChatGPTやClaudeなどのAIボットが自社サイトに来ているかをログで可視化する</td>
+<td data-label="種類">AIクローラー追跡系</td>
+<td data-label="例">アクセスログ系プラグイン</td>
+<td data-label="何ができるか">ChatGPTやClaudeなどのAIボットが自社サイトに来ているかをログで可視化する</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>AIクローラー追跡系は、ここまでの3種類とは目的が異なります。情報の渡し方を整える道具ではなく、<strong>AIが実際に巡回しているかを見るための道具</strong>です。引用されたかどうかまでは分かりませんが、そもそもクロールされていないなら渡し方を整えても意味がないので、状況を把握する用途では使えます。</p>
 <p>すでにYoastなどのSEOプラグインを入れているなら、<strong>新しくLLMO用のプラグインを追加する前に、手元のプラグインが対応していないか確認してください</strong>。同じ機能を持つプラグインを重ねると、構造化データが二重に出力されて不具合の原因になります。</p>
 <p>なお、llms.txtは静的ファイルを手で置くこともできます。記事数が少ないうちは、プラグインを入れるより手書きのファイルを1つ設置するほうが管理は楽です。</p>
@@ -205,12 +213,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>同じです。CMSが何であれ、本文がテキストとして読めるか、中身が具体的か、外部で語られているかが要点になります。プラグインという形がないだけで、確認すべき内容は変わりません。</p>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -219,9 +228,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">LLMO系プラグインは何をしてくれるのか</a><a href="#s2">入れるだけでは引用が増えない理由</a><a href="#s3">WordPressで先に手をつけるべきこと</a><a href="#s4">llms.txtはどうするか</a><a href="#s5">プラグインを入れる前に確認すること</a><a href="#s6">中身の改善まで伴走するなら</a><a href="#s7">まとめ</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -254,11 +266,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTコネク…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.17</span>
         </div>
         <h1 class="post-title">【2026年10月】ChatGPTコネクタの管理者設定・BusinessとEnterpriseの違い</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのコネクタの管理"><defs><linearGradient id="ecg-5d37aa96" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5d37aa96)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのコネクタの管理</text><line x1="136.4" y1="327.1" x2="1063.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">止める範囲ごとの設定と場所</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 </ul></div></div>
 <figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/01_fig_overview.jpg" alt="書類からチャットの画面までの間に4つの門が並ぶ図。門の名前は左からプラグインとアプリ、アクション、権限、ドメイン" loading="lazy"><figcaption>アプリが動くまでに通る4つの関門</figcaption></figure>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -110,7 +118,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s2">止めたい範囲で選ぶ設定</h2>
 <p>アプリまわりの設定は、何を止めたいかで使い分けます。管理機能のヘルプの説明を止めたい範囲ごとに並べると、次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>止めたいこと</th>
@@ -121,49 +129,63 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>そのアプリを社内で使わせない</td>
-<td>アプリの有効・無効</td>
-<td>管理コンソール［プラグイン］</td>
-<td>Business・Enterprise・Edu</td>
+<td data-label="止めたいこと">そのアプリを社内で使わせない</td>
+<td data-label="使う設定">アプリの有効・無効</td>
+<td data-label="場所">管理コンソール［プラグイン］</td>
+<td data-label="プラン">Business・Enterprise・Edu</td>
 </tr>
 <tr>
-<td>一部の部署だけに使わせる</td>
-<td>カスタムロールのアプリの選択</td>
-<td>ワークスペース設定［権限とロール］</td>
-<td>Enterprise・Edu</td>
+<td data-label="止めたいこと">一部の部署だけに使わせる</td>
+<td data-label="使う設定">カスタムロールのアプリの選択</td>
+<td data-label="場所">ワークスペース設定［権限とロール］</td>
+<td data-label="プラン">Enterprise・Edu</td>
 </tr>
 <tr>
-<td>書き込みをさせない</td>
-<td>アクション（読み取り・書き込み）</td>
-<td>プラグインの中のアプリの設定</td>
-<td>アプリによる</td>
+<td data-label="止めたいこと">書き込みをさせない</td>
+<td data-label="使う設定">アクション（読み取り・書き込み）</td>
+<td data-label="場所">プラグインの中のアプリの設定</td>
+<td data-label="プラン">アプリによる</td>
 </tr>
 <tr>
-<td>実行の前に毎回確かめさせる</td>
-<td>権限（4段階）</td>
-<td>ワークスペース設定［一般］とアプリごと</td>
-<td>Business・Enterprise・Edu</td>
+<td data-label="止めたいこと">実行の前に毎回確かめさせる</td>
+<td data-label="使う設定">権限（4段階）</td>
+<td data-label="場所">ワークスペース設定［一般］とアプリごと</td>
+<td data-label="プラン">Business・Enterprise・Edu</td>
 </tr>
 <tr>
-<td>個人のメールのアカウントでつながせない</td>
-<td>ドメインを管理</td>
-<td>プラグインの中のアプリ</td>
-<td>ヘルプに限定の記載なし</td>
+<td data-label="止めたいこと">個人のメールのアカウントでつながせない</td>
+<td data-label="使う設定">ドメインを管理</td>
+<td data-label="場所">プラグインの中のアプリ</td>
+<td data-label="プラン">ヘルプに限定の記載なし</td>
 </tr>
 <tr>
-<td>会社のアカウントを個人のChatGPTでつながせない</td>
-<td>検証済みドメインによる制限</td>
-<td>OpenAIサポートに依頼</td>
-<td>Enterprise</td>
+<td data-label="止めたいこと">会社のアカウントを個人のChatGPTでつながせない</td>
+<td data-label="使う設定">検証済みドメインによる制限</td>
+<td data-label="場所">OpenAIサポートに依頼</td>
+<td data-label="プラン">Enterprise</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**どれか1つを切れば全部が止まる作りではありません。**プラグインのインストール・アプリの有効化・ロール・アクション・権限は別々に評価され、GoogleやMicrosoftの側の承認もまた別の関門です。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/03_fig_choose.png" alt="止めたいこと6つと使う設定の対応。社内で使わせないはアプリの有効と無効、一部の部署だけはカスタムロール、書き込みはアクション、毎回の確認は権限、個人のメールのアカウントはドメインを管理、個人のChatGPTからの接続は検証済みドメインによる制限" loading="lazy"><figcaption>止めたいことと使う設定の対応</figcaption></figure>
 
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">BusinessとEnterpriseの既定の違い</h2>
 <p>同じ管理コンソールでも、最初の状態と変えられる範囲はプランで違います。管理機能のヘルプにあるプランごとの既定を並べました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>項目</th>
@@ -173,32 +195,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>アプリの最初の状態</td>
-<td>有効</td>
-<td>作成時に所定のアプリだけ有効</td>
+<td data-label="項目">アプリの最初の状態</td>
+<td data-label="Business">有効</td>
+<td data-label="Enterprise・Edu">作成時に所定のアプリだけ有効</td>
 </tr>
 <tr>
-<td>新しく出たプラグインとアプリ</td>
-<td>ヘルプに記載なし</td>
-<td>一般に無効</td>
+<td data-label="項目">新しく出たプラグインとアプリ</td>
+<td data-label="Business">ヘルプに記載なし</td>
+<td data-label="Enterprise・Edu">一般に無効</td>
 </tr>
 <tr>
-<td>ロールごとのアプリの許可</td>
-<td>なし（全体のオンとオフ）</td>
-<td>あり（RBAC）</td>
+<td data-label="項目">ロールごとのアプリの許可</td>
+<td data-label="Business">なし（全体のオンとオフ）</td>
+<td data-label="Enterprise・Edu">あり（RBAC）</td>
 </tr>
 <tr>
-<td>Googleドキュメント・スプレッドシート・スライドの操作</td>
-<td>最初からオン</td>
-<td>管理者が有効にするまでオフ</td>
+<td data-label="項目">Googleドキュメント・スプレッドシート・スライドの操作</td>
+<td data-label="Business">最初からオン</td>
+<td data-label="Enterprise・Edu">管理者が有効にするまでオフ</td>
 </tr>
 <tr>
-<td>会社ドメインのアカウントの接続先の制限</td>
-<td>ヘルプの対象外</td>
-<td>サポートに依頼して有効化</td>
+<td data-label="項目">会社ドメインのアカウントの接続先の制限</td>
+<td data-label="Business">ヘルプの対象外</td>
+<td data-label="Enterprise・Edu">サポートに依頼して有効化</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**Businessで気をつけたいのは、アプリが有効な状態から始まることです。**社員は管理者が何もしなくても、GoogleドライブやSlackを自分のアカウントでつなげます。止めたいアプリがあるなら、社員に使わせ始める前に管理者が無効にしておきます。Enterpriseは反対に、新しいプラグインやアプリが出ても、一般に管理者が有効にするまで使えません。</p>
 <h2 id="s4">ワークスペース全体で止める手順</h2>
 <p>Businessで管理者が決められるのは、アプリをワークスペースで使えるかどうかです。ヘルプの手順は次のとおりです。</p>
@@ -234,7 +256,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>**［新しいアクションを無効にする］が効くのは、選んだあとに増えたアクションだけです。**すでに有効なアクションは止まらないため、今ある書き込みのアクションは1つずつ外します。アクションを選ぶ項目そのものが無いアプリもあります。</p>
 <h3 id="s6-2">権限で確認のタイミングを決める</h3>
 <p>権限はChatGPTがアプリを使う前にいつ利用者に確認を求めるかの設定で、4段階あります。<a href="https://help.openai.com/ja-jp/articles/20001495">アプリの権限管理のヘルプ</a>の説明は次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>権限</th>
@@ -243,23 +265,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>常に確認</td>
-<td>読み取りの前も変更の前も確認する</td>
+<td data-label="権限">常に確認</td>
+<td data-label="ヘルプの説明">読み取りの前も変更の前も確認する</td>
 </tr>
 <tr>
-<td>読み取りアクションを許可</td>
-<td>読み取りは確認なし、変更の前は確認する</td>
+<td data-label="権限">読み取りアクションを許可</td>
+<td data-label="ヘルプの説明">読み取りは確認なし、変更の前は確認する</td>
 </tr>
 <tr>
-<td>低リスクのアクションを許可</td>
-<td>低リスクは自動で承認、高リスクは確認か拒否</td>
+<td data-label="権限">低リスクのアクションを許可</td>
+<td data-label="ヘルプの説明">低リスクは自動で承認、高リスクは確認か拒否</td>
 </tr>
 <tr>
-<td>すべてのアクションを許可</td>
-<td>対応するアクションを追加の確認なしで実行</td>
+<td data-label="権限">すべてのアクションを許可</td>
+<td data-label="ヘルプの説明">対応するアクションを追加の確認なしで実行</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>管理機能のヘルプによると、ワークスペース全体の既定を選ぶ場所は［ワークスペース設定］＞［一般］＞［設定］の［プラグイン権限］です。アプリごとに変えるなら管理コンソールの［プラグイン］でアプリを含むプラグインを開き、アプリの［権限］から選びます。**ワークスペース全体の選択肢に［すべてのアクションを許可］は出てきません。**リスクが高いため、出てくるのは個々のアプリの設定だけです。ただし既存のポリシー設定によっては異なる場合がある、とヘルプは書いています。</p>
 <p>追加の確認や拒否の対象になる例として、権限管理のヘルプはメールやメッセージの送信・ファイルの削除・共有やセキュリティの設定の変更・購入を挙げています。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/04_help_permissions.jpg" alt="アプリの権限管理のヘルプにある権限の選択肢。常に確認、読み取りアクションを許可、低リスクのアクションを許可、すべてのアクションを許可の4つ" loading="lazy"><figcaption>権限の4つの選択肢（ChatGPT でのアプリの権限管理）</figcaption></figure>
@@ -305,7 +327,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Googleドライブのアプリは、ドキュメント・スプレッドシート・スライドの操作もまとめて受け持つようになりました。管理機能のヘルプによると、これらの操作を有効にしたあと<strong>Google Workspaceの管理者がドライブの新しいスコープを承認し直す必要がある場合があります</strong>。社員がつなげないときに確かめる場所として挙がっているのも、Google側のスコープの承認です。</p>
 <h2 id="s9">管理者によって無効化と出たとき</h2>
 <p>社員から「プラグインに管理者によって無効化と出る」と言われたときに見る順番も、<a href="https://help.openai.com/ja-jp/articles/20001497">アプリのトラブルシューティング</a>にあります。画面に出る文言ごとに意味が違います。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>画面の文言</th>
@@ -314,23 +336,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>管理者によって無効化</td>
-<td>ワークスペース・ロール・中のアプリのどれか</td>
+<td data-label="画面の文言">管理者によって無効化</td>
+<td data-label="止まっている場所・対処">ワークスペース・ロール・中のアプリのどれか</td>
 </tr>
 <tr>
-<td>管理者の承認が必要です</td>
-<td>管理者がプラグインと中のアプリを確かめていない</td>
+<td data-label="画面の文言">管理者の承認が必要です</td>
+<td data-label="止まっている場所・対処">管理者がプラグインと中のアプリを確かめていない</td>
 </tr>
 <tr>
-<td>ワークスペースでの設定が必要です</td>
-<td>アプリの設定が済んでいない</td>
+<td data-label="画面の文言">ワークスペースでの設定が必要です</td>
+<td data-label="止まっている場所・対処">アプリの設定が済んでいない</td>
 </tr>
 <tr>
-<td>ワークスペースが必要です</td>
-<td>会社などのワークスペースに切り替えて使う</td>
+<td data-label="画面の文言">ワークスペースが必要です</td>
+<td data-label="止まっている場所・対処">会社などのワークスペースに切り替えて使う</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**［管理者の承認が必要です］は、依頼がもう送られたという意味ではありません。**依頼が送られたとは限らないため、社内の連絡でも頼んでもらいます。</p>
 <p>管理者が先に確かめるのは意図したワークスペースとプラグインで変えたかと、変えたのがワークスペースの既定かカスタムロールかです。Enterpriseなら、その人に付いている全部のロールも見ます。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-connectors-admin/07_help_disabled.jpg" alt="トラブルシューティングのヘルプの節。アクセスが制限されていてもプラグインはディレクトリに表示されることがあり、表示されていても中のアプリを使えるとは限らない" loading="lazy"><figcaption>プラグインに管理者によって無効化と出る場合（OpenAIヘルプ）</figcaption></figure>
@@ -372,12 +394,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -386,9 +409,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">コネクタとアプリとプラグイン</a><a href="#s2">止めたい範囲で選ぶ設定</a><a href="#s3">BusinessとEnterpriseの既定の違い</a><a href="#s4">ワークスペース全体で止める手順</a><a href="#s5">ロールごとに使えるアプリを分ける</a><a href="#s6">読み取りだけに絞る設定</a><a href="#s7">会社のアカウントのつなぎ先を絞る</a><a href="#s8">GoogleとMicrosoftの側の承認</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -421,11 +447,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

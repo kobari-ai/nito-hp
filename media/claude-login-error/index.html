@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claudeにログイン…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.26</span>
         </div>
         <h1 class="post-title">【2026年9月】Claudeにログインできない原因と対処を解説｜メールが届かない・Google・Apple・電話番号</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeにログインできない"><defs><linearGradient id="ecg-a9af7a84" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a9af7a84)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeにログインできない</text><line x1="121.2" y1="327.1" x2="1078.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">メール・Google・Apple・電話番号</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>新しく作るときは<strong>電話番号の確認</strong>が必要。同じ番号で確認できるアカウントは3つまで</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -93,7 +101,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">ログインできない5つの原因</h2>
 <p>Anthropicのヘルプのトラブルシューティングとよくある質問、「<a href="https://support.claude.com/ja/articles/8287232">電話番号を確認する</a>」のヘルプを合わせると、原因はおおむね5つに分かれます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>原因</th>
@@ -103,38 +111,52 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ログインメールが届かない</td>
-<td>件名「Claude.aiへのセキュアログインリンク」のメールが来ない</td>
-<td>迷惑メールと隔離を確認し、数分後に再度試す</td>
+<td data-label="原因">ログインメールが届かない</td>
+<td data-label="起きること">件名「Claude.aiへのセキュアログインリンク」のメールが来ない</td>
+<td data-label="対処">迷惑メールと隔離を確認し、数分後に再度試す</td>
 </tr>
 <tr>
-<td>別の端末でリンクを開いた</td>
-<td>ログインせずに検証コードが出る</td>
-<td>コードを元の端末に入れる</td>
+<td data-label="原因">別の端末でリンクを開いた</td>
+<td data-label="起きること">ログインせずに検証コードが出る</td>
+<td data-label="対処">コードを元の端末に入れる</td>
 </tr>
 <tr>
-<td>登録と違うメールアドレスで入った</td>
-<td>別のアカウントに入る、または新しく作る画面になる</td>
-<td>いつもログインに使っているメールアドレスで入り直す</td>
+<td data-label="原因">登録と違うメールアドレスで入った</td>
+<td data-label="起きること">別のアカウントに入る、または新しく作る画面になる</td>
+<td data-label="対処">いつもログインに使っているメールアドレスで入り直す</td>
 </tr>
 <tr>
-<td>Googleの接続の問題</td>
-<td>Googleで続けるが進まない</td>
-<td>Googleアカウントの接続を外してやり直す</td>
+<td data-label="原因">Googleの接続の問題</td>
+<td data-label="起きること">Googleで続けるが進まない</td>
+<td data-label="対処">Googleアカウントの接続を外してやり直す</td>
 </tr>
 <tr>
-<td>電話番号の確認</td>
-<td>確認コードが来ない、番号が使えない</td>
-<td>別の番号を使う、時間をおいて再度試す</td>
+<td data-label="原因">電話番号の確認</td>
+<td data-label="起きること">確認コードが来ない、番号が使えない</td>
+<td data-label="対処">別の番号を使う、時間をおいて再度試す</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**原因の見当がつかないときは、先に<a href="https://status.claude.com/">Claudeのステータスページ</a>で障害が出ていないかを見てください。**ヘルプも、システム全体の障害が出ているなら、ほかの対処を試す前に復旧を待つよう勧めています。</p>
 <h2 id="s2">ログイン画面の3つの入り口</h2>
 <p><a href="https://claude.ai/login">Claudeのログイン画面</a>を開くと、入り口が3つ並びます。ヘルプの本文は「Googleで続行」と「メールで続行」の2つを案内していますが、2026年9月26日のスマホのブラウザでは「Appleで続ける」も表示されていました。ヘルプのよくある質問には、Appleで登録した場合の手順があります。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/claude-login-error/cle_01_sp_login.jpg" alt="スマホのブラウザで開いたClaudeのログイン画面。1のGoogleで続ける、2のAppleで続ける、メールアドレスの入力欄の下の3のメールで続けるが赤枠で囲まれている" loading="lazy"><figcaption>ログイン画面（2026年9月26日、スマホ）。1がGoogle、2がApple、3がメール</figcaption></figure>
 
 <p>ヘルプの案内どおり、**別の端末でも、いつもログインに使っているのと同じメールアドレスで入るのが確実です。**Appleの非公開メールで登録したなら、そのアドレスは @privaterelay.appleid.com で終わるものです。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">ログインメールが届かないとき</h2>
 <p>メールで続けると、件名「Claude.aiへのセキュアログインリンク」のメールが届きます。届かないときにヘルプが挙げている確認は次の4つです。</p>
 <ol>
@@ -165,7 +187,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ログインのリンクは転送用のアドレスあてに送られ、Apple IDのメールに届きます。ヘルプによると、iPhoneのClaudeアプリで右上のイニシャルを押し、設定の下に表示されるメールアドレスが、その転送用のアドレスです。</p>
 <h2 id="s7">電話番号の確認で止まるとき</h2>
 <p>Claudeのアカウントを初めて作るときは、電話番号にテキストメッセージで届く6桁のコードを入れる確認があります。<a href="https://support.claude.com/ja/articles/8287232">電話番号を確認する</a>のヘルプでは、この確認はすべての新しい利用者に必要で、飛ばす方法は無いとされています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>起きること</th>
@@ -174,23 +196,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>コードが届かない</td>
-<td>数分待つ。5分以上なら「もう一度試す」で番号を入れ直す</td>
+<td data-label="起きること">コードが届かない</td>
+<td data-label="原因と対処">数分待つ。5分以上なら「もう一度試す」で番号を入れ直す</td>
 </tr>
 <tr>
-<td>番号が使えない</td>
-<td>VoIPの番号、Google Voice、アプリで作った番号、固定電話は使えない</td>
+<td data-label="起きること">番号が使えない</td>
+<td data-label="原因と対処">VoIPの番号、Google Voice、アプリで作った番号、固定電話は使えない</td>
 </tr>
 <tr>
-<td>番号が何度も使われたと出る</td>
-<td>その番号で確認済みのアカウントがすでに3つある。別の番号を使うか、確認済みのアカウントからサポートに連絡して番号のひも付けを外してもらう</td>
+<td data-label="起きること">番号が何度も使われたと出る</td>
+<td data-label="原因と対処">その番号で確認済みのアカウントがすでに3つある。別の番号を使うか、確認済みのアカウントからサポートに連絡して番号のひも付けを外してもらう</td>
 </tr>
 <tr>
-<td>コードが効かない</td>
-<td>最新のコードを入れる。古いコードは使えない</td>
+<td data-label="起きること">コードが効かない</td>
+<td data-label="原因と対処">最新のコードを入れる。古いコードは使えない</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**確認に使った電話番号はあとから変えられません。**長く使う番号で確認してください。</p>
 <h2 id="s8">よくある質問</h2>
 <h3 id="s8-1">Claudeのパスワードを忘れたときはどうしますか？</h3>
@@ -218,12 +240,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -232,9 +255,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">ログインできない5つの原因</a><a href="#s2">ログイン画面の3つの入り口</a><a href="#s3">ログインメールが届かないとき</a><a href="#s4">別の端末でリンクを開いたとき</a><a href="#s5">Googleで続けられないとき</a><a href="#s6">Appleの非公開メールで登録したとき</a><a href="#s7">電話番号の確認で止まるとき</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -267,11 +293,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

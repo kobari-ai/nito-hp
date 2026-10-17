@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTが途中…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.13</span>
         </div>
         <h1 class="post-title">【2026年10月】ChatGPTが途中で止まる原因と続きを出す方法｜長文・続けるボタン・考え中</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTが途中で止まるとき"><defs><linearGradient id="ecg-ca54df90" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ca54df90)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="86.4" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTが途中</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">で止まるとき</text><line x1="326.4" y1="378.0" x2="873.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">長文・続けるボタン・考え中・エラー</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li>考え中のまま進まないときは、<strong>ヘルプの順番どおり30〜60秒待ってから、生成を停止して再生成</strong>する</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s2"><span class="fork__q">止まった回答の続きを今すぐ出したい</span><span class="fork__go">2章を読む</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -97,9 +105,9 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">止まり方で分かれる4つの症状</h2>
 <p>文字が出ている途中で止まったのか、何も出ないまま考え中が続いているのかで、試すことは変わります。まず自分の画面がどれに近いかを見てください。</p>
-<figure class="post-figure"><img src="/media/images/chatgpt-stops-midway/csm_00_fig_types.png" alt="ChatGPTが止まる4つの症状の図。長い文章が切れる、続けるボタンがない、考え中のまま止まる、エラーで止まる、の4枚のカードが並ぶ" loading="lazy"><figcaption>ChatGPTが途中で止まるときの4つの症状</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/chatgpt-stops-midway/csm_00_fig_types_v.png" alt="ChatGPTが止まる4つの症状の図。長い文章が切れる、続けるボタンがない、考え中のまま止まる、エラーで止まる、の4つを縦に並べ、それぞれ画面で起きていることを添えている" loading="lazy"><figcaption>ChatGPTが途中で止まるときの4つの症状</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>症状</th>
@@ -109,27 +117,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>長い文章が切れる</td>
-<td>文の途中や区切りのいい所で回答が終わる</td>
-<td>同じチャットで「続けて」と送る</td>
+<td data-label="症状">長い文章が切れる</td>
+<td data-label="画面で起きていること">文の途中や区切りのいい所で回答が終わる</td>
+<td data-label="最初に試すこと">同じチャットで「続けて」と送る</td>
 </tr>
 <tr>
-<td>続けるボタンがない</td>
-<td>解説記事にあるボタンが見当たらない</td>
-<td>ボタンを探さずに「続けて」と送る</td>
+<td data-label="症状">続けるボタンがない</td>
+<td data-label="画面で起きていること">解説記事にあるボタンが見当たらない</td>
+<td data-label="最初に試すこと">ボタンを探さずに「続けて」と送る</td>
 </tr>
 <tr>
-<td>考え中のまま止まる</td>
-<td>Thinking…やGenerating…の表示のまま進まない</td>
-<td>30〜60秒待ち、生成を停止して再生成</td>
+<td data-label="症状">考え中のまま止まる</td>
+<td data-label="画面で起きていること">Thinking…やGenerating…の表示のまま進まない</td>
+<td data-label="最初に試すこと">30〜60秒待ち、生成を停止して再生成</td>
 </tr>
 <tr>
-<td>エラーで止まる</td>
-<td>回答の途中でエラーの文言が出る</td>
-<td>文言を読み、再生成か再読み込み</td>
+<td data-label="症状">エラーで止まる</td>
+<td data-label="画面で起きていること">回答の途中でエラーの文言が出る</td>
+<td data-label="最初に試すこと">文言を読み、再生成か再読み込み</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s2">長い文章が途中で切れるとき</h2>
 <p>OpenAIのヘルプには、ChatGPTが1回の回答で書ける長さの数字は載っていません。手がかりになるのは<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">2023年5月12日のリリースノート</a>で、上限のトークン数を超えて続きを生成できるようになったと書かれています。<strong>2023年の時点で、1回の回答に長さの上限があったことがこの記述から分かります。</strong> 今の上限の数字や、何字で切れるかは公開されていません。</p>
 <p>試したときは47都道府県を1県600字ずつ（合わせて約2万8,000字）頼んだ1回目の回答が、群馬県まで書いたところで終わりました。最後の行は「次の範囲は11. 埼玉県から20. 長野県までです」で、文が途中で切れたのではなく、ChatGPTが自分で区切りを入れて止めていました。3回目は福島県までの7道県（約4,600字）で「第1部は以上です」と区切り、2回目は47都道府県を1回で書き切っています。<strong>同じ頼み方でも、区切るかどうかと区切る位置は毎回違いました。</strong></p>
@@ -143,6 +151,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s2-2">最初から分けて頼む</h3>
 <p>長い文章が要るなら、最初から1回の範囲を決めて頼む手もあります（この頼み方は試していません）。「北海道から群馬県までの10道県を、1県600字で」のように範囲を書き、終わったら次の範囲を頼みます。どこまで書き終えたかを自分で追えるので、さっきのような書き直しにも気づきやすくなります。</p>
 <p>報告書や小説なら章ごと、コードならファイルや関数ごとが区切りの目安です。前の回答の内容を引き継がせたいときは、同じチャットのまま次を頼みます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を使っている方へ</p>
+<p class="mcta__ttl">長い資料の要約や議事録の整理を毎回分けて頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">続けるボタンが出ないとき</h2>
 <p>解説記事に「Continue generating」として出てくるボタンのもとは、2023年5月12日のリリースノートの「続きを生成できるようになった」という項目です。ボタンという言葉は無く、上限を超えて続きを生成でき、続きの1回もメッセージの回数に数えると書かれていました。</p>
 <p>その後、<a href="https://community.openai.com/t/where-is-the-button-continue-generation/691846">OpenAIのコミュニティ</a>にはボタンが消えたという投稿が続きます。2024年3月20日の投稿は「昨日はあったボタンが今日は無い」というもので、戻ったという返信が付いたのは約1週間後の3月28日と29日でした。ボタンは上限で切れたときだけ出るという返信も同じスレッドに付いていました。2024年9月には<a href="https://community.openai.com/t/continue-generating-button-no-longer-working/954559">長いコードでボタンが1回しか効かない</a>という報告も出ています。リリースノートを「continue generating」で探しても出てくるのは2023年5月の項目だけで、外したという告知は見つかりませんでした。</p>
@@ -170,7 +192,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>同じヘルプは、会話が長いときややり取りの回数が多いときにも新しいチャットを始めるよう書いています。**同じ会話だけで止まるなら、新しいチャットで送り直すのが先です。**それぞれの手順の詳しい説明は<a href="/media/chatgpt-error-messages/">ChatGPTのエラーメッセージ一覧</a>に、遅さそのものの原因は<a href="/media/chatgpt-slow/">ChatGPTが重い・遅いとき</a>にまとめています。</p>
 <h2 id="s5">エラーで止まるとき</h2>
 <p>回答の途中でエラーの文言が出たら、文言で見分けます。ヘルプに載っている文言のほかに、コミュニティで報告が続いている文言もありました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>文言</th>
@@ -180,32 +202,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>応答の生成中にエラーが発生しました</td>
-<td>ヘルプ</td>
-<td>再生成を押す。続くならブラウザか端末を再起動</td>
+<td data-label="文言">応答の生成中にエラーが発生しました</td>
+<td data-label="載っている所">ヘルプ</td>
+<td data-label="試すこと">再生成を押す。続くならブラウザか端末を再起動</td>
 </tr>
 <tr>
-<td>接続が途切れました。回答全体の受信を待っています（検索の言い方。画面は未確認）</td>
-<td>コミュニティの報告（英語の表示）</td>
-<td>回答をコピーしてから再読み込み</td>
+<td data-label="文言">接続が途切れました。回答全体の受信を待っています（検索の言い方。画面は未確認）</td>
+<td data-label="載っている所">コミュニティの報告（英語の表示）</td>
+<td data-label="試すこと">回答をコピーしてから再読み込み</td>
 </tr>
 <tr>
-<td>Error in message stream</td>
-<td>コミュニティの報告</td>
-<td>ヘルプの止まったときの手順を上から試す</td>
+<td data-label="文言">Error in message stream</td>
+<td data-label="載っている所">コミュニティの報告</td>
+<td data-label="試すこと">ヘルプの止まったときの手順を上から試す</td>
 </tr>
 <tr>
-<td>ネットワークエラーが発生しました</td>
-<td>ヘルプ</td>
-<td>VPNやプロキシを切り、別の回線で試す</td>
+<td data-label="文言">ネットワークエラーが発生しました</td>
+<td data-label="載っている所">ヘルプ</td>
+<td data-label="試すこと">VPNやプロキシを切り、別の回線で試す</td>
 </tr>
 <tr>
-<td>上限に達しました</td>
-<td>モデルのヘルプ（リセットの時刻）</td>
-<td>リセットの時刻まで待つ</td>
+<td data-label="文言">上限に達しました</td>
+<td data-label="載っている所">モデルのヘルプ（リセットの時刻）</td>
+<td data-label="試すこと">リセットの時刻まで待つ</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>ネットワーク構成の問題やClientErrorの直し方は<a href="/media/chatgpt-network-error/">ChatGPTのネットワーク構成の問題とClientError</a>、上限の種類とリセットの時刻は<a href="/media/chatgpt-limit-reached/">ChatGPTで上限に達したとき</a>で詳しく扱っています。</p>
 <h3 id="s5-1">接続が途切れたと出たとき</h3>
 <p>「接続が途切れました。回答全体の受信を待っています」は検索で探されている言い方で、日本語の画面では確かめていません。英語の画面の「Connection interrupted. Waiting for the complete answer」はコミュニティで報告されている表示で、ヘルプには載っていません。2026年6月の<a href="https://community.openai.com/t/switch-for-gpt-image-gen-in-long-context-prompts-lead-to-connection-interrupted-waiting-for-the-complete-answer/1385186">コミュニティの投稿</a>には、画像の生成で、この表示か「Image generation failed」が3割ほど出たという報告もあります。5.5 Instantで画像を作ったときだけ出るという返信も付いていました。同じ投稿者はページを読み込み直すと「Too many requests」と出てその会話が失われたとも書いています。</p>
@@ -245,12 +267,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -259,9 +282,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">止まり方で分かれる4つの症状</a><a href="#s2">長い文章が途中で切れるとき</a><a href="#s3">続けるボタンが出ないとき</a><a href="#s4">考え中のまま止まるとき</a><a href="#s5">エラーで止まるとき</a><a href="#s6">よくある質問</a><a href="#s7">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -294,11 +320,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

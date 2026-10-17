@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTに学習…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.08</span>
         </div>
         <h1 class="post-title">【2026年10月】ChatGPTに学習させない設定方法｜スマホ・過去のデータ・一時チャット</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTに学習させない設定"><defs><linearGradient id="ecg-4986a664" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4986a664)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="86.4" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTに学習</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">させない設定</text><line x1="326.4" y1="378.0" x2="873.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">スマホ・過去のデータ・一時チャット</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -74,6 +76,12 @@
 </ul></div></div>
 <figure class="post-figure"><img src="/media/images/chatgpt-training-off/01_fig_three.jpg" alt="ChatGPTに学習させない3つの方法を並べた図。設定をオフ、一時チャット、プライバシーポータル" loading="lazy"><figcaption>OpenAIのヘルプセンターの記述から作成（2026年10月8日時点）</figcaption></figure>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -103,7 +111,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">学習させない3つの方法</h2>
 <p>ヘルプが挙げている方法は3つで、効く範囲が違います。アカウント全体で止めるなら設定かポータル、その場の1回だけなら一時チャットです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>方法</th>
@@ -114,25 +122,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>設定をオフ</td>
-<td>オフにした後の新しい会話すべて</td>
-<td>残る</td>
-<td>ふだんの使い方のまま止めたい</td>
+<td data-label="方法">設定をオフ</td>
+<td data-label="効く範囲">オフにした後の新しい会話すべて</td>
+<td data-label="履歴">残る</td>
+<td data-label="向く場面">ふだんの使い方のまま止めたい</td>
 </tr>
 <tr>
-<td>一時チャット</td>
-<td>その会話だけ</td>
-<td>残らない（保存しなければ）</td>
-<td>1回だけ残したくない相談</td>
+<td data-label="方法">一時チャット</td>
+<td data-label="効く範囲">その会話だけ</td>
+<td data-label="履歴">残らない（保存しなければ）</td>
+<td data-label="向く場面">1回だけ残したくない相談</td>
 </tr>
 <tr>
-<td>プライバシーポータル</td>
-<td>アカウント全体</td>
-<td>残る</td>
-<td>設定画面が見つからない・申請の記録を残したい</td>
+<td data-label="方法">プライバシーポータル</td>
+<td data-label="効く範囲">アカウント全体</td>
+<td data-label="履歴">残る</td>
+<td data-label="向く場面">設定画面が見つからない・申請の記録を残したい</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**設定とポータルはどちらか一方で足ります。**ヘルプにはChatGPTの会話とCodexのタスクについて「どちらのオプションでも十分です。両方を行う必要はありません」とあります。個人向けのプランでCodexを使っている人は、同じ設定がCodexのタスクにも効きます。</p>
 <h2 id="s2">設定をオフにする手順</h2>
 <p><a href="https://help.openai.com/ja-jp/articles/7730893-data-controls-faq">ChatGPTのデータ管理</a>のヘルプに載っている手順は、ウェブ・iPhoneとAndroid・ログインしていないときの3通りです。ログインしていれば、どの端末でオフにしても設定はアカウント全体に効きます。</p>
@@ -155,11 +163,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-training-off/03_logout_dc_sp.jpg" alt="ログインしていないChatGPTをスマホで開き、設定のデータコントロールを表示した画面。すべての人のためにモデルを改善するの行とスイッチを赤枠で囲んでいる。下にあなたのコンテンツをモデルの学習のために使用することを許可してくださいという説明がある" loading="lazy"><figcaption>chatgpt.com のログインしていない画面（2026年10月8日、スマホ表示）</figcaption></figure>
 
 <p>ログインしていない画面の［データコントロール］には、学習のスイッチの下に広告とマーケティングのスイッチも並んでいました。**広告の設定は学習の設定とは別の項目です。**学習をオフにしても広告の設定は変わりません。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">オフにして変わること・変わらないこと</h2>
 <p>設定をオフにして変わるのは、これから始める会話が学習に使われなくなることだけです。履歴・メモリ・それまでの会話の扱いは、それぞれ別の操作で決まります。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-training-off/02_fig_unchanged.jpg" alt="学習の設定をオフにしても変わらないことを3つ並べた図。過去のチャットは残る、メモリは別の設定、評価を送った会話は例外" loading="lazy"><figcaption>OpenAIのヘルプセンターの記述から作成（2026年10月8日時点）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>対象</th>
@@ -168,35 +190,35 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>オフにした後の新しい会話</td>
-<td>学習に使われない</td>
+<td data-label="対象">オフにした後の新しい会話</td>
+<td data-label="オフにしたとき">学習に使われない</td>
 </tr>
 <tr>
-<td>保存済みのチャット</td>
-<td>削除も非表示にもならない</td>
+<td data-label="対象">保存済みのチャット</td>
+<td data-label="オフにしたとき">削除も非表示にもならない</td>
 </tr>
 <tr>
-<td>アーカイブ済みのチャット</td>
-<td>アーカイブのまま。アーカイブしても学習の扱いは変わらない</td>
+<td data-label="対象">アーカイブ済みのチャット</td>
+<td data-label="オフにしたとき">アーカイブのまま。アーカイブしても学習の扱いは変わらない</td>
 </tr>
 <tr>
-<td>プロジェクトのチャット</td>
-<td>それぞれのプロジェクトに残る</td>
+<td data-label="対象">プロジェクトのチャット</td>
+<td data-label="オフにしたとき">それぞれのプロジェクトに残る</td>
 </tr>
 <tr>
-<td>メモリ</td>
-<td>別の設定。オフにしても消えない</td>
+<td data-label="対象">メモリ</td>
+<td data-label="オフにしたとき">別の設定。オフにしても消えない</td>
 </tr>
 <tr>
-<td>評価（いいね・よくないね）を送った会話</td>
-<td>会話全体が学習に使われることがある</td>
+<td data-label="対象">評価（いいね・よくないね）を送った会話</td>
+<td data-label="オフにしたとき">会話全体が学習に使われることがある</td>
 </tr>
 <tr>
-<td>OpenAIサポートとの会話</td>
-<td>オンのときは改善に使われることがある</td>
+<td data-label="対象">OpenAIサポートとの会話</td>
+<td data-label="オフにしたとき">オンのときは改善に使われることがある</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="s3-1">オフにする前の会話</h3>
 <p>**オフが効くのは、オフにした後の新しい会話です。**データ管理のヘルプは「新しい会話は OpenAI モデルの学習には使用されません」と書き、オフにする前の会話を学習から外すとは書いていません。</p>
 <p>それまでの会話を残したくないなら、チャットを削除します。個人向けのデータの取り扱いのヘルプによると、消したチャットは30日以内にOpenAIのシステムから削除されます。ただし、セキュリティ上や法的な理由で保持が必要な場合と、すでに匿名化されてアカウントとの関連付けが外れている場合は除かれます。1件ずつ消す手順とすべて消す手順は「<a href="/media/chatgpt-history-delete/">ChatGPTの履歴を削除する方法</a>」にまとめました。</p>
@@ -211,7 +233,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s4">一時チャットで1回だけ残さない</h2>
 <p>一時チャットはその会話だけを履歴にもメモリにも学習にも残さないモードです。新しいチャットを開いて［一時チャット］を選び、最初のメッセージを送る前に「パーソナライズあり」か「パーソナライズなし」を選びます。</p>
 <p><a href="https://help.openai.com/ja-jp/articles/8914046-temporary-chat-faq">一時チャットのヘルプ</a>では、扱いは次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>項目</th>
@@ -220,27 +242,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>履歴</td>
-<td>表示されない。離れると開き直せない</td>
+<td data-label="項目">履歴</td>
+<td data-label="一時チャットの間">表示されない。離れると開き直せない</td>
 </tr>
 <tr>
-<td>メモリ</td>
-<td>作らない・更新しない（パーソナライズありなら既存のメモリは使える）</td>
+<td data-label="項目">メモリ</td>
+<td data-label="一時チャットの間">作らない・更新しない（パーソナライズありなら既存のメモリは使える）</td>
 </tr>
 <tr>
-<td>学習</td>
-<td>使われない</td>
+<td data-label="項目">学習</td>
+<td data-label="一時チャットの間">使われない</td>
 </tr>
 <tr>
-<td>保持</td>
-<td>安全上の目的で最長30日間コピーが残ることがある</td>
+<td data-label="項目">保持</td>
+<td data-label="一時チャットの間">安全上の目的で最長30日間コピーが残ることがある</td>
 </tr>
 <tr>
-<td>保存したとき</td>
-<td>通常のチャットになり、アカウントの学習の設定に従う</td>
+<td data-label="項目">保存したとき</td>
+<td data-label="一時チャットの間">通常のチャットになり、アカウントの学習の設定に従う</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**一時チャットを保存すると、その時点で通常のチャットに変わります。**学習の設定がオンのままなら、保存した会話は学習の対象に戻ります。一時チャットが履歴に見当たらない理由は「<a href="/media/chatgpt-history-lost/">ChatGPTの履歴が消えたときの探し方</a>」に書きました。</p>
 <h2 id="s5">プライバシーポータルから申請する</h2>
 <p>設定画面とは別に、OpenAIの<a href="https://privacy.openai.com/policies">プライバシーポータル</a>から学習を止める申請ができます。ポータルの［プライバシーリクエストを送信］から本人確認の方法とリクエストの種類（コンテンツをモデルの学習に使用しない）を選んで申し込み、処理が終わるとメールで知らせが届く流れです。</p>
@@ -252,7 +274,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>仕事用のプランの会話は最初から学習に使われません。データ管理のヘルプはBusiness・Enterprise・Edu・ヘルスケア向けのワークスペースのコンテンツを既定で学習に使わないと書いています。モデル改善のヘルプによると、APIの入力と出力も同じ扱いです。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-training-off/05_fig_plans.jpg" alt="会話を学習に使う最初の設定をプランで分けた図。Free、Go、Plus、Proはオン、BusinessとEnterpriseはオフ" loading="lazy"><figcaption>OpenAIのヘルプセンターとエンタープライズプライバシーのページから作成（2026年10月8日時点）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -262,27 +284,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>無料版・Go・Plus・Pro</td>
-<td>学習に使われることがある</td>
-<td>設定かポータルでオフ</td>
+<td data-label="プラン">無料版・Go・Plus・Pro</td>
+<td data-label="最初の状態">学習に使われることがある</td>
+<td data-label="止め方">設定かポータルでオフ</td>
 </tr>
 <tr>
-<td>ログインしていない利用</td>
-<td>学習に使われることがある</td>
-<td>そのブラウザの設定でオフ</td>
+<td data-label="プラン">ログインしていない利用</td>
+<td data-label="最初の状態">学習に使われることがある</td>
+<td data-label="止め方">そのブラウザの設定でオフ</td>
 </tr>
 <tr>
-<td>Business・Enterprise・Edu</td>
-<td>使われない</td>
-<td>何もしなくてよい</td>
+<td data-label="プラン">Business・Enterprise・Edu</td>
+<td data-label="最初の状態">使われない</td>
+<td data-label="止め方">何もしなくてよい</td>
 </tr>
 <tr>
-<td>API</td>
-<td>使われない</td>
-<td>何もしなくてよい（組織が共有を有効にした場合を除く）</td>
+<td data-label="プラン">API</td>
+<td data-label="最初の状態">使われない</td>
+<td data-label="止め方">何もしなくてよい（組織が共有を有効にした場合を除く）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><a href="https://openai.com/ja-JP/enterprise-privacy/">エンタープライズプライバシー</a>のページでも、ビジネスデータは既定で学習に使わず、フィードバックなどでデータの共有に明示的に同意した場合だけ使うことがあると説明しています。**Plusは1人ずつの契約なので、学習の設定もメンバーそれぞれのアカウントでオフにする必要があります。**チームでの使い方を比べるなら「<a href="/media/chatgpt-business/">ChatGPT Businessとは？料金とPlusとの違い</a>」が参考になります。</p>
 <h2 id="s7">個人情報を入れる前に</h2>
 <p>学習をオフにしても、入力した内容をOpenAIの誰も見なくなるわけではありません。個人向けのデータの取り扱いのヘルプによると、権限のある少数の担当者と委託先が、不正利用の調査・問い合わせへの対応・法的な対応のために、必要な範囲でコンテンツにアクセスすることがあります。オプトアウトしていなければ、モデルの改善もその目的のひとつです。</p>
@@ -322,12 +344,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -336,9 +359,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">学習させない3つの方法</a><a href="#s2">設定をオフにする手順</a><a href="#s3">オフにして変わること・変わらないこと</a><a href="#s4">一時チャットで1回だけ残さない</a><a href="#s5">プライバシーポータルから申請する</a><a href="#s6">BusinessとEnterpriseは最初からオフ</a><a href="#s7">個人情報を入れる前に</a><a href="#s8">オフにするデメリット</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -371,11 +397,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

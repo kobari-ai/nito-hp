@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】GPT-6 Astr…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.17</span>
         </div>
         <h1 class="post-title">【2026年10月】GPT-6 Astraとは？ChatGPTで使えるプラン・上限・料金・GPT-5.6との違い</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GPT-6 Astraとは"><defs><linearGradient id="ecg-a68e65db" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a68e65db)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GPT-6 Astraとは</text><line x1="273.2" y1="327.1" x2="926.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">使えるプラン・上限・料金を公式で確認</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li>得意なのはPC操作・資料作成・長い作業。知識問題では第三者指標で首位ではない</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -115,7 +123,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s1-1">名前が2つある</h3>
 <p>GPT-6 Astra には呼び名が2つあります。APIのモデルIDと ChatGPT Work・Codex での表示は「GPT-6 Astra」、**ChatGPTの通常チャットでの表示は「GPT-6 Pro」**です。OpenAIのヘルプは「GPT-6 Astra を搭載した GPT-6 Pro」と書いており、中身は同じモデルです。</p>
 <h3 id="s1-2">基本スペック</h3>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>項目</th>
@@ -124,39 +132,39 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>発表日</td>
-<td>2026年9月3日（限定）、9月4日（一般）</td>
+<td data-label="項目">発表日</td>
+<td data-label="内容">2026年9月3日（限定）、9月4日（一般）</td>
 </tr>
 <tr>
-<td>コンテキストウィンドウ</td>
-<td>1,050,000トークン（入力と出力の合計）</td>
+<td data-label="項目">コンテキストウィンドウ</td>
+<td data-label="内容">1,050,000トークン（入力と出力の合計）</td>
 </tr>
 <tr>
-<td>最大出力</td>
-<td>128,000トークン</td>
+<td data-label="項目">最大出力</td>
+<td data-label="内容">128,000トークン</td>
 </tr>
 <tr>
-<td>知識の期限</td>
-<td>2026年4月30日</td>
+<td data-label="項目">知識の期限</td>
+<td data-label="内容">2026年4月30日</td>
 </tr>
 <tr>
-<td>推論の深さ（reasoning effort）</td>
-<td>low・medium・high・xhigh・max の5段階</td>
+<td data-label="項目">推論の深さ（reasoning effort）</td>
+<td data-label="内容">low・medium・high・xhigh・max の5段階</td>
 </tr>
 <tr>
-<td>入力</td>
-<td>テキストと画像。音声・動画は非対応</td>
+<td data-label="項目">入力</td>
+<td data-label="内容">テキストと画像。音声・動画は非対応</td>
 </tr>
 <tr>
-<td>APIのモデルID</td>
-<td>gpt-6-astra</td>
+<td data-label="項目">APIのモデルID</td>
+<td data-label="内容">gpt-6-astra</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>出典はOpenAIのモデルページです。105万トークンは魅力的に見えますが、後述するとおり<strong>入力が272,000トークンを超えると単価が上がる</strong>ので、資料を全部入れる設計はコストに直結します。</p>
 <h2 id="s2">発表後に変わったこと</h2>
 <p>発表からの1か月で、公式の発表とヘルプには次の変化がありました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>日付</th>
@@ -166,32 +174,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>9月14日</td>
-<td>Plus・Pro の Instant から思考モデルへの自動切り替えを廃止（安全上の理由を除く）</td>
-<td>難しい依頼でも自分で「Pro」を選ばないと GPT-6 Pro は動かない</td>
+<td data-label="日付">9月14日</td>
+<td data-label="変わったこと">Plus・Pro の Instant から思考モデルへの自動切り替えを廃止（安全上の理由を除く）</td>
+<td data-label="Astraへの影響">難しい依頼でも自分で「Pro」を選ばないと GPT-6 Pro は動かない</td>
 </tr>
 <tr>
-<td>9月22日</td>
-<td>GPT-6 Sol と GPT-6 Luna を Work・Codex・API に追加</td>
-<td>GPT-6 は3段構成に。チャットには来ていない</td>
+<td data-label="日付">9月22日</td>
+<td data-label="変わったこと">GPT-6 Sol と GPT-6 Luna を Work・Codex・API に追加</td>
+<td data-label="Astraへの影響">GPT-6 は3段構成に。チャットには来ていない</td>
 </tr>
 <tr>
-<td>9月29日</td>
-<td>GPT-6.1 Sol を Work・Codex・API に追加</td>
-<td>Astra に近い性能を5分の1の API 単価で</td>
+<td data-label="日付">9月29日</td>
+<td data-label="変わったこと">GPT-6.1 Sol を Work・Codex・API に追加</td>
+<td data-label="Astraへの影響">Astra に近い性能を5分の1の API 単価で</td>
 </tr>
 <tr>
-<td>9月29日</td>
-<td>月500ドルの Pro 500 を新設、Pro 200 の新規受付を再開</td>
-<td>Astra を速く動かす Ultrafast は Pro の中では Pro 500 だけ</td>
+<td data-label="日付">9月29日</td>
+<td data-label="変わったこと">月500ドルの Pro 500 を新設、Pro 200 の新規受付を再開</td>
+<td data-label="Astraへの影響">Astra を速く動かす Ultrafast は Pro の中では Pro 500 だけ</td>
 </tr>
 <tr>
-<td>9月29日</td>
-<td>Astra で動く常時稼働のエージェント「dot」を発表</td>
-<td>Pro と Business Premium から順次</td>
+<td data-label="日付">9月29日</td>
+<td data-label="変わったこと">Astra で動く常時稼働のエージェント「dot」を発表</td>
+<td data-label="Astraへの影響">Pro と Business Premium から順次</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>出典は<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPTのリリースノート</a>と各発表ページです。</p>
 <h3 id="s2-1">GPT-6ファミリーが3段になった</h3>
 <p><a href="https://openai.com/ja-JP/index/introducing-gpt-6-sol-and-luna/">GPT-6 Sol と Luna の発表</a>で、Astra は3段の一番上という位置づけに変わりました。Sol は日常の難しい仕事向け、Luna は大量の定型処理向けで、どちらも Astra と同じ手法で学習しています。さらに9月29日の<a href="https://openai.com/ja-JP/index/introducing-gpt-6-1-sol/">GPT-6.1 Sol の発表</a>は、<strong>エージェント型のコーディングや画面操作で Astra に迫る性能を、Astra の5分の1の単価で出す</strong>と書いています。</p>
@@ -200,7 +208,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>9月17日の時点のヘルプには「Pro 200ドルは週200回、Pro 100ドルは週50回」という表が載っていました。今のヘルプにはこの表がなく、「上位の Pro ほど Pro モデルの上限が高い」という書き方に変わっています。Pro 200 は9月29日から新規契約の利用枠が下がり、2026年9月22日から9月29日午前10時（太平洋時間）までの間にPro 200が有効だった人は、契約が続いていれば10月29日まで前の枠を使えます。</p>
 <h2 id="s3">ChatGPTのどのプランで使えるか</h2>
 <p>検索でも「chatgpt astra 使うには」「3000円プラン astra使える？」のように調べられています。ヘルプ「<a href="https://help.openai.com/ja-jp/articles/20001354-gpt-56-and-gpt-6-pro-in-chatgpt">ChatGPTのGPT-5.6とGPT-6 Pro</a>」と「<a href="https://help.openai.com/en/articles/12003714">ChatGPT Business のモデルと上限</a>」の記載を表にしました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -211,43 +219,43 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>無料・Go</td>
-<td>使えない</td>
-<td>使えない</td>
-<td>-</td>
+<td data-label="プラン">無料・Go</td>
+<td data-label="通常チャット（GPT-6 Pro）">使えない</td>
+<td data-label="Work・Codex（GPT-6 Astra）">使えない</td>
+<td data-label="チャットの上限">-</td>
 </tr>
 <tr>
-<td>Plus（3,000円）</td>
-<td><strong>使えない</strong></td>
-<td>使える</td>
-<td>-</td>
+<td data-label="プラン">Plus（3,000円）</td>
+<td data-label="通常チャット（GPT-6 Pro）"><strong>使えない</strong></td>
+<td data-label="Work・Codex（GPT-6 Astra）">使える</td>
+<td data-label="チャットの上限">-</td>
 </tr>
 <tr>
-<td>Pro（16,800円から、$100・$200・$500）</td>
-<td>使える</td>
-<td>使える</td>
-<td>ヘルプに回数の記載なし。上位ほど多い</td>
+<td data-label="プラン">Pro（16,800円から、$100・$200・$500）</td>
+<td data-label="通常チャット（GPT-6 Pro）">使える</td>
+<td data-label="Work・Codex（GPT-6 Astra）">使える</td>
+<td data-label="チャットの上限">ヘルプに回数の記載なし。上位ほど多い</td>
 </tr>
 <tr>
-<td>Business Standard</td>
-<td>使える</td>
-<td>使える（枠の一部）</td>
-<td><strong>月15回</strong>（GPT-5.6 Sol Pro と共有）</td>
+<td data-label="プラン">Business Standard</td>
+<td data-label="通常チャット（GPT-6 Pro）">使える</td>
+<td data-label="Work・Codex（GPT-6 Astra）">使える（枠の一部）</td>
+<td data-label="チャットの上限"><strong>月15回</strong>（GPT-5.6 Sol Pro と共有）</td>
 </tr>
 <tr>
-<td>Business Premium</td>
-<td>使える</td>
-<td>使える</td>
-<td>週50回（GPT-5.6 Sol Pro と共有）</td>
+<td data-label="プラン">Business Premium</td>
+<td data-label="通常チャット（GPT-6 Pro）">使える</td>
+<td data-label="Work・Codex（GPT-6 Astra）">使える</td>
+<td data-label="チャットの上限">週50回（GPT-5.6 Sol Pro と共有）</td>
 </tr>
 <tr>
-<td>Enterprise</td>
-<td>管理者の設定次第</td>
-<td>管理者の設定次第</td>
-<td>料金表による。クレジット払いは1回50クレジット</td>
+<td data-label="プラン">Enterprise</td>
+<td data-label="通常チャット（GPT-6 Pro）">管理者の設定次第</td>
+<td data-label="Work・Codex（GPT-6 Astra）">管理者の設定次第</td>
+<td data-label="チャットの上限">料金表による。クレジット払いは1回50クレジット</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure post-figure--sp"><img src="/media/images/gpt-6-astra-guide/astra_06_help_v2.jpg" alt="OpenAIヘルプのChatGPTのGPT-5.6とGPT-6 Proのページ冒頭。GPT-6 ProはPro 100ドル、Pro 200ドル、Business、Enterpriseで利用でき、PlusプランではChatGPT WorkとCodexでGPT-6 Astraを利用できると書かれている" loading="lazy"><figcaption>OpenAIヘルプの冒頭（2026年10月5日撮影）。Plusはチャットではなく Work と Codex で使える</figcaption></figure>
 
 <p>ヘルプの GPT-6 Pro の対象には Pro 100 と Pro 200 が名指しされ、9月29日に出た Pro 500 は料金ページの Pro の項目にまとめて載っています。</p>
@@ -274,7 +282,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>モデルIDは <code>gpt-6-astra</code> で、Responses API を使います。reasoning.effort の none は使えず、temperature・top_p は指定できません。Microsoft Azure と Amazon Bedrock からも呼べ、対象顧客は Zero Data Retention を選べます。</p>
 <h2 id="s5">表示されないときの確認</h2>
 <p>「対象プランのはずなのに出ない」ときに見る順番です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>確認すること</th>
@@ -284,32 +292,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>契約とログイン先</td>
-<td>無料・Go、または別アカウント</td>
-<td>契約中のアカウントとワークスペースで開く</td>
+<td data-label="確認すること">契約とログイン先</td>
+<td data-label="よくある原因">無料・Go、または別アカウント</td>
+<td data-label="対処">契約中のアカウントとワークスペースで開く</td>
 </tr>
 <tr>
-<td>開いている画面</td>
-<td>Plus で通常チャットを探している</td>
-<td>Work か Codex を開く</td>
+<td data-label="確認すること">開いている画面</td>
+<td data-label="よくある原因">Plus で通常チャットを探している</td>
+<td data-label="対処">Work か Codex を開く</td>
 </tr>
 <tr>
-<td>アプリの版</td>
-<td>古いデスクトップアプリ・CLI</td>
-<td>メニューの「アップデートを確認」を手動で押し、アプリを完全に再起動。CLI は 0.153.0 以上</td>
+<td data-label="確認すること">アプリの版</td>
+<td data-label="よくある原因">古いデスクトップアプリ・CLI</td>
+<td data-label="対処">メニューの「アップデートを確認」を手動で押し、アプリを完全に再起動。CLI は 0.153.0 以上</td>
 </tr>
 <tr>
-<td>会社の管理者設定</td>
-<td>ワークスペースのモデルアクセス権限による</td>
-<td>管理者にモデルの有効化を頼む</td>
+<td data-label="確認すること">会社の管理者設定</td>
+<td data-label="よくある原因">ワークスペースのモデルアクセス権限による</td>
+<td data-label="対処">管理者にモデルの有効化を頼む</td>
 </tr>
 <tr>
-<td>段階展開</td>
-<td>条件を満たしていても順番待ち</td>
-<td>従来モデルで作業して待つ。クレジットを買っても使えるモデルは増えない</td>
+<td data-label="確認すること">段階展開</td>
+<td data-label="よくある原因">条件を満たしていても順番待ち</td>
+<td data-label="対処">従来モデルで作業して待つ。クレジットを買っても使えるモデルは増えない</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>ヘルプは更新を入れたあとにもう一度「アップデートを確認」を押し、続けて更新が出れば入れて再起動するよう書いています。</p>
 <h2 id="s6">料金</h2>
 <p>ChatGPT側とAPI側で考え方が違います。</p>
@@ -323,7 +331,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h3 id="s6-2">API は従量課金</h3>
 <p>100万トークンあたりの単価です（OpenAIモデルページ）。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>区分</th>
@@ -334,35 +342,35 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Standard（入力272K以下）</td>
-<td>$10</td>
-<td>$1</td>
-<td>$50</td>
+<td data-label="区分">Standard（入力272K以下）</td>
+<td data-label="入力">$10</td>
+<td data-label="キャッシュ読み取り">$1</td>
+<td data-label="出力">$50</td>
 </tr>
 <tr>
-<td>Standard（入力272K超）</td>
-<td>$20</td>
-<td>$2</td>
-<td>$75</td>
+<td data-label="区分">Standard（入力272K超）</td>
+<td data-label="入力">$20</td>
+<td data-label="キャッシュ読み取り">$2</td>
+<td data-label="出力">$75</td>
 </tr>
 <tr>
-<td>Batch・Flex</td>
-<td>Standard の半額</td>
-<td>半額</td>
-<td>半額</td>
+<td data-label="区分">Batch・Flex</td>
+<td data-label="入力">Standard の半額</td>
+<td data-label="キャッシュ読み取り">半額</td>
+<td data-label="出力">半額</td>
 </tr>
 <tr>
-<td>Fast mode</td>
-<td>Standard の2倍</td>
-<td>2倍</td>
-<td>2倍</td>
+<td data-label="区分">Fast mode</td>
+<td data-label="入力">Standard の2倍</td>
+<td data-label="キャッシュ読み取り">2倍</td>
+<td data-label="出力">2倍</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>GPT-5.6 Sol の Standard は入力$4・出力$20なので、単純比較で2.5倍です。ただし OpenAI は Astra が同じ作業を少ないトークンで終えるとしており、単価だけで費用が2.5倍になるとは限りません。キャッシュ書き込みは入力単価の1.25倍で、急がない処理は Batch か Flex に回すと半額になります。</p>
 <h2 id="s7">GPT-5.6・GPT-6.1 Solとの違い</h2>
 <p>チャットの普段使いは今も GPT-5.6 です。無料と Go の既定モデルは GPT-5.6 Luna、有料プランの Instant から Extra High までは GPT-5.6 Sol が動いています。Work・Codex・API では GPT-6.1 Sol が新しい選択肢になりました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th></th>
@@ -373,35 +381,35 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>使える場所</td>
-<td>チャット（GPT-6 Pro）・Work・Codex・API</td>
-<td>Work・Codex・API</td>
-<td>チャット・Work・Codex・API</td>
+<td data-label="">使える場所</td>
+<td data-label="GPT-6 Astra">チャット（GPT-6 Pro）・Work・Codex・API</td>
+<td data-label="GPT-6.1 Sol">Work・Codex・API</td>
+<td data-label="GPT-5.6 Sol">チャット・Work・Codex・API</td>
 </tr>
 <tr>
-<td>向いている作業</td>
-<td>画面操作、複数資料の照合、長い多段階の作業</td>
-<td>Astra に近い質で回数をこなしたい作業</td>
-<td>短い定型文、要約、日常の質問</td>
+<td data-label="">向いている作業</td>
+<td data-label="GPT-6 Astra">画面操作、複数資料の照合、長い多段階の作業</td>
+<td data-label="GPT-6.1 Sol">Astra に近い質で回数をこなしたい作業</td>
+<td data-label="GPT-5.6 Sol">短い定型文、要約、日常の質問</td>
 </tr>
 <tr>
-<td>API単価（入力／出力）</td>
-<td>$10／$50</td>
-<td>$2／$10</td>
-<td>$4／$20</td>
+<td data-label="">API単価（入力／出力）</td>
+<td data-label="GPT-6 Astra">$10／$50</td>
+<td data-label="GPT-6.1 Sol">$2／$10</td>
+<td data-label="GPT-5.6 Sol">$4／$20</td>
 </tr>
 <tr>
-<td>Codex の5時間の目安（Plus）</td>
-<td>5〜45</td>
-<td>15〜160</td>
-<td>-</td>
+<td data-label="">Codex の5時間の目安（Plus）</td>
+<td data-label="GPT-6 Astra">5〜45</td>
+<td data-label="GPT-6.1 Sol">15〜160</td>
+<td data-label="GPT-5.6 Sol">-</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>短い要約や定型文で困っていないなら、すべてを Astra に切り替える理由はありません。<strong>複数の資料を見比べる仕事や、何度も修正を頼んでいる仕事</strong>から試すと、手直しの回数で差が見えます。Work や Codex で Astra の枠がすぐ尽きる場合は、GPT-6.1 Sol に下ろすと同じ枠で3倍ほどの量を回せる計算です。</p>
 <h2 id="s8">ベンチマークの読み方</h2>
 <p>発表ページには他社モデルとの比較表が載っていますが、読み方に注意が要ります。GPT系の数値はOpenAIの研究環境かAPIで測ったもので、他社の値には外部の公開結果も混ざっています。主な行を抜き出しました（すべてOpenAIの発表ページ掲載値）。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>ベンチマーク</th>
@@ -413,70 +421,70 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Agents' Last Exam（エージェント総合）</td>
-<td>59.3%</td>
-<td>53.6%</td>
-<td>-</td>
-<td>55.5%</td>
+<td data-label="ベンチマーク">Agents' Last Exam（エージェント総合）</td>
+<td data-label="GPT-6 Astra">59.3%</td>
+<td data-label="GPT-5.6 Sol">53.6%</td>
+<td data-label="Claude Fable 5.1">-</td>
+<td data-label="Claude Opus 5">55.5%</td>
 </tr>
 <tr>
-<td>OSWorld 2.0 offline（デスクトップ操作）</td>
-<td>72.6%</td>
-<td>65.7%</td>
-<td>-</td>
-<td>70.2%</td>
+<td data-label="ベンチマーク">OSWorld 2.0 offline（デスクトップ操作）</td>
+<td data-label="GPT-6 Astra">72.6%</td>
+<td data-label="GPT-5.6 Sol">65.7%</td>
+<td data-label="Claude Fable 5.1">-</td>
+<td data-label="Claude Opus 5">70.2%</td>
 </tr>
 <tr>
-<td>AutomationBench（事務作業）</td>
-<td>41.4%</td>
-<td>18.1%</td>
-<td>31.4%</td>
-<td>26.9%</td>
+<td data-label="ベンチマーク">AutomationBench（事務作業）</td>
+<td data-label="GPT-6 Astra">41.4%</td>
+<td data-label="GPT-5.6 Sol">18.1%</td>
+<td data-label="Claude Fable 5.1">31.4%</td>
+<td data-label="Claude Opus 5">26.9%</td>
 </tr>
 <tr>
-<td>Terminal-Bench 4.0</td>
-<td>57.9%</td>
-<td>37.3%</td>
-<td>55.8%</td>
-<td>52.6%</td>
+<td data-label="ベンチマーク">Terminal-Bench 4.0</td>
+<td data-label="GPT-6 Astra">57.9%</td>
+<td data-label="GPT-5.6 Sol">37.3%</td>
+<td data-label="Claude Fable 5.1">55.8%</td>
+<td data-label="Claude Opus 5">52.6%</td>
 </tr>
 <tr>
-<td>FrontierMath Tier 4</td>
-<td>97.6%</td>
-<td>83.0%</td>
-<td>87.8%</td>
-<td>73.2%</td>
+<td data-label="ベンチマーク">FrontierMath Tier 4</td>
+<td data-label="GPT-6 Astra">97.6%</td>
+<td data-label="GPT-5.6 Sol">83.0%</td>
+<td data-label="Claude Fable 5.1">87.8%</td>
+<td data-label="Claude Opus 5">73.2%</td>
 </tr>
 <tr>
-<td>GPQA Diamond（科学）</td>
-<td>96.0%</td>
-<td>94.6%</td>
-<td>93.7%</td>
-<td>93.7%</td>
+<td data-label="ベンチマーク">GPQA Diamond（科学）</td>
+<td data-label="GPT-6 Astra">96.0%</td>
+<td data-label="GPT-5.6 Sol">94.6%</td>
+<td data-label="Claude Fable 5.1">93.7%</td>
+<td data-label="Claude Opus 5">93.7%</td>
 </tr>
 <tr>
-<td>Humanity's Last Exam（ツールあり）</td>
-<td>57.2%</td>
-<td>-</td>
-<td>65.0%</td>
-<td>63.6%</td>
+<td data-label="ベンチマーク">Humanity's Last Exam（ツールあり）</td>
+<td data-label="GPT-6 Astra">57.2%</td>
+<td data-label="GPT-5.6 Sol">-</td>
+<td data-label="Claude Fable 5.1">65.0%</td>
+<td data-label="Claude Opus 5">63.6%</td>
 </tr>
 <tr>
-<td>ARC-AGI-3（抽象推論）</td>
-<td>99.9%</td>
-<td>7.8%</td>
-<td>-</td>
-<td>30.2%</td>
+<td data-label="ベンチマーク">ARC-AGI-3（抽象推論）</td>
+<td data-label="GPT-6 Astra">99.9%</td>
+<td data-label="GPT-5.6 Sol">7.8%</td>
+<td data-label="Claude Fable 5.1">-</td>
+<td data-label="Claude Opus 5">30.2%</td>
 </tr>
 <tr>
-<td>Artificial Analysis 指数 v4.1.1（第三者）</td>
-<td>61.2</td>
-<td>60.9</td>
-<td>65.7</td>
-<td>63.1</td>
+<td data-label="ベンチマーク">Artificial Analysis 指数 v4.1.1（第三者）</td>
+<td data-label="GPT-6 Astra">61.2</td>
+<td data-label="GPT-5.6 Sol">60.9</td>
+<td data-label="Claude Fable 5.1">65.7</td>
+<td data-label="Claude Opus 5">63.1</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>伸びているのは手順を最後まで遂行する系の項目</strong>で、知識寄りの GPQA は1.4ポイントしか動いていません。Humanity's Last Exam では Claude Fable 5.1 に負けており、OpenAI自身がその行を表に載せています。第三者機関 Artificial Analysis の総合指数も61.2で、Claude Fable 5.1 の65.7を下回ります。ARC-AGI-3 の99.9%は、OpenAIの応答API向けの実行環境で測った値で、汎用の実行環境では62.7%だったとARC Prize側が公表しました。</p>
 <h3 id="s8-1">PC操作と仕事の成果物</h3>
 <p>OpenAIはAstraを、コンピュータ操作の速度と正確性で新しい到達点と位置づけ、例としてオンラインフォームの入力、CRMの顧客レコード更新、カレンダーの整理を挙げています。発表によると OSWorld 2.0 では GPT-5.6 Sol より<strong>1タスクあたり約47%短い時間</strong>で、より高い点を出しました。</p>
@@ -544,12 +552,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -558,9 +567,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">GPT-6 Astraとは</a><a href="#s2">発表後に変わったこと</a><a href="#s3">ChatGPTのどのプランで使えるか</a><a href="#s4">使い方（Chat・Work・Codex・API）</a><a href="#s5">表示されないときの確認</a><a href="#s6">料金</a><a href="#s7">GPT-5.6・GPT-6.1 Solとの違い</a><a href="#s8">ベンチマークの読み方</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -593,11 +605,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

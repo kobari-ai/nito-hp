@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】スマート機能の設定を…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.09</span>
         </div>
         <h1 class="post-title">【2026年10月】スマート機能の設定を両方ともオンにする方法 Gemini連携・スマホ・出ないとき</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="スマート機能を両方ともオンにする"><defs><linearGradient id="ecg-b03a5793" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b03a5793)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="86.4" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">スマート機能を両</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">方ともオンにする</text><line x1="296.0" y1="378.0" x2="904.0" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">Gemini連携・スマホ・出ないとき</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 </ul></div></div>
 <figure class="post-figure"><img src="/media/images/gmail-smart-features-on/00_fig_flow.png" alt="案内が出てから使えるようになるまでの流れの図。Geminiアプリから、Gmailの設定を開き、2つをオンにして保存し、Geminiに戻ってもう一度試す" loading="lazy"><figcaption>案内が出てから使えるようになるまでの流れ</figcaption></figure>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -106,7 +114,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Gmailのスマート機能のスイッチは3つあり、そのうち案内の「両方」に当たるのは、同じ設定画面に並ぶ2つです。残りの1つは［全般］タブのチェックボックスで、タブの自動分類やスマート作成の担当です。</p>
 <figure class="post-figure"><img src="/media/images/gmail-smart-features-on/01_fig_need.png" alt="使いたい機能ごとに必要なスイッチの図。GeminiアプリでGmailを読むには他のGoogleサービスのスマート機能とアクティビティの保存。Gmailの中のGeminiに相談にはGoogle Workspaceのスマート機能。メールの要約にはGoogle Workspaceのスマート機能とGmail、Chat、Meetのスマート機能" loading="lazy"><figcaption>使いたい機能と必要なスイッチ（Gmailヘルプ・Geminiアプリ ヘルプから作成）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>スイッチ</th>
@@ -117,27 +125,41 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Google Workspace のスマート機能</td>
-<td>［全般］の［Workspace のスマート機能の設定を管理］</td>
-<td>Gmailの予定をカレンダーに表示、検索のパーソナライズ、Geminiへの要約・下書きの依頼</td>
-<td>入る</td>
+<td data-label="スイッチ">Google Workspace のスマート機能</td>
+<td data-label="場所">［全般］の［Workspace のスマート機能の設定を管理］</td>
+<td data-label="オンで使えるもの">Gmailの予定をカレンダーに表示、検索のパーソナライズ、Geminiへの要約・下書きの依頼</td>
+<td data-label="案内の「両方」">入る</td>
 </tr>
 <tr>
-<td>他の Google サービスのスマート機能</td>
-<td>同じ画面の下段</td>
-<td>マップの予約表示、ウォレットのチケット、Geminiアプリでの提案と回答（個人アカウントのみ）</td>
-<td>入る</td>
+<td data-label="スイッチ">他の Google サービスのスマート機能</td>
+<td data-label="場所">同じ画面の下段</td>
+<td data-label="オンで使えるもの">マップの予約表示、ウォレットのチケット、Geminiアプリでの提案と回答（個人アカウントのみ）</td>
+<td data-label="案内の「両方」">入る</td>
 </tr>
 <tr>
-<td>Gmail、Chat、Meet のスマート機能</td>
-<td>［全般］の［スマート機能］のチェックボックス</td>
-<td>メイン・プロモーションなどの自動分類、スマート作成、スマート リプライ、概要カード</td>
-<td>入らない</td>
+<td data-label="スイッチ">Gmail、Chat、Meet のスマート機能</td>
+<td data-label="場所">［全般］の［スマート機能］のチェックボックス</td>
+<td data-label="オンで使えるもの">メイン・プロモーションなどの自動分類、スマート作成、スマート リプライ、概要カード</td>
+<td data-label="案内の「両方」">入らない</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**GeminiアプリとGoogle Workspaceをつなぐ条件として、Geminiアプリ ヘルプが名前を挙げているのは［他の Google サービスのスマート機能］です。**ヘルプの「Google Workspace アプリを接続できない理由」の節に、このスイッチをGmailの設定でオンにする必要があるとあります。案内のほうは2つともオンにするよう求めていて、設定画面でも2つが1枚に並んでいるため、2つともオンにしてから保存するのが確実です。</p>
 <p>2つのスイッチは別々に動き、［Google Workspace のスマート機能］をオンにして［他の Google サービスのスマート機能］だけをオフにする組み合わせもできるとGmailヘルプにあります。上だけオンにして下を見落とすと、Geminiアプリからは同じ案内が出続けるでしょう。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Gemini を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">パソコンでオンにする手順</h2>
 <p>前述の2026年1月の記事によると、案内の［続ける］を押すとGmailのスマート機能の画面が開きます。同じ記事が行き先として挙げているアドレス（<code>https://mail.google.com/mail/?ogwsfsd=true#settings</code>）を2026年10月9日に開くと、この画面が直接出ました。</p>
 <ol>
@@ -156,7 +178,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Geminiに戻ったあと、続けて「Google Workspace に接続する必要があります」という確認と［接続］のボタンが出ることがあります。前述の2026年1月の記事では、ここで［続ける］と［接続］を押すと、カレンダーの予定を使った回答が返ってきたそうです。</p>
 <h2 id="s4">スマホのGmailアプリでオンにする手順</h2>
 <p>スマホではGmailアプリの設定から同じ2つのスイッチを変えられます。［Gmail、Chat、Meet のスマート機能］については、変更はすべての端末に反映される一方でパソコンでの変更の一部はモバイルアプリに反映されない、という注意書きがGmailヘルプにあります。2つのスイッチには同じ説明が無いため、Geminiをスマホで使うならGmailアプリでもオンになっているかを確かめましょう。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>端末</th>
@@ -165,15 +187,15 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Android</td>
-<td>左上のメニューから［設定］を開き、アカウントを選ぶ。［全般］の［Google Workspace のスマート機能］を開き、［Google Workspace のスマート機能］と［他の Google サービスのスマート機能］のチェックを入れる</td>
+<td data-label="端末">Android</td>
+<td data-label="開く順番">左上のメニューから［設定］を開き、アカウントを選ぶ。［全般］の［Google Workspace のスマート機能］を開き、［Google Workspace のスマート機能］と［他の Google サービスのスマート機能］のチェックを入れる</td>
 </tr>
 <tr>
-<td>iPhone・iPad</td>
-<td>左上のメニューから［設定］を開き、［全般］の［データのプライバシー］から［Google Workspace のスマート機能］に進む。2つのスイッチをオンにして、右上の［完了］を押す</td>
+<td data-label="端末">iPhone・iPad</td>
+<td data-label="開く順番">左上のメニューから［設定］を開き、［全般］の［データのプライバシー］から［Google Workspace のスマート機能］に進む。2つのスイッチをオンにして、右上の［完了］を押す</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure post-figure--sp"><img src="/media/images/gmail-smart-features-on/gso_04_help_android.jpg" alt="GmailヘルプのAndroid版の手順。Gmailアプリを開き、左上のメニューから設定、アカウントを選び、全般でGoogle Workspaceのスマート機能をタップし、Google Workspaceのスマート機能と他のGoogleサービスのスマート機能の横のチェックボックスをタップする。最後の2項目が赤枠" loading="lazy"><figcaption>GmailヘルプのAndroidの手順（2026年10月9日）。赤枠の2つにチェックを入れる</figcaption></figure>
 
 <p>Androidはアカウントごとに設定が分かれているため、Geminiで使っているアカウントを選んでから開きます。複数のアカウントを入れているなら、アカウントの選択画面でメールアドレスを見比べてから進むと確実です。</p>
@@ -182,7 +204,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>カレンダー・Chat・ドライブ・Meet・Voice で2つのスイッチを入れられるのはウェブブラウザからだけ、という注記もGmailヘルプにあります。Gmailアプリには設定があるので、スマホしか使わない人もGmailアプリなら変えられます。</p>
 <h2 id="s5">オンにすると使われるデータ</h2>
 <p>スイッチの横の説明文を読むと、オンにすることが同意として扱われているのが分かります。［Google Workspace のスマート機能］なら、Gmailやドライブの中身と使い方をWorkspace全体のパーソナライズに使うことへの同意です。［他の Google サービスのスマート機能］は、同じ中身を他のGoogleサービス（マップ・ウォレット・Geminiアプリなど）のパーソナライズに使うことへの同意になります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>公式の説明</th>
@@ -191,32 +213,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>スマート機能がオンのあいだ、機能の向上のためにデータが使われることがある</td>
-<td>Gmailヘルプのスマート機能のページ</td>
+<td data-label="公式の説明">スマート機能がオンのあいだ、機能の向上のためにデータが使われることがある</td>
+<td data-label="書かれている場所">Gmailヘルプのスマート機能のページ</td>
 </tr>
 <tr>
-<td>オフにすると以後は使われないが、改善の過程で学習された内容は残る場合がある</td>
-<td>同じページの「データの取り扱い」</td>
+<td data-label="公式の説明">オフにすると以後は使われないが、改善の過程で学習された内容は残る場合がある</td>
+<td data-label="書かれている場所">同じページの「データの取り扱い」</td>
 </tr>
 <tr>
-<td>Googleは個人のメールでGeminiを含む基盤モデルを学習しない</td>
-<td><a href="https://blog.google/products-and-platforms/products/gmail/privacy-in-gmail-with-gemini/">Google公式ブログ（2026年4月7日）</a></td>
+<td data-label="公式の説明">Googleは個人のメールでGeminiを含む基盤モデルを学習しない</td>
+<td data-label="書かれている場所"><a href="https://blog.google/products-and-platforms/products/gmail/privacy-in-gmail-with-gemini/">Google公式ブログ（2026年4月7日）</a></td>
 </tr>
 <tr>
-<td>Gemini in Gmailは頼まれた処理のあとデータを持ち続けない</td>
-<td>同じブログ</td>
+<td data-label="公式の説明">Gemini in Gmailは頼まれた処理のあとデータを持ち続けない</td>
+<td data-label="書かれている場所">同じブログ</td>
 </tr>
 <tr>
-<td>Geminiアプリのチャットは、一部を人間のレビュアーが見ることがある</td>
-<td><a href="https://support.google.com/gemini/answer/13594961?hl=ja">Geminiアプリのプライバシー ハブ</a></td>
+<td data-label="公式の説明">Geminiアプリのチャットは、一部を人間のレビュアーが見ることがある</td>
+<td data-label="書かれている場所"><a href="https://support.google.com/gemini/answer/13594961?hl=ja">Geminiアプリのプライバシー ハブ</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**Geminiアプリから Gmail を読むには［アクティビティの保存］をオンにしておく必要があり、そのチャットはプライバシー ハブの説明どおり、一部がレビュアーに見られる対象に入ります。**連携したアプリから取り出したメールやファイルの中身も、Geminiアプリのプライバシーに関するお知らせに沿って扱うとプライバシー ハブにあります。人に見られたくないメールの中身は、Geminiアプリには尋ねないでおくのが安全です。</p>
 <p>公式ブログのこの説明が対象にしているのは、Gmailの中で動くGeminiです。Geminiアプリのチャットの扱いは、アプリ側の設定（アクティビティの保存）で決まります。仕事用や学校用のアカウントには別の規約が適用される場合もある、とプライバシー ハブは断っています。</p>
 <h2 id="s6">オンにしても使えないとき</h2>
 <p>2つをオンにしても同じ案内が出る、または接続できないときは、下の順に見ていきます。どれもGeminiアプリ ヘルプか前述の2026年1月の記事に出てくる確かめ方です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>確かめること</th>
@@ -226,37 +248,37 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>保存したか</td>
-<td>Gmailのスマート機能の画面</td>
-<td>2つがオンのまま［保存］を押し直す</td>
+<td data-label="確かめること">保存したか</td>
+<td data-label="見る場所">Gmailのスマート機能の画面</td>
+<td data-label="直し方">2つがオンのまま［保存］を押し直す</td>
 </tr>
 <tr>
-<td>同じアカウントか</td>
-<td>Geminiの左下のアイコンとGmailの右上のアイコン</td>
-<td>Geminiで使っているアカウントのGmailで設定する</td>
+<td data-label="確かめること">同じアカウントか</td>
+<td data-label="見る場所">Geminiの左下のアイコンとGmailの右上のアイコン</td>
+<td data-label="直し方">Geminiで使っているアカウントのGmailで設定する</td>
 </tr>
 <tr>
-<td>アクティビティの保存</td>
-<td><a href="https://myactivity.google.com/product/gemini">Geminiアプリ アクティビティ</a></td>
-<td>［アクティビティの保存］をオンにする</td>
+<td data-label="確かめること">アクティビティの保存</td>
+<td data-label="見る場所"><a href="https://myactivity.google.com/product/gemini">Geminiアプリ アクティビティ</a></td>
+<td data-label="直し方">［アクティビティの保存］をオンにする</td>
 </tr>
 <tr>
-<td>アプリ連携</td>
-<td>Geminiの［設定とヘルプ］の［アプリ連携］</td>
-<td>［Google Workspace］をオンにする</td>
+<td data-label="確かめること">アプリ連携</td>
+<td data-label="見る場所">Geminiの［設定とヘルプ］の［アプリ連携］</td>
+<td data-label="直し方">［Google Workspace］をオンにする</td>
 </tr>
 <tr>
-<td>再読み込み</td>
-<td>Geminiの画面</td>
-<td>ページを再読み込みしてもう一度接続する</td>
+<td data-label="確かめること">再読み込み</td>
+<td data-label="見る場所">Geminiの画面</td>
+<td data-label="直し方">ページを再読み込みしてもう一度接続する</td>
 </tr>
 <tr>
-<td>仕事用・学校用のアカウント</td>
-<td>管理者の設定</td>
-<td>管理者にアプリ連携を有効にしてもらう</td>
+<td data-label="確かめること">仕事用・学校用のアカウント</td>
+<td data-label="見る場所">管理者の設定</td>
+<td data-label="直し方">管理者にアプリ連携を有効にしてもらう</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure post-figure--sp"><img src="/media/images/gmail-smart-features-on/gso_03_help_reason.jpg" alt="Geminiアプリ ヘルプのGoogle Workspaceアプリを接続できない理由の節。仕事用または学校用のアカウントは管理者がまずアプリ連携を有効にする必要があること。必要な設定がGmailでオフになっている可能性があり、Gmailの設定で他のGoogleサービスのスマート機能をオンにし、Geminiアプリを再読み込みしてもう一度接続する、と書かれた段落が赤枠" loading="lazy"><figcaption>Geminiアプリ ヘルプの「接続できない理由」（2026年10月9日）</figcaption></figure>
 
 <p>**［アクティビティの保存］がオフのままだと、Gmailの設定を全部オンにしてもGoogle Workspaceにはつながりません。**Geminiアプリ ヘルプには、この設定がオフのときGeminiはGoogle Workspaceに接続できないとあります。プライバシー ハブの説明も同じで、Google Workspaceなどとの連携はアクティビティの保存がオフの状態では使えません。</p>
@@ -310,12 +332,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -324,9 +347,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">この案内が出る場面</a><a href="#s2">両方が指す2つのスイッチ</a><a href="#s3">パソコンでオンにする手順</a><a href="#s4">スマホのGmailアプリでオンにする手順</a><a href="#s5">オンにすると使われるデータ</a><a href="#s6">オンにしても使えないとき</a><a href="#s7">Gmailの中のGeminiを使いたいとき</a><a href="#s8">仕事用や学校用のアカウント</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -359,11 +385,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

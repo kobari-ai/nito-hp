@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Geminiで画像生成…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.25</span>
         </div>
         <h1 class="post-title">【2026年9月】Geminiで画像生成できない原因と対処を解説｜上限・何回まで・表示されないとき</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Geminiで画像生成できない"><defs><linearGradient id="ecg-7e9044c4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7e9044c4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Geminiで画像生成できない</text><line x1="121.2" y1="327.1" x2="1078.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">上限・何回まで・表示されないとき</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>規約に反すると判断された画像は、生成後に<strong>Geminiアプリが削除することがある</strong></li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -97,7 +105,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Googleの<a href="https://support.google.com/gemini/answer/14286560?hl=ja">Geminiアプリで画像を生成、編集する</a>と<a href="https://support.google.com/gemini/answer/16275805?hl=ja">使用量上限とアップグレード</a>のページには、画像が作れなくなる条件が分かれて書かれています。<strong>最初に見るのは画像の代わりに何が表示されたかです。</strong></p>
 <figure class="post-figure"><img src="/media/images/gemini-image-error/00_fig_causes.png" alt="Geminiで画像が作れない5つの原因の図。1使用量の上限は通知とリセットの時刻が出るので待つか上限の広いプランに変える、2文字だけで返るときはログイン・年齢・アカウントの種類を確認、3画像が消える・出ないときは作品名や実在の人物を外す、4編集だけできないときは画像の編集が18歳以上、5Proでやり直せないのは、AIプランなしでは使えないか、有料プランでNano Banana 2の1日の上限に達したとき" loading="lazy"><figcaption>出方で原因を分ける</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>出方</th>
@@ -107,32 +115,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>上限に達した通知と、リセットの時刻</td>
-<td>使用量の上限</td>
-<td>時刻まで待つ。急ぐならプランを上げる</td>
+<td data-label="出方">上限に達した通知と、リセットの時刻</td>
+<td data-label="原因">使用量の上限</td>
+<td data-label="まずやること">時刻まで待つ。急ぐならプランを上げる</td>
 </tr>
 <tr>
-<td>「現在生成できません」など文章だけが返る</td>
-<td>ログイン・年齢・アカウントの種類・一時的な不調</td>
-<td>条件を確かめ、新しいチャットで「画像を生成して」と頼み直す</td>
+<td data-label="出方">「現在生成できません」など文章だけが返る</td>
+<td data-label="原因">ログイン・年齢・アカウントの種類・一時的な不調</td>
+<td data-label="まずやること">条件を確かめ、新しいチャットで「画像を生成して」と頼み直す</td>
 </tr>
 <tr>
-<td>画像が生成後に消える、文字だけが残る</td>
-<td>規約に反すると判断された</td>
-<td>作品名や実在の人物を外して言い換える</td>
+<td data-label="出方">画像が生成後に消える、文字だけが残る</td>
+<td data-label="原因">規約に反すると判断された</td>
+<td data-label="まずやること">作品名や実在の人物を外して言い換える</td>
 </tr>
 <tr>
-<td>生成はできるが編集ができない</td>
-<td>年齢の条件・モデル</td>
-<td>18歳以上か、Flash-Liteを選んでいないか確かめる</td>
+<td data-label="出方">生成はできるが編集ができない</td>
+<td data-label="原因">年齢の条件・モデル</td>
+<td data-label="まずやること">18歳以上か、Flash-Liteを選んでいないか確かめる</td>
 </tr>
 <tr>
-<td>「Proでやり直す」が使えない</td>
-<td>AIプランなしでは使えない。有料プランならNano Banana 2の1日の上限</td>
-<td>有料プランが必要。有料で使えないときは翌日に回す</td>
+<td data-label="出方">「Proでやり直す」が使えない</td>
+<td data-label="原因">AIプランなしでは使えない。有料プランならNano Banana 2の1日の上限</td>
+<td data-label="まずやること">有料プランが必要。有料で使えないときは翌日に回す</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>表の上から順に確かめると、原因を取り違えずに済みます。2025年にGoogleのコミュニティに寄せられた質問にも、画像を頼むと文章で「現在生成できません」と返る例や、プロンプトのような文字だけが表示されて画像が出ない例がありました。</p>
 <h2 id="s2">使用量の上限に達したとき</h2>
 <p>Geminiアプリの上限は回数ではなく、<strong>プロンプトの複雑さ、モデル、機能、チャットの長さから計算される使用量</strong>で決まります。公式ヘルプによると、使用量上限は週ごとの上限に達するまで5時間ごとにリセットされます。この上限の仕組みは2026年5月17日に変更されたものです。</p>
@@ -141,7 +149,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>公式ヘルプの表の基準はAIプランなしの上限です。</p>
 <figure class="post-figure"><img src="/media/images/gemini-image-error/02_fig_plans.png" alt="Geminiアプリのプランごとの使用量上限の図。AIプランなしは標準でNano Banana 2で生成しダウンロードは1K、Google AI Plusは2倍、Google AI Proは4倍、Google AI UltraはProの4倍か20倍で、Plus以上はダウンロードが2KでProでやり直せる" loading="lazy"><figcaption>AIプランなしを標準とした公式の倍率</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -152,42 +160,56 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>AIプランなし</td>
-<td>標準</td>
-<td>1K</td>
-<td>なし</td>
+<td data-label="プラン">AIプランなし</td>
+<td data-label="使用量上限">標準</td>
+<td data-label="画像のダウンロード">1K</td>
+<td data-label="Nano Banana Proでやり直す">なし</td>
 </tr>
 <tr>
-<td>Google AI Plus</td>
-<td>標準の2倍</td>
-<td>2K</td>
-<td>あり</td>
+<td data-label="プラン">Google AI Plus</td>
+<td data-label="使用量上限">標準の2倍</td>
+<td data-label="画像のダウンロード">2K</td>
+<td data-label="Nano Banana Proでやり直す">あり</td>
 </tr>
 <tr>
-<td>Google AI Pro</td>
-<td>標準の4倍</td>
-<td>2K</td>
-<td>あり</td>
+<td data-label="プラン">Google AI Pro</td>
+<td data-label="使用量上限">標準の4倍</td>
+<td data-label="画像のダウンロード">2K</td>
+<td data-label="Nano Banana Proでやり直す">あり</td>
 </tr>
 <tr>
-<td>Google AI Ultra</td>
-<td>Proの4倍か20倍（契約の種類による）</td>
-<td>2K</td>
-<td>あり</td>
+<td data-label="プラン">Google AI Ultra</td>
+<td data-label="使用量上限">Proの4倍か20倍（契約の種類による）</td>
+<td data-label="画像のダウンロード">2K</td>
+<td data-label="Nano Banana Proでやり直す">あり</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Nano Banana 2による画像生成そのものは、AIプランなしを含む全プランで使えます。さらに公式ヘルプには<strong>上限が変わるときはAIプランなしの利用者から先に制限がかかることがある</strong>とも書かれています。プランなしではDeep Researchのように計算量の多い機能が混み合う時間帯に使えないことがある、とも公式ヘルプにあります。画像生成が名指しされているわけではないものの、混む時間を避けて試してみてください。各プランの金額は<a href="/media/gemini-pricing/">Geminiの料金プランの記事</a>にまとめました。</p>
 <h3 id="s2-2">リセットの時刻の確かめ方</h3>
 <p>上限に近づくとGeminiアプリに通知が出て、上限に達すると通知の内容が変わり、いつリセットされるかが表示されます。公式ヘルプでは<a href="https://gemini.google.com/">gemini.google.com</a>の左下の設定アイコンから使用量上限を開く手順も案内されています。</p>
 <p>9月25日にAIプランなしの個人アカウントで設定を開いたところ、メニューに使用量上限の項目は出ていませんでした。**表示されない場合は上限に達したときの通知に出るリセットの時刻で判断します。**上限に達したときにAIプランを使っていれば、Flash-Liteに切り替えて会話は続けられます。</p>
 <h3 id="s2-3">Nano Banana 2の1日の上限</h3>
 <p>5時間と週の上限とは別に、公式ヘルプには<strong>Nano Banana 2の1日の使用量上限</strong>が出てきます。この上限に達すると、有料プランでもNano Banana Proで画像をやり直せなくなります。上限の具体的な枚数は公開されていません。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Gemini を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">文字だけで返ってくるとき</h2>
 <p>画像を頼んだのに「現在生成できません」のような文章だけが返るときは、使える条件を満たしていない可能性があります。公式ヘルプの「必要なもの」に書かれている条件は次のとおりです。</p>
 <figure class="post-figure"><img src="/media/images/gemini-image-error/gie_03_help_req.jpg" alt="Google公式ヘルプのGeminiアプリで画像を生成、編集するのページ。必要なものとして、一部のバージョンでは対応する言語と国に限られること、画像を生成および編集するには18歳以上、画像を生成するには13歳以上である必要があること、学校用アカウントではアクセス制限が異なる場合があること、Geminiアプリにログインする必要があることが書かれている" loading="lazy"><figcaption>画像生成の条件が書かれた公式ヘルプ（2026年9月25日取得）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>条件</th>
@@ -196,23 +218,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ログイン</td>
-<td>Geminiアプリにログインしている必要がある</td>
+<td data-label="条件">ログイン</td>
+<td data-label="公式ヘルプの記述">Geminiアプリにログインしている必要がある</td>
 </tr>
 <tr>
-<td>年齢</td>
-<td>画像の生成は13歳（国ごとの年齢）以上、生成と編集は18歳以上</td>
+<td data-label="条件">年齢</td>
+<td data-label="公式ヘルプの記述">画像の生成は13歳（国ごとの年齢）以上、生成と編集は18歳以上</td>
 </tr>
 <tr>
-<td>言語と国</td>
-<td>一部のバージョンでは、対応する言語と国に限られる</td>
+<td data-label="条件">言語と国</td>
+<td data-label="公式ヘルプの記述">一部のバージョンでは、対応する言語と国に限られる</td>
 </tr>
 <tr>
-<td>アカウントの種類</td>
-<td>学校用アカウントではアクセス制限が異なる場合がある。仕事用・学校用は別の規約が適用されることがある</td>
+<td data-label="条件">アカウントの種類</td>
+<td data-label="公式ヘルプの記述">学校用アカウントではアクセス制限が異なる場合がある。仕事用・学校用は別の規約が適用されることがある</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>条件を満たしているのに文字だけで返るときは、頼み方も見直します。**公式ヘルプはプロンプトの最後に「描いて」「生成して」「作成して」を入れるよう勧めています。**入力欄の「画像」ボタンを選んだ状態で頼む方法もあります。2025年のGoogleのコミュニティの投稿には、同じプロンプトを新しいチャットで送ったら生成できた、という回答もありました。今のモデルでも同じかは分かりません。</p>
 <p>会社や学校のアカウントには、ライセンスの種類に応じて別の規約が適用されることがあります。個人のアカウントでは作れるのに会社のアカウントでは作れないなら、社内の管理者に確かめてください。</p>
 <h2 id="s4">画像が消える・表示されないとき</h2>
@@ -265,12 +287,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -279,9 +302,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">画像生成ができない5つの原因</a><a href="#s2">使用量の上限に達したとき</a><a href="#s3">文字だけで返ってくるとき</a><a href="#s4">画像が消える・表示されないとき</a><a href="#s5">画像の編集ができないとき</a><a href="#s6">画像を作る手順</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -314,11 +340,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

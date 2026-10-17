@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Google AIモ…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.26</span>
         </div>
         <h1 class="post-title">【2026年10月】Google AIモードの会話を保存する方法を解説｜履歴・ノートブック・共有リンク・コピー</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードの会話を保存する"><defs><linearGradient id="ecg-24152236" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-24152236)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードの会話を保存する</text><line x1="136.4" y1="327.1" x2="1063.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">履歴・ノートブック・共有リンク・コピー</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li>「次の質問をすると、新しい検索が開始します」と出たら、その会話を先に共有リンクかコピーで残してから次の質問をする</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -101,7 +109,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>保存したい目的が「自分があとで見返す」なのか「人に渡す」なのかで、向いている方法が変わります。<a href="https://support.google.com/websearch/answer/16011537?hl=ja">Google 検索の AI モードで AI による回答を取得する</a>と<a href="https://support.google.com/websearch/answer/16517651?hl=ja">Google 検索の AI による回答を共有する</a>の2つのヘルプに、履歴と共有リンクの扱いが書かれています。ノートブックは<a href="https://support.google.com/websearch/answer/17499802?hl=ja">AI モードでノートブックを使ってみる</a>に手順があります。コピーとPDFは回答の下のボタンとブラウザの機能で行う方法です。</p>
 <figure class="post-figure"><img src="/media/images/ai-mode-save/00_fig_methods5.png" alt="Google AIモードの会話を残す5つの方法の図。1履歴はログインと検索の履歴の設定が条件で、履歴を削除すると消える。2共有リンクは履歴とパーソナライズの設定が条件で、スレッド全体が入る。3ノートブックはパソコンの一覧のメニューからスレッドを入れてテーマごとにまとめ、スレッドは履歴に入るので履歴を消すと消える。4コピーは回答ごとに本文をメモに移せる。5PDFとスクリーンショットは見た目ごと手元に残せる" loading="lazy"><figcaption>AIモードの会話を残す5つの方法（2026年10月4日時点）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>方法</th>
@@ -112,37 +120,37 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>履歴</td>
-<td>ログインと検索の履歴の設定</td>
-<td>スレッド全体</td>
-<td>自分で消したとき・自動削除の期間を過ぎたとき</td>
+<td data-label="方法">履歴</td>
+<td data-label="必要な条件">ログインと検索の履歴の設定</td>
+<td data-label="残る範囲">スレッド全体</td>
+<td data-label="消えるとき">自分で消したとき・自動削除の期間を過ぎたとき</td>
 </tr>
 <tr>
-<td>共有リンク</td>
-<td>上に加えてパーソナライズの設定</td>
-<td>共有した時点のスレッド全体</td>
-<td>リンクを消したとき・元のスレッドを消したとき</td>
+<td data-label="方法">共有リンク</td>
+<td data-label="必要な条件">上に加えてパーソナライズの設定</td>
+<td data-label="残る範囲">共有した時点のスレッド全体</td>
+<td data-label="消えるとき">リンクを消したとき・元のスレッドを消したとき</td>
 </tr>
 <tr>
-<td>ノートブック</td>
-<td>個人のアカウントでパソコンから</td>
-<td>追加したスレッド</td>
-<td>スレッドは履歴に入っているので、履歴を消すと消える</td>
+<td data-label="方法">ノートブック</td>
+<td data-label="必要な条件">個人のアカウントでパソコンから</td>
+<td data-label="残る範囲">追加したスレッド</td>
+<td data-label="消えるとき">スレッドは履歴に入っているので、履歴を消すと消える</td>
 </tr>
 <tr>
-<td>コピー</td>
-<td>なし</td>
-<td>コピーした回答の本文</td>
-<td>貼り付け先から消さない限り残る</td>
+<td data-label="方法">コピー</td>
+<td data-label="必要な条件">なし</td>
+<td data-label="残る範囲">コピーした回答の本文</td>
+<td data-label="消えるとき">貼り付け先から消さない限り残る</td>
 </tr>
 <tr>
-<td>PDF・スクリーンショット</td>
-<td>なし</td>
-<td>画面に出ている部分</td>
-<td>手元のファイルを消さない限り残る</td>
+<td data-label="方法">PDF・スクリーンショット</td>
+<td data-label="必要な条件">なし</td>
+<td data-label="残る範囲">画面に出ている部分</td>
+<td data-label="消えるとき">手元のファイルを消さない限り残る</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**履歴と共有リンクはGoogleアカウントの中に残るため、履歴を消すとどちらも消えます。**消える心配をしたくない回答は、コピーかPDFで手元に移します。</p>
 <h2 id="s2">履歴に自動で残す</h2>
 <p>AIモードで話した内容は条件がそろっていれば何もしなくても履歴に入ります。条件はGoogleアカウントにログインしていることと、検索の履歴を残す設定がオンになっていることの2つです。ログアウトした状態で使った会話は残りません。仕事用のGoogle Workspaceのアカウントで検索とアシスタントがオフになっている場合も、検索履歴は使えず、オンにできるのは管理者です。</p>
@@ -156,6 +164,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <p>**注意が要るのは、以前「ウェブとアプリのアクティビティ」がオンで「検索のカスタマイズ」がオフだった人です。**この場合は検索サービス履歴だけがオンになるため、会話は履歴に残りますが、共有リンクは作れません。共有したいときはGoogleアカウントの<a href="https://www.google.com/search-personalization/">検索サービスにおけるパーソナライズされたおすすめ表示</a>をオンにします。</p>
 <p>ヘルプの記事と画面の表示が一致しないことがあるのは、この切り替えの途中だからです。検索サービス履歴のオンとオフは<a href="https://myactivity.google.com/search-services/settings">検索サービス履歴の設定</a>のページで確かめられます。まだ切り替わっていないアカウントでは、同じページで従来の「ウェブとアプリのアクティビティ」が表示されます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">共有リンクで残す</h2>
 <p>共有リンクは本来は人に回答を見せるための機能ですが、リンクを自分宛てのメモやメールに貼っておけば、あとから同じ会話を開けます。<strong>使うには検索サービス履歴とパーソナライズされたおすすめ表示の両方をオンにしておく必要があり、どちらかがオフだと共有できません。</strong></p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/ai-mode-save/ams_01_icons.jpg" alt="スマホのAIモードで回答の下に並ぶアイコン。左から1のコピー、2の共有、高評価、低評価、その他。1と2が赤枠で囲まれている" loading="lazy"><figcaption>回答の下のアイコン（2026年9月26日、スマホ）。1がコピー、2が共有</figcaption></figure>
@@ -176,7 +198,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/ai-mode-save/ams_03_pc_links.jpg" alt="パソコン版のAIモードでサイドバーを開いた画面。左下の1の設定を押すと、2のAI モードで共有した公開リンクを管理、検索履歴を表示、パーソナライズのメニューが開く。1と2が赤枠で囲まれている" loading="lazy"><figcaption>パソコン版のメニュー（2026年9月26日）。1の設定から2に進む</figcaption></figure>
 
 <p>削除には2つの経路があり、消えるまでの時間が違います。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>操作</th>
@@ -185,15 +207,15 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>「公開リンクを管理」で共有リンクを削除</td>
-<td>数分以内</td>
+<td data-label="操作">「公開リンクを管理」で共有リンクを削除</td>
+<td data-label="消えるまで">数分以内</td>
 </tr>
 <tr>
-<td>元のAIモードのスレッドを削除</td>
-<td>対応する共有リンクも数日以内に削除</td>
+<td data-label="操作">元のAIモードのスレッドを削除</td>
+<td data-label="消えるまで">対応する共有リンクも数日以内に削除</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>元の会話を履歴から消すと共有リンクも使えなくなるため、共有リンクだけを保存先にするのは確実ではありません。</strong></p>
 <h2 id="s4">ノートブックにまとめる</h2>
 <p>パソコンのAIモードで左の一覧の「最近」のスレッドにカーソルを合わせると、右端にメニューが出て「共有」「ノートブックに追加」「削除」が並びます。**同じテーマの会話を1か所に集めておきたいなら、ノートブックが向いています。**会話の保存先が増えるのではなく、履歴に入っている会話をまとめて置く場所です。</p>
@@ -210,7 +232,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <p>ノートブックの中の会話のメニューで「ノートブックから削除」を押すと、会話はノートブックから外れて「最近」の一覧に戻りました。メニューのいちばん下の「削除」は会話そのものを消す項目なので、押し間違えないようにしてください。</p>
 <p>同じヘルプによると、使えるのは自分で管理する個人のGoogleアカウントで、履歴とパーソナライズされたおすすめ表示のオンがすすめられています。ノートブックにはファイルやURLをソースとして足すこともでき、ソースとカスタム指示はGeminiアプリと<a href="/media/gemini-notebook-guide/">Gemini Notebook</a>のノートブックにも同期されます。<strong>AIモードのチャットはGeminiアプリやGemini Notebookには同期されず、ノートブックの中でもAIモードでしか開けません</strong>（<a href="https://support.google.com/gemininotebook/answer/17513891?hl=ja">Gemini Notebook側のヘルプ</a>）。AIモードのノートブックは英語のみの提供と同じヘルプにありますが、上のとおり日本語の画面でも追加と取り外しはできました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>操作</th>
@@ -219,23 +241,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>会話のメニューで「ノートブックから削除」</td>
-<td>会話は「最近」に戻る（10月4日に確認）</td>
+<td data-label="操作">会話のメニューで「ノートブックから削除」</td>
+<td data-label="どうなるか">会話は「最近」に戻る（10月4日に確認）</td>
 </tr>
 <tr>
-<td>ノートブックを削除</td>
-<td>ヘルプでは、ノートブックとソースが消えて中のスレッドは「最近」に戻る。確認の画面には「このノートブックとその内容すべてが完全に削除されます」と出る</td>
+<td data-label="操作">ノートブックを削除</td>
+<td data-label="どうなるか">ヘルプでは、ノートブックとソースが消えて中のスレッドは「最近」に戻る。確認の画面には「このノートブックとその内容すべてが完全に削除されます」と出る</td>
 </tr>
 <tr>
-<td>AIモードでノートブックを削除</td>
-<td>GeminiアプリとGemini Notebookの同じノートブックも消える</td>
+<td data-label="操作">AIモードでノートブックを削除</td>
+<td data-label="どうなるか">GeminiアプリとGemini Notebookの同じノートブックも消える</td>
 </tr>
 <tr>
-<td>AIモードのアクティビティを削除</td>
-<td>Gemini Notebookのソースと指示は消えない</td>
+<td data-label="操作">AIモードのアクティビティを削除</td>
+<td data-label="どうなるか">Gemini Notebookのソースと指示は消えない</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**ノートブックを消す前に、残したい会話は「ノートブックから削除」で「最近」に戻しておくのが確実です。**ヘルプと確認の画面の書き方が違い、ノートブックごと消したときの会話の扱いは試していません。</p>
 <h2 id="s5">本文をコピーして残す</h2>
 <p>回答の下のいちばん左にあるアイコンを押すと、その回答の本文がコピーされます。画面の読み上げ用の表示名は「テキストをコピー」で、質問の文にも同じようなコピーのボタンが付いています。</p>
@@ -251,7 +273,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ログインして検索サービス履歴がオンなら前の会話は履歴から開き直せますが、ログアウトしていると残りません。条件のまとめを先に貼っておくと、新しい検索でも前提を説明し直す手間が減ります。</p>
 <h2 id="s8">保存した会話が消えるとき</h2>
 <p>履歴に残した会話と共有リンクは、Googleアカウントの設定と操作によって消えます。手元に移す範囲は消える経路から決めるのが近道です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>操作・設定</th>
@@ -260,27 +282,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>AIモードの履歴から会話を削除</td>
-<td>その会話と、対応する共有リンク（数日以内）</td>
+<td data-label="操作・設定">AIモードの履歴から会話を削除</td>
+<td data-label="消えるもの">その会話と、対応する共有リンク（数日以内）</td>
 </tr>
 <tr>
-<td>履歴の上部から「すべて削除」</td>
-<td>AIモードの全ての会話</td>
+<td data-label="操作・設定">履歴の上部から「すべて削除」</td>
+<td data-label="消えるもの">AIモードの全ての会話</td>
 </tr>
 <tr>
-<td>検索サービス履歴の自動削除</td>
-<td>設定した期間を過ぎた会話</td>
+<td data-label="操作・設定">検索サービス履歴の自動削除</td>
+<td data-label="消えるもの">設定した期間を過ぎた会話</td>
 </tr>
 <tr>
-<td>共有リンクを削除</td>
-<td>リンクだけ。元の会話は履歴に残る</td>
+<td data-label="操作・設定">共有リンクを削除</td>
+<td data-label="消えるもの">リンクだけ。元の会話は履歴に残る</td>
 </tr>
 <tr>
-<td>ノートブックを削除</td>
-<td>ノートブックとソース。ヘルプではスレッドは「最近」に戻るが、確認の画面は内容すべてを削除と表示。先にノートブックから外す</td>
+<td data-label="操作・設定">ノートブックを削除</td>
+<td data-label="消えるもの">ノートブックとソース。ヘルプではスレッドは「最近」に戻るが、確認の画面は内容すべてを削除と表示。先にノートブックから外す</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>残る期間は履歴の設定の自動削除で決まります。Googleの<a href="https://blog.google/technology/safety-security/keeping-private-information-private/">2020年6月の発表</a>によると、それ以降に作ったアカウントは、ウェブとアプリのアクティビティが最初から18か月で自動削除される設定です。それより前のアカウントは自分で設定していなければ自動削除の期間がかからないため、今の期間はGoogleアカウントの「データとプライバシー」から「履歴の設定」を開き、「自動削除」で確かめてください。</p>
 <p>検索結果のAIによる概要から「AI モードでさらに詳しく」に進んだ会話は、検索履歴に2件の記録が残る場合があります。<a href="https://support.google.com/websearch/answer/16011537?hl=ja">AIモードのヘルプ</a>では、AIモードの履歴から消しても検索履歴には残るため、完全に消すには検索履歴からも削除する必要があるという案内です。</p>
 <p>履歴から削除した会話はしばらくのあいだマイ アクティビティに表示が残ることがあります。24時間以内に自動で削除されるというのが、同じヘルプの案内です。<strong>消した会話を元に戻す手順はヘルプには案内されていないため、消す前に必要な回答をコピーかPDFで移しておきます。</strong></p>
@@ -320,12 +342,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -334,9 +357,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">保存の方法は5つ</a><a href="#s2">履歴に自動で残す</a><a href="#s3">共有リンクで残す</a><a href="#s4">ノートブックにまとめる</a><a href="#s5">本文をコピーして残す</a><a href="#s6">PDFやスクリーンショットで残す</a><a href="#s7">新しい検索が開始しますと出たとき</a><a href="#s8">保存した会話が消えるとき</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -369,11 +395,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

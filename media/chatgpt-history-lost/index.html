@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTの履歴…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.26</span>
         </div>
         <h1 class="post-title">【2026年10月】ChatGPTの履歴が消えた原因と戻し方を解説｜検索・アーカイブ・プロジェクト・一時チャット</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの履歴が消えた"><defs><linearGradient id="ecg-a544e35b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a544e35b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの履歴が消えた</text><line x1="174.4" y1="327.1" x2="1025.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">検索・アーカイブ・プロジェクト・一時チャット</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li>削除した会話は<strong>戻せない</strong>。すべてのチャットを削除した場合も同じ</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -107,7 +115,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>OpenAIのヘルプ「<a href="https://help.openai.com/ja-jp/articles/8809935-how-to-delete-and-archive-chats-in-chatgpt">ChatGPT でのチャットの削除とアーカイブ</a>」の、チャットが見つからない場合の手順と、検索・プロジェクト・一時チャットのヘルプを合わせると、原因は6つに分かれます。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-history-lost/00_fig_causes_v2.jpg" alt="履歴が消えたときの図。残っている側は虫眼鏡と箱とフォルダのアイコンで検索で探す。戻らない側はゴミ箱と砂時計のアイコンで削除と一時チャット" loading="lazy"><figcaption>見えないだけの会話は探せば出る。削除と保存しなかった一時チャットは戻らない（OpenAIのヘルプから作成）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>原因</th>
@@ -117,37 +125,37 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>別のアカウントやワークスペース</td>
-<td>元のアカウントやワークスペースに残っている</td>
-<td>ログインの方法とワークスペースを確かめる</td>
+<td data-label="原因">別のアカウントやワークスペース</td>
+<td data-label="会話は残っているか">元のアカウントやワークスペースに残っている</td>
+<td data-label="探す場所">ログインの方法とワークスペースを確かめる</td>
 </tr>
 <tr>
-<td>古い会話がサイドバーに出ないだけ</td>
-<td>残っている</td>
-<td>サイドバーの検索</td>
+<td data-label="原因">古い会話がサイドバーに出ないだけ</td>
+<td data-label="会話は残っているか">残っている</td>
+<td data-label="探す場所">サイドバーの検索</td>
 </tr>
 <tr>
-<td>アーカイブした</td>
-<td>残っている</td>
-<td>設定のデータ コントロール</td>
+<td data-label="原因">アーカイブした</td>
+<td data-label="会話は残っているか">残っている</td>
+<td data-label="探す場所">設定のデータ コントロール</td>
 </tr>
 <tr>
-<td>プロジェクトに移した</td>
-<td>プロジェクトの中に残っている</td>
-<td>サイドバーのプロジェクト</td>
+<td data-label="原因">プロジェクトに移した</td>
+<td data-label="会話は残っているか">プロジェクトの中に残っている</td>
+<td data-label="探す場所">サイドバーのプロジェクト</td>
 </tr>
 <tr>
-<td>一時チャット・ログインなし</td>
-<td>残らない</td>
-<td>なし</td>
+<td data-label="原因">一時チャット・ログインなし</td>
+<td data-label="会話は残っているか">残らない</td>
+<td data-label="探す場所">なし</td>
 </tr>
 <tr>
-<td>削除した</td>
-<td>残らない</td>
-<td>なし</td>
+<td data-label="原因">削除した</td>
+<td data-label="会話は残っているか">残らない</td>
+<td data-label="探す場所">なし</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**上の4つなら会話は見つかります。**一時チャットやログインなしで使った会話、削除した会話は探しても出てきません。</p>
 <h2 id="s2">消えた会話を探す順番</h2>
 <p>ヘルプのトラブルシューティングにある順番に、プロジェクトの確認を足すと次のようになります。見つかった時点で終わってかまいません。</p>
@@ -178,6 +186,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>2026年9月中旬に更新されたChatGPTのデスクトップアプリ（Windows・Mac・Linux）で、サイドバーの最近の会話が途中までしか出なくなったという報告が、OpenAIのGitHubの「<a href="https://github.com/openai/codex/issues/46800">openai/codex の issue #46800</a>」に複数寄せられました。止まり方は報告によって違い、macOSは約4件、Windowsはちょうど40件で止まったと書かれています。多くの報告では会話はウェブ版の<a href="https://chatgpt.com/">chatgpt.com</a>に残っていました。一覧に出ない古い会話をアプリの検索で見つけて開けた例と、タイトルを入れても見つからなかった例があります。まずはアプリの検索を試してください。<strong>9月30日の版（26.928）に更新したら直った、と複数の報告者が書いています。</strong></p>
 <p>ただし10月17日時点でもこのissueは開いたままで、10月13日にはWindowsの新しい版で似た症状の投稿もありました。OpenAIからの告知は見当たりません。どれも利用者の報告で、この記事では再現を試していません。同じ症状なら、アプリを最新の版に更新し、直るまではウェブ版で会話を開いてください。</p>
 <p>Androidのアプリについては<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT のリリースノート</a>の2026年8月21日の項によると、版1.2026.216からサイドバーに出す最近の会話を最大8件にしました。一覧に見当たらない会話も検索なら探せます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">プロジェクトごと見当たらないとき</h2>
 <p>中の会話だけでなく、プロジェクトそのものがサイドバーの一覧から消えたという相談もあります。<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT のリリースノート</a>の2026年6月18日の項によると、ウェブ版のサイドバーからチャットとプロジェクトをピン留めできるようになり、ピン留めの欄にプロジェクトも並ぶようになりました。同じ更新で、最近の項目を1つの一覧にまとめるか、プロジェクトごとにまとめるかも選べるようになっています。**いつもの場所に無いときはピン留めの欄と最近の項目の並べ方を先に確かめてください。**2026年10月17日にPCのブラウザで確かめると、ピン留めの欄はサイドバーの上のほうにありました。並べ方は［最近の項目］の横の［…］から［サイドバーを整理］を開き、［プロジェクト別］と［1つのリストで表示］から選びます。同じメニューの［表示対象］で、［プロジェクト］にチェックが付いているかも見てください。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-history-lost/cgh_04_pc_pin.jpg" alt="ChatGPTのサイドバー。ピン留めの欄にテスト用の国民の祝日一覧の会話が1件あり赤い枠で囲まれている。メニューのサイドバーを整理から開いたプロジェクト別と1つのリストで表示の選択肢も赤い枠で囲まれている" loading="lazy"><figcaption>ピン留めの欄と並べ方の切り替え（2026年10月17日、PCのブラウザ）</figcaption></figure>
@@ -190,7 +212,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>**多くの報告では会話は検索や最近の項目に出ています。**ただし検索で出ても開けなかった報告もあります。プロジェクトが見えなくても、まず検索で中の会話を探してください。開けないときはデータ コントロールの［データをエクスポート］で控えを取り、プロジェクトの名前と見えなくなった日時を添えてサポートに伝えます。</p>
 <h2 id="s4">会話が削除されたと出るとき</h2>
 <p>検索で見つけた会話や保存しておいたURLを開くと、会話が削除されたという表示が出ることがあります。英語の画面では「The conversation has been deleted. Start a new chat.」と出たという報告があり、日本語の画面の文言はこの記事では確かめていません。出る場面はヘルプと利用者の報告から次の4つが分かっています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>場面</th>
@@ -200,27 +222,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>自分で削除した会話が古い検索結果に残っていた</td>
-<td>ヘルプ</td>
-<td>戻らない</td>
+<td data-label="場面">自分で削除した会話が古い検索結果に残っていた</td>
+<td data-label="根拠">ヘルプ</td>
+<td data-label="会話は戻るか">戻らない</td>
 </tr>
 <tr>
-<td>人から受け取った共有リンクの元の会話が削除された</td>
-<td>ヘルプ（表示の文言は未確認）</td>
-<td>リンクは開けない</td>
+<td data-label="場面">人から受け取った共有リンクの元の会話が削除された</td>
+<td data-label="根拠">ヘルプ（表示の文言は未確認）</td>
+<td data-label="会話は戻るか">リンクは開けない</td>
 </tr>
 <tr>
-<td>Macのアプリで別の端末で消した会話が一覧に残った</td>
-<td>利用者の報告</td>
-<td>すでに削除されている</td>
+<td data-label="場面">Macのアプリで別の端末で消した会話が一覧に残った</td>
+<td data-label="根拠">利用者の報告</td>
+<td data-label="会話は戻るか">すでに削除されている</td>
 </tr>
 <tr>
-<td>削除していないのにプロジェクトごと消えた</td>
-<td>利用者の報告</td>
-<td>10月17日の時点で不明</td>
+<td data-label="場面">削除していないのにプロジェクトごと消えた</td>
+<td data-label="根拠">利用者の報告</td>
+<td data-label="会話は戻るか">10月17日の時点で不明</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>検索のヘルプによると、削除したチャットが古い検索結果に一時的に残っていても開いて復元されることはありません。共有リンクのヘルプ「<a href="https://help.openai.com/ja-jp/articles/7925741-chatgpt-shared-links-faq">ChatGPT での会話とスケジュール済みタスクの共有</a>」によると、会話を削除するとその共有リンクも削除されます。<strong>受け取ったリンクが開けないなら、共有した人が元の会話を消した可能性があります。</strong></p>
 <p>Macのデスクトップアプリでは、スマホや別のパソコンで削除した会話が最近の項目に残り、開けないものもあったという報告が<a href="https://community.openai.com/t/deleted-conversations-remain-in-recents-on-chatgpt-macos-app/1395892">9月9日</a>にありました。OpenAIは9月19日に修正を出したと返信しましたが、そのあとも同じ報告が続いています。ウェブ版の一覧にその会話が無ければ、削除は済んでいてアプリの表示だけが古いままだと考えられます。削除した覚えが無いのに出る場合は、上のプロジェクトの報告と同じく、エクスポートで控えを取ってからサポートに伝えてください。</p>
 <h2 id="s5">履歴に残らない2つのケース</h2>
@@ -290,12 +312,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -304,9 +327,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">履歴が消える6つの原因</a><a href="#s2">消えた会話を探す順番</a><a href="#s3">プロジェクトごと見当たらないとき</a><a href="#s4">会話が削除されたと出るとき</a><a href="#s5">履歴に残らない2つのケース</a><a href="#s6">削除した会話は戻らない</a><a href="#s7">もう一度試すで前の回答が消えたとき</a><a href="#s8">会話を消さないための設定と習慣</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -339,11 +365,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

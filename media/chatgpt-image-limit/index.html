@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTの画像…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.25</span>
         </div>
         <h1 class="post-title">【2026年10月】ChatGPTの画像生成の制限を解説｜何枚まで・できない原因・リセット時間</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの画像生成の制限"><defs><linearGradient id="ecg-fe136034" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-fe136034)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの画像生成の制限</text><line x1="136.4" y1="327.1" x2="1063.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">何枚まで・できない原因・リセット時間</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>9月8日のChatGPT 画像 2.5で上限は変わっていない。公式のDALL·E GPTは8月30日に終了した</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -102,7 +110,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>「画像が作れない」という状態は、上限に達した場合だけではありません。OpenAIの<a href="https://help.openai.com/ja-jp/articles/7996703-troubleshooting-chatgpt-error-messages">エラーメッセージのトラブルシューティング</a>と<a href="https://help.openai.com/ja-jp/articles/11084440-images-in-chatgpt">ChatGPT の画像</a>のページに、<a href="https://openai.com/ja-JP/policies/usage-policies/">使用に関するポリシー</a>を合わせると、止まり方は5つに分かれます。<strong>最初に見るのは画像の代わりに何が表示されたかです。</strong></p>
 <figure class="post-figure"><img src="/media/images/chatgpt-image-limit/00_fig_causes_v2.jpg" alt="ChatGPTで画像が作れない5つの原因を並べた図。砂時計の回数の上限、盾のポリシー、回る矢印の処理中のまま、警告の三角のエラー、筆に禁止の印の機能が使えない" loading="lazy"><figcaption>画面の出方で原因を5つに分ける</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>画面の出方</th>
@@ -112,32 +120,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>画像作成の上限に達した旨と、再開の時刻</td>
-<td>回数の上限</td>
-<td>時刻まで待つ。急ぐならプランを上げる</td>
+<td data-label="画面の出方">画像作成の上限に達した旨と、再開の時刻</td>
+<td data-label="原因">回数の上限</td>
+<td data-label="まずやること">時刻まで待つ。急ぐならプランを上げる</td>
 </tr>
 <tr>
-<td>画像の代わりに文章で断られる</td>
-<td>利用ポリシー</td>
-<td>実在の人物名や作品名を外して言い換える</td>
+<td data-label="画面の出方">画像の代わりに文章で断られる</td>
+<td data-label="原因">利用ポリシー</td>
+<td data-label="まずやること">実在の人物名や作品名を外して言い換える</td>
 </tr>
 <tr>
-<td>生成中の表示が数分たっても終わらない</td>
-<td>処理の混雑・長い会話</td>
-<td>待つ。止めて再生成、新しいチャットで送り直す</td>
+<td data-label="画面の出方">生成中の表示が数分たっても終わらない</td>
+<td data-label="原因">処理の混雑・長い会話</td>
+<td data-label="まずやること">待つ。止めて再生成、新しいチャットで送り直す</td>
 </tr>
 <tr>
-<td>「問題が発生しました。」などのエラー</td>
-<td>通信・ブラウザ・障害</td>
-<td>障害情報を見て、VPNや拡張機能を外す</td>
+<td data-label="画面の出方">「問題が発生しました。」などのエラー</td>
+<td data-label="原因">通信・ブラウザ・障害</td>
+<td data-label="まずやること">障害情報を見て、VPNや拡張機能を外す</td>
 </tr>
 <tr>
-<td>DALL·Eが見つからない・画像が作れない設定</td>
-<td>機能の終了・保護者の設定</td>
-<td>ChatGPT 画像を使う。保護者の設定を確かめる</td>
+<td data-label="画面の出方">DALL·Eが見つからない・画像が作れない設定</td>
+<td data-label="原因">機能の終了・保護者の設定</td>
+<td data-label="まずやること">ChatGPT 画像を使う。保護者の設定を確かめる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>表の上から順に当てはまるか確かめると、原因を取り違えずに済みます。公式ヘルプには<strong>画像生成はリクエストの複雑さによって数分かかる場合がある</strong>と書かれています。</p>
 <h2 id="s2">回数の上限に達したとき</h2>
 <p>無料版で画像を作り続けたときに出るのが、画像作成の上限に達した旨の通知です。<a href="https://help.openai.com/ja-jp/articles/9275245-chatgpt-free-tier-faq">ChatGPT 無料版に関するよくある質問</a>には、実際の表示例の画像が載っています。</p>
@@ -151,11 +159,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>参照用の画像を添えて頼んでいるなら、止まったのがアップロードの側ということもあります。無料版のFAQではファイルと画像のアップロードも画像の作成とは別の上限として挙がっています。アップロードの回数と容量は<a href="/media/chatgpt-file-upload-limit/">ChatGPTのファイルアップロード上限の記事</a>で、ほかの種類の上限は<a href="/media/chatgpt-limit-reached/">ChatGPTで上限に達したときの記事</a>で整理しました。</p>
 <h3 id="s2-2">有料プランに変えるとリセット</h3>
 <p>急ぐときの手はプランを上げることです。同じ公式FAQに、<strong>無料版で上限に達したあとPlus・Pro・Businessに変えると利用上限がリセットされる</strong>と書かれています。対象として挙がっているのはこの3つで、Goは書かれていません。待たずにほかのAIで作るなら、4つのAIの無料の上限と料金を並べた<a href="/media/ai-compare/">AIの比較ページ</a>で、画像の作成の扱いも確かめられます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">プランごとの画像生成の違い</h2>
 <p><a href="https://chatgpt.com/ja-JP/pricing/">ChatGPTの料金ページ</a>では、画像生成の扱いがプランごとに1行で書かれています。<strong>無料版は「画像作成に制限あり」、Goは「より多くの画像生成」、Plusは「より高度で正確な画像生成」で、無制限と書かれているのはProだけです。</strong></p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-image-limit/cil_01_pricing_sp_v2.jpg" alt="ChatGPTの料金ページをスマホで開いた画面。無料版0円の機能一覧に、GPT-5.6 Lunaでのテキストチャットは無制限、アップロードを含むメッセージ数に上限あり、画像作成に制限あり、音声チャットに上限ありが並び、画像作成に制限ありの行が赤枠で囲まれている" loading="lazy"><figcaption>料金ページの無料版の欄。赤枠が画像の行</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -167,35 +189,35 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>無料版</td>
-<td>0円</td>
-<td>画像作成に制限あり</td>
-<td>上限あり</td>
-<td>いいえ</td>
+<td data-label="プラン">無料版</td>
+<td data-label="月額">0円</td>
+<td data-label="料金ページの書き方">画像作成に制限あり</td>
+<td data-label="比較表の画像生成">上限あり</td>
+<td data-label="Thinkingによる画像生成">いいえ</td>
 </tr>
 <tr>
-<td>Go</td>
-<td>1,400円</td>
-<td>より多くの画像生成</td>
-<td>はい</td>
-<td>いいえ</td>
+<td data-label="プラン">Go</td>
+<td data-label="月額">1,400円</td>
+<td data-label="料金ページの書き方">より多くの画像生成</td>
+<td data-label="比較表の画像生成">はい</td>
+<td data-label="Thinkingによる画像生成">いいえ</td>
 </tr>
 <tr>
-<td>Plus</td>
-<td>3,000円</td>
-<td>より高度で正確な画像生成</td>
-<td>はい</td>
-<td>はい</td>
+<td data-label="プラン">Plus</td>
+<td data-label="月額">3,000円</td>
+<td data-label="料金ページの書き方">より高度で正確な画像生成</td>
+<td data-label="比較表の画像生成">はい</td>
+<td data-label="Thinkingによる画像生成">はい</td>
 </tr>
 <tr>
-<td>Pro</td>
-<td>16,800円から</td>
-<td>高速かつ無制限の画像作成</td>
-<td>はい</td>
-<td>はい</td>
+<td data-label="プラン">Pro</td>
+<td data-label="月額">16,800円から</td>
+<td data-label="料金ページの書き方">高速かつ無制限の画像作成</td>
+<td data-label="比較表の画像生成">はい</td>
+<td data-label="Thinkingによる画像生成">はい</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>表は10月7日時点の料金ページの表示です。比較表ではGo以上の画像生成が「はい」と表示され、枚数は書かれていません。Plusの欄の下には「制限が適用されます」とあり、Proの欄にも無制限で使えるが不正利用を防ぐ安全対策は適用されると添えられています。</p>
 <p>Plus以上で使えるThinkingによる画像生成は、公式ヘルプで「思考機能付き画像」と呼ばれている機能です。Plus・Pro・Businessで使え、EnterpriseとEduは近日対応と書かれています。**何枚まで作れるかの数字は無料版からPlusまでどこにも公開されていません。**金額の詳しい比較は<a href="/media/chatgpt-pricing/">ChatGPTの料金プランの記事</a>にまとめました。</p>
 <h3 id="s3-1">何枚までという数字の扱い</h3>
@@ -234,7 +256,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s8">上限を無駄にしない頼み方</h2>
 <p>回数に上限がある以上、1回ごとの精度を上げるほど多くの画像を仕上げられます。公式ヘルプに載っている機能のうち、作り直しの回数を減らせるものを並べます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>やり方</th>
@@ -243,31 +265,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>用途と載せる文字を最初に書く</td>
-<td>ポスターやロゴで、文字の入れ直しによる作り直し</td>
+<td data-label="やり方">用途と載せる文字を最初に書く</td>
+<td data-label="何が減るか">ポスターやロゴで、文字の入れ直しによる作り直し</td>
 </tr>
 <tr>
-<td>アスペクト比を最初に指定する</td>
-<td>縦横の比率を変えるための作り直し</td>
+<td data-label="やり方">アスペクト比を最初に指定する</td>
+<td data-label="何が減るか">縦横の比率を変えるための作り直し</td>
 </tr>
 <tr>
-<td>気になる部分だけ選択ツールで範囲を選んで直す</td>
-<td>全体の作り直し</td>
+<td data-label="やり方">気になる部分だけ選択ツールで範囲を選んで直す</td>
+<td data-label="何が減るか">全体の作り直し</td>
 </tr>
 <tr>
-<td>テンプレートの質問に答えてから送る</td>
-<td>スタイルの指定漏れによる作り直し</td>
+<td data-label="やり方">テンプレートの質問に答えてから送る</td>
+<td data-label="何が減るか">スタイルの指定漏れによる作り直し</td>
 </tr>
 <tr>
-<td>参照画像をアップロードして「この雰囲気で」と頼む</td>
-<td>言葉だけで雰囲気を伝える往復</td>
+<td data-label="やり方">参照画像をアップロードして「この雰囲気で」と頼む</td>
+<td data-label="何が減るか">言葉だけで雰囲気を伝える往復</td>
 </tr>
 <tr>
-<td>モバイルアプリでスケッチを描いてから頼む</td>
-<td>構図を言葉で伝える往復</td>
+<td data-label="やり方">モバイルアプリでスケッチを描いてから頼む</td>
+<td data-label="何が減るか">構図を言葉で伝える往復</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>選択ツールは生成された画像を開いて「選択」を押し、直したい範囲をなぞって変更を書く機能です。公式ヘルプには<strong>ハイライトした範囲の外まで編集が及ぶことがある</strong>とも書かれています。範囲を選ぶときは「元に戻す」「やり直す」で選び直せます。編集が範囲の外まで及んだら、範囲を狭めて頼み直すか、会話で直したい部分を言葉で指定し直してください。</p>
 <p>スケッチはChatGPTのモバイルアプリの機能で、入力欄に「@」と打ってスケッチを選ぶと手描きの画面が開きます。描いたあとに主題・色・スタイルを書き添えて送ると、それをもとに画像が作られます。</p>
 <h2 id="s9">よくある質問</h2>
@@ -300,12 +322,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -314,9 +337,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">画像生成ができない5つの原因</a><a href="#s2">回数の上限に達したとき</a><a href="#s3">プランごとの画像生成の違い</a><a href="#s4">ポリシーで断られるとき</a><a href="#s5">処理中のまま進まないとき</a><a href="#s6">エラーが表示されるとき</a><a href="#s7">画像の機能が使えないとき</a><a href="#s8">上限を無駄にしない頼み方</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -349,11 +375,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

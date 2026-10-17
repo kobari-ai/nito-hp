@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】ChatGPTの使い方…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.23</span>
         </div>
         <h1 class="post-title">【2026年9月】ChatGPTの使い方を公式ヘルプで確認｜モデル選択・ファイル・プラグイン</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの使い方"><defs><linearGradient id="ecg-dc6bc9a7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-dc6bc9a7)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの使い方</text><line x1="288.4" y1="327.1" x2="911.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">モデル選択・ファイル・プラグインの現在地</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li><strong>カスタムGPTは2026年12月11日に終了予定</strong>で、移行先はプラグイン。カスタムアクションは引き継がれない</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -111,9 +119,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p><strong>新しいチャット</strong>は話題を変えるときの区切りです。ChatGPTは1つの会話の中では前のやり取りを踏まえて答えるので、別件を同じ会話に混ぜると精度が落ちがちです。</p>
 <p><strong>ウェブ検索</strong>は最新の情報が必要なときにChatGPTが自分で使います。手動で使いたいときは検索のアイコンを押すか、対応している画面で<code>/Search</code>と打つ方法もあります。検索を使った回答には出典が付きます。</p>
 <p><strong>一時チャット</strong>は履歴に残さない会話です。新しいチャットを開いて「Temporary」を選び、最初のメッセージを送る前に「Personalized」か「Unpersonalized」を選びます。Unpersonalizedならメモリもカスタム指示もプラグインも使わずに答えます。一時チャットはそのままの状態ならモデルの改善にも使われません。あとから通常のチャットとして保存することもできます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">モデルは考える深さで選ぶ</h2>
 <p>2026年9月時点のモデル選択は、モデル名の一覧から選ぶ形ではありません。<strong>Thinkingのスライダー</strong>で、どれだけ考えさせるかを選びます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>段階</th>
@@ -123,32 +145,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Instant</td>
-<td>日常の質問向け。有料はGPT-5.6 Sol、無料とGoはGPT-5.6 Luna</td>
-<td>全プラン</td>
+<td data-label="段階">Instant</td>
+<td data-label="中身">日常の質問向け。有料はGPT-5.6 Sol、無料とGoはGPT-5.6 Luna</td>
+<td data-label="使えるプラン">全プラン</td>
 </tr>
 <tr>
-<td>Medium</td>
-<td>標準の思考。GPT-5.6 Sol</td>
-<td>Plus・Pro・Business・Enterprise</td>
+<td data-label="段階">Medium</td>
+<td data-label="中身">標準の思考。GPT-5.6 Sol</td>
+<td data-label="使えるプラン">Plus・Pro・Business・Enterprise</td>
 </tr>
 <tr>
-<td>High</td>
-<td>思考を延ばす。GPT-5.6 Sol</td>
-<td>Plus・Pro・Business・Enterprise</td>
+<td data-label="段階">High</td>
+<td data-label="中身">思考を延ばす。GPT-5.6 Sol</td>
+<td data-label="使えるプラン">Plus・Pro・Business・Enterprise</td>
 </tr>
 <tr>
-<td>Extra High</td>
-<td>GPT-5.6 Solで最も深い段階</td>
-<td>Pro・Business・Enterprise</td>
+<td data-label="段階">Extra High</td>
+<td data-label="中身">GPT-5.6 Solで最も深い段階</td>
+<td data-label="使えるプラン">Pro・Business・Enterprise</td>
 </tr>
 <tr>
-<td>Pro</td>
-<td>GPT-5.6 Sol ProとGPT-6 Pro</td>
-<td>Pro・Business・Enterprise</td>
+<td data-label="段階">Pro</td>
+<td data-label="中身">GPT-5.6 Sol ProとGPT-6 Pro</td>
+<td data-label="使えるプラン">Pro・Business・Enterprise</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/chatgpt-guide/cg_03_fig_thinking.png" alt="ChatGPTの思考の段階とプランの対応図。Instantは全プラン、MediumとHighはPlus以上、Extra HighとProはProとBusinessとEnterpriseのみ。無料とGoにはSolの段階がなくThinkはGPT-5.6 Lunaが担当する" loading="lazy"><figcaption>思考の段階と、それぞれが使えるプラン</figcaption></figure>
 
 <p>選ぶときに効くのは、日常でどの段階まで使うかです。Highまでで足りるならPlus、それより上の段階を常用するなら上位プランという分かれ方になります。</p>
@@ -170,7 +192,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s6">画像と音声で増えた操作</h2>
 <p>画像は2026年9月8日に更新され、作り方の入口が増えました。Imagesのテンプレートから選んで細部を調整する、スマホで<code>@</code>からSketchを選んで下絵を描き、そこから作らせる、といった形です。生成した画像をスマホで全画面にすると、編集やコメントでの指示ができます。作った画像のプロンプトを共有して、相手に同じ形で作ってもらうこともできます。テンプレートはWorkモードではまだ使えません。</p>
 <p>音声は2026年9月9日に、検索や難しい問いのときにGPT-5.6やGPT-6 Astraを使えるようになりました。モデルと思考の深さはテキストと同じ操作で選びます。GPT-Liveの1日の上限は次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -179,23 +201,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Go</td>
-<td>GPT-Live-1 miniで3時間まで</td>
+<td data-label="プラン">Go</td>
+<td data-label="GPT-Liveの上限">GPT-Live-1 miniで3時間まで</td>
 </tr>
 <tr>
-<td>Plus</td>
-<td>GPT-Live-1で3時間まで</td>
+<td data-label="プラン">Plus</td>
+<td data-label="GPT-Liveの上限">GPT-Live-1で3時間まで</td>
 </tr>
 <tr>
-<td>Pro（$100）</td>
-<td>GPT-Live-1で15時間まで</td>
+<td data-label="プラン">Pro（$100）</td>
+<td data-label="GPT-Liveの上限">GPT-Live-1で15時間まで</td>
 </tr>
 <tr>
-<td>Pro（$200）</td>
-<td>GPT-Live-1が無制限</td>
+<td data-label="プラン">Pro（$200）</td>
+<td data-label="GPT-Liveの上限">GPT-Live-1が無制限</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>PlusとProでは上限に達してもGPT-Live miniへ切り替わる動きはなくなりました。音声側にあったInstantとMediumとHighの区分も廃止されています。</p>
 <h2 id="s7">繰り返す作業はスケジュールに置く</h2>
 <p>毎朝の要約や定期的な確認は、会話のたびに頼まなくても構いません。スケジュール機能に「荷物が届いたら教えて」のように頼むと、一度きりまたは繰り返しの仕事として登録されます。</p>
@@ -268,12 +290,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -282,9 +305,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">アカウントなしで試せる範囲</a><a href="#s2">最初に覚える操作は3つ</a><a href="#s3">モデルは考える深さで選ぶ</a><a href="#s4">自動で思考モードに切り替わらなくなった</a><a href="#s5">ファイルは毎回アップロードしない</a><a href="#s6">画像と音声で増えた操作</a><a href="#s7">繰り返す作業はスケジュールに置く</a><a href="#s8">カスタムGPTは12月11日に終了予定</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -317,11 +343,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

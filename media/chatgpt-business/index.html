@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPT Bu…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.04</span>
         </div>
         <h1 class="post-title">【2026年10月】ChatGPT Businessとは？料金とPlusとの違い｜1人で使えるか・2席から・プレミアム</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT Businessとは"><defs><linearGradient id="ecg-6096da69" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6096da69)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">比較</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT Businessとは</text><line x1="159.2" y1="327.1" x2="1040.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">料金・Plusとの違い・2席から</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>個人のチャットはBusinessに<strong>統合できるが取り消せない</strong>。分けたまま使うこともできる</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -100,7 +108,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p><a href="https://chatgpt.com/ja-JP/pricing">ChatGPTの料金ページ</a>のビジネス向けタブでは、標準シートが1ユーザーあたり月3,050円（2名以上・年額課金）、月額課金なら3,850円と表示されています。<a href="https://openai.com/ja-JP/business/pricing/">OpenAIのビジネス向け料金ページ</a>には、プレミアムシートも並んでいます。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-business/cb_01_pricing_sp.jpg" alt="OpenAIのビジネス向け料金ページをスマホで開いた画面。Businessの欄に、標準シートが3,050円から、年額課金で20ドル、月額課金で25ドル、プレミアムシートが15,250円から、標準シートの5倍の利用枠で5時間ごとの利用上限なし、年額課金で100ドル、月額課金で125ドルと表示され、その下に含まれる内容が並んでいる" loading="lazy"><figcaption>OpenAIのビジネス向け料金ページ（2026年10月4日、スマホ表示）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>席の種類</th>
@@ -111,26 +119,40 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>標準シート</td>
-<td>3,050円（$20）</td>
-<td>3,850円（$25）</td>
-<td>ChatGPT、ChatGPT Work、Codex</td>
+<td data-label="席の種類">標準シート</td>
+<td data-label="年額課金">3,050円（$20）</td>
+<td data-label="月額課金">3,850円（$25）</td>
+<td data-label="中身">ChatGPT、ChatGPT Work、Codex</td>
 </tr>
 <tr>
-<td>プレミアムシート</td>
-<td>15,250円から（$100）</td>
-<td>$125</td>
-<td>標準の5倍の利用枠。5時間ごとの上限なし</td>
+<td data-label="席の種類">プレミアムシート</td>
+<td data-label="年額課金">15,250円から（$100）</td>
+<td data-label="月額課金">$125</td>
+<td data-label="中身">標準の5倍の利用枠。5時間ごとの上限なし</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>金額はどれも1人あたりの月額です。年額課金は1年分をまとめて払う形で、標準シート2席なら1年で73,200円になります。料金ページに税込みか税別かは書かれていないため、払う金額は決済の画面で確かめてください。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-business/00_fig_cost.png" alt="2人で使うときの月の目安の図。Plusを2人なら6,000円で管理も請求も別々、Business標準2席の年額課金なら6,100円、月額課金なら7,700円で既定で学習に使われない、標準1席とプレミアム1席なら年額課金で月120ドル、月額課金で150ドル" loading="lazy"><figcaption>2人で使うときの月の目安（料金ページの表示から作成）</figcaption></figure>
 
 <p>Plusは月払いだけなので、同じ月払いで比べるとBusinessは2人で月1,700円高くなります。Businessを年額課金にすれば差は月100円まで縮みますが、1年分を先に払う形です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">Plusとの違い</h2>
 <p>金額が近いぶん、選ぶ決め手は会話の扱いと管理の仕組みです。料金ページの比較表とヘルプから、違いを並べます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>項目</th>
@@ -140,42 +162,42 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>月額</td>
-<td>3,000円</td>
-<td>3,050円（年額）・3,850円（月額）</td>
+<td data-label="項目">月額</td>
+<td data-label="Plus">3,000円</td>
+<td data-label="Business">3,050円（年額）・3,850円（月額）</td>
 </tr>
 <tr>
-<td>人数</td>
-<td>1人</td>
-<td>2席から200席まで</td>
+<td data-label="項目">人数</td>
+<td data-label="Plus">1人</td>
+<td data-label="Business">2席から200席まで</td>
 </tr>
 <tr>
-<td>会話を学習に使うか</td>
-<td>設定の「すべての人のためにモデルを改善する」をオフにすると、それ以降の会話は使われない</td>
-<td>既定で使われない</td>
+<td data-label="項目">会話を学習に使うか</td>
+<td data-label="Plus">設定の「すべての人のためにモデルを改善する」をオフにすると、それ以降の会話は使われない</td>
+<td data-label="Business">既定で使われない</td>
 </tr>
 <tr>
-<td>管理</td>
-<td>本人だけ</td>
-<td>所有者・管理者のロール、SAML SSO、請求の一元化</td>
+<td data-label="項目">管理</td>
+<td data-label="Plus">本人だけ</td>
+<td data-label="Business">所有者・管理者のロール、SAML SSO、請求の一元化</td>
 </tr>
 <tr>
-<td>共有</td>
-<td>共有リンク・共有プロジェクト</td>
-<td>ワークスペース内で共有。外の人はリンクを開けない</td>
+<td data-label="項目">共有</td>
+<td data-label="Plus">共有リンク・共有プロジェクト</td>
+<td data-label="Business">ワークスペース内で共有。外の人はリンクを開けない</td>
 </tr>
 <tr>
-<td>社内のツールとつなぐ</td>
-<td>ツールにつなぐアプリはある。社内ナレッジは対象外</td>
-<td>Google Drive、Microsoft 365、Slackなどと接続、社内ナレッジ</td>
+<td data-label="項目">社内のツールとつなぐ</td>
+<td data-label="Plus">ツールにつなぐアプリはある。社内ナレッジは対象外</td>
+<td data-label="Business">Google Drive、Microsoft 365、Slackなどと接続、社内ナレッジ</td>
 </tr>
 <tr>
-<td>過去のチャットのメモリ</td>
-<td>拡張</td>
-<td>近日提供予定と表示</td>
+<td data-label="項目">過去のチャットのメモリ</td>
+<td data-label="Plus">拡張</td>
+<td data-label="Business">近日提供予定と表示</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**会話がOpenAIの学習に使われないのが最初からの状態か、自分で設定を切るかが、仕事で使うときのいちばんの差です。**Plusでも<a href="https://help.openai.com/ja-jp/articles/7730893-data-controls-faq">データコントロールのFAQ</a>の手順で、それ以降の会話を学習に使わない設定にできます。ただPlusは1人ずつの契約なので、この設定もそれぞれのアカウントにあります。</p>
 <p>Plusで学習を止める手順と、オフにしても学習に使われる例外は「<a href="/media/chatgpt-training-off/">ChatGPTに学習させない設定方法</a>」にまとめました。</p>
 <p>一方で、料金ページの比較表では過去のチャットのメモリとメモリソースがBusinessで近日提供予定になっています。Plusで使っていた過去の会話を覚える機能は、Businessに移るとまだ同じようには使えません。</p>
@@ -204,7 +226,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ワークスペースの支出管理で見えるのは、利用状況やクレジットの残高といった数字です。メンバーの非公開の会話を管理者が自動で読めるようになるわけではありません。会話を見せたいときは自分で共有リンクを作って同じワークスペースのメンバーに渡します。ワークスペースの外の人がそのリンクを開いても、中身は表示されません。</p>
 <h2 id="s8">席を減らすときと返金</h2>
 <p>一般FAQの決まりは次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>操作</th>
@@ -213,23 +235,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>席を増やす</td>
-<td>すぐ。残りの期間の日割りが請求される</td>
+<td data-label="操作">席を増やす</td>
+<td data-label="いつ反映されるか">すぐ。残りの期間の日割りが請求される</td>
 </tr>
 <tr>
-<td>席を減らす</td>
-<td>次の請求期間の初めから</td>
+<td data-label="操作">席を減らす</td>
+<td data-label="いつ反映されるか">次の請求期間の初めから</td>
 </tr>
 <tr>
-<td>メンバーを外す</td>
-<td>席は空くが、有料の席の数は減らない</td>
+<td data-label="操作">メンバーを外す</td>
+<td data-label="いつ反映されるか">席は空くが、有料の席の数は減らない</td>
 </tr>
 <tr>
-<td>使っていない席の返金</td>
-<td>その期間の席数が決まったあとは対象外</td>
+<td data-label="操作">使っていない席の返金</td>
+<td data-label="いつ反映されるか">その期間の席数が決まったあとは対象外</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>メンバーを外しただけでは料金は下がりません。退職者が出たら、メンバーを外したうえで、次の請求期間に向けて席数を減らす予約をします。</p>
 <p>Businessそのものを解約すると、ワークスペースは無効化される場合があります。一般FAQによると、無効化されてもデータは削除されませんが、メンバーは開けなくなり、再び有効にできるのは所有者だけです。</p>
 <p>Google WorkspaceでGeminiを使う場合の料金と学習の扱いは、<a href="/media/google-workspace-gemini/">Google WorkspaceのGemini</a>で同じ形で整理しています。</p>
@@ -263,12 +285,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -277,9 +300,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">ChatGPT Businessとは</a><a href="#s2">料金は1席ごとの月額</a><a href="#s3">Plusとの違い</a><a href="#s4">1人で使えるか</a><a href="#s5">標準シートとプレミアムシート</a><a href="#s6">個人のチャットを持ち込むか</a><a href="#s7">管理者に会話は見えるか</a><a href="#s8">席を減らすときと返金</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -312,11 +338,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

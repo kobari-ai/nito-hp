@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTのアカ…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.07</span>
         </div>
         <h1 class="post-title">【2026年10月】ChatGPTのアカウント削除の方法｜再登録・同じメールアドレス・サブスクの扱い</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのアカウント削除"><defs><linearGradient id="ecg-5462e3c5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5462e3c5)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのアカウント削除</text><line x1="136.4" y1="327.1" x2="1063.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">再登録・同じメールアドレス・サブスクの扱い</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 </ul></div></div>
 <figure class="post-figure"><img src="/media/images/chatgpt-account-delete/01_fig_before.jpg" alt="ChatGPTのアカウント削除の前に確かめる3つを並べた図。サブスクの解約、データの書き出し、同じメールアドレスで作り直せるのは30日後" loading="lazy"><figcaption>OpenAIのヘルプセンターの記述から作成（2026年10月7日時点）</figcaption></figure>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -101,7 +109,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s1">削除するとどうなるか</h2>
 <p>ヘルプの冒頭に置かれているのは「元に戻すことはできません」の一文です。削除したアカウントではChatGPTやAPIを含むOpenAIのサービスに入れなくなります。<strong>データは30日以内に削除されますが、法令で保持が求められる場合や許される場合は一部が長く残ります。</strong></p>
 <p>削除と同時に起きることをヘルプの記述から並べると次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>対象</th>
@@ -111,41 +119,41 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ChatGPT・API</td>
-<td>そのアカウントでは使えなくなる</td>
-<td>アカウント削除のヘルプ</td>
+<td data-label="対象">ChatGPT・API</td>
+<td data-label="削除したとき">そのアカウントでは使えなくなる</td>
+<td data-label="出典">アカウント削除のヘルプ</td>
 </tr>
 <tr>
-<td>チャットなどのデータ</td>
-<td>30日以内に削除。法令による例外あり</td>
-<td>同上</td>
+<td data-label="対象">チャットなどのデータ</td>
+<td data-label="削除したとき">30日以内に削除。法令による例外あり</td>
+<td data-label="出典">同上</td>
 </tr>
 <tr>
-<td>ウェブで申し込んだサブスク</td>
-<td>解約される</td>
-<td>同上・解約のヘルプ</td>
+<td data-label="対象">ウェブで申し込んだサブスク</td>
+<td data-label="削除したとき">解約される</td>
+<td data-label="出典">同上・解約のヘルプ</td>
 </tr>
 <tr>
-<td>App Storeのサブスク</td>
-<td>解約されない</td>
-<td>同上</td>
+<td data-label="対象">App Storeのサブスク</td>
+<td data-label="削除したとき">解約されない</td>
+<td data-label="出典">同上</td>
 </tr>
 <tr>
-<td>共有リンク</td>
-<td>作成者が削除すると共有会話のリンクも削除</td>
-<td>共有リンクのFAQ</td>
+<td data-label="対象">共有リンク</td>
+<td data-label="削除したとき">作成者が削除すると共有会話のリンクも削除</td>
+<td data-label="出典">共有リンクのFAQ</td>
 </tr>
 <tr>
-<td>広告アカウント</td>
-<td>管理できなくなる可能性。配信中の広告は止まらない場合がある</td>
-<td>アカウント削除のヘルプ</td>
+<td data-label="対象">広告アカウント</td>
+<td data-label="削除したとき">管理できなくなる可能性。配信中の広告は止まらない場合がある</td>
+<td data-label="出典">アカウント削除のヘルプ</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>共有リンクについては「<a href="/media/chatgpt-share-link/">ChatGPTの共有リンクを解説</a>」で、リンクを残したまま消す方法も扱っています。広告の項目はChatGPTの広告を出稿している人だけが関係し、ヘルプは削除の前にキャンペーンを止めるよう案内しています。</p>
 <h2 id="s2">削除しなくて済む場合</h2>
 <p>アカウント削除のヘルプは手順より先に「他の選択肢をご検討ください」という節を置いています。支払いを止める・メールアドレスを変える・会話を消すのは、どれも削除せずにできる操作です。目的ごとの行き先は次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>やりたいこと</th>
@@ -154,29 +162,43 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>支払いだけ止めたい</td>
-<td>サブスクの解約（［設定］→［請求］）</td>
+<td data-label="やりたいこと">支払いだけ止めたい</td>
+<td data-label="削除の代わりに使う場所">サブスクの解約（［設定］→［請求］）</td>
 </tr>
 <tr>
-<td>会話を消したい</td>
-<td>チャットの削除・アーカイブ</td>
+<td data-label="やりたいこと">会話を消したい</td>
+<td data-label="削除の代わりに使う場所">チャットの削除・アーカイブ</td>
 </tr>
 <tr>
-<td>学習に使われたくない</td>
-<td>［データ コントロール］の［すべての人のためにモデルを改善する］をオフ</td>
+<td data-label="やりたいこと">学習に使われたくない</td>
+<td data-label="削除の代わりに使う場所">［データ コントロール］の［すべての人のためにモデルを改善する］をオフ</td>
 </tr>
 <tr>
-<td>メールアドレスやログイン方法を変えたい</td>
-<td>［設定］→［セキュリティとログイン］など</td>
+<td data-label="やりたいこと">メールアドレスやログイン方法を変えたい</td>
+<td data-label="削除の代わりに使う場所">［設定］→［セキュリティとログイン］など</td>
 </tr>
 <tr>
-<td>覚えた内容を消したい</td>
-<td>［個人用設定］のメモリ</td>
+<td data-label="やりたいこと">覚えた内容を消したい</td>
+<td data-label="削除の代わりに使う場所">［個人用設定］のメモリ</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**会話を消すだけなら、アカウントを残したまま履歴を削除できます。**手順は「<a href="/media/chatgpt-history-delete/">ChatGPTの履歴を削除する方法</a>」にまとめました。料金だけが理由ならサブスクを解約して無料版に戻す手もあり、プランごとの違いは「<a href="/media/chatgpt-pricing/">ChatGPTの料金を解説</a>」で比べました。</p>
 <p>ログイン方法を変えるために削除を考える人もいますが、ヘルプには「アカウントを削除しても、サインイン方法を変更することはできません」とあります。GoogleやAppleで登録した人は、［設定］→［セキュリティとログイン］の［Password］に［Add］が出ていれば、削除せずにパスワードを足せます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">削除の前にやること</h2>
 <p>削除の確定ボタンを押すと、あとから取り出せるものはありません。押す前に確かめたいのはサブスク・データの書き出し・仕事用のワークスペースの3つです。</p>
 <h3 id="s3-1">サブスクは申し込んだ場所で解約</h3>
@@ -184,7 +206,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/chatgpt-account-delete/02_fig_where_cancel.jpg" alt="ChatGPTのサブスクは申し込んだ場所で解約することを示す図。chatgpt.com、App Store、Google Playの3つ" loading="lazy"><figcaption>OpenAIのヘルプセンターの記述から作成（2026年10月7日時点）</figcaption></figure>
 
 <p>Google Playの扱いはヘルプのページによって書き方が違います。Androidアプリの削除のヘルプは「Google Play ストア経由で登録した場合、削除してもキャンセルされない」としています。解約のヘルプのFAQは「Google Play のサブスクリプションを確認し、まだ有効な場合はキャンセル」と案内しています。<strong>どちらの書き方でも、Google Playで申し込んだ人は削除の前に自分で解約しておくのが確実です。</strong></p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>申し込んだ場所</th>
@@ -194,22 +216,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>chatgpt.com</td>
-<td>解約される</td>
-<td>［設定］→［請求］→［プランをキャンセルする］</td>
+<td data-label="申し込んだ場所">chatgpt.com</td>
+<td data-label="削除したとき">解約される</td>
+<td data-label="解約する場所（2026年10月7日時点のヘルプ）">［設定］→［請求］→［プランをキャンセルする］</td>
 </tr>
 <tr>
-<td>App Store</td>
-<td>解約されない</td>
-<td>iPhoneの［設定］→名前→［サブスクリプション］→［ChatGPT］</td>
+<td data-label="申し込んだ場所">App Store</td>
+<td data-label="削除したとき">解約されない</td>
+<td data-label="解約する場所（2026年10月7日時点のヘルプ）">iPhoneの［設定］→名前→［サブスクリプション］→［ChatGPT］</td>
 </tr>
 <tr>
-<td>Google Play</td>
-<td>確認が必要</td>
-<td>Google Playの［サブスクリプション］→［ChatGPT］</td>
+<td data-label="申し込んだ場所">Google Play</td>
+<td data-label="削除したとき">確認が必要</td>
+<td data-label="解約する場所（2026年10月7日時点のヘルプ）">Google Playの［サブスクリプション］→［ChatGPT］</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>解約のヘルプによると、次の期間の請求を避けるには請求日の24時間以上前に解約します。解約しても過去の請求は自動では返金されず、アプリを消しただけでは解約になりません。経費の書類が要る人は削除の前に請求書を保存しておきます。取り方は「<a href="/media/chatgpt-invoice/">ChatGPTの領収書とインボイスを解説</a>」にあります。</p>
 <h3 id="s3-2">残したい会話を書き出す</h3>
 <p>削除したチャットは戻らず、新しいアカウントにも引き継がれません。**残したい会話があるなら、削除の前にデータのエクスポートを済ませます。**ヘルプにある手順は次のとおりです。</p>
@@ -239,7 +261,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>**ウェブ版のヘルプでは削除の入口が［アカウント］にあり、iPhoneのヘルプの［データ コントロール］、Androidのヘルプの［データ管理］とは場所が違います。**ウェブ版で［データ コントロール］を開いて削除が見つからないときは［アカウント］を見ます。</p>
 <h3 id="s4-2">iPhoneとAndroid</h3>
 <p>スマホアプリの手順はiPhoneとAndroidで別のヘルプに分かれています。iPhoneは［アカウント設定］→［データ コントロール］→［アカウントを削除］の順で、確認の画面で［アカウントを削除］を押すと確定します。Androidは左上の二本線でメニューを開き、名前の右の点から設定に入って［データ管理］→［アカウントを削除する］を押します。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>端末</th>
@@ -248,19 +270,19 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ウェブ</td>
-<td>［設定］→［アカウント］→［削除する］</td>
+<td data-label="端末">ウェブ</td>
+<td data-label="入口（2026年10月7日時点のヘルプ）">［設定］→［アカウント］→［削除する］</td>
 </tr>
 <tr>
-<td>iPhone</td>
-<td>［アカウント設定］→［データ コントロール］→［アカウントを削除］</td>
+<td data-label="端末">iPhone</td>
+<td data-label="入口（2026年10月7日時点のヘルプ）">［アカウント設定］→［データ コントロール］→［アカウントを削除］</td>
 </tr>
 <tr>
-<td>Android</td>
-<td>メニュー→名前の右の点→［データ管理］→［アカウントを削除する］</td>
+<td data-label="端末">Android</td>
+<td data-label="入口（2026年10月7日時点のヘルプ）">メニュー→名前の右の点→［データ管理］→［アカウントを削除する］</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="s4-3">ログインできないとき</h3>
 <p>サインインできない人は<a href="https://privacy.openai.com/policies">OpenAIのプライバシーポータル</a>から削除を申し込みます。スマホでは画面の下に［プライバシーに関するリクエストを送信］のボタンが出ます。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-account-delete/04_privacy_portal_sp.jpg" alt="OpenAIのプライバシーポータルをスマホで開いた画面。画面の下に出るプライバシーに関するリクエストを送信のボタンを赤枠で囲んでいる" loading="lazy"><figcaption>OpenAIのプライバシーポータル（2026年10月7日、スマホ表示・ログインなしの画面）</figcaption></figure>
@@ -274,7 +296,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>アカウントに登録したメールアドレスか電話番号で本人確認ができる必要があります。どちらも使えない場合はOpenAIのサポートに所有者の確認を頼むようヘルプは案内しています。ボタンより先の画面はログインと本人確認が要るため、この記事では開いていません。</p>
 <h2 id="s5">削除できないときの原因</h2>
 <p>削除が進まないときはまずどの段階で止まっているかを見ます。2026年10月7日のヘルプから読み取れる原因は次の4つです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>止まる場面</th>
@@ -284,27 +306,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>削除の項目が見当たらない</td>
-<td>仕事用のワークスペースで使っている</td>
-<td>組織の管理者に頼む</td>
+<td data-label="止まる場面">削除の項目が見当たらない</td>
+<td data-label="原因">仕事用のワークスペースで使っている</td>
+<td data-label="どうするか">組織の管理者に頼む</td>
 </tr>
 <tr>
-<td>ログインできない</td>
-<td>メールやパスワードが使えない</td>
-<td>プライバシーポータルから申し込む</td>
+<td data-label="止まる場面">ログインできない</td>
+<td data-label="原因">メールやパスワードが使えない</td>
+<td data-label="どうするか">プライバシーポータルから申し込む</td>
 </tr>
 <tr>
-<td>本人確認が通らない</td>
-<td>登録したメールも電話番号も使えない</td>
-<td>OpenAIのサポートに所有者の確認を頼む</td>
+<td data-label="止まる場面">本人確認が通らない</td>
+<td data-label="原因">登録したメールも電話番号も使えない</td>
+<td data-label="どうするか">OpenAIのサポートに所有者の確認を頼む</td>
 </tr>
 <tr>
-<td>「アカウントが存在しません」と出る</td>
-<td>すでに削除済みか無効化されている</td>
-<td>自分で消していなければ届いたメールを確認する</td>
+<td data-label="止まる場面">「アカウントが存在しません」と出る</td>
+<td data-label="原因">すでに削除済みか無効化されている</td>
+<td data-label="どうするか">自分で消していなければ届いたメールを確認する</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>「ログインから10分以内でないと削除ボタンが押せない」という説明を見かけることがあります。2026年1月28日に保存された英語版のヘルプ（<a href="https://web.archive.org/web/20260128234323/https://help.openai.com/en/articles/6378407-how-to-delete-your-account">Internet Archive</a>）には、直近10分以内のログインが必要という記述がありました。**2026年10月7日に取得したヘルプには日本語版にも英語版にもこの記述はありません。**この記事では削除の操作をしていないため、今の画面にこの条件が残っているかは確かめていません。</p>
 <p>「削除」と「無効化」は別のものです。無効化は利用規約や利用ポリシーの違反、年齢確認が済んでいないときなどにOpenAIの側で行われます。ヘルプによると、30日待っても無効化されたアカウントは戻らず、手順は届いたメールに書かれています。</p>
 <p>なお、アカウント削除とデータコントロールのヘルプには、アカウントを一時停止する手順は書かれていません。しばらく使わないだけなら、サブスクを解約してログアウトしておく方法が取れます。</p>
@@ -318,7 +340,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>2026年10月7日の時点で、iPhoneとAndroidの削除のヘルプには「同じメールアドレスでは新しいアカウントを作成できません」とだけ書かれています。30日後の再登録に触れているのは、ウェブのアカウント削除のヘルプと「<a href="https://help.openai.com/ja-jp/articles/9019931">削除後に新しいアカウントを作成する</a>」のページです。<strong>ヘルプの中で書き方がそろっていないので、再登録の条件は後者の2ページで確かめます。</strong></p>
 <p>30日待てない場合は別のメールアドレスで登録できます。メールの事業者が対応していれば、jane+new@example.com のような「+」付きのアドレスも使えるとヘルプにあります。30日たっても登録できないときは、前のアカウントが削除か無効化かを確かめたうえでサポートに問い合わせる流れです。</p>
 <p>電話番号の扱いは次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>項目</th>
@@ -327,27 +349,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>アカウントを作るとき</td>
-<td>電話番号の認証は不要</td>
+<td data-label="項目">アカウントを作るとき</td>
+<td data-label="2026年10月7日時点のヘルプ">電話番号の認証は不要</td>
 </tr>
 <tr>
-<td>最初のAPIキーを作るとき</td>
-<td>電話番号の認証が必要</td>
+<td data-label="項目">最初のAPIキーを作るとき</td>
+<td data-label="2026年10月7日時点のヘルプ">電話番号の認証が必要</td>
 </tr>
 <tr>
-<td>1つの番号で認証できる数</td>
-<td>最大3アカウントの最初のAPIキー</td>
+<td data-label="項目">1つの番号で認証できる数</td>
+<td data-label="2026年10月7日時点のヘルプ">最大3アカウントの最初のAPIキー</td>
 </tr>
 <tr>
-<td>削除したとき</td>
-<td>APIの認証の上限はリセットされない</td>
+<td data-label="項目">削除したとき</td>
+<td data-label="2026年10月7日時点のヘルプ">APIの認証の上限はリセットされない</td>
 </tr>
 <tr>
-<td>ChatGPTの個人アカウントの番号</td>
-<td>一部の例外を除き30日後に消され、同じ番号で再登録できる</td>
+<td data-label="項目">ChatGPTの個人アカウントの番号</td>
+<td data-label="2026年10月7日時点のヘルプ">一部の例外を除き30日後に消され、同じ番号で再登録できる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s7">よくある質問</h2>
 <h3 id="s7-1">ChatGPTのアカウントを削除するとどうなりますか？</h3>
 <p>そのアカウントではChatGPTもAPIも使えなくなり、データは30日以内に削除されます。削除は取り消せず、新しいアカウントを作っても前のチャット・ファイル・保存済みメモリは戻りません。法令で保持が求められる場合などは、一部のデータが長く残ることがあります。</p>
@@ -381,12 +403,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -395,9 +418,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">削除するとどうなるか</a><a href="#s2">削除しなくて済む場合</a><a href="#s3">削除の前にやること</a><a href="#s4">削除の手順</a><a href="#s5">削除できないときの原因</a><a href="#s6">同じメールアドレスで再登録する</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -430,11 +456,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Geminiの回数制…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.02</span>
         </div>
         <h1 class="post-title">【2026年10月】Geminiの回数制限を解説｜5時間と週の上限・無料・確認方法・リセット</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Geminiの回数制限"><defs><linearGradient id="ecg-800a417e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-800a417e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Geminiの回数制限</text><line x1="273.2" y1="327.1" x2="926.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">5時間と週の上限・無料・確認方法・リセット</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>残りは設定の「使用量上限」で見られるとヘルプは案内している。上限に近づくと通知が出て、達するとリセットの時刻が分かる</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -102,7 +110,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>変更のお知らせのページは上限に早く達する可能性があるものとして4つを挙げています。</p>
 <figure class="post-figure"><img src="/media/images/gemini-limits/03_help_change.jpg" alt="Geminiアプリのヘルプ「Geminiモデルへのアクセスと使用量上限の変更」の変更点。週単位の上限に達するまで5時間ごとにリセットされるコンピューティングベースの使用量上限に移行すると書かれ、使用量が多くなるものとしてメディア生成（画像、動画、音楽）、Deep Research、Proモデル、拡張思考とDeep Thinkが並ぶ。下の使用制限の表で、AI Ultraの行の「サブスクリプションに応じてAI Proの5倍または20倍」が赤い枠で囲まれている" loading="lazy"><figcaption>変更のお知らせのページ。Ultraの倍率は「5倍または20倍」</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>使う量が多いもの</th>
@@ -111,23 +119,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>メディアの生成</td>
-<td>画像・動画・音楽</td>
+<td data-label="使う量が多いもの">メディアの生成</td>
+<td data-label="中身">画像・動画・音楽</td>
 </tr>
 <tr>
-<td>Deep Research</td>
-<td>複数のサイトを調べてレポートにまとめる機能</td>
+<td data-label="使う量が多いもの">Deep Research</td>
+<td data-label="中身">複数のサイトを調べてレポートにまとめる機能</td>
 </tr>
 <tr>
-<td>Proのモデル</td>
-<td>複雑な数学やコーディング向けの上位のモデル</td>
+<td data-label="使う量が多いもの">Proのモデル</td>
+<td data-label="中身">複雑な数学やコーディング向けの上位のモデル</td>
 </tr>
 <tr>
-<td>拡張思考とDeep Think</td>
-<td>回答の前に長く推論する設定</td>
+<td data-label="使う量が多いもの">拡張思考とDeep Think</td>
+<td data-label="中身">回答の前に長く推論する設定</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>上限のページにも、モデルが高度で思考レベルが高いほど使用量の消費が多くなる、という注意があります。上限に近いときはProや拡張思考を外すのが、量を節約する手になります。要約やブレインストーミングのような日常のタスクにはFlash-Liteが向く、とヘルプは書いています。</p>
 <h2 id="s2">プランごとの上限</h2>
 <p>上限はプランごとに倍率で書かれていて、基準になるのはプランなしの「標準の上限」です。</p>
@@ -136,7 +144,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>**UltraはAI Proの5倍か20倍です。**変更のお知らせは日本語版も英語版も5倍で、10月10日の時点で英語版の上限のページも「5x or 20x higher than AI Pro」と書いています。日本語版の上限のページだけが「AI Pro の上限の 4 倍または 20 倍」のままで、翻訳が追いついていないと見られます。5倍と20倍のどちらになるかはUltraのプランで分かれるので、申し込みの画面で確かめてください。</p>
 <figure class="post-figure"><img src="/media/images/gemini-limits/07_fig_plans.png" alt="Geminiアプリのプランごとの上限の図。プランなしは標準の上限で一度に読める長さ32,000トークン、Google AI Plusは標準の2倍で128,000トークン、Google AI Proは標準の4倍で100万トークン、Google AI Ultraは上限のページではAI Proの4倍または20倍、変更のお知らせではAI Proの5倍または20倍で100万トークン" loading="lazy"><figcaption>プランごとの上限の倍率と、一度に読める長さ（10月2日の図。英語版の上限のページはその後5倍にそろった）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -146,37 +154,51 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>プランなし</td>
-<td>標準</td>
-<td>32,000トークン</td>
+<td data-label="プラン">プランなし</td>
+<td data-label="上限">標準</td>
+<td data-label="一度に読める長さ">32,000トークン</td>
 </tr>
 <tr>
-<td>Google AI Plus</td>
-<td>標準の2倍</td>
-<td>128,000トークン</td>
+<td data-label="プラン">Google AI Plus</td>
+<td data-label="上限">標準の2倍</td>
+<td data-label="一度に読める長さ">128,000トークン</td>
 </tr>
 <tr>
-<td>Google AI Pro</td>
-<td>標準の4倍</td>
-<td>100万トークン</td>
+<td data-label="プラン">Google AI Pro</td>
+<td data-label="上限">標準の4倍</td>
+<td data-label="一度に読める長さ">100万トークン</td>
 </tr>
 <tr>
-<td>Google AI Ultra</td>
-<td>AI Proの5倍か20倍（日本語版の上限のページは4倍のまま）</td>
-<td>100万トークン</td>
+<td data-label="プラン">Google AI Ultra</td>
+<td data-label="上限">AI Proの5倍か20倍（日本語版の上限のページは4倍のまま）</td>
+<td data-label="一度に読める長さ">100万トークン</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>一度に読める長さ（コンテキストウィンドウ）は回数の上限とは別の枠で、長いPDFや長いチャットで差が出る部分です。超えると、渡した内容の一部が考慮されないまま回答が返ることがあるとヘルプは書いています。月額の料金とほかの特典は<a href="/media/gemini-pricing/">Geminiの料金プラン</a>で比べています。</p>
 <h3 id="s2-1">無料で使える範囲</h3>
 <p>プランなしで選べるモデルは、2026年10月9日からFlash-Liteだけです。ヘルプ「Gemini モデルへのアクセスと使用量上限の変更」の表ではプランなしの行が「自動」で、大半の質問はFlash-Liteで答えます。上限のページにあったモデルの表は10月14日に消えました。使える量は標準の上限で、Plusの半分、Proの4分の1です。</p>
 <p>無料の利用者向けの注意も2つ書かれています。Deep Researchのように計算資源を多く使う機能は、需要が高い時間帯に使えないことがあります。上限を変えるときはプランに入っていない利用者に先に新しい上限が適用されることがある、という注意です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Gemini を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">上限に達したときにできること</h2>
 <p>上限のページの「使用量の上限に達した場合にできること」には、2つの案内があります。</p>
 <figure class="post-figure"><img src="/media/images/gemini-limits/04_help_reach.jpg" alt="Geminiアプリのヘルプの使用量の上限に達した場合にできること。赤い枠の中に、Google AIサブスクリプションをご利用で上限に達した場合はFlash-Liteで会話を続けることができますと書かれている。その下に、5時間または1週間の上限に達した場合はアップグレードするか、モデルの上限がリセットされるまで待つよう書かれている" loading="lazy"><figcaption>Flash-Liteで続けられるのは、Google AIのプランの利用者</figcaption></figure>
 
 <p>**Flash-Liteで会話を続けられると書かれているのは、Google AIのプランに入っている利用者です。**プランなしで上限に達した場合にFlash-Liteへ切り替わるかは、このヘルプには書かれていません。解説記事には全員がFlash-Liteに切り替わるように書いたものもありますが、ヘルプの文は主語をプランの利用者に限っています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>状況</th>
@@ -185,15 +207,15 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>プランに入っていて上限に達した</td>
-<td>Flash-Liteで続ける、上限がリセットされるまで待つ、上のプランにする</td>
+<td data-label="状況">プランに入っていて上限に達した</td>
+<td data-label="ヘルプにある選択肢">Flash-Liteで続ける、上限がリセットされるまで待つ、上のプランにする</td>
 </tr>
 <tr>
-<td>5時間か1週間の上限に達した</td>
-<td>上限の高いプランにする、モデルの上限がリセットされるまで待つ</td>
+<td data-label="状況">5時間か1週間の上限に達した</td>
+<td data-label="ヘルプにある選択肢">上限の高いプランにする、モデルの上限がリセットされるまで待つ</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>プランを上げても、上限がなくなるわけではありません。倍率が上がるだけなので、Deep Researchや動画の生成を続ける使い方では、上のプランでも上限に届きます。</p>
 <h2 id="s4">残りとリセットの時刻を確かめる</h2>
 <p>ヘルプによると、上限に近づくとGeminiアプリに通知が出て、上限に達すると通知の中身が変わり、いつリセットされるかが分かります。残りを自分から見に行く方法として、ヘルプは2つの手順を挙げています。</p>
@@ -237,12 +259,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -251,9 +274,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">上限の決まり方</a><a href="#s2">プランごとの上限</a><a href="#s3">上限に達したときにできること</a><a href="#s4">残りとリセットの時刻を確かめる</a><a href="#s5">仕事用と学校用のアカウント</a><a href="#s6">Google検索のAIモードの上限とは別</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -286,11 +312,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

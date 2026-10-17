@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claudeの料金プラ…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.22</span>
         </div>
         <h1 class="post-title">【2026年9月】Claudeの料金プランを比較｜Free・Pro $18・Max・Teamの違いと選び方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの料金プラン"><defs><linearGradient id="ecg-816b3db3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-816b3db3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの料金プラン</text><line x1="235.2" y1="327.1" x2="964.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">Free・Pro・Max・Teamの違いと選び方</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li><strong>Opus と Claude Code はProから</strong>。Freeで使えるのはSonnetとHaiku</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -96,7 +104,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">個人向け3プランの金額</h2>
 <p>料金ページの「個人」タブに並ぶのは3つです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -106,22 +114,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Free</td>
-<td>$0</td>
-<td>課金なし</td>
+<td data-label="プラン">Free</td>
+<td data-label="月額">$0</td>
+<td data-label="支払い方法">課金なし</td>
 </tr>
 <tr>
-<td>Pro</td>
-<td>$18（年払いの月額。$220を一括）</td>
-<td>月払いなら$22</td>
+<td data-label="プラン">Pro</td>
+<td data-label="月額">$18（年払いの月額。$220を一括）</td>
+<td data-label="支払い方法">月払いなら$22</td>
 </tr>
 <tr>
-<td>Max</td>
-<td>$110から</td>
-<td>月払いのみ</td>
+<td data-label="プラン">Max</td>
+<td data-label="月額">$110から</td>
+<td data-label="支払い方法">月払いのみ</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/claude-pricing/cl_01_plans.jpg" alt="Claudeの公式料金ページの個人タブ。Freeが$0、Proが$18で年間サブスクリプション割引適用時の月額と注記、Maxが$110からと表示されている" loading="lazy"><figcaption>公式の料金ページ。個人向けは3プラン</figcaption></figure>
 
 <p>Proの$18は年間サブスクリプションの割引が入った月額で、請求は$220の一括です。月払いを選ぶと$22になります。Maxの$110は「から」で、後述する5倍と20倍のどちらを選ぶかで変わります。20倍を選んだときの金額は料金ページには出ていません。</p>
@@ -132,6 +140,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/claude-pricing/cl_03_jct.jpg" alt="Claude料金ページのカード下の注記。使用量制限が適用されます、価格およびプランはAnthropicの裁量により変更される場合があります、Prices include 10% JCT と表示されている" loading="lazy"><figcaption>カードの下に置かれた注記</figcaption></figure>
 
 <p>税抜の$20に消費税を足して請求額を見積もると、実際とずれます。円でいくらになるかは決済時の為替によって変わるため、金額を確定させたい場合は請求の履歴で確認してください。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">使える量の決まり方</h2>
 <p>Claudeの上限は回数ではありません。公式ページによると、仕組みはこうです。</p>
 <figure class="post-figure"><img src="/media/images/claude-pricing/01_fig_limits.png" alt="Claudeの使用量の仕組みの図。全プラン共通の5時間のローリング枠、有料プランに加わる週次の上限、ウェブとデスクトップとモバイルとClaude Codeが同じプールを使うこと、上限に当たったら待つか上位プランに移るか使用クレジットで続けるかの3つの選択肢" loading="lazy"><figcaption>使用量の枠と、上限に当たったときの逃げ道</figcaption></figure>
@@ -141,7 +163,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>上限に達しても、有料プランなら<strong>使用クレジット</strong>をオンにしてAPIの標準レートで作業を続けられます。待つか、上げるか、従量で払うかの3択です。</p>
 <h2 id="s4">プランごとに使えるモデルと機能</h2>
 <p>プラン選びに効くのは次の行です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>項目</th>
@@ -153,77 +175,77 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Opus</td>
-<td>なし</td>
-<td>あり</td>
-<td>あり</td>
-<td>あり</td>
+<td data-label="項目">Opus</td>
+<td data-label="Free">なし</td>
+<td data-label="Pro">あり</td>
+<td data-label="Max 5x">あり</td>
+<td data-label="Max 20x">あり</td>
 </tr>
 <tr>
-<td>Sonnet・Haiku</td>
-<td>あり</td>
-<td>あり</td>
-<td>あり</td>
-<td>あり</td>
+<td data-label="項目">Sonnet・Haiku</td>
+<td data-label="Free">あり</td>
+<td data-label="Pro">あり</td>
+<td data-label="Max 5x">あり</td>
+<td data-label="Max 20x">あり</td>
 </tr>
 <tr>
-<td>Fable</td>
-<td>なし</td>
-<td>使用クレジット</td>
-<td>週次制限の50%</td>
-<td>週次制限の50%</td>
+<td data-label="項目">Fable</td>
+<td data-label="Free">なし</td>
+<td data-label="Pro">使用クレジット</td>
+<td data-label="Max 5x">週次制限の50%</td>
+<td data-label="Max 20x">週次制限の50%</td>
 </tr>
 <tr>
-<td>Claude Code</td>
-<td>なし</td>
-<td>あり</td>
-<td>あり</td>
-<td>あり</td>
+<td data-label="項目">Claude Code</td>
+<td data-label="Free">なし</td>
+<td data-label="Pro">あり</td>
+<td data-label="Max 5x">あり</td>
+<td data-label="Max 20x">あり</td>
 </tr>
 <tr>
-<td>Research</td>
-<td>なし</td>
-<td>あり</td>
-<td>あり</td>
-<td>あり</td>
+<td data-label="項目">Research</td>
+<td data-label="Free">なし</td>
+<td data-label="Pro">あり</td>
+<td data-label="Max 5x">あり</td>
+<td data-label="Max 20x">あり</td>
 </tr>
 <tr>
-<td>プロジェクト</td>
-<td>最大5</td>
-<td>あり</td>
-<td>あり</td>
-<td>あり</td>
+<td data-label="項目">プロジェクト</td>
+<td data-label="Free">最大5</td>
+<td data-label="Pro">あり</td>
+<td data-label="Max 5x">あり</td>
+<td data-label="Max 20x">あり</td>
 </tr>
 <tr>
-<td>混雑時の優先アクセス</td>
-<td>なし</td>
-<td>なし</td>
-<td>あり</td>
-<td>あり</td>
+<td data-label="項目">混雑時の優先アクセス</td>
+<td data-label="Free">なし</td>
+<td data-label="Pro">なし</td>
+<td data-label="Max 5x">あり</td>
+<td data-label="Max 20x">あり</td>
 </tr>
 <tr>
-<td>月間APIクレジット（Claude Codeには使えません）</td>
-<td>なし</td>
-<td>なし</td>
-<td>$100</td>
-<td>$200</td>
+<td data-label="項目">月間APIクレジット（Claude Codeには使えません）</td>
+<td data-label="Free">なし</td>
+<td data-label="Pro">なし</td>
+<td data-label="Max 5x">$100</td>
+<td data-label="Max 20x">$200</td>
 </tr>
 <tr>
-<td>請求サイクル</td>
-<td>該当なし</td>
-<td>月払いと年払い</td>
-<td>月払い</td>
-<td>月払い</td>
+<td data-label="項目">請求サイクル</td>
+<td data-label="Free">該当なし</td>
+<td data-label="Pro">月払いと年払い</td>
+<td data-label="Max 5x">月払い</td>
+<td data-label="Max 20x">月払い</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Fableは比較表に別枠で載っている上位のモデルで、Proでは使用クレジット、Maxでは週次制限の50%までという扱いになります。FreeとProの間にある壁は、<strong>OpusとClaude Code</strong>です。この2つが必要なら、無料のままでは届きません。MaxとProの差は主に量で、出力の上限と混雑時の優先アクセスが加わります。Claude Platformで開発に使える月間のAPIクレジットも、個人向けのプランではMaxにだけ付きます（Max 5xは月$100、Max 20xは月$200）。2026年10月に料金ページに加わりました（10月11日に確認）。Claude Codeには使えません。受け取るにはClaude Consoleの組織をプランにリンクし、使わなかった分は翌月に繰り越されません。</p>
 <p>コンテキストウィンドウは4プランとも「最大100万（モデルによって異なります）」で、プランで差が付いていません。Geminiは無料と有料でここが大きく変わるので、Claudeの特徴として覚えておく価値があります。モデルの学習にデータを使うかどうかは、どのプランもオプトアウトできます。</p>
 <h2 id="s5">チームと会社で契約するとき</h2>
 <p>「Team &amp; Enterprise」タブに切り替えると、Teamはシートの種類で金額が2つに分かれます。</p>
 <figure class="post-figure"><img src="/media/images/claude-pricing/cl_02_team.jpg" alt="Claude料金ページのTeam & Enterpriseタブ。Teamは2〜150名向けでスタンダードシートが$22、プレミアムシートが$110、EnterpriseはUS$20のシート料金にAPIレートでの使用量を加える形と表示されている" loading="lazy"><figcaption>チーム向けタブの表示</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>区分</th>
@@ -234,31 +256,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Team／スタンダード</td>
-<td>$22</td>
-<td>$27.50</td>
-<td>1セッションの使用量はProの1.25倍</td>
+<td data-label="区分">Team／スタンダード</td>
+<td data-label="年払いのシート単価">$22</td>
+<td data-label="月払い">$27.50</td>
+<td data-label="中身">1セッションの使用量はProの1.25倍</td>
 </tr>
 <tr>
-<td>Team／プレミアム</td>
-<td>$110</td>
-<td>$137.50</td>
-<td>1セッションの使用量はProの6.25倍</td>
+<td data-label="区分">Team／プレミアム</td>
+<td data-label="年払いのシート単価">$110</td>
+<td data-label="月払い">$137.50</td>
+<td data-label="中身">1セッションの使用量はProの6.25倍</td>
 </tr>
 <tr>
-<td>Enterprise</td>
-<td>$20＋APIレートの使用量</td>
-<td>年払いのみ（最低20シート）</td>
-<td>SCIM・監査ログ・データ保持の設定</td>
+<td data-label="区分">Enterprise</td>
+<td data-label="年払いのシート単価">$20＋APIレートの使用量</td>
+<td data-label="月払い">年払いのみ（最低20シート）</td>
+<td data-label="中身">SCIM・監査ログ・データ保持の設定</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Teamは2席から150席までで、2種類のシートを混ぜて契約できます。会話は既定でモデルの学習に使われません。SSO・請求の一元化・コネクターの管理者コントロールはTeam以上に付き、個人向けのProやMaxには付きません。Claude Fableはプレミアムシートなら週の使用量の50%までプラン内で使え、スタンダードシートでは使用クレジットの従量課金です。Claude Platformで使えるAPIクレジットも、シートごとに付きます（スタンダードは1席$20、プレミアムは1席$100、組織の合計で月$500まで）。2026年10月に料金ページに加わりました。Proとの違いやProから移るときの注意は<a href="/media/claude-team/">Claude Teamプランの記事</a>にまとめました。</p>
 <p>Enterpriseはシートあたり$20に、使った分のAPIレートが乗る形です。使うモデルとタスクでコストが動きます。<strong>料金ページには年払いで最低20シートと書かれているため、20人に満たない組織はTeamを選ぶことになります。</strong></p>
 <p>このほか大学向けに教育プランがあり、学生・教員・スタッフを含む大学全体を対象に、割引料金、学習モード、専用のAPIクレジットが用意されています。</p>
 <h2 id="s6">年払いはいくら安くなるのか</h2>
 <p>年払いがあるのはProとTeam、Enterpriseは年払いのみです。12か月使った場合の総額を並べると差が見えます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>区分</th>
@@ -269,25 +291,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Pro</td>
-<td>$220</td>
-<td>$264（$22×12）</td>
-<td>$44</td>
+<td data-label="区分">Pro</td>
+<td data-label="年払い">$220</td>
+<td data-label="月払いを12か月">$264（$22×12）</td>
+<td data-label="差">$44</td>
 </tr>
 <tr>
-<td>Team／スタンダード（1シート）</td>
-<td>$264（$22×12）</td>
-<td>$330（$27.50×12）</td>
-<td>$66</td>
+<td data-label="区分">Team／スタンダード（1シート）</td>
+<td data-label="年払い">$264（$22×12）</td>
+<td data-label="月払いを12か月">$330（$27.50×12）</td>
+<td data-label="差">$66</td>
 </tr>
 <tr>
-<td>Team／プレミアム（1シート）</td>
-<td>$1,320（$110×12）</td>
-<td>$1,650（$137.50×12）</td>
-<td>$330</td>
+<td data-label="区分">Team／プレミアム（1シート）</td>
+<td data-label="年払い">$1,320（$110×12）</td>
+<td data-label="月払いを12か月">$1,650（$137.50×12）</td>
+<td data-label="差">$330</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>年払いは1年分を一括で請求されます。月払いから年払いへ切り替える場合、未使用の期間は最初の年間請求書に充当されます。</p>
 <p>返金は原則として受け付けていません。欧州経済領域と英国では14日間のキャンセル期間内であればアプリ内で返金をリクエストできて、それ以外の地域はヘルプから返金の資格を確認する形になります。</p>
 <h2 id="s7">プランの変更と解約</h2>
@@ -329,12 +351,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -343,9 +366,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">個人向け3プランの金額</a><a href="#s2">表示価格に消費税が含まれている</a><a href="#s3">使える量の決まり方</a><a href="#s4">プランごとに使えるモデルと機能</a><a href="#s5">チームと会社で契約するとき</a><a href="#s6">年払いはいくら安くなるのか</a><a href="#s7">プランの変更と解約</a><a href="#s8">どのプランを選ぶか</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -378,11 +404,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Google AIモー…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.16</span>
         </div>
         <h1 class="post-title">【2026年9月】Google AIモードの使い方を解説。切り替え・表示されない・消し方・履歴</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google AIモードの使い方"><defs><linearGradient id="ecg-c80adbd3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-c80adbd3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Google AIモードの使い方</text><line x1="128.8" y1="327.1" x2="1071.2" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">切り替え・消し方・履歴を実機で確認</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li><strong>キャッシュ削除とシークレットモードでは消せない</strong></li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -119,7 +127,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>経緯としては2025年3月に試験公開、5月に米国で一般公開、9月9日に日本語で提供が始まりました。利用は無料で、Googleアカウントにログインしていなくても使えます。ただし履歴を残して続きから再開するにはログインが必要です。提供は200以上の国と地域で、公式ヘルプによれば130を超える言語に対応しています。</p>
 <h3 id="s1-1">どのくらい使われているか</h3>
 <p>サイバーエージェント GEOラボの「生成AI / AI Overview ユーザー利用実態調査（2026年8月期）」（2026年9月4日発表。全国15〜69歳の9,278名、調査期間は8月7日〜10日）では、<strong>AIモードの利用率は28.4%で、2026年2月の調査から2.6ポイント増えています。</strong> 10代に限ると48.8%です。同じ調査で、AIモードを含む生成AIを検索の手段として使う人は52.3%、検索エンジンは86.9%でした。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>サービス</th>
@@ -129,27 +137,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ChatGPT</td>
-<td>30.6%</td>
-<td>+1.5pt</td>
+<td data-label="サービス">ChatGPT</td>
+<td data-label="利用率（2026年8月）">30.6%</td>
+<td data-label="前回（2026年2月）比">+1.5pt</td>
 </tr>
 <tr>
-<td>Google AIモード</td>
-<td>28.4%</td>
-<td>+2.6pt</td>
+<td data-label="サービス">Google AIモード</td>
+<td data-label="利用率（2026年8月）">28.4%</td>
+<td data-label="前回（2026年2月）比">+2.6pt</td>
 </tr>
 <tr>
-<td>Gemini</td>
-<td>23.2%</td>
-<td>+3.6pt</td>
+<td data-label="サービス">Gemini</td>
+<td data-label="利用率（2026年8月）">23.2%</td>
+<td data-label="前回（2026年2月）比">+3.6pt</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>出典は<a href="https://www.cyberagent.co.jp/news/detail/id=33787">サイバーエージェントの発表</a>です。提供開始から1年で、ChatGPTと2ポイント差まで来ています。使う人が3割いる一方で、消したい人の検索も多いのが今の状態で、この記事の後半はそのどちらにも答えます。</p>
 <h3 id="s1-2">AIによる概要との違い</h3>
 <figure class="post-figure"><img src="/media/images/google-ai-mode-guide/10_fig_three.png" alt="スマホの実際の画面3枚。左はAIによる概要が検索結果の上に出た画面、中央はAIモードの会話画面、右はGeminiアプリの画面" loading="lazy"><figcaption>スマホの実際の画面（2026年9月）。左からAIによる概要、AIモード、Gemini。同じ「還元率の高いクレジットカード」で、出る場所と画面が違う</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>比較する点</th>
@@ -159,30 +167,30 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>表示される場所</td>
-<td>検索結果の最上部</td>
-<td>専用の画面</td>
+<td data-label="比較する点">表示される場所</td>
+<td data-label="AIによる概要">検索結果の最上部</td>
+<td data-label="AIモード">専用の画面</td>
 </tr>
 <tr>
-<td>出方</td>
-<td>検索すると自動で出る</td>
-<td>自分で切り替える</td>
+<td data-label="比較する点">出方</td>
+<td data-label="AIによる概要">検索すると自動で出る</td>
+<td data-label="AIモード">自分で切り替える</td>
 </tr>
 <tr>
-<td>追加の質問</td>
-<td>できない</td>
-<td>できる。前の文脈を覚えている</td>
+<td data-label="比較する点">追加の質問</td>
+<td data-label="AIによる概要">できない</td>
+<td data-label="AIモード">できる。前の文脈を覚えている</td>
 </tr>
 <tr>
-<td>向いている場面</td>
-<td>すぐ答えが欲しい</td>
-<td>条件が複雑、比較したい</td>
+<td data-label="比較する点">向いている場面</td>
+<td data-label="AIによる概要">すぐ答えが欲しい</td>
+<td data-label="AIモード">条件が複雑、比較したい</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>AIによる概要は通常の検索に付く要約で、AIモードは会話を続けるための別画面です。</strong> 「AIモードを消したい」と探している人の多くが実際に消したいのはAIによる概要の方で、この2つを取り違えると消し方の章で手順が合いません。AIによる概要の仕組みは<a href="/media/ai-overviews-guide/">AI Overviews（AIによる概要）とは</a>で別に書いています。</p>
 <h3 id="s1-3">Geminiとの違い</h3>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>比較する点</th>
@@ -192,22 +200,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>位置づけ</td>
-<td>Google検索の拡張</td>
-<td>作業支援のAI</td>
+<td data-label="比較する点">位置づけ</td>
+<td data-label="AIモード">Google検索の拡張</td>
+<td data-label="Gemini">作業支援のAI</td>
 </tr>
 <tr>
-<td>得意なこと</td>
-<td>情報収集、比較、手順の整理</td>
-<td>文章の作成、動画や音楽の生成、Gemini Live</td>
+<td data-label="比較する点">得意なこと</td>
+<td data-label="AIモード">情報収集、比較、手順の整理</td>
+<td data-label="Gemini">文章の作成、動画や音楽の生成、Gemini Live</td>
 </tr>
 <tr>
-<td>出典の表示</td>
-<td>回答に出典リンクが付く</td>
-<td>検索を使ったときのみ</td>
+<td data-label="比較する点">出典の表示</td>
+<td data-label="AIモード">回答に出典リンクが付く</td>
+<td data-label="Gemini">検索を使ったときのみ</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>AIモードは検索から得た情報を整理して見せる機能で、Geminiは文章や画像を作る作業まで含む汎用のAIです。動画や音楽の生成、リアルタイムの音声対話はGeminiにしかありません。ChatGPTとの違いは<a href="/media/ai-mode-vs-chatgpt/">Google AIモードとChatGPTの違い</a>で扱っています。</p>
 <h2 id="s2">AIモードの開き方</h2>
 <p>公式ヘルプが案内している入口は3つあり、どの端末でも変わりません。これにAIによる概要から入る経路と、URLで直接開く方法を足した5通りを順に書きます。</p>
@@ -230,7 +238,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p><strong>AIによる概要からAIモードに入ると、履歴が2件に分かれて記録されます。</strong> 最初の検索と、AIモードに移った操作が別のエントリになるため、片方を消しても検索履歴にはもう片方が残ります。片方だけ消して残っていた、という状態を避けたい人は履歴の章を先に読んでください。</p>
 <h3 id="s2-4">毎回AIモードから始めたいとき</h3>
 <p>検索のURLに <code>udm=50</code> を付けると、AIモードの画面が直接開きます。実機で確認したところ、ログインしていない状態でも <code>https://www.google.com/search?q=質問&amp;udm=50</code> でAIモードの会話画面に入れました。Chromeの設定で検索エンジンとして登録しておけば、アドレスバーから打った質問がそのままAIモードで開きます。登録の手順は後の消し方の章で書く <code>udm=14</code> の登録と同じで、URLの末尾を <code>udm=50</code> にするだけです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>入口</th>
@@ -241,37 +249,37 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td><code>google.com/ai</code> を開く</td>
-<td>可</td>
-<td>可</td>
-<td>URLを打つだけ</td>
+<td data-label="入口"><code>google.com/ai</code> を開く</td>
+<td data-label="PC">可</td>
+<td data-label="スマホ">可</td>
+<td data-label="手数">URLを打つだけ</td>
 </tr>
 <tr>
-<td>検索ボックス右の「AI モード」</td>
-<td>可</td>
-<td>可</td>
-<td>1回押す</td>
+<td data-label="入口">検索ボックス右の「AI モード」</td>
+<td data-label="PC">可</td>
+<td data-label="スマホ">可</td>
+<td data-label="手数">1回押す</td>
 </tr>
 <tr>
-<td>検索結果のタブ</td>
-<td>可</td>
-<td>可</td>
-<td>検索してから1回押す</td>
+<td data-label="入口">検索結果のタブ</td>
+<td data-label="PC">可</td>
+<td data-label="スマホ">可</td>
+<td data-label="手数">検索してから1回押す</td>
 </tr>
 <tr>
-<td>AIによる概要の「さらに詳しく」</td>
-<td>可</td>
-<td>可</td>
-<td>概要を開いてから押す</td>
+<td data-label="入口">AIによる概要の「さらに詳しく」</td>
+<td data-label="PC">可</td>
+<td data-label="スマホ">可</td>
+<td data-label="手数">概要を開いてから押す</td>
 </tr>
 <tr>
-<td><code>udm=50</code> を検索エンジンに登録</td>
-<td>可</td>
-<td>ブラウザのみ</td>
-<td>最初に1回設定</td>
+<td data-label="入口"><code>udm=50</code> を検索エンジンに登録</td>
+<td data-label="PC">可</td>
+<td data-label="スマホ">ブラウザのみ</td>
+<td data-label="手数">最初に1回設定</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s3">通常の検索との切り替え</h2>
 <p>AIモードの画面にも、検索結果と同じタブが上に並んでいます。公式ヘルプ「<a href="https://support.google.com/websearch/answer/16011537?hl=ja&amp;co=GENIE.Platform%3DiOS">Google 検索の AI モードで AI による回答を取得する</a>」には「検索結果と AI モードを切り替えるには、画面上部の［すべて］をタップします」と書かれていて、通常の検索に戻る操作はこれだけです。設定画面にAIモードをオンとオフで切り替える項目はありません。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/google-ai-mode-switch/gas_03_sp_to_all.jpg" alt="スマホのAIモードの画面。「祝日はいつ」への回答が表示され、上部のタブ列のすべてが赤い枠で囲まれている" loading="lazy"><figcaption>AIモードの画面では、タブ列の「すべて」を押すと通常の検索結果に戻る</figcaption></figure>
@@ -295,7 +303,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s4-3">追加の質問で絞り込む</h3>
 <p>回答が返ってきたら、同じ入力欄に「予算を半分にして」「表で比較して」と続けて入れます。<strong>AIモードは前の文脈を覚えているため、条件を1つずつ足して答えを絞り込めます。</strong> 会話をやり直す必要はありません。</p>
 <h3 id="s4-4">質問の書き方</h3>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>目的</th>
@@ -304,23 +312,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>比較する</td>
-<td>「電源とWi-Fiがあるカフェを駅から徒歩10分以内で3つ比較して」</td>
+<td data-label="目的">比較する</td>
+<td data-label="入力の例">「電源とWi-Fiがあるカフェを駅から徒歩10分以内で3つ比較して」</td>
 </tr>
 <tr>
-<td>計画する</td>
-<td>「金沢に2泊3日。移動を少なく、雨の日の代案も入れて」</td>
+<td data-label="目的">計画する</td>
+<td data-label="入力の例">「金沢に2泊3日。移動を少なく、雨の日の代案も入れて」</td>
 </tr>
 <tr>
-<td>理解する</td>
-<td>「新NISAのつみたて投資枠と成長投資枠の違いを初心者向けに」</td>
+<td data-label="目的">理解する</td>
+<td data-label="入力の例">「新NISAのつみたて投資枠と成長投資枠の違いを初心者向けに」</td>
 </tr>
 <tr>
-<td>画像で調べる</td>
-<td>写真を添付して「この植物の名前と室内で育てる注意点」</td>
+<td data-label="目的">画像で調べる</td>
+<td data-label="入力の例">写真を添付して「この植物の名前と室内で育てる注意点」</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>比較表を作らせる、手順を番号付きにさせる、といった出力の形を指定する聞き方が、AIモードでは特に通ります。もう1つ効くのは前提を先に渡すことで、「初めて確定申告をする会社員です」「家族4人で予算は月3万円」のように自分の状況を書いてから聞くと、回答がその条件に合わせて絞られます。</p>
 <h3 id="s4-5">Search Live と Deep Search</h3>
 <p>カメラを向けたまま会話できる Search Live と、複雑なリサーチをAIに任せる Deep Search もAIモードの機能です。Search Live は公式ブログで日本での提供開始が案内されています。Deep Search は提供状況が環境によって違うため、自分の画面に出ているかを確認してから使ってください。</p>
@@ -341,7 +349,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>アプリやブラウザのバージョンが古い、シークレットモードを使っている、JavaScriptを無効にしている、のどれかに当たると表示されません。JavaScript の無効化は解説記事のほとんどが挙げていませんが、広告ブロックの設定で切っている人は確認してください。</p>
 <h3 id="s5-4">Google側の変更で出ないケース</h3>
 <p><strong>急にAIモードが出なくなった場合、端末や設定ではなくGoogle側の変更であることがあります。</strong> 2025年12月ごろのアップデート以降、買い物や場所を探す検索では通常のリンクが優先され、AIモードが出にくくなったという報告が動画で複数出ています。この場合は端末側で直せません。<code>google.com/ai</code> から入れば機能そのものは使えるので、直そうとせずに入口を変えてください。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>症状</th>
@@ -352,36 +360,36 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>アイコンやタブが無い</td>
-<td>年齢・Workspace・Search Labs の設定</td>
-<td>個人アカウントで試す、Labs を確認</td>
-<td>直せる</td>
+<td data-label="症状">アイコンやタブが無い</td>
+<td data-label="主な原因">年齢・Workspace・Search Labs の設定</td>
+<td data-label="対処">個人アカウントで試す、Labs を確認</td>
+<td data-label="自分で直せるか">直せる</td>
 </tr>
 <tr>
-<td>押しても動かない</td>
-<td>ブラウザが古い、JavaScript が無効</td>
-<td>更新する、設定を戻す</td>
-<td>直せる</td>
+<td data-label="症状">押しても動かない</td>
+<td data-label="主な原因">ブラウザが古い、JavaScript が無効</td>
+<td data-label="対処">更新する、設定を戻す</td>
+<td data-label="自分で直せるか">直せる</td>
 </tr>
 <tr>
-<td>急に消えた</td>
-<td>Google 側の表示変更</td>
-<td><code>google.com/ai</code> から入る</td>
-<td>直せない</td>
+<td data-label="症状">急に消えた</td>
+<td data-label="主な原因">Google 側の表示変更</td>
+<td data-label="対処"><code>google.com/ai</code> から入る</td>
+<td data-label="自分で直せるか">直せない</td>
 </tr>
 <tr>
-<td>アドレスバーの補完がAIモードに飛ぶ</td>
-<td>Chrome のアドレスバー機能</td>
-<td>2026年9月の Chrome 153 では切る項目が無い</td>
-<td>直せない</td>
+<td data-label="症状">アドレスバーの補完がAIモードに飛ぶ</td>
+<td data-label="主な原因">Chrome のアドレスバー機能</td>
+<td data-label="対処">2026年9月の Chrome 153 では切る項目が無い</td>
+<td data-label="自分で直せるか">直せない</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="s5-5">アドレスバーの補完がAIモードに飛ぶ</h3>
 <p>Chromeで検索語を途中まで入れて Tab キーを押すと、いつもの検索ではなくAIモードに飛ばされる。2025年12月のChromeの変更以降、この不満が個人の技術ブログで複数書かれています。これはアドレスバーに追加されたAIモードの入口が原因です。2025年12月ごろの記事では <code>chrome://flags</code> の「AI Mode Omnibox entrypoint」を無効にすれば戻せると書かれていますが、<strong>2026年9月17日の Chrome 153 で確認したところ、その項目は無くなっていました</strong>（詳しくは消し方の章）。現時点では Tab の代わりに Enter で検索するか、検索エンジンの登録で回避する形になります。</p>
 <h2 id="s6">AIモードとAIによる概要を消す方法</h2>
 <p>2026年9月時点で、AIモードを完全にオフにする公式の設定はありません。<strong>消せるのはAIモードの入口と、検索結果の上に出るAIによる概要の表示で、どちらも方法が別です。</strong></p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>消したいもの</th>
@@ -391,17 +399,17 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>アドレスバーなどのAIモードの入口</td>
-<td>パソコンのChromeはアドレスバーを右クリックして［AI モードを常に表示する］を外す。Pixelは検索バーの設定でオフ</td>
-<td><a href="/media/ai-mode-remove/">Google AIモードを消す方法</a></td>
+<td data-label="消したいもの">アドレスバーなどのAIモードの入口</td>
+<td data-label="方法">パソコンのChromeはアドレスバーを右クリックして［AI モードを常に表示する］を外す。Pixelは検索バーの設定でオフ</td>
+<td data-label="詳しい手順"><a href="/media/ai-mode-remove/">Google AIモードを消す方法</a></td>
 </tr>
 <tr>
-<td>検索結果の上のAIによる概要</td>
-<td>［ウェブ］タブか <code>udm=14</code>。パソコンのChromeは検索エンジンに登録できる</td>
-<td><a href="/media/ai-overviews-off/">Google検索のAIによる概要を消す方法</a></td>
+<td data-label="消したいもの">検索結果の上のAIによる概要</td>
+<td data-label="方法">［ウェブ］タブか <code>udm=14</code>。パソコンのChromeは検索エンジンに登録できる</td>
+<td data-label="詳しい手順"><a href="/media/ai-overviews-off/">Google検索のAIによる概要を消す方法</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><code>chrome://flags</code> の「AI mode」「AI Mode Omnibox entrypoint」は、2026年9月の Chrome 153・154 では見つかりませんでした。キャッシュの削除やSearch Labsのオフでは、検索のAIモードは消えません。</p>
 <h2 id="s7">AIモードの履歴</h2>
 <p>AIモードの履歴は検索語ではなく会話のまとまりとして記録されます。通常の検索履歴とは記録の単位も保存場所も違うため、消したつもりで残ることがあります。</p>
@@ -412,7 +420,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>住所や口座情報、他人の個人情報、社外秘の資料は入力もアップロードもしないでください。入力した内容はGoogleのAI機能の改善に使われることがあります。18歳以上に限られる機能もあり、Search Labs の試験運用版、パーソナルインテリジェンス、Gemini 3 Pro の高度な画像生成がそれに当たります。</p>
 <h2 id="s9">AIモードは何を引用しているか</h2>
 <p>2026年9月16日に、AIモードについての4つの質問をChatGPT・Gemini・Perplexity・Google AIモードに投げ、回答に付いた出典110件を記録しました。4つの質問は使い方・表示されないときの対処・消し方・AIによる概要との違いです。nitoの計測基盤で取ったもので、<strong>4つの質問という小さな範囲の観測です。</strong> 質問の選び方で内訳は変わるため、割合を一般化はしません。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>出典</th>
@@ -421,27 +429,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>support.google.com（公式ヘルプ）</td>
-<td>54</td>
+<td data-label="出典">support.google.com（公式ヘルプ）</td>
+<td data-label="件数（110件中）">54</td>
 </tr>
 <tr>
-<td>blog.google（公式ブログ）</td>
-<td>11</td>
+<td data-label="出典">blog.google（公式ブログ）</td>
+<td data-label="件数（110件中）">11</td>
 </tr>
 <tr>
-<td>youtube.com</td>
-<td>8</td>
+<td data-label="出典">youtube.com</td>
+<td data-label="件数（110件中）">8</td>
 </tr>
 <tr>
-<td>search.google</td>
-<td>5</td>
+<td data-label="出典">search.google</td>
+<td data-label="件数（110件中）">5</td>
 </tr>
 <tr>
-<td>企業の解説記事</td>
-<td>各1〜2</td>
+<td data-label="出典">企業の解説記事</td>
+<td data-label="件数（110件中）">各1〜2</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>2026年9月16日に4つの質問で確かめた範囲では、<strong>Googleの公式ヘルプとYouTubeの解説動画が、同じ回答の出典欄に並んで出てきました。</strong> 企業の解説記事も混ざりますが、公式のドキュメントと動画が同列で引かれています。読者にとっての意味は単純で、手順の正解は公式ヘルプにあり、解説記事は分かりやすさのために読むもので、最後の確認は回答に付いた出典リンクで済ませるのが早いということです。AIに引用される記事の条件は<a href="/media/cited-by-ai-overviews/">AI Overviewsに引用されるには</a>で扱っています。</p>
 <h2 id="s10">自社がAIモードにどう出ているかを確かめるなら</h2>
 <p>使う側の話に続けて、自社のサービスがAIモードの回答に出ているか、出典に自社サイトが入っているかも、同じ画面で確かめられます。見込み客が使いそうな質問を書き出し、AIモードで実際に聞き、回答の本文に社名が出るかと出典に自社のページがあるかを分けて記録するだけです。出ない原因の切り分けはChatGPTを例に<a href="/media/chatgpt-not-appearing/">ChatGPTに自社が出てこない原因と対策</a>にまとめており、AIモードでも同じ手順が使えます。</p>
@@ -490,12 +498,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>引用される側の話はこの記事の範囲を超えるため、<a href="/media/cited-by-ai-overviews/">AI Overviewsに引用されるには</a>と<a href="/media/ai-cited-writing/">AIに引用される記事の書き方</a>を参照してください。</p>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -504,9 +513,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Google AIモードとは</a><a href="#s2">AIモードの開き方</a><a href="#s3">通常の検索との切り替え</a><a href="#s4">AIモードでできること</a><a href="#s5">AIモードが表示されない・使えないときの直し方</a><a href="#s6">AIモードとAIによる概要を消す方法</a><a href="#s7">AIモードの履歴</a><a href="#s8">使う前に知っておく注意点</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -539,11 +551,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

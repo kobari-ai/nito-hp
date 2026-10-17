@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Geminiの料金プラ…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.21</span>
         </div>
         <h1 class="post-title">【2026年9月】Geminiの料金プランを比較｜無料・Plus 725円・Pro 2,900円・Ultraの違いと選び方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Geminiの料金プラン"><defs><linearGradient id="ecg-3f85a269" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-3f85a269)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Geminiの料金プラン</text><line x1="235.2" y1="327.1" x2="964.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">無料・Plus・Pro・Ultraの違いと選び方</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li><strong>学生はGoogle AI Plusを1年間無料</strong>で使える</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -97,7 +105,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">料金とプランの中身</h2>
 <p>公式のプランページに載っている日本の月額と、含まれるストレージは次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -108,31 +116,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>無料</td>
-<td>0円</td>
-<td>Googleアカウントの既定</td>
-<td>標準</td>
+<td data-label="プラン">無料</td>
+<td data-label="月額（日本）">0円</td>
+<td data-label="ストレージ">Googleアカウントの既定</td>
+<td data-label="使用量の上限（AIプランなしとの比）">標準</td>
 </tr>
 <tr>
-<td>Google AI Plus</td>
-<td>725円</td>
-<td>400GB</td>
-<td>標準の2倍</td>
+<td data-label="プラン">Google AI Plus</td>
+<td data-label="月額（日本）">725円</td>
+<td data-label="ストレージ">400GB</td>
+<td data-label="使用量の上限（AIプランなしとの比）">標準の2倍</td>
 </tr>
 <tr>
-<td>Google AI Pro</td>
-<td>2,900円</td>
-<td>5TB</td>
-<td>標準の4倍</td>
+<td data-label="プラン">Google AI Pro</td>
+<td data-label="月額（日本）">2,900円</td>
+<td data-label="ストレージ">5TB</td>
+<td data-label="使用量の上限（AIプランなしとの比）">標準の4倍</td>
 </tr>
 <tr>
-<td>Google AI Ultra</td>
-<td>14,500円から</td>
-<td>20TBから</td>
-<td>最大20倍（AI Proの5倍か20倍。日本語版の使用量上限のページは4倍）</td>
+<td data-label="プラン">Google AI Ultra</td>
+<td data-label="月額（日本）">14,500円から</td>
+<td data-label="ストレージ">20TBから</td>
+<td data-label="使用量の上限（AIプランなしとの比）">最大20倍（AI Proの5倍か20倍。日本語版の使用量上限のページは4倍）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/gemini-pricing/gp_01_plans_page.jpg" alt="Google Oneの「Google AIのプラン」ページ。日本を選択した状態で、Google AI Plusが月額725円、Google AI Proが月額2,900円、Google AI Ultraが月額14,500円からと表示されている" loading="lazy"><figcaption>公式ページの日本価格（地域の選択は「日本」）</figcaption></figure>
 
 <p>有料プランはGoogle Oneを通じて契約する形で、ストレージはGmail・Googleドライブ・Googleフォトの共通の容量です。Plus以上はFamily Sharingで最大5人まで共有できます。</p>
@@ -145,7 +153,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>つまり「1日何回まで」という形では示されておらず、重い使い方をすれば早く上限に当たります。いまどれだけ使ったかは画面左下の設定から、使用量上限のアイコンで確認できます。5時間と週の区切りやプランごとの倍率、上限に達したときの選択肢は<a href="/media/gemini-limits/">Geminiの回数制限</a>にまとめました。</p>
 <h3 id="s2-2">一度に読ませられる長さ</h3>
 <p>見落とされやすいのがここです。コンテキストウィンドウはプランで大きく変わります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -154,24 +162,24 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>無料</td>
-<td>32,000トークン</td>
+<td data-label="プラン">無料</td>
+<td data-label="コンテキストウィンドウ">32,000トークン</td>
 </tr>
 <tr>
-<td>Google AI Plus</td>
-<td>128,000トークン</td>
+<td data-label="プラン">Google AI Plus</td>
+<td data-label="コンテキストウィンドウ">128,000トークン</td>
 </tr>
 <tr>
-<td>Google AI Pro・Ultra</td>
-<td>100万トークン</td>
+<td data-label="プラン">Google AI Pro・Ultra</td>
+<td data-label="コンテキストウィンドウ">100万トークン</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>公式は100万トークンで最大1,500ページのテキストか3万行のコードを理解できると説明しており、無料との差はおよそ30倍です。プロンプトがこの範囲を超えると、渡した内容の一部が考慮されないまま回答が返ることがあります。<strong>長い資料を読ませる用途があるなら、ここが実質的な分かれ目になります。</strong></p>
 <h3 id="s2-3">一部の機能</h3>
 <p>2026年10月9日から順に、選べるモデルがプランで分かれます。ヘルプ「<a href="https://support.google.com/gemini/answer/17004136?hl=ja">Gemini モデルへのアクセスと使用量上限の変更</a>」の表では、<strong>プランなしは「自動」（自分で選べるのはFlash-Liteだけ）、AI PlusはFlash-LiteとFlash、AI ProとUltraは3つすべて</strong>です。AI Plusの適用日はメールで知らされ、10月10日の料金ページのPlusの欄にはまだ3.1 Proへのアクセスが載っています。使用量上限のページにあったモデルの表は、10月14日に消えました。変わる範囲は<a href="/media/gemini-flash-lite/">Gemini Flash-Liteとは</a>で詳しく扱っています。</p>
 <p>無料で使える機能も多く、Canvas、Gem、Deep Research、画像生成、音楽生成、アプリ連携は無料プランの列にもチェックが入っています。有料でないと使えないのは次のものです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>機能</th>
@@ -182,19 +190,33 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>動画生成、時間指定アクション、今日のまとめ、Nano Banana Proでの再生成</td>
-<td>×</td>
-<td>○</td>
-<td>○</td>
+<td data-label="機能">動画生成、時間指定アクション、今日のまとめ、Nano Banana Proでの再生成</td>
+<td data-label="無料">×</td>
+<td data-label="Plus">○</td>
+<td data-label="Pro・Ultra">○</td>
 </tr>
 <tr>
-<td>Gemini Spark（提供は一部の国。日本での提供は公式に明記なし）</td>
-<td>×</td>
-<td>×</td>
-<td>○</td>
+<td data-label="機能">Gemini Spark（提供は一部の国。日本での提供は公式に明記なし）</td>
+<td data-label="無料">×</td>
+<td data-label="Plus">×</td>
+<td data-label="Pro・Ultra">○</td>
 </tr>
 </tbody>
-</table>
+</table></div>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Gemini を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">日本では使えない機能に注意</h2>
 <p>プランページのPro・Ultraの説明には、<strong>米国のみと明記された機能がいくつも含まれています</strong>。料金を比べる前に、ここを切り分けておきます。</p>
 <figure class="post-figure"><img src="/media/images/gemini-pricing/00_fig_us_only.png" alt="Pro・Ultraの説明に含まれる米国のみの機能の図。日本でも使えるのはGemini 3 ProとDeep Researchの拡大、動画生成・画像生成・音楽生成、Gemini Notebookの拡張。米国のみまたは一部の国のみなのはGmailのAI受信トレイ、AIモードのDeep Search、Chromeの自動ブラウジング、Gemini Agent、Gemini Spark" loading="lazy"><figcaption>プラン自体は契約できるが、一部の機能は米国限定</figcaption></figure>
@@ -249,12 +271,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -263,9 +286,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">料金とプランの中身</a><a href="#s2">有料にすると何が増えるのか</a><a href="#s3">日本では使えない機能に注意</a><a href="#s4">学生は1年間無料</a><a href="#s5">どれを選ぶか</a><a href="#s6">解約の手順</a><a href="#s7">AI検索での見え方は別の話</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -298,11 +324,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

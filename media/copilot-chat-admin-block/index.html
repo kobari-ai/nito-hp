@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Copilot Ch…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.17</span>
         </div>
         <h1 class="post-title">【2026年10月】Copilot Chatを社内で止める方法｜ブロック・Web検索・エージェント</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilot Chatを社内で止める"><defs><linearGradient id="ecg-53450a90" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-53450a90)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="86.4" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilot Chat</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">を社内で止める</text><line x1="326.4" y1="378.0" x2="873.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">ブロック・ピン留め・Web検索・エージェント</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 </ul></div></div>
 <figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/01_fig_scope.png" alt="Copilot Chatを止める3段階の図。ピン留めを外すのは見えなくするだけ、特定の人・Web検索・エージェントは一部だけ止める、統合アプリでブロックすると使えなくなる。止まる範囲はこの順に広がる" loading="lazy"><figcaption>止まる範囲は3段階</figcaption></figure>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Copilot を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -105,7 +113,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">止めたい範囲を先に決める</h2>
 <p>画面から消したいのか使えなくしたいのかで、選ぶ設定は変わります。Copilot Chatの入口はCopilotアプリ（Web・デスクトップ・モバイル）、Edge、Outlook、Teams、WordやExcelのエージェントと複数あり、<strong>どこか1つを閉じても別の入口から開ける</strong>ように作られています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>やりたいこと</th>
@@ -115,37 +123,37 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>TeamsとOutlookから見えなくする</td>
-<td>Copilot＞設定のピン留め</td>
-<td>ナビゲーションの表示だけ</td>
+<td data-label="やりたいこと">TeamsとOutlookから見えなくする</td>
+<td data-label="使う設定">Copilot＞設定のピン留め</td>
+<td data-label="止まる範囲">ナビゲーションの表示だけ</td>
 </tr>
 <tr>
-<td>全員が使えないようにする</td>
-<td>統合アプリでCopilotをブロック</td>
-<td>Copilotアプリ・Outlook・Teams・Web版のChat</td>
+<td data-label="やりたいこと">全員が使えないようにする</td>
+<td data-label="使う設定">統合アプリでCopilotをブロック</td>
+<td data-label="止まる範囲">Copilotアプリ・Outlook・Teams・Web版のChat</td>
 </tr>
 <tr>
-<td>一部の人だけに使わせる</td>
-<td>統合アプリの［ユーザー］タブ</td>
-<td>選ばなかった人（ライセンスなし）</td>
+<td data-label="やりたいこと">一部の人だけに使わせる</td>
+<td data-label="使う設定">統合アプリの［ユーザー］タブ</td>
+<td data-label="止まる範囲">選ばなかった人（ライセンスなし）</td>
 </tr>
 <tr>
-<td>Web検索だけ止める</td>
-<td>Copilot での Web 検索を許可する</td>
-<td>Bingへの検索クエリ</td>
+<td data-label="やりたいこと">Web検索だけ止める</td>
+<td data-label="使う設定">Copilot での Web 検索を許可する</td>
+<td data-label="止まる範囲">Bingへの検索クエリ</td>
 </tr>
 <tr>
-<td>有料のエージェントを止める</td>
-<td>従量課金を設定しない・エージェントのブロック</td>
-<td>社内データを読むエージェント</td>
+<td data-label="やりたいこと">有料のエージェントを止める</td>
+<td data-label="使う設定">従量課金を設定しない・エージェントのブロック</td>
+<td data-label="止まる範囲">社内データを読むエージェント</td>
 </tr>
 <tr>
-<td>Edgeのボタンを消す</td>
-<td>Microsoft365CopilotChatIconEnabled</td>
-<td>Edgeのツールバーの表示</td>
+<td data-label="やりたいこと">Edgeのボタンを消す</td>
+<td data-label="使う設定">Microsoft365CopilotChatIconEnabled</td>
+<td data-label="止まる範囲">Edgeのツールバーの表示</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>迷ったら、<strong>表示を消す設定と利用を止める設定を分けて考える</strong>と整理しやすくなります。前者はピン留めとEdgeのボタン、後者は統合アプリでのブロックと各機能のポリシーです。</p>
 <h2 id="s2">ピン留めを外しても使える</h2>
 <p>TeamsのアイコンからCopilotが消えれば止まった、と考えたくなります。しかしLearnの管理のページは、ピン留めを外してもCopilot Chatへのアクセスは削除されず、Copilotアプリなどから引き続き使える可能性がある、と注意書きを置いています。<strong>ピン留めは表示の設定で、利用の可否は決めません。</strong></p>
@@ -156,6 +164,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s2-2">2026年1月からCopilotアプリには効かない</h3>
 <p>Microsoft Copilotアプリ（旧Microsoft 365 Copilotアプリ）のナビゲーションには、ピン留めの設定が効かなくなりました。Learnの管理のページによると、欧州経済領域とスイスのテナントは2025年7月25日から、それ以外のテナントは2026年1月28日からです。<strong>ピン留めしない設定にしても、Copilotアプリを開けばChatは並んでいます。</strong></p>
 <p>ピン留めしない設定でも、利用者はTeamsやOutlookのアプリストアからCopilotを自分で追加できます。ピン留めを外す手は社員を急に戸惑わせずに入口を目立たなくしたいとき向けで、利用を止める手ではありません。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Copilot を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">統合アプリでCopilotをブロックする</h2>
 <p>社員がCopilot Chatを使えない状態にしたいときは、ブロックを使います。Learnの管理のページには、すべてのユーザー、または特定のユーザーとグループのCopilot Chatへのアクセスをブロックでき、そこには対象となるMicrosoft Copilotライセンスを持つ人も含まれる、と書かれています。</p>
 <figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/03_learn_block.jpg" alt="Microsoft LearnのMicrosoft Copilot Chatへのアクセスを制限する節。ピン留めを外す、特定のユーザーまたはグループに制限する、アクセスのブロックの3つが並ぶ（赤枠1）。ブロックの項には対象となるライセンスを持つユーザーも含めてブロックでき、ブロックされるとCopilotアプリ・Outlook・Teams・Web版などで使えなくなると書かれている（赤枠2）" loading="lazy"><figcaption>Microsoft Learn「Microsoft Copilot Chatの管理」のアクセスを制限する節</figcaption></figure>
@@ -172,7 +194,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>表記が見つからないときは、統合アプリの一覧で「Copilot」を検索してください。</p>
 <h3 id="s3-2">ライセンスを持つ人も止まる</h3>
 <p>統合アプリの3つの設定でCopilotライセンスの有無によって動きが変わることも、同じブログが表で示しています。違いが出るのは**［アプリをブロックする］以外の2つ**で、ライセンスを持つ人のCopilot Chatは使えるままです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>統合アプリの設定</th>
@@ -182,22 +204,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>展開対象から外す</td>
-<td>使えない・追加もできない</td>
-<td>使える</td>
+<td data-label="統合アプリの設定">展開対象から外す</td>
+<td data-label="ライセンスなしの人">使えない・追加もできない</td>
+<td data-label="ライセンスありの人">使える</td>
 </tr>
 <tr>
-<td>組織のユーザーはインストールできません</td>
-<td>使えない・追加もできない</td>
-<td>使える</td>
+<td data-label="統合アプリの設定">組織のユーザーはインストールできません</td>
+<td data-label="ライセンスなしの人">使えない・追加もできない</td>
+<td data-label="ライセンスありの人">使える</td>
 </tr>
 <tr>
-<td>アプリをブロックする</td>
-<td>使えない</td>
-<td>使えない</td>
+<td data-label="統合アプリの設定">アプリをブロックする</td>
+<td data-label="ライセンスなしの人">使えない</td>
+<td data-label="ライセンスありの人">使えない</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/copilot-chat-admin-block/04_fig_block_matrix.png" alt="統合アプリの3つの設定でCopilot Chatを使えるかの図。展開対象から外すと、組織のユーザーはインストールできませんの2つは、ライセンスなしの人は使えず、ライセンスありの人は使える。アプリをブロックするはどちらも使えない" loading="lazy"><figcaption>ライセンスを持つ人まで止まるのはブロックだけ</figcaption></figure>
 
 <p>有料のCopilotを入れた部署は残し、それ以外を止めたいなら、［展開対象から外す］か［組織のユーザーはインストールできません］が合います。全員を止めるならブロックです。ブロックしたあとのアイコンの見え方はOutlookの種類によってそろわない場合がある、とブログは書いています。</p>
@@ -279,12 +301,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Copilot を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -293,9 +316,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">止めたい範囲を先に決める</a><a href="#s2">ピン留めを外しても使える</a><a href="#s3">統合アプリでCopilotをブロックする</a><a href="#s4">一部の人だけに使わせる</a><a href="#s5">Web検索だけを止める</a><a href="#s6">エージェントと従量課金を止める</a><a href="#s7">EdgeとWindowsと個人アカウントの入口</a><a href="#s8">止める前と止めたあとに見るもの</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -328,11 +354,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

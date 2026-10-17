@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】AI検索エンジン4種を…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.20</span>
         </div>
         <h1 class="post-title">【2026年9月】AI検索エンジン4種を実測比較｜ChatGPT・Perplexity・Gemini・AIモードの引用と回答の違い</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI検索エンジン4種の実測比較"><defs><linearGradient id="ecg-d12cc42a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d12cc42a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="86.4" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">実測比較</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI検索エンジン</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">4種の実測比較</text><line x1="326.4" y1="378.0" x2="873.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">出典の数・回答の長さ・引用されるサイト</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>サイト側の示唆: <strong>同じ質問でも引用されるサイトはAIごとに違う</strong>。1つのAIで出ないことは、全部で出ないことを意味しない</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -92,7 +100,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">測り方</h2>
 <p>nitoが日常的に使っているAI検索の実測ツール（4つのAIに同じ質問を投げて、回答と出典を記録する仕組み）で、2026年9月20日に次の5つの質問を投げました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>#</th>
@@ -102,39 +110,39 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>2026年9月時点で、日本で使える電子帳簿保存法に対応した会計ソフトのおすすめは？</td>
-<td>商品の比較</td>
+<td data-label="#">1</td>
+<td data-label="質問">2026年9月時点で、日本で使える電子帳簿保存法に対応した会計ソフトのおすすめは？</td>
+<td data-label="質問の種類">商品の比較</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Claude Code と Cursor はどちらが初心者向き？違いを教えて</td>
-<td>ツールの比較</td>
+<td data-label="#">2</td>
+<td data-label="質問">Claude Code と Cursor はどちらが初心者向き？違いを教えて</td>
+<td data-label="質問の種類">ツールの比較</td>
 </tr>
 <tr>
-<td>3</td>
-<td>東京都内で法人向けにLLMO（AI検索対策）を支援している会社を教えて</td>
-<td>会社探し</td>
+<td data-label="#">3</td>
+<td data-label="質問">東京都内で法人向けにLLMO（AI検索対策）を支援している会社を教えて</td>
+<td data-label="質問の種類">会社探し</td>
 </tr>
 <tr>
-<td>4</td>
-<td>AIによる概要（Google）を非表示にする方法は？</td>
-<td>手順の確認</td>
+<td data-label="#">4</td>
+<td data-label="質問">AIによる概要（Google）を非表示にする方法は？</td>
+<td data-label="質問の種類">手順の確認</td>
 </tr>
 <tr>
-<td>5</td>
-<td>今週のAI関連の主なニュースを3つ教えて</td>
-<td>最新情報</td>
+<td data-label="#">5</td>
+<td data-label="質問">今週のAI関連の主なニュースを3つ教えて</td>
+<td data-label="質問の種類">最新情報</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>記録したのは回答の本文、出典として提示されたURL、そしてAIが裏で実行した検索クエリ（取得できるものだけ）です。各AIとも既定のモードで、無料・有料の切り替えや検索機能の手動オンオフはしていません。GeminiとPerplexityは5問のうち2問で取得に失敗したので、集計は取得できた分だけで出しています。取得できなかった2問は計測側の失敗で、そのAIが答えられなかったわけではありません。</p>
 <figure class="post-figure"><img src="/media/images/ai-search-engine-comparison/00_fig_method.png" alt="実測の方法の図。同じ5つの質問を ChatGPT・Perplexity・Gemini・Google AIモードの4つに同時に投げ、回答の本文・出典URL・裏で実行された検索クエリを記録して比較する" loading="lazy"><figcaption>同じ質問を同じ日に4つへ。記録するのは回答・出典・裏の検索</figcaption></figure>
 
 <h2 id="s2">実測の結果</h2>
 <figure class="post-figure"><img src="/media/images/ai-search-engine-comparison/00_fig_result.png" alt="4つのAI検索の実測結果。出典ドメイン数の中央値はPerplexity 16・ChatGPT 12・AIモード 4・Gemini 4。回答の長さはPerplexity 2788字・AIモード 1427字・Gemini 1083字・ChatGPT 333字" loading="lazy"><figcaption>出典の数と回答の長さは逆の関係（2026年9月20日、同一の5問）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th></th>
@@ -147,39 +155,39 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ChatGPT</td>
-<td>5 / 5</td>
-<td>12（0〜17）</td>
-<td>333字</td>
-<td>45</td>
-<td>7</td>
+<td data-label="">ChatGPT</td>
+<td data-label="取得できた問">5 / 5</td>
+<td data-label="出典ドメイン数（中央値・範囲）">12（0〜17）</td>
+<td data-label="回答の長さ（中央値）">333字</td>
+<td data-label="出典の総数">45</td>
+<td data-label="うち公式・一次">7</td>
 </tr>
 <tr>
-<td>Perplexity</td>
-<td>3 / 5</td>
-<td>16（11〜18）</td>
-<td>2,788字</td>
-<td>45</td>
-<td>6</td>
+<td data-label="">Perplexity</td>
+<td data-label="取得できた問">3 / 5</td>
+<td data-label="出典ドメイン数（中央値・範囲）">16（11〜18）</td>
+<td data-label="回答の長さ（中央値）">2,788字</td>
+<td data-label="出典の総数">45</td>
+<td data-label="うち公式・一次">6</td>
 </tr>
 <tr>
-<td>GoogleのAIモード</td>
-<td>5 / 5</td>
-<td>4（0〜11）</td>
-<td>1,427字</td>
-<td>23</td>
-<td>1</td>
+<td data-label="">GoogleのAIモード</td>
+<td data-label="取得できた問">5 / 5</td>
+<td data-label="出典ドメイン数（中央値・範囲）">4（0〜11）</td>
+<td data-label="回答の長さ（中央値）">1,427字</td>
+<td data-label="出典の総数">23</td>
+<td data-label="うち公式・一次">1</td>
 </tr>
 <tr>
-<td>Gemini</td>
-<td>3 / 5</td>
-<td>4（4〜5）</td>
-<td>1,083字</td>
-<td>13</td>
-<td>1</td>
+<td data-label="">Gemini</td>
+<td data-label="取得できた問">3 / 5</td>
+<td data-label="出典ドメイン数（中央値・範囲）">4（4〜5）</td>
+<td data-label="回答の長さ（中央値）">1,083字</td>
+<td data-label="出典の総数">13</td>
+<td data-label="うち公式・一次">1</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>「公式・一次」は、出典のドメインがサービスの公式サイトや提供元のヘルプ（support.google.com、anthropic.com、claude.com、cursor.com、会計ソフト各社の公式サイトなど）だったものを数えたものです。</p>
 <p><strong>① 出典の数と回答の長さは連動しない。</strong> ChatGPTは出典を12ドメイン提示しながら、回答は333字と最も短いです。要点だけを短く返し、根拠はリンクで示す形です。Perplexityは出典16ドメインで回答2,788字と、どちらも最多でした。</p>
 <p><strong>② AIモードとGeminiは出典が少ない。</strong> どちらもGoogleの製品ですが、実測では出典として提示されたドメインが4前後でした。回答は1,000字を超える一方、根拠の幅は狭くなります。</p>
@@ -188,7 +196,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>平均の傾向とは別に、質問ごとの結果も並べます。</p>
 <figure class="post-figure"><img src="/media/images/ai-search-engine-comparison/00_fig_by_question.png" alt="質問の種類ごとの結果の図。商品の比較・ツールの比較・会社探し・手順の確認・最新情報の5種類で、どのAIが出典を多く出したか、回答が長かったかを並べた表" loading="lazy"><figcaption>質問の種類で得意なAIが変わる。同じ質問でも引用されるサイトは重ならない</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>質問</th>
@@ -199,41 +207,41 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>会計ソフトのおすすめ</td>
-<td>Perplexity 18</td>
-<td>Perplexity 3,555字</td>
-<td>Perplexityは裏で45回の検索を実行。ChatGPTは出典0で要約のみ</td>
+<td data-label="質問">会計ソフトのおすすめ</td>
+<td data-label="出典が多かった">Perplexity 18</td>
+<td data-label="回答が長かった">Perplexity 3,555字</td>
+<td data-label="特徴">Perplexityは裏で45回の検索を実行。ChatGPTは出典0で要約のみ</td>
 </tr>
 <tr>
-<td>Claude Code と Cursor</td>
-<td>ChatGPT 17</td>
-<td>AIモード 1,795字</td>
-<td>ChatGPTは公式ドキュメントと個人ブログを併用。AIモードは出典0で長文</td>
+<td data-label="質問">Claude Code と Cursor</td>
+<td data-label="出典が多かった">ChatGPT 17</td>
+<td data-label="回答が長かった">AIモード 1,795字</td>
+<td data-label="特徴">ChatGPTは公式ドキュメントと個人ブログを併用。AIモードは出典0で長文</td>
 </tr>
 <tr>
-<td>LLMO支援会社を探す</td>
-<td>Perplexity 16、ChatGPT 12</td>
-<td>AIモード 1,845字</td>
-<td>4つとも回答。引用された会社は各AIで大きく違った</td>
+<td data-label="質問">LLMO支援会社を探す</td>
+<td data-label="出典が多かった">Perplexity 16、ChatGPT 12</td>
+<td data-label="回答が長かった">AIモード 1,845字</td>
+<td data-label="特徴">4つとも回答。引用された会社は各AIで大きく違った</td>
 </tr>
 <tr>
-<td>AIによる概要の消し方</td>
-<td>Perplexity 11</td>
-<td>AIモード 1,427字</td>
-<td>ChatGPTは公式ヘルプ1件に絞り、267字で回答</td>
+<td data-label="質問">AIによる概要の消し方</td>
+<td data-label="出典が多かった">Perplexity 11</td>
+<td data-label="回答が長かった">AIモード 1,427字</td>
+<td data-label="特徴">ChatGPTは公式ヘルプ1件に絞り、267字で回答</td>
 </tr>
 <tr>
-<td>今週のAIニュース</td>
-<td>ChatGPT 15</td>
-<td>AIモード 726字</td>
-<td>ChatGPTは海外メディアが中心、AIモードは国内メディア4件。PerplexityとGeminiは取得できず</td>
+<td data-label="質問">今週のAIニュース</td>
+<td data-label="出典が多かった">ChatGPT 15</td>
+<td data-label="回答が長かった">AIモード 726字</td>
+<td data-label="特徴">ChatGPTは海外メディアが中心、AIモードは国内メディア4件。PerplexityとGeminiは取得できず</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>「会社を探す」質問では、4つのAIとも回答しましたが、<strong>名前が挙がった会社はほとんど重なりませんでした</strong>。同じ検索意図でも、AIごとに参照する情報源が違うためです。</p>
 <h2 id="s4">使う側の選び方</h2>
 <p>実測から言える使い分けは次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>用途</th>
@@ -243,32 +251,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>事実を早く確認したい</td>
-<td>ChatGPT</td>
-<td>回答が短く、出典のリンクが多い。読む時間が最小</td>
+<td data-label="用途">事実を早く確認したい</td>
+<td data-label="向いているAI">ChatGPT</td>
+<td data-label="理由">回答が短く、出典のリンクが多い。読む時間が最小</td>
 </tr>
 <tr>
-<td>根拠まで確かめたい</td>
-<td>Perplexity</td>
-<td>出典が最多で、回答も詳しい。裏で何十回も検索する</td>
+<td data-label="用途">根拠まで確かめたい</td>
+<td data-label="向いているAI">Perplexity</td>
+<td data-label="理由">出典が最多で、回答も詳しい。裏で何十回も検索する</td>
 </tr>
 <tr>
-<td>検索のついでに答えを読みたい</td>
-<td>GoogleのAIモード</td>
-<td>検索結果の画面で完結する。回答は1,000〜1,800字で、出典は少ない</td>
+<td data-label="用途">検索のついでに答えを読みたい</td>
+<td data-label="向いているAI">GoogleのAIモード</td>
+<td data-label="理由">検索結果の画面で完結する。回答は1,000〜1,800字で、出典は少ない</td>
 </tr>
 <tr>
-<td>文章の作成まで続けたい</td>
-<td>Gemini・ChatGPT</td>
-<td>調べたあとにそのまま書かせる流れが自然</td>
+<td data-label="用途">文章の作成まで続けたい</td>
+<td data-label="向いているAI">Gemini・ChatGPT</td>
+<td data-label="理由">調べたあとにそのまま書かせる流れが自然</td>
 </tr>
 <tr>
-<td>最新のニュース</td>
-<td>ChatGPT</td>
-<td>出典15ドメインで海外メディアまで広く引いた</td>
+<td data-label="用途">最新のニュース</td>
+<td data-label="向いているAI">ChatGPT</td>
+<td data-label="理由">出典15ドメインで海外メディアまで広く引いた</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>「AIで1番優秀なのはどれか」は、測る軸で答えが変わります。出典の数で選ぶならPerplexity、回答の短さならChatGPT、検索の画面で完結するのはAIモードでした。4つとも無料で試せます。各サービスの回答の出方の違いは<a href="https://nito-0210.com/media/ai-platform-differences/">AI検索の出方の比較記事</a>にも書いています。</p>
 <h2 id="s5">サイトを持つ側への示唆</h2>
 <p>ここからは企業のサイト運営の話です。実測から見えた点が3つあります。</p>
@@ -323,12 +331,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -337,9 +346,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">測り方</a><a href="#s2">実測の結果</a><a href="#s3">質問の種類で結果が変わる</a><a href="#s4">使う側の選び方</a><a href="#s5">サイトを持つ側への示唆</a><a href="#s6">AI検索での引用を実測から始めるなら</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -372,11 +384,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

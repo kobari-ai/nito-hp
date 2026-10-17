@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claude Code…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.19</span>
         </div>
         <h1 class="post-title">【2026年9月】Claude Codeの使い方を初心者向けに解説｜インストール・基本コマンド・CLAUDE.md・上級編</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Codeの使い方"><defs><linearGradient id="ecg-4d148b76" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4d148b76)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Codeの使い方</text><line x1="197.2" y1="327.1" x2="1002.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">インストールから最初の変更、CLAUDE.md、上級編まで</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>毎回の指示を減らすなら<strong>CLAUDE.md</strong>。<code>/init</code> で自動生成でき、公式の目安は<strong>1ファイル200行以下</strong></li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -105,7 +113,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">Claude Codeとは何か</h2>
 <p>Claude CodeはAnthropicの<a href="https://code.claude.com/docs/ja/overview">公式ドキュメント</a>で「コードベースを読み取り、ファイルを編集し、コマンドを実行し、開発ツールと統合するagentic codingツール」と説明されています。チャット画面のClaudeは答えを返すところまでですが、Claude Codeは指示を受けると必要なファイルを自分で探して読み、変更を加え、テストを回し、結果を報告します。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th></th>
@@ -115,36 +123,36 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>主な入口</td>
-<td>ブラウザ・スマホアプリ</td>
-<td>ターミナル・VS Code・デスクトップアプリ</td>
+<td data-label="">主な入口</td>
+<td data-label="チャットのClaude（claude.ai）">ブラウザ・スマホアプリ</td>
+<td data-label="Claude Code">ターミナル・VS Code・デスクトップアプリ</td>
 </tr>
 <tr>
-<td>ファイルの扱い</td>
-<td>添付したものを読む</td>
-<td>フォルダの中を自分で探して読み書きする</td>
+<td data-label="">ファイルの扱い</td>
+<td data-label="チャットのClaude（claude.ai）">添付したものを読む</td>
+<td data-label="Claude Code">フォルダの中を自分で探して読み書きする</td>
 </tr>
 <tr>
-<td>コマンドの実行</td>
-<td>できない</td>
-<td>できる（許可の上で）</td>
+<td data-label="">コマンドの実行</td>
+<td data-label="チャットのClaude（claude.ai）">できない</td>
+<td data-label="Claude Code">できる（許可の上で）</td>
 </tr>
 <tr>
-<td>向いている作業</td>
-<td>質問・文章作成・相談</td>
-<td>複数ファイルにまたがる変更・定型作業の自動化</td>
+<td data-label="">向いている作業</td>
+<td data-label="チャットのClaude（claude.ai）">質問・文章作成・相談</td>
+<td data-label="Claude Code">複数ファイルにまたがる変更・定型作業の自動化</td>
 </tr>
 <tr>
-<td>料金</td>
-<td>無料プランあり</td>
-<td>有料プラン（Pro以上）かAPI</td>
+<td data-label="">料金</td>
+<td data-label="チャットのClaude（claude.ai）">無料プランあり</td>
+<td data-label="Claude Code">有料プラン（Pro以上）かAPI</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>コードを書く道具として作られていますが、公式ドキュメントの<a href="https://code.claude.com/docs/ja/common-workflows">一般的なワークフロー</a>には「ノートと非コードフォルダで作業する」という節があり、Markdownのメモや資料のフォルダで動かす使い方も正式に案内されています。</p>
 <h2 id="s2">使う前に必要なもの</h2>
 <p>必要なものを表にまとめます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>必要なもの</th>
@@ -153,33 +161,47 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>アカウント</td>
-<td>Claude Pro・Max・Team・Enterpriseのいずれか、またはClaude Console（API）のアカウント。無料プランでは使えない</td>
+<td data-label="必要なもの">アカウント</td>
+<td data-label="内容（公式ドキュメント）">Claude Pro・Max・Team・Enterpriseのいずれか、またはClaude Console（API）のアカウント。無料プランでは使えない</td>
 </tr>
 <tr>
-<td>OS</td>
-<td>macOS 13.0以上、Windows 10 1809以上、Ubuntu 20.04以上など</td>
+<td data-label="必要なもの">OS</td>
+<td data-label="内容（公式ドキュメント）">macOS 13.0以上、Windows 10 1809以上、Ubuntu 20.04以上など</td>
 </tr>
 <tr>
-<td>ハードウェア</td>
-<td>4GB以上のRAM、x64またはARM64</td>
+<td data-label="必要なもの">ハードウェア</td>
+<td data-label="内容（公式ドキュメント）">4GB以上のRAM、x64またはARM64</td>
 </tr>
 <tr>
-<td>ネットワーク</td>
-<td>インターネット接続</td>
+<td data-label="必要なもの">ネットワーク</td>
+<td data-label="内容（公式ドキュメント）">インターネット接続</td>
 </tr>
 <tr>
-<td>入口</td>
-<td>ターミナル、VS Code、JetBrains、デスクトップアプリ、ウェブのいずれか</td>
+<td data-label="必要なもの">入口</td>
+<td data-label="内容（公式ドキュメント）">ターミナル、VS Code、JetBrains、デスクトップアプリ、ウェブのいずれか</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>無料プランで <code>claude</code> を起動してもログインの段階で止まります。プランの違いと使用量の上限は<a href="https://nito-0210.com/media/claude-code-pricing/">料金プランの記事</a>に書いたので、この記事で前提にするのは「Pro（月$22）以上に入っている」状態です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">Claude Codeを使える5つの場所</h2>
 <p>公式ドキュメントはClaude Codeを使える場所としてターミナル、VS Code、デスクトップアプリ、ウェブ、JetBrainsの5つを並べています。どれを選んでも中身は同じClaude Codeで、違いは画面の操作感と、ファイルの変更をどこで確認するかです。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-guide/00_fig_surfaces.png" alt="Claude Codeを使える5つの場所（ターミナル・VS Code・デスクトップアプリ・ウェブ・JetBrains）と、それぞれが向いている人を並べた図" loading="lazy"><figcaption>使える場所は5つ。エンジニア以外はデスクトップアプリかVS Codeから入ると迷いにくい</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>場所</th>
@@ -189,32 +211,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ターミナル（CLI）</td>
-<td>コマンド操作に抵抗がない人</td>
-<td>一番自由度が高い。この記事の手順はここが基準</td>
+<td data-label="場所">ターミナル（CLI）</td>
+<td data-label="向いている人">コマンド操作に抵抗がない人</td>
+<td data-label="特徴">一番自由度が高い。この記事の手順はここが基準</td>
 </tr>
 <tr>
-<td>VS Code拡張</td>
-<td>エディタで差分を見ながら進めたい人</td>
-<td>変更箇所がエディタ内に差分で出る。@メンションでファイルを指定できる</td>
+<td data-label="場所">VS Code拡張</td>
+<td data-label="向いている人">エディタで差分を見ながら進めたい人</td>
+<td data-label="特徴">変更箇所がエディタ内に差分で出る。@メンションでファイルを指定できる</td>
 </tr>
 <tr>
-<td>デスクトップアプリ</td>
-<td>ターミナルを避けたい人</td>
-<td>Chat・Cowork・Codeの3タブ。macOS・Windows・Linux（ベータ）</td>
+<td data-label="場所">デスクトップアプリ</td>
+<td data-label="向いている人">ターミナルを避けたい人</td>
+<td data-label="特徴">Chat・Cowork・Codeの3タブ。macOS・Windows・Linux（ベータ）</td>
 </tr>
 <tr>
-<td>ウェブ（claude.ai）</td>
-<td>手元のPCに入れたくない人</td>
-<td>GitHubのリポジトリをクラウドで動かす</td>
+<td data-label="場所">ウェブ（claude.ai）</td>
+<td data-label="向いている人">手元のPCに入れたくない人</td>
+<td data-label="特徴">GitHubのリポジトリをクラウドで動かす</td>
 </tr>
 <tr>
-<td>JetBrains</td>
-<td>IntelliJ・PyCharmなどを使う人</td>
-<td>プラグインとして入れる</td>
+<td data-label="場所">JetBrains</td>
+<td data-label="向いている人">IntelliJ・PyCharmなどを使う人</td>
+<td data-label="特徴">プラグインとして入れる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>エンジニアではない人が最初に触るなら、<a href="https://code.claude.com/docs/ja/desktop">デスクトップアプリ</a>が入りやすいです。生成されたファイルをその場で開いて確認できるVS Code版かデスクトップアプリ版のほうが、ターミナルに慣れていない人には向いています。以下はターミナル版を基準に書きますが、コマンドはどの入口でも同じです。</p>
 <h2 id="s4">インストールの3つの方法</h2>
 <p>公式が推奨するのはネイティブインストールで、macOS・Linux・WSLなら1行です。Homebrew、WinGetでも入ります。</p>
@@ -254,7 +276,7 @@ claude</code></p>
 <p>初心者が一番戸惑うのが「許可しますか？」の確認です。Claude Codeは権限モードによって、ファイルの書き込みやコマンドの実行の前に確認を出すかどうかが変わります。セッション中に<strong>Shift+Tab</strong>を押すと、モードが順番に切り替わります。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-guide/00_fig_modes.png" alt="Claude Codeの権限モード4つ。default（毎回確認）、acceptEdits（編集は自動）、plan（読むだけで計画を出す）、auto（分類器が判断）を並べた図" loading="lazy"><figcaption>Shift+Tabで循環する権限モード。迷ったら既定か計画モード</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>モード</th>
@@ -264,31 +286,31 @@ claude</code></p>
 </thead>
 <tbody>
 <tr>
-<td>default（Manual）</td>
-<td>ツールを初めて使うたびに確認する</td>
-<td>最初の数日。何をしているか把握したいとき</td>
+<td data-label="モード">default（Manual）</td>
+<td data-label="動き">ツールを初めて使うたびに確認する</td>
+<td data-label="向いている場面">最初の数日。何をしているか把握したいとき</td>
 </tr>
 <tr>
-<td>acceptEdits</td>
-<td>作業フォルダ内のファイル編集は自動で受け入れる</td>
-<td>編集は任せてよいが、コマンド実行は確認したいとき</td>
+<td data-label="モード">acceptEdits</td>
+<td data-label="動き">作業フォルダ内のファイル編集は自動で受け入れる</td>
+<td data-label="向いている場面">編集は任せてよいが、コマンド実行は確認したいとき</td>
 </tr>
 <tr>
-<td>plan</td>
-<td>ファイルを読んで計画を出すだけで、編集しない</td>
-<td>大きめの変更の前。手順を先に見たいとき</td>
+<td data-label="モード">plan</td>
+<td data-label="動き">ファイルを読んで計画を出すだけで、編集しない</td>
+<td data-label="向いている場面">大きめの変更の前。手順を先に見たいとき</td>
 </tr>
 <tr>
-<td>auto</td>
-<td>分類器が安全性を確認しながら自動で承認する</td>
-<td>Pro・Max・Teamのターミナルで使える。慣れてから</td>
+<td data-label="モード">auto</td>
+<td data-label="動き">分類器が安全性を確認しながら自動で承認する</td>
+<td data-label="向いている場面">Pro・Max・Teamのターミナルで使える。慣れてから</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Pro・Max・Teamのターミナルセッションでは<strong>autoモードが既定の開始モード</strong>です。分類器がClaudeの行動をリクエストと照らして確認し、ほとんどの作業を確認なしで進めます。何が起きているかを覚える段階では、Shift+TabでManualに切り替えて確認を1つずつ読むほうが、動きがつかめます。<code>bypassPermissions</code> という確認をすべて省くモードもありますが、公式ドキュメントも注意書きを付けており、初心者向けではありません。</p>
 <h2 id="s8">覚えておく基本コマンドとショートカット</h2>
 <p>公式クイックスタートが「必須コマンド」として挙げているのは、ターミナルから打つシェルコマンド5つと、Claude Codeの中で打つスラッシュコマンド3つです。それに <code>/compact</code> <code>/init</code> <code>/model</code> を足した11個を表にします。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>種類</th>
@@ -298,64 +320,64 @@ claude</code></p>
 </thead>
 <tbody>
 <tr>
-<td>シェル</td>
-<td><code>claude</code></td>
-<td>対話モードを開始</td>
+<td data-label="種類">シェル</td>
+<td data-label="コマンド"><code>claude</code></td>
+<td data-label="動き">対話モードを開始</td>
 </tr>
 <tr>
-<td>シェル</td>
-<td><code>claude "指示"</code></td>
-<td>指示つきで開始</td>
+<td data-label="種類">シェル</td>
+<td data-label="コマンド"><code>claude "指示"</code></td>
+<td data-label="動き">指示つきで開始</td>
 </tr>
 <tr>
-<td>シェル</td>
-<td><code>claude -p "質問"</code></td>
-<td>1回だけ答えて終了（スクリプトに組み込める）</td>
+<td data-label="種類">シェル</td>
+<td data-label="コマンド"><code>claude -p "質問"</code></td>
+<td data-label="動き">1回だけ答えて終了（スクリプトに組み込める）</td>
 </tr>
 <tr>
-<td>シェル</td>
-<td><code>claude -c</code></td>
-<td>このフォルダの直前の会話を続ける</td>
+<td data-label="種類">シェル</td>
+<td data-label="コマンド"><code>claude -c</code></td>
+<td data-label="動き">このフォルダの直前の会話を続ける</td>
 </tr>
 <tr>
-<td>シェル</td>
-<td><code>claude -r</code></td>
-<td>過去の会話を選んで再開</td>
+<td data-label="種類">シェル</td>
+<td data-label="コマンド"><code>claude -r</code></td>
+<td data-label="動き">過去の会話を選んで再開</td>
 </tr>
 <tr>
-<td>セッション</td>
-<td><code>/help</code></td>
-<td>コマンド一覧</td>
+<td data-label="種類">セッション</td>
+<td data-label="コマンド"><code>/help</code></td>
+<td data-label="動き">コマンド一覧</td>
 </tr>
 <tr>
-<td>セッション</td>
-<td><code>/clear</code></td>
-<td>会話履歴を消して新しい話題へ</td>
+<td data-label="種類">セッション</td>
+<td data-label="コマンド"><code>/clear</code></td>
+<td data-label="動き">会話履歴を消して新しい話題へ</td>
 </tr>
 <tr>
-<td>セッション</td>
-<td><code>/compact</code></td>
-<td>会話を要約して文脈を軽くする</td>
+<td data-label="種類">セッション</td>
+<td data-label="コマンド"><code>/compact</code></td>
+<td data-label="動き">会話を要約して文脈を軽くする</td>
 </tr>
 <tr>
-<td>セッション</td>
-<td><code>/init</code></td>
-<td>CLAUDE.mdを自動生成</td>
+<td data-label="種類">セッション</td>
+<td data-label="コマンド"><code>/init</code></td>
+<td data-label="動き">CLAUDE.mdを自動生成</td>
 </tr>
 <tr>
-<td>セッション</td>
-<td><code>/model</code></td>
-<td>モデルを切り替える</td>
+<td data-label="種類">セッション</td>
+<td data-label="コマンド"><code>/model</code></td>
+<td data-label="動き">モデルを切り替える</td>
 </tr>
 <tr>
-<td>セッション</td>
-<td><code>/exit</code></td>
-<td>終了（Ctrl+Dを2回でも可）</td>
+<td data-label="種類">セッション</td>
+<td data-label="コマンド"><code>/exit</code></td>
+<td data-label="動き">終了（Ctrl+Dを2回でも可）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>ショートカットは公式の<a href="https://code.claude.com/docs/ja/interactive-mode">インタラクティブモード</a>のページに一覧があります。その中から、この記事で触れたものを6つ抜き出します。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>キー</th>
@@ -364,31 +386,31 @@ claude</code></p>
 </thead>
 <tbody>
 <tr>
-<td>Shift+Tab</td>
-<td>権限モードを切り替える</td>
+<td data-label="キー">Shift+Tab</td>
+<td data-label="動き">権限モードを切り替える</td>
 </tr>
 <tr>
-<td>Esc</td>
-<td>実行中の応答を止める</td>
+<td data-label="キー">Esc</td>
+<td data-label="動き">実行中の応答を止める</td>
 </tr>
 <tr>
-<td>Esc Esc</td>
-<td>入力を消す、または直前の状態に巻き戻す</td>
+<td data-label="キー">Esc Esc</td>
+<td data-label="動き">入力を消す、または直前の状態に巻き戻す</td>
 </tr>
 <tr>
-<td>Ctrl+V（macOSのiTerm2はCmd+V）</td>
-<td>クリップボードの画像を貼り付ける</td>
+<td data-label="キー">Ctrl+V（macOSのiTerm2はCmd+V）</td>
+<td data-label="動き">クリップボードの画像を貼り付ける</td>
 </tr>
 <tr>
-<td>Ctrl+O</td>
-<td>詳細な実行ログ（トランスクリプト）を開く</td>
+<td data-label="キー">Ctrl+O</td>
+<td data-label="動き">詳細な実行ログ（トランスクリプト）を開く</td>
 </tr>
 <tr>
-<td>Option+P / Alt+P</td>
-<td>入力を消さずにモデルを切り替える</td>
+<td data-label="キー">Option+P / Alt+P</td>
+<td data-label="動き">入力を消さずにモデルを切り替える</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><code>/</code> を打つとコマンドとスキルの一覧が出て、Tabで補完が効きます。↑キーで呼び出せるのは過去の入力です。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-guide/ccg_02_docs_shortcuts.jpg" alt="Claude Code公式ドキュメントのキーボードショートカット一覧。Ctrl+C、Ctrl+D、Ctrl+O、Ctrl+Rなどの説明" loading="lazy"><figcaption>公式ドキュメントのショートカット一覧</figcaption></figure>
 
@@ -396,7 +418,7 @@ claude</code></p>
 <p>「日本語で答えて」「コミット前にテストを回して」を毎回書くのは面倒です。そのためにあるのが<strong>CLAUDE.md</strong>で、セッションの開始時に必ず読み込まれる指示書です。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-guide/00_fig_claudemd.png" alt="CLAUDE.mdの配置場所4つ。~/.claude/CLAUDE.md（全プロジェクト）、./CLAUDE.md（このプロジェクト、共有）、CLAUDE.local.md（このプロジェクト、自分だけ）、.claude/rules/（ファイル種別ごと）" loading="lazy"><figcaption>CLAUDE.mdの置き場所と届く範囲。まずはプロジェクト直下の1枚から</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>置き場所</th>
@@ -406,27 +428,27 @@ claude</code></p>
 </thead>
 <tbody>
 <tr>
-<td><code>~/.claude/CLAUDE.md</code></td>
-<td>自分の全プロジェクト</td>
-<td>「日本語で答える」など個人の好み</td>
+<td data-label="置き場所"><code>~/.claude/CLAUDE.md</code></td>
+<td data-label="届く範囲">自分の全プロジェクト</td>
+<td data-label="用途">「日本語で答える」など個人の好み</td>
 </tr>
 <tr>
-<td><code>./CLAUDE.md</code></td>
-<td>このプロジェクト（Gitで共有）</td>
-<td>ビルド・テストのコマンド、命名規則</td>
+<td data-label="置き場所"><code>./CLAUDE.md</code></td>
+<td data-label="届く範囲">このプロジェクト（Gitで共有）</td>
+<td data-label="用途">ビルド・テストのコマンド、命名規則</td>
 </tr>
 <tr>
-<td><code>./CLAUDE.local.md</code></td>
-<td>このプロジェクト（自分だけ）</td>
-<td>手元だけの設定。<code>.gitignore</code> に入れる</td>
+<td data-label="置き場所"><code>./CLAUDE.local.md</code></td>
+<td data-label="届く範囲">このプロジェクト（自分だけ）</td>
+<td data-label="用途">手元だけの設定。<code>.gitignore</code> に入れる</td>
 </tr>
 <tr>
-<td><code>./.claude/rules/*.md</code></td>
-<td>このプロジェクトの特定のファイル</td>
-<td>「<code>*.tsx</code> を触るときはこの規約」のように範囲を絞る</td>
+<td data-label="置き場所"><code>./.claude/rules/*.md</code></td>
+<td data-label="届く範囲">このプロジェクトの特定のファイル</td>
+<td data-label="用途">「<code>*.tsx</code> を触るときはこの規約」のように範囲を絞る</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>一番早い作り方は、プロジェクトのフォルダで <code>/init</code> を打つことです。Claude Codeがフォルダを分析して、ビルドコマンドやテストの手順、規約を含む下書きを作ります。全プロジェクト共通の設定は <code>~/.claude/</code> という隠しフォルダに置きますが、Finderで見えなくて迷う人が多いところです（macOSは Shift+Cmd+. で表示）。「すべてのプロジェクトで日本語で答えるように設定して」とClaude Code自身に頼めば、場所を探さなくても作ってくれます。</p>
 <p>公式ドキュメントの<a href="https://code.claude.com/docs/ja/memory">メモリ</a>のページには、書き方の目安が3つ挙げられています。</p>
 <ul>
@@ -458,7 +480,7 @@ claude</code></p>
 <p>スキルがCLAUDE.mdと違うのは、最初は名前と説明文だけが読み込まれ、必要と判断されたときにだけ本文が読まれる点です。CLAUDE.mdに手順を全部書くより文脈を圧迫しません。</p>
 <h2 id="s12">つまずきやすい点</h2>
 <p>初心者が止まりやすい点をまとめます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>つまずき</th>
@@ -468,37 +490,37 @@ claude</code></p>
 </thead>
 <tbody>
 <tr>
-<td>ログインで止まる</td>
-<td>無料プランで使おうとしている</td>
-<td>Pro以上に入るか、ConsoleでAPIクレジットを買う</td>
+<td data-label="つまずき">ログインで止まる</td>
+<td data-label="原因">無料プランで使おうとしている</td>
+<td data-label="対処">Pro以上に入るか、ConsoleでAPIクレジットを買う</td>
 </tr>
 <tr>
-<td>Proなのに残高が減る</td>
-<td>環境変数 <code>ANTHROPIC_API_KEY</code> がある</td>
-<td>環境変数を外して <code>/login</code> でログインし直す</td>
+<td data-label="つまずき">Proなのに残高が減る</td>
+<td data-label="原因">環境変数 <code>ANTHROPIC_API_KEY</code> がある</td>
+<td data-label="対処">環境変数を外して <code>/login</code> でログインし直す</td>
 </tr>
 <tr>
-<td>Windowsでコマンドがエラー</td>
-<td>CMDでPowerShell用のコマンドを打っている</td>
-<td>PowerShellを使う</td>
+<td data-label="つまずき">Windowsでコマンドがエラー</td>
+<td data-label="原因">CMDでPowerShell用のコマンドを打っている</td>
+<td data-label="対処">PowerShellを使う</td>
 </tr>
 <tr>
-<td>アプリを作ろうとしてNode.jsを要求される</td>
-<td>作りたいものに実行環境が要る</td>
-<td>Claude Codeにインストール手順を聞く。またはHTML単体で動くものとして頼む</td>
+<td data-label="つまずき">アプリを作ろうとしてNode.jsを要求される</td>
+<td data-label="原因">作りたいものに実行環境が要る</td>
+<td data-label="対処">Claude Codeにインストール手順を聞く。またはHTML単体で動くものとして頼む</td>
 </tr>
 <tr>
-<td>上限に達した</td>
-<td>5時間枠を使い切った</td>
-<td>待つか、上位プランか、使用クレジット。詳細は料金の記事</td>
+<td data-label="つまずき">上限に達した</td>
+<td data-label="原因">5時間枠を使い切った</td>
+<td data-label="対処">待つか、上位プランか、使用クレジット。詳細は料金の記事</td>
 </tr>
 <tr>
-<td>隠しフォルダが見つからない</td>
-<td><code>~/.claude</code> は非表示</td>
-<td>Shift+Cmd+.（macOS）で表示。またはClaude Codeに作らせる</td>
+<td data-label="つまずき">隠しフォルダが見つからない</td>
+<td data-label="原因"><code>~/.claude</code> は非表示</td>
+<td data-label="対処">Shift+Cmd+.（macOS）で表示。またはClaude Codeに作らせる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>上限の仕組みと、上限に当たったときの3つの選択肢は<a href="https://nito-0210.com/media/claude-code-pricing/">料金プランの記事</a>に詳しく書いています。インストールやログインのエラーは公式の<a href="https://code.claude.com/docs/ja/troubleshooting">トラブルシューティング</a>に対処法がまとまっています。</p>
 <h2 id="s13">よくある質問</h2>
 <p>Googleの「他の人はこちらも質問」に出ている質問が中心です。</p>
@@ -532,12 +554,13 @@ claude</code></p>
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -546,9 +569,12 @@ claude</code></p>
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Claude Codeとは何か</a><a href="#s2">使う前に必要なもの</a><a href="#s3">Claude Codeを使える5つの場所</a><a href="#s4">インストールの3つの方法</a><a href="#s5">ログインと最初の起動</a><a href="#s6">最初の質問と最初の変更</a><a href="#s7">権限モードを切り替える</a><a href="#s8">覚えておく基本コマンドとショートカット</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -581,11 +607,25 @@ claude</code></p>
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Geminiが勝手に…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.02</span>
         </div>
         <h1 class="post-title">【2026年10月】Geminiが勝手に起動する原因と止め方｜電源ボタン・OK Google</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Geminiが勝手に起動する"><defs><linearGradient id="ecg-7a873d24" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7a873d24)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Geminiが勝手に起動する</text><line x1="159.2" y1="327.1" x2="1040.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">電源ボタン・OK Google・ロック画面・イヤホン</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>Googleアシスタントは2026年9月4日からスマホでの提供の終了が始まり、<strong>終了の手続きが済んだ端末では切り替え直せない</strong></li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -98,7 +106,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Googleのヘルプも、起動のしかたを変えたいだけならGeminiアプリを削除する必要はないとして、止める方法を項目ごとに並べています。</p>
 <figure class="post-figure"><img src="/media/images/gemini-auto-launch/02_help_ways.jpg" alt="Gemini アプリ ヘルプ「Android デバイスで Gemini アプリを管理、削除する」の冒頭。Android でGeminiを起動する方法を変えたい場合でも必ずしもGeminiモバイルアプリを削除する必要はないと書かれ、赤い枠の中に、電源ボタンからGeminiを削除する、「OK Google」をオフにして音声でGeminiが開かないようにする、スマートフォンがロックされているときにGeminiが開かないようにする、の3つの項目が並んでいる" loading="lazy"><figcaption>ヘルプはアプリを消さずに止める方法を入口ごとに案内している（Gemini アプリ ヘルプ）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>入口</th>
@@ -107,31 +115,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>電源ボタンの長押し</td>
-<td>端末の設定のジェスチャー（Galaxyは便利な機能のサイドボタン）</td>
+<td data-label="入口">電源ボタンの長押し</td>
+<td data-label="止める場所">端末の設定のジェスチャー（Galaxyは便利な機能のサイドボタン）</td>
 </tr>
 <tr>
-<td>「OK Google」</td>
-<td>Geminiアプリの設定の［Gemini とハンズフリーで話す］</td>
+<td data-label="入口">「OK Google」</td>
+<td data-label="止める場所">Geminiアプリの設定の［Gemini とハンズフリーで話す］</td>
 </tr>
 <tr>
-<td>ロック画面</td>
-<td>Geminiアプリの設定の［ロック画面での Gemini］</td>
+<td data-label="入口">ロック画面</td>
+<td data-label="止める場所">Geminiアプリの設定の［ロック画面での Gemini］</td>
 </tr>
 <tr>
-<td>画面の隅からのスワイプ</td>
-<td>Pixelは端末の設定のナビゲーション モード</td>
+<td data-label="入口">画面の隅からのスワイプ</td>
+<td data-label="止める場所">Pixelは端末の設定のナビゲーション モード</td>
 </tr>
 <tr>
-<td>イヤホンの長押し</td>
-<td>イヤホンのアプリのタッチ操作の設定</td>
+<td data-label="入口">イヤホンの長押し</td>
+<td data-label="止める場所">イヤホンのアプリのタッチ操作の設定</td>
 </tr>
 <tr>
-<td>まとめて止める</td>
-<td>端末の設定の［デジタル アシスタント アプリ］を［なし］</td>
+<td data-label="入口">まとめて止める</td>
+<td data-label="止める場所">端末の設定の［デジタル アシスタント アプリ］を［なし］</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s2">電源ボタンの長押しを電源メニューに戻す</h2>
 <p>電源を切ろうとしてGeminiが開くのは、電源ボタンの長押しがアシスタントの呼び出しになっているためです。サムスンのFAQによると、**GalaxyではAndroid 15から、電源ボタンの長押しがGeminiの呼び出しに変わりました。**Pixelも6以降は長押しでアシスタントが開きます。</p>
 <p>Googleのヘルプの手順は、端末の設定で長押しの動作を選び直すものです。</p>
@@ -155,6 +163,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/gemini-auto-launch/04_samsung.jpg" alt="サムスンのFAQの電源（サイドキー）長押しを電源メニュー表示に変更する方法。対象機種として2025年2月発売のS25以降の機種、Android 15へのアップデートで対応するS21以降のSシリーズ、Flip3以降、Fold3以降、A54 5G、A55 5G、YE2以降のA25 5Gが並ぶ。下にスマホの画面4枚で、設定の便利な機能、サイドボタン、長押し、電源OFFメニューを選ぶ手順が示されている" loading="lazy"><figcaption>Galaxyは便利な機能のサイドボタンから「電源OFFメニュー」を選ぶ（Samsung Japan 公式FAQ）</figcaption></figure>
 
 <p>同じFAQには、設定を変えずに電源のメニューを出す方法として、サイドボタンと音量を下げるボタンの同時長押しと、クイックパネルの電源のアイコンが載っています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Gemini を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">OK Googleとロック画面での起動を止める</h2>
 <p>声で開いてしまうなら「OK Google」を、ロックしたままのスマホで開いてしまうならロック画面での起動を止めます。どちらもGeminiアプリの中の設定です。</p>
 <ol>
@@ -221,12 +243,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -235,9 +258,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Geminiが起動する入口</a><a href="#s2">電源ボタンの長押しを電源メニューに戻す</a><a href="#s3">OK Googleとロック画面での起動を止める</a><a href="#s4">画面の隅とイヤホンから開くとき</a><a href="#s5">まとめて止めるなら既定のアシスタントを外す</a><a href="#s6">Googleアシスタントに戻す方法が使えなくなった</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -270,11 +296,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

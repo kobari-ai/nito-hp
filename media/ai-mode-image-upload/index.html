@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Google AIモ…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.26</span>
         </div>
         <h1 class="post-title">【2026年10月】Google AIモードで写真・画像を送る方法｜スマホ・PC別と送れない原因</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードに写真を送る"><defs><linearGradient id="ecg-d2693e33" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d2693e33)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードに写真を送る</text><line x1="212.4" y1="327.1" x2="987.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">送り方・送れない原因・形式・枚数</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -74,6 +76,12 @@
 <li>送った写真は<strong>検索サービス履歴に残る場合がある</strong>。「メディアを保存」の設定で残すかを選べ、マイ アクティビティから消せる</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -114,7 +122,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>画像が付かない、送信するとエラーになる場合は、原因がおおむね4つに分かれます。形式と枚数は2026年9月26日に画面で試したり受け付けの設定を読んだりして確かめたもので、アカウントの制限はGoogleのコミュニティの回答から、画像の作成との違いは公式ヘルプから整理しました。</p>
 <figure class="post-figure"><img src="/media/images/ai-mode-image-upload/00_fig_causes.png" alt="Google AIモードに画像を送れないときの4つの原因の図。1対応していない形式で、GIFは貼り付けても付かずエラーも出ない。2スマホのファイル選択は1枚ずつの設定で、2枚目を選ぶと置き換わるという報告がある。3学校のアカウントで管理者が止めている。4画像を追加ではなく画像を作成を選んでいる" loading="lazy"><figcaption>画像を送れない4つの原因</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>原因</th>
@@ -124,35 +132,49 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>対応していない形式</td>
-<td>GIFは貼り付けても付かない。ファイルを選ぶ画面の一覧にも無い</td>
-<td>JPEGかPNGに変えて送る</td>
+<td data-label="原因">対応していない形式</td>
+<td data-label="起きること">GIFは貼り付けても付かない。ファイルを選ぶ画面の一覧にも無い</td>
+<td data-label="直し方">JPEGかPNGに変えて送る</td>
 </tr>
 <tr>
-<td>スマホのファイル選択で2枚目を選んだ</td>
-<td>1枚目と置き換わる（コミュニティの報告）</td>
-<td>1枚ずつ質問するか、貼り付けで足す</td>
+<td data-label="原因">スマホのファイル選択で2枚目を選んだ</td>
+<td data-label="起きること">1枚目と置き換わる（コミュニティの報告）</td>
+<td data-label="直し方">1枚ずつ質問するか、貼り付けで足す</td>
 </tr>
 <tr>
-<td>学校のアカウント</td>
-<td>画像もファイルもエラーになる</td>
-<td>管理者に確認する。個人のアカウントで試す</td>
+<td data-label="原因">学校のアカウント</td>
+<td data-label="起きること">画像もファイルもエラーになる</td>
+<td data-label="直し方">管理者に確認する。個人のアカウントで試す</td>
 </tr>
 <tr>
-<td>「画像を作成」を選んでいる</td>
-<td>画像の生成が始まる</td>
-<td>「画像を追加」を選び直す</td>
+<td data-label="原因">「画像を作成」を選んでいる</td>
+<td data-label="起きること">画像の生成が始まる</td>
+<td data-label="直し方">「画像を追加」を選び直す</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**画像を貼っても何も起きないときは、まず形式を確かめてください。**GIFの場合はエラーの表示が出ないため、付いていないことに気づきにくくなります。</p>
 <p>画像を付けていないのに質問そのものを送れないときは、<a href="/media/ai-mode-cant-send/">Google AIモードで質問を送信できない原因</a>を見てください。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">対応していない形式</h2>
 <p>貼り付けで送れるかどうかは、2026年9月26日にログアウトの状態で、ブラウザの開発者向けの機能で貼り付けの操作を再現して試しました。**200×120ピクセルのGIFの画像を貼り付けると、パソコンでもスマホの表示でも画像は付かず、エラーの表示も出ませんでした。**同じ手順でPNGの画像を貼り付けると、入力欄に小さな画像が付きました。</p>
 <figure class="post-figure"><img src="/media/images/ai-mode-image-upload/aiu_03_pc_paste.jpg" alt="パソコン版のAIモードの入力欄にPNGの画像を貼り付けた画面。質問するの欄の上に貼り付けた画像の小さなサムネイルが付き、赤枠で囲まれている。右下の送信のボタンが押せる状態になっている" loading="lazy"><figcaption>PNGを貼り付けた入力欄（2026年9月26日、パソコン）。GIFでは何も付かなかった</figcaption></figure>
 
 <p>ファイルを選ぶ画面には、どの形式を受け付けるかの設定もあります。同じ日にログアウトの状態で読むと、パソコンとスマホのブラウザで中身が違いました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>形式</th>
@@ -162,27 +184,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>JPEG・PNG・WebP・AVIF</td>
-<td>一覧にある</td>
-<td>一覧にある</td>
+<td data-label="形式">JPEG・PNG・WebP・AVIF</td>
+<td data-label="パソコン">一覧にある</td>
+<td data-label="スマホのブラウザ（Android の表示）">一覧にある</td>
 </tr>
 <tr>
-<td>HEIC・HEIF（iPhoneの写真の形式）</td>
-<td>一覧にある</td>
-<td>一覧に無い</td>
+<td data-label="形式">HEIC・HEIF（iPhoneの写真の形式）</td>
+<td data-label="パソコン">一覧にある</td>
+<td data-label="スマホのブラウザ（Android の表示）">一覧に無い</td>
 </tr>
 <tr>
-<td>BMP・TIFF</td>
-<td>一覧にある</td>
-<td>一覧に無い</td>
+<td data-label="形式">BMP・TIFF</td>
+<td data-label="パソコン">一覧にある</td>
+<td data-label="スマホのブラウザ（Android の表示）">一覧に無い</td>
 </tr>
 <tr>
-<td>GIF</td>
-<td>一覧に無い</td>
-<td>一覧に無い</td>
+<td data-label="形式">GIF</td>
+<td data-label="パソコン">一覧に無い</td>
+<td data-label="スマホのブラウザ（Android の表示）">一覧に無い</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/ai-mode-image-upload/01_fig_formats.png" alt="AIモードのファイルを選ぶ画面が受け付ける画像の形式の比較図。パソコンはJPEG、PNG、WebP、AVIF、HEIC、HEIF、BMP、TIFFの8種類。スマホのブラウザのAndroidの表示はJPEG、PNG、WebP、AVIFの4種類。GIFはどちらにも無い" loading="lazy"><figcaption>ファイルを選ぶ画面の形式（2026年9月26日の画面の設定から作成）</figcaption></figure>
 
 <p>**GIFは貼り付けでも付かず、ファイルを選ぶ画面の一覧にも入っていないため、送りたいときはPNGかJPEGに変えます。**スマホのブラウザの一覧はAndroidの表示で読んだもので、iPhoneのSafariでHEICの写真がどう扱われるかは確かめていません。iPhoneで撮る写真をJPEGにしたいときは、iPhoneの設定の「カメラ」から「フォーマット」を「互換性優先」にすると、次からJPEGで保存されます。</p>
@@ -203,7 +225,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>AIモードに送った写真はGoogleアカウントの検索サービス履歴に保存される場合があり、残すかどうかは設定で選べる仕組みです。<a href="https://support.google.com/websearch/answer/17025248?hl=ja">検索サービス履歴のヘルプ</a>には、履歴に含まれるメディアとしてアップロードしたコンテンツやGoogleレンズの画像が挙げられています。保存と削除の手順は<a href="https://support.google.com/websearch/answer/17028154?hl=ja">メディアの管理のヘルプ</a>にあります。</p>
 <figure class="post-figure"><img src="/media/images/ai-mode-image-upload/04_fig_photo.png" alt="AIモードに送った写真の扱いの図。検索サービス履歴とメディアを保存がオンなら、送った写真も履歴に入ることがある。メディアを保存をオフにすると、これから送る写真は残らない。すでに残った写真はマイ アクティビティから削除し、オフにしても前の写真は消えない。学習に使う前にアカウントから切り離し、AIの改善のために人が見る前に許可を求めるとヘルプに書かれている" loading="lazy"><figcaption>送った写真の扱い（Google検索ヘルプより作成）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>知りたいこと</th>
@@ -212,27 +234,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>写真を残すかどうか</td>
-<td>検索サービス履歴がオンのとき、「メディアを保存」のチェックで切り替えられる</td>
+<td data-label="知りたいこと">写真を残すかどうか</td>
+<td data-label="ヘルプの記載">検索サービス履歴がオンのとき、「メディアを保存」のチェックで切り替えられる</td>
 </tr>
 <tr>
-<td>消し方</td>
-<td>マイ アクティビティの検索サービス履歴から削除できる。「メディアを保存」をオフにしても、前に保存された写真は消えない</td>
+<td data-label="知りたいこと">消し方</td>
+<td data-label="ヘルプの記載">マイ アクティビティの検索サービス履歴から削除できる。「メディアを保存」をオフにしても、前に保存された写真は消えない</td>
 </tr>
 <tr>
-<td>AIの学習に使われるか</td>
-<td>使われることがある。使う前にGoogleアカウントから切り離される。保存された写真は、アカウントから削除しない限り技術の改善に使われる場合がある</td>
+<td data-label="知りたいこと">AIの学習に使われるか</td>
+<td data-label="ヘルプの記載">使われることがある。使う前にGoogleアカウントから切り離される。保存された写真は、アカウントから削除しない限り技術の改善に使われる場合がある</td>
 </tr>
 <tr>
-<td>人が写真を見るか</td>
-<td>AIの改善のために人が見る前に許可を求める</td>
+<td data-label="知りたいこと">人が写真を見るか</td>
+<td data-label="ヘルプの記載">AIの改善のために人が見る前に許可を求める</td>
 </tr>
 <tr>
-<td>学校のアカウント</td>
-<td>検索サービス履歴のデータは学習に使われない</td>
+<td data-label="知りたいこと">学校のアカウント</td>
+<td data-label="ヘルプの記載">検索サービス履歴のデータは学習に使われない</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>2026年4月の<a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13326825903">Yahoo!知恵袋の質問</a>には、送った写真が大丈夫か、履歴を消したがどうなるかという相談がありました。AIモードの履歴から消した分は、マイ アクティビティに表示が残っても24時間以内に消えます。AIによる概要から入った会話は、検索履歴の側からも消します。**写真を残したくないなら、送る前に<a href="https://myactivity.google.com/search-services/settings">検索サービス履歴の設定</a>で「メディアを保存」をオフにし、すでに送った分はマイ アクティビティから消します。**検索サービス履歴をオフにすると、それ以降のアクティビティは生成AIの学習に使われないとも書かれています。設定が「ウェブとアプリのアクティビティ」のままのアカウントもあり、切り替えの途中です。</p>
 <h2 id="s8">送る前に試す順番</h2>
 <p>原因が分からないときは手間の少ないものから順に試すと早く片づきます。</p>
@@ -275,12 +297,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -289,9 +312,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">画像を送る方法</a><a href="#s2">送れない4つの原因</a><a href="#s3">対応していない形式</a><a href="#s4">スマホのファイル選択は1枚ずつ</a><a href="#s5">学校のアカウント</a><a href="#s6">画像の作成との違い</a><a href="#s7">送った写真はどこに残るか</a><a href="#s8">送る前に試す順番</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -324,11 +350,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

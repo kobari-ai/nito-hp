@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Claude Tea…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.13</span>
         </div>
         <h1 class="post-title">【2026年10月】Claude Teamのメンバー招待と管理｜役割・席の切り替え・Proからの移行</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Teamの招待と管理"><defs><linearGradient id="ecg-97a5b514" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-97a5b514)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Teamの招待と管理</text><line x1="121.2" y1="327.1" x2="1078.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">役割・席と請求・Proからの移行</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 </ul></div></div>
 <figure class="post-figure"><img src="/media/images/claude-team-admin/cta_00_overview.jpg" alt="Claude Teamの管理の全体を示すイラスト。招待・席・請求の3つの箱が左から矢印でつながり、上に役割、右下に移行の文字がある" loading="lazy"><figcaption>招待・席・請求がつながり、その上に役割の分担がある</figcaption></figure>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -115,7 +123,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>組織を作る本人は会社のドメインのメールアドレスが必須です。**メンバー用に@gmail.comのようなフリーメールのドメインを足せるかは、ヘルプの2つのページで書き方が違います。**アカウント管理のFAQは足せるとし、組織ディスカバリーのページはGmailなどの個人用ドメインは許可リストに追加できないとしています。足せた組織なら、業務委託の人を個人のGmailで入れる使い方もできます。ただし後で出てくる招待リンクと組み合わせると、リンクを手に入れたGmailの利用者なら誰でも参加できてしまうため、フリーメールを足せた組織ではリンクを止めておくほうが安全です。</p>
 <h2 id="s2">招待メール以外の参加の方法</h2>
 <p>メール招待のほかに、Teamには招待リンク・ディスカバリー・メンバー同士の招待の3つの経路があります。SSOを設定した組織ならIDプロバイダーからのJITプロビジョニングでも人が入ります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>参加の方法</th>
@@ -126,31 +134,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>招待リンク</td>
-<td>新しい組織ではオン</td>
-<td>なし（リンクを開けば加わる）</td>
-<td>空いている中でいちばん下の種類</td>
+<td data-label="参加の方法">招待リンク</td>
+<td data-label="Teamの既定">新しい組織ではオン</td>
+<td data-label="審査">なし（リンクを開けば加わる）</td>
+<td data-label="入ったときの席">空いている中でいちばん下の種類</td>
 </tr>
 <tr>
-<td>組織ディスカバリー</td>
-<td>新しい組織ではオン、前からある組織ではオフ</td>
-<td>自動承認か管理者の承認を選ぶ</td>
-<td>自動承認は空いている中でいちばん下の種類。管理者承認は承認時に空きが無ければ席を購入</td>
+<td data-label="参加の方法">組織ディスカバリー</td>
+<td data-label="Teamの既定">新しい組織ではオン、前からある組織ではオフ</td>
+<td data-label="審査">自動承認か管理者の承認を選ぶ</td>
+<td data-label="入ったときの席">自動承認は空いている中でいちばん下の種類。管理者承認は承認時に空きが無ければ席を購入</td>
 </tr>
 <tr>
-<td>メンバー同士の招待</td>
-<td>新しい組織ではオン</td>
-<td>既定は1件ずつ管理者が承認</td>
-<td>空いている中でいちばん下の種類</td>
+<td data-label="参加の方法">メンバー同士の招待</td>
+<td data-label="Teamの既定">新しい組織ではオン</td>
+<td data-label="審査">既定は1件ずつ管理者が承認</td>
+<td data-label="入ったときの席">空いている中でいちばん下の種類</td>
 </tr>
 <tr>
-<td>SSOのJITプロビジョニング</td>
-<td>SSOを設定した組織だけ</td>
-<td>IDプロバイダー側で割り当て</td>
-<td>空いている中でいちばん上の種類</td>
+<td data-label="参加の方法">SSOのJITプロビジョニング</td>
+<td data-label="Teamの既定">SSOを設定した組織だけ</td>
+<td data-label="審査">IDプロバイダー側で割り当て</td>
+<td data-label="入ったときの席">空いている中でいちばん上の種類</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/claude-team-admin/cta_01_join_ways.jpg" alt="Claude Teamに人が入る4つの方法を並べた図。メール招待と招待リンクとディスカバリーとメンバー同士の招待のそれぞれに、審査の有無と期限を書いている" loading="lazy"><figcaption>参加の方法ごとの審査と期限（Claudeのヘルプセンターの記述から作成）</figcaption></figure>
 
 <p>SSOを入れた組織では、招待リンクと組織ディスカバリーは使えません。メンバーはIDプロバイダーの割り当てで入る仕組みに切り替わります。</p>
@@ -163,9 +171,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s2-2">ディスカバリーの自動承認は席を買い足す</h3>
 <p>会社のメールアドレスでClaudeに登録しようとした人に、既存のTeamの組織を見つけて参加をリクエストさせる機能が組織ディスカバリーです。<a href="https://support.claude.com/ja/articles/13566435">組織ディスカバリーのヘルプ</a>では、組織設定の［組織とアクセス］でドメインごとに検出可能のトグルを入れ、新規メンバーの承認を「自動承認」か「管理者承認が必要」から選びます。</p>
 <p>**自動承認にすると、空きの席が無いときは請求が自動で広がり、新しい席がその場で購入されます。**社員が自分で登録するたびに席が増えるため、人数を予算で区切りたい組織は管理者承認を選ぶほうが安全です。管理者承認でも、承認した時点で空きが無ければ席は買われます。このページはGmailなどの個人用ドメインと.eduのドメインを許可リストに追加できないとしていますが、アカウント管理のFAQは@gmail.comなどのパブリックドメインを許可されたドメインとして追加できると書いていて、前の「招待できるメールアドレス」の節で触れたとおり2つのページの書き方がそろっていません。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">4つの役割でできること</h2>
 <p>Teamの役割はユーザー・管理者・オーナー・プライマリオーナーの4つです。<a href="https://support.claude.com/ja/articles/9267276">ロールと権限</a>の表から、管理の操作に関係する行を抜き出しました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>操作</th>
@@ -177,63 +199,63 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>新しいメンバーの招待</td>
-<td></td>
-<td>○</td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">新しいメンバーの招待</td>
+<td data-label="ユーザー"></td>
+<td data-label="管理者">○</td>
+<td data-label="オーナー">○</td>
+<td data-label="プライマリオーナー">○</td>
 </tr>
 <tr>
-<td>メンバーの削除・招待の取り消し</td>
-<td></td>
-<td>○</td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">メンバーの削除・招待の取り消し</td>
+<td data-label="ユーザー"></td>
+<td data-label="管理者">○</td>
+<td data-label="オーナー">○</td>
+<td data-label="プライマリオーナー">○</td>
 </tr>
 <tr>
-<td>管理者・オーナーの招待と削除</td>
-<td></td>
-<td></td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">管理者・オーナーの招待と削除</td>
+<td data-label="ユーザー"></td>
+<td data-label="管理者"></td>
+<td data-label="オーナー">○</td>
+<td data-label="プライマリオーナー">○</td>
 </tr>
 <tr>
-<td>ロールの変更</td>
-<td></td>
-<td></td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">ロールの変更</td>
+<td data-label="ユーザー"></td>
+<td data-label="管理者"></td>
+<td data-label="オーナー">○</td>
+<td data-label="プライマリオーナー">○</td>
 </tr>
 <tr>
-<td>請求書の表示と支払い・支払い方法の変更</td>
-<td></td>
-<td></td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">請求書の表示と支払い・支払い方法の変更</td>
+<td data-label="ユーザー"></td>
+<td data-label="管理者"></td>
+<td data-label="オーナー">○</td>
+<td data-label="プライマリオーナー">○</td>
 </tr>
 <tr>
-<td>連携・機能・プロジェクト共有の有効化</td>
-<td></td>
-<td></td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">連携・機能・プロジェクト共有の有効化</td>
+<td data-label="ユーザー"></td>
+<td data-label="管理者"></td>
+<td data-label="オーナー">○</td>
+<td data-label="プライマリオーナー">○</td>
 </tr>
 <tr>
-<td>利用状況の分析を見る</td>
-<td></td>
-<td></td>
-<td>○</td>
-<td>○</td>
+<td data-label="操作">利用状況の分析を見る</td>
+<td data-label="ユーザー"></td>
+<td data-label="管理者"></td>
+<td data-label="オーナー">○</td>
+<td data-label="プライマリオーナー">○</td>
 </tr>
 <tr>
-<td>データのエクスポートの依頼</td>
-<td></td>
-<td></td>
-<td></td>
-<td>○</td>
+<td data-label="操作">データのエクスポートの依頼</td>
+<td data-label="ユーザー"></td>
+<td data-label="管理者"></td>
+<td data-label="オーナー"></td>
+<td data-label="プライマリオーナー">○</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/claude-team-admin/cta_04_roles.jpg" alt="Claude Teamの4つの役割を階段状に並べた図。管理者は招待と削除、オーナーは請求とロールの変更、プライマリオーナーはデータのエクスポートが加わる" loading="lazy"><figcaption>上の役割ほどできることが増える（ロールと権限のヘルプから作成）</figcaption></figure>
 
 <p>**管理者は人の出入りを受け持つ役で、お金と権限の設定には触れません。**人の出入りだけを任せる担当者には管理者を、請求書を受け取る担当者にはオーナーを割り当てると、請求の画面を見せる相手を絞れます。メンバーの一覧は管理者以上が［Members］の［Export CSV］で書き出せて、名前・メールアドレス・ロール・席の種類が入ります。</p>
@@ -246,7 +268,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>**ただし外しただけでは契約の席数は変わらず、請求も日割りの返金もありません。**料金を下げるには2つ目の操作として、オーナーかプライマリオーナーが［Organization and access］の［Total seats］から［Manage］を開き、［Add or change seats］で減らしたい種類の「-」を押して確定します。減らした分が反映されるのは次の更新日で、年払いなら年の更新日です。</p>
 <figure class="post-figure"><img src="/media/images/claude-team-admin/cta_05_remove_billing.jpg" alt="メンバーを外してから請求が下がるまでの流れの図。メンバーを外すと席が空くだけで請求はそのまま、席数を減らすと次の更新日から請求が下がる" loading="lazy"><figcaption>外す操作と席数を減らす操作は別（シートの購入と管理のヘルプから作成）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>操作</th>
@@ -256,22 +278,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>メンバーを外す</td>
-<td>管理者以上</td>
-<td>変わらない（席が空くだけ）</td>
+<td data-label="操作">メンバーを外す</td>
+<td data-label="誰ができるか">管理者以上</td>
+<td data-label="請求への反映">変わらない（席が空くだけ）</td>
 </tr>
 <tr>
-<td>席を増やす</td>
-<td>オーナー以上</td>
-<td>すぐ。残りの期間の日割りを請求</td>
+<td data-label="操作">席を増やす</td>
+<td data-label="誰ができるか">オーナー以上</td>
+<td data-label="請求への反映">すぐ。残りの期間の日割りを請求</td>
 </tr>
 <tr>
-<td>席を減らす</td>
-<td>オーナー以上</td>
-<td>次の更新日から。返金なし</td>
+<td data-label="操作">席を減らす</td>
+<td data-label="誰ができるか">オーナー以上</td>
+<td data-label="請求への反映">次の更新日から。返金なし</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>外した人を同じメールアドレスで招待し直すと、アカウントの履歴は残ったまま戻るとヘルプに書かれています。Teamを解約したあとは［Members］から外す操作ができなくなり、ヘルプは少ない席数で契約し直す前に外したいときはサポートに連絡するよう案内しています（<a href="https://support.claude.com/ja/articles/9267323">組織のTeamプラン購読をキャンセルする</a>）。</p>
 <h2 id="s5">StandardとPremiumの切り替え</h2>
 <p>契約の総数の中であれば、席の種類は人ごとに入れ替え自由です。手順は［Members］で相手の［Tier］の選択肢から［Standard］か［Premium］を選ぶだけで、管理者以上が操作できます。Premiumの空きがあれば、StandardからPremiumへの変更は新しい購入ではなく割り当ての変更になります。</p>
@@ -282,7 +304,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>複数の人をまとめてPremiumからStandardに下げるなら、1人ずつ［Tier］を変えずに［Add or change seats］で種類ごとの合計を決めます。**予約できる席の変更は一度に1つだけで、新しい変更を出したり席を足したり招待が受け入れられたりすると、保留中の変更は置き換わります。**更新日の直前に新しい人を招待するときは、予約した減らす変更が残っているかを確かめ直してください。</p>
 <h2 id="s6">個人のProから移るときの会話</h2>
 <p>会社のメールアドレスで個人のProやMaxを使っていた人がTeamに加わると、同じアドレスに個人用と組織用の2つのアカウントができます。<a href="https://support.claude.com/ja/articles/9267400">個人用のClaudeアカウントを組織に移動する</a>のヘルプによると、選べるのは次の3つです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>選ぶもの</th>
@@ -293,29 +315,29 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>両方のアカウントを保持</td>
-<td>残る</td>
-<td>個人のほうに残る</td>
-<td>続く</td>
+<td data-label="選ぶもの">両方のアカウントを保持</td>
+<td data-label="個人のアカウント">残る</td>
+<td data-label="今までの会話">個人のほうに残る</td>
+<td data-label="Proの契約">続く</td>
 </tr>
 <tr>
-<td>組織だけにしてデータを持ち込む</td>
-<td>閉じる</td>
-<td>組織に移る</td>
-<td>自動で解約、日割りで返金</td>
+<td data-label="選ぶもの">組織だけにしてデータを持ち込む</td>
+<td data-label="個人のアカウント">閉じる</td>
+<td data-label="今までの会話">組織に移る</td>
+<td data-label="Proの契約">自動で解約、日割りで返金</td>
 </tr>
 <tr>
-<td>組織だけにしてデータを削除</td>
-<td>閉じる</td>
-<td>移らない</td>
-<td>自動で解約、日割りで返金</td>
+<td data-label="選ぶもの">組織だけにしてデータを削除</td>
+<td data-label="個人のアカウント">閉じる</td>
+<td data-label="今までの会話">移らない</td>
+<td data-label="Proの契約">自動で解約、日割りで返金</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/claude-team-admin/cta_07_migrate.jpg" alt="個人のProを持つ人がTeamに加わるときの3つの選択肢の図。両方を保持、データを持ち込む、データを削除に分かれ、データを持ち込むは戻せないと書いている" loading="lazy"><figcaption>持ち込みは一方通行（個人用アカウントの移動のヘルプから作成）</figcaption></figure>
 
 <p>Teamでは招待を受け入れるときに選ぶ画面が出て、その場で決めなくても7日ほど案内の帯が表示されます。あとから移すなら組織のアカウントに切り替えてから設定の［アカウント］で［個人用アカウントを閉じる］へ進みます。<strong>データを持ち込むと、移った中身は個人のアカウントに戻せません。</strong></p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>組織に移るもの</th>
@@ -324,34 +346,34 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>チャットとチャット内のアーティファクト</td>
-<td>カスタムスキル（先に書き出す）</td>
+<td data-label="組織に移るもの">チャットとチャット内のアーティファクト</td>
+<td data-label="移らないもの">カスタムスキル（先に書き出す）</td>
 </tr>
 <tr>
-<td>プロジェクトと指示・ファイル</td>
-<td>連携したアプリのサインイン（入れ直す）</td>
+<td data-label="組織に移るもの">プロジェクトと指示・ファイル</td>
+<td data-label="移らないもの">連携したアプリのサインイン（入れ直す）</td>
 </tr>
 <tr>
-<td>アップロードしたファイル</td>
-<td>自分で足したカスタムコネクタ</td>
+<td data-label="組織に移るもの">アップロードしたファイル</td>
+<td data-label="移らないもの">自分で足したカスタムコネクタ</td>
 </tr>
 <tr>
-<td>チャットとプロジェクトのメモリ（組織がメモリを切っている場合を除く）</td>
-<td>公開したアーティファクトと公開の共有リンク</td>
+<td data-label="組織に移るもの">チャットとプロジェクトのメモリ（組織がメモリを切っている場合を除く）</td>
+<td data-label="移らないもの">公開したアーティファクトと公開の共有リンク</td>
 </tr>
 <tr>
-<td>Claude Codeのメモリと個人設定（組織アカウントに独自の値が既に設定されている場合を除く）</td>
-<td>Claude Codeのクラウドのセッション</td>
+<td data-label="組織に移るもの">Claude Codeのメモリと個人設定（組織アカウントに独自の値が既に設定されている場合を除く）</td>
+<td data-label="移らないもの">Claude Codeのクラウドのセッション</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure post-figure--sp"><img src="/media/images/claude-team-admin/cta_08_help_moved_sp.jpg" alt="Claudeのヘルプで移動時に移動されるものの節をスマホで開いた画面。チャット、プロジェクト、アップロードされたファイル、メモリなどの移動されるものの一覧を赤枠で囲んでいる" loading="lazy"><figcaption>移動されるものの一覧（Claudeのヘルプセンター、スマホ表示）</figcaption></figure>
 
 <p>デスクトップのCoworkのセッションは組織に移らず、ヘルプでは「コンピュータに残ります」と書かれています。公開の共有リンクはずっと使えなくなるため、社外に会話のリンクを渡している人は移る前に別の方法で共有し直しておきます。App StoreでProを契約した人は、Appleの決まりで自動の解約ができず、選べるのは「両方のアカウントを保持」だけです。移った直後はチャットの一覧が出そろうまで時間がかかり、見つからないときはサインアウトして入り直すようヘルプに書かれています。</p>
 <p>組織を作る本人が個人のProから申し込むときの流れは少し別です。<a href="https://support.claude.com/ja/articles/9267247">Team プランを始める</a>のヘルプによると、個人アカウントを別に保つチェックボックスが表示される場合は、既定でそのアカウントがその場でTeamに切り替わります。App Storeで購入したプラン・一時停止中のプラン・対応していない通貨のときはチェックボックスが出ず、別の組織が新しくできます。その手順は<a href="/media/claude-team/">Claude Teamの料金の記事のProから移る節</a>に載せました。</p>
 <h2 id="s7">参加できないときの確認</h2>
 <p>招待したのに相手が入れないときは、ここまでに書いた招待メールの21日の期限・ドメインの許可・招待リンクの90日の期限のほかに、次の2つを確かめます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>状況</th>
@@ -360,15 +382,15 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>席が空いているのに［Add member］が押せない</td>
-<td>受け入れられていない保留中の招待が席を使っていないか。取り消すか席を足す</td>
+<td data-label="状況">席が空いているのに［Add member］が押せない</td>
+<td data-label="確かめること">受け入れられていない保留中の招待が席を使っていないか。取り消すか席を足す</td>
 </tr>
 <tr>
-<td>加わったのに会社の画面にならない</td>
-<td>左下の名前から組織のアカウントに切り替える（青いチェックが今のアカウント）</td>
+<td data-label="状況">加わったのに会社の画面にならない</td>
+<td data-label="確かめること">左下の名前から組織のアカウントに切り替える（青いチェックが今のアカウント）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>個人用と組織用のアカウントは同じメールアドレスでも会話とプロジェクトが別々です。<strong>仕事の相談を始める前に左下のチェックが組織のほうに付いているかを確かめるよう社内で伝えておくと、業務の会話が個人のアカウントに残る事故を減らせます。</strong></p>
 <p>席と役割を整えたあと、日々の業務の一部をAIに任せる仕組みづくりまで進めるときの進め方は、<a href="/ai-agent/">AIエージェント構築支援</a>のページにまとめています。</p>
 <h2 id="s8">よくある質問</h2>
@@ -404,12 +426,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -418,9 +441,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">メンバーを招待する手順</a><a href="#s2">招待メール以外の参加の方法</a><a href="#s3">4つの役割でできること</a><a href="#s4">メンバーを削除する手順と請求</a><a href="#s5">StandardとPremiumの切り替え</a><a href="#s6">個人のProから移るときの会話</a><a href="#s7">参加できないときの確認</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -453,11 +479,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

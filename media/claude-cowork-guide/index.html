@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claude Cowo…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.20</span>
         </div>
         <h1 class="post-title">【2026年9月】Claude Coworkとは？使い方・できること・料金｜チャットとの統合で変わった点</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Coworkの使い方"><defs><linearGradient id="ecg-fc92d2cd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-fc92d2cd)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Coworkの使い方</text><line x1="151.6" y1="327.1" x2="1048.4" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">できること・始め方・権限・安全に使う条件</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>公式が使わないよう勧める領域がある。<strong>金融口座・契約・医療・他人の個人情報・行政の手続き</strong>は、ブラウザ操作やコンピュータ操作に任せない</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -107,7 +115,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>公式ヘルプ「<a href="https://support.claude.com/ja/articles/13345190">Claude Coworkを始める</a>」の定義は、<strong>Claude Codeのエージェント機能をコーディング以外のナレッジワークにもたらすもの</strong>です。プロンプトに1つずつ答えるのではなく、複数の手順が要るタスクを引き受けて代わりに実行します。公式ヘルプの言い方では望む結果を説明したら離れてよく、戻ると完成した作業（整えられた文書、整理されたファイル、まとめられた調査）を確認できる、とされています。</p>
 <figure class="post-figure"><img src="/media/images/claude-cowork-guide/00_fig_what.png" alt="チャットのClaude・Claude Cowork・Claude Codeの位置づけの図。チャットは答えを返す、CoworkはGUIで作業を実行する、Claude Codeはターミナルで開発作業を実行する。CoworkとClaude Codeは同じエージェントの仕組み" loading="lazy"><figcaption>CoworkとClaude Codeは同じ仕組み。違いは入口（GUIかターミナルか）と対象の作業</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th></th>
@@ -118,43 +126,43 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>入口</td>
-<td>ブラウザ・アプリの会話</td>
-<td>デスクトップアプリ・ウェブ・スマホ・Chrome</td>
-<td>ターミナル・VS Code</td>
+<td data-label="">入口</td>
+<td data-label="チャットのClaude">ブラウザ・アプリの会話</td>
+<td data-label="Claude Cowork">デスクトップアプリ・ウェブ・スマホ・Chrome</td>
+<td data-label="Claude Code">ターミナル・VS Code</td>
 </tr>
 <tr>
-<td>向いている作業</td>
-<td>質問・文章・相談</td>
-<td>ファイル整理・資料作成・調査・定型業務</td>
-<td>コードの修正・テスト・開発</td>
+<td data-label="">向いている作業</td>
+<td data-label="チャットのClaude">質問・文章・相談</td>
+<td data-label="Claude Cowork">ファイル整理・資料作成・調査・定型業務</td>
+<td data-label="Claude Code">コードの修正・テスト・開発</td>
 </tr>
 <tr>
-<td>ファイル</td>
-<td>添付したものを読む</td>
-<td>許可したフォルダを読み書きする</td>
-<td>プロジェクト全体を読み書きする</td>
+<td data-label="">ファイル</td>
+<td data-label="チャットのClaude">添付したものを読む</td>
+<td data-label="Claude Cowork">許可したフォルダを読み書きする</td>
+<td data-label="Claude Code">プロジェクト全体を読み書きする</td>
 </tr>
 <tr>
-<td>実行</td>
-<td>しない</td>
-<td>サンドボックスで実行する</td>
-<td>ターミナルで実行する</td>
+<td data-label="">実行</td>
+<td data-label="チャットのClaude">しない</td>
+<td data-label="Claude Cowork">サンドボックスで実行する</td>
+<td data-label="Claude Code">ターミナルで実行する</td>
 </tr>
 <tr>
-<td>使う人</td>
-<td>誰でも</td>
-<td>事務・企画・営業など</td>
-<td>エンジニア</td>
+<td data-label="">使う人</td>
+<td data-label="チャットのClaude">誰でも</td>
+<td data-label="Claude Cowork">事務・企画・営業など</td>
+<td data-label="Claude Code">エンジニア</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>解説動画（安野貴博「業務を自動化できるCoworkって何？」、にゃんた「ChatGPTやClaude Codeと何が違う？」）では、Claude Codeでできる作業は基本的にCoworkでもできるが、Claude Codeが黒い画面を使うエンジニア向けなのに対して、CoworkはそれをGUIにして全ビジネスパーソン向けにしたもの、と説明されていました。</p>
 <h2 id="s2">チャットとCoworkが1つのClaudeに</h2>
 <p>公式ヘルプ「<a href="https://support.claude.com/ja/articles/16761823">Claude Coworkとチャットが1つのClaudeに統合</a>」によると、AnthropicはチャットとCoworkという2つの製品の区別をなくす新しい体験を、ウェブ・デスクトップ・モバイルのProとMaxプランから段階的に配信しています。同じプランでも配信の時期は異なり、有効にするための操作は要りません。</p>
 <figure class="post-figure"><img src="/media/images/claude-cowork-guide/00_fig_unified.png" alt="従来の体験と新しい統合体験の比較図。従来はメッセージ欄でChatかCoworkを選んでから依頼、新しい体験は1つの会話で依頼するとClaudeが答えるかタスクとして実行するかを判断する。既存のCoworkタスク・プロジェクト・コネクタ・スキルは引き継がれる" loading="lazy"><figcaption>統合後は「Cowork」を選ぶ手順がなくなり、依頼の内容でClaudeが判断する</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th></th>
@@ -164,31 +172,45 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>始め方</td>
-<td>メッセージ欄で「Cowork」を選んで依頼</td>
-<td>任意の会話で、同僚に頼むように依頼</td>
+<td data-label="">始め方</td>
+<td data-label="従来の体験">メッセージ欄で「Cowork」を選んで依頼</td>
+<td data-label="新しい統合体験">任意の会話で、同僚に頼むように依頼</td>
 </tr>
 <tr>
-<td>権限の設定</td>
-<td>手動承認・自動承認・すべての承認をスキップの3つ</td>
-<td>自動と手動（既定）の2つ</td>
+<td data-label="">権限の設定</td>
+<td data-label="従来の体験">手動承認・自動承認・すべての承認をスキップの3つ</td>
+<td data-label="新しい統合体験">自動と手動（既定）の2つ</td>
 </tr>
 <tr>
-<td>会話の一覧</td>
-<td>チャットとCoworkが別</td>
-<td>短い質問と長いタスクが同じ一覧</td>
+<td data-label="">会話の一覧</td>
+<td data-label="従来の体験">チャットとCoworkが別</td>
+<td data-label="新しい統合体験">短い質問と長いタスクが同じ一覧</td>
 </tr>
 <tr>
-<td>引き継ぎ</td>
-<td>既存のCoworkタスク・プロジェクト・コネクタ・スキル・アーティファクト・ファイルは引き継がれる</td>
-<td></td>
+<td data-label="">引き継ぎ</td>
+<td data-label="従来の体験">既存のCoworkタスク・プロジェクト・コネクタ・スキル・アーティファクト・ファイルは引き継がれる</td>
+<td data-label="新しい統合体験"></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>この記事の「始め方」は両方の画面で書きます。どちらの画面でも、できることと権限の考え方は同じです。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">使える場所とプラン</h2>
 <p>Coworkは有料プランだけで使えます。始められる場所は4つあり、どこから始めてもタスクはアカウントに紐づくので、別の端末から進捗を見たり、成果物を受け取ったりできます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>場所</th>
@@ -198,27 +220,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>デスクトップアプリ（macOS・Windows）</td>
-<td>Pro・Max・Team・Enterprise</td>
-<td>手元のファイル・組み込みブラウザ・コンピュータ操作はここが開いているときだけ</td>
+<td data-label="場所">デスクトップアプリ（macOS・Windows）</td>
+<td data-label="対応プラン">Pro・Max・Team・Enterprise</td>
+<td data-label="備考">手元のファイル・組み込みブラウザ・コンピュータ操作はここが開いているときだけ</td>
 </tr>
 <tr>
-<td>ウェブ（claude.ai）</td>
-<td>Pro・Max・Team（ベータ）、Enterpriseは管理者が有効化</td>
-<td>クラウドで実行</td>
+<td data-label="場所">ウェブ（claude.ai）</td>
+<td data-label="対応プラン">Pro・Max・Team（ベータ）、Enterpriseは管理者が有効化</td>
+<td data-label="備考">クラウドで実行</td>
 </tr>
 <tr>
-<td>スマホ（iOS・Android）</td>
-<td>同上</td>
-<td>進捗の確認、質問への返答、外出先からの開始</td>
+<td data-label="場所">スマホ（iOS・Android）</td>
+<td data-label="対応プラン">同上</td>
+<td data-label="備考">進捗の確認、質問への返答、外出先からの開始</td>
 </tr>
 <tr>
-<td>Chromeのサイドパネル</td>
-<td>Max・Team。Proは配信中。Enterpriseは管理者が有効化</td>
-<td>開くとそのままセッションが始まる</td>
+<td data-label="場所">Chromeのサイドパネル</td>
+<td data-label="対応プラン">Max・Team。Proは配信中。Enterpriseは管理者が有効化</td>
+<td data-label="備考">開くとそのままセッションが始まる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/claude-cowork-guide/00_fig_places.png" alt="Coworkを使える4つの場所（デスクトップアプリ・ウェブ・スマホ・Chromeサイドパネル）と、それぞれで使える機能。手元のファイル・組み込みブラウザ・コンピュータ操作はデスクトップアプリが開いているときだけ" loading="lazy"><figcaption>どこからでも始められる。手元のファイルを触る作業だけはデスクトップアプリが必要</figcaption></figure>
 
 <p>必要なものは、有料プランのアカウントとインターネット接続です。アプリを閉じるかオフラインになると、クラウドで動いているセッションからは手元のファイルが見えなくなります。</p>
@@ -244,7 +266,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>解説動画では「整理して」とだけ頼むと、Claudeがフォルダの中を見たうえで「種類別・日付別・プロジェクト別」の整理案を逆に提案し、選ぶと自動でフォルダを作って分類していく様子が映っていました。「曖昧な要件は質問して」「構成案の合意を取ってから作って」と添えると、対象者・目的・ページ数を聞き返してから作り始めるので、出来上がりの手戻りが減ります。</p>
 <h2 id="s5">権限の設定と任せる範囲</h2>
 <p>Coworkで最初に決めるのが、Claudeがどこまで確認せずに進むかです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>設定</th>
@@ -254,17 +276,17 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>手動（既定）</td>
-<td>操作の前に毎回確認を求める。1つずつ許可する</td>
-<td>最初の数回。メッセージ送信や重要ファイルの変更など、結果が戻せない作業</td>
+<td data-label="設定">手動（既定）</td>
+<td data-label="動き">操作の前に毎回確認を求める。1つずつ許可する</td>
+<td data-label="向いている場面">最初の数回。メッセージ送信や重要ファイルの変更など、結果が戻せない作業</td>
 </tr>
 <tr>
-<td>自動</td>
-<td>確認で止まらずに進む。操作の前に自動の安全チェックが走り、危険と判断した操作は止める</td>
-<td>要約・整理・下書きなど、やり直しが効く作業</td>
+<td data-label="設定">自動</td>
+<td data-label="動き">確認で止まらずに進む。操作の前に自動の安全チェックが走り、危険と判断した操作は止める</td>
+<td data-label="向いている場面">要約・整理・下書きなど、やり直しが効く作業</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>従来の画面には「すべての承認をスキップ」もあり、これは自動チェックも行いません。統合後の画面では自動と手動の2つです。どちらの画面でも、<strong>ファイルを完全に削除する前の確認は既定で出ます</strong>。設定は会話の途中でも変えられ、作業中に止めたり方向を変えたりできます。</p>
 <figure class="post-figure"><img src="/media/images/claude-cowork-guide/00_fig_permissions.png" alt="Coworkの権限設定の図。手動（既定、毎回確認）と自動（安全チェックつきで進む）。どちらでもファイルの完全削除の前は確認。結果が戻せない作業は手動で近くにいる" loading="lazy"><figcaption>やり直しが効く作業は自動、戻せない作業は手動で近くにいる</figcaption></figure>
 
@@ -297,7 +319,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>手元のファイルにクラウドのセッションが触るときは、開いているデスクトップアプリを経由し、許可したフォルダの中だけを読み書きします。</p>
 <h2 id="s8">安全に使うための線引き</h2>
 <p>公式ヘルプ「<a href="https://support.claude.com/ja/articles/13364135">Claude Coworkを安全に使用する</a>」は、使わないほうがよい領域をはっきり書いています。要点は5つです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>注意</th>
@@ -306,27 +328,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>任せない領域</td>
-<td>金融口座・投資・暗号資産、契約や法的文書、医療・健康情報、他人の個人情報、行政機関のサイト。ブラウザ操作やコンピュータ操作で扱わない</td>
+<td data-label="注意">任せない領域</td>
+<td data-label="内容">金融口座・投資・暗号資産、契約や法的文書、医療・健康情報、他人の個人情報、行政機関のサイト。ブラウザ操作やコンピュータ操作で扱わない</td>
 </tr>
 <tr>
-<td>ファイルの渡し方</td>
-<td>財務書類・認証情報・個人記録を含むフォルダにアクセス権を与えない。重要なファイルはバックアップし、専用の作業フォルダを作る</td>
+<td data-label="注意">ファイルの渡し方</td>
+<td data-label="内容">財務書類・認証情報・個人記録を含むフォルダにアクセス権を与えない。重要なファイルはバックアップし、専用の作業フォルダを作る</td>
 </tr>
 <tr>
-<td>プロンプトインジェクション</td>
-<td>サイト・メール・外部文書に隠された指示にClaudeが従ってしまうリスクがある。外部の内容を読ませて、かつ操作の権限を与える組み合わせで起きやすい</td>
+<td data-label="注意">プロンプトインジェクション</td>
+<td data-label="内容">サイト・メール・外部文書に隠された指示にClaudeが従ってしまうリスクがある。外部の内容を読ませて、かつ操作の権限を与える組み合わせで起きやすい</td>
 </tr>
 <tr>
-<td>戻せない作業</td>
-<td>送金、自分名義のメッセージ送信、購入、重要ファイルの変更は、手動モードで、自分が近くにいるときに</td>
+<td data-label="注意">戻せない作業</td>
+<td data-label="内容">送金、自分名義のメッセージ送信、購入、重要ファイルの変更は、手動モードで、自分が近くにいるときに</td>
 </tr>
 <tr>
-<td>スケジュール</td>
-<td>見ていない間に動くので、まず要約・編集の低リスクな作業から。送信や購入は定期実行にしない。出力を定期的に確認する</td>
+<td data-label="注意">スケジュール</td>
+<td data-label="内容">見ていない間に動くので、まず要約・編集の低リスクな作業から。送信や購入は定期実行にしない。出力を定期的に確認する</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>指示していないファイルやURLに触り始めたり、頼んだ範囲を超えて作業が広がったりしたら、すぐに止める、というのも公式の案内です。ローカルのMCPサーバーはPC上で通常のプログラムと同じ権限で動くので、検証された拡張だけを使い、求められる権限を確認します。</p>
 <h2 id="s9">料金</h2>
 <p>Coworkに追加料金はなく、Claudeの有料プランに含まれます。日本向けの料金ページ（<a href="https://claude.com/ja/pricing">claude.com/ja/pricing</a>）は消費税込みの表示で、Proは月$22（年払いなら月$18）、Maxは月$110からです。使用量はチャットと同じ枠から減り、解説動画では「エージェントとして裏で動く指示が長いので、通常のチャットより枠に達しやすい」と説明されていました。プランの違いと上限の仕組みは<a href="https://nito-0210.com/media/claude-code-pricing/">Claude Codeの料金プランの記事</a>に表でまとめています。</p>
@@ -364,12 +386,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -378,9 +401,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Claude Coworkとは</a><a href="#s2">チャットとCoworkが1つのClaudeに</a><a href="#s3">使える場所とプラン</a><a href="#s4">始め方</a><a href="#s5">権限の設定と任せる範囲</a><a href="#s6">Claude Coworkでできること</a><a href="#s7">タスクはどこで動いているか</a><a href="#s8">安全に使うための線引き</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -413,11 +439,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

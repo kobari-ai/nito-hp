@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Android Au…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.07</span>
         </div>
         <h1 class="post-title">【2026年10月】Android AutoのGeminiはいつから？使えない・オフにする方法</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Android AutoのGemini"><defs><linearGradient id="ecg-cdb66c42" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-cdb66c42)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Android AutoのGemini</text><line x1="151.6" y1="327.1" x2="1048.4" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">いつから・使えない・勝手に起動・オフ</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 </ul></div></div>
 <figure class="post-figure"><img src="/media/images/android-auto-gemini/01_fig_overview_v2.jpg" alt="Android AutoのGeminiの図。使えないときはスマホの条件を確かめる。勝手に話すときはOK Googleをオフにする" loading="lazy"><figcaption>使えないときと勝手に話すときで見る場所が違う</figcaption></figure>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -96,7 +104,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">Android AutoのGeminiでできること</h2>
 <p>これまでのGoogleアシスタントは「〇〇に電話」のような決まった言い方を待っていました。Geminiは言い回しを選ばずに頼め、続けて聞き返すこともできます。Gemini アプリ ヘルプの「<a href="https://support.google.com/gemini/answer/16735982?hl=ja">車内で Gemini と話す</a>」は、車でできることを次の4つに分けています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>できること</th>
@@ -105,23 +113,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>電話とメッセージ</td>
-<td>電話をかける・メッセージを送る・届いたメッセージを要約する</td>
+<td data-label="できること">電話とメッセージ</td>
+<td data-label="ヘルプとブログに出てくる例">電話をかける・メッセージを送る・届いたメッセージを要約する</td>
 </tr>
 <tr>
-<td>場所の検索とナビ</td>
-<td>寄り道先を探して経路に足す・口コミをもとに店を聞く</td>
+<td data-label="できること">場所の検索とナビ</td>
+<td data-label="ヘルプとブログに出てくる例">寄り道先を探して経路に足す・口コミをもとに店を聞く</td>
 </tr>
 <tr>
-<td>音楽</td>
-<td>再生・停止・曲の変更</td>
+<td data-label="できること">音楽</td>
+<td data-label="ヘルプとブログに出てくる例">再生・停止・曲の変更</td>
 </tr>
 <tr>
-<td>Geminiとの会話</td>
-<td>行き先の話をする・プレゼントのアイデアを出す・スピーチの練習</td>
+<td data-label="できること">Geminiとの会話</td>
+<td data-label="ヘルプとブログに出てくる例">行き先の話をする・プレゼントのアイデアを出す・スピーチの練習</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>呼び出し方は従来と同じで、<strong>「OK Google」と話しかける・車の画面のマイクのアイコンを押す・ハンドルの音声コマンドボタンを長押しする</strong>の3つです。<a href="https://blog.google/products/android/android-auto-gemini-tips/">Googleのブログ（2025年11月20日）</a>は、Gmailの予約メールからホテルの住所を探す例も挙げています。</p>
 <figure class="post-figure"><img src="/media/images/android-auto-gemini/02_help_androidauto_v2.jpg" alt="Android Auto ヘルプ「Gemini または Google アシスタントに話しかける」の冒頭。赤い枠の中に、ほとんどのモバイル デバイスで今後はGoogleアシスタントに代わってGeminiがサポートし、2026年にアシスタントのユーザーをGeminiにアップグレードする移行に取り組んでいる、と書かれている" loading="lazy"><figcaption>Android Auto ヘルプの冒頭にGoogleアシスタントからGeminiへの移行の案内がある（2026年10月7日取得）</figcaption></figure>
 
@@ -131,7 +139,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <p>日本語の環境で切り替わった日は、利用者の報告で分かります。<a href="https://helentech.jp/news-android-auto-gemini-japan/">HelenTech（2026年5月7日）</a>は、Pixel 10 ProとAndroid Auto 16.7の組み合わせで5月6日にGeminiへの切り替わりを確かめています。この時点ではGemini Liveの会話が続かず、Geminiの話の途中で割り込むこともできませんでした。Googleは<a href="https://blog.google/products-and-platforms/platforms/android/android-in-cars-updates/">2026年5月12日のブログ</a>で、Android AutoのGeminiは広く使えるようになったと書きました。国の名前は挙げていません。</p>
 <p><a href="https://jetstream.blog/2026/07/15/android-auto-gemini-live-rollout/">Jetstream BLOG（2026年7月15日）</a>は、7月上旬から中旬にかけて車の画面にGemini Liveのボタンが出たと伝えています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>時期</th>
@@ -141,38 +149,52 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>2025年11月20日</td>
-<td>45言語で提供開始。数か月かけて順に</td>
-<td>Googleのブログ</td>
+<td data-label="時期">2025年11月20日</td>
+<td data-label="出来事">45言語で提供開始。数か月かけて順に</td>
+<td data-label="出どころ">Googleのブログ</td>
 </tr>
 <tr>
-<td>2026年5月6日ごろ</td>
-<td>日本語の環境でGeminiに切り替わった</td>
-<td>利用者の報告（HelenTech）</td>
+<td data-label="時期">2026年5月6日ごろ</td>
+<td data-label="出来事">日本語の環境でGeminiに切り替わった</td>
+<td data-label="出どころ">利用者の報告（HelenTech）</td>
 </tr>
 <tr>
-<td>2026年5月12日</td>
-<td>Android AutoのGeminiが広く利用可能に</td>
-<td>Googleのブログ</td>
+<td data-label="時期">2026年5月12日</td>
+<td data-label="出来事">Android AutoのGeminiが広く利用可能に</td>
+<td data-label="出どころ">Googleのブログ</td>
 </tr>
 <tr>
-<td>2026年7月上旬〜中旬</td>
-<td>日本でGemini Liveのボタンが出た</td>
-<td>利用者の報告（Jetstream）</td>
+<td data-label="時期">2026年7月上旬〜中旬</td>
+<td data-label="出来事">日本でGemini Liveのボタンが出た</td>
+<td data-label="出どころ">利用者の報告（Jetstream）</td>
 </tr>
 <tr>
-<td>2026年9月4日</td>
-<td>スマホのGoogleアシスタントの削除が始まる（Android Autoも対象）</td>
-<td>ITmedia Mobile</td>
+<td data-label="時期">2026年9月4日</td>
+<td data-label="出来事">スマホのGoogleアシスタントの削除が始まる（Android Autoも対象）</td>
+<td data-label="出どころ">ITmedia Mobile</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>切り替えをこちらで早める設定は、ヘルプにもブログにもありません。案内が出ないうちはスマホの既定のアシスタントがGeminiになっているか、Android AutoとGeminiアプリが最新版かを確かめて待つしかありません。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">使うために必要なもの</h2>
 <p>条件は<strong>スマホの画面を車に映すAndroid Auto</strong>と、**Googleのシステムを積んだ車（Google 搭載の自動車）**で分かれます。<a href="https://support.google.com/gemini/answer/16735982?hl=ja">車内で Gemini と話す</a>のヘルプは、スマホのAndroid Autoで要るものを3つ挙げています。</p>
 <figure class="post-figure"><img src="/media/images/android-auto-gemini/03_help_requirements_v2.jpg" alt="Gemini アプリ ヘルプ「車内で Gemini と話す」の必要なもの。赤い枠の中に、スマートフォンの Android Auto の場合として、Android 11 以降を搭載し 2 GB 以上の RAM を備えた Android スマートフォン、Gemini がデジタル アシスタントとしてセットアップされている、Android Auto に対応している車両、の3つが並んでいる" loading="lazy"><figcaption>スマホのAndroid Autoで要るのは端末・既定のアシスタント・対応車の3つ（Gemini アプリ ヘルプ）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th></th>
@@ -182,26 +204,26 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>端末</td>
-<td>Android 11以降・RAM 2GB以上のスマホ</td>
-<td>車そのもの</td>
+<td data-label="">端末</td>
+<td data-label="スマホのAndroid Auto">Android 11以降・RAM 2GB以上のスマホ</td>
+<td data-label="Google 搭載の自動車">車そのもの</td>
 </tr>
 <tr>
-<td>アカウント</td>
-<td>スマホのGoogle アカウント</td>
-<td>車にログインしたGoogle アカウント</td>
+<td data-label="">アカウント</td>
+<td data-label="スマホのAndroid Auto">スマホのGoogle アカウント</td>
+<td data-label="Google 搭載の自動車">車にログインしたGoogle アカウント</td>
 </tr>
 <tr>
-<td>Geminiを有効にする場所</td>
-<td>スマホの既定のデジタル アシスタント</td>
-<td>車の画面の［設定］［Google］［アシスタント］。一覧に無ければ車のソフトウェアを最新にする</td>
+<td data-label="">Geminiを有効にする場所</td>
+<td data-label="スマホのAndroid Auto">スマホの既定のデジタル アシスタント</td>
+<td data-label="Google 搭載の自動車">車の画面の［設定］［Google］［アシスタント］。一覧に無ければ車のソフトウェアを最新にする</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Android Auto自体は<a href="https://support.google.com/androidauto/answer/6348019?hl=ja">Android 9以降で動きます</a>が、<strong>Geminiで使うにはAndroid 11以降</strong>が必要です。Android Autoは動くのにGeminiだけ出てこないときは、このAndroidの版の差が原因として考えられます。</p>
 <h2 id="s4">Geminiが使えないときの確認</h2>
 <p>Geminiが答えない・Googleアシスタントのまま、というときは次の順で見ます。どれも車を止めてから確かめてください。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>確かめること</th>
@@ -211,32 +233,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>端末</td>
-<td>Android 11以降・RAM 2GB以上。Android（Go エディション）はAndroid Autoが使えない</td>
-<td>Gemini アプリ ヘルプ・Android Auto ヘルプ</td>
+<td data-label="確かめること">端末</td>
+<td data-label="条件">Android 11以降・RAM 2GB以上。Android（Go エディション）はAndroid Autoが使えない</td>
+<td data-label="出どころ">Gemini アプリ ヘルプ・Android Auto ヘルプ</td>
 </tr>
 <tr>
-<td>既定のアシスタント</td>
-<td>スマホの［デジタル アシスタント アプリ］が「Google」になっている（GeminiもGoogleアシスタントも「Google」と表示される）。電源ボタンの長押しか「OK Google」でGeminiが開けば、Geminiになっている</td>
-<td>Gemini アプリ ヘルプ</td>
+<td data-label="確かめること">既定のアシスタント</td>
+<td data-label="条件">スマホの［デジタル アシスタント アプリ］が「Google」になっている（GeminiもGoogleアシスタントも「Google」と表示される）。電源ボタンの長押しか「OK Google」でGeminiが開けば、Geminiになっている</td>
+<td data-label="出どころ">Gemini アプリ ヘルプ</td>
 </tr>
 <tr>
-<td>アカウント</td>
-<td>13歳以上。13歳未満は保護者の承認が要る。仕事用プロファイルでは使えない。仕事用・学校用のアカウントはGeminiを使えるプランかライセンスが要る</td>
-<td>Gemini モバイルアプリの利用要件</td>
+<td data-label="確かめること">アカウント</td>
+<td data-label="条件">13歳以上。13歳未満は保護者の承認が要る。仕事用プロファイルでは使えない。仕事用・学校用のアカウントはGeminiを使えるプランかライセンスが要る</td>
+<td data-label="出どころ">Gemini モバイルアプリの利用要件</td>
 </tr>
 <tr>
-<td>国と言語</td>
-<td>一部の言語や地域ではGeminiとAndroid Autoが使えない</td>
-<td>Gemini アプリ ヘルプ</td>
+<td data-label="確かめること">国と言語</td>
+<td data-label="条件">一部の言語や地域ではGeminiとAndroid Autoが使えない</td>
+<td data-label="出どころ">Gemini アプリ ヘルプ</td>
 </tr>
 <tr>
-<td>「OK Google」</td>
-<td>Voice Matchと「OK Google」がオンのときだけ声で呼べる</td>
-<td>Gemini アプリ ヘルプ</td>
+<td data-label="確かめること">「OK Google」</td>
+<td data-label="条件">Voice Matchと「OK Google」がオンのときだけ声で呼べる</td>
+<td data-label="出どころ">Gemini アプリ ヘルプ</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>声で呼んでも反応しないのに、マイクのアイコンなら動く</strong>ときは、「OK Google」の設定が原因です。ヘルプはVoice Matchと「OK Google」がオンになっているときにだけ声の呼び出しが働くとしています。年齢の条件は「<a href="/media/gemini-age-limit/">Geminiは何歳から使える？</a>」に、スマホ側でGeminiが動かないときの確認は「<a href="/media/gemini-not-working/">Geminiが使えない原因と対処</a>」にまとめました。</p>
 <p><a href="https://support.google.com/androidauto/answer/6348334?hl=ja">音声コマンドと音量に関する問題</a>のヘルプは、ハンドルのボタンを押す時間が短いとAndroid Autoが終了し、再起動が要ることがあると書いています。トーンが鳴るまで押し続け、鳴ってから話してください。</p>
 <h2 id="s5">音楽が再生できないとき</h2>
@@ -244,7 +266,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/android-auto-gemini/05_help_music_v2.jpg" alt="Gemini アプリ ヘルプ「Gemini モバイルアプリでメディア ストリーミング アプリの音楽を再生、検索する」の必要なもの。赤い枠の中に、Gemini アプリを使用する、Gemini モバイルアプリに個人の Google アカウントでログインしている、アクティビティの保存がオンになっている、この設定がオフだとGeminiはメディア ストリーミング アプリに接続できない、と書かれている" loading="lazy"><figcaption>アクティビティの保存がオフだと音楽アプリに接続できない（Gemini アプリ ヘルプ）</figcaption></figure>
 
 <p><a href="https://support.google.com/gemini/answer/15300097?hl=ja&amp;co=GENIE.Platform%3DAndroid">SpotifyやPandoraのヘルプ</a>と<a href="https://support.google.com/gemini/answer/15237118?hl=ja&amp;co=GENIE.Platform%3DAndroid">YouTube Musicのヘルプ</a>は、どちらも<strong>アクティビティの保存がオンでないと接続できない</strong>と書いています。車で試す前に、停車中にスマホのGeminiアプリで一度「Spotifyで〇〇を再生して」と頼むと、未接続なら接続の案内が出ます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>症状</th>
@@ -253,23 +275,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>「再生できない」と返される</td>
-<td>音楽アプリがGeminiに接続されていない。アクティビティの保存がオフ</td>
+<td data-label="症状">「再生できない」と返される</td>
+<td data-label="ヘルプにある条件">音楽アプリがGeminiに接続されていない。アクティビティの保存がオフ</td>
 </tr>
 <tr>
-<td>違うアプリで流れる</td>
-<td>アプリを指定しないと、最後に使ったアプリが選ばれる</td>
+<td data-label="症状">違うアプリで流れる</td>
+<td data-label="ヘルプにある条件">アプリを指定しないと、最後に使ったアプリが選ばれる</td>
 </tr>
 <tr>
-<td>曲を指定しても流れない</td>
-<td>オンデマンド再生に対応したサブスクリプションが要る</td>
+<td data-label="症状">曲を指定しても流れない</td>
+<td data-label="ヘルプにある条件">オンデマンド再生に対応したサブスクリプションが要る</td>
 </tr>
 <tr>
-<td>仕事用のアカウントで使えない</td>
-<td>個人のGoogle アカウントでのログインが要る（Spotifyなど）</td>
+<td data-label="症状">仕事用のアカウントで使えない</td>
+<td data-label="ヘルプにある条件">個人のGoogle アカウントでのログインが要る（Spotifyなど）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>頼むときは「YouTube Musicで〇〇を再生して」のように<strong>アプリの名前を入れる</strong>のが確実です。YouTube Musicのヘルプは、Geminiが別のアプリを選ぶときは「@YouTubeMusic」を付けて頼めると案内しています。</p>
 <h2 id="s6">勝手に起動する・話が止まらないとき</h2>
 <p><a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10328258645">Yahoo!知恵袋の質問</a>には、車内の会話にGeminiが割り込み、止めても話し続けるという相談があります。ヘルプにある3つの呼び出し方のうち、マイクのアイコンとハンドルのボタンは手で押す操作です。<strong>触れずに始まるのは「OK Google」だけです</strong>。</p>
@@ -279,7 +301,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s7">Android AutoだけGeminiをオフにできるか</h2>
 <p>Redditには「Android Autoのときだけ Geminiを切りたい」という投稿が並んでいます。2026年10月7日に読んだヘルプには、<strong>Android Autoの中でGeminiだけを切る設定は書かれていません</strong>。HelenTechは5月時点でAndroid AutoのGeminiの設定は「正確な位置情報を共有する」だけだったと伝えています。</p>
 <p>代わりにとれる手段は次の3つです。どれもスマホ全体の設定が変わります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>手段</th>
@@ -289,22 +311,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Geminiアプリで「OK Google」をオフ</td>
-<td>声での呼び出し（ヘルプの条件から読める。車では未確認）</td>
-<td>スマホでも声で呼べなくなる</td>
+<td data-label="手段">Geminiアプリで「OK Google」をオフ</td>
+<td data-label="車で止まるもの">声での呼び出し（ヘルプの条件から読める。車では未確認）</td>
+<td data-label="スマホへの影響">スマホでも声で呼べなくなる</td>
 </tr>
 <tr>
-<td>既定のデジタル アシスタント アプリを「なし」</td>
-<td>Geminiを使う条件から外れる。車の画面での動きはヘルプに書かれていない</td>
-<td>電源ボタンなどからアシスタントが開かなくなる</td>
+<td data-label="手段">既定のデジタル アシスタント アプリを「なし」</td>
+<td data-label="車で止まるもの">Geminiを使う条件から外れる。車の画面での動きはヘルプに書かれていない</td>
+<td data-label="スマホへの影響">電源ボタンなどからアシスタントが開かなくなる</td>
 </tr>
 <tr>
-<td>Googleアシスタントに戻す</td>
-<td>車の呼び出しもアシスタントに戻る（2026年9月4日から削除が進み、削除が済んだ端末では選べない）</td>
-<td>スマホのアシスタントも替わる</td>
+<td data-label="手段">Googleアシスタントに戻す</td>
+<td data-label="車で止まるもの">車の呼び出しもアシスタントに戻る（2026年9月4日から削除が進み、削除が済んだ端末では選べない）</td>
+<td data-label="スマホへの影響">スマホのアシスタントも替わる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>既定のアシスタントの変え方はヘルプの「<a href="https://support.google.com/gemini/answer/16938321?hl=ja">Android デバイスで Gemini アプリを管理、削除する</a>」にあります。［設定］［アプリ］［デフォルトのアプリ］［デジタル アシスタント アプリ］で「なし」を選びます。<strong>「なし」にしたときに車の音声操作がどこまで使えるかはヘルプに書かれておらず、試してもいません</strong>。電話やナビを声で頼む使い方を続けたいなら、「OK Google」だけを切る方が影響は小さくなります。</p>
 <p>Googleアシスタントに戻す方法は使えなくなりつつあります。<a href="https://www.itmedia.co.jp/mobile/articles/2608/06/news064.html">ITmedia Mobile（2026年8月6日）</a>によると、Googleは8月4日から日本の利用者にもアシスタントの提供終了を知らせるメールを送り、9月4日から削除を始め、全員に届くまで数週間かかる見込み、と伝えています。対象にはスマホから映すAndroid Autoも入る、とのことです。Geminiの最低要件を満たさない端末やGeminiが使えない地域では、引き続きアシスタントを使える場合があるとしています。同じ記事によると、Google 搭載の自動車のGoogleアシスタントは9月4日以降も引き続き動く見込みです。</p>
 <h2 id="s8">車でGemini Liveを使う</h2>
@@ -357,12 +379,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -371,9 +394,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Android AutoのGeminiでできること</a><a href="#s2">日本で使えるようになった時期</a><a href="#s3">使うために必要なもの</a><a href="#s4">Geminiが使えないときの確認</a><a href="#s5">音楽が再生できないとき</a><a href="#s6">勝手に起動する・話が止まらないとき</a><a href="#s7">Android AutoだけGeminiをオフにできるか</a><a href="#s8">車でGemini Liveを使う</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -406,11 +432,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

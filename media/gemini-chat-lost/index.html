@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Geminiのチャッ…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.25</span>
         </div>
         <h1 class="post-title">【2026年10月】Geminiのチャットが消えた原因と戻し方を解説｜履歴の探し方・自動削除・障害</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Geminiのチャットが消えた"><defs><linearGradient id="ecg-cfe1998a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-cfe1998a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Geminiのチャットが消えた</text><line x1="121.2" y1="327.1" x2="1078.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">履歴の探し方・自動削除・障害</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>保存したチャットも<strong>既定では18か月で自動削除</strong>。残したい回答はGoogleドキュメントへのエクスポートやGoogleデータエクスポートで手元に置ける</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -102,7 +110,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>公式ヘルプの<a href="https://support.google.com/gemini/answer/13278892?hl=ja">Geminiアプリのアクティビティを管理、削除する</a>と<a href="https://support.google.com/gemini/answer/13666746?hl=ja">最近のチャットを確認、管理する</a>、プライバシーハブ、Googleの障害の記録を合わせると、原因は5つに分かれます。見つかる可能性があるのは2つで、残りの3つは元に戻せません。</p>
 <figure class="post-figure"><img src="/media/images/gemini-chat-lost/00_fig_causes_v2.jpg" alt="Geminiのチャットが消えたように見える5つの原因の図。探せば見つかるのは別のアカウントと不具合や障害で、会話は元のアカウントやアクティビティに残っている。戻せないのは保存がオフの間の会話、最初から履歴に残らない一時チャット、既定では18か月で消える自動削除" loading="lazy"><figcaption>消えたように見える5つの原因</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>原因</th>
@@ -112,32 +120,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>別のアカウントに切り替わっている</td>
-<td>元のアカウントに残っている</td>
-<td>右上のアイコンでアカウントを確認</td>
+<td data-label="原因">別のアカウントに切り替わっている</td>
+<td data-label="会話は残っているか">元のアカウントに残っている</td>
+<td data-label="確かめ方">右上のアイコンでアカウントを確認</td>
 </tr>
 <tr>
-<td>アクティビティの保存がオフ</td>
-<td>オフの間の会話は残らない。それ以前の会話はアクティビティに残っていることがある</td>
-<td>設定の「アクティビティ」で状態を見る</td>
+<td data-label="原因">アクティビティの保存がオフ</td>
+<td data-label="会話は残っているか">オフの間の会話は残らない。それ以前の会話はアクティビティに残っていることがある</td>
+<td data-label="確かめ方">設定の「アクティビティ」で状態を見る</td>
 </tr>
 <tr>
-<td>一時チャットで話していた</td>
-<td>履歴には残らない</td>
-<td>残したい会話は通常のチャットで始める</td>
+<td data-label="原因">一時チャットで話していた</td>
+<td data-label="会話は残っているか">履歴には残らない</td>
+<td data-label="確かめ方">残したい会話は通常のチャットで始める</td>
 </tr>
 <tr>
-<td>自動削除の期間を過ぎた</td>
-<td>削除されている</td>
-<td>自動削除の期間を確認</td>
+<td data-label="原因">自動削除の期間を過ぎた</td>
+<td data-label="会話は残っているか">削除されている</td>
+<td data-label="確かめ方">自動削除の期間を確認</td>
 </tr>
 <tr>
-<td>表示の不具合やGoogle側の障害</td>
-<td>アクティビティに残っている</td>
-<td>シークレットモードで開く・ステータスダッシュボードを見る</td>
+<td data-label="原因">表示の不具合やGoogle側の障害</td>
+<td data-label="会話は残っているか">アクティビティに残っている</td>
+<td data-label="確かめ方">シークレットモードで開く・ステータスダッシュボードを見る</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**アカウントの切り替わりと表示の不具合や障害なら、会話は見つかります。**保存をオフにする前の会話も、アクティビティのページに残っていることがあります。保存がオフの間の会話、一時チャット、自動削除で消えたものは元には戻せません。</p>
 <h2 id="s2">消えたチャットを探す順番</h2>
 <p>探す手順は手間の少ないものから順に並べると次のとおりです。見つかった時点で終わってかまいません。</p>
@@ -166,9 +174,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li>ブラウザのキャッシュとCookieを消し、拡張機能を外した状態で開き直す</li>
 </ol>
 <p>シークレットモードで表示されるなら、原因はふだん使っているブラウザの側にあります。スマホのアプリで消えたときは、パソコンのブラウザで同じアカウントを開いて比べると端末の問題かどうかを切り分けられます。どの端末でも同じように消えているなら、次の障害を疑ってください。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Gemini を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">Google側の障害で消えたとき</h2>
 <p>自分の設定や端末に原因が無くても、Google側の障害で履歴が見えなくなることがあります。<a href="https://www.google.com/appsstatus/dashboard/incidents/nK23ZsSxV33wfkqXVeh3?hl=ja">Google Workspaceのステータスダッシュボード</a>には、2026年2月にパソコンのブラウザ版とスマホのアプリで会話の履歴が見えなくなった障害が記録されています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>日時（日本時間）</th>
@@ -177,19 +199,19 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>2026年2月19日 1時30分ごろ</td>
-<td>履歴が見えない問題が始まる</td>
+<td data-label="日時（日本時間）">2026年2月19日 1時30分ごろ</td>
+<td data-label="ステータスダッシュボードの記載">履歴が見えない問題が始まる</td>
 </tr>
 <tr>
-<td>2026年2月20日</td>
-<td>原因となった裏側の処理を止め、履歴を戻す作業中。終わる時期は未定</td>
+<td data-label="日時（日本時間）">2026年2月20日</td>
+<td data-label="ステータスダッシュボードの記載">原因となった裏側の処理を止め、履歴を戻す作業中。終わる時期は未定</td>
 </tr>
 <tr>
-<td>2026年2月23日 5時8分</td>
-<td>影響を受けた全員の分が解消</td>
+<td data-label="日時（日本時間）">2026年2月23日 5時8分</td>
+<td data-label="ステータスダッシュボードの記載">影響を受けた全員の分が解消</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure post-figure--sp"><img src="/media/images/gemini-chat-lost/gcl_04_status_feb.jpg" alt="Google Workspaceのステータスダッシュボードに載った2026年2月23日の最終報告の画面。英語でタイトル、説明、症状、回避策が並び、回避策にはパソコンでは設定とヘルプからアクティビティを開く、スマホでは右上のプロフィールからGeminiアプリアクティビティを選ぶと書かれている" loading="lazy"><figcaption>2026年2月の障害の最終報告（英語、2026年10月6日撮影）</figcaption></figure>
 
 <p>最終報告によると、原因は<strong>内部の処理が会話のメタデータの一部を消したことで、サイドバーから会話が隠れていました</strong>。その間も、隠れた会話の質問と回答はアクティビティのページから見られたと書かれています。Googleはバックアップからデータを戻して対応しました。</p>
@@ -216,7 +238,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li>保存期間を3か月・18か月・36か月から選ぶか、「アクティビティを自動削除しない」を選ぶ</li>
 </ol>
 <p>自動削除で消えた会話は、設定を変えても戻りません。**長く残したいチャットがあるなら、消える前に期間を延ばしておくのが確実です。**設定ごとに会話がどれだけ残るかは次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>状態</th>
@@ -226,33 +248,33 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>アクティビティの保存がオン</td>
-<td>既定で18か月。3か月・36か月・削除しないに変更可</td>
-<td>履歴と同じ</td>
+<td data-label="状態">アクティビティの保存がオン</td>
+<td data-label="自分の履歴に残る期間">既定で18か月。3か月・36か月・削除しないに変更可</td>
+<td data-label="Google側の保持">履歴と同じ</td>
 </tr>
 <tr>
-<td>アクティビティの保存がオフ</td>
-<td>残らない</td>
-<td>最長72時間</td>
+<td data-label="状態">アクティビティの保存がオフ</td>
+<td data-label="自分の履歴に残る期間">残らない</td>
+<td data-label="Google側の保持">最長72時間</td>
 </tr>
 <tr>
-<td>一時チャット</td>
-<td>残らない</td>
-<td>最長72時間。AIの学習には使われない</td>
+<td data-label="状態">一時チャット</td>
+<td data-label="自分の履歴に残る期間">残らない</td>
+<td data-label="Google側の保持">最長72時間。AIの学習には使われない</td>
 </tr>
 <tr>
-<td>自分で削除した</td>
-<td>すぐ画面から消える</td>
-<td>保存先から消す手順が始まる</td>
+<td data-label="状態">自分で削除した</td>
+<td data-label="自分の履歴に残る期間">すぐ画面から消える</td>
+<td data-label="Google側の保持">保存先から消す手順が始まる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s6">自分で削除したチャット</h2>
 <p>サイドバーからチャットを削除すると、Geminiアプリのアクティビティからも同時に消えます。公式ヘルプによると、削除したチャットはすぐに画面から消え、その後Googleの保存先からも完全に消す手順が始まります。元に戻す方法は案内されていません。チャットの中でCanvasを使って作った文書やアプリも一緒に消えます。</p>
 <p>ただし、削除しても残るものがあります。**共有したチャットの公開リンクは、チャットを削除しても消えません。**Gemとの会話を削除してもGem自体は残ります。会話の途中から「新しいチャットで分岐」で作ったチャットは元のチャットとは別に扱われ、片方を消してももう片方は残ります。消し方の単位と削除しても残るものは<a href="/media/gemini-history-delete/">Geminiの履歴を削除する方法</a>に、公開リンクの消し方は<a href="/media/gemini-share-link/">Geminiの共有リンク</a>にまとめています。</p>
 <h2 id="s7">消える前に残しておく方法</h2>
 <p>自動削除や障害に備えて、大事な会話は手元に書き出しておくと安心です。公式に案内されている方法は2つあります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>方法</th>
@@ -262,17 +284,17 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td><a href="https://support.google.com/gemini/answer/14184041?hl=ja">Googleドキュメントにエクスポート</a></td>
-<td>1つの回答</td>
-<td>残したい回答がはっきりしているとき</td>
+<td data-label="方法"><a href="https://support.google.com/gemini/answer/14184041?hl=ja">Googleドキュメントにエクスポート</a></td>
+<td data-label="書き出せるもの">1つの回答</td>
+<td data-label="向いている場面">残したい回答がはっきりしているとき</td>
 </tr>
 <tr>
-<td><a href="https://support.google.com/gemini/answer/16920332?hl=ja">Googleデータエクスポート</a></td>
-<td>チャット・生成したメディア・アップロードなどのアクティビティとGem</td>
-<td>まとめて手元に置きたいとき</td>
+<td data-label="方法"><a href="https://support.google.com/gemini/answer/16920332?hl=ja">Googleデータエクスポート</a></td>
+<td data-label="書き出せるもの">チャット・生成したメディア・アップロードなどのアクティビティとGem</td>
+<td data-label="向いている場面">まとめて手元に置きたいとき</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>ドキュメントへのエクスポートは、回答の下の「共有とエクスポート」アイコンから「Googleドキュメントにエクスポート」を選ぶだけです。Googleドライブに新しいドキュメントとして保存されます。</p>
 <p>まとめて残すなら<a href="https://takeout.google.com/">takeout.google.com</a>を開き、いったん選択をすべて解除してから「マイ アクティビティ」の中の「Geminiアプリ」にチェックを入れます。Gemも残したいときは「Gemini」にもチェックが必要です。**エクスポートの頻度を選べば、定期的に自動で書き出すこともできます。**削除や自動削除で消えたあとの会話は含まれないので、消える前に書き出しておいてください。</p>
 <h2 id="s8">よくある質問</h2>
@@ -307,12 +329,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -321,9 +344,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">チャットが消える5つの原因</a><a href="#s2">消えたチャットを探す順番</a><a href="#s3">Google側の障害で消えたとき</a><a href="#s4">履歴に残らない2つのケース</a><a href="#s5">自動削除で消えたとき</a><a href="#s6">自分で削除したチャット</a><a href="#s7">消える前に残しておく方法</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -356,11 +382,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

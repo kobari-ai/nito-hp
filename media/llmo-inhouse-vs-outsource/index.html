@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>AI検索対策は内製と外注どちらがいい？自…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.07.21</span>
         </div>
         <h1 class="post-title">AI検索対策は内製と外注どちらがいい？自社でできる範囲と頼るべき範囲</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="内製か外注かの線引き"><defs><linearGradient id="ecg-c4df2bf5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-c4df2bf5)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="137.3" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">判断ガイド</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">内製か外注かの線引き</text><line x1="220.0" y1="327.1" x2="980.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">自社でできる範囲と頼るべき範囲</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li>おすすめは、初動を内製で進め、実行の段階で伴走を入れる組み立て</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -98,7 +106,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>内製か外注かは、作業をひとまとめにしたままだと決められません。「AI検索対策」とだけ言うと、丸ごと外注するか何もしないかの二択になってしまいます。</p>
 <p>分解すると、やることは5つです。現状把握、情報整備、一次情報とFAQ、サイテーション、計測と改善。前半は自社の内側を整える作業、後半は社外での評価づくりと結果の確認にあたります。</p>
 <p>工程ごとに必要なスキルもコストも違います。まとめて判断せず、1つずつ「これは自社で回せるか」を問うところから始めます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>工程</th>
@@ -108,32 +116,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>現状把握</td>
-<td>AIに自社がどう出るか確認する</td>
-<td>始めやすい</td>
+<td data-label="工程">現状把握</td>
+<td data-label="主な作業">AIに自社がどう出るか確認する</td>
+<td data-label="内製での始めやすさ">始めやすい</td>
 </tr>
 <tr>
-<td>情報整備</td>
-<td>誰に・何が強いかをサイトに明記する</td>
-<td>始めやすい</td>
+<td data-label="工程">情報整備</td>
+<td data-label="主な作業">誰に・何が強いかをサイトに明記する</td>
+<td data-label="内製での始めやすさ">始めやすい</td>
 </tr>
 <tr>
-<td>一次情報・FAQ</td>
-<td>独自データや想定質問への回答を用意する</td>
-<td>始めやすい</td>
+<td data-label="工程">一次情報・FAQ</td>
+<td data-label="主な作業">独自データや想定質問への回答を用意する</td>
+<td data-label="内製での始めやすさ">始めやすい</td>
 </tr>
 <tr>
-<td>サイテーション</td>
-<td>第三者メディアや比較サイトでの言及を増やす</td>
-<td>外部の力が要る</td>
+<td data-label="工程">サイテーション</td>
+<td data-label="主な作業">第三者メディアや比較サイトでの言及を増やす</td>
+<td data-label="内製での始めやすさ">外部の力が要る</td>
 </tr>
 <tr>
-<td>計測・改善</td>
-<td>言及率とAI経由流入を継続的に見て直す</td>
-<td>継続に体制が要る</td>
+<td data-label="工程">計測・改善</td>
+<td data-label="主な作業">言及率とAI経由流入を継続的に見て直す</td>
+<td data-label="内製での始めやすさ">継続に体制が要る</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>上の3つは内製で始められ、下の2つで外部の力が効いてきます</strong>。工程の全体像は、進め方をまとめた記事でも解説しています。</p>
 <div class="in-link-card"><a href="/media/ai-search-first-steps/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">AI検索対策は何から始める？企業が取り組むべき5ステップ</div><div class="in-link-card__desc">現状把握から効果測定まで、AI検索対策を実務の順番で解説しています。工程の全体像はこちらで確認できます。</div></div></a></div>
 <h2 id="s2">内製で始められる範囲</h2>
@@ -168,7 +176,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>もう一つ、自社では気づきにくいのがブランドメッセージの言語化です。結局この会社は誰に何を届けるのか。外の視点で整理してもらうと、AIにも人にも伝わる一貫性の土台ができます。</p>
 <h2 id="s5">費用の目安（内製・外注）</h2>
 <p>金額には幅がありますが、目安を持っておくと判断しやすくなります。市場の料金体系を整理すると、おおむね次のレンジです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>進め方</th>
@@ -178,27 +186,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>初期診断・スポット</td>
-<td>現状分析や改善提案を単発で</td>
-<td>3〜30万円</td>
+<td data-label="進め方">初期診断・スポット</td>
+<td data-label="内容">現状分析や改善提案を単発で</td>
+<td data-label="費用の目安">3〜30万円</td>
 </tr>
 <tr>
-<td>月額コンサル</td>
-<td>方針設計と定例での伴走</td>
-<td>月20〜90万円</td>
+<td data-label="進め方">月額コンサル</td>
+<td data-label="内容">方針設計と定例での伴走</td>
+<td data-label="費用の目安">月20〜90万円</td>
 </tr>
 <tr>
-<td>実装まで含む伴走</td>
-<td>コンテンツ制作や施策実行まで</td>
-<td>月20〜120万円</td>
+<td data-label="進め方">実装まで含む伴走</td>
+<td data-label="内容">コンテンツ制作や施策実行まで</td>
+<td data-label="費用の目安">月20〜120万円</td>
 </tr>
 <tr>
-<td>内製</td>
-<td>社内担当者の人件費換算</td>
-<td>月20〜55万円相当</td>
+<td data-label="進め方">内製</td>
+<td data-label="内容">社内担当者の人件費換算</td>
+<td data-label="費用の目安">月20〜55万円相当</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>同じコンサルでも、対応範囲によって月20万円台から90万円近くまで開きます。実装まで含めるとさらに幅が出ます。</p>
 <p>見落としがちなのは、<strong>内製も無料ではない</strong>ことです。担当者の工数は人件費として発生します。外注費だけを見て内製を選ぶと、社内工数という見えないコストが後から乗ってきます。両者は同じ土俵で比べる必要があります。費用の内訳は別記事でも整理しています。</p>
 <div class="in-link-card"><a href="/media/llmo-cost/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">LLMO対策の費用相場は？内訳と予算別の考え方</div><div class="in-link-card__desc">AI検索対策にかかる費用の内訳と、予算に応じた進め方を解説しています。金額感を詰めたい方はこちらへ。</div></div></a></div>
@@ -254,12 +262,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>看板よりも、AI検索対策を技術設定だけに切り詰めていないかを確認してください。事業の強みの言語化や効果測定、問い合わせという成果まで一緒に見られる相手であれば、どちらでも問題ありません。</p>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -268,9 +277,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">AI検索対策の作業を5つの工程に分ける</a><a href="#s2">内製で始められる範囲</a><a href="#s3">内製だけだとつまずきやすいところ</a><a href="#s4">外部の力が効く範囲</a><a href="#s5">費用の目安（内製・外注）</a><a href="#s6">どう組み立てるか：初動は内製、実行は伴走で</a><a href="#s7">外注するなら、発注側の準備で成果が変わる</a><a href="#s8">AI検索対策を伴走で進めるなら</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -303,11 +315,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

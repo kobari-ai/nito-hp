@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>Google AIモードとChatGPT…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.07.31</span>
         </div>
         <h1 class="post-title">Google AIモードとChatGPTの違い。企業が対策で押さえるべき点</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードとChatGPT"><defs><linearGradient id="ecg-d94495a5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d94495a5)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底比較</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードとChatGPT</text><line x1="242.8" y1="327.1" x2="957.2" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">違いと対策で押さえる点</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>どちらを優先するかは、<strong>自社の見込み客がどちらを使っているか</strong>で決める</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -94,7 +102,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>いちばん大きな違いは、答えの材料をどこから持ってくるかです。</p>
 <p><strong>Google AIモード</strong>は、Googleの検索インデックスを土台にしています。質問を受けると内部で複数の検索を走らせ、その結果をまとめて回答を組み立てます。つまり、Googleにインデックスされていて、検索で評価されているページが材料になります。</p>
 <p><strong>ChatGPT</strong>は、学習済みのデータをベースに答えます。必要に応じてWeb検索も行いますが、基本は学習時点の知識と、その会話の文脈から答えを組み立てます。だから、Web上で広く言及されている企業やサービスほど答えに登場しやすくなります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>観点</th>
@@ -104,27 +112,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>答えの土台</td>
-<td>Googleの検索インデックス</td>
-<td>学習データ＋必要に応じたWeb検索</td>
+<td data-label="観点">答えの土台</td>
+<td data-label="Google AIモード">Googleの検索インデックス</td>
+<td data-label="ChatGPT">学習データ＋必要に応じたWeb検索</td>
 </tr>
 <tr>
-<td>効きやすい要素</td>
-<td>SEOの評価、インデックス状況</td>
-<td>Web全体での言及量、指名度</td>
+<td data-label="観点">効きやすい要素</td>
+<td data-label="Google AIモード">SEOの評価、インデックス状況</td>
+<td data-label="ChatGPT">Web全体での言及量、指名度</td>
 </tr>
 <tr>
-<td>引用元の示し方</td>
-<td>リンクで出典を示すことが多い</td>
-<td>出典を示さないこともある</td>
+<td data-label="観点">引用元の示し方</td>
+<td data-label="Google AIモード">リンクで出典を示すことが多い</td>
+<td data-label="ChatGPT">出典を示さないこともある</td>
 </tr>
 <tr>
-<td>反映の速さ</td>
-<td>インデックスされれば比較的早い</td>
-<td>学習の周期に左右され遅いことがある</td>
+<td data-label="観点">反映の速さ</td>
+<td data-label="Google AIモード">インデックスされれば比較的早い</td>
+<td data-label="ChatGPT">学習の周期に左右され遅いことがある</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s2">対策として何が変わるか</h2>
 <p>この違いは、そのまま打ち手の違いになります。</p>
 <p><strong>Google AIモードを狙うなら、SEOの積み上げがそのまま効きます</strong>。インデックスされていること、検索で一定の評価を得ていること、質問に対して明快に答えているページがあること。従来のSEOでやってきたことが土台になります。逆に言えば、インデックスされていないページは、どれだけ内容が良くてもAIモードの材料になりません。</p>
@@ -188,12 +196,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>一般にはGoogle AIモードのほうが先に動きやすい傾向があります。インデックスされれば材料になりうるためです。ChatGPTは学習の周期が絡むため、変化が見えるまで時間がかかることがあります。</p>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -202,9 +211,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">そもそも何が違うのか</a><a href="#s2">対策として何が変わるか</a><a href="#s3">引用元の示し方が違う</a><a href="#s4">どちらを優先すべきか</a><a href="#s5">両方に共通して効くこと</a><a href="#s6">AI検索対策を伴走で進めるなら</a><a href="#s7">まとめ</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -237,11 +249,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

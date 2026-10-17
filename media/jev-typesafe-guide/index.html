@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Jev（TypeSaf…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.19</span>
         </div>
         <h1 class="post-title">【2026年9月】Jev（TypeSafe AI）とは？文章を書かないAIの仕組み・料金・使い方・苦手なこと</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jev（TypeSafe AI）とは"><defs><linearGradient id="ecg-5e05245f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5e05245f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Jev（TypeSafe AI）とは</text><line x1="128.8" y1="327.1" x2="1071.2" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">判断だけを返すAIの仕組みと使いどころ</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li><strong>英語が主で、日本語を含むCJKは同等の精度が出ない</strong>と公式が明記。日付計算・数値・文章生成も苦手</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -114,7 +122,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Jevへの質問は「<a href="https://docs.typesafe.ai/primitives">プリミティブ</a>」と呼ばれ、3種類しかありません。質問ごとにIDと <code>type</code> と <code>instructions</code>（何を判断するか）を書き、ChoiceとScoreには <code>criteria</code>（選択肢や段階）を付けます。</p>
 <figure class="post-figure"><img src="/media/images/jev-typesafe-guide/00_fig_primitives.png" alt="Choice・Score・Noulの3種類の質問と、それぞれが返す値の例" loading="lazy"><figcaption>3種類の質問と返り値（公式ドキュメント「Primitives」から。数値は例）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>質問の型</th>
@@ -125,33 +133,47 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Choice</td>
-<td>どれか</td>
-<td>選んだ1つ、全選択肢の確率、確信度</td>
-<td>この問い合わせは請求・技術・営業のどの担当か</td>
+<td data-label="質問の型">Choice</td>
+<td data-label="答えるもの">どれか</td>
+<td data-label="返る値">選んだ1つ、全選択肢の確率、確信度</td>
+<td data-label="例">この問い合わせは請求・技術・営業のどの担当か</td>
 </tr>
 <tr>
-<td>Score</td>
-<td>どの段階か</td>
-<td>段階の期待値、段階ごとの確率、確信度</td>
-<td>顧客の怒りは冷静・不満・激怒のどこか</td>
+<td data-label="質問の型">Score</td>
+<td data-label="答えるもの">どの段階か</td>
+<td data-label="返る値">段階の期待値、段階ごとの確率、確信度</td>
+<td data-label="例">顧客の怒りは冷静・不満・激怒のどこか</td>
 </tr>
 <tr>
-<td>Noul</td>
-<td>本当か</td>
-<td>0〜1の確率</td>
-<td>この文面は返金を求めているか</td>
+<td data-label="質問の型">Noul</td>
+<td data-label="答えるもの">本当か</td>
+<td data-label="返る値">0〜1の確率</td>
+<td data-label="例">この文面は返金を求めているか</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>公式ドキュメントの例では、決済連携が3日間失敗しているという問い合わせを渡して「担当」「怒りの度合い」「緊急か」の3問を同時に投げると、<code>department: "billing"</code>、<code>frustration: 1.035</code>、<code>is_urgent: 0.999</code> のような答えが返ります。プログラム側は「緊急の確率が0.9を超えたら優先キューへ」「担当の確信度が0.6を下回ったら人が振り分ける」といった分岐をそのまま書けます。</p>
 <figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_05_docs_quickstart.jpg" alt="公式ドキュメントのQuick start。Playgroundにサンプルの問い合わせを貼り、Noulの質問を追加する手順" loading="lazy"><figcaption>公式のQuick start。Playgroundなら登録だけで試せる</figcaption></figure>
 
 <h3 id="s2-1">質問の作り方の原則</h3>
 <p>公式ドキュメントが繰り返し書いているのは「1つの質問には1つの即断」という原則です。「このメッセージは緊急か」は良い質問で、「このメッセージを分析して最適な対応を決めて」は悪い質問です。複数の要因で決まる判断は要因ごとに別の質問にして、答えをコードで組み合わせます。スタートアップのピッチを採点したいなら「市場規模」「技術的な実現性」「チーム」を別々に聞く、という具合です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">料金と上限</h2>
 <p>公式の「<a href="https://docs.typesafe.ai/models">Models</a>」ページに載っている、2026年9月19日時点の仕様です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>項目</th>
@@ -160,35 +182,35 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>モデル</td>
-<td>jev-1.13.0（エイリアス <code>jev-latest</code>、<code>jev-preview</code>）</td>
+<td data-label="項目">モデル</td>
+<td data-label="公表値">jev-1.13.0（エイリアス <code>jev-latest</code>、<code>jev-preview</code>）</td>
 </tr>
 <tr>
-<td>料金</td>
-<td><strong>入力100万トークンあたり$0.042。出力は無料</strong></td>
+<td data-label="項目">料金</td>
+<td data-label="公表値"><strong>入力100万トークンあたり$0.042。出力は無料</strong></td>
 </tr>
 <tr>
-<td>応答時間</td>
-<td>70〜500ミリ秒（米国西海岸からの計測）</td>
+<td data-label="項目">応答時間</td>
+<td data-label="公表値">70〜500ミリ秒（米国西海岸からの計測）</td>
 </tr>
 <tr>
-<td>コンテキスト</td>
-<td>1リクエスト64,000トークン。stateと最長の質問で32,000トークン</td>
+<td data-label="項目">コンテキスト</td>
+<td data-label="公表値">1リクエスト64,000トークン。stateと最長の質問で32,000トークン</td>
 </tr>
 <tr>
-<td>レート上限</td>
-<td>毎秒250,000トークン・毎分1,200リクエスト（需要に応じて予告なく変動）</td>
+<td data-label="項目">レート上限</td>
+<td data-label="公表値">毎秒250,000トークン・毎分1,200リクエスト（需要に応じて予告なく変動）</td>
 </tr>
 <tr>
-<td>入力</td>
-<td>テキストのみ。画像・音声・動画は非対応</td>
+<td data-label="項目">入力</td>
+<td data-label="公表値">テキストのみ。画像・音声・動画は非対応</td>
 </tr>
 <tr>
-<td>学習への利用</td>
-<td>顧客のリクエストと応答は学習に使わない。企業向けにゼロデータ保持あり</td>
+<td data-label="項目">学習への利用</td>
+<td data-label="公表値">顧客のリクエストと応答は学習に使わない。企業向けにゼロデータ保持あり</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_04_docs_models.jpg" alt="公式ドキュメントのModelsページ。Jev 1.13の料金・レート上限・コンテキスト長・入力形式の表" loading="lazy"><figcaption>公式のModelsページ（2026年9月19日）</figcaption></figure>
 
 <p>料金を業務の規模で見ると、問い合わせ1件を1,000トークンとして1件あたり$0.000042、1ドル150円なら約0.006円です。10万件を判定しても約630円で、出力が無料なので質問を増やしても入力分しか増えません。X上で共有されている「1決定あたり$0.0002」という数字は、ブラウザ操作のように1回のstateが数千トークンになる用途での実測値です。</p>
@@ -215,7 +237,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>公式ドキュメントには「<a href="https://docs.typesafe.ai/model-jaggedness/jev-1.13">Model jaggedness</a>（モデルのむら）」というページがあり、jev-1.13が苦手なことが失敗の型ごとに整理されています。業務に組み込む前に見ておく表です。</p>
 <figure class="post-figure"><img src="/media/images/jev-typesafe-guide/jev_06_docs_jagged.jpg" alt="公式ドキュメントのJev 1.13 jaggednessページ。失敗の型と代わりにすべきことの表" loading="lazy"><figcaption>公式の「Jev 1.13 jaggedness」（2026年9月17日更新）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>苦手なこと</th>
@@ -225,52 +247,52 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>数値と計算</td>
-<td>個数を数える、金額を比べる、Scoreの小数から正確な量を出す</td>
-<td>数えるのも計算もコードで。モデルには「しきい値を超えるか」だけ聞く</td>
+<td data-label="苦手なこと">数値と計算</td>
+<td data-label="何が起きるか">個数を数える、金額を比べる、Scoreの小数から正確な量を出す</td>
+<td data-label="公式の代替案">数えるのも計算もコードで。モデルには「しきい値を超えるか」だけ聞く</td>
 </tr>
 <tr>
-<td>数値の表現</td>
-<td>16進のカラーコードやRGBより「赤」のような名前のほうが精度が高い</td>
-<td>コードで名前や区分に変換してから渡す</td>
+<td data-label="苦手なこと">数値の表現</td>
+<td data-label="何が起きるか">16進のカラーコードやRGBより「赤」のような名前のほうが精度が高い</td>
+<td data-label="公式の代替案">コードで名前や区分に変換してから渡す</td>
 </tr>
 <tr>
-<td>日付と時刻</td>
-<td>どちらが先か、何日離れているか、期間内かの判定が不安定</td>
-<td>日付の抽出だけモデルに任せ（月・日・年はChoice）、比較はコードで</td>
+<td data-label="苦手なこと">日付と時刻</td>
+<td data-label="何が起きるか">どちらが先か、何日離れているか、期間内かの判定が不安定</td>
+<td data-label="公式の代替案">日付の抽出だけモデルに任せ（月・日・年はChoice）、比較はコードで</td>
 </tr>
 <tr>
-<td>回りくどい指示</td>
-<td>二重否定や、性質の性質を問う多段の推論で精度が落ちる</td>
-<td>直接的に書く。stateの該当箇所を名前で指す</td>
+<td data-label="苦手なこと">回りくどい指示</td>
+<td data-label="何が起きるか">二重否定や、性質の性質を問う多段の推論で精度が落ちる</td>
+<td data-label="公式の代替案">直接的に書く。stateの該当箇所を名前で指す</td>
 </tr>
 <tr>
-<td>無関係な情報の多いstate</td>
-<td>判断に関係ない内容が増えるほど精度が落ちる</td>
-<td>コードで絞ってから渡す。無理ならNoulで関連性を先に判定</td>
+<td data-label="苦手なこと">無関係な情報の多いstate</td>
+<td data-label="何が起きるか">判断に関係ない内容が増えるほど精度が落ちる</td>
+<td data-label="公式の代替案">コードで絞ってから渡す。無理ならNoulで関連性を先に判定</td>
 </tr>
 <tr>
-<td>敵対的な内容</td>
-<td>stateを「データ」として扱い、注入された指示を疑わない</td>
-<td>criteriaに明示する。多人数に出す前に十分テスト</td>
+<td data-label="苦手なこと">敵対的な内容</td>
+<td data-label="何が起きるか">stateを「データ」として扱い、注入された指示を疑わない</td>
+<td data-label="公式の代替案">criteriaに明示する。多人数に出す前に十分テスト</td>
 </tr>
 <tr>
-<td>指示とcriteriaの矛盾</td>
-<td>trueが「いいえ」を意味するような書き方で混乱する</td>
-<td>criteriaを指示の延長として、同じ言葉で書く</td>
+<td data-label="苦手なこと">指示とcriteriaの矛盾</td>
+<td data-label="何が起きるか">trueが「いいえ」を意味するような書き方で混乱する</td>
+<td data-label="公式の代替案">criteriaを指示の延長として、同じ言葉で書く</td>
 </tr>
 <tr>
-<td>質問形式をまたいだ一貫性</td>
-<td>同じ問いをNoulとChoiceで聞くと数値が対応しない。「返金か」と「返金でないか」の確率の和が1にならない</td>
-<td>聞きたいことをそのまま1つの形で聞く。しきい値を別の形式に流用しない</td>
+<td data-label="苦手なこと">質問形式をまたいだ一貫性</td>
+<td data-label="何が起きるか">同じ問いをNoulとChoiceで聞くと数値が対応しない。「返金か」と「返金でないか」の確率の和が1にならない</td>
+<td data-label="公式の代替案">聞きたいことをそのまま1つの形で聞く。しきい値を別の形式に流用しない</td>
 </tr>
 <tr>
-<td>文章生成</td>
-<td>Choiceを連鎖させて文章を作ることは技術的に可能だが、精度が低く遅い</td>
-<td>生成は生成モデルに任せる</td>
+<td data-label="苦手なこと">文章生成</td>
+<td data-label="何が起きるか">Choiceを連鎖させて文章を作ることは技術的に可能だが、精度が低く遅い</td>
+<td data-label="公式の代替案">生成は生成モデルに任せる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="s5-1">日本語で使うときの注意</h3>
 <p>公式の「Models」ページには、英語が主な学習言語で精度も英語が最も高く、<strong>日本語を含むCJKは扱えるが同等ではないので自分のコンテンツでテストしてから頼ること</strong>、と書かれています。日本語の問い合わせ分類に使うなら、まず数百件で英語と同じ精度が出るかを確かめ、確信度のしきい値を英語より保守的に置くのが現実的です。</p>
 <p>日本から呼ぶ場合は通信の遅れも乗ります。公表の70〜500ミリ秒は米国西海岸からの計測なので、国内からだと0.5〜0.8秒程度になったという報告が<a href="https://koiyal.com/blog/jev-system-one-model-explained">日本の解説記事</a>にあります。</p>
@@ -310,12 +332,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -324,9 +347,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Jevとは何か</a><a href="#s2">Jevに投げられる3種類の質問</a><a href="#s3">料金と上限</a><a href="#s4">公式が挙げている使いどころ</a><a href="#s5">公式が認めているJevの苦手なこと</a><a href="#s6">使い始める手順</a><a href="#s7">AI検索の側から見たJev</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -359,11 +385,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

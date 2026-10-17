@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Claudeの解約方…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.04</span>
         </div>
         <h1 class="post-title">【2026年10月】Claudeの解約方法を解説｜いつまで使える・返金・iPhone・解約できないとき</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeを解約する"><defs><linearGradient id="ecg-84e5ccf5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-84e5ccf5)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeを解約する</text><line x1="273.2" y1="327.1" x2="926.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">いつまで使える・返金・iPhone</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>支払いは<strong>原則として返金されない</strong>。iPhoneのアプリで払った分の返金はAppleに申請する</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -95,7 +103,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p><a href="https://support.claude.com/ja/articles/8325617">Pro または Max サブスクリプションをキャンセルする</a>のヘルプによると、解約はサインアップしたプラットフォームの手順に従います。同じClaudeでも、どこで払ったかで操作する画面が変わります。</p>
 <figure class="post-figure"><img src="/media/images/claude-cancel/00_fig_where.png" alt="Claudeの解約を契約した場所ごとに分けた図。1ウェブ・デスクトップで契約したら左下の名前から設定を開き請求のキャンセル。2iPhoneのアプリで契約したらアプリの右上のイニシャルから請求、サブスクリプションを管理で、支払いと返金はApple。3Androidのアプリで契約したら同じくアプリから、アプリを消していたらGoogle Playから。4TeamとセルフサービスのEnterpriseは、オーナーかプライマリオーナーが組織設定のお支払いからキャンセルする" loading="lazy"><figcaption>解約する場所は、契約した場所で決まる</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>契約した場所</th>
@@ -104,23 +112,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>claude.ai・デスクトップアプリ</td>
-<td>左下の名前から［設定］の［請求］で［キャンセル］</td>
+<td data-label="契約した場所">claude.ai・デスクトップアプリ</td>
+<td data-label="解約する場所">左下の名前から［設定］の［請求］で［キャンセル］</td>
 </tr>
 <tr>
-<td>iPhoneのClaudeアプリ</td>
-<td>アプリの右上のイニシャルから［請求］（料金ページのFAQでは［お支払い］）の［サブスクリプションを管理］。アプリを消していればAppleのサブスクリプションの設定</td>
+<td data-label="契約した場所">iPhoneのClaudeアプリ</td>
+<td data-label="解約する場所">アプリの右上のイニシャルから［請求］（料金ページのFAQでは［お支払い］）の［サブスクリプションを管理］。アプリを消していればAppleのサブスクリプションの設定</td>
 </tr>
 <tr>
-<td>AndroidのClaudeアプリ</td>
-<td>アプリの右上のイニシャルから［請求］の［サブスクリプションを管理］。アプリを消していればGoogle Playの定期購入</td>
+<td data-label="契約した場所">AndroidのClaudeアプリ</td>
+<td data-label="解約する場所">アプリの右上のイニシャルから［請求］の［サブスクリプションを管理］。アプリを消していればGoogle Playの定期購入</td>
 </tr>
 <tr>
-<td>TeamプランとセルフサービスのEnterprise</td>
-<td>オーナーかプライマリオーナーが組織設定の［お支払い］から</td>
+<td data-label="契約した場所">TeamプランとセルフサービスのEnterprise</td>
+<td data-label="解約する場所">オーナーかプライマリオーナーが組織設定の［お支払い］から</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>どこで契約したか分からないときは、届いている領収書を見ます。<a href="https://support.claude.com/ja/articles/8325618">有料プラン請求のFAQ</a>によると、ウェブで払った分の領収書は「Your receipt from Anthropic」という件名でメールに届きます。App StoreやGoogle Playで払った分の領収書は、それぞれのストアのアカウントで管理されます。</p>
 <h2 id="s2">ウェブとデスクトップで解約する</h2>
 <p><a href="https://claude.ai/">claude.ai</a>かデスクトップアプリで申し込んだ場合の手順です。</p>
@@ -132,6 +140,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/claude-cancel/ccl_02_billing.png" alt="claude.aiの設定画面。1は左のメニューの［請求］を赤枠で囲んだもの。2はその画面のいちばん下にある［解約］の欄で、プランをキャンセルの横の［キャンセル］ボタンを赤枠で囲んだもの" loading="lazy"><figcaption>claude.aiの［設定］→［請求］の画面（2026年10月4日に撮影。ボタンは押していない）</figcaption></figure>
 
 <p>設定の中の名前は、ヘルプでは［請求］、<a href="https://claude.com/ja/pricing">料金ページ</a>のFAQでは［お支払い］と書かれています。どちらも同じ画面です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">iPhoneとAndroidで解約する</h2>
 <p>アプリで申し込んだ場合、支払いはApple App StoreかGoogle Playが処理しています。止めるのはClaudeの設定画面ではなく、アプリかストアの側です。</p>
 <ol>
@@ -149,7 +171,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>年払いのProを途中で解約した場合も、ヘルプの書き方では請求期間の終わりまで使えて、そのあとFree planに移ります。料金ページではProに年払い（一括請求）がありますが、年払いの残りの期間も、次の節の決まりでは原則として返金されません（欧州経済領域と英国の購入から14日以内を除く）。</p>
 <h2 id="s5">返金の条件</h2>
 <p><a href="https://support.claude.com/ja/articles/12386328">有料のClaudeプランの払い戻しをリクエストする</a>のヘルプでは、Consumer Terms of Serviceに書かれている場合と法律で必要な場合を除き、すべての支払いは返金されないと書かれています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>場面</th>
@@ -158,27 +180,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ウェブで払った分</td>
-<td>返金の対象なら、［ヘルプを取得］のメッセンジャーから「Claude払い戻しリクエスト」で申請</td>
+<td data-label="場面">ウェブで払った分</td>
+<td data-label="ヘルプの書き方">返金の対象なら、［ヘルプを取得］のメッセンジャーから「Claude払い戻しリクエスト」で申請</td>
 </tr>
 <tr>
-<td>欧州経済領域と英国</td>
-<td>購入から14日以内なら、使った分を引いて返金</td>
+<td data-label="場面">欧州経済領域と英国</td>
+<td data-label="ヘルプの書き方">購入から14日以内なら、使った分を引いて返金</td>
 </tr>
 <tr>
-<td>iPhoneのアプリで払った分</td>
-<td>Appleが判断する。reportaproblem.apple.comから申請</td>
+<td data-label="場面">iPhoneのアプリで払った分</td>
+<td data-label="ヘルプの書き方">Appleが判断する。reportaproblem.apple.comから申請</td>
 </tr>
 <tr>
-<td>Androidのアプリで払った分</td>
-<td>サポートが対象かを確かめてから手伝う</td>
+<td data-label="場面">Androidのアプリで払った分</td>
+<td data-label="ヘルプの書き方">サポートが対象かを確かめてから手伝う</td>
 </tr>
 <tr>
-<td>ProやMaxからTeamに移った</td>
-<td>個人の契約は自動で解約され、使っていない期間の分が日割りで返金</td>
+<td data-label="場面">ProやMaxからTeamに移った</td>
+<td data-label="ヘルプの書き方">個人の契約は自動で解約され、使っていない期間の分が日割りで返金</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>iPhoneのアプリで払った分は、**Appleに返金を申請しても解約にはなりません。**返金とは別に、サブスクリプションの解約もしておきます。</p>
 <h2 id="s6">解約できないとき</h2>
 <p>解約のボタンが見つからないときや、解約したのに請求が来たときは、次の順に確かめます。</p>
@@ -220,12 +242,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -234,9 +257,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">解約は契約した場所で行う</a><a href="#s2">ウェブとデスクトップで解約する</a><a href="#s3">iPhoneとAndroidで解約する</a><a href="#s4">解約するといつまで使えるか</a><a href="#s5">返金の条件</a><a href="#s6">解約できないとき</a><a href="#s7">アカウントの削除は解約と別</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -269,11 +295,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

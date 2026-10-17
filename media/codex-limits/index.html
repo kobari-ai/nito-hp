@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Codexの制限とリ…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AIエージェント</span>
             <span class="post-date">2026.10.01</span>
         </div>
         <h1 class="post-title">【2026年10月】Codexの制限とリセットを解説｜5時間枠・週間枠・確認方法・保存済みリセット</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Codexの制限とリセット"><defs><linearGradient id="ecg-e2c23412" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e2c23412)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Codexの制限とリセット</text><line x1="182.0" y1="327.1" x2="1018.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">5時間枠・週間枠・確認方法・保存済みリセット</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li>即時リセットはPlusとProの個人アカウントがChatGPTのウェブ版とCodexのデスクトップアプリで買える（アカウントと請求先の国による）。<strong>枠が増えるのではなく次の週の枠を前倒しで使う仕組み</strong>で、サポートに頼んでも上限は戻らない</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -104,7 +112,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ChatGPT Workで長い調査をした日は、同じ枠からCodexの分も減っています。Codexをあまり使っていないのに上限が近いときは、Workの使い方も見直します。WorkとCodexの枠の大きさをプランごとに比べたい場合は、<a href="/media/chatgpt-work-plans/">ChatGPT Workのプランと上限</a>にまとめました。</p>
 <h3 id="s1-1">5時間で送れる量の目安</h3>
 <p>同じヘルプにはPlusとBusiness Standardで5時間あたりに送れるローカルメッセージの数の目安がモデルごとに載っています。<strong>目安であって保証ではなく、タスク・モデル・設定によって変わり、週間枠もかかる</strong>と断ったうえでの幅です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>モデル</th>
@@ -114,27 +122,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>GPT-6 Astra</td>
-<td>5〜45</td>
-<td>5〜45</td>
+<td data-label="モデル">GPT-6 Astra</td>
+<td data-label="Plus">5〜45</td>
+<td data-label="Business Standard">5〜45</td>
 </tr>
 <tr>
-<td>GPT-6.1 Sol</td>
-<td>15〜160</td>
-<td>15〜160</td>
+<td data-label="モデル">GPT-6.1 Sol</td>
+<td data-label="Plus">15〜160</td>
+<td data-label="Business Standard">15〜160</td>
 </tr>
 <tr>
-<td>GPT-6 Sol</td>
-<td>15〜150</td>
-<td>15〜150</td>
+<td data-label="モデル">GPT-6 Sol</td>
+<td data-label="Plus">15〜150</td>
+<td data-label="Business Standard">15〜150</td>
 </tr>
 <tr>
-<td>GPT-6 Luna</td>
-<td>350〜3,000</td>
-<td>350〜3,000</td>
+<td data-label="モデル">GPT-6 Luna</td>
+<td data-label="Plus">350〜3,000</td>
+<td data-label="Business Standard">350〜3,000</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Plusで比べると、**GPT-6 AstraはGPT-6 Lunaの数十分の1の量で5時間枠が尽きる計算です。**クラウドのタスクはローカルより多く枠を使うことがあります。Proの3プランとBusiness Premiumは5時間枠がないため、この表の対象外です。APIキーで使う場合は従量課金で、この枠の外です。</p>
 <h2 id="s2">残りとリセット時刻の確認方法</h2>
 <p>残りの量とリセットの時刻は、**デスクトップアプリ・CLI・ウェブの［設定］→［使用状況］**で見られます。OpenAIのヘルプ「<a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan">Using Codex with your ChatGPT plan</a>」は、上限が近いときや達したときに、どの枠が尽きたか、クレジットの残高、表示されたリセットの時刻を確かめるよう案内しています。</p>
@@ -142,11 +150,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ヘルプの書き方は「プランによっては両方が適用される」で、**全員に両方の枠があるとは限りません。**自分のアカウントにどちらの枠があるかは、［使用状況］で確かめます。</p>
 <h3 id="s2-1">作業中に上限に達したとき</h3>
 <p>Codexが作業をしている途中で上限に達しても、<strong>その回の作業は公正な利用の範囲で最後まで続けられる</strong>とヘルプに書かれています。止まるのは次の依頼からです。作業が終わったら［使用状況］か上限の案内を開き、どの選択肢が出ているかを確かめます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">上限に達したあとの4つの選択肢</h2>
 <p>上限に達したときにできることは、待つ・保存済みリセットを使う・即時リセットを買う・クレジットで続けるの4つです。<strong>どれが出るかはプランとアカウントで変わり、ヘルプは上限の案内に出た選択肢を確かめるよう書いています。</strong></p>
 <figure class="post-figure"><img src="/media/images/codex-limits/03_fig_ways.png" alt="Codexの上限に達したあとの4つの選択肢の図。リセットを待つ：使用状況に出る時刻になると自動で戻り、週のリセット日は変わらない。保存済みリセットを使う：配られた人だけで、5時間枠と週間枠を1回だけ戻し、週のリセット日が変わり期限を過ぎると消える。即時リセットを買う：PlusとProの個人アカウントが対象で、次の週の枠を前倒しで使い、買った時点で適用され取っておけない。クレジットで続ける：プランの枠を使い切ったあと残高から差し引いて使う、リセットとは別の従量の残高" loading="lazy"><figcaption>上限に達したあとの4つの選択肢</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>選択肢</th>
@@ -157,31 +179,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>リセットを待つ</td>
-<td>全員</td>
-<td>変わらない</td>
-<td>関係なし</td>
+<td data-label="選択肢">リセットを待つ</td>
+<td data-label="使える人">全員</td>
+<td data-label="週のリセット日">変わらない</td>
+<td data-label="取っておけるか">関係なし</td>
 </tr>
 <tr>
-<td>保存済みリセット</td>
-<td>配られた人</td>
-<td>使った日を起点に変わる</td>
-<td>期限まで取っておける</td>
+<td data-label="選択肢">保存済みリセット</td>
+<td data-label="使える人">配られた人</td>
+<td data-label="週のリセット日">使った日を起点に変わる</td>
+<td data-label="取っておけるか">期限まで取っておける</td>
 </tr>
 <tr>
-<td>即時リセットの購入</td>
-<td>PlusとProの個人アカウント</td>
-<td>購入後の最初の依頼から7日後に変わる</td>
-<td>取っておけない</td>
+<td data-label="選択肢">即時リセットの購入</td>
+<td data-label="使える人">PlusとProの個人アカウント</td>
+<td data-label="週のリセット日">購入後の最初の依頼から7日後に変わる</td>
+<td data-label="取っておけるか">取っておけない</td>
 </tr>
 <tr>
-<td>クレジット</td>
-<td>対象のプラン</td>
-<td>変わらない</td>
-<td>残高として残る</td>
+<td data-label="選択肢">クレジット</td>
+<td data-label="使える人">対象のプラン</td>
+<td data-label="週のリセット日">変わらない</td>
+<td data-label="取っておけるか">残高として残る</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>モデルを軽いものに切り替えても、**使い切った枠の残りは戻りません。**ヘルプはこの点をはっきり書いています。軽いモデルに替えるのは次の枠を長持ちさせるためです。</p>
 <h3 id="s3-1">保存済みリセット</h3>
 <p>OpenAIは2026年9月3日と4日、GPT-6 Astraの提供に合わせて、条件を満たすPlus・Pro・Businessのアカウントに、各日1回分の保存済みリセットを配りました。両日とも条件を満たした人は、2回分を受け取った計算です。ヘルプ「<a href="https://help.openai.com/ja-jp/articles/20001498-how-banked-codex-resets-work">保存済み Codex リセットの仕組み</a>」によると、**1つの保存済みリセットはCodexの使用上限を1回だけリセットでき、使うか期限が切れるまでアカウントに残ります。**友だちを招待する紹介の特典で配られることもあります。</p>
@@ -240,12 +262,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -254,9 +277,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">5時間枠と週間枠</a><a href="#s2">残りとリセット時刻の確認方法</a><a href="#s3">上限に達したあとの4つの選択肢</a><a href="#s4">サポートでは上限をリセットしない</a><a href="#s5">枠を長持ちさせる使い方</a><a href="#s6">よくある質問</a><a href="#s7">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -289,11 +315,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

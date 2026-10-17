@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>LLMOとは？SEOとの違いと、AIに推…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.08.13</span>
         </div>
         <h1 class="post-title">LLMOとは？SEOとの違いと、AIに推奨されるための対策を解説</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMOとは？"><defs><linearGradient id="ecg-fd1c37e8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-fd1c37e8)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">基礎解説</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMOとは？</text><line x1="394.8" y1="327.1" x2="805.2" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">SEOとの違いと対策の全体像</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li>llms.txtや構造化データは<strong>優先度が高くない</strong>。先にやることがある</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -153,7 +161,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>目指す状態はシンプルで、<strong>AIの回答のなかに自社が登場していること</strong>です。ユーザーがAIに相談したとき、その答えのなかで名前を挙げられたり、情報源としてリンクされたりする。ここを狙います。</p>
 <h3 id="s1-1">LLMO・GEO・AEO・AIOの違い</h3>
 <p>同じ領域を指す言葉がいくつも流通していて、最初につまずきやすい部分です。整理すると次のようになります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>呼称</th>
@@ -163,27 +171,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>LLMO</td>
-<td>Large Language Model Optimization</td>
-<td>大規模言語モデル最適化。日本で最も使われる</td>
+<td data-label="呼称">LLMO</td>
+<td data-label="正式名称">Large Language Model Optimization</td>
+<td data-label="意味">大規模言語モデル最適化。日本で最も使われる</td>
 </tr>
 <tr>
-<td>GEO</td>
-<td>Generative Engine Optimization</td>
-<td>生成エンジン最適化。海外で主流</td>
+<td data-label="呼称">GEO</td>
+<td data-label="正式名称">Generative Engine Optimization</td>
+<td data-label="意味">生成エンジン最適化。海外で主流</td>
 </tr>
 <tr>
-<td>AEO</td>
-<td>Answer Engine Optimization</td>
-<td>回答エンジン最適化</td>
+<td data-label="呼称">AEO</td>
+<td data-label="正式名称">Answer Engine Optimization</td>
+<td data-label="意味">回答エンジン最適化</td>
 </tr>
 <tr>
-<td>AIO</td>
-<td>AI Optimization</td>
-<td>AI最適化</td>
+<td data-label="呼称">AIO</td>
+<td data-label="正式名称">AI Optimization</td>
+<td data-label="意味">AI最適化</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>呼び方が違うだけで、やることはほぼ同じ</strong>です。どの言葉を使うかに時間をかける意味はありません。この記事ではLLMOで統一します。</p>
 <h3 id="s1-2">引用されて終わりではない</h3>
 <p>「AIに引用されても、直接の流入にはつながらないのでは」という疑問はよく出ます。実際、最初の接点ではクリックに至らないことも多くあります。</p>
@@ -212,7 +220,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p><strong>みっつめが、先行者としての位置取り</strong>です。LLMOはまだ新しい領域で、多くの企業が本格的に着手していません。<strong>早く始めた企業が、その分野でAIに認識されやすくなる</strong>という側面があります。ただし、これは煽りに乗って過剰投資する理由にはなりません。</p>
 <h2 id="s3">LLMOとSEOは何が違うのか</h2>
 <p>対象が検索エンジンかAIか、という違いから、目的も指標も変わります。整理すると次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>観点</th>
@@ -222,47 +230,47 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>対象</td>
-<td>検索エンジン</td>
-<td>LLM（AI）</td>
+<td data-label="観点">対象</td>
+<td data-label="SEO">検索エンジン</td>
+<td data-label="LLMO">LLM（AI）</td>
 </tr>
 <tr>
-<td>目的</td>
-<td>検索結果での上位表示</td>
-<td>AI回答文への引用・推奨</td>
+<td data-label="観点">目的</td>
+<td data-label="SEO">検索結果での上位表示</td>
+<td data-label="LLMO">AI回答文への引用・推奨</td>
 </tr>
 <tr>
-<td>読み手</td>
-<td>検索者（人間）</td>
-<td>LLM＋回答文を読む人間</td>
+<td data-label="観点">読み手</td>
+<td data-label="SEO">検索者（人間）</td>
+<td data-label="LLMO">LLM＋回答文を読む人間</td>
 </tr>
 <tr>
-<td>ユーザー行動</td>
-<td>キーワードで検索し、結果から選んでクリック</td>
-<td>質問を入力し、AIの回答を読む</td>
+<td data-label="観点">ユーザー行動</td>
+<td data-label="SEO">キーワードで検索し、結果から選んでクリック</td>
+<td data-label="LLMO">質問を入力し、AIの回答を読む</td>
 </tr>
 <tr>
-<td>露出の仕組み</td>
-<td>検索結果に表示される</td>
-<td>回答文中に情報源として引用される</td>
+<td data-label="観点">露出の仕組み</td>
+<td data-label="SEO">検索結果に表示される</td>
+<td data-label="LLMO">回答文中に情報源として引用される</td>
 </tr>
 <tr>
-<td>対策の対象範囲</td>
-<td>主に自社サイト</td>
-<td>Web上のあらゆる情報</td>
+<td data-label="観点">対策の対象範囲</td>
+<td data-label="SEO">主に自社サイト</td>
+<td data-label="LLMO">Web上のあらゆる情報</td>
 </tr>
 <tr>
-<td>成果指標</td>
-<td>検索順位・流入数</td>
-<td>引用や言及の回数、推奨率</td>
+<td data-label="観点">成果指標</td>
+<td data-label="SEO">検索順位・流入数</td>
+<td data-label="LLMO">引用や言及の回数、推奨率</td>
 </tr>
 <tr>
-<td>効果測定</td>
-<td>アクセス解析で追える</td>
-<td>定量的な把握が難しい</td>
+<td data-label="観点">効果測定</td>
+<td data-label="SEO">アクセス解析で追える</td>
+<td data-label="LLMO">定量的な把握が難しい</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="s3-1">対策の範囲が広がるのが最大の違い</h3>
 <p>表のなかで、実務上いちばん影響が大きいのが<strong>対策の対象範囲</strong>です。</p>
 <p>SEOでは、基本的に自社サイトの評価を高めることが中心でした。ページの構造を整え、コンテンツを充実させ、被リンクを集める。作業の場所は自社サイトです。</p>
@@ -283,7 +291,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>人間が調べものをするとき、知っていることは記憶から答え、知らないことは検索する。AIも同じ構造だと考えると理解しやすくなります。</p>
 <h3 id="s4-2">AIによって情報の取り方が違う</h3>
 <p>同じ質問でも、AIごとに答えの作り方が違います。<strong>どのAIで露出したいかによって、効く打ち手が変わる</strong>ため、傾向を押さえておくと優先順位をつけやすくなります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>サービス</th>
@@ -293,27 +301,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ChatGPT</td>
-<td>学習済みの知識が中心。必要に応じてWeb検索</td>
-<td>知識で答えるときは引用元が出ないことがある</td>
+<td data-label="サービス">ChatGPT</td>
+<td data-label="情報の取り方">学習済みの知識が中心。必要に応じてWeb検索</td>
+<td data-label="出方の特徴">知識で答えるときは引用元が出ないことがある</td>
 </tr>
 <tr>
-<td>Perplexity</td>
-<td>毎回Web検索する前提の設計</td>
-<td>引用元が明示され、リンクからの流入が発生しやすい</td>
+<td data-label="サービス">Perplexity</td>
+<td data-label="情報の取り方">毎回Web検索する前提の設計</td>
+<td data-label="出方の特徴">引用元が明示され、リンクからの流入が発生しやすい</td>
 </tr>
 <tr>
-<td>Gemini・AI Overviews</td>
-<td>Google検索の結果を土台にする</td>
-<td>Googleでの評価がそのまま効きやすい</td>
+<td data-label="サービス">Gemini・AI Overviews</td>
+<td data-label="情報の取り方">Google検索の結果を土台にする</td>
+<td data-label="出方の特徴">Googleでの評価がそのまま効きやすい</td>
 </tr>
 <tr>
-<td>Copilot</td>
-<td>Bingの検索結果を土台にする</td>
-<td>Bingでのインデックス状況に左右される</td>
+<td data-label="サービス">Copilot</td>
+<td data-label="情報の取り方">Bingの検索結果を土台にする</td>
+<td data-label="出方の特徴">Bingでのインデックス状況に左右される</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>ここから導けることは2つあります。<strong>Google検索での評価を上げる施策は、GeminiとAI Overviewsに直結する</strong>こと。そして<strong>学習データに入るような外部での言及は、ChatGPTでの登場に効く</strong>ことです。</p>
 <div class="in-link-card"><a href="/media/ai-platform-differences/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">ChatGPT・Perplexity・Geminiで答えの出方はどう違うか</div><div class="in-link-card__desc">各AIの引用元の傾向と、それぞれで露出するための考え方を解説しています。</div></div></a></div>
 <h3 id="s4-3">AIは順を追って判断している</h3>
@@ -406,7 +414,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
 <p>とくにrobots.txtは確認しておいてください。<strong>設定した覚えがなくても、過去の担当者やCMSの初期設定でAIクローラーを拒否している場合があります</strong>。</p>
 <p>主なクローラーは次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>クローラー名</th>
@@ -416,32 +424,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>GPTBot</td>
-<td>OpenAI</td>
-<td>学習データの収集</td>
+<td data-label="クローラー名">GPTBot</td>
+<td data-label="提供元">OpenAI</td>
+<td data-label="役割">学習データの収集</td>
 </tr>
 <tr>
-<td>OAI-SearchBot</td>
-<td>OpenAI</td>
-<td>ChatGPTの検索機能</td>
+<td data-label="クローラー名">OAI-SearchBot</td>
+<td data-label="提供元">OpenAI</td>
+<td data-label="役割">ChatGPTの検索機能</td>
 </tr>
 <tr>
-<td>Google-Extended</td>
-<td>Google</td>
-<td>Geminiなどの学習</td>
+<td data-label="クローラー名">Google-Extended</td>
+<td data-label="提供元">Google</td>
+<td data-label="役割">Geminiなどの学習</td>
 </tr>
 <tr>
-<td>ClaudeBot</td>
-<td>Anthropic</td>
-<td>学習データの収集</td>
+<td data-label="クローラー名">ClaudeBot</td>
+<td data-label="提供元">Anthropic</td>
+<td data-label="役割">学習データの収集</td>
 </tr>
 <tr>
-<td>PerplexityBot</td>
-<td>Perplexity</td>
-<td>検索・回答用の収集</td>
+<td data-label="クローラー名">PerplexityBot</td>
+<td data-label="提供元">Perplexity</td>
+<td data-label="役割">検索・回答用の収集</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>注意したいのが、<strong>用途によってボットが分かれている</strong>点です。学習用は拒否したいが検索には出したい、という判断もできますが、<strong>意図せず全部を止めていないか</strong>を確認してください。</p>
 <p>読める状態になっていなければ、どれだけ内容が良くても届きません。</p>
 <h3 id="s7-2">文章の構造を整える</h3>
@@ -470,7 +478,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>技術的な整備と並行して、というより、それ以上に効いてくるのがE-E-A-Tです。Googleが掲げる評価の考え方で、Experience（経験）、Expertise（専門性）、Authoritativeness（権威性）、Trustworthiness（信頼性）の頭文字を取ったものです。</p>
 <p>なぜLLMOでE-E-A-Tが効くのか。AIはWeb上の膨大な情報から答えを組み立てるとき、単に情報量の多いサイトより、<strong>誰が、どんな経験や専門性をもとに、どれだけ信頼できる情報を出しているか</strong>を見ているためです。「この分野ならこのサイトが信頼できる」とAIに認識させることが、引用の前提になります。</p>
 <p>具体的に示すべきものを整理します。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>要素</th>
@@ -480,27 +488,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>経験</td>
-<td>実際にやった人が書いているか</td>
-<td>導入の実体験、現場で得た知見、失敗した事例</td>
+<td data-label="要素">経験</td>
+<td data-label="何を示すか">実際にやった人が書いているか</td>
+<td data-label="具体例">導入の実体験、現場で得た知見、失敗した事例</td>
 </tr>
 <tr>
-<td>専門性</td>
-<td>その分野に詳しいか</td>
-<td>資格、対応実績の分野と件数、専門用語の正確さ</td>
+<td data-label="要素">専門性</td>
+<td data-label="何を示すか">その分野に詳しいか</td>
+<td data-label="具体例">資格、対応実績の分野と件数、専門用語の正確さ</td>
 </tr>
 <tr>
-<td>権威性</td>
-<td>第三者から認められているか</td>
-<td>業界メディアへの寄稿、登壇、受賞、被リンク</td>
+<td data-label="要素">権威性</td>
+<td data-label="何を示すか">第三者から認められているか</td>
+<td data-label="具体例">業界メディアへの寄稿、登壇、受賞、被リンク</td>
 </tr>
 <tr>
-<td>信頼性</td>
-<td>情報が正確で最新か</td>
-<td>出典の明示、更新日の表示、運営者情報の開示</td>
+<td data-label="要素">信頼性</td>
+<td data-label="何を示すか">情報が正確で最新か</td>
+<td data-label="具体例">出典の明示、更新日の表示、運営者情報の開示</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>とくに効くのが<strong>著者情報と監修者情報</strong>です。誰が書いたのか、どんな専門性を持っているのかをページ内に明記し、可能ならプロフィールページへリンクします。匿名の解説記事と、専門家の署名がある解説記事では、根拠としての扱われ方が変わります。</p>
 <p>情報の鮮度も同じ軸です。<strong>古い情報を放置せず、定期的に見直して更新日を示す</strong>。AIにとって、いつ時点の情報かが分からないページはリスクの高い情報源になります。</p>
 <div class="in-link-card"><a href="/media/eeat-for-ai-search/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">E-E-A-TはAI検索でどう効く？信頼される情報源になる方法</div><div class="in-link-card__desc">専門性・権威性・信頼性をどう示すか、実務の観点で解説しています。</div></div></a></div>
@@ -570,7 +578,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>LLMOの難しさは、効果測定にあります。検索順位のように分かりやすい指標がないためです。</p>
 <h3 id="s9-1">見るべき指標</h3>
 <p>追う対象は4つに整理できます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>指標</th>
@@ -580,27 +588,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>推奨率</td>
-<td>対象の質問で自社が推奨される割合</td>
-<td>直接コントロールできる</td>
+<td data-label="指標">推奨率</td>
+<td data-label="何を見るか">対象の質問で自社が推奨される割合</td>
+<td data-label="性質">直接コントロールできる</td>
 </tr>
 <tr>
-<td>引用数</td>
-<td>回答の情報源としてリンクされた回数</td>
-<td>中間指標</td>
+<td data-label="指標">引用数</td>
+<td data-label="何を見るか">回答の情報源としてリンクされた回数</td>
+<td data-label="性質">中間指標</td>
 </tr>
 <tr>
-<td>AI経由の流入・CV</td>
-<td>リファラーがAIサービスのセッション</td>
-<td>結果指標</td>
+<td data-label="指標">AI経由の流入・CV</td>
+<td data-label="何を見るか">リファラーがAIサービスのセッション</td>
+<td data-label="性質">結果指標</td>
 </tr>
 <tr>
-<td>指名検索</td>
-<td>社名での検索数の推移</td>
-<td>結果指標</td>
+<td data-label="指標">指名検索</td>
+<td data-label="何を見るか">社名での検索数の推移</td>
+<td data-label="性質">結果指標</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="s9-2">推奨率を中心に置く</h3>
 <p>このなかで、<strong>日々の施策と直接つながるのは推奨率</strong>です。流入数や指名検索は結果として動く指標で、直接操作できません。</p>
 <p>推奨率は、対策対象として決めた質問をAIに投げたとき、自社が挙がる割合を指します。「〇〇におすすめのツールは？」で自社が出るかを定期的に記録し、その率を追います。<strong>施策を打った結果として率が動くので、因果が追いやすくなります</strong>。</p>
@@ -661,7 +669,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <div class="in-link-card"><a href="/media/ai-search-first-steps/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">AI検索対策は何から始める？企業が取り組むべき5ステップ</div><div class="in-link-card__desc">現状把握から効果測定まで、AI検索対策を実務の順番で解説しています。</div></div></a></div>
 <h3 id="s10-4">自社の状況によって、始める場所は変わる</h3>
 <p>ここまでの手順は共通ですが、<strong>どこに力を入れるかは、いまの状態によって変わります</strong>。よくある4つのパターンで整理します。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>状況</th>
@@ -670,23 +678,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>コンテンツが少ない（記事数が一桁）</td>
-<td>狙う質問を決めて、それに答える記事をつくる。技術的な整備は後</td>
+<td data-label="状況">コンテンツが少ない（記事数が一桁）</td>
+<td data-label="最初に手をつけるところ">狙う質問を決めて、それに答える記事をつくる。技術的な整備は後</td>
 </tr>
 <tr>
-<td>記事は多いがAIに出てこない</td>
-<td>技術面（クロール可否・構造）の点検と、外部での言及づくり</td>
+<td data-label="状況">記事は多いがAIに出てこない</td>
+<td data-label="最初に手をつけるところ">技術面（クロール可否・構造）の点検と、外部での言及づくり</td>
 </tr>
 <tr>
-<td>検索順位は取れている</td>
-<td>引用されやすい書き方への修正。土台があるぶん、成果が出るまでが早い</td>
+<td data-label="状況">検索順位は取れている</td>
+<td data-label="最初に手をつけるところ">引用されやすい書き方への修正。土台があるぶん、成果が出るまでが早い</td>
 </tr>
 <tr>
-<td>会社選び系の質問で出たい</td>
-<td>自社サイトより先に、比較記事・レビューサイトへの掲載</td>
+<td data-label="状況">会社選び系の質問で出たい</td>
+<td data-label="最初に手をつけるところ">自社サイトより先に、比較記事・レビューサイトへの掲載</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>判断の順序としては、**まず「AIに読まれているか」を確認し、次に「質問に答える内容があるか」、最後に「第三者が言及しているか」**という順で見ていくと、抜けが出にくくなります。</p>
 <div class="in-link-card"><a href="/media/llmo-not-working-checklist/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">LLMO対策をしても効果が出ないときのチェックリスト</div><div class="in-link-card__desc">施策を打っているのに変化がないときに、どこを疑うかを順番に整理しています。</div></div></a></div>
 <h2 id="s11">やらなくていいこと・注意点</h2>
@@ -734,7 +742,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p><strong>煽りに乗って過剰に投資せず、SEOとのバランスを取りながら進める</strong>のが現実的です。</p>
 <h2 id="s12">LLMOチェックリスト</h2>
 <p>ここまでの内容を、確認できる形にまとめます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>分類</th>
@@ -744,92 +752,92 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>読める状態か</td>
-<td>robots.txt</td>
-<td>AIクローラーをブロックしていないか</td>
+<td data-label="分類">読める状態か</td>
+<td data-label="項目">robots.txt</td>
+<td data-label="確認内容">AIクローラーをブロックしていないか</td>
 </tr>
 <tr>
-<td></td>
-<td>本文の取得</td>
-<td>JavaScriptに頼らず、ソースに本文があるか</td>
+<td data-label="分類"></td>
+<td data-label="項目">本文の取得</td>
+<td data-label="確認内容">JavaScriptに頼らず、ソースに本文があるか</td>
 </tr>
 <tr>
-<td></td>
-<td>見出し構造</td>
-<td>h2・h3が意味の区切りになっているか</td>
+<td data-label="分類"></td>
+<td data-label="項目">見出し構造</td>
+<td data-label="確認内容">h2・h3が意味の区切りになっているか</td>
 </tr>
 <tr>
-<td></td>
-<td>表示速度</td>
-<td>極端に遅くないか</td>
+<td data-label="分類"></td>
+<td data-label="項目">表示速度</td>
+<td data-label="確認内容">極端に遅くないか</td>
 </tr>
 <tr>
-<td>内容</td>
-<td>結論ファースト</td>
-<td>各見出しの直後に結論があるか</td>
+<td data-label="分類">内容</td>
+<td data-label="項目">結論ファースト</td>
+<td data-label="確認内容">各見出しの直後に結論があるか</td>
 </tr>
 <tr>
-<td></td>
-<td>チャンク完結</td>
-<td>一段落だけで意味が通るか</td>
+<td data-label="分類"></td>
+<td data-label="項目">チャンク完結</td>
+<td data-label="確認内容">一段落だけで意味が通るか</td>
 </tr>
 <tr>
-<td></td>
-<td>FAQ</td>
-<td>想定質問に一問一答で答えているか</td>
+<td data-label="分類"></td>
+<td data-label="項目">FAQ</td>
+<td data-label="確認内容">想定質問に一問一答で答えているか</td>
 </tr>
 <tr>
-<td></td>
-<td>一次情報</td>
-<td>独自データ・実績・具体的な数字があるか</td>
+<td data-label="分類"></td>
+<td data-label="項目">一次情報</td>
+<td data-label="確認内容">独自データ・実績・具体的な数字があるか</td>
 </tr>
 <tr>
-<td></td>
-<td>著者情報</td>
-<td>誰が書いたか、実績、更新日が示されているか</td>
+<td data-label="分類"></td>
+<td data-label="項目">著者情報</td>
+<td data-label="確認内容">誰が書いたか、実績、更新日が示されているか</td>
 </tr>
 <tr>
-<td>外部</td>
-<td>比較記事</td>
-<td>主要な比較記事に掲載されているか</td>
+<td data-label="分類">外部</td>
+<td data-label="項目">比較記事</td>
+<td data-label="確認内容">主要な比較記事に掲載されているか</td>
 </tr>
 <tr>
-<td></td>
-<td>レビュー</td>
-<td>レビューサイトに評価が蓄積されているか</td>
+<td data-label="分類"></td>
+<td data-label="項目">レビュー</td>
+<td data-label="確認内容">レビューサイトに評価が蓄積されているか</td>
 </tr>
 <tr>
-<td></td>
-<td>プレスリリース</td>
-<td>一次情報を発信しているか</td>
+<td data-label="分類"></td>
+<td data-label="項目">プレスリリース</td>
+<td data-label="確認内容">一次情報を発信しているか</td>
 </tr>
 <tr>
-<td></td>
-<td>表記統一</td>
-<td>社名・強み・対象がどの媒体でも同じか</td>
+<td data-label="分類"></td>
+<td data-label="項目">表記統一</td>
+<td data-label="確認内容">社名・強み・対象がどの媒体でも同じか</td>
 </tr>
 <tr>
-<td>計測</td>
-<td>推奨率</td>
-<td>対象の質問での推奨率を記録しているか</td>
+<td data-label="分類">計測</td>
+<td data-label="項目">推奨率</td>
+<td data-label="確認内容">対象の質問での推奨率を記録しているか</td>
 </tr>
 <tr>
-<td></td>
-<td>流入</td>
-<td>AI経由のセッションを見ているか</td>
+<td data-label="分類"></td>
+<td data-label="項目">流入</td>
+<td data-label="確認内容">AI経由のセッションを見ているか</td>
 </tr>
 <tr>
-<td></td>
-<td>指名検索</td>
-<td>社名検索の推移を追っているか</td>
+<td data-label="分類"></td>
+<td data-label="項目">指名検索</td>
+<td data-label="確認内容">社名検索の推移を追っているか</td>
 </tr>
 <tr>
-<td></td>
-<td>認知経路</td>
-<td>問い合わせで「AIで知った」を取得しているか</td>
+<td data-label="分類"></td>
+<td data-label="項目">認知経路</td>
+<td data-label="確認内容">問い合わせで「AIで知った」を取得しているか</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s13">AI検索対策を伴走で進めるなら</h2>
 <p>nitoは、固定費を抑えた成果報酬型で、戦略設計から記事制作・外部掲載・効果測定までを一気通貫で実行しています。現状把握から改善の実行まで、社内で回せる状態を目指して伴走します。</p>
 <!-- 固定PRパート（ブログパーツ）: llmo-cta
@@ -887,12 +895,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>多くの場合、差は自社サイトの中身ではなく、第三者からの言及量にあります。会社選びの質問でAIが参照するのは比較記事やレビューサイトであることが多く、そこに載っているかどうかで結果が分かれます。まず引用元になっているURLを確認してください。</p>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -901,9 +910,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">LLMOとは何か</a><a href="#s2">なぜ今LLMOが注目されるのか</a><a href="#s3">LLMOとSEOは何が違うのか</a><a href="#s4">AIはどうやって答えを作っているのか</a><a href="#s5">LLMOで目指す状態</a><a href="#s6">対策① どのプロンプトで推奨されたいかを決める</a><a href="#s7">対策② AIが読み取れる状態にする</a><a href="#s8">対策③ 外部に情報を置く</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -936,11 +948,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

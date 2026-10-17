@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Gemini Fla…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.08</span>
         </div>
         <h1 class="post-title">【2026年10月】Gemini Flash-Liteとは？無料版の変更とFlashとの違い</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gemini Flash-Liteとは"><defs><linearGradient id="ecg-7e37186a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7e37186a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Gemini Flash-Liteとは</text><line x1="136.4" y1="327.1" x2="1063.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">10月9日から無料版はFlash-Liteだけ</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 <li>Flashが要るならAI Plus（月額725円）、Proが要るならAI Pro（月額2,900円）が最低限のプラン</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -100,7 +108,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/gemini-flash-lite/gfl_00_fig_overview.jpg" alt="10月9日からのGeminiのモデルの変更を表した図。3本の柱が左から右へ高くなり、左の低い柱に無料はFlash-Liteだけ、中央にAI PlusはFlashまで、右の高い柱にProはAI Pro以上と書かれている" loading="lazy"><figcaption>10月9日からのプランとモデルの関係</figcaption></figure>
 
 <p>**AIのプランに入っていない人は10月9日から、AI Plusの人はメールで知らされる日から、新しい表が当てはまります。**AI ProとAI Ultraは、変更後も3つのモデルすべてに印が付いています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -111,31 +119,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>プランなし</td>
-<td>Flash-Lite・Flash・Pro</td>
-<td>自動（選べるのはFlash-Liteだけ）</td>
-<td>0円</td>
+<td data-label="プラン">プランなし</td>
+<td data-label="10月8日まで">Flash-Lite・Flash・Pro</td>
+<td data-label="10月9日から">自動（選べるのはFlash-Liteだけ）</td>
+<td data-label="月額（税込）">0円</td>
 </tr>
 <tr>
-<td>Google AI Plus</td>
-<td>Flash-Lite・Flash・Pro</td>
-<td>Flash-Lite・Flash（適用日はメールで案内）</td>
-<td>725円</td>
+<td data-label="プラン">Google AI Plus</td>
+<td data-label="10月8日まで">Flash-Lite・Flash・Pro</td>
+<td data-label="10月9日から">Flash-Lite・Flash（適用日はメールで案内）</td>
+<td data-label="月額（税込）">725円</td>
 </tr>
 <tr>
-<td>Google AI Pro</td>
-<td>Flash-Lite・Flash・Pro</td>
-<td>Flash-Lite・Flash・Pro</td>
-<td>2,900円</td>
+<td data-label="プラン">Google AI Pro</td>
+<td data-label="10月8日まで">Flash-Lite・Flash・Pro</td>
+<td data-label="10月9日から">Flash-Lite・Flash・Pro</td>
+<td data-label="月額（税込）">2,900円</td>
 </tr>
 <tr>
-<td>Google AI Ultra</td>
-<td>Flash-Lite・Flash・Pro</td>
-<td>Flash-Lite・Flash・Pro</td>
-<td>14,500円か32,000円</td>
+<td data-label="プラン">Google AI Ultra</td>
+<td data-label="10月8日まで">Flash-Lite・Flash・Pro</td>
+<td data-label="10月9日から">Flash-Lite・Flash・Pro</td>
+<td data-label="月額（税込）">14,500円か32,000円</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>10月8日までの列は使用量上限のページ「<a href="https://support.google.com/gemini/answer/16275805?hl=ja">Google AI のサブスクリプション プランに応じた Gemini アプリの使用量上限とアップグレード</a>」のモデルの表です。月額は「<a href="https://gemini.google/jp/subscriptions/?hl=ja">Google AI プラン</a>」の日本向けの表示を写しました。</p>
 <figure class="post-figure"><img src="/media/images/gemini-flash-lite/gfl_01_help_change.jpg" alt="Googleのヘルプ、Geminiモデルへのアクセスと使用量上限の変更のページ。2026年10月より個人アカウントのGeminiアプリで利用可能なモデルが変わり、AIサブスクリプションを利用していないユーザーには10月9日から適用と書かれている。下の表で、プランなしの行はFlash-Liteだけにチェックが付き、FlashとProは×。赤い枠でプランなしの行を囲んでいる" loading="lazy"><figcaption>告知の表ではプランなしの行がFlash-Liteだけ</figcaption></figure>
 
@@ -147,11 +155,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <p>自分のアカウントで今どのモデルを使っているかも、この場所で確かめられます。<strong>アプリでもウェブ版でも、入力欄の右に出ている名前を押すと一覧が開き、プランで使えないモデルは灰色になります。</strong></p>
 <p>開発者向けのGemini APIにも同じ名前のモデルがあり、紛らわしい点です。<a href="https://ai.google.dev/gemini-api/docs/pricing">Gemini API の料金ページ</a>は3.5 Flash-Liteを、大量のエージェント タスク、翻訳、シンプルなデータ処理に向けた費用対効果の高いモデルと書いています。<strong>アプリとAPIは同じ名前でも料金も上限も別の仕組み</strong>で、10月9日の変更が当てはまるのはアプリのほうだけです。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Gemini を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">Flash・Proとの違い</h2>
 <p>ヘルプには性能の数字はなく、向いている用件の説明だけが載っています。3つを並べると、速さを取るか考える深さを取るかで分かれます。</p>
 <figure class="post-figure"><img src="/media/images/gemini-flash-lite/gfl_03_fig_models.jpg" alt="Geminiの3つのモデルの公式の説明を並べた図。Flash-Liteは無料から使え、スピード重視で要約などの日常のタスク向き。FlashはAI Plusから使え、速さと推論のバランス型で複雑な問題まで。ProはAI Proから使え、複雑な数学やコーディング向きで回答は遅め" loading="lazy"><figcaption>使用量上限のページの説明をもとにした3つのモデルの違い</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>モデル</th>
@@ -161,22 +183,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Flash-Lite</td>
-<td>スピードに最適化した効率的な主力モデル。要約やブレインストーミングなど日常のタスクに最適</td>
-<td>すべて（プランなしを含む）</td>
+<td data-label="モデル">Flash-Lite</td>
+<td data-label="ヘルプの説明">スピードに最適化した効率的な主力モデル。要約やブレインストーミングなど日常のタスクに最適</td>
+<td data-label="10月9日から使えるプラン">すべて（プランなしを含む）</td>
 </tr>
 <tr>
-<td>Flash</td>
-<td>スピードと推論のバランスが取れた、より強力なモデル。シンプルな問題から複雑な問題まで解決できる</td>
-<td>AI Plus・AI Pro・AI Ultra</td>
+<td data-label="モデル">Flash</td>
+<td data-label="ヘルプの説明">スピードと推論のバランスが取れた、より強力なモデル。シンプルな問題から複雑な問題まで解決できる</td>
+<td data-label="10月9日から使えるプラン">AI Plus・AI Pro・AI Ultra</td>
 </tr>
 <tr>
-<td>Pro</td>
-<td>複雑な数学やコーディングに優れた最先端のモデル。回答までの時間は他のモデルより長い</td>
-<td>AI Pro・AI Ultra</td>
+<td data-label="モデル">Pro</td>
+<td data-label="ヘルプの説明">複雑な数学やコーディングに優れた最先端のモデル。回答までの時間は他のモデルより長い</td>
+<td data-label="10月9日から使えるプラン">AI Pro・AI Ultra</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**Flash-Liteで足りるかどうかは、モデルの差よりも用件の重さで決まります。**短いメールの言い回し、記事の要約、会議メモの箇条書きの整理のように答えの形が決まっている用件は、Flash-Liteの説明の範囲に入ります。条件の多い比較や、数式とコードの組み立てのように考える段階が多い用件は、ヘルプがFlashやProに割り当てている領域です。</p>
 <p>モデルとは別に、プランで決まる差がもう1つあります。使用量上限のページでは一度に読める量（コンテキストウィンドウ）がプランなしで32,000トークン、AI Plusで128,000トークン、AI ProとUltraで100万トークンです。<strong>長いPDFや複数のファイルを読ませる使い方では、Flash-Liteかどうかより先にこの上限に当たりやすくなります。</strong></p>
 <h3 id="s3-1">Flash-Liteで困りやすい場面</h3>
@@ -191,7 +213,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>告知と同じ日に読んでも、Googleのほかのページは前の内容のままでした。10月8日に取得した時点で次の3つが合っておらず、10月10日に取り直すと料金ページの無料の欄がFlash-Liteに変わっていました。10月14日には使用量上限のページからモデルの表が消え、日本語版の告知もプランなしを「自動」と書くようになっています。</p>
 <figure class="post-figure"><img src="/media/images/gemini-flash-lite/gfl_04_help_limits.jpg" alt="Googleのヘルプの使用量上限のページ。赤い枠1はDeep ThinkをAI Ultraのみと書いた行。赤い枠2はモデルへのアクセスの表のAIプランなしの行で、Gemini 3 Flash-lite・Gemini 3 Flash・Gemini 3 Proのすべてに丸が付いている" loading="lazy"><figcaption>使用量上限のページはプランなしにも3つとも丸が付いたまま（10月8日）</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>項目</th>
@@ -201,22 +223,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>プランなしのモデル</td>
-<td>日本語版も10月14日から「自動」（英語版は10月10日の時点で「Auto」）</td>
-<td>料金ページの無料欄は10月10日に3.5 Flash-Liteへ変わった（10月8日は3.6 Flashと3.1 Pro）。使用量上限のページのモデルの表は10月14日に消えた</td>
+<td data-label="項目">プランなしのモデル</td>
+<td data-label="変更の告知">日本語版も10月14日から「自動」（英語版は10月10日の時点で「Auto」）</td>
+<td data-label="ほかの公式ページ">料金ページの無料欄は10月10日に3.5 Flash-Liteへ変わった（10月8日は3.6 Flashと3.1 Pro）。使用量上限のページのモデルの表は10月14日に消えた</td>
 </tr>
 <tr>
-<td>Deep Think</td>
-<td>10月15日の時点で日本語版・英語版とも対象のプランの記載なし（英語版は10月8日はAI Ultraだけ）</td>
-<td>使用量上限のページの「AI Ultra のみ」は10月14日に消えた</td>
+<td data-label="項目">Deep Think</td>
+<td data-label="変更の告知">10月15日の時点で日本語版・英語版とも対象のプランの記載なし（英語版は10月8日はAI Ultraだけ）</td>
+<td data-label="ほかの公式ページ">使用量上限のページの「AI Ultra のみ」は10月14日に消えた</td>
 </tr>
 <tr>
-<td>AI Ultraの上限</td>
-<td>AI Proの5倍か20倍（告知のページの「以前の変更内容」の節）</td>
-<td>使用量上限のページは日本語版だけ4倍か20倍。料金ページは5倍と20倍</td>
+<td data-label="項目">AI Ultraの上限</td>
+<td data-label="変更の告知">AI Proの5倍か20倍（告知のページの「以前の変更内容」の節）</td>
+<td data-label="ほかの公式ページ">使用量上限のページは日本語版だけ4倍か20倍。料金ページは5倍と20倍</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure post-figure--sp"><img src="/media/images/gemini-flash-lite/gfl_05_plans_sp.jpg" alt="スマホで開いたGoogle AIプランの料金ページの無料の欄。0円の下のGeminiアプリの特典に、赤い枠で3.6 Flashへのアクセスと3.1 Proへのアクセス（制限あり）が囲まれている。その下に画像の生成と編集、Deep Research、Gemini Liveが続く" loading="lazy"><figcaption>10月8日の料金ページの無料欄。10月10日には3.5 Flash-Liteに変わった</figcaption></figure>
 
 <p>**モデルとAI Ultraの倍率は、日付の入った変更の告知のほうを正として読むのが無難です。**英語版の告知は10月10日の時点で、プランなしの既定を「Auto」と書いています。質問ごとにGeminiがモデルを選び、大半はFlash-Liteで答え、深い推論が要る質問はFlashやProに回ることがある、という説明です。自動の選択をオフにすると、すべてFlash-Liteで答えます。日本語版も10月14日から同じ説明になり、表のプランなしの行は「自動」です。</p>
@@ -236,7 +258,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>会社のGoogle Workspaceのアカウントは、今回の告知の対象外です。使えるモデルは会社の契約と管理者の設定で決まり、条件はヘルプ「<a href="https://support.google.com/gemini/answer/14620100?hl=ja">仕事用または学校用の Google アカウントで Gemini アプリを利用する</a>」にまとまっています。個人の無料アカウントで仕事に使っていた場合は、この機会に会社のアカウントへ寄せられるかを確かめておくと、10月9日のあとに使えるモデルが分かります。</p>
 <h2 id="s6">有料にするならどのプランか</h2>
 <p>FlashかProのどちらが要るかで、選ぶプランが決まります。<strong>Flashで足りるならAI Plus、Proが要るならAI Proが最低限</strong>です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -248,35 +270,35 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>プランなし</td>
-<td>0円</td>
-<td>自動（選べるのはFlash-Liteだけ）</td>
-<td>標準</td>
-<td>32,000トークン</td>
+<td data-label="プラン">プランなし</td>
+<td data-label="月額（税込）">0円</td>
+<td data-label="使えるモデル">自動（選べるのはFlash-Liteだけ）</td>
+<td data-label="使用量の上限">標準</td>
+<td data-label="読める量">32,000トークン</td>
 </tr>
 <tr>
-<td>Google AI Plus</td>
-<td>725円</td>
-<td>Flash-Lite・Flash</td>
-<td>標準の2倍</td>
-<td>128,000トークン</td>
+<td data-label="プラン">Google AI Plus</td>
+<td data-label="月額（税込）">725円</td>
+<td data-label="使えるモデル">Flash-Lite・Flash</td>
+<td data-label="使用量の上限">標準の2倍</td>
+<td data-label="読める量">128,000トークン</td>
 </tr>
 <tr>
-<td>Google AI Pro</td>
-<td>2,900円</td>
-<td>Flash-Lite・Flash・Pro</td>
-<td>標準の4倍</td>
-<td>100万トークン</td>
+<td data-label="プラン">Google AI Pro</td>
+<td data-label="月額（税込）">2,900円</td>
+<td data-label="使えるモデル">Flash-Lite・Flash・Pro</td>
+<td data-label="使用量の上限">標準の4倍</td>
+<td data-label="読める量">100万トークン</td>
 </tr>
 <tr>
-<td>Google AI Ultra</td>
-<td>14,500円か32,000円</td>
-<td>Flash-Lite・Flash・Pro</td>
-<td>AI Proの5倍か20倍（日本語版の上限のページは4倍のまま）</td>
-<td>100万トークン</td>
+<td data-label="プラン">Google AI Ultra</td>
+<td data-label="月額（税込）">14,500円か32,000円</td>
+<td data-label="使えるモデル">Flash-Lite・Flash・Pro</td>
+<td data-label="使用量の上限">AI Proの5倍か20倍（日本語版の上限のページは4倍のまま）</td>
+<td data-label="読める量">100万トークン</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>AI Plusでは今まで選べたProが外れます。AI PlusでProを使っていた人は、メールで届く適用日までにAI Proへ上げるかを決めておくと慌てずに済みます。プランごとの細かい特典は「<a href="/media/gemini-pricing/">Geminiの料金プラン</a>」、ChatGPTやClaudeの無料版と比べたいときは「<a href="/media/ai-compare/">ChatGPT・Gemini・Claude・AIモードの比較</a>」にまとめています。</p>
 <h2 id="s7">よくある質問</h2>
 <h3 id="s7-1">Geminiの無料版は10月9日から使えなくなりますか？</h3>
@@ -307,12 +329,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -321,9 +344,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">10月9日から順に変わること</a><a href="#s2">Gemini Flash-Liteとは</a><a href="#s3">Flash・Proとの違い</a><a href="#s4">公式ページで食い違っている点</a><a href="#s5">無料のままFlashを使う方法</a><a href="#s6">有料にするならどのプランか</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -356,11 +382,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claude Code…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.19</span>
         </div>
         <h1 class="post-title">【2026年9月】Claude Codeとは？仕組み・できること・他のAIコーディングツールとの違い</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Codeとは"><defs><linearGradient id="ecg-8a838d84" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-8a838d84)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Codeとは</text><line x1="273.2" y1="327.1" x2="926.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">仕組み・できること・他ツールとの違い</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>ファイル編集の前にスナップショットを取るため、<strong>Escを2回押せば直前の状態に戻せる</strong>。権限モードで任せる範囲も決められる</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -96,7 +104,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>公式ドキュメントの<a href="https://code.claude.com/docs/ja/overview">概要</a>は、Claude Codeを「コードベースを読み取り、ファイルを編集し、コマンドを実行し、開発ツールと統合するagentic codingツール」と説明しています。名前にCodeと付きますが、動くのはコードの中だけではなく、ドキュメントの作成やファイルの整理など、コマンドラインからできる作業全般が対象です。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-about/00_fig_what.png" alt="Claude Codeの位置づけの図。チャットのClaudeは答えを返す、Claude Codeは目標を受けてファイルを読み・編集し・コマンドを実行して仕事を終わらせる" loading="lazy"><figcaption>同じ依頼でも、チャットは提案までで止まり、Claude Codeは変更と検証まで進む</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th></th>
@@ -106,32 +114,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>入力</td>
-<td>質問・貼り付けたコード</td>
-<td>目標（「このバグを直して」）</td>
+<td data-label="">入力</td>
+<td data-label="チャットのClaude">質問・貼り付けたコード</td>
+<td data-label="Claude Code">目標（「このバグを直して」）</td>
 </tr>
 <tr>
-<td>ファイル</td>
-<td>添付したものを読む</td>
-<td>プロジェクトの中を自分で探して読み書きする</td>
+<td data-label="">ファイル</td>
+<td data-label="チャットのClaude">添付したものを読む</td>
+<td data-label="Claude Code">プロジェクトの中を自分で探して読み書きする</td>
 </tr>
 <tr>
-<td>コマンド</td>
-<td>実行できない</td>
-<td>実行できる（許可の上で）</td>
+<td data-label="">コマンド</td>
+<td data-label="チャットのClaude">実行できない</td>
+<td data-label="Claude Code">実行できる（許可の上で）</td>
 </tr>
 <tr>
-<td>出力</td>
-<td>文章・コードの提案</td>
-<td>変更されたファイル、実行されたテスト</td>
+<td data-label="">出力</td>
+<td data-label="チャットのClaude">文章・コードの提案</td>
+<td data-label="Claude Code">変更されたファイル、実行されたテスト</td>
 </tr>
 <tr>
-<td>使う場所</td>
-<td>ブラウザ・アプリ</td>
-<td>ターミナル・VS Code・デスクトップアプリ・ウェブ</td>
+<td data-label="">使う場所</td>
+<td data-label="チャットのClaude">ブラウザ・アプリ</td>
+<td data-label="Claude Code">ターミナル・VS Code・デスクトップアプリ・ウェブ</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>どちらもAnthropicの製品で、中身の言語モデルも共通です。周りにツールとループが付いているかどうかが、両者を分けています。チャット画面のClaudeの使い方は<a href="https://nito-0210.com/media/claude-guide/">別記事</a>にまとめています。</p>
 <h2 id="s2">仕組み: agenticループと5つのツール</h2>
 <p>公式ドキュメント「<a href="https://code.claude.com/docs/ja/how-claude-code-works">Claude Codeの仕組み</a>」は、タスクを渡されたClaudeが<strong>コンテキストの収集 → アクションの実行 → 結果の検証</strong>の3つのフェーズを通って働く、と説明しています。</p>
@@ -148,7 +156,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ol>
 <p>どのツールを使うかは、プロンプトとその時点で分かっていることからClaude自身が選びます。ループは依頼の内容によって伸び縮みし、コードベースへの質問なら収集だけで終わることもあります。途中で止めて方向を変えるのも前提の設計です。Escを押せばその場で止まります。</p>
 <p>ループを動かすのは推論する<strong>モデル</strong>と、行動する<strong>ツール</strong>の2つです。組み込みツールは5つのカテゴリに分かれます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>カテゴリ</th>
@@ -157,33 +165,47 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ファイル操作</td>
-<td>ファイルの読み取り、コード編集、新規作成、名前変更と再編成</td>
+<td data-label="カテゴリ">ファイル操作</td>
+<td data-label="できること">ファイルの読み取り、コード編集、新規作成、名前変更と再編成</td>
 </tr>
 <tr>
-<td>検索</td>
-<td>パターンでファイルを検索、正規表現で内容を検索、コードベースを探索</td>
+<td data-label="カテゴリ">検索</td>
+<td data-label="できること">パターンでファイルを検索、正規表現で内容を検索、コードベースを探索</td>
 </tr>
 <tr>
-<td>実行</td>
-<td>シェルコマンドの実行、サーバー起動、テスト実行、gitの操作</td>
+<td data-label="カテゴリ">実行</td>
+<td data-label="できること">シェルコマンドの実行、サーバー起動、テスト実行、gitの操作</td>
 </tr>
 <tr>
-<td>ウェブ</td>
-<td>ウェブ検索、ドキュメントの取得、エラーメッセージの検索</td>
+<td data-label="カテゴリ">ウェブ</td>
+<td data-label="できること">ウェブ検索、ドキュメントの取得、エラーメッセージの検索</td>
 </tr>
 <tr>
-<td>コードインテリジェンス</td>
-<td>編集後の型エラーと警告の表示、定義へのジャンプ、参照の検索（プラグインが必要）</td>
+<td data-label="カテゴリ">コードインテリジェンス</td>
+<td data-label="できること">編集後の型エラーと警告の表示、定義へのジャンプ、参照の検索（プラグインが必要）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>公式ドキュメントは「ツールがなければ、Claudeはテキストで応答することしかできません。ツールがあれば、Claudeはアクションを実行できます」と書いています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">Claude Codeがアクセスできるもの</h2>
 <p>あるディレクトリで <code>claude</code> と打って起動したとき、Claude Codeが見られるものは公式ドキュメントに列挙されています。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-about/00_fig_access.png" alt="Claude Codeがアクセスできるものの図。プロジェクトのファイル、ターミナル、gitの状態、CLAUDE.md、自動メモリ、拡張機能（MCP・スキル・サブエージェント）" loading="lazy"><figcaption>起動したディレクトリを中心に、これだけのものが見えている</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>対象</th>
@@ -192,37 +214,37 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>プロジェクト</td>
-<td>ディレクトリとサブディレクトリ内のファイル、許可した他の場所のファイル</td>
+<td data-label="対象">プロジェクト</td>
+<td data-label="内容">ディレクトリとサブディレクトリ内のファイル、許可した他の場所のファイル</td>
 </tr>
 <tr>
-<td>ターミナル</td>
-<td>実行できるあらゆるコマンド。ビルドツール、git、パッケージマネージャー</td>
+<td data-label="対象">ターミナル</td>
+<td data-label="内容">実行できるあらゆるコマンド。ビルドツール、git、パッケージマネージャー</td>
 </tr>
 <tr>
-<td>gitの状態</td>
-<td>現在のブランチ、コミットされていない変更、最近のコミット履歴</td>
+<td data-label="対象">gitの状態</td>
+<td data-label="内容">現在のブランチ、コミットされていない変更、最近のコミット履歴</td>
 </tr>
 <tr>
-<td>CLAUDE.md</td>
-<td>プロジェクト固有の指示・規約を書いたファイル。毎セッションの開始時に読まれる</td>
+<td data-label="対象">CLAUDE.md</td>
+<td data-label="内容">プロジェクト固有の指示・規約を書いたファイル。毎セッションの開始時に読まれる</td>
 </tr>
 <tr>
-<td>自動メモリ</td>
-<td>作業中にClaudeが保存した学び。各セッションの開始時に先頭200行または25KBまで読まれる</td>
+<td data-label="対象">自動メモリ</td>
+<td data-label="内容">作業中にClaudeが保存した学び。各セッションの開始時に先頭200行または25KBまで読まれる</td>
 </tr>
 <tr>
-<td>拡張機能</td>
-<td>MCPサーバー、スキル、サブエージェント、Claude in Chrome</td>
+<td data-label="対象">拡張機能</td>
+<td data-label="内容">MCPサーバー、スキル、サブエージェント、Claude in Chrome</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>プロジェクト全体が見えているので、「認証のバグを直して」と頼めば、関連ファイルを検索して複数のファイルにまたがる修正ができます。ここが、開いているファイルしか見ていない補完型のツールとの差です。</p>
 <h2 id="s4">他のAIコーディングツールとの違い</h2>
 <p>AIでコードを書くツールは大きく3つの型に分かれます。3つを分ける軸が<strong>誰が次の一手を決めるか</strong>です。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-about/00_fig_types.png" alt="AIコーディングツールの3つの型の図。補完型（書いている横で次の行を提案）、チャット型（貼り付けて相談）、エージェント型（目標を渡すと自分でファイルを読み編集し実行する）" loading="lazy"><figcaption>3つの型。Claude Codeはエージェント型で、実行と検証まで自分で回す</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>型</th>
@@ -232,26 +254,26 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>補完型</td>
-<td>書いている横で次の行やブロックを提案する</td>
-<td>採用するか決め、自分で書き進める</td>
+<td data-label="型">補完型</td>
+<td data-label="動き">書いている横で次の行やブロックを提案する</td>
+<td data-label="人の役割">採用するか決め、自分で書き進める</td>
 </tr>
 <tr>
-<td>チャット型</td>
-<td>貼り付けたコードについて相談に答える</td>
-<td>コードを貼り、答えを自分で反映する</td>
+<td data-label="型">チャット型</td>
+<td data-label="動き">貼り付けたコードについて相談に答える</td>
+<td data-label="人の役割">コードを貼り、答えを自分で反映する</td>
 </tr>
 <tr>
-<td>エージェント型（Claude Code）</td>
-<td>目標を渡すと、ファイルを探して読み、編集し、コマンドを実行して検証する</td>
-<td>目標を決め、要所で承認し、必要なら止めて方向を変える</td>
+<td data-label="型">エージェント型（Claude Code）</td>
+<td data-label="動き">目標を渡すと、ファイルを探して読み、編集し、コマンドを実行して検証する</td>
+<td data-label="人の役割">目標を決め、要所で承認し、必要なら止めて方向を変える</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>同じエージェント型の中での違いは、どこで動くか（ターミナル・エディタ・クラウド）、どのモデルを使うか、権限の仕組みがどうなっているか、に分かれます。Claude Codeの場合、<strong>ターミナル、VS Code・JetBrains拡張、デスクトップアプリ、claude.ai/code、Slack、CI/CD</strong>から使え、実行環境もローカル・クラウド・リモートコントロールの3つが選べます。agenticループもツールも、どこから使っても同じだというのが公式ドキュメントの説明です。</p>
 <h2 id="s5">Claude Codeでできること</h2>
 <p>公式ドキュメントとクイックスタートに例として挙げられているものを整理すると、次の8つになります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>できること</th>
@@ -260,43 +282,43 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>コードベースの説明</td>
-<td>「このプロジェクトは何をしていますか？」「入口になるファイルはどれ？」</td>
+<td data-label="できること">コードベースの説明</td>
+<td data-label="頼み方の例">「このプロジェクトは何をしていますか？」「入口になるファイルはどれ？」</td>
 </tr>
 <tr>
-<td>機能の追加</td>
-<td>「ユーザー登録フォームに入力検証を追加して」</td>
+<td data-label="できること">機能の追加</td>
+<td data-label="頼み方の例">「ユーザー登録フォームに入力検証を追加して」</td>
 </tr>
 <tr>
-<td>バグの修正</td>
-<td>「空のフォームが送信できるバグを直して」</td>
+<td data-label="できること">バグの修正</td>
+<td data-label="頼み方の例">「空のフォームが送信できるバグを直して」</td>
 </tr>
 <tr>
-<td>リファクタリング</td>
-<td>「認証モジュールをasync/awaitに書き換えて」</td>
+<td data-label="できること">リファクタリング</td>
+<td data-label="頼み方の例">「認証モジュールをasync/awaitに書き換えて」</td>
 </tr>
 <tr>
-<td>テストの作成と実行</td>
-<td>「この関数のユニットテストを書いて、実行して」</td>
+<td data-label="できること">テストの作成と実行</td>
+<td data-label="頼み方の例">「この関数のユニットテストを書いて、実行して」</td>
 </tr>
 <tr>
-<td>gitの操作</td>
-<td>「変更をコミットして」「ブランチを作って」「コンフリクトの解決を手伝って」</td>
+<td data-label="できること">gitの操作</td>
+<td data-label="頼み方の例">「変更をコミットして」「ブランチを作って」「コンフリクトの解決を手伝って」</td>
 </tr>
 <tr>
-<td>ドキュメントの更新</td>
-<td>「READMEをインストール手順込みで更新して」</td>
+<td data-label="できること">ドキュメントの更新</td>
+<td data-label="頼み方の例">「READMEをインストール手順込みで更新して」</td>
 </tr>
 <tr>
-<td>コードレビュー</td>
-<td>「変更をレビューして改善を提案して」</td>
+<td data-label="できること">コードレビュー</td>
+<td data-label="頼み方の例">「変更をレビューして改善を提案して」</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>コードのないフォルダでも動く点も特徴です。公式ドキュメントの<a href="https://code.claude.com/docs/ja/common-workflows">一般的なワークフロー</a>には「ノートと非コードフォルダで作業する」という節があり、Markdownのメモや資料のフォルダで使う例が案内されています。</p>
 <h2 id="s6">料金と使える条件</h2>
 <p>Claude Codeは無料プランでは使えません。Claude Pro（月$22、年払いなら月$18）以上のプランに入るか、APIの従量課金で使います。日本向け料金ページは消費税込みの表示です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -306,32 +328,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Free</td>
-<td>$0</td>
-<td>使えない</td>
+<td data-label="プラン">Free</td>
+<td data-label="月額（消費税込み）">$0</td>
+<td data-label="Claude Code">使えない</td>
 </tr>
 <tr>
-<td>Pro</td>
-<td>$22（年払いは月$18）</td>
-<td>使える</td>
+<td data-label="プラン">Pro</td>
+<td data-label="月額（消費税込み）">$22（年払いは月$18）</td>
+<td data-label="Claude Code">使える</td>
 </tr>
 <tr>
-<td>Max</td>
-<td>$110／$220</td>
-<td>使える（Proの5倍／20倍の使用量）</td>
+<td data-label="プラン">Max</td>
+<td data-label="月額（消費税込み）">$110／$220</td>
+<td data-label="Claude Code">使える（Proの5倍／20倍の使用量）</td>
 </tr>
 <tr>
-<td>Team・Enterprise</td>
-<td>1シート$27.50〜</td>
-<td>使える</td>
+<td data-label="プラン">Team・Enterprise</td>
+<td data-label="月額（消費税込み）">1シート$27.50〜</td>
+<td data-label="Claude Code">使える</td>
 </tr>
 <tr>
-<td>API</td>
-<td>従量課金</td>
-<td>使える</td>
+<td data-label="プラン">API</td>
+<td data-label="月額（消費税込み）">従量課金</td>
+<td data-label="Claude Code">使える</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>使用量の上限は5時間ごとの枠と1週間の枠の2段構えで、claude.aiのチャットとClaude Codeが同じ枠を使います。上限に当たったときの選択肢や、APIの単価は<a href="https://nito-0210.com/media/claude-code-pricing/">料金プランの記事</a>に詳しく書いています。</p>
 <h2 id="s7">勝手に壊されないための仕組み</h2>
 <p>「AIが自分でコマンドを実行する」と聞いて最初に気になるのは安全性です。Claude Codeには3つの層があります。</p>
@@ -344,7 +366,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
 <p>公式のセキュリティページには「Claude Codeは、ユーザーが付与したパーミッションのみを持ちます。承認前に、提案されたコードとコマンドのセキュリティを確認する責任があります」と書かれています。自動で進む範囲を広げるほど、人が事前に確認できる量は減る、という関係です。</p>
 <h2 id="s8">向いている人・向いていない人</h2>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>向いている</th>
@@ -353,27 +375,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>複数ファイルにまたがる修正が多い人</td>
-<td>1行ずつ提案してほしい人（補完型のほうが合う）</td>
+<td data-label="向いている">複数ファイルにまたがる修正が多い人</td>
+<td data-label="向いていない">1行ずつ提案してほしい人（補完型のほうが合う）</td>
 </tr>
 <tr>
-<td>テストやビルドまで含めて任せたい人</td>
-<td>提案を読んで自分で書きたい人</td>
+<td data-label="向いている">テストやビルドまで含めて任せたい人</td>
+<td data-label="向いていない">提案を読んで自分で書きたい人</td>
 </tr>
 <tr>
-<td>定型作業をコマンドや手順書ごと自動化したい人</td>
-<td>無料で使いたい人（Pro以上が必要）</td>
+<td data-label="向いている">定型作業をコマンドや手順書ごと自動化したい人</td>
+<td data-label="向いていない">無料で使いたい人（Pro以上が必要）</td>
 </tr>
 <tr>
-<td>ターミナルでの作業に抵抗がない人</td>
-<td>GUIだけで完結させたい人（デスクトップアプリなら可）</td>
+<td data-label="向いている">ターミナルでの作業に抵抗がない人</td>
+<td data-label="向いていない">GUIだけで完結させたい人（デスクトップアプリなら可）</td>
 </tr>
 <tr>
-<td>コード以外のファイル整理にも使いたい人</td>
-<td>取り消せない操作を承認なしで任せたい人</td>
+<td data-label="向いている">コード以外のファイル整理にも使いたい人</td>
+<td data-label="向いていない">取り消せない操作を承認なしで任せたい人</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>プログラミングをしない人の用途としては、議事録の整形やフォルダの整理があります。その場合はターミナルよりデスクトップアプリのほうが入りやすく、具体的な手順は<a href="https://nito-0210.com/media/claude-code-guide/">使い方の記事</a>に書いています。</p>
 <h2 id="s9">よくある質問</h2>
 <p>Googleの「他の人はこちらも質問」に出ている質問が中心です。</p>
@@ -402,12 +424,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -416,9 +439,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Claude Codeとは</a><a href="#s2">仕組み: agenticループと5つのツール</a><a href="#s3">Claude Codeがアクセスできるもの</a><a href="#s4">他のAIコーディングツールとの違い</a><a href="#s5">Claude Codeでできること</a><a href="#s6">料金と使える条件</a><a href="#s7">勝手に壊されないための仕組み</a><a href="#s8">向いている人・向いていない人</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -451,11 +477,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

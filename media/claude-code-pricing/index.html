@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claude Code…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.18</span>
         </div>
         <h1 class="post-title">【2026年9月】Claude Codeの料金プランを解説。Pro・Max・Team・APIの違いと使用量の上限</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Codeの料金"><defs><linearGradient id="ecg-4d30809b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4d30809b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Codeの料金</text><line x1="235.2" y1="327.1" x2="964.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">プラン別の月額・上限・APIの単価を公式で確認</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>APIはSonnet 5が入力$2・出力$10（100万トークンあたり）。公式の平均は開発者1人あたり1日約$13</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -108,7 +116,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>日本向けの料金ページ（claude.com/ja/pricing）は「Prices include 10% JCT」と書かれており、米国向けの$20・$100・$200に消費税10%が乗った金額が表示されます。2026年9月18日時点の表示です。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-pricing/cc_01_pricing_personal.jpg" alt="Anthropicの日本向け料金ページ。Free $0、Pro $18（年払い時の月額）、Max $110からと表示" loading="lazy"><figcaption>日本向け料金ページの個人プラン（2026年9月18日）。消費税込みの表示</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -119,49 +127,49 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Free</td>
-<td>$0</td>
-<td><strong>使えない</strong></td>
-<td>5時間枠あり。日常的な質問向け</td>
+<td data-label="プラン">Free</td>
+<td data-label="月額（消費税込み）">$0</td>
+<td data-label="Claude Code"><strong>使えない</strong></td>
+<td data-label="使用量の目安">5時間枠あり。日常的な質問向け</td>
 </tr>
 <tr>
-<td>Pro</td>
-<td>$22（年払いは月$18、$220一括）</td>
-<td>使える</td>
-<td>Freeの5倍以上</td>
+<td data-label="プラン">Pro</td>
+<td data-label="月額（消費税込み）">$22（年払いは月$18、$220一括）</td>
+<td data-label="Claude Code">使える</td>
+<td data-label="使用量の目安">Freeの5倍以上</td>
 </tr>
 <tr>
-<td>Max 5x</td>
-<td>$110</td>
-<td>使える</td>
-<td>Proの5倍</td>
+<td data-label="プラン">Max 5x</td>
+<td data-label="月額（消費税込み）">$110</td>
+<td data-label="Claude Code">使える</td>
+<td data-label="使用量の目安">Proの5倍</td>
 </tr>
 <tr>
-<td>Max 20x</td>
-<td>$220（$200＋消費税）</td>
-<td>使える</td>
-<td>Proの20倍</td>
+<td data-label="プラン">Max 20x</td>
+<td data-label="月額（消費税込み）">$220（$200＋消費税）</td>
+<td data-label="Claude Code">使える</td>
+<td data-label="使用量の目安">Proの20倍</td>
 </tr>
 <tr>
-<td>Team スタンダード</td>
-<td>1シート$27.50（年払いは$22）</td>
-<td>使える</td>
-<td>Proより多い</td>
+<td data-label="プラン">Team スタンダード</td>
+<td data-label="月額（消費税込み）">1シート$27.50（年払いは$22）</td>
+<td data-label="Claude Code">使える</td>
+<td data-label="使用量の目安">Proより多い</td>
 </tr>
 <tr>
-<td>Team プレミアム</td>
-<td>1シート$137.50（年払いは$110）</td>
-<td>使える</td>
-<td>スタンダードの5倍</td>
+<td data-label="プラン">Team プレミアム</td>
+<td data-label="月額（消費税込み）">1シート$137.50（年払いは$110）</td>
+<td data-label="Claude Code">使える</td>
+<td data-label="使用量の目安">スタンダードの5倍</td>
 </tr>
 <tr>
-<td>Enterprise</td>
-<td>1シート$20（年払い）＋API単価で使用量</td>
-<td>使える</td>
-<td>管理者が上限を設定</td>
+<td data-label="プラン">Enterprise</td>
+<td data-label="月額（消費税込み）">1シート$20（年払い）＋API単価で使用量</td>
+<td data-label="Claude Code">使える</td>
+<td data-label="使用量の目安">管理者が上限を設定</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>出典はAnthropicの料金ページです。Freeの行にある「使えない」は、機能比較表の「Claude Code」の行がFreeだけ「いいえ」になっていることから取っています。</p>
 <h3 id="s2-1">Pro（月$22）で使えること</h3>
 <p>ProはClaude Codeが使える最も安いプランです。Claude Codeのほかに、Claude Design・Slides・Docs、プロジェクト、Claude in Chrome、Microsoft 365向けのClaudeが付きます。使えるモデルはOpus・Sonnet・Haikuで、Fableは「使用クレジット」経由になります。5時間あたりの使用量はFreeの5倍以上と書かれていますが、<strong>固定のメッセージ数は公開されていません</strong>。会話の長さ、選ぶモデル、使う機能で消費が変わるためです。</p>
@@ -170,6 +178,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s2-3">Team・Enterpriseの単価</h3>
 <p>Teamは2〜150名向けで、シートが2種類あります。スタンダードは月払い$27.50で使用量がProより多く、プレミアムは$137.50でスタンダードの5倍です。どちらもClaude Codeが含まれ、一元請求・SSO・管理者コントロールが付きます。Enterpriseは1シート$20（年払い）にAPI単価での使用量が加わる形で、管理者がユーザーごとの利用上限を設定できます。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-pricing/cc_02_pricing_team.jpg" alt="料金ページのTeam & Enterpriseタブ。スタンダードシート$22、プレミアムシート$110（年払い時の月額）、Enterpriseは$20/シート/月＋API使用量" loading="lazy"><figcaption>Team & Enterpriseの料金（2026年9月18日）。表示は年払い時の月額</figcaption></figure>
+
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
 
 <h2 id="s3">使用量の上限の仕組み</h2>
 <p>料金ページのFAQによると、すべてのプランに<strong>5時間のローリングウィンドウでリセットされる上限</strong>があり、有料プランにはさらに<strong>週次の上限</strong>が加わります。5時間の枠が回復しても、週の枠を使い切っていれば止まります。</p>
@@ -188,7 +210,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>3つ目の使用クレジットは、claude.aiの「設定＞使用状況」（Settings &gt; Usage）でオン・オフを切り替え、月間の支出上限も設定できます。Claude Code側からは <code>/usage-credits</code> で同じ画面が開く仕組みです。Pro・Maxで支出上限に達すると、Claude Codeが上限を引き上げるか聞いてくるので、CLIを離れずに続けられます。</p>
 <h2 id="s5">API従量課金の料金</h2>
 <p>APIキーで使う場合はモデルごとの単価に使ったトークン量を掛けた金額が請求されます。2026年9月18日時点の主なモデルの単価（100万トークンあたり）です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>モデル</th>
@@ -199,31 +221,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Claude Fable 5.1</td>
-<td>$10</td>
-<td>$50</td>
-<td>$0.25</td>
+<td data-label="モデル">Claude Fable 5.1</td>
+<td data-label="入力">$10</td>
+<td data-label="出力">$50</td>
+<td data-label="キャッシュ読み取り">$0.25</td>
 </tr>
 <tr>
-<td>Claude Opus 5</td>
-<td>$5</td>
-<td>$25</td>
-<td>$0.50</td>
+<td data-label="モデル">Claude Opus 5</td>
+<td data-label="入力">$5</td>
+<td data-label="出力">$25</td>
+<td data-label="キャッシュ読み取り">$0.50</td>
 </tr>
 <tr>
-<td>Claude Sonnet 5</td>
-<td>$2</td>
-<td>$10</td>
-<td>$0.20</td>
+<td data-label="モデル">Claude Sonnet 5</td>
+<td data-label="入力">$2</td>
+<td data-label="出力">$10</td>
+<td data-label="キャッシュ読み取り">$0.20</td>
 </tr>
 <tr>
-<td>Claude Haiku 4.5</td>
-<td>$1</td>
-<td>$5</td>
-<td>$0.10</td>
+<td data-label="モデル">Claude Haiku 4.5</td>
+<td data-label="入力">$1</td>
+<td data-label="出力">$5</td>
+<td data-label="キャッシュ読み取り">$0.10</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/claude-code-pricing/cc_05_api_pricing_table.jpg" alt="Anthropic公式ドキュメントのモデル別料金表。Fable 5.1、Opus 5、Sonnet 5、Haiku 4.5の入力・出力・キャッシュ単価" loading="lazy"><figcaption>公式ドキュメントのモデル料金表（2026年9月18日）</figcaption></figure>
 
 <p>Claude Codeは毎回のやり取りで <code>CLAUDE.md</code> やこれまでの会話を送り直すため、入力トークンが積み上がります。それを抑えるのがプロンプトキャッシュで、キャッシュに当たった入力は基本単価の1/10です。Claude Codeは自動でキャッシュを使うので、<code>/usage</code> の「Prompt cache」の行でヒット率を確認できます。</p>
@@ -287,12 +309,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -301,9 +324,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Claude Codeの料金は2通り</a><a href="#s2">プラン別の料金とClaude Codeで使える範囲</a><a href="#s3">使用量の上限の仕組み</a><a href="#s4">上限に達したときの3つの選択肢</a><a href="#s5">API従量課金の料金</a><a href="#s6">どのプランを選ぶか</a><a href="#s7">使いすぎを防ぐ設定と確認方法</a><a href="#s8">上級編。同じ作業でトークンを減らす3つの手</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -336,11 +362,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

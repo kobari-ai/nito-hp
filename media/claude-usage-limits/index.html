@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claudeの使用制限…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.25</span>
         </div>
         <h1 class="post-title">【2026年9月】Claudeの使用制限とリセット時間を解説｜5時間・週間・無料版・ツール使用制限</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの使用制限とリセット"><defs><linearGradient id="ecg-aad0a654" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-aad0a654)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="86.4" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの使用制</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">限とリセット</text><line x1="311.2" y1="378.0" x2="888.8" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">5時間・週間・無料版・ツール使用制限</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>「このターンのツール使用制限に達しました」は、表示の文言から読む限り<strong>1回の応答の中の上限</strong>。使用量の枠の表示とは別に出る</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -103,7 +111,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/claude-usage-limits/00_fig_kinds.png" alt="Claudeで作業が止まる4つの制限の図。5時間のセッション制限と週間の使用制限は使用量の枠で時間で戻る。ターンのツール使用制限は文言から読む限り1回の応答の上限で、長さの制限は1つの会話の上限で新しい会話に分ける" loading="lazy"><figcaption>4つの制限と、それぞれの表示と対処</figcaption></figure>
 
 <p>表示される文言で見分けられます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>表示</th>
@@ -114,31 +122,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>5時間の制限に近づいています</td>
-<td>5時間のセッション制限（警告）</td>
-<td>戻る</td>
-<td>残りの作業を絞る</td>
+<td data-label="表示">5時間の制限に近づいています</td>
+<td data-label="何の制限か">5時間のセッション制限（警告）</td>
+<td data-label="待てば戻るか">戻る</td>
+<td data-label="すぐできること">残りの作業を絞る</td>
 </tr>
 <tr>
-<td>5時間の制限に達しました - [時間]にリセットされます</td>
-<td>5時間のセッション制限</td>
-<td>戻る</td>
-<td>リセット・使用クレジット</td>
+<td data-label="表示">5時間の制限に達しました - [時間]にリセットされます</td>
+<td data-label="何の制限か">5時間のセッション制限</td>
+<td data-label="待てば戻るか">戻る</td>
+<td data-label="すぐできること">リセット・使用クレジット</td>
 </tr>
 <tr>
-<td>Claudeはこのターンのツール使用制限に達しました</td>
-<td>1回の応答で使えるツールの回数（文言からの読み）</td>
-<td>枠とは別</td>
-<td>「続ける」を押す（利用者の報告）</td>
+<td data-label="表示">Claudeはこのターンのツール使用制限に達しました</td>
+<td data-label="何の制限か">1回の応答で使えるツールの回数（文言からの読み）</td>
+<td data-label="待てば戻るか">枠とは別</td>
+<td data-label="すぐできること">「続ける」を押す（利用者の報告）</td>
 </tr>
 <tr>
-<td>メッセージがこのチャットの長さ制限を超えます</td>
-<td>1つの会話に入る量</td>
-<td>戻らない</td>
-<td>ファイルを減らす・新しい会話</td>
+<td data-label="表示">メッセージがこのチャットの長さ制限を超えます</td>
+<td data-label="何の制限か">1つの会話に入る量</td>
+<td data-label="待てば戻るか">戻らない</td>
+<td data-label="すぐできること">ファイルを減らす・新しい会話</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/claude-usage-limits/cul_03_help_err.jpg" alt="Claude公式ヘルプのエラーメッセージのトラブルシューティングのページ。使用制限の警告として5時間の制限に近づいています、制限に達したときの5時間の制限に達しました - 時間にリセットされます、追加使用が有効な場合の表示、長さ制限エラーの文言が載っている" loading="lazy"><figcaption>使用制限と長さ制限の文言が載っている公式ヘルプ（2026年9月25日取得）</figcaption></figure>
 
 <p>このほかに「予期しない容量制約により、Claudeはメッセージに応答できません」という表示もありますが、これは制限ではなくClaude全体の混雑で起き、利用者の枠とは関係がありません。公式ヘルプでは停止ではなく一時的な負荷の管理と説明され、<a href="https://status.claude.com">ステータスページ</a>にも載りません。</p>
@@ -157,6 +165,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>同じ1通でも、長い会話の後半で送ると過去のやり取りをまとめて読み直すため、減り方が大きくなります。**ネット上で見かける「5時間で約45回」のような数字は目安にすぎず、公式は固定の回数を示していません。**Proの枠は無料版より多く、Maxはセッションあたりの量をProの5倍か20倍から選べます。金額は<a href="/media/claude-pricing/">Claudeの料金プランの記事</a>にまとめました。</p>
 <h3 id="s2-2">無料版の制限</h3>
 <p>無料版にも5時間の枠があり、同じく5時間ごとに戻ります。公式ヘルプで週間の制限が明記されているのはProとMaxで、無料版の週間の枠については書かれていません。**無料版は使用クレジットの対象外なので、上限に達したら待つかProに上げるかの2択です。**使えるモデルの範囲も有料プランより狭く、OpusとClaude Codeは無料版では使えません。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">週間の使用制限</h2>
 <p>有料プランにはすべてのモデルに共通の週間の枠が加わります。<a href="https://support.claude.com/ja/articles/8325606">Proプランの公式ヘルプ</a>によると、週間の枠は**アカウントに割り当てられた毎週の固定の時刻にリセットされ、その日時はClaudeを使い始めた時期や契約した時期に関係なく変わりません。**1週間を通して見ると、使い方にかかわらず毎回まるごと1週間分が戻ります。</p>
 <p>9月25日に開いた設定画面では「今週」の行に「2:00（木曜日）にリセット」と表示され、別の行に「今週のFable」がありました。Fableには通常の週間枠とは別の上限があり、リセットの時刻は同じです。公式ヘルプはさらに、容量の管理のために月単位の上限やモデルごとの制限をかける場合があるとも書いています。</p>
@@ -194,7 +216,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>上限の表示が出たら、取れる手はプランによって4つあります。</p>
 <figure class="post-figure"><img src="/media/images/claude-usage-limits/03_fig_choices.png" alt="上限に達したときに取れる4つの手の図。待つは全プランで表示された時刻まで待つ。無料でリセットは付与された人だけで設定か上限の表示で押す。使用クレジットはProとMaxでAPIの標準料金で続け1日の上限は2000ドル。上位プランはProの5倍か20倍の枠" loading="lazy"><figcaption>上限に達したときの4つの手</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>対処</th>
@@ -205,31 +227,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>待つ</td>
-<td>全プラン</td>
-<td>なし</td>
-<td>5時間のリセットが近いとき</td>
+<td data-label="対処">待つ</td>
+<td data-label="使えるプラン">全プラン</td>
+<td data-label="費用">なし</td>
+<td data-label="向く場面">5時間のリセットが近いとき</td>
 </tr>
 <tr>
-<td>無料でリセット</td>
-<td>付与されたアカウント</td>
-<td>なし</td>
-<td>枠が尽きて次のリセットまで遠いとき</td>
+<td data-label="対処">無料でリセット</td>
+<td data-label="使えるプラン">付与されたアカウント</td>
+<td data-label="費用">なし</td>
+<td data-label="向く場面">枠が尽きて次のリセットまで遠いとき</td>
 </tr>
 <tr>
-<td>使用クレジット</td>
-<td>Pro・Max</td>
-<td>APIの標準料金</td>
-<td>締め切りがあり今日中に終えたいとき</td>
+<td data-label="対処">使用クレジット</td>
+<td data-label="使えるプラン">Pro・Max</td>
+<td data-label="費用">APIの標準料金</td>
+<td data-label="向く場面">締め切りがあり今日中に終えたいとき</td>
 </tr>
 <tr>
-<td>上位プランに変える</td>
-<td>Pro・Max 5x</td>
-<td>月額の差額</td>
-<td>毎週のように上限に当たるとき</td>
+<td data-label="対処">上位プランに変える</td>
+<td data-label="使えるプラン">Pro・Max 5x</td>
+<td data-label="費用">月額の差額</td>
+<td data-label="向く場面">毎週のように上限に当たるとき</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="s6-1">使用クレジットで続ける</h3>
 <p>使用クレジットは、プランの枠を使い切ったあとも<strong>APIの標準料金の従量課金で作業を続ける仕組み</strong>です。<a href="https://support.claude.com/ja/articles/12429409">使用クレジットの公式ヘルプ</a>によると、設定の使用量の画面でオンにし、支払い方法を登録して先に入金します。月の支出上限と、残高が減ったときの自動の入金も設定できます。1日に使える額の上限は2,000ドルです。**日本では2026年9月10日から、使用クレジットは購入から6か月で期限が切れます。**期限の7日前にメールが届き、設定の画面にも期限が表示されるので、一度に多く入金しすぎないようにします。</p>
 <figure class="post-figure"><img src="/media/images/claude-usage-limits/cul_02_credits.jpg" alt="Claudeの設定の使用量の画面の下半分。1の使用クレジットの欄にプランの上限に達した場合もClaudeを使い続けるために利用クレジットを有効にしてくださいという説明とオンオフのスイッチ、使用量を追加購入のボタン、月間利用上限。2の今週の製品別使用状況にClaude Code、チャット、Cowork、その他の割合が並ぶ" loading="lazy"><figcaption>1が使用クレジットのスイッチ、2が今週の製品別の使用状況</figcaption></figure>
@@ -249,7 +271,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
 <h2 id="s8">制限に早く達する原因と減らし方</h2>
 <p>同じプランでも、使い方によって上限に当たる早さは大きく変わります。公式ヘルプと<a href="https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code">Claude Codeのモデルと使用量のページ</a>で挙げられている減らし方のうち、効果の大きいものを表にしました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>原因</th>
@@ -258,31 +280,31 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>1つの会話を長く続けている</td>
-<td>話題が変わったら新しい会話にする。Claude Codeは <code>/clear</code></td>
+<td data-label="原因">1つの会話を長く続けている</td>
+<td data-label="減らし方">話題が変わったら新しい会話にする。Claude Codeは <code>/clear</code></td>
 </tr>
 <tr>
-<td>同じ資料を毎回添付している</td>
-<td>プロジェクトに入れる。キャッシュされ、再利用時の消費が小さくなる</td>
+<td data-label="原因">同じ資料を毎回添付している</td>
+<td data-label="減らし方">プロジェクトに入れる。キャッシュされ、再利用時の消費が小さくなる</td>
 </tr>
 <tr>
-<td>軽い作業にも上位モデルを使っている</td>
-<td>日常の作業はSonnet、難しい問題だけOpusに切り替える</td>
+<td data-label="原因">軽い作業にも上位モデルを使っている</td>
+<td data-label="減らし方">日常の作業はSonnet、難しい問題だけOpusに切り替える</td>
 </tr>
 <tr>
-<td>拡張思考が常にオン、努力レベルが高いまま</td>
-<td>要らない作業ではオフにするか努力レベルを下げる</td>
+<td data-label="原因">拡張思考が常にオン、努力レベルが高いまま</td>
+<td data-label="減らし方">要らない作業ではオフにするか努力レベルを下げる</td>
 </tr>
 <tr>
-<td>使わないツールやコネクタがオン</td>
-<td>会話ごとにウェブ検索・リサーチ・MCPを外す</td>
+<td data-label="原因">使わないツールやコネクタがオン</td>
+<td data-label="減らし方">会話ごとにウェブ検索・リサーチ・MCPを外す</td>
 </tr>
 <tr>
-<td>質問を小分けに送っている</td>
-<td>関連する質問を1通にまとめる</td>
+<td data-label="原因">質問を小分けに送っている</td>
+<td data-label="減らし方">関連する質問を1通にまとめる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Claude Codeを使う人向けには、公式が勧める使い方が2つあります。1つは<strong>Opusで計画を立ててSonnetで実行する</strong>分け方で、<code>/model opusplan</code> を選ぶと自動で切り替わります。もう1つは <code>/usage</code> の内訳で、消費の多いサブエージェントやMCPサーバーを見つけて外すことです。9月14日の変更で週間の枠が直前より減ったため、週の半ばで一度内訳を見ておくと週末に止まらずに済みます。</p>
 <h2 id="s9">よくある質問</h2>
 <h3 id="s9-1">Claudeの無料版は何回まで使えますか？</h3>
@@ -322,12 +344,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -336,9 +359,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Claudeで止まる制限は4種類</a><a href="#s2">5時間のセッション制限</a><a href="#s3">週間の使用制限</a><a href="#s4">リセット時間の確認方法</a><a href="#s5">無料でリセットする機能</a><a href="#s6">上限に達したときの対処</a><a href="#s7">ツール使用制限のメッセージ</a><a href="#s8">制限に早く達する原因と減らし方</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -371,11 +397,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Workspaceの…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.10</span>
         </div>
         <h1 class="post-title">【2026年10月】WorkspaceのGeminiを無効化する方法 管理コンソール・組織部門・Gmail</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WorkspaceのGeminiを止める"><defs><linearGradient id="ecg-8eab7d94" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-8eab7d94)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="86.4" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">WorkspaceのG</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">eminiを止める</text><line x1="334.0" y1="378.0" x2="866.0" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">管理コンソール・組織部門・既定の状態</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -74,6 +76,12 @@
 <li><strong>ライセンスの無い人に使わせる設定をオンにすると、その人には個人と同じ規約が適用される</strong></li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -101,7 +109,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">管理者が止められる3つの範囲</h2>
 <p>「Geminiをオフにしたのに、Gmailにはまだ出る」という相談は、止めた場所と出ている場所が違うときに起きます。管理者ヘルプはgemini.google.comで会話するGeminiアプリと、GmailやドキュメントなどWorkspaceのアプリの中で動くGeminiを別のサービスとして扱っています。<strong>Geminiアプリの設定はWorkspaceのアプリの中のAI機能に影響しない</strong>と、ヘルプにも書かれています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>止めたいもの</th>
@@ -112,25 +120,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Geminiアプリ（ウェブ・スマホ・Chrome・Mac）</td>
-<td>［生成AI］［Geminiアプリ］［サービスのステータス］</td>
-<td>オン</td>
-<td>Business・Enterpriseのほとんど</td>
+<td data-label="止めたいもの">Geminiアプリ（ウェブ・スマホ・Chrome・Mac）</td>
+<td data-label="管理コンソールの場所">［生成AI］［Geminiアプリ］［サービスのステータス］</td>
+<td data-label="既定">オン</td>
+<td data-label="対応エディション">Business・Enterpriseのほとんど</td>
 </tr>
 <tr>
-<td>Gmail・ドキュメント・Meetなどの中のGemini</td>
-<td>［生成AI］［Gemini for Workspace］［機能へのアクセス］</td>
-<td>オン</td>
-<td>Enterprise Standard・Enterprise Plusなど</td>
+<td data-label="止めたいもの">Gmail・ドキュメント・Meetなどの中のGemini</td>
+<td data-label="管理コンソールの場所">［生成AI］［Gemini for Workspace］［機能へのアクセス］</td>
+<td data-label="既定">オン</td>
+<td data-label="対応エディション">Enterprise Standard・Enterprise Plusなど</td>
 </tr>
 <tr>
-<td>GeminiアプリからGmailやドライブを読む連携</td>
-<td>［生成AI］［Geminiアプリ］［アプリ］</td>
-<td>オン</td>
-<td>Geminiアプリを使えるエディション</td>
+<td data-label="止めたいもの">GeminiアプリからGmailやドライブを読む連携</td>
+<td data-label="管理コンソールの場所">［生成AI］［Geminiアプリ］［アプリ］</td>
+<td data-label="既定">オン</td>
+<td data-label="対応エディション">Geminiアプリを使えるエディション</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>このほか、旧NotebookLMのGemini Notebookは［生成AI］［Gemini Notebook］、MeetのAIによるメモ作成は［アプリ］［Google Workspace］［Google Meet］の［Gemini の設定］と、それぞれ別の場所です。Geminiのベータ版の機能は既定でオフで、管理者がオンにしない限り組織では使えません。</p>
 <p>Gemini Notebookをオンにする手順と使えないときの確かめ方は<a href="/media/notebooklm-workspace-admin/">WorkspaceでNotebookLMを有効にする方法</a>にまとめました。</p>
 <h2 id="s2">Geminiアプリをオンまたはオフにする手順</h2>
@@ -150,6 +158,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/google-workspace-gemini-admin/gwa_02_user_access.jpg" alt="管理者ヘルプのGeminiアプリを使用できるユーザーを選択する節。既定ではライセンスが割り当てられた18歳以上のユーザーが使えること、この設定はgemini.google.com、モバイルアプリ、Gemini in Chromeへのアクセスを管理しWorkspaceのほかのAI機能には影響しないという注意、ユーザーアクセスの手順が並び、ライセンスの有無にかかわらず全員に許可するチェックボックスの行が赤枠" loading="lazy"><figcaption>［ユーザー アクセス］のチェックボックス（2026年10月10日）</figcaption></figure>
 
 <p>対象のエディションを持たない人がGeminiアプリを使うと、Workspaceの規約ではなく<strong>Googleの利用規約とGeminiアプリのプライバシーに関するお知らせが適用</strong>されます。その場合のチャットは人のレビュアーによるレビューや、Googleの製品と機械学習の改良に使われることがあると同じヘルプに書かれています。会社のデータを守る目的なら、このチェックは外したままにします。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Gemini を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">GmailやドキュメントのGeminiを止める方法</h2>
 <p>Gmailの右上のGeminiのアイコンやドキュメントのサイドパネルは、Geminiアプリをオフにしても消えません。こちらは［Gemini for Workspace］の側の設定です。</p>
 <h3 id="s3-1">Enterpriseの機能へのアクセス</h3>
@@ -232,12 +254,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -246,9 +269,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">管理者が止められる3つの範囲</a><a href="#s2">Geminiアプリをオンまたはオフにする手順</a><a href="#s3">GmailやドキュメントのGeminiを止める方法</a><a href="#s4">日本の組織の既定の状態</a><a href="#s5">組織部門とグループで分ける</a><a href="#s6">Workspaceとの連携と会話履歴</a><a href="#s7">止めたときの利用者の画面</a><a href="#s8">スマホとChromeのGemini</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -281,11 +307,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

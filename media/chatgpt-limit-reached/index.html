@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTで上限…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.25</span>
         </div>
         <h1 class="post-title">【2026年10月】ChatGPTで上限に達したときのリセット時間と対処｜無料版・Plus・Pro・Codex</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTの上限とリセット時間"><defs><linearGradient id="ecg-d20d7ad5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d20d7ad5)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="86.4" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTの上限</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">とリセット時間</text><line x1="326.4" y1="378.0" x2="873.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">無料版・Plus・Pro・Codexの違いと対処</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>Plus・Proの個人アカウントは、WorkとCodexの枠を<strong>有料ですぐに戻せる</strong>（次の週の枠を前倒しで使う）。戻すと週の区切りも変わる</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -98,7 +106,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>上限に達したという表示はどの機能を使っていたかで意味が変わります。OpenAIの<a href="https://help.openai.com/ja-jp/articles/20001354-gpt-56-and-gpt-6-pro-in-chatgpt">ChatGPTでのGPT-5.6とGPT-6 Pro</a>と<a href="https://help.openai.com/ja-jp/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex">WorkとCodexでのGPT-6 Astraの利用量管理</a>を読むと、上限は5つに分かれます。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-limit-reached/00_fig_kinds_v2.jpg" alt="ChatGPTの上限5種類を並べた図。画像とファイルのアイコンのツールの上限、電球のアイコンの思考の上限、星のアイコンのProモデルの上限、コードの括弧のアイコンのWorkとCodexの上限、盾のアイコンの一時的な利用制限" loading="lazy"><figcaption>どこで止まったかで戻り方が違う</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>上限</th>
@@ -109,37 +117,37 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ツールの上限</td>
-<td>無料版・Go</td>
-<td>画像生成・アップロード・音声・データ分析</td>
-<td>表示された時刻まで待つ。Plus以上に変える</td>
+<td data-label="上限">ツールの上限</td>
+<td data-label="対象のプラン">無料版・Go</td>
+<td data-label="何が止まるか">画像生成・アップロード・音声・データ分析</td>
+<td data-label="戻り方">表示された時刻まで待つ。Plus以上に変える</td>
 </tr>
 <tr>
-<td>思考の上限</td>
-<td>有料プラン</td>
-<td>中程度・高・超高で使うGPT-5.6 Sol</td>
-<td>別のモデルで続くことがある。時刻まで待つ</td>
+<td data-label="上限">思考の上限</td>
+<td data-label="対象のプラン">有料プラン</td>
+<td data-label="何が止まるか">中程度・高・超高で使うGPT-5.6 Sol</td>
+<td data-label="戻り方">別のモデルで続くことがある。時刻まで待つ</td>
 </tr>
 <tr>
-<td>Proモデルの上限</td>
-<td>Pro・Business</td>
-<td>GPT-6 ProとGPT-5.6 Sol Pro</td>
-<td>別のモデルを使う。枠の回復を待つ</td>
+<td data-label="上限">Proモデルの上限</td>
+<td data-label="対象のプラン">Pro・Business</td>
+<td data-label="何が止まるか">GPT-6 ProとGPT-5.6 Sol Pro</td>
+<td data-label="戻り方">別のモデルを使う。枠の回復を待つ</td>
 </tr>
 <tr>
-<td>WorkとCodexの上限</td>
-<td>Plus・Pro・Business</td>
-<td>WorkとCodexでの作業</td>
-<td>5時間枠と週間枠の回復、リセットの利用</td>
+<td data-label="上限">WorkとCodexの上限</td>
+<td data-label="対象のプラン">Plus・Pro・Business</td>
+<td data-label="何が止まるか">WorkとCodexでの作業</td>
+<td data-label="戻り方">5時間枠と週間枠の回復、リセットの利用</td>
 </tr>
 <tr>
-<td>一時的な利用制限</td>
-<td>全プラン</td>
-<td>不正利用と判断された操作</td>
-<td>ChatGPTの通知に従う</td>
+<td data-label="上限">一時的な利用制限</td>
+<td data-label="対象のプラン">全プラン</td>
+<td data-label="何が止まるか">不正利用と判断された操作</td>
+<td data-label="戻り方">ChatGPTの通知に従う</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>**表示が出たときに使っていた機能を思い出すと、どの行に当たるかが分かります。**チャットで画像を頼んでいたならツールの上限、Codexで作業していたならWorkとCodexの上限です。</p>
 <h2 id="s2">無料版とGoの上限</h2>
 <p>無料版とGoでは日常のテキストのチャットは、不正利用を防ぐ制限の範囲内で回数無制限です。<a href="https://help.openai.com/ja-jp/articles/9275245-chatgpt-free-tier-faq">ChatGPT 無料版に関するよくある質問</a>によると、ファイルのアップロード、画像生成、音声、データ分析などのツールには、それぞれ別の上限があります。上限に達するとChatGPTから通知が出ます。</p>
@@ -148,6 +156,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <p>通知の例には、Plusに変えるか翌朝の9時17分以降にもう一度試すよう英語で書かれています。**同じFAQによると、無料版で上限に達したあとPlus・Pro・Businessに変えると、上限はその場でリセットされます。**Goはこの対象に書かれていません。</p>
 <p>画像生成の上限は<a href="/media/chatgpt-image-limit/">ChatGPTの画像生成ができない原因の記事</a>で、アップロードの回数と容量は<a href="/media/chatgpt-file-upload-limit/">ChatGPTのファイルアップロード上限の記事</a>で詳しく扱っています。メモリの容量がいっぱいになったときの空け方は<a href="/media/chatgpt-memory-full/">ChatGPTのメモリがいっぱいのときの対処</a>へ。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">有料プランの思考とProモデルの上限</h2>
 <p>有料プランでは思考のレベル（中程度・高・超高）を選ぶとGPT-5.6 Solが使われます。**思考の上限に達すると、ChatGPTは別の利用可能なモデルで処理を続けることがあります。**止まらずに答えが返ってきても、使われたモデルが変わっている場合があるということです。</p>
 <h3 id="s3-1">考えてと頼んでも切り替わらない</h3>
@@ -158,7 +180,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-limit-reached/clr_01_help_pro_v2.jpg" alt="OpenAI公式ヘルプのChatGPTでのGPT-5.6とGPT-6 Proのページをスマホで開いた画面。GPT-6 ProとGPT-5.6 Sol Proの利用上限の見出しの下に、Proの契約でもGPT-6 Proを無制限には使えないこと、Pro 200ドルは週の上限に達すると思考の中程度に切り替わること、Pro 100ドルとBusinessは2つのモデルで1つの枠を共有することが書かれている" loading="lazy"><figcaption>Proモデルの上限の説明。Proの件数の表は消えている（2026年10月5日に取得）</figcaption></figure>
 
 <p>9月25日に読んだときには、このページにPro $200で週200件、Pro $100で週50件という件数の表がありました。**10月5日時点ではその表がなくなり、Proの件数は書かれていません。**Businessのモデルと制限のページには、Businessの件数が今も載っています。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>プラン</th>
@@ -168,27 +190,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Pro $200</td>
-<td>週ごとの上限（件数の記載なし）</td>
-<td>Sol Proは1日の枠と、2つを合わせた1日の枠の両方に残りがあるときだけ使える</td>
+<td data-label="プラン">Pro $200</td>
+<td data-label="GPT-6 Proの枠（チャット）">週ごとの上限（件数の記載なし）</td>
+<td data-label="GPT-5.6 Sol Proとの関係">Sol Proは1日の枠と、2つを合わせた1日の枠の両方に残りがあるときだけ使える</td>
 </tr>
 <tr>
-<td>Pro $100</td>
-<td>週ごとの枠（件数の記載なし）</td>
-<td>2つのモデルで1つの週の枠を共有</td>
+<td data-label="プラン">Pro $100</td>
+<td data-label="GPT-6 Proの枠（チャット）">週ごとの枠（件数の記載なし）</td>
+<td data-label="GPT-5.6 Sol Proとの関係">2つのモデルで1つの週の枠を共有</td>
 </tr>
 <tr>
-<td>Business Standard</td>
-<td>月15件</td>
-<td>2つのモデルで月15件を共有</td>
+<td data-label="プラン">Business Standard</td>
+<td data-label="GPT-6 Proの枠（チャット）">月15件</td>
+<td data-label="GPT-5.6 Sol Proとの関係">2つのモデルで月15件を共有</td>
 </tr>
 <tr>
-<td>Business Premium</td>
-<td>週50件</td>
-<td>2つのモデルで週50件を共有</td>
+<td data-label="プラン">Business Premium</td>
+<td data-label="GPT-6 Proの枠（チャット）">週50件</td>
+<td data-label="GPT-5.6 Sol Proとの関係">2つのモデルで週50件を共有</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Pro 500のGPT-6 Proの件数と扱いは、ヘルプに記載がありません（10月5日時点）。</p>
 <p>Pro $200でGPT-6 Proの週の上限に達すると、ChatGPTは自動で思考「中程度」のGPT-5.6に切り替わります。Pro $100とBusinessは2つのモデルで1つの枠を共有しているため、**モデルを切り替えても件数は増えません。**これらはチャットでの上限で、WorkとCodexには別の枠があります。</p>
 <h3 id="s3-3">Pro 500の追加とPro 200の枠</h3>
@@ -203,7 +225,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>枠の戻り方、配られた保存済みリセットの使い方、PlusとProの個人アカウントで買える即時リセットの違いは、<a href="/media/codex-limits/">Codexの制限とリセット</a>にまとめました。プランごとの枠の大きさは<a href="/media/chatgpt-work-plans/">ChatGPT Workのプランと上限の記事</a>で比べられます。</p>
 <h2 id="s5">上限に達したときの対処</h2>
 <p>取れる手を並べると次のとおりです。最後の行のサポートへの依頼は、上限を戻す手段にはなりません。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>手</th>
@@ -213,37 +235,37 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>待つ</td>
-<td>すべての上限</td>
-<td>時刻は分かる場合だけ画面に出る</td>
+<td data-label="手">待つ</td>
+<td data-label="使える場面">すべての上限</td>
+<td data-label="注意">時刻は分かる場合だけ画面に出る</td>
 </tr>
 <tr>
-<td>別のモデルを使う</td>
-<td>有料プランの思考・Proモデル</td>
-<td>同じ枠を共有するモデルでは増えない。WorkとCodexの共有の枠も戻らない</td>
+<td data-label="手">別のモデルを使う</td>
+<td data-label="使える場面">有料プランの思考・Proモデル</td>
+<td data-label="注意">同じ枠を共有するモデルでは増えない。WorkとCodexの共有の枠も戻らない</td>
 </tr>
 <tr>
-<td>プランを上げる</td>
-<td>無料版のツールの上限</td>
-<td>Plus・Pro・Businessに変えると上限がリセット</td>
+<td data-label="手">プランを上げる</td>
+<td data-label="使える場面">無料版のツールの上限</td>
+<td data-label="注意">Plus・Pro・Businessに変えると上限がリセット</td>
 </tr>
 <tr>
-<td>リセットを使う</td>
-<td>WorkとCodex</td>
-<td>週のリセット日が変わる。購入分は次の週の前倒し</td>
+<td data-label="手">リセットを使う</td>
+<td data-label="使える場面">WorkとCodex</td>
+<td data-label="注意">週のリセット日が変わる。購入分は次の週の前倒し</td>
 </tr>
 <tr>
-<td>クレジットで続ける</td>
-<td>WorkとCodexなど（アカウントによる）</td>
-<td>含まれる枠を使い切ったあと、従量課金の残高から引かれる</td>
+<td data-label="手">クレジットで続ける</td>
+<td data-label="使える場面">WorkとCodexなど（アカウントによる）</td>
+<td data-label="注意">含まれる枠を使い切ったあと、従量課金の残高から引かれる</td>
 </tr>
 <tr>
-<td>サポートに頼む</td>
-<td>使えない</td>
-<td>数え間違いや、時刻を過ぎても戻らないときの調査だけ</td>
+<td data-label="手">サポートに頼む</td>
+<td data-label="使える場面">使えない</td>
+<td data-label="注意">数え間違いや、時刻を過ぎても戻らないときの調査だけ</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>即時リセットを買えるのはPlusとProの個人アカウントです。<a href="https://help.openai.com/ja-jp/articles/20001507-paid-weekly-work-and-codex-rate-limit-resets">WorkとCodexの週間レート制限の有料リセット</a>では、購入できる場所としてChatGPTのウェブ版とCodexのデスクトップアプリが挙がっています。ただし買えるかどうかはアカウントと請求先の国によって違い、同じプランでも出ないことがあります。手順で押す場所はデスクトップアプリの［使用状況］にある［即時リセットを購入］と、週の上限に達したときに出るバナーです。5時間の上限だけではバナーは出ません。クレジットはCodexとWorkのほか、ChatGPT for WordやExcel、PowerPointの対象の機能にも使えます。</p>
 <h3 id="s5-1">サポートは上限をリセットしない</h3>
 <p>ChatGPTでのGPT-5.6とGPT-6 Proのヘルプには、<strong>OpenAIのサポートはChatGPTやCodexの利用上限をリセットしない</strong>とはっきり書かれています。問い合わせてよいのは使用量が誤って数えられたと思うときと、表示されたリセット時刻を過ぎても使えないときです。</p>
@@ -281,12 +303,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -295,9 +318,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">上限は5種類</a><a href="#s2">無料版とGoの上限</a><a href="#s3">有料プランの思考とProモデルの上限</a><a href="#s4">WorkとCodexの上限</a><a href="#s5">上限に達したときの対処</a><a href="#s6">よくある質問</a><a href="#s7">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -330,11 +356,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Google検索のAI…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.30</span>
         </div>
         <h1 class="post-title">【2026年9月】Google検索のAIによる概要を消す方法を解説｜ウェブタブ・udm=14・拡張機能・スマホ</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIによる概要を消す"><defs><linearGradient id="ecg-6c8b30b9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6c8b30b9)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIによる概要を消す</text><line x1="250.4" y1="327.1" x2="949.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">ウェブタブ・udm=14・拡張機能・スマホ</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>ログインしていなくても、AIによる概要は出た。Search Labs の［検索における AI］をオフにしても消えるのは試験運用版だけ</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -100,7 +108,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>AIによる概要とAIモードは別の機能です。検索結果の一番上に要約として出るのがAIによる概要で、タブ列の［AI モード］を押すと開く会話の画面がAIモードです。<strong>アドレスバーのボタンなどAIモードの入口を消したい場合は、<a href="/media/ai-mode-remove/">Google AIモードを消す方法</a>を見てください。</strong></p>
 <figure class="post-figure"><img src="/media/images/ai-overviews-off/00_fig_methods.png" alt="AIによる概要を出さない4つの方法の図。ウェブタブは検索のたびにタブ列から選ぶ公式の方法。udm=14は検索結果のURLに付けるとウェブタブと同じ画面になり、パソコンのChromeは検索エンジンとして登録できる。-aiは検索語の後ろに付けるとAIによる概要が出なかったが、aiを含むページも除外され画面の並びも変わった。拡張機能はパソコンのブラウザ向けで、権限と開発元を確かめてから入れる" loading="lazy"><figcaption>AIによる概要を出さない4つの方法</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>方法</th>
@@ -112,35 +120,35 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>［ウェブ］タブ</td>
-<td>その検索だけ</td>
-<td>使える</td>
-<td>使える</td>
-<td>検索のたびに選ぶ</td>
+<td data-label="方法">［ウェブ］タブ</td>
+<td data-label="効く範囲">その検索だけ</td>
+<td data-label="スマホ">使える</td>
+<td data-label="パソコン">使える</td>
+<td data-label="注意">検索のたびに選ぶ</td>
 </tr>
 <tr>
-<td><code>udm=14</code></td>
-<td>その検索だけ。登録すれば毎回</td>
-<td>ブックマークで使う</td>
-<td>Chromeは検索エンジンに登録できる</td>
-<td>［AI モード］のタブは残る</td>
+<td data-label="方法"><code>udm=14</code></td>
+<td data-label="効く範囲">その検索だけ。登録すれば毎回</td>
+<td data-label="スマホ">ブックマークで使う</td>
+<td data-label="パソコン">Chromeは検索エンジンに登録できる</td>
+<td data-label="注意">［AI モード］のタブは残る</td>
 </tr>
 <tr>
-<td><code>-ai</code></td>
-<td>その検索だけ</td>
-<td>使える</td>
-<td>使える</td>
-<td>aiを含むページも外れる</td>
+<td data-label="方法"><code>-ai</code></td>
+<td data-label="効く範囲">その検索だけ</td>
+<td data-label="スマホ">使える</td>
+<td data-label="パソコン">使える</td>
+<td data-label="注意">aiを含むページも外れる</td>
 </tr>
 <tr>
-<td>拡張機能</td>
-<td>毎回</td>
-<td>使えない</td>
-<td>使える</td>
-<td>権限と開発元を確かめる</td>
+<td data-label="方法">拡張機能</td>
+<td data-label="効く範囲">毎回</td>
+<td data-label="スマホ">使えない</td>
+<td data-label="パソコン">使える</td>
+<td data-label="注意">権限と開発元を確かめる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s2">スマホで消す</h2>
 <p>9月30日に、スマホの表示で「お月見 いつ」と検索しました。ログインしていない状態でも、検索結果の一番上にAIによる概要が出ました。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/ai-overviews-off/01_sp_normal.jpg" alt="スマホの表示でお月見 いつと検索した結果。タブ列の下にAIによる概要が出て、2026年の中秋の名月は9月25日でしたという要約と、もっと見るのボタンが表示されている" loading="lazy"><figcaption>ふつうに検索した画面。一番上にAIによる概要が出る（2026年9月30日）</figcaption></figure>
@@ -155,6 +163,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure post-figure--sp"><img src="/media/images/ai-overviews-off/03_sp_udm14.jpg" alt="スマホの表示でudm=14を付けてお月見 いつと検索した結果。AIによる概要は無く、三幸製菓やISETAN DOORなどの検索結果のリンクが一番上から並んでいる。タブ列の左端にはAIモードが残っている" loading="lazy"><figcaption>udm=14 を付けた画面。AIによる概要は出ず、［AI モード］のタブは残る</figcaption></figure>
 
 <p>スマホのChromeのヘルプを見ると、既定の検索エンジンは一覧から選ぶ形です。最近使った検索エンジンが一覧に加わる仕組みはありますが、<code>udm=14</code> 付きのURLを入れて登録する手順は書かれていません。スマホで毎回使いたいなら、<a href="https://www.google.com/search?q=%E3%81%8A%E6%9C%88%E8%A6%8B%20%E3%81%84%E3%81%A4&amp;udm=14">udm=14 を付けた検索画面</a>をブックマークしておき、そこから検索窓に語を入れ直す形がいちばん手数が少なく済みます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">パソコンのChromeで毎回消す</h2>
 <p>パソコンのChromeでは <code>udm=14</code> を付けた検索を検索エンジンとして登録し、デフォルトにできます。手順はChromeのヘルプ「<a href="https://support.google.com/chrome/answer/95426?hl=ja&amp;co=GENIE.Platform%3DDesktop">既定の検索エンジンとサイト内検索のショートカットを設定する</a>」に書かれている、サイト内検索の追加と同じです。</p>
 <ol>
@@ -180,7 +202,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>**拡張機能は開いたページの中身を読み書きできるため、入れる前に要求される権限と開発元を確かめてください。**Googleの画面の作りが変わると、更新が止まった拡張機能は効かなくなります。nitoではこの拡張機能を入れて試していません。</p>
 <h2 id="s6">効かない方法</h2>
 <p>消そうとして試しても、AIによる概要が消えない方法です。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>方法</th>
@@ -190,22 +212,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>ログインしないで検索する</td>
-<td>出た</td>
-<td>9月30日にログインしていない状態で試した</td>
+<td data-label="方法">ログインしないで検索する</td>
+<td data-label="結果">出た</td>
+<td data-label="根拠">9月30日にログインしていない状態で試した</td>
 </tr>
 <tr>
-<td>Search Labs の［検索における AI］をオフ</td>
-<td>検索のAIによる概要は残る</td>
-<td>ヘルプではオフにする対象は試験運用版の機能</td>
+<td data-label="方法">Search Labs の［検索における AI］をオフ</td>
+<td data-label="結果">検索のAIによる概要は残る</td>
+<td data-label="根拠">ヘルプではオフにする対象は試験運用版の機能</td>
 </tr>
 <tr>
-<td>設定画面でオフを探す</td>
-<td>スイッチが無い</td>
-<td>ヘルプに無効にできないと書かれている</td>
+<td data-label="方法">設定画面でオフを探す</td>
+<td data-label="結果">スイッチが無い</td>
+<td data-label="根拠">ヘルプに無効にできないと書かれている</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Googleのヘルプの Labs の節には、［検索における AI］をオフにする手順が載っています。**ただしこれは新しい機能を先に試す試験運用からの抜け方で、AIによる概要そのものを止める設定ではありません。**同じヘルプの冒頭で、AIによる概要は検索の主要な機能で無効にできないと書かれています。</p>
 <h2 id="s7">AI検索での見え方は別の話</h2>
 <p>自分の画面からAIによる概要を消すことと、会社やお店がAIによる概要の中でどう紹介されるかは別の問題で、後者は<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。</p>
@@ -233,12 +255,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -247,9 +270,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">オフにする設定は無い</a><a href="#s2">スマホで消す</a><a href="#s3">パソコンのChromeで毎回消す</a><a href="#s4">検索語に -ai を付ける</a><a href="#s5">拡張機能で隠す</a><a href="#s6">効かない方法</a><a href="#s7">AI検索での見え方は別の話</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -282,11 +308,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

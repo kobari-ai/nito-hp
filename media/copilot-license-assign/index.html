@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Copilotのライ…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI活用</span>
             <span class="post-date">2026.10.15</span>
         </div>
         <h1 class="post-title">【2026年10月】Copilotのライセンスを割り当てる方法｜グループ・反映時間・使えないとき</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilotのライセンスの割り当て"><defs><linearGradient id="ecg-19fa92fa" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-19fa92fa)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="86.4" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilotのライセ</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ンスの割り当て</text><line x1="288.4" y1="378.0" x2="911.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">グループ・反映時間・使えないとき</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -73,6 +75,12 @@
 </ul></div></div>
 <figure class="post-figure"><img src="/media/images/copilot-license-assign/cla_01_overview.png" alt="Copilotのライセンスを割り当ててから使えるまでの流れの図。前提のライセンス、Copilotを割り当て、最大24時間、ラベルで確認の4段階" loading="lazy"><figcaption>前提のライセンスを確かめてから割り当て、反映を待って利用者のラベルで確かめる（24時間は一部のアプリの上限）</figcaption></figure>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Copilot を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -105,7 +113,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s1">割り当てる前にそろえるもの</h2>
 <p>Copilotのライセンスは単体では使えず、土台になるMicrosoft 365などのライセンスに足すアドオンです。<a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing">Microsoft Copilot のライセンス オプション</a>には前提のプランとしてMicrosoft 365 E3・E5やBusiness Standardなどが並び、Microsoft 365 E7には最初からCopilotが含まれます。</p>
 <p><a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-setup">セットアップの手順</a>は、<strong>Copilotのライセンスより先に、利用者をテナントに追加してMicrosoft 365のライセンスを割り当てておく</strong>順番です。割り当ての前に確かめることを、公式の記事ごとに並べると次のとおりです。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>確かめること</th>
@@ -115,37 +123,37 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>前提のライセンス</td>
-<td>利用者に対象のMicrosoft 365などのライセンスが付いている</td>
-<td>ライセンス オプション</td>
+<td data-label="確かめること">前提のライセンス</td>
+<td data-label="中身">利用者に対象のMicrosoft 365などのライセンスが付いている</td>
+<td data-label="書かれている記事">ライセンス オプション</td>
 </tr>
 <tr>
-<td>職場のアカウント</td>
-<td>Microsoft Entra IDの職場または学校のアカウントがある</td>
-<td>要件</td>
+<td data-label="確かめること">職場のアカウント</td>
+<td data-label="中身">Microsoft Entra IDの職場または学校のアカウントがある</td>
+<td data-label="書かれている記事">要件</td>
 </tr>
 <tr>
-<td>ゲストではない</td>
-<td>ゲストを含む別のテナントの利用者への割り当ては対象外</td>
-<td>セットアップ</td>
+<td data-label="確かめること">ゲストではない</td>
+<td data-label="中身">ゲストを含む別のテナントの利用者への割り当ては対象外</td>
+<td data-label="書かれている記事">セットアップ</td>
 </tr>
 <tr>
-<td>使用場所</td>
-<td>割り当ての前に利用者の場所を設定する</td>
-<td>グループのライセンス</td>
+<td data-label="確かめること">使用場所</td>
+<td data-label="中身">割り当ての前に利用者の場所を設定する</td>
+<td data-label="書かれている記事">グループのライセンス</td>
 </tr>
 <tr>
-<td>ユーザー単位の契約</td>
-<td>Microsoft 365 Apps for enterpriseのデバイス単位のライセンスではCopilotを使えない</td>
-<td>要件</td>
+<td data-label="確かめること">ユーザー単位の契約</td>
+<td data-label="中身">Microsoft 365 Apps for enterpriseのデバイス単位のライセンスではCopilotを使えない</td>
+<td data-label="書かれている記事">要件</td>
 </tr>
 <tr>
-<td>割り当てる人のロール</td>
-<td>ライセンス管理者かユーザー管理者以上</td>
-<td>ライセンスの割り当て</td>
+<td data-label="確かめること">割り当てる人のロール</td>
+<td data-label="中身">ライセンス管理者かユーザー管理者以上</td>
+<td data-label="書かれている記事">ライセンスの割り当て</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>ロールは取り違えやすいところです。<a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/add-users/about-admin-roles">管理者ロールの一覧</a>では、AI 管理者はCopilotやAIの管理機能を扱うロールで、<strong>利用者のライセンスは管理しない</strong>と説明されています。割り当ての作業はライセンス管理者に任せます。</p>
 <h3 id="s1-1">名前がMicrosoft Copilotに変わった</h3>
 <p><a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements">Microsoft Copilot の要件</a>によると、Microsoft 365 Copilotは<strong>Microsoft Copilot</strong>に、Microsoft 365 Copilot ChatはMicrosoft Copilot Chatに名前が変わりました。セットアップの手順で製品の一覧から選ぶのも［Microsoft Copilot］です。</p>
@@ -167,6 +175,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>割り当てが終わらなかった人がいると、操作のあとに状態のメッセージが出ます。［エラーと問題の表示］で1人ずつ理由を見られます。</p>
 <h3 id="s2-2">アクティブなユーザーのページから割り当てる</h3>
 <p>1人なら［ユーザー］＞［アクティブなユーザー］で行を選び、［ライセンスとアプリ］でCopilotにチェックを入れて［変更の保存］です。数人なら名前の横の丸を選び、上の［製品ライセンスの管理］で既存のライセンスを残したまま割り当てます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Copilot を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">グループで割り当てる</h2>
 <p>部署や役割でグループを作っておくと、異動のたびに1人ずつ付け外しをしなくて済みます。<a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-group-licenses">グループにライセンスを割り当てる手順</a>によると、対象にできるのはセキュリティ グループ、メールが有効なグループ、Microsoft 365 グループです。</p>
 <ol>
@@ -200,7 +222,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>原因の1つ目は、割り当てた直後の反映の遅れです。残りの原因を見る場所で3つに分けると、担当を決めやすくなります。</p>
 <figure class="post-figure"><img src="/media/images/copilot-license-assign/cla_06_fig_check.png" alt="割り当てたのにCopilotが出ないときに見る順番の図。1は管理センターで一覧に本人がいるか、エラーと問題のタブ、アプリとサービス。2は待って更新で一部は最大24時間、ライセンスの更新、全部閉じて再起動。3は端末とアカウントで職場のアカウントか、半期チャネルか、デバイス単位の契約か、プライバシーの設定。4は回線とブラウザで cloud.microsoft、WebSocketの接続、Web版のCookie。1人ずつ要件を調べるときはCopilotライセンス詳細診断を使う" loading="lazy"><figcaption>管理センターから利用者の端末、社内の回線へと順に見る</figcaption></figure>
 
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>原因</th>
@@ -210,47 +232,47 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>割り当てて間もない</td>
-<td>割り当てた時刻</td>
-<td>最大24時間待ち、ライセンスの更新と再起動</td>
+<td data-label="原因">割り当てて間もない</td>
+<td data-label="見る場所">割り当てた時刻</td>
+<td data-label="直し方">最大24時間待ち、ライセンスの更新と再起動</td>
 </tr>
 <tr>
-<td>割り当てが失敗している</td>
-<td>管理センターの［エラーと問題］</td>
-<td>原因を直して［再処理］</td>
+<td data-label="原因">割り当てが失敗している</td>
+<td data-label="見る場所">管理センターの［エラーと問題］</td>
+<td data-label="直し方">原因を直して［再処理］</td>
 </tr>
 <tr>
-<td>個人と職場の両方でサインイン</td>
-<td>アプリの［ファイル］＞［アカウント］</td>
-<td>職場のアカウントで開く</td>
+<td data-label="原因">個人と職場の両方でサインイン</td>
+<td data-label="見る場所">アプリの［ファイル］＞［アカウント］</td>
+<td data-label="直し方">職場のアカウントで開く</td>
 </tr>
 <tr>
-<td>半期エンタープライズ チャネル</td>
-<td>［ファイル］＞［アカウント］の製品情報</td>
-<td>最新チャネルか月次エンタープライズ チャネルへ</td>
+<td data-label="原因">半期エンタープライズ チャネル</td>
+<td data-label="見る場所">［ファイル］＞［アカウント］の製品情報</td>
+<td data-label="直し方">最新チャネルか月次エンタープライズ チャネルへ</td>
 </tr>
 <tr>
-<td>デバイス単位のライセンス</td>
-<td>契約の種類</td>
-<td>ユーザー単位のライセンスを割り当てる</td>
+<td data-label="原因">デバイス単位のライセンス</td>
+<td data-label="見る場所">契約の種類</td>
+<td data-label="直し方">ユーザー単位のライセンスを割り当てる</td>
 </tr>
 <tr>
-<td>プライバシーの設定</td>
-<td>［アカウントのプライバシー］＞［設定の管理］</td>
-<td>2つの項目をオンにする</td>
+<td data-label="原因">プライバシーの設定</td>
+<td data-label="見る場所">［アカウントのプライバシー］＞［設定の管理］</td>
+<td data-label="直し方">2つの項目をオンにする</td>
 </tr>
 <tr>
-<td>社内の回線</td>
-<td>プロキシ・ファイアウォール</td>
-<td>*.cloud.microsoft とWebSocketを通す</td>
+<td data-label="原因">社内の回線</td>
+<td data-label="見る場所">プロキシ・ファイアウォール</td>
+<td data-label="直し方">*.cloud.microsoft とWebSocketを通す</td>
 </tr>
 <tr>
-<td>Web版でだけ出ない</td>
-<td>ブラウザのCookie</td>
-<td>サードパーティのCookieを有効にする</td>
+<td data-label="原因">Web版でだけ出ない</td>
+<td data-label="見る場所">ブラウザのCookie</td>
+<td data-label="直し方">サードパーティのCookieを有効にする</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="s5-1">管理センターで見るところ</h3>
 <p>製品ごとの［エラーと問題］タブには、ライセンスを受け取れなかった人と理由が出ます。割り当てのページが挙げる主な理由は、<strong>使えるライセンスが残っていない、競合するサービスやプランがある、使用場所が正しくない</strong>の3つです。原因を直したら、その人を選んで［再処理］を押すと、今の設定でもう一度割り当てを試します。</p>
 <h3 id="s5-2">利用者の端末で見るところ</h3>
@@ -265,7 +287,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s6">利用者が自分のライセンスを確かめる</h2>
 <p>利用者が自分の画面で状態を確かめる方法もあります。サポート記事「<a href="https://support.microsoft.com/ja-jp/microsoft-365-copilot/what-copilot-license-do-i-have">所有している Copilot ライセンスの種類</a>」によると、職場のアカウントでMicrosoft 365にサインインし、ホーム ページのいちばん下までスクロールすると、名前の下にラベルが出ます。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>ラベル</th>
@@ -274,19 +296,19 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>Copilot Chat（基本）</td>
-<td>アドオンのライセンスが無く、Word・Excel・PowerPoint・OneNoteのCopilotは使えない</td>
+<td data-label="ラベル">Copilot Chat（基本）</td>
+<td data-label="意味">アドオンのライセンスが無く、Word・Excel・PowerPoint・OneNoteのCopilotは使えない</td>
 </tr>
 <tr>
-<td>M365 Copilot（基本）</td>
-<td>アドオンのライセンスは無いが、アプリのCopilotに標準アクセスできる</td>
+<td data-label="ラベル">M365 Copilot（基本）</td>
+<td data-label="意味">アドオンのライセンスは無いが、アプリのCopilotに標準アクセスできる</td>
 </tr>
 <tr>
-<td>M365 Copilot（プレミアム）</td>
-<td>アドオンのライセンスがあり、アプリのCopilotの全機能に優先アクセスできる</td>
+<td data-label="ラベル">M365 Copilot（プレミアム）</td>
+<td data-label="意味">アドオンのライセンスがあり、アプリのCopilotの全機能に優先アクセスできる</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure post-figure--sp"><img src="/media/images/copilot-license-assign/cla_09_help_labels_sp.jpg" alt="Microsoftサポートの職場または学校アカウントでCopilotライセンスをチェックする方法。Microsoft 365にサインインしてホームページの一番下までスクロールすると、名前の下にCopilot Chat（基本）、M365 Copilot（基本）、M365 Copilot（プレミアム）のどれかのラベルが表示される。3つのラベルの見本の画像が並ぶ" loading="lazy"><figcaption>サポート記事のラベルの見本（名前はMicrosoftの例）</figcaption></figure>
 
 <p>サポート記事の説明では、アドオンのライセンスを持つ人のラベルはプレミアムです。<strong>社内の案内に、確かめる場所としてこのラベルを書いておくと、利用者が自分で状態を見られます</strong>。3つのラベルの状態でできることの違いは、<a href="/media/copilot-guide/">Copilotの使い方の記事</a>にまとめています。</p>
@@ -329,12 +351,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Copilot を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -343,9 +366,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">割り当てる前にそろえるもの</a><a href="#s2">管理センターで割り当てる手順</a><a href="#s3">グループで割り当てる</a><a href="#s4">反映までの時間</a><a href="#s5">割り当てたのに使えないとき</a><a href="#s6">利用者が自分のライセンスを確かめる</a><a href="#s7">外すときと付け替えるとき</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -378,11 +404,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

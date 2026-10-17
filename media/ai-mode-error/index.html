@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Google AIモ…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.10.01</span>
         </div>
         <h1 class="post-title">【2026年10月】Google AIモードのエラーを解説｜回答が生成されないときの直し方と原因</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードのエラー"><defs><linearGradient id="ecg-d81bfd4e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d81bfd4e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="137.3" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードのエラー</text><line x1="288.4" y1="327.1" x2="911.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">回答が生成されないときの直し方と原因</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>回答の代わりにリンクだけが並ぶ、特定の答えを出さずに調べ方を示す、という表示は<strong>エラーではない</strong>。ヘルプはリンクだけになる場合があると書いている</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -97,7 +105,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/ai-mode-error/01_fig_kinds.png" alt="AIモードで回答が出ないときの3つの形の図。エラー：エラーが発生したため、AI による回答が生成されませんでしたと出る。送り直し・ログアウト・時間を置くの順に試す。リンクだけ：回答の品質に十分な信頼性がないとき、リンクが表示されることがある。答えない：誰に投票すべきには、特定の人や政党は勧められないと答えた。どちらもエラーではない" loading="lazy"><figcaption>AIモードで回答が出ないときの3つの形</figcaption></figure>
 
 <p>10月1日にAIモードの画面のデータを見ると、「エラーが発生したため、コンテンツを生成できませんでした。」という別の言い方の文も入っていました。コミュニティの投稿に出てくるのは最初の文で、2026年7月の投稿では「a」のような短い質問でも同じ文しか出ないと書かれていました。そのスレッドでプロダクト エキスパートは、<strong>AIモードは常に動く仕様ではなく、条件は分からないものの、検索する言葉やアカウントによって出たり出なかったりしている</strong>と返信しています。10月にログインせずに「a」と送ったときは、あいさつの回答が返ってきました。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>画面に出るもの</th>
@@ -107,22 +115,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>エラーが発生したため、AI による回答が生成されませんでした。</td>
-<td>回答の生成が失敗した</td>
-<td>送り直す。続くならログアウトして試す</td>
+<td data-label="画面に出るもの">エラーが発生したため、AI による回答が生成されませんでした。</td>
+<td data-label="どういう状態か">回答の生成が失敗した</td>
+<td data-label="最初にやること">送り直す。続くならログアウトして試す</td>
 </tr>
 <tr>
-<td>回答が出ずにウェブのリンクが並ぶ</td>
-<td>回答の信頼性が足りないと判断された</td>
-<td>言い方を変えて送り直すか、リンク先を読む</td>
+<td data-label="画面に出るもの">回答が出ずにウェブのリンクが並ぶ</td>
+<td data-label="どういう状態か">回答の信頼性が足りないと判断された</td>
+<td data-label="最初にやること">言い方を変えて送り直すか、リンク先を読む</td>
 </tr>
 <tr>
-<td>特定の答えを出さずに調べ方を示す</td>
-<td>選挙の投票先など、AIモードが決めない質問</td>
-<td>判断の材料を聞く形に変える</td>
+<td data-label="画面に出るもの">特定の答えを出さずに調べ方を示す</td>
+<td data-label="どういう状態か">選挙の投票先など、AIモードが決めない質問</td>
+<td data-label="最初にやること">判断の材料を聞く形に変える</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s2">エラーが続くときに試す順番</h2>
 <p>エラーの文が出たら、まず同じ質問をもう一度送ります。同じ文が続くなら次の順に試すと、どこに原因があるかを切り分けられます。</p>
 <figure class="post-figure"><img src="/media/images/ai-mode-error/03_fig_order.png" alt="AIモードでエラーが続くときに試す順番の図。1 送り直す：同じ質問をもう一度送るか言い方を変えて送る。2 google.com/ai で開き直す：2026年2月の投稿でプロダクト エキスパートが案内した方法。3 ログアウトして試す：ログアウトするかシークレットウィンドウで同じ質問をする。動けばアカウントの側。4 時間を置く：どのアカウントでも出るなら24〜48時間待つ。2026年8月の投稿では3日後に直った" loading="lazy"><figcaption>エラーが続くときに試す順番</figcaption></figure>
@@ -137,6 +145,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s2-3">時間を置く</h3>
 <p>2026年8月16日の投稿では、AIモードを使っている途中で「エラーが発生したため、AI による回答が生成されませんでした。」が出始め、ログアウトしても何を入れても同じ文しか出なくなったと書かれていました。プロダクト エキスパートは、何かの上限を超えたか一時的なエラーかもしれないとして、**24時間、できれば48時間待つよう返信しています。**投稿者は8月22日に、3日くらい置いたら直ったと報告しました。</p>
 <p>2026年3月の投稿にも、別のプロダクト エキスパートが「AIモードを多用すると応答がおかしくなったり使えなくなったりする事例がある」として、時間を空けるよう返信しています。ただしヘルプに1日の上限が書かれているのは、有料のGoogle AIプランで使うGemini 3 Proだけです。**ふだんの高速モードに回数の上限があるとは、ヘルプには書かれていません。**上限に当たったのか一時的な不具合なのかは、画面からは見分けられません。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">学校や会社のアカウントで続くとき</h2>
 <p>2026年7月19日の投稿は、子どもが使う学校のChromebookで、学校のWorkspaceのアカウントにログインした状態でした。プロダクト エキスパートの2人は、学校から配られたアカウントでは制限がかかっている可能性があるとして、**最初の相談先は学校の先生かアカウントの管理者だと返信しています。**8月16日の投稿も、学校から配られたタブレットでした。</p>
 <p>ヘルプにも、Workspaceのアカウントでは管理者の設定で使える範囲が変わる例として、検索履歴のことが書かれています。検索とアシスタントがオフになっているWorkspaceのユーザーは検索履歴を使えず、オンにするには管理者が管理コンソールから設定する必要があります。</p>
@@ -185,12 +207,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -199,9 +222,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">回答が出ない3つの形</a><a href="#s2">エラーが続くときに試す順番</a><a href="#s3">学校や会社のアカウントで続くとき</a><a href="#s4">エラーではない表示</a><a href="#s5">AIによる概要のエラーとの違い</a><a href="#s6">よくある質問</a><a href="#s7">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -234,11 +260,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}

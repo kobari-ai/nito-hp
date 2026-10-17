@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/media/_template/media.css?v=0971132f">
+    <link rel="stylesheet" href="/media/_template/media.css?v=acbcbd33">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
         <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年9月】Claude MCPと…
     </nav>
 
+    <div class="page-wrap">
     <main class="article">
         <div class="post-meta">
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.09.21</span>
         </div>
         <h1 class="post-title">【2026年9月】Claude MCPとは？Claude Codeへの接続方法を解説｜4つのトランスポート・3つのスコープ・認証・つまずきどころ</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
         <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude MCPの接続方法"><defs><linearGradient id="ecg-1afd82ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1afd82ac)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="531.5" y="137.3" width="137.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">使い方</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude MCPの接続方法</text><line x1="182.0" y1="327.1" x2="1018.0" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">トランスポート・スコープ・認証・つまずきどころ</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
 
@@ -72,6 +74,12 @@
 <li>外部のコンテンツを取ってくるサーバーは<strong>プロンプトインジェクションの経路になりうる</strong>。信頼できるサーバーだけを入れ、データベースは読み取り専用ユーザーでつなぐ</li>
 </ul></div></div>
 
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
@@ -113,9 +121,23 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
 <p>このほかにMCPサーバーは<strong>チャネル</strong>としても動きます。サーバー側からセッションにメッセージを押し込めるため、離席中に届いたDiscordのチャットやwebhookのイベントにClaudeが反応できます。使うにはサーバーが <code>claude/channel</code> 機能を宣言し、起動時に <code>--channels</code> フラグで有効にしてください。</p>
 <p>接続するサーバーは<a href="https://claude.com/directory">Anthropic Directory</a>で探せます。DirectoryのコネクターはClaude Codeと同じMCPの仕組みを使うため、<code>claude mcp add</code> でそのまま追加できます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
 <h2 id="s3">サーバーを追加する4つの方法</h2>
 <p>トランスポートはサーバーがどこで動くかで決まります。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>方法</th>
@@ -125,27 +147,27 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>HTTP（推奨）</td>
-<td>クラウド上のサービス。最も広くサポートされている</td>
-<td><code>claude mcp add --transport http &lt;name&gt; &lt;url&gt;</code></td>
+<td data-label="方法">HTTP（推奨）</td>
+<td data-label="どんなサーバー向きか">クラウド上のサービス。最も広くサポートされている</td>
+<td data-label="追加の仕方"><code>claude mcp add --transport http &lt;name&gt; &lt;url&gt;</code></td>
 </tr>
 <tr>
-<td>SSE（非推奨）</td>
-<td>SSEのエンドポイントしか公開していないサービス</td>
-<td>HTTPと同じコマンド（自動で切り替わる）</td>
+<td data-label="方法">SSE（非推奨）</td>
+<td data-label="どんなサーバー向きか">SSEのエンドポイントしか公開していないサービス</td>
+<td data-label="追加の仕方">HTTPと同じコマンド（自動で切り替わる）</td>
 </tr>
 <tr>
-<td>stdio</td>
-<td>自分のマシンで動かすプロセス、カスタムスクリプト</td>
-<td><code>claude mcp add &lt;name&gt; -- &lt;command&gt; [args...]</code></td>
+<td data-label="方法">stdio</td>
+<td data-label="どんなサーバー向きか">自分のマシンで動かすプロセス、カスタムスクリプト</td>
+<td data-label="追加の仕方"><code>claude mcp add &lt;name&gt; -- &lt;command&gt; [args...]</code></td>
 </tr>
 <tr>
-<td>WebSocket</td>
-<td>サーバー側から予期しないイベントを押し込みたい場合</td>
-<td><code>claude mcp add-json</code> で <code>"type":"ws"</code> を指定</td>
+<td data-label="方法">WebSocket</td>
+<td data-label="どんなサーバー向きか">サーバー側から予期しないイベントを押し込みたい場合</td>
+<td data-label="追加の仕方"><code>claude mcp add-json</code> で <code>"type":"ws"</code> を指定</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/claude-mcp-guide/00_fig_transports.png" alt="MCPサーバーを追加する4つの方法の図。HTTPは推奨でクラウド上のサービス向けOAuth対応、SSEは非推奨でHTTPと同じコマンド、stdioはローカルのプロセスで--の後ろがサーバーのコマンド、WebSocketはサーバー側からイベントを押し込みたいときでOAuthは使えない" loading="lazy"><figcaption>4つのトランスポートの選び分け</figcaption></figure>
 
 <p>リモートのサービスをつなぐならHTTPを選んでください。SSEしか公開していないサーバーも、HTTPと同じコマンドで追加できます。Claude CodeがまずHTTPを試し、受け付けられなければSSEに切り替えるためです。</p>
@@ -164,7 +186,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>このとき2か所を直す必要があります。ひとつが、<code>url</code> はあるのに <code>type</code> がないエントリです。Claude Codeは <code>type</code> のないエントリをstdioサーバーとして読むため、<code>"type": "http"</code>（または <code>sse</code>、<code>ws</code>）を足さないとそのサーバーはスキップされます。もうひとつはサーバー名で、使えるのは英数字とハイフンとアンダースコアだけです。</p>
 <h2 id="s5">3つのスコープと優先順位</h2>
 <p><code>claude mcp add</code> は、<code>--scope</code> を付けなければローカルスコープに書き込みます。3つのスコープで違うのはこの2点です。どのプロジェクトで読み込まれるか、そしてチームと共有されるかどうか。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>スコープ</th>
@@ -175,25 +197,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>local（既定）</td>
-<td>追加したプロジェクトだけ</td>
-<td>されない</td>
-<td><code>~/.claude.json</code></td>
+<td data-label="スコープ">local（既定）</td>
+<td data-label="読み込まれる範囲">追加したプロジェクトだけ</td>
+<td data-label="チームと共有">されない</td>
+<td data-label="保存場所"><code>~/.claude.json</code></td>
 </tr>
 <tr>
-<td>project</td>
-<td>そのプロジェクトだけ</td>
-<td>される（バージョン管理経由）</td>
-<td>プロジェクトルートの <code>.mcp.json</code></td>
+<td data-label="スコープ">project</td>
+<td data-label="読み込まれる範囲">そのプロジェクトだけ</td>
+<td data-label="チームと共有">される（バージョン管理経由）</td>
+<td data-label="保存場所">プロジェクトルートの <code>.mcp.json</code></td>
 </tr>
 <tr>
-<td>user</td>
-<td>すべてのプロジェクト</td>
-<td>されない</td>
-<td><code>~/.claude.json</code></td>
+<td data-label="スコープ">user</td>
+<td data-label="読み込まれる範囲">すべてのプロジェクト</td>
+<td data-label="チームと共有">されない</td>
+<td data-label="保存場所"><code>~/.claude.json</code></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/claude-mcp-guide/00_fig_scopes.png" alt="MCPの3つのスコープの図。localは既定で~/.claude.jsonに保存され追加したプロジェクトだけ、projectはプロジェクトルートの.mcp.jsonでチームと共有し各自の承認が要る、userは~/.claude.jsonで全プロジェクト。同名はlocalからclaude.aiコネクタの順に優先しフィールドはマージされない" loading="lazy"><figcaption>スコープは保存場所と共有範囲で選ぶ</figcaption></figure>
 
 <p>localは個人の実験や、バージョン管理に入れたくない認証情報を持つサーバー向けです。名前が紛らわしいのですが、<strong>MCPのローカルスコープが書き込むのはホームディレクトリの <code>~/.claude.json</code></strong> で、一般的なローカル設定の <code>.claude/settings.local.json</code> とは別のファイルです。</p>
@@ -210,7 +232,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>なお、<code>headers.Authorization</code> を自分で設定したサーバーが認証に失敗した場合、Claude CodeはOAuthに切り替えず、接続失敗として報告します。トークンを直すか、ヘッダーを外してOAuthに任せるかのどちらかです。</p>
 <h2 id="s7">サーバーの状態を読む</h2>
 <p><code>claude mcp add</code> が出す <code>Added ...</code> は、設定が書き込まれたという意味でしかありません。つながったかどうかは <code>claude mcp list</code> か、セッション内の <code>/mcp</code> で確認します。</p>
-<table>
+<div class="tbl"><table class="stack">
 <thead>
 <tr>
 <th>表示</th>
@@ -220,32 +242,32 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </thead>
 <tbody>
 <tr>
-<td>✔ Connected</td>
-<td>接続済み</td>
-<td>なし</td>
+<td data-label="表示">✔ Connected</td>
+<td data-label="意味">接続済み</td>
+<td data-label="すること">なし</td>
 </tr>
 <tr>
-<td>! Needs authentication</td>
-<td>認証が必要</td>
-<td><code>/mcp</code> か <code>claude mcp login &lt;name&gt;</code> でサインイン</td>
+<td data-label="表示">! Needs authentication</td>
+<td data-label="意味">認証が必要</td>
+<td data-label="すること"><code>/mcp</code> か <code>claude mcp login &lt;name&gt;</code> でサインイン</td>
 </tr>
 <tr>
-<td>✘ Failed to connect</td>
-<td>接続に失敗</td>
-<td>同じ行に出るHTTPステータスやエラーを読む</td>
+<td data-label="表示">✘ Failed to connect</td>
+<td data-label="意味">接続に失敗</td>
+<td data-label="すること">同じ行に出るHTTPステータスやエラーを読む</td>
 </tr>
 <tr>
-<td>⏸ Pending approval</td>
-<td><code>.mcp.json</code> のサーバーが未承認</td>
-<td><code>claude</code> を対話的に起動して承認する</td>
+<td data-label="表示">⏸ Pending approval</td>
+<td data-label="意味"><code>.mcp.json</code> のサーバーが未承認</td>
+<td data-label="すること"><code>claude</code> を対話的に起動して承認する</td>
 </tr>
 <tr>
-<td>⊘ Disabled for this project</td>
-<td>このプロジェクトで無効</td>
-<td><code>/mcp</code> のパネルから戻す</td>
+<td data-label="表示">⊘ Disabled for this project</td>
+<td data-label="意味">このプロジェクトで無効</td>
+<td data-label="すること"><code>/mcp</code> のパネルから戻す</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <figure class="post-figure"><img src="/media/images/claude-mcp-guide/00_fig_status.png" alt="claude mcp listが出す5つの状態と対処の表。Connectedは接続済み、Needs authenticationは/mcpかclaude mcp loginでサインイン、Failed to connectは同じ行のHTTPステータスを読む、Pending approvalはclaudeを対話的に起動して承認、Disabledは/mcpのパネルから戻す" loading="lazy"><figcaption>状態ごとに、次にすることが決まる</figcaption></figure>
 
 <p><code>✘ Failed to connect</code> はサーバーに接続できなかったという意味で、<code>list</code> コマンドが失敗したわけではありません。失敗の詳細にはサーバーが返したHTTPステータス（401など）とエラーテキストが付きます。認証情報のように見えるテキストと展開後のURLは、秘密が混ざりうるため伏せられます。</p>
@@ -306,12 +328,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
         </div>
 
-        <div class="post-cta">
-            <div class="post-cta__label">CONTACT</div>
-            <div class="post-cta__ttl">いいモノが自然に広まる仕組み、一緒につくりませんか</div>
-            <p class="post-cta__desc">AIの導入やAI検索対策について、まずはお気軽にご相談ください。</p>
-            <a href="/contact.html" class="post-cta__btn">無料で相談する</a>
-        </div>
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
 
         <div class="author">
             <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
@@ -320,9 +343,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="author__name">岡村 希一</div>
                 <div class="author__role">nito代表</div>
                 <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
             </div>
         </div>
     </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">MCPとは何か</a><a href="#s2">MCPで何ができるか</a><a href="#s3">サーバーを追加する4つの方法</a><a href="#s4">他のクライアント向けの手順を読み替える</a><a href="#s5">3つのスコープと優先順位</a><a href="#s6">リモートサーバーで認証する</a><a href="#s7">サーバーの状態を読む</a><a href="#s8">設定でつまずく箇所</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
 
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
@@ -355,11 +381,25 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         </nav>
         <p class="f-copy">© 2026 nito. All rights reserved.</p>
     </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
       var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
-      var L=[['.bp-cta','bp_cta'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
         var u; try{u=new URL(a.href,location.href);}catch(_){return;}
