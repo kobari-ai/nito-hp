@@ -25,7 +25,7 @@ OpenAIのヘルプ「[広告マネージャーの提供状況](https://help.open
 
 管理画面の正式な名前は広告マネージャー（Ads Manager）で、[ads.openai.com](https://ads.openai.com/)から登録します。提供状況のヘルプによると、**セルフサービスで使えるのは広告を出して請求を受ける法人が一覧の国に拠点を置いている場合**です。日本はこの一覧で「利用可能」です。一覧に無い国の会社も登録はできるものの、使えるのは提供が始まってからです。
 
-<!-- SHOT: OpenAIヘルプ「Ads Manager の提供状況」日本語版の注（法人の拠点）と一覧の「日本 利用可能」の行・https://help.openai.com/ja-jp/articles/20001245・PC幅・注と日本の行に赤枠 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-ads/cads_02_availability.png" alt="OpenAI ヘルプの Ads Manager の提供状況。広告を出稿し請求先となる法人が対象の国に拠点を置いている必要があるという注と、国ごとの提供状況の表" loading="lazy"><figcaption>Ads Manager の提供状況（OpenAI ヘルプ）</figcaption></figure>
 
 開始の時期は、出どころによって日付が違います。公式のお知らせと報道を時系列で並べました。
 
@@ -46,7 +46,7 @@ OpenAIのヘルプ「[広告マネージャーの提供状況](https://help.open
 
 今のヘルプ「[ChatGPT 広告のキャンペーン作成](https://help.openai.com/ja-jp/articles/20001210)」が決めているのは、**請求通貨ごとの1日の最低予算で、円なら2,500円**です。米ドルなら25ドルで、ほかの記事にある「$25」はこちらを指しています。
 
-<!-- SHOT: OpenAIヘルプ「ChatGPT 広告のキャンペーン作成」日本語版の「キャンペーンの最低利用額」の表・https://help.openai.com/ja-jp/articles/20001210・PC幅・JPY 2,500 の行に赤枠 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-ads/cads_03_minimum.png" alt="OpenAI ヘルプの ChatGPT 広告のキャンペーン作成のキャンペーンの最低利用額の表。通貨ごとの1日の最低予算が並び、JPY は2,500円" loading="lazy"><figcaption>キャンペーンの最低利用額（OpenAI ヘルプ）</figcaption></figure>
 
 日予算は1日ごとの上限でなく、**7日間の平均で使う目標の額**です。1日に使うのは日予算の2倍まで、7日間では7倍までとヘルプにあります。日予算2,500円で30日配信すると約7万5,000円になり、月単位で見た最低の目安はこのあたりです（ヘルプの最低額からの計算）。予算はキャンペーンの総額で決めることもできますが、総額の最低額はヘルプに見当たりません。
 
@@ -75,7 +75,7 @@ OpenAIのヘルプ「[広告マネージャーの提供状況](https://help.open
 
 ヘルプにはしきい値が25ドルから50ドル・100ドルへと上がっていく例が載っています。**同じ額の請求が続けて来ても重複とは限らず、しきい値ごとに分けて請求されている**ことがあります。消費税についてOpenAIは税務の助言はしないと断っているので、仕訳は顧問の税理士に確かめてください。
 
-<!-- SHOT: OpenAIヘルプ「請求とお支払い」日本語版の「ChatGPT 広告の請求書に日本の消費税（JCT）は加算されますか？」の節・https://help.openai.com/ja-jp/articles/20001216・PC幅・回答の1文目に赤枠 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-ads/cads_04_jct.png" alt="OpenAI ヘルプの請求とお支払いの、ChatGPT 広告の請求書に日本の消費税は加算されるかの質問と回答" loading="lazy"><figcaption>請求書と日本の消費税（OpenAI ヘルプ）</figcaption></figure>
 
 [ads.openai.com](https://ads.openai.com/)の最初の画面には、初めての広告主が500ドルを使うと500ドル分の広告クレジットがもらえる案内が出ています。ヘルプは、案内を見ただけではクレジットを得たことにならないとし、条件は[広告クレジットの規約](https://openai.com/policies/ad-credit-terms/)に従うとしています。
 
@@ -91,7 +91,7 @@ OpenAIのヘルプ「[広告マネージャーの提供状況](https://help.open
 6. 広告でタイトル・説明文・リンク先・画像を入れる
 7. 審査を通ると配信が始まる
 
-<!-- SHOT: ads.openai.com のトップ（ログイン不要）・https://ads.openai.com/・スマホ幅・登録のボタンに赤枠1 -->
+<figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-ads/cads_05_ads_top_sp.png" alt="スマホで開いた ads.openai.com のトップ。ChatGPT で広告配信の見出しと今すぐ開始のボタン" loading="lazy"><figcaption>ads.openai.com のトップ（スマホ）</figcaption></figure>
 
 コンテキストヒントは、どんな会話で広告が合うかをOpenAIに伝える短い説明です。ヘルプは検索広告のキーワードのような完全一致の条件ではないとし、何を・誰に・どんな場面で役立つかを、明確で具体的な言葉で書くよう勧めています。配信する国や期間はヒントでは絞れないため、キャンペーンの設定で決めます。広告作成のヘルプによれば、**同じ商品でもタイトルと説明文の切り口を変えて何本も用意するほど、広告が合う会話をシステムが見つけやすくなります**。
 
@@ -120,7 +120,7 @@ OpenAIのヘルプ「[広告マネージャーの提供状況](https://help.open
 
 **会社の契約（BusinessやEnterprise）でChatGPTを使っている担当者には、広告は届きません。**法人向けの高い商材で意思決定者が会社のアカウントで比較しているなら、広告を出してもその人の目には入りません。無料版の利用者なら、送れるメッセージが減る代わりに広告を消す設定も選べます。
 
-<!-- SHOT: OpenAIヘルプ「ChatGPT での広告」日本語版の冒頭（無料版とGoに表示、Plus・Pro・Business・Enterprise・Eduには表示しない）・https://help.openai.com/ja-jp/articles/20001047・PC幅・該当の2文に赤枠 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-ads/cads_06_where.png" alt="OpenAI ヘルプの ChatGPT での広告。広告が表示されるプランと、表示されない場面のよくある質問" loading="lazy"><figcaption>ChatGPT での広告が出るプラン（OpenAI ヘルプ）</figcaption></figure>
 
 ## 日本で出せない業種
 
@@ -135,7 +135,7 @@ OpenAIのヘルプ「[広告マネージャーの提供状況](https://help.open
 | 求人 | 個別の求人の広告は禁止。求人サイトへの広告は同じ条件で可 |
 | 家計簿アプリ・会計ソフト | 金融商品を勧めない金融ツールは一般に許可 |
 
-<!-- SHOT: OpenAIの広告ポリシー日本語版の「金融サービス」の節の最後の文（米国外の金融サービスに関する広告は、原則として禁止）・https://openai.com/ja-JP/policies/ad-policies/・PC幅・該当の1文に赤枠 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-ads/cads_07_policy.png" alt="OpenAI の広告ポリシーの金融サービスとギャンブルの節" loading="lazy"><figcaption>広告ポリシーの金融サービスの節（OpenAI）</figcaption></figure>
 
 税理士・M&A仲介・BtoBのソフトウェアのように、表のどれに入るか書かれていない業種もあります。ポリシーによると、**主な事業が制限や禁止の分野に入る広告主は出稿できない場合があります**。審査は広告主・広告とリンク先・出す場所の3段で行われます。多くは機械で判定し、一部を人が見る仕組みです。8月末の公式のお知らせはビジネスで使うソフトウェア選びをChatGPTの使われ方の例に挙げていますが、BtoBの広告を対象に加えたとは書いていません。
 
