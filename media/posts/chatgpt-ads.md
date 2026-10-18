@@ -19,7 +19,7 @@ OpenAIのヘルプ「[広告マネージャーの提供状況](https://help.open
 - 広告が出るのは**無料版とGoの利用者だけ**。Business・Enterpriseのアカウントには出ず、**広告は回答の中身に影響しない**
 :::
 
-<!-- FIG: 記事の概要図（縦に2段・横並びは2つまで）。上段「回答の文の中」＝全プランの利用者が見る、下段「回答の下の広告枠」＝無料版とGoだけ。図の文字は「回答」「広告」「全プラン」「無料版とGo」「1日2,500円から」の5か所まで。幅800 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-ads/cads_00_overview.png" alt="ChatGPTで会社名が出る2つの場所の図。回答の文の中で挙がるのは全プランの利用者が見る。回答の下の広告枠に出るのは無料版とGoだけで、1日2,500円から" loading="lazy"><figcaption>ChatGPTで会社名が出る2つの場所</figcaption></figure>
 
 ## 日本で出稿できる条件
 
