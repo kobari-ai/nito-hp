@@ -35,6 +35,8 @@ cover_sub: ナビ・マップに相談・保存されるデータ
 
 マップに相談の始め方は、Googleマップ ヘルプの「[Google マップで質問する](https://support.google.com/maps/answer/16842041?hl=ja)」が案内しています。**ボタンの場所は検索バーの下で、押さなければGeminiとの会話は始まりません。**
 
+店舗を運営する会社向けに、マップのAIとビジネスプロフィールの関係は[GoogleビジネスプロフィールのAI対策の記事](/media/gbp-ai-search/)で整理しています。
+
 <figure class="post-figure post-figure--sp"><img src="/media/images/google-maps-gemini/03_help_ask.jpg" alt="Google マップ ヘルプ「Google マップで質問する」のAndroidの手順。赤い枠の1番に、検索バーの下にあるマップに相談をタップします、と書かれている。その前後に、Google マップ アプリを開く、プロンプトが表示されたら質問を入力するかマイクをタップする、送信アイコンをタップする、の手順が並ぶ" loading="lazy"><figcaption>マップに相談は検索バーの下のボタンから開く（Google マップ ヘルプ、2026年10月13日取得）</figcaption></figure>
 
 ## 何が変わったのか
