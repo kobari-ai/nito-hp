@@ -19,7 +19,7 @@ Microsoft 365 管理センターの「Microsoft Copilot の使用状況レポー
 - 未使用の人への通知、配り直しの候補、経営向けの推定時間は**管理センターとViva インサイトに用意されている**
 :::
 
-<!-- FIG: brain/scripts/seo/fig/cadp_split.html を描画して /media/images/copilot-adoption/cadp_01_split.png に。alt: 使われない人を使えない人・試していない人・試して離れた人の3つに分け、それぞれレポートで見る所を並べた図 -->
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_01_split.png" alt="使われない人を使えない人・試していない人・試して離れた人の3つに分け、それぞれレポートで見る所を並べた図" loading="lazy"><figcaption>Copilotを使わない人の3つの型と、レポートで見る所</figcaption></figure>
 
 ## 使われていないかを数字で確かめる
 
@@ -133,7 +133,7 @@ Copilot ダッシュボードの準備ページにも、無料のCopilot Chatを
 
 自動で見られるのは一部の人だけです。Entra IDの利用者が2,500人以上で、大半の人が1つのレポートライン（同じ経営者の下の系統）に入っている会社では、上位3階層にいて部下の多い人に、自動でダッシュボードが表示されます。部門の管理者は自分のチームの導入と影響を見られるため、部署ごとの振り返りに使えるのが利点です。
 
-<!-- FIG: brain/scripts/seo/fig/cadp_report.html を描画して /media/images/copilot-adoption/cadp_02_report.png に。alt: 管理センターの使用状況レポートは担当が毎週見る数字、Copilot ダッシュボードは経営に出す数字、という使い分けの図 -->
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_02_report.png" alt="管理センターの使用状況レポートは担当が毎週見る数字、Copilot ダッシュボードは経営に出す数字、という使い分けの図" loading="lazy"><figcaption>使用状況レポートと Copilot ダッシュボードの使い分け</figcaption></figure>
 
 ## 社内で先に決めておくこと
 
