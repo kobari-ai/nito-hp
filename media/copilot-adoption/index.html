@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Copilotが社内で使われないときの調べ方｜使用状況レポート・定着の手順 | nito Column</title>
+    <meta name="description" content="Microsoft 365 Copilotが社内で使われないとき、使用状況レポートで使えない人・試していない人・離れた人を分ける方法を公式ドキュメントから解説。通知の出し方、ライセンスの配り直し、経営に出す数字まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/copilot-adoption/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Copilotが社内で使われないときの調べ方｜使用状況レポート・定着の手順">
+    <meta property="og:description" content="Microsoft 365 Copilotが社内で使われないとき、使用状況レポートで使えない人・試していない人・離れた人を分ける方法を公式ドキュメントから解説。通知の出し方、ライセンスの配り直し、経営に出す数字まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/copilot-adoption/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/_default.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/_default.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Copilotが社内で使われないときの調べ方｜使用状況レポート・定着の手順", "description": "Microsoft 365 Copilotが社内で使われないとき、使用状況レポートで使えない人・試していない人・離れた人を分ける方法を公式ドキュメントから解説。通知の出し方、ライセンスの配り直し、経営に出す数字まで。", "datePublished": "2026-10-19", "dateModified": "2026-10-19", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/copilot-adoption/"}, "articleSection": "AI活用", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Copilotが社内で使われないときの調べ方｜使用状況レポート・定着の手順"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Copilotの使用状況はどこで確認できますか？", "acceptedAnswer": {"@type": "Answer", "text": "Microsoft 365 管理センターの［レポート］＞［使用状況］で［Microsoft Copilot］＞［Copilot］を選び、［使用状況］タブを開きます。期間の選択肢は7日・28日・90日・180日の4つです。"}}, {"@type": "Question", "name": "Copilotのアクティブ ユーザーは何を数えていますか？", "acceptedAnswer": {"@type": "Answer", "text": "Copilotのライセンスを持つ人のうち、期間中にどれかのアプリでCopilotの機能に意図的な操作をした人です。ウィンドウを開いただけでは数えず、プロンプトを送ると数えます。"}}, {"@type": "Question", "name": "Copilotのレポートで名前が出ないのはなぜ？", "acceptedAnswer": {"@type": "Answer", "text": "既定ではすべてのレポートでユーザー名や表示名が隠れているためです。［設定］＞［組織の設定］＞［サービス］＞［レポート］で、非表示にするチェックを外すと出ます。"}}, {"@type": "Question", "name": "Copilotを使っていない人に通知を送れますか？", "acceptedAnswer": {"@type": "Answer", "text": "送れます。使用状況レポートの推奨カードから組織のメッセージを出すと、30日間使っていない人にWindowsの通知で、Copilotのライセンスを持つTeamsの新しい利用者で30日以内にTeamsのCopilotを使っていない人にはTeamsの中の表示で届きます。受信者の絞り込みはMicrosoft 365 グループ単位です。"}}, {"@type": "Question", "name": "Copilotのライセンスを誰に回すかはどう決めますか？", "acceptedAnswer": {"@type": "Answer", "text": "手がかりは準備状況レポートの「Copilot のおすすめユーザー」の列です。ライセンスの無い人のうち、Microsoft 365 アプリをよく使う上位25%に毎週印が付きます。最終的な判断は部署の業務を知る人と一緒に行うのが確実です。"}}, {"@type": "Question", "name": "Copilot ダッシュボードは有料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "見る人に有料のViva インサイトのライセンスやCopilotのライセンスは要りません。ただしデータの処理には、テナントにCopilotのライセンスが1つ以上か、Viva インサイトのライセンスが50以上要ります。ベンチマークやエージェントの分析など一部の機能は、Copilotのライセンス数や有料のViva インサイトの有無で使えるかが変わります。"}}, {"@type": "Question", "name": "Copilotの2つのレポートで数が違うのはなぜ？", "acceptedAnswer": {"@type": "Answer", "text": "アクティブの定義は同じでも、対象に含める人と期間が違うためです。ダッシュボードは28日分で最大6日遅れるため、管理センターの同じ日の数字とはずれます。"}}, {"@type": "Question", "name": "Copilotの利用は監査ログから集計できますか？", "acceptedAnswer": {"@type": "Answer", "text": "集計はできますが、Microsoftは監査ログを使用状況レポートの土台として使う想定ではないとしています。公式のレポートと数が一致しない場合があるため、社内の報告は管理センターかダッシュボードの数字にそろえます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=56b59318">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Copilotが社内…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.19</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Copilotが社内で使われないときの調べ方｜使用状況レポート・定着の手順</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilotが社内で使われないとき"><defs><linearGradient id="ecg-35d50493" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-35d50493)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="86.4" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilotが社内で</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">使われないとき</text><line x1="288.4" y1="378.0" x2="911.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">使用状況レポート・定着の手順</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Microsoft 365 管理センターの「Microsoft Copilot の使用状況レポート」のアクティブ ユーザーは、ウィンドウを開いただけでは数えず、プロンプトを送る・要約のボタンを押すなどの操作をして初めて数える定義です。</p>
+<p>使われていないと感じたら、先にこの数字で止まっている人を分けると打ち手が決まります。この記事では2026年10月19日時点のMicrosoft Learnと導入サイトをもとに、レポートの読み方・定着の材料・配り直しと報告の数字を扱います。管理センターの画面は操作していません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>アクティブ ユーザーはCopilotの機能を実際に使った人の数</strong>。ウィンドウを開いただけでは数えない</li>
+<li>使われない人は<strong>使えない・試していない・試して離れた</strong>の3つに分け、それぞれに別の打ち手を当てる</li>
+<li>未使用の人への通知、配り直しの候補、経営向けの推定時間は<strong>管理センターとViva インサイトに用意されている</strong></li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_01_split.png" alt="使われない人を使えない人・試していない人・試して離れた人の3つに分け、それぞれレポートで見る所を並べた図" loading="lazy"><figcaption>Copilotを使わない人の3つの型と、レポートで見る所</figcaption></figure>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Copilot を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>使われていないかを数字で確かめる</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>使われない人を3つに分ける</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>使えない人</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>一度も試していない人</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>試して離れた人</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>Microsoftが用意している定着の材料</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>ライセンスを配り直す判断</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>経営に報告する数字</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>社内で先に決めておくこと</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">使われていないかを数字で確かめる</h2>
+<p>「入れたのに誰も使っていない」と感じても、それだけでは誰が止まっているのか分かりません。Microsoft Learnの「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage">Microsoft Copilot の使用状況レポート</a>」によると、レポートは管理センターの［レポート］＞［使用状況］で［Microsoft Copilot］＞［Copilot］を選び、［使用状況］タブで開きます。期間は過去7日・28日・90日・180日から選べ、ある日の利用は通常その日の終わり（UTC）から48時間以内に反映されます。</p>
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_03_usage.png" alt="Microsoft Learn の使用状況レポートの表示手順。管理センターのレポートから使用状況を選び、Microsoft Copilot の使用状況タブを開く" loading="lazy"><figcaption>使用状況レポートを開く手順（Microsoft Learn）</figcaption></figure>
+
+<p>上の段に並ぶ数字のうち、まず見るのは次の3つです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>数字</th>
+<th>中身</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="数字">有効なユーザー</td>
+<td data-label="中身">期間中にCopilotのライセンスを持っていた人の数</td>
+</tr>
+<tr>
+<td data-label="数字">アクティブ ユーザー</td>
+<td data-label="中身">有効なユーザーのうち、どれか1つのアプリでCopilotの機能を試した人の数</td>
+</tr>
+<tr>
+<td data-label="数字">アクティブ ユーザー率</td>
+<td data-label="中身">アクティブ ユーザーを有効なユーザーで割った値</td>
+</tr>
+</tbody>
+</table></div>
+<p>数え方で注意したいのはアクティブの定義です。**AIの機能に意図的な操作をしたときだけアクティブと数えるため、Wordのリボンでアイコンを押してウィンドウを開いただけの人は入りません。**率が低いときは開いてはみたものの何も頼まずに閉じた人が含まれている、という読み方もできます。</p>
+<p>ユーザー名や表示名は既定ではどのレポートでも隠れており、出すときは［設定］＞［組織の設定］＞［サービス］タブの［レポート］で「すべてのレポートでユーザー、グループ、サイト名を非表示にする」のチェックを外します（Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/activity-reports">Microsoft 365 管理センターのアクティビティ レポート</a>」）。<strong>社内のプライバシーの方針で名前を出してよいかを先に確かめておかないと、誰に案内を送るかを決める段階で作業が止まります。</strong></p>
+<p>Purviewの監査ログから自前でプロンプト数を集計する会社もありますが、Microsoftは監査ログを使用状況レポートの土台として使う想定ではないとしています。集計した数が公式のレポートと一致しない場合があるため、社内で報告する数字は管理センターのレポートかViva インサイトのCopilot ダッシュボードにそろえるのが無難です。</p>
+<h2 id="s2">使われない人を3つに分ける</h2>
+<p>アクティブ ユーザー率が低いと分かっても、全員に同じ研修を案内するだけでは止まっている理由は解消しません。レポートの表を書き出して、使われない人を次の3つに分けると打ち手を当てやすくなります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>分け方</th>
+<th>レポートで見る所</th>
+<th>打ち手</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="分け方">使えない人</td>
+<td data-label="レポートで見る所">準備状況レポートの更新チャネルの列・推奨カード</td>
+<td data-label="打ち手">端末とアプリの設定を直す</td>
+</tr>
+<tr>
+<td data-label="分け方">試していない人</td>
+<td data-label="レポートで見る所">最終アクティビティ日が空欄</td>
+<td data-label="打ち手">組織のメッセージで通知する</td>
+</tr>
+<tr>
+<td data-label="分け方">試して離れた人</td>
+<td data-label="レポートで見る所">アプリ別の最終アクティビティ日が古い</td>
+<td data-label="打ち手">部署の使い道を渡す・声を聞く</td>
+</tr>
+</tbody>
+</table></div>
+<p>ユーザー別の表には過去180日の間に一度でもライセンスを持った人が全員出ます。途中でライセンスを外した人や、一度も使っていない人も含まれるので、［エクスポート］でCSVに落としてから並べ替えると分けやすくなります。</p>
+<h3 id="s2-1">使えない人</h3>
+<p>本人に使う気があっても、画面にCopilotが出ていなければ使いようがありません。同じ［Microsoft Copilot］のレポートの最初のタブが「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-readiness">Microsoft Copilot 準備状況レポート</a>」で、ユーザーごとの「対象となる更新プログラム チャネルを使用する」の列で、端末が対象のチャネルかどうかが分かります。<strong>Copilot ダッシュボードの説明では、デスクトップ版のアプリでCopilotを使うには最新チャネルか月次エンタープライズ チャネルに入っている必要があるとされています。</strong></p>
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_04_readiness.png" alt="Microsoft Learn の準備状況レポートのユーザー アクティビティ テーブル。対象となる更新プログラム チャネルを使用するの行を赤枠で囲んでいる" loading="lazy"><figcaption>準備状況レポートのユーザー アクティビティ テーブル（Microsoft Learn）</figcaption></figure>
+
+<p>Viva インサイトのCopilot ダッシュボードの準備ページには、OutlookやCopilotアプリでの利用がブロックされている、Microsoft 365 アプリにCopilot Chatがピン留めされていない、といった推奨カードが出ます。割り当てた直後で表示を待っている人もいるため、反映の時間と出ないときの順番は「<a href="/media/copilot-license-assign/">Copilotのライセンスを割り当てる方法</a>」で確かめてください。</p>
+<h3 id="s2-2">一度も試していない人</h3>
+<p>ライセンスがあるのに最終アクティビティ日が空欄の人は、まだ一度もCopilotの機能を使っていない可能性が高い人です。ただしレポートの説明には、割り当てから24時間以内に使った人が、まれに空欄になる場合があると書かれています。</p>
+<p>この層に向いているのはレポートに組み込まれた組織のメッセージです。Microsoft Learnの「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/track-copilot-adoption">Microsoft Copilot を使用して導入を促進する 使用状況レポート 組織のメッセージング</a>」（2026年9月25日更新）によると、あらかじめ用意された推奨カードは次の2枚です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>推奨カード</th>
+<th>届く相手</th>
+<th>出る場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="推奨カード">Microsoft Copilot の使用をユーザーに奨励する</td>
+<td data-label="届く相手">ライセンスを持つWindows 11の利用者で、30日間使っていない人</td>
+<td data-label="出る場所">Windowsの通知（画面の右下）</td>
+</tr>
+<tr>
+<td data-label="推奨カード">Teams の Copilot を使用してユーザーが時間を節約できるようにする</td>
+<td data-label="届く相手">Copilotのライセンスを持つTeamsの新しい利用者で、30日以内にTeamsのCopilotを使っていない人</td>
+<td data-label="出る場所">TeamsのCopilotチャットの横</td>
+</tr>
+</tbody>
+</table></div>
+<p>カードの［アクションの実行］からメッセージの種類を選び、受信者をMicrosoft 365 グループで絞り、開始日と終了日、頻度（毎週・毎月・隔月）を決めればスケジュールが組まれます。**部署のグループで絞れるため、利用率の低い部署にだけ通知を出す使い方ができます。**送ったあとは［レポート］＞［組織のメッセージ］で、メッセージの総数・クリック数・クリック率を追えます。</p>
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_05_orgmsg.png" alt="Microsoft Learn の組織メッセージの推奨カードの節。Copilot の使用を促すカードと Teams で使うよう促すカードの2枚が用意されている" loading="lazy"><figcaption>あらかじめ用意された推奨カード（Microsoft Learn）</figcaption></figure>
+
+<p>用意された文面は「Copilot をお試しください」のような一般的なものです。用意された推奨カードより細かく決めたいときは、管理センターの組織のメッセージのページから出します。</p>
+<h3 id="s2-3">試して離れた人</h3>
+<p>一度は使ったのに、最終アクティビティ日が1か月以上前で止まっている人もいます。ユーザー別の表にはTeams・Word・Excel・PowerPoint・Outlook・OneNote・Loop・Copilot Chatのアプリ別に最後の日付が並ぶので、**どのアプリで止まったかを見ると、案内する使い方が絞れます。**Teamsの会議の要約だけ続いていてWordが止まっている人には、Wordでの文書の下書きの例を案内する、といった具合です。</p>
+<p>Word・Excel・PowerPointなどの最終日は、送信の遅れで実際より新しく出たり空欄になったりする既知の制限があります。1人の数字で判断せず、部署の傾向として読むほうが安全です。</p>
+<p>使い道の材料はMicrosoftの導入サイトの<a href="https://adoption.microsoft.com/ja-jp/scenario-library/">シナリオ ライブラリ</a>にあります。財務・人事・営業・法務などの機能別と、製造・小売・金融などの業種別に、Copilotでやる作業の例を集めたページです。Copilot ダッシュボードの満足度（回答へのサムアップの割合）を見ると、どのグループで手応えが無いかも分かります。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Copilot を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">Microsoftが用意している定着の材料</h2>
+<p>Microsoft Learnの「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-enablement-resources">IT 管理者向け Microsoft Copilot 導入ガイドと概要</a>」（2026年10月15日更新）は、導入を5つの手順で示しています。5つ目に置かれているのが、ライセンスを割り当てたあとのウェルカム メールと、利用者がMicrosoftにフィードバックを送れる設定です。<strong>割り当てで終わらせず、使い始めの案内までを導入の範囲に入れています。</strong></p>
+<p>社内の推進で使える材料は次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>材料</th>
+<th>中身</th>
+<th>使う場面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="材料"><a href="https://adoption.microsoft.com/ja-jp/copilot/success-kit/">Copilot Success Kit</a></td>
+<td data-label="中身">実装の概要・利用者向けガイド・技術準備ガイド・導入計画チェックリスト・ライセンス配分ガイドなど</td>
+<td data-label="使う場面">推進の計画を作り直すとき</td>
+</tr>
+<tr>
+<td data-label="材料"><a href="https://adoption.microsoft.com/ja-jp/scenario-library/">シナリオ ライブラリ</a></td>
+<td data-label="中身">機能別・業種別の使い方の例</td>
+<td data-label="使う場面">部署ごとの使い道を決めるとき</td>
+</tr>
+<tr>
+<td data-label="材料">組織のメッセージ</td>
+<td data-label="中身">Windows・Teamsへの通知</td>
+<td data-label="使う場面">試していない人に届けるとき</td>
+</tr>
+<tr>
+<td data-label="材料"><a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-copilot-onboarding">Copilot オンボード</a></td>
+<td data-label="中身">製品の中で使い方を案内する機能</td>
+<td data-label="使う場面">使い始めの案内をそろえるとき</td>
+</tr>
+<tr>
+<td data-label="材料"><a href="https://adoption.microsoft.com/ja-jp/become-a-champion/">チャンピオン プログラム</a></td>
+<td data-label="中身">推進役が会社をまたいで情報を交換するMicrosoftのコミュニティ（英語）と、社内のコミュニティの作り方のガイド</td>
+<td data-label="使う場面">部署ごとに相談役を置くとき</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_06_kit.png" alt="Microsoft の Copilot サクセス キットのページ。実装の概要・ユーザー有効化ガイド・技術準備ガイドなどの資料が並ぶ" loading="lazy"><figcaption>Copilot サクセス キットの資料（Microsoft）</figcaption></figure>
+
+<p>Copilot オンボードは、管理センターで社内のAI 使用ポリシーのURLを入れておくと、利用者が使い始めにそのポリシーを読む流れを作れます。Viva Learningを有効にすれば、誰が最後まで終えたかも追えます。ただし今はFrontier プログラムに参加したテナントだけが対象です。</p>
+<h2 id="s4">ライセンスを配り直す判断</h2>
+<p>使っていない人のライセンスにも、1人ごとの月額がかかり続けます。ライセンスの割り当てを外しても契約の数は減らないため（<a href="/media/copilot-license-assign/">Copilotのライセンスを割り当てる方法</a>の最後の節）、配り直すのか、契約を減らすのかを分けて決めます（料金は<a href="https://www.microsoft.com/ja-jp/microsoft-365/copilot">Microsoft 365 Copilotの公式ページ</a>で確かめてください）。</p>
+<p>配り直す先の候補は準備状況レポートの「Copilot のおすすめユーザー」の列に出ます。**ライセンスを持っていない人のうち、過去28日のOutlook・Teams・Wordなどの使い方が多い上位25%に、毎週印が付きます。**25%の中での順位は付かず、Copilotのライセンスを買った会社だけが使える機能です。Microsoftはこのデータを社員の評価に使うものではないと明記しています。</p>
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_07_candidates.png" alt="Microsoft Learn の Copilot の候補者列の追加情報。ライセンスの無い利用者のうち使い方が多い上位25%に印が付く" loading="lazy"><figcaption>Copilot の候補者列の説明（Microsoft Learn）</figcaption></figure>
+
+<p>Copilot ダッシュボードの準備ページにも、無料のCopilot Chatをよく使っている人をライセンスの候補と考える、という推奨カードがあります。Microsoftの説明では、Copilot Chatをよく使う人ほどライセンスを持ったときにCopilotから価値を引き出せるとされています。</p>
+<p>数字を出すのは管理者でも、誰から外して誰に回すかは部署の業務を知る人でないと決められません。**管理者は止まっている人の一覧と候補の一覧を出し、配り直しは推進の担当と部門の責任者で決める、と役割を分けておくと話が早く進みます。**レポートを見るだけなら、グローバル管理者でなくレポート閲覧者のロールで足ります。名前を出す設定を変えられるのは全体管理者です。</p>
+<h2 id="s5">経営に報告する数字</h2>
+<p>利用率だけを出しても、投資に見合ったかの議論にはなりません。Viva インサイトの「<a href="https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard">Microsoft Copilot ダッシュボード</a>」は、準備・導入・影響・センチメントの4つの切り口で数字を出します。**見る人に有料のViva インサイトのライセンスやCopilotのライセンスは要りません。**ただしデータの処理には、テナントにCopilotのライセンスが1つ以上か、Viva インサイトのライセンスが50以上要ります。データは過去28日分で、最大6日の遅れがあり、ライセンスを割り当ててから処理が始まるまでは最大7日です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>指標</th>
+<th>中身</th>
+<th>報告で気をつけること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="指標">アクティブなCopilot ユーザー</td>
+<td data-label="中身">28日間にどれかのアプリで1回以上使った人</td>
+<td data-label="報告で気をつけること">管理センターの数とは対象の人と期間が違う</td>
+</tr>
+<tr>
+<td data-label="指標">Copilot アシスト時間</td>
+<td data-label="中身">Copilotの操作の数に、Microsoftの調査に基づく係数を掛けた時間</td>
+<td data-label="報告で気をつけること">実測ではなく推定</td>
+</tr>
+<tr>
+<td data-label="指標">Copilot アシストバリュー</td>
+<td data-label="中身">アシスト時間に時給を掛けた額</td>
+<td data-label="報告で気をつけること">時給の既定は72ドル。自社の数字に替える</td>
+</tr>
+<tr>
+<td data-label="指標">満足度</td>
+<td data-label="中身">回答へのサムアップの割合</td>
+<td data-label="報告で気をつけること">押した人の反応だけを数える</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_08_dashboard.png" alt="Microsoft Learn の Copilot ダッシュボードのアシストバリューの説明。時給の既定は72ドルで設定から変えられる文を赤枠で囲んでいる" loading="lazy"><figcaption>アシストバリューの時給の既定（Microsoft Learn）</figcaption></figure>
+
+<p>アシスト時間を漏れなく出すには、オプションの診断データを有効にしておく必要があります。<strong>時給の既定は米国労働統計局のデータに基づく72ドルで、自社の人件費とは合わないため、報告の前に設定で自社の時給と円に替えてください。</strong></p>
+<p>自動で見られるのは一部の人だけです。Entra IDの利用者が2,500人以上で、大半の人が1つのレポートライン（同じ経営者の下の系統）に入っている会社では、上位3階層にいて部下の多い人に、自動でダッシュボードが表示されます。部門の管理者は自分のチームの導入と影響を見られるため、部署ごとの振り返りに使えるのが利点です。</p>
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_02_report.png" alt="管理センターの使用状況レポートは担当が毎週見る数字、Copilot ダッシュボードは経営に出す数字、という使い分けの図" loading="lazy"><figcaption>使用状況レポートと Copilot ダッシュボードの使い分け</figcaption></figure>
+
+<h2 id="s6">社内で先に決めておくこと</h2>
+<p>レポートもダッシュボードも、見る人と見方が決まっていないと開かれなくなります。推進を始める前か立て直す前に、次の5つを社内で決めておくと迷いが減ります。</p>
+<ul>
+<li>数字を見る人と、その人に付けるロール</li>
+<li>使用状況レポートに名前を出すかどうか</li>
+<li>見る期間（28日など）と見る間隔</li>
+<li>組織のメッセージを出す相手と頻度</li>
+<li>AI 使用ポリシーの置き場と、オンボードに入れるかどうか</li>
+</ul>
+<p>ライセンスの種類ごとの違いは「<a href="/media/copilot-guide/">Copilotの使い方を解説</a>」、無料のCopilot Chatを止める・絞る設定は「<a href="/media/copilot-chat-admin-block/">Copilot Chatを社内で止める方法</a>」の記事で扱いました。</p>
+<h2 id="s7">よくある質問</h2>
+<h3 id="s7-1">Copilotの使用状況はどこで確認できますか？</h3>
+<p>Microsoft 365 管理センターの［レポート］＞［使用状況］で［Microsoft Copilot］＞［Copilot］を選び、［使用状況］タブを開きます。期間の選択肢は7日・28日・90日・180日の4つです。</p>
+<h3 id="s7-2">Copilotのアクティブ ユーザーは何を数えていますか？</h3>
+<p>Copilotのライセンスを持つ人のうち、期間中にどれかのアプリでCopilotの機能に意図的な操作をした人です。ウィンドウを開いただけでは数えず、プロンプトを送ると数えます。</p>
+<h3 id="s7-3">Copilotのレポートで名前が出ないのはなぜ？</h3>
+<p>既定ではすべてのレポートでユーザー名や表示名が隠れているためです。［設定］＞［組織の設定］＞［サービス］＞［レポート］で、非表示にするチェックを外すと出ます。</p>
+<h3 id="s7-4">Copilotを使っていない人に通知を送れますか？</h3>
+<p>送れます。使用状況レポートの推奨カードから組織のメッセージを出すと、30日間使っていない人にWindowsの通知で、Copilotのライセンスを持つTeamsの新しい利用者で30日以内にTeamsのCopilotを使っていない人にはTeamsの中の表示で届きます。受信者の絞り込みはMicrosoft 365 グループ単位です。</p>
+<h3 id="s7-5">Copilotのライセンスを誰に回すかはどう決めますか？</h3>
+<p>手がかりは準備状況レポートの「Copilot のおすすめユーザー」の列です。ライセンスの無い人のうち、Microsoft 365 アプリをよく使う上位25%に毎週印が付きます。最終的な判断は部署の業務を知る人と一緒に行うのが確実です。</p>
+<h3 id="s7-6">Copilot ダッシュボードは有料ですか？</h3>
+<p>見る人に有料のViva インサイトのライセンスやCopilotのライセンスは要りません。ただしデータの処理には、テナントにCopilotのライセンスが1つ以上か、Viva インサイトのライセンスが50以上要ります。ベンチマークやエージェントの分析など一部の機能は、Copilotのライセンス数や有料のViva インサイトの有無で使えるかが変わります。</p>
+<h3 id="s7-7">Copilotの2つのレポートで数が違うのはなぜ？</h3>
+<p>アクティブの定義は同じでも、対象に含める人と期間が違うためです。ダッシュボードは28日分で最大6日遅れるため、管理センターの同じ日の数字とはずれます。</p>
+<h3 id="s7-8">Copilotの利用は監査ログから集計できますか？</h3>
+<p>集計はできますが、Microsoftは監査ログを使用状況レポートの土台として使う想定ではないとしています。公式のレポートと数が一致しない場合があるため、社内の報告は管理センターかダッシュボードの数字にそろえます。</p>
+<h2 id="s8">出典</h2>
+<ul>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage">Microsoft Copilot の使用状況レポート</a>」（2026年10月19日取得）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-readiness">Microsoft Copilot 準備状況レポート</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/activity-reports">Microsoft 365 管理センターのアクティビティ レポート</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/track-copilot-adoption">Microsoft Copilot を使用して導入を促進する 使用状況レポート 組織のメッセージング</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard">Microsoft 365 の顧客向けの Microsoft Copilot ダッシュボードに接続する</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-enablement-resources">IT 管理者向け Microsoft Copilot 導入ガイドと概要</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-copilot-onboarding">Microsoft Copilot オンボードを管理する (Frontier)</a>」（同）</li>
+<li>Microsoft 導入サイト「<a href="https://adoption.microsoft.com/ja-jp/copilot/success-kit/">Copilot Success Kit</a>」（同）</li>
+<li>Microsoft 導入サイト「<a href="https://adoption.microsoft.com/ja-jp/scenario-library/">シナリオ ライブラリ</a>」（同）</li>
+<li>Microsoft 導入サイト「<a href="https://adoption.microsoft.com/ja-jp/become-a-champion/">チャンピオン プログラム</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Copilot を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">使われていないかを数字で確かめる</a><a href="#s2">使われない人を3つに分ける</a><a href="#s3">Microsoftが用意している定着の材料</a><a href="#s4">ライセンスを配り直す判断</a><a href="#s5">経営に報告する数字</a><a href="#s6">社内で先に決めておくこと</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-connectors-admin/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのコネクタの管理"><defs><linearGradient id="ecg-95170910" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-95170910)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのコネクタの管理</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.17</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTコネクタの管理者設定・BusinessとEnterpriseの違い</div>
+            </a>
+            <a href="/media/circle-to-search-off/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="かこって検索をオフにする"><defs><linearGradient id="ecg-beb4de1a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-beb4de1a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">かこって検索をオフにする</text><line x1="144.0" y1="365.9" x2="1056.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.17</div>
+                <div class="rel-card__ttl">【2026年10月】かこって検索をオフにする方法｜Pixel・Galaxy・AQUOS・勝手に起動するとき</div>
+            </a>
+            <a href="/media/copilot-chat-admin-block/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilot Chatを社内で止める"><defs><linearGradient id="ecg-116e0872" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-116e0872)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="125.2" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilot Chat</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">を社内で止める</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.17</div>
+                <div class="rel-card__ttl">【2026年10月】Copilot Chatを社内で止める方法｜ブロック・Web検索・エージェント</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'copilot-adoption',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
