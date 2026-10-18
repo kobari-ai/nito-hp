@@ -24,14 +24,14 @@ Googleは2026年8月7日、Googleマップで条件を話して店を探す「�
 
 <!-- SHOT: 01_fig_where.png・HTML図（brain/scripts/seo/fig/gbp_where.html）・幅800 DPR2・赤枠なし -->
 
-| 場面 | AIが材料にするもの | 日本での提供 |
+| 場面 | AIが使う情報 | 日本での提供 |
 |---|---|---|
 | 検索のAIモードとAIによる概要 | インデックスされたページ。検索セントラルはGBPを最新に保つことを基本に挙げる | AIモードは[2025年9月に日本語で提供開始](https://blog.google/intl/ja-jp/products/explore-get-answers/ai-mode-search/) |
 | マップの場所のヒントと質問 | クチコミとオンライン上の情報 | 2026年2月13日の発表で日本のAndroidとiOSに |
 | マップのクチコミの要約 | ユーザーのクチコミ | 同じ発表で日本のAndroidとiOSに |
 | マップに相談 | Googleマップの最新情報 | 2026年8月7日から数週間かけて順に |
 
-マップの場所のヒントは、Google Japan Blogの[2026年2月13日の記事](https://blog.google/intl/ja-jp/products/explore-get-answers/maps-gemini-tips/)が紹介した機能です。レストランやホテルのページを下に送ると、クチコミやオンラインの情報をGeminiが分析した予約方法や駐車のコツが出ます。同じ記事はお店のページで「無料駐車場はありますか？」と尋ねる使い方と、Geminiによるクチコミの要約も日本で使えるとしています。
+マップの場所のヒントは、Google Japan Blogの[2026年2月13日の記事](https://blog.google/intl/ja-jp/products/explore-get-answers/maps-gemini-tips/)が紹介した機能です。レストランやホテルのページを下にスクロールすると、クチコミやオンラインの情報をGeminiが分析した予約方法や駐車のコツが出ます。同じ記事はお店のページで「無料駐車場はありますか？」と尋ねる使い方と、Geminiによるクチコミの要約も日本で使えるとしています。
 
 <!-- SHOT: 02_blog_maps_tips.png・Google Japan Blog「Google マップの新機能で、お出かけをもっとスムーズに」の「Gemini で Google マップ の場所の詳細を確認」の節・https://blog.google/intl/ja-jp/products/explore-get-answers/maps-gemini-tips/・PC・赤枠1: 質問の例の文 ／ 赤枠2:「日本国内の Android および iOS」の文 -->
 
@@ -51,7 +51,7 @@ Googleは2026年8月7日、Googleマップで条件を話して店を探す「�
 | クチコミの要約 | ユーザーのクチコミだけをもとにAIが作る | 要約に入るクチコミの選び方 |
 | 測り方 | AI機能での表示はSearch Consoleの「ウェブ」に含まれる | GBPの閲覧数のうちAI経由の内訳 |
 
-1行目と2行目はGoogle 検索セントラルの「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」の記述です。同じページはAI向けに新しいファイルや特別な schema.org の構造化データを作る必要もないとしています。3行目はGBPヘルプの「[Google のローカル検索結果のランキングを改善するヒント](https://support.google.com/business/answer/7091?hl=ja)」、4行目はGoogle Maps Platform の「[AI によるクチコミの要約](https://developers.google.com/maps/documentation/places/web-service/review-summaries?hl=ja)」の説明です。
+1・2行目はGoogle 検索セントラルの「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」、3行目はGBPヘルプの「[Google のローカル検索結果のランキングを改善するヒント](https://support.google.com/business/answer/7091?hl=ja)」、4行目はGoogle Maps Platform の「[AI によるクチコミの要約](https://developers.google.com/maps/documentation/places/web-service/review-summaries?hl=ja)」によります。検索セントラルはAI向けの新しいファイルや特別な schema.org の構造化データも不要としています。
 
 <!-- SHOT: 03_help_ai_features.png・Google 検索セントラル「AI 機能とウェブサイト」のSEOの基本の箇条書き・https://developers.google.com/search/docs/appearance/ai-features?hl=ja・PC・赤枠1:「追加の要件はなく、別途特別な最適化を行う必要もありません」の太字 ／ 赤枠2:「Merchant Center とビジネス プロフィールの情報が最新のものであることを確認します」の行 -->
 
@@ -59,15 +59,15 @@ Googleは2026年8月7日、Googleマップで条件を話して店を探す「�
 
 ## GBPで整える5つの項目
 
-GBPヘルプのランキングのヒントは情報が充実して正確なほどローカル検索結果に出やすいと説明しています。AIの答えの材料になる項目も、この延長で埋めていきます。
+GBPヘルプは情報が充実して正確なほどローカル検索結果に出やすいと説明しています。AIに読まれる項目も、この延長で埋めていきます。
 
 ### ① ビジネスの種類とサービス
 
-ヘルプの説明によると関連性とは、検索語とプロフィールが合う度合いのことです。業種（カテゴリ）とサービスの項目が、その合い方を決める入口です。工務店なら注文住宅やリフォーム、クリニックなら診療の内容のように、**扱うサービスを項目として並べておくと、条件を重ねた相談と照らし合わせる材料が増えます**。
+ヘルプの説明によると関連性とは、検索語とプロフィールが合う度合いのことです。業種（カテゴリ）とサービスの項目は、この関連性に直接かかわります。工務店なら注文住宅やリフォーム、クリニックなら診療の内容のように、**扱うサービスを項目として並べておくと、条件を重ねた相談と照らし合わせられる情報が増えます**。
 
 ### ② 営業時間と特別営業時間
 
-マップに相談を紹介した[Google Japan Blogの記事](https://blog.google/intl/ja-jp/products/connect-communicate/japanese-ask-maps/)には、「今夜使える照明付きの公営テニスコートを探して」のように時刻を含む質問の例があります。ヘルプも特別営業時間を含む営業時間の入力を勧めています。祝日や年末年始の時間まで入れておかないと、時間の条件がつく相談で答えの材料が欠けてしまいます。
+[マップに相談を紹介したブログ](https://blog.google/intl/ja-jp/products/connect-communicate/japanese-ask-maps/)の質問の例には「今夜使える」のような時刻の条件が入っています。ヘルプも特別営業時間を含めた入力を勧めており、祝日や年末年始の時間まで入れておけば、時間の条件がついた相談にも答えられる情報がそろいます。
 
 ### ③ 属性とメニュー
 
@@ -85,11 +85,11 @@ GBPヘルプのランキングのヒントは情報が充実して正確なほ�
 
 <!-- SHOT: 04_help_description_sp.png・GBPヘルプ「ビジネス プロフィールの説明を管理する」の「AI を活用してビジネスの説明を生成する」の手順・https://support.google.com/business/answer/13682007?hl=ja・スマホ（shot.py --mobile）・赤枠1:［説明の候補を見る］の行 ／ 赤枠2:「内容が正確かどうかを確認し」の注意書き -->
 
-手順はヘルプの記載で、nitoはこの画面を操作して確かめていません。ヘルプはこの機能を一部の地域と言語に限ったものとし、生成された文が正確か確認するよう求めています。変更の反映は通常10分ほどですが、30営業日ほどかかる場合もあるとのことです。書く中身は別のヘルプ「[Google マップに表示されるビジネスの概要について](https://support.google.com/business/answer/6088158?hl=ja)」の案内どおり、価格やセールではなく商品やサービスと他にない特長にします。
+この手順はヘルプの記載によるもので、nitoは実際の画面では試していません。ヘルプは一部の地域と言語だけの機能とし、生成された文が正確か確認するよう求めています。変更の反映は通常10分ほどですが、30営業日ほどかかる場合もあるとのことです。書く中身は別のヘルプ「[Google マップに表示されるビジネスの概要について](https://support.google.com/business/answer/6088158?hl=ja)」の案内どおり、価格やセールではなく商品やサービスと他にない特長にします。
 
 ### ⑤ 写真と動画
 
-ランキングのヒントは写真や動画で商品やサービスを紹介するよう勧めています。後で触れるGeminiのビジネス ノートブックも、店の外観などの写真を足すことを提案の例に挙げています。
+同じヘルプは写真や動画で商品やサービスを紹介するよう勧めています。後で触れるGeminiのビジネス ノートブックも、店の外観などの写真を足すことを提案の例に挙げています。
 
 ## クチコミとAIの要約
 
@@ -101,7 +101,7 @@ GBPヘルプのランキングのヒントは情報が充実して正確なほ�
 
 ### 返信と依頼の仕方
 
-ランキングのヒントによると、好意的なクチコミや有用な返信はビジネスの注目度を高めるのに役立ちます。要約を変えられるのはクチコミの中身だけなので、**来店した人に具体的な体験を書いてもらう依頼と、全件への返信**が店舗側の打てる手です。クチコミのリンクやQRコードを作る手順もGBPヘルプにあります。
+ランキングのヘルプによると、好意的なクチコミや有用な返信があるとビジネスが目に留まりやすくなります。要約を変えられるのはクチコミの中身だけなので、**来店した人に具体的な体験を書いてもらう依頼と、全件への返信**が店舗側の打てる手です。クチコミのリンクやQRコードを作る手順もGBPヘルプにあります。
 
 ### やってはいけない依頼
 
@@ -118,11 +118,11 @@ Googleマップの「[禁止または制限されているコンテンツ](https
 - クチコミの要約とフィードバックのテーマの整理
 - 閲覧数・ウェブサイトへの誘導数・検索キーワードの確認
 
-接続した人はビジネス ノートブックも作れます。不足している営業時間や説明の更新、写真の追加といった次の作業をGeminiが提案する画面です。どちらも段階的に提供されており、ヘルプは「すぐには利用できない場合」があるとしています。
+接続するとビジネス ノートブックも作れ、不足している情報の更新や写真の追加をGeminiが提案します。どちらも段階的な提供で、すぐには使えない場合もあります。
 
 ### 接続の条件と会社への影響
 
-ヘルプの条件を会社の運用で起きることと並べました。
+会社でGBPを持つときの運用に、条件の多くが直接かかわります。
 
 | ヘルプの条件 | 会社で起きること |
 |---|---|
@@ -138,11 +138,11 @@ Googleマップの「[禁止または制限されているコンテンツ](https
 
 ## AIモードの自動通話と詳細設定
 
-米国ではAIモードが利用者の代わりに店へ電話をかける機能が動いています。Google 検索ヘルプの「[AI モードを使用してローカルの在庫状況と価格を確認する](https://support.google.com/websearch/answer/17104441?hl=ja&co=GENIE.Platform%3DDesktop)」は、店のウェブサイトに直近の予約枠や在庫が載っていない場合、Googleが店に電話して確かめると説明しています。提供は英語で、GBPヘルプの「[Google からビジネスへの自動通話またはテキスト メッセージについて](https://support.google.com/business/answer/7690269?hl=ja)」は、予約や価格の確認の通話を米国の一部の州を除く全州としています。
+米国ではAIモードが利用者の代わりに店へ電話をかける機能が動いています。Google 検索ヘルプの「[AI モードを使用してローカルの在庫状況と価格を確認する](https://support.google.com/websearch/answer/17104441?hl=ja&co=GENIE.Platform%3DDesktop)」は、店のウェブサイトに直近の予約枠や在庫が載っていない場合、Googleが店に電話して確かめると説明しています。提供は英語で、GBPヘルプの「[Google からビジネスへの自動通話またはテキスト メッセージについて](https://support.google.com/business/answer/7690269?hl=ja)」は、予約や価格を確かめる通話の提供先を米国（一部の州を除く）としています。
 
-日本で使えるとは2026年10月19日時点のどちらのヘルプにも書かれていません。それでも、**ウェブサイトやGBPに予約枠・料金・在庫が載っていない店ほど、AIが答えられずに電話で確かめにいく**仕組みだとは読めます。
+日本で使えるとは2026年10月19日時点のどちらのヘルプにも書かれていません。米国の仕組みに沿えば、**ウェブサイトに予約枠や在庫を載せていない店ほど、Googleから確認の電話を受けやすくなります**。GBPヘルプによると、Merchant Centerで店の商品を共有していれば在庫の問い合わせの電話はかかりません。
 
-自動通話を受けるかどうかは、GBPの詳細設定で決められます。GBPヘルプの「[プロフィールの詳細設定を管理する](https://support.google.com/business/answer/10737668?hl=ja)」では、その他アイコンから［ビジネス プロフィールの設定］の［詳細設定］に進むと、自動通話とテキスト メッセージの許可・拒否と、ほかのGoogleのサービスとのデータ共有を切り替えられます。営業時間の確認のための自動通話で更新された情報は、審査のあいだ「保留中」になり、最長で5営業日かかるとのことです。
+自動通話を受けるかどうかは、GBPの詳細設定で決められます。GBPヘルプの「[プロフィールの詳細設定を管理する](https://support.google.com/business/answer/10737668?hl=ja)」では、その他アイコンから［ビジネス プロフィールの設定］の［詳細設定］に進むと、自動通話とテキスト メッセージの許可・拒否と、ほかのGoogleのサービスとのデータ共有を切り替えられます。
 
 <!-- SHOT: 08_help_settings.png・GBPヘルプ「プロフィールの詳細設定を管理する」の「使用可能な設定」・https://support.google.com/business/answer/10737668?hl=ja・PC・赤枠1:「Google からの自動通話とテキスト メッセージ」の行 ／ 赤枠2:「ビジネスの最適化案」の行 -->
 
@@ -163,9 +163,9 @@ GBPそのものは無料ですが、GBPヘルプの「[サードパーティと�
 
 ### 効果の測り方
 
-GBPヘルプの「[ビジネス プロフィールのパフォーマンスとインサイトを確認する](https://support.google.com/business/answer/9918094?hl=ja)」では、検索とマップでのプロフィールの閲覧数・クリック数などが見られます。Googleアナリティクスとつなげば、ウェブサイトのクリック・通話・ルートをまとめて見られます（[アナリティクス ヘルプ](https://support.google.com/analytics/answer/16930347?hl=ja)）。ただし、このヘルプにAIモードから見られた分を分ける項目の説明はありません。
+GBPヘルプの「[ビジネス プロフィールのパフォーマンスとインサイトを確認する](https://support.google.com/business/answer/9918094?hl=ja)」では、検索とマップでのプロフィールの閲覧数・クリック数などが見られます。[Googleアナリティクスにつなぐ](https://support.google.com/analytics/answer/16930347?hl=ja)こともできますが、どちらのヘルプにもAIモードから見られた分を分ける項目の説明はありません。
 
-ウェブサイト側はAI機能での表示もSearch Consoleの検索タイプ「ウェブ」に含まれると検索セントラルが説明しています。**AI経由の数字が取れない部分は、自社の条件でAIモードとマップに相談に質問し、名前が挙がるかを毎月記録する**のが現実的な測り方です。nitoはAIモード・ChatGPT・Gemini・Perplexityに同じ質問を繰り返して社名が挙がる回数を数えており、店舗の業種でも同じ方法が使えます。
+ウェブサイト側はAI機能での表示もSearch Consoleの検索タイプ「ウェブ」に含まれると検索セントラルが説明しています。**AI経由の数字が取れない部分は、自社の条件でAIモードとマップに相談に質問し、名前が挙がるかを毎月記録する**のが現実的な測り方です。nitoもAIモード・ChatGPT・Gemini・Perplexityに同じ質問を繰り返し、社名が挙がる回数を数える方法で測っています。
 
 業種ごとの考え方は[飲食店](/media/restaurant-ai-search/)・[クリニック](/media/clinic-ai-search/)・[建設・リフォーム](/media/construction-ai-search/)・[不動産](/media/real-estate-ai-search/)の記事にあります。
 
@@ -179,11 +179,11 @@ AI対策のつもりで、GBPのガイドラインやポリシーに触れてし
 
 ### AIが書いた説明文をそのまま出す
 
-AIの説明文の候補はヘルプ自身が正確さの確認を求めています。対応していない診療やサービスが混ざったまま公開すると、その文がAIの答えの材料になってしまいます。
+AIの説明文の候補はヘルプ自身が正確さの確認を求めています。対応していない診療やサービスが混ざったまま公開すれば、利用者はそれを店の説明として読みます。
 
 ### 業者を同時に何社も入れる
 
-サードパーティのヒントが勧めるのは一度に1社ずつ試す方法です。同じヘルプはGoogleでの上位表示を保証する業者や、Googleの社員を名乗る業者を注意すべき兆候に挙げています。AIモードで必ず上位に出すという約束も、この保証の一種です。
+業者と組むなら一度に1社ずつ試すのが、GBPヘルプの勧める進め方です。同じヘルプはGoogleでの上位表示を保証する業者や、Googleの社員を名乗る業者を注意すべき兆候に挙げています。ヘルプはAIモードに触れていませんが、AIモードで必ず上位に出すという約束も根拠を示せない点は同じです。
 
 ### サイトとGBPで情報が食い違う
 
@@ -193,7 +193,7 @@ GBPヘルプの「[Google がビジネス プロフィールとローカル検�
 
 ### GoogleビジネスプロフィールにAI対策は必要ですか？
 
-AI専用の設定はありません。検索セントラルはAIによる概要とAIモードに特別な最適化は要らないとしたうえで、GBPの情報を最新に保つことを基本に挙げています。やることは業種・営業時間・属性・説明文・写真を正確に埋めることです。
+AI専用の設定はありません。検索セントラルはAIによる概要とAIモードに特別な最適化は要らないとし、GBPの情報を最新に保つことを基本に挙げています。業種・営業時間・属性・説明文・写真を正確に埋めることが対策になります。
 
 ### ビジネスプロフィールはAIモードで使われますか？
 
@@ -205,11 +205,11 @@ GoogleはAIモードがGBPのどの項目をどう使うかを公表していま
 
 ### ビジネスプロフィールの説明文はAIで作れますか？
 
-作れます。プロフィールの編集画面で［説明の候補を見る］を押すと、プロフィールやウェブサイトの情報をもとに候補が出ます。一部の地域と言語に限った機能です。ヘルプは正確さを確かめてから使うよう求めています。
+作れます。編集画面の［説明の候補を見る］で候補が出ますが、一部の地域と言語だけの機能で、ヘルプは正確さを確かめてから使うよう求めています。
 
 ### ビジネスプロフィールはGeminiで管理できますか？
 
-条件つきで可能です。gemini.google.com でGBPを接続すると、営業時間の更新、クチコミへの返信の下書き、閲覧数や検索キーワードの確認を頼めます。提供は段階的で、まだ出ないアカウントもある点に注意が必要です。
+条件つきで可能です。gemini.google.com でGBPを接続すると、営業時間の更新やクチコミへの返信の下書きを頼めます。提供は段階的で、まだ出ないアカウントもある点に注意が必要です。
 
 ### 複数店舗のプロフィールもGeminiにつなげますか？
 
@@ -228,17 +228,18 @@ GoogleはAIモードがGBPのどの項目をどう使うかを公表していま
 いずれも2026年10月19日に取得しました。
 
 - Google 検索セントラル「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」
-- Google ビジネス プロフィール ヘルプ「[Google のローカル検索結果のランキングを改善するヒント](https://support.google.com/business/answer/7091?hl=ja)」
-- Google ビジネス プロフィール ヘルプ「[Google マップに表示されるビジネスの概要について](https://support.google.com/business/answer/6088158?hl=ja)」
-- Google ビジネス プロフィール ヘルプ「[ビジネス プロフィールの説明を管理する](https://support.google.com/business/answer/13682007?hl=ja)」
-- Google ビジネス プロフィール ヘルプ「[Google ビジネス プロフィールを Gemini ウェブアプリで管理する](https://support.google.com/business/answer/17142585?hl=ja&co=GENIE.Platform%3DDesktop)」
-- Google ビジネス プロフィール ヘルプ「[ビジネス プロフィールのオーナーと管理者を管理する](https://support.google.com/business/answer/3403100?hl=ja)」
-- Google ビジネス プロフィール ヘルプ「[プロフィールの詳細設定を管理する](https://support.google.com/business/answer/10737668?hl=ja)」
-- Google ビジネス プロフィール ヘルプ「[Google からビジネスへの自動通話またはテキスト メッセージについて](https://support.google.com/business/answer/7690269?hl=ja)」
-- Google ビジネス プロフィール ヘルプ「[ビジネス プロフィールのパフォーマンスとインサイトを確認する](https://support.google.com/business/answer/9918094?hl=ja)」
-- Google ビジネス プロフィール ヘルプ「[サードパーティと連携してビジネス プロフィールを管理するためのヒント](https://support.google.com/business/answer/7163406?hl=ja)」
-- Google ビジネス プロフィール ヘルプ「[Google に掲載するビジネス情報のガイドライン](https://support.google.com/business/answer/3038177?hl=ja)」
-- Google ビジネス プロフィール ヘルプ「[Google がビジネス プロフィールとローカル検索結果の情報を入手する方法と、それらの用途](https://support.google.com/business/answer/2721884?hl=ja)」
+- Google ビジネス プロフィール ヘルプ
+  - 「[Google のローカル検索結果のランキングを改善するヒント](https://support.google.com/business/answer/7091?hl=ja)」
+  - 「[Google マップに表示されるビジネスの概要について](https://support.google.com/business/answer/6088158?hl=ja)」
+  - 「[ビジネス プロフィールの説明を管理する](https://support.google.com/business/answer/13682007?hl=ja)」
+  - 「[Google ビジネス プロフィールを Gemini ウェブアプリで管理する](https://support.google.com/business/answer/17142585?hl=ja&co=GENIE.Platform%3DDesktop)」
+  - 「[ビジネス プロフィールのオーナーと管理者を管理する](https://support.google.com/business/answer/3403100?hl=ja)」
+  - 「[プロフィールの詳細設定を管理する](https://support.google.com/business/answer/10737668?hl=ja)」
+  - 「[Google からビジネスへの自動通話またはテキスト メッセージについて](https://support.google.com/business/answer/7690269?hl=ja)」
+  - 「[ビジネス プロフィールのパフォーマンスとインサイトを確認する](https://support.google.com/business/answer/9918094?hl=ja)」
+  - 「[サードパーティと連携してビジネス プロフィールを管理するためのヒント](https://support.google.com/business/answer/7163406?hl=ja)」
+  - 「[Google に掲載するビジネス情報のガイドライン](https://support.google.com/business/answer/3038177?hl=ja)」
+  - 「[Google がビジネス プロフィールとローカル検索結果の情報を入手する方法と、それらの用途](https://support.google.com/business/answer/2721884?hl=ja)」
 - マップユーザーの投稿コンテンツに関するポリシー「[禁止または制限されているコンテンツ](https://support.google.com/contributionpolicy/answer/7400114?hl=ja)」
 - Google Japan Blog「[Google 検索における「AI モード」を日本語で提供開始](https://blog.google/intl/ja-jp/products/explore-get-answers/ai-mode-search/)」（2025年9月9日）
 - Google 検索ヘルプ「[AI モードを使用してローカルの在庫状況と価格を確認する](https://support.google.com/websearch/answer/17104441?hl=ja&co=GENIE.Platform%3DDesktop)」
