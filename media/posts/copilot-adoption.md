@@ -25,7 +25,7 @@ Microsoft 365 管理センターの「Microsoft Copilot の使用状況レポー
 
 「入れたのに誰も使っていない」と感じても、それだけでは誰が止まっているのか分かりません。Microsoft Learnの「[Microsoft Copilot の使用状況レポート](https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage)」によると、レポートは管理センターの［レポート］＞［使用状況］で［Microsoft Copilot］＞［Copilot］を選び、［使用状況］タブで開きます。期間は過去7日・28日・90日・180日から選べ、ある日の利用は通常その日の終わり（UTC）から48時間以内に反映されます。
 
-<!-- SHOT: Microsoft Learn「Microsoft Copilot の使用状況レポート」の表示手順の節と、使用状況タブの画面例（m365-copilot-adoption.png）・https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage ・PC・赤枠は手順の番号1〜5 -->
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_03_usage.png" alt="Microsoft Learn の使用状況レポートの表示手順。管理センターのレポートから使用状況を選び、Microsoft Copilot の使用状況タブを開く" loading="lazy"><figcaption>使用状況レポートを開く手順（Microsoft Learn）</figcaption></figure>
 
 上の段に並ぶ数字は3つです。
 
@@ -57,7 +57,7 @@ Purviewの監査ログから自前でプロンプト数を集計する会社も�
 
 本人に使う気があっても、画面にCopilotが出ていなければ使いようがありません。同じ［Microsoft Copilot］のレポートの最初のタブが「[Microsoft Copilot 準備状況レポート](https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-readiness)」で、ユーザーごとの「対象となる更新プログラム チャネルを使用する」の列で、端末が対象のチャネルかどうかが分かります。**Copilot ダッシュボードの説明では、デスクトップ版のアプリでCopilotを使うには最新チャネルか月次エンタープライズ チャネルに入っている必要があるとされています。**
 
-<!-- SHOT: Microsoft Learn「Microsoft Copilot 準備状況レポート」のユーザー アクティビティ テーブルの節・https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-readiness ・PC・赤枠は「対象となる更新プログラム チャネルを使用する」の行 -->
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_04_readiness.png" alt="Microsoft Learn の準備状況レポートのユーザー アクティビティ テーブル。対象となる更新プログラム チャネルを使用するの行を赤枠で囲んでいる" loading="lazy"><figcaption>準備状況レポートのユーザー アクティビティ テーブル（Microsoft Learn）</figcaption></figure>
 
 Viva インサイトのCopilot ダッシュボードの準備ページには、OutlookやCopilotアプリでの利用がブロックされている、Microsoft 365 アプリにCopilot Chatがピン留めされていない、といった推奨カードが出ます。割り当てた直後で表示を待っている人もいるため、反映の時間と出ないときの順番は「[Copilotのライセンスを割り当てる方法](/media/copilot-license-assign/)」で確かめてください。
 
@@ -74,7 +74,7 @@ Viva インサイトのCopilot ダッシュボードの準備ページには、O
 
 カードの［アクションの実行］からメッセージの種類を選び、受信者をMicrosoft 365 グループで絞り、開始日と終了日、頻度（毎週・毎月・隔月）を決めればスケジュールが組まれます。**部署のグループで絞れるため、利用率の低い部署にだけ通知を出す使い方ができます。**送ったあとは［レポート］＞［組織のメッセージ］で、メッセージの総数・クリック数・クリック率を追えます。
 
-<!-- SHOT: Microsoft Learn「組織メッセージで導入を促進する」の推奨カード2枚の節・https://learn.microsoft.com/ja-jp/microsoft-365/copilot/track-copilot-adoption ・PC・赤枠なし -->
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_05_orgmsg.png" alt="Microsoft Learn の組織メッセージの推奨カードの節。Copilot の使用を促すカードと Teams で使うよう促すカードの2枚が用意されている" loading="lazy"><figcaption>あらかじめ用意された推奨カード（Microsoft Learn）</figcaption></figure>
 
 用意された文面は「Copilot をお試しください」のような一般的なものです。社内の使い道や問い合わせ先を入れたいときは、管理センターの組織のメッセージのページから自前の文面で出します。
 
@@ -100,7 +100,7 @@ Microsoft Learnの「[IT 管理者向け Microsoft Copilot 導入ガイドと概
 | [Copilot オンボード](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-copilot-onboarding) | 製品の中で使い方を案内する機能 | 使い始めの案内をそろえるとき |
 | [チャンピオン プログラム](https://adoption.microsoft.com/ja-jp/champions/) | 社内の推進役どうしのコミュニティ | 部署ごとに相談役を置くとき |
 
-<!-- SHOT: Microsoft 導入サイト「Copilot Success Kit」の What's in the full kit の一覧・https://adoption.microsoft.com/ja-jp/copilot/success-kit/ ・PC・赤枠なし -->
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_06_kit.png" alt="Microsoft の Copilot サクセス キットのページ。実装の概要・ユーザー有効化ガイド・技術準備ガイドなどの資料が並ぶ" loading="lazy"><figcaption>Copilot サクセス キットの資料（Microsoft）</figcaption></figure>
 
 Copilot オンボードは、管理センターで社内のAI 使用ポリシーのURLを入れておくと、利用者が使い始めにそのポリシーを読む流れを作れます。Viva Learningを有効にすれば、誰が最後まで終えたかも追えます。ただし今はFrontier プログラムに参加したテナントだけが対象です。
 
@@ -110,7 +110,7 @@ Copilot オンボードは、管理センターで社内のAI 使用ポリシー
 
 配り直す先の候補は準備状況レポートの「Copilot のおすすめユーザー」の列に出ます。**ライセンスを持っていない人のうち、過去28日のOutlook・Teams・Wordなどの使い方が多い上位25%に、毎週印が付きます。**25%の中での順位は付かず、Copilotのライセンスを買った会社だけが使える機能です。Microsoftはこのデータを社員の評価に使うものではないと明記しています。
 
-<!-- SHOT: Microsoft Learn「Microsoft Copilot 準備状況レポート」の「Copilot の候補者列の追加情報」の節・https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-readiness ・PC・赤枠は上位25%の文 -->
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_07_candidates.png" alt="Microsoft Learn の Copilot の候補者列の追加情報。ライセンスの無い利用者のうち使い方が多い上位25%に印が付く" loading="lazy"><figcaption>Copilot の候補者列の説明（Microsoft Learn）</figcaption></figure>
 
 Copilot ダッシュボードの準備ページにも、無料のCopilot Chatをよく使っている人をライセンスの候補と考える、という推奨カードがあります。Microsoftの説明では、Copilot Chatをよく使う人ほどライセンスを持ったときにCopilotから価値を引き出せるとされています。
 
@@ -127,7 +127,7 @@ Copilot ダッシュボードの準備ページにも、無料のCopilot Chatを
 | Copilot アシストバリュー | アシスト時間に時給を掛けた額 | 時給の既定は72ドル。自社の数字に替える |
 | 満足度 | 回答へのサムアップの割合 | 押した人の反応だけを数える |
 
-<!-- SHOT: Microsoft Learn「Microsoft Copilot ダッシュボード」の影響の節（Copilot アシスト時間とアシストバリュー）・https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard ・PC・赤枠は時給72ドルの文 -->
+<figure class="post-figure"><img src="/media/images/copilot-adoption/cadp_08_dashboard.png" alt="Microsoft Learn の Copilot ダッシュボードのアシストバリューの説明。時給の既定は72ドルで設定から変えられる文を赤枠で囲んでいる" loading="lazy"><figcaption>アシストバリューの時給の既定（Microsoft Learn）</figcaption></figure>
 
 アシスト時間を漏れなく出すには、オプションの診断データを有効にしておく必要があります。**時給の既定は米国労働統計局のデータに基づく72ドルで、自社の人件費とは合わないため、報告の前に設定で自社の時給と円に替えてください。**
 
