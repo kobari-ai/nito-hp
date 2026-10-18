@@ -22,7 +22,7 @@ Googleは2026年8月7日、Googleマップで条件を話して店を探す「�
 
 「駅の近くで個室のある居酒屋」「土曜に診てもらえる歯医者」のような相談は、検索窓にもマップにも入力されます。Googleのヘルプとブログを並べると、日本でGBPの情報がAIの答えに入りうる場面は次の4つです。
 
-<!-- SHOT: 01_fig_where.png・HTML図（brain/scripts/seo/fig/gbp_where.html）・幅640 DPR2・赤枠なし -->
+<figure class="post-figure"><img src="/media/images/gbp-ai-search/01_fig_where.png" alt="AIが店舗情報を使う4つの場面の図。検索のAIモード、マップの場所のヒント、クチコミの要約、マップに相談" loading="lazy"></figure>
 
 | 場面 | AIが使う情報 | 日本での提供 |
 |---|---|---|
@@ -33,7 +33,7 @@ Googleは2026年8月7日、Googleマップで条件を話して店を探す「�
 
 マップの場所のヒントは、Google Japan Blogの[2026年2月13日の記事](https://blog.google/intl/ja-jp/products/explore-get-answers/maps-gemini-tips/)が紹介した機能です。レストランやホテルのページを下にスクロールすると、クチコミやオンラインの情報をGeminiが分析した予約方法や駐車のコツが出ます。同じ記事はお店のページで「無料駐車場はありますか？」と尋ねる使い方と、Geminiによるクチコミの要約も日本で使えるとしています。
 
-<!-- SHOT: 02_blog_maps_tips.png・Google Japan Blog「Google マップの新機能で、お出かけをもっとスムーズに」の「Gemini で Google マップ の場所の詳細を確認」の節・https://blog.google/intl/ja-jp/products/explore-get-answers/maps-gemini-tips/・PC・赤枠1: 質問の例の文 ／ 赤枠2:「日本国内の Android および iOS」の文 -->
+<figure class="post-figure"><img src="/media/images/gbp-ai-search/02_blog_maps_tips.png" alt="Google Japan Blog の Gemini で Google マップの場所の詳細を確認する節" loading="lazy"><figcaption>GeminiでGoogleマップの場所の詳細を確認する（Google Japan Blog）</figcaption></figure>
 
 GMO TECHが[2026年8月6日に公表した調査](https://prtimes.jp/main/html/rd/p/000005478.000000136.html)（第三者の実測）は、日本語のローカル検索約10万9,500クエリ・延べ約44万回答のうち約7割で、Google上の店舗カードを参照したとみられる回答があったとしています。店舗カードにはGBPのほか、公式サイトなどの情報も入ります。業種の差は大きく、7月4日時点で引用に占める店舗情報の割合は居酒屋が87.5％、フィットネスが9.8％でした。Googleが公表した数字ではありませんが、**店を探す相談では、AIモードの答えにGoogle上の店舗情報が使われている**ことを示す結果です。
 
@@ -53,7 +53,7 @@ GMO TECHが[2026年8月6日に公表した調査](https://prtimes.jp/main/html/r
 
 1・2行目はGoogle 検索セントラルの「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」、3行目はGBPヘルプの「[Google のローカル検索結果のランキングを改善するヒント](https://support.google.com/business/answer/7091?hl=ja)」、4行目はGoogle Maps Platform の開発者向けドキュメント「[AI によるクチコミの要約](https://developers.google.com/maps/documentation/places/web-service/review-summaries?hl=ja)」によります。検索セントラルはAI向けの新しいファイルや特別な schema.org の構造化データも不要としています。
 
-<!-- SHOT: 03_help_ai_features.png・Google 検索セントラル「AI 機能とウェブサイト」のSEOの基本の箇条書き・https://developers.google.com/search/docs/appearance/ai-features?hl=ja・PC・赤枠1:「追加の要件はなく、別途特別な最適化を行う必要もありません」の太字 ／ 赤枠2:「Merchant Center とビジネス プロフィールの情報が最新のものであることを確認します」の行 -->
+<figure class="post-figure"><img src="/media/images/gbp-ai-search/03_help_ai_features.png" alt="Google 検索セントラルの AI 機能とウェブサイトのページ。AI 機能に表示されるための追加の要件は無いと書かれている" loading="lazy"><figcaption>AI 機能とウェブサイト（Google 検索セントラル）</figcaption></figure>
 
 右の列を埋める説明は、業者の経験則か推測です。**社内で予算を通すときに根拠を示せるのは、ヘルプが挙げる基本の項目のほう**でしょう。ウェブサイト側の手入れは[AIによる概要の記事](/media/ai-overviews-guide/)の企業の対策の節で扱っています。
 
@@ -83,7 +83,7 @@ GBPヘルプは情報が充実して正確なほどローカル検索結果に�
 4. ［説明の候補を見る］を押す
 5. 候補を確かめて［使用］を押し、直してから［保存］を押す
 
-<!-- SHOT: 04_help_description_sp.png・GBPヘルプ「ビジネス プロフィールの説明を管理する」の「AI を活用してビジネスの説明を生成する」の手順・https://support.google.com/business/answer/13682007?hl=ja・スマホ（shot.py --mobile）・赤枠1:［説明の候補を見る］の行 ／ 赤枠2:「内容が正確かどうかを確認し」の注意書き -->
+<figure class="post-figure post-figure--sp"><img src="/media/images/gbp-ai-search/04_help_description_sp.png" alt="ビジネス プロフィールのヘルプの AI を活用してビジネスの説明を生成する手順" loading="lazy"><figcaption>AI を活用してビジネスの説明を生成する手順（ビジネス プロフィール ヘルプ）</figcaption></figure>
 
 この手順はヘルプの記載によるもので、nitoは実際の画面では試していません。ヘルプは一部の地域と言語だけの機能とし、生成された文が正確か確認するよう求めています。変更の反映は通常10分ほどですが、30営業日ほどかかる場合もあるとのことです。書く中身は別のヘルプ「[Google マップに表示されるビジネスの概要について](https://support.google.com/business/answer/6088158?hl=ja)」の案内どおり、価格やセールではなく商品やサービスと他にない特長にします。
 
@@ -97,7 +97,7 @@ GBPヘルプは情報が充実して正確なほどローカル検索結果に�
 
 **編集者による概要は店舗側で編集できず、プレイス トピックやクチコミ抜粋はクチコミから作られます**。Geminiによるクチコミの要約も、Google Maps Platform の開発者向けドキュメントではユーザーのクチコミだけをもとにした要約で、「Gemini で要約」と表示されます。概要が無関係な場所に結びついている場合や、提供していないサービスに触れている場合は、マップアプリの［概要を報告］から報告できます。
 
-<!-- SHOT: 05_help_overview.png・GBPヘルプ「Google マップに表示されるビジネスの概要について」の「編集者による概要」と「ユーザーのクチコミ抜粋」・https://support.google.com/business/answer/6088158?hl=ja・PC・赤枠1:「編集者による概要は編集できません」 ／ 赤枠2: プレイス トピックの「ビジネス オーナーが管理する必要はありません」 -->
+<figure class="post-figure"><img src="/media/images/gbp-ai-search/05_help_overview.png" alt="ビジネス プロフィールのヘルプのビジネスの概要のページ。ビジネスの説明と編集者による概要の説明" loading="lazy"><figcaption>ビジネスの概要の種類（ビジネス プロフィール ヘルプ）</figcaption></figure>
 
 ### 返信と依頼の仕方
 
@@ -107,7 +107,7 @@ GBPヘルプは情報が充実して正確なほどローカル検索結果に�
 
 Googleマップの「[禁止または制限されているコンテンツ](https://support.google.com/contributionpolicy/answer/7400114?hl=ja)」は、割引や無料の商品と引き換えにクチコミを頼む行為を禁じています。否定的なクチコミの投稿を妨げることや、肯定的なクチコミだけを選んで募ることも禁止です。一方、特典をつけずに実体験の投稿を促すことは認められています。
 
-<!-- SHOT: 06_policy_reviews.png・マップユーザーの投稿コンテンツに関するポリシー「禁止または制限されているコンテンツ」の評価の操作の節・https://support.google.com/contributionpolicy/answer/7400114?hl=ja・PC・赤枠1: インセンティブと引き換えの行 ／ 赤枠2: 肯定的なクチコミを選択的に募る行 -->
+<figure class="post-figure"><img src="/media/images/gbp-ai-search/06_policy_reviews.png" alt="マップのユーザー投稿コンテンツのポリシーの虚偽のエンゲージメントの節" loading="lazy"><figcaption>虚偽のエンゲージメントの禁止（マップのユーザー投稿コンテンツのポリシー）</figcaption></figure>
 
 ## Gemini連携で変わる運用
 
@@ -132,7 +132,7 @@ Googleマップの「[禁止または制限されているコンテンツ](https
 | 欧州経済領域と英国を除く。日本語に対応 | 日本の店舗は対象 |
 | gemini.google.com だけで使える | スマホのGeminiアプリでは使えない。スマホでもブラウザで gemini.google.com を開けば使える |
 
-<!-- SHOT: 07_help_gemini_req.png・GBPヘルプ「Google ビジネス プロフィールを Gemini ウェブアプリで管理する」の「必要なもの」・https://support.google.com/business/answer/17142585?hl=ja&co=GENIE.Platform%3DDesktop・PC・赤枠1:「1 つのみ所有または管理」の行 ／ 赤枠2:「仕事用または学校用の Google アカウントで利用することはできません」の行 -->
+<figure class="post-figure"><img src="/media/images/gbp-ai-search/07_help_gemini_req.png" alt="ビジネス プロフィールのヘルプの Gemini ウェブアプリで管理するための必要なもの。プロフィールを1つのみ所有または管理していることなど" loading="lazy"><figcaption>Gemini でビジネス プロフィールを管理するのに必要なもの（ビジネス プロフィール ヘルプ）</figcaption></figure>
 
 **最初の判断は、会社のプロフィールを社員個人のGoogleアカウントに結びつけてよいか**です。GBPヘルプの「[ビジネス プロフィールのオーナーと管理者を管理する](https://support.google.com/business/answer/3403100?hl=ja)」では、オーナーはユーザーの追加と削除やプロフィールの削除までできます。管理者はそれ以外の編集はほぼ同じようにできるため、Geminiを使う担当者を管理者にとどめ、オーナーは経営者が持つ分け方もあります。担当者が辞めるときに権限を外す手順は、接続の前に決めておきましょう。
 
@@ -142,13 +142,13 @@ Google 検索ヘルプの「[AI モードを使用してローカルの在庫状
 
 自動通話を受けるかどうかは、GBPの詳細設定で決められます。GBPヘルプの「[プロフィールの詳細設定を管理する](https://support.google.com/business/answer/10737668?hl=ja)」では、その他アイコンから［ビジネス プロフィールの設定］の［詳細設定］に進むと、自動通話とテキスト メッセージの許可・拒否と、ほかのGoogleのサービスとのデータ共有を切り替えられます。
 
-<!-- SHOT: 08_help_settings.png・GBPヘルプ「プロフィールの詳細設定を管理する」の「使用可能な設定」・https://support.google.com/business/answer/10737668?hl=ja・PC・赤枠1:「Google からの自動通話とテキスト メッセージ」の行 ／ 赤枠2:「ビジネスの最適化案」の行 -->
+<figure class="post-figure"><img src="/media/images/gbp-ai-search/08_help_settings.png" alt="ビジネス プロフィールのヘルプの詳細設定の使用可能な設定。Google からの自動通話とテキスト メッセージなど" loading="lazy"><figcaption>使用可能な詳細設定（ビジネス プロフィール ヘルプ）</figcaption></figure>
 
 ## 社内で決めること
 
 GBPそのものは無料ですが、GBPヘルプの「[サードパーティと連携してビジネス プロフィールを管理するためのヒント](https://support.google.com/business/answer/7163406?hl=ja)」によると、管理を外部に頼む場合は多くが有料です。費用をかける前に、次の6つを社内で決めておくと、業者の提案を比べやすくなります。
 
-<!-- SHOT: 09_fig_decide.png・HTML図（brain/scripts/seo/fig/gbp_decide.html）・幅640 DPR2・赤枠なし -->
+<figure class="post-figure"><img src="/media/images/gbp-ai-search/09_fig_decide.png" alt="社内で決める6つのことの図。誰のアカウントで持つか、Geminiに接続するか、誰が情報を直すか、クチコミの頼み方、自動通話を受けるか、何で測るか" loading="lazy"></figure>
 
 | 決めること | 決める人の例 | 根拠になる公式ページ |
 |---|---|---|
