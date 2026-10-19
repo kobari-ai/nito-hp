@@ -178,6 +178,8 @@ ChatGPTの中で自社の名前が目に入る場面は、広告のほかに、�
 
 回答に自社が出てこない原因は[ChatGPTに自社が出てこない5つの原因と対策](/media/chatgpt-not-appearing/)で、GoogleのAIモードとの違いは[Google AIモードとChatGPTの違い](/media/ai-mode-vs-chatgpt/)で扱っています。
 
+GoogleのAIモードとAIによる概要の広告が日本でどこまで出るかは、[Google AIモードの広告は日本で出せる？](/media/ai-mode-ads/)にまとめました。
+
 ## よくある質問
 
 ### Q. ChatGPT広告の最低出稿金額はいくらですか？
