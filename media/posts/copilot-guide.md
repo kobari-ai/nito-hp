@@ -90,6 +90,8 @@ Microsoft Graphが持ち込むのは、メール、ファイル、会議、予�
 
 プレミアムにはMicrosoft Copilot Coworkも付きますが、こちらも使用量ベースの課金です。Coworkは利用者に代わってMicrosoft 365の環境全体でタスクを実行します。
 
+エージェントを自社で作るときのCopilot Studioの料金とクレジットの減り方は、[Copilot Studioの料金](/media/copilot-studio/)にまとめています。
+
 ## 個人と職場で入口が違う
 
 同じCopilotという名前でも、サインインしているアカウントの種類で入口が分かれます。
