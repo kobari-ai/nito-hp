@@ -23,7 +23,7 @@ OpenAIの事業者向けページ「[Power product discovery in ChatGPT](https:/
 
 ## ChatGPTショッピングの今の形
 
-「1万円以内の手土産を探して」のように買い物の意図がある質問をすると、ChatGPTは画像と価格と購入先へのリンクを付けた商品の一覧を回答に出します。ヘルプ「[Shopping with ChatGPT Search](https://help.openai.com/en/articles/11128490)」は、**この商品の検索結果をChatGPTが独自に選んでいて、広告でもOpenAIの提携の影響を受けたものでもない**と書いています。広告は別の枠として扱われます。
+「1万円以内の手土産を探して」のように買い物の意図がある質問をすると、ChatGPTは画像と価格と購入先へのリンクを付けた商品の一覧を回答に出します。ヘルプ「[Shopping with ChatGPT Search](https://help.openai.com/en/articles/11128490)」は、**この商品の検索結果はChatGPTが独自に選んだもので、広告ではなくOpenAIの提携にも左右されない**と書いています。広告は別の枠として扱われます。
 
 ### 商品の選ばれ方
 
@@ -37,7 +37,7 @@ OpenAIの事業者向けページ「[Power product discovery in ChatGPT](https:/
 
 ### Instant Checkoutの終了
 
-2025年9月に始まったInstant Checkoutは、ChatGPTの画面で注文と支払いまで済ませる仕組みでした。今は事業者向けページに、**単独のInstant Checkoutの体験から離れ、利用者は販売者のサイトやアプリで購入する**と書かれています。主な出来事を時系列で並べました。
+2025年9月に始まったInstant Checkoutは、ChatGPTの画面で注文と支払いまで済ませる仕組みでした。今は事業者向けページに、**単独のInstant Checkoutの体験から離れ、利用者は販売者のサイトやアプリで購入する**と書かれています。
 
 | 時期 | 出来事 | 出どころ |
 |---|---|---|
@@ -49,7 +49,7 @@ OpenAIの事業者向けページ「[Power product discovery in ChatGPT](https:/
 
 ACP（Agentic Commerce Protocol）はOpenAIがStripeと作った、AIと販売者が商品情報や注文をやり取りするための仕様です。今の事業者向けページの説明では、**ACPの役目は商品の発見と推薦のための商品データの共有**です。
 
-なお、ヘルプ「Shopping with ChatGPT Search」の冒頭には、一部の対象の商品と販売者でInstant Checkoutを出すことがあるという文がまだ残っています。事業者向けページと食い違うため、この記事は事業者向けページの説明に合わせて書いています。Shopifyのヘルプ「[ChatGPTでの販売](https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts/chatgpt)」も、ChatGPTを商品を見つけるための参照元として扱い、購入はオンラインストアのチェックアウトで完了する仕組みです。
+なお、ヘルプ「Shopping with ChatGPT Search」の冒頭には、一部の対象の商品と販売者でInstant Checkoutを出すことがあるという文がまだ残っています。事業者向けページとは食い違うため、申し込みを考えるときは事業者に向けて書かれた事業者向けページの説明を基準にします。Shopifyのヘルプ「[ChatGPTでの販売](https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts/chatgpt)」も、ChatGPTを商品を見つけるための参照元として扱い、購入はオンラインストアのチェックアウトで完了する仕組みです。
 
 ## 商品が載る3つの経路
 
@@ -65,7 +65,7 @@ ACP（Agentic Commerce Protocol）はOpenAIがStripeと作った、AIと販売�
 
 事業者向けページには**ShopifyかEtsyで売っている場合はカタログがすでに連携されていて、追加の設定も申請も要らない**とあります。Shopifyのヘルプ「[Shopifyエージェントストアフロント](https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts)」によると、商品はShopify Catalogを通じてChatGPTに渡り、要件を満たすストアでは最初から有効です。
 
-ただし要件を満たさないストアの商品はShopify Catalogに入りません。[Shopify Catalogの要件](https://help.shopify.com/ja/manual/shopify-catalog/requirements)のうち、事業者が引っかかりやすいものを抜き出しました。
+ただし要件を満たさないストアの商品はShopify Catalogに入りません。[Shopify Catalogの要件](https://help.shopify.com/ja/manual/shopify-catalog/requirements)で、事業者が引っかかりやすいのは次の4つです。
 
 - Starterプラン以上で、ストアがパスワードで保護されていない
 - 商品にタイトルと画像が1枚以上あり、価格が0円より高い
@@ -119,7 +119,7 @@ ShopifyやEtsyを使っていない自社ECの道は、商品フィードをOpen
 
 <!-- SHOT: ChatGPT リリースノートの 2026年3月24日「Shopping updates in ChatGPT」・https://help.openai.com/en/articles/6825453-chatgpt-release-notes ・PC・赤枠1: rolling out to all ChatGPT users this week／赤枠2: using the Agentic Commerce Protocol (ACP) -->
 
-ここから言えるのは、日本国内向けに売っている会社がフィードを申請しても、今はウェイトリストに入る段階だということです。Shopify Catalogの要件には国の条件が書かれていないため、日本のShopifyのストアがCatalogに入っていても、ChatGPTで誰に表示されるかは別に確かめる必要があります。**国内向けの会社が今すぐ動かせるのは③のWebの情報で、①と②は申請と要件の確認までになります。**
+日本国内向けに売っている会社がフィードを申請しても、今はウェイトリストに入る段階です。Shopify Catalogの要件には国の条件が書かれていないため、日本のShopifyのストアがCatalogに入っていても、ChatGPTで誰に表示されるかは別に確かめる必要があります。**国内向けの会社が今すぐ動かせるのは③のWebの情報で、①と②は申請と要件の確認までになります。**
 
 ## 費用と手数料
 
@@ -161,7 +161,7 @@ ShopifyのストアならChatGPTへの連携は最初から有効なため、何
 
 ### ① 商品データの持ち主
 
-価格と在庫の新しさが販売者の並び順の材料になるため、誰がデータを更新するのかを最初に決めておくのが近道です。自社ECでフィードを送るなら、EC担当とシステムの担当のどちらが毎日の送信を持つのかが最初の論点です。Shopifyなら管理画面の商品データがそのまま渡るので、商品の登録の手順がそのままChatGPTでの見え方です。
+価格と在庫の新しさが販売者の並び順の材料になるため、誰がデータを更新するのかを最初に決めておくのが近道です。自社ECでフィードを送るなら、EC担当とシステムの担当のどちらが毎日の送信を持つのかが最初の論点です。Shopifyなら管理画面の商品データがそのまま渡るため、商品を登録するときの入力がChatGPTでの見え方を決めます。
 
 ### ② 載せたくない商品の扱い
 
