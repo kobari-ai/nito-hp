@@ -16,7 +16,7 @@ Copilot Studioの課金の単位は、2025年9月1日に「メッセージ」か
 :::takeaways
 - **Copilot Studioは1パック月29,985円で25,000クレジット**。ほかに後払いの従量課金と1年分の事前購入がある
 - **Microsoft 365 Copilotのライセンスを持つ社員が社内で使うエージェントは追加費用なし**。社外への公開とGitHub Copilotハーネスはクレジットがかかる
-- **作る人には無料のユーザーライセンスか作成者の役割が要る**。試用版で作ったエージェントは公開できない
+- **作る人には無料のユーザーライセンスか作成者の役割が要る**（M365 Copilotのライセンスがあれば Microsoft 365 向けは作れる）。試用版で作ったエージェントは公開できない
 :::
 
 <!-- SHOT: 01_fig_pay.png｜HTML図（brain/scripts/seo/fig/cstd_pay.html）。払い方3通りを縦に3段｜幅640・DPR2｜赤枠なし -->
@@ -51,13 +51,13 @@ Microsoft 365 Copilotを入れた会社には、エージェントを作る入�
 
 <!-- SHOT: 03_pricing_plans.png｜価格ページの「ニーズに適した Copilot Studio プランを見つける」の3枚のカード｜https://www.microsoft.com/ja-jp/microsoft-365-copilot/pricing/copilot-studio｜PC｜赤枠 1: ¥4,497 ／ 2: 事前購入プランの「最大 20% 削減」 -->
 
-事前購入プランは、1 CCCU（Copilotクレジット コミット ユニット）が1ドル・100クレジットに当たります。ライセンスガイドの表は3,000 CCCUで2,850ドル（5%引き）から3,000,000 CCCUで2,400,000ドル（20%引き）までの9段で、いちばん下の段が容量パック1つの12か月分です。容量パックで足りない分を従量課金で受ける組み合わせもでき、その場合はパックを使い切るまで従量課金の請求は出ません。
+事前購入プランは、1 CCCU（Copilotクレジット コミット ユニット）が1ドル・100クレジットに当たります。ライセンスガイドの表は3,000 CCCUで2,850ドル（5%引き）から3,000,000 CCCUで2,400,000ドル（20%引き）までの9段で、いちばん上の段（3,000 CCCU）が容量パック1つの12か月分です。容量パックで足りない分を従量課金で受ける組み合わせもでき、その場合はパックを使い切るまで従量課金の請求は出ません。
 
-無料で試すなら、Copilot Studioの試用版かAzureの無料アカウントを使います。試用版は社員が個人でサインアップでき、期間の終わりに30日延長できます。Azureの無料アカウントに付く29,985円分のクレジットも、エージェントの作成に使えると価格ページにありました。
+無料で試すなら、Copilot Studioの試用版かAzureの無料アカウントを使います。試用版は社員が個人でサインアップでき、期間の終わりに30日延長できます。Azureの無料アカウントに付く200ドル分（価格ページの円表示は29,985円）のクレジットも、最初の30日はエージェントの作成に使えると価格ページにありました。
 
 ## クレジットの減り方
 
-**クレジットはエージェントの動きごとに減り方が違い、社内データを引いて答えると1回で12クレジットを使います。** Learnの「[請求レートと管理](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-messages-management)」（2026年8月3日更新）の主な単価は次のとおりです。
+**クレジットはエージェントの動きごとに減り方が違い、テナントグラフでの根拠付けをオンにしたエージェントが社内データを引いて答えると、1回で12クレジットを使います。** Learnの「[請求レートと管理](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-messages-management)」（2026年8月3日更新）にある標準ハーネスの主な単価は次のとおりです。
 
 | 動き | 減るクレジット | M365 Copilotのライセンスを持つ人 |
 |---|---|---|
@@ -68,7 +68,7 @@ Microsoft 365 Copilotを入れた会社には、エージェントを作る入�
 | エージェントフロー（100アクションあたり） | 13 | 無料 |
 | AIツールのプレミアム（10回答ごと） | 100 | 無料 |
 
-社内データ（Microsoft Graph）を引いて答えると、テナントグラフの10と生成回答の2を足して1回12クレジットです。推論モデルを使う場合はこの単価に1,000トークンあたり10クレジットが上乗せされます。
+テナントグラフでの根拠付け（エージェントごとにオン・オフできる）をオンにしたエージェントが社内データ（Microsoft Graph）を引いて答えると、テナントグラフの10と生成回答の2を足して1回12クレジットです。オフなら生成回答の2クレジットです。推論モデルを使う場合はこの単価に1,000トークンあたり10クレジットが上乗せされます。
 
 <!-- SHOT: 04_learn_rates.png｜Learn「請求レートと管理」の Copilot クレジットの課金レートの表｜https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-messages-management｜PC｜赤枠 1: 生成回答 2 Copilot クレジット ／ 2: テナント グラフの基盤設定 10 Copilot クレジット -->
 
@@ -76,7 +76,7 @@ Learnには課金の例が3つ載っています。そのうちWebサイトの�
 
 もう1つの例の社内の営業データに答えるエージェントでは、使う150人のうちM365 Copilotのライセンスを持つ50人の分は数えず、残りの100人の分だけで1日4,800クレジットと見積もっています。**同じエージェントでも、使う人がライセンスを持つかどうかで費用が変わります。**
 
-消費量はMicrosoftの[Copilot Studio Agent Usage Estimator](https://microsoft.github.io/copilot-studio-estimator/)で見積もれます。エージェントの種類・使う人の数・ナレッジ・ツールを選ぶと、月のクレジットの目安が出ます（こちらでは操作していません）。
+消費量はMicrosoftの[Copilot Credit Estimator](https://microsoft.github.io/copilot-studio-estimator/)で見積もれます。エージェントの種類・使う人の数・ナレッジ・ツールを選ぶと、月のクレジットの目安が出ます（こちらでは操作していません）。
 
 ## M365 Copilotで足りる範囲
 
@@ -85,7 +85,7 @@ Microsoft 365 Copilotは、価格ページで1ユーザー月4,497円相当（�
 | 場面 | 費用 |
 |---|---|
 | ライセンスを持つ社員がTeams・SharePoint・Copilot Chatでエージェントを使う | 追加なし（公正利用の上限あり） |
-| ライセンスを持たない社員が社内データを読むエージェントを使う | クレジットが減る |
+| ライセンスを持たない社員がエージェントを使う | クレジットが減る |
 | Webサイト・アプリ・SNSなど社外に公開する | Copilot Studioの契約が要る |
 | GitHub Copilotハーネスで作ったエージェントとワークフロー | クレジットが減る |
 | 画面を操作するエージェント（CUA） | M365 Copilotに含まれない |
@@ -104,13 +104,13 @@ Copilot Studioで作るものは、どれもハーネスと呼ぶ実行の仕組
 | Copilot Chatハーネス | 社内の知識をCopilot Chatにつなぐ | 含まれる |
 | GitHub Copilotハーネス | 目標を手順に分けて進める長い作業。Word・Excel・PDFも作る | クレジットが要る |
 
-GitHub Copilotハーネスは名前にGitHubと付きますが、Copilot Studioの中の仕組みです。Learnによると、Copilot Studioでエージェントが動くときに顧客のデータはGitHub Copilotのサービスに送られません。**社内のQ&Aや決まった手順の受付なら標準ハーネスで足り、書類を作る長い作業を任せる段からクレジットの見積もりが要ります。**
+GitHub Copilotハーネスは名前にGitHubと付きますが、Copilot Studioの中の仕組みです。Learnによると、Copilot Studioでエージェントが動くときに顧客のデータはGitHub Copilotのサービスに送られません。**M365 Copilotのライセンスを持つ社員がTeamsなどMicrosoftのチャネルで使う社内のQ&Aや受付なら、標準ハーネスで追加費用はかかりません。ライセンスの無い社員や社外の人が使うとき、書類を作る長い作業を任せるときは、クレジットの見積もりが要ります。**
 
 <!-- SHOT: 06_learn_harness.png｜Learn「Copilot Studio のハーネス」のハーネスの比較の表｜https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview｜PC｜赤枠 1: 最適な用途の行 ／ 2: 請求書の行 -->
 
 ## 作れる人の決め方
 
-**Copilot Studioのエージェントを使う人にライセンスは要りませんが、作る人には権限が要ります。** Learnの「[ユーザー ライセンスの割り当ておよびアクセスの管理](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-licensing)」によると、容量パックで買った会社は、テナントのライセンスとは別に作る人ごとにCopilot Studio ユーザー ライセンスを割り当てます。このユーザーライセンスは無料で、ライセンスガイドの価格も0ドルです。
+**Copilot Studioのエージェントを使う人にライセンスは要りませんが、作る人には権限が要ります。** Learnの「[ライセンスを割り当て、Copilot Studio へのアクセスを管理する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-licensing)」によると、容量パックで買った会社は、テナントのライセンスとは別に作る人ごとにCopilot Studio ユーザー ライセンスを割り当てます。このユーザーライセンスは無料で、ライセンスガイドの価格も0ドルです。
 
 従量課金か事前購入プランで買った場合は、Power Platform 管理センターの設定でCopilot Studioの作成者にセキュリティグループを割り当て、そのグループの人だけが作れるようにします。M365 Copilotのライセンスを持つ人は、そのライセンスのままMicrosoft 365向けのエージェントを作れます。
 
@@ -135,11 +135,11 @@ GitHub Copilotハーネスは名前にGitHubと付きますが、Copilot Studio�
 
 ### どのデータを読ませるか
 
-エージェント ビルダーで作ったエージェントは使う人のアクセス権の範囲で答えるため、その人が開けないSharePointのファイルは答えに出ません。逆に、権限が広すぎるフォルダーをナレッジに入れると、そこを開ける人の答えには中身がそのまま出ます。エージェント ビルダーで組織の全員に共有しても、ナレッジのファイルの権限は自動では広がらず、特定のセキュリティグループに共有するときだけ自動で付きます。
+エージェント ビルダーで作ったエージェントは使う人のアクセス権の範囲で答えるため、その人が開けないSharePointのファイルは答えに出ません。逆に、権限が広すぎるフォルダーをナレッジに入れると、そこを開ける人の答えに中身が出ることがあります。エージェント ビルダーで組織の全員に共有しても、ナレッジのファイルの権限は自動では広がらず、特定のセキュリティグループに共有するときだけ自動で付きます。
 
 ### 上限をどこで止めるか
 
-前払いの容量を使い切っても、その場では止まりません。**テナントの消費が前払い分の125%に達するとカスタムのエージェントが止まり、使う人には「このエージェントは現在使用できません。使用制限に達しました。」と返ります。** 指定した管理者にはメールが届き、Power Platform 管理センターにも通知が出ます。
+前払いの容量を使い切ると、新しいエージェントフローの実行はその時点で止まります。**カスタムのエージェントが止まるのはテナントの消費が前払い分の125%に達したときで、使う人には「このエージェントは現在使用できません。使用制限に達しました。」などと返ります。** 指定した管理者にはメールが届き、Power Platform 管理センターにも通知が出ます。
 
 止めたくない環境に従量課金をつないでおけば、超過分はAzureの請求に回るため止まりません。Power Platform 管理センターではエージェントごとに月の上限を決められるため、試しに作ったエージェントが本番の枠を使い切る事態を防げます。
 
@@ -147,9 +147,9 @@ GitHub Copilotハーネスは名前にGitHubと付きますが、Copilot Studio�
 
 ## 自社で作るか外に頼むか
 
-**社内のQ&Aや申請の受付を標準ハーネスで作るなら、自社の担当者で回せる範囲です。** エージェント ビルダーから始め、足りなくなったらCopilot Studioへコピーする順で進めれば、作り直しも出ません。
+**M365 Copilotのライセンスを持つ社員が使う社内のQ&Aや申請の受付を標準ハーネスで作るなら、自社の担当者で回せる範囲です。** エージェント ビルダーから始め、足りなくなったらCopilot Studioへコピーする順で進めれば、作り直しも出ません。
 
-外の手を借りるかを考えるのは、社外向けに公開するとき、Microsoft 365の外の業務システムにプレミアムやカスタムのコネクタでつなぐとき、GitHub Copilotハーネスで複数の手順を任せるときです。この3つはクレジットの見積もりと、環境やデータ損失防止（DLP）のポリシーの設計が毎月の費用に響きます。ライセンスガイドも、業種向けや独自の作り込みが要る場合の買い方として、Microsoftのパートナーに設計から運用まで任せる経路を挙げています。作り方の選び方そのものは[AIエージェントの作り方](/media/ai-agent-build/)で比べています。
+外の手を借りるかを考えるのは、社外向けに公開するとき、Microsoft 365の外の業務システムにプレミアムやカスタムのコネクタでつなぐとき、GitHub Copilotハーネスで複数の手順を任せるときです。この3つはクレジットの見積もりと、環境やデータ損失防止（DLP）のポリシーの設計が要ります。ライセンスガイドも、業種向けや独自の作り込みが要る場合の買い方として、Microsoftのパートナーに設計から運用まで任せる経路を挙げています。作り方の選び方そのものは[AIエージェントの作り方](/media/ai-agent-build/)で比べています。
 
 <!-- SHOT: 09_fig_decide.png｜HTML図（brain/scripts/seo/fig/cstd_decide.html）。作る前に決める3つと自社か外部かの線を縦に4段｜幅640・DPR2｜赤枠なし -->
 
@@ -161,7 +161,7 @@ GitHub Copilotハーネスは名前にGitHubと付きますが、Copilot Studio�
 
 ### Copilot Studioの料金は1ユーザーいくらですか？
 
-1人ごとの月額はありません。テナント全体で容量パック（月29,985円で25,000クレジット）・従量課金・事前購入プランのどれかを買い、作る人には無料のユーザーライセンスか作成者の役割を割り当てます。
+1人ごとの月額はありません。テナント全体で容量パック（月29,985円で25,000クレジット）・従量課金・事前購入プランのどれかを買い、作る人には無料のユーザーライセンスか作成者の役割を割り当てます。M365 Copilotのライセンスを持つ人は、Microsoft 365 向けのエージェントをそのまま作れます。
 
 ### Copilot Studioのクレジットは繰り越せますか？
 
@@ -169,11 +169,11 @@ GitHub Copilotハーネスは名前にGitHubと付きますが、Copilot Studio�
 
 ### Copilot Studioはクレジット切れで止まりますか？
 
-前払い分の125%に達するとカスタムのエージェントが止まります。進行中の会話は最後まで続き、容量を足すか翌月に戻るまで新しい会話は受け付けません。従量課金をつないだ環境は止まらず、超過分がAzureの請求に回ります。
+前払いの容量を使い切ると、新しいエージェントフローの実行はその時点で止まります。カスタムのエージェントが止まるのは前払い分の125%に達したときで、進行中の会話は最後まで続き、容量を足すか翌月に戻るまで新しい会話は受け付けません。従量課金をつないだ環境は止まらず、超過分がAzureの請求に回ります。
 
 ### Copilot Studioの利用にライセンスは要りますか？
 
-使う人に特別なライセンスは要りません。ただしM365 Copilotのライセンスを持たない人が社内データを読むエージェントを使うと、その分のクレジットが減ります。
+使う人に特別なライセンスは要りません。ただしM365 Copilotのライセンスを持たない人がエージェントを使うと、その分のクレジットが減ります。
 
 ### Copilot Studioのメッセージとは何ですか？
 
@@ -194,12 +194,12 @@ GitHub Copilotハーネスは名前にGitHubと付きますが、Copilot Studio�
 - [Microsoft Copilot Studio プランと価格](https://www.microsoft.com/ja-jp/microsoft-365-copilot/pricing/copilot-studio)（Microsoft。容量パック・従量課金・事前購入プラン・M365 Copilotの価格・FAQ）
 - [Microsoft Copilot Studio licensing guidance](https://www.microsoft.com/licensing/guidance/Microsoft-Copilot-Studio)（Microsoft、英語。従量課金の単価・事前購入プランの9段・ユーザーライセンス・作成者の役割）
 - [Copilot Credits licensing guidance](https://www.microsoft.com/licensing/guidance/Copilot-Credits)（Microsoft、英語。ハーネスごとの扱いと公正利用の上限）
-- [標準ハーネスライセンス](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/billing-licensing)（Microsoft Learn。単位の変更・試用版は公開できない・M365 Copilotに含まれる機能）
+- [標準ハーネス駆動のエージェントのライセンス取得](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/billing-licensing)（Microsoft Learn。単位の変更・試用版は公開できない・M365 Copilotに含まれる機能）
 - [請求レートと管理](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-messages-management)（Microsoft Learn。課金レート・課金の例・125%での停止）
 - [Copilot Studio のハーネス](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview)（Microsoft Learn。3種類のハーネスの違い）
-- [ユーザー ライセンスの割り当ておよびアクセスの管理](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-licensing)（Microsoft Learn。テナントとユーザーのライセンス・試用版・ゲスト）
-- [Copilot Studio Standard ハーネスにアクセスする](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-licensing-subscriptions)（Microsoft Learn。試用版の延長・Teams向けのプラン）
+- [ライセンスを割り当て、Copilot Studio へのアクセスを管理する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-licensing)（Microsoft Learn。テナントとユーザーのライセンス・試用版・ゲスト）
+- [Copilot Studio にアクセスする](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-licensing-subscriptions)（Microsoft Learn。試用版の延長・Teams向けのプラン）
 - [エージェント ビルダーと Copilot Studio のどちらかを選択してエージェントを構築します](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copilot-studio-experience)（Microsoft Learn。2つの比較とコピー）
 - [エージェント ビルダーの概要](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder)（Microsoft Learn。アクションの制限・SharePointの共有）
 - [Azure Retail Prices API](https://learn.microsoft.com/ja-jp/rest/api/cost-management/retail-prices/azure-retail-prices)（Microsoft Learn。従量課金の円の単価を引いたAPI）
-- [Copilot Studio Agent Usage Estimator](https://microsoft.github.io/copilot-studio-estimator/)（Microsoft。消費の見積もり）
+- [Copilot Credit Estimator](https://microsoft.github.io/copilot-studio-estimator/)（Microsoft。消費の見積もり）
