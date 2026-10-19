@@ -19,7 +19,7 @@ AIモードの広告は米国でテストが続いていて、日本での開始
 - AIによる概要の広告は**上部広告として計上され、分けて見られず、狙うことも外すこともできない**
 :::
 
-<!-- SHOT: HTML図。検索結果の中で広告が出る3つの位置（概要の上・概要の中・概要の下）とAIモードの日本での可否を縦に4段・brain/scripts/seo/fig/amad_where.html・幅640 DPR2・赤枠なし。保存名 01_fig_where.png -->
+<figure class="post-figure"><img src="/media/images/ai-mode-ads/01_fig_where.png" alt="AIによる概要の上と下の広告は日本で出る。概要の中の広告は英語の12か国だけ、AIモードの広告は米国でテスト中で日本は対象外" loading="lazy"></figure>
 
 ## AIモードの広告は日本で出る？
 
@@ -37,7 +37,7 @@ GoogleがAIモードでの広告のテストを発表したのは2025年5月で�
 
 2026年5月の発表を訳した[日本語版のブログ](https://blog.google/intl/ja-jp/company-news/technology/google-marketing-live-search-ads/)には、冒頭に「本発表は米国向けのもの」という断りがあります。8月の「[Google Marketing Live Japan 2026](https://business.google.com/jp/accelerate/announcements/gmljp-keynote/)」のレポートも、AIモードの広告・AI搭載ショッピング広告・リード獲得のエージェント機能を紹介したうえで、**いずれも日本国内での提供時期は未定**という書き方でした。
 
-<!-- SHOT: Accelerate with Google Japan「Google Marketing Live Japan 2026」の「質問に答える広告」の節・https://business.google.com/jp/accelerate/announcements/gmljp-keynote/・PC・赤枠 1:「※いずれも日本国内での提供時期は未定です。」の行。保存名 02_gmljp_undecided.png -->
+<figure class="post-figure"><img src="/media/images/ai-mode-ads/02_gmljp_undecided.png" alt="Google Marketing Live Japan 2026 の記事。AIモードの広告などの新しい広告フォーマットは、いずれも日本国内での提供時期は未定と書かれている" loading="lazy"><figcaption>Accelerate with Google Japan「Google Marketing Live Japan 2026」</figcaption></figure>
 
 日本での開始を2027年の中ごろと見る解説記事もあります。その根拠の一つは動的検索広告（DSA）がAI Maxに切り替わる時期ですが、**この移行日は2026年6月に「2026年9月から」が「2027年2月から」へ延期されました**。推測の前提が動いているため、日本の開始日を社内の計画に入れるのは公式の発表が出てからにします。
 
@@ -65,7 +65,7 @@ AIによる概要は2024年8月から日本でも出ているため、概要の�
 
 概要の中の広告には業種の制限があります。ヘルプは**アダルト・アルコール・ギャンブル・金融・ヘルスケア・政治などのデリケートな分野の広告は、概要の中に出さない**としています。単価の高い金融や医療の商材は、日本で概要の中の広告が始まっても、そこには出ない前提で考えるのが安全です。AIによる概要そのものの仕組みは[AIによる概要とは？仕組み・消し方・企業の対策](/media/ai-overviews-guide/)で扱っています。
 
-<!-- SHOT: Google広告ヘルプ「広告と AI による概要について」の「始める前に」の節・https://support.google.com/google-ads/answer/16297775?hl=ja・PC・赤枠 1: 200 以上の地域の行 ／ 2: 英語でご利用いただけます の国の一覧の行。保存名 03_help_aio_markets.png -->
+<figure class="post-figure"><img src="/media/images/ai-mode-ads/03_help_aio_markets.png" alt="Google広告ヘルプの始める前にの節。概要の上部と下部の広告は200以上の地域、概要の中の広告はオーストラリアや米国など英語の12か国が対象" loading="lazy"><figcaption>Google広告ヘルプ「広告と AI による概要について」</figcaption></figure>
 
 ## 出稿の設定とAI Max
 
@@ -93,7 +93,7 @@ AI Max（ヘルプの日本語では「AI 最大化設定」）は新しいキ�
 4. AI 最大化設定をオンに切り替える
 5. 使う機能を選ぶ
 
-<!-- SHOT: Google広告ヘルプ「検索キャンペーン向け AI 最大化設定をセットアップする」の「既存の検索キャンペーンで AI 最大化設定を有効にする」の手順・https://support.google.com/google-ads/answer/15909989?hl=ja・PC・赤枠 1:［AI 最大化設定］を選択の行 ／ 2: コンバージョン ベースのスマート自動入札戦略が必要の注。保存名 04_help_aimax_steps.png -->
+<figure class="post-figure"><img src="/media/images/ai-mode-ads/04_help_aimax_steps.png" alt="Google広告ヘルプの検索キャンペーン向け AI 最大化設定の手順。新しい検索キャンペーンではAI 最大化設定がデフォルトで選ばれている" loading="lazy"><figcaption>Google広告ヘルプ「検索キャンペーン向け AI 最大化設定をセットアップする」</figcaption></figure>
 
 効かせるには入札の条件があります。**コンバージョンを使うスマート自動入札でないと、検索語句とのマッチングなどの機能は十分に動きません**。手動の入札単価（手動CPC）では検索語句とのマッチングが動かないと、ヘルプのよくある質問に書かれています。
 
@@ -107,7 +107,7 @@ AI Max（ヘルプの日本語では「AI 最大化設定」）は新しいキ�
 | キャンペーン単位の部分一致 | 2026年9月から | 検索語句とのマッチング |
 | 動的検索広告（DSA） | 2027年2月から（当初は2026年9月） | 3つすべて。今のURLの指定は残る |
 
-<!-- SHOT: Google広告ヘルプ「動的検索広告について」の冒頭の注・https://support.google.com/google-ads/answer/2471185?hl=ja・PC・赤枠 1:「2027 年 2 月より」の文。保存名 05_help_dsa_2027.png -->
+<figure class="post-figure"><img src="/media/images/ai-mode-ads/05_help_dsa_2027.png" alt="Google広告ヘルプの動的検索広告の注。2027年2月より動的検索広告のキャンペーンはAI 最大化設定に自動でアップグレードされる" loading="lazy"><figcaption>Google広告ヘルプ「動的検索広告について」</figcaption></figure>
 
 ## レポートで分けて見られるか
 
@@ -120,7 +120,7 @@ AI Max（ヘルプの日本語では「AI 最大化設定」）は新しいキ�
 | 概要を表示先から外せるか | いいえ |
 | 概要に出た分をセグメント別レポートで分けて見られるか | 現時点ではできない |
 
-<!-- SHOT: Google広告ヘルプ「広告と AI による概要について」のよくある質問（すべて開く）・https://support.google.com/google-ads/answer/16297775?hl=ja・PC・畳まれていれば shot.py --click でよくある質問を開く・赤枠 1:「上部広告としてレポートに記録されます」 ／ 2:「セグメント別レポートで別個にそのデータを確認することはできません」。保存名 06_help_aio_faq.png -->
+
 
 **概要に出た分だけの表示回数やクリック数は、今のGoogle広告では取り出せません**。代わりに追えるのは上部広告の表示回数の動きと、AI Maxの検索語句レポートです。AI Maxをオンにすると、マッチタイプに「AI 最大化設定」が加わり、［ソース］の列でどの仕組みで一致したかが分かります。長い質問のような検索語句が増えているかは、ここで見られます。
 
@@ -152,13 +152,13 @@ ChatGPTでも同じ違いがあり、広告の出し方は[ChatGPT広告の出�
 - どの質問や回答で出たかは教えてもらえない
 - AIの回答への表示は止められない
 
-<!-- SHOT: LINEヤフー for Business「生成AIを利用した回答におけるテスト表示について」の注意事項・https://www.lycbiz.com/jp/news/yahoo-ads/20251216-01/・PC・赤枠 1:「料金は発生しません」 ／ 2:「停止できません」。保存名 07_lyc_notice.png -->
+
 
 ## 社内で先に決めておくこと
 
 AIによる概要の広告は新しい広告メニューを買う話ではなく、今の検索広告の出方が変わる話です。決めるのは予算の額より、設定と確認の分担になります。
 
-<!-- SHOT: HTML図。社内で先に決める4つ（予算の置き方・計測と入札・広告文と遷移先の確認・代理店に確かめること）を縦に4段・brain/scripts/seo/fig/amad_decide.html・幅640 DPR2・赤枠なし。保存名 08_fig_decide.png -->
+<figure class="post-figure"><img src="/media/images/ai-mode-ads/08_fig_decide.png" alt="社内で先に決める4つ。予算の置き方、計測と入札、広告文と遷移先の確認、代理店に確かめること" loading="lazy"></figure>
 
 ### 予算の置き方
 
