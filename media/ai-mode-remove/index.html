@@ -69,7 +69,7 @@
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
 <li>AIモードそのものをオフにする公式の設定は無い。<strong>消せるのはボタンやショートカットなどの入口</strong></li>
 <li>パソコンのChromeは、<strong>アドレスバーを右クリックして［AI モードを常に表示する］の選択を外す</strong>とボタンが消える（Chromeの公式ヘルプ）</li>
-<li>Pixelは、Googleアプリの**［設定］、［Pixel Search Box をカスタマイズ］で［AI モード］をオフ**にする</li>
+<li>Pixelは、Googleアプリの<strong>［設定］、［Pixel Search Box をカスタマイズ］で［AI モード］をオフ</strong>にする</li>
 <li><code>chrome://flags</code> の「AI mode」「AI Mode Omnibox entrypoint」は <strong>Chrome 154 にも無い</strong>。今ある4項目はボタンの挙動を変えるもので、消すスイッチではない</li>
 <li>検索結果のタブ列の［AI モード］は消せない。AIの要約を見たくないなら［ウェブ］タブか <code>udm=14</code> を使う</li>
 </ul></div></div>
@@ -151,7 +151,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>**公式の手順があるのは上の2つだけです。**それ以外は入口を使わずに済む形にするか、画面の見た目を拡張機能で変えることになります。</p>
+<p><strong>公式の手順があるのは上の2つだけです。</strong>それ以外は入口を使わずに済む形にするか、画面の見た目を拡張機能で変えることになります。</p>
 <h2 id="s2">Chromeのアドレスバーのボタンを消す</h2>
 <p>パソコンのChromeでは、アドレスバーの右端に［AI モード］のボタンが出ます。文字を打ち始めたときに目に入るため、邪魔に感じやすい入口です。Chromeのヘルプ「<a href="https://support.google.com/chrome/answer/16704170?hl=ja&amp;co=GENIE.Platform%3DDesktop">Chrome で AI モードを使用する</a>」に、非表示にする手順が書かれています。</p>
 <ol>
@@ -161,7 +161,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ol>
 <figure class="post-figure"><img src="/media/images/ai-mode-remove/02_help_hide.jpg" alt="Google Chromeヘルプのアドレスバーから操作する場合の節。ヒントとして、アドレスバーのAIモードとタブなどを追加を非表示にするには、アドレスバーを右クリックして、AIモードを常に表示するの選択を解除すると書かれている" loading="lazy"><figcaption>Chromeのヘルプのヒント（2026年9月30日取得）</figcaption></figure>
 
-<p>**これで消えるのは、アドレスバーの［AI モード］と［タブなどを追加］のボタンです。**ボタンを隠すだけで、AIモードそのものが止まるわけではありません。元に戻したいときは同じメニューで［AI モードを常に表示する］を選び直します。</p>
+<p><strong>これで消えるのは、アドレスバーの［AI モード］と［タブなどを追加］のボタンです。</strong>ボタンを隠すだけで、AIモードそのものが止まるわけではありません。元に戻したいときは同じメニューで［AI モードを常に表示する］を選び直します。</p>
 <p>Chromeの機能はアカウントや地域ごとに段階的に届きます。nitoが9月17日に Chrome 153 で見たときは、このメニューの項目がありませんでした。9月30日の Chrome 154 では、このメニューを開いて確かめられていません。右クリックしても項目が出ない場合は、Chromeを最新版に更新してから、もう一度試してください。更新は右上の3点メニューの［ヘルプ］、［Google Chrome について］から行えます。</p>
 <div class="mcta">
 <div class="mcta__body">
@@ -180,12 +180,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </div>
 
 <h2 id="s3">新しいタブの検索ボックスのボタン</h2>
-<p>Chromeで新しいタブを開くと、検索ボックスの右にも［AI モード］のボタンが出ます。アドレスバーのボタンと違い、**この入口を非表示にする手順はChromeのヘルプに書かれていません。**同じヘルプには新しいタブから開く手順と、キーボードの Tab キーと Enter キーで開く手順だけが載っています。</p>
+<p>Chromeで新しいタブを開くと、検索ボックスの右にも［AI モード］のボタンが出ます。アドレスバーのボタンと違い、<strong>この入口を非表示にする手順はChromeのヘルプに書かれていません。</strong>同じヘルプには新しいタブから開く手順と、キーボードの Tab キーと Enter キーで開く手順だけが載っています。</p>
 <p>既定の検索エンジンをGoogle以外にすれば、新しいタブの検索ボックスもGoogleのものではなくなります。ボタンが消えるかどうかをnitoでは切り替えて試していません。</p>
-<p>ただし検索エンジンを変えると、検索結果そのものが変わります。**ボタンを消すためだけに検索エンジンを替えるのは、代わりに失うものが大きい方法です。**Googleの検索結果を使い続けたいなら、ボタンは残したまま押さない、という扱いが現実的です。</p>
+<p>ただし検索エンジンを変えると、検索結果そのものが変わります。<strong>ボタンを消すためだけに検索エンジンを替えるのは、代わりに失うものが大きい方法です。</strong>Googleの検索結果を使い続けたいなら、ボタンは残したまま押さない、という扱いが現実的です。</p>
 <h2 id="s4">chrome://flags では消せない</h2>
 <p>「AIモード 消し方」で上位に出る記事の多くが、<code>chrome://flags</code> で「AI mode」と「AI Mode Omnibox entrypoint」を Disabled にする手順を載せています。2025年12月から2026年8月に書かれたもので、当時の画面をもとにした手順です。</p>
-<p>**2026年9月30日に Chrome 154.0.8037.58 で <code>chrome://flags</code> を開き、検索窓に「AI mode」と入れたところ、この2つの項目は出てきませんでした。**表示されたのは次の4つです。</p>
+<p><strong>2026年9月30日に Chrome 154.0.8037.58 で <code>chrome://flags</code> を開き、検索窓に「AI mode」と入れたところ、この2つの項目は出てきませんでした。</strong>表示されたのは次の4つです。</p>
 <figure class="post-figure"><img src="/media/images/ai-mode-remove/03_chrome154_flags.png" alt="Chrome 154.0.8037.58 の chrome://flags で AI mode を検索した画面。AIM 3P entrypoint、Omnibox Dynamic AI Mode Button、NTP Realbox Dynamic AI Mode Button、Omnibox AI Mode Space Does Not Activate の4項目だけが表示されている" loading="lazy"><figcaption>Chrome 154 の chrome://flags（2026年9月30日）。記事で紹介されている2つの項目は無い</figcaption></figure>
 
 <div class="tbl"><table class="stack">
@@ -214,9 +214,9 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>どれもボタンの挙動を変える項目で、入口を消すスイッチではありません。9月17日の Chrome 153 でも同じ4項目でした。**<code>chrome://flags</code> はChromeの更新で項目が予告なく消えるため、古い記事の手順は今の画面と合わないことがあります。**アドレスバーのボタンを消したいなら、前の節の右クリックの設定を使ってください。</p>
+<p>どれもボタンの挙動を変える項目で、入口を消すスイッチではありません。9月17日の Chrome 153 でも同じ4項目でした。<strong><code>chrome://flags</code> はChromeの更新で項目が予告なく消えるため、古い記事の手順は今の画面と合わないことがあります。</strong>アドレスバーのボタンを消したいなら、前の節の右クリックの設定を使ってください。</p>
 <h2 id="s5">スマホでは入口を消せるか</h2>
-<p>Chromeのヘルプを Android と iPhone の表示に切り替えると、新しいタブとアドレスバーからAIモードを開く手順は書かれていますが、**非表示にする手順はどちらにもありません。**パソコンの右クリックに当たる設定は、2026年9月30日時点のヘルプには見当たりませんでした。</p>
+<p>Chromeのヘルプを Android と iPhone の表示に切り替えると、新しいタブとアドレスバーからAIモードを開く手順は書かれていますが、<strong>非表示にする手順はどちらにもありません。</strong>パソコンの右クリックに当たる設定は、2026年9月30日時点のヘルプには見当たりませんでした。</p>
 <h3 id="s5-1">Pixelの検索バー</h3>
 <p>Pixelのホーム画面にある検索バーには、AIモードのショートカットが出ます。こちらは Google Pixel のヘルプ「<a href="https://support.google.com/pixelphone/answer/15629302?hl=ja">Google Pixel で検索する</a>」に、無効にする手順が載っています。</p>
 <ol>
@@ -233,12 +233,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>iPhoneのSafariには、AIモードに関わる設定はありません。Google検索の結果にはタブ列の［AI モード］が出ますが、これは次の節のとおり消せない入口です。Safariの設定の［検索エンジン］でGoogle以外を選べばGoogleの検索結果は出なくなりますが、検索結果そのものも変わります。</p>
 <h2 id="s6">検索結果のタブは消せない</h2>
 <p>Google検索の結果の上に並ぶタブ列には、［すべて］［画像］などと並んで［AI モード］が出ます。<strong>このタブを消す公式の設定はありません。9月30日にスマホの表示で試したところ、<code>udm=14</code> を付けた検索結果でも［AI モード］のタブは残りました。</strong></p>
-<p>混同しやすいのが、AIモードとAIによる概要です。検索結果の一番上に出るAIの要約は「AIによる概要」という別の機能で、こちらは［ウェブ］タブに切り替えるか、URLに <code>udm=14</code> を付けると出なくなります。AIモードのタブは押さなければ開かないため、**邪魔に感じているのが検索結果の上のAIの文章なら、消したいのはAIによる概要のほうです。**手順は<a href="/media/google-ai-mode-guide/">Google AIモードの使い方</a>の消し方の章にまとめています。</p>
+<p>混同しやすいのが、AIモードとAIによる概要です。検索結果の一番上に出るAIの要約は「AIによる概要」という別の機能で、こちらは［ウェブ］タブに切り替えるか、URLに <code>udm=14</code> を付けると出なくなります。AIモードのタブは押さなければ開かないため、<strong>邪魔に感じているのが検索結果の上のAIの文章なら、消したいのはAIによる概要のほうです。</strong>手順は<a href="/media/google-ai-mode-guide/">Google AIモードの使い方</a>の消し方の章にまとめています。</p>
 <figure class="post-figure"><img src="/media/images/ai-mode-remove/05_fig_choose.png" alt="消したいものごとの方法の図。AIモードのボタンはパソコンのChromeは右クリックの設定、Pixelは検索バーの設定で非表示にし、chrome://flagsでは消せない。AIによる概要はウェブタブかudm=14で出ない画面にし、AIモードとは別の機能。LINEのAIボタンはGoogleのAIモードではなくLINEのAgent iで、プラスメニューで表示をオフにすると30日間出ない" loading="lazy"><figcaption>消したいものごとの方法</figcaption></figure>
 
 <h2 id="s7">LINEのAIボタンは別の機能</h2>
 <p>「AIモード 消す」と一緒に「LINE」が検索されていますが、LINEのトーク画面の入力欄の下に出るAIのボタンは、GoogleのAIモードではありません。LINEの「Agent i」という機能で、返信の提案や話題の提案をするものです。</p>
-<p>LINEのヘルプ「<a href="https://help2.line.me/line/smartphone?contentId=200001143&amp;lang=ja">トークルームのAgent iとは？</a>」に表示の切り替えが載っています。トークルーム下部のプラスメニューを開き、［トークルームのAgent iを表示］をオフにします。**オフにした表示は30日間出なくなり、その間はすべてのトークルームでAgent iの機能が使えません。**設定はメッセージ入力欄の左側のボタンを押したときに反映されます。</p>
+<p>LINEのヘルプ「<a href="https://help2.line.me/line/smartphone?contentId=200001143&amp;lang=ja">トークルームのAgent iとは？</a>」に表示の切り替えが載っています。トークルーム下部のプラスメニューを開き、［トークルームのAgent iを表示］をオフにします。<strong>オフにした表示は30日間出なくなり、その間はすべてのトークルームでAgent iの機能が使えません。</strong>設定はメッセージ入力欄の左側のボタンを押したときに反映されます。</p>
 <h2 id="s8">効かない方法</h2>
 <p>入口を消そうとして試されることが多いものの、効果が無い方法をまとめます。</p>
 <div class="tbl"><table class="stack">
@@ -272,7 +272,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>**画面の見た目ごと消したいなら、拡張機能でページの表示を書き換える方法もあります。**ただし拡張機能は開発者が更新を止めると効かなくなり、Chromeのアドレスバーのような画面の外枠には手が届きません。まずは右クリックの設定とPixelの設定を使い、それで消えない入口は押さない、という順で考えるのが安全です。</p>
+<p><strong>画面の見た目ごと消したいなら、拡張機能でページの表示を書き換える方法もあります。</strong>ただし拡張機能は開発者が更新を止めると効かなくなり、Chromeのアドレスバーのような画面の外枠には手が届きません。まずは右クリックの設定とPixelの設定を使い、それで消えない入口は押さない、という順で考えるのが安全です。</p>
 <h2 id="s9">AI検索での見え方は別の話</h2>
 <p>自分の画面から入口を消すことと、会社やお店がAIモードの回答にどう出てくるかは別の問題で、後者は<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。</p>
 <h2 id="s10">よくある質問</h2>
@@ -329,6 +329,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/chatgpt-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-1865b097" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1865b097)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</div>
+            </a>
             <a href="/media/chatgpt-ads/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT広告の出稿方法"><defs><linearGradient id="ecg-5b608b19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b608b19)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT広告の出稿方法</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
@@ -338,11 +343,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ビジネスプロフィールとAI"><defs><linearGradient id="ecg-f25ce86a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f25ce86a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ビジネスプロフィールとAI</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
                 <div class="rel-card__ttl">【2026年10月】GoogleビジネスプロフィールのAI対策とは？AIモード・口コミ要約・Gemini連携</div>
-            </a>
-            <a href="/media/claude-stops-midway/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeが途中で止まるとき"><defs><linearGradient id="ecg-0975f5d4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-0975f5d4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeが途中で止まるとき</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.10.17</div>
-                <div class="rel-card__ttl">【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ</div>
             </a>
         </div>
     </section>

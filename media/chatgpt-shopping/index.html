@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況 | nito Column</title>
+    <meta name="description" content="ChatGPTの商品の検索結果に自社商品を載せる方法をOpenAIとShopifyの公式資料で整理。商品フィードの申請、Shopify・Etsyの連携、日本の事業者の今、手数料、載せられない商品、AIの回答で挙がることとの違いまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/chatgpt-shopping/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況">
+    <meta property="og:description" content="ChatGPTの商品の検索結果に自社商品を載せる方法をOpenAIとShopifyの公式資料で整理。商品フィードの申請、Shopify・Etsyの連携、日本の事業者の今、手数料、載せられない商品、AIの回答で挙がることとの違いまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/chatgpt-shopping/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/chatgpt-shopping.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/chatgpt-shopping.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況", "description": "ChatGPTの商品の検索結果に自社商品を載せる方法をOpenAIとShopifyの公式資料で整理。商品フィードの申請、Shopify・Etsyの連携、日本の事業者の今、手数料、載せられない商品、AIの回答で挙がることとの違いまで。", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/chatgpt-shopping/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTショッピングに商品を載せるのに費用はかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "自社のサイトやアプリで買われた分に手数料はかかりません。ShopifyのストアもChatGPTでの販売の手数料は無く、通常の決済手数料だけです。フィードの申請の費用は公式資料に書かれていません。"}}, {"@type": "Question", "name": "ChatGPTショッピングは日本でも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "事業者向けページにはショッピングは米国の利用者向けに提供中とあります。商品フィードの仕様も標準の送り先は米国で、日本を選ぶ設定はありません。日本で始まる時期は公式に書かれていません。"}}, {"@type": "Question", "name": "ChatGPTの商品フィードは日本の会社でも申請できますか？", "acceptedAnswer": {"@type": "Answer", "text": "受け付けは承認されたパートナーに限られ、申し込むとウェイトリストに入ります。米国・カナダ・メキシコ以外の国はOpenAIが連携を確認してから使う決まりで、日本の名前は仕様にありません。"}}, {"@type": "Question", "name": "ShopifyのストアはChatGPTに自動で載りますか？", "acceptedAnswer": {"@type": "Answer", "text": "Shopify Catalogの要件を満たすストアは、最初から連携が有効です。パスワードで保護したストアや、価格が0円の商品、B2B専用の商品は対象外です。"}}, {"@type": "Question", "name": "ChatGPTのInstant Checkoutは今も使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "事業者向けページの説明では、単独のInstant Checkoutから離れて購入は販売者のサイトやアプリで行います。"}}, {"@type": "Question", "name": "ChatGPT広告を出すと商品の検索結果で上位に出ますか？", "acceptedAnswer": {"@type": "Answer", "text": "出ません。ヘルプは商品の検索結果が広告でなく、OpenAIの提携の影響も受けないと書いています。広告は回答の下の別の枠に出ます。"}}, {"@type": "Question", "name": "ChatGPTショッピングにお酒やサプリメントは載せられますか？", "acceptedAnswer": {"@type": "Answer", "text": "アルコール度数0.5%を超える酒類と、減量・筋肉づくりなど健康への効果をうたって売るサプリメントは載せられません。どちらも商取引のポリシーで扱わない商品に入っています。"}}, {"@type": "Question", "name": "ChatGPTに自社の商品を載せたくない場合はどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "Shopifyなら管理画面の［販売チャネル］＞［Agentic］でChatGPTのShopify Catalogへのアクセスを無効にします。クロールで表示されることはあるため、検索用のクローラーの設定も合わせて確かめます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=56b59318">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPTショッ…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.20</span>
+        </div>
+        <h1 class="post-title">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-48492598" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-48492598)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="86.4" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="378.0" x2="949.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">商品フィードの申請と日本の状況</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>OpenAIの事業者向けページ「<a href="https://chatgpt.com/merchants/">Power product discovery in ChatGPT</a>」には、2026年10月20日に確認した時点でChatGPTのショッピングは米国の利用者向けに提供中と書かれています。同じページはチャットの中で決済まで済ませるInstant Checkoutから離れ、購入は販売者のサイトで行う形に移ると説明しています。</p>
+<p>日本語の解説には2025年秋のチャット内決済の説明のまま残っているものがあります。この記事は商品を載せる3つの経路と日本の事業者の今、費用、載せられない商品を、公式に書いてあることと無いことに分けて整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>商品が載る経路は<strong>Shopify・Etsyの連携、商品フィードの申請、Webの情報からの掲載</strong>の3つ。要件を満たすShopifyのストアとEtsyの商品は申請しなくても連携済み</li>
+<li>商品フィードの申請は承認制で、今申し込むとウェイトリストに入る。<strong>フィードの仕様では標準の送り先が米国で、日本を選ぶ設定は載っていない</strong></li>
+<li>自社サイトで買われた分に手数料はかからない。<strong>酒類やサプリメントは商品の検索結果に出ない</strong></li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_00_routes.png" alt="ChatGPTに商品が載る3つの経路の図。ShopifyとEtsyの連携、商品フィードの申請、Webの情報からの掲載" loading="lazy"></figure>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>ChatGPTショッピングの今の形</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>商品の選ばれ方</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>Instant Checkoutの縮小</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>商品が載る3つの経路</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>① Shopify・Etsyの連携</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>② 商品フィードの申請</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>③ Webの情報から載る</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>日本の事業者が使えるか</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>費用と手数料</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>商品の検索結果に出ない商品</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>社内で決めておくこと</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>① 商品データの持ち主</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>② 載せたくない商品の扱い</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>③ 法務と表示の確認</a></li>
+                    <li class="toc-h3"><a href="#s6-4"><span class="toc__n">6-4</span>④ 成果の見方</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>商品枠とAIの回答で挙がることの違い</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">ChatGPTショッピングの今の形</h2>
+<p>「1万円以内の手土産を探して」のように買い物の意図がある質問をすると、ChatGPTは画像と価格と購入先へのリンクを付けた商品の一覧を回答に出します。ヘルプ「<a href="https://help.openai.com/en/articles/11128490">Shopping with ChatGPT Search</a>」は、<strong>この商品の検索結果はChatGPTが独自に選んだもので、広告ではなくOpenAIの提携にも左右されない</strong>と書いています。広告は別の枠として扱われます。</p>
+<h3 id="s1-1">商品の選ばれ方</h3>
+<p>ヘルプが挙げる材料は3つです。1つ目は価格や商品説明などの構造化されたデータとその他の第三者のコンテンツで、提供元には事業者自身と第三者の両方が入ります。2つ目は新しい検索結果を見る前のモデルの回答、3つ目はOpenAIの安全基準と商品のポリシーです。質問の文に加えて、メモリーやカスタム指示に書かれた好みも考慮されます。</p>
+<p>商品を押したあとに並ぶ販売者の順番について、ヘルプは<strong>在庫・価格・品質・その商品の製造元か主な販売者か</strong>で決めると説明しています。価格は第三者の提供元から受け取っていて、事業者が値段を変えてから画面に反映されるまで時間がかかることがあるとも書かれています。「Budget-friendly」のようなラベルやレビューの要約はモデルが作ったもので、レビューの出どころは公開されたWebサイトです。</p>
+<!-- SHOT: OpenAI ヘルプ「Shopping with ChatGPT Search」の How Merchants Are Selected の節・https://help.openai.com/en/articles/11128490 ・PC・赤枠1: 販売者の並びの基準の文（availability, price, quality...）／赤枠2: Shopify Catalog の文 -->
+
+<p>ヘルプが挙げる販売者の並び順の材料は、<strong>在庫・価格・品質と、その商品の製造元か主な販売者か</strong>です。価格は第三者の提供元から受け取るため、自社のページを直すだけでは反映が揃いません。</p>
+<h3 id="s1-2">Instant Checkoutの縮小</h3>
+<p>2025年9月に始まったInstant Checkoutは、ChatGPTの画面で注文と支払いまで済ませる仕組みでした。今は事業者向けページに、<strong>単独のInstant Checkoutの体験から離れ、利用者は販売者のサイトやアプリで購入する</strong>と書かれています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>時期</th>
+<th>出来事</th>
+<th>出どころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="時期">2025年9月29日</td>
+<td data-label="出来事">Instant Checkoutと決済の仕様ACPを発表。米国の利用者が米国のEtsy出品者から購入できる形で開始</td>
+<td data-label="出どころ">OpenAIのお知らせ</td>
+</tr>
+<tr>
+<td data-label="時期">2025年11月20日</td>
+<td data-label="出来事">Shopifyの販売者に広がる（Spanx・Skims・Glossierから）</td>
+<td data-label="出どころ">リリースノート</td>
+</tr>
+<tr>
+<td data-label="時期">2025年11月24日</td>
+<td data-label="出来事">商品を深く調べて比べるショッピングリサーチを開始</td>
+<td data-label="出どころ">リリースノート</td>
+</tr>
+<tr>
+<td data-label="時期">2026年3月24日</td>
+<td data-label="出来事">商品の表示と比較を改善し、ACPで事業者の商品情報を取り込む</td>
+<td data-label="出どころ">リリースノート</td>
+</tr>
+<tr>
+<td data-label="時期">2026年3月25日</td>
+<td data-label="出来事">Instant Checkoutの伸びが弱く、商品の発見に力を移すと報じられる</td>
+<td data-label="出どころ">Retail Gazette</td>
+</tr>
+</tbody>
+</table></div>
+<p>ACP（Agentic Commerce Protocol）はOpenAIがStripeと作った、AIと販売者が商品情報や注文をやり取りするための仕様です。今の事業者向けページの説明では、<strong>ACPの役目は商品の発見と推薦のための商品データの共有</strong>です。</p>
+<p>なお、ヘルプ「Shopping with ChatGPT Search」の冒頭には、一部の対象の商品と販売者でInstant Checkoutを出すことがあるという文がまだ残っています。事業者向けページとは食い違うため、申し込みを考えるときは事業者に向けて書かれた事業者向けページの説明を基準にします。Shopifyのヘルプ「<a href="https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts/chatgpt">ChatGPTでの販売</a>」も、ChatGPTを商品を見つけるための参照元として扱い、購入はオンラインストアのチェックアウトで完了する仕組みです。</p>
+<h2 id="s2">商品が載る3つの経路</h2>
+<p>自社の商品をChatGPTの商品の検索結果に出す道はどのECの仕組みで売っているかで変わり、公式資料にある経路は3つです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>経路</th>
+<th>手続き</th>
+<th>費用</th>
+<th>向いている会社</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="経路">Shopify・Etsyの連携</td>
+<td data-label="手続き">申請は不要。Shopifyは要件を満たすストアで既定で有効</td>
+<td data-label="費用">ChatGPTでの販売の手数料は無い</td>
+<td data-label="向いている会社">Shopify・Etsyで売っている会社</td>
+</tr>
+<tr>
+<td data-label="経路">商品フィードの申請</td>
+<td data-label="手続き">事業者向けページから申し込む。承認制で今はウェイトリスト</td>
+<td data-label="費用">申請の費用は記載なし。フィードを作る工数がかかる</td>
+<td data-label="向いている会社">自社ECで商品数が多い会社</td>
+</tr>
+<tr>
+<td data-label="経路">Webの情報から載る</td>
+<td data-label="手続き">手続きは無い</td>
+<td data-label="費用">掲載の費用は無い</td>
+<td data-label="向いている会社">すべての会社</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s2-1">① Shopify・Etsyの連携</h3>
+<p>事業者向けページには<strong>ShopifyかEtsyで売っている場合はカタログがすでに連携されていて、追加の設定も申請も要らない</strong>とあります。Shopifyのヘルプ「<a href="https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts">Shopifyエージェントストアフロント</a>」によると、商品はShopify Catalogを通じてChatGPTに渡り、要件を満たすストアでは最初から有効です。</p>
+<p>ただし要件を満たさないストアの商品はShopify Catalogに入りません。<a href="https://help.shopify.com/ja/manual/shopify-catalog/requirements">Shopify Catalogの要件</a>で、事業者が引っかかりやすいのは次の3つです。</p>
+<ul>
+<li>Starterプラン以上で、ストアがパスワードで保護されていない</li>
+<li>商品にタイトルと画像が1枚以上あり、価格が0円より高い</li>
+<li>商品が非掲載や検索エンジンから非表示の設定になっていない</li>
+</ul>
+<p>アカウントのメールの認証や2段階認証は、要件ではなく、満たさないときに案内される「アカウント状況を改善する手順」の中の項目です。</p>
+<p>要件を満たしているかは管理画面の［販売チャネル］＞［Agentic］で確かめられ、［ソース］＞［Shopify Catalog］の横に理由が表示されることがあります。ChatGPTでの販売のヘルプには、<strong>B2B専用の商品は対象外で、法的な表示は商品説明の先頭6,000字以内に入れる</strong>という注意もあります。Etsy側の条件はOpenAIとEtsyのどちらの資料でも確認できませんでした。</p>
+<!-- SHOT: Shopify ヘルプ「ChatGPTでの販売」の考慮事項の箇条書き・https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts/chatgpt ・PC・赤枠1: B2B 専用商品はサポートされていない／赤枠2: ChatGPTでの販売に関連する手数料は発生しません -->
+
+<h3 id="s2-2">② 商品フィードの申請</h3>
+<p>ShopifyやEtsyを使っていない自社ECの道は、商品フィードをOpenAIに直接送る申請です。開発者向けの「<a href="https://developers.openai.com/commerce/guides/get-started">Get Started</a>」は、<strong>フィードの受け付けは今のところ承認されたパートナーに限られる</strong>と書いています。申し込みは事業者向けページのフォームからで、申し込み済みならウェイトリストに入っています。事業者が自分でデータをつなげる仕組みは、事業者向けページで年内に用意する予定とされています。</p>
+<p>送り方はファイルのアップロード（SFTP）とAPIの2つです。OpenAIが勧める組み合わせは、1日1回ファイルで全件を送って日中の変更をAPIで送る形です。販促キャンペーン（プロモーション）の情報はAPIでしか送れません。<a href="https://developers.openai.com/commerce/specs/file-upload/products">商品フィードの仕様</a>で必須になっている項目は9つです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>中身</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">item_id</td>
+<td data-label="中身">商品や色・サイズ違いごとの固定のID</td>
+</tr>
+<tr>
+<td data-label="項目">title</td>
+<td data-label="中身">商品名（色・サイズ違いは選んだものを含める）</td>
+</tr>
+<tr>
+<td data-label="項目">description</td>
+<td data-label="中身">事実を書いた商品説明</td>
+</tr>
+<tr>
+<td data-label="項目">url</td>
+<td data-label="中身">商品ページのURL</td>
+</tr>
+<tr>
+<td data-label="項目">brand</td>
+<td data-label="中身">商品ページに出しているブランド名</td>
+</tr>
+<tr>
+<td data-label="項目">seller_name</td>
+<td data-label="中身">売っている事業者の名前</td>
+</tr>
+<tr>
+<td data-label="項目">image_url</td>
+<td data-label="中身">その商品のメインの画像のURL</td>
+</tr>
+<tr>
+<td data-label="項目">availability</td>
+<td data-label="中身">在庫あり・在庫切れ・予約などの状態</td>
+</tr>
+<tr>
+<td data-label="項目">price</td>
+<td data-label="中身">通常の価格と通貨のコード</td>
+</tr>
+</tbody>
+</table></div>
+<p>仕様にはGoogle互換のフィードの扱いも書かれているため、Google Merchant Center向けに商品データを整えている会社は、その形を土台にできるか申請のときに確かめる価値があります。フィードは広告にも使われ、広告で使う商品には別の項目を付けます。広告の出し方は<a href="/media/chatgpt-ads/">ChatGPT広告の出稿方法</a>で扱っています。</p>
+<h3 id="s2-3">③ Webの情報から載る</h3>
+<p>ヘルプは商品を選ぶ材料に、事業者と第三者の構造化データに加えて「その他の第三者のコンテンツ」を挙げていて、自社のフィードに限っていません。Shopifyのヘルプも、ChatGPTへのカタログの提供を止めたあとでも<strong>Webのクロールなど別の経路で商品が表示されることがある</strong>と書いています。</p>
+<p>ChatGPTの検索全体の話として、この経路で手を付けられるのは、ChatGPTの検索用のクローラーを拒否しないことです。OpenAIの「<a href="https://developers.openai.com/api/docs/bots">Overview of OpenAI Crawlers</a>」は、<strong>OAI-SearchBotを拒否したサイトはChatGPTの検索の回答に表示されない</strong>と説明しています。robots.txtでOAI-SearchBotを止めていないか、商品ページの価格と在庫が読める形で出ているかを先に確かめます。フィードを出していない日本の自社ECの商品が、日本のアカウントの商品一覧に出るかどうかは試していません。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">ChatGPT に自社がどう紹介されているか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">日本の事業者が使えるか</h2>
+<p>日本で売っている会社にとっての問題は、申し込めるかどうかより、載せた商品を日本の利用者が見られるかどうかです。公式資料を並べると、書いてあることと書いていないことがはっきり分かれます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>公式に書いてあること</th>
+<th>公式に書いていないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="公式に書いてあること">事業者向けページ: ショッピングは米国の利用者向けに提供中。事業者と地域は順に広げる予定</td>
+<td data-label="公式に書いていないこと">日本の利用者に提供する時期</td>
+</tr>
+<tr>
+<td data-label="公式に書いてあること">リリースノート（2026年3月24日）: 商品の表示の改善を全利用者に順次届ける</td>
+<td data-label="公式に書いていないこと">その改善が日本のアカウントに届いたか</td>
+</tr>
+<tr>
+<td data-label="公式に書いてあること">フィードの仕様: 標準のアップロードの送り先は米国。表せる国は米国・カナダ・メキシコ</td>
+<td data-label="公式に書いていないこと">日本向けのフィードの受け付けの開始</td>
+</tr>
+<tr>
+<td data-label="公式に書いてあること">フィードの仕様: ほかの市場はOpenAIが連携と国・通貨を確認してから使う</td>
+<td data-label="公式に書いていないこと">円の価格の扱いと審査の基準・期間</td>
+</tr>
+</tbody>
+</table></div>
+<!-- SHOT: OpenAI 開発者ドキュメント「Products」の Geo tagging の節・https://developers.openai.com/commerce/specs/file-upload/products ・PC・赤枠1: The standard OpenAI-format upload currently targets the US／赤枠2: target_countries の行（US, CA, and MX） -->
+
+<p><strong>フィードの仕様が今想定している送り先は米国で、日本は国の一覧にも入っていません。</strong>リリースノートの「全利用者」と事業者向けページの「米国の利用者向け」は食い違って見えますが、両者の関係はどちらの資料にも書かれていません。日本のアカウントで商品の一覧が出るかどうかも、この記事では試していません。</p>
+<!-- SHOT: ChatGPT リリースノートの 2026年3月24日「Shopping updates in ChatGPT」・https://help.openai.com/en/articles/6825453-chatgpt-release-notes ・PC・赤枠1: rolling out to all ChatGPT users this week／赤枠2: using the Agentic Commerce Protocol (ACP) -->
+
+<p>日本国内向けに売っている会社がフィードを申請しても、今はウェイトリストに入る段階です。Shopify Catalogの要件には国の条件が書かれていないため、日本のShopifyのストアがCatalogに入っていても、ChatGPTで誰に表示されるかは別に確かめる必要があります。<strong>国内向けの会社が今すぐ動かせるのは③のWebの情報で、①と②は申請と要件の確認までになります。</strong></p>
+<h2 id="s4">費用と手数料</h2>
+<p>ChatGPTショッピングの費用を分けるのは、どの仕組みで買われるかです。事業者向けページは<strong>自社のサイトやアプリで買われた分には手数料がかからない</strong>と書いています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>場面</th>
+<th>費用</th>
+<th>出どころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="場面">自社サイト・アプリでの購入</td>
+<td data-label="費用">手数料なし</td>
+<td data-label="出どころ">事業者向けページ</td>
+</tr>
+<tr>
+<td data-label="場面">Shopifyのストアへの送客</td>
+<td data-label="費用">ChatGPTでの販売の手数料なし。通常の決済手数料だけ</td>
+<td data-label="出どころ">Shopifyのヘルプ</td>
+</tr>
+<tr>
+<td data-label="場面">商品フィードの申請</td>
+<td data-label="費用">記載なし</td>
+<td data-label="出どころ">開発者ドキュメント</td>
+</tr>
+<tr>
+<td data-label="場面">Instant Checkout（単独の形から移行中）</td>
+<td data-label="費用">販売者が完了した購入ごとに少額の手数料</td>
+<td data-label="出どころ">OpenAIのお知らせ（2025年9月）</td>
+</tr>
+<tr>
+<td data-label="場面">ChatGPT広告</td>
+<td data-label="費用">表示かクリックごと</td>
+<td data-label="出どころ">ChatGPT広告のヘルプ</td>
+</tr>
+</tbody>
+</table></div>
+<p>Instant Checkoutの手数料は、2026年1月に<a href="https://www.shopifreaks.com/shopify-confirms-a-4-fee-on-sales-made-through-chatgpt-but-whats-the-real-cost/">Shopifreaks</a>などがShopifyの販売者で4%と報じていました。単独の形から離れつつある仕組みの数字なので、これから載せる判断には使いません。</p>
+<p>お金より重くなりやすいのは社内の工数です。Shopify・Etsyは追加の作業がない一方で、自社ECのフィードには商品データの書き出しと毎日の更新、価格と在庫の変更を送るAPIの開発が要ります。</p>
+<h2 id="s5">商品の検索結果に出ない商品</h2>
+<p>OpenAIの「<a href="https://openai.com/policies/commerce-policies">Commerce policies</a>」は、ショッピングで扱わない商品とサービスを決めています。対象は商品の掲載と事業者の参加で、<strong>OpenAIは理由を問わず掲載を外したり参加を制限したりできる</strong>とも書かれています。日本の会社で当たりやすい区分を抜き出しました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>区分</th>
+<th>ポリシーの中身</th>
+<th>当たりやすい商品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="区分">酒類</td>
+<td data-label="ポリシーの中身">アルコール度数0.5%を超える飲料と蒸留の道具</td>
+<td data-label="当たりやすい商品">日本酒・ワイン・クラフトビール</td>
+</tr>
+<tr>
+<td data-label="区分">サプリメント</td>
+<td data-label="ポリシーの中身">減量・性的な効果・筋肉づくり・デトックスなどの健康効果をうたう摂取物</td>
+<td data-label="当たりやすい商品">減量や健康効果をうたうサプリメント</td>
+</tr>
+<tr>
+<td data-label="区分">たばこ・ニコチン</td>
+<td data-label="ポリシーの中身">たばこ・電子たばこ・ニコチン製品と吸うための道具</td>
+<td data-label="当たりやすい商品">加熱式たばこの関連品</td>
+</tr>
+<tr>
+<td data-label="区分">医薬品</td>
+<td data-label="ポリシーの中身">処方が要る医薬品・医療用品</td>
+<td data-label="当たりやすい商品">処方薬</td>
+</tr>
+<tr>
+<td data-label="区分">護身用品</td>
+<td data-label="ポリシーの中身">催涙スプレー・スタンガンなど</td>
+<td data-label="当たりやすい商品">催涙スプレーなどの護身用品</td>
+</tr>
+</tbody>
+</table></div>
+<!-- SHOT: OpenAI「Commerce policies」の Drugs, medications, and supplements と Tobacco, nicotine, and alcohol の節・https://openai.com/policies/commerce-policies ・PC・赤枠1: Supplements の行／赤枠2: Alcoholic beverages (over 0.5% ABV) の行 -->
+
+<p>アルコール度数0.5%を超える酒類や、減量などの効果をうたうサプリメントは、フィードを整えても商品の検索結果には出ません。ポリシーが決めているのは商品の掲載で、回答の文の中で銘柄や会社名が挙がるかどうかには触れていません。Shopifyのヘルプも、OpenAIの禁止商品に当たる商品はChatGPTの商品の検索結果に表示されないと書いています。</p>
+<h2 id="s6">社内で決めておくこと</h2>
+<p>ShopifyのストアならChatGPTへの連携は最初から有効なため、何も決めないまま商品が出ていることがあります。申し込みの前に、社内で次の4つを決めておくと手戻りが減ります。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_06_decide.png" alt="申し込む前に社内で決める4つのことの図。商品データの持ち主、載せたくない商品、法務と表示、成果の見方" loading="lazy"></figure>
+
+<h3 id="s6-1">① 商品データの持ち主</h3>
+<p>価格と在庫が販売者の並び順の材料になるため、誰がデータを更新するのかを最初に決めておくのが近道です。自社ECでフィードを送るなら、EC担当とシステムの担当のどちらが毎日の送信を持つのかが最初の論点です。Shopifyなら管理画面の商品データがそのまま渡るため、商品を登録するときの入力がChatGPTでの見え方を決めます。</p>
+<h3 id="s6-2">② 載せたくない商品の扱い</h3>
+<p>Shopifyでは［販売チャネル］＞［Agentic］で［Shopifyによる管理を許可する］を外し、［ChatGPT］の［Shopify Catalogへのアクセス］を無効にすると、ChatGPTへのカタログの提供を止められます。それでもクロールなど別の経路で表示されることはあるとヘルプに書かれているため、<strong>完全に出したくない商品はクロールの側の設定まで確かめます</strong>。</p>
+<h3 id="s6-3">③ 法務と表示の確認</h3>
+<p>商取引のポリシーに当たる商品が無いかを、商品の一覧と照らし合わせます。Shopifyでは法的な表示を商品説明の先頭6,000字に入れる決まりがあるため、説明が長い商品は表示の位置を見直します。</p>
+<h3 id="s6-4">④ 成果の見方</h3>
+<p>Shopifyのヘルプによると、AIのチャネルからの注文は発生元が分かる形で管理画面に出ます。自社ECではGA4でChatGPTからの流入を分けて見ます。設定の手順は<a href="/media/ai-search-measurement/">GA4でAI経由の流入を見る方法</a>で扱っています。</p>
+<h2 id="s7">商品枠とAIの回答で挙がることの違い</h2>
+<p>ChatGPTの中で自社の商品や会社名が目に入る場所は、商品の検索結果だけではありません。回答の文の中で名前が挙がる場合と、回答の下の広告枠があります。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_07_where.png" alt="ChatGPTで商品や社名が出る3つの場所の図。商品の検索結果、回答の文の中、広告" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>商品の検索結果</th>
+<th>回答の文の中</th>
+<th>広告</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">出る場所</td>
+<td data-label="商品の検索結果">回答の中の商品の一覧</td>
+<td data-label="回答の文の中">回答の文章</td>
+<td data-label="広告">回答の下のスポンサー枠</td>
+</tr>
+<tr>
+<td data-label="項目">載せ方</td>
+<td data-label="商品の検索結果">連携・フィード・Webの情報</td>
+<td data-label="回答の文の中">手続きは無い</td>
+<td data-label="広告">広告マネージャーで出稿</td>
+</tr>
+<tr>
+<td data-label="項目">日本の利用者</td>
+<td data-label="商品の検索結果">事業者向けページは米国向けと記載</td>
+<td data-label="回答の文の中">見られる</td>
+<td data-label="広告">日本で出稿できる</td>
+</tr>
+<tr>
+<td data-label="項目">お金</td>
+<td data-label="商品の検索結果">掲載の費用の記載なし</td>
+<td data-label="回答の文の中">掲載料は無い</td>
+<td data-label="広告">表示かクリックごと</td>
+</tr>
+<tr>
+<td data-label="項目">何で決まるか</td>
+<td data-label="商品の検索結果">商品データ・価格・在庫・レビュー</td>
+<td data-label="回答の文の中">AIが参照するWebの情報</td>
+<td data-label="広告">会話の内容と入札</td>
+</tr>
+</tbody>
+</table></div>
+<p>商品の検索結果は型番や価格で比べられる商品に向いた枠で、申請しても日本の利用者に届く時期は書かれていません。一方で、比べて選ぶ前の「どの会社に頼むか」「どのメーカーが信頼できるか」という質問には、回答の文で答えが返ります。<strong>高額で比べられる商材ほど、回答の文の中で名前が挙がるかどうかが買い手との最初の接点になります。</strong></p>
+<p>回答の文で自社が挙がらない原因は<a href="/media/chatgpt-not-appearing/">ChatGPTに自社が出てこない5つの原因と対策</a>で、EC全体の進め方は<a href="/media/ec-ai-search/">EC・通販のAI検索対策</a>で扱っています。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Q. ChatGPTショッピングに商品を載せるのに費用はかかりますか？</h3>
+<p>自社のサイトやアプリで買われた分に手数料はかかりません。ShopifyのストアもChatGPTでの販売の手数料は無く、通常の決済手数料だけです。フィードの申請の費用は公式資料に書かれていません。</p>
+<h3 id="s8-2">Q. ChatGPTショッピングは日本でも使えますか？</h3>
+<p>事業者向けページにはショッピングは米国の利用者向けに提供中とあります。商品フィードの仕様も標準の送り先は米国で、日本を選ぶ設定はありません。日本で始まる時期は公式に書かれていません。</p>
+<h3 id="s8-3">Q. ChatGPTの商品フィードは日本の会社でも申請できますか？</h3>
+<p>受け付けは承認されたパートナーに限られ、申し込むとウェイトリストに入ります。米国・カナダ・メキシコ以外の国はOpenAIが連携を確認してから使う決まりで、日本の名前は仕様にありません。</p>
+<h3 id="s8-4">Q. ShopifyのストアはChatGPTに自動で載りますか？</h3>
+<p>Shopify Catalogの要件を満たすストアは、最初から連携が有効です。パスワードで保護したストアや、価格が0円の商品、B2B専用の商品は対象外です。</p>
+<h3 id="s8-5">Q. ChatGPTのInstant Checkoutは今も使えますか？</h3>
+<p>事業者向けページの説明では、単独のInstant Checkoutから離れて購入は販売者のサイトやアプリで行います。</p>
+<h3 id="s8-6">Q. ChatGPT広告を出すと商品の検索結果で上位に出ますか？</h3>
+<p>出ません。ヘルプは商品の検索結果が広告でなく、OpenAIの提携の影響も受けないと書いています。広告は回答の下の別の枠に出ます。</p>
+<h3 id="s8-7">Q. ChatGPTショッピングにお酒やサプリメントは載せられますか？</h3>
+<p>アルコール度数0.5%を超える酒類と、減量・筋肉づくりなど健康への効果をうたって売るサプリメントは載せられません。どちらも商取引のポリシーで扱わない商品に入っています。</p>
+<h3 id="s8-8">Q. ChatGPTに自社の商品を載せたくない場合はどうしますか？</h3>
+<p>Shopifyなら管理画面の［販売チャネル］＞［Agentic］でChatGPTのShopify Catalogへのアクセスを無効にします。クロールで表示されることはあるため、検索用のクローラーの設定も合わせて確かめます。</p>
+<h2 id="s9">出典</h2>
+<ul>
+<li>OpenAI「<a href="https://chatgpt.com/merchants/">Power product discovery in ChatGPT</a>」（2026年10月20日取得）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/en/articles/11128490">Shopping with ChatGPT Search</a>」（同）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a>」2025年9月29日・11月20日・11月24日・2026年3月24日の項（同）</li>
+<li>OpenAI「<a href="https://openai.com/index/buy-it-in-chatgpt/">Buy it in ChatGPT: Instant Checkout and the Agentic Commerce Protocol</a>」2025年9月29日（同）</li>
+<li>OpenAI Developers「<a href="https://developers.openai.com/commerce/guides/get-started">Get Started</a>」「<a href="https://developers.openai.com/commerce/guides/key-concepts">Key concepts</a>」（同）</li>
+<li>OpenAI Developers「<a href="https://developers.openai.com/commerce/specs/file-upload/products">Products</a>」（同）</li>
+<li>OpenAI「<a href="https://openai.com/policies/commerce-policies">Commerce policies</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/bots">Overview of OpenAI Crawlers</a>」（同）</li>
+<li>Shopify ヘルプセンター「<a href="https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts">Shopifyエージェントストアフロント</a>」「<a href="https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts/chatgpt">ChatGPTでの販売</a>」「<a href="https://help.shopify.com/ja/manual/shopify-catalog/requirements">Shopify Catalogの要件</a>」（同）</li>
+<li>Shopifreaks「<a href="https://www.shopifreaks.com/shopify-confirms-a-4-fee-on-sales-made-through-chatgpt-but-whats-the-real-cost/">Shopify confirms a 4% fee on sales made through ChatGPT, but what's the real cost?</a>」2026年1月</li>
+<li>Retail Gazette「<a href="https://www.retailgazette.co.uk/blog/2026/03/openai-pivots-chatgpt-shopping-strategy-after-instant-checkout-underwhelms/">OpenAI pivots ChatGPT shopping strategy after Instant Checkout underwhelms</a>」2026年3月25日</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">ChatGPTショッピングの今の形</a><a href="#s2">商品が載る3つの経路</a><a href="#s3">日本の事業者が使えるか</a><a href="#s4">費用と手数料</a><a href="#s5">商品の検索結果に出ない商品</a><a href="#s6">社内で決めておくこと</a><a href="#s7">商品枠とAIの回答で挙がることの違い</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-ads/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT広告の出稿方法"><defs><linearGradient id="ecg-5b608b19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b608b19)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT広告の出稿方法</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.19</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPT広告の出稿方法・最低出稿金額と日本で出せる業種</div>
+            </a>
+            <a href="/media/gbp-ai-search/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ビジネスプロフィールとAI"><defs><linearGradient id="ecg-f25ce86a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f25ce86a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ビジネスプロフィールとAI</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.19</div>
+                <div class="rel-card__ttl">【2026年10月】GoogleビジネスプロフィールのAI対策とは？AIモード・口コミ要約・Gemini連携</div>
+            </a>
+            <a href="/media/claude-stops-midway/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeが途中で止まるとき"><defs><linearGradient id="ecg-0975f5d4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-0975f5d4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeが途中で止まるとき</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.17</div>
+                <div class="rel-card__ttl">【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'chatgpt-shopping',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>

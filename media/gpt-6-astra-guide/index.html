@@ -68,7 +68,7 @@
 <p>発表から1か月で周りの状況はかなり動きました。9月22日に弟分のGPT-6 SolとGPT-6 Lunaが加わり、29日にはGPT-6.1 Solと月500ドルの新しいProプランが出ています。一方でヘルプからはProのチャットの回数が消え、Plusの扱いも「チャットでは使えない」のまま変わっていません。</p>
 <p>OpenAIの<a href="https://openai.com/ja-JP/index/gpt-6-astra/">発表ページ</a>・<a href="https://help.openai.com/ja-jp/articles/20001354-gpt-56-and-gpt-6-pro-in-chatgpt">ヘルプセンター</a>・<a href="https://developers.openai.com/api/docs/models/gpt-6-astra">モデルページ</a>を2026年10月5日に取り直し、GPT-6 Astraが何を変えたのか、ChatGPTのどのプランでどこに出るのか、上限と料金、GPT-5.6やGPT-6.1 Solとどう使い分けるかを書きます。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
-<li>ChatGPTの通常チャットでは**「GPT-6 Pro」という名前**で出る。思考レベルの「Pro」を選ぶと使える</li>
+<li>ChatGPTの通常チャットでは<strong>「GPT-6 Pro」という名前</strong>で出る。思考レベルの「Pro」を選ぶと使える</li>
 <li>通常チャットで使えるのは<strong>Pro・Business・Enterprise</strong>。Plusは Work と Codex でだけ使える</li>
 <li>チャットの回数が公開されているのは Business だけで、Standard は<strong>月15回</strong>、Premium は週50回</li>
 <li>API は入力$10・出力$50（100万トークン）。9月29日に出た GPT-6.1 Sol は同じ作業を<strong>5分の1の単価</strong>で受ける</li>
@@ -121,7 +121,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure post-figure--sp"><img src="/media/images/gpt-6-astra-guide/astra_05_announce_v2.jpg" alt="OpenAIの発表ページの冒頭。2026年9月22日更新としてGPT-6 SolとGPT-6 Lunaを追加しGPT-6ファミリーを拡充すると書かれている" loading="lazy"><figcaption>発表ページの冒頭（2026年10月5日撮影）。9月22日の更新の告知が足されている</figcaption></figure>
 
 <h3 id="s1-1">名前が2つある</h3>
-<p>GPT-6 Astra には呼び名が2つあります。APIのモデルIDと ChatGPT Work・Codex での表示は「GPT-6 Astra」、**ChatGPTの通常チャットでの表示は「GPT-6 Pro」**です。OpenAIのヘルプは「GPT-6 Astra を搭載した GPT-6 Pro」と書いており、中身は同じモデルです。</p>
+<p>GPT-6 Astra には呼び名が2つあります。APIのモデルIDと ChatGPT Work・Codex での表示は「GPT-6 Astra」、<strong>ChatGPTの通常チャットでの表示は「GPT-6 Pro」</strong>です。OpenAIのヘルプは「GPT-6 Astra を搭載した GPT-6 Pro」と書いており、中身は同じモデルです。</p>
 <h3 id="s1-2">基本スペック</h3>
 <div class="tbl"><table class="stack">
 <thead>
@@ -268,7 +268,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/gpt-6-astra-guide/astra_00_where_v2.jpg" alt="GPT-6 Astraの4つの入口の図。チャット、ワーク、Codex、APIの4枚のカードがあり、チャットには表示名はGPT-6 Proという吹き出しが付いている" loading="lazy"><figcaption>4つの入口。チャットだけ名前が GPT-6 Pro になる</figcaption></figure>
 
 <h3 id="s4-1">通常チャットで使う</h3>
-<p>入力欄の右にある思考レベル（Instant・Medium・High・Extra High・Pro）で**「Pro」を選ぶ**と、対象プランでは GPT-6 Pro が使えます。GPT-5.6 Sol Pro を使いたいときはモデルメニューで GPT-5.6 Sol を選んでから Pro を選びます。9月14日に自動の切り替えが廃止されたので、「もっと考えて」と頼んでも思考レベルは上がりません（安全上の理由を除く）。</p>
+<p>入力欄の右にある思考レベル（Instant・Medium・High・Extra High・Pro）で<strong>「Pro」を選ぶ</strong>と、対象プランでは GPT-6 Pro が使えます。GPT-5.6 Sol Pro を使いたいときはモデルメニューで GPT-5.6 Sol を選んでから Pro を選びます。9月14日に自動の切り替えが廃止されたので、「もっと考えて」と頼んでも思考レベルは上がりません（安全上の理由を除く）。</p>
 <p>無料と Go では Think（GPT-5.6 Luna）は選べますが、Pro の選択肢はありません。</p>
 <h3 id="s4-2">ChatGPT Work で使う</h3>
 <p>Work は資料を読んで調べて、スライドや表などのファイルを作るところまでを1回の依頼で進めるモードです。画面上部の「Chat／Work」の切り替えで開き、モデル一覧から GPT-6 Astra を選びます。Plus でも使えますが、通常チャットとは別の利用枠です。</p>
@@ -322,7 +322,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s6">料金</h2>
 <p>ChatGPT側とAPI側で考え方が違います。</p>
 <h3 id="s6-1">ChatGPT は月額据え置き</h3>
-<p>Astra の追加で Plus と Pro の月額は変わっていません。日本の料金ページ（2026年10月5日）では、無料0円・Go 1,400円・Plus 3,000円・Pro 16,800円からで、**Pro の項目に「GPT-6 Astra による Pro 推論」と「3段階から選べる利用枠」**が並んでいます。「常時稼働のエージェント dot」も Pro の項目に加わりました。プラン全体の違いは<a href="/media/chatgpt-pricing/">ChatGPTの料金プランを比較</a>にまとめています。</p>
+<p>Astra の追加で Plus と Pro の月額は変わっていません。日本の料金ページ（2026年10月5日）では、無料0円・Go 1,400円・Plus 3,000円・Pro 16,800円からで、<strong>Pro の項目に「GPT-6 Astra による Pro 推論」と「3段階から選べる利用枠」</strong>が並んでいます。「常時稼働のエージェント dot」も Pro の項目に加わりました。プラン全体の違いは<a href="/media/chatgpt-pricing/">ChatGPTの料金プランを比較</a>にまとめています。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/gpt-6-astra-guide/astra_04_pricing_pro_v2.jpg" alt="ChatGPTの日本の料金ページのProの項目。月額16,800円からで、3段階から選べる利用枠、GPT-6 AstraによるPro推論、常時稼働のエージェントDotなどが並んでいる" loading="lazy"><figcaption>料金ページの Pro の項目（2026年10月5日撮影）</figcaption></figure>
 
 <p>ドルでは Pro 100・Pro 200・Pro 500 の3つで、Ultrafast（Astra を速く動かす設定）が付くのは Pro の中では Pro 500 だけです。Ultrafast は通常（Standard）の8倍の速さで利用枠を減らすため、<strong>同じ Pro でも速度を選ぶと使える量は大きく減ります</strong>。</p>
@@ -577,6 +577,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/chatgpt-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-1865b097" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1865b097)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</div>
+            </a>
             <a href="/media/chatgpt-ads/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT広告の出稿方法"><defs><linearGradient id="ecg-5b608b19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b608b19)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT広告の出稿方法</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
@@ -586,11 +591,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ビジネスプロフィールとAI"><defs><linearGradient id="ecg-f25ce86a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f25ce86a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ビジネスプロフィールとAI</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
                 <div class="rel-card__ttl">【2026年10月】GoogleビジネスプロフィールのAI対策とは？AIモード・口コミ要約・Gemini連携</div>
-            </a>
-            <a href="/media/claude-stops-midway/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeが途中で止まるとき"><defs><linearGradient id="ecg-0975f5d4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-0975f5d4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeが途中で止まるとき</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.10.17</div>
-                <div class="rel-card__ttl">【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ</div>
             </a>
         </div>
     </section>

@@ -67,7 +67,7 @@
 <p>OpenAIは2025年1月1日から、日本でChatGPTを直接買う利用者に10%の消費税を請求し、適格請求書を発行しています。請求書をどこで受け取るかは契約した場所で変わり、iPhoneやAndroidのアプリで払った分はOpenAIの画面に出てきません。</p>
 <p>経理で手が止まりやすいのは登録番号です。ネット上の解説には2つの番号が出てきて、どちらを控えればよいかが分かりにくくなっています。この記事は2026年10月6日に確認したOpenAIのヘルプセンターと国税庁の公表サイトをもとに、導入担当と経理が確かめる点を順に整理します。勘定科目や仕入税額控除のような税務の判断は扱わず、顧問の税理士に確認する前提で書きます。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
-<li>ウェブで契約したPlus・Proは<strong>設定からアカウントの支払いを開き「管理」</strong>、Businessは**ワークスペース設定の「請求」**から請求書をダウンロードする</li>
+<li>ウェブで契約したPlus・Proは<strong>設定からアカウントの支払いを開き「管理」</strong>、Businessは<strong>ワークスペース設定の「請求」</strong>から請求書をダウンロードする</li>
 <li>iPhone・Androidのアプリで払った分は<strong>AppleとGoogleの購入履歴</strong>にあり、OpenAIの請求画面には出ない</li>
 <li>OpenAIのヘルプが載せる登録番号は<strong>T3700150133253（OpenAI OpCo, LLC）</strong>。国税庁の公表サイトでの登録年月日は2026年1月1日</li>
 <li>自分で申し込むBusinessは<strong>請求書払い・銀行振込ができない</strong>。請求書払いが要るならEnterpriseなどの契約プランを営業に相談する</li>
@@ -182,14 +182,14 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s3">アプリで払った分はAppleとGoogle</h2>
 <p>iPhoneなら設定アプリで自分の名前をタップし、「メディアと購入」から「アカウントを表示」を開いて「購入履歴」に進みます（<a href="https://help.openai.com/ja-jp/articles/9030143">App Storeで登録した場合のヘルプ</a>）。更新のたびに、Appleアカウントのメールアドレスへ領収書のメールも届きます。</p>
-<p>Google Playで払った分も、OpenAIの請求ポータルには表示されません。Google Playの購入履歴で確かめます。**アプリ経由の領収書の発行元はAppleかGoogleになるため、OpenAIの適格請求書とは別の書類です。**経費精算での扱いは社内の規程と税理士の判断に合わせてください。</p>
+<p>Google Playで払った分も、OpenAIの請求ポータルには表示されません。Google Playの購入履歴で確かめます。<strong>アプリ経由の領収書の発行元はAppleかGoogleになるため、OpenAIの適格請求書とは別の書類です。</strong>経費精算での扱いは社内の規程と税理士の判断に合わせてください。</p>
 <p>アプリの契約はアンインストールしても解約になりません。ウェブに移るときはiPhoneなら設定の「サブスクリプション」、AndroidならGoogle Playの「サブスクリプション」からChatGPTを解約してから申し込み直します。</p>
 <h2 id="s4">消費税と適格請求書</h2>
 <p><a href="https://help.openai.com/ja-jp/articles/10242647">OpenAIの請求書における日本の消費税</a>のヘルプによると、OpenAIは日本の消費税法に基づいて対象のサービスに10%の消費税（JCT）を請求しています。始まったのは2025年1月1日で、それより前の料金には付きません。<strong>消費税の付いていない過去の請求書が、後から書き直されることもありません。</strong></p>
-<p>価格は米ドル建てのままで、そこに消費税が足されます。国をまたいで提供するデジタルサービスに当たるため、米ドルでの表示を続けられるとヘルプは書いています。そのうえで**日本の利用者に渡す適格請求書には、税額が日本円で書かれます。**ChatGPTの料金ページは円で金額を表示しているので、実際の請求額と通貨は手元の請求書で確かめてください。料金そのものは<a href="/media/chatgpt-pricing/">ChatGPTの料金プランの記事</a>にまとめています。</p>
+<p>価格は米ドル建てのままで、そこに消費税が足されます。国をまたいで提供するデジタルサービスに当たるため、米ドルでの表示を続けられるとヘルプは書いています。そのうえで<strong>日本の利用者に渡す適格請求書には、税額が日本円で書かれます。</strong>ChatGPTの料金ページは円で金額を表示しているので、実際の請求額と通貨は手元の請求書で確かめてください。料金そのものは<a href="/media/chatgpt-pricing/">ChatGPTの料金プランの記事</a>にまとめています。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-invoice/02_jct_number_sp.jpg" alt="OpenAIのヘルプ「OpenAIの請求書における日本の消費税」をスマホで開いた画面。OpenAI OpCo, LLCが日本の適格請求書発行者として適格請求書を提供するという回答と、QII登録番号はT3700150133253で対象の取引の請求書に記載されるという回答を赤枠で囲んでいる" loading="lazy"><figcaption>OpenAIのヘルプセンター（2026年10月6日、スマホ表示）</figcaption></figure>
 
-<p>消費税がかからない例外もあります。Enterpriseのような個別の契約で買う法人には消費税を請求せず、一般にリバースチャージの仕組みが当てはまると書かれています。この場合はサービスを受ける日本の会社のほうが、自分で税額を計算して申告し納めます。**自社がどちらに当たるか、仕入税額控除をどう扱うかは税理士に確認してください。**区分が自分の契約と合わないと思ったときの窓口は、OpenAIのサポートです。</p>
+<p>消費税がかからない例外もあります。Enterpriseのような個別の契約で買う法人には消費税を請求せず、一般にリバースチャージの仕組みが当てはまると書かれています。この場合はサービスを受ける日本の会社のほうが、自分で税額を計算して申告し納めます。<strong>自社がどちらに当たるか、仕入税額控除をどう扱うかは税理士に確認してください。</strong>区分が自分の契約と合わないと思ったときの窓口は、OpenAIのサポートです。</p>
 <div class="tbl"><table class="stack">
 <thead>
 <tr>
@@ -253,7 +253,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>経理が見るべきなのは、記事に載っている番号ではなく<strong>手元の請求書に印字された番号</strong>です。その番号を公表サイトで検索し、表示される名称が請求書の発行元と同じか、取引の日にその登録が有効だったかを確かめます。2025年の請求書と2026年の請求書でどちらの番号が書かれているかは、請求書ごとに確認してください。なお公表サイトは「T」を除いた13桁で<a href="https://www.houjin-bangou.nta.go.jp/">法人番号公表サイト</a>とも照合できます。</p>
 <h2 id="s6">請求書払いができるプラン</h2>
 <p>銀行振込や月末締めの請求書払いを前提にしている会社は、契約するプランを先に決めます。<a href="https://chatgpt.com/ja-JP/pricing">ChatGPTの料金ページ</a>のよくある質問によると、Go・Plus・Pro・Businessの支払いは主要なクレジットカードです。請求書払いなどを望む場合はEnterpriseについて営業に問い合わせる形になります。</p>
-<p><a href="https://help.openai.com/ja-jp/articles/8792536">ChatGPT Businessでの請求とシートの管理</a>には、Businessに限った記述があります。**自分で申し込むBusinessでは、請求書払い・銀行振込・発注書・後払いのどれも使えません。**ヘルプの挙げる支払い方法はクレジットカードとデビットカードで、対象のOpenAIギフトカードをワークスペースで引き換えたウォレット残高も充てられます。<strong>すでに使っているBusinessを、サポートに頼んで請求書払いに変えることもできません。</strong></p>
+<p><a href="https://help.openai.com/ja-jp/articles/8792536">ChatGPT Businessでの請求とシートの管理</a>には、Businessに限った記述があります。<strong>自分で申し込むBusinessでは、請求書払い・銀行振込・発注書・後払いのどれも使えません。</strong>ヘルプの挙げる支払い方法はクレジットカードとデビットカードで、対象のOpenAIギフトカードをワークスペースで引き換えたウォレット残高も充てられます。<strong>すでに使っているBusinessを、サポートに頼んで請求書払いに変えることもできません。</strong></p>
 <div class="tbl"><table class="stack">
 <thead>
 <tr>
@@ -319,12 +319,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>納税者番号の欄も同じ画面にあり、書き換えたら「保存」を押して終わりです。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-invoice/05_billing_change_sp.jpg" alt="OpenAIのヘルプ「請求先情報、納税者番号、VAT IDの更新」の請求書の変更の節をスマホで開いた画面。請求先情報または納税者番号の変更は今後の請求書にのみ適用され、発行済みの請求書を遡って更新することはできないという段落を赤枠で囲んでいる" loading="lazy"><figcaption>OpenAIのヘルプセンター（2026年10月6日、スマホ表示）</figcaption></figure>
 
-<p>**請求先や納税者番号を変えても、すでに発行された請求書の宛名は変わりません。**直したい過去の分があるときは、ヘルプセンターのチャットからサポートに連絡し、対象の請求書番号を伝えて確認や再発行を頼みます。再発行されるとは限りません。</p>
+<p><strong>請求先や納税者番号を変えても、すでに発行された請求書の宛名は変わりません。</strong>直したい過去の分があるときは、ヘルプセンターのチャットからサポートに連絡し、対象の請求書番号を伝えて確認や再発行を頼みます。再発行されるとは限りません。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-invoice/06_fig_change.jpg" alt="請求先情報を編集して保存したときの図。発行済みの請求書はそのまま残り、直すならサポートに請求書番号を伝える。これからの請求書には新しい宛名と番号が入る" loading="lazy"><figcaption>OpenAIのヘルプセンターの記述から作成（2026年10月6日時点）</figcaption></figure>
 
 <p>契約した直後に宛名を入れておけば、この手間は起きません。Businessを申し込む担当者は、最初の請求の前に請求先情報を会社名にしておくと経理への受け渡しが楽になります。</p>
 <h2 id="s8">経理に回す前の確認</h2>
-<p><a href="https://help.openai.com/ja-jp/articles/8156167">請求書の日付のヘルプ</a>によると、月払いのセルフサービスの契約は申し込んだ日を基準に毎月請求されます。12日に申し込めば毎月12日です。**請求書の日付は変えられないため、月末締めに合わせたい場合も日付はそのまま扱います。**Enterpriseは契約で請求期間が決まり、暦月とずれることがあります。</p>
+<p><a href="https://help.openai.com/ja-jp/articles/8156167">請求書の日付のヘルプ</a>によると、月払いのセルフサービスの契約は申し込んだ日を基準に毎月請求されます。12日に申し込めば毎月12日です。<strong>請求書の日付は変えられないため、月末締めに合わせたい場合も日付はそのまま扱います。</strong>Enterpriseは契約で請求期間が決まり、暦月とずれることがあります。</p>
 <p>経理に請求書を渡す前にそろえておきたい項目は、次のとおりです。</p>
 <div class="tbl"><table class="stack">
 <thead>

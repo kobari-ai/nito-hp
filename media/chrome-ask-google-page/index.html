@@ -72,7 +72,7 @@
 <li>2025年に広まった<strong>flagsの「Omnibox contextual suggestions」はChrome 155には無い</strong>（2026年10月15日にMacで確認）</li>
 <li>Chromeの設定画面には、この表示だけを消すスイッチが見当たらない</li>
 <li>入口ごと止める条件は<strong>既定の検索エンジンをGoogle以外にすること</strong>。ヘルプとポリシーの説明は、Googleが既定であることを前提にしている</li>
-<li>会社のパソコンは管理者が**SearchContentSharingSettings（Chrome 144以降）**で止められる。AIモードのボタンは右クリックで隠せる</li>
+<li>会社のパソコンは管理者が<strong>SearchContentSharingSettings（Chrome 144以降）</strong>で止められる。AIモードのボタンは右クリックで隠せる</li>
 </ul></div></div>
 
 <div class="fork">
@@ -102,11 +102,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </script>
 
 <h2 id="s1">このページについてGoogleに質問するの正体</h2>
-<p>アドレスバーの候補に見慣れない1行が増えたなら、それがこの項目です。Chromeヘルプの「<a href="https://support.google.com/chrome/answer/15086890?hl=ja">Google レンズ in Chrome を使用して検索する</a>」は、アドレスバーから選ぶ手順の中でこの項目を案内しています。**ヒントには特定のページではアドレスバーに既定で表示されることがある、と書かれています。**頼んでいないのに出てくるのはこのためです。</p>
+<p>アドレスバーの候補に見慣れない1行が増えたなら、それがこの項目です。Chromeヘルプの「<a href="https://support.google.com/chrome/answer/15086890?hl=ja">Google レンズ in Chrome を使用して検索する</a>」は、アドレスバーから選ぶ手順の中でこの項目を案内しています。<strong>ヒントには特定のページではアドレスバーに既定で表示されることがある、と書かれています。</strong>頼んでいないのに出てくるのはこのためです。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chrome-ask-google-page/02_help_lens.jpg" alt="Chromeヘルプ「Google レンズ in Chrome を使用して検索する」のアドレスバーから検索するの節。赤い枠に、アドレスバーでこのページについて Google に質問を選択します、質問にタブやファイルを追加するには AI モードを選択します、とある。もう1つの赤い枠はヒントで、特定のページでアドレスバーにこのページについて Google に質問がデフォルトで表示されることがあります、と書かれている" loading="lazy"><figcaption>アドレスバーの項目はGoogleレンズの入口（Chromeヘルプ）</figcaption></figure>
 
 <p>選ぶとGoogleレンズがページの内容をもとに答えを返し、結果はサイドパネルに出ます。続けて聞きたいことはサイドパネルの下の［もっと聞く］に入力し、そこからAIモードに切り替わります。</p>
-<p>ページのデータの扱いは同じヘルプの最後の節です。**レンズでページの内容を検索すると、ページのスクリーンショットとデータがGoogleに送られます。**処理のための一時的な保存を除いてGoogleはデータを保存せず、ページも画像も学習には使わない、とヘルプは説明しています。ここで書かれているのはレンズを使ったときの話で、項目が候補に表示されているだけの状態については記載がありません。</p>
+<p>ページのデータの扱いは同じヘルプの最後の節です。<strong>レンズでページの内容を検索すると、ページのスクリーンショットとデータがGoogleに送られます。</strong>処理のための一時的な保存を除いてGoogleはデータを保存せず、ページも画像も学習には使わない、とヘルプは説明しています。ここで書かれているのはレンズを使ったときの話で、項目が候補に表示されているだけの状態については記載がありません。</p>
 <h2 id="s2">Chromeに増えた3つのAIの入口</h2>
 <p>いまのChromeにはAIを呼ぶ入口が見た目の違う形で3つあります。名前が似ているため、別の入口の消し方を読んでしまわないように表で分けておきました。</p>
 <figure class="post-figure"><img src="/media/images/chrome-ask-google-page/01_fig_overview.png" alt="ChromeのAIの入口を描いたイラスト（実際の画面ではない）。ブラウザのアドレスバーの下に候補の一覧が開き、周りにGoogleレンズ、AIモード、Geminiの3つの吹き出しが並んでいる" loading="lazy"><figcaption>アドレスバーまわりにはレンズ・AIモード・Geminiの入口がある（イラスト）</figcaption></figure>
@@ -164,7 +164,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>2026年10月15日に新しいプロファイルでMacのChrome 155.0.8059.40を開き、chrome://flags の検索欄に Omnibox contextual suggestions と入れた結果が次の画面です。</p>
 <figure class="post-figure"><img src="/media/images/chrome-ask-google-page/03_flags_nomatch.jpg" alt="Chrome 155.0.8059.40のchrome://flagsの画面。検索欄にOmnibox contextual suggestionsと入力してあり、使用可能のタブの下に赤い枠でNo matching experimentsと表示されている" loading="lazy"><figcaption>Chrome 155のflagsでは項目が見つからない（2026年10月15日）</figcaption></figure>
 
-<p>**このMacで使えない項目が並ぶ［利用不可］のタブまで含めても、637ある項目の中に omnibox-contextual-suggestions はありませんでした。**flagsは試験運用の機能なので、予告なく消えることがあります。</p>
+<p><strong>このMacで使えない項目が並ぶ［利用不可］のタブまで含めても、637ある項目の中に omnibox-contextual-suggestions はありませんでした。</strong>flagsは試験運用の機能なので、予告なく消えることがあります。</p>
 <p>名前の近い「WebUI Omnibox Ask G About This Page」という項目は残っています。この項目を選んだときの行き先を別の画面に切り替えるという説明で、表示を消すものではありません。</p>
 <h2 id="s4">今のChromeでの止め方</h2>
 <p>設定画面も確かめました。Chrome 155の［AI イノベーション］［検索エンジン］［サイトの設定］を開いた範囲では、この項目だけを消すスイッチは見当たりません。海外の解説には［サイトの設定］の「ページのコンテンツ」をオフにする方法を挙げるものがありますが、パソコン版の［サイトの設定］の一覧にその名前はありませんでした。</p>
@@ -222,7 +222,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </table></div>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chrome-ask-google-page/05_policy_scs.jpg" alt="Chrome Enterpriseのポリシー一覧のSearchContentSharingSettingsの説明。赤い枠の1つ目に、1 = ユーザーはページやファイルのコンテンツを Google AI Mode と共有できません、コンテキストを共有するためのエントリ ポイントとサイドパネルは無効になるか非表示になります、とある。2つ目の赤い枠に、Google Search がユーザーのデフォルトの検索エンジンでない場合この機能は無効になっているため、このポリシーは無視されます、とある" loading="lazy"><figcaption>SearchContentSharingSettingsの説明（Chrome Enterprise）</figcaption></figure>
 
-<p>**SearchContentSharingSettingsを1にすると、ページの内容を共有する入口とサイドパネルは無効になるか、非表示になります。**LensOverlaySettingsの説明には、開いているページの内容について質問する機能が含まれています。そのLensOverlaySettingsはChrome 147から非推奨になり、代わりにSearchContentSharingSettingsを使うよう案内されています。AIModeSettingsとは別に動き、Gemini in Chromeには影響しないことも説明にありました。</p>
+<p><strong>SearchContentSharingSettingsを1にすると、ページの内容を共有する入口とサイドパネルは無効になるか、非表示になります。</strong>LensOverlaySettingsの説明には、開いているページの内容について質問する機能が含まれています。そのLensOverlaySettingsはChrome 147から非推奨になり、代わりにSearchContentSharingSettingsを使うよう案内されています。AIModeSettingsとは別に動き、Gemini in Chromeには影響しないことも説明にありました。</p>
 <p>自分のパソコンにも同じ設定は入れられます。Windowsはレジストリの Software\Policies\Google\Chrome に SearchContentSharingSettings をREG_DWORDの1で作り、Macは構成プロファイルで同じ名前の設定に1を入れます。<a href="https://www.lifehacker.jp/article/2601script-removes-ai-features-from-chrome-edge-firefox/">ライフハッカーが2026年1月に紹介した</a>オープンソースのスクリプト「JustTheBrowser」も、このポリシーの仕組みを使ってブラウザのAI機能をまとめて止めるものです。</p>
 <p>入れたあとは chrome://policy を開くと、効いているポリシーを一覧で確かめられます。ポリシーが入ったChromeは、設定画面に「お使いのブラウザは組織によって管理されています」と出るようになります。この方法も手元では試していません。</p>
 <h3 id="s4-3">③ AIモードのボタンだけ隠す</h3>
@@ -232,7 +232,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ヘルプがこの操作で隠れると書いているのは、［AI モード］と［タブなどを追加］の2つです。［このページについて Google に質問］も一緒に消えるという記載はありません。</p>
 <h2 id="s5">AndroidとiPhoneのChrome</h2>
 <p>スマホのChromeにも、開いているページについてAIに聞く入口があります。Androidのヘルプ「Chrome で AI モードを使用する」は、アドレスバーの［AI モード］から質問し、メニューの［現在のタブを追加］で開いているタブについて聞く手順を案内しています。iPhone版の<a href="https://support.google.com/chrome/answer/15086890?hl=en&amp;co=GENIE.Platform%3DiOS">レンズのヘルプ</a>（英語版）は、アドレスバーの左のGoogleレンズのアイコンからページを検索する手順です。</p>
-<p>2026年5月19日の<a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13328211688">Yahoo!知恵袋の質問</a>には、Androidで画面の下に出る「質問する」という表示を消したい、という相談があります。ベストアンサーはChromeの新しい表示だとして、flagsのOmnibox contextual suggestionsを無効にする方法を挙げていました。**Mac版のChrome 155のflagsにこの項目はありませんでしたが、Android版で残っているかは確かめられていません。**Android版のflagsはパソコン版と項目が違うことがあり、スマホの画面では試していないためです。Androidのヘルプにも、この表示を切る手順は見当たりませんでした。</p>
+<p>2026年5月19日の<a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13328211688">Yahoo!知恵袋の質問</a>には、Androidで画面の下に出る「質問する」という表示を消したい、という相談があります。ベストアンサーはChromeの新しい表示だとして、flagsのOmnibox contextual suggestionsを無効にする方法を挙げていました。<strong>Mac版のChrome 155のflagsにこの項目はありませんでしたが、Android版で残っているかは確かめられていません。</strong>Android版のflagsはパソコン版と項目が違うことがあり、スマホの画面では試していないためです。Androidのヘルプにも、この表示を切る手順は見当たりませんでした。</p>
 <p>会社が管理するスマホなら、SearchContentSharingSettingsはAndroidとiPhoneのChrome 144以降にも対応しています。</p>
 <h2 id="s6">よくある質問</h2>
 <h3 id="s6-1">ChromeのGoogleに質問するの表示は消せますか？</h3>

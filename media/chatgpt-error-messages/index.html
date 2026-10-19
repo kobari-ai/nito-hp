@@ -65,7 +65,7 @@
 
         <div class="post-content">
 <p>OpenAIのヘルプ「<a href="https://help.openai.com/ja-jp/articles/7996703">ChatGPTのエラーメッセージのトラブルシューティング</a>」には、よく出るエラーの文言と対処が並んでいます。ヘルプによると、ChatGPTのエラーはネットワークの構成・ブラウザの拡張機能・一時的なサーバー側の問題などで起きます。文言ごとに試すことが違うので、まず画面に出た文言を確かめるのが近道です。</p>
-<p>**2026年9月11日から27日までにOpenAIのステータスページに載った障害のうち、件名にChatGPTが入る10件は、件名を見るとすべてプラン・機能・地域のどれかに限ったものでした。**ステータスページで「ChatGPT」に印が付いていても、自分の使い方が当てはまるとは限りません。この記事ではOpenAIのヘルプ（2026年9月27日取得）をもとに、エラーの文言ごとの原因と対処、止まったときに試す順番を整理します。</p>
+<p><strong>2026年9月11日から27日までにOpenAIのステータスページに載った障害のうち、件名にChatGPTが入る10件は、件名を見るとすべてプラン・機能・地域のどれかに限ったものでした。</strong>ステータスページで「ChatGPT」に印が付いていても、自分の使い方が当てはまるとは限りません。この記事ではOpenAIのヘルプ（2026年9月27日取得）をもとに、エラーの文言ごとの原因と対処、止まったときに試す順番を整理します。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
 <li>「問題が発生しました」は<strong>原因を特定しない汎用のエラー</strong>。サーバー側の一時的な問題と手元の環境の両方がありうる</li>
 <li>「ネットワークエラー」「WebSocket」は、<strong>端末とOpenAIのサーバーの接続</strong>が安定していないという意味</li>
@@ -189,7 +189,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s3">ネットワークエラーとWebSocketのエラー</h2>
 <p>「ネットワークエラーが発生しました」と「WebSocketへの接続中にエラーが発生しました」は、ヘルプでは同じ項目にまとめられています。どちらも、端末がOpenAIのサーバーと安定した接続を作れていないという意味です。</p>
-<p>まずVPNやプロキシと、Web Protectなどのセキュリティのフィルターを切ります。それでも出るなら、別のブラウザかシークレットモード、別のネットワークか端末で試してください。**家では使えるのに会社や学校では出るなら、ネットワーク側で通信が止められている可能性があります。**その場合は下の「会社のWi-Fiでだけ出るとき」の節が参考になります。</p>
+<p>まずVPNやプロキシと、Web Protectなどのセキュリティのフィルターを切ります。それでも出るなら、別のブラウザかシークレットモード、別のネットワークか端末で試してください。<strong>家では使えるのに会社や学校では出るなら、ネットワーク側で通信が止められている可能性があります。</strong>その場合は下の「会社のWi-Fiでだけ出るとき」の節が参考になります。</p>
 <h2 id="s4">不審なアクティビティと出たとき</h2>
 <p>「不審なアクティビティを検出しました」「通常とは異なるアクティビティが検出されました」は、OpenAIのシステムが、自動化されたものに似た通信や通常と違う動きを検出したときに出ます。</p>
 <p>ヘルプの対処は次の5つです。</p>
@@ -205,7 +205,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>「Thinking…」「Generating…」のまま進まない、スピナーが回り続ける、といった場合について、ヘルプは試す順番を具体的に示しています。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-error-messages/01_fig_steps.png" alt="ChatGPTの応答が止まったときに試す順番の図。1、その場でやり直す。30〜60秒待つ、生成を停止して再生成、新しいチャットで送り直す。2、画面とログインを直す。ハード更新、サインアウトして入り直す、拡張機能を止めてシークレットで開く。3、回線と障害を確かめる。VPNやプロキシやセキュアDNSを切る、別のブラウザや回線や端末で試す、status.openai.comを見る" loading="lazy"><figcaption>応答が止まったときに試す順番（OpenAIのヘルプから作成）</figcaption></figure>
 
-<p>**最初の一手は待つことで、ヘルプは30〜60秒としています。**ハード更新はCmd（WindowsはCtrl）とShiftとRを同時に押す操作です。デスクトップのアプリなら再読み込みにあたります。</p>
+<p><strong>最初の一手は待つことで、ヘルプは30〜60秒としています。</strong>ハード更新はCmd（WindowsはCtrl）とShiftとRを同時に押す操作です。デスクトップのアプリなら再読み込みにあたります。</p>
 <p>会話が長い、やり取りの回数が多いときは、新しいチャットを始めるのも対処の1つとして挙がっています。ブラウザ・端末・回線を変えても続くなら、ヘルプはHARファイルとブラウザのコンソールのエラーを記録し、使ったモデルと会話のURLを添えてサポートに問い合わせるよう勧めています。</p>
 <p>「応答の生成中にエラーが発生しました」も同じ系統のエラーです。ヘルプでは一時的なエラーのことがあるとされ、まず「再生成」を押します。</p>
 <p>回答が区切って終わったときや、文の途中で切れたときは、<a href="/media/chatgpt-stops-midway/">ChatGPTが途中で止まるとき</a>に続きの出し方をまとめています。</p>
@@ -213,7 +213,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>「チャットの準備中に問題が発生しました」は、ブラウザの拡張機能かURLブロッカーがページの読み込みを妨げているときに出ます。スクリプトを止めたりページの中身を書き換えたりする拡張機能を止め、見覚えのない拡張機能も一時的に切ってください。シークレットウィンドウか別のブラウザで開けば、拡張機能が原因かどうかを切り分けられます。</p>
 <p>エラーの文言が出ないまま画面が白い、読み込みが終わらない、という場合もヘルプに項目がありました。ハード更新、サインアウトして入り直す、ChatGPTのサイトデータとCookieを消す、拡張機能やコンテンツブロッカーを止める、新しいブラウザのプロファイルで開く、などが挙がっています。</p>
 <h2 id="s7">ダウンロードと電話番号のエラー</h2>
-<p>ChatGPTが作ったファイルのダウンロードで「ダウンロードに失敗しました」「ファイルが見つかりません」と出たら、ファイルが古くなっていないかを確かめます。**ヘルプによると、ChatGPTが作ったファイルはしばらくすると使えなくなります。**時間が経ったファイルなら、もう一度作ってもらいましょう。</p>
+<p>ChatGPTが作ったファイルのダウンロードで「ダウンロードに失敗しました」「ファイルが見つかりません」と出たら、ファイルが古くなっていないかを確かめます。<strong>ヘルプによると、ChatGPTが作ったファイルはしばらくすると使えなくなります。</strong>時間が経ったファイルなら、もう一度作ってもらいましょう。</p>
 <p>ファイルの大きさの上限は512MBです。GPTで作ったファイルなら、Code Interpreterの機能がオンになっているか、オンにしたあとでGPTを更新したかも確かめます。</p>
 <p>WindowsやmacOSのChatGPTアプリで「電話番号が必要です」と出た場合は、対応している国か地域の携帯電話の番号を入れ、画面の案内どおりに認証すれば使い続けられます。</p>
 <h2 id="s8">ステータスページで障害を確かめる</h2>
@@ -227,7 +227,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>障害の件名を開くと、影響したサービスと経過が時刻つきで並びます。9月23日の「Elevated Error Rates for ChatGPT across Plus and Pro plans.」では、日本時間の18時13分にエラーの増加を確認し、18時54分に復旧したと書かれていました。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-error-messages/gem_03_sp_inc.jpg" alt="スマホで開いたOpenAIのステータスページの障害の詳細。件名はElevated Error Rates for ChatGPT across Plus and Pro plans。ResolvedとDegraded performanceの表示、影響したコンポーネントはChatGPTの1つ、Updatesに18時54分のResolved、18時45分のMonitoring、その前のIdentifiedが並ぶ" loading="lazy"><figcaption>9月23日の障害の詳細（2026年9月27日、スマホ）</figcaption></figure>
 
-<p>**自分のプランや使っている機能が件名に入っていれば、その障害の復旧を待ってください。**ページ上部の「Subscribe to updates」から、障害の知らせを受け取る設定もできます。</p>
+<p><strong>自分のプランや使っている機能が件名に入っていれば、その障害の復旧を待ってください。</strong>ページ上部の「Subscribe to updates」から、障害の知らせを受け取る設定もできます。</p>
 <h2 id="s9">会社のWi-Fiでだけ出るとき</h2>
 <p>会社のネットワークでだけエラーが出るなら、OpenAIのヘルプ「<a href="https://help.openai.com/ja-jp/articles/9247338">WebとアプリのChatGPTエラーに関するネットワーク推奨事項</a>」が参考になります。社内のWi-Fiを管理するIT部門と、その利用者に向けたページです。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-error-messages/gem_05_net.jpg" alt="OpenAIのヘルプのWebとアプリのChatGPTエラーに関するネットワーク推奨事項のページ。対象は社内Wi-Fiネットワークを管理するIT部門と社内Wi-Fiの利用者と書かれ、ネットワークの問題を調べる前にStatuspageで障害を確かめること、推奨は企業のIT部門向けであること、その下に許可リストに追加するOpenAIとChatGPTのドメインの見出しがある" loading="lazy"><figcaption>OpenAIのネットワーク推奨事項のヘルプ（2026年9月27日取得）</figcaption></figure>
@@ -287,6 +287,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/chatgpt-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-1865b097" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1865b097)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</div>
+            </a>
             <a href="/media/chatgpt-ads/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT広告の出稿方法"><defs><linearGradient id="ecg-5b608b19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b608b19)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT広告の出稿方法</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
@@ -296,11 +301,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ビジネスプロフィールとAI"><defs><linearGradient id="ecg-f25ce86a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f25ce86a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ビジネスプロフィールとAI</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
                 <div class="rel-card__ttl">【2026年10月】GoogleビジネスプロフィールのAI対策とは？AIモード・口コミ要約・Gemini連携</div>
-            </a>
-            <a href="/media/claude-stops-midway/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeが途中で止まるとき"><defs><linearGradient id="ecg-0975f5d4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-0975f5d4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeが途中で止まるとき</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.10.17</div>
-                <div class="rel-card__ttl">【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ</div>
             </a>
         </div>
     </section>

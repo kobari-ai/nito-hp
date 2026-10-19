@@ -160,7 +160,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>一時停止の表示は2025年のGitHubの報告にある英語の文言です。日本語の画面でどう訳されて出るかは確かめていません。**表のうち、この記事で扱うのは一時停止・考えを整理・表示なしの3つです。**ほかの4つはリンク先の記事のほうが詳しく書いています。</p>
+<p>一時停止の表示は2025年のGitHubの報告にある英語の文言です。日本語の画面でどう訳されて出るかは確かめていません。<strong>表のうち、この記事で扱うのは一時停止・考えを整理・表示なしの3つです。</strong>ほかの4つはリンク先の記事のほうが詳しく書いています。</p>
 <h2 id="s2">1回の回答で書ける量</h2>
 <p>Claudeが1回の回答で書ける量には上限があり、これを最大出力と呼びます。<a href="https://platform.claude.com/docs/ja/about-claude/models/overview">Claude Platformのモデル一覧</a>では、Fable 5.1・Opus 5.5・Sonnet 5.5・Haiku 5.5の4つとも最大出力は12万8,000トークンです。これはAPIで1回に頼める上限で、claude.aiのチャット画面で1回にどこまで書くかは公開されていません。</p>
 <p>ネットで見かける「8,192トークン（日本語で4,000〜5,000字）」は、2024年ごろのモデルの数字です。APIの上限は大きくなっていますが、チャット画面の上限は公開されていません。<strong>8,192トークンを前提にした説明は、今のモデルには当てはまりません。</strong></p>
@@ -201,10 +201,10 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li>コード: 「parse_rows 関数の途中で止まっています。この関数を最初から書き直し、その下の関数へ進んでください」</li>
 <li>表: 「表の12行目まで出ています。13行目から、見出しの行を付けずに続けてください」</li>
 </ul>
-<p>**区切りを段落や関数の頭にしておけば、前の回答とのつなぎ目で迷いません。**文の途中からつながせるより、少し戻って重ねたほうが貼り合わせは楽です。</p>
+<p><strong>区切りを段落や関数の頭にしておけば、前の回答とのつなぎ目で迷いません。</strong>文の途中からつながせるより、少し戻って重ねたほうが貼り合わせは楽です。</p>
 <h3 id="s3-2">続けたら長さ制限が出たとき</h3>
 <p><a href="https://support.claude.com/ja/articles/12466728">エラーメッセージのヘルプ</a>にある長さ制限の文言は「メッセージがこのチャットの長さ制限を超えます。ファイルを少なくするか、ファイルサイズを小さくするか、新しい会話を開始してください。」です。添付のファイルを減らせば同じ会話で続けられることがあり、新しいチャットに移るのはそれでも警告が出たときです。</p>
-<p>新しいチャットに移るときは、何も持たずに始めると前提が消えます。移る前に、今のチャットで「ここまでの目的・決めたこと・書き終えた部分の見出し・残りの作業を箇条書きで」と頼み、その箇条書きと書き終えた本文の最後の段落を新しいチャットに貼ります。**本文を全部貼り直すと、新しいチャットもすぐ同じ長さに近づきます。**残りの作業に要る部分だけを渡してください。</p>
+<p>新しいチャットに移るときは、何も持たずに始めると前提が消えます。移る前に、今のチャットで「ここまでの目的・決めたこと・書き終えた部分の見出し・残りの作業を箇条書きで」と頼み、その箇条書きと書き終えた本文の最後の段落を新しいチャットに貼ります。<strong>本文を全部貼り直すと、新しいチャットもすぐ同じ長さに近づきます。</strong>残りの作業に要る部分だけを渡してください。</p>
 <figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_01_help_length.png" alt="Claudeのヘルプセンターのエラーメッセージのページにある長さ制限エラーの節。許可される最大入力長を超えると出るエラーの文言と、メッセージが長すぎて送る前に短くする必要があるという説明の段落が赤枠で囲まれている" loading="lazy"><figcaption>ヘルプの「長さ制限エラー」の節</figcaption></figure>
 
 <h2 id="s4">考えを整理していると出たとき</h2>
@@ -222,7 +222,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li>回答が欠けたままなら、最後の行を指定して続きを頼む</li>
 <li>同じ所で何度も止まるなら、別のブラウザかアプリで同じ会話を開く</li>
 </ol>
-<p>エラーのヘルプには、使用量の枠を使い切って使用クレジットに切り替わる瞬間について「切断されたように見えるかもしれませんが、作業は継続され」るとあります。**使用クレジットに切り替わる瞬間に止まって見えても、作業は続いています。**次の処理が終わると、表示は「現在クレジットを使用しています」に変わります。容量制約の表示が状況ページに載らないことも、同じヘルプの記載です。</p>
+<p>エラーのヘルプには、使用量の枠を使い切って使用クレジットに切り替わる瞬間について「切断されたように見えるかもしれませんが、作業は継続され」るとあります。<strong>使用クレジットに切り替わる瞬間に止まって見えても、作業は続いています。</strong>次の処理が終わると、表示は「現在クレジットを使用しています」に変わります。容量制約の表示が状況ページに載らないことも、同じヘルプの記載です。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/claude-stops-midway/clsm_05_status_sp.png" alt="スマホで開いたClaude Statusのページ。All Systems Operationalの帯の下に、過去30日の稼働状況がサービスごとに並び、一番上のclaude.aiの行が赤枠で囲まれている" loading="lazy"><figcaption>Claudeの状況ページ。一番上がclaude.aiの行</figcaption></figure>
 
 <h2 id="s6">長い文章を止まらずに受け取る頼み方</h2>
@@ -272,7 +272,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>どれも、**対話の画面で continue と送れば、最後に完成した部分から続きが始まります。**ドキュメントによると、Claude Codeは完成した部分を残し、途中まで書いていた最後の部分だけを捨てる仕組みです。最後の数文が欠けていることがあるので、再開の前に画面で確かめてください。</p>
+<p>どれも、<strong>対話の画面で continue と送れば、最後に完成した部分から続きが始まります。</strong>ドキュメントによると、Claude Codeは完成した部分を残し、途中まで書いていた最後の部分だけを捨てる仕組みです。最後の数文が欠けていることがあるので、再開の前に画面で確かめてください。</p>
 <p>回答が長すぎて切れたときは「Claude's response exceeded the ... output token maximum」と出ます。ここでも残りの頼み方は continue です。上限は環境変数 CLAUDE_CODE_MAX_OUTPUT_TOKENS で変えられますが、ドキュメントは1回の回答を1ファイル・1節ずつに分けて頼む方法も挙げています。</p>
 <p>画面ごと固まって何も受け付けないときは、Ctrl+Cで止め、それでもだめならターミナルを閉じます。<a href="https://code.claude.com/docs/ja/troubleshooting">トラブルシューティングのドキュメント</a>によると、同じフォルダで claude --resume を実行すれば会話は戻ります。Claude Codeそのものの使い方の記事は<a href="/media/claude-code-guide/">Claude Codeの使い方</a>です。</p>
 <figure class="post-figure"><img src="/media/images/claude-stops-midway/clsm_07_code_errors.png" alt="Claude Codeのエラーのドキュメントにある、The response above may be incompleteの節。ストリーミングが途中で失敗したときの説明の下に、API Errorで始まる6行のコードブロックがあり、そのブロックが赤枠で囲まれている" loading="lazy"><figcaption>Claude Codeのドキュメントにある6つの文言</figcaption></figure>
@@ -363,6 +363,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/chatgpt-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-1865b097" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1865b097)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</div>
+            </a>
             <a href="/media/chatgpt-ads/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT広告の出稿方法"><defs><linearGradient id="ecg-5b608b19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b608b19)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT広告の出稿方法</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
@@ -372,11 +377,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ビジネスプロフィールとAI"><defs><linearGradient id="ecg-f25ce86a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f25ce86a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ビジネスプロフィールとAI</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
                 <div class="rel-card__ttl">【2026年10月】GoogleビジネスプロフィールのAI対策とは？AIモード・口コミ要約・Gemini連携</div>
-            </a>
-            <a href="/media/ai-mode-cant-send/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードで送信できない"><defs><linearGradient id="ecg-55a6e73a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-55a6e73a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードで送信できない</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.10.15</div>
-                <div class="rel-card__ttl">【2026年10月】Google AIモードで質問を送信できない原因を解説｜送信ボタン・追加質問</div>
             </a>
         </div>
     </section>

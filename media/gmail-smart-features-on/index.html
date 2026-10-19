@@ -108,7 +108,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>必要なGmailの設定が無効になっているため、Google Workspaceは利用できません。設定を有効にしてから、もう一度お試しください。</p>
 </blockquote>
 <p>案内の下に並ぶのは「Google Workspace スマート設定」「スマート機能の設定を両方ともオンにします」の見出しと、［もう一度試す］［続ける］の2つのボタンです。2026年1月11日の<a href="https://did2memo.net/2026/01/11/google-gemini-required-gmail-settings-are-off-error/">情報科学屋さんを目指す人のメモ</a>の記事にも、同じ文言とボタンが載っていました。同じ記事によると、英語の画面では「Turn on both smart features settings」と出るそうです。</p>
-<p>**メールや予定の話をしていなくても、この案内が出ることがあります。**2026年2月の<a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14325193134">Yahoo!知恵袋の質問</a>では、企業の事業内容を尋ねただけで出たという声がありました。Geminiがメールやドライブに情報が無いか探しに行こうとしているのでは、と回答者の1人は書いていました。</p>
+<p><strong>メールや予定の話をしていなくても、この案内が出ることがあります。</strong>2026年2月の<a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14325193134">Yahoo!知恵袋の質問</a>では、企業の事業内容を尋ねただけで出たという声がありました。Geminiがメールやドライブに情報が無いか探しに行こうとしているのでは、と回答者の1人は書いていました。</p>
 <p>日本でこの案内に当たりやすい理由は、設定の初期値にあります。<a href="https://support.google.com/mail/answer/15604322?hl=ja">Gmailヘルプのスマート機能のページ</a>によると、欧州経済領域・日本・スイス・英国に住んでいる場合、スマート機能の設定は最初からオフです。日本に住んでいれば、自分で切った覚えがなくてもオフの状態から始まります。</p>
 <h2 id="s2">両方が指す2つのスイッチ</h2>
 <p>Gmailのスマート機能のスイッチは3つあり、そのうち案内の「両方」に当たるのは、同じ設定画面に並ぶ2つです。残りの1つは［全般］タブのチェックボックスで、タブの自動分類やスマート作成の担当です。</p>
@@ -144,7 +144,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>**GeminiアプリとGoogle Workspaceをつなぐ条件として、Geminiアプリ ヘルプが名前を挙げているのは［他の Google サービスのスマート機能］です。**ヘルプの「Google Workspace アプリを接続できない理由」の節に、このスイッチをGmailの設定でオンにする必要があるとあります。案内のほうは2つともオンにするよう求めていて、設定画面でも2つが1枚に並んでいるため、2つともオンにしてから保存するのが確実です。</p>
+<p><strong>GeminiアプリとGoogle Workspaceをつなぐ条件として、Geminiアプリ ヘルプが名前を挙げているのは［他の Google サービスのスマート機能］です。</strong>ヘルプの「Google Workspace アプリを接続できない理由」の節に、このスイッチをGmailの設定でオンにする必要があるとあります。案内のほうは2つともオンにするよう求めていて、設定画面でも2つが1枚に並んでいるため、2つともオンにしてから保存するのが確実です。</p>
 <p>2つのスイッチは別々に動き、［Google Workspace のスマート機能］をオンにして［他の Google サービスのスマート機能］だけをオフにする組み合わせもできるとGmailヘルプにあります。上だけオンにして下を見落とすと、Geminiアプリからは同じ案内が出続けるでしょう。</p>
 <div class="mcta">
 <div class="mcta__body">
@@ -176,7 +176,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <figure class="post-figure"><img src="/media/images/gmail-smart-features-on/gso_01_dialog.jpg" alt="Google Workspaceのスマート機能の設定画面。上にGoogle Workspaceのスマート機能のスイッチがあり1の赤枠、下に他のGoogleサービスのスマート機能のスイッチがあり2の赤枠、右下の保存ボタンに3の赤枠" loading="lazy"><figcaption>開いた画面（2026年10月9日、パソコン）。1と2をオンにして3で保存する</figcaption></figure>
 
-<p>**保存を押さずに閉じると、スイッチを動かしても設定は変わりません。**下段の説明にも「Gemini アプリでの提案と回答」が並んでいて、Geminiアプリに関わるのはこちらのスイッチです。</p>
+<p><strong>保存を押さずに閉じると、スイッチを動かしても設定は変わりません。</strong>下段の説明にも「Gemini アプリでの提案と回答」が並んでいて、Geminiアプリに関わるのはこちらのスイッチです。</p>
 <p>Geminiに戻ったあと、続けて「Google Workspace に接続する必要があります」という確認と［接続］のボタンが出ることがあります。前述の2026年1月の記事では、ここで［続ける］と［接続］を押すと、カレンダーの予定を使った回答が返ってきたそうです。</p>
 <h2 id="s4">スマホのGmailアプリでオンにする手順</h2>
 <p>スマホではGmailアプリの設定から同じ2つのスイッチを変えられます。［Gmail、Chat、Meet のスマート機能］については、変更はすべての端末に反映される一方でパソコンでの変更の一部はモバイルアプリに反映されない、という注意書きがGmailヘルプにあります。2つのスイッチには同じ説明が無いため、Geminiをスマホで使うならGmailアプリでもオンになっているかを確かめましょう。</p>
@@ -236,7 +236,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>**Geminiアプリから Gmail を読むには［アクティビティの保存］をオンにしておく必要があり、そのチャットはプライバシー ハブの説明どおり、一部がレビュアーに見られる対象に入ります。**連携したアプリから取り出したメールやファイルの中身も、Geminiアプリのプライバシーに関するお知らせに沿って扱うとプライバシー ハブにあります。人に見られたくないメールの中身は、Geminiアプリには尋ねないでおくのが安全です。</p>
+<p><strong>Geminiアプリから Gmail を読むには［アクティビティの保存］をオンにしておく必要があり、そのチャットはプライバシー ハブの説明どおり、一部がレビュアーに見られる対象に入ります。</strong>連携したアプリから取り出したメールやファイルの中身も、Geminiアプリのプライバシーに関するお知らせに沿って扱うとプライバシー ハブにあります。人に見られたくないメールの中身は、Geminiアプリには尋ねないでおくのが安全です。</p>
 <p>公式ブログのこの説明が対象にしているのは、Gmailの中で動くGeminiです。Geminiアプリのチャットの扱いは、アプリ側の設定（アクティビティの保存）で決まります。仕事用や学校用のアカウントには別の規約が適用される場合もある、とプライバシー ハブは断っています。</p>
 <h2 id="s6">オンにしても使えないとき</h2>
 <p>2つをオンにしても同じ案内が出る、または接続できないときは、下の順に見ていきます。どれもGeminiアプリ ヘルプか前述の2026年1月の記事に出てくる確かめ方です。</p>
@@ -283,7 +283,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </table></div>
 <figure class="post-figure post-figure--sp"><img src="/media/images/gmail-smart-features-on/gso_03_help_reason.jpg" alt="Geminiアプリ ヘルプのGoogle Workspaceアプリを接続できない理由の節。仕事用または学校用のアカウントは管理者がまずアプリ連携を有効にする必要があること。必要な設定がGmailでオフになっている可能性があり、Gmailの設定で他のGoogleサービスのスマート機能をオンにし、Geminiアプリを再読み込みしてもう一度接続する、と書かれた段落が赤枠" loading="lazy"><figcaption>Geminiアプリ ヘルプの「接続できない理由」（2026年10月9日）</figcaption></figure>
 
-<p>**［アクティビティの保存］がオフのままだと、Gmailの設定を全部オンにしてもGoogle Workspaceにはつながりません。**Geminiアプリ ヘルプには、この設定がオフのときGeminiはGoogle Workspaceに接続できないとあります。プライバシー ハブの説明も同じで、Google Workspaceなどとの連携はアクティビティの保存がオフの状態では使えません。</p>
+<p><strong>［アクティビティの保存］がオフのままだと、Gmailの設定を全部オンにしてもGoogle Workspaceにはつながりません。</strong>Geminiアプリ ヘルプには、この設定がオフのときGeminiはGoogle Workspaceに接続できないとあります。プライバシー ハブの説明も同じで、Google Workspaceなどとの連携はアクティビティの保存がオフの状態では使えません。</p>
 <p><a href="https://gemini.google.com/apps">Geminiの［アプリ連携］の画面</a>では、Google Workspaceのスイッチ1つでGmail・カレンダー・Keep・ToDo リスト・ドキュメント・ドライブがまとめてつながります。ここがオフなら、オンにして画面の指示に沿って進めてください。</p>
 <figure class="post-figure"><img src="/media/images/gmail-smart-features-on/gso_02_apps.jpg" alt="Geminiのアプリ連携の画面。Googleのアプリの欄にGoogle Workspaceの枠があり、Gmail、Google Calendar、Google Keep、Google ToDoリスト、Googleドキュメント、Googleドライブが並ぶ。右上のスイッチが赤枠で、オンになっている" loading="lazy"><figcaption>Geminiの［アプリ連携］（2026年10月9日、パソコン）。赤枠がGoogle Workspaceのスイッチ</figcaption></figure>
 

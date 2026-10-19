@@ -65,7 +65,7 @@
 
         <div class="post-content">
 <p>Claudeの使用制限には、5時間ごとに戻るセッションの枠と、有料プランに加わる週間の枠があります。どちらも回数ではなく使用量で決まり、リセットの時刻は「設定 &gt; 使用量」の画面に表示されます。ウェブ版・デスクトップ版・モバイルアプリ・Claude Codeの利用は、すべて同じ枠から引かれます。</p>
-<p>2026年9月は枠の仕組みに2つの変化がありました。**9月14日にClaude Codeの週間枠が見直され、9月下旬には対象プランの設定画面に「無料でリセット」のボタンが出ています。**この記事では公式ヘルプの記述と9月25日に開いた実際の設定画面をもとに、リセット時間の見方と、上限に達したときに取れる手を整理します。「このターンのツール使用制限に達しました」という表示が使用量の上限とは別物である点も扱います。</p>
+<p>2026年9月は枠の仕組みに2つの変化がありました。<strong>9月14日にClaude Codeの週間枠が見直され、9月下旬には対象プランの設定画面に「無料でリセット」のボタンが出ています。</strong>この記事では公式ヘルプの記述と9月25日に開いた実際の設定画面をもとに、リセット時間の見方と、上限に達したときに取れる手を整理します。「このターンのツール使用制限に達しました」という表示が使用量の上限とは別物である点も扱います。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
 <li>使用量の枠は<strong>5時間のセッションと、有料プランの週間の2段</strong>。ウェブ・アプリ・Claude Codeで共通</li>
 <li>リセットの時刻は「設定 &gt; 使用量」に出る。<strong>週間の枠はアカウントごとに決まった曜日と時刻で戻り</strong>、使い始めた日では動かない</li>
@@ -151,7 +151,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <p>このほかに「予期しない容量制約により、Claudeはメッセージに応答できません」という表示もありますが、これは制限ではなくClaude全体の混雑で起き、利用者の枠とは関係がありません。公式ヘルプでは停止ではなく一時的な負荷の管理と説明され、<a href="https://status.claude.com">ステータスページ</a>にも載りません。</p>
 <h2 id="s2">5時間のセッション制限</h2>
-<p>5時間の枠は無料版を含む全プランにあり、**5時間ごとに満タンに戻ります。**次に戻る時刻は、設定の画面の「現在のセッション」に出ます。公式ヘルプはこの枠を会話の予算にたとえ、リセットまでに送れるメッセージの量やClaude Codeで作業できる時間を決めるものと説明しています。</p>
+<p>5時間の枠は無料版を含む全プランにあり、<strong>5時間ごとに満タンに戻ります。</strong>次に戻る時刻は、設定の画面の「現在のセッション」に出ます。公式ヘルプはこの枠を会話の予算にたとえ、リセットまでに送れるメッセージの量やClaude Codeで作業できる時間を決めるものと説明しています。</p>
 <h3 id="s2-1">何回まで送れるか</h3>
 <p>回数は決まっていません。<a href="https://support.claude.com/ja/articles/9797557">使用制限のベストプラクティス</a>が挙げる消費の増える要因は次のとおりです。</p>
 <ul>
@@ -162,9 +162,9 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li>アーティファクトの作成</li>
 <li>コード実行やファイル作成を含む複数ステップのタスク</li>
 </ul>
-<p>同じ1通でも、長い会話の後半で送ると過去のやり取りをまとめて読み直すため、減り方が大きくなります。**ネット上で見かける「5時間で約45回」のような数字は目安にすぎず、公式は固定の回数を示していません。**Proの枠は無料版より多く、Maxはセッションあたりの量をProの5倍か20倍から選べます。金額は<a href="/media/claude-pricing/">Claudeの料金プランの記事</a>にまとめました。</p>
+<p>同じ1通でも、長い会話の後半で送ると過去のやり取りをまとめて読み直すため、減り方が大きくなります。<strong>ネット上で見かける「5時間で約45回」のような数字は目安にすぎず、公式は固定の回数を示していません。</strong>Proの枠は無料版より多く、Maxはセッションあたりの量をProの5倍か20倍から選べます。金額は<a href="/media/claude-pricing/">Claudeの料金プランの記事</a>にまとめました。</p>
 <h3 id="s2-2">無料版の制限</h3>
-<p>無料版にも5時間の枠があり、同じく5時間ごとに戻ります。公式ヘルプで週間の制限が明記されているのはProとMaxで、無料版の週間の枠については書かれていません。**無料版は使用クレジットの対象外なので、上限に達したら待つかProに上げるかの2択です。**使えるモデルの範囲も有料プランより狭く、OpusとClaude Codeは無料版では使えません。</p>
+<p>無料版にも5時間の枠があり、同じく5時間ごとに戻ります。公式ヘルプで週間の制限が明記されているのはProとMaxで、無料版の週間の枠については書かれていません。<strong>無料版は使用クレジットの対象外なので、上限に達したら待つかProに上げるかの2択です。</strong>使えるモデルの範囲も有料プランより狭く、OpusとClaude Codeは無料版では使えません。</p>
 <div class="mcta">
 <div class="mcta__body">
 <p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
@@ -182,13 +182,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </div>
 
 <h2 id="s3">週間の使用制限</h2>
-<p>有料プランにはすべてのモデルに共通の週間の枠が加わります。<a href="https://support.claude.com/ja/articles/8325606">Proプランの公式ヘルプ</a>によると、週間の枠は**アカウントに割り当てられた毎週の固定の時刻にリセットされ、その日時はClaudeを使い始めた時期や契約した時期に関係なく変わりません。**1週間を通して見ると、使い方にかかわらず毎回まるごと1週間分が戻ります。</p>
+<p>有料プランにはすべてのモデルに共通の週間の枠が加わります。<a href="https://support.claude.com/ja/articles/8325606">Proプランの公式ヘルプ</a>によると、週間の枠は<strong>アカウントに割り当てられた毎週の固定の時刻にリセットされ、その日時はClaudeを使い始めた時期や契約した時期に関係なく変わりません。</strong>1週間を通して見ると、使い方にかかわらず毎回まるごと1週間分が戻ります。</p>
 <p>9月25日に開いた設定画面では「今週」の行に「2:00（木曜日）にリセット」と表示され、別の行に「今週のFable」がありました。Fableには通常の週間枠とは別の上限があり、リセットの時刻は同じです。公式ヘルプはさらに、容量の管理のために月単位の上限やモデルごとの制限をかける場合があるとも書いています。</p>
 <h3 id="s3-1">9月14日のClaude Codeの変更</h3>
 <p>Claude Codeの週間枠は、2026年9月14日に見直されました。Anthropicの開発者向けアカウントClaudeDevsは8月29日（米国時間）に、Pro・Max・Team・シート制Enterpriseの標準の週間枠を恒久的に25%引き上げると投稿しました。元の投稿は削除され、<a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/">BleepingComputer</a>が文面を引用しています。それまでは5月から続いていた50%の臨時増量が9月13日まで適用されていました。</p>
 <figure class="post-figure"><img src="/media/images/claude-usage-limits/02_fig_0914.png" alt="Claude Codeの週間枠の変化を示す棒グラフ。臨時増量の前を100とすると、9月13日までの50%の臨時増量中は150、9月14日からの恒久的な25%増は125。臨時増量の前より25%多いが9月13日までより約17%少ない" loading="lazy"><figcaption>臨時増量の前を100とした指数。実際のメッセージ数ではない</figcaption></figure>
 
-<p>**臨時増量の前と比べれば25%増えましたが、直前の9月13日までと比べると約17%の減少です。**残っている<a href="https://x.com/ClaudeDevs/status/2093742322525810912">説明の投稿</a>では、ClaudeDevs自身が直前と比べて17%の減少にあたると書いています。9月中旬から週の後半に枠が足りなくなったなら、この変更が理由の1つです。なお5時間の枠は、5月6日の<a href="https://www.anthropic.com/news/higher-limits-spacex">Anthropicの発表</a>でClaude Code向けが2倍になり、Pro・Maxのピーク時間帯の削減もこのとき廃止されました。9月25日時点で、公式ヘルプに9月14日の変更を説明したページは見当たりません。</p>
+<p><strong>臨時増量の前と比べれば25%増えましたが、直前の9月13日までと比べると約17%の減少です。</strong>残っている<a href="https://x.com/ClaudeDevs/status/2093742322525810912">説明の投稿</a>では、ClaudeDevs自身が直前と比べて17%の減少にあたると書いています。9月中旬から週の後半に枠が足りなくなったなら、この変更が理由の1つです。なお5時間の枠は、5月6日の<a href="https://www.anthropic.com/news/higher-limits-spacex">Anthropicの発表</a>でClaude Code向けが2倍になり、Pro・Maxのピーク時間帯の削減もこのとき廃止されました。9月25日時点で、公式ヘルプに9月14日の変更を説明したページは見当たりません。</p>
 <h2 id="s4">リセット時間の確認方法</h2>
 <p>残りの量と次のリセットの時刻は、ウェブ版かデスクトップ版の<a href="https://claude.ai/settings/usage">設定の使用量</a>で確認できます。パソコンでは左下のアカウント名から「設定」を開き、「使用量」を選びます。スマホはアプリではなくブラウザで <a href="https://claude.ai/settings/usage">claude.ai/settings/usage</a> を開くと、同じ画面が出ます。公式ヘルプでのこの画面の呼び名は「使用状況」です。</p>
 <figure class="post-figure"><img src="/media/images/claude-usage-limits/cul_01_usage.jpg" alt="Claudeの設定の使用量の画面。上に順調です、木曜日のリセットまで余裕を持って利用できる見込みですと表示され、1の現在のセッションに16:30にリセットされます 9%使用済み、2の今週に2:00木曜日にリセット 14%使用済み、今週のFableに別の週間上限、3のリセットの欄に無料でリセットのボタンがある" loading="lazy"><figcaption>設定の使用量の画面（2026年9月25日、Max 5xのアカウント）。1が5時間、2が週間、3が無料でリセット</figcaption></figure>
@@ -203,7 +203,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <p>Claude Codeでは、対話画面で <code>/usage</code> を実行すると同じ使用率とリセットの情報が出ます。<a href="https://code.claude.com/docs/en/costs">Claude Codeの公式ドキュメント</a>によると、ProやMaxでは同じ画面に<strong>スキル・サブエージェント・MCPサーバーごとの消費の割合</strong>も表示されます。この内訳はその端末の履歴から計算したもので、ほかの端末やウェブ版の利用は含まれません。</p>
 <h2 id="s5">無料でリセットする機能</h2>
-<p>9月25日時点で、公式ヘルプに<a href="https://support.claude.com/en/articles/17007452-what-is-a-limit-reset">制限リセットのページ</a>があります。対象のプランにときどき付与され、**押すと5時間の枠か週間の枠のどちらかがその場で満タンに戻ります。**どちらが戻るかは付与されたリセットごとに決まっています。</p>
+<p>9月25日時点で、公式ヘルプに<a href="https://support.claude.com/en/articles/17007452-what-is-a-limit-reset">制限リセットのページ</a>があります。対象のプランにときどき付与され、<strong>押すと5時間の枠か週間の枠のどちらかがその場で満タンに戻ります。</strong>どちらが戻るかは付与されたリセットごとに決まっています。</p>
 <figure class="post-figure"><img src="/media/images/claude-usage-limits/cul_04_help_reset.jpg" alt="Claude公式ヘルプのWhat is a limit resetのページ。対象のプランにときどき付与され、5時間のセッション制限か週間の使用制限をすぐ満タンに戻す、週間の制限は通常の曜日と時刻にもリセットされる、使ったら取り消せない、Settings > UsageのResetsの欄でReset for freeを押す、と書かれている" loading="lazy"><figcaption>制限リセットの公式ヘルプ（英語版のみ、2026年9月25日取得）</figcaption></figure>
 
 <p>使うときの注意は4つです。</p>
@@ -255,16 +255,16 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tbody>
 </table></div>
 <h3 id="s6-1">使用クレジットで続ける</h3>
-<p>使用クレジットは、プランの枠を使い切ったあとも<strong>APIの標準料金の従量課金で作業を続ける仕組み</strong>です。<a href="https://support.claude.com/ja/articles/12429409">使用クレジットの公式ヘルプ</a>によると、設定の使用量の画面でオンにし、支払い方法を登録して先に入金します。月の支出上限と、残高が減ったときの自動の入金も設定できます。1日に使える額の上限は2,000ドルです。**日本では2026年9月10日から、使用クレジットは購入から6か月で期限が切れます。**期限の7日前にメールが届き、設定の画面にも期限が表示されるので、一度に多く入金しすぎないようにします。</p>
+<p>使用クレジットは、プランの枠を使い切ったあとも<strong>APIの標準料金の従量課金で作業を続ける仕組み</strong>です。<a href="https://support.claude.com/ja/articles/12429409">使用クレジットの公式ヘルプ</a>によると、設定の使用量の画面でオンにし、支払い方法を登録して先に入金します。月の支出上限と、残高が減ったときの自動の入金も設定できます。1日に使える額の上限は2,000ドルです。<strong>日本では2026年9月10日から、使用クレジットは購入から6か月で期限が切れます。</strong>期限の7日前にメールが届き、設定の画面にも期限が表示されるので、一度に多く入金しすぎないようにします。</p>
 <figure class="post-figure"><img src="/media/images/claude-usage-limits/cul_02_credits.jpg" alt="Claudeの設定の使用量の画面の下半分。1の使用クレジットの欄にプランの上限に達した場合もClaudeを使い続けるために利用クレジットを有効にしてくださいという説明とオンオフのスイッチ、使用量を追加購入のボタン、月間利用上限。2の今週の製品別使用状況にClaude Code、チャット、Cowork、その他の割合が並ぶ" loading="lazy"><figcaption>1が使用クレジットのスイッチ、2が今週の製品別の使用状況</figcaption></figure>
 
 <p>使用クレジットを使っても、5時間の枠のリセットの時刻は変わりません。App StoreやGoogle Playで契約した場合も、オンにできるのはウェブ版だけです。同じ画面の下にある「今週の製品別使用状況」を見ると、チャット・Claude Code・Coworkのどれが枠を使っているかが分かります。</p>
 <h3 id="s6-2">上位プランに変える</h3>
-<p>Proで何度も上限に当たるならMax 5x、Max 5xで当たるならMax 20xが候補になります。**MaxでもProと同じく5時間と週間の2段の枠があり、上限が無くなるわけではありません。**週間の枠が足りないのか5時間の枠が足りないのかを使用量の画面で見てから決めると、上げすぎを防げます。</p>
+<p>Proで何度も上限に当たるならMax 5x、Max 5xで当たるならMax 20xが候補になります。<strong>MaxでもProと同じく5時間と週間の2段の枠があり、上限が無くなるわけではありません。</strong>週間の枠が足りないのか5時間の枠が足りないのかを使用量の画面で見てから決めると、上げすぎを防げます。</p>
 <p>回答が途中で止まったときに、使用制限なのか長さの上限なのかを見分ける方法は<a href="/media/claude-stops-midway/">Claudeの回答が途中で止まるときの対処法</a>にあります。</p>
 <h2 id="s7">ツール使用制限のメッセージ</h2>
 <p>「Claudeはこのターンのツール使用制限に達しました」は、<strong>1回の応答の中で使えるツールの回数に達したという表示</strong>です。ここでいうターンは1通のメッセージに対する1回の応答を指します。ウェブ検索、ファイルの読み書き、コード実行、Googleドライブなどのコネクタの呼び出しがツールに数えられ、調べものを1通で頼むと1回の応答の中で何十回も呼び出すことがあります。</p>
-<p>表示の文言から読む限り、5時間や週間の枠とは別の上限で、使用量が尽きたときの「5時間の制限に達しました」とは文言が違います。**利用者の報告では表示の下の「続ける」を押すと同じ作業の続きから再開します。**公式ヘルプにはこの表示の説明がまだありません。</p>
+<p>表示の文言から読む限り、5時間や週間の枠とは別の上限で、使用量が尽きたときの「5時間の制限に達しました」とは文言が違います。<strong>利用者の報告では表示の下の「続ける」を押すと同じ作業の続きから再開します。</strong>公式ヘルプにはこの表示の説明がまだありません。</p>
 <p>1ターンで使えるツールの回数は、9月25日時点で公式ヘルプに記載がありません。ネット上では10〜20回という報告が多いものの、どれも利用者の報告です。同じところで何度も止まるなら、頼みごとを分けると最後まで進みます。</p>
 <ul>
 <li>「すべて調べて」のように終わりの無い頼み方をやめ、対象と数を指定する</li>
@@ -371,6 +371,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/chatgpt-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-1865b097" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1865b097)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</div>
+            </a>
             <a href="/media/chatgpt-ads/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT広告の出稿方法"><defs><linearGradient id="ecg-5b608b19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b608b19)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT広告の出稿方法</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
@@ -380,11 +385,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ビジネスプロフィールとAI"><defs><linearGradient id="ecg-f25ce86a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f25ce86a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ビジネスプロフィールとAI</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
                 <div class="rel-card__ttl">【2026年10月】GoogleビジネスプロフィールのAI対策とは？AIモード・口コミ要約・Gemini連携</div>
-            </a>
-            <a href="/media/claude-stops-midway/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeが途中で止まるとき"><defs><linearGradient id="ecg-0975f5d4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-0975f5d4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeが途中で止まるとき</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.10.17</div>
-                <div class="rel-card__ttl">【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ</div>
             </a>
         </div>
     </section>

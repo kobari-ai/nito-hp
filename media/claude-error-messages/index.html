@@ -65,7 +65,7 @@
 
         <div class="post-content">
 <p>Anthropicのヘルプ「<a href="https://support.claude.com/ja/articles/12466728">Claudeのエラーメッセージのトラブルシューティング</a>」には、使用制限・長さ制限・ログインエラー・容量制約・サービスインシデントの5つが並んでいます。このうち「予期しない容量制約により、Claudeはメッセージに応答できません」は障害ではなく、<a href="https://status.claude.com/">ステータスページ</a>にも載らないとされています。ステータスページがすべて緑でもエラーが出ることがあるのは、このためです。</p>
-<p>Claude Codeや開発者向けのAPIでは、529 Overloaded・500・429といった番号つきのエラーが出るのが、アプリとの違いです。**529は使用量に数えられず、容量はモデルごとに管理されているので、別のモデルに切り替えれば続けられることがあります。**この記事では公式ヘルプとClaude Code・APIのドキュメント（2026年9月27日取得）をもとに、表示される文言から原因と対処を見分ける方法を整理します。</p>
+<p>Claude Codeや開発者向けのAPIでは、529 Overloaded・500・429といった番号つきのエラーが出るのが、アプリとの違いです。<strong>529は使用量に数えられず、容量はモデルごとに管理されているので、別のモデルに切り替えれば続けられることがあります。</strong>この記事では公式ヘルプとClaude Code・APIのドキュメント（2026年9月27日取得）をもとに、表示される文言から原因と対処を見分ける方法を整理します。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
 <li>「予期しない容量制約」は<strong>障害ではなく全体の混雑</strong>。ステータスページには出ない。ヘルプの対処は数分おいて送り直すこと</li>
 <li>ステータスページのインシデントは技術的な問題。<strong>2026年9月は27日までに14件</strong>が載り、うち6件は特定のモデルのエラーの増加だった</li>
@@ -174,7 +174,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <p>容量の問題は通常の負荷の管理なので、ステータスページには出ません。一時的なもので、1日のうちに需要の波が変わるにつれて解消するのが普通です。ヘルプの勧める対処は数分後にもう一度送ることです。</p>
 <p>サービスインシデントのほうは、Claudeがすべてかほとんどの利用者にとって使えない、または大きく落ちている状態を指します。こちらはシステムの実際の技術的な問題で、<a href="https://status.claude.com/">status.claude.com</a>に範囲と影響、復旧の経過が載ります。</p>
-<p>**ステータスページが緑でもエラーが続くなら、容量制約か手元の原因を先に疑ってください。**容量制約なら、ヘルプの勧めどおり数分おいてから送り直します。</p>
+<p><strong>ステータスページが緑でもエラーが続くなら、容量制約か手元の原因を先に疑ってください。</strong>容量制約なら、ヘルプの勧めどおり数分おいてから送り直します。</p>
 <div class="mcta">
 <div class="mcta__body">
 <p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
@@ -195,7 +195,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ステータスページにはclaude.ai・Claude Console・Claude API・Claude Code・Claude Coworkが別々の行で並びます。過去30日の棒グラフの色で、どの日にどのサービスで問題があったかが分かります。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/claude-error-messages/cem_02_sp_status.jpg" alt="スマホで開いたClaude Statusのページ。All Systems Operationalの緑の帯の下に、claude.ai、Claude Console、Claude API、Claude Codeの過去30日の稼働率の棒グラフが並ぶ。claude.aiとClaude APIとClaude Codeの棒の一部が黄色やオレンジや赤になっている" loading="lazy"><figcaption>Claudeのステータスページ（2026年9月27日、スマホ）</figcaption></figure>
 
-<p>2026年9月1日から27日までに、このページには14件のインシデントが載りました（日本時間で数えた件数）。**そのうち6件は「Elevated errors for Claude Sonnet 5」のように、特定のモデルか複数のモデルでエラーが増えたという件名でした。**障害が出ても、すべてのモデルが同時に止まるとは限りません。</p>
+<p>2026年9月1日から27日までに、このページには14件のインシデントが載りました（日本時間で数えた件数）。<strong>そのうち6件は「Elevated errors for Claude Sonnet 5」のように、特定のモデルか複数のモデルでエラーが増えたという件名でした。</strong>障害が出ても、すべてのモデルが同時に止まるとは限りません。</p>
 <p>9月22日の「Elevated errors for multiple models」では、最初にMythos 5.1・Fable 5.1・Opus 5のエラーの増加が報告されました。途中の更新でFableとMythosが先に戻り、Opus 5のエラーが残っていると書かれています。影響が出ていたのは日本時間の9時50分から11時10分までです。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/claude-error-messages/cem_03_sp_incident.jpg" alt="スマホで開いたClaudeのステータスページのインシデント詳細。件名はElevated errors for multiple models。ResolvedはUTCの0時50分から2時10分まで影響があったこと、Monitoringは成功率が戻ったこと、UpdateはClaude Fable 5と5.1、Mythos 5と5.1が戻りClaude Opus 5のエラーの解消を進めていることを伝えている" loading="lazy"><figcaption>9月22日のインシデントの経過（2026年9月27日、スマホ）</figcaption></figure>
 
@@ -204,14 +204,14 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Claude Codeで「API Error: Repeated 529 Overloaded errors」と出たら、APIがすべての利用者の分で一時的に容量に達しているという意味です。エラーリファレンスによると、Claude Codeはこの表示を出す前にすでに何度か再試行しています。</p>
 <figure class="post-figure"><img src="/media/images/claude-error-messages/cem_04_code529.jpg" alt="Claude Codeのエラーリファレンスの529の節。APIは全ユーザー間で一時的に容量に達していて、Claude Codeは表示の前に数回再試行していること、529は使用制限ではなくクォータに数えられないこと、対応方法としてステータスページの確認、数分後の再試行、容量はモデルごとなので/modelで別のモデルに切り替えることが書かれている" loading="lazy"><figcaption>Claude Codeのエラーリファレンスの529の節（2026年9月27日取得）</figcaption></figure>
 
-<p>**529は利用者の使用制限ではなく、使用量にも数えられません。**エラーが続いても、そのぶん5時間の枠が減ることはありません。</p>
-<p>ドキュメントの対処は3つです。ステータスページで容量の通知を確かめる、数分後に試す、そして /model で別のモデルに切り替えて作業を続けることです。**容量はモデルごとに管理されているため、Opusが混んでいてもSonnetなら通ることがあります。**1つのモデルに負荷が集中しているときは、Claude Codeのほうから「Opus is experiencing high load, please use /model to switch to Sonnet」のように切り替えを勧める表示も出ます。</p>
+<p><strong>529は利用者の使用制限ではなく、使用量にも数えられません。</strong>エラーが続いても、そのぶん5時間の枠が減ることはありません。</p>
+<p>ドキュメントの対処は3つです。ステータスページで容量の通知を確かめる、数分後に試す、そして /model で別のモデルに切り替えて作業を続けることです。<strong>容量はモデルごとに管理されているため、Opusが混んでいてもSonnetなら通ることがあります。</strong>1つのモデルに負荷が集中しているときは、Claude Codeのほうから「Opus is experiencing high load, please use /model to switch to Sonnet」のように切り替えを勧める表示も出ます。</p>
 <p>CIのように人が見ていない場所で動かしているなら、環境変数 CLAUDE_CODE_RETRY_WATCHDOG を1にすると、429と529の容量のエラーを回数の上限なしで再試行させられます。</p>
 <h2 id="s5">モデルを切り替えて続けられる場合</h2>
 <p>モデルを変えれば済むのはそのモデルだけが混んでいるか止まっているときです。どのエラーがそれに当たるかは、次のように分かれます。</p>
 <figure class="post-figure"><img src="/media/images/claude-error-messages/02_fig_model.png" alt="モデルの切り替えで続けられるかの図。続けられるのは容量がモデルごとに管理されている529 Overloaded、そのモデルの系統だけにかかるOpusの制限とSonnetの制限、特定のモデルだけエラーが増えている障害。続けられないのはすべてのモデルで共有される5時間の制限と週間の制限、1つの会話に入る量の長さ制限、手元の環境やアカウントが原因のログインエラー" loading="lazy"><figcaption>モデルの切り替えで続けられるエラー（Claude Codeのドキュメントとヘルプから作成）</figcaption></figure>
 
-<p>Claude Codeの「You've hit your Opus limit」「You've hit your Sonnet limit」は、それぞれのモデルの系統にだけかかる制限です。**制限がかかったモデルの系統以外に切り替えれば、同じ時間帯でも作業を続けられます。**ただしモデルごとに会話の読み込みのキャッシュが別なので、切り替えた直後の1回は会話全体を読み直すぶん重くなります。</p>
+<p>Claude Codeの「You've hit your Opus limit」「You've hit your Sonnet limit」は、それぞれのモデルの系統にだけかかる制限です。<strong>制限がかかったモデルの系統以外に切り替えれば、同じ時間帯でも作業を続けられます。</strong>ただしモデルごとに会話の読み込みのキャッシュが別なので、切り替えた直後の1回は会話全体を読み直すぶん重くなります。</p>
 <p>一方の「You've hit your session limit」と「You've hit your weekly limit」は、表示されたリセットの時刻まで待つか、ProとMaxなら使用クレジットで続けます。</p>
 <h2 id="s6">500と429の見分け方</h2>
 <p>Claude Codeの「API Error: 500 Internal server error」は、API内部の予期しない障害です。エラーリファレンスには<strong>利用者のプロンプト・設定・アカウントが原因ではない</strong>と書かれています。表示にも「usually temporary」とあり、まず送り直して、続くならステータスページを見てください。インシデントが出ていないのに続く場合は、/feedback で報告するようドキュメントは勧めています。</p>
@@ -292,7 +292,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s8">手元が原因のエラー</h2>
 <p>アプリで「ログインエラーが発生しました」と出た場合、ヘルプはVPNを使っていないかを確かめ、ブラウザの拡張機能を止め、キャッシュとCookieを消すよう勧めています。それでも出るなら、ステータスページで障害を確かめてください。</p>
 <p>画面に「challenges.cloudflare.com のブロックを解除してください」と出る場合は、Cloudflareの確認が拡張機能やネットワークで止められています。見分け方と対処は「<a href="/media/cloudflare-challenges-unblock/">challenges.cloudflare.com のブロック解除の原因と対処</a>」にまとめています。</p>
-<p>長さ制限のエラーは待っても戻りません。**ヘルプによると、コード実行を有効にした有料プランでは、会話が長くなると前のメッセージが自動で要約されるため、ふだんの使い方でこのエラーに当たることはめったにありません。**それでも出るのは、最初のメッセージがとても大きい場合などです。内容を小さく分ける、要点だけを抜き出してから送る、新しい会話を始める、のどれかで対処します。</p>
+<p>長さ制限のエラーは待っても戻りません。<strong>ヘルプによると、コード実行を有効にした有料プランでは、会話が長くなると前のメッセージが自動で要約されるため、ふだんの使い方でこのエラーに当たることはめったにありません。</strong>それでも出るのは、最初のメッセージがとても大きい場合などです。内容を小さく分ける、要点だけを抜き出してから送る、新しい会話を始める、のどれかで対処します。</p>
 <h2 id="s9">よくある質問</h2>
 <h3 id="s9-1">Claudeで容量制約のエラーが出たらいつ直りますか？</h3>
 <p>ヘルプでは一時的なもので、1日のうちに需要の波が変わるにつれて解消するとされています。数分おいてから送り直してください。</p>
@@ -344,6 +344,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/chatgpt-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-1865b097" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1865b097)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</div>
+            </a>
             <a href="/media/chatgpt-ads/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT広告の出稿方法"><defs><linearGradient id="ecg-5b608b19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b608b19)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT広告の出稿方法</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
@@ -353,11 +358,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ビジネスプロフィールとAI"><defs><linearGradient id="ecg-f25ce86a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f25ce86a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ビジネスプロフィールとAI</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
                 <div class="rel-card__ttl">【2026年10月】GoogleビジネスプロフィールのAI対策とは？AIモード・口コミ要約・Gemini連携</div>
-            </a>
-            <a href="/media/claude-stops-midway/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeが途中で止まるとき"><defs><linearGradient id="ecg-0975f5d4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-0975f5d4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeが途中で止まるとき</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.10.17</div>
-                <div class="rel-card__ttl">【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ</div>
             </a>
         </div>
     </section>

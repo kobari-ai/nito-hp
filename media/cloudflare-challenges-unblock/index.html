@@ -65,7 +65,7 @@
 
         <div class="post-content">
 <p>「続行するには、challenges.cloudflare.com のブロックを解除してください。」を出しているのはChatGPTやClaudeそのものではなく、手前にあるCloudflareの確認画面です。英語の画面では「Please unblock challenges.cloudflare.com to proceed.」と表示されます。</p>
-<p>**2025年11月18日の夜には、Cloudflareの障害でChatGPTなど多くのサイトにこの表示が出ました。**Claudeで出たという質問も同じ日に投稿されていて、日本語で検索して上に出てくる記事の多くはこの日の障害について書かれたものです。ただ、障害が無い日でも、広告ブロックの拡張機能やVPN、会社のネットワークが確認を止めていると同じ表示になります。</p>
+<p><strong>2025年11月18日の夜には、Cloudflareの障害でChatGPTなど多くのサイトにこの表示が出ました。</strong>Claudeで出たという質問も同じ日に投稿されていて、日本語で検索して上に出てくる記事の多くはこの日の障害について書かれたものです。ただ、障害が無い日でも、広告ブロックの拡張機能やVPN、会社のネットワークが確認を止めていると同じ表示になります。</p>
 <p>この記事ではCloudflareの公式ドキュメントと、Cloudflareが公開している検査ツールを2026年9月27日に実際に動かした結果をもとに、障害か手元かの見分け方と、手元が原因だったときの直し方を整理します。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
 <li>メッセージを出しているのは<strong>Cloudflareの確認画面</strong>。確認に使う challenges.cloudflare.com に届かないと出る</li>
@@ -107,7 +107,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">メッセージの意味と出る仕組み</h2>
 <p>ChatGPTやClaudeは、Cloudflareという会社のネットワークを通して配信されています。Cloudflareはアクセスが人かボットかを見ていて、怪しいと判断したときだけ、サイトを開く前に確認画面をはさむ仕組みです。</p>
-<p>確認画面が動くのは challenges.cloudflare.com から確認の仕組み（Turnstile）を読み込んだあとです。**この読み込みが途中で止まると、確認が終わらず「ブロックを解除してください」と表示されます。**Cloudflareの確認画面に組み込まれた日本語の案内文でも、インターネットやファイアウォールの設定が challenges.cloudflare.com へのアクセスを止めていないかを確かめるよう書かれています。</p>
+<p>確認画面が動くのは challenges.cloudflare.com から確認の仕組み（Turnstile）を読み込んだあとです。<strong>この読み込みが途中で止まると、確認が終わらず「ブロックを解除してください」と表示されます。</strong>Cloudflareの確認画面に組み込まれた日本語の案内文でも、インターネットやファイアウォールの設定が challenges.cloudflare.com へのアクセスを止めていないかを確かめるよう書かれています。</p>
 <figure class="post-figure"><img src="/media/images/cloudflare-challenges-unblock/00_fig_where.png" alt="メッセージが出るまでの流れの図。1、ChatGPTやClaudeを開くと、手前のCloudflareがアクセスが人かボットかを見る。2、確認が必要と判断されると確認画面が出る。3、確認の仕組みを challenges.cloudflare.com から読み込み、届かないとメッセージが出る。止まる場所は2つで、手元ではブラウザ・ネットワーク・端末のどこかが通信を止めている。Cloudflare側では障害で確認の仕組みそのものが動かず、手元では直せない" loading="lazy"><figcaption>メッセージが出るまでの流れと、止まる場所（Cloudflareのドキュメントと確認画面の案内文から作成）</figcaption></figure>
 
 <p><strong>どちらで止まっているかで対処が正反対になるため、先に見分けます。</strong></p>
@@ -119,13 +119,13 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>最初に見るのは、<a href="https://www.cloudflarestatus.com/">Cloudflareのステータスページ</a>です。「Active incidents」に進行中の障害が並び、ネットワーク全体の障害ならここに出ます。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/cloudflare-challenges-unblock/ccu_01_sp_cfstatus.jpg" alt="スマホで開いたCloudflare System Statusのページ。Active incidentsに、アジア太平洋のネットワーク性能の低下、Cloudflare One Clientsが一部のサイトで誤って確認を求められる件、一部のWARP利用者の位置情報の誤りの3件が、Identifiedの表示で並んでいる" loading="lazy"><figcaption>Cloudflareのステータスページ（2026年9月27日、スマホ）</figcaption></figure>
 
-<p>**2026年9月27日に開いたときは、「Cloudflare One Clients are incorrectly challenged on some sites」が対応中でした。**会社などで入れるCloudflareの接続アプリ（Cloudflare One Client）を使っている人が、一部のサイトで誤って確認を求められる不具合で、日本時間の9月23日から「原因を特定し修正中」の表示が続いています。会社のパソコンでだけ確認画面が出るなら、この種類の不具合も疑えます。</p>
+<p><strong>2026年9月27日に開いたときは、「Cloudflare One Clients are incorrectly challenged on some sites」が対応中でした。</strong>会社などで入れるCloudflareの接続アプリ（Cloudflare One Client）を使っている人が、一部のサイトで誤って確認を求められる不具合で、日本時間の9月23日から「原因を特定し修正中」の表示が続いています。会社のパソコンでだけ確認画面が出るなら、この種類の不具合も疑えます。</p>
 <p>ChatGPTなら<a href="https://status.openai.com/">OpenAIのステータスページ</a>、Claudeなら<a href="https://status.claude.com/">Claudeのステータスページ</a>も合わせて見てください。サービス側の障害でも画面が開かない症状は似ています。</p>
 <figure class="post-figure"><img src="/media/images/cloudflare-challenges-unblock/ccu_02_status_ai.jpg" alt="左はOpenAIのステータスページで、We're fully operationalと表示され、APIs、ChatGPT、Codexなどに緑のチェックが付いている。右はClaude Statusのページで、All Systems Operationalと表示され、claude.aiなどの過去30日の稼働率が棒グラフで並んでいる" loading="lazy"><figcaption>OpenAIとClaudeのステータスページ（2026年9月27日、スマホ）</figcaption></figure>
 
 <h3 id="s2-2">シークレットモードとモバイル回線で試す</h3>
 <p>どのステータスページにも障害が出ていなければ、原因は手元にあると考えて進めます。Cloudflareのドキュメントが勧めるのは、シークレットモード（プライベートモード）で開き直すことです。<strong>シークレットモードでは多くの拡張機能が止まるため、そこで開けるなら拡張機能が原因</strong>だと絞れます。</p>
-<p>次に、スマホならWi-Fiを切ってモバイル回線で開いてみます。パソコンなら、スマホのテザリングにつなぎ替えても同じ確認ができます。**回線を変えて開けるなら、原因はネットワーク側です。**会社や学校のWi-Fi、家のルーターの広告ブロック機能、VPNなどが候補になります。</p>
+<p>次に、スマホならWi-Fiを切ってモバイル回線で開いてみます。パソコンなら、スマホのテザリングにつなぎ替えても同じ確認ができます。<strong>回線を変えて開けるなら、原因はネットワーク側です。</strong>会社や学校のWi-Fi、家のルーターの広告ブロック機能、VPNなどが候補になります。</p>
 <div class="mcta">
 <div class="mcta__body">
 <p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
@@ -238,24 +238,24 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>原因が分かったら、その拡張機能の設定で chatgpt.com や claude.ai、challenges.cloudflare.com を対象外にすれば、ほかのサイトでは広告ブロックを使い続けられます。ブラウザに最初から入っている広告ブロックも、同じように止めて試してください。</p>
 <h3 id="s4-2">VPN・プロキシと会社のネットワーク</h3>
 <p>VPNやプロキシを通すと、確認が増えたり、Cloudflareから見たIPアドレスが途中で変わったりすることがあります。いったん切って開けるなら、VPNの接続先を変えるか、ChatGPTやClaudeを使うときだけ切ります。</p>
-<p>会社や学校のネットワークは、自分では設定を変えられません。**IT部門には「challenges.cloudflare.com への通信を許可してほしい」と、ドメイン名をそのまま伝えると話が早くなります。**セキュリティソフトの場合も、ソフトを丸ごと止めるのではなく、許可リストにこのドメインを足すのが安全です。</p>
+<p>会社や学校のネットワークは、自分では設定を変えられません。<strong>IT部門には「challenges.cloudflare.com への通信を許可してほしい」と、ドメイン名をそのまま伝えると話が早くなります。</strong>セキュリティソフトの場合も、ソフトを丸ごと止めるのではなく、許可リストにこのドメインを足すのが安全です。</p>
 <h3 id="s4-3">ブラウザの設定と端末の時刻</h3>
 <p>Cloudflareのドキュメントでは、どの確認もJavaScriptとCookieが有効でないと通れないとされています。確認画面の案内文には端末の日付や時刻がずれていると確認が終わらないという項目もあります。時刻は手で合わせるより、自動設定にするほうが確実です。</p>
 <p>スマホで見落としやすいのが、LINEやXの中でリンクを開いたときです。Cloudflareの対応ブラウザのページは、アプリの中で開くブラウザ（アプリ内ブラウザ）は機能が制限されていて、確認の動きが変わることがあると書いています。<strong>右上のメニューから「ブラウザで開く」を選び、SafariやChromeで開き直してください。</strong></p>
 <h2 id="s5">やってはいけない対処</h2>
 <p>検索で見つかる対処の中には効き目が無いものや危ないものも混ざっています。</p>
 <ul>
-<li>**セキュリティソフトのリアルタイム保護を切ったままにする。**試すなら短時間で戻し、原因と分かったら許可リストで対応する</li>
-<li>**知らない会社のDNSに切り替える。**通信の行き先を預けることになる。DNSを変えて試すなら、Google（8.8.8.8）やCloudflare（1.1.1.1）のような大手に限る</li>
-<li>**障害中に設定をいじり続ける。**Cloudflare側の障害なら手元では直らず、変えた設定を戻し忘れる</li>
-<li>**Cloudflareに確認を外してもらおうとする。**Cloudflareのドキュメントには、Cloudflareの社員は確認を外せず、外せるのはサイトの運営者だけと書かれている</li>
+<li><strong>セキュリティソフトのリアルタイム保護を切ったままにする。</strong>試すなら短時間で戻し、原因と分かったら許可リストで対応する</li>
+<li><strong>知らない会社のDNSに切り替える。</strong>通信の行き先を預けることになる。DNSを変えて試すなら、Google（8.8.8.8）やCloudflare（1.1.1.1）のような大手に限る</li>
+<li><strong>障害中に設定をいじり続ける。</strong>Cloudflare側の障害なら手元では直らず、変えた設定を戻し忘れる</li>
+<li><strong>Cloudflareに確認を外してもらおうとする。</strong>Cloudflareのドキュメントには、Cloudflareの社員は確認を外せず、外せるのはサイトの運営者だけと書かれている</li>
 </ul>
-<p>手元をすべて試しても開けないときは、OpenAIやAnthropicのサポートに連絡します。**Cloudflareのドキュメントは、エラーコードとRay ID（確認画面の下に出る英数字）をサイトの運営者に伝えるよう案内しています。**画面を撮っておけば、伝えるときに迷いません。</p>
+<p>手元をすべて試しても開けないときは、OpenAIやAnthropicのサポートに連絡します。<strong>Cloudflareのドキュメントは、エラーコードとRay ID（確認画面の下に出る英数字）をサイトの運営者に伝えるよう案内しています。</strong>画面を撮っておけば、伝えるときに迷いません。</p>
 <h2 id="s6">2025年11月18日の障害</h2>
 <p>日本語の検索で上位に並ぶ記事の多くは、この日の障害について書かれています。<a href="https://blog.cloudflare.com/ja-jp/18-november-2025-outage/">Cloudflareの公式ブログ</a>には、障害の時間の流れと原因が日本語で公開されています。日本時間に直すと、夜から翌日の未明まで続いた障害でした。</p>
 <figure class="post-figure"><img src="/media/images/cloudflare-challenges-unblock/02_fig_1118.png" alt="2025年11月18日のCloudflare障害の時間の流れ。日本時間20時20分に障害が始まり、Turnstileも読み込めなくなった。23時30分に正しい設定ファイルに戻して主な影響が解消。翌日2時6分に残りのサービスの再起動が終わってすべて復旧" loading="lazy"><figcaption>2025年11月18日のCloudflare障害の時間の流れ（日本時間。Cloudflare公式ブログから作成）</figcaption></figure>
 
-<p>原因は攻撃ではありません。ボット管理に使う設定ファイルが想定の2倍の大きさになり、それを読み込むソフトが処理できなくなったと説明されています。**影響を受けたサービスの一覧には「Turnstileが読み込めなかった」とあり、確認の仕組みそのものが止まっていました。**この日にメッセージが出た人は、手元の設定を変えても直らなかったことになります。</p>
+<p>原因は攻撃ではありません。ボット管理に使う設定ファイルが想定の2倍の大きさになり、それを読み込むソフトが処理できなくなったと説明されています。<strong>影響を受けたサービスの一覧には「Turnstileが読み込めなかった」とあり、確認の仕組みそのものが止まっていました。</strong>この日にメッセージが出た人は、手元の設定を変えても直らなかったことになります。</p>
 <p>Cloudflareは2025年12月5日にも、日本時間17時47分から18時12分まで、約25分の障害を<a href="https://blog.cloudflare.com/5-december-2025-outage/">公式ブログ</a>で報告しています。<strong>同じメッセージが大勢に同時に出ているときは、まずステータスページを見るのが一番の近道です。</strong></p>
 <h2 id="s7">よくある質問</h2>
 <h3 id="s7-1">Cloudflareでブロックされた原因は何ですか？</h3>
@@ -312,6 +312,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/chatgpt-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-1865b097" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1865b097)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</div>
+            </a>
             <a href="/media/chatgpt-ads/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT広告の出稿方法"><defs><linearGradient id="ecg-5b608b19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b608b19)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT広告の出稿方法</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
@@ -321,11 +326,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ビジネスプロフィールとAI"><defs><linearGradient id="ecg-f25ce86a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f25ce86a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ビジネスプロフィールとAI</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
                 <div class="rel-card__ttl">【2026年10月】GoogleビジネスプロフィールのAI対策とは？AIモード・口コミ要約・Gemini連携</div>
-            </a>
-            <a href="/media/claude-stops-midway/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeが途中で止まるとき"><defs><linearGradient id="ecg-0975f5d4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-0975f5d4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeが途中で止まるとき</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.10.17</div>
-                <div class="rel-card__ttl">【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ</div>
             </a>
         </div>
     </section>

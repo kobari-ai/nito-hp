@@ -65,7 +65,7 @@
 
         <div class="post-content">
 <p>ChatGPTのサイドバーから会話が見えなくなっても、削除されているとは限りません。OpenAIのヘルプ「<a href="https://help.openai.com/ja-jp/articles/10056348-how-do-i-search-my-chat-history-in-chatgpt">ChatGPT でチャット、プロジェクト、ファイルを探す</a>」にも、古いチャットがサイドバーに表示されなくなっていても削除されたとは限らない、と書かれています。</p>
-<p>一方で、削除した会話と、保存しなかった一時チャットは戻りません。**OpenAIのヘルプでは削除したチャットはChatGPTでもOpenAIのサポート経由でも復元できないとされています。**この記事では2026年10月5日と17日に取得したOpenAIのヘルプとリリースノート、利用者の報告をもとに、消えたように見える原因と、探す順番を整理します。</p>
+<p>一方で、削除した会話と、保存しなかった一時チャットは戻りません。<strong>OpenAIのヘルプでは削除したチャットはChatGPTでもOpenAIのサポート経由でも復元できないとされています。</strong>この記事では2026年10月5日と17日に取得したOpenAIのヘルプとリリースノート、利用者の報告をもとに、消えたように見える原因と、探す順番を整理します。</p>
 <p>2026年9月中旬からはChatGPTのデスクトップアプリでサイドバーの会話が途中までしか出なくなったという報告も利用者から上がっています。多くの報告では会話はウェブ版に残っていたため、アプリだけで消えたときの見分け方も載せました。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
 <li>消えたように見える原因は<strong>別のアカウントやワークスペース・サイドバーに出ないだけ・アーカイブ・プロジェクトへの移動・一時チャット・削除</strong>の6つ</li>
@@ -156,7 +156,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>**上の4つなら会話は見つかります。**一時チャットやログインなしで使った会話、削除した会話は探しても出てきません。</p>
+<p><strong>上の4つなら会話は見つかります。</strong>一時チャットやログインなしで使った会話、削除した会話は探しても出てきません。</p>
 <h2 id="s2">消えた会話を探す順番</h2>
 <p>ヘルプのトラブルシューティングにある順番に、プロジェクトの確認を足すと次のようになります。見つかった時点で終わってかまいません。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-history-lost/01_fig_order_v2.jpg" alt="消えた会話を探す順番の図。1アカウント、2検索、3アーカイブ、4プロジェクト、5再読み込みのカードが矢印でつながっている" loading="lazy"><figcaption>上から順に確かめる</figcaption></figure>
@@ -165,8 +165,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h3 id="s2-1">アカウントとワークスペースを確かめる</h3>
 <p>ヘルプが最初に挙げているのは、正しいメールアドレスかシングルサインオン（GoogleやAppleのアカウントなど）の方式で、正しいアカウントとワークスペースに入っているかの確認です。アプリでは会話があるのにブラウザでは消えている場合は、両方で同じ方法でログインしているかを見てください。</p>
-<p>仕事で使う人はワークスペースも見てください。<a href="https://help.openai.com/ja-jp/articles/9125172-the-chatgpt-home-page">ChatGPT ホームページ</a>のヘルプによると、チャットや設定はワークスペースに保存され、1つのアカウントで複数のワークスペースに入れます。**個人のワークスペースと会社のワークスペースを切り替えると、見える履歴も切り替わる仕組みです。**勤務先のメールアドレスは勤務先が管理しているため、退職してそのアドレスが使えなくなると、そのアカウントに保存された会話にも入れなくなります。</p>
-<p>同じヘルプには会社のメールアドレスでEnterpriseのワークスペースに参加するとき、そのアドレスにひも付く個人用ワークスペースを統合するか、データをエクスポートして削除するよう求められる場合がある、とも書かれています。**統合を選んだなら、個人の会話は会社のワークスペースの側にあるはずなので、そちらで検索します。統合は元に戻せません。**エクスポートして削除したなら、会話は手元のエクスポートのファイルにしか残っていません。</p>
+<p>仕事で使う人はワークスペースも見てください。<a href="https://help.openai.com/ja-jp/articles/9125172-the-chatgpt-home-page">ChatGPT ホームページ</a>のヘルプによると、チャットや設定はワークスペースに保存され、1つのアカウントで複数のワークスペースに入れます。<strong>個人のワークスペースと会社のワークスペースを切り替えると、見える履歴も切り替わる仕組みです。</strong>勤務先のメールアドレスは勤務先が管理しているため、退職してそのアドレスが使えなくなると、そのアカウントに保存された会話にも入れなくなります。</p>
+<p>同じヘルプには会社のメールアドレスでEnterpriseのワークスペースに参加するとき、そのアドレスにひも付く個人用ワークスペースを統合するか、データをエクスポートして削除するよう求められる場合がある、とも書かれています。<strong>統合を選んだなら、個人の会話は会社のワークスペースの側にあるはずなので、そちらで検索します。統合は元に戻せません。</strong>エクスポートして削除したなら、会話は手元のエクスポートのファイルにしか残っていません。</p>
 <h3 id="s2-2">サイドバーの検索で探す</h3>
 <p>古い会話はサイドバーの一覧に出なくなることがありますが、検索すれば開き直せます。<a href="https://chatgpt.com/">ChatGPT</a>のサイドバーの検索を開き、会話の中で使った語やタイトルの一部を入れてください。パソコンのブラウザではWindowsなら Ctrl+K、Macなら Cmd+K でも開けます。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-history-lost/cgh_03_help_search_v2.jpg" alt="OpenAIのヘルプのチャットとアーカイブ済みの会話の検索の節。通常のチャットとアーカイブ済みのチャットは検索結果に表示されるが削除済みのチャットは表示されないとあり、赤い枠の中に、古いチャットがサイドバーに表示されなくなっていても削除されたとは限らず、会話に含まれる単語やフレーズを検索すると見つけて再度開けると書かれている" loading="lazy"><figcaption>サイドバーに無い会話も検索なら開ける（OpenAIのヘルプ、2026年10月5日）</figcaption></figure>
@@ -178,7 +178,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>アーカイブした会話は設定を開いて「データ コントロール」を選び、「アーカイブ済みのチャット」（端末によっては「アーカイブ済みのチャットを表示」）から見られます。ブラウザなら<a href="https://chatgpt.com/#settings/DataControls">データ コントロールを直接開くリンク</a>からも移れます。「アーカイブを解除」を選ぶと通常の履歴に戻る仕組みです。</p>
 <h3 id="s2-4">プロジェクトの中を見る</h3>
 <p>プロジェクトに移した会話の置き場所は、サイドバーのプロジェクトの中です。<a href="https://help.openai.com/ja-jp/articles/10169521-projects-in-chatgpt">ChatGPT のプロジェクト</a>のヘルプには、会話のメニューに「プロジェクトから削除」があれば、選ぶとチャット履歴に戻せる、と書かれています。サイドバーのプロジェクトを開いて、中に会話が無いか見てください。</p>
-<p>共有プロジェクトから抜けた人は、抜ける前に自分のチャットをコピーするかを聞かれています。**コピーを選んでいれば、元の名前の先頭に「コピー」が付いた新しいプロジェクトがサイドバーにでき、会話はそこに移っています。**共有プロジェクトでほかのメンバーが自分のチャットを削除すると、所有者を含めたほかの人からも見えなくなります。所有者がプロジェクトごと削除した場合も、事前にコピーしていない限り見られません。</p>
+<p>共有プロジェクトから抜けた人は、抜ける前に自分のチャットをコピーするかを聞かれています。<strong>コピーを選んでいれば、元の名前の先頭に「コピー」が付いた新しいプロジェクトがサイドバーにでき、会話はそこに移っています。</strong>共有プロジェクトでほかのメンバーが自分のチャットを削除すると、所有者を含めたほかの人からも見えなくなります。所有者がプロジェクトごと削除した場合も、事前にコピーしていない限り見られません。</p>
 <h3 id="s2-5">再読み込みと障害の確認</h3>
 <p>ここまでで見つからなければ、ChatGPTを再読み込みするか、いったんサインアウトしてから再度サインインします。<a href="https://status.openai.com/">OpenAIのステータス</a>で障害が起きていないかも確かめてください。</p>
 <h3 id="s2-6">アプリでだけ見えないとき</h3>
@@ -203,7 +203,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </div>
 
 <h2 id="s3">プロジェクトごと見当たらないとき</h2>
-<p>中の会話だけでなく、プロジェクトそのものがサイドバーの一覧から消えたという相談もあります。<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT のリリースノート</a>の2026年6月18日の項によると、ウェブ版のサイドバーからチャットとプロジェクトをピン留めできるようになり、ピン留めの欄にプロジェクトも並ぶようになりました。同じ更新で、最近の項目を1つの一覧にまとめるか、プロジェクトごとにまとめるかも選べるようになっています。**いつもの場所に無いときはピン留めの欄と最近の項目の並べ方を先に確かめてください。**2026年10月17日にPCのブラウザで確かめると、ピン留めの欄はサイドバーの上のほうにありました。並べ方は［最近の項目］の横の［…］から［サイドバーを整理］を開き、［プロジェクト別］と［1つのリストで表示］から選びます。同じメニューの［表示対象］で、［プロジェクト］にチェックが付いているかも見てください。</p>
+<p>中の会話だけでなく、プロジェクトそのものがサイドバーの一覧から消えたという相談もあります。<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT のリリースノート</a>の2026年6月18日の項によると、ウェブ版のサイドバーからチャットとプロジェクトをピン留めできるようになり、ピン留めの欄にプロジェクトも並ぶようになりました。同じ更新で、最近の項目を1つの一覧にまとめるか、プロジェクトごとにまとめるかも選べるようになっています。<strong>いつもの場所に無いときはピン留めの欄と最近の項目の並べ方を先に確かめてください。</strong>2026年10月17日にPCのブラウザで確かめると、ピン留めの欄はサイドバーの上のほうにありました。並べ方は［最近の項目］の横の［…］から［サイドバーを整理］を開き、［プロジェクト別］と［1つのリストで表示］から選びます。同じメニューの［表示対象］で、［プロジェクト］にチェックが付いているかも見てください。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-history-lost/cgh_04_pc_pin.jpg" alt="ChatGPTのサイドバー。ピン留めの欄にテスト用の国民の祝日一覧の会話が1件あり赤い枠で囲まれている。メニューのサイドバーを整理から開いたプロジェクト別と1つのリストで表示の選択肢も赤い枠で囲まれている" loading="lazy"><figcaption>ピン留めの欄と並べ方の切り替え（2026年10月17日、PCのブラウザ）</figcaption></figure>
 
 <p>サイドバーの検索でフィルターを［プロジェクト］にすると、プロジェクトだけを探せます。あとからプロジェクトに移した会話は、プロジェクトのページには出るのにサイドバーのプロジェクトの下には出なかった、という利用者の報告も<a href="https://community.openai.com/t/project-sidebar-does-not-show-chats-added-to-a-project-afterward/1403758">10月6日のコミュニティの投稿</a>にあります。サイドバーで見当たらなくても、プロジェクトを開いて中を見てください。</p>
@@ -211,7 +211,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s3-1">削除していないのに消えた報告</h3>
 <p>削除した覚えがないのにプロジェクトが消えたという報告もあります。2026年9月4日に<a href="https://community.openai.com/t/entire-chatgpt-project-disappeared-chats-still-searchable-but-show-conversation-deleted-404/1394754">OpenAIのコミュニティに投稿したPlusの利用者</a>は、ウェブとWindowsのデスクトップアプリとiPhoneのどれでも、プロジェクトが一覧から消えたと書いています。中の会話は検索には出るものの、開くと会話が削除されたという表示か404のエラーになったそうです。9月3日の障害のころに起きたという投稿で、10月17日に確かめた時点ではOpenAIの回答は付いていませんでした。</p>
 <p>CodexのアプリのWindows版では、更新のあとにパソコンのフォルダとひも付けたプロジェクトの一覧が空になった報告も（<a href="https://community.openai.com/t/windows-projects-disappeared-after-update-to-26-820-60940-but-chats-remain-intact/1392901">8月27日</a>・<a href="https://community.openai.com/t/local-projects-disappear-from-sidebar-after-windows-desktop-update/1405156">10月11日</a>）あり、8月の報告者は非公式の方法で一覧を戻しています。</p>
-<p>**多くの報告では会話は検索や最近の項目に出ています。**ただし検索で出ても開けなかった報告もあります。プロジェクトが見えなくても、まず検索で中の会話を探してください。開けないときはデータ コントロールの［データをエクスポート］で控えを取り、プロジェクトの名前と見えなくなった日時を添えてサポートに伝えます。</p>
+<p><strong>多くの報告では会話は検索や最近の項目に出ています。</strong>ただし検索で出ても開けなかった報告もあります。プロジェクトが見えなくても、まず検索で中の会話を探してください。開けないときはデータ コントロールの［データをエクスポート］で控えを取り、プロジェクトの名前と見えなくなった日時を添えてサポートに伝えます。</p>
 <h2 id="s4">会話が削除されたと出るとき</h2>
 <p>検索で見つけた会話や保存しておいたURLを開くと、会話が削除されたという表示が出ることがあります。英語の画面では「The conversation has been deleted. Start a new chat.」と出たという報告があり、日本語の画面の文言はこの記事では確かめていません。出る場面はヘルプと利用者の報告から次の4つが分かっています。</p>
 <div class="tbl"><table class="stack">
@@ -253,20 +253,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ログアウトの状態で使うと、チャット履歴は保存されません。ヘルプによると、会話を持てるのは一度に1つだけで、同じブラウザの今のセッションの間しか開けません。ログアウトすると、その会話は続けられなくなります。</p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-history-lost/cgh_01_sp_logout_v2.jpg" alt="スマホのブラウザでログアウトの状態のChatGPTを開いた画面。右上のログインのボタンが赤枠と番号1で示されている。中央に今日は何をしますかと入力欄が表示されている" loading="lazy"><figcaption>ログアウトの状態の画面（2026年10月5日、スマホ）。1のログインから入ると履歴が残る</figcaption></figure>
 
-<p>**あとからアカウントを作ると、サイドバーに表示されるのは最新の会話のスレッドだけで、それ以前の会話は保存できません。**残したい会話があるなら、始める前に右上の「ログイン」から入っておきます。</p>
+<p><strong>あとからアカウントを作ると、サイドバーに表示されるのは最新の会話のスレッドだけで、それ以前の会話は保存できません。</strong>残したい会話があるなら、始める前に右上の「ログイン」から入っておきます。</p>
 <h3 id="s5-2">一時チャット</h3>
 <p><a href="https://help.openai.com/ja-jp/articles/8914046-temporary-chat-faq">ChatGPT の一時チャット</a>は、保存しない限り履歴に表示されない会話です。保存しなかった一時チャットは、チャットを離れたあとに履歴から開き直せません。</p>
-<p>OpenAIは安全上の目的で一時チャットのコピーを最長30日間保持する場合がありますが、これは利用者が見られる履歴とは別です。**残したい会話を一時チャットで始めてしまったら、画面を離れる前に通常のチャットとして保存してください。**保存すると通常のチャットに変わり、履歴から再開できます。</p>
+<p>OpenAIは安全上の目的で一時チャットのコピーを最長30日間保持する場合がありますが、これは利用者が見られる履歴とは別です。<strong>残したい会話を一時チャットで始めてしまったら、画面を離れる前に通常のチャットとして保存してください。</strong>保存すると通常のチャットに変わり、履歴から再開できます。</p>
 <h2 id="s6">削除した会話は戻らない</h2>
 <p>会話のメニューから1件ずつ消した場合も、設定の「すべてのチャットを削除」を使った場合も、ヘルプは<strong>ChatGPTでもOpenAIのサポート経由でも復元できない</strong>としています。プロジェクトを削除した場合は中のチャットもまとめて消え、こちらも戻せません。</p>
 <p>「すべてのチャットを削除」は同じデータ コントロールの中で「すべてのチャットをアーカイブ」と並び、プロジェクト内のチャットも対象になることがあります。押す前に確認のメッセージを読んでください。</p>
 <p>削除とアーカイブの違いや消す手順、会話を消しても残るメモリとライブラリのファイルは<a href="/media/chatgpt-history-delete/">ChatGPTの履歴を削除する方法</a>にまとめました。メモリの容量がいっぱいになったときの空け方は<a href="/media/chatgpt-memory-full/">ChatGPTのメモリがいっぱいのときの対処</a>にまとめています。</p>
 <h2 id="s7">もう一度試すで前の回答が消えたとき</h2>
-<p>会話は残っているのに、回答の下の［もう一度試す］を押したら前の回答に戻れなくなった、という相談もあります。OpenAIのサポートは<a href="https://community.openai.com/t/where-are-options-for-choosing-better-answers-in-chatgpt/1375312">2026年2月28日のコミュニティの返信</a>で、今の［もう一度試す］は新しい回答を作って前の回答を置き換えると説明しました。前の動きに戻す設定は無いとも書いています。**前の回答を残したまま別の答えも見たいなら、同じチャットに新しいメッセージとして頼み直します。**サポートは「regenerate」と送れば前の回答を残したまま新しい回答が出ると案内していますが、この記事では試していません。</p>
+<p>会話は残っているのに、回答の下の［もう一度試す］を押したら前の回答に戻れなくなった、という相談もあります。OpenAIのサポートは<a href="https://community.openai.com/t/where-are-options-for-choosing-better-answers-in-chatgpt/1375312">2026年2月28日のコミュニティの返信</a>で、今の［もう一度試す］は新しい回答を作って前の回答を置き換えると説明しました。前の動きに戻す設定は無いとも書いています。<strong>前の回答を残したまま別の答えも見たいなら、同じチャットに新しいメッセージとして頼み直します。</strong>サポートは「regenerate」と送れば前の回答を残したまま新しい回答が出ると案内していますが、この記事では試していません。</p>
 <figure class="post-figure"><img src="/media/images/chatgpt-history-lost/cgh_05_retry_icon.jpg" alt="ChatGPTの回答の下に並ぶコピーや共有や読み上げのアイコンのうち、丸い矢印の形のアイコンが赤い枠で囲まれている" loading="lazy"><figcaption>回答の下の［もう一度試す］のアイコン。マウスを重ねると「もう一度試す...」と出る（2026年10月17日、PCのブラウザ）</figcaption></figure>
 
 <p>以前は回答の下に1/2のような番号と左右の矢印が出て、前の版に切り替えられました。この矢印が消えたという報告は<a href="https://community.openai.com/t/chatgpt-web-update-removed-message-version-arrows-cannot-access-edited-message-history/1374666">2月20日のスレッド</a>から続いています。<a href="https://community.openai.com/t/urgent-regression-message-version-arrows-disappear-after-reload-including-newly-created-versions/1391636">8月21日のスレッド</a>には、再読み込みすると矢印が消えるという報告に40件を超える返信が付きました。<a href="https://community.openai.com/t/restore-the-ability-to-use-version-arrows-in-chatgpt/1394714">9月4日の投稿</a>は、矢印が版の履歴に置き換わり、別の版を見るには新しいチャットに分岐する必要があると書いています。サポートは9月8日に、1つの会話の中で別の版を残す要望を担当に伝えると返信しましたが、時期は示していません。8月の再読み込みのスレッドでは、10月14日にもサポートが状況を聞き直しています。</p>
-<p>**残したい回答は［もう一度試す］を押す前にコピーしておくのが確実です。**データのエクスポートに入っていたJSONのファイルに見えなくなった版が残っていたという利用者の報告も、8月23日にありました。同じ報告によると、エクスポートのHTMLのファイルには出ていなかったそうです。</p>
+<p><strong>残したい回答は［もう一度試す］を押す前にコピーしておくのが確実です。</strong>データのエクスポートに入っていたJSONのファイルに見えなくなった版が残っていたという利用者の報告も、8月23日にありました。同じ報告によると、エクスポートのHTMLのファイルには出ていなかったそうです。</p>
 <h2 id="s8">会話を消さないための設定と習慣</h2>
 <p>次の3つを決めておくと、ここまでの原因のうち取り違えから起きるものを防げます。</p>
 <ol>
@@ -339,6 +339,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/chatgpt-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-1865b097" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1865b097)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</div>
+            </a>
             <a href="/media/chatgpt-ads/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT広告の出稿方法"><defs><linearGradient id="ecg-5b608b19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b608b19)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT広告の出稿方法</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
@@ -348,11 +353,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ビジネスプロフィールとAI"><defs><linearGradient id="ecg-f25ce86a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f25ce86a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ビジネスプロフィールとAI</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.10.19</div>
                 <div class="rel-card__ttl">【2026年10月】GoogleビジネスプロフィールのAI対策とは？AIモード・口コミ要約・Gemini連携</div>
-            </a>
-            <a href="/media/claude-stops-midway/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeが途中で止まるとき"><defs><linearGradient id="ecg-0975f5d4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-0975f5d4)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">トラブル</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeが途中で止まるとき</text><line x1="121.2" y1="365.9" x2="1078.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.10.17</div>
-                <div class="rel-card__ttl">【2026年10月】Claudeの回答が途中で止まるときの対処法｜一時停止・長さ制限・接続切れ</div>
             </a>
         </div>
     </section>

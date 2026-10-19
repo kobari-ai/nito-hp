@@ -144,7 +144,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-stops-midway/csm_01_sp_split.png" alt="スマホで開いたChatGPTのウェブ版で、47都道府県を頼んだ回答の終わり。1は第1部は以上です、ここまで北海道から福島県までの7道県を紹介しました、次のパートでは茨城県から続けます、という区切りの文。2は回答の下にあるコピーと共有の2つのボタンで、続けるボタンは無い" loading="lazy"><figcaption>3回目の試しで、7道県で区切って終えた回答。下にあるのはコピーと共有だけ（2026年10月13日、ログインなし）</figcaption></figure>
 
 <h3 id="s2-1">続けてと送る</h3>
-<p>区切られた回答の続きは同じチャットで「続けて」と送れば出ます。**試したときは1回目が埼玉県から長野県までの10県（約5,700字）、3回目が茨城県から愛知県までの16県（約1万字）で、どちらも区切った所の次から始まりました。**最後にはまた「次は三重県から」のように次の範囲が書かれていて、47都道府県をそろえるには何回か送ることになります。</p>
+<p>区切られた回答の続きは同じチャットで「続けて」と送れば出ます。<strong>試したときは1回目が埼玉県から長野県までの10県（約5,700字）、3回目が茨城県から愛知県までの16県（約1万字）で、どちらも区切った所の次から始まりました。</strong>最後にはまた「次は三重県から」のように次の範囲が書かれていて、47都道府県をそろえるには何回か送ることになります。</p>
 <p>送る前に、回答の最後の行を見てください。2回目の試しでは47都道府県を書き終えて「以上が、北海道から沖縄県までの47都道府県です」と締めた回答に「続けて」と送っています。するとChatGPTは「抜けていた北海道から愛知県までの23道県」を補うと書き、北海道から書き直し始めました。<strong>最後が締めの文なら続きは無いので、「続けて」は送らないほうが無駄がありません。</strong></p>
 <figure class="post-figure post-figure--sp"><img src="/media/images/chatgpt-stops-midway/csm_02_sp_continue.png" alt="スマホで開いたChatGPTのウェブ版で、47都道府県を書き終えた回答のあとに続けてと送った画面。1は送った続けての吹き出し。2は回答の書き出しで、抜けていた北海道から愛知県までの23道県を紹介しますと書き、北海道から書き直している" loading="lazy"><figcaption>2回目の試しで、書き終えた回答に「続けて」と送ると、北海道から書き直しが始まった（2026年10月13日、ログインなし）</figcaption></figure>
 
@@ -191,7 +191,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ol>
 <figure class="post-figure"><img src="/media/images/chatgpt-stops-midway/csm_04_help_steps.png" alt="OpenAIのヘルプ、ChatGPTのエラーメッセージのトラブルシューティングの日本語版。1はChatGPTが応答を完了せずに止まっているように見える場合の手順で、30〜60秒待つ、生成を停止して再生成、新しいチャット、ハード更新などが順に並ぶ" loading="lazy"><figcaption>OpenAIのヘルプにある止まったときの順番（日本語版）</figcaption></figure>
 
-<p>同じヘルプは、会話が長いときややり取りの回数が多いときにも新しいチャットを始めるよう書いています。**同じ会話だけで止まるなら、新しいチャットで送り直すのが先です。**それぞれの手順の詳しい説明は<a href="/media/chatgpt-error-messages/">ChatGPTのエラーメッセージ一覧</a>に、遅さそのものの原因は<a href="/media/chatgpt-slow/">ChatGPTが重い・遅いとき</a>にまとめています。</p>
+<p>同じヘルプは、会話が長いときややり取りの回数が多いときにも新しいチャットを始めるよう書いています。<strong>同じ会話だけで止まるなら、新しいチャットで送り直すのが先です。</strong>それぞれの手順の詳しい説明は<a href="/media/chatgpt-error-messages/">ChatGPTのエラーメッセージ一覧</a>に、遅さそのものの原因は<a href="/media/chatgpt-slow/">ChatGPTが重い・遅いとき</a>にまとめています。</p>
 <h2 id="s5">エラーで止まるとき</h2>
 <p>回答の途中でエラーの文言が出たら、文言で見分けます。ヘルプに載っている文言のほかに、コミュニティで報告が続いている文言もありました。</p>
 <div class="tbl"><table class="stack">
@@ -233,7 +233,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>ネットワーク構成の問題やClientErrorの直し方は<a href="/media/chatgpt-network-error/">ChatGPTのネットワーク構成の問題とClientError</a>、上限の種類とリセットの時刻は<a href="/media/chatgpt-limit-reached/">ChatGPTで上限に達したとき</a>で詳しく扱っています。</p>
 <h3 id="s5-1">接続が途切れたと出たとき</h3>
 <p>「接続が途切れました。回答全体の受信を待っています」は検索で探されている言い方で、日本語の画面では確かめていません。英語の画面の「Connection interrupted. Waiting for the complete answer」はコミュニティで報告されている表示で、ヘルプには載っていません。2026年6月の<a href="https://community.openai.com/t/switch-for-gpt-image-gen-in-long-context-prompts-lead-to-connection-interrupted-waiting-for-the-complete-answer/1385186">コミュニティの投稿</a>には、画像の生成で、この表示か「Image generation failed」が3割ほど出たという報告もあります。5.5 Instantで画像を作ったときだけ出るという返信も付いていました。同じ投稿者はページを読み込み直すと「Too many requests」と出てその会話が失われたとも書いています。</p>
-<p>報告は1人分ですが、**読み込み直す前に、そこまでに出た回答をコピーしておけば失わずに済みます。**10月7日には読み込みの失敗や「Resume stream unavailable」と一緒にこの表示が出るという<a href="https://community.openai.com/t/is-anyone-else-experiencing-recurring-chatgpt-loading-failures-stream-errors-and-stuck-tasks/1404071">別の投稿</a>もありました。</p>
+<p>報告は1人分ですが、<strong>読み込み直す前に、そこまでに出た回答をコピーしておけば失わずに済みます。</strong>10月7日には読み込みの失敗や「Resume stream unavailable」と一緒にこの表示が出るという<a href="https://community.openai.com/t/is-anyone-else-experiencing-recurring-chatgpt-loading-failures-stream-errors-and-stuck-tasks/1404071">別の投稿</a>もありました。</p>
 <h3 id="s5-2">Error in message streamと出たとき</h3>
 <p>2026年9月23日の<a href="https://community.openai.com/t/chatgpt-android-error-in-message-stream-interrupts-long-conversations/1399948">コミュニティの投稿</a>は、Androidのアプリで、ファイルを添付した長い会話が「Thinking」のあと止まり、この表示が出たという報告です。最初の投稿に付いたリアクションは4つで、ウェブ版やデスクトップアプリで出たという返信も同じスレッドにあり、Androidだけの話ではありません。投稿者も原因を特定できておらず、公式の説明はまだありません。</p>
 <p>どの症状でも直らないときは、ヘルプのとおり、タイムスタンプ付きのHARファイルとブラウザのコンソールのエラーを集め、使ったモデルと会話のURLかIDを添えてサポートに問い合わせます。</p>
