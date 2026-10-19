@@ -14,12 +14,12 @@ OpenAIの事業者向けページ「[Power product discovery in ChatGPT](https:/
 日本語の解説には2025年秋のチャット内決済の説明のまま残っているものがあります。この記事は商品を載せる3つの経路と日本の事業者の今、費用、載せられない商品を、公式に書いてあることと無いことに分けて整理します。
 
 :::takeaways
-- 商品が載る経路は**Shopify・Etsyの連携、商品フィードの申請、Webの情報からの掲載**の3つ。Shopify と Etsy で売っている商品は申請しなくても連携済み
+- 商品が載る経路は**Shopify・Etsyの連携、商品フィードの申請、Webの情報からの掲載**の3つ。要件を満たすShopifyのストアとEtsyの商品は申請しなくても連携済み
 - 商品フィードの申請は承認制で、今申し込むとウェイトリストに入る。**フィードの仕様では標準の送り先が米国で、日本を選ぶ設定は載っていない**
 - 自社サイトで買われた分に手数料はかからない。**酒類やサプリメントは商品の検索結果に出ない**
 :::
 
-<!-- SHOT: HTML図 cshp_routes.html（商品が載る3つの経路を縦に3段）・幅640 DPR2・赤枠なし -->
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_00_routes.png" alt="ChatGPTに商品が載る3つの経路の図。ShopifyとEtsyの連携、商品フィードの申請、Webの情報からの掲載" loading="lazy"></figure>
 
 ## ChatGPTショッピングの今の形
 
@@ -33,9 +33,9 @@ OpenAIの事業者向けページ「[Power product discovery in ChatGPT](https:/
 
 <!-- SHOT: OpenAI ヘルプ「Shopping with ChatGPT Search」の How Merchants Are Selected の節・https://help.openai.com/en/articles/11128490 ・PC・赤枠1: 販売者の並びの基準の文（availability, price, quality...）／赤枠2: Shopify Catalog の文 -->
 
-事業者の側から見ると、**価格と在庫の情報が新しいことと、公開されたサイトにレビューがあること**が並び順の材料です。どちらも自社サイトの外の情報を含むため、自社のページを直すだけでは揃いません。
+ヘルプが挙げる販売者の並び順の材料は、**在庫・価格・品質と、その商品の製造元か主な販売者か**です。価格は第三者の提供元から受け取るため、自社のページを直すだけでは反映が揃いません。
 
-### Instant Checkoutの終了
+### Instant Checkoutの縮小
 
 2025年9月に始まったInstant Checkoutは、ChatGPTの画面で注文と支払いまで済ませる仕組みでした。今は事業者向けページに、**単独のInstant Checkoutの体験から離れ、利用者は販売者のサイトやアプリで購入する**と書かれています。
 
@@ -44,8 +44,8 @@ OpenAIの事業者向けページ「[Power product discovery in ChatGPT](https:/
 | 2025年9月29日 | Instant Checkoutと決済の仕様ACPを発表。米国の利用者が米国のEtsy出品者から購入できる形で開始 | OpenAIのお知らせ |
 | 2025年11月20日 | Shopifyの販売者に広がる（Spanx・Skims・Glossierから） | リリースノート |
 | 2025年11月24日 | 商品を深く調べて比べるショッピングリサーチを開始 | リリースノート |
-| 2026年3月 | チャット内の決済から離れ、商品の発見に力を移すと報じられる | 報道 |
 | 2026年3月24日 | 商品の表示と比較を改善し、ACPで事業者の商品情報を取り込む | リリースノート |
+| 2026年3月25日 | Instant Checkoutの伸びが弱く、商品の発見に力を移すと報じられる | Retail Gazette |
 
 ACP（Agentic Commerce Protocol）はOpenAIがStripeと作った、AIと販売者が商品情報や注文をやり取りするための仕様です。今の事業者向けページの説明では、**ACPの役目は商品の発見と推薦のための商品データの共有**です。
 
@@ -65,22 +65,23 @@ ACP（Agentic Commerce Protocol）はOpenAIがStripeと作った、AIと販売�
 
 事業者向けページには**ShopifyかEtsyで売っている場合はカタログがすでに連携されていて、追加の設定も申請も要らない**とあります。Shopifyのヘルプ「[Shopifyエージェントストアフロント](https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts)」によると、商品はShopify Catalogを通じてChatGPTに渡り、要件を満たすストアでは最初から有効です。
 
-ただし要件を満たさないストアの商品はShopify Catalogに入りません。[Shopify Catalogの要件](https://help.shopify.com/ja/manual/shopify-catalog/requirements)で、事業者が引っかかりやすいのは次の4つです。
+ただし要件を満たさないストアの商品はShopify Catalogに入りません。[Shopify Catalogの要件](https://help.shopify.com/ja/manual/shopify-catalog/requirements)で、事業者が引っかかりやすいのは次の3つです。
 
 - Starterプラン以上で、ストアがパスワードで保護されていない
 - 商品にタイトルと画像が1枚以上あり、価格が0円より高い
 - 商品が非掲載や検索エンジンから非表示の設定になっていない
-- アカウントのメールの認証と2段階認証が済んでいて、正規の販売実績がある
 
-要件を満たしているかは管理画面の［販売チャネル］＞［Agentic］で確かめられ、満たしていなければ理由が表示されます。ChatGPTでの販売のヘルプには、**B2B専用の商品は対象外で、法的な表示は商品説明の先頭6,000字以内に入れる**という注意もあります。Etsy側の条件はOpenAIとEtsyのどちらの資料でも確認できませんでした。
+アカウントのメールの認証や2段階認証は、要件ではなく、満たさないときに案内される「アカウント状況を改善する手順」の中の項目です。
+
+要件を満たしているかは管理画面の［販売チャネル］＞［Agentic］で確かめられ、［ソース］＞［Shopify Catalog］の横に理由が表示されることがあります。ChatGPTでの販売のヘルプには、**B2B専用の商品は対象外で、法的な表示は商品説明の先頭6,000字以内に入れる**という注意もあります。Etsy側の条件はOpenAIとEtsyのどちらの資料でも確認できませんでした。
 
 <!-- SHOT: Shopify ヘルプ「ChatGPTでの販売」の考慮事項の箇条書き・https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts/chatgpt ・PC・赤枠1: B2B 専用商品はサポートされていない／赤枠2: ChatGPTでの販売に関連する手数料は発生しません -->
 
 ### ② 商品フィードの申請
 
-ShopifyやEtsyを使っていない自社ECの道は、商品フィードをOpenAIに直接送る申請です。開発者向けの「[Get Started](https://developers.openai.com/commerce/guides/get-started)」は、**フィードの受け付けは今のところ承認されたパートナーに限られる**と書いています。申し込みは事業者向けページのフォームからで、申し込み済みならウェイトリストに入っています。事業者が自分でデータをつなげる仕組みは、同じページで年内に用意する予定とされています。
+ShopifyやEtsyを使っていない自社ECの道は、商品フィードをOpenAIに直接送る申請です。開発者向けの「[Get Started](https://developers.openai.com/commerce/guides/get-started)」は、**フィードの受け付けは今のところ承認されたパートナーに限られる**と書いています。申し込みは事業者向けページのフォームからで、申し込み済みならウェイトリストに入っています。事業者が自分でデータをつなげる仕組みは、事業者向けページで年内に用意する予定とされています。
 
-送り方はファイルのアップロード（SFTP）とAPIの2つです。OpenAIが勧める組み合わせは、1日1回ファイルで全件を送って日中の変更をAPIで送る形です。セールの情報はAPIでしか送れません。[商品フィードの仕様](https://developers.openai.com/commerce/specs/file-upload/products)で必須になっている項目は9つです。
+送り方はファイルのアップロード（SFTP）とAPIの2つです。OpenAIが勧める組み合わせは、1日1回ファイルで全件を送って日中の変更をAPIで送る形です。販促キャンペーン（プロモーション）の情報はAPIでしか送れません。[商品フィードの仕様](https://developers.openai.com/commerce/specs/file-upload/products)で必須になっている項目は9つです。
 
 | 項目 | 中身 |
 |---|---|
@@ -100,7 +101,7 @@ ShopifyやEtsyを使っていない自社ECの道は、商品フィードをOpen
 
 ヘルプは商品を選ぶ材料に、事業者と第三者の構造化データに加えて「その他の第三者のコンテンツ」を挙げていて、自社のフィードに限っていません。Shopifyのヘルプも、ChatGPTへのカタログの提供を止めたあとでも**Webのクロールなど別の経路で商品が表示されることがある**と書いています。
 
-この経路で手を付けられるのは、ChatGPTの検索用のクローラーを拒否しないことです。OpenAIの「[Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots)」は、**OAI-SearchBotを拒否したサイトはChatGPTの検索の回答に表示されない**と説明しています。robots.txtでOAI-SearchBotを止めていないか、商品ページの価格と在庫が読める形で出ているかを先に確かめます。フィードを出していない日本の自社ECの商品が、日本のアカウントの商品一覧に出るかどうかは試していません。
+ChatGPTの検索全体の話として、この経路で手を付けられるのは、ChatGPTの検索用のクローラーを拒否しないことです。OpenAIの「[Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots)」は、**OAI-SearchBotを拒否したサイトはChatGPTの検索の回答に表示されない**と説明しています。robots.txtでOAI-SearchBotを止めていないか、商品ページの価格と在庫が読める形で出ているかを先に確かめます。フィードを出していない日本の自社ECの商品が、日本のアカウントの商品一覧に出るかどうかは試していません。
 
 ## 日本の事業者が使えるか
 
@@ -130,10 +131,10 @@ ChatGPTショッピングの費用を分けるのは、どの仕組みで買わ�
 | 自社サイト・アプリでの購入 | 手数料なし | 事業者向けページ |
 | Shopifyのストアへの送客 | ChatGPTでの販売の手数料なし。通常の決済手数料だけ | Shopifyのヘルプ |
 | 商品フィードの申請 | 記載なし | 開発者ドキュメント |
-| Instant Checkout（終了） | 販売者が完了した購入ごとに少額の手数料 | OpenAIのお知らせ（2025年9月） |
+| Instant Checkout（単独の形から移行中） | 販売者が完了した購入ごとに少額の手数料 | OpenAIのお知らせ（2025年9月） |
 | ChatGPT広告 | 表示かクリックごと | ChatGPT広告のヘルプ |
 
-Instant Checkoutの手数料は、2026年1月に[Shopifreaks](https://www.shopifreaks.com/shopify-confirms-a-4-fee-on-sales-made-through-chatgpt-but-whats-the-real-cost/)などがShopifyの販売者で4%と報じていました。終わった仕組みの数字なので、これから載せる判断には使いません。
+Instant Checkoutの手数料は、2026年1月に[Shopifreaks](https://www.shopifreaks.com/shopify-confirms-a-4-fee-on-sales-made-through-chatgpt-but-whats-the-real-cost/)などがShopifyの販売者で4%と報じていました。単独の形から離れつつある仕組みの数字なので、これから載せる判断には使いません。
 
 お金より重くなりやすいのは社内の工数です。Shopify・Etsyは追加の作業がない一方で、自社ECのフィードには商品データの書き出しと毎日の更新、価格と在庫の変更を送るAPIの開発が要ります。
 
@@ -144,24 +145,24 @@ OpenAIの「[Commerce policies](https://openai.com/policies/commerce-policies)�
 | 区分 | ポリシーの中身 | 当たりやすい商品 |
 |---|---|---|
 | 酒類 | アルコール度数0.5%を超える飲料と蒸留の道具 | 日本酒・ワイン・クラフトビール |
-| サプリメント | 減量・性的な効果・筋肉づくり・デトックスなどの健康効果をうたう摂取物 | 健康食品・ダイエット食品 |
+| サプリメント | 減量・性的な効果・筋肉づくり・デトックスなどの健康効果をうたう摂取物 | 減量や健康効果をうたうサプリメント |
 | たばこ・ニコチン | たばこ・電子たばこ・ニコチン製品と吸うための道具 | 加熱式たばこの関連品 |
-| 医薬品 | 処方が要る医薬品と医療用品 | 処方薬 |
-| 護身用品 | 催涙スプレー・スタンガンなど | 防犯グッズ |
+| 医薬品 | 処方が要る医薬品・医療用品 | 処方薬 |
+| 護身用品 | 催涙スプレー・スタンガンなど | 催涙スプレーなどの護身用品 |
 
 <!-- SHOT: OpenAI「Commerce policies」の Drugs, medications, and supplements と Tobacco, nicotine, and alcohol の節・https://openai.com/policies/commerce-policies ・PC・赤枠1: Supplements の行／赤枠2: Alcoholic beverages (over 0.5% ABV) の行 -->
 
-酒蔵や健康食品のメーカーは、フィードを整えても商品の検索結果には出ません。ポリシーが決めているのは商品の掲載で、回答の文の中で銘柄や会社名が挙がるかどうかには触れていません。Shopifyのヘルプも、OpenAIの禁止商品に当たる商品はChatGPTの商品の検索結果に表示されないと書いています。
+アルコール度数0.5%を超える酒類や、減量などの効果をうたうサプリメントは、フィードを整えても商品の検索結果には出ません。ポリシーが決めているのは商品の掲載で、回答の文の中で銘柄や会社名が挙がるかどうかには触れていません。Shopifyのヘルプも、OpenAIの禁止商品に当たる商品はChatGPTの商品の検索結果に表示されないと書いています。
 
 ## 社内で決めておくこと
 
 ShopifyのストアならChatGPTへの連携は最初から有効なため、何も決めないまま商品が出ていることがあります。申し込みの前に、社内で次の4つを決めておくと手戻りが減ります。
 
-<!-- SHOT: HTML図 cshp_decide.html（社内で決めておく4つのことを縦に4段）・幅640 DPR2・赤枠なし -->
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_06_decide.png" alt="申し込む前に社内で決める4つのことの図。商品データの持ち主、載せたくない商品、法務と表示、成果の見方" loading="lazy"></figure>
 
 ### ① 商品データの持ち主
 
-価格と在庫の新しさが販売者の並び順の材料になるため、誰がデータを更新するのかを最初に決めておくのが近道です。自社ECでフィードを送るなら、EC担当とシステムの担当のどちらが毎日の送信を持つのかが最初の論点です。Shopifyなら管理画面の商品データがそのまま渡るため、商品を登録するときの入力がChatGPTでの見え方を決めます。
+価格と在庫が販売者の並び順の材料になるため、誰がデータを更新するのかを最初に決めておくのが近道です。自社ECでフィードを送るなら、EC担当とシステムの担当のどちらが毎日の送信を持つのかが最初の論点です。Shopifyなら管理画面の商品データがそのまま渡るため、商品を登録するときの入力がChatGPTでの見え方を決めます。
 
 ### ② 載せたくない商品の扱い
 
@@ -179,7 +180,7 @@ Shopifyのヘルプによると、AIのチャネルからの注文は発生元�
 
 ChatGPTの中で自社の商品や会社名が目に入る場所は、商品の検索結果だけではありません。回答の文の中で名前が挙がる場合と、回答の下の広告枠があります。
 
-<!-- SHOT: HTML図 cshp_where.html（商品や社名が出る3つの場所を縦に3段）・幅640 DPR2・赤枠なし -->
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_07_where.png" alt="ChatGPTで商品や社名が出る3つの場所の図。商品の検索結果、回答の文の中、広告" loading="lazy"></figure>
 
 | 項目 | 商品の検索結果 | 回答の文の中 | 広告 |
 |---|---|---|---|
@@ -205,7 +206,7 @@ ChatGPTの中で自社の商品や会社名が目に入る場所は、商品の�
 
 ### Q. ChatGPTの商品フィードは日本の会社でも申請できますか？
 
-申し込みのフォームに国の制限は書かれていませんが、受け付けは承認されたパートナーに限られ、申し込むとウェイトリストに入ります。日本向けの市場の設定はOpenAIが連携を確認してからです。
+受け付けは承認されたパートナーに限られ、申し込むとウェイトリストに入ります。米国・カナダ・メキシコ以外の国はOpenAIが連携を確認してから使う決まりで、日本の名前は仕様にありません。
 
 ### Q. ShopifyのストアはChatGPTに自動で載りますか？
 
@@ -219,9 +220,9 @@ Shopify Catalogの要件を満たすストアは、最初から連携が有効�
 
 出ません。ヘルプは商品の検索結果が広告でなく、OpenAIの提携の影響も受けないと書いています。広告は回答の下の別の枠に出ます。
 
-### Q. ChatGPTショッピングにお酒や健康食品は載せられますか？
+### Q. ChatGPTショッピングにお酒やサプリメントは載せられますか？
 
-載せられません。アルコール度数0.5%を超える飲料と健康効果をうたうサプリメントは、商取引のポリシーで扱わない商品に入っています。
+アルコール度数0.5%を超える酒類と、減量・筋肉づくりなど健康への効果をうたって売るサプリメントは載せられません。どちらも商取引のポリシーで扱わない商品に入っています。
 
 ### Q. ChatGPTに自社の商品を載せたくない場合はどうしますか？
 
@@ -239,3 +240,4 @@ Shopifyなら管理画面の［販売チャネル］＞［Agentic］でChatGPT�
 - OpenAI「[Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots)」（同）
 - Shopify ヘルプセンター「[Shopifyエージェントストアフロント](https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts)」「[ChatGPTでの販売](https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts/chatgpt)」「[Shopify Catalogの要件](https://help.shopify.com/ja/manual/shopify-catalog/requirements)」（同）
 - Shopifreaks「[Shopify confirms a 4% fee on sales made through ChatGPT, but what's the real cost?](https://www.shopifreaks.com/shopify-confirms-a-4-fee-on-sales-made-through-chatgpt-but-whats-the-real-cost/)」2026年1月
+- Retail Gazette「[OpenAI pivots ChatGPT shopping strategy after Instant Checkout underwhelms](https://www.retailgazette.co.uk/blog/2026/03/openai-pivots-chatgpt-shopping-strategy-after-instant-checkout-underwhelms/)」2026年3月25日
