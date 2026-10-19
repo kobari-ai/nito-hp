@@ -196,6 +196,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/ai-agent-build/00_fig_three.png" alt="AIエージェントの作り方3通りの図。ノーコードはDifyやn8nで画面でノードをつないで作るが細かい制御と移植がしづらい、既製の基盤はCopilot Studioなどで業務アプリと一体だが基盤の外に出づらい、コードで組むとAPIを直接使えて中身が見えるが立ち上がりは遅い" loading="lazy"><figcaption>3通りの違いと、引き換えに失うもの</figcaption></figure>
 
 <p>選ぶ基準は機能の多さではなく、<strong>動かなかったときに自分で直したいかどうか</strong>です。直したいならコード、中身に踏み込まないと決めているならノーコードや既製の基盤が向きます。</p>
+<p>既製の基盤でCopilot Studioを選ぶ場合の料金と作れる人の決め方は、<a href="/media/copilot-studio/">Copilot Studioの料金</a>で扱っています。</p>
 <h3 id="s3-1">ノーコードで作る場合</h3>
 <p>Difyを例にすると、流れはアカウント作成、モデルの設定、ワークフローの作成の3つです。クラウド版のSandboxプランには最初に200のAIクレジットが付いており、OpenAIやAnthropic、Geminiのモデルを呼べます。<strong>このクレジットは一度きりの付与で、毎月は更新されません。</strong></p>
 <p>入力を受け取るノード、自由入力から必要な値を取り出すノード、モデルを呼ぶノードといった部品を、画面上で並べてつなぎます。自然文で書かれた入力を決まった形に直す処理をモデルに任せられるため、後ろのノードが扱いやすくなります。</p>
