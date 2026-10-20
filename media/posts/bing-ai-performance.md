@@ -37,7 +37,7 @@ Bing Webmaster Toolsは、Bingの検索での表示やクロールの状態を�
 
 Microsoftは3月の広告主向けのブログで、自社のグラウンディング（AIが回答の根拠になるWebの情報を引く仕組み）が主要なAIアシスタントのほぼすべてを支えていると書いています。**これはMicrosoftの主張で、どのアシスタントの引用がレポートに入るのかは明かしていません**。Adobeの日本語の解説（2026年10月3日更新）も、対象はCopilotの引用とAIの要約だけで、ChatGPTなどほかのAIアシスタントはまだ含まれないと説明しています。
 
-日本の企業がBingの数字を見る理由もあります。[Statcounter](https://gs.statcounter.com/search-engine-market-share/all/japan)の集計では、2026年9月の日本の検索エンジンの割合はGoogleが59.27%、Bingが31.41%でした。デスクトップに限るとBingが51.83%で、Googleの42.17%を上回ります。ページビューの標本で数える集計のため検索の回数そのものではありませんが、**会社のパソコンで比較される商材ほど、BingとCopilotでの見え方を確かめる意味は大きくなります**。
+日本の企業がBingの数字を見る理由もあります。[Statcounter](https://gs.statcounter.com/search-engine-market-share/all/japan)の検索結果から来た閲覧の標本による集計（2026年10月21日時点）では、2026年9月の日本の検索エンジンの割合はGoogleが59.27%、Bingが31.41%でした。デスクトップに限るとBingが51.83%で、Googleの42.17%を上回ります。検索の回数そのものではありませんが、**会社のパソコンで比較される商材ほど、BingとCopilotでの見え方を確かめる意味は大きくなります**。
 
 ## 見られる5つの指標
 
@@ -57,7 +57,7 @@ Microsoftは3月の広告主向けのブログで、自社のグラウンディ�
 
 ## 6月に加わった4つの機能
 
-Bingは2026年6月16日の[ブログ](https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare)で、4つの機能をプレビューとして世界で出し始めました。どれも分類にAIを使っていて、**専門性の高い分野では分類が大まかになることがある**と断っています。
+Bingは2026年6月16日の[ブログ](https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare)で、4つの機能をプレビューとして世界で出し始めました。**意図とトピックはAIの分類で、プレビューの間は専門性の高い分野でラベルが大まかになることがある**と断っています。
 
 ### 意図（Intents）
 
@@ -73,23 +73,23 @@ Bingは2026年6月16日の[ブログ](https://blogs.bing.com/search/June-2026/Ne
 
 ### 比較（Compare）
 
-前の期間を同じグラフに重ねる機能です。今の期間は実線、比べる期間は点線で、直近30日と前の30日のような並べ方も、日付を選んだ比較もできます。ただし変化の理由までは示さないと、ヘルプは注記しています。
+前の期間を同じグラフに重ねる機能です。今の期間は実線、比べる期間は破線で、直近30日と前の30日のような並べ方も、日付を選んだ比較もできます。ただし変化の理由までは示さないと、ヘルプは注記しています。
 
 ## 使い始めるまでの手順
 
-AIパフォーマンスに別の申し込みは要りません。Bing Webmaster Toolsでサイトの所有を確認すれば開けます。すでにGoogle Search Consoleでサイトを確認しているなら、インポートで確認の手順を省けます。
+AIパフォーマンスは、Bing Webmaster Toolsでサイトの所有を確認したサイトで開ける機能です。すでにGoogle Search Consoleでサイトを確認しているなら、インポートで確認の手順を省けます。
 
 1. [Bing Webmaster Tools](https://www.bing.com/webmasters/about)にサインインするか、アカウントを作る
 2. My Sitesの画面でImportを押し、Google Search Consoleのアカウントでサインインして許可する
 3. 一覧から追加するサイトを選んでImportを押す
-4. AI Performanceを開き、期間（7日・30日・3か月・任意の範囲）を選ぶ
-5. 必要な表をCSVかExcelで書き出して、社内の資料に使う
-
-<figure class="post-figure"><img src="/media/images/bing-ai-performance/bwai_02_steps.png" alt="AIパフォーマンスを開くまでの4段。Bing Webmaster Toolsにサインイン、My SitesでImportしてSearch Consoleで許可、サイトを選んで取り込む、AI Performanceを開いて期間を選ぶ" loading="lazy"></figure>
+4. AI Performanceを開き、期間を選ぶ
+5. 必要な表を書き出して、社内の資料に使う
 
 
 
-[インポートの手順のブログ](https://blogs.bing.com/webmaster/september-2019/Import-sites-from-Search-Console-to-Bing-Webmaster-Tools)によると、1回に取り込めるのは100サイトまで、1つのアカウントで1,000サイトまでです。新しく確認したサイトの検索のデータは、出るまで最大48時間かかると書かれています。Search Consoleへのアクセスを取り消すと所有の確認が外れるため、そのときはメタタグかDNSで確認し直します。
+
+
+[インポートの手順のブログ](https://blogs.bing.com/webmaster/september-2019/Import-sites-from-Search-Console-to-Bing-Webmaster-Tools)によると、1回に取り込めるのは100サイトまで、1つのアカウントで1,000サイトまでです。新しく確認したサイトの検索のデータは、出るまで最大48時間かかると書かれています。Search Consoleへのアクセスを取り消すと所有の確認が外れるため、そのときは再接続するか、メタタグかDNSで確認し直します。
 
 インポートを使わない場合は、XMLファイルのアップロード・メタタグ・DNSのレコードのどれかで確認します。ヘルプによればAIパフォーマンスのデータは毎日の更新で、反映には少しの遅れがあるとのことです。
 
@@ -115,11 +115,11 @@ PinMeToの7月3日の記事によると、2026年6月1日から引用数が急�
 
 ### APIはまだ公式の記述が無い
 
-書き出しはCSVとExcelに対応していて、絞り込んだ条件がそのまま反映されます。2月にSearch Influenceが書いた記事では、APIは予定に入っているとMicrosoftのFabrice Canel氏がXで答えていました。2026年10月21日に見たヘルプにAPIの記述は無く、定期の報告は画面からの書き出しで回すことになります。
+画面の表は書き出せて、絞り込んだ条件がそのまま反映されます。2月にSearch Influenceが書いた記事では、APIは対応を検討する一覧に入っているが時期は示していない、とMicrosoftのFabrice Canel氏がXで答えていました。2026年10月21日に見たヘルプにAPIの記述は無く、定期の報告は画面からの書き出しで回すことになります。
 
 ## Googleのレポートとの違い
 
-Googleも2026年6月3日に、Search Consoleで生成AIの機能での表示を見るレポートを出しました。[Search Centralのブログ](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports)には、8月31日に世界のすべてのサイトへ広げたと追記されています。2つは数えているものが違うため、表で並べました。
+Googleも2026年6月3日に、Search Consoleで生成AIの機能での表示を見るレポートを一部のサイトから出しました。[Search Centralのブログ](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports)には、8月31日に世界のすべてのサイトへ広げたと追記されています。2つは数えているものが違うため、表で並べました。
 
 | 項目 | BingのAIパフォーマンス | Search Consoleの生成AIレポート |
 |---|---|---|
@@ -146,7 +146,7 @@ AIパフォーマンスは費用がかからず、サイトの確認が済めば
 
 ### ありがちな失敗
 
-よくある読み違いは3つです。1つ目は引用数を流入と書くこと、2つ目はグラウンディングクエリを顧客の質問そのものと読むこと、3つ目は6月のバックフィルによる急増を成果として報告することです。どれもヘルプとMicrosoftの説明で否定されているため、報告の脚注に1行ずつ入れておくと社内の誤解を防げます。
+よくある読み違いは3つです。1つ目は引用数を流入と書くこと、2つ目はグラウンディングクエリを顧客の質問そのものと読むこと、3つ目は6月のバックフィルによる急増を成果として報告することです。1つ目と2つ目はヘルプが、3つ目はMicrosoftの担当者がX上で否定しているため、報告の脚注に1行ずつ入れておくと社内の誤解を防げます。
 
 ## 引用数と回答で名前が挙がることの違い
 
@@ -160,13 +160,13 @@ AIの回答で自社が目に入る形は2つあります。回答の下や横�
 | 引用がほとんど出ない | 引用が少ない事実だけ | Bingのインデックスとrobots.txtの設定 |
 | ChatGPTやGeminiでの出方を知りたい | 入るとは書かれていない | 同じ質問を各AIに定期的に聞いて記録する |
 
-表の2行目でインデックスを見るのは、AIパフォーマンスに映るのがインデックスの対象になるページだけだとヘルプが書いているためです。回答の文で自然に挙がること（AIO）は出典に引かれることとは別の結果で、このレポートの数字だけでは測れません。回答に社名が出てこない原因は[ChatGPTに自社が出てこない5つの原因と対策](/media/chatgpt-not-appearing/)、お金を払って載せる枠は[ChatGPT広告の出稿方法](/media/chatgpt-ads/)で扱っています。
+表の2行目でrobots.txtを見るのは、Bingは引用でもrobots.txtの設定に従うと2月の発表が書いているためです。回答の文で自然に挙がること（AIO）は出典に引かれることとは別の結果で、このレポートの数字だけでは測れません。回答に社名が出てこない原因は[ChatGPTに自社が出てこない5つの原因と対策](/media/chatgpt-not-appearing/)、お金を払って載せる枠は[ChatGPT広告の出稿方法](/media/chatgpt-ads/)で扱っています。
 
 ## よくある質問
 
 ### Q. Bing Webmaster ToolsのAIパフォーマンスは無料ですか？
 
-無料です。Bing Webmaster Toolsの紹介ページは無料のSEO・GEOのツールと案内していて、AIパフォーマンスはサイトの所有を確認すれば追加の申し込みなしで開けます。
+無料です。Bing Webmaster Toolsの紹介ページは無料のSEO・GEOのツールと案内していて、AIパフォーマンスはサイトの所有を確認すると開けます。
 
 ### Q. Bing Webmaster ToolsのAIパフォーマンスにChatGPTの引用は入りますか？
 
@@ -186,7 +186,7 @@ AIの回答で自社が目に入る形は2つあります。回答の下や横�
 
 ### Q. Copilotの回答に引用されるには何をすればいいですか？
 
-Bingの発表とヘルプが挙げるのは、見出し・表・よくある質問で読み取りやすくすること、例やデータと出典で裏づけること、内容を新しく保つことの3つです。更新をすぐ伝える仕組みとしてIndexNowを、店舗のある会社にはBing Places for Businessへの登録を勧めています。robots.txtで止めたページは、その設定に従って扱われます。
+Bingのヘルプが、検討してよい一般的な目安として挙げるのは6つです。利用者の意図に合わせる、見出し・表・よくある質問で読み取りやすくする、深さと専門性を出す、例やデータと出典で裏づける、内容を新しく保つ、形式をまたいで表記をそろえる、です。2月の発表が勧めるのは、更新をすぐ伝える仕組みのIndexNowと、店舗のある会社のBing Places for Businessへの登録です。robots.txtで止めたページは、その設定に従って扱われます。
 
 ### Q. Google Search ConsoleでAIによる概要の表示回数は見られますか？
 
