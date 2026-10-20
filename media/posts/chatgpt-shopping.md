@@ -31,7 +31,7 @@ OpenAIの事業者向けページ「[Power product discovery in ChatGPT](https:/
 
 商品を押したあとに並ぶ販売者の順番について、ヘルプは**在庫・価格・品質・その商品の製造元か主な販売者か**で決めると説明しています。価格は第三者の提供元から受け取っていて、事業者が値段を変えてから画面に反映されるまで時間がかかることがあるとも書かれています。「Budget-friendly」のようなラベルやレビューの要約はモデルが作ったもので、レビューの出どころは公開されたWebサイトです。
 
-<!-- SHOT: OpenAI ヘルプ「Shopping with ChatGPT Search」の How Merchants Are Selected の節・https://help.openai.com/en/articles/11128490 ・PC・赤枠1: 販売者の並びの基準の文（availability, price, quality...）／赤枠2: Shopify Catalog の文 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_01_help_merchants.png" alt="OpenAIのヘルプのHow Merchants Are Selectedの節。販売者は在庫・価格・品質と製造元か主な販売者かで並び、Shopifyの販売者はShopify Catalogを通じて連携済みと書かれている" loading="lazy"><figcaption>OpenAI ヘルプ「Shopping with ChatGPT Search」</figcaption></figure>
 
 ヘルプが挙げる販売者の並び順の材料は、**在庫・価格・品質と、その商品の製造元か主な販売者か**です。価格は第三者の提供元から受け取るため、自社のページを直すだけでは反映が揃いません。
 
@@ -75,7 +75,7 @@ ACP（Agentic Commerce Protocol）はOpenAIがStripeと作った、AIと販売�
 
 要件を満たしているかは管理画面の［販売チャネル］＞［Agentic］で確かめられ、［ソース］＞［Shopify Catalog］の横に理由が表示されることがあります。ChatGPTでの販売のヘルプには、**B2B専用の商品は対象外で、法的な表示は商品説明の先頭6,000字以内に入れる**という注意もあります。Etsy側の条件はOpenAIとEtsyのどちらの資料でも確認できませんでした。
 
-<!-- SHOT: Shopify ヘルプ「ChatGPTでの販売」の考慮事項の箇条書き・https://help.shopify.com/ja/manual/online-sales-channels/agentic-storefronts/chatgpt ・PC・赤枠1: B2B 専用商品はサポートされていない／赤枠2: ChatGPTでの販売に関連する手数料は発生しません -->
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_02_shopify_chatgpt.png" alt="ShopifyのヘルプのChatGPTでの販売の考慮事項。B2B専用の商品はAgentic Storefrontで対象外で、ChatGPTでの販売に手数料は発生しないと書かれている" loading="lazy"><figcaption>Shopify ヘルプ「ChatGPTでの販売」</figcaption></figure>
 
 ### ② 商品フィードの申請
 
@@ -114,11 +114,11 @@ ChatGPTの検索全体の話として、この経路で手を付けられるの�
 | フィードの仕様: 標準のアップロードの送り先は米国。表せる国は米国・カナダ・メキシコ | 日本向けのフィードの受け付けの開始 |
 | フィードの仕様: ほかの市場はOpenAIが連携と国・通貨を確認してから使う | 円の価格の扱いと審査の基準・期間 |
 
-<!-- SHOT: OpenAI 開発者ドキュメント「Products」の Geo tagging の節・https://developers.openai.com/commerce/specs/file-upload/products ・PC・赤枠1: The standard OpenAI-format upload currently targets the US／赤枠2: target_countries の行（US, CA, and MX） -->
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_03_feed_geo.png" alt="OpenAIの商品フィードの仕様のGeo taggingの節。標準のアップロードは今のところ米国向けで、ほかの市場はOpenAIが連携を確認してから使うと書かれている" loading="lazy"><figcaption>OpenAI 開発者ドキュメント「Products」</figcaption></figure>
 
 **フィードの仕様が今想定している送り先は米国で、日本は国の一覧にも入っていません。**リリースノートの「全利用者」と事業者向けページの「米国の利用者向け」は食い違って見えますが、両者の関係はどちらの資料にも書かれていません。日本のアカウントで商品の一覧が出るかどうかも、この記事では試していません。
 
-<!-- SHOT: ChatGPT リリースノートの 2026年3月24日「Shopping updates in ChatGPT」・https://help.openai.com/en/articles/6825453-chatgpt-release-notes ・PC・赤枠1: rolling out to all ChatGPT users this week／赤枠2: using the Agentic Commerce Protocol (ACP) -->
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_04_release_0324.png" alt="ChatGPTのリリースノートのShopping updates in ChatGPT。改善は今週すべての利用者に順に届き、Agentic Commerce Protocolで事業者の商品情報を取り込むと書かれている" loading="lazy"><figcaption>ChatGPT リリースノート（2026年3月24日）</figcaption></figure>
 
 日本国内向けに売っている会社がフィードを申請しても、今はウェイトリストに入る段階です。Shopify Catalogの要件には国の条件が書かれていないため、日本のShopifyのストアがCatalogに入っていても、ChatGPTで誰に表示されるかは別に確かめる必要があります。**国内向けの会社が今すぐ動かせるのは③のWebの情報で、①と②は申請と要件の確認までになります。**
 
@@ -150,7 +150,7 @@ OpenAIの「[Commerce policies](https://openai.com/policies/commerce-policies)�
 | 医薬品 | 処方が要る医薬品・医療用品 | 処方薬 |
 | 護身用品 | 催涙スプレー・スタンガンなど | 催涙スプレーなどの護身用品 |
 
-<!-- SHOT: OpenAI「Commerce policies」の Drugs, medications, and supplements と Tobacco, nicotine, and alcohol の節・https://openai.com/policies/commerce-policies ・PC・赤枠1: Supplements の行／赤枠2: Alcoholic beverages (over 0.5% ABV) の行 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-shopping/cshp_05_policy.png" alt="OpenAIのコマースポリシーの薬物・医薬品及びサプリメントの節。減量やボディビルなど健康効果をうたって販売される摂取用製品が対象外と書かれている" loading="lazy"><figcaption>OpenAI「コマースポリシー」</figcaption></figure>
 
 アルコール度数0.5%を超える酒類や、減量などの効果をうたうサプリメントは、フィードを整えても商品の検索結果には出ません。ポリシーが決めているのは商品の掲載で、回答の文の中で銘柄や会社名が挙がるかどうかには触れていません。Shopifyのヘルプも、OpenAIの禁止商品に当たる商品はChatGPTの商品の検索結果に表示されないと書いています。
 
