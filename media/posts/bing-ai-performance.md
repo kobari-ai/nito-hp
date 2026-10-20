@@ -19,7 +19,7 @@ AIの回答から自社サイトへの動きは、GA4ではクリックされた
 - 2026年6月に**意図・トピック・引用シェア・比較**の4つがプレビューで加わった。Googleも8月末に生成AIの表示回数のレポートを全サイトへ広げた
 :::
 
-<!-- SHOT: AIパフォーマンスのダッシュボード（総引用数・平均引用ページ数・推移のグラフ）。Bing Webmaster Tools にログインして撮る。サイト名・URL・アカウントのアイコンは写さない・PC・赤枠なし。撮れない場合は Bing Webmaster Blog 2月の記事の図（https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview）を PC 幅で -->
+<figure class="post-figure"><img src="/media/images/bing-ai-performance/bwai_01_three.png" alt="AIの数字は3か所で別々に見る。Bing Webmaster ToolsはCopilotなどで出典に引かれた回数、Google Search ConsoleはAIによる概要などでの表示回数、GA4はAIの回答から実際にサイトに来た人" loading="lazy"></figure>
 
 ## AIパフォーマンスで分かること
 
@@ -85,9 +85,9 @@ AIパフォーマンスに別の申し込みは要りません。Bing Webmaster 
 4. AI Performanceを開き、期間（7日・30日・3か月・任意の範囲）を選ぶ
 5. 必要な表をCSVかExcelで書き出して、社内の資料に使う
 
-<!-- SHOT: Bing Webmaster Tools の My Sites の Import ボタン。ログインして撮る・PC・赤枠1つ（Import）。サイト名とアカウント名は写さない -->
+<figure class="post-figure"><img src="/media/images/bing-ai-performance/bwai_02_steps.png" alt="AIパフォーマンスを開くまでの4段。Bing Webmaster Toolsにサインイン、My SitesでImportしてSearch Consoleで許可、サイトを選んで取り込む、AI Performanceを開いて期間を選ぶ" loading="lazy"></figure>
 
-<!-- SHOT: AI Performance の画面で期間の選択と Compare の位置。ログインして撮る・PC・赤枠2つ（期間・Compare）。サイト名は写さない -->
+
 
 [インポートの手順のブログ](https://blogs.bing.com/webmaster/september-2019/Import-sites-from-Search-Console-to-Bing-Webmaster-Tools)によると、1回に取り込めるのは100サイトまで、1つのアカウントで1,000サイトまでです。新しく確認したサイトの検索のデータは、出るまで最大48時間かかると書かれています。Search Consoleへのアクセスを取り消すと所有の確認が外れるため、そのときはメタタグかDNSで確認し直します。
 
