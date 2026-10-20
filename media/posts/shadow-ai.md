@@ -19,13 +19,13 @@ IPAが2026年1月に公表した「情報セキュリティ10大脅威 2026」�
 - **Defenderの自動ブロックが効くのは組み込んだ端末で、私物のスマホは残る**。移行は本人の操作が要るので、段取りを先に決める
 :::
 
-<!-- FIG: 概要図。会社がやる5つの順番を縦に積む（調べる・用意する・ルール・止める・移す）。文字は5か所まで・読点なし。HTML 図（幅800の縦長） -->
+<figure class="post-figure"><img src="/media/images/shadow-ai/shai_00_steps.png" alt="シャドーAIに会社がやる5つの順番。使われているかを調べる、会社の契約を用意する、社内ルールを書く、止める、個人アカウントから移す" loading="lazy"></figure>
 
 ## シャドーAIとは
 
 情報システムの部署が把握していないクラウドサービスを社員が使う状態は、以前からシャドーITと呼ばれてきました。[IPAの10大脅威 2026の解説書（組織編）](https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf)は、職場にAIサービスが無い場合などに、社員が個人的に使っているAIサービスを業務に使うことをシャドーAIと書いています。**持ち出しが禁止されている業務データをAIに入力すれば情報漏えいにつながり、会社が個人アカウントの業務利用を認識できないこともリスクだ、というのがIPAの整理です。**
 
-<!-- SHOT: IPA「情報セキュリティ10大脅威 2026」の組織向けの表（3位 AIの利用をめぐるサイバーリスク・初選出の行）・https://www.ipa.go.jp/security/10threats/10threats2026.html ・PC・赤枠は3位の行 -->
+<figure class="post-figure"><img src="/media/images/shadow-ai/shai_01_ipa.png" alt="IPAの情報セキュリティ10大脅威2026の組織向けの表。3位のAIの利用をめぐるサイバーリスクは2026年の初選出" loading="lazy"><figcaption>IPA「情報セキュリティ10大脅威 2026」</figcaption></figure>
 
 同じ解説書は米国のAI企業の調査として、生成AIにデータをコピーして貼り付けている利用者が77%いて、そのうち82%が組織に管理されていないアカウントからだったと紹介しています（米国の企業の調査で、日本の数字ではありません）。日本の会社では[総務省の令和7年版 情報通信白書](https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r07/html/nd112220.html)が、生成AIの活用方針を定めている企業は2024年度の調査で49.7%と書いています。中小企業では「方針を明確に定めていない」との回答が約半数でした。
 
@@ -66,7 +66,7 @@ IPAの対策と各社の管理機能を、手を付ける順に並べ直しま�
 
 IPAが挙げる把握の手段は、通信ログとCASB（クラウドの利用を見張る仕組み）です。Microsoftの[Defender for Cloud Apps](https://learn.microsoft.com/ja-jp/defender-cloud-apps/release-note-archive)はアプリの一覧に生成AIの分類を持ち、ChatGPTなど社内で使われている生成AIのアプリを絞り込めます。検知の仕組みが無い会社なら、最初の一歩は経費精算に個人のサブスクが出ていないかの確認です。
 
-<!-- SHOT: Microsoft Learn「検出されたアプリを管理する」の非承認のタグ付けの節・https://learn.microsoft.com/ja-jp/defender-cloud-apps/governance-discovery ・PC・赤枠は「承認なし」の説明 -->
+<figure class="post-figure"><img src="/media/images/shadow-ai/shai_02_learn.png" alt="Microsoft Learnの検出されたアプリの管理のページ。アプリの承認を解除しても使用はブロックされず、ブロックするにはブロック スクリプトを生成すると書かれている" loading="lazy"><figcaption>Microsoft Learn「検出されたアプリを管理する」</figcaption></figure>
 
 ### ② 会社の契約を用意する
 
@@ -99,7 +99,7 @@ Defender for Cloud Appsでアプリに非承認のタグを付けるだけでは
 | ChatGPT Enterprise・Edu（認証済みのドメインで招待） | 個人用ワークスペースがあると、参加の前に移行の手順が出ることがある。統合するか、書き出して削除するか |
 | 招待なし | 個人用ワークスペースはそのまま残る |
 
-<!-- SHOT: OpenAIヘルプ「Onboarding employees with existing ChatGPT accounts」の Understand what employees will see の表・https://help.openai.com/en/articles/10479654 ・PC・赤枠は Business の行 -->
+
 
 **統合すると個人用ワークスペースは使えなくなり、会社のワークスペースから個人用へ戻す手段はありません。**統合の操作の手順は[ChatGPT Businessのメンバー招待と管理](/media/chatgpt-business-admin/)にまとめました。
 
