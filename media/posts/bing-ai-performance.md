@@ -51,6 +51,8 @@ Microsoftは3月の広告主向けのブログで、自社のグラウンディ�
 | ページ別の引用 | URLごとの引用回数 | ページの重要度ではない |
 | 推移 | 日ごとの引用の増減 | 増減の理由は示さない |
 
+<figure class="post-figure"><img src="/media/images/bing-ai-performance/bwai_02_dashboard.png" alt="Bing Webmaster ToolsのAI Performanceの画面の例。期間の切り替え、総引用数と平均引用ページ数、日ごとの推移のグラフ、データは全体の標本という注記が並ぶ" loading="lazy"><figcaption>Bing Webmaster Blog（2026年2月10日）に載ったAI Performanceの画面の例</figcaption></figure>
+
 いちばん使い道があるのはグラウンディングクエリです。Search Consoleの検索クエリに近い見え方ですが、利用者が入力した質問ではなく、**AIが回答の根拠を探すときに使った語句**を示します。自社のどのページが、どんな語句でAIに拾われているかが分かります。
 
 [Microsoft Advertisingのブログ](https://about.ads.microsoft.com/en/blog/post/march-2026/the-ai-performance-dashboard-your-view-into-where-your-brand-appears-across-the-ai-web)によると、3月には語句とページを対応づける表示が加わりました。語句を選ぶと引用されたページが、ページを選ぶとそのページを引いた語句が出ます。[ヘルプ](https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c)によると語句とページで同時に絞ることはできないため、両方で見たいときはエクスポートしたファイルで突き合わせます。
