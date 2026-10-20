@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】シャドーAI対策とは？会社がやること｜個人のChatGPT・社内ルール・検知 | nito Column</title>
+    <meta name="description" content="シャドーAI対策をIPA・個人情報保護委員会・AI事業者ガイドラインと各社の公式ヘルプで解説。個人のChatGPTやGeminiで起きること、会社がやる5つの順番、誰が決めるか、移行とブロックでつまずく所まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/shadow-ai/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】シャドーAI対策とは？会社がやること｜個人のChatGPT・社内ルール・検知">
+    <meta property="og:description" content="シャドーAI対策をIPA・個人情報保護委員会・AI事業者ガイドラインと各社の公式ヘルプで解説。個人のChatGPTやGeminiで起きること、会社がやる5つの順番、誰が決めるか、移行とブロックでつまずく所まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/shadow-ai/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/shadow-ai.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/shadow-ai.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】シャドーAI対策とは？会社がやること｜個人のChatGPT・社内ルール・検知", "description": "シャドーAI対策をIPA・個人情報保護委員会・AI事業者ガイドラインと各社の公式ヘルプで解説。個人のChatGPTやGeminiで起きること、会社がやる5つの順番、誰が決めるか、移行とブロックでつまずく所まで。", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/shadow-ai/"}, "articleSection": "AI活用", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】シャドーAI対策とは？会社がやること｜個人のChatGPT・社内ルール・検知"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "シャドーAIはIPAの10大脅威で何位ですか？", "acceptedAnswer": {"@type": "Answer", "text": "組織向けの3位です。「情報セキュリティ10大脅威 2026」で、AIの利用をめぐるサイバーリスクとして初めて選ばれました。解説書の中でシャドーAIが名指しされています。"}}, {"@type": "Question", "name": "社員が個人のChatGPTに入れた内容は学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "個人向けのプランでは［すべての人のためにモデルを改善する］がオンなら学習に使われます。BusinessとEnterpriseは既定で学習に使いません。"}}, {"@type": "Question", "name": "ChatGPTの管理者は個人の統合を強制できますか？", "acceptedAnswer": {"@type": "Answer", "text": "Businessではできません。OpenAIのヘルプによると、Businessの管理者は社員に個人用ワークスペースの統合も削除も求めることができず、統合するかは社員が選びます。Enterpriseで認証済みのドメインから招待した場合は、参加の前に統合するか書き出して削除するかの手順が出ることがあります。"}}, {"@type": "Question", "name": "ChatGPTのドメイン認証で個人の会話は移りますか？", "acceptedAnswer": {"@type": "Answer", "text": "移りません。ドメインの認証だけでは個人用ワークスペースは削除も統合もされません。Enterpriseの招待や自動のアカウント作成で移行の手順が出たときに、統合を選んだ人の、移せる種類の内容だけが移ります。チャットを選んで移すことはできません。"}}, {"@type": "Question", "name": "個人のGeminiに入れた内容は人に見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "見られることがあります。Geminiアプリのプライバシー ハブには、人間のレビュアーがチャットの一部をレビューし、レビューしたチャットは最長3年保存されるとあります。Google WorkspaceのGeminiは人によるレビューの対象になりません。"}}, {"@type": "Question", "name": "DefenderでChatGPTの利用を見つけられますか？", "acceptedAnswer": {"@type": "Answer", "text": "通信のログをDefender for Cloud Appsにつないでいれば見つけられます。アプリの一覧に生成AIの分類があり、ChatGPTなどの利用を洗い出せます。非承認にしても、それだけではブロックされません。"}}, {"@type": "Question", "name": "シャドーAIは個人情報保護法の違反になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "個人情報取扱事業者が個人データを本人の同意なく入力し、出力以外の目的で扱われた場合は、違反になる可能性があると個人情報保護委員会が書いています。入力の前に、サービスの会社が機械学習に使わないこと等を確かめるよう求めています。"}}, {"@type": "Question", "name": "シャドーAIの社内ルールに罰則は要りますか？", "acceptedAnswer": {"@type": "Answer", "text": "IPAの解説書は経営者層の対策に規程違反時の対応（ペナルティ）の明確化を挙げています。誤って入力したときの報告先も合わせて決めておけば、事故の後に誰へ知らせるかで迷いません。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=56b59318">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】シャドーAI対策とは…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.21</span>
+        </div>
+        <h1 class="post-title">【2026年10月】シャドーAI対策とは？会社がやること｜個人のChatGPT・社内ルール・検知</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="シャドーAI対策で会社がやること"><defs><linearGradient id="ecg-6ea73779" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6ea73779)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="86.4" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">シャドーAI対策で</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">会社がやること</text><line x1="288.4" y1="378.0" x2="911.6" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">個人のChatGPT・社内ルール・検知・移行</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>IPAが2026年1月に公表した「情報セキュリティ10大脅威 2026」で、AIの利用をめぐるサイバーリスクが組織向けの3位に初めて入りました。解説書は社員が個人で使うAIサービスを業務に使う状態をシャドーAIと呼び、会社がそれを認識できないこと自体もリスクに挙げました。</p>
+<p>社員が個人のChatGPTに議事録や顧客の資料を貼っているかもしれないが、禁止すべきか会社で契約すべきか決めきれない、という担当者向けに、公的な資料と各社の公式ヘルプで会社がやることを順に書きます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>会社の管理者は個人用ワークスペースに入れず、Businessでは統合も削除も求められない</strong></li>
+<li>IPAの解説書は、未許可のAIの禁止を、<strong>シャドーAIを避けるためのAIサービス利用の検討の項目に置き、個人アカウントの業務利用の制限と並べている</strong></li>
+<li><strong>Defenderの自動ブロックが効くのは会社が登録した端末だけで、登録していない私物のスマホは残る</strong>。移行は本人の操作が要るので、段取りを先に決める</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/shadow-ai/shai_00_steps.png" alt="シャドーAIに会社がやる5つの順番。使われているかを調べる、会社の契約を用意する、社内ルールを書く、止める、個人アカウントから移す" loading="lazy"></figure>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>シャドーAIとは</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>個人アカウントで起きること</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>公的な資料が会社に求めること</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>会社がやる5つの順番</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>① 使われているかを調べる</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>② 会社の契約を用意する</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>③ 社内ルールを書く</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>④ 止める</a></li>
+                    <li class="toc-h3"><a href="#s4-5"><span class="toc__n">4-5</span>⑤ 個人アカウントから移す</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>誰が決めて何にお金がかかるか</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>止めるときにつまずく所</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>禁止だけを出す</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>私物のスマホが残る</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>移行を本人任せにする</a></li>
+                    <li class="toc-h3"><a href="#s6-4"><span class="toc__n">6-4</span>ドメインを認証すれば片付くと考える</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">シャドーAIとは</h2>
+<p>情報システムの部署が把握していないクラウドサービスを社員が使う状態は、以前からシャドーITと呼ばれてきました。<a href="https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf">IPAの10大脅威 2026の解説書（組織編）</a>は、職場にAIサービスが無い場合などに、社員が個人的に使っているAIサービスを業務に使うことをシャドーAIと書いています。<strong>持ち出しが禁止されている業務データをAIに入力すれば情報漏えいにつながり、会社が個人アカウントの業務利用を認識できないこともリスクだ、というのがIPAの整理です。</strong></p>
+<figure class="post-figure"><img src="/media/images/shadow-ai/shai_01_ipa.png" alt="IPAの情報セキュリティ10大脅威2026の組織向けの表。3位のAIの利用をめぐるサイバーリスクは2026年の初選出" loading="lazy"><figcaption>IPA「情報セキュリティ10大脅威 2026」</figcaption></figure>
+
+<p>同じ解説書は米国のAI企業の調査として、生成AIにデータをコピーして貼り付けている利用者が77%いて、そのうち82%が組織に管理されていないアカウントからだったと紹介しています（米国のAI企業の調査です）。日本の会社では<a href="https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r07/html/nd112220.html">総務省の令和7年版 情報通信白書</a>が、生成AIの活用方針を定めている企業は2024年度の調査で49.7%と書いています。中小企業では「方針を明確に定めていない」との回答が約半数でした。</p>
+<h2 id="s2">個人アカウントで起きること</h2>
+<p>個人の契約は社員とサービスの会社との契約で、会社は当事者ではありません。OpenAIの<a href="https://help.openai.com/en/articles/9672121">管理されたワークスペースのヘルプ</a>によると、1つのアカウントで個人用と仕事用のワークスペースを分けて持てますが、仕事用の権限で個人用の中には入れません。<strong>ChatGPT Businessの管理者は、社員の個人用ワークスペースを統合させることも削除させることもできない、とヘルプに書かれています。</strong></p>
+<p>入力した内容の扱いも、個人向けと会社向けで違います。2026年10月21日に各社の公式ページで確かめた内容を並べました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>個人向け（ChatGPT・Gemini）</th>
+<th>会社向け（ChatGPT Business・Enterprise、WorkspaceのGemini）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">モデルの学習</td>
+<td data-label="個人向け（ChatGPT・Gemini）">ChatGPTは［すべての人のためにモデルを改善する］がオンなら使われる。Geminiは本人の設定で決まる</td>
+<td data-label="会社向け（ChatGPT Business・Enterprise、WorkspaceのGemini）">既定では使わない。Workspaceは許可なくドメインの外で使わない</td>
+</tr>
+<tr>
+<td data-label="項目">人によるレビュー</td>
+<td data-label="個人向け（ChatGPT・Gemini）">Geminiはチャットの一部をレビューし、レビューしたものは最長3年保存</td>
+<td data-label="会社向け（ChatGPT Business・Enterprise、WorkspaceのGemini）">WorkspaceのGeminiはレビューされない</td>
+</tr>
+</tbody>
+</table></div>
+<p>ChatGPTの個人向けの学習の設定は<a href="https://help.openai.com/en/articles/7730893">データコントロールのヘルプ</a>、会社向けは<a href="https://openai.com/enterprise-privacy/">OpenAIのEnterprise privacy</a>（2026年1月8日更新）によります。個人の設定の切り方は<a href="/media/chatgpt-training-off/">ChatGPTに学習させない設定</a>にまとめました。Geminiは<a href="https://support.google.com/gemini/answer/13594961?hl=ja">Geminiアプリのプライバシー ハブ</a>に、人間のレビュアーが確認したチャットはアクティビティを消しても消えず最長3年保存されるとあります。Workspaceの<a href="https://support.google.com/a/answer/15706919?hl=ja">Google Workspaceの生成AIに関するプライバシー ハブ</a>には、人によるレビューも許可のない学習も無いと書かれていました。</p>
+<p>個人情報が絡む場面について、<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/">個人情報保護委員会の注意喚起</a>（2023年6月2日）は、個人情報取扱事業者が本人の同意なく個人データを含むプロンプトを入力し、それが応答の出力以外の目的で扱われれば、個人情報保護法の規定に違反する可能性があるとしています。<strong>そのため、入力する前にサービスの会社が個人データを機械学習に使わないこと等を確かめるよう求めています。</strong>社員の個人アカウントについてこの確認を会社が担保する手段はありません。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">公的な資料が会社に求めること</h2>
+<p>IPAの解説書は対策を経営者層とシステム管理者・従業員に分けて並べ、<a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html">AI事業者ガイドライン</a>のAI利用者を想定したものだと断っています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>担う人</th>
+<th>IPAの解説書に並ぶ対策（シャドーAIに関わるもの）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="担う人">経営者層</td>
+<td data-label="IPAの解説書に並ぶ対策（シャドーAIに関わるもの）">AIサービスの利用の検討、未許可のAIサービス利用の禁止、利用規定の整備、個人アカウントでの業務利用の制限、規程違反時の対応の明確化、学習から外すオプトアウト設定の徹底、契約時の約款の確認</td>
+</tr>
+<tr>
+<td data-label="担う人">システム管理者・従業員</td>
+<td data-label="IPAの解説書に並ぶ対策（シャドーAIに関わるもの）">IT資産と構成の管理、通信ログやCASBで管理されていないAIサービスの利用を把握、多要素認証、AI利用の講習、秘密情報を安易に入力しない</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>禁止の項目は「シャドーAI回避のため、AIサービス利用の検討」の下の1つです。</strong></p>
+<p>総務省と経済産業省の<a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html">AI事業者ガイドライン（第1.2版）</a>（2026年3月31日公表）は、第5部でAI利用者に求めることを挙げています。個人情報を不適切に入力しないこと（U-4）と、機密情報を不適切に入力しないこと・提供者のセキュリティ上の留意点を守ること（U-5）が、社内ルールの柱になります。</p>
+<h2 id="s4">会社がやる5つの順番</h2>
+<p>IPAの対策と各社の管理機能を、手を付ける順に並べ直しました。手順は公式の説明に沿って書いています。</p>
+<h3 id="s4-1">① 使われているかを調べる</h3>
+<p>IPAが挙げる把握の手段は、通信ログとCASB（クラウドの利用を見張る仕組み）です。Microsoftの<a href="https://learn.microsoft.com/ja-jp/defender-cloud-apps/release-note-archive">Defender for Cloud Apps</a>はアプリの一覧に生成AIの分類を持ち、ChatGPTなど社内で使われている生成AIのアプリを絞り込めます。検知の仕組みが無い会社なら、最初の一歩は経費精算に個人のサブスクが出ていないかの確認です。</p>
+<figure class="post-figure"><img src="/media/images/shadow-ai/shai_02_learn.png" alt="Microsoft Learnの検出されたアプリの管理のページ。アプリの承認を解除しても使用はブロックされず、ブロックするにはブロック スクリプトを生成すると書かれている" loading="lazy"><figcaption>Microsoft Learn「検出されたアプリを管理する」</figcaption></figure>
+
+<h3 id="s4-2">② 会社の契約を用意する</h3>
+<p>禁止を出す前に、使ってよいAIを決めて配ります。ChatGPT BusinessとEnterprise、Google WorkspaceのGemini、Microsoft Copilot Chatは、どれも会社のアカウントで入る点で個人の契約と違います。ChatGPT Businessの席の料金と個人のPlusとの差は<a href="/media/chatgpt-business/">ChatGPT Businessとは</a>に書きました。</p>
+<h3 id="s4-3">③ 社内ルールを書く</h3>
+<p>ルールに入れる項目はここまでの公的な資料から拾え、根拠ごとに並べると次の表のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>根拠</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">使ってよいAIと契約の種類</td>
+<td data-label="根拠">IPA（AIサービス利用の検討）</td>
+</tr>
+<tr>
+<td data-label="項目">個人アカウントの業務利用を制限する</td>
+<td data-label="根拠">IPA（個人アカウントの業務利用の制限）</td>
+</tr>
+<tr>
+<td data-label="項目">不適切に入れない情報（個人データ・機密情報）</td>
+<td data-label="根拠">個人情報保護委員会、AI事業者ガイドライン U-4・U-5</td>
+</tr>
+<tr>
+<td data-label="項目">学習のオプトアウトの設定</td>
+<td data-label="根拠">IPA</td>
+</tr>
+<tr>
+<td data-label="項目">違反したときの対応と、誤って入れたときの報告先</td>
+<td data-label="根拠">IPA（規程違反時の対応、被害を受けた後の対応）</td>
+</tr>
+<tr>
+<td data-label="項目">出力を確かめてから使う</td>
+<td data-label="根拠">IPA（ハルシネーション）</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s4-4">④ 止める</h3>
+<p>Defender for Cloud Appsでアプリに非承認のタグを付けるだけでは使用はブロックされない、と<a href="https://learn.microsoft.com/ja-jp/defender-cloud-apps/governance-discovery">検出されたアプリの管理のページ</a>に書かれています。<strong>Defender for Endpointでクラウド保護とネットワーク保護を有効にしていれば、Defender for Endpointに登録した端末では、非承認にしたアプリが自動でブロックされます。</strong>ブロックはデバイスグループごとに絞れるほか、ブロックの代わりに警告を出す形も選べます。Microsoftの無料のCopilot Chatを止める設定は<a href="/media/copilot-chat-admin-block/">Copilot Chatを社内で止める方法</a>で扱いました。</p>
+<h3 id="s4-5">⑤ 個人アカウントから移す</h3>
+<p>社員が仕事のメールアドレスで個人のChatGPTを使っている場合は、移し方を先に決めておくのが安全です。OpenAIの<a href="https://help.openai.com/en/articles/10479654">既存のChatGPTアカウントを持つ社員の受け入れのヘルプ</a>にある違いをまとめました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>招待された先</th>
+<th>社員に起きること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="招待された先">ChatGPT Business</td>
+<td data-label="社員に起きること">個人用ワークスペースを分けたままにするか統合するかを本人が選ぶ。管理者は統合も削除も求められない</td>
+</tr>
+<tr>
+<td data-label="招待された先">ChatGPT Enterprise・Edu（認証済みのドメインで招待）</td>
+<td data-label="社員に起きること">個人用ワークスペースがあると、参加の前に移行の手順が出ることがある。統合するか、書き出して削除するか</td>
+</tr>
+<tr>
+<td data-label="招待された先">招待も承認された登録もない</td>
+<td data-label="社員に起きること">個人用ワークスペースはたいてい別のまま。Enterprise・Eduで自動のアカウント作成があると、仕事のメールでサインインしただけで移行の手順が出ることがある</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>統合すると個人用ワークスペースは使えなくなり、会社のワークスペースから個人用へ戻す手段はありません。</strong>統合の操作の手順は<a href="/media/chatgpt-business-admin/">ChatGPT Businessのメンバー招待と管理</a>にまとめました。</p>
+<h2 id="s5">誰が決めて何にお金がかかるか</h2>
+<p>IPAの分け方に合わせると、決める人と費用の項目は次のようになります。金額は契約や席数で変わるので、項目だけ並べています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>決めること</th>
+<th>決める人</th>
+<th>お金や手間がかかるもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="決めること">使ってよいAIと契約</td>
+<td data-label="決める人">経営者層</td>
+<td data-label="お金や手間がかかるもの">会社の契約の席代</td>
+</tr>
+<tr>
+<td data-label="決めること">社内ルールと罰則</td>
+<td data-label="決める人">経営者層</td>
+<td data-label="お金や手間がかかるもの">ルール作りと周知の工数、必要なら専門家への相談</td>
+</tr>
+<tr>
+<td data-label="決めること">利用状況の把握とブロック</td>
+<td data-label="決める人">システム管理者</td>
+<td data-label="お金や手間がかかるもの">検知やブロックの仕組みのライセンス。今あるライセンスで何が使えるかを先に確かめる</td>
+</tr>
+<tr>
+<td data-label="決めること">移行の段取り</td>
+<td data-label="決める人">システム管理者</td>
+<td data-label="お金や手間がかかるもの">社員ごとの移行の案内と問い合わせの対応</td>
+</tr>
+<tr>
+<td data-label="決めること">講習</td>
+<td data-label="決める人">システム管理者</td>
+<td data-label="お金や手間がかかるもの">講習の準備と受講の時間</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="s6">止めるときにつまずく所</h2>
+<h3 id="s6-1">禁止だけを出す</h3>
+<p><strong>IPAは職場でAIサービスの利用が無い場合などに、社員が個人のAIを業務に使うことがあると書いています。</strong></p>
+<h3 id="s6-2">私物のスマホが残る</h3>
+<p>自動ブロックが効くのは会社がDefender for Endpointに登録した端末だけです。登録していない私物のスマホで個人のアプリを開く経路は残るため、ルールと講習で補う必要があります。</p>
+<h3 id="s6-3">移行を本人任せにする</h3>
+<p>OpenAIのヘルプは招待を送る前に、社員が仕事のメールで個人・Plus・Proのアカウントを使っていないかを確かめるよう勧めています。同じヘルプによると、App StoreやGoogle Playで払ったサブスクは移行の流れで止まらない場合があり、ストアでの解約が別に要る場合があります。統合した自作のGPTは非公開になるため、共有していたものは共有し直しが必要です。</p>
+<h3 id="s6-4">ドメインを認証すれば片付くと考える</h3>
+<p><a href="https://help.openai.com/en/articles/8871611">ドメイン認証のヘルプ</a>によると、仕事のドメインを認証しても、既存の個人用ワークスペースは削除も統合もされません。個人のChatGPTアカウントまで制限できるのはヘルプがdomain claimingと呼ぶ別の手続きで、承認された用途に限り、サポートへの申請が要ります。Enterpriseには、仕事のメールで会社以外のワークスペースから外部アプリに新しくつなぐことを止める設定もあり、これもサポートへの依頼で有効にします。</p>
+<h2 id="s7">よくある質問</h2>
+<h3 id="s7-1">シャドーAIはIPAの10大脅威で何位ですか？</h3>
+<p>組織向けの3位です。「情報セキュリティ10大脅威 2026」で、AIの利用をめぐるサイバーリスクとして初めて選ばれました。解説書の中でシャドーAIが名指しされています。</p>
+<h3 id="s7-2">社員が個人のChatGPTに入れた内容は学習に使われますか？</h3>
+<p>個人向けのプランでは［すべての人のためにモデルを改善する］がオンなら学習に使われます。BusinessとEnterpriseは既定で学習に使いません。</p>
+<h3 id="s7-3">ChatGPTの管理者は個人の統合を強制できますか？</h3>
+<p>Businessではできません。OpenAIのヘルプによると、Businessの管理者は社員に個人用ワークスペースの統合も削除も求めることができず、統合するかは社員が選びます。Enterpriseで認証済みのドメインから招待した場合は、参加の前に統合するか書き出して削除するかの手順が出ることがあります。</p>
+<h3 id="s7-4">ChatGPTのドメイン認証で個人の会話は移りますか？</h3>
+<p>移りません。ドメインの認証だけでは個人用ワークスペースは削除も統合もされません。Enterpriseの招待や自動のアカウント作成で移行の手順が出たときに、統合を選んだ人の、移せる種類の内容だけが移ります。チャットを選んで移すことはできません。</p>
+<h3 id="s7-5">個人のGeminiに入れた内容は人に見られますか？</h3>
+<p>見られることがあります。Geminiアプリのプライバシー ハブには、人間のレビュアーがチャットの一部をレビューし、レビューしたチャットは最長3年保存されるとあります。Google WorkspaceのGeminiは人によるレビューの対象になりません。</p>
+<h3 id="s7-6">DefenderでChatGPTの利用を見つけられますか？</h3>
+<p>通信のログをDefender for Cloud Appsにつないでいれば見つけられます。アプリの一覧に生成AIの分類があり、ChatGPTなどの利用を洗い出せます。非承認にしても、それだけではブロックされません。</p>
+<h3 id="s7-7">シャドーAIは個人情報保護法の違反になりますか？</h3>
+<p>個人情報取扱事業者が個人データを本人の同意なく入力し、出力以外の目的で扱われた場合は、違反になる可能性があると個人情報保護委員会が書いています。入力の前に、サービスの会社が機械学習に使わないこと等を確かめるよう求めています。</p>
+<h3 id="s7-8">シャドーAIの社内ルールに罰則は要りますか？</h3>
+<p>IPAの解説書は経営者層の対策に規程違反時の対応（ペナルティ）の明確化を挙げています。誤って入力したときの報告先も合わせて決めておけば、事故の後に誰へ知らせるかで迷いません。</p>
+<h2 id="s8">出典</h2>
+<ul>
+<li>IPA「<a href="https://www.ipa.go.jp/security/10threats/10threats2026.html">情報セキュリティ10大脅威 2026</a>」（2026年1月29日公開、2026年10月21日取得）</li>
+<li>IPA「<a href="https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf">情報セキュリティ10大脅威 2026 解説書（組織編）</a>」（2026年3月12日公開、2026年10月21日取得）</li>
+<li>総務省「<a href="https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r07/html/nd112220.html">令和7年版 情報通信白書 企業におけるAI利用の現状</a>」（同）</li>
+<li>個人情報保護委員会「<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/">生成AIサービスの利用に関する注意喚起等について</a>」（2023年6月2日公表、同）</li>
+<li>総務省・経済産業省「<a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html">AI事業者ガイドライン（第1.2版）</a>」（2026年3月31日公表、同）</li>
+<li>OpenAI「<a href="https://openai.com/enterprise-privacy/">Enterprise privacy at OpenAI</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/7730893">Data controls in ChatGPT</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/9672121">Getting started with OpenAI identity and access for managed workspaces</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/10479654">Onboarding employees with existing ChatGPT accounts</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/8871611">Verifying your domain for OpenAI identity</a>」（同）</li>
+<li>Google「<a href="https://support.google.com/gemini/answer/13594961?hl=ja">Geminiアプリのプライバシー ハブ</a>」（同）</li>
+<li>Google「<a href="https://support.google.com/a/answer/15706919?hl=ja">Google Workspaceの生成AIに関するプライバシー ハブ</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/defender-cloud-apps/release-note-archive">Microsoft Defender for Cloud Appsの過去の更新プログラムのアーカイブ</a>」（同）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/defender-cloud-apps/governance-discovery">検出されたアプリを管理する</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">シャドーAIとは</a><a href="#s2">個人アカウントで起きること</a><a href="#s3">公的な資料が会社に求めること</a><a href="#s4">会社がやる5つの順番</a><a href="#s5">誰が決めて何にお金がかかるか</a><a href="#s6">止めるときにつまずく所</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/copilot-studio/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilot Studioの料金"><defs><linearGradient id="ecg-399a77f6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-399a77f6)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilot Studioの料金</text><line x1="166.8" y1="365.9" x2="1033.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】Copilot Studioの料金を解説｜M365 Copilotの範囲・作れる人</div>
+            </a>
+            <a href="/media/copilot-adoption/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilotが社内で使われないとき"><defs><linearGradient id="ecg-7548a162" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7548a162)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilotが社内で</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">使われないとき</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.19</div>
+                <div class="rel-card__ttl">【2026年10月】Copilotが社内で使われないときの調べ方｜使用状況レポート・定着の手順</div>
+            </a>
+            <a href="/media/chatgpt-connectors-admin/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのコネクタの管理"><defs><linearGradient id="ecg-95170910" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-95170910)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">法人</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのコネクタの管理</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.17</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTコネクタの管理者設定・BusinessとEnterpriseの違い</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'shadow-ai',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
