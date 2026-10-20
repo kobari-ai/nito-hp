@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】サーチコンソールでAIモード・AIによる概要の表示を見る方法と分からないこと | nito Column</title>
+    <meta name="description" content="Search Consoleの生成AIパフォーマンスレポートで、AIモードとAIによる概要に自社ページが出た回数を見る方法をGoogleのヘルプで整理。クリック・検索語・内訳が見られない点、除外設定の扱い、社内の報告の作り方まで書きました。">
+    <link rel="canonical" href="https://nito-0210.com/media/gsc-ai-mode/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】サーチコンソールでAIモード・AIによる概要の表示を見る方法と分からないこと">
+    <meta property="og:description" content="Search Consoleの生成AIパフォーマンスレポートで、AIモードとAIによる概要に自社ページが出た回数を見る方法をGoogleのヘルプで整理。クリック・検索語・内訳が見られない点、除外設定の扱い、社内の報告の作り方まで書きました。">
+    <meta property="og:url" content="https://nito-0210.com/media/gsc-ai-mode/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/gsc-ai-mode.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/gsc-ai-mode.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】サーチコンソールでAIモード・AIによる概要の表示を見る方法と分からないこと", "description": "Search Consoleの生成AIパフォーマンスレポートで、AIモードとAIによる概要に自社ページが出た回数を見る方法をGoogleのヘルプで整理。クリック・検索語・内訳が見られない点、除外設定の扱い、社内の報告の作り方まで書きました。", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/gsc-ai-mode/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】サーチコンソールでAIモード・AIによる概要の表示を見る方法と分からないこと"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Search Consoleの生成AIレポートでクリック数は見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "見られません。ヘルプの「レポートを設定する」の節にある指標はインプレッション数だけです。AI機能からのクリックは通常の検索パフォーマンスのクリック数に含まれていますが、通常の検索結果からのクリックと分けては出ません。"}}, {"@type": "Question", "name": "Search ConsoleでAIモードとAIによる概要を分けて見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "分けられません。生成AIレポートは両方の表示回数を合わせた数字で、片方だけを選ぶ絞り込みはヘルプに書かれていません。検索タイプの選択肢もテキストとマルチモーダルの2つです。"}}, {"@type": "Question", "name": "Search Consoleに生成AIのレポートが表示されないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "ヘルプが挙げる理由はAI機能での表示回数の不足と、検索の生成 AI 設定でのサイトの除外の2つです。設定の「検索の生成 AI」で、含めるが選ばれているか、親から設定を継承しているなら親の設定が含めるになっているかを先に確かめます。"}}, {"@type": "Question", "name": "Search ConsoleでAIモードに出たときの検索語は分かりますか？", "acceptedAnswer": {"@type": "Answer", "text": "分かりません。生成AIレポートの分け方はページ・国・デバイス・日付の4つで、検索語はありません。通常のレポートの検索語にはAI機能の分も混ざっていて、AI機能での表示だけを取り出す方法は用意されていないのが現状です。"}}, {"@type": "Question", "name": "Search ConsoleでChatGPTからの流入は見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "見られません。Search ConsoleはGoogleの検索とDiscoverなどのデータだけを扱うため、ChatGPTやPerplexityから来た分はGA4の参照元で確かめます。"}}, {"@type": "Question", "name": "Search Consoleで生成AI機能から除外すると通常の検索順位は下がりますか？", "acceptedAnswer": {"@type": "Answer", "text": "ヘルプによると、この設定はAI機能に表示するかどうかだけに効き、通常の検索の順位や掲載の判断には使われません。ただしAI機能からの表示と流入は無くなり、生成AIレポートが出ない原因にもなります。"}}, {"@type": "Question", "name": "Search Consoleの生成AIレポートはAPIで取得できますか？", "acceptedAnswer": {"@type": "Answer", "text": "Search Analytics APIのリファレンスには、生成AI機能を指す検索タイプがありません（2026年10月21日に確認）。数字が要るときは画面からエクスポートします（レポートの画面にエクスポートのボタンがあることを2026年10月21日に確かめました）。"}}, {"@type": "Question", "name": "Search Consoleの生成AIレポートを使うのに費用はかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "かかりません。Search ConsoleはGoogleの無料サービスで、生成AIレポートもその中の機能です。Search Consoleでパフォーマンスのレポートを見られる権限（所有者・フルユーザー・制限付きユーザー）があれば、そのまま開けます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=56b59318">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】サーチコンソールでA…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.21</span>
+        </div>
+        <h1 class="post-title">【2026年10月】サーチコンソールでAIモード・AIによる概要の表示を見る方法と分からないこと</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="サーチコンソールでAI表示を見る"><defs><linearGradient id="ecg-f111dfd5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f111dfd5)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="86.4" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="122.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">計測</text><text x="600" y="232.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">サーチコンソール</text><text x="600" y="334.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">でAI表示を見る</text><line x1="296.0" y1="378.0" x2="904.0" y2="378.0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="451.9" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">生成AIレポートで分かること</text><text x="600" y="535.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Googleは2026年8月31日、Search Consoleの「生成 AI パフォーマンス レポート」を世界のすべてのサイトに広げました。AIによる概要とAIモードに自社ページへのリンクが出た回数を、ページごとに見られる公式の画面です。</p>
+<p>経営会議で「うちはAI検索に出ているのか」と聞かれたとき、最初に開くのはこのレポートになります。ただし見られるのは表示回数だけです。この記事はGoogleのヘルプをもとに、開き方と分かること・分からないこと、社内で決めておく設定を整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>生成AIレポートで見られるのは<strong>AIによる概要とAIモードを合わせた表示回数</strong>で、ページ・国・デバイス・日付で分けられる</li>
+<li><strong>クリック数・検索語・AIモードと概要の内訳は、生成AIレポートのヘルプに載っていない</strong>。表示回数は通常の検索パフォーマンスにも入っているので足し算しない</li>
+<li>同時に入った<strong>検索の生成 AI 設定で除外すると、AI機能からの表示も流入も無くなり、このレポートが出ない原因にもなる</strong>。触れる人を社内で決めておく</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/gsc-ai-mode/gsam_00_overview.png" alt="生成AIのレポートで分かること。見られるのは表示回数と、ページ・国・デバイス・日付ごとの内訳。見られないのはクリック数と検索語、AIモードと概要の内訳" loading="lazy"></figure>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>生成AIパフォーマンスレポートとは</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>レポートの開き方</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>レポートが表示されないとき</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>見られること・見られないこと</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>クリック数と検索語は出ない</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>AIモードとAIによる概要は分けられない</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>通常のレポートと足し算しない</a></li>
+                    <li class="toc-h3"><a href="#s3-4"><span class="toc__n">3-4</span>APIでは取れない</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>数字の読み方</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>社内で決めておくこと</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>検索の生成 AI 設定を触れる人</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>月次の報告に載せる数字</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>Google以外のAIは別のツールで見る</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>表示回数とAIの回答で挙がることは違う</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">生成AIパフォーマンスレポートとは</h2>
+<p>Search Central ブログの<a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports">発表記事</a>は2026年6月3日付けで、最初は一部のサイトだけに配られました。同じ記事の冒頭に、8月31日にすべてのサイトへ広げたという注記が後から足されています。</p>
+<p>レポートは検索とDiscoverの2本です。検索の方は<strong>AIによる概要とAIモードに自社ページへのリンクが出た回数</strong>を数えます。ヘルプ「<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成 AI パフォーマンス レポート（検索）</a>」は、対象の機能の一覧を検索の開発に合わせて更新するとしています。Discoverの生成AI機能は<a href="https://support.google.com/webmasters/answer/16983858?hl=ja">Discover版のレポート</a>に分かれ、Search Labsの試験運用のデータはどちらにも入りません。</p>
+<p>AI機能の表示とクリックは、このレポートができる前から通常の検索パフォーマンスに入っていました。<a href="https://developers.google.com/search/updates?hl=ja">検索セントラルの更新履歴</a>では、AIによる概要の数え方の説明が2024年8月、AIモードのデータが合計に入ったのが2025年6月16日です。<strong>新しいレポートはもともと合計に入っていた数字からAI機能の表示回数だけを切り出して見せるもの</strong>と読むと、後の注意点がつながります。</p>
+<h2 id="s2">レポートの開き方</h2>
+<p>ヘルプのページにある「生成 AI パフォーマンス レポートを開く」のリンク先は、Search Consoleの<a href="https://search.google.com/search-console/performance/search-analytics/ai">生成 AI 機能のレポート</a>です。画面から入るときは左のメニューで［検索パフォーマンス］を開き、グラフの下に出る「Google 検索の生成 AI 機能におけるサイトのパフォーマンスに関する詳細情報を確認できます」の［レポートを開く］を押します。2026年10月21日に開いたときの画面の名前は「生成 AI 機能」で、「ベータ版」と付いていました。</p>
+<figure class="post-figure"><img src="/media/images/gsc-ai-mode/gsam_01_entry.png" alt="Search Consoleの検索パフォーマンスのグラフの下に出る案内。Google 検索の生成 AI 機能におけるサイトのパフォーマンスに関する詳細情報を確認できますの右にレポートを開くがある" loading="lazy"><figcaption>Search Consoleの検索パフォーマンスの画面（2026年10月21日）</figcaption></figure>
+
+<p>レポートの初期の表示は、選んだ期間の合計の表示回数です。検索タイプは「ウェブ: テキストベース」と「ウェブ: マルチモーダル」の2つで、後者はGoogleレンズやかこって検索など画像を使った検索の分になります。表の上のタブを切り替えると、ページ・国・デバイス・日付ごとに分けて見られます。グラフと表はどちらもエクスポートでき、画面で「~」や「-」の項目はダウンロードしたデータで0になります。</p>
+<h3 id="s2-1">レポートが表示されないとき</h3>
+<p>検索版のヘルプが挙げるレポートが見当たらない理由の1つめは、<strong>AI機能での表示回数が足りていないこと</strong>です。もう1つの理由として書かれているのが、後で説明する検索の生成 AI 設定でサイトを除外していることです。Discover版のヘルプには、段階的な配布のためにすべてのプロパティで使えるわけではない、という理由も残っています。</p>
+<p>AIによる概要がほとんど出ない語で集客しているサイトでも、表示回数は足りなくなります。その場合は除外の設定を確かめたうえで、まず通常の検索でインデックスと順位が足りているかを見る方が先です。AIによる概要がインデックスを土台にしている点は<a href="/media/cited-by-ai-overviews/">AI Overviewsに引用されるにはの記事</a>にまとめています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">AI のおすすめに自社の名前が挙がるか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">見られること・見られないこと</h2>
+<p><strong>このレポートでAI経由のクリックや検索語まで分かると読むと、社内の報告を誤ります。</strong>ヘルプが挙げる指標は表示回数だけで、分け方もページ・国・日付・デバイスの4つです。通常の検索パフォーマンスとの違いを、2026年10月21日に取得したヘルプで並べると次のようになります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>生成AIレポート</th>
+<th>通常の検索パフォーマンス</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">表示回数</td>
+<td data-label="生成AIレポート">見られる（概要とAIモードの合計）</td>
+<td data-label="通常の検索パフォーマンス">AI機能の分も含む・区別なし</td>
+</tr>
+<tr>
+<td data-label="項目">クリック数</td>
+<td data-label="生成AIレポート">ヘルプの指標に無い</td>
+<td data-label="通常の検索パフォーマンス">AI機能の分も含む・区別なし</td>
+</tr>
+<tr>
+<td data-label="項目">検索語（クエリ）</td>
+<td data-label="生成AIレポート">分け方の一覧に無い</td>
+<td data-label="通常の検索パフォーマンス">見られるがAI機能の分は区別なし</td>
+</tr>
+<tr>
+<td data-label="項目">AIモードと概要の内訳</td>
+<td data-label="生成AIレポート">ヘルプに記載なし</td>
+<td data-label="通常の検索パフォーマンス">分けられない</td>
+</tr>
+<tr>
+<td data-label="項目">掲載順位</td>
+<td data-label="生成AIレポート">指標に無い</td>
+<td data-label="通常の検索パフォーマンス">概要は1つの順位として数える</td>
+</tr>
+<tr>
+<td data-label="項目">ページ・国・デバイス・日付</td>
+<td data-label="生成AIレポート">見られる</td>
+<td data-label="通常の検索パフォーマンス">見られる</td>
+</tr>
+<tr>
+<td data-label="項目">APIでの取得</td>
+<td data-label="生成AIレポート">リファレンスに記載なし</td>
+<td data-label="通常の検索パフォーマンス">Search Analytics APIで取れる</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s3-1">クリック数と検索語は出ない</h3>
+<p>クリック数が見られると書いた解説記事もありますが、ヘルプの「レポートを設定する」の節に出てくる指標はインプレッション数だけです。指標を足すことも含めてサイト運営者と検討を続ける、と発表記事は書くにとどまっています。<strong>AI機能から何人が来たかは、今のところSearch Consoleのどのレポートでも分けて出ません。</strong></p>
+<p>検索語が出ないため、どの質問でAIの回答に自社のページが出たのかも分かりません。通常のレポートには検索語がありますが、AI機能に出た分と通常の検索結果に出た分は区別されずに混ざっています。</p>
+<h3 id="s3-2">AIモードとAIによる概要は分けられない</h3>
+<p>ヘルプは対象の機能としてAIによる概要とAIモードの2つを並べていますが、片方だけを選ぶ絞り込みの説明はありません。ヘルプにある検索タイプの説明も、テキストとマルチモーダルの2つだけでした。AIモードの利用が伸びているかどうかを、このレポートだけで判断することはできません。</p>
+<p>数え方の細部はヘルプ「<a href="https://support.google.com/webmasters/answer/7042828?hl=ja">表示回数、掲載順位、クリック数とは</a>」にあります。AIによる概要は検索結果の中で1つの順位を占め、中のリンクはすべて同じ順位として数えられます。AIモードで追加の質問をすると<strong>新しい検索として数えられます</strong>。</p>
+<h3 id="s3-3">通常のレポートと足し算しない</h3>
+<p>ヘルプの「データの詳細」の節によると、生成AIレポートの中身は通常の検索パフォーマンスのウェブ検索タイプのデータです。月次の報告で「通常の表示回数」と「生成AIの表示回数」を合計すると、同じ表示を2回数えることになります。並べるなら、通常の表示回数の内数として扱います。</p>
+<h3 id="s3-4">APIでは取れない</h3>
+<p><a href="https://developers.google.com/webmaster-tools/v1/searchanalytics/query">Search Analytics APIのリファレンス</a>が検索タイプとして挙げているのは、web・image・video・news・discover・googleNewsの6つです。2026年10月21日に確かめた時点で、生成AI機能を指す値はありませんでした。APIで数字を集めて自動で報告を作っている会社は、このレポートの分だけ画面からエクスポートして足す運用になります。</p>
+<h2 id="s4">数字の読み方</h2>
+<p>表示回数そのものより、<strong>ページごとに通常の表示回数と並べた比率</strong>の方が社内の判断に使えます。どちらもウェブ検索タイプのデータなので、同じ期間・同じページで比べると、そのページの表示のうちAI機能に出た割合が分かります。割合が高いページはAIによる概要やAIモードが出る語で多く表示されているページです。書き方が選ばれた結果なのか、AI機能が出やすい語で表示されているだけなのかは、この比率では分けられません。</p>
+<p>比べるときは集計の単位をそろえます。グラフの合計はプロパティ単位で、同じAI機能に自社のリンクが2つ出ても1回の扱いです。表をページで分けた場合はページ単位の集計になるため、グラフの合計と表の合計は一致しないことがあります。日付は太平洋時間で、直近の数字は暫定値として点線で表示されます。</p>
+<p>表は通常のレポートと同じく1,000行までです。記事や製品ページが1,000を超えるサイトでは、上位から順に見ていく前提で、残りはディレクトリごとのプロパティを分けて確かめます。</p>
+<h2 id="s5">社内で決めておくこと</h2>
+<p>このレポートはマーケ担当が個人で眺めるより、<strong>誰が設定を持ち、毎月どの数字を経営に出すかを先に決めておく</strong>方が役に立ちます。Search Console自体はGoogleの<a href="https://support.google.com/webmasters/answer/9128668?hl=ja">無料サービス</a>で、このレポートのために新しい契約は要りません。</p>
+<h3 id="s5-1">検索の生成 AI 設定を触れる人</h3>
+<p>レポートと同じ8月31日に、すべてのサイトに<a href="https://support.google.com/webmasters/answer/16908024?hl=ja">検索の生成 AI 設定</a>が入りました。Search Consoleの<a href="https://search.google.com/search-console/settings/search-gen-ai">設定の「検索の生成 AI」</a>から開きます。設定の対象はAIによる概要・AIモード・Discoverの生成AI機能の3つで、選べるのは次の3つです。</p>
+<ul>
+<li><strong>含める</strong>: AI機能にリンクとコンテンツが表示される対象になる。すべてのプロパティの初期値</li>
+<li><strong>除外する</strong>: AI機能に出なくなり、そこからの表示も流入も発生しない</li>
+<li><strong>親から設定を継承する</strong>: 上の階層のプロパティと同じ設定に従う。親があるプロパティの初期値</li>
+</ul>
+<p>除外しても、通常の検索の順位や掲載の判断には使われないとヘルプは説明しています。一方で<strong>除外するとAI機能での表示がなくなり、生成AIレポートが出ない原因にもなる</strong>と、レポートのヘルプが注記しています。AIに勝手に使われたくないという理由で誰かが除外を選ぶと、見られる機会と測る手段を同時に失うことになります。除外の反映は通常数日以内で、設定が有効になってから1〜2日で除外されますが、キャッシュや伝播の状況でもっとかかるものもあるという説明でした。</p>
+<p>設定は上の階層から引き継がれる仕組みです。ドメインのプロパティの下にURLのプロパティがあれば、何も変えない限り下は上の設定に従います。下の階層で上書きした場合は、いちばん上のドメインのプロパティの所有者の画面に通知が出る決まりです。</p>
+<p>ヘルプ「<a href="https://support.google.com/webmasters/answer/7687615?hl=ja">所有者、ユーザー、権限の管理</a>」は、所有者を設定も含めてプロパティを完全に操作できる役割と説明しています。サイトの制作会社や過去の代理店に所有者の権限を渡したままの会社は、<strong>いま誰が所有者なのかを一覧で確かめ、この設定を変える前に誰の承認を取るかを決めておく</strong>と事故を防げます。</p>
+<h3 id="s5-2">月次の報告に載せる数字</h3>
+<p>経営に出す数字は3つに絞ると、毎月同じ形で比べられます。</p>
+<ol>
+<li>生成AIの表示回数の月ごとの推移</li>
+<li>生成AIの表示回数が多いページの上位10本と、それぞれの通常の表示回数との比率</li>
+<li>通常の検索パフォーマンスのクリック数（AI機能の分を含むと注記する）</li>
+</ol>
+<p>クリック数をAI経由として報告しないことが大事です。通常のクリックにAI機能の分が混ざっていることを注記し、AIからの成果は別の手段で見ると書いておくと、後で数字の意味を問われても説明がぶれません。</p>
+<h2 id="s6">Google以外のAIは別のツールで見る</h2>
+<p>Search Consoleに出るのはGoogle検索の中のAI機能だけです。ChatGPT・Perplexity・Claudeで自社が紹介され、そこからサイトに来た分は、GA4の参照元で見ることになります。正規表現での絞り込みや、参照元が落ちて直接流入に混ざる問題は<a href="/media/ai-search-measurement/">AI検索対策の効果の測り方の記事</a>で扱っています。</p>
+<p>MicrosoftのCopilotやBingの検索に出るAIの回答も、Search Consoleには入りません。Bingの検索のデータはMicrosoftのBing Webmaster Toolsで見る仕組みのため、Googleとは別に確かめる必要があります。Googleの数字だけでAI検索全体を語ると、ChatGPT経由で比較している見込み客の動きが報告から抜けてしまいます。</p>
+<h2 id="s7">表示回数とAIの回答で挙がることは違う</h2>
+<p>このレポートは<strong>AI機能の中に自社ページへのリンクが表示された回数</strong>を数えます。回答の本文で自社が勧められたのか、出典の一覧の端にリンクが並んだだけなのかは区別されません。検索語も出ないため、「〇〇に強い会社は？」のような比較の質問で社名が挙がったかどうかも分かりません。</p>
+<p>商談に近い質問で名前が挙がること（AIO）を目的にしている会社にとって、生成AIレポートは<strong>AIの材料として選ばれているページを見つける手段</strong>で、推薦されているかを確かめる手段ではありません。レポートの結果によって、次の判断は2つに分かれます。</p>
+<ul>
+<li><strong>表示回数が伸びているページがある</strong>: そのページが通常のレポートでどの語に表示されているかを見て、AI機能が出る語の答えになっているかを確かめる</li>
+<li><strong>表示回数がほとんど無い</strong>: 除外の設定、インデックスの状況、狙っている語でAIによる概要が出るかを順に確かめる</li>
+</ul>
+<p>比較の質問で名前が挙がるかは、どちらの場合もレポートからは分かりません。見込み客が使いそうな質問をAIモードやChatGPTに実際に入れ、同じ質問を何回か繰り返して挙がった回数で見ます。AIの回答は毎回作り直されるため、1回聞いて出なかったことを根拠にしないようにします。AIモードの画面で質問する手順は<a href="/media/google-ai-mode-guide/">Google AIモードの使い方の記事</a>に書いています。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Q. Search Consoleの生成AIレポートでクリック数は見られますか？</h3>
+<p>見られません。ヘルプの「レポートを設定する」の節にある指標はインプレッション数だけです。AI機能からのクリックは通常の検索パフォーマンスのクリック数に含まれていますが、通常の検索結果からのクリックと分けては出ません。</p>
+<h3 id="s8-2">Q. Search ConsoleでAIモードとAIによる概要を分けて見られますか？</h3>
+<p>分けられません。生成AIレポートは両方の表示回数を合わせた数字で、片方だけを選ぶ絞り込みはヘルプに書かれていません。検索タイプの選択肢もテキストとマルチモーダルの2つです。</p>
+<h3 id="s8-3">Q. Search Consoleに生成AIのレポートが表示されないのはなぜですか？</h3>
+<p>ヘルプが挙げる理由はAI機能での表示回数の不足と、検索の生成 AI 設定でのサイトの除外の2つです。設定の「検索の生成 AI」で、含めるが選ばれているか、親から設定を継承しているなら親の設定が含めるになっているかを先に確かめます。</p>
+<h3 id="s8-4">Q. Search ConsoleでAIモードに出たときの検索語は分かりますか？</h3>
+<p>分かりません。生成AIレポートの分け方はページ・国・デバイス・日付の4つで、検索語はありません。通常のレポートの検索語にはAI機能の分も混ざっていて、AI機能での表示だけを取り出す方法は用意されていないのが現状です。</p>
+<h3 id="s8-5">Q. Search ConsoleでChatGPTからの流入は見られますか？</h3>
+<p>見られません。Search ConsoleはGoogleの検索とDiscoverなどのデータだけを扱うため、ChatGPTやPerplexityから来た分はGA4の参照元で確かめます。</p>
+<h3 id="s8-6">Q. Search Consoleで生成AI機能から除外すると通常の検索順位は下がりますか？</h3>
+<p>ヘルプによると、この設定はAI機能に表示するかどうかだけに効き、通常の検索の順位や掲載の判断には使われません。ただしAI機能からの表示と流入は無くなり、生成AIレポートが出ない原因にもなります。</p>
+<h3 id="s8-7">Q. Search Consoleの生成AIレポートはAPIで取得できますか？</h3>
+<p>Search Analytics APIのリファレンスには、生成AI機能を指す検索タイプがありません（2026年10月21日に確認）。数字が要るときは画面からエクスポートします（レポートの画面にエクスポートのボタンがあることを2026年10月21日に確かめました）。</p>
+<h3 id="s8-8">Q. Search Consoleの生成AIレポートを使うのに費用はかかりますか？</h3>
+<p>かかりません。Search ConsoleはGoogleの無料サービスで、生成AIレポートもその中の機能です。Search Consoleでパフォーマンスのレポートを見られる権限（所有者・フルユーザー・制限付きユーザー）があれば、そのまま開けます。</p>
+<h2 id="s9">出典</h2>
+<ul>
+<li>Google Search Central ブログ「<a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports">Introducing Search Generative AI performance reports in Search Console</a>」2026年6月3日（2026年10月21日取得）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成 AI パフォーマンス レポート（検索）</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16983858?hl=ja">生成 AI パフォーマンス レポート（Discover）</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16908024?hl=ja">検索の生成 AI 設定</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/7042828?hl=ja">表示回数、掲載順位、クリック数とは</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/7576553?hl=ja">検索パフォーマンス レポート（検索結果）</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/7687615?hl=ja">所有者、ユーザー、権限の管理</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/9128668?hl=ja">Search Console の概要</a>」（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI 機能とウェブサイト</a>」（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/updates?hl=ja">検索セントラルのドキュメントの最新情報</a>」（同）</li>
+<li>Google for Developers「<a href="https://developers.google.com/webmaster-tools/v1/searchanalytics/query">Search Analytics: query</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">生成AIパフォーマンスレポートとは</a><a href="#s2">レポートの開き方</a><a href="#s3">見られること・見られないこと</a><a href="#s4">数字の読み方</a><a href="#s5">社内で決めておくこと</a><a href="#s6">Google以外のAIは別のツールで見る</a><a href="#s7">表示回数とAIの回答で挙がることは違う</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/bing-ai-performance/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BingのAIパフォーマンス"><defs><linearGradient id="ecg-4a62ded7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4a62ded7)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">計測</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">BingのAIパフォーマンス</text><line x1="159.2" y1="365.9" x2="1040.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.21</div>
+                <div class="rel-card__ttl">【2026年10月】Bing Webmaster ToolsのAIパフォーマンスとは？見方と注意点</div>
+            </a>
+            <a href="/media/ai-mode-ads/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードの広告は日本で出る？"><defs><linearGradient id="ecg-ca9b7701" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ca9b7701)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードの広告</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">は日本で出る？</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】Google AIモードの広告は日本で出せる？AIによる概要の広告枠と出稿設定</div>
+            </a>
+            <a href="/media/chatgpt-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-1865b097" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1865b097)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'gsc-ai-mode',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
