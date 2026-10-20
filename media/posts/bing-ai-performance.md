@@ -77,7 +77,7 @@ Bingは2026年6月16日の[ブログ](https://blogs.bing.com/search/June-2026/Ne
 
 ## 使い始めるまでの手順
 
-AIパフォーマンスは、Bing Webmaster Toolsでサイトの所有を確認したサイトで開ける機能です。すでにGoogle Search Consoleでサイトを確認しているなら、インポートで確認の手順を省けます。
+AIパフォーマンスはBing Webmaster Toolsでサイトの所有を確認したサイトで開ける機能です。すでにGoogle Search Consoleでサイトを確認しているなら、インポートで確認の手順を省けます。
 
 1. [Bing Webmaster Tools](https://www.bing.com/webmasters/about)にサインインするか、アカウントを作る
 2. My Sitesの画面でImportを押し、Google Search Consoleのアカウントでサインインして許可する
@@ -186,7 +186,7 @@ AIの回答で自社が目に入る形は2つあります。回答の下や横�
 
 ### Q. Copilotの回答に引用されるには何をすればいいですか？
 
-Bingのヘルプが、検討してよい一般的な目安として挙げるのは6つです。利用者の意図に合わせる、見出し・表・よくある質問で読み取りやすくする、深さと専門性を出す、例やデータと出典で裏づける、内容を新しく保つ、形式をまたいで表記をそろえる、です。2月の発表が勧めるのは、更新をすぐ伝える仕組みのIndexNowと、店舗のある会社のBing Places for Businessへの登録です。robots.txtで止めたページは、その設定に従って扱われます。
+Bingのヘルプが、検討してよい一般的な目安として挙げるのは6つです。利用者の意図に合わせる、見出し・表・よくある質問で読み取りやすくする、深さと専門性を出す、例やデータと出典で裏づける、内容を新しく保つ、形式をまたいで表記をそろえる、です。2月の発表が勧めるのは更新をすぐ伝える仕組みのIndexNowと、店舗のある会社のBing Places for Businessへの登録です。robots.txtで止めたページは、その設定に従って扱われます。
 
 ### Q. Google Search ConsoleでAIによる概要の表示回数は見られますか？
 
