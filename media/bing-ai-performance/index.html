@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Bing Webmaster ToolsのAIパフォーマンスとは？見方と注意点 | nito Column</title>
+    <meta name="description" content="Bing Webmaster ToolsのAIパフォーマンスで、CopilotとBingのAI回答に自社ページが引用された回数を見る方法を公式の説明で整理。指標の読み方、6月の4機能、Googleのレポートとの違いまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/bing-ai-performance/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Bing Webmaster ToolsのAIパフォーマンスとは？見方と注意点">
+    <meta property="og:description" content="Bing Webmaster ToolsのAIパフォーマンスで、CopilotとBingのAI回答に自社ページが引用された回数を見る方法を公式の説明で整理。指標の読み方、6月の4機能、Googleのレポートとの違いまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/bing-ai-performance/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/bing-ai-performance.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/bing-ai-performance.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Bing Webmaster ToolsのAIパフォーマンスとは？見方と注意点", "description": "Bing Webmaster ToolsのAIパフォーマンスで、CopilotとBingのAI回答に自社ページが引用された回数を見る方法を公式の説明で整理。指標の読み方、6月の4機能、Googleのレポートとの違いまで。", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/bing-ai-performance/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Bing Webmaster ToolsのAIパフォーマンスとは？見方と注意点"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Bing Webmaster ToolsのAIパフォーマンスは無料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "無料です。Bing Webmaster Toolsの紹介ページは無料のSEO・GEOのツールと案内していて、AIパフォーマンスはサイトの所有を確認すると開けます。"}}, {"@type": "Question", "name": "Bing Webmaster ToolsのAIパフォーマンスにChatGPTの引用は入りますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式の説明に出てくるのはCopilot・BingのAI要約・一部の提携先だけで、提携先の名前は公表されていません。ChatGPTが入るとは書かれておらず、Adobeの日本語の解説もChatGPTはまだ含まれないとしています。"}}, {"@type": "Question", "name": "Bing Webmaster ToolsのAIパフォーマンスでクリック数は分かりますか？", "acceptedAnswer": {"@type": "Answer", "text": "分かりません。引用は流入やクリックを表さない、というのがヘルプの説明です。AIの回答から来た人数はGA4などのアクセス解析で別に見ます。"}}, {"@type": "Question", "name": "Bing Webmaster ToolsのAIパフォーマンスに語句が出ないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "選んだ期間の引用が少ないと、グラウンディングクエリは出ない場合があるためです。ペナルティや除外を意味するものではないと、ヘルプは説明しています。"}}, {"@type": "Question", "name": "日本のサイトでもBing Webmaster ToolsのAIパフォーマンスは使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。2月の発表に国の制限の記述は無く、6月の4つの機能も世界での提供でした。"}}, {"@type": "Question", "name": "Copilotの回答に引用されるには何をすればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "Bingのヘルプが、検討してよい一般的な目安として挙げるのは6つです。利用者の意図に合わせる、見出し・表・よくある質問で読み取りやすくする、深さと専門性を出す、例やデータと出典で裏づける、内容を新しく保つ、形式をまたいで表記をそろえる、です。2月の発表が勧めるのは更新をすぐ伝える仕組みのIndexNowと、店舗のある会社のBing Places for Businessへの登録です。robots.txtで止めたページは、その設定に従って扱われます。"}}, {"@type": "Question", "name": "Google Search ConsoleでAIによる概要の表示回数は見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "見られます。Search Centralのブログによると、AIによる概要とAIモードでの表示回数を見るレポートは2026年8月31日に世界のすべてのサイトへ広がりました。ブログが挙げる項目は表示回数・ページ・国・デバイス・日付です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=56b59318">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Bing Webma…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.21</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Bing Webmaster ToolsのAIパフォーマンスとは？見方と注意点</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BingのAIパフォーマンス"><defs><linearGradient id="ecg-2204bc44" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-2204bc44)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">計測</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">BingのAIパフォーマンス</text><line x1="159.2" y1="327.1" x2="1040.8" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">Copilotで引用された回数の見方</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>Microsoftは2026年2月10日、Bing Webmaster Toolsに「AI Performance（AIパフォーマンス）」を公開プレビューで加えました。CopilotやBingのAIの回答で、自社のページが出典として何回示されたかを、サイトの管理者が無料で見られるレポートです。</p>
+<p>AIの回答から自社サイトへの動きは、GA4ではクリックされた分しか残らないため、引用されているかどうかは社内で確かめにくいままでした。この記事は公式のブログとヘルプをもとに、見られる指標と読み方、6月に加わった4つの機能、数字を社内で報告するときの注意を整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>CopilotとBingのAI要約、一部の提携先で自社ページが引用された回数</strong>を、ページ別と語句別に無料で見られる</li>
+<li>引用は<strong>クリックでも流入でもない</strong>。提携先の名前は公表されておらず、ChatGPTやGoogleのAIの数字が入るとは書かれていない</li>
+<li>2026年6月に<strong>意図・トピック・引用シェア・比較</strong>の4つがプレビューで加わった。Googleも8月末に生成AIの表示回数のレポートを全サイトへ広げた</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/bing-ai-performance/bwai_01_three.png" alt="AIの数字は3か所で別々に見る。Bing Webmaster ToolsはCopilotなどで出典に引かれた回数、Google Search ConsoleはAIによる概要などでの表示回数、GA4はAIの回答から実際にサイトに来た人" loading="lazy"></figure>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>AIパフォーマンスで分かること</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>見られる5つの指標</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>6月に加わった4つの機能</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>意図（Intents）</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>トピック（Topics）</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>引用シェア（Citation Share）</a></li>
+                    <li class="toc-h3"><a href="#s3-4"><span class="toc__n">3-4</span>比較（Compare）</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>使い始めるまでの手順</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>数字を読むときの注意</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>引用はクリックではない</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>語句は要約されている</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>絞り方で数がずれる</a></li>
+                    <li class="toc-h3"><a href="#s5-4"><span class="toc__n">5-4</span>6月の急増は後から足されたデータ</a></li>
+                    <li class="toc-h3"><a href="#s5-5"><span class="toc__n">5-5</span>APIはまだ公式の記述が無い</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>Googleのレポートとの違い</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>社内での使い方</a></li>
+                    <li class="toc-h3"><a href="#s7-1"><span class="toc__n">7-1</span>誰が登録して誰が読むか</a></li>
+                    <li class="toc-h3"><a href="#s7-2"><span class="toc__n">7-2</span>月次報告に入れる形</a></li>
+                    <li class="toc-h3"><a href="#s7-3"><span class="toc__n">7-3</span>ありがちな失敗</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>引用数と回答で名前が挙がることの違い</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">AIパフォーマンスで分かること</h2>
+<p>Bing Webmaster Toolsは、Bingの検索での表示やクロールの状態を確かめるMicrosoftの管理画面です。<a href="https://www.bing.com/webmasters/about">紹介ページ</a>はSEOとGEOの無料のツールと案内しています。2月の発表によると、AIパフォーマンスはその対象をAIの回答に広げたもので、<strong>Microsoft Copilot、BingのAIが作る要約、一部の提携先の3か所で、自社のページが出典として表示された回数を数えます</strong>。どのURLが参照されたか、回数がどう変わったかも日ごとに追えます。</p>
+<p>公式の説明には書かれていないことも残っているため、読み違えやすい点を公式の文に沿って分けました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>公式に書いてあること</th>
+<th>書いていないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">対象</td>
+<td data-label="公式に書いてあること">Copilot・BingのAI要約・一部の提携先</td>
+<td data-label="書いていないこと">提携先の会社名</td>
+</tr>
+<tr>
+<td data-label="項目">ChatGPT</td>
+<td data-label="公式に書いてあること">名前は出てこない</td>
+<td data-label="書いていないこと">含むかどうか</td>
+</tr>
+<tr>
+<td data-label="項目">数えるもの</td>
+<td data-label="公式に書いてあること">回答に出典として表示された回数</td>
+<td data-label="書いていないこと">回答の中の位置や順番</td>
+</tr>
+<tr>
+<td data-label="項目">提供の段階</td>
+<td data-label="公式に書いてあること">公開プレビュー</td>
+<td data-label="書いていないこと">正式提供の時期</td>
+</tr>
+<tr>
+<td data-label="項目">費用</td>
+<td data-label="公式に書いてあること">Bing Webmaster Toolsは無料のツール</td>
+<td data-label="書いていないこと">AIパフォーマンス単体の料金の記載</td>
+</tr>
+</tbody>
+</table></div>
+<p>Microsoftは3月の広告主向けのブログで、自社のグラウンディング（AIが回答の根拠になるWebの情報を引く仕組み）が主要なAIアシスタントのほぼすべてを支えていると書いています。<strong>これはMicrosoftの主張で、どのアシスタントの引用がレポートに入るのかは明かしていません</strong>。Adobeの日本語の解説（2026年10月3日更新）も、対象はCopilotの引用とAIの要約だけで、ChatGPTなどほかのAIアシスタントはまだ含まれないと説明しています。</p>
+<p>日本の企業がBingの数字を見る理由もあります。<a href="https://gs.statcounter.com/search-engine-market-share/all/japan">Statcounter</a>の検索結果から来た閲覧の標本による集計（2026年10月21日時点）では、2026年9月の日本の検索エンジンの割合はGoogleが59.27%、Bingが31.41%でした。デスクトップに限るとBingが51.83%で、Googleの42.17%を上回ります。検索の回数そのものではありませんが、<strong>会社のパソコンで比較される商材ほど、BingとCopilotでの見え方を確かめる意味は大きくなります</strong>。</p>
+<h2 id="s2">見られる5つの指標</h2>
+<p><a href="https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview">2月の発表</a>が挙げる指標は5つです。画面で探しやすいよう英語名も並べました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>指標</th>
+<th>意味</th>
+<th>読むときの注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="指標">総引用数（Total Citations）</td>
+<td data-label="意味">期間中にAIの回答で出典として表示された回数</td>
+<td data-label="読むときの注意">回答の中の位置は分からない</td>
+</tr>
+<tr>
+<td data-label="指標">平均引用ページ数（Average Cited Pages）</td>
+<td data-label="意味">1日に引用された自社の異なるページの数の平均</td>
+<td data-label="読むときの注意">順位や重要度を表さない</td>
+</tr>
+<tr>
+<td data-label="指標">グラウンディングクエリ（Grounding queries）</td>
+<td data-label="意味">引用したページを取りに行くときにAIが使った語句</td>
+<td data-label="読むときの注意">全体から抜き出した標本</td>
+</tr>
+<tr>
+<td data-label="指標">ページ別の引用</td>
+<td data-label="意味">URLごとの引用回数</td>
+<td data-label="読むときの注意">ページの重要度ではない</td>
+</tr>
+<tr>
+<td data-label="指標">推移</td>
+<td data-label="意味">日ごとの引用の増減</td>
+<td data-label="読むときの注意">増減の理由は示さない</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/bing-ai-performance/bwai_02_dashboard.png" alt="Bing Webmaster ToolsのAI Performanceの画面の例。期間の切り替え、総引用数と平均引用ページ数、日ごとの推移のグラフ、データは全体の標本という注記が並ぶ" loading="lazy"><figcaption>Bing Webmaster Blog（2026年2月10日）に載ったAI Performanceの画面の例</figcaption></figure>
+
+<p>いちばん使い道があるのはグラウンディングクエリです。Search Consoleの検索クエリに近い見え方ですが、利用者が入力した質問ではなく、<strong>AIが回答の根拠を探すときに使った語句</strong>を示します。自社のどのページが、どんな語句でAIに拾われているかが分かります。</p>
+<p><a href="https://about.ads.microsoft.com/en/blog/post/march-2026/the-ai-performance-dashboard-your-view-into-where-your-brand-appears-across-the-ai-web">Microsoft Advertisingのブログ</a>によると、3月には語句とページを対応づける表示が加わりました。語句を選ぶと引用されたページが、ページを選ぶとそのページを引いた語句が出ます。<a href="https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c">ヘルプ</a>によると語句とページで同時に絞ることはできないため、両方で見たいときはエクスポートしたファイルで突き合わせます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">AI のおすすめに自社の名前が挙がるか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">6月に加わった4つの機能</h2>
+<p>Bingは2026年6月16日の<a href="https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare">ブログ</a>で、4つの機能をプレビューとして世界で出し始めました。<strong>意図とトピックはAIの分類で、プレビューの間は専門性の高い分野でラベルが大まかになることがある</strong>と断っています。</p>
+<h3 id="s3-1">意図（Intents）</h3>
+<p>グラウンディングクエリを情報収集・購入検討・比較・地域・調査などの意図に分けて見せる機能です。ECで売るサイトなら購入検討（Commercial）や比較（Comparison）の意図で引用されているかを確かめる使い方を、ヘルプは例に挙げています。調査の意図で引かれたいのに情報収集の語句ばかりなら、根拠や深さが足りないかを見直す手がかりになります。</p>
+<h3 id="s3-2">トピック（Topics）</h3>
+<p>関係する語句を大きなテーマにまとめる機能です。ブログではソーラーパネル・発電効率・住宅への設置の3つの語句を、1つのテーマにまとめる例が挙がっています。トピックで絞って引用されたページを見るには、エクスポートしてから絞り込みます。</p>
+<h3 id="s3-3">引用シェア（Citation Share）</h3>
+<p>ある語句で表示された出典のうち、自社サイトが占めた割合です。総引用数が多くても、同じ語句で多くのサイトが引かれていれば割合は低く出ます。<strong>ほかのサイトのドメインは表示されず、順位でも流入の割合でもない</strong>と公式は書いています。</p>
+<h3 id="s3-4">比較（Compare）</h3>
+<p>前の期間を同じグラフに重ねる機能です。今の期間は実線、比べる期間は破線で、直近30日と前の30日のような並べ方も、日付を選んだ比較もできます。ただし変化の理由までは示さないと、ヘルプは注記しています。</p>
+<h2 id="s4">使い始めるまでの手順</h2>
+<p>AIパフォーマンスはBing Webmaster Toolsでサイトの所有を確認したサイトで開ける機能です。すでにGoogle Search Consoleでサイトを確認しているなら、インポートで確認の手順を省けます。</p>
+<ol>
+<li><a href="https://www.bing.com/webmasters/about">Bing Webmaster Tools</a>にサインインするか、アカウントを作る</li>
+<li>My Sitesの画面でImportを押し、Google Search Consoleのアカウントでサインインして許可する</li>
+<li>一覧から追加するサイトを選んでImportを押す</li>
+<li>AI Performanceを開き、期間を選ぶ</li>
+<li>必要な表を書き出して、社内の資料に使う</li>
+</ol>
+<p><a href="https://blogs.bing.com/webmaster/september-2019/Import-sites-from-Search-Console-to-Bing-Webmaster-Tools">インポートの手順のブログ</a>によると、1回に取り込めるのは100サイトまで、1つのアカウントで1,000サイトまでです。新しく確認したサイトの検索のデータは、出るまで最大48時間かかると書かれています。Search Consoleへのアクセスを取り消すと所有の確認が外れるため、そのときは再接続するか、メタタグかDNSで確認し直します。</p>
+<p>インポートを使わない場合は、XMLファイルのアップロード・メタタグ・DNSのレコードのどれかで確認します。ヘルプによればAIパフォーマンスのデータは毎日の更新で、反映には少しの遅れがあるとのことです。</p>
+<h2 id="s5">数字を読むときの注意</h2>
+<p>AIパフォーマンスの数字は、Search Consoleの検索の数字と同じ感覚で読むとずれます。報告の前に知っておきたい点を、ヘルプのよくある質問から拾いました。</p>
+<h3 id="s5-1">引用はクリックではない</h3>
+<p>引用は回答で表示または参照されたことを示すだけで、流入・クリック・利用者の反応は表さない、とヘルプははっきり書いています。<strong>引用が1,000回あっても、サイトに1,000人来たわけではありません</strong>。クリックの数はこのレポートに無いため、流入はGA4などで別に見ます。</p>
+<h3 id="s5-2">語句は要約されている</h3>
+<p>グラウンディングクエリはまとめた一般的な語句で、利用者の個別の質問や細かいロングテールの語句は出ません。引用が少ないサイトでは語句が出ないこともありますが、ペナルティや除外を意味するものではないとヘルプは説明しています。</p>
+<h3 id="s5-3">絞り方で数がずれる</h3>
+<p>データは標本で、語句とページでは集計の期間が少しずつ違うことがあります。語句で絞ってから見たページの引用数と、ページで絞ってから見た同じ語句の数が合わない場合もあり、ヘルプはこれを想定どおりの動きとしています。</p>
+<h3 id="s5-4">6月の急増は後から足されたデータ</h3>
+<p>PinMeToの7月3日の記事によると、2026年6月1日から引用数が急に増えたという報告が多くのアカウントで出ました。MicrosoftのKrishna Madhavan氏はX上で、これを過去分のデータを後から反映する通常のバックフィルと説明しています。<strong>この時期の伸びを施策の成果として報告しない</strong>ほうが安全です。</p>
+<h3 id="s5-5">APIはまだ公式の記述が無い</h3>
+<p>画面の表は書き出せて、絞り込んだ条件がそのまま反映されます。2月にSearch Influenceが書いた記事では、APIは対応を検討する一覧に入っているが時期は示していない、とMicrosoftのFabrice Canel氏がXで答えていました。2026年10月21日に見たヘルプにAPIの記述は無く、定期の報告は画面からの書き出しで回すことになります。</p>
+<h2 id="s6">Googleのレポートとの違い</h2>
+<p>Googleも2026年6月3日に、Search Consoleで生成AIの機能での表示を見るレポートを一部のサイトから出しました。<a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports">Search Centralのブログ</a>には、8月31日に世界のすべてのサイトへ広げたと追記されています。2つは数えているものが違うため、表で並べました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>BingのAIパフォーマンス</th>
+<th>Search Consoleの生成AIレポート</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">対象</td>
+<td data-label="BingのAIパフォーマンス">Copilot・BingのAI要約・一部の提携先</td>
+<td data-label="Search Consoleの生成AIレポート">AIによる概要・AIモード・Discoverの生成AI機能</td>
+</tr>
+<tr>
+<td data-label="項目">数えるもの</td>
+<td data-label="BingのAIパフォーマンス">出典として表示された回数</td>
+<td data-label="Search Consoleの生成AIレポート">URLが表示された回数</td>
+</tr>
+<tr>
+<td data-label="項目">語句</td>
+<td data-label="BingのAIパフォーマンス">グラウンディングクエリ（標本）</td>
+<td data-label="Search Consoleの生成AIレポート">ブログの項目に無い</td>
+</tr>
+<tr>
+<td data-label="項目">分けて見られる軸</td>
+<td data-label="BingのAIパフォーマンス">ページ・語句・意図・トピック</td>
+<td data-label="Search Consoleの生成AIレポート">ページ・国・デバイス・日付</td>
+</tr>
+<tr>
+<td data-label="項目">クリック</td>
+<td data-label="BingのAIパフォーマンス">無い</td>
+<td data-label="Search Consoleの生成AIレポート">ブログの項目に無い</td>
+</tr>
+<tr>
+<td data-label="項目">提供</td>
+<td data-label="BingのAIパフォーマンス">2026年2月から公開プレビュー</td>
+<td data-label="Search Consoleの生成AIレポート">2026年8月31日から全サイト</td>
+</tr>
+</tbody>
+</table></div>
+<p>生成AIの表示回数は検索の全体のパフォーマンスにも含まれたままだと、Googleのブログは書いています。GoogleのAIの回答で表示されたかはSearch Console、Microsoft側で引用されたかはBing Webmaster Tools、実際に来た人はGA4と、<strong>3つは数える対象が違うため、足し合わせずに並べて見ます</strong>。GA4でAI経由の流入を分ける設定は<a href="/media/ai-search-measurement/">AI検索対策の効果の測り方</a>、GoogleのAIによる概要に引かれるための実務は<a href="/media/cited-by-ai-overviews/">AI Overviewsに引用されるには</a>で扱っています。</p>
+<h2 id="s7">社内での使い方</h2>
+<p>AIパフォーマンスは費用がかからず、サイトの確認が済めば数字を見始められます。社内で回すときに決めておきたいのは、誰が担当するかと、どう報告するかです。</p>
+<h3 id="s7-1">誰が登録して誰が読むか</h3>
+<p>登録はサイトの所有を確認できる人の作業で、多くの会社ではSearch Consoleの権限を持つ制作会社かWeb担当になります。読むのはAIでの見え方に責任を持つマーケ担当です。<strong>Search Consoleを制作会社のアカウントで持っている場合は、インポートの前に自社のアカウントで権限をもらっておく</strong>と、担当が替わっても数字が途切れません。</p>
+<h3 id="s7-2">月次報告に入れる形</h3>
+<p>月次報告には今月CopilotとBingのAIの回答で何ページが合計何回引用されたかを、前の月と並べて書きます。比較の機能で前の期間を重ね、ページを更新した日をグラフに書き込んでおくと、更新のあとに引用が動いたかを見られます。ただし比較は変化を見るもので、更新が効いたと言い切る根拠にはならないとヘルプは書いています。</p>
+<h3 id="s7-3">ありがちな失敗</h3>
+<p>よくある読み違いは3つです。1つ目は引用数を流入と書くこと、2つ目はグラウンディングクエリを顧客の質問そのものと読むこと、3つ目は6月のバックフィルによる急増を成果として報告することです。1つ目と2つ目はヘルプが、3つ目はMicrosoftの担当者がX上で否定しているため、報告の脚注に1行ずつ入れておくと社内の誤解を防げます。</p>
+<h2 id="s8">引用数と回答で名前が挙がることの違い</h2>
+<p>AIの回答で自社が目に入る形は2つあります。回答の下や横の出典の欄にページが並ぶ場合と、回答の文の中で会社や商品が名前で挙がる場合です。<strong>AIパフォーマンスが数えるのは前者だけで、回答の文で勧められたかどうかは分かりません</strong>。</p>
+<p>たとえば、選び方を解説した自社の記事が出典に引かれた一方で、回答の文では他社の名前が勧められていることがあります。それでも引用数は増えますし、引用シェアは他社のドメインを出さないため、レポートから誰が勧められたかは読めません。数字を見たあとの次の判断は、状況で分かれます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>状況</th>
+<th>レポートで分かること</th>
+<th>次に確かめること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="状況">引用が増えたのに問い合わせが変わらない</td>
+<td data-label="レポートで分かること">出典に引かれた回数</td>
+<td data-label="次に確かめること">買い手が打ちそうな質問をAIに聞き、回答の文に社名が出るか</td>
+</tr>
+<tr>
+<td data-label="状況">引用がほとんど出ない</td>
+<td data-label="レポートで分かること">引用が少ない事実だけ</td>
+<td data-label="次に確かめること">Bingのインデックスとrobots.txtの設定</td>
+</tr>
+<tr>
+<td data-label="状況">ChatGPTやGeminiでの出方を知りたい</td>
+<td data-label="レポートで分かること">入るとは書かれていない</td>
+<td data-label="次に確かめること">同じ質問を各AIに定期的に聞いて記録する</td>
+</tr>
+</tbody>
+</table></div>
+<p>表の2行目でrobots.txtを見るのは、Bingは引用でもrobots.txtの設定に従うと2月の発表が書いているためです。回答の文で自然に挙がること（AIO）は出典に引かれることとは別の結果で、このレポートの数字だけでは測れません。回答に社名が出てこない原因は<a href="/media/chatgpt-not-appearing/">ChatGPTに自社が出てこない5つの原因と対策</a>、お金を払って載せる枠は<a href="/media/chatgpt-ads/">ChatGPT広告の出稿方法</a>で扱っています。</p>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">Q. Bing Webmaster ToolsのAIパフォーマンスは無料ですか？</h3>
+<p>無料です。Bing Webmaster Toolsの紹介ページは無料のSEO・GEOのツールと案内していて、AIパフォーマンスはサイトの所有を確認すると開けます。</p>
+<h3 id="s9-2">Q. Bing Webmaster ToolsのAIパフォーマンスにChatGPTの引用は入りますか？</h3>
+<p>公式の説明に出てくるのはCopilot・BingのAI要約・一部の提携先だけで、提携先の名前は公表されていません。ChatGPTが入るとは書かれておらず、Adobeの日本語の解説もChatGPTはまだ含まれないとしています。</p>
+<h3 id="s9-3">Q. Bing Webmaster ToolsのAIパフォーマンスでクリック数は分かりますか？</h3>
+<p>分かりません。引用は流入やクリックを表さない、というのがヘルプの説明です。AIの回答から来た人数はGA4などのアクセス解析で別に見ます。</p>
+<h3 id="s9-4">Q. Bing Webmaster ToolsのAIパフォーマンスに語句が出ないのはなぜですか？</h3>
+<p>選んだ期間の引用が少ないと、グラウンディングクエリは出ない場合があるためです。ペナルティや除外を意味するものではないと、ヘルプは説明しています。</p>
+<h3 id="s9-5">Q. 日本のサイトでもBing Webmaster ToolsのAIパフォーマンスは使えますか？</h3>
+<p>使えます。2月の発表に国の制限の記述は無く、6月の4つの機能も世界での提供でした。</p>
+<h3 id="s9-6">Q. Copilotの回答に引用されるには何をすればいいですか？</h3>
+<p>Bingのヘルプが、検討してよい一般的な目安として挙げるのは6つです。利用者の意図に合わせる、見出し・表・よくある質問で読み取りやすくする、深さと専門性を出す、例やデータと出典で裏づける、内容を新しく保つ、形式をまたいで表記をそろえる、です。2月の発表が勧めるのは更新をすぐ伝える仕組みのIndexNowと、店舗のある会社のBing Places for Businessへの登録です。robots.txtで止めたページは、その設定に従って扱われます。</p>
+<h3 id="s9-7">Q. Google Search ConsoleでAIによる概要の表示回数は見られますか？</h3>
+<p>見られます。Search Centralのブログによると、AIによる概要とAIモードでの表示回数を見るレポートは2026年8月31日に世界のすべてのサイトへ広がりました。ブログが挙げる項目は表示回数・ページ・国・デバイス・日付です。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li>Bing Webmaster Blog「<a href="https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview">Introducing AI Performance in Bing Webmaster Tools Public Preview</a>」2026年2月10日（2026年10月21日取得）</li>
+<li>Bing Search Blog「<a href="https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare">New AI Visibility Insights in Bing Webmaster Tools: Intents, Topics, Citation Share, Compare</a>」2026年6月16日（同）</li>
+<li>Bing Webmaster Tools ヘルプ「<a href="https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c">AI Performance in Bing Webmaster Tools</a>」（同）</li>
+<li>Microsoft Advertising Blog「<a href="https://about.ads.microsoft.com/en/blog/post/march-2026/the-ai-performance-dashboard-your-view-into-where-your-brand-appears-across-the-ai-web">The AI Performance dashboard</a>」2026年3月23日（同）</li>
+<li>Bing Webmaster Blog「<a href="https://blogs.bing.com/webmaster/september-2019/Import-sites-from-Search-Console-to-Bing-Webmaster-Tools">Easily Verify Your Site in Bing Webmaster Tools by Importing from Google Search Console</a>」2025年6月更新（同）</li>
+<li>Bing Webmaster Tools「<a href="https://www.bing.com/webmasters/about">About</a>」（同）</li>
+<li>Google Search Central Blog「<a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports">Introducing Search Generative AI performance reports in Search Console</a>」2026年6月3日（同）</li>
+<li>Statcounter「<a href="https://gs.statcounter.com/search-engine-market-share/all/japan">Search Engine Market Share Japan</a>」2026年9月（同）</li>
+<li>Adobe Experience League「<a href="https://experienceleague.adobe.com/ja/docs/brand-visibility-learn/tutorials/measurement/bing-webmaster-tools-ai-performance-report">Bing ウェブマスターツール AI パフォーマンスレポート</a>」2026年10月3日更新（同）</li>
+<li>PinMeTo「<a href="https://www.pinmeto.com/news/bing-ai-performance-backfill-citation-share-2026/">Bing's AI citation surge was backfill, not new visibility</a>」2026年7月3日（同）</li>
+<li>Search Influence「<a href="https://www.searchinfluence.com/blog/bing-ai-performance-report-copilot-citations/">Inside Bing's New AI Performance Report</a>」2026年2月12日（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">AIパフォーマンスで分かること</a><a href="#s2">見られる5つの指標</a><a href="#s3">6月に加わった4つの機能</a><a href="#s4">使い始めるまでの手順</a><a href="#s5">数字を読むときの注意</a><a href="#s6">Googleのレポートとの違い</a><a href="#s7">社内での使い方</a><a href="#s8">引用数と回答で名前が挙がることの違い</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-mode-ads/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードの広告は日本で出る？"><defs><linearGradient id="ecg-ca9b7701" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ca9b7701)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードの広告</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">は日本で出る？</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】Google AIモードの広告は日本で出せる？AIによる概要の広告枠と出稿設定</div>
+            </a>
+            <a href="/media/chatgpt-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTショッピングに商品を載せる"><defs><linearGradient id="ecg-1865b097" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1865b097)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTショッピン</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">グに商品を載せる</text><line x1="250.4" y1="416.8" x2="949.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPTショッピングに自社商品を載せる方法・商品フィードの申請と日本の状況</div>
+            </a>
+            <a href="/media/chatgpt-ads/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT広告の出稿方法"><defs><linearGradient id="ecg-5b608b19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b608b19)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT広告の出稿方法</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.19</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPT広告の出稿方法・最低出稿金額と日本で出せる業種</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'bing-ai-performance',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
