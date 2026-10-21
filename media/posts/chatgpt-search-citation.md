@@ -23,11 +23,11 @@ OpenAIのクローラーの公式ページは、ChatGPTの検索結果に出た�
 
 ## ChatGPT検索が引用元を選ぶ仕組み
 
-ChatGPTに最新の情報が要る質問をすると、ChatGPTは自分でWebを検索し、回答に出典のリンクを付けます。OpenAIのヘルプ「[Searching the web with ChatGPT](https://help.openai.com/en/articles/9237897-chatgpt-search)」によると、検索は無料プランでも、ログインしていない人でも使えます。回答の下の「情報源」を押すと、引用したページとほかの関連リンクが並びます。
+ChatGPTに最新の情報が要る質問をすると、ChatGPTは自分でWebを検索し、回答に出典のリンクを付けます。OpenAIのヘルプ「[Searching the web with ChatGPT](https://help.openai.com/en/articles/9237897-chatgpt-search)」によると、検索は無料プランでも、ログインしていない人でも使えます。回答の下に「情報源」が出ているときは、押すと引用したページとほかの関連リンクが並びます。
 
-同じヘルプによると、**ChatGPTは外部の検索の提供元と組み、質問を検索向けの語に書き換えて送ることがあります**。ヘルプはがんの治療薬についての質問を例に、「CCR8 immunotherapy drug development 2025」のような語に直して送り、結果を見てからさらに細かい語で検索し直す流れを示しています。並べ方は複数の要素で決め、掲載の位置は保証しないとも書いています。
+同じヘルプによると、**ChatGPTは外部の検索の提供元と組み、質問を検索向けの語に書き換えて送ることがあります**。ヘルプはがんの治療薬についての質問を例に、「CCR8 immunotherapy drug development 2025」のような語に直して送り、結果を見てからさらに細かい語で検索し直す流れを示しています。並べ方は複数の要素で決まり、掲載の位置は保証されないという説明です。
 
-公式の文と、解説記事でよく見る話が混ざりやすいので分けました。
+解説記事で条件のように書かれる話には、公式のページに無いものも混ざっています。
 
 | 項目 | 公式に書いてあること | 書いていないこと |
 |---|---|---|
@@ -45,7 +45,7 @@ ChatGPTの対策はBingの対策から始まると書く解説記事もありま
 
 ## OpenAIの3つのクローラー
 
-OpenAIのサイトに来るボットは用途ごとに名前が分かれていて、robots.txtでも別々に指定します。[Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots)（2026年10月21日更新）の説明を表にしました。
+OpenAIのサイトに来るボットは用途ごとに名前が分かれていて、robots.txtでも別々に指定します。[Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots)（2026年10月21日更新）が挙げる3つの違いは次のとおりです。
 
 | 名前 | 何のために来るか | robots.txtで止めたとき |
 |---|---|---|
@@ -59,7 +59,7 @@ OpenAIのサイトに来るボットは用途ごとに名前が分かれてい�
 
 ### 学習は断って検索に出る書き方
 
-公式ページによると3つの設定は互いに独立していて、OAI-SearchBotを許可したままGPTBotだけを止められます。学習には使わせず、検索には出したい会社のrobots.txtは次の形になります。
+公式ページによると3つの設定は互いに独立していて、OAI-SearchBotを許可したままGPTBotだけを止められます。学習には使わせず、検索には出したい会社のrobots.txtの例が次の形です。
 
 ```
 User-agent: OAI-SearchBot
@@ -81,7 +81,7 @@ robots.txtで許可していても、手前のCDNやセキュリティの設定�
 
 CDNの既定も変わっています。Cloudflareの「[Block AI Bots](https://developers.cloudflare.com/bots/additional-configurations/block-ai-bots/)」によると、2026年9月15日から新しく登録したドメインの既定は、学習（Training）と利用者の代わりに動くボット（Agent）を広告のあるページで止め、検索（Search）は許可する設定になりました。Cloudflareの[robots.txtの設定](https://developers.cloudflare.com/bots/additional-configurations/managed-robots-txt/)を有効にすると、GPTBotやGoogle-Extendedなどを止める行が既存のrobots.txtの前に足されます。
 
-nitoのサイト（Cloudflareを通して配信、robots.txtはすべて許可）で、2026年10月22日に名乗り（ユーザーエージェント）だけを変えてトップ以外のページを取得してみました。OAI-SearchBot・ChatGPT-User・bingbotの名乗りでは200が返り、GPTBotの名乗りでは403で拒否されました。OpenAIのIPアドレスから来ていない偽の名乗りなので本物のクローラーの扱いと同じとは限りませんが、**robots.txtが許可していても、CDNの側で特定のボットを止めていることがある**のは確かめられました。
+nitoのサイト（Cloudflareを通して配信、robots.txtはすべて許可）で、2026年10月22日に名乗り（ユーザーエージェント）だけを変えて記事一覧のページを取得してみました。OAI-SearchBot・ChatGPT-User・bingbotの名乗りでは200が返り、GPTBotの名乗りでは403で拒否されました。OpenAIのIPアドレスから来ていない偽の名乗りなので本物のクローラーの扱いと同じとは限りませんが、**robots.txtが許可していても、CDNの側で特定のボットを止めていることがある**のは確かめられました。
 
 <!-- SHOT: 図3 robots.txtとCDNの2段の関門。robots.txtは許可、CDNで止まると届かない。HTML 図 brain/scripts/seo/fig/cscit_cdn.html を描画して /media/images/chatgpt-search-citation/cscit_03_cdn.png。alt「OAI-SearchBotはrobots.txtとCDNの2か所を通ってページに届く。robots.txtで許可していてもCDNで止めていると巡回できない」 -->
 
@@ -102,9 +102,9 @@ nitoのサイト（Cloudflareを通して配信、robots.txtはすべて許可�
 
 ## ChatGPTからの流入の見え方
 
-ChatGPTの引用元から自社のページに来た人は、URLの末尾に `utm_source=chatgpt.com` が付いて届きます。この仕組みを公式に説明していたのは、OpenAIのヘルプの「Publishers and Developers - FAQ」でした。Internet Archiveが2026年10月4日に保存した版には、OAI-SearchBotを許可したサイトはGoogleアナリティクスなどでChatGPTからの流入を追え、ChatGPTが参照URLにこのパラメータを自動で付けると書かれています。
+ChatGPTの引用元のリンクから来た人のURLには、`utm_source=chatgpt.com` が付きます。この仕組みを公式に説明していたのは、OpenAIのヘルプの「Publishers and Developers - FAQ」でした。Internet Archiveが2026年10月4日に保存した版には、OAI-SearchBotを許可したサイトはGoogleアナリティクスなどでChatGPTからの流入を追え、ChatGPTが参照URLにこのパラメータを自動で付けると書かれています。
 
-**同じURLを2026年10月22日に開くと、ChatGPT Atlasの提供終了を案内する記事に替わっていました。** このFAQはAtlasの項目の下に置かれていたため、Atlasの終了と一緒に差し替わったとみられます（推測）。上位の解説記事が根拠に引くページが今は読めないので、社内の資料に引くときは保存版の日付を添えるのが無難です。utmが今も付くかどうかは、自社のGA4に `chatgpt.com` の参照元が届いているかで確かめられます。
+**同じURLを2026年10月22日に開くと、ChatGPT Atlasの提供終了を案内する記事に替わっていました。** このFAQはAtlasの項目の下に置かれていたため、Atlasの終了と一緒に差し替わったとみられますが、OpenAIからの説明は見つけられませんでした。上位の解説記事が根拠に引くページが今は読めないので、社内の資料に引くときは保存版の日付を添えるのが無難です。utmが今も付くかどうかは、自社のGA4に `chatgpt.com` の参照元が届いているかで確かめられます。
 
 GA4の[デフォルト チャネル グループのヘルプ](https://support.google.com/analytics/answer/9756891?hl=ja)には「AI アシスタント」のチャネルがあります。ChatGPT・Gemini・Deepseek・Copilot・Grokなどから来た分を集め、GoogleのAIによる概要とAIモードは除くという定義です。参照元のURLがAIアシスタントのリストに一致すると、メディアが `ai-assistant` に置き換わります。
 
@@ -147,7 +147,7 @@ GA4で正規表現を使ってAIの参照元をまとめる手順は[AI検索対
 
 ## 引用元に出ることとAIの回答で名前が挙がること
 
-OAI-SearchBotを許可するのは、ChatGPTが自社のページを読める状態にするところまでです。公式ページも掲載の位置は保証しないと書いているとおり、許可しただけで「〇〇に強い会社は？」という質問の答えに社名が挙がるわけではありません。**社名が挙がるかどうかを左右するのは、ChatGPTが検索で集めたページに自社のことが何と書かれているかです**。
+OAI-SearchBotを許可するのは、ChatGPTが自社のページを読める状態にするところまでです。公式ページも掲載の位置は保証しないと書いているとおり、許可しただけで「〇〇に強い会社は？」という質問の答えに社名が挙がるわけではありません。回答は検索で集めたページをもとに書かれるため、**そのページに自社のことが何と書かれているかで社名が挙がるかどうかが変わります**。
 
 そのため、引用元に出る条件を整えたあとに見るのは、自社の見込み客がAIに聞きそうな質問で実際に社名が出るか、どのページが引かれているかです。回答は同じ質問でも毎回変わるので、何度か聞いて出た回数で見ます。自社のサイト以外にどんな第三者の記事が要るかは[サイテーションの増やし方](/media/citation-for-ai/)、名前が出ない原因の切り分けは[ChatGPTに自社が出てこない原因](/media/chatgpt-not-appearing/)に書いています。
 
@@ -185,7 +185,7 @@ OpenAIの公式ページによると、検索の結果に反映されるまで�
 
 - OpenAI「[Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots)」2026年10月21日更新（2026年10月22日取得）
 - OpenAI Help Center「[Searching the web with ChatGPT](https://help.openai.com/en/articles/9237897-chatgpt-search)」（同）
-- OpenAI Help Center「Publishers and Developers - FAQ」の[Internet Archiveの保存版](http://web.archive.org/web/20261004224023/https://help.openai.com/en/articles/12627856-publishers-and-developers-faq)2026年10月4日保存（同）。[同じURL](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq)は10月22日にChatGPT Atlasの提供終了の記事を表示
+- OpenAI Help Center「Publishers and Developers - FAQ」の[Internet Archiveの保存版](https://web.archive.org/web/20261004224023/https://help.openai.com/en/articles/12627856-publishers-and-developers-faq)2026年10月4日保存（同）。[同じURL](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq)は10月22日にChatGPT Atlasの提供終了の記事を表示
 - OpenAI「[searchbot.json](https://openai.com/searchbot.json)」作成日時2026年1月2日（同）
 - Google アナリティクス ヘルプ「[[GA4] デフォルト チャネル グループ](https://support.google.com/analytics/answer/9756891?hl=ja)」（同）
 - Cloudflare Docs「[Block AI Bots](https://developers.cloudflare.com/bots/additional-configurations/block-ai-bots/)」2026年7月1日更新（同）
