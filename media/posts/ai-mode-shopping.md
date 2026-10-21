@@ -19,7 +19,7 @@ Googleは2025年9月30日、AIモードで会話しながら商品を探せる�
 - 商品の枠に出ることと、AIの回答の文で社名が挙がることは**材料が別**。比べて選ぶ前の質問には、Webの情報から組み立てた文で答えが返る
 :::
 
-<!-- SHOT: HTML図 amsh_routes.html。AIモードに商品が届く3つの経路（Merchant Center・Shopifyのアプリ・サイトのクロール）を縦に3段・幅640・DPR2 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-shopping/amsh_00_routes.png" alt="AIモードに商品が届く3つの経路。Merchant Centerは無料リスティングが既定で有効、Shopifyのアプリは同期すると無料の掲載が有効、サイトのクロールは手続きなしでGoogleが読む" loading="lazy"></figure>
 
 ## AIモードのショッピングの今の形
 
@@ -48,11 +48,11 @@ AIモードのショッピングに関わる機能は、発表ごとに対象の
 | 無料リスティング | 日本を含む国 | 使える |
 | 会話属性の質問と回答 | すべての国 | 使える |
 
-<!-- SHOT: HTML図 amsh_japan.html。上の表を図にしたもの。「日本で使える」4つと「記載なし・対象外」4つを縦2段に分ける・幅640・DPR2 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-shopping/amsh_01_japan.png" alt="日本で使えるのは日本語のAIモード・無料リスティング・会話属性の質問と回答・検索の商品結果の試着。会話型ショッピング・AIモードでの購入手続き・AIパフォーマンス分析・ビジネスエージェントは日本の記載なしか対象外" loading="lazy"></figure>
 
 **日本語のAIモードに商品の一覧が出るかは、この記事では試していません。**2026年7月のミエルカの解説動画では、米国のAIモードには商品のタイルが並ぶ一方で日本ではめったに見ないと解説者が話していました。これは投稿者の観察で、第三者の検証はありません。
 
-<!-- SHOT: Google公式ブログ「AI Mode can now help you search and explore visually」の最後の段落・https://blog.google/products/search/search-ai-updates-september-2025/ ・PC・赤枠1: rolling out in English in the U.S. this week の文 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-shopping/amsh_02_blog_us.png" alt="Google公式ブログの最後の段落。AIモードの新しい体験は今週から米国で英語で提供すると書かれている" loading="lazy"><figcaption>Google公式ブログ（2025年9月30日）</figcaption></figure>
 
 ## 商品が載る3つの経路
 
@@ -70,7 +70,7 @@ AIモードに商品が届く道は、どの仕組みで売っているかで変
 
 ヘルプが挙げる表示先はGoogle検索・Googleマップ・Gemini・YouTube・ショッピングタブ・Google画像検索・Googleレンズの7つです。表示される国が場所ごとに書かれていて、商品の詳細をまとめたショッピングナレッジパネルは日本でも使えます。ファッションの人気商品の枠は米国のモバイルだけです。
 
-<!-- SHOT: Merchant Centerヘルプ「商品の無料リスティング」の無料リスティングの仕組みの節・https://support.google.com/merchants/answer/13889434?hl=ja ・PC・赤枠1: ほとんどの場合、無料リスティング機能はデフォルトで有効 の文／赤枠2: ユーザーに対して商品が表示されることを保証するものではありません の注 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-shopping/amsh_03_help_free.png" alt="Merchant Centerヘルプの無料リスティングの仕組み。ほとんどの場合、無料リスティング機能はデフォルトで有効で、表示を保証するものではないと書かれている" loading="lazy"><figcaption>Merchant Center ヘルプ「商品の無料リスティング」</figcaption></figure>
 
 ### ② ShopifyのGoogle & YouTubeアプリ
 
@@ -111,7 +111,7 @@ AIモードとの関わりがはっきり書かれているのは質問と回答
 - キーワードや検索語句は入れない
 - 説明文や商品の詳細の属性にすでに書いた内容は、繰り返し登録しなくてよい
 
-<!-- SHOT: Merchant Centerヘルプ「質問と回答 [question_and_answer]」の冒頭の注と最小要件の節・https://support.google.com/merchants/answer/17085211?hl=ja ・PC・赤枠1: Google 検索の AI モードなどの会話型エクスペリエンスで使用することを目的 の注／赤枠2: すべての国で使用できます の文／赤枠3: 価格や日付など時期によって変動する情報は入力しないでください の文 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-shopping/amsh_04_help_qa.png" alt="Merchant Centerヘルプの質問と回答の属性のページ。主にGoogle検索のAIモードなどの会話型エクスペリエンスで使うことを目的とし、すべての国で使用できると書かれている" loading="lazy"><figcaption>Merchant Center ヘルプ「質問と回答 [question_and_answer]」</figcaption></figure>
 
 2026年9月16日のGoogleのブログによると、lululemonとのテストでは**ブランドが登録した会話属性が、AIモードの関連する商品のおすすめの50%で使われました**。Googleが示した1社のテストの数字で、他社で同じ割合になるかは書かれていません。
 
@@ -123,7 +123,7 @@ AIモードとの関わりがはっきり書かれているのは質問と回答
 
 費用の大半は社内の手間です。誰が商品データを持ち、どの頻度で直すかを決めないまま始めると、価格のずれで商品が不承認になる原因を誰も追えません。
 
-<!-- SHOT: HTML図 amsh_decide.html。始める前に社内で決める4つ（商品データの持ち主・価格と在庫の更新・載せたくない商品・成果の見方）を縦に4段・幅640・DPR2 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-shopping/amsh_05_decide.png" alt="始める前に社内で決める4つ。商品データの持ち主、価格と在庫の更新、載せたくない商品、成果の見方" loading="lazy"></figure>
 
 ### ① 商品データの持ち主
 
@@ -141,8 +141,6 @@ Shopping Graphで毎時更新される商品は20億件を超えます。セー�
 
 Merchant Centerの［パフォーマンス］のページで、無料リスティングの結果を絞り込んで見られます。AIモードとAIによる概要での見え方を分けて示すAIパフォーマンス分析は、オーストラリア・カナダ・インド・ニュージーランド・米国の英語のクエリが対象で、日本のアカウントでは使えません。
 
-<!-- SHOT: Merchant Centerヘルプ「AI パフォーマンス分析について」の利用可能な国と地域の節・https://support.google.com/merchants/answer/17200695?hl=ja ・PC・赤枠1: オーストラリア、カナダ、インド、ニュージーランド、米国の Merchant Center アカウントを対象に、英語のクエリ の文 -->
-
 AIモードとAIによる概要で自社のページが表示・クリックされた分は、Search Consoleの検索タイプ「ウェブ」に含まれます。見方は[サーチコンソールでAIモード・AIによる概要の表示を見る方法](/media/gsc-ai-mode/)で扱っています。
 
 ## 商品の枠とAIの回答で挙がることの違い
@@ -154,8 +152,6 @@ AIモードで自社の名前が目に入る場所は、商品の一覧だけで
 | 載せ方 | Merchant Centerの商品データとクロール | 手続きはない | Google広告で出稿 |
 | 日本 | 会話型ショッピングは米国の英語から | 日本語で使える | AIによる概要の上下は日本で出る |
 | 何で決まるか | 商品データ・価格・在庫・レビュー | インデックスされたWebのページ | 入札と広告の関連性 |
-
-<!-- SHOT: Search Central「AI 機能とウェブサイト」のSEOのベストプラクティスの節・https://developers.google.com/search/docs/appearance/ai-features?hl=ja ・PC・赤枠1: Merchant Center とビジネス プロフィールの情報が最新のものであることを確認します の行 -->
 
 商品の枠は、型番や価格で比べられる商品に向いた場所です。一方で「どのメーカーの業務用機器が長持ちするか」のように選ぶ前の質問には、AIが参照したページから組み立てた文で答えが返ります。Search Centralによると、回答の根拠のリンクに出るにはページがインデックスに登録され、スニペットを表示できる状態であることが条件です。
 
