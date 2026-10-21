@@ -141,6 +141,8 @@ AIによる概要やAIモードで自社の名前が目に入る場面は、広�
 
 ChatGPTでも同じ違いがあり、広告の出し方は[ChatGPT広告の出稿方法と最低出稿金額](/media/chatgpt-ads/)にまとめました。AIによる概要に引用されるための対策は[AI Overviewsに引用されるには？](/media/cited-by-ai-overviews/)で扱っています。
 
+広告ではなく無料で商品を載せる経路は[Google AIモードのショッピングに商品を載せる方法](/media/ai-mode-shopping/)で扱っています。
+
 ## Yahoo!とLINEのAI回答の広告
 
 日本の検索で、AIの回答の中にすでに広告が出ているのはLINEヤフーです。LINEヤフーの[お知らせ](https://www.lycbiz.com/jp/news/yahoo-ads/20251216-01/)では、2025年12月15日に、Yahoo!のAIアシスタントの回答とYahoo!検索の結果に出るAIの回答で、LINEヤフー広告のテスト表示を始めました。最初はスマートフォン版からです。2026年5月11日の更新で、出る場所はAgent i（LINE AI を含む）の回答に広がっています。

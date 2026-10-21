@@ -194,6 +194,8 @@ ChatGPTの中で自社の商品や会社名が目に入る場所は、商品の�
 
 回答の文で自社が挙がらない原因は[ChatGPTに自社が出てこない5つの原因と対策](/media/chatgpt-not-appearing/)で、EC全体の進め方は[EC・通販のAI検索対策](/media/ec-ai-search/)で扱っています。
 
+GoogleのAIモードに商品を無料で載せる経路は[Google AIモードのショッピングに商品を載せる方法](/media/ai-mode-shopping/)で扱っています。
+
 ## よくある質問
 
 ### Q. ChatGPTショッピングに商品を載せるのに費用はかかりますか？
