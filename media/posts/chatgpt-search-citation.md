@@ -19,7 +19,7 @@ OpenAIのクローラーの公式ページは、ChatGPTの検索結果に出た�
 - 流入はutm_source=chatgpt.comとGA4のAIアシスタントのチャネルで見る。**utmを説明していた公式のFAQは、10月22日に開くと別の記事に替わっていた**
 :::
 
-<!-- SHOT: 図1 引用元に出るまでの4つの関門（robots.txt・CDNとサーバー・ページの中身・計測）を縦4段で。HTML 図 brain/scripts/seo/fig/cscit_gates.html を描画して /media/images/chatgpt-search-citation/cscit_01_gates.png。alt「ChatGPTの検索で引用元に出るまでの4つの関門。robots.txtでOAI-SearchBotを許可する、CDNとサーバーがOpenAIのIPを通す、ページに答えがある、流入を計測する」 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-search-citation/cscit_01_gates.png" alt="ChatGPTの検索で引用元に出るまでの4つの関門。robots.txtでOAI-SearchBotを許可する、CDNとサーバーがOpenAIのIPを通す、ページに答えがある、流入を計測する" loading="lazy"></figure>
 
 ## ChatGPT検索が引用元を選ぶ仕組み
 
@@ -55,7 +55,7 @@ OpenAIのサイトに来るボットは用途ごとに名前が分かれてい�
 
 このほかに、ChatGPTの広告として入稿したページだけを確かめに来るOAI-AdsBotがあります。**検索に出すかどうかを決めるのはOAI-SearchBotの設定だけ**で、公式ページはChatGPT-Userを検索の止め方に使わないよう書いています。
 
-<!-- SHOT: 図2 OpenAIの3つのクローラー（OAI-SearchBot＝検索・GPTBot＝学習・ChatGPT-User＝利用者の操作）を縦3段で。HTML 図 brain/scripts/seo/fig/cscit_bots.html を描画して /media/images/chatgpt-search-citation/cscit_02_bots.png。alt「OpenAIのクローラーは3つ。OAI-SearchBotはChatGPTの検索に出すため、GPTBotはモデルの学習のため、ChatGPT-Userは利用者の操作でページを読むため」 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-search-citation/cscit_02_bots.png" alt="OpenAIのクローラーは3つ。OAI-SearchBotはChatGPTの検索に出すため、GPTBotはモデルの学習のため、ChatGPT-Userは利用者の操作でページを読むため" loading="lazy"></figure>
 
 ### 学習は断って検索に出る書き方
 
@@ -83,9 +83,9 @@ CDNの既定も変わっています。Cloudflareの「[Block AI Bots](https://d
 
 nitoのサイト（Cloudflareを通して配信、robots.txtはすべて許可）で、2026年10月22日に名乗り（ユーザーエージェント）だけを変えて記事一覧のページを取得してみました。OAI-SearchBot・ChatGPT-User・bingbotの名乗りでは200が返り、GPTBotの名乗りでは403で拒否されました。OpenAIのIPアドレスから来ていない偽の名乗りなので本物のクローラーの扱いと同じとは限りませんが、**robots.txtが許可していても、CDNの側で特定のボットを止めていることがある**のは確かめられました。
 
-<!-- SHOT: 図3 robots.txtとCDNの2段の関門。robots.txtは許可、CDNで止まると届かない。HTML 図 brain/scripts/seo/fig/cscit_cdn.html を描画して /media/images/chatgpt-search-citation/cscit_03_cdn.png。alt「OAI-SearchBotはrobots.txtとCDNの2か所を通ってページに届く。robots.txtで許可していてもCDNで止めていると巡回できない」 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-search-citation/cscit_03_cdn.png" alt="OAI-SearchBotはrobots.txtとCDNの2か所を通ってページに届く。robots.txtで許可していてもCDNで止めていると巡回できない" loading="lazy"></figure>
 
-<!-- SHOT: Cloudflare Docs「Block AI Bots」の New defaults on September 15, 2026 の節・https://developers.cloudflare.com/bots/additional-configurations/block-ai-bots/・PC・赤枠は Search will remain allowed を含む段落。figcaption「Cloudflare Docs（2026年7月1日更新）の新しい既定の説明」 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-search-citation/cscit_04_cf_defaults.png" alt="Cloudflare DocsのBlock AI Botsのページ。2026年9月15日からの新しい既定で、新しいドメインでは学習用とエージェントのボットが広告のあるページで止められ、検索用は許可されたままと書かれている" loading="lazy"><figcaption>Cloudflare Docs（2026年7月1日更新）の新しい既定の説明</figcaption></figure>
 
 ### 自社サイトで確かめる順番
 
@@ -97,8 +97,6 @@ nitoのサイト（Cloudflareを通して配信、robots.txtはすべて許可�
 4. ChatGPTで検索を選び、自社の社名とサービス名で質問して、情報源に自社のページが出るかを見る
 
 1と3は社内の誰でも見られますが、2はCDNの契約者の権限が要ります。4は回答が毎回変わるため、1回出なかったことで止まっていると決めず、2と3の結果と合わせて読みます。
-
-<!-- SHOT: ChatGPTの回答の下の「情報源」ボタンと引用の一覧・https://chatgpt.com/・スマホ・未ログイン・中立の質問（例: 国民の祝日の一覧）・赤枠①情報源ボタン ②引用の一覧。figcaption「回答の下の情報源を押すと、引用したページが並ぶ」 -->
 
 ## ChatGPTからの流入の見え方
 
