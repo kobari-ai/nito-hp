@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】GPTsを社内だけで共有する方法｜共有範囲・管理者の設定・プラグイン移行 | nito Column</title>
+    <meta name="description" content="GPTsを社内だけで共有する方法をOpenAIのヘルプで解説。社外に出ない共有範囲と権限、BusinessとEnterpriseで管理者が決められること、12月11日の終了予定とプラグインへ移るときに共有をやり直す手順まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/gpts-internal-share/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】GPTsを社内だけで共有する方法｜共有範囲・管理者の設定・プラグイン移行">
+    <meta property="og:description" content="GPTsを社内だけで共有する方法をOpenAIのヘルプで解説。社外に出ない共有範囲と権限、BusinessとEnterpriseで管理者が決められること、12月11日の終了予定とプラグインへ移るときに共有をやり直す手順まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/gpts-internal-share/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/gpts-internal-share.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/gpts-internal-share.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】GPTsを社内だけで共有する方法｜共有範囲・管理者の設定・プラグイン移行", "description": "GPTsを社内だけで共有する方法をOpenAIのヘルプで解説。社外に出ない共有範囲と権限、BusinessとEnterpriseで管理者が決められること、12月11日の終了予定とプラグインへ移るときに共有をやり直す手順まで。", "datePublished": "2026-10-22", "dateModified": "2026-10-22", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/gpts-internal-share/"}, "articleSection": "AI活用", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】GPTsを社内だけで共有する方法｜共有範囲・管理者の設定・プラグイン移行"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTのGPTsは社内だけで共有できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。Business・Enterprise・Eduのワークスペースで共有範囲を［招待者のみ］［リンクを知っているワークスペース内の全員］［ワークスペース］のどれかにすれば、社外の人は開けません。"}}, {"@type": "Question", "name": "ChatGPT PlusでGPTsを作れますか？", "acceptedAnswer": {"@type": "Answer", "text": "新しいGPTは作れません。Free・Go・Plus・Proの個人用アカウントは新しいGPTの作成も公開もできない、とOpenAIのヘルプにあります。前に作ったGPTは今も使え、条件を満たせば編集もできる状態です。ただし移行はすべてのプランが対象で、終了の日程は自分のアカウントに届く案内で確かめます。"}}, {"@type": "Question", "name": "ChatGPT BusinessでGPTsを公開できますか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年8月ごろから公開リンクが消えたという利用者の報告がありましたが、2026年10月13日にOpenAIのサポートが、Businessから公開共有を外すと告知したものではなく、選べる範囲はワークスペースの権限と条件によると答えています。公開できないと出るなら、OpenAIのサポートでワークスペースごとに確かめるのが案内の手順です。"}}, {"@type": "Question", "name": "GPTsの会話は作成者に見えますか？", "acceptedAnswer": {"@type": "Answer", "text": "見えません。GPTの作成者は利用者との個別の会話を見られない、とOpenAIのヘルプに書かれています。ただしアプリやアクションを使うGPTでは、入力の一部が外部のサービスに送られることがあります。"}}, {"@type": "Question", "name": "EnterpriseでGPTsの共有範囲を絞れますか？", "acceptedAnswer": {"@type": "Answer", "text": "絞れます。［ワークスペース設定］の［権限とロール］で、共有を許すかどうかと、招待者のみやワークスペースのみに絞るかを決める仕組みです。サードパーティ製GPTを使わせるかもここで決めます。"}}, {"@type": "Question", "name": "GPTsの作成者が退職したらどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "Enterprise・Eduでは、ワークスペースのオーナーに所有権が移り、未割り当てとして表示されます。オーナーは別のメンバーに付け替えられます。Businessの扱いはヘルプに書かれていませんでした。"}}, {"@type": "Question", "name": "GPTsをプラグインに移すと共有はどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "引き継がれません。プラグインは非公開の状態で作られるので、作成者か管理者が共有し直し、利用者がインストールするか管理者がインストール済みにする必要があります。"}}, {"@type": "Question", "name": "GPTsの新規作成はいつまでできますか？", "acceptedAnswer": {"@type": "Answer", "text": "対象のEnterpriseワークスペースでは2026年10月26日（予定）までです。終了は2026年12月11日の予定で、延期が承認されたワークスペースだけ2027年2月11日。ほかのプランの日程はアカウントやワークスペースごとの案内に従います。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=56b59318">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】GPTsを社内だけで…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.22</span>
+        </div>
+        <h1 class="post-title">【2026年10月】GPTsを社内だけで共有する方法｜共有範囲・管理者の設定・プラグイン移行</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GPTsを社内だけで共有する"><defs><linearGradient id="ecg-ff3f970b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ff3f970b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="137.3" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GPTsを社内だけで共有する</text><line x1="128.8" y1="327.1" x2="1071.2" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">共有範囲・管理者の設定・移行後の共有</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>OpenAIのヘルプでは、Free・Go・Plus・Proの個人用アカウントで新しいGPTを作ることも公開することもできなくなりました。新しく作って社内に配れるのはBusiness・Enterprise・Eduのワークスペースだけです。そのGPTも終了の予定で（対象のEnterpriseは2026年12月11日、ほかのプランは届く案内の日程）、移行先のプラグインには共有の設定が移りません。</p>
+<p>社内用のGPTを配っている、またはこれから配る担当者に向けて、社外に出ない共有範囲の選び方、BusinessとEnterpriseで管理者が決められることの違い、移行のときに共有をやり直す手順を書きます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>社内だけに絞るなら、共有範囲は［招待者のみ］［リンクを知っているワークスペース内の全員］［ワークスペース］の3つから選ぶ</strong></li>
+<li><strong>共有範囲の上限を管理者が決められるとヘルプにあるのはEnterpriseとEdu</strong>。Businessのヘルプに同じ設定の記載は無い。Businessの社外への公開は、ワークスペースの権限と条件によるとOpenAIのサポートが答えている</li>
+<li><strong>プラグインに移行すると共有の設定は移らず、非公開から始まる</strong>。誰にどの権限で配っていたかを移行の前に控える</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/gpts-internal-share/gpis_01_scope.png" alt="GPTの共有範囲は5つ。招待者のみ、リンクを知っているワークスペース内の全員、ワークスペースは社内だけ。リンクを知っている全員とGPT Storeは社外の人も開ける" loading="lazy"></figure>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>GPTsを作って共有できるプラン</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>社内だけに絞る共有範囲</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>共有の手順</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>直接の共有は100件まで</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>権限レベルで見えるもの</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>作成者に会話は見えない</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>管理者が決められること</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>Businessの公開リンクの報告</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>作った人が退職したら</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>移行で共有はやり直しになる</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>共有の設定は引き継がれない</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>プラグインを社内に共有する</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>費用がかかる操作</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>移行の前に控えておくこと</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>移行できる人</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>つまずきやすい所</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">GPTsを作って共有できるプラン</h2>
+<p>最初に確かめたいのは、社員がどのアカウントでGPTを作っているかです。<a href="https://help.openai.com/en/articles/8554407">GPTs in ChatGPT</a>によると、個人用アカウントでも既存のGPTは使え、条件を満たせば編集もできます。ただし新しく作ること、公開することはできません。<strong>会社でGPTを配るなら、作る場所をBusiness・Enterprise・Eduのワークスペースにそろえる必要があります。</strong></p>
+<p>2026年10月22日に公式ヘルプで確かめた内容を、プランごとに並べました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>プラン</th>
+<th>新しいGPTの作成</th>
+<th>社内への共有</th>
+<th>社外への公開</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="プラン">Free・Go・Plus・Pro</td>
+<td data-label="新しいGPTの作成">できない</td>
+<td data-label="社内への共有">社内という単位が無い</td>
+<td data-label="社外への公開">新しくはできない</td>
+</tr>
+<tr>
+<td data-label="プラン">Business</td>
+<td data-label="新しいGPTの作成">ワークスペースの設定と権限による</td>
+<td data-label="社内への共有">できる</td>
+<td data-label="社外への公開">ワークスペースの権限と条件による</td>
+</tr>
+<tr>
+<td data-label="プラン">Enterprise・Edu</td>
+<td data-label="新しいGPTの作成">ワークスペースの設定と権限による</td>
+<td data-label="社内への共有">できる</td>
+<td data-label="社外への公開">管理者が許可した範囲で</td>
+</tr>
+</tbody>
+</table></div>
+<p>Enterpriseの<a href="https://help.openai.com/ja-jp/articles/20001519">移行のFAQ</a>には、<strong>カスタムGPTの新規作成が2026年10月26日（予定）で終わる</strong>と書かれています。止まるのは新しく作ることで、移行していない既存のGPTはその後も編集できます。BusinessとEduの新規作成の終わりは、ヘルプには書かれていませんでした。</p>
+<h2 id="s2">社内だけに絞る共有範囲</h2>
+<p>社内用のGPTを作った人がまず迷うのが、共有の画面に並ぶ選択肢です。<a href="https://help.openai.com/ja-jp/articles/8798878">GPTの共有と公開</a>のヘルプには5つの範囲があり、社外の人が開けるのは下の2つだけです。<strong>社内だけに絞るなら、上の3つのどれかを選びます。</strong></p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>共有範囲</th>
+<th>開ける人</th>
+<th>社外の人</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="共有範囲">招待者のみ</td>
+<td data-label="開ける人">自分と、追加した特定のユーザー・グループ</td>
+<td data-label="社外の人">開けない</td>
+</tr>
+<tr>
+<td data-label="共有範囲">リンクを知っているワークスペース内の全員</td>
+<td data-label="開ける人">リンクを受け取ったワークスペースのメンバー</td>
+<td data-label="社外の人">開けない</td>
+</tr>
+<tr>
+<td data-label="共有範囲">ワークスペース</td>
+<td data-label="開ける人">ワークスペースのメンバー全員</td>
+<td data-label="社外の人">開けない</td>
+</tr>
+<tr>
+<td data-label="共有範囲">リンクを知っている全員</td>
+<td data-label="開ける人">リンクを知っている人全員（公開リンクが使える場合）</td>
+<td data-label="社外の人">開ける</td>
+</tr>
+<tr>
+<td data-label="共有範囲">GPT Store</td>
+<td data-label="開ける人">ChatGPTの利用者全員</td>
+<td data-label="社外の人">開ける</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>［招待者のみ］は部署や案件のメンバーに絞りたいとき、［ワークスペース］は全社に配る手順書のようなGPTに向きます。</strong>［リンクを知っているワークスペース内の全員］はその間で、リンクを社内のチャットに貼った相手だけに届きます。特定のユーザーやグループを指定する共有は、管理されたワークスペースだけの機能です。</p>
+<h3 id="s2-1">共有の手順</h3>
+<p>ヘルプの手順は6つです。GPTを直接共有された相手には、GPTへのリンクが入った通知メールが届きます。</p>
+<ol>
+<li>エディターでGPTを開く</li>
+<li>［共有］を選ぶ</li>
+<li>共有範囲を選ぶ</li>
+<li>権限レベルを選ぶ</li>
+<li>［保存］で共有の変更を適用する</li>
+<li>直接送るなら、GPTのリンクをコピーする</li>
+</ol>
+<h3 id="s2-2">直接の共有は100件まで</h3>
+<p>特定の相手を指定する共有には上限があります。ヘルプによると、<strong>1つのGPTを直接共有できる相手は、個人とグループを合わせて100件まで</strong>です。グループは中の人数にかかわらず1件と数えるので、50人と50グループに共有することもできます。この上限は［ワークスペース］のような広い範囲には当たりません。部署ごとのグループが社内の名簿とつながっているなら、人ではなくグループで渡せば上限に届きにくくなる計算です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">権限レベルで見えるもの</h2>
+<p>共有範囲と別に、相手に何を許すかを3段階から選びます。ここを広げすぎると、GPTの中身まで社内に出回ります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>権限レベル</th>
+<th>できること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="権限レベル">チャット可能</td>
+<td data-label="できること">GPTを使って会話する</td>
+</tr>
+<tr>
+<td data-label="権限レベル">設定を表示可能</td>
+<td data-label="できること">使うことに加えて、複製と構成の設定の表示</td>
+</tr>
+<tr>
+<td data-label="権限レベル">編集可能</td>
+<td data-label="できること">GPTを直接変更する</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>［設定を表示可能］にすると、相手はGPTを複製して構成の設定を見られます。</strong> 指示文の書き方や設定を社内で見せたくないなら、利用者は［チャット可能］にとどめ、［編集可能］は管理を任せる人だけにしましょう。公開リンクとGPT Storeでは［設定を表示可能］は選べず、［チャット可能］だけです。</p>
+<h3 id="s3-1">作成者に会話は見えない</h3>
+<p>GPTs in ChatGPTのヘルプには、<strong>GPTの作成者は利用者とGPTの個別の会話を見られない</strong>とあります。Business・Enterprise・Eduのデータは既定でモデルの学習に使われません。ただし、アプリや外部のAPI（アクション）を使うGPTでは、入力の関連する部分が外部のサービスに送られることがあり、その先の扱いをOpenAIは監査も管理もしないと書かれています。</p>
+<h2 id="s4">管理者が決められること</h2>
+<p>共有範囲を社員任せにするか、管理者が上限を決めるかは、契約しているプランで変わります。<a href="https://help.openai.com/ja-jp/articles/8555535">Enterprise・EduのGPTの管理</a>のヘルプには、［ワークスペース設定］の［権限とロール］で、GPTを作れる人・共有できるか・共有の範囲を招待者のみかワークスペースのみに絞るかを決められると書かれています。<strong>Businessには同じ内容のヘルプが無く、共有範囲の上限を管理者が絞れるとは書かれていません。</strong></p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>管理の項目</th>
+<th>Enterprise・Edu</th>
+<th>Business</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="管理の項目">GPTを作れる人</td>
+<td data-label="Enterprise・Edu">権限とロールで決める</td>
+<td data-label="Business">ワークスペースの設定と権限による</td>
+</tr>
+<tr>
+<td data-label="管理の項目">共有範囲の上限</td>
+<td data-label="Enterprise・Edu">招待者のみ・ワークスペースのみなどに絞れる</td>
+<td data-label="Business">ヘルプに記載なし</td>
+</tr>
+<tr>
+<td data-label="管理の項目">サードパーティ製GPTの利用</td>
+<td data-label="Enterprise・Edu">許可・オーナーが承認したものだけ・許可しない</td>
+<td data-label="Business">ヘルプに記載なし</td>
+</tr>
+<tr>
+<td data-label="管理の項目">GPTで使えるアプリ</td>
+<td data-label="Enterprise・Edu">管理者がオン・オフする</td>
+<td data-label="Business">ヘルプに記載なし</td>
+</tr>
+<tr>
+<td data-label="管理の項目">アクションの送り先</td>
+<td data-label="Enterprise・Edu">管理者がドメインで絞る</td>
+<td data-label="Business">ヘルプに記載なし</td>
+</tr>
+<tr>
+<td data-label="管理の項目">会話の共有リンクを全体で止める</td>
+<td data-label="Enterprise・Edu">Enterpriseはできる（Eduは記載なし）</td>
+<td data-label="Business">できない</td>
+</tr>
+</tbody>
+</table></div>
+<p>会話の共有リンクの行は<a href="https://help.openai.com/en/articles/8798634">ChatGPT Businessのデータ管理のヘルプ</a>によります。Businessのメンバーは自分が作ったリンクを消せますが、全員の共有を止める設定はEnterpriseだけです。</p>
+<h3 id="s4-1">Businessの公開リンクの報告</h3>
+<p><a href="https://community.openai.com/t/unable-to-publicly-share-custom-gpts-from-a-chatgpt-business-workspace/1391451">OpenAIの開発者コミュニティの投稿</a>では、2026年8月20日ごろからBusinessのワークスペースでGPTの共有の画面から［リンクを知っている全員］が消えたという報告が続き、ワークスペースの設定にあるGPTの共有の項目にEnterpriseの印が付いて操作できないという投稿もありました。9月には戻ったという報告もあります。<strong>10月13日にOpenAIのサポートが同じスレッドで、Businessから公開共有を外すと告知したものではなく、選べる範囲はワークスペースの権限と条件による、まだ公開できないと出るならサポートでワークスペースごとに確かめる、と答えています。</strong> 前から公開していたリンクは開けて新しい公開リンクだけ作れない、という内容は、利用者が転記したサポートのメールに書かれていたものです。社内だけに配る使い方には影響しないものの、取引先にGPTを渡している会社は、自社のワークスペースで公開が選べるかを先に確かめておきます。</p>
+<h3 id="s4-2">作った人が退職したら</h3>
+<p>Enterprise・Eduのヘルプには、GPTの所有者がワークスペースから外されても、<strong>GPTは所有者のいない状態にならず、ワークスペースのオーナーに移る</strong>とあります。そのGPTは未割り当てとして表示され、オーナーが中身を見て別のメンバーに付け替える流れです。元の作成者がワークスペースに戻ると、所有権が自動で戻ることもあります。Businessの同じ扱いはヘルプに書かれていなかったため、退職の手続きの前に、本人が持っているGPTを誰が引き継ぐかを決めておけば、持ち主のいないGPTが残りません。</p>
+<h2 id="s5">移行で共有はやり直しになる</h2>
+<p>12月11日の終了に向けて、GPTはプラグインへ移す流れになっています。移行で運ばれるもの全体は<a href="/media/chatgpt-guide/">ChatGPTの使い方の記事</a>に書いたので、ここで扱うのは共有に関わるところだけです。移行のFAQはこの変更をすべてのChatGPTプランが対象と書き、日程はアカウントやワークスペースごとの案内に従うとしています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>日付</th>
+<th>対象のEnterpriseワークスペースで起きること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="日付">2026年9月11日</td>
+<td data-label="対象のEnterpriseワークスペースで起きること">管理者への告知</td>
+</tr>
+<tr>
+<td data-label="日付">2026年9月22日</td>
+<td data-label="対象のEnterpriseワークスペースで起きること">移行の機能とバナーの提供の目標日</td>
+</tr>
+<tr>
+<td data-label="日付">2026年10月26日（予定）</td>
+<td data-label="対象のEnterpriseワークスペースで起きること">カスタムGPTの新規作成の終了</td>
+</tr>
+<tr>
+<td data-label="日付">2026年12月11日</td>
+<td data-label="対象のEnterpriseワークスペースで起きること">標準の終了予定日。GPTとGPTのページが開けなくなる</td>
+</tr>
+<tr>
+<td data-label="日付">2027年2月11日</td>
+<td data-label="対象のEnterpriseワークスペースで起きること">延期が承認されたワークスペースだけの終了日</td>
+</tr>
+</tbody>
+</table></div>
+<p>ヘルプのページどうしで日付が食い違う所もありました。GPTの共有と公開のページの冒頭の告知は移行の開始を2026年9月17日としていますが、移行のFAQは9月22日を目標日にしています。どちらも目標で、すべてのワークスペースでその日に使えるとは限らないという注記付きです。</p>
+<h3 id="s5-1">共有の設定は引き継がれない</h3>
+<p><strong>移行してもGPTの共有の設定は引き継がれず、これまでの利用者に新しいプラグインへのアクセスが付くこともない</strong>と移行のFAQにあります。プラグインは非公開の状態で作られ、自動でインストールもされません。OpenAIの<a href="https://learn.chatgpt.com/docs/migrate-custom-gpts">移行ガイド</a>によると、管理者がまとめて移行する場合も共有の設定はコピーされず、1つずつ共有し直すか作成者に頼むことになります。元のGPTは移行の時点で読み取り専用になり、終了日まで使えるので、その間に利用者を新しい方へ移す段取りです。</p>
+<h3 id="s5-2">プラグインを社内に共有する</h3>
+<p><a href="https://help.openai.com/ja-jp/articles/20001256">ChatGPTとCodexのプラグイン</a>のヘルプによると、BusinessとEnterpriseのユーザーは同じワークスペースのメンバーにプラグインを共有できます。［プラグイン］で自分のプラグインを選び、その他のメニューの［プラグインを共有］から相手を選んで保存します。選択肢は3つで、どれもワークスペースの外には出ません。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>共有の選択肢</th>
+<th>届く相手</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="共有の選択肢">招待されたユーザーのみ</td>
+<td data-label="届く相手">指定したユーザーまたはグループ</td>
+</tr>
+<tr>
+<td data-label="共有の選択肢">このワークスペース内でリンクを知っている全員</td>
+<td data-label="届く相手">リンクを受け取ったメンバー</td>
+</tr>
+<tr>
+<td data-label="共有の選択肢">ワークスペースディレクトリに表示</td>
+<td data-label="届く相手">対象のメンバーが探してインストールできる</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>GPTと違って、プラグインは共有されても相手がインストールするまで使えません。</strong> 管理者が［インストール済み］の設定にすれば対象のメンバーに自動でインストールされ、［利用可能］なら各自がインストールする形です。Enterpriseでは共有に関わる権限は［プラグインを共有］［プラグインをワークスペースに公開］［プラグインを使用］の3つで、ロールごとに決められます。Businessの管理者はワークスペース全体での可否を管理する、とヘルプにあります。</p>
+<figure class="post-figure"><img src="/media/images/gpts-internal-share/gpis_02_migrate.png" alt="移行で共有をやり直す流れ。共有の相手を控える、プラグインに移す、動きを試す、控えた相手に共有し直す、メンバーにインストールしてもらう" loading="lazy"></figure>
+
+<h3 id="s5-3">費用がかかる操作</h3>
+<p>Enterpriseの場合、アプリを使わない移行済みのGPTを即時モードのChatで使う分には追加の料金はかからない、とFAQにあります。会話でプラグインを作ったり直したりするとWorkかCodexを使い、Workでの操作はクレジットを消費します。誰が直すかと回数の目安を先に決めておくと、請求で驚きません。</p>
+<h2 id="s6">移行の前に控えておくこと</h2>
+<p>共有のやり直しで漏れが出るのは、元のGPTを誰に配っていたかが記録に残っていないときです。GPTごとに管理する人を決め、目的・利用者・指示・参照ファイル・連携を記録するよう移行ガイドは勧めています。<strong>共有の設定は移らないので、共有範囲・相手・権限を移行の前に表にしておきます。</strong></p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>控える項目</th>
+<th>書く内容の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="控える項目">GPTの名前とリンク</td>
+<td data-label="書く内容の例">見積もりの下書き</td>
+</tr>
+<tr>
+<td data-label="控える項目">管理する人</td>
+<td data-label="書く内容の例">営業部の担当者（作成者が退職していれば引き継いだ人）</td>
+</tr>
+<tr>
+<td data-label="控える項目">共有範囲と相手</td>
+<td data-label="書く内容の例">招待者のみ・営業部のグループ</td>
+</tr>
+<tr>
+<td data-label="控える項目">権限レベル</td>
+<td data-label="書く内容の例">利用者はチャット可能、管理する人は編集可能</td>
+</tr>
+<tr>
+<td data-label="控える項目">アクションの有無</td>
+<td data-label="書く内容の例">社内の在庫APIにつないでいる</td>
+</tr>
+<tr>
+<td data-label="控える項目">移行後の配り方</td>
+<td data-label="書く内容の例">招待されたユーザーのみで営業部へ、インストール済みにする</td>
+</tr>
+</tbody>
+</table></div>
+<p>Enterpriseの管理者は、ChatGPT Adminのプラグインで、直近30日に使われたGPTの一覧（所有者・利用・移行の状況・カスタムアクション）を出せると移行ガイドにあります。書き出せる形式はExcelやCSVなどで、上の表の土台にそのまま使えるのが利点です。</p>
+<h3 id="s6-1">移行できる人</h3>
+<p>FAQによると、<strong>GPTを移行できるのは作成者とワークスペースの管理者だけ</strong>です（Enterpriseで予定されている手順）。使う権限を持っているだけの人は移行できません。社員に「自分で使っているGPTを移しておいて」と頼んでも、作成者でなければ移行の項目は出ないので、作成者か管理者に寄せて進めます。</p>
+<h3 id="s6-2">つまずきやすい所</h3>
+<p>移行ガイドとFAQに書かれている注意から、社内に配っているGPTで起きやすいものを4つ挙げます。</p>
+<ul>
+<li><strong>下書きのままのGPT</strong>: 移行に使われるのは公開済みの最新版で、下書きや未公開の編集は移りません。共有範囲を広げなくても、保存して公開済みにしておけば対象になります</li>
+<li><strong>共有し直しの忘れ</strong>: 作成者が移行して自分だけでテストを終え、利用者には共有していない状態です。共有したあと、利用者の1人に開いてもらって確かめます</li>
+<li><strong>アクションでつないだ社内システム</strong>: カスタムアクションは移らず、アプリかカスタムのMCPサーバーで作り直す必要があります。管理者が情報システムやセキュリティの担当と権限を見直す時間を、移行の日程に入れておきます</li>
+<li><strong>社外の人が使っていたGPT</strong>: 対象のEnterpriseワークスペースで作った公開GPTは、別のプランから使っている人がいても移行の対象です。公開の設定も移らず、ワークスペースのプラグインを社外の人に届ける方法はヘルプに書かれていません。社外の利用者がいるGPTは、移行の前に渡し方を決めておきます</li>
+</ul>
+<p>社員が個人のChatGPTで作って業務に使っているGPTは会社の管理の外にあります。個人アカウントの扱いは<a href="/media/shadow-ai/">シャドーAI対策の記事</a>に、Businessのメンバーの招待と権限は<a href="/media/chatgpt-business-admin/">ChatGPT Businessのメンバー管理</a>に書きました。</p>
+<h2 id="s7">よくある質問</h2>
+<h3 id="s7-1">ChatGPTのGPTsは社内だけで共有できますか？</h3>
+<p>できます。Business・Enterprise・Eduのワークスペースで共有範囲を［招待者のみ］［リンクを知っているワークスペース内の全員］［ワークスペース］のどれかにすれば、社外の人は開けません。</p>
+<h3 id="s7-2">ChatGPT PlusでGPTsを作れますか？</h3>
+<p>新しいGPTは作れません。Free・Go・Plus・Proの個人用アカウントは新しいGPTの作成も公開もできない、とOpenAIのヘルプにあります。前に作ったGPTは今も使え、条件を満たせば編集もできる状態です。ただし移行はすべてのプランが対象で、終了の日程は自分のアカウントに届く案内で確かめます。</p>
+<h3 id="s7-3">ChatGPT BusinessでGPTsを公開できますか？</h3>
+<p>2026年8月ごろから公開リンクが消えたという利用者の報告がありましたが、2026年10月13日にOpenAIのサポートが、Businessから公開共有を外すと告知したものではなく、選べる範囲はワークスペースの権限と条件によると答えています。公開できないと出るなら、OpenAIのサポートでワークスペースごとに確かめるのが案内の手順です。</p>
+<h3 id="s7-4">GPTsの会話は作成者に見えますか？</h3>
+<p>見えません。GPTの作成者は利用者との個別の会話を見られない、とOpenAIのヘルプに書かれています。ただしアプリやアクションを使うGPTでは、入力の一部が外部のサービスに送られることがあります。</p>
+<h3 id="s7-5">EnterpriseでGPTsの共有範囲を絞れますか？</h3>
+<p>絞れます。［ワークスペース設定］の［権限とロール］で、共有を許すかどうかと、招待者のみやワークスペースのみに絞るかを決める仕組みです。サードパーティ製GPTを使わせるかもここで決めます。</p>
+<h3 id="s7-6">GPTsの作成者が退職したらどうなりますか？</h3>
+<p>Enterprise・Eduでは、ワークスペースのオーナーに所有権が移り、未割り当てとして表示されます。オーナーは別のメンバーに付け替えられます。Businessの扱いはヘルプに書かれていませんでした。</p>
+<h3 id="s7-7">GPTsをプラグインに移すと共有はどうなりますか？</h3>
+<p>引き継がれません。プラグインは非公開の状態で作られるので、作成者か管理者が共有し直し、利用者がインストールするか管理者がインストール済みにする必要があります。</p>
+<h3 id="s7-8">GPTsの新規作成はいつまでできますか？</h3>
+<p>対象のEnterpriseワークスペースでは2026年10月26日（予定）までです。終了は2026年12月11日の予定で、延期が承認されたワークスペースだけ2027年2月11日。ほかのプランの日程はアカウントやワークスペースごとの案内に従います。</p>
+<h2 id="s8">出典</h2>
+<ul>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/8798878">GPT の共有と公開</a>」（2026年10月22日取得）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/8554407">GPTs in ChatGPT</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/8555535">Enterprise および Edu ワークスペースでの GPT へのアクセス管理</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/20001519">カスタム GPT の提供終了と移行に関する FAQ</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/20001256">ChatGPT と Codex のプラグイン</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/8798634">Managing data, sharing, and privacy in ChatGPT Business</a>」（同）</li>
+<li>ChatGPT Learn「<a href="https://learn.chatgpt.com/docs/migrate-custom-gpts">Moving your custom GPT workflows to plugins</a>」（同）</li>
+<li>OpenAI Developer Community「<a href="https://community.openai.com/t/unable-to-publicly-share-custom-gpts-from-a-chatgpt-business-workspace/1391451">Unable to publicly share Custom GPTs from a ChatGPT Business workspace</a>」（2026年8月20日〜10月13日の投稿、同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">GPTsを作って共有できるプラン</a><a href="#s2">社内だけに絞る共有範囲</a><a href="#s3">権限レベルで見えるもの</a><a href="#s4">管理者が決められること</a><a href="#s5">移行で共有はやり直しになる</a><a href="#s6">移行の前に控えておくこと</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/shadow-ai/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="シャドーAI対策で会社がやること"><defs><linearGradient id="ecg-663cb194" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-663cb194)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="125.2" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">シャドーAI対策で</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">会社がやること</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.21</div>
+                <div class="rel-card__ttl">【2026年10月】シャドーAI対策とは？会社がやること｜個人のChatGPT・社内ルール・検知</div>
+            </a>
+            <a href="/media/copilot-studio/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilot Studioの料金"><defs><linearGradient id="ecg-399a77f6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-399a77f6)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilot Studioの料金</text><line x1="166.8" y1="365.9" x2="1033.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】Copilot Studioの料金を解説｜M365 Copilotの範囲・作れる人</div>
+            </a>
+            <a href="/media/copilot-adoption/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilotが社内で使われないとき"><defs><linearGradient id="ecg-7548a162" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7548a162)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilotが社内で</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">使われないとき</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.19</div>
+                <div class="rel-card__ttl">【2026年10月】Copilotが社内で使われないときの調べ方｜使用状況レポート・定着の手順</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'gpts-internal-share',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
