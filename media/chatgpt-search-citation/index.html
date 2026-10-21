@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】ChatGPT検索で引用元に出る条件とは？OAI-SearchBotと流入の見方 | nito Column</title>
+    <meta name="description" content="ChatGPTの検索で自社サイトが引用元に出る条件をOpenAIの公式ページで整理。OAI-SearchBotとGPTBotの違い、robots.txtとCDNの確かめ方、GA4での流入の見え方まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/chatgpt-search-citation/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】ChatGPT検索で引用元に出る条件とは？OAI-SearchBotと流入の見方">
+    <meta property="og:description" content="ChatGPTの検索で自社サイトが引用元に出る条件をOpenAIの公式ページで整理。OAI-SearchBotとGPTBotの違い、robots.txtとCDNの確かめ方、GA4での流入の見え方まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/chatgpt-search-citation/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/chatgpt-search-citation.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/chatgpt-search-citation.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】ChatGPT検索で引用元に出る条件とは？OAI-SearchBotと流入の見方", "description": "ChatGPTの検索で自社サイトが引用元に出る条件をOpenAIの公式ページで整理。OAI-SearchBotとGPTBotの違い、robots.txtとCDNの確かめ方、GA4での流入の見え方まで。", "datePublished": "2026-10-22", "dateModified": "2026-10-22", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/chatgpt-search-citation/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】ChatGPT検索で引用元に出る条件とは？OAI-SearchBotと流入の見方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTの検索に出るにはBingへの登録が必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "公式のページに、Bingへの登録が必要とは書かれていません。OpenAIのヘルプは外部の検索の提供元と組むと説明し、プライバシーの案内にMicrosoftとShopifyを挙げています。Bing Webmaster Toolsへの登録は無料なので、索引の状態を確かめる目的で入れておくのは損になりません。"}}, {"@type": "Question", "name": "GPTBotをブロックするとChatGPTの検索に出なくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "GPTBotを止めたまま検索に出せる、と公式ページにあります。OpenAIの公式ページは、OAI-SearchBotを許可して検索に出しながら、GPTBotを止めて学習に使わない合図を出せると書いています。"}}, {"@type": "Question", "name": "OAI-SearchBotを許可すればChatGPTで必ず引用されますか？", "acceptedAnswer": {"@type": "Answer", "text": "必ずではありません。OpenAIのヘルプによると検索結果は複数の要素で並べられ、掲載の位置は保証されません。許可は引用元の候補に入るための条件です。"}}, {"@type": "Question", "name": "ChatGPTの検索に出したくないページはどうすればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "robots.txtでOAI-SearchBotを止めると検索の回答には出ませんが、ナビゲーション用のリンクとしては出ることがあります。Atlas（ChatGPTのブラウザ）についての保存版のFAQ（2026年10月4日保存）は、Atlasでリンクも出したくない場合はnoindexのメタタグを使い、タグを読めるようにクローラーの巡回は許可するよう案内していました。"}}, {"@type": "Question", "name": "robots.txtを直してからChatGPTに反映されるまでどれくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "OpenAIの公式ページによると、検索の結果に反映されるまで約24時間かかることがあります。"}}, {"@type": "Question", "name": "ChatGPTからの流入はGA4のどこで見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "既定のチャネルの「AI アシスタント」か、参照元の `chatgpt.com` で見られます。GA4のヘルプによると、このチャネルはChatGPT・Gemini・Copilotなどから来た分を集め、GoogleのAIによる概要とAIモードは含みません。"}}, {"@type": "Question", "name": "ChatGPT-Userはrobots.txtで止められますか？", "acceptedAnswer": {"@type": "Answer", "text": "止まらない場合があります。OpenAIの公式ページは、ChatGPT-Userは利用者の操作で動くためrobots.txtのルールが適用されないことがあると書き、検索に出すかの管理にはOAI-SearchBotを使うよう案内しています。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=56b59318">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】ChatGPT検索で…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.22</span>
+        </div>
+        <h1 class="post-title">【2026年10月】ChatGPT検索で引用元に出る条件とは？OAI-SearchBotと流入の見方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT検索の引用元"><defs><linearGradient id="ecg-e72e2241" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e72e2241)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT検索の引用元</text><line x1="212.4" y1="327.1" x2="987.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">OAI-SearchBotの許可と流入の見方</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>OpenAIのクローラーの公式ページは、ChatGPTの検索結果に出たいサイトにOAI-SearchBotをrobots.txtで許可し、OpenAIが公開するIPアドレスからの通信も通すよう勧めています（2026年10月22日に確認）。</p>
+<p>ところが社内では、robots.txtは制作会社、CDNは情報システムの担当、GA4はマーケ担当と持ち主が分かれがちで、どこで止まっているかが見えません。この記事は公式に書いてあることと無いことを分けたうえで、確かめる順番と社内の分担を書きます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>ChatGPTの検索の引用元に出る公式の条件は、<strong>OAI-SearchBotを許可することと、サーバーやCDNがOpenAIのIPアドレスを通すことの2つ</strong>。掲載の位置は保証されない</li>
+<li>学習用のGPTBotと検索用のOAI-SearchBotは別々に設定でき、<strong>GPTBotを止めても検索には出られる</strong>。Bingの索引に載ることが条件とは公式に書かれていない</li>
+<li>流入はutm_source=chatgpt.comとGA4のAIアシスタントのチャネルで見る。<strong>utmを説明していた公式のFAQは、10月22日に開くと別の記事に替わっていた</strong></li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/chatgpt-search-citation/cscit_01_gates.png" alt="ChatGPTの検索で引用元に出るまでの4つの関門。robots.txtでOAI-SearchBotを許可する、CDNとサーバーがOpenAIのIPを通す、ページに答えがある、流入を計測する" loading="lazy"></figure>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>ChatGPT検索が引用元を選ぶ仕組み</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>Bingの索引との関係</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>OpenAIの3つのクローラー</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>学習は断って検索に出る書き方</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>Disallowとnoindexの違い</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>CDNとサーバーの設定</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>自社サイトで確かめる順番</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>ChatGPTからの流入の見え方</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>社内で決めること</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>設定の持ち主</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>学習を許すかの判断</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>ありがちな失敗</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>引用元に出ることとAIの回答で名前が挙がること</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">ChatGPT検索が引用元を選ぶ仕組み</h2>
+<p>ChatGPTに最新の情報が要る質問をすると、ChatGPTは自分でWebを検索し、回答に出典のリンクを付けます。OpenAIのヘルプ「<a href="https://help.openai.com/en/articles/9237897-chatgpt-search">Searching the web with ChatGPT</a>」によると、検索は無料プランでも、ログインしていない人でも使えます。回答の下に「情報源」が出ているときは、押すと引用したページとほかの関連リンクが並びます。</p>
+<p>同じヘルプによると、<strong>ChatGPTは外部の検索の提供元と組み、質問を検索向けの語に書き換えて送ることがあります</strong>。ヘルプはがんの治療薬についての質問を例に、「CCR8 immunotherapy drug development 2025」のような語に直して送り、結果を見てからさらに細かい語で検索し直す流れを示しています。並べ方は複数の要素で決まり、掲載の位置は保証されないという説明です。</p>
+<p>解説記事で条件のように書かれる話には、公式のページに無いものも混ざっています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>公式に書いてあること</th>
+<th>書いていないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">載る条件</td>
+<td data-label="公式に書いてあること">OAI-SearchBotの許可と、ホストやCDNがOpenAIのIPを通すこと</td>
+<td data-label="書いていないこと">何をすれば上に出るか</td>
+</tr>
+<tr>
+<td data-label="項目">並び順</td>
+<td data-label="公式に書いてあること">複数の要素で決め、位置は保証しない</td>
+<td data-label="書いていないこと">要素の中身</td>
+</tr>
+<tr>
+<td data-label="項目">検索の提携先</td>
+<td data-label="公式に書いてあること">外部の検索の提供元に語を送る</td>
+<td data-label="書いていないこと">Bingの索引に載ることが条件か</td>
+</tr>
+<tr>
+<td data-label="項目">学習</td>
+<td data-label="公式に書いてあること">GPTBotを止めると学習に使わない合図になる</td>
+<td data-label="書いていないこと">学習を止めると検索で不利になるか</td>
+</tr>
+<tr>
+<td data-label="項目">流入の計測</td>
+<td data-label="公式に書いてあること">参照URLにutm_source=chatgpt.comを付ける（10月4日に保存されたFAQ）</td>
+<td data-label="書いていないこと">今読める公式ページでの記載</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s1-1">Bingの索引との関係</h3>
+<p>ChatGPTの対策はBingの対策から始まると書く解説記事もあります。ヘルプが検索の提供元のプライバシーの案内として挙げるのはMicrosoftとShopifyの2社で、<strong>MicrosoftのBingが提供元の一つである強い示唆にはなりますが、Bingの索引に載っていないと引用されないとは書かれていません</strong>。Atlas（ChatGPTのブラウザ）についての出版社向けのFAQ（2026年10月4日に保存された版）には、robots.txtで止めたページでも、外部の検索の提供元やほかのページの巡回からURLを得て、質問に関係する兆しがあればリンクとページ名を出すことがあるという文もありました。</p>
+<p>Bing Webmaster Toolsに登録して索引の状態を見ておくことは損になりませんが、条件として社内に説明するのは公式の文を超えます。Bingの管理画面で見られる引用の数はCopilotなどの分で、ChatGPTが入るとは書かれていない点は<a href="/media/bing-ai-performance/">Bing Webmaster ToolsのAIパフォーマンスの記事</a>にまとめています。</p>
+<h2 id="s2">OpenAIの3つのクローラー</h2>
+<p>OpenAIのサイトに来るボットは用途ごとに名前が分かれていて、robots.txtでも別々に指定します。<a href="https://developers.openai.com/api/docs/bots">Overview of OpenAI Crawlers</a>が挙げる主な3つの違いは次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>名前</th>
+<th>何のために来るか</th>
+<th>robots.txtで止めたとき</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="名前">OAI-SearchBot</td>
+<td data-label="何のために来るか">ChatGPTの検索結果にサイトを出す</td>
+<td data-label="robots.txtで止めたとき">検索の回答には出ない。ナビゲーション用のリンクとしては出ることがある</td>
+</tr>
+<tr>
+<td data-label="名前">GPTBot</td>
+<td data-label="何のために来るか">基盤モデルの学習に使う内容を集める</td>
+<td data-label="robots.txtで止めたとき">学習に使わない合図になる。検索の表示とは別</td>
+</tr>
+<tr>
+<td data-label="名前">ChatGPT-User</td>
+<td data-label="何のために来るか">利用者の質問やGPTの操作でページを読みに行く</td>
+<td data-label="robots.txtで止めたとき">利用者の操作なので効かない場合がある。検索に出すかの判断には使わない</td>
+</tr>
+</tbody>
+</table></div>
+<p>このほかに、ChatGPTの広告として入稿したページだけを確かめに来るOAI-AdsBotがあります。<strong>検索に出すかの設定はOAI-SearchBotで行い、ChatGPT-Userは使いません。</strong> 公式ページはChatGPT-Userを検索の止め方に使わないよう書いています。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-search-citation/cscit_02_bots.png" alt="OpenAIのクローラーは3つ。OAI-SearchBotはChatGPTの検索に出すため、GPTBotはモデルの学習のため、ChatGPT-Userは利用者の操作でページを読むため" loading="lazy"></figure>
+
+<h3 id="s2-1">学習は断って検索に出る書き方</h3>
+<p>公式ページによるとOAI-SearchBotとGPTBotの設定は互いに独立していて、OAI-SearchBotを許可したままGPTBotだけを止められます。学習には使わせず、検索には出したい会社のrobots.txtの例が次の形です。</p>
+<p>```
+User-agent: OAI-SearchBot
+Allow: /</p>
+<p>User-agent: GPTBot
+Disallow: /
+```</p>
+<p>robots.txtを直してから検索の側に反映されるまでは約24時間かかることがあると書かれています。両方を許可しているサイトでは、1回の巡回の結果を検索と学習の両方に使うことがあるとも説明されているため、<strong>学習を断るならGPTBotの行を明示しておく</strong>のが確実です。</p>
+<h3 id="s2-2">Disallowとnoindexの違い</h3>
+<p>robots.txtのDisallowは巡回を止める合図で、ページの存在を消すものではありません。今の公式ページも、OAI-SearchBotを止めたサイトがナビゲーション用のリンクとしては出ることがあると書いています。Atlas（ChatGPTのブラウザ）についての保存版のFAQ（10月4日保存）は、Atlasでリンクとページ名だけが出るのを防ぎたいならnoindexのメタタグを使い、<strong>そのタグを読めるようにクローラーの巡回は許可しておく</strong>よう案内していました。止めたいページを両方で塞ぐと、noindexが読まれないまま残ります。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">ChatGPT に自社がどう紹介されているか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">CDNとサーバーの設定</h2>
+<p>robots.txtで許可していても、手前のCDNやセキュリティの設定が通信を止めていれば巡回できません。ヘルプはサイトを検索の対象にする条件として、ホストやCDNが<a href="https://openai.com/searchbot.json">OpenAIの公開するIPアドレス</a>からの通信を通すことを挙げています。</p>
+<p>CDNの既定も変わっています。Cloudflareの「<a href="https://developers.cloudflare.com/bots/additional-configurations/block-ai-bots/">Block AI Bots</a>」によると、2026年9月15日から、新しく登録したドメインの既定を、学習（Training）と利用者の代わりに動くボット（Agent）を広告のあるページで止め、検索（Search）は許可する設定に変えると案内しています。Agentには会話の中でページを取りに行くボットやブラウザを操作するエージェントが入るため、広告のあるページではChatGPT-Userのようなボットも止まる対象です。検索と学習を兼ねるボットは、学習を止める設定で一緒に止まるとも書かれています。Cloudflareの<a href="https://developers.cloudflare.com/bots/additional-configurations/managed-robots-txt/">robots.txtの設定</a>でBot Preference Syncをオンにし、学習（Training）をDisallowなどにすると、例としてGPTBotやGoogle-Extendedを止める行が既存のrobots.txtの前に足されます。</p>
+<p>nitoのサイト（Cloudflareを通して配信、robots.txtはすべて許可）で、2026年10月22日に名乗り（ユーザーエージェント）だけを変えて記事一覧のページを取得してみました。OAI-SearchBot・ChatGPT-User・bingbotの名乗りでは200が返り、GPTBotの名乗りでは403で拒否されました。OpenAIのIPアドレスから来ていない偽の名乗りなので本物のクローラーの扱いと同じとは限りませんが、<strong>robots.txtが許可していても、CDNの側で特定のボットを止めていることがある</strong>のは確かめられました。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-search-citation/cscit_03_cdn.png" alt="OAI-SearchBotはrobots.txtとCDNの2か所を通ってページに届く。robots.txtで許可していてもCDNで止めていると巡回できない" loading="lazy"></figure>
+
+<figure class="post-figure"><img src="/media/images/chatgpt-search-citation/cscit_04_cf_defaults.png" alt="Cloudflare DocsのBlock AI Botsのページ。2026年9月15日からの新しい既定で、新しいドメインでは学習用とエージェントのボットを広告のあるページで止め、検索用は許可したままにすると書かれている" loading="lazy"><figcaption>Cloudflare Docs（2026年7月1日更新）の新しい既定の説明</figcaption></figure>
+
+<h3 id="s3-1">自社サイトで確かめる順番</h3>
+<p>確かめる場所は4つで、上から順に見ると止まっている場所を絞れます。</p>
+<ol>
+<li>ブラウザで <code>https://自社のドメイン/robots.txt</code> を開き、<code>User-agent: OAI-SearchBot</code> か <code>User-agent: *</code> の下に <code>Disallow: /</code> が無いかを見る</li>
+<li>CDNやWAFの管理画面でAIのボットの扱いを見る。Cloudflareなら「Security Settings」の「Configure AI bot policies」でSearchが許可になっているかと、Agentの扱い</li>
+<li>サーバーのアクセスログで <code>OAI-SearchBot</code> を検索し、来ていれば送信元のIPが公開リストの範囲かを見る</li>
+<li>ChatGPTで検索を選び、自社の社名とサービス名で質問して、情報源に自社のページが出るかを見る</li>
+</ol>
+<p>1は社内の誰でも見られますが、2はCDNの契約者の権限、3はサーバーのログを見られる人（情報システムの担当か制作会社）に頼むことになります。4は回答が毎回変わるため、1回出なかったことで止まっていると決めず、2と3の結果と合わせて読みます。</p>
+<h2 id="s4">ChatGPTからの流入の見え方</h2>
+<p>ChatGPTの引用元のリンクから来た人のURLには <code>utm_source=chatgpt.com</code> が付く、と保存版のFAQに書かれていました。この仕組みを公式に説明していたのは、OpenAIのヘルプの「Publishers and Developers - FAQ」でした。Internet Archiveが2026年10月4日に保存した版には、OAI-SearchBotを許可したサイトはGoogleアナリティクスなどの分析ツールでChatGPTからの流入を追え、ChatGPTが参照URLにこのパラメータを自動で付けると書かれています。</p>
+<p><strong>同じURLを2026年10月22日に開くと、ChatGPT Atlasの提供終了を案内する記事に替わっていました。</strong> このFAQはAtlasの項目の下に置かれていたため、Atlasの終了と一緒に差し替わったとみられますが、OpenAIからの説明は見つけられませんでした。解説記事がよく根拠に引くページが今は読めないので、社内の資料に引くときは保存版の日付を添えるのが無難です。utmが今も付くかどうかは、自社のGA4に <code>chatgpt.com</code> の参照元が届いているかで確かめられます。</p>
+<p>GA4の<a href="https://support.google.com/analytics/answer/9756891?hl=ja">デフォルト チャネル グループのヘルプ</a>には「AI アシスタント」のチャネルがあります。ChatGPT・Gemini・Deepseek・Copilot・Grokなどから来た分を集め、GoogleのAIによる概要とAIモードは除くという定義です。参照 URL がAIアシスタントのリストに一致すると、メディアが <code>ai-assistant</code>、キャンペーンが <code>(ai-assistant)</code> に設定されます。</p>
+<p>数字ごとに見る場所が違うため、月次の報告では混ぜないようにします。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>知りたいこと</th>
+<th>見る場所</th>
+<th>分かること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="知りたいこと">ChatGPTから来た人</td>
+<td data-label="見る場所">GA4の参照元とAIアシスタントのチャネル</td>
+<td data-label="分かること">引用を押して来た訪問</td>
+</tr>
+<tr>
+<td data-label="知りたいこと">クローラーが来ているか</td>
+<td data-label="見る場所">サーバーやCDNのアクセスログ</td>
+<td data-label="分かること">OAI-SearchBotの訪問とIP</td>
+</tr>
+<tr>
+<td data-label="知りたいこと">Copilotでの引用</td>
+<td data-label="見る場所">Bing Webmaster Tools</td>
+<td data-label="分かること">出典として示された回数</td>
+</tr>
+<tr>
+<td data-label="知りたいこと">回答で名前が挙がるか</td>
+<td data-label="見る場所">ChatGPTに実際に質問する</td>
+<td data-label="分かること">自社が紹介されるか・どのページが引かれるか</td>
+</tr>
+</tbody>
+</table></div>
+<p>GA4で正規表現を使ってAIの参照元をまとめる手順は<a href="/media/ai-search-measurement/">AI検索対策の効果の測り方</a>に書きました。Search ConsoleではChatGPTからの分は見られないことも、<a href="/media/gsc-ai-mode/">サーチコンソールの生成AIレポートの記事</a>で触れています。</p>
+<h2 id="s5">社内で決めること</h2>
+<p>ここまでの設定はどれも1行や1つの切り替えで直せるため、止まりやすいのは技術より、<strong>誰が持っていて誰が決めるかが社内で決まっていないこと</strong>です。</p>
+<h3 id="s5-1">設定の持ち主</h3>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>設定</th>
+<th>持ち主の例</th>
+<th>決めておくこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="設定">robots.txt</td>
+<td data-label="持ち主の例">制作会社・Webの担当</td>
+<td data-label="決めておくこと">OAI-SearchBotとGPTBotをそれぞれ許可するか</td>
+</tr>
+<tr>
+<td data-label="設定">CDN・WAF</td>
+<td data-label="持ち主の例">情報システムの担当・ホスティング会社</td>
+<td data-label="決めておくこと">Search・Agent・Trainingの分類ごとの扱い</td>
+</tr>
+<tr>
+<td data-label="設定">サーバーのログ</td>
+<td data-label="持ち主の例">情報システムの担当・制作会社</td>
+<td data-label="決めておくこと">OAI-SearchBotの訪問を月に1回見るか</td>
+</tr>
+<tr>
+<td data-label="設定">GA4</td>
+<td data-label="持ち主の例">マーケ担当</td>
+<td data-label="決めておくこと">AIアシスタントのチャネルを月次の数字に入れるか</td>
+</tr>
+</tbody>
+</table></div>
+<p>制作会社が持っているサイトでは、robots.txtの1行の修正でも作業の依頼になることがあります。CDNの設定はセキュリティの方針と結びつくため、マーケ担当が自分で変えるより、情報システムの担当に「検索用は許可、学習用は会社の方針で」と分けて頼むほうが話が通りやすくなります。</p>
+<h3 id="s5-2">学習を許すかの判断</h3>
+<p>検索に出すかと、学習に使わせるかは別の判断です。検索の許可は集客の判断なのでマーケ担当が決められますが、学習の許可は自社の文章や資料をモデルの学習に渡すかどうかの話で、広報や法務の確認が要る会社もあります。<strong>GPTBotを止めたままOAI-SearchBotを許可して検索に出せる、と公式ページにある</strong>ため、迷っているあいだは学習だけ止めておく選び方もできます。</p>
+<h3 id="s5-3">ありがちな失敗</h3>
+<ul>
+<li>AIのボットをまとめて止める設定やプラグインを入れ、その中にOAI-SearchBotも入っていた</li>
+<li>robots.txtだけを見て問題なしと判断し、CDNやセキュリティ製品のボット対策で止まっていたのに気づかなかった</li>
+<li>公開前の検証用サイトに入れた <code>Disallow: /</code> が、本番に移したあとも残っていた</li>
+<li>検索に出したくないページをrobots.txtで止め、noindexが読まれずにリンクだけ出続けた</li>
+</ul>
+<h2 id="s6">引用元に出ることとAIの回答で名前が挙がること</h2>
+<p>OAI-SearchBotを許可するのは、ChatGPTが自社のページを読める状態にするところまでです。ヘルプも掲載の位置は保証しないと書いているとおり、許可しただけで「〇〇に強い会社は？」という質問の答えに社名が挙がるわけではありません。回答は検索で集めたページをもとに書かれるため、<strong>そのページに自社のことが何と書かれているかで社名が挙がるかどうかが変わります</strong>。</p>
+<p>そのため、引用元に出る条件を整えたあとに見るのは、自社の見込み客がAIに聞きそうな質問で実際に社名が出るか、どのページが引かれているかです。回答は同じ質問でも毎回変わるので、何度か聞いて出た回数で見ます。自社のサイト以外にどんな第三者の記事が要るかは<a href="/media/citation-for-ai/">サイテーションの増やし方</a>、名前が出ない原因の切り分けは<a href="/media/chatgpt-not-appearing/">ChatGPTに自社が出てこない原因</a>に書いています。</p>
+<h2 id="s7">よくある質問</h2>
+<h3 id="s7-1">Q. ChatGPTの検索に出るにはBingへの登録が必要ですか？</h3>
+<p>公式のページに、Bingへの登録が必要とは書かれていません。OpenAIのヘルプは外部の検索の提供元と組むと説明し、プライバシーの案内にMicrosoftとShopifyを挙げています。Bing Webmaster Toolsへの登録は無料なので、索引の状態を確かめる目的で入れておくのは損になりません。</p>
+<h3 id="s7-2">Q. GPTBotをブロックするとChatGPTの検索に出なくなりますか？</h3>
+<p>GPTBotを止めたまま検索に出せる、と公式ページにあります。OpenAIの公式ページは、OAI-SearchBotを許可して検索に出しながら、GPTBotを止めて学習に使わない合図を出せると書いています。</p>
+<h3 id="s7-3">Q. OAI-SearchBotを許可すればChatGPTで必ず引用されますか？</h3>
+<p>必ずではありません。OpenAIのヘルプによると検索結果は複数の要素で並べられ、掲載の位置は保証されません。許可は引用元の候補に入るための条件です。</p>
+<h3 id="s7-4">Q. ChatGPTの検索に出したくないページはどうすればいいですか？</h3>
+<p>robots.txtでOAI-SearchBotを止めると検索の回答には出ませんが、ナビゲーション用のリンクとしては出ることがあります。Atlas（ChatGPTのブラウザ）についての保存版のFAQ（2026年10月4日保存）は、Atlasでリンクも出したくない場合はnoindexのメタタグを使い、タグを読めるようにクローラーの巡回は許可するよう案内していました。</p>
+<h3 id="s7-5">Q. robots.txtを直してからChatGPTに反映されるまでどれくらいかかりますか？</h3>
+<p>OpenAIの公式ページによると、検索の結果に反映されるまで約24時間かかることがあります。</p>
+<h3 id="s7-6">Q. ChatGPTからの流入はGA4のどこで見られますか？</h3>
+<p>既定のチャネルの「AI アシスタント」か、参照元の <code>chatgpt.com</code> で見られます。GA4のヘルプによると、このチャネルはChatGPT・Gemini・Copilotなどから来た分を集め、GoogleのAIによる概要とAIモードは含みません。</p>
+<h3 id="s7-7">Q. ChatGPT-Userはrobots.txtで止められますか？</h3>
+<p>止まらない場合があります。OpenAIの公式ページは、ChatGPT-Userは利用者の操作で動くためrobots.txtのルールが適用されないことがあると書き、検索に出すかの管理にはOAI-SearchBotを使うよう案内しています。</p>
+<h2 id="s8">出典</h2>
+<ul>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/bots">Overview of OpenAI Crawlers</a>」（2026年10月22日取得）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/9237897-chatgpt-search">Searching the web with ChatGPT</a>」（同）</li>
+<li>OpenAI Help Center「Publishers and Developers - FAQ」の<a href="https://web.archive.org/web/20261004224023/https://help.openai.com/en/articles/12627856-publishers-and-developers-faq">Internet Archiveの保存版</a>2026年10月4日保存（同）。<a href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq">同じURL</a>は10月22日にChatGPT Atlasの提供終了の記事を表示</li>
+<li>OpenAI「<a href="https://openai.com/searchbot.json">searchbot.json</a>」（同）</li>
+<li>Google アナリティクス ヘルプ「<a href="https://support.google.com/analytics/answer/9756891?hl=ja">[GA4] デフォルト チャネル グループ</a>」（同）</li>
+<li>Cloudflare Docs「<a href="https://developers.cloudflare.com/bots/additional-configurations/block-ai-bots/">Block AI Bots</a>」2026年7月1日更新（同）</li>
+<li>Cloudflare Docs「<a href="https://developers.cloudflare.com/bots/additional-configurations/managed-robots-txt/">robots.txt setting</a>」2026年10月8日更新（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">ChatGPT検索が引用元を選ぶ仕組み</a><a href="#s2">OpenAIの3つのクローラー</a><a href="#s3">CDNとサーバーの設定</a><a href="#s4">ChatGPTからの流入の見え方</a><a href="#s5">社内で決めること</a><a href="#s6">引用元に出ることとAIの回答で名前が挙がること</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/bing-ai-performance/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BingのAIパフォーマンス"><defs><linearGradient id="ecg-4a62ded7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4a62ded7)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">計測</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">BingのAIパフォーマンス</text><line x1="159.2" y1="365.9" x2="1040.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.21</div>
+                <div class="rel-card__ttl">【2026年10月】Bing Webmaster ToolsのAIパフォーマンスとは？見方と注意点</div>
+            </a>
+            <a href="/media/gsc-ai-mode/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="サーチコンソールでAI表示を見る"><defs><linearGradient id="ecg-4896efe2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4896efe2)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">計測</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">サーチコンソール</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">でAI表示を見る</text><line x1="296.0" y1="416.8" x2="904.0" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.21</div>
+                <div class="rel-card__ttl">【2026年10月】サーチコンソールでAIモード・AIによる概要の表示を見る方法と分からないこと</div>
+            </a>
+            <a href="/media/ai-mode-ads/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードの広告は日本で出る？"><defs><linearGradient id="ecg-ca9b7701" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ca9b7701)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">広告</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードの広告</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">は日本で出る？</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.20</div>
+                <div class="rel-card__ttl">【2026年10月】Google AIモードの広告は日本で出せる？AIによる概要の広告枠と出稿設定</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'chatgpt-search-citation',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
