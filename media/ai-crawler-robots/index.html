@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】GPTBotなどAIクローラーをrobots.txtで止めるかの判断と書き方 | nito Column</title>
+    <meta name="description" content="GPTBot・ClaudeBot・Google-ExtendedなどAIのクローラーを止めるか許すかを各社の公式ページで整理。学習用と検索用の違い、CDNで止まっている場合の確かめ方まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/ai-crawler-robots/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】GPTBotなどAIクローラーをrobots.txtで止めるかの判断と書き方">
+    <meta property="og:description" content="GPTBot・ClaudeBot・Google-ExtendedなどAIのクローラーを止めるか許すかを各社の公式ページで整理。学習用と検索用の違い、CDNで止まっている場合の確かめ方まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/ai-crawler-robots/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/ai-crawler-robots.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/ai-crawler-robots.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】GPTBotなどAIクローラーをrobots.txtで止めるかの判断と書き方", "description": "GPTBot・ClaudeBot・Google-ExtendedなどAIのクローラーを止めるか許すかを各社の公式ページで整理。学習用と検索用の違い、CDNで止まっている場合の確かめ方まで。", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-crawler-robots/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】GPTBotなどAIクローラーをrobots.txtで止めるかの判断と書き方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "GPTBotをブロックするとChatGPTの検索に出なくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "出なくなることはありません。OpenAIの公式ページは、GPTBotとOAI-SearchBotの設定は互いに独立していて、GPTBotを止めたまま検索に出られると書いています。"}}, {"@type": "Question", "name": "Google-ExtendedをブロックするとAIによる概要に出なくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "出なくなることはありません。Google-Extendedが管理するのはGeminiの学習とGeminiアプリなどの根拠づけで、AIによる概要とAIモードから外す設定はSearch Consoleの検索の生成 AI 設定です。"}}, {"@type": "Question", "name": "ClaudeBotをブロックするとClaudeの検索に出なくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "ClaudeBotは学習用で、Claudeの検索に使うのはClaude-SearchBotです。Anthropicのヘルプは、ClaudeBotを止めたときの影響を学習データから除くことだけで説明していて、検索への影響には触れていません。"}}, {"@type": "Question", "name": "PerplexityBotは学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "使われないと公式にあります。PerplexityBotは検索結果にサイトを出すためのもので、止めるとPerplexityの検索結果に出にくくなります。"}}, {"@type": "Question", "name": "robots.txtでブロックすればAIに一切使われなくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "そうはなりません。robots.txtはお願いの合図で、利用者の操作で動くChatGPT-UserやPerplexity-Userには効かない場合があると各社が書いています。確実に守るならログインかCDNの設定です。"}}, {"@type": "Question", "name": "Cloudflareの設定でGooglebotまで止まることはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "あります。2026年9月15日の変更から、TrainingでBlockを選ぶとGooglebot・Bingbot・Applebotも止まる仕様です。学習だけ断るならDisallow AI Trainingを選びます。"}}, {"@type": "Question", "name": "AIのクローラーを止めると問い合わせは減りますか？", "acceptedAnswer": {"@type": "Answer", "text": "検索用を止めると、AI検索の回答の情報源から外れるため、そこから来る見込み客を失います。学習用だけを止めた場合、OpenAI・Google・Appleは検索に影響しないと説明しています。Google-ExtendedはGeminiアプリの回答の根拠からも外れる点が例外です。"}}, {"@type": "Question", "name": "robots.txtを書き換えてからAIに反映されるまでどれくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "OpenAIは検索の側に約24時間、Perplexityは最大24時間です。GoogleのSearch Consoleの設定は、有効になってから1〜2日で除外され、キャッシュで遅れることもあるとヘルプにあります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=56b59318">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】GPTBotなどAI…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.23</span>
+        </div>
+        <h1 class="post-title">【2026年10月】GPTBotなどAIクローラーをrobots.txtで止めるかの判断と書き方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIクローラーの許可と拒否"><defs><linearGradient id="ecg-84b70720" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-84b70720)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIクローラーの許可と拒否</text><line x1="136.4" y1="327.1" x2="1063.6" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">学習用と検索用を分けて決める</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>OpenAI・Anthropic・Perplexity・Googleは、サイトに来るAIのボットを学習用と検索用に分けて公開し、robots.txtで別々に止められるようにしています（2026年10月23日に各社の公式ページで確認）。</p>
+<p>社内では「AIに学習されたくない」と「AI検索に出たい」が同じrobots.txtの話として持ち込まれ、どの名前を止めるとどうなるかが分からないまま決めがちです。この記事は各社の公式に書いてあることと無いことを分け、止めるか許すかの判断、robots.txtの書き方、自社サイトで確かめる手順を扱います。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>学習用のボット（GPTBot・Google-Extendedなど）を止めても検索に出るかには影響しない、とOpenAI・Google・Appleは公式に書いている</strong>。ただしGoogle-Extendedを止めるとGeminiアプリの回答の根拠からも外れる</li>
+<li><strong>Google-Extendedを止めてもGoogle検索のAIによる概要からは外れない</strong>。AIによる概要とAIモードから外す設定は、Search Consoleの「検索の生成 AI」にある</li>
+<li><strong>robots.txtで許可していても、CDNで止まっていることがある</strong>。nitoのサイトでは学習用のユーザーエージェントにだけ403が返った</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/ai-crawler-robots/acrb_01_types.png" alt="AIのクローラーは3種類。学習用はモデルの学習に使う内容を集め、検索用はAIの検索の回答に出すページを集め、利用者の操作用は質問を受けてその場でページを読む" loading="lazy"></figure>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>AIのクローラーの3つの種類</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>止めたときに起きること</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>学習用を止めた場合</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>検索用を止めた場合</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>利用者の操作用はrobots.txtが効かないことがある</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>GoogleのAIだけ設定が別</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>止めるか許すかの判断</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>日本の会社の設定の例</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>誰が決めるか</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>robots.txtの書き方</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>学習だけ止める書き方</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>すべてのAIを止める書き方</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>書くときの注意</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>CDNとrobots.txtを守らないボット</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>Cloudflareの9月15日の変更</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>robots.txtを守らないボット</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>自社サイトで確かめる手順</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">AIのクローラーの3つの種類</h2>
+<p>GPTBotを止めるかどうかの相談でも、実際には各社のボットをまとめて決めることになります。各社の公式ページを並べると、役割は<strong>モデルの学習用・AIの検索用・利用者の操作用の3つ</strong>に分かれます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>会社</th>
+<th>学習用</th>
+<th>検索用</th>
+<th>利用者の操作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="会社">OpenAI</td>
+<td data-label="学習用">GPTBot</td>
+<td data-label="検索用">OAI-SearchBot</td>
+<td data-label="利用者の操作用">ChatGPT-User</td>
+</tr>
+<tr>
+<td data-label="会社">Anthropic</td>
+<td data-label="学習用">ClaudeBot</td>
+<td data-label="検索用">Claude-SearchBot</td>
+<td data-label="利用者の操作用">Claude-User</td>
+</tr>
+<tr>
+<td data-label="会社">Perplexity</td>
+<td data-label="学習用">公開なし</td>
+<td data-label="検索用">PerplexityBot</td>
+<td data-label="利用者の操作用">Perplexity-User</td>
+</tr>
+<tr>
+<td data-label="会社">Google</td>
+<td data-label="学習用">Google-Extended</td>
+<td data-label="検索用">Googlebot</td>
+<td data-label="利用者の操作用">Google-Agentなど</td>
+</tr>
+<tr>
+<td data-label="会社">Apple</td>
+<td data-label="学習用">Applebot-Extended</td>
+<td data-label="検索用">Applebot</td>
+<td data-label="利用者の操作用">公開なし</td>
+</tr>
+</tbody>
+</table></div>
+<p>PerplexityはPerplexityBotを検索結果にサイトを出すためのものとし、基盤モデルの学習には使わないと説明していて、学習用の名前は公開していません。Common Crawl（公開データセットを作る団体）の<strong>CCBot</strong>も、学習用のボットとしてまとめて止められることが多い名前です。</p>
+<p>GoogleとAppleは書き方が違い、注意が要ります。<strong>Google-ExtendedとApplebot-Extendedは巡回するボットではなく、robots.txtに書く制御用の名前</strong>で、巡回そのものは検索用のGooglebotやApplebotがしています。Googleの<a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers?hl=ja">一般的なクローラーの一覧</a>も、Google-Extendedには個別のユーザーエージェントが無いという説明です。</p>
+<h2 id="s2">止めたときに起きること</h2>
+<p>どのボットを止めるかで失うものは大きく変わります。各社の公式ページの説明を止めたときに起きることで並べたのが次の表です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>止めるもの</th>
+<th>止まること</th>
+<th>AIの回答への影響（公式の書き方）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="止めるもの">GPTBot</td>
+<td data-label="止まること">OpenAIの基盤モデルの学習</td>
+<td data-label="AIの回答への影響（公式の書き方）">検索の設定とは独立</td>
+</tr>
+<tr>
+<td data-label="止めるもの">ClaudeBot</td>
+<td data-label="止まること">Anthropicのモデルの学習</td>
+<td data-label="AIの回答への影響（公式の書き方）">将来のコンテンツを学習データから除く</td>
+</tr>
+<tr>
+<td data-label="止めるもの">Google-Extended</td>
+<td data-label="止まること">Geminiの学習とGeminiアプリの根拠づけ</td>
+<td data-label="AIの回答への影響（公式の書き方）">Google検索には影響しない。Geminiアプリの回答の根拠には使われない</td>
+</tr>
+<tr>
+<td data-label="止めるもの">Applebot-Extended</td>
+<td data-label="止まること">Appleの基盤モデルの学習</td>
+<td data-label="AIの回答への影響（公式の書き方）">Siri・Spotlight・Safariでは引き続き見つかる</td>
+</tr>
+<tr>
+<td data-label="止めるもの">OAI-SearchBot</td>
+<td data-label="止まること">ChatGPTの検索</td>
+<td data-label="AIの回答への影響（公式の書き方）">検索の回答に出ない</td>
+</tr>
+<tr>
+<td data-label="止めるもの">Claude-SearchBot</td>
+<td data-label="止まること">Claudeの検索用のインデックス</td>
+<td data-label="AIの回答への影響（公式の書き方）">検索結果での見え方が下がることがある</td>
+</tr>
+<tr>
+<td data-label="止めるもの">PerplexityBot</td>
+<td data-label="止まること">Perplexityの検索</td>
+<td data-label="AIの回答への影響（公式の書き方）">検索結果に出すには許可を勧める</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s2-1">学習用を止めた場合</h3>
+<p>OpenAIの<a href="https://developers.openai.com/api/docs/bots">クローラーの公式ページ</a>は、OAI-SearchBotとGPTBotの設定は互いに独立していて、検索に出ながら学習には使わせない指定ができると書いています。Anthropicの<a href="https://support.claude.com/ja/articles/8896518">Claudeヘルプセンター</a>も学習用のClaudeBotと検索用のClaude-SearchBotを分けていますが、ClaudeBotを止めたときの説明は学習データから除くことだけで、検索への影響には触れていません。<strong>学習用と検索用が別の名前なので、どの会社でも学習用だけを止める書き方はできます。</strong></p>
+<p>Google-Extendedだけは扱いが違います。Googleの説明にあるGoogle-Extendedの対象は学習に加えてGeminiアプリで回答の根拠に使うことで、止めるとGeminiアプリの回答に自社のページが使われなくなります。</p>
+<p>ただし学習を止める指定が効くのは、これから集める分です。Anthropicの説明も対象を「将来のコンテンツ」としていて、すでに学習に使った分を消す話ではありません。</p>
+<h3 id="s2-2">検索用を止めた場合</h3>
+<p>検索用を止めた場合はその会社のAI検索の回答の情報源から外れてしまいます。OpenAIはOAI-SearchBotを止めたサイトは検索の回答に出ないと書き、Perplexityは検索結果に出すためにPerplexityBotの許可を勧めています。<strong>商材が高い会社がAI検索で見込み客に見つけてもらいたいなら、検索用は許可したままにするのが前提です。</strong>ChatGPTの検索に出る条件の細かい点は<a href="/media/chatgpt-search-citation/">ChatGPT検索で引用元に出る条件</a>にまとめています。</p>
+<h3 id="s2-3">利用者の操作用はrobots.txtが効かないことがある</h3>
+<p>利用者が「このページを読んで」と頼んだときに動くボットの扱いは、会社ごとにまちまちです。OpenAIはChatGPT-Userには「robots.txt rules may not apply」と書き、Perplexityも<a href="https://docs.perplexity.ai/guides/bots">Perplexity Crawlers</a>でPerplexity-Userは原則としてrobots.txtを無視すると説明しています。Googleの<a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers">ユーザー トリガー フェッチャー</a>も同じ扱いです。一方でAnthropicは、Claude-Userを止めると利用者の依頼でページを取りに行けなくなると書いていて、robots.txtの指定に従う仕様です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">AI のおすすめに自社の名前が挙がるか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">GoogleのAIだけ設定が別</h2>
+<p>Google-Extendedを止めればGoogleのAIをまとめて断れる、と考えて設定する会社は少なくありません。Googleの一覧の原文は「Google-Extended が Google 検索でのサイトの登録に影響したり、Google 検索でのランキング シグナルとして使用されたりすることはありません」です。<strong>Google-Extendedが効くのはGeminiの学習とGeminiアプリなどの根拠づけで、Google検索のAIによる概要に出るかどうかは対象に入っていません。</strong></p>
+<p>Google検索のAI機能から外す設定は、2026年8月31日に全サイトへ広がったSearch Consoleの「<a href="https://support.google.com/webmasters/answer/16908024?hl=ja">検索の生成 AI 設定</a>」です。対象はAIによる概要・AIモード・Discoverの生成AI機能で、既定は「含める」になっています。除外を選ぶと、それらの機能でリンクも回答の根拠としての利用も無くなり、表示も流入も止まる仕組みです。通常の検索の順位には使わないとヘルプにあります。</p>
+<figure class="post-figure"><img src="/media/images/ai-crawler-robots/acrb_02_google.png" alt="GoogleのAIは設定が2つに分かれる。Google-ExtendedはGeminiの学習とGeminiアプリの根拠づけ、Search Consoleの検索の生成AI設定はAIによる概要とAIモード" loading="lazy"></figure>
+
+<p>ページ単位で抑えたいときは、検索セントラルの「<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI 機能とウェブサイト</a>」が挙げるnosnippet・data-nosnippet・max-snippet・noindexを使います。Googlebot自体をrobots.txtで止めると、AIによる概要だけでなく通常の検索からも消えます。</p>
+<figure class="post-figure"><img src="/media/images/ai-crawler-robots/acrb_04_gsc_help.png" alt="Search Consoleヘルプの検索の生成AI設定のページ。2026年8月31日からすべてのウェブサイトに公開され、AIによる概要・AIモード・Discoverの生成AI機能が対象と書かれている" loading="lazy"><figcaption>Search Consoleヘルプの検索の生成 AI 設定（2026年10月23日に撮影）</figcaption></figure>
+
+<h2 id="s4">止めるか許すかの判断</h2>
+<p>迷ったときに使える問いは2つです。1つ目は<strong>自社のコンテンツそのものが売り物か</strong>、2つ目は<strong>AI検索から見込み客に来てほしいか</strong>です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>会社の状況</th>
+<th>学習用</th>
+<th>検索用</th>
+<th>利用者の操作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="会社の状況">サービスを売るための会社サイト</td>
+<td data-label="学習用">方針しだい</td>
+<td data-label="検索用">許可</td>
+<td data-label="利用者の操作用">許可</td>
+</tr>
+<tr>
+<td data-label="会社の状況">記事やデータそのものが商品</td>
+<td data-label="学習用">止める</td>
+<td data-label="検索用">経営判断</td>
+<td data-label="利用者の操作用">経営判断</td>
+</tr>
+<tr>
+<td data-label="会社の状況">会員限定・有料の部分</td>
+<td data-label="学習用">robots.txtでなくログインで守る</td>
+<td data-label="検索用">同左</td>
+<td data-label="利用者の操作用">同左</td>
+</tr>
+</tbody>
+</table></div>
+<p>商材が高い会社のサイトはページを読まれて問い合わせにつながるのが目的なので、検索用と利用者の操作用は許可が基本です。学習を許すかどうかは自社の文章や資料をモデルの学習に渡してよいかという話で、広報や法務の確認が要る会社もあります。<strong>OpenAI・Google・Appleは学習を止めても検索に響かないと書いているため、方針が決まるまで学習用だけ止めておく選び方ができます。</strong> Geminiアプリで見つけてもらいたい会社は、Google-Extendedを止める対象から外します。</p>
+<h3 id="s4-1">日本の会社の設定の例</h3>
+<p>2026年10月23日に各社のrobots.txtを取得すると、判断は会社の稼ぎ方でくっきり分かれていました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>サイト</th>
+<th>AIのボットの指定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="サイト">日本経済新聞・朝日新聞・読売新聞</td>
+<td data-label="AIのボットの指定">学習用・検索用・利用者の操作用をまとめて拒否</td>
+</tr>
+<tr>
+<td data-label="サイト">クックパッド</td>
+<td data-label="AIのボットの指定">学習用とPerplexityBotなどを拒否。OAI-SearchBotの指定なし</td>
+</tr>
+<tr>
+<td data-label="サイト">食べログ</td>
+<td data-label="AIのボットの指定">GPTBotとGoogle-Extendedだけ拒否</td>
+</tr>
+<tr>
+<td data-label="サイト">freee・SmartHR・Sansan</td>
+<td data-label="AIのボットの指定">AIのボットの個別の指定なし</td>
+</tr>
+</tbody>
+</table></div>
+<p>記事が商品の新聞社は検索用まで止め、食べログは学習用だけを止めています。ソフトウェアを売る会社は個別の指定を書かず、ほかのボットと同じ扱いのままでした。</p>
+<h3 id="s4-2">誰が決めるか</h3>
+<p>学習の許可は広報・法務と経営、検索の許可は集客の責任者が決め、robots.txtの修正は制作会社かWebの担当に頼むのが一般的な分かれ方です。設定の持ち主の分け方は<a href="/media/chatgpt-search-citation/">ChatGPT検索で引用元に出る条件</a>の表にまとめています。</p>
+<h2 id="s5">robots.txtの書き方</h2>
+<p>robots.txtはサイトのルート（<code>https://自社のドメイン/robots.txt</code>）に置くテキストファイルです。<strong>サブドメインごとに1つずつ要る</strong>ため、<code>www</code>と<code>blog</code>のように分かれているサイトはそれぞれに書きます。</p>
+<h3 id="s5-1">学習だけ止める書き方</h3>
+<p>検索用と利用者の操作用は許可したまま、学習用だけを止める形です。</p>
+<p>```
+User-agent: GPTBot
+Disallow: /</p>
+<p>User-agent: ClaudeBot
+Disallow: /</p>
+<p>User-agent: Google-Extended
+Disallow: /</p>
+<p>User-agent: Applebot-Extended
+Disallow: /</p>
+<p>User-agent: CCBot
+Disallow: /</p>
+<p>User-agent: *
+Allow: /
+```</p>
+<p>この書き方でGoogle-Extendedを入れると、Geminiアプリが回答の根拠に自社のページを使わなくなります。Geminiでも見つけてもらいたい会社は、Google-Extendedの2行を外します。</p>
+<h3 id="s5-2">すべてのAIを止める書き方</h3>
+<p>新聞社のように検索用まで止めるなら、上の書き方の<code>User-agent: *</code>の前に次のグループを足し、検索用と利用者の操作用もまとめて止めます。</p>
+<p><code>User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Disallow: /</code></p>
+<p>ここにGooglebotを入れると通常の検索からも消えるため、Googleの検索のAIを断るならSearch Consoleの設定が先です。Perplexity-UserやChatGPT-Userは書いても止まらない場合がある点も、先に社内に伝えておきます。</p>
+<h3 id="s5-3">書くときの注意</h3>
+<p>robots.txtの規格（<a href="https://www.rfc-editor.org/rfc/rfc9309">RFC 9309</a>）では、ボットは自分の名前に合うグループのルールだけに従い、合うグループが無いときに限って<code>User-agent: *</code>に従います。<strong>GPTBot用のグループを作ると、<code>*</code>に書いた<code>Disallow</code>はGPTBotには効かなくなる</strong>ため、止めたい場所はGPTBotのグループにも書き直します。名前の大文字と小文字は区別されません。</p>
+<p>反映には時間がかかり、OpenAIは検索の側に約24時間、Perplexityは最大24時間と書いています。Anthropicは反映までの時間を公開していません。古い名前の<code>anthropic-ai</code>を書いているサイトもありますが、今のAnthropicのヘルプには載っていない名前です。</p>
+<h2 id="s6">CDNとrobots.txtを守らないボット</h2>
+<p>robots.txtは「来ないでほしい」という合図で、RFC 9309も「These rules are not a form of access authorization.」としています。実際に通信を止められるのは手前のCDNやWAF（不正な通信を止める仕組み）の設定です。</p>
+<h3 id="s6-1">Cloudflareの9月15日の変更</h3>
+<p>Cloudflareを使うサイトは、管理画面のAIボットの設定でSearch・Agent・Trainingを分けて止められます。Cloudflareの<a href="https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/">2026年9月15日のブログ</a>によると、<strong>TrainingでBlockを選ぶと、検索と学習を兼ねるGooglebot・Bingbot・Applebotまで止まり、通常の検索にも影響します</strong>。学習だけ断って検索に残すには、新しくできた「Disallow AI Training」を選びます。</p>
+<p>同じブログによると、Cloudflare上で検索のボットを止めるサイトは1%未満、学習を止める仕組みを入れるサイトは17%でした（Cloudflareの集計）。さらに<a href="https://blog.cloudflare.com/bot-preference-sync/">Bot Preference Sync</a>をオンにすると、管理画面の設定がrobots.txtの先頭に足されます。<strong>制作会社が書いていない<code>Disallow</code>がrobots.txtに出ているときは、CDNの設定から来ていることがあります。</strong></p>
+<h3 id="s6-2">robots.txtを守らないボット</h3>
+<p>Cloudflareは<a href="https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/">2025年8月4日のブログ</a>で、robots.txtとWAFで止めた新しいドメインの中身をPerplexityが答えたという観測を出しました。止められるとmacOSのChromeを装うユーザーエージェントと公開範囲外のIPで取りに来た、というのがCloudflareの主張です。同じ試験のChatGPT-Userは、robots.txtを読んで止まったという結果でした。Common Crawlも、CCBotを名乗る偽のクローラーがいると<a href="https://commoncrawl.org/ccbot">CCBotの説明</a>で注意しています。<strong>確実に止めたいページはrobots.txtではなく、ログインかCDNの側で守ります。</strong></p>
+<h2 id="s7">自社サイトで確かめる手順</h2>
+<p>設定したつもりでも、robots.txt・CDN・サーバーのどこかで想定と違う扱いになっている例は珍しくありません。ターミナルが使える担当者なら、次の順で10分ほどで確かめられます。</p>
+<ol>
+<li><code>curl https://自社のドメイン/robots.txt</code> で中身を見る。書いた覚えのない<code>Disallow</code>があればCDNの設定を疑う</li>
+<li>ユーザーエージェント（ボットが名乗る文字列）だけを変えて同じページを取る。例: <code>curl -s -o /dev/null -w "%{http_code}" -A "GPTBot/1.4" https://自社のドメイン/</code></li>
+<li>返ってきた状態コードを見る。200なら通り、403ならユーザーエージェントで止める設定がどこかにある</li>
+<li>403が出たら、CDNの管理画面（Cloudflareなら<a href="https://developers.cloudflare.com/ai-crawl-control/">AI Crawl Control</a>）とサーバーのログで、本物のボットの扱いを確かめる</li>
+<li>GoogleのAIの扱いは、Search Consoleの設定から検索の生成 AIを開いて見る</li>
+</ol>
+<p>nitoのサイト（Cloudflareで配信、robots.txtは<code>User-agent: *</code>と<code>Allow: /</code>だけ）で、2026年10月23日に記事一覧のページをユーザーエージェントだけ変えて取得した結果が次の表です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>ユーザーエージェント</th>
+<th>状態コード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="ユーザーエージェント">ブラウザ・Googlebot</td>
+<td data-label="状態コード">200</td>
+</tr>
+<tr>
+<td data-label="ユーザーエージェント">OAI-SearchBot・Claude-SearchBot・PerplexityBot</td>
+<td data-label="状態コード">200</td>
+</tr>
+<tr>
+<td data-label="ユーザーエージェント">ChatGPT-User・Claude-User・Perplexity-User</td>
+<td data-label="状態コード">200</td>
+</tr>
+<tr>
+<td data-label="ユーザーエージェント">GPTBot・ClaudeBot・CCBot・Bytespider</td>
+<td data-label="状態コード">403</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>robots.txtはすべて許可なのに、学習用のユーザーエージェントにだけ403が返りました。</strong> 403の中身は「Your request was blocked.」の1行で、GPTBotを名乗ってもrobots.txt自体は200で読めました。各社の公開IPから来ていない偽のユーザーエージェントなので、本物のボットが同じ扱いになるとは限りません。それでも、robots.txtだけを見て判断すると実際の扱いとずれることは確かめられます。</p>
+<figure class="post-figure"><img src="/media/images/ai-crawler-robots/acrb_03_check.png" alt="自社サイトでAIのボットの扱いを確かめる順番。robots.txtを開く、ユーザーエージェントを変えてcurlで取る、状態コードを読む、CDNの管理画面とログを見る" loading="lazy"></figure>
+
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Q. GPTBotをブロックするとChatGPTの検索に出なくなりますか？</h3>
+<p>出なくなることはありません。OpenAIの公式ページは、GPTBotとOAI-SearchBotの設定は互いに独立していて、GPTBotを止めたまま検索に出られると書いています。</p>
+<h3 id="s8-2">Q. Google-ExtendedをブロックするとAIによる概要に出なくなりますか？</h3>
+<p>出なくなることはありません。Google-Extendedが管理するのはGeminiの学習とGeminiアプリなどの根拠づけで、AIによる概要とAIモードから外す設定はSearch Consoleの検索の生成 AI 設定です。</p>
+<h3 id="s8-3">Q. ClaudeBotをブロックするとClaudeの検索に出なくなりますか？</h3>
+<p>ClaudeBotは学習用で、Claudeの検索に使うのはClaude-SearchBotです。Anthropicのヘルプは、ClaudeBotを止めたときの影響を学習データから除くことだけで説明していて、検索への影響には触れていません。</p>
+<h3 id="s8-4">Q. PerplexityBotは学習に使われますか？</h3>
+<p>使われないと公式にあります。PerplexityBotは検索結果にサイトを出すためのもので、止めるとPerplexityの検索結果に出にくくなります。</p>
+<h3 id="s8-5">Q. robots.txtでブロックすればAIに一切使われなくなりますか？</h3>
+<p>そうはなりません。robots.txtはお願いの合図で、利用者の操作で動くChatGPT-UserやPerplexity-Userには効かない場合があると各社が書いています。確実に守るならログインかCDNの設定です。</p>
+<h3 id="s8-6">Q. Cloudflareの設定でGooglebotまで止まることはありますか？</h3>
+<p>あります。2026年9月15日の変更から、TrainingでBlockを選ぶとGooglebot・Bingbot・Applebotも止まる仕様です。学習だけ断るならDisallow AI Trainingを選びます。</p>
+<h3 id="s8-7">Q. AIのクローラーを止めると問い合わせは減りますか？</h3>
+<p>検索用を止めると、AI検索の回答の情報源から外れるため、そこから来る見込み客を失います。学習用だけを止めた場合、OpenAI・Google・Appleは検索に影響しないと説明しています。Google-ExtendedはGeminiアプリの回答の根拠からも外れる点が例外です。</p>
+<h3 id="s8-8">Q. robots.txtを書き換えてからAIに反映されるまでどれくらいかかりますか？</h3>
+<p>OpenAIは検索の側に約24時間、Perplexityは最大24時間です。GoogleのSearch Consoleの設定は、有効になってから1〜2日で除外され、キャッシュで遅れることもあるとヘルプにあります。</p>
+<h2 id="s9">出典</h2>
+<ul>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/bots">Overview of OpenAI Crawlers</a>」（2026年10月23日取得）</li>
+<li>Google for Developers「<a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers?hl=ja">Google の一般的なクローラー</a>」2026年10月19日更新（同）</li>
+<li>Google for Developers「<a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers">Google のユーザー トリガー フェッチャー</a>」（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI 機能とウェブサイト</a>」2025年12月31日更新（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16908024?hl=ja">検索の生成 AI 設定</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/8896518">Anthropicはウェブからデータをクロールしていますか？</a>」2026年4月7日（同）</li>
+<li>Perplexity「<a href="https://docs.perplexity.ai/guides/bots">Perplexity Crawlers</a>」（同）</li>
+<li>Apple「<a href="https://support.apple.com/ja-jp/119829">Applebotについて</a>」2026年9月7日公開（同）</li>
+<li>Common Crawl「<a href="https://commoncrawl.org/ccbot">CCBot</a>」（同）</li>
+<li>IETF「<a href="https://www.rfc-editor.org/rfc/rfc9309">RFC 9309 Robots Exclusion Protocol</a>」2022年9月（同）</li>
+<li>Cloudflare Blog「<a href="https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/">Have it both ways: stay discoverable in search while disallowing AI training</a>」2026年9月15日（同）</li>
+<li>Cloudflare Blog「<a href="https://blog.cloudflare.com/bot-preference-sync/">Say it once: introducing Bot Preference Sync</a>」2026年8月21日（同）</li>
+<li>Cloudflare Blog「<a href="https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/">Perplexity is using stealth, undeclared crawlers to evade website no-crawl directives</a>」2025年8月4日（同）</li>
+<li>Cloudflare Docs「<a href="https://developers.cloudflare.com/ai-crawl-control/">AI Crawl Control</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">AIのクローラーの3つの種類</a><a href="#s2">止めたときに起きること</a><a href="#s3">GoogleのAIだけ設定が別</a><a href="#s4">止めるか許すかの判断</a><a href="#s5">robots.txtの書き方</a><a href="#s6">CDNとrobots.txtを守らないボット</a><a href="#s7">自社サイトで確かめる手順</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-mode-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードに商品を載せる"><defs><linearGradient id="ecg-4697b34a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4697b34a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードに商品を載せる</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.22</div>
+                <div class="rel-card__ttl">【2026年10月】Google AIモードのショッピングに商品を載せる方法と日本の状況</div>
+            </a>
+            <a href="/media/chatgpt-search-citation/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT検索の引用元"><defs><linearGradient id="ecg-a934f38d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a934f38d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT検索の引用元</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.22</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPT検索で引用元に出る条件とは？OAI-SearchBotと流入の見方</div>
+            </a>
+            <a href="/media/bing-ai-performance/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BingのAIパフォーマンス"><defs><linearGradient id="ecg-4a62ded7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4a62ded7)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">計測</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">BingのAIパフォーマンス</text><line x1="159.2" y1="365.9" x2="1040.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.21</div>
+                <div class="rel-card__ttl">【2026年10月】Bing Webmaster ToolsのAIパフォーマンスとは？見方と注意点</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'ai-crawler-robots',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
