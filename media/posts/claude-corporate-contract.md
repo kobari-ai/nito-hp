@@ -19,18 +19,18 @@ Anthropicの[料金ページ](https://claude.com/ja/pricing)の比較表では�
 - 会話は既定で学習に使われないが、**評価ボタンで送ったフィードバックは例外で、オーナーが組織ごと止められる**
 :::
 
-<!-- SHOT: 概要図（gen_gemini_web・800幅2倍・縦に積む）。5つの経路を縦に並べ、各段の文字は「Team」「Enterpriseセルフ」「Enterprise営業経由」「AWS Marketplace」「クラウドのAPI」の5か所だけ。alt=Claudeの法人契約の5つの経路を縦に並べた図。上からTeam、セルフサービスのEnterprise、営業担当経由のEnterprise、AWS MarketplaceのEnterprise、クラウドのAPI。figcaption=Claudeの法人契約の経路（Anthropicの料金ページ・ヘルプ・パートナーのページから作成） -->
-
 ## 法人契約の経路は5つ
 
 社員が個人でProやMaxを契約し、経費で落とす使い方は法人契約に入りません。Claude Codeの[法的および規制対応のページ](https://code.claude.com/docs/ja/legal-and-compliance)は、Free・Pro・Maxを消費者向けの利用規約、Team・Enterprise・APIを商用規約の対象と分けています。**会社として契約するなら、商用規約が適用される経路から選びます。**公式のページに出てくる経路を申し込み先と支払いで並べると、次の5つです。
+
+<figure class="post-figure"><img src="/media/images/claude-corporate-contract/ccc_01_routes.png" alt="Claudeの法人契約の5つの経路を縦に並べた図。上からTeam、セルフサービスのEnterprise、営業担当経由のEnterprise、AWS MarketplaceのEnterprise、クラウドのAPI" loading="lazy"></figure>
 
 | 経路 | 申し込み先 | 支払い | 席の数 |
 |---|---|---|---|
 | Team | 料金ページからウェブで | カード（月払い・年払い） | 2〜150席 |
 | Enterprise（セルフサービス） | 料金ページからウェブで | カード・ACH（米ドル・年払い） | 20席から |
 | Enterprise（営業担当経由） | 購買エージェントか営業チーム | 請求書・振込・カード | 50席から |
-| AWS MarketplaceのEnterprise | AWSのコンソール | AWSの請求書 | 20席の単位 |
+| AWS MarketplaceのEnterprise | AWSのコンソール | AWSの請求書 | 20席から（追加は1席から） |
 | クラウドのAPI | Bedrock・Agent Platform・Foundry | 各クラウドの請求書 | 席なし（使った分） |
 
 上の4つは社員がブラウザやアプリでClaudeと会話する席を買う契約です。5つ目はモデルを呼び出した分だけを払う経路で、チャットの画面は付きません。社内のシステムに組み込むか、Claude Codeをクラウドの認証で動かす使い方になります。プランの機能と料金は[Claude Teamプランの記事](/media/claude-team/)と[Claude Enterpriseの記事](/media/claude-enterprise/)、個人プランは[Claudeの料金の記事](/media/claude-pricing/)にまとめています。
@@ -47,13 +47,11 @@ Teamは料金ページの「Team plan を申し込む」から始めます。[�
 
 [エンタープライズプランとは何ですか？](https://support.claude.com/ja/articles/9797531)によると、セルフサービスと営業担当経由のEnterpriseは機能も席の単価も同じです。違うのは買い方・払い方・管理の仕方で、請求書払いと複数の通貨に対応するのは営業担当経由だけです。セルフサービスは米ドルだけで、使用量は前払いのクレジットから引かれます。
 
-**営業担当経由は月ごとの後払いで、請求書がメールで届きます。**[Enterpriseの請求方法のヘルプ](https://support.claude.com/ja/articles/11526368)では、シートの請求書も使用量の請求書も支払いリンク付きで請求担当者に送られ、支払い条件は請求書に書かれます。払い方は銀行振込（ACHか海外送金）かカードで、5万ドル以上の請求書は振込だけです。料金ページの比較表でも、トライアル・コンサルテーション・AWS Marketplaceでの提供に「はい」が付くのは営業担当経由の列だけです。
-
-<!-- SHOT: 料金ページの比較表「お支払い方法」と「パートナーシップ」の行・https://claude.com/ja/pricing（Team & Enterpriseタブの「プラン間の機能を比較」）・スマホ・赤枠1「請求書払い／ネット支払い条件」の行、赤枠2「AWS Marketplaceでの提供」の行。alt=Claudeの料金ページの比較表のお支払い方法とパートナーシップの部分。請求書払い／ネット支払い条件とAWS Marketplaceでの提供の行は、Team・Enterprise（セルフサービス）がいいえ、Enterprise（営業担当経由）だけがはい。figcaption=料金ページの比較表（2026年10月23日、スマホ表示） -->
+**営業担当経由では席の料金が年の初めに請求され、使用量は月ごとの後払いで、請求書はメールで届きます。**[Enterpriseの請求方法のヘルプ](https://support.claude.com/ja/articles/11526368)では、シートの請求書も使用量の請求書も支払いリンク付きで請求担当者に送られ、支払い条件は請求書に書かれます。払い方は銀行振込（ACHか海外送金）かカードで、5万ドル以上の請求書は振込だけです。料金ページの比較表でも、トライアル・コンサルテーション・AWS Marketplaceでの提供に「はい」が付くのは営業担当経由の列だけです。
 
 問い合わせの入口は人数で変わります。[営業担当に問い合わせるページ](https://claude.com/ja/contact-sales)は、営業チームが受け持つのは500シート以上の導入やBaaSのような複雑な取引だけと書き、それ以外は購買エージェントとのチャットで見積もりを受けるよう案内しています。ヘルプが示す営業担当経由の最低席数は50席なので、**50〜499席の会社はまず購買エージェントのチャットから入る**ことになります。チャットから必要に応じて営業チームに引き継がれることも、同じページに書かれていました。
 
-<!-- SHOT: 営業担当に問い合わせるページ・https://claude.com/ja/contact-sales・スマホ・赤枠1「購買エージェントとチャットする」、赤枠2「500 シート以上の導入や BaaS」の文。alt=Claudeの営業担当に問い合わせるページ。購買エージェントとのチャットで見積もりと購入ができ、営業チームが対応するのは500シート以上の導入やBaaSなどの複雑な取引だけと書かれている。figcaption=営業担当に問い合わせるページ（2026年10月23日、スマホ表示） -->
+<figure class="post-figure"><img src="/media/images/claude-corporate-contract/ccc_03_contact.png" alt="Claudeの営業担当に問い合わせるページ。購買エージェントとのチャットで見積もりと購入ができ、営業チームが対応するのは500シート以上の導入やBaaSなどの複雑な取引だけと書かれている" loading="lazy"><figcaption>営業担当に問い合わせるページ（2026年10月23日、スマホ表示）</figcaption></figure>
 
 ## AWSやGoogle Cloudの請求に載せる
 
@@ -63,9 +61,7 @@ Teamは料金ページの「Team plan を申し込む」から始めます。[�
 
 [AWS Marketplaceの掲載ページ](https://aws.amazon.com/marketplace/pp/prodview-nnvi6wff6ef6m)では販売者がAnthropicで、12か月の契約に20席が入った単位が4,800ドルです。1席あたり月20ドルで、料金ページのEnterpriseの席の料金と同じ額になります。使用量はAPIの料金で上乗せされ、足した席は残りの期間の日割りで請求されます。条件を変えた見積もりは、ページの「Request Private Offer」から頼みます。
 
-[Enterpriseの請求方法のヘルプ](https://support.claude.com/ja/articles/11526368)によると、AWS Marketplaceで買ったEnterpriseは営業担当経由と同じく月ごとの後払いで、支払いはAWSを通します。[AWS Japanの税務ヘルプ](https://aws.amazon.com/jp/tax-help/japan/)では、2025年4月1日から日本の住所のAWSアカウント向けのマーケットプレイスの運営者がアマゾン ウェブ サービス ジャパン合同会社になり、10%の消費税を徴収して適格請求書を出しています。**海外の会社への送金を社内で通しにくい場合も、AWSの請求書にまとめて払えます。**
-
-<!-- SHOT: AWS Marketplaceの掲載ページの料金表・https://aws.amazon.com/marketplace/pp/prodview-nnvi6wff6ef6m・PC・赤枠1「12 months」の行と「20 Claude Enterprise seats」の金額、赤枠2「Request Private Offer」。alt=AWS MarketplaceのClaude Enterpriseの掲載ページ。販売者はAnthropicで、12か月の契約で20席の単位が4,800ドル、使用量はAPIの料金で別に請求される。figcaption=AWS MarketplaceのClaude Enterprise（2026年10月23日） -->
+[Enterpriseの請求方法のヘルプ](https://support.claude.com/ja/articles/11526368)によると、AWS Marketplaceで買ったEnterpriseは、支払いをAWSを通します。AWSの掲載ページでは、席の料金は契約の条件に沿って前払いか分割で払い、後払いになるのは使用量です。[AWS Japanの税務ヘルプ](https://aws.amazon.com/jp/tax-help/japan/)では、2025年4月1日から日本の住所のAWSアカウント向けのマーケットプレイスの運営者がアマゾン ウェブ サービス ジャパン合同会社になり、10%の消費税を徴収して適格請求書を出しています。**海外の会社への送金を社内で通しにくい場合も、AWSの請求書にまとめて払えます。**
 
 ### BedrockとAgent PlatformとFoundry
 
@@ -83,7 +79,7 @@ Anthropicは[サービスパートナーの一覧](https://claude.com/ja/marketp
 
 この一覧に並ぶのは導入の支援・研修・開発を頼める会社です。**ライセンスを売るか、請求を代わりに受けるかは一覧に書かれていません。**パートナーの手数料と、パートナー経由で買ったときの契約の相手も、Anthropicの公式ページには記載がありません。
 
-<!-- SHOT: サービスパートナーの一覧・https://claude.com/ja/marketplace/service-partners・PC・対応エリアの絞り込みで「日本」を選んだ状態、赤枠1 フィルターの「日本」、赤枠2 一覧の件数。alt=Claudeのサービスパートナーの一覧。サービス対応エリアやティアで絞り込めるフィルターと、Global Premier・優先・Selectのティアごとのパートナーが並んでいる。figcaption=Anthropicのサービスパートナーの一覧（2026年10月23日） -->
+<figure class="post-figure"><img src="/media/images/claude-corporate-contract/ccc_05_partners.png" alt="Claudeのサービスパートナーの一覧。ティアごとにパートナーが並び、Global PremierにはAccentureやBain & Companyがある" loading="lazy"><figcaption>Anthropicのサービスパートナーの一覧（2026年10月23日）</figcaption></figure>
 
 ライセンスの買い方は、各社の発表で確かめることになります。野村総合研究所は2025年11月20日に、[Amazon Bedrock向けのAnthropic認定リセラーに国内で初めて選ばれた](https://www.nri.com/jp/news/newsrelease/20251120_1.html)と発表しました。クラスメソッドは自社の技術ブログで、[AWSの請求代行を通してAWS MarketplaceのClaude Enterpriseを買う手順](https://dev.classmethod.jp/articles/claude-enterprise-members-aws-marketplace-invoice/)を公開しています（2026年5月8日）。その記事では支払いが円建ての銀行振込で、請求書はAWS Japanから届くとしています。どちらも各社の説明で、Anthropicの公式ページでは確かめられませんでした。**パートナーに頼むなら、契約の相手・請求の通貨・手数料・サポートの窓口の4点を見積もりの時点で書面にしてもらいます。**
 
@@ -95,7 +91,7 @@ Anthropicは[サービスパートナーの一覧](https://claude.com/ja/marketp
 
 [データ処理補遺（DPA）](https://www.anthropic.com/legal/data-processing-addendum)（2025年2月24日発効）は商用規約に組み込まれていて、規約に同意すれば一緒に適用されます。データの処理を任せる委託先は別表に並び、新しく加えるときは事前に通知があります。DPAの条件を個別に変えられるかは、公式のページに書かれていません。
 
-<!-- SHOT: 商用規約の冒頭・https://www.anthropic.com/legal/commercial-terms・PC・赤枠1「Anthropic Ireland, Limited if Customer resides in the European Economic Area」から「Anthropic, PBC if Customer resides anywhere else」までの文。alt=Anthropicの商用規約の冒頭。Anthropicは顧客が欧州経済領域・スイス・英国にあればAnthropic Ireland, Limited、それ以外ならAnthropic, PBCを指すと書かれている。figcaption=商用規約の冒頭（2026年10月23日） -->
+<figure class="post-figure"><img src="/media/images/claude-corporate-contract/ccc_06_terms.png" alt="Anthropicの商用規約の冒頭。Anthropicは顧客が欧州経済領域・スイス・英国にあればAnthropic Ireland, Limited、それ以外ならAnthropic, PBCを指すと書かれている" loading="lazy"><figcaption>商用規約の冒頭（2026年10月23日）</figcaption></figure>
 
 Anthropicは2025年10月29日に[東京オフィスの開設](https://www.anthropic.com/news/opening-our-tokyo-office)を発表し、日本の代表は東條英俊氏と紹介されています。ただし、2026年10月23日時点の商用規約が挙げる契約の相手は上の2社だけで、日本の拠点の名前はありません。日本向けに分けた営業窓口のページも見当たらず、問い合わせは料金ページか問い合わせのページからです。消費税は2026年4月1日から請求されていて、適格請求書の登録番号は[Claudeの領収書と請求書の記事](/media/claude-invoice/)に載せています。
 
@@ -105,7 +101,7 @@ Anthropicは2025年10月29日に[東京オフィスの開設](https://www.anthro
 
 例外は社員が自分から送ったデータです。**同じ記事によると、サムズアップとサムズダウンのボタンで送ったフィードバックは学習に使われることがあり、その会話全体が最大5年保存されます。**TeamとEnterpriseのプライマリオーナーとオーナーは、組織設定 > データとプライバシーの「チャットを評価」で、このボタンを組織ごと止められます。
 
-<!-- SHOT: プライバシーセンターの記事・https://privacy.claude.com/ja/articles/7996868・スマホ・赤枠1 商用製品は既定で訓練に使わない段落、赤枠2 フィードバックを訓練に使うことがある段落。alt=Anthropicのプライバシーセンターの記事。商用製品の入力と出力は既定でモデルの訓練に使わないが、サムズアップやサムズダウンで送ったフィードバックは訓練に使うことがあると書かれている。figcaption=学習の扱いの記事（2026年10月23日、スマホ表示） -->
+<figure class="post-figure"><img src="/media/images/claude-corporate-contract/ccc_07_privacy.png" alt="Anthropicのプライバシーセンターの記事。商用製品の入力と出力は既定でモデルの訓練に使わないが、評価ボタンなどで送ったフィードバックは訓練に使うことがあると書かれている" loading="lazy"><figcaption>学習の扱いの記事（2026年10月23日、スマホ表示）</figcaption></figure>
 
 Claude Codeの[データ使用のドキュメント](https://code.claude.com/docs/ja/data-usage)も同じ扱いです。Team・Enterprise・API・サードパーティのクラウドで使ったコードとプロンプトは学習に使わず、例外はDevelopment Partner Programに参加した組織だけです。稟議書には学習に使われないことと一緒に、評価ボタンを止めるかどうかも決めて書いておきます。
 
@@ -123,11 +119,11 @@ Enterpriseの今の席は1種類で、ウェブ・デスクトップ・モバイ
 |---|---|---|
 | 契約の相手 | Anthropic, PBC（米国） | 販売者はAnthropic・請求はAWS Japan |
 | 同意する規約 | 商用規約とDPA | 掲載ページのEULA |
-| 支払い | Teamはカード・営業担当経由は請求書 | AWSの請求書（月ごとの後払い） |
+| 支払い | Teamはカード・営業担当経由は請求書 | AWSの請求書（12か月分の席＋使用量） |
 | 契約期間 | Teamは月か年・Enterpriseは年 | 12か月 |
 | 適格請求書 | Anthropicの登録番号 | AWS Japanの登録番号 |
 
-<!-- SHOT: HTML図（scripts/seo/fig の型・800幅2倍・縦に積む）。稟議で確かめる人と項目を4段で。法務=商用規約の準拠法と仲裁・DPA／情シス=SSOとドメイン・評価ボタン・データの保存期間／経理=通貨・支払い方法・適格請求書／決裁者=経路と年額。alt=Claudeの法人契約の稟議で確かめる人と項目を縦に並べた図。法務は規約と準拠法、情シスはSSOと学習の設定、経理は通貨と請求書、決裁者は経路と年額を見る。figcaption=稟議で確かめる人と項目（公式の規約・ヘルプから作成） -->
+<figure class="post-figure"><img src="/media/images/claude-corporate-contract/ccc_08_ringi.png" alt="Claudeの法人契約の稟議で確かめる人と項目を縦に並べた図。法務は規約と準拠法、情シスはSSOと学習の設定、経理は通貨と請求書、決裁者は経路と年額を見る" loading="lazy"><figcaption>稟議で確かめる人と項目（公式の規約・ヘルプから作成）</figcaption></figure>
 
 ### 決める人と役割
 
@@ -147,7 +143,7 @@ Enterpriseの今の席は1種類で、ウェブ・デスクトップ・モバイ
 
 ### Claudeの法人契約は何人からできますか？
 
-Teamは2人から150人まで、セルフサービスのEnterpriseは20席から、営業担当経由のEnterpriseは50席からです。AWS MarketplaceのEnterpriseは20席の単位です。
+Teamは2人から150人まで、セルフサービスのEnterpriseは20席から、営業担当経由のEnterpriseは50席からです。AWS MarketplaceのEnterpriseは20席からです。
 
 ### Claudeは請求書払いで契約できますか？
 
