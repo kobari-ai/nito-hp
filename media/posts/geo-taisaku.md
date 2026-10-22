@@ -9,7 +9,7 @@ cover_sub: 論文の内容と会社が決めること
 cta: llmo
 ---
 
-GEO（Generative Engine Optimization）は、2023年11月に米プリンストン大学とインド工科大学デリー校などの研究者が論文で名付けた言葉です。生成AIの回答で、自社のページが材料として使われやすくする工夫を指します。2026年5月にはGoogleが公式ガイドで、Google検索から見ればGEOもSEOだと書きました。
+GEO（Generative Engine Optimization）は、2023年11月に米プリンストン大学とインド工科大学デリー校などの研究者が論文で名付けた言葉です。生成AIの回答で、自社のページが材料として使われやすくする工夫を指します。Googleも公式ガイドで、Google検索の生成AI機能にもSEOの基本がそのまま効き、AEO・GEOとして広まる「ハック」の多くは効果がないと書きました。
 
 GEO対策の提案を受けて社内で費用を説明する立場の方に向けて、この記事では論文が確かめたことと確かめていないこと、会社がやること、外に依頼するときに見る点を書きます。
 
@@ -19,7 +19,7 @@ GEO対策の提案を受けて社内で費用を説明する立場の方に向�
 - 外に依頼するなら、**目標を言及率だけでなく問い合わせまで置くか、どのAIに何問を何回聞くか**を契約の前に決める
 :::
 
-<!-- SHOT: 概要図 geo_01_stages（HTML の図・brain/scripts/seo/fig/geo_01_stages.html）。AI の回答ができるまでの4段階と、論文が測った段階・PC 幅の図・赤枠なし -->
+<figure class="post-figure"><img src="/media/images/geo-taisaku/geo_01_stages.png" alt="AIの回答ができるまでの4段階。検索で拾われる、並べ替えで残る、回答に使われる、来訪と問い合わせ。GEOの論文が測ったのは回答に使われる段階" loading="lazy"></figure>
 
 ## GEO対策とは何か
 
@@ -27,9 +27,7 @@ GEOという略語は、論文「GEO: Generative Engine Optimization」（Aggarw
 
 地図や位置情報のGEO（ジオターゲティング）とは関係がありません。日本ではSEO会社や制作会社のサービス名でGEO対策という言い方が使われ、論文の書き換えの手法だけを指す会社もあれば、診断から記事の制作・毎月の測定までを含める会社もあります。
 
-**Googleは2026年5月15日に公開した[生成AI機能向けの最適化ガイド](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)でAEO・GEOに触れ、Google検索の観点からは生成AI検索向けの最適化もSEOだと書いています。** 第三者のAEO・GEOの助言やサービスを検討する場合について、同じガイドは[第三者のSEOの助言を評価する案内](https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja)を読むよう促しました。
-
-<!-- SHOT: Google 検索セントラルの生成 AI 機能向けの最適化ガイドで「AEO」と「GEO」に触れた段落・https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja ・PC 幅のまま（公式の根拠）・該当段落に赤枠1 -->
+**Googleは[生成AI機能向けの最適化ガイド](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)でAEO・GEOに触れ、Google検索の生成AI機能にもSEOの基本がそのまま効き、AEO・GEOとして広まる「ハック」の多くは効果がないと書いています。** 第三者のAEO・GEOの助言やサービスを検討する場合について、同じガイドは[第三者のSEOの助言を評価する案内](https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja)を読むよう促しました。
 
 ## LLMO・AIOとの違い
 
@@ -84,7 +82,7 @@ GEOの説明でよく引かれる最大40%は、上の実験で、AIにすでに
 
 2023年11月から2026年7月までの45本の研究を検討した総説（[Martinez、arXiv 2607.14035](https://arxiv.org/abs/2607.14035)、2026年7月公開・査読前）も、同じ点を指摘しています。元の論文の伸びは実験の設定の中では正しいものの、すでに回答の材料に入ったページが前提で、自然に見つけられることや続く流入は示していないと総説は整理しています。
 
-<!-- SHOT: 図 geo_02_measured（HTML の図・brain/scripts/seo/fig/geo_02_measured.html）。論文が測ったことと測っていないことの対比・縦積み・赤枠なし -->
+<figure class="post-figure"><img src="/media/images/geo-taisaku/geo_02_measured.png" alt="GEO論文の最大40%が指すもの。測ったのは渡した5件の中で回答に使われた語の割合。検索に拾われる率やクリック・問い合わせは測っていない" loading="lazy"></figure>
 
 ### 書き換えで下がった実験
 
@@ -151,13 +149,11 @@ ChatGPTの検索は別の仕組みです。OpenAIの[クローラーの説明](h
 
 直すときは一度に1つずつ変え、前と同じ問い・同じ回数で測り直します。月に1回のように間隔も決めておくと、何が効いたかを追えます。
 
-<!-- SHOT: 図 geo_03_loop（HTML の図・brain/scripts/seo/fig/geo_03_loop.html）。測る・1つ直す・同じ条件で測り直すの3段・縦積み・赤枠なし -->
+<figure class="post-figure"><img src="/media/images/geo-taisaku/geo_03_loop.png" alt="測る・直す・測るの回し方。同じ問いを何回も聞く、一度に1つだけ直す、同じ条件で測り直す" loading="lazy"></figure>
 
 ### Search Consoleの生成AIレポート
 
 Googleの分は、Search Consoleの[生成AIパフォーマンスレポート](https://support.google.com/webmasters/answer/16984139?hl=ja)で見られます。2026年8月31日に全サイトに公開され、AIによる概要とAIモードでサイトへのリンクが表示された回数を、ページ・国・デバイス・日付に分けて出します。表示が少ないサイトではレポート自体が出ないこともあります。
-
-<!-- SHOT: Search Console の生成 AI パフォーマンス レポートの画面・https://search.google.com/search-console・PC・表示回数のグラフに赤枠1。ログインが要るのでサイト名とアカウントは写さない。撮れなければ図を入れない -->
 
 ### 目標を問い合わせまで置く
 
@@ -178,7 +174,7 @@ AEO・GEOの助言を含めた業者の選び方は、Googleの[SEO業者の利�
 | 権限 | 最初に何の権限が要るか | 診断の段階でSearch Consoleの書き込み権限を求める |
 | 保証 | 結果を約束するか | AIで必ず紹介される、上位を保証すると言う |
 
-**診断の段階ではSearch Consoleの権限を読み取りだけにし、検索結果の1ページ目を保証する業者は避けるよう、Googleのページは勧めています。** 第三者のツールについても、Googleの内部のデータには触れられず、予測は保証ではないと書いています。
+**診断の段階ではSearch Consoleの権限を読み取りだけにし、掲載順位を保証すると言う業者には注意するよう、Googleのページは勧めています。** 第三者のツールについても、Googleの内部のデータには触れられず、予測は保証ではないと書いています。
 
 決裁で揉めやすいのは期間です。流入や売上への効果は研究の証拠がいちばん弱い部分で、投資対効果の主張が学術の証拠を大きく上回っていると総説は書きました。契約の前に、何か月目にどの数字を見て次の手を決めるかを社内で合わせておくと、途中の判断が速くなります。費用の幅と作業の分け方は[LLMO対策の費用相場](/media/llmo-cost/)、社内との分け方は[内製と外注どちらがいい？](/media/llmo-inhouse-vs-outsource/)にまとめています。海外の支援会社が出している成果の数字は[海外のAI検索対策の成功事例](/media/overseas-geo-cases/)で読めます。
 
