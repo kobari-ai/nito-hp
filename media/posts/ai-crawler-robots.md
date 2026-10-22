@@ -14,9 +14,9 @@ OpenAI・Anthropic・Perplexity・Googleは、サイトに来るAIのボット�
 社内では「AIに学習されたくない」と「AI検索に出たい」が同じrobots.txtの話として持ち込まれ、どの名前を止めるとどうなるかが分からないまま決めがちです。この記事は各社の公式に書いてあることと無いことを分け、止めるか許すかの判断、robots.txtの書き方、自社サイトで確かめる手順を扱います。
 
 :::takeaways
-- **学習用のボット（GPTBot・ClaudeBot・Google-Extendedなど）を止めても、各社の検索の回答に出るかには影響しないと公式に書かれている**。回答に出なくなるのは検索用を止めたとき
+- **学習用のボット（GPTBot・Google-Extendedなど）を止めても検索に出るかには影響しない、とOpenAI・Google・Appleは公式に書いている**。ただしGoogle-Extendedを止めるとGeminiアプリの回答の根拠からも外れる
 - **Google-ExtendedはGoogle検索のAIによる概要には効かない**。AIによる概要とAIモードから外す設定は、Search Consoleの「検索の生成 AI」にある
-- **robots.txtで許可していても、CDNで止まっていることがある**。nitoのサイトでは学習用の名乗りにだけ403が返った
+- **robots.txtで許可していても、CDNで止まっていることがある**。nitoのサイトでは学習用のユーザーエージェントにだけ403が返った
 :::
 
 <!-- SHOT: 図1 AIのクローラーの3つの種類（学習用・検索用・利用者の操作用）を縦3段で。HTML 図 brain/scripts/seo/fig/acrb_types.html を描画して /media/images/ai-crawler-robots/acrb_01_types.png。alt「AIのクローラーは3種類。学習用はモデルの学習に使う内容を集め、検索用はAIの検索の回答に出すページを集め、利用者の操作用は質問を受けてその場でページを読む」 -->
@@ -35,17 +35,17 @@ GPTBotを止めるかどうかの相談でも、実際には各社のボット�
 
 PerplexityはPerplexityBotを検索結果にサイトを出すためのものとし、基盤モデルの学習には使わないと説明していて、学習用の名前は公開していません。Common Crawl（公開データセットを作る団体）の**CCBot**も、学習用のボットとしてまとめて止められることが多い名前です。
 
-GoogleとAppleは書き方が違い、注意が要ります。**Google-ExtendedとApplebot-Extendedは巡回するボットではなく、robots.txtに書く制御用の名前**で、巡回そのものは検索用のGooglebotやApplebotがしています。Googleの[一般的なクローラーの一覧](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers?hl=ja)も、Google-Extendedには個別のユーザーエージェントが無いとしています。
+GoogleとAppleは書き方が違い、注意が要ります。**Google-ExtendedとApplebot-Extendedは巡回するボットではなく、robots.txtに書く制御用の名前**で、巡回そのものは検索用のGooglebotやApplebotがしています。Googleの[一般的なクローラーの一覧](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers?hl=ja)も、Google-Extendedには個別のユーザーエージェントが無いという説明です。
 
 ## 止めたときに起きること
 
-どのボットを止めるかで失うものは大きく変わるため、先に一覧で見ておくと判断が速くなるでしょう。各社の公式ページに書かれた内容を、止めたときに起きることで並べました。
+どのボットを止めるかで失うものは大きく変わります。各社の公式ページの説明を止めたときに起きることで並べたのが次の表です。
 
 | 止めるもの | 止まること | AIの回答への影響（公式の書き方） |
 |---|---|---|
 | GPTBot | OpenAIの基盤モデルの学習 | 検索の設定とは独立 |
-| ClaudeBot | Anthropicのモデルの学習 | 将来のコンテンツを学習から除く合図 |
-| Google-Extended | Geminiの学習とGeminiアプリの根拠づけ | Google検索の掲載と順位には影響しない |
+| ClaudeBot | Anthropicのモデルの学習 | 将来のコンテンツを学習データから除く |
+| Google-Extended | Geminiの学習とGeminiアプリの根拠づけ | Google検索には影響しない。Geminiアプリの回答の根拠には使われない |
 | Applebot-Extended | Appleの基盤モデルの学習 | Siri・Spotlight・Safariでは引き続き見つかる |
 | OAI-SearchBot | ChatGPTの検索 | 検索の回答に出ない |
 | Claude-SearchBot | Claudeの検索用のインデックス | 検索結果での見え方が下がることがある |
@@ -53,9 +53,11 @@ GoogleとAppleは書き方が違い、注意が要ります。**Google-Extended�
 
 ### 学習用を止めた場合
 
-OpenAIの[クローラーの公式ページ](https://developers.openai.com/api/docs/bots)は、OAI-SearchBotとGPTBotの設定は互いに独立していて、検索に出ながら学習には使わない合図を出せると書いています。Anthropicの[Claudeヘルプセンター](https://support.claude.com/ja/articles/8896518)も学習用のClaudeBotと検索用のClaude-SearchBotを分けています。**どの会社でも、学習だけを断って検索の回答には残る選び方ができます。**
+OpenAIの[クローラーの公式ページ](https://developers.openai.com/api/docs/bots)は、OAI-SearchBotとGPTBotの設定は互いに独立していて、検索に出ながら学習には使わせない指定ができると書いています。Anthropicの[Claudeヘルプセンター](https://support.claude.com/ja/articles/8896518)も学習用のClaudeBotと検索用のClaude-SearchBotを分けていますが、ClaudeBotを止めたときの説明は学習データから除くことだけで、検索への影響には触れていません。**学習用と検索用が別の名前なので、どの会社でも学習用だけを止める書き方はできます。**
 
-ただし学習を止める合図は、これから集める分に効くものです。Anthropicの説明も「将来のコンテンツ」を除く合図としていて、すでに学習に使った分を消す話ではありません。
+Google-Extendedだけは扱いが違います。Googleの説明にあるGoogle-Extendedの対象は学習に加えてGeminiアプリで回答の根拠に使うことで、止めるとGeminiアプリの回答に自社のページが使われなくなります。
+
+ただし学習を止める指定が効くのは、これから集める分です。Anthropicの説明も対象を「将来のコンテンツ」としていて、すでに学習に使った分を消す話ではありません。
 
 ### 検索用を止めた場合
 
@@ -63,7 +65,7 @@ OpenAIの[クローラーの公式ページ](https://developers.openai.com/api/d
 
 ### 利用者の操作用はrobots.txtが効かないことがある
 
-利用者が「このページを読んで」と頼んだときに動くボットの扱いは、会社ごとにまちまちです。OpenAIはChatGPT-Userには「robots.txt rules may not apply」と書き、Perplexityも[Perplexity Crawlers](https://docs.perplexity.ai/guides/bots)でPerplexity-Userは原則としてrobots.txtを無視すると説明しています。Googleの[ユーザー トリガー フェッチャー](https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers)も同じ扱いです。一方でAnthropicは、Claude-Userを止めると利用者の依頼でページを取りに行けなくなると書いていて、robots.txtで止まる側に入ります。
+利用者が「このページを読んで」と頼んだときに動くボットの扱いは、会社ごとにまちまちです。OpenAIはChatGPT-Userには「robots.txt rules may not apply」と書き、Perplexityも[Perplexity Crawlers](https://docs.perplexity.ai/guides/bots)でPerplexity-Userは原則としてrobots.txtを無視すると説明しています。Googleの[ユーザー トリガー フェッチャー](https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers)も同じ扱いです。一方でAnthropicは、Claude-Userを止めると利用者の依頼でページを取りに行けなくなると書いていて、robots.txtの指定に従う仕様です。
 
 ## GoogleのAIだけ設定が別
 
@@ -87,7 +89,7 @@ Google検索のAI機能から外す設定は、2026年8月31日に全サイト�
 | 記事やデータそのものが商品 | 止める | 経営判断 | 経営判断 |
 | 会員限定・有料の部分 | robots.txtでなくログインで守る | 同左 | 同左 |
 
-商材が高い会社のサイトはページを読まれて問い合わせにつながるのが目的なので、検索用と利用者の操作用は許可が基本です。学習を許すかどうかは自社の文章や資料をモデルの学習に渡してよいかという話で、広報や法務の確認が要る会社もあります。**学習を止めても検索の回答には響かないため、方針が決まるまで学習用だけ止めておく選び方ができます。**
+商材が高い会社のサイトはページを読まれて問い合わせにつながるのが目的なので、検索用と利用者の操作用は許可が基本です。学習を許すかどうかは自社の文章や資料をモデルの学習に渡してよいかという話で、広報や法務の確認が要る会社もあります。**OpenAI・Google・Appleは学習を止めても検索に響かないと書いているため、方針が決まるまで学習用だけ止めておく選び方ができます。** Geminiアプリで見つけてもらいたい会社は、Google-Extendedを止める対象から外します。
 
 ### 日本の会社の設定の例
 
@@ -134,9 +136,11 @@ User-agent: *
 Allow: /
 ```
 
+この書き方でGoogle-Extendedを入れると、Geminiアプリが回答の根拠に自社のページを使わなくなります。Geminiでも見つけてもらいたい会社は、Google-Extendedの2行を外します。
+
 ### すべてのAIを止める書き方
 
-新聞社のように検索用まで止めるなら、上の5つに検索用と利用者の操作用を足します。
+新聞社のように検索用まで止めるなら、上の書き方の`User-agent: *`の前に次のグループを足し、検索用と利用者の操作用もまとめて止めます。
 
 ```
 User-agent: OAI-SearchBot
@@ -168,44 +172,44 @@ Cloudflareを使うサイトは、管理画面のAIボットの設定でSearch�
 
 ### robots.txtを守らないボット
 
-Cloudflareは[2025年8月4日のブログ](https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/)で、robots.txtとWAFで止めた新しいドメインの中身をPerplexityが答えたという観測を出しました。止められるとmacOSのChromeを装う名乗りと公開範囲外のIPで取りに来た、というのがCloudflareの主張です。同じ試験のChatGPT-Userは、robots.txtを読んで止まったという結果でした。Common Crawlも、CCBotを名乗る偽のクローラーがいると[CCBotの説明](https://commoncrawl.org/ccbot)で注意しています。**確実に止めたいページはrobots.txtではなく、ログインかCDNの側で守ります。**
+Cloudflareは[2025年8月4日のブログ](https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/)で、robots.txtとWAFで止めた新しいドメインの中身をPerplexityが答えたという観測を出しました。止められるとmacOSのChromeを装うユーザーエージェントと公開範囲外のIPで取りに来た、というのがCloudflareの主張です。同じ試験のChatGPT-Userは、robots.txtを読んで止まったという結果でした。Common Crawlも、CCBotを名乗る偽のクローラーがいると[CCBotの説明](https://commoncrawl.org/ccbot)で注意しています。**確実に止めたいページはrobots.txtではなく、ログインかCDNの側で守ります。**
 
 ## 自社サイトで確かめる手順
 
 設定したつもりでも、robots.txt・CDN・サーバーのどこかで想定と違う扱いになっている例は珍しくありません。ターミナルが使える担当者なら、次の順で10分ほどで確かめられます。
 
 1. `curl https://自社のドメイン/robots.txt` で中身を見る。書いた覚えのない`Disallow`があればCDNの設定を疑う
-2. 名乗りだけを変えて同じページを取る。例: `curl -s -o /dev/null -w "%{http_code}" -A "GPTBot/1.4" https://自社のドメイン/`
-3. 返ってきた状態コードを見る。200なら通り、403なら名乗りで止める設定がどこかにある
+2. ユーザーエージェント（ボットが名乗る文字列）だけを変えて同じページを取る。例: `curl -s -o /dev/null -w "%{http_code}" -A "GPTBot/1.4" https://自社のドメイン/`
+3. 返ってきた状態コードを見る。200なら通り、403ならユーザーエージェントで止める設定がどこかにある
 4. 403が出たら、CDNの管理画面（Cloudflareなら[AI Crawl Control](https://developers.cloudflare.com/ai-crawl-control/)）とサーバーのログで、本物のボットの扱いを確かめる
 5. GoogleのAIの扱いは、Search Consoleの設定から検索の生成 AIを開いて見る
 
-nitoのサイト（Cloudflareで配信、robots.txtは`User-agent: *`と`Allow: /`だけ）で、2026年10月23日に記事一覧のページを名乗りだけ変えて取得した結果が次の表です。
+nitoのサイト（Cloudflareで配信、robots.txtは`User-agent: *`と`Allow: /`だけ）で、2026年10月23日に記事一覧のページをユーザーエージェントだけ変えて取得した結果が次の表です。
 
-| 名乗り | 状態コード |
+| ユーザーエージェント | 状態コード |
 |---|---|
 | ブラウザ・Googlebot | 200 |
 | OAI-SearchBot・Claude-SearchBot・PerplexityBot | 200 |
 | ChatGPT-User・Claude-User・Perplexity-User | 200 |
 | GPTBot・ClaudeBot・CCBot・Bytespider | 403 |
 
-**robots.txtはすべて許可なのに、学習用の名乗りにだけ403が返りました。** 403の中身は「Your request was blocked.」の1行で、GPTBotの名乗りでもrobots.txt自体は200で読めました。各社の公開IPから来ていない偽の名乗りなので、本物のボットが同じ扱いになるとは限りません。それでも、robots.txtだけを見て判断すると実際の扱いとずれることは確かめられます。
+**robots.txtはすべて許可なのに、学習用のユーザーエージェントにだけ403が返りました。** 403の中身は「Your request was blocked.」の1行で、GPTBotを名乗ってもrobots.txt自体は200で読めました。各社の公開IPから来ていない偽のユーザーエージェントなので、本物のボットが同じ扱いになるとは限りません。それでも、robots.txtだけを見て判断すると実際の扱いとずれることは確かめられます。
 
-<!-- SHOT: 図3 確かめる順番を縦4段で。「robots.txtを開く」「名乗りを変えてcurl」「状態コードを読む」「CDNとログを見る」。HTML 図 brain/scripts/seo/fig/acrb_check.html を描画して /media/images/ai-crawler-robots/acrb_03_check.png。alt「自社サイトでAIのボットの扱いを確かめる順番。robots.txtを開く、名乗りを変えてcurlで取る、状態コードを読む、CDNの管理画面とログを見る」 -->
+<!-- SHOT: 図3 確かめる順番を縦4段で。「robots.txtを開く」「UAを変えてcurl」「状態コードを読む」「CDNとログを見る」。HTML 図 brain/scripts/seo/fig/acrb_check.html を描画して /media/images/ai-crawler-robots/acrb_03_check.png。alt「自社サイトでAIのボットの扱いを確かめる順番。robots.txtを開く、ユーザーエージェントを変えてcurlで取る、状態コードを読む、CDNの管理画面とログを見る」 -->
 
 ## よくある質問
 
 ### Q. GPTBotをブロックするとChatGPTの検索に出なくなりますか？
 
-出なくなりません。OpenAIの公式ページは、GPTBotとOAI-SearchBotの設定は互いに独立していて、GPTBotを止めたまま検索に出られると書いています。
+出なくなることはありません。OpenAIの公式ページは、GPTBotとOAI-SearchBotの設定は互いに独立していて、GPTBotを止めたまま検索に出られると書いています。
 
 ### Q. Google-ExtendedをブロックするとAIによる概要に出なくなりますか？
 
-出なくなりません。Google-Extendedが管理するのはGeminiの学習とGeminiアプリなどの根拠づけで、AIによる概要とAIモードから外す設定はSearch Consoleの検索の生成 AI 設定です。
+出なくなることはありません。Google-Extendedが管理するのはGeminiの学習とGeminiアプリなどの根拠づけで、AIによる概要とAIモードから外す設定はSearch Consoleの検索の生成 AI 設定です。
 
 ### Q. ClaudeBotをブロックするとClaudeの検索に出なくなりますか？
 
-ClaudeBotは学習用で、Claudeの検索に使うのはClaude-SearchBotです。ClaudeBotだけを止めるなら、Anthropicのヘルプの説明では検索のためのインデックスとは別の扱いになります。
+ClaudeBotは学習用で、Claudeの検索に使うのはClaude-SearchBotです。Anthropicのヘルプは、ClaudeBotを止めたときの影響を学習データから除くことだけで説明していて、検索への影響には触れていません。
 
 ### Q. PerplexityBotは学習に使われますか？
 
@@ -213,7 +217,7 @@ ClaudeBotは学習用で、Claudeの検索に使うのはClaude-SearchBotです�
 
 ### Q. robots.txtでブロックすればAIに一切使われなくなりますか？
 
-なりません。robots.txtは合図で、利用者の操作で動くChatGPT-UserやPerplexity-Userには効かない場合があると各社が書いています。確実に守るならログインかCDNの設定です。
+そうはなりません。robots.txtはお願いの合図で、利用者の操作で動くChatGPT-UserやPerplexity-Userには効かない場合があると各社が書いています。確実に守るならログインかCDNの設定です。
 
 ### Q. Cloudflareの設定でGooglebotまで止まることはありますか？
 
@@ -221,7 +225,7 @@ ClaudeBotは学習用で、Claudeの検索に使うのはClaude-SearchBotです�
 
 ### Q. AIのクローラーを止めると問い合わせは減りますか？
 
-検索用を止めると、AI検索の回答の情報源から外れるため、そこから来る見込み客を失います。学習用だけを止めた場合、各社とも検索の回答には影響しないという説明です。
+検索用を止めると、AI検索の回答の情報源から外れるため、そこから来る見込み客を失います。学習用だけを止めた場合、OpenAI・Google・Appleは検索に影響しないと説明しています。Google-ExtendedはGeminiアプリの回答の根拠からも外れる点が例外です。
 
 ### Q. robots.txtを書き換えてからAIに反映されるまでどれくらいかかりますか？
 
