@@ -15,11 +15,11 @@ OpenAI・Anthropic・Perplexity・Googleは、サイトに来るAIのボット�
 
 :::takeaways
 - **学習用のボット（GPTBot・Google-Extendedなど）を止めても検索に出るかには影響しない、とOpenAI・Google・Appleは公式に書いている**。ただしGoogle-Extendedを止めるとGeminiアプリの回答の根拠からも外れる
-- **Google-ExtendedはGoogle検索のAIによる概要には効かない**。AIによる概要とAIモードから外す設定は、Search Consoleの「検索の生成 AI」にある
+- **Google-Extendedを止めてもGoogle検索のAIによる概要からは外れない**。AIによる概要とAIモードから外す設定は、Search Consoleの「検索の生成 AI」にある
 - **robots.txtで許可していても、CDNで止まっていることがある**。nitoのサイトでは学習用のユーザーエージェントにだけ403が返った
 :::
 
-<!-- SHOT: 図1 AIのクローラーの3つの種類（学習用・検索用・利用者の操作用）を縦3段で。HTML 図 brain/scripts/seo/fig/acrb_types.html を描画して /media/images/ai-crawler-robots/acrb_01_types.png。alt「AIのクローラーは3種類。学習用はモデルの学習に使う内容を集め、検索用はAIの検索の回答に出すページを集め、利用者の操作用は質問を受けてその場でページを読む」 -->
+<figure class="post-figure"><img src="/media/images/ai-crawler-robots/acrb_01_types.png" alt="AIのクローラーは3種類。学習用はモデルの学習に使う内容を集め、検索用はAIの検索の回答に出すページを集め、利用者の操作用は質問を受けてその場でページを読む" loading="lazy"></figure>
 
 ## AIのクローラーの3つの種類
 
@@ -69,15 +69,15 @@ Google-Extendedだけは扱いが違います。Googleの説明にあるGoogle-E
 
 ## GoogleのAIだけ設定が別
 
-Google-Extendedを止めればGoogleのAIをまとめて断れる、と考えて設定する会社は少なくありません。Googleの一覧の原文は「Google-Extended が Google 検索でのサイトの登録に影響したり、Google 検索でのランキング シグナルとして使用されたりすることはありません」です。**Google-Extendedが効くのはGeminiの学習とGeminiアプリなどの根拠づけで、Google検索のAIによる概要は対象に入っていません。**
+Google-Extendedを止めればGoogleのAIをまとめて断れる、と考えて設定する会社は少なくありません。Googleの一覧の原文は「Google-Extended が Google 検索でのサイトの登録に影響したり、Google 検索でのランキング シグナルとして使用されたりすることはありません」です。**Google-Extendedが効くのはGeminiの学習とGeminiアプリなどの根拠づけで、Google検索のAIによる概要に出るかどうかは対象に入っていません。**
 
 Google検索のAI機能から外す設定は、2026年8月31日に全サイトへ広がったSearch Consoleの「[検索の生成 AI 設定](https://support.google.com/webmasters/answer/16908024?hl=ja)」です。対象はAIによる概要・AIモード・Discoverの生成AI機能で、既定は「含める」になっています。除外を選ぶと、それらの機能でリンクも回答の根拠としての利用も無くなり、表示も流入も止まる仕組みです。通常の検索の順位には使わないとヘルプにあります。
 
-<!-- SHOT: 図2 GoogleのAIの2つの設定を縦2段で。上段「Google-Extended（robots.txt）：Geminiの学習とGeminiアプリの根拠づけ」、下段「検索の生成 AI 設定（Search Console）：AIによる概要とAIモード」。HTML 図 brain/scripts/seo/fig/acrb_google.html を描画して /media/images/ai-crawler-robots/acrb_02_google.png。alt「GoogleのAIは設定が2つに分かれる。Google-ExtendedはGeminiの学習とGeminiアプリの根拠づけ、Search Consoleの検索の生成AI設定はAIによる概要とAIモード」 -->
+<figure class="post-figure"><img src="/media/images/ai-crawler-robots/acrb_02_google.png" alt="GoogleのAIは設定が2つに分かれる。Google-ExtendedはGeminiの学習とGeminiアプリの根拠づけ、Search Consoleの検索の生成AI設定はAIによる概要とAIモード" loading="lazy"></figure>
 
 ページ単位で抑えたいときは、検索セントラルの「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」が挙げるnosnippet・data-nosnippet・max-snippet・noindexを使います。Googlebot自体をrobots.txtで止めると、AIによる概要だけでなく通常の検索からも消えます。
 
-<!-- SHOT: Search Console ヘルプ「検索の生成 AI 設定」https://support.google.com/webmasters/answer/16908024?hl=ja ・PC・赤枠は冒頭の「2026 年 8 月 31 日より、この設定は世界中のすべてのウェブサイトにリリースされています」と対象の3つ（AI による概要・AI モード・Discover の生成 AI 機能）。figcaption「Search Consoleヘルプの検索の生成 AI 設定（2026年10月23日に撮影）」 -->
+<figure class="post-figure"><img src="/media/images/ai-crawler-robots/acrb_04_gsc_help.png" alt="Search Consoleヘルプの検索の生成AI設定のページ。2026年8月31日からすべてのウェブサイトに公開され、AIによる概要・AIモード・Discoverの生成AI機能が対象と書かれている" loading="lazy"><figcaption>Search Consoleヘルプの検索の生成 AI 設定（2026年10月23日に撮影）</figcaption></figure>
 
 ## 止めるか許すかの判断
 
@@ -100,9 +100,9 @@ Google検索のAI機能から外す設定は、2026年8月31日に全サイト�
 | 日本経済新聞・朝日新聞・読売新聞 | 学習用・検索用・利用者の操作用をまとめて拒否 |
 | クックパッド | 学習用とPerplexityBotなどを拒否。OAI-SearchBotの指定なし |
 | 食べログ | GPTBotとGoogle-Extendedだけ拒否 |
-| freee・SmartHR・サイボウズ・Sansan | AIのボットの個別の指定なし |
+| freee・SmartHR・Sansan | AIのボットの個別の指定なし |
 
-記事が商品の新聞社は検索用まで止め、食べログは学習用だけを止めています。ソフトウェアを売る会社は個別の指定を書かず、すべて許可のままでした。
+記事が商品の新聞社は検索用まで止め、食べログは学習用だけを止めています。ソフトウェアを売る会社は個別の指定を書かず、ほかのボットと同じ扱いのままでした。
 
 ### 誰が決めるか
 
@@ -195,7 +195,7 @@ nitoのサイト（Cloudflareで配信、robots.txtは`User-agent: *`と`Allow: 
 
 **robots.txtはすべて許可なのに、学習用のユーザーエージェントにだけ403が返りました。** 403の中身は「Your request was blocked.」の1行で、GPTBotを名乗ってもrobots.txt自体は200で読めました。各社の公開IPから来ていない偽のユーザーエージェントなので、本物のボットが同じ扱いになるとは限りません。それでも、robots.txtだけを見て判断すると実際の扱いとずれることは確かめられます。
 
-<!-- SHOT: 図3 確かめる順番を縦4段で。「robots.txtを開く」「UAを変えてcurl」「状態コードを読む」「CDNとログを見る」。HTML 図 brain/scripts/seo/fig/acrb_check.html を描画して /media/images/ai-crawler-robots/acrb_03_check.png。alt「自社サイトでAIのボットの扱いを確かめる順番。robots.txtを開く、ユーザーエージェントを変えてcurlで取る、状態コードを読む、CDNの管理画面とログを見る」 -->
+<figure class="post-figure"><img src="/media/images/ai-crawler-robots/acrb_03_check.png" alt="自社サイトでAIのボットの扱いを確かめる順番。robots.txtを開く、ユーザーエージェントを変えてcurlで取る、状態コードを読む、CDNの管理画面とログを見る" loading="lazy"></figure>
 
 ## よくある質問
 
