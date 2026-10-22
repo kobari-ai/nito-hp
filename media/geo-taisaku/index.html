@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】GEO対策とは？論文の内容とLLMO・AIOとの違い・会社が決めること | nito Column</title>
+    <meta name="description" content="GEO対策とは何かを、元の論文（KDD 2024）とGoogleの公式ガイドで確かめて解説。論文の最大40%が測ったもの、LLMO・AIOとの違い、会社がやること、測り方、外に依頼するときに確かめる点まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/geo-taisaku/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】GEO対策とは？論文の内容とLLMO・AIOとの違い・会社が決めること">
+    <meta property="og:description" content="GEO対策とは何かを、元の論文（KDD 2024）とGoogleの公式ガイドで確かめて解説。論文の最大40%が測ったもの、LLMO・AIOとの違い、会社がやること、測り方、外に依頼するときに確かめる点まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/geo-taisaku/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/geo-taisaku.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/geo-taisaku.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】GEO対策とは？論文の内容とLLMO・AIOとの違い・会社が決めること", "description": "GEO対策とは何かを、元の論文（KDD 2024）とGoogleの公式ガイドで確かめて解説。論文の最大40%が測ったもの、LLMO・AIOとの違い、会社がやること、測り方、外に依頼するときに確かめる点まで。", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/geo-taisaku/"}, "articleSection": "AI検索対策", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】GEO対策とは？論文の内容とLLMO・AIOとの違い・会社が決めること"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "GEO対策とLLMO対策は何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "指す取り組みはほぼ同じです。GEOは英語の論文から海外で広まった言葉で、日本の支援会社のサービス名にはLLMOやAIOもよく使われます。見積もりでは呼び名でなく、診断・修正・制作・測定のどこまで入るかで比べてください。"}}, {"@type": "Question", "name": "GEO対策をすればChatGPTで必ず紹介されますか？", "acceptedAnswer": {"@type": "Answer", "text": "必ずではありません。元の論文の最大40%はAIにあらかじめ渡した5件の中での伸びで、ChatGPTが自分で検索してページを選ぶ場面は試していません。同じ問いを何回か聞き、出た割合で確かめます。"}}, {"@type": "Question", "name": "Google検索のAIモードに出るためにGEO対策は特別に必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Googleは必要ないと書いています。公式ガイドによると、AIによる概要やAIモードに出るための追加の要件は無く、インデックスに登録されてスニペットを表示できることが条件です。Google検索の観点では、生成AI向けの最適化もSEOに含まれます。"}}, {"@type": "Question", "name": "llms.txtを置けばGEO対策になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "Google検索については効果がありません。Googleの公式ガイドは、Google検索はllms.txtを使わず、置いても表示や順位に影響しないと書いています。ほかのサービスのために置くのは問題ないとも書いていますが、ChatGPTなどの扱いはこのガイドには書かれていません。"}}, {"@type": "Question", "name": "GEO対策の効果はGoogle Search Consoleで見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "Googleの分は見られます。生成AIパフォーマンスレポートで、AIによる概要とAIモードでの表示回数をページごとに確かめられます。ChatGPTやPerplexityの分は入らないため、問い合わせのときに何で知ったかを聞く方法と組み合わせてください。"}}, {"@type": "Question", "name": "GEO対策は自社だけでできますか？", "acceptedAnswer": {"@type": "Answer", "text": "問いを決める、AIに聞いて記録する、自社の情報を書き足す、といった作業は社内でできます。小規模な地域の会社なら作業の多くを自分でできると、Googleも書いています。サイトの技術的な不具合の修正や測る仕組みづくりは、外に依頼したほうが早い作業です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=56b59318">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】GEO対策とは？論文…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.23</span>
+        </div>
+        <h1 class="post-title">【2026年10月】GEO対策とは？論文の内容とLLMO・AIOとの違い・会社が決めること</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch post-eyecatch--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GEO対策とは"><defs><linearGradient id="ecg-a8090c4d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a8090c4d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="137.3" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="173.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="283.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GEO対策とは</text><line x1="379.6" y1="327.1" x2="820.4" y2="327.1" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="401.0" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff">論文の内容と会社が決めること</text><text x="600" y="484.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+
+        <div class="post-content">
+<p>GEO（Generative Engine Optimization）は、2023年11月に米プリンストン大学とインド工科大学デリー校などの研究者が論文で名付けた言葉です。生成AIの回答で、自社のページが材料として使われやすくする工夫を指します。Googleも公式ガイドで、Google検索の生成AI機能にもSEOの基本がそのまま効き、AEO・GEOとして広まる「ハック」の多くは効果がないと書きました。</p>
+<p>GEO対策の提案を受けて社内で費用を説明する立場の方に向けて、この記事では論文が確かめたことと確かめていないこと、会社がやること、外に依頼するときに見る点を書きます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>論文の最大40%は、<strong>AIにあらかじめ渡した5件のページのうち、回答に使われた語の割合の伸び</strong>。検索に拾われる率や問い合わせの数ではない</li>
+<li>Googleは2026年5月の公式ガイドで、<strong>llms.txt・チャンク化・AI向けの書き換えはGoogle検索には不要</strong>と書いた。ChatGPTなどほかのAIは別に確かめる</li>
+<li>外に依頼するなら、<strong>目標を言及率だけでなく問い合わせまで置くか、どのAIに何問を何回聞くか</strong>を契約の前に決める</li>
+</ul></div></div>
+<figure class="post-figure"><img src="/media/images/geo-taisaku/geo_01_stages.png" alt="AIの回答ができるまでの4段階。検索で拾われる、並べ替えで残る、回答に使われる、来訪と問い合わせ。GEOの論文が測ったのは回答に使われる段階" loading="lazy"></figure>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>GEO対策とは何か</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>LLMO・AIOとの違い</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>元の論文で分かったこと</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>実験の組み立て</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>伸びた手法と伸びなかった手法</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>Perplexityでの確認</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>論文に書いていないこと</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>最大40%が指すもの</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>書き換えで下がった実験</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>よく聞く説明と一次情報</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>会社が実際にやること</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>測る質問を決める</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>AIに読まれる状態か確かめる</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>回答の材料になる情報を載せる</a></li>
+                    <li class="toc-h3"><a href="#s5-4"><span class="toc__n">5-4</span>外部の情報をそろえる</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>測定と改善の回し方</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>同じ問いを何回も聞く</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>Search Consoleの生成AIレポート</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>目標を問い合わせまで置く</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>外部に依頼するときの確認点</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">GEO対策とは何か</h2>
+<p>GEOという略語は、論文「GEO: Generative Engine Optimization」（Aggarwalほか、<a href="https://arxiv.org/abs/2311.09735">arXiv 2311.09735</a>）から広まりました。2023年11月に公開され、2024年8月に開かれたデータマイニングの国際会議KDD 2024に採択されています。検索した結果をAIがまとめて答える仕組み（生成エンジン）の回答で、ウェブサイトの見え方を上げる最適化の枠組みとして論文はGEOを定めました。</p>
+<p>地図や位置情報のGEO（ジオターゲティング）とは関係がありません。日本ではSEO会社や制作会社のサービス名でGEO対策という言い方が使われ、論文の書き換えの手法だけを指す会社もあれば、診断から記事の制作・毎月の測定までを含める会社もあります。</p>
+<p><strong>Googleは<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">生成AI機能向けの最適化ガイド</a>でAEO・GEOに触れ、Google検索の生成AI機能にもSEOの基本がそのまま効き、AEO・GEOとして広まる「ハック」の多くは効果がないと書いています。</strong> 第三者のAEO・GEOの助言やサービスを検討する場合について、同じガイドは<a href="https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja">第三者のSEOの助言を評価する案内</a>を読むよう促しました。</p>
+<h2 id="s2">LLMO・AIOとの違い</h2>
+<p>GEO・LLMO・AIO・AEOは、どれも生成AIの回答に自社の情報を出す取り組みの呼び名です。由来が違うだけで、会社がやることはほぼ重なります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>呼び名</th>
+<th>正式名</th>
+<th>見かける場面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="呼び名">GEO</td>
+<td data-label="正式名">Generative Engine Optimization</td>
+<td data-label="見かける場面">2023年の論文が由来。海外の記事と、論文を引く日本の解説</td>
+</tr>
+<tr>
+<td data-label="呼び名">LLMO</td>
+<td data-label="正式名">Large Language Model Optimization</td>
+<td data-label="見かける場面">日本の支援会社のサービス名や解説</td>
+</tr>
+<tr>
+<td data-label="呼び名">AIO</td>
+<td data-label="正式名">AI Optimization など</td>
+<td data-label="見かける場面">日本の支援会社。GoogleのAI Overviewsへの対策の意味で使う会社もある</td>
+</tr>
+<tr>
+<td data-label="呼び名">AEO</td>
+<td data-label="正式名">Answer Engine Optimization</td>
+<td data-label="見かける場面">海外のSEO会社。Googleのガイドも名前を挙げる</td>
+</tr>
+</tbody>
+</table></div>
+<p>呼び名で依頼先を選び分ける理由はなく、見積もりでは診断・ページの修正・記事の制作・測定のどこまで入るかを先に確かめます。用語の成り立ちとSEOとの違いは<a href="/media/what-is-llmo/">LLMOとは？SEOとの違い</a>に書いています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">AI のおすすめに自社の名前が挙がるか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">元の論文で分かったこと</h2>
+<h3 id="s3-1">実験の組み立て</h3>
+<p>研究チームはまず、問いを1万問集めた評価用のデータ（GEO-bench）を作りました。出どころは検索の問いの公開データ（MS MARCO・Natural Questionsなど）、Perplexityの話題の問い、GPT-4に作らせた問いなど9つで、25の分野にまたがります。8割が情報を探す問いで、購入のような取引の問いは1割です。</p>
+<p>回答を作る側はGoogle検索の上位5件の本文をgpt-3.5-turboに渡して答えさせる仕組みです。<strong>5件のうち1件だけを手法で書き換え、書き換える前と後で、そのページが回答にどれだけ使われたかを比べました。</strong> 測った指標は次の2つです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>指標</th>
+<th>何を数えるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="指標">Position-Adjusted Word Count</td>
+<td data-label="何を数えるか">回答のうち、そのページを出典とする文の語数。回答の前のほうに出るほど重みを付けて数える</td>
+</tr>
+<tr>
+<td data-label="指標">Subjective Impression</td>
+<td data-label="何を数えるか">関連性・回答への影響・独自性・位置・量・クリックされそうか・多様性の7つをGPT-3.5に採点させる</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s3-2">伸びた手法と伸びなかった手法</h3>
+<p>書き換えの手法は9つ試されています。主な結果は次のとおりで、伸びは書き換える前に比べた相対の値です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>手法</th>
+<th>内容</th>
+<th>論文の結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="手法">引用の追加</td>
+<td data-label="内容">信頼できる出典の発言を引用する</td>
+<td data-label="論文の結果">語数の指標でいちばん伸びた（約41%）</td>
+</tr>
+<tr>
+<td data-label="手法">統計の追加</td>
+<td data-label="内容">言葉の説明を数字に置き換える</td>
+<td data-label="論文の結果">語数の指標で30〜40%伸びた</td>
+</tr>
+<tr>
+<td data-label="手法">出典の明記</td>
+<td data-label="内容">信頼できる出典を示す</td>
+<td data-label="論文の結果">語数の指標で30〜40%伸びた</td>
+</tr>
+<tr>
+<td data-label="手法">流暢にする</td>
+<td data-label="内容">文を読みやすく整える</td>
+<td data-label="論文の結果">伸びは中程度で分野による</td>
+</tr>
+<tr>
+<td data-label="手法">権威的な口調</td>
+<td data-label="内容">説得的で断定的な書き方にする</td>
+<td data-label="論文の結果">有意な伸びなし</td>
+</tr>
+<tr>
+<td data-label="手法">キーワードの詰め込み</td>
+<td data-label="内容">問いの語を増やす</td>
+<td data-label="論文の結果">ほぼ伸びず。Perplexityでは約10%悪化</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>検索の順位が低いページほど伸びが大きく出ています。</strong> 出典の明記はGoogle検索で5位のページでは115.1%伸び、1位のページでは30.3%下がりました。</p>
+<h3 id="s3-3">Perplexityでの確認</h3>
+<p>実際に使われている生成エンジンのPerplexityでも、論文は200問で確かめています。ページの文章をファイルとして渡し、その文章だけで答えさせる形です。<strong>Perplexityが自分でWebを検索してページを選ぶ場面は試していません。</strong> この条件で、引用の追加は語数の指標で22%伸び、キーワードの詰め込みは書き換える前より10%悪くなりました。</p>
+<h2 id="s4">論文に書いていないこと</h2>
+<h3 id="s4-1">最大40%が指すもの</h3>
+<p>GEOの説明でよく引かれる最大40%は、上の実験で、AIにすでに渡した5件の中での語数の割合が伸びた幅です。<strong>検索に拾われる確率・クリック・問い合わせが40%増えるという意味ではありません。</strong> 論文も限界の節で、手法が検索順位にどう響くかは測っていないと断っています。</p>
+<p>2023年11月から2026年7月までの45本の研究を検討した総説（<a href="https://arxiv.org/abs/2607.14035">Martinez、arXiv 2607.14035</a>、2026年7月公開・査読前）も、同じ点を指摘しています。元の論文の伸びは実験の設定の中では正しいものの、すでに回答の材料に入ったページが前提で、自然に見つけられることや続く流入は示していないと総説は整理しています。</p>
+<figure class="post-figure"><img src="/media/images/geo-taisaku/geo_02_measured.png" alt="GEO論文の最大40%が指すもの。測ったのは渡した5件の中で回答に使われた語の割合。検索に拾われる率やクリック・問い合わせは測っていない" loading="lazy"></figure>
+
+<h3 id="s4-2">書き換えで下がった実験</h3>
+<p>総説が取り上げるSAGEO Arena（Kimほか、2026年）は、17万1,003件の文書と2,700問で、検索・並べ替え・回答の段階を全部通して試しました。本文だけを書き換えると、並べ替えのあとで上位10件に残る割合が約16%、最後に引用される割合が約6%下がっています。<strong>引用されやすく書き換えた結果、その前の段階で拾われにくくなることがあると分かりました。</strong></p>
+<p>総説の結論は控えめです。検討した範囲では複数のAIで長く見つけられやすくなる、または利用者の行動が変わると因果まで示せた手法はまだありません。総説が勧めるのは問いに合った内容で、確かめられる数字や定義を含むページです。構造を分かりやすくし、技術的に取得できる状態にしたうえで、拾われたか・引用されたか・正しく紹介されたかを分けて測るよう求めています。</p>
+<h3 id="s4-3">よく聞く説明と一次情報</h3>
+<p>GEO対策の提案や記事でよく見る説明を、一次情報と並べます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>よく聞く説明</th>
+<th>Googleのガイドなど一次情報の記述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="よく聞く説明">論文でAIの回答での露出が最大40%上がると実証された</td>
+<td data-label="Googleのガイドなど一次情報の記述">5件を渡した実験の中の語数の割合の伸び。検索に拾われる率は測っていない</td>
+</tr>
+<tr>
+<td data-label="よく聞く説明">llms.txtを置くとAIに読まれやすい</td>
+<td data-label="Googleのガイドなど一次情報の記述">Google検索はllms.txtを使わず、置いても表示や順位に影響しない</td>
+</tr>
+<tr>
+<td data-label="よく聞く説明">AIのために文章を小さく区切る</td>
+<td data-label="Googleのガイドなど一次情報の記述">細かく分ける必要はない。Googleはページの複数の話題を理解できる</td>
+</tr>
+<tr>
+<td data-label="よく聞く説明">問いの言い換えごとにページを作る</td>
+<td data-label="Googleのガイドなど一次情報の記述">ランキングや回答を操作する目的なら、スパムポリシーの大量生成コンテンツの不正使用に当たる</td>
+</tr>
+<tr>
+<td data-label="よく聞く説明">構造化データがAI対策に必須</td>
+<td data-label="Googleのガイドなど一次情報の記述">生成AI検索に構造化データは要らない。リッチリザルトのためには引き続き勧める</td>
+</tr>
+<tr>
+<td data-label="よく聞く説明">言及を増やせば推薦される</td>
+<td data-label="Googleのガイドなど一次情報の記述">作られた言及（英語版ではinauthentic mentions）を集めても役に立たない</td>
+</tr>
+</tbody>
+</table></div>
+<p>右の列はGoogle検索（AIによる概要・AIモード）についての説明で、ChatGPTやPerplexityでの扱いはこのガイドには書かれていません。</p>
+<h2 id="s5">会社が実際にやること</h2>
+<p>論文の書き換えの手法より先に、会社として決めることがあります。</p>
+<h3 id="s5-1">測る質問を決める</h3>
+<p>最初に、見込み客がAIに聞きそうな質問を数十問書き出します。社名を入れない質問（「工場の省エネ設備を相談できる会社は？」のような種類の質問）と、社名を入れた質問（「〇〇社の評判は？」）は分けます。<strong>新しい顧客につながるのは社名を入れない質問で候補に入るかどうかです。</strong></p>
+<p>質問の案はマーケ担当より、営業とカスタマーサポートが多く持っています。商談で最初に聞かれること、比べられた相手、失注の理由を集めると、実際の質問に近づきます。</p>
+<h3 id="s5-2">AIに読まれる状態か確かめる</h3>
+<p>Googleの<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI機能とウェブサイト</a>によると、AIによる概要やAIモードにリンクとして出る条件は、ページがインデックスに登録され、検索でスニペットを表示できることです。追加の技術要件はありません。Search Consoleの<a href="https://support.google.com/webmasters/answer/16908024?hl=ja">検索の生成AI設定</a>は既定でサイトを含める設定になっていて、除外にするとリンクにも回答の根拠にも使われなくなります。</p>
+<p>ChatGPTの検索は別の仕組みです。OpenAIの<a href="https://developers.openai.com/api/docs/bots">クローラーの説明</a>は、robots.txtでOAI-SearchBotを止めたサイトはChatGPTの検索の回答に出ないと書いています。CDNやサーバーで止まっていないかを含めた確かめ方は、<a href="/media/chatgpt-search-citation/">ChatGPT検索で引用元に出る条件</a>にまとめました。</p>
+<h3 id="s5-3">回答の材料になる情報を載せる</h3>
+<p>誰でも書ける一般論（Googleの例は「初めて住宅を購入する人向けの7つのヒント」）より、独自の経験や専門の見方に基づく内容をGoogleのガイドは勧めています。総説が再現しやすいとした要素も、問いとの関係の深さと、確かめられる数字・定義・比較でした。</p>
+<p>会社のサイトで言えば、料金の決まり方、納期、対応できない条件、導入事例の数字、比べられたときの違いのように、社内にしかない情報です。営業資料には書いてあるのにサイトに出ていない情報があれば、そこから出します。</p>
+<h3 id="s5-4">外部の情報をそろえる</h3>
+<p>地域の会社ならGoogleビジネスプロフィール、ECならMerchant Centerの情報を最新にするよう、Googleのガイドは勧めています。会社名・所在地・サービスの説明が、自社サイト・ビジネスプロフィール・業界の比較サイトで食い違っていないかも見ます。総説が引く調査（Kirstenほか、2026年）では、GoogleのAIによる概要が引用したドメインの53%が通常の検索の上位10件に入っていませんでした。</p>
+<p>社内で分けるなら、たとえば次のようになります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>やること</th>
+<th>主な担当</th>
+<th>外部に依頼しやすいか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="やること">測る質問を決める</td>
+<td data-label="主な担当">マーケ担当・営業</td>
+<td data-label="外部に依頼しやすいか">案は出してもらえるが、決めるのは社内</td>
+</tr>
+<tr>
+<td data-label="やること">読まれる状態の確認</td>
+<td data-label="主な担当">Webの担当・制作会社</td>
+<td data-label="外部に依頼しやすいか">依頼しやすい</td>
+</tr>
+<tr>
+<td data-label="やること">回答の材料になる情報</td>
+<td data-label="主な担当">事業の責任者・営業</td>
+<td data-label="外部に依頼しやすいか">情報は社内から。文章にする作業は依頼できる</td>
+</tr>
+<tr>
+<td data-label="やること">外部の情報をそろえる</td>
+<td data-label="主な担当">広報・店舗の担当</td>
+<td data-label="外部に依頼しやすいか">一部は依頼できる</td>
+</tr>
+<tr>
+<td data-label="やること">測って直す</td>
+<td data-label="主な担当">マーケ担当</td>
+<td data-label="外部に依頼しやすいか">作業は依頼できる。目標は社内で決める</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="s6">測定と改善の回し方</h2>
+<h3 id="s6-1">同じ問いを何回も聞く</h3>
+<p>生成AIの回答は同じ問いでも聞くたびに変わります。商用のAIを調べた研究では引用元の重なりが小さく、回ごとのばらつきも大きいと総説はまとめました。<strong>1回聞いて出た・出ないで判断せず、同じ問いを同じ条件で何回か聞き、出た割合で見ます。</strong> AIごとに引用元が違うので、ChatGPT・Gemini・Perplexity・GoogleのAIモードのように対象を決め、AIごとに分けて測ります。</p>
+<p>直すときは一度に1つずつ変え、前と同じ問い・同じ回数で測り直します。月に1回のように間隔も決めておくと、何が効いたかを追えます。</p>
+<figure class="post-figure"><img src="/media/images/geo-taisaku/geo_03_loop.png" alt="測る・直す・測るの回し方。同じ問いを何回も聞く、一度に1つだけ直す、同じ条件で測り直す" loading="lazy"></figure>
+
+<h3 id="s6-2">Search Consoleの生成AIレポート</h3>
+<p>Googleの分は、Search Consoleの<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成AIパフォーマンスレポート</a>で見られます。2026年8月31日に全サイトに公開され、AIによる概要とAIモードでサイトへのリンクが表示された回数を、ページ・国・デバイス・日付に分けて出します。表示が少ないサイトではレポート自体が出ないこともあります。</p>
+<h3 id="s6-3">目標を問い合わせまで置く</h3>
+<p>AIの回答で社名を知った人が、その場でリンクを押さずにあとで社名を検索して来ることもあります。その人はGA4ではAIから来たとは記録されません。<strong>nitoが支援するSaaS企業では、会員登録のときのアンケートで登録した人の26.7%がAI検索で知った・比べたと答えた一方、同じ期間のGA4でAIから来た割合は0.007%でした。</strong></p>
+<p>そのため目標は、回答に名前が出た割合（言及率）だけに置かず、問い合わせのフォームや商談の最初に何で知ったかを聞いて、AIを選んだ数まで置きます。言及率は週ごとに大きく揺れることがあるので、問い合わせの数と並べて月単位で見ます。GA4での見方と聞き方は<a href="/media/ai-search-measurement/">AI検索対策の効果はどう測る？</a>に書いています。</p>
+<h2 id="s7">外部に依頼するときの確認点</h2>
+<p>AEO・GEOの助言を含めた業者の選び方は、Googleの<a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=ja">SEO業者の利用を検討する</a>のページに挙がっています。そこからGEO対策の見積もりで聞く点に絞ると、次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>確かめること</th>
+<th>聞き方の例</th>
+<th>気をつけたい答え</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="確かめること">目標</td>
+<td data-label="聞き方の例">何をもって成果とするか</td>
+<td data-label="気をつけたい答え">言及率だけで、問い合わせの数を見ない</td>
+</tr>
+<tr>
+<td data-label="確かめること">測り方</td>
+<td data-label="聞き方の例">どのAIに、何問を、何回ずつ聞くか</td>
+<td data-label="気をつけたい答え">1回だけ聞いた結果で良し悪しを言う</td>
+</tr>
+<tr>
+<td data-label="確かめること">根拠</td>
+<td data-label="聞き方の例">施策の根拠になる資料はどれか</td>
+<td data-label="気をつけたい答え">論文の40%を、AIでの露出が40%上がると説明する</td>
+</tr>
+<tr>
+<td data-label="確かめること">納品物</td>
+<td data-label="聞き方の例">毎月何が変わるか</td>
+<td data-label="気をつけたい答え">llms.txtや構造化データの設置だけで終わる</td>
+</tr>
+<tr>
+<td data-label="確かめること">権限</td>
+<td data-label="聞き方の例">最初に何の権限が要るか</td>
+<td data-label="気をつけたい答え">診断の段階でSearch Consoleの書き込み権限を求める</td>
+</tr>
+<tr>
+<td data-label="確かめること">保証</td>
+<td data-label="聞き方の例">結果を約束するか</td>
+<td data-label="気をつけたい答え">AIで必ず紹介される、上位を保証すると言う</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>診断の段階ではSearch Consoleの権限を読み取りだけにし、掲載順位を保証すると言う業者には注意するよう、Googleのページは勧めています。</strong> 第三者のツールについても、Googleの内部のデータには触れられず、予測は保証ではないと書いています。</p>
+<p>決裁で揉めやすいのは期間です。流入や売上への効果は研究の証拠がいちばん弱い部分で、投資対効果の主張が学術の証拠を大きく上回っていると総説は書きました。契約の前に、何か月目にどの数字を見て次の手を決めるかを社内で合わせておくと、途中の判断が速くなります。費用の幅と作業の分け方は<a href="/media/llmo-cost/">LLMO対策の費用相場</a>、社内との分け方は<a href="/media/llmo-inhouse-vs-outsource/">内製と外注どちらがいい？</a>にまとめています。海外の支援会社が出している成果の数字は<a href="/media/overseas-geo-cases/">海外のAI検索対策の成功事例</a>で読めます。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Q. GEO対策とLLMO対策は何が違いますか？</h3>
+<p>指す取り組みはほぼ同じです。GEOは英語の論文から海外で広まった言葉で、日本の支援会社のサービス名にはLLMOやAIOもよく使われます。見積もりでは呼び名でなく、診断・修正・制作・測定のどこまで入るかで比べてください。</p>
+<h3 id="s8-2">Q. GEO対策をすればChatGPTで必ず紹介されますか？</h3>
+<p>必ずではありません。元の論文の最大40%はAIにあらかじめ渡した5件の中での伸びで、ChatGPTが自分で検索してページを選ぶ場面は試していません。同じ問いを何回か聞き、出た割合で確かめます。</p>
+<h3 id="s8-3">Q. Google検索のAIモードに出るためにGEO対策は特別に必要ですか？</h3>
+<p>Googleは必要ないと書いています。公式ガイドによると、AIによる概要やAIモードに出るための追加の要件は無く、インデックスに登録されてスニペットを表示できることが条件です。Google検索の観点では、生成AI向けの最適化もSEOに含まれます。</p>
+<h3 id="s8-4">Q. llms.txtを置けばGEO対策になりますか？</h3>
+<p>Google検索については効果がありません。Googleの公式ガイドは、Google検索はllms.txtを使わず、置いても表示や順位に影響しないと書いています。ほかのサービスのために置くのは問題ないとも書いていますが、ChatGPTなどの扱いはこのガイドには書かれていません。</p>
+<h3 id="s8-5">Q. GEO対策の効果はGoogle Search Consoleで見られますか？</h3>
+<p>Googleの分は見られます。生成AIパフォーマンスレポートで、AIによる概要とAIモードでの表示回数をページごとに確かめられます。ChatGPTやPerplexityの分は入らないため、問い合わせのときに何で知ったかを聞く方法と組み合わせてください。</p>
+<h3 id="s8-6">Q. GEO対策は自社だけでできますか？</h3>
+<p>問いを決める、AIに聞いて記録する、自社の情報を書き足す、といった作業は社内でできます。小規模な地域の会社なら作業の多くを自分でできると、Googleも書いています。サイトの技術的な不具合の修正や測る仕組みづくりは、外に依頼したほうが早い作業です。</p>
+<h2 id="s9">出典</h2>
+<ul>
+<li>Aggarwal, P. ほか「<a href="https://arxiv.org/abs/2311.09735">GEO: Generative Engine Optimization</a>」arXiv 2311.09735 v3（2024年6月28日改訂、KDD 2024）（2026年10月23日取得）</li>
+<li>GEOのコードとプロンプト「<a href="https://github.com/GEO-optim/GEO">GEO-optim/GEO</a>」GitHub（同）</li>
+<li>Martinez, O.「<a href="https://arxiv.org/abs/2607.14035">Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)</a>」arXiv 2607.14035（2026年7月15日、査読前）（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索の生成 AI 機能向けにウェブサイトを最適化する</a>」2026年10月9日更新（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI 機能とウェブサイト</a>」2025年12月31日更新（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=ja">SEO 業者の利用を検討する</a>」2026年6月10日更新（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja">サードパーティの SEO ツール、サービス、アドバイスの使用に関する Google 検索のガイダンス</a>」2026年6月10日更新（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成 AI パフォーマンス レポート（検索）</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16908024?hl=ja">検索の生成 AI 設定</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/bots">Overview of OpenAI Crawlers</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">GEO対策とは何か</a><a href="#s2">LLMO・AIOとの違い</a><a href="#s3">元の論文で分かったこと</a><a href="#s4">論文に書いていないこと</a><a href="#s5">会社が実際にやること</a><a href="#s6">測定と改善の回し方</a><a href="#s7">外部に依頼するときの確認点</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-crawler-robots/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIクローラーの許可と拒否"><defs><linearGradient id="ecg-b6a5c61e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b6a5c61e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIクローラーの許可と拒否</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.23</div>
+                <div class="rel-card__ttl">【2026年10月】GPTBotなどAIクローラーをrobots.txtで止めるかの判断と書き方</div>
+            </a>
+            <a href="/media/ai-mode-shopping/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIモードに商品を載せる"><defs><linearGradient id="ecg-4697b34a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4697b34a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">ショッピング</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIモードに商品を載せる</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.22</div>
+                <div class="rel-card__ttl">【2026年10月】Google AIモードのショッピングに商品を載せる方法と日本の状況</div>
+            </a>
+            <a href="/media/chatgpt-search-citation/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT検索の引用元"><defs><linearGradient id="ecg-a934f38d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a934f38d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPT検索の引用元</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.22</div>
+                <div class="rel-card__ttl">【2026年10月】ChatGPT検索で引用元に出る条件とは？OAI-SearchBotと流入の見方</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'geo-taisaku',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
