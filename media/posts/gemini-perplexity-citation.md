@@ -33,7 +33,7 @@ ChatGPTの対策を進めた会社でも、GeminiとPerplexityは引用元を探
 
 ChatGPTの検索で引用元に出る条件は[ChatGPT検索で引用元に出る条件](/media/chatgpt-search-citation/)に、Google検索のAIによる概要は[AI Overviewsに引用されるには？](/media/cited-by-ai-overviews/)に分けて書いています。AIによる概要とAIモードはGoogle検索の中の機能で、この記事ではGeminiアプリと別の製品として扱います。
 
-<!-- SHOT: 図 gpc_overview.html → gpc_01_overview.png・alt「GeminiとPerplexityが引用元を探す先の違い。GeminiはGoogle検索の索引から、Perplexityは自前の索引から読み、サイト側で外す設定はGoogle-ExtendedとPerplexityBot」 -->
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_01_overview.png" alt="GeminiとPerplexityが引用元を探す先の違い。GeminiはGoogle検索の索引から、Perplexityは自前の索引から読み、サイト側で外す設定はGoogle-ExtendedとPerplexityBot" loading="lazy"></figure>
 
 ## Geminiが引用元を選ぶ仕組み
 
@@ -47,7 +47,7 @@ Geminiアプリの[プライバシー ハブ](https://support.google.com/gemini/
 
 Search Centralの[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)は特別な構造化データは要らないとしていますが、対象はAIによる概要とAIモードです。Geminiアプリで構造化データが引用に効くかは公開されていません。
 
-<!-- SHOT: 図 gpc_gemini_flow.html → gpc_02_gemini.png・alt「Geminiアプリが回答を作るときの流れ。質問を読む、Google検索の索引から内容を受け取る、回答を書く、ソースボタンにリンクを出す。Google-Extendedを止めたページは受け取る段階で外れる」 -->
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_02_gemini.png" alt="Geminiアプリが回答を作るときの流れ。質問を読む、Google検索の索引から内容を受け取る、回答を書く、ソースボタンにリンクを出す。Google-Extendedを止めたページは受け取る段階で外れる" loading="lazy"></figure>
 
 ### ソースボタンの見方
 
@@ -55,13 +55,13 @@ Geminiアプリのヘルプ「[Gemini アプリの関連ソースを表示する
 
 Googleの検索結果ではこのページの題に回答の再確認（double-check）も含めて表示されますが、2026年10月24日に開いた本文に再確認の説明はありませんでした。**引用を数えるときはソースボタンのパネルに出たリンクだけを数えます。**
 
-<!-- SHOT: 画面 https://support.google.com/gemini/answer/14143489?hl=ja・本文だけにある探す語「すべての回答に関連リンクやソースが含まれるわけではありません」・赤枠にする語「回答の下に [ソース] ボタンが表示されない場合は、その回答に対しては、Gemini アプリがリンクを提供しなかったことを意味します」・PC・alt「Gemini アプリ ヘルプの関連ソースのページ。ソースボタンが無い回答ではGeminiアプリがリンクを出していないと書かれている」・figcaption「Gemini アプリ ヘルプ『Gemini アプリの関連ソースを表示する』（2026年10月24日）」 -->
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_shot_gemini_help.png" alt="Gemini アプリ ヘルプの関連ソースのページ。ソースボタンが無い回答ではGeminiアプリがリンクを出していないと書かれている" loading="lazy"><figcaption>Gemini アプリ ヘルプ『Gemini アプリの関連ソースを表示する』（2026年10月24日）</figcaption></figure>
 
 ### Google-Extendedを止めた場合
 
 robots.txtで学習用のボットをまとめて止めている会社は、Google-Extendedを先に確かめます。一覧によるとGoogle-Extendedが管理するのはGeminiの学習とGeminiアプリでのグラウンディングで、**止めるとGeminiアプリの回答の根拠に自社のページが使われなくなります**。Google検索には影響しないため、AIによる概要とAIモードには出続けます。学習は断りつつGeminiでは見つけてもらう設定は無いので、集客を持つマーケ担当と文章の扱いを決める広報や法務で、どちらを取るかを決めます。書き方の詳細は[AIクローラーをrobots.txtで止めるかの判断と書き方](/media/ai-crawler-robots/)で扱いました。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=ja#google-extended・本文だけにある探す語「スタンドアロンのプロダクト トークン」・赤枠にする語「Gemini アプリでのグラウンディング（事実確認と関連性向上を目的として、プロンプト入力時に Google の検索インデックスからモデルにコンテンツを提供すること）」・PC・alt「Googleの一般的なクローラーの一覧のGoogle-Extendedの節。Geminiアプリでのグラウンディングに自社サイトの内容を使うかを管理できると書かれている」・figcaption「Google 検索セントラル『Google の一般的なクローラー』のGoogle-Extendedの節（2026年10月24日）」 -->
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_shot_google_extended.png" alt="Googleの一般的なクローラーの一覧のGoogle-Extendedの節。Geminiアプリでのグラウンディングに自社サイトの内容を使うかを管理できると書かれている" loading="lazy"><figcaption>Google 検索セントラル『Google の一般的なクローラー』のGoogle-Extendedの節（2026年10月24日）</figcaption></figure>
 
 ### 地域の質問と地図の答え
 
@@ -79,7 +79,7 @@ Bingの索引も見ているとしてBing Webmaster Toolsへの登録を勧め�
 
 同じ記事によると、索引には権威のあるドメインや扱いの少ない話題の文書を優先して残し、入れ直すかはページの重要さと更新の頻度から予測するという説明です。候補は語の一致と意味の近さの両方で集め、文書と、文書を分けた小さな単位の両方で採点します。
 
-<!-- SHOT: 図 gpc_pplx_flow.html → gpc_03_pplx.png・alt「Perplexityが回答を作るときの流れ。PerplexityBotが巡回して自前の索引に入れる、ページを段落ほどの単位に分ける、語の一致と意味の近さで候補を集めて採点する、番号つきの引用で回答する」 -->
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_03_pplx.png" alt="Perplexityが回答を作るときの流れ。PerplexityBotが巡回して自前の索引に入れる、ページを段落ほどの単位に分ける、語の一致と意味の近さで候補を集めて採点する、番号つきの引用で回答する" loading="lazy"></figure>
 
 ### PerplexityBotとPerplexity-User
 
@@ -92,7 +92,7 @@ Perplexityのボットは2つあり、[Perplexity Crawlers](https://docs.perplex
 
 **検索結果に出たいなら、robots.txtでPerplexityBotを許可し、公開IPからの通信をWAFでも通します**。CloudflareとAWSのWAFでの手順も同じページにあり、反映は最大24時間です。WAFを持つ情報システムの担当や制作会社に頼むときは、[PerplexityBotのIPアドレスの一覧](https://www.perplexity.com/perplexitybot.json)のURLを添えます。
 
-<!-- SHOT: 画面 https://docs.perplexity.ai/guides/bots・本文だけにある探す語「Each setting works independently」・赤枠にする語「To ensure your site appears in search results, we recommend allowing PerplexityBot」・PC・alt「Perplexity CrawlersのページのPerplexityBotの行。検索結果に出すためにrobots.txtでの許可と公開IPからの通信の許可を勧め、学習には使わないと書かれている」・figcaption「Perplexity『Perplexity Crawlers』（2026年10月24日）」 -->
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_shot_pplx_bots.png" alt="Perplexity CrawlersのページのPerplexityBotの行。検索結果に出すためにrobots.txtでの許可と公開IPからの通信の許可を勧め、学習には使わないと書かれている" loading="lazy"><figcaption>Perplexity『Perplexity Crawlers』（2026年10月24日）</figcaption></figure>
 
 ### 番号つきの引用とモデル
 
@@ -140,7 +140,7 @@ GeminiもPerplexityも同じ質問への回答が聞くたびに変わるため�
 
 Geminiは検索やYouTubeの履歴など他のGoogleのサービスの情報を使うことがあると[プライバシー ハブ](https://support.google.com/gemini/answer/13594961?hl=ja)にあるため、担当者の個人のアカウントでは測りません。nitoは商談の前の計測で1つの質問を各AIに2回ずつ聞き、案件の毎日の計測では14の質問を4つのAIに1日1回ずつ聞いています。
 
-<!-- SHOT: 図 gpc_conditions.html → gpc_04_conditions.png・alt「引用を測るときにそろえる3つの条件。ログインの状態は測定用のアカウントにそろえる、モードとモデルの名前を記録する、同じ質問を同じ日に2回以上聞く」 -->
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_04_conditions.png" alt="引用を測るときにそろえる3つの条件。ログインの状態は測定用のアカウントにそろえる、モードとモデルの名前を記録する、同じ質問を同じ日に2回以上聞く" loading="lazy"></figure>
 
 ### 記録する項目
 
@@ -158,7 +158,7 @@ Geminiは検索やYouTubeの履歴など他のGoogleのサービスの情報を�
 
 引用元に自社のURLが入ったのに社名が回答に出ないなら、ページは読まれていても紹介の材料になる文が無いということで、直すのはページの中身です。社名が出たのに自社のURLが無いなら、他社の記事や比較サイトの文から紹介されているので、その記事が自社をどう書いているかを確かめます。
 
-<!-- SHOT: 図 gpc_record.html → gpc_05_record.png・alt「引用を記録する1行の項目。日時、AIとモード、ログインの状態、質問、社名が出たか、引用元のURL、自社のURLが何番目か」 -->
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_05_record.png" alt="引用を記録する1行の項目。日時、AIとモード、ログインの状態、質問、社名が出たか、引用元のURL、自社のURLが何番目か" loading="lazy"></figure>
 
 ### GA4とSearch Consoleで見えるもの
 
