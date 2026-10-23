@@ -23,7 +23,7 @@ GEO対策ツール（AIO対策ツールとも呼ばれます）は、ChatGPTやG
 
 どの製品も、登録した質問（プロンプト）をAIに定期的に投げて回答を保存し、自社と競合が何回出たかを数えるところは共通しています。数える対象は回答の文に社名が出たか（言及）、自社のページが出典としてリンクされたか（引用）、AIがどのサイトを参考にしたか（引用元）の3つです。ミエルカGEO・DolphinX AIO・LLMOチェキのように、GA4と連携してAIから来た人の流入や問い合わせまで並べる製品もあります。
 
-<!-- SHOT: 図 gtl_measure.html → gtl_01_measure.png・alt「GEO対策ツールが測る4つ。回答に社名が出たか、自社のページが引用されたか、AIが参考にしたサイト、AIから来た人と問い合わせ」 -->
+<figure class="post-figure"><img src="/media/images/geo-aio-tools/gtl_01_measure.png" alt="GEO対策ツールが測る4つ。回答に社名が出たか、自社のページが引用されたか、AIが参考にしたサイト、AIから来た人と問い合わせ" loading="lazy"></figure>
 
 **製品の差が出るのは、測れるAIの種類と、1つの質問を何回くり返して数えるか、そして料金の単位です。** 言及モニタリング・サイト診断・流入計測という種類の違いと選定基準は[LLMOツールはどう選ぶ？](/media/llmo-tools/)にまとめてあるので、この記事では製品名で比べます。
 
@@ -56,17 +56,17 @@ GEO対策ツール（AIO対策ツールとも呼ばれます）は、ChatGPTやG
 
 [AIsearchmap](https://aisearchmap.jp/)はCINCの製品で、ChatGPT・Gemini・Perplexity・GoogleのAIモードとAIによる概要の5つを測れます。**フリープランは0円でChatGPTだけを25問まで測れ、期間を区切ったトライアルはありません。** 有料のエンタープライズは月5万円で800問（4つのAI×各200問）からで、記事の制作やサイトの修正までCINCが受け持つ実行支援プランは月19.8万円（税別）です。回答の全文を保存し、AIが引用したURLを順に並べる画面があります。
 
-<!-- SHOT: 画面 https://aisearchmap.jp/ ・本文だけにある探す語「ChatGPTを対象に25プロンプトまで無料で計測できます」・赤枠にする語「¥ 0 /月」と「プロンプト数：25」・PC・alt「AIsearchmapの料金プラン。フリーは0円でChatGPTを25プロンプトまで、エンタープライズは月5万円で800プロンプトから」・figcaption「AIsearchmapの料金プラン（2026年10月24日）」 -->
+<figure class="post-figure"><img src="/media/images/geo-aio-tools/gtl_shot_aisearchmap.png" alt="AIsearchmapの料金プラン。フリーは0円でChatGPTを25プロンプトまで、エンタープライズは月5万円で800プロンプトから" loading="lazy"><figcaption>AIsearchmapの料金プラン（2026年10月24日）</figcaption></figure>
 
 ### DolphinX AIO
 
 [DolphinX AIO](https://dolphinx.jp/aio)はメディアリーチの製品です。毎日の計測はChatGPT・Gemini・AIモード・Copilot・AIによる概要が対象で、AIによる概要はプロプランから、ClaudeとPerplexityは追加のオプションになります。**[料金](https://dolphinx.jp/aio/pricing)は6ヶ月契約が基本で、ライトが月30,000円（20問×4つのAI）、プロが月50,000円（50問×4つのAI）、ビジネスが月100,000円（いずれも税別）です。** 12ヶ月契約にするとライトは月27,000円に下がります。14日間の無料トライアルはカードの登録が要らず、期間が終わっても自動では課金されません。同じ質問をその場で10回続けて投げ、言及された確率を出すオンデマンド計測もあります。
 
-<!-- SHOT: 画面 https://dolphinx.jp/aio/pricing ・本文だけにある探す語「6ヶ月契約が基本です」・赤枠にする語「6ヶ月契約が基本です。12ヶ月契約は月あたりがお得になります。」と「¥30,000 ／月」・PC・alt「DolphinX AIOの料金ページ。6ヶ月契約が基本で、ライトは月30,000円（税別）」・figcaption「DolphinX AIOの料金（2026年10月24日）」 -->
+<figure class="post-figure"><img src="/media/images/geo-aio-tools/gtl_shot_dolphinx.png" alt="DolphinX AIOの料金ページ。6ヶ月契約が基本で、ライトは月30,000円（税別）" loading="lazy"><figcaption>DolphinX AIOの料金（2026年10月24日）</figcaption></figure>
 
 ### LLMOチェキ
 
-[LLMOチェキ](https://llmocheki.com/)はIteraの製品で、ChatGPT・Gemini・Claude・Perplexity・Grok・AIモード・AIによる概要・Copilotの8つを測れます。**グロースプランが月50,000円、スケールプランが月85,000円（どちらも税別・6ヶ月契約）で、この価格は2026年10月1日以降の新規契約のものと公式ページにあります。** 7日間の無料トライアルでは全機能を使え、カードの登録は要りません。同じ質問をくり返して「10回中4回＝40%（95%信頼区間17〜69%）」のように幅をつけて記録するのが特徴でです。
+[LLMOチェキ](https://llmocheki.com/)はIteraの製品で、ChatGPT・Gemini・Claude・Perplexity・Grok・AIモード・AIによる概要・Copilotの8つを測れます。**グロースプランが月50,000円、スケールプランが月85,000円（どちらも税別・6ヶ月契約）で、この価格は2026年10月1日以降の新規契約のものと公式ページにあります。** 7日間の無料トライアルでは全機能を使え、カードの登録は要りません。同じ質問をくり返して「10回中4回＝40%（95%信頼区間17〜69%）」のように幅をつけて記録するのが特徴です。
 
 ### AKARUMI
 
@@ -78,13 +78,13 @@ GEO対策ツール（AIO対策ツールとも呼ばれます）は、ChatGPTやG
 
 SemrushのAI Visibility Toolkitは、SEOツールのSemrushにAI向けの分析を足す製品です。**[ヘルプ](https://www.semrush.com/kb/1493-ai-visibility-toolkit)によると料金は月99ドルで、無料トライアルはありません。** 毎日追える質問は25問で、50問の追加は月60ドル、同じ会社で使う人を増やすと1人ごとに99ドルが加わる料金です。ヘルプが例に挙げるAIはChatGPTとGoogleのAIモードで、競合と比べるレポートの対象国には日本も入っています。
 
-<!-- SHOT: 画面 https://www.semrush.com/kb/1493-ai-visibility-toolkit ・本文だけにある探す語「the AI Visibility Toolkit does not offer a free trial」・赤枠にする語「Price: $99 per month.」と「Trial: No, the AI Visibility Toolkit does not offer a free trial.」・PC・alt「SemrushのヘルプのAI Visibility Toolkitの料金。月99ドルで無料トライアルはない」・figcaption「Semrushのヘルプ（2026年10月24日）」 -->
+<figure class="post-figure"><img src="/media/images/geo-aio-tools/gtl_shot_semrush.png" alt="SemrushのヘルプのAI Visibility Toolkitの料金。月99ドルで無料トライアルはない" loading="lazy"><figcaption>Semrushのヘルプ（2026年10月24日）</figcaption></figure>
 
 ### Ahrefs Brand Radar
 
 [Ahrefs Brand Radar](https://ahrefs.com/brand-radar)は、Ahrefsのキーワードのデータから作った4億9,600万件の質問をAIに投げた結果を持っていて、質問を登録しなくても市場の中での自社の出方を調べられます。対象はAIによる概要・AIモード・ChatGPT・Perplexity・Gemini・Copilotで、自分で決めた質問はClaudeでも測れます。**[料金ページ](https://ahrefs.com/pricing)の円表示では、Brand Radar AIが月30,600円から、自分の質問だけを測るパッケージは月7,700円からです。** AhrefsのLite〜Advancedのプランには自分の質問が5〜20問含まれ、割引と無料トライアルは行っていないと料金ページのFAQにあります。日本語の質問をどこまで扱えるかは、公式ページで見つけられませんでした。
 
-<!-- SHOT: 画面 https://ahrefs.com/pricing ・本文だけにある探す語「Custom prompt packages」・赤枠にする語「Get started from ¥30,600/mo」と「¥7,700/mo」・PC・alt「Ahrefsの料金ページ。Brand Radar AIは月30,600円から、自分の質問を測るパッケージは月7,700円から」・figcaption「Ahrefsの料金ページ（2026年10月24日）」 -->
+<figure class="post-figure"><img src="/media/images/geo-aio-tools/gtl_shot_ahrefs.png" alt="Ahrefsの料金ページ。Brand Radar AIは月30,600円から、自分の質問を測るパッケージは月7,700円から" loading="lazy"><figcaption>Ahrefsの料金ページ（2026年10月24日）</figcaption></figure>
 
 ### Otterly.AI
 
@@ -106,7 +106,7 @@ GoogleとMicrosoftは、自社のAIでサイトがどれだけ表示・引用さ
 
 ## 会社が選ぶときの決め方
 
-<!-- SHOT: 図 gtl_steps.html → gtl_02_steps.png・alt「GEO対策ツールを選ぶ順番。測る質問とAIを決める、回答の数え方を確かめる、契約期間の総額で比べる、試用で自社の質問を入れる」 -->
+<figure class="post-figure"><img src="/media/images/geo-aio-tools/gtl_02_steps.png" alt="GEO対策ツールを選ぶ順番。測る質問とAIを決める、回答の数え方を確かめる、契約期間の総額で比べる、試用で自社の質問を入れる" loading="lazy"></figure>
 
 ### 測る質問とAIを先に決める
 
@@ -120,7 +120,7 @@ GoogleとMicrosoftは、自社のAIでサイトがどれだけ表示・引用さ
 
 DolphinX AIOとLLMOチェキは6ヶ月契約が基本なので、月額だけで稟議を出すと決裁額を読み違えます。6ヶ月使った場合の月額の合計（税別）は、DolphinX AIOのライトで18万円、LLMOチェキのグロースで30万円です。**比べるときは総額を測れる質問の数で割り、1問あたりの費用にそろえます。**
 
-<!-- SHOT: 図 gtl_cost.html → gtl_03_cost.png・alt「6ヶ月使った場合の月額の合計（税別）。DolphinX AIOライト18万円で20問、AIsearchmapエンタープライズ30万円で200問、LLMOチェキグロース30万円、ミエルカGEO単一サイト29万8,800円と初期費用」 -->
+<figure class="post-figure"><img src="/media/images/geo-aio-tools/gtl_03_cost.png" alt="6ヶ月使った場合の月額の合計（税別）。DolphinX AIOライト18万円で20問、AIsearchmapエンタープライズ30万円で200問、LLMOチェキグロース30万円、ミエルカGEO単一サイト29万8,800円と初期費用" loading="lazy"></figure>
 
 税の表記にも気をつけます。ミエルカGEOの月額は税抜49,800円で、税込にすると54,780円です。ドル建ての製品は為替で円の金額が動き、Semrushのように使う人を足すごとに料金が増える製品もあります。
 
@@ -152,7 +152,7 @@ DolphinX AIOとLLMOチェキは6ヶ月契約が基本なので、月額だけで
 
 Googleは[第三者のSEOツールについてのガイダンス](https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja)で、AEO・GEOのツールも含め、第三者のツールはGoogleの内部のランキングデータにアクセスできず、成果も保証できないとしています。**ツールが出すのは登録した質問で試したときの結果です。** 自社が出ていない質問と、AIが代わりに引用したサイトは分かりますが、自社のどのページのどの文を直せば回答が変わるかは、測った数字から人が読み解くことになります。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja ・本文だけにある探す語「サードパーティ ツールは、Google の内部ランキング データにアクセスすることも」・赤枠にする語「サードパーティ ツールは、Google の内部ランキング データにアクセスすることも、パフォーマンスを保証することもできません。」・PC・alt「Googleのガイダンス。第三者のツールはGoogleの内部ランキングデータにアクセスできず、パフォーマンスを保証できない」・figcaption「Google 検索セントラルのガイダンス（2026年10月24日）」 -->
+<figure class="post-figure"><img src="/media/images/geo-aio-tools/gtl_shot_google.png" alt="Googleのガイダンス。第三者のツールはGoogleの内部ランキングデータにアクセスできず、パフォーマンスを保証できない" loading="lazy"><figcaption>Google 検索セントラルのガイダンス（2026年10月24日）</figcaption></figure>
 
 直す作業は、自社のページに情報を書き足すことと、AIが引用している外部のサイトに載ることの2つに分かれます。AIsearchmapの実行支援プランは、ツールの会社が作業まで受ける例です。nitoは測る仕組みを自社で持つ支援会社で、測った回答から直すページと書き足す情報を決め、問い合わせの数で効果を確かめるところまでを支援しています。問い合わせで成果を見る方法は[AI検索対策の効果はどう測る？](/media/ai-search-measurement/)に書きました。
 
