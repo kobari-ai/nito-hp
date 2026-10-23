@@ -115,7 +115,7 @@ ChatGPTからMicrosoft 365のファイルを読むときは、[SharePointアプ�
 |---|---|---|---|
 | 入力を学習に使うか | 使わない | 既定で使わない | 既定で使わない |
 | データを日本に置けるか | 日本のテナントは製品条項の対象 | 対象外 | 日本を含む10地域から選ぶ |
-| 会話の保持と検索 | Purviewの保持ポリシーとコンテンツ検索 | 管理者が保持期間を設定 | 管理者が保持期間を設定、Compliance API |
+| 会話の保持と検索 | Purviewの保持ポリシーとコンテンツ検索 | 公式の比較表に記載なし | 管理者が保持期間を設定、Compliance API |
 
 Copilotは[製品条項のデータ所在地](https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/m365-dr-product-terms)の対象に、Microsoft 365 Copilotが2024年3月1日、Copilot Chatが2025年9月1日に加わりました。**既定の地域が日本のテナントなら、Copilotとのやり取りも日本に保存される約束に入っています。**ただしWebの検索に使う短い語句はBingに送られ、Microsoft 365とは別の扱いになると[エンタープライズ データ保護のページ](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/enterprise-data-protection)にあります。
 
@@ -123,7 +123,7 @@ ChatGPTでデータを日本に置けるのは、新しく導入するEnterprise
 
 <figure class="post-figure"><img src="/media/images/copilot-vs-chatgpt/ccv_09_learn_dr.png" alt="Microsoft Learnのデータ所在地のページ。対象の地域に日本が含まれ、ワークロードの表にMicrosoft 365 Copilotの追加日が2024年3月1日、Microsoft 365 Copilot Chatが2025年9月1日と書かれている" loading="lazy"><figcaption>Microsoft Learn「製品条項のデータ所在地」（2026年10月24日）</figcaption></figure>
 
-**ChatGPT Businessで管理者がメンバーの会話を見られるかは、OpenAIの2つのページで書き方が違います。**[Businessのデータ共有のヘルプ](https://help.openai.com/ja-jp/articles/8798634)は、他のメンバーの会話は自動で表示されず、利用状況の分析でも管理者は全員のチャットを見られないとしています。一方で[エンタープライズ プライバシーのページ](https://openai.com/ja-JP/enterprise-privacy/)のBusinessのFAQには、管理者が会話履歴を閲覧・エクスポート・削除できるとあります。社内規程で会話の監査が要る会社は、契約の前にOpenAIの営業かサポートに確かめておくべき項目です。
+**ChatGPT Businessのワークスペース管理者は、メンバーの会話履歴を閲覧・エクスポート・削除できると[エンタープライズ プライバシーのページ](https://openai.com/ja-JP/enterprise-privacy/)のBusinessのFAQにあります。**[Businessのデータ共有のヘルプ](https://help.openai.com/ja-jp/articles/8798634)が書いているのは、ほかのメンバーには会話が自動で表示されないことと、利用状況の分析や支出管理の画面から会話は見えないことです。管理者がどの画面から会話を開けるかはヘルプに手順が見当たらないため、社内規程で会話の監査が要る会社は、契約の前にOpenAIの営業かサポートに確かめておくべき項目です。
 
 ## 管理者が設定するところ
 
