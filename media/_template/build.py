@@ -440,11 +440,15 @@ def eyecatch_svg(headline, sub, tag, uid) -> str:
     return "".join(p)
 
 
-def eyecatch_html(meta) -> str:
-    """アイキャッチ。image指定があれば写真、なければブランド固定デザインSVGを自動生成。"""
+def eyecatch_html(meta, slug=None) -> str:
+    """アイキャッチ。image指定があれば写真、なければ gen_og.py の JPEG、それも無ければブランド固定デザインSVGを自動生成。
+    SVG だけだと Google 検索のサムネイルに使える画像がページに無く、著者の顔写真が出ていた（2026-10-23 希一さん）。"""
     img = meta.get("image", "")
     if img:
         return f'<div class="post-eyecatch"><img src="{html.escape(img)}" alt="{html.escape(meta["title"])}"></div>'
+    if slug and (ROOT / "images" / "og" / f"{slug}.jpg").exists():
+        return (f'<div class="post-eyecatch"><img src="/media/images/og/{slug}.jpg" alt="{html.escape(meta["title"])}" '
+                f'width="1200" height="628" fetchpriority="high"></div>')
     headline, sub, tag = cover_texts(meta)
     uid = hashlib.md5(f"{headline}|{tag}".encode()).hexdigest()[:8]
     return f'<div class="post-eyecatch post-eyecatch--svg">{eyecatch_svg(headline, sub, tag, uid)}</div>'
@@ -536,8 +540,10 @@ def build_jsonld(post) -> str:
         "articleSection": meta["category"],
         "inLanguage": "ja",
     }
-    if meta.get("image"):
-        article["image"] = meta["image"] if meta["image"].startswith("http") else SITE + meta["image"]
+    # 検索結果のサムネイルに使う画像。無いと本文の著者の顔写真が選ばれる（2026-10-23 希一さん）
+    img = og_image_url(meta, post["slug"])
+    if not img.endswith("/_default.jpg"):
+        article["image"] = img
 
     breadcrumb = {
         "@context": "https://schema.org",
@@ -595,7 +601,7 @@ def build_article(post, posts, template: str) -> str:
         "{{SLUG}}": post["slug"],
         "{{CATEGORY}}": html.escape(meta["category"]),
         "{{DATE}}": meta["date"].replace("-", "."),
-        "{{EYECATCH}}": eyecatch_html(meta),
+        "{{EYECATCH}}": eyecatch_html(meta, post["slug"]),
         "{{LEAD}}": post["lead"],
         "{{TOC}}": post["toc"],
         "{{BODY}}": post["body"],
