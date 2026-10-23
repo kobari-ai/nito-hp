@@ -46,9 +46,13 @@ MicrosoftとOpenAIでは、価格の通貨と税の書き方が違います。Mi
 
 Microsoftの金額は税抜、ChatGPTの金額は消費税の前の値です。[ChatGPTの料金ページ](https://chatgpt.com/ja-JP/pricing)のビジネス向けタブには、標準シートが3,050円（年額課金）・3,850円（月額課金）と円でも出ていました（2026年10月4日に確認）。席の数え方は「[ChatGPT Businessとは](/media/chatgpt-business/)」にまとめています。
 
+<!-- SHOT: 画面 https://chatgpt.com/ja-JP/pricing のビジネス向けタブ（「ビジネス」を押して切り替える）・本文だけにある探す語「2名以上」・赤枠 Businessの標準シートの円の金額と「年額課金」「月額課金」の注記・スマホ・alt「ChatGPTの料金ページのビジネス向けタブをスマホで開いた画面。Businessの標準シートの1ユーザーあたりの月額が円で表示され、年額課金と月額課金の金額が並んでいる」・figcaption「ChatGPTの料金ページのビジネス向けタブ（撮影日）」・撮るときに3,050円と3,850円のままか確かめ、変わっていたら本文の円と出典の注記の日付を直す -->
+
 <!-- SHOT: 画面 https://www.microsoft.com/ja-jp/microsoft-365/copilot/business の「Microsoft Copilot の価格」の Teams が含まれるプラン・年払いのカード3枚・本文だけにある探す語「Originally starting from」・赤枠「¥2,698」と「価格には消費税は含まれていません」・PC・alt「MicrosoftのCopilot Businessの価格ページ。年払いのカードが3枚並び、Microsoft 365 Copilot Businessは3,148円に取り消し線が引かれて2,698円、Business Standard（Copilotを含む）は3,523円、Business Premium（Copilotを含む）は4,797円で、どれもユーザー/月相当・年払い・価格には消費税は含まれていませんと書かれている」・figcaption「Copilot Businessの価格ページ（2026年10月24日）」 -->
 
 **Copilotの金額はCopilotだけの値段で、土台になるMicrosoft 365のライセンスは別に要ります。**Copilot BusinessならBusiness BasicやBusiness Standardなど、法人向けならE3やE5などです。価格ページには土台とCopilotを組み合わせた価格もあり、Business Standardと組み合わせると年払いで月3,523円、月払いで4,228円です。ChatGPT Businessは単独で契約でき、Microsoft 365の有無は問いません。
+
+<!-- SHOT: 画面 https://www.microsoft.com/ja-jp/microsoft-365/copilot/enterprise の「Microsoft Copilot の価格」の Microsoft 365 Copilot のカード・本文だけにある探す語「または毎月 ¥4,722 のお支払い」・赤枠「¥4,497」と「条件を満たす Microsoft 365 プランのライセンスが別途必要です」・PC・alt「法人向けMicrosoft 365 Copilotの価格のカード。ユーザー/月相当・年払いで4,497円、または年間契約の毎月払いで4,722円、価格には消費税は含まれていません、条件を満たすMicrosoft 365プランのライセンスが別途必要ですと書かれている」・figcaption「法人向けMicrosoft 365 Copilotの価格ページ（2026年10月24日）」 -->
 
 最低の席数は両者で逆の向きに決まっています。Copilotは[2024年1月のMicrosoftの発表](https://www.microsoft.com/en-us/microsoft-365/blog/2024/01/15/expanding-copilot-for-microsoft-365-to-businesses-of-all-sizes/)で300席の最低購入数がなくなり、1人から買えます。ChatGPT Businessは最低2席で、1つの契約の上限が200席です。
 
@@ -56,7 +60,7 @@ Microsoftの金額は税抜、ChatGPTの金額は消費税の前の値です。[
 
 年払いで50人に配ったときの月額です。Copilotの土台のライセンスは含めていません。
 
-<!-- SHOT: 図 ccv_cost.html → ccv_02_cost.png・alt「50人に配ったときの月額の目安を縦に並べた図。Copilot Businessは割引の表示で134,900円、定価で157,400円、法人向けMicrosoft 365 Copilotは224,850円でいずれも税抜。ChatGPT Business標準シートは1,000ドルで消費税を足すと1,100ドル」 -->
+<!-- SHOT: 図 ccv_cost.html → ccv_05_cost.png・alt「50人に配ったときの月額の目安を縦に並べた図。Copilot Businessは割引の表示で134,900円、定価で157,400円、法人向けMicrosoft 365 Copilotは224,850円でいずれも税抜。ChatGPT Business標準シートは1,000ドルで消費税を足すと1,100ドル」 -->
 
 | 契約（年払い） | 50人の月額 | 消費税を足すと |
 |---|---|---|
@@ -81,7 +85,7 @@ Microsoftの金額は税抜、ChatGPTの金額は消費税の前の値です。[
 
 Copilot Chatのままでは、Word・Excel・PowerPoint・OneNoteの中でCopilotのチャットは使えません。ファイルのアップロードや画像の生成はできますが、混んでいるときは有料の利用者が優先されます。
 
-<!-- SHOT: 図 ccv_decide.html → ccv_03_decide.png・alt「CopilotとChatGPTのどちらを入れるかを決める順番の図。1は社員がMicrosoft 365のアカウントで働いているか、2はCopilot Chatで足りない仕事が何か、3は読ませたい社内データがどこにあるか、4はデータを日本に置く決まりがあるか」 -->
+<!-- SHOT: 図 ccv_decide.html → ccv_06_decide.png・alt「CopilotとChatGPTのどちらを入れるかを決める順番の図。1は社員がMicrosoft 365のアカウントで働いているか、2はCopilot Chatで足りない仕事が何か、3は読ませたい社内データがどこにあるか、4はデータを日本に置く決まりがあるか」 -->
 
 Google Workspaceで働いている会社がCopilotを入れるなら、Microsoft 365のライセンスから買う必要があり、ChatGPT Businessのほうが手前で済むでしょう。ChatGPTの料金ページにも、BusinessでGoogle Workspace・Slack・GitHub・Microsoft 365などと連携できるとの記載があります。
 
@@ -99,7 +103,7 @@ ChatGPTはChatGPTの画面で使うのが基本です。料金ページの比較
 
 Microsoft 365の外のシステムをつなぐ仕組みが[Copilotコネクタ](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview)です。中身をMicrosoft Graphに取り込む同期型と、MCPを使ってその場で取りに行く取り込まない型があり、どちらも元のシステムの権限を守ります。
 
-<!-- SHOT: 図 ccv_data.html → ccv_04_data.png・alt「社内データへの届き方の比較図。上段のCopilotは本人が閲覧できるメール・予定表・Teams・SharePointをMicrosoft Graph経由で読み、外のシステムはCopilotコネクタでつなぐ。下段のChatGPTはSharePointアプリを使い、Entraの管理者がSites.Read.AllとFiles.Read.Allを承認してから職場のSharePointとOneDriveを検索する」 -->
+<!-- SHOT: 図 ccv_data.html → ccv_07_data.png・alt「社内データへの届き方の図。Copilotは本人が閲覧できるものだけをMicrosoft Graph経由で読み、外のシステムはCopilotコネクタでつなぐ。ChatGPTはつないだアカウントの権限の範囲をSharePointアプリで読み、設定によっては先にEntraの管理者の承認が要る」 -->
 
 ChatGPTからMicrosoft 365のファイルを読むときは、[SharePointアプリ](https://help.openai.com/ja-jp/articles/12143177)を使います。対象は職場のSharePointとOneDriveで、個人用のOneDriveは対象外です。**組織で管理者の同意が必要な設定なら、先にMicrosoft Entraの管理者が権限を承認しないと使えません。**ヘルプはライブで読むためにSites.Read.AllとFiles.Read.Allを挙げ、ChatGPTのワークスペース管理者とEntraの管理者が別の人のことがあると書いています。
 
@@ -138,6 +142,8 @@ ChatGPTはMicrosoft 365とは別の管理コンソールを持ちます。料金
 | ロールベースのアクセス制御 | なし | あり |
 | IP許可リスト | なし | あり |
 | Compliance API | なし | あり |
+
+<!-- SHOT: 画面 https://openai.com/ja-JP/business/pricing/ の「すべての機能を比較」のセキュリティと管理の表・本文だけにある探す語「グローバル管理コンソール」・赤枠 SCIM の行と IP 許可リストの行・PC・alt「OpenAIのビジネス向け料金ページの機能の比較表。セキュリティと管理の欄でSAML SSOとドメイン認証はBusinessとEnterpriseの両方に付き、SCIM、ロールベースのアクセス制御、Compliance API、IP許可リストはEnterpriseだけに付いている」・figcaption「OpenAIのビジネス向け料金ページの比較表（2026年10月24日）」 -->
 
 Entra IDとSAMLでつなげばBusinessでも会社のアカウントでサインインできますが、退職者のアカウントを自動で外すSCIMはEnterpriseだけです。SCIMの無いBusinessでは退職者をワークスペースの画面で外す運用になり、その手順は「[ChatGPT Businessのメンバー招待と管理](/media/chatgpt-business-admin/)」にまとめています。
 
