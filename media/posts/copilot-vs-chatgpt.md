@@ -44,7 +44,7 @@ MicrosoftとOpenAIでは、価格の通貨と税の書き方が違います。Mi
 | ChatGPT Business プレミアムシート | 100ドル | 125ドル | 同上 |
 | ChatGPT Enterprise | 非公開（営業に見積もり） | 同左 | 営業と決める |
 
-Microsoftの金額は税抜、ChatGPTの金額は消費税の前の値です。[ChatGPTの料金ページ](https://chatgpt.com/ja-JP/pricing)のビジネス向けタブには、標準シートが3,050円（年額課金）・3,850円（月額課金）と円でも出ていました（2026年10月4日に確認）。席の数え方は「[ChatGPT Businessとは](/media/chatgpt-business/)」にまとめています。
+Microsoftの金額は税抜、ChatGPTの金額は消費税の前の値です。[ChatGPTの料金ページ](https://chatgpt.com/ja-JP/pricing)のビジネス向けタブには、標準シートが3,050円（年額課金）・3,850円（月額課金）と円でも出ていました（2026年10月4日に確認）。2026年10月24日に開いた[ビジネス向けの料金ページ](https://openai.com/ja-JP/business/pricing/)では、スタンダードシートは年額課金で月20ドル、月額課金で月25ドルです。席の数え方は「[ChatGPT Businessとは](/media/chatgpt-business/)」にまとめています。
 
 <figure class="post-figure"><img src="/media/images/copilot-vs-chatgpt/ccv_03_ms_business.png" alt="MicrosoftのCopilot Businessの価格ページで、利用中のMicrosoft 365プランに追加するMicrosoft 365 Copilot Businessのカード。3,148円に取り消し線が引かれて2,698円、ユーザー/月相当・年払い、価格には消費税は含まれていませんと書かれている" loading="lazy"><figcaption>Copilot Businessの価格ページ（2026年10月24日）</figcaption></figure>
 
