@@ -9,7 +9,7 @@ cover_sub: 10製品の料金と対応AI
 cta: llmo
 ---
 
-GEO対策ツール（AIO対策ツールとも呼ばれます）は、ChatGPTやGeminiに決めた質問を自動で投げ、回答に自社の名前やページが出たかを記録する製品です。料金は無料の枠から月10万円を超えるプランまであり、測れるAIや試せる期間も製品ごとに違います。
+GEO対策ツール（AIO対策ツールとも呼ばれます）は、ChatGPTやGeminiに決めた質問を自動で投げ、回答に自社の名前やページが出たかを記録する製品です。料金は無料の枠から月10万円前後のプランまであり、測れるAIや試せる期間も製品ごとに違います。
 
 この記事では国産5製品と海外5製品の料金・測れるAI・無料で試せるかを、2026年10月24日に各社の公式ページで確かめて並べました。nitoはどの製品も契約して試していないため、表の中身は公式の記載です。後半に会社が選ぶときの決め方を書きます。
 
@@ -34,7 +34,7 @@ GEO対策ツール（AIO対策ツールとも呼ばれます）は、ChatGPTやG
 | 製品 | 測れるAI | 月額（公式の表示） | 無料で試す |
 |---|---|---|---|
 | ミエルカGEO | AIによる概要・ChatGPT・Gemini | 49,800円（税抜）から。別に初期費用 | 無料トライアル |
-| AIsearchmap | ChatGPT・Gemini・Perplexity・AIモード・AIによる概要 | 0円（ChatGPTを25問）。有料は5万円で800問から | フリープラン |
+| AIsearchmap | ChatGPT・Gemini・Perplexity・AIモード・AIによる概要 | 0円（ChatGPTを25問）。有料は5万円で200問×4つのAIから | フリープラン |
 | DolphinX AIO | ChatGPT・Gemini・AIモード・Copilot・AIによる概要。Claude・Perplexityは追加 | 30,000円（税別・6ヶ月契約）から | 14日間 |
 | LLMOチェキ | ChatGPT・Gemini・Claude・Perplexity・Grok・AIモード・AIによる概要・Copilot | 50,000円（税別・6ヶ月契約）から | 7日間 |
 | AKARUMI | ChatGPT・Gemini・Perplexity・Copilot・AIモード・AIによる概要・Claudeからプランごとに2〜4つ | 料金ページに金額なし | 7日間 |
@@ -44,7 +44,7 @@ GEO対策ツール（AIO対策ツールとも呼ばれます）は、ChatGPTやG
 | Profound | 試用はChatGPT・Gemini・AIによる概要 | 個別見積もり | 7日間 |
 | Scrunch | ChatGPT・Perplexity・AIによる概要・Copilot | 250ドル（125問）から | 7日間 |
 
-**同じ「月5万円」でも、DolphinX AIOのプロは50問を4つのAIに毎日投げ、AIsearchmapのエンタープライズは200問を4つのAIで測ります。** 表の月額は入口の金額で、測れる質問の数まで並べないと高い安いは決まりません。
+**同じ「月5万円」でも、DolphinX AIOのプロは50問を4つのAIに毎日投げ、AIsearchmapのエンタープライズは200問を4つのAIで測ります。** AIsearchmapの計測の頻度は公式ページに書かれていません。表の月額は入口の金額で、測れる質問の数まで並べないと高い安いは決まりません。
 
 ## 国産のGEO対策ツール5製品
 
@@ -132,7 +132,7 @@ DolphinX AIOとLLMOチェキは6ヶ月契約が基本なので、月額だけで
 |---|---|---|
 | ミエルカGEO | 初期費用が別にかかる | 運営会社がISMS認証を取得 |
 | AIsearchmap | 請求書払い。契約期間は申込内容による | エンタープライズはユーザー数の制限なし |
-| DolphinX AIO | 6ヶ月契約。請求書払いで見積書は即日 | 多要素認証とIP制限 |
+| DolphinX AIO | 6ヶ月契約。請求書払いで見積書は即日 | 多要素認証とIP制限（企業単位で設定） |
 | LLMOチェキ | 6ヶ月契約。初期費用0円 | MCP・APIでほかの道具とつなぐ |
 | Profound | 個別見積もり | SSO（SAML）とSOC 2 |
 
