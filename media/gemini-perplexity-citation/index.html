@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Gemini・Perplexityに自社が引用されるには？公式の仕組みと確かめ方 | nito Column</title>
+    <meta name="description" content="GeminiとPerplexityに自社サイトが引用される条件を各社の公式資料で整理。Google検索の索引との関係、Perplexityの自前の索引とBing、Google-Extendedの扱い、社内での引用の確かめ方まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/gemini-perplexity-citation/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Gemini・Perplexityに自社が引用されるには？公式の仕組みと確かめ方">
+    <meta property="og:description" content="GeminiとPerplexityに自社サイトが引用される条件を各社の公式資料で整理。Google検索の索引との関係、Perplexityの自前の索引とBing、Google-Extendedの扱い、社内での引用の確かめ方まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/gemini-perplexity-citation/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/gemini-perplexity-citation.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/gemini-perplexity-citation.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Gemini・Perplexityに自社が引用されるには？公式の仕組みと確かめ方", "description": "GeminiとPerplexityに自社サイトが引用される条件を各社の公式資料で整理。Google検索の索引との関係、Perplexityの自前の索引とBing、Google-Extendedの扱い、社内での引用の確かめ方まで。", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/gemini-perplexity-citation/"}, "articleSection": "AI検索対策", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/gemini-perplexity-citation.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Gemini・Perplexityに自社が引用されるには？公式の仕組みと確かめ方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Geminiに引用されるにはGoogle検索で上位に出る必要がありますか？", "acceptedAnswer": {"@type": "Answer", "text": "何位なら引用されるかは公開されていません。Googleはグラウンディングを、Googleの検索インデックスからモデルに内容を渡す仕組みと説明しているため、少なくとも索引に載っていることが前提です。"}}, {"@type": "Question", "name": "Geminiの回答にソースボタンが出ないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "Geminiアプリのヘルプによると、ボタンが無いのはその回答にGeminiアプリがリンクを出さなかったためです。すべての回答にソースが付くわけではありません。"}}, {"@type": "Question", "name": "Google-ExtendedをブロックするとGeminiに引用されなくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "Geminiアプリの回答の根拠には使われなくなります。Google-Extendedが管理するのはGeminiの学習とGeminiアプリでのグラウンディングで、Google検索への登録には影響しないため、AIによる概要とAIモードには出続けます。"}}, {"@type": "Question", "name": "PerplexityはBingの検索結果を使っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式の資料に書かれていません。Perplexityの研究記事によると、2022年末の最初の版は外部の検索APIを使っていましたが、今は2,000億を超えるURLを追う自前の索引を持っています。今もBingを併用しているかの記述はありません。"}}, {"@type": "Question", "name": "PerplexityBotを許可すればPerplexityで必ず引用されますか？", "acceptedAnswer": {"@type": "Answer", "text": "必ずではありません。Perplexityは検索結果に出すためにPerplexityBotの許可を勧めていますが、許可すれば引用されるとは書いていません。"}}, {"@type": "Question", "name": "GeminiやPerplexityからの流入はGA4で見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "参照元の gemini.google.com や perplexity.ai で見られます。GA4の「AI アシスタント」のチャネルの例示にGeminiは入っていますが、Perplexityの名前はないため、自社のGA4でどのチャネルに入るかを確かめます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=051ff6b4">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Gemini・Per…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.10.24</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Gemini・Perplexityに自社が引用されるには？公式の仕組みと確かめ方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/gemini-perplexity-citation.jpg" alt="【2026年10月】Gemini・Perplexityに自社が引用されるには？公式の仕組みと確かめ方" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>HubSpot Japanが2026年7月に公表した調査では、BtoBの購買に関わる1,573人のうち51.2%が、業務用の商品やサービスの情報収集にGeminiを使うと答えました（頻繁に使うとときどき使うの合計）。</p>
+<p>ChatGPTの対策を進めた会社でも、GeminiとPerplexityは引用元を探しに行く先が違い、同じ手当てでは足りないことがあります。この記事は2つのAIについて公式の資料に書いてあることと無いことを分け、引用されるページの書き方と、社内で引用を確かめる方法を書きます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>Geminiアプリの回答の一部はGoogle検索の結果に基づく</strong>とGoogleは書いている。Google-Extendedを止めると、Geminiアプリの回答の根拠に自社のページが使われなくなる</li>
+<li><strong>Perplexityは2,000億を超えるURLを追う自前の索引を持つ</strong>と公表している。今もBingなどの外部の検索を併用しているかは、公式の資料に書かれていない</li>
+<li>回答は聞くたびに変わるため、<strong>同じ質問をログインの状態とモードをそろえて何回か聞き、記録した割合で判断する</strong>。GA4とSearch Consoleでは2つのAIの引用回数は見えない</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>GeminiとPerplexityの違い</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Geminiが引用元を選ぶ仕組み</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>Google検索の索引との関係</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>ソースボタンの見方</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>Google-Extendedを止めた場合</a></li>
+                    <li class="toc-h3"><a href="#s2-4"><span class="toc__n">2-4</span>地域の質問と地図の答え</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>Perplexityが引用元を選ぶ仕組み</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>自前の索引とBingの関係</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>PerplexityBotとPerplexity-User</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>番号つきの引用とモデル</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>引用されるページに書くこと</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>自社の数字と判断の基準</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>1段落で答えが閉じる書き方</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>引用されているかを社内で確かめる方法</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>質問の作り方</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>回数と条件のそろえ方</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>記録する項目</a></li>
+                    <li class="toc-h3"><a href="#s5-4"><span class="toc__n">5-4</span>GA4とSearch Consoleで見えるもの</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>社内で決めること</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>担当の分け方</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>手で測る場合の工数</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>ありがちな失敗</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">GeminiとPerplexityの違い</h2>
+<p>2つのAIはどちらも回答に出典のリンクを付けますが、<strong>引用元を探しに行く先が違うため、直す場所も確かめ方も分けて考えます</strong>。GeminiはGoogle検索の索引を使い、Perplexityは自社で作った索引を使うと、それぞれの公式の資料にあります。社内ではまとめてAI検索と呼ばれがちな2つを、公式の記述で並べると次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>Gemini（アプリ）</th>
+<th>Perplexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">引用元を探す先</td>
+<td data-label="Gemini（アプリ）">Google検索の索引</td>
+<td data-label="Perplexity">自前の索引（2,000億超のURLを追跡）</td>
+</tr>
+<tr>
+<td data-label="項目">出典の見せ方</td>
+<td data-label="Gemini（アプリ）">回答の下か中のソースボタン。出ない回答もある</td>
+<td data-label="Perplexity">各回答に番号つきの引用</td>
+</tr>
+<tr>
+<td data-label="項目">サイト側で外す設定</td>
+<td data-label="Gemini（アプリ）">Google-Extended（Google検索には影響しない）</td>
+<td data-label="Perplexity">PerplexityBotをrobots.txtで止める</td>
+</tr>
+<tr>
+<td data-label="項目">引用の回数を見る管理画面</td>
+<td data-label="Gemini（アプリ）">公式の案内なし</td>
+<td data-label="Perplexity">一般のサイト向けの案内なし</td>
+</tr>
+<tr>
+<td data-label="項目">公式の資料に書かれていないこと</td>
+<td data-label="Gemini（アプリ）">引用元を選ぶ基準</td>
+<td data-label="Perplexity">今もBingなど外部の検索を使うか</td>
+</tr>
+</tbody>
+</table></div>
+<p>ChatGPTの検索で引用元に出る条件は<a href="/media/chatgpt-search-citation/">ChatGPT検索で引用元に出る条件</a>に、Google検索のAIによる概要は<a href="/media/cited-by-ai-overviews/">AI Overviewsに引用されるには？</a>に分けて書いています。AIによる概要とAIモードはGoogle検索の中の機能で、この記事ではGeminiアプリと別の製品として扱います。</p>
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_01_overview.png" alt="GeminiとPerplexityが引用元を探す先の違い。GeminiはGoogle検索の索引から、Perplexityは自前の索引から読み、サイト側で外す設定はGoogle-ExtendedとPerplexityBot" loading="lazy"></figure>
+
+<h2 id="s2">Geminiが引用元を選ぶ仕組み</h2>
+<p>Geminiアプリに引用されるかどうかは、<strong>Google検索の索引に載り、検索で読まれるページであることが出発点です</strong>。引用元を選ぶ基準そのものは公開されていませんが、Geminiアプリと検索のつながりを書いた公式の記述は2つです。</p>
+<h3 id="s2-1">Google検索の索引との関係</h3>
+<p>Geminiアプリの<a href="https://support.google.com/gemini/answer/13594961?hl=ja">プライバシー ハブ</a>は、回答の一部がGoogle検索の検索結果に基づくと説明しています。Googleの<a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=ja">一般的なクローラーの一覧</a>はもう少し具体的で、Geminiアプリでのグラウンディングを「プロンプト入力時に Google の検索インデックスからモデルにコンテンツを提供すること」としています。</p>
+<p>開発者向けの<a href="https://ai.google.dev/gemini-api/docs/google-search?hl=ja">Gemini APIの説明</a>には、モデルが検索の要否を判断し、検索の語を作って実行し、結果を引用つきでまとめる流れが図で示されているものの、Geminiアプリで同じ手順が動くとは書かれていません。それでも2つの記述から、<strong>Googleの索引に無いページはGeminiアプリの回答の材料にも入らない</strong>ことは言えます。</p>
+<p>Search Centralの<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI 機能とウェブサイト</a>は特別な構造化データは要らないとしていますが、対象はAIによる概要とAIモードです。Geminiアプリで構造化データが引用に効くかは公開されていません。</p>
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_02_gemini.png" alt="Geminiアプリが回答を作るときの流れ。質問を読む、Google検索の索引から内容を受け取る、回答を書く、ソースボタンにリンクを出す。Google-Extendedを止めたページは受け取る段階で外れる" loading="lazy"></figure>
+
+<h3 id="s2-2">ソースボタンの見方</h3>
+<p>Geminiアプリのヘルプ「<a href="https://support.google.com/gemini/answer/14143489?hl=ja">Gemini アプリの関連ソースを表示する</a>」によると、ソースがある回答では回答の下か中にソースボタンが出て、押すと右側に関連リンクのパネルが開きます。<strong>ボタンが無いなら、Geminiアプリはその回答にリンクを出していません。</strong> ヘルプはソースボタンのパネルを関連リンクの出る場所として説明しています。</p>
+<p><strong>引用を数えるときはソースボタンのパネルに出たリンクだけを数えます。</strong></p>
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_shot_gemini_help.png" alt="Gemini アプリ ヘルプの関連ソースのページ。ソースボタンが無い回答ではGeminiアプリがリンクを出していないと書かれている" loading="lazy"><figcaption>Gemini アプリ ヘルプ『Gemini アプリの関連ソースを表示する』（2026年10月24日）</figcaption></figure>
+
+<h3 id="s2-3">Google-Extendedを止めた場合</h3>
+<p>robots.txtで学習用のボットをまとめて止めている会社は、Google-Extendedを先に確かめます。一覧によるとGoogle-Extendedが管理するのはGeminiの学習とGeminiアプリでのグラウンディングで、<strong>止めるとGeminiアプリの回答の根拠に自社のページが使われなくなります</strong>。Google検索には影響しないため、AIによる概要とAIモードには出続けます。学習は断りつつGeminiでは見つけてもらう設定は無いので、集客を持つマーケ担当と文章の扱いを決める広報や法務で、どちらを取るかを決めます。書き方の詳細は<a href="/media/ai-crawler-robots/">AIクローラーをrobots.txtで止めるかの判断と書き方</a>で扱いました。</p>
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_shot_google_extended.png" alt="Googleの一般的なクローラーの一覧のGoogle-Extendedの節。Geminiアプリでのグラウンディングに自社サイトの内容を使うかを管理できると書かれている" loading="lazy"><figcaption>Google 検索セントラル『Google の一般的なクローラー』のGoogle-Extendedの節（2026年10月24日）</figcaption></figure>
+
+<h3 id="s2-4">地域の質問と地図の答え</h3>
+<p>地域を付けた質問では、Geminiが出典のリンクでなく地図で答えることがあります。nitoが2026年10月7日に、ある士業の案件で地域名を付けた質問をGeminiに10回聞いたところ、9回はGoogleマップの店舗カードで答え、引用元のリンクは0件でした。1つの案件の実測ですが、<strong>店舗や事務所に来てもらう商売では、ページより先にGoogleビジネスプロフィールの中身が読まれる</strong>と考えて、営業時間・対応する地域・料金の目安をプロフィールにも書いておきます。口コミを増やせば紹介されるかは、nitoではまだ確かめていません。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">Gemini に自社がどう紹介されているか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">Perplexityが引用元を選ぶ仕組み</h2>
+<p>Perplexityは自前の索引から、文書をさらに小さく分けた単位で文を拾って採点します。nitoはここから、<strong>ページ全体の評価より、1つの段落だけで質問の答えが閉じているかが引用に効く</strong>と読んでいます。根拠はPerplexityが2025年9月に公開した、検索の基盤の設計についての記事です。</p>
+<h3 id="s3-1">自前の索引とBingの関係</h3>
+<p>Perplexity Researchの<a href="https://research.perplexity.ai/articles/architecting-and-evaluating-an-ai-first-search-api">検索APIの設計の記事</a>によると、2022年末の最初の版は公開されていた検索のAPIを組み込んでいました。高すぎた例として挙げる料金（1,000クエリ200ドル）のリンク先は、MicrosoftのBingのAPIの料金ページです。その後は自前の基盤に移り、<strong>今の索引は2,000億を超えるURLを追っている</strong>とあります。同じ日の<a href="https://www.perplexity.ai/hub/blog/introducing-the-perplexity-search-api">ブログ</a>によると、この基盤は一般向けの回答と同じものです。</p>
+<p>Bingの索引も見ているとしてBing Webmaster Toolsへの登録を勧める解説記事もありますが、<strong>今もBingなどの外部の検索を併用しているかは、公式の資料に書かれていません</strong>。Bingへの登録は損になりませんが、Perplexityの対策として社内に説明すると公式の記述を超えてしまいます。</p>
+<p>同じ記事によると、索引には権威のあるドメインや扱いの少ない話題の文書を優先して残し、入れ直すかはページの重要さと更新の頻度から予測するという説明です。候補は語の一致と意味の近さの両方で集め、文書と、文書を分けた小さな単位の両方で採点します。</p>
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_03_pplx.png" alt="Perplexityが回答を作るときの流れ。PerplexityBotが巡回して自前の索引に入れる、ページを段落ほどの単位に分ける、語の一致と意味の近さで候補を集めて採点する、番号つきの引用で回答する" loading="lazy"></figure>
+
+<h3 id="s3-2">PerplexityBotとPerplexity-User</h3>
+<p>Perplexityのボットは2つあり、<a href="https://docs.perplexity.ai/guides/bots">Perplexity Crawlers</a>が役割を分けて説明しています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>名前</th>
+<th>何をするか</th>
+<th>robots.txtとの関係</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="名前">PerplexityBot</td>
+<td data-label="何をするか">Perplexityの検索結果にサイトを出してリンクする。基盤モデルの学習には使わない</td>
+<td data-label="robots.txtとの関係">従う。検索に出したいなら許可を勧めている</td>
+</tr>
+<tr>
+<td data-label="名前">Perplexity-User</td>
+<td data-label="何をするか">利用者の質問に答えるためにページを読み、回答にリンクを付ける</td>
+<td data-label="robots.txtとの関係">利用者の求めで動くため、原則としてrobots.txtを無視する</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>検索結果に出たいなら、robots.txtでPerplexityBotを許可し、公開IPからの通信をWAFでも通します</strong>。CloudflareとAWSのWAFでの手順も同じページにあり、反映は最大24時間です。WAFを持つ情報システムの担当や制作会社に頼むときは、<a href="https://www.perplexity.com/perplexitybot.json">PerplexityBotのIPアドレスの一覧</a>のURLを添えます。</p>
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_shot_pplx_bots.png" alt="Perplexity CrawlersのページのPerplexityBotの行。検索結果に出すためにrobots.txtでの許可と公開IPからの通信の許可を勧め、学習には使わないと書かれている" loading="lazy"><figcaption>Perplexity『Perplexity Crawlers』（2026年10月24日）</figcaption></figure>
+
+<h3 id="s3-3">番号つきの引用とモデル</h3>
+<p>Perplexityのヘルプ「<a href="https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work">How does Perplexity work?</a>」によると、回答には番号つきの引用が付き、Pro Searchでは既定のBestのほかGPT-5やClaude 4.6 Sonnetなどからモデルを選べます。</p>
+<p>引用の数は測る条件で大きく変わります。未ログインのPerplexityは、nitoの計測だと3〜4回で登録を求める画面が出て、引用元も1回答あたり2〜3件でした。ログインしたProでは中央値39件です（計測の環境を替えたときの記録で、比較実験ではありません）。</p>
+<p>上とは別の環境で2026年9月12日に、AI検索対策の会社を探す15の質問を4つのAIで計測したときは、1回答あたりの引用元がPerplexityで14.4件、Geminiで5.2件でした。<strong>Perplexityは1つの回答に多くのページを並べるため、引用元に入ったかだけでなく、何番目にどの段落が引かれたかまで見ないと競合との差が分かりません。</strong></p>
+<h2 id="s4">引用されるページに書くこと</h2>
+<p>他社の製品や制度についての事実は、その会社や役所のページから引かれやすく、<strong>自社のページが引かれるのは自社にしか書けない文、つまり自社の数字と判断の基準です</strong>。nitoが10月にGoogle検索のAIによる概要の引用元を調べたときも、他社の商品の記述はその会社のページか一覧に特化したページから引かれていました。GeminiとPerplexityで同じ調べはしていないので、ここは強い示唆にとどまります。</p>
+<h3 id="s4-1">自社の数字と判断の基準</h3>
+<p>見込み客が商材の高い会社をAIで探すときの質問は、「〇〇の費用はいくらか」「どこに頼めばいいか」のような判断の問いです。その判断に使える数字と基準を書いた文が、回答の材料になります。料金なら「月額〇万円から」で止めず、どの作業が入り、どの条件で上がり、どんな会社には勧めないかまで書くと、ほかのサイトに同じ文がありません。導入の件数・対応の期間・契約の条件のように、自社の記録からしか出せない数字も同じ扱いです。</p>
+<p>nitoが支援する士業の事務所では、手続きごとの料金と対応の範囲を書いた相続・遺言の新しいページが、公開3日後からGeminiとPerplexityの回答の引用元に入りました。</p>
+<h3 id="s4-2">1段落で答えが閉じる書き方</h3>
+<p>Perplexityが文書を小さな単位に分けて採点する以上、前の段落に頼った書き方は不利になります。段落の中で「上記のとおり」「この方法なら」と書くと、その段落だけを拾われたときに意味が通りません。<strong>見出しの問いへの答えを段落の1文目に置き、主語と数字をその段落の中で言い切ります。</strong></p>
+<p>数字には取得日や更新日を添え、内容を直したら更新日も変えておくのが基本です。Perplexityは索引に入れ直すかを更新の頻度からも予測しているため、古い日付のまま中身だけ直すと、回答に届くまで時間がかかることがあります。Geminiについて同じ設計は公開されていないので、Gemini向けに書き方を変える根拠は無く、同じ書き方で足ります。</p>
+<h2 id="s5">引用されているかを社内で確かめる方法</h2>
+<p>GeminiもPerplexityも同じ質問への回答が聞くたびに変わるため、<strong>1回の画面ではなく、条件をそろえて同じ質問を何回か聞いた記録で判断します</strong>。測り方の全体は<a href="/media/geo-taisaku/">GEO対策の記事の測定の節</a>に書いたので、ここでは2つのAIでそろえる条件と記録の項目を書きます。</p>
+<h3 id="s5-1">質問の作り方</h3>
+<p>見込み客が比べるときに打ちそうな文で質問を作り、社名を入れた質問と入れない質問を分けておきます。「〇〇社の評判は？」は紹介の中身が正しいかを見る質問で、「〇〇に強い会社は？」は候補に入るかを見る質問です。</p>
+<p>土台の文を1つ決めて地域や予算などの条件を1か所ずつ変えると、どの条件で名前が出なくなるかが分かります。地域を付けた質問はGeminiが地図で答えることがあるので、別に数えます。自社が勝つように作った質問は見込み客の聞き方とずれるため、判断に使えません。</p>
+<h3 id="s5-2">回数と条件のそろえ方</h3>
+<p>そろえる条件はAIごとに少し違います。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>条件</th>
+<th>Gemini</th>
+<th>Perplexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="条件">ログイン</td>
+<td data-label="Gemini">測定用のアカウントか未ログイン</td>
+<td data-label="Perplexity">測定用のアカウント（未ログインは数回で登録を求められ引用も少ない）</td>
+</tr>
+<tr>
+<td data-label="条件">モード</td>
+<td data-label="Gemini">使ったモデルの名前を記録する</td>
+<td data-label="Perplexity">Pro Searchか、選んだモデル（Bestなど）を記録する</td>
+</tr>
+<tr>
+<td data-label="条件">回数</td>
+<td data-label="Gemini">同じ質問を同じ日に2回以上</td>
+<td data-label="Perplexity">同じ質問を同じ日に2回以上</td>
+</tr>
+</tbody>
+</table></div>
+<p>Geminiは検索やYouTubeの履歴など他のGoogleのサービスの情報を使うことがあると<a href="https://support.google.com/gemini/answer/13594961?hl=ja">プライバシー ハブ</a>にあるため、担当者の個人のアカウントでは測りません。nitoは商談の前の計測で1つの質問を各AIに2回ずつ聞き、案件の毎日の計測では14の質問を4つのAIに1日1回ずつ聞いています。</p>
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_04_conditions.png" alt="引用を測るときにそろえる3つの条件。ログインの状態は測定用のアカウントにそろえる、モードとモデルの名前を記録する、同じ質問を同じ日に2回以上聞く" loading="lazy"></figure>
+
+<h3 id="s5-3">記録する項目</h3>
+<p>1つの回答を1行にして、次の項目を残します。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>書くこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">日時</td>
+<td data-label="書くこと">聞いた日付と時刻</td>
+</tr>
+<tr>
+<td data-label="項目">AIとモード</td>
+<td data-label="書くこと">Gemini・Perplexityと、モデルやPro Searchの別</td>
+</tr>
+<tr>
+<td data-label="項目">ログインの状態</td>
+<td data-label="書くこと">測定用のアカウントか未ログインか</td>
+</tr>
+<tr>
+<td data-label="項目">質問</td>
+<td data-label="書くこと">打った文をそのまま</td>
+</tr>
+<tr>
+<td data-label="項目">社名</td>
+<td data-label="書くこと">回答の本文に出たか、出た位置と紹介の1〜2文</td>
+</tr>
+<tr>
+<td data-label="項目">引用元</td>
+<td data-label="書くこと">出典のURLをすべて</td>
+</tr>
+<tr>
+<td data-label="項目">自社のURL</td>
+<td data-label="書くこと">引用元に入ったか、何番目か</td>
+</tr>
+</tbody>
+</table></div>
+<p>引用元に自社のURLが入ったのに社名が回答に出ないなら、ページは読まれていても紹介の材料になる文が無いということで、直すのはページの中身です。社名が出たのに自社のURLが無いなら、他社の記事や比較サイトの文から紹介されているので、その記事が自社をどう書いているかを確かめます。</p>
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_05_record.png" alt="引用を記録する1行の項目。日時、AIとモード、ログインの状態、質問、社名が出たか、引用元のURL、自社のURLが何番目か" loading="lazy"></figure>
+
+<h3 id="s5-4">GA4とSearch Consoleで見えるもの</h3>
+<p>GeminiにもPerplexityにも、サイト運営者が引用の回数を見られる管理画面の公式の案内は見当たりませんでした。Search Consoleの<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成 AI パフォーマンス レポート</a>が数えるのはAIによる概要とAIモードの表示で、Geminiアプリは入りません。</p>
+<p>GA4の<a href="https://support.google.com/analytics/answer/9756891?hl=ja">デフォルト チャネル グループ</a>には「AI アシスタント」のチャネルがあり、ヘルプが例に挙げる参照元にGeminiは入っていますが、Perplexityの名前はありません。nitoのサイトのGA4では、2026年10月24日に見た直近7日に gemini.google.com からの18セッションがAI アシスタントに入っていました。Perplexityからの訪問はこの7日に無く、どのチャネルに入るかは確かめられていません。<strong>自社のGA4で参照元 perplexity.ai の行がどのチャネルに入っているかを一度見ておきます。</strong></p>
+<p>GA4に残るのは引用のリンクを押して来た人だけなので、記録した割合とは別の表で持ちます。GA4での見方は<a href="/media/ai-search-measurement/">AI検索対策の効果はどう測る？</a>に書いています。</p>
+<h2 id="s6">社内で決めること</h2>
+<p>質問を測る人、ページを直す人、robots.txtやWAFを持つ人は社内で別々のことが多く、<strong>誰が何を持つかを決めないまま測り始めると、記録だけが増えて直す人に届きません</strong>。</p>
+<h3 id="s6-1">担当の分け方</h3>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>仕事</th>
+<th>持ち主の例</th>
+<th>決めておくこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="仕事">質問の一覧</td>
+<td data-label="持ち主の例">マーケ担当</td>
+<td data-label="決めておくこと">何問で、いつ見直すか</td>
+</tr>
+<tr>
+<td data-label="仕事">計測と記録</td>
+<td data-label="持ち主の例">マーケ担当・外部の支援会社</td>
+<td data-label="決めておくこと">回数・頻度・ログインの状態</td>
+</tr>
+<tr>
+<td data-label="仕事">ページの本文</td>
+<td data-label="持ち主の例">マーケ担当・制作会社</td>
+<td data-label="決めておくこと">数字と基準の文を誰が書くか</td>
+</tr>
+<tr>
+<td data-label="仕事">robots.txt・WAF</td>
+<td data-label="持ち主の例">情報システムの担当・制作会社</td>
+<td data-label="決めておくこと">PerplexityBotとGoogle-Extendedの扱い</td>
+</tr>
+<tr>
+<td data-label="仕事">Googleビジネスプロフィール</td>
+<td data-label="持ち主の例">店舗や営業の担当</td>
+<td data-label="決めておくこと">営業時間と対応する範囲の更新</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s6-2">手で測る場合の工数</h3>
+<p>20問をGeminiとPerplexityに2回ずつ聞くと、1回の計測で80回答になります。1回答を開いて記録するのに2分かかるとすると約2時間40分で、月に1回なら担当者の半日ほどです（見積もり）。毎週測るなら月に10時間を超えるため、決まった質問を自動で投げて記録する仕組みか、外部の支援を考える目安になります。</p>
+<h3 id="s6-3">ありがちな失敗</h3>
+<ul>
+<li>担当者の個人アカウントで測り、本人の履歴が入った回答を会社の数字にした</li>
+<li>Perplexityを未ログインで測り、引用元が2〜3件しか出ない状態で自社が出ないと判断した</li>
+<li>学習を断るつもりでGoogle-Extendedを止め、Geminiアプリの回答の根拠からも外れていた</li>
+<li>地域を付けた質問で地図の答えが出た回を引用0件と数え、ページの問題と取り違えた</li>
+<li>1回出た・出なかったで、施策が効いたかを判断した</li>
+</ul>
+<h2 id="s7">よくある質問</h2>
+<h3 id="s7-1">Q. Geminiに引用されるにはGoogle検索で上位に出る必要がありますか？</h3>
+<p>何位なら引用されるかは公開されていません。Googleはグラウンディングを、Googleの検索インデックスからモデルに内容を渡す仕組みと説明しているため、少なくとも索引に載っていることが前提です。</p>
+<h3 id="s7-2">Q. Geminiの回答にソースボタンが出ないのはなぜですか？</h3>
+<p>Geminiアプリのヘルプによると、ボタンが無いのはその回答にGeminiアプリがリンクを出さなかったためです。すべての回答にソースが付くわけではありません。</p>
+<h3 id="s7-3">Q. Google-ExtendedをブロックするとGeminiに引用されなくなりますか？</h3>
+<p>Geminiアプリの回答の根拠には使われなくなります。Google-Extendedが管理するのはGeminiの学習とGeminiアプリでのグラウンディングで、Google検索への登録には影響しないため、AIによる概要とAIモードには出続けます。</p>
+<h3 id="s7-4">Q. PerplexityはBingの検索結果を使っていますか？</h3>
+<p>公式の資料に書かれていません。Perplexityの研究記事によると、2022年末の最初の版は外部の検索APIを使っていましたが、今は2,000億を超えるURLを追う自前の索引を持っています。今もBingを併用しているかの記述はありません。</p>
+<h3 id="s7-5">Q. PerplexityBotを許可すればPerplexityで必ず引用されますか？</h3>
+<p>必ずではありません。Perplexityは検索結果に出すためにPerplexityBotの許可を勧めていますが、許可すれば引用されるとは書いていません。</p>
+<h3 id="s7-6">Q. GeminiやPerplexityからの流入はGA4で見られますか？</h3>
+<p>参照元の gemini.google.com や perplexity.ai で見られます。GA4の「AI アシスタント」のチャネルの例示にGeminiは入っていますが、Perplexityの名前はないため、自社のGA4でどのチャネルに入るかを確かめます。</p>
+<h2 id="s8">出典</h2>
+<ul>
+<li>Google「<a href="https://support.google.com/gemini/answer/14143489?hl=ja">Gemini アプリの関連ソースを表示する</a>」Gemini アプリ ヘルプ（2026年10月24日取得）</li>
+<li>Google「<a href="https://support.google.com/gemini/answer/13594961?hl=ja">Gemini アプリのプライバシー ハブ</a>」（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=ja">Google の一般的なクローラー</a>」2026年10月19日更新（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI 機能とウェブサイト</a>」2025年12月31日更新（同）</li>
+<li>Google AI for Developers「<a href="https://ai.google.dev/gemini-api/docs/google-search?hl=ja">Google 検索によるグラウンディング</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成 AI パフォーマンス レポート（検索）</a>」（同）</li>
+<li>Google アナリティクス ヘルプ「<a href="https://support.google.com/analytics/answer/9756891?hl=ja">[GA4] デフォルト チャネル グループ</a>」（同）</li>
+<li>Perplexity「<a href="https://docs.perplexity.ai/guides/bots">Perplexity Crawlers</a>」（同）</li>
+<li>Perplexity「<a href="https://www.perplexity.com/perplexitybot.json">PerplexityBotのIPアドレスの一覧</a>」（同）</li>
+<li>Perplexity Help Center「<a href="https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work">How does Perplexity work?</a>」（同）</li>
+<li>Perplexity Research「<a href="https://research.perplexity.ai/articles/architecting-and-evaluating-an-ai-first-search-api">Architecting and Evaluating an AI-First Search API</a>」2025年9月25日（同）</li>
+<li>Perplexity Blog「<a href="https://www.perplexity.ai/hub/blog/introducing-the-perplexity-search-api">Introducing the Perplexity Search API</a>」2025年9月25日（同）</li>
+<li>HubSpot Japan「<a href="https://prtimes.jp/main/html/rd/p/000000083.000037724.html">日本のBtoB購買に関する意識・実態調査2026</a>」PR TIMES、2026年7月16日。調査期間2026年6月11日〜16日、従業員50名以上の企業でBtoB商材の購買に関わった1,573名（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">GeminiとPerplexityの違い</a><a href="#s2">Geminiが引用元を選ぶ仕組み</a><a href="#s3">Perplexityが引用元を選ぶ仕組み</a><a href="#s4">引用されるページに書くこと</a><a href="#s5">引用されているかを社内で確かめる方法</a><a href="#s6">社内で決めること</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/geo-aio-tools/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GEO対策ツールの比較"><defs><linearGradient id="ecg-c58153ad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-c58153ad)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">比較</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GEO対策ツールの比較</text><line x1="227.6" y1="365.9" x2="972.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.24</div>
+                <div class="rel-card__ttl">【2026年10月】GEO対策ツール・AIO対策ツール10製品の比較 料金・対応AI・無料トライアル</div>
+            </a>
+            <a href="/media/ai-crawler-robots/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIクローラーの許可と拒否"><defs><linearGradient id="ecg-b6a5c61e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b6a5c61e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">設定</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIクローラーの許可と拒否</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.23</div>
+                <div class="rel-card__ttl">【2026年10月】GPTBotなどAIクローラーをrobots.txtで止めるかの判断と書き方</div>
+            </a>
+            <a href="/media/geo-taisaku/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GEO対策とは"><defs><linearGradient id="ecg-2895d954" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-2895d954)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GEO対策とは</text><line x1="379.6" y1="365.9" x2="820.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.23</div>
+                <div class="rel-card__ttl">【2026年10月】GEO対策とは？論文の内容とLLMO・AIOとの違い・会社が決めること</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'gemini-perplexity-citation',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
