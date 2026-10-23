@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】CopilotとChatGPTの違い｜会社に入れるならどっち？料金・データ・管理 | nito Column</title>
+    <meta name="description" content="Microsoft 365 CopilotとChatGPT Businessを会社に入れる前提で比べます。円と米ドルで違う料金と消費税、最低席数、Teams・Outlookとの連携、社内データへのつなぎ方、学習と保存場所、管理者の設定まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/copilot-vs-chatgpt/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】CopilotとChatGPTの違い｜会社に入れるならどっち？料金・データ・管理">
+    <meta property="og:description" content="Microsoft 365 CopilotとChatGPT Businessを会社に入れる前提で比べます。円と米ドルで違う料金と消費税、最低席数、Teams・Outlookとの連携、社内データへのつなぎ方、学習と保存場所、管理者の設定まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/copilot-vs-chatgpt/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/copilot-vs-chatgpt.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/copilot-vs-chatgpt.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】CopilotとChatGPTの違い｜会社に入れるならどっち？料金・データ・管理", "description": "Microsoft 365 CopilotとChatGPT Businessを会社に入れる前提で比べます。円と米ドルで違う料金と消費税、最低席数、Teams・Outlookとの連携、社内データへのつなぎ方、学習と保存場所、管理者の設定まで。", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/copilot-vs-chatgpt/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/copilot-vs-chatgpt.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】CopilotとChatGPTの違い｜会社に入れるならどっち？料金・データ・管理"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "CopilotとChatGPTは同じAIですか？", "acceptedAnswer": {"@type": "Answer", "text": "同じではありません。CopilotはMicrosoftの製品で、Microsoft 365の権限とデータの上で動きます。ChatGPTはOpenAIの製品で、独自の画面とワークスペースを持ちます。"}}, {"@type": "Question", "name": "Copilotの中身はChatGPTですか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPTそのものではありません。LearnによるとCopilotはOpenAIのモデルを使い、Anthropicのモデルも管理者が許可すれば使えます。答えの根拠になる社内データの扱いはMicrosoftの契約に従います。"}}, {"@type": "Question", "name": "CopilotとChatGPTはどちらが安いですか？", "acceptedAnswer": {"@type": "Answer", "text": "1人あたりの年払いではCopilot Businessが2,698円（税抜、割引の表示）、ChatGPT Businessが20ドル（消費税の前）で近い金額です。Copilotは土台のMicrosoft 365のライセンスが別に要るため、Microsoft 365を使っていない会社ではChatGPTのほうが安く済みます。"}}, {"@type": "Question", "name": "CopilotはMicrosoft 365なしで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "有料のCopilotはBusiness BasicやE3などの対象のMicrosoft 365のライセンスがある人に足す契約なので、単独では買えません。Microsoft 365を使っていない会社は、そのライセンスからの契約です。"}}, {"@type": "Question", "name": "Copilot Chatは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "対象のMicrosoft 365プランを使っている人なら、追加費用なしで使えます。Webを根拠に答え、渡したファイルも読めるものの、Word・Excel・PowerPoint・OneNoteの中のCopilotのチャットには有料のCopilotが必要です。"}}, {"@type": "Question", "name": "ChatGPTはSharePointのファイルを読めますか？", "acceptedAnswer": {"@type": "Answer", "text": "SharePointアプリを使えば読めます。組織で管理者の同意が必要な設定なら、先にMicrosoft Entraの管理者がSites.Read.AllやFiles.Read.Allなどの権限を承認しておく形です。"}}, {"@type": "Question", "name": "CopilotとChatGPTの入力は学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "会社向けの契約ならどちらも使われません。Copilotのプロンプトと応答は基礎モデルの学習に使われず、ChatGPT BusinessとEnterpriseは既定で学習に使われない設定です。"}}, {"@type": "Question", "name": "ChatGPTのデータは日本に保存できますか？", "acceptedAnswer": {"@type": "Answer", "text": "新しく導入するChatGPT EnterpriseとEduなら日本を選べます。Businessはデータレジデンシーの対象外です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=051ff6b4">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】CopilotとCh…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.24</span>
+        </div>
+        <h1 class="post-title">【2026年10月】CopilotとChatGPTの違い｜会社に入れるならどっち？料金・データ・管理</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/copilot-vs-chatgpt.jpg" alt="【2026年10月】CopilotとChatGPTの違い｜会社に入れるならどっち？料金・データ・管理" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>MicrosoftのCopilot Businessの価格ページは、1人あたり月2,698円（年払い・税抜）と円で表示しています。OpenAIのビジネス向け料金ページでは、ChatGPT Businessの標準シートが1人あたり月20ドル（年額課金）です。どちらも2026年10月24日に開いたときの表示です。</p>
+<p>1人あたりの金額は近くても、税の扱い・前提になる契約・社内データへの届き方は違います。この記事は会社でAIを入れる担当者に向けて、どちらを選ぶかの判断に要る違いを公式の資料で並べます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>すでにMicrosoft 365を使っている会社には<strong>Copilot Chatが追加費用なしで入っている</strong>。有料のCopilotは300人までならCopilot Business、それより多い会社やE3・E5の会社は法人向けのMicrosoft 365 Copilot</li>
+<li><strong>ChatGPT Businessは米ドル建てで、直接の購入には消費税10%が加わる</strong>。2席から200席までで、データを日本に置けるのはEnterpriseだけ</li>
+<li>違いの芯は社内データへの届き方。<strong>Copilotは本人が開ける範囲のMicrosoft 365全体を読み、ChatGPTはSharePointなどをアプリでつなぎ、組織の設定によってはEntraの管理者の同意が要る</strong></li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Copilot を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>比べる相手を先にそろえる</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>料金と最低席数</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>50人で入れたときの月額</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>Microsoft 365を使っているか</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>TeamsとOutlookの中で使えるか</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>社内データへのつなぎ方</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>学習の扱いと保存場所</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>管理者が設定するところ</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>両方入れる会社の例</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>個人の無料版の違い</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">比べる相手を先にそろえる</h2>
+<p>「Copilot」と呼ばれる製品はいくつもあり、比べる相手を決めないと話がかみ合いません。会社で検討の対象になるのは、Microsoft 365の利用者に追加費用なしで付くCopilot Chatと、有料のCopilotの2段です。プログラミング用のGitHub Copilotは別の製品で、この記事では扱いません。</p>
+<p>有料のCopilotは会社の規模で2つに分かれます。<a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing">Microsoft Learnのライセンスのページ</a>によると、<strong>Copilot BusinessはMicrosoft 365 Businessのライセンスを持つ300人までの組織向けのアドオンで、法人向けと同じCopilotの機能を提供します</strong>。300人を超える会社ではE3やE5などに足す法人向けのライセンスを使います。</p>
+<p>LearnではMicrosoft 365 CopilotがMicrosoft Copilotに名前を変えたと書かれていますが、日本の価格ページは旧名のままなので、この記事は価格ページの名前で呼びます。</p>
+<figure class="post-figure"><img src="/media/images/copilot-vs-chatgpt/ccv_01_lineup.png" alt="会社で比べる5つの契約を縦に並べた図。Microsoft側はCopilot Chat（Microsoft 365に追加費用なし）、Copilot Business（300人まで）、法人向けMicrosoft 365 Copilot（E3・E5などに追加）、OpenAI側はChatGPT Business（2〜200席）とChatGPT Enterprise（営業経由）" loading="lazy"></figure>
+
+<p>ChatGPTの会社向けは、自分で申し込めるBusinessと、営業を通して契約するEnterpriseの2つです。<a href="https://openai.com/ja-JP/business/pricing/">OpenAIのビジネス向け料金ページ</a>はBusinessを従業員数2〜200名のチーム向けとしています。両者の差は「<a href="/media/chatgpt-enterprise/">ChatGPT Enterpriseとは</a>」に書いています。</p>
+<h2 id="s2">料金と最低席数</h2>
+<p>MicrosoftとOpenAIでは、価格の通貨と税の書き方が違います。Microsoftの価格ページはどのカードにも「価格には消費税は含まれていません」と添えた円の表示です。OpenAIの料金ページは米ドルで、<a href="https://help.openai.com/ja-jp/articles/10242647">日本の消費税のヘルプ</a>によると<strong>OpenAIから直接買う場合は10%の消費税が請求され、適格請求書には税額が円で書かれます</strong>。Enterpriseのような個別契約の法人は、一般にリバースチャージの扱いで消費税は請求されません。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>契約</th>
+<th>年払い（1人の月額）</th>
+<th>月払い（1人の月額）</th>
+<th>人数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="契約">Copilot Chat</td>
+<td data-label="年払い（1人の月額）">追加費用なし</td>
+<td data-label="月払い（1人の月額）">追加費用なし</td>
+<td data-label="人数">対象のMicrosoft 365の利用者</td>
+</tr>
+<tr>
+<td data-label="契約">Copilot Business</td>
+<td data-label="年払い（1人の月額）">2,698円（表示は3,148円からの割引）</td>
+<td data-label="月払い（1人の月額）">3,778円</td>
+<td data-label="人数">300人まで</td>
+</tr>
+<tr>
+<td data-label="契約">法人向けMicrosoft 365 Copilot</td>
+<td data-label="年払い（1人の月額）">4,497円</td>
+<td data-label="月払い（1人の月額）">4,722円（年間契約の毎月払い）</td>
+<td data-label="人数">下限なし</td>
+</tr>
+<tr>
+<td data-label="契約">ChatGPT Business 標準シート</td>
+<td data-label="年払い（1人の月額）">20ドル</td>
+<td data-label="月払い（1人の月額）">25ドル</td>
+<td data-label="人数">2〜200席</td>
+</tr>
+<tr>
+<td data-label="契約">ChatGPT Business プレミアムシート</td>
+<td data-label="年払い（1人の月額）">100ドル</td>
+<td data-label="月払い（1人の月額）">125ドル</td>
+<td data-label="人数">同上</td>
+</tr>
+<tr>
+<td data-label="契約">ChatGPT Enterprise</td>
+<td data-label="年払い（1人の月額）">非公開（営業に見積もり）</td>
+<td data-label="月払い（1人の月額）">同左</td>
+<td data-label="人数">営業と決める</td>
+</tr>
+</tbody>
+</table></div>
+<p>Microsoftの金額は税抜、ChatGPTの金額は消費税の前の値です。<a href="https://chatgpt.com/ja-JP/pricing">ChatGPTの料金ページ</a>のビジネス向けタブには、標準シートが3,050円（年額課金）・3,850円（月額課金）と円でも出ていました（2026年10月4日に確認）。2026年10月24日に開いた<a href="https://openai.com/ja-JP/business/pricing/">ビジネス向けの料金ページ</a>では、スタンダードシートは年額課金で月20ドル、月額課金で月25ドルです。席の数え方は「<a href="/media/chatgpt-business/">ChatGPT Businessとは</a>」にまとめています。</p>
+<figure class="post-figure"><img src="/media/images/copilot-vs-chatgpt/ccv_03_ms_business.png" alt="MicrosoftのCopilot Businessの価格ページで、利用中のMicrosoft 365プランに追加するMicrosoft 365 Copilot Businessのカード。3,148円に取り消し線が引かれて2,698円、ユーザー/月相当・年払い、価格には消費税は含まれていませんと書かれている" loading="lazy"><figcaption>Copilot Businessの価格ページ（2026年10月24日）</figcaption></figure>
+
+<p><strong>Copilotの金額はCopilotだけの値段で、土台になるMicrosoft 365のライセンスは別に要ります。</strong>Copilot BusinessならBusiness BasicやBusiness Standardなど、法人向けならE3やE5などです。価格ページには土台とCopilotを組み合わせた価格もあり、Business Standardと組み合わせると年払いで月3,523円、月払いで4,228円です。ChatGPT Businessは単独で契約でき、Microsoft 365の有無は問いません。</p>
+<figure class="post-figure"><img src="/media/images/copilot-vs-chatgpt/ccv_04_ms_enterprise.png" alt="法人向けMicrosoft 365 Copilotの価格のカード。ユーザー/月相当・年払いで4,497円、または年間契約の毎月払いで4,722円、価格には消費税は含まれていません、条件を満たすMicrosoft 365プランのライセンスが別途必要ですと書かれている" loading="lazy"><figcaption>法人向けMicrosoft 365 Copilotの価格ページ（2026年10月24日）</figcaption></figure>
+
+<p>最低の席数は両者で逆の向きに決まっています。Copilotは<a href="https://www.microsoft.com/en-us/microsoft-365/blog/2024/01/15/expanding-copilot-for-microsoft-365-to-businesses-of-all-sizes/">2024年1月のMicrosoftの発表</a>で300席の最低購入数がなくなり、1人から買えます。ChatGPT Businessは最低2席で、1つの契約の上限が200席です。</p>
+<h3 id="s2-1">50人で入れたときの月額</h3>
+<p>年払いで50人に配ったときの月額です。Copilotの土台のライセンスは含めていません。</p>
+<figure class="post-figure"><img src="/media/images/copilot-vs-chatgpt/ccv_05_cost.png" alt="50人に配ったときの月額の目安を縦に並べた図。Copilot Businessは割引の表示で134,900円、定価で157,400円、法人向けMicrosoft 365 Copilotは224,850円でいずれも税抜。ChatGPT Business標準シートは1,000ドルで消費税を足すと1,100ドル" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>契約（年払い）</th>
+<th>50人の月額</th>
+<th>消費税を足すと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="契約（年払い）">Copilot Business（割引の表示）</td>
+<td data-label="50人の月額">134,900円</td>
+<td data-label="消費税を足すと">148,390円</td>
+</tr>
+<tr>
+<td data-label="契約（年払い）">Copilot Business（定価）</td>
+<td data-label="50人の月額">157,400円</td>
+<td data-label="消費税を足すと">173,140円</td>
+</tr>
+<tr>
+<td data-label="契約（年払い）">法人向けMicrosoft 365 Copilot</td>
+<td data-label="50人の月額">224,850円</td>
+<td data-label="消費税を足すと">247,335円</td>
+</tr>
+<tr>
+<td data-label="契約（年払い）">ChatGPT Business 標準シート</td>
+<td data-label="50人の月額">1,000ドル</td>
+<td data-label="消費税を足すと">1,100ドル</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Copilot Businessの割引は価格ページに終了日が書かれていないため、予算は定価の3,148円で組んでおくほうが安全です。</strong>年払いと月払いの差も大きく、Copilot Businessは年払いの2,698円に対して月払いが3,778円です。Cowork・Autopilot・Work IQ APIなどの高度な機能は従量課金で、ライセンスとは別に請求されます。エージェントの費用は「<a href="/media/copilot-studio/">Copilot Studioの料金</a>」で扱っています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Copilot を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">Microsoft 365を使っているか</h2>
+<p>最初に確かめたいのは社員がすでにMicrosoft 365のアカウントで働いているかどうかです。<a href="https://www.microsoft.com/ja-jp/microsoft-365/copilot/pricing">価格ページのFAQ</a>では、Copilot Chatは対象のMicrosoft 365プランの利用者に追加費用なしで含まれるWebを根拠にしたAIアシスタントと説明されています。<strong>有料の契約を決める前に、社員はもう会社の管理下にあるAIチャットを持っている</strong>ことになります。</p>
+<p><a href="https://learn.microsoft.com/ja-jp/copilot/overview">Copilot Chatの概要</a>にある表では、何を根拠に答えるかが入口ごとに分かれています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>入口</th>
+<th>何を根拠に答えるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="入口">Copilot Chat（Web・アプリ）</td>
+<td data-label="何を根拠に答えるか">Web、本人が渡したファイル、対応するアプリの文脈</td>
+</tr>
+<tr>
+<td data-label="入口">OutlookのCopilot Chat</td>
+<td data-label="何を根拠に答えるか">受信トレイ・予定表・会議・チャットと限られた関連の内容</td>
+</tr>
+<tr>
+<td data-label="入口">有料のCopilot</td>
+<td data-label="何を根拠に答えるか">Microsoft Graph、Work IQ、Microsoft 365全体の索引</td>
+</tr>
+</tbody>
+</table></div>
+<p>Copilot Chatのままでは、Word・Excel・PowerPoint・OneNoteの中でCopilotのチャットは使えません。ファイルのアップロードや画像の生成はできますが、混んでいるときは有料の利用者が優先されます。</p>
+<figure class="post-figure"><img src="/media/images/copilot-vs-chatgpt/ccv_06_decide.png" alt="CopilotとChatGPTのどちらを入れるかを決める順番の図。1は社員がMicrosoft 365のアカウントで働いているか、2はCopilot Chatで足りない仕事が何か、3は読ませたい社内データがどこにあるか、4はデータを日本に置く決まりがあるか" loading="lazy"></figure>
+
+<p>Google Workspaceで働いている会社がCopilotを入れるなら、Microsoft 365のライセンスから買う必要があり、ChatGPT Businessのほうが手前で済むでしょう。ChatGPTの料金ページにも、BusinessでGoogle Workspace・Slack・GitHub・Microsoft 365などと連携できるとの記載があります。</p>
+<p>Microsoft 365の会社なら、Copilot Chatで足りない仕事を書き出してから有料のCopilotを配る人を選ぶと無駄が出にくくなります。配ったあとの利用の確かめ方は「<a href="/media/copilot-adoption/">Copilotが社内で使われないときの調べ方</a>」で扱いました。</p>
+<h2 id="s4">TeamsとOutlookの中で使えるか</h2>
+<p>有料のCopilotはアプリの中に入ります。Microsoftの価格ページに並ぶのは、Word・Excel・PowerPoint・Outlook・Teamsなどのアプリ内のCopilotと、Teamsのチャット・通話での利用です。<a href="https://www.youtube.com/watch?v=aTEpjYBMsjc">ユースフルの解説動画</a>ではCopilot ChatだとOutlookの横のチャットで下書きを作って貼り付ける手間が残り、有料版だと返信欄に直接下書きが入る違いが実演されていました。</p>
+<p>ChatGPTはChatGPTの画面で使うのが基本です。料金ページの比較表ではBusinessでExcel・PowerPoint・Googleスプレッドシートの拡張機能が標準で付き、Microsoft 365とつなぐアプリもあります。<strong>1日の仕事がOutlookとTeamsの中で終わる人にはCopilotが近く、資料の下調べや長い文章を別の画面で練る人にはChatGPTの使い方が合います</strong>。</p>
+<h2 id="s5">社内データへのつなぎ方</h2>
+<p><strong>Copilotが答えに使う社内のデータは、本人が少なくとも閲覧できるものだけです。</strong><a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-privacy">Learnのデータとプライバシーのページ</a>によると、メール・予定表・チャット・会議・文書にMicrosoft Graphを通して届き、SharePointなどの権限をそのまま守ります。裏返すと、全社に共有されたままの人事や給与のファイルがあれば答えの材料になり得るため、導入の前にSharePointの共有設定を見直しておく必要があります。</p>
+<p>Microsoft 365の外のシステムをつなぐ仕組みが<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview">Copilotコネクタ</a>です。中身をMicrosoft Graphに取り込む同期型と、MCPを使ってその場で取りに行く取り込まない型があり、どちらも元のシステムの権限を守ります。</p>
+<figure class="post-figure"><img src="/media/images/copilot-vs-chatgpt/ccv_07_data.png" alt="社内データへの届き方の図。Copilotは本人が閲覧できるものだけをMicrosoft Graph経由で読み、外のシステムはCopilotコネクタでつなぐ。ChatGPTはつないだアカウントの権限の範囲をSharePointアプリで読み、設定によっては先にEntraの管理者の承認が要る" loading="lazy"></figure>
+
+<p>ChatGPTからMicrosoft 365のファイルを読むときは、<a href="https://help.openai.com/ja-jp/articles/12143177">SharePointアプリ</a>を使います。対象は職場のSharePointとOneDriveで、個人用のOneDriveは対象外です。<strong>組織で管理者の同意が必要な設定なら、先にMicrosoft Entraの管理者が権限を承認しないと使えません。</strong>ヘルプはライブで読むためにSites.Read.AllとFiles.Read.Allを挙げ、ChatGPTのワークスペース管理者とEntraの管理者が別の人のことがあると書いています。</p>
+<p>読める範囲はつないだMicrosoftアカウントの権限に従うので、権限の見直しが要るのはChatGPTでも同じです。アプリを有効にする手順は「<a href="/media/chatgpt-connectors-admin/">ChatGPTのコネクタの管理</a>」で扱っています。</p>
+<h2 id="s6">学習の扱いと保存場所</h2>
+<p>入力が学習に使われない点は、どちらの会社向けの契約でも公式に書かれています。差が出るのは保存場所と、管理者が会話をどう扱えるかです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>Copilot</th>
+<th>ChatGPT Business</th>
+<th>ChatGPT Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">入力を学習に使うか</td>
+<td data-label="Copilot">使わない</td>
+<td data-label="ChatGPT Business">既定で使わない</td>
+<td data-label="ChatGPT Enterprise">既定で使わない</td>
+</tr>
+<tr>
+<td data-label="項目">データを日本に置けるか</td>
+<td data-label="Copilot">日本のテナントは製品条項の対象</td>
+<td data-label="ChatGPT Business">対象外</td>
+<td data-label="ChatGPT Enterprise">日本を含む10地域から選ぶ</td>
+</tr>
+<tr>
+<td data-label="項目">会話の保持と検索</td>
+<td data-label="Copilot">Purviewの保持ポリシーとコンテンツ検索</td>
+<td data-label="ChatGPT Business">公式の比較表に記載なし</td>
+<td data-label="ChatGPT Enterprise">管理者が保持期間を設定、Compliance API</td>
+</tr>
+</tbody>
+</table></div>
+<p>Copilotは<a href="https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/m365-dr-product-terms">製品条項のデータ所在地</a>の対象に、Microsoft 365 Copilotが2024年3月1日、Copilot Chatが2025年9月1日に加わりました。<strong>既定の地域が日本のテナントなら、Copilotとのやり取りも日本に保存される約束に入っています。</strong>ただしWebの検索に使う短い語句はBingに送られ、Microsoft 365とは別の扱いになると<a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/enterprise-data-protection">エンタープライズ データ保護のページ</a>にあります。</p>
+<p>ChatGPTでデータを日本に置けるのは、新しく導入するEnterpriseとEduです。Businessは料金ページの比較表でデータレジデンシーの対象外です。</p>
+<figure class="post-figure"><img src="/media/images/copilot-vs-chatgpt/ccv_09_learn_dr.png" alt="Microsoft Learnのデータ所在地のページ。対象の地域に日本が含まれ、ワークロードの表にMicrosoft 365 Copilotの追加日が2024年3月1日、Microsoft 365 Copilot Chatが2025年9月1日と書かれている" loading="lazy"><figcaption>Microsoft Learn「製品条項のデータ所在地」（2026年10月24日）</figcaption></figure>
+
+<p><strong>ChatGPT Businessのワークスペース管理者は、メンバーの会話履歴を閲覧・エクスポート・削除できると<a href="https://openai.com/ja-JP/enterprise-privacy/">エンタープライズ プライバシーのページ</a>のBusinessのFAQにあります。</strong><a href="https://help.openai.com/ja-jp/articles/8798634">Businessのデータ共有のヘルプ</a>が書いているのは、ほかのメンバーには会話が自動で表示されないことと、利用状況の分析や支出管理の画面から会話は見えないことです。管理者がどの画面から会話を開けるかはヘルプに手順が見当たらないため、社内規程で会話の監査が要る会社は、契約の前にOpenAIの営業かサポートに確かめておくべき項目です。</p>
+<h2 id="s7">管理者が設定するところ</h2>
+<p><strong>Copilotは社員のMicrosoft 365のアカウントと権限をそのまま使うため、管理の場所が増えません。</strong>ライセンスはMicrosoft 365管理センターで割り当て、エージェントは統合アプリの画面で許可し、従量課金はCost Managementで上限を決めます。割り当ての手順は「<a href="/media/copilot-license-assign/">Copilotのライセンスを割り当てる方法</a>」にあります。</p>
+<p>ChatGPTはMicrosoft 365とは別の管理コンソールを持ちます。料金ページの比較表で、BusinessとEnterpriseの差は次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>機能</th>
+<th>ChatGPT Business</th>
+<th>ChatGPT Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="機能">SAML SSO・ドメイン認証</td>
+<td data-label="ChatGPT Business">あり</td>
+<td data-label="ChatGPT Enterprise">あり</td>
+</tr>
+<tr>
+<td data-label="機能">SCIM（アカウントの自動追加と削除）</td>
+<td data-label="ChatGPT Business">なし</td>
+<td data-label="ChatGPT Enterprise">あり</td>
+</tr>
+<tr>
+<td data-label="機能">ロールベースのアクセス制御</td>
+<td data-label="ChatGPT Business">なし</td>
+<td data-label="ChatGPT Enterprise">あり</td>
+</tr>
+<tr>
+<td data-label="機能">IP許可リスト</td>
+<td data-label="ChatGPT Business">なし</td>
+<td data-label="ChatGPT Enterprise">あり</td>
+</tr>
+<tr>
+<td data-label="機能">Compliance API</td>
+<td data-label="ChatGPT Business">なし</td>
+<td data-label="ChatGPT Enterprise">あり</td>
+</tr>
+</tbody>
+</table></div>
+<p>Entra IDとSAMLでつなげばBusinessでも会社のアカウントでサインインできますが、退職者のアカウントを自動で外すSCIMはEnterpriseだけです。SCIMの無いBusinessでは退職者をワークスペースの画面で外す運用になり、その手順は「<a href="/media/chatgpt-business-admin/">ChatGPT Businessのメンバー招待と管理</a>」にまとめています。</p>
+<h2 id="s8">両方入れる会社の例</h2>
+<p>全社でCopilotを買ったあとにChatGPTも使われるようになった例は報じられています。<a href="https://www.bloomberg.com/news/articles/2025-06-24/chatgpt-vs-copilot-inside-the-openai-and-microsoft-rivalry">Bloombergの2025年6月24日の記事</a>によると、製薬のAmgenは前の年の春に2万人分のCopilotの購入を発表し、13か月後には社員がChatGPTを使っていました。同じ報道を伝えた<a href="https://tomsguide.com/ai/microsoft-reportedly-struggling-to-convince-companies-to-buy-copilot-yup-employees-prefer-chatgpt">Tom's Guide</a>は、社員がChatGPTも使っていると書いています。</p>
+<p>両方を入れると費用が二重になるうえ、社員が使う画面・データの保存場所・管理の画面も2つずつです。分けるなら、全員にはCopilot Chatを使ってもらい、資料づくりが多い部署にだけChatGPT Businessを配るように、誰がどちらを使うかを先に決めておくと迷いが減ります。<strong>どちらを入れる場合も、個人で契約したAIに業務のデータを入れてよいかを社内の規程で決めておきます。</strong>規程の作り方は「<a href="/media/shadow-ai/">シャドーAIの対策</a>」が参考になります。</p>
+<h2 id="s9">個人の無料版の違い</h2>
+<p>個人で使う無料のCopilotアプリとChatGPTの無料版は、どちらも会社の契約の外のサービスです。上の表の学習の扱い・保存場所・管理者の設定は会社向けの契約の話で、個人のアカウントには当てはまりません。</p>
+<p>ChatGPTの無料版・Go・Plusでは「すべての人のためにモデルを改善する」の設定がオンだと、入力が学習に使われることがあると<a href="https://help.openai.com/ja-jp/articles/11487775">接続済みアプリのヘルプ</a>にもあります。個人で使い続けるなら、設定を確かめておきましょう。手順は「<a href="/media/chatgpt-training-off/">ChatGPTに学習させない設定方法</a>」にあります。</p>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">CopilotとChatGPTは同じAIですか？</h3>
+<p>同じではありません。CopilotはMicrosoftの製品で、Microsoft 365の権限とデータの上で動きます。ChatGPTはOpenAIの製品で、独自の画面とワークスペースを持ちます。</p>
+<h3 id="s10-2">Copilotの中身はChatGPTですか？</h3>
+<p>ChatGPTそのものではありません。LearnによるとCopilotはOpenAIのモデルを使い、Anthropicのモデルも管理者が許可すれば使えます。答えの根拠になる社内データの扱いはMicrosoftの契約に従います。</p>
+<h3 id="s10-3">CopilotとChatGPTはどちらが安いですか？</h3>
+<p>1人あたりの年払いではCopilot Businessが2,698円（税抜、割引の表示）、ChatGPT Businessが20ドル（消費税の前）で近い金額です。Copilotは土台のMicrosoft 365のライセンスが別に要るため、Microsoft 365を使っていない会社ではChatGPTのほうが安く済みます。</p>
+<h3 id="s10-4">CopilotはMicrosoft 365なしで使えますか？</h3>
+<p>有料のCopilotはBusiness BasicやE3などの対象のMicrosoft 365のライセンスがある人に足す契約なので、単独では買えません。Microsoft 365を使っていない会社は、そのライセンスからの契約です。</p>
+<h3 id="s10-5">Copilot Chatは無料で使えますか？</h3>
+<p>対象のMicrosoft 365プランを使っている人なら、追加費用なしで使えます。Webを根拠に答え、渡したファイルも読めるものの、Word・Excel・PowerPoint・OneNoteの中のCopilotのチャットには有料のCopilotが必要です。</p>
+<h3 id="s10-6">ChatGPTはSharePointのファイルを読めますか？</h3>
+<p>SharePointアプリを使えば読めます。組織で管理者の同意が必要な設定なら、先にMicrosoft Entraの管理者がSites.Read.AllやFiles.Read.Allなどの権限を承認しておく形です。</p>
+<h3 id="s10-7">CopilotとChatGPTの入力は学習に使われますか？</h3>
+<p>会社向けの契約ならどちらも使われません。Copilotのプロンプトと応答は基礎モデルの学習に使われず、ChatGPT BusinessとEnterpriseは既定で学習に使われない設定です。</p>
+<h3 id="s10-8">ChatGPTのデータは日本に保存できますか？</h3>
+<p>新しく導入するChatGPT EnterpriseとEduなら日本を選べます。Businessはデータレジデンシーの対象外です。</p>
+<h2 id="s11">出典</h2>
+<p>すべて2026年10月24日に取得。ChatGPTの料金ページの円の表示だけ2026年10月4日に確認。</p>
+<ul>
+<li>Microsoft「<a href="https://www.microsoft.com/ja-jp/microsoft-365/copilot/business">Microsoft Copilot Business の価格</a>」</li>
+<li>Microsoft「<a href="https://www.microsoft.com/ja-jp/microsoft-365/copilot/enterprise">法人向け Microsoft 365 Copilot の価格</a>」</li>
+<li>Microsoft「<a href="https://www.microsoft.com/ja-jp/microsoft-365/copilot/pricing">Microsoft Copilot の価格とよくある質問</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing">Microsoft Copilot のライセンス オプション</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/copilot/overview">Microsoft Copilot Chat の概要</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-privacy">Microsoft Copilot のデータ、プライバシー、セキュリティ</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/enterprise-data-protection">Microsoft Copilot および Microsoft Copilot Chat におけるエンタープライズ データ保護</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/m365-dr-product-terms">製品条項のデータ所在地</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview">Copilot connectors overview</a>」</li>
+<li>Microsoft 365 Blog「<a href="https://www.microsoft.com/en-us/microsoft-365/blog/2024/01/15/expanding-copilot-for-microsoft-365-to-businesses-of-all-sizes/">Expanding Copilot for Microsoft 365 to businesses of all sizes</a>」（2024年1月15日）</li>
+<li>OpenAI「<a href="https://openai.com/ja-JP/business/pricing/">ビジネス向け料金</a>」</li>
+<li>ChatGPT「<a href="https://chatgpt.com/ja-JP/pricing">料金</a>」ビジネス向けタブ</li>
+<li>OpenAI「<a href="https://openai.com/ja-JP/enterprise-privacy/">エンタープライズ プライバシー</a>」</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/10242647">OpenAI の請求書における日本の消費税</a>」</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/8798634">ChatGPT Business でのデータ共有とプライバシーの管理</a>」</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/12143177">ChatGPT の SharePoint アプリと設定</a>」</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/11487775">ChatGPT の接続済みアプリ</a>」</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/9903489-data-residency-and-inference-residency-for-chatgpt">ChatGPT のデータレジデンシーと推論レジデンシー</a>」</li>
+<li>Bloomberg「<a href="https://www.bloomberg.com/news/articles/2025-06-24/chatgpt-vs-copilot-inside-the-openai-and-microsoft-rivalry">ChatGPT vs Copilot: Inside the OpenAI and Microsoft Rivalry</a>」（2025年6月24日）</li>
+<li>Tom's Guide「<a href="https://tomsguide.com/ai/microsoft-reportedly-struggling-to-convince-companies-to-buy-copilot-yup-employees-prefer-chatgpt">Microsoft reportedly struggling to convince companies to buy Copilot</a>」（2025年6月26日）</li>
+<li>ユースフル「<a href="https://www.youtube.com/watch?v=aTEpjYBMsjc">Copilotの無償版と有償版の差</a>」（YouTube）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Copilot を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">比べる相手を先にそろえる</a><a href="#s2">料金と最低席数</a><a href="#s3">Microsoft 365を使っているか</a><a href="#s4">TeamsとOutlookの中で使えるか</a><a href="#s5">社内データへのつなぎ方</a><a href="#s6">学習の扱いと保存場所</a><a href="#s7">管理者が設定するところ</a><a href="#s8">両方入れる会社の例</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/claude-corporate-contract/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの法人契約"><defs><linearGradient id="ecg-bf88281c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-bf88281c)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの法人契約</text><line x1="273.2" y1="365.9" x2="926.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.23</div>
+                <div class="rel-card__ttl">【2026年10月】Claudeの法人契約の方法を解説｜請求書払い・AWS経由・代理店・稟議の準備</div>
+            </a>
+            <a href="/media/gpts-internal-share/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GPTsを社内だけで共有する"><defs><linearGradient id="ecg-fbc069cc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-fbc069cc)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GPTsを社内だけで共有する</text><line x1="128.8" y1="365.9" x2="1071.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.22</div>
+                <div class="rel-card__ttl">【2026年10月】GPTsを社内だけで共有する方法｜共有範囲・管理者の設定・プラグイン移行</div>
+            </a>
+            <a href="/media/shadow-ai/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="シャドーAI対策で会社がやること"><defs><linearGradient id="ecg-663cb194" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-663cb194)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="125.2" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">シャドーAI対策で</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">会社がやること</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.21</div>
+                <div class="rel-card__ttl">【2026年10月】シャドーAI対策とは？会社がやること｜個人のChatGPT・社内ルール・検知</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'copilot-vs-chatgpt',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
