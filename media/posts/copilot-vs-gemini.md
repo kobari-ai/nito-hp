@@ -122,7 +122,7 @@ Google側でSharePoint・OneDrive・Outlook・Teamsとつなぐ道として公�
 | データを日本に置けるか | 日本のテナントは製品条項の対象 | データ リージョンは米国・EU・指定なし |
 | 会話の保持と検索 | Purviewの保持ポリシーとコンテンツ検索 | Vault、Geminiアプリの会話は管理者が保存の有無と期間を決める |
 
-表の学習の行は、MicrosoftはLearnの、Googleはプライバシー ハブの文言です。WorkspaceのGeminiアプリでこの扱いを受けるにはドメインの所有権の確認が条件で、詳しくは「[Google WorkspaceのGeminiとは](/media/google-workspace-gemini/)」の学習の節にあります。
+表の学習の行はMicrosoftはLearnの文言、Googleはプライバシー ハブの文言です。WorkspaceのGeminiアプリでこの扱いを受けるにはドメインの所有権の確認が条件で、詳しくは「[Google WorkspaceのGeminiとは](/media/google-workspace-gemini/)」の学習の節にあります。
 
 保存場所では両者の差がはっきり出ます。Microsoftの[製品条項のデータ所在地](https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/m365-dr-product-terms)は対象の国に日本を含み、Microsoft 365 CopilotとCopilot Chatもその対象のサービスです。**既定の地域が日本のテナントなら、Copilotとのやり取りも日本に保存される約束に入っています。**
 
@@ -134,7 +134,7 @@ Googleの[データ リージョンの管理者ヘルプ](https://knowledge.work
 
 ## 管理者が設定するところ
 
-**どちらも、今の土台の管理画面でAIを管理するため、管理の場所は増えません。**Microsoftはライセンスの割り当てをMicrosoft 365管理センターで行い、従量課金の上限はCost Managementで決めます。モデルはLearnによるとOpenAIとAnthropicのものを使い、使うかどうかも管理者が決めます。割り当ての手順は「[Copilotのライセンスを割り当てる方法](/media/copilot-license-assign/)」にあります。
+**どちらも、今の土台の管理画面でAIを管理するため、管理の場所は増えません。**Microsoftはライセンスの割り当てをMicrosoft 365管理センターで行い、従量課金の上限はCost Managementで決めます。モデルはLearnによるとOpenAIとAnthropicのものを使い、使うかどうかも管理者が決めます。割り当ての手順は「[Copilotのライセンスを割り当てる方法](/media/copilot-license-assign/)」で解説しました。
 
 Googleは[Google管理コンソール](https://admin.google.com/)の［生成AI］［Geminiアプリ］で、Geminiアプリを使える人と会話履歴を残す期間を決めます。部署ごとに止める方法やGmailのGeminiを止められるエディションは「[Google WorkspaceのGeminiを無効化する方法](/media/google-workspace-gemini-admin/)」にまとめました。
 
@@ -184,7 +184,7 @@ Workspaceのデータ リージョンで選べるのは米国・欧州連合・�
 
 ### Gemini EnterpriseとCopilotの違いは？
 
-Gemini EnterpriseはAIエージェントを作って共有するためのGoogleの製品で、Workspaceのプランとは別の契約です。そのドキュメントには、SharePointやTeamsなどMicrosoftのサービスにつなぐコネクタも並んでいます。CopilotはMicrosoft 365のアプリの中で動くAIです。
+Gemini EnterpriseはAIエージェントを作って共有するためのGoogleの製品で、Workspaceのプランとは別の契約です。そのドキュメントにはSharePointやTeamsなどMicrosoftのサービスにつなぐコネクタも並んでいます。CopilotはMicrosoft 365のアプリの中で動くAIです。
 
 ## 出典
 
