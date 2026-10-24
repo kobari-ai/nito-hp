@@ -85,7 +85,7 @@ Copilot Chatのままでは、Word・Excel・PowerPoint・OneNoteの中でCopilo
 
 <figure class="post-figure"><img src="/media/images/copilot-vs-chatgpt/ccv_06_decide.png" alt="CopilotとChatGPTのどちらを入れるかを決める順番の図。1は社員がMicrosoft 365のアカウントで働いているか、2はCopilot Chatで足りない仕事が何か、3は読ませたい社内データがどこにあるか、4はデータを日本に置く決まりがあるか" loading="lazy"></figure>
 
-Google Workspaceで働いている会社がCopilotを入れるなら、Microsoft 365のライセンスから買う必要があり、ChatGPT Businessのほうが手前で済むでしょう。ChatGPTの料金ページにも、BusinessでGoogle Workspace・Slack・GitHub・Microsoft 365などと連携できるとの記載があります。
+Google Workspaceで働いている会社がCopilotを入れるなら、Microsoft 365のライセンスから買う必要があり、ChatGPT Businessのほうが手前で済むでしょう。ChatGPTの料金ページにも、BusinessでGoogle Workspace・Slack・GitHub・Microsoft 365などと連携できるとの記載があります。Google WorkspaceのGeminiと比べるなら「[CopilotとGeminiの違い](/media/copilot-vs-gemini/)」で同じ順番に並べました。
 
 Microsoft 365の会社なら、Copilot Chatで足りない仕事を書き出してから有料のCopilotを配る人を選ぶと無駄が出にくくなります。配ったあとの利用の確かめ方は「[Copilotが社内で使われないときの調べ方](/media/copilot-adoption/)」で扱いました。
 

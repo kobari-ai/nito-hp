@@ -147,7 +147,7 @@ Workspaceは会社でなくても契約できます。**1人だけのアカウ�
 
 ただし前の節のとおり、Geminiアプリのエンタープライズ級のデータ保護はドメインの所有権の確認が条件です。Businessのプランでスマホのアプリを使うにも、ビジネス用のメールアドレスで登録するかドメインを確認する必要があります。学習されないことが目的なら、独自ドメインを用意してから申し込みます。
 
-Workspaceのアカウントは今の個人アカウントとは別のアカウントになり、写真やドライブのファイルは自動では移りません。仕事用のアカウントでGeminiを使えるのは18歳以上で、年齢の条件は[Geminiの年齢制限](/media/gemini-age-limit/)で扱っています。ほかの法人向けAIと比べるなら、[ChatGPT Business](/media/chatgpt-business/)と[Claude Teamプラン](/media/claude-team/)の料金と学習の扱いも同じ形で整理しています。
+Workspaceのアカウントは今の個人アカウントとは別のアカウントになり、写真やドライブのファイルは自動では移りません。仕事用のアカウントでGeminiを使えるのは18歳以上で、年齢の条件は[Geminiの年齢制限](/media/gemini-age-limit/)で扱っています。ほかの法人向けAIと比べるなら、[ChatGPT Business](/media/chatgpt-business/)と[Claude Teamプラン](/media/claude-team/)の料金と学習の扱いも同じ形で整理しています。Microsoft 365 Copilotとの違いは「[CopilotとGeminiの違い](/media/copilot-vs-gemini/)」で比べました。
 
 ## よくある質問
 
