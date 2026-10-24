@@ -25,7 +25,7 @@ Google Workspaceの料金ページでは、Business Standardが1ユーザー月1
 
 有料のCopilotは会社の規模で2つに分かれます。[Microsoft Learnのライセンスのページ](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing)によると、**Copilot BusinessはMicrosoft 365 Businessのライセンスを持つ300人までの組織向けのアドオンで、法人向けと同じCopilotの機能を提供します**。300人を超える会社ではE3やE5などに足す法人向けのライセンスを使い、種類ごとの機能の差は「[Copilotの使い方](/media/copilot-guide/)」にまとめました。
 
-<!-- SHOT: 図 cvg_lineup.html → cvg_01_lineup.png・alt「会社で比べる5つの契約を縦に並べた図。Microsoft側はCopilot Chat（Microsoft 365に追加費用なし）、Copilot Business（300人までの会社が足す）、法人向けMicrosoft 365 Copilot（E3やE5などに足す）、Google側はWorkspaceのGemini（BusinessとEnterpriseの月額に込み）とGemini Enterprise（エージェント用の別の契約）」 -->
+<figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_01_lineup.png" alt="会社で比べる5つの契約を縦に並べた図。Microsoft側はCopilot Chat（Microsoft 365に追加費用なし）、Copilot Business（300人までの会社が足す）、法人向けMicrosoft 365 Copilot（E3やE5などに足す）、Google側はWorkspaceのGemini（BusinessとEnterpriseの月額に込み）とGemini Enterprise（エージェント用の別の契約）" loading="lazy"></figure>
 
 WorkspaceのGeminiは、GmailやドキュメントなどのアプリのなかのGeminiと、gemini.google.comのGeminiアプリの2つです。[PC Watchの2025年1月16日の記事](https://pc.watch.impress.co.jp/docs/news/1654889.html)によると、GoogleはGemini BusinessとGemini Enterpriseのアドオンをやめてプランの月額に組み込み、Business Standardの年間契約を1,360円から1,600円に改めました（新料金は2025年3月17日から）。**Gemini Businessの20ドル・Gemini Enterpriseの30ドルという金額は旧アドオンのもので、今の契約には当てはまりません。**
 
@@ -33,7 +33,7 @@ WorkspaceのGeminiは、Gmailやドキュメントなどのアプリのなかの
 
 ## 料金と最低席数
 
-どちらも日本の料金は円の税抜です。Microsoftの価格ページはどのカードにも「価格には消費税は含まれていません」と書き、[Google Workspaceの料金ページ](https://workspace.google.com/intl/ja/pricing)も「（税別）」と添えているので、税抜の金額どうしでそのまま比べられます。
+どちらも日本の料金は円の税抜です。Microsoftの価格ページはどのカードにも「価格には消費税は含まれていません」と書き、[Google Workspaceの料金ページ](https://workspace.google.com/intl/ja/pricing)も各プランの「価格の詳細」に「（税別）」と添えているので、税抜の金額どうしでそのまま比べられます。
 
 | 契約 | 年払い（1人の月額） | 月払い（1人の月額） | AIの扱い |
 |---|---|---|---|
@@ -48,11 +48,11 @@ WorkspaceのGeminiは、Gmailやドキュメントなどのアプリのなかの
 
 Workspaceの月払いの列は1年の契約をしないフレキシブルプランで、Microsoftの金額は[Teamsが含まれるプランの価格ページ](https://www.microsoft.com/ja-jp/microsoft-365/business/with-teams-plans-and-pricing)と[Copilot Businessの価格ページ](https://www.microsoft.com/ja-jp/microsoft-365/copilot/business)の表示です。
 
-<!-- SHOT: 画面 https://workspace.google.com/intl/ja/pricing・本文だけにある探す語「価格はユーザー 1 人あたりの月額料金です（税別）」・赤枠にする語「￥1,600」と「（税別）」・PC・alt「Google Workspaceの料金ページの年間プランのカード。Starter・Standard・Plusが並び、Standardは1ユーザー月1,600円、価格はユーザー1人あたりの月額料金です（税別）と書かれている」・figcaption「Google Workspaceの料金ページ（2026年10月25日）」 -->
+<figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_gws_pricing.png" alt="Google Workspaceの料金ページの年間プランのカード。Starter・Standard・Plusが並び、Standardは新規向けの3か月50%オフで800円、取り消し線の定価が1ユーザー月1,600円" loading="lazy"><figcaption>Google Workspaceの料金ページ（2026年10月25日）</figcaption></figure>
 
 **Workspaceは2025年1月からGeminiを月額に組み込んだのに対し、MicrosoftはCopilotを土台のプランに足す形のままです。**ただしMicrosoftの価格ページには、Business StandardとBusiness PremiumにCopilot Businessを組み合わせた価格があります。Business Standardの単体2,098円にCopilot Businessの定価3,148円を別に足すと5,246円、割引の表示の2,698円でも4,796円になり、組み合わせの3,523円のほうが安く済みます。
 
-<!-- SHOT: 画面 https://www.microsoft.com/ja-jp/microsoft-365/copilot/business・本文だけにある探す語「Microsoft 365 Business Standard (Copilot を含む)」・赤枠にする語「¥3,523」と「価格には消費税は含まれていません。」・PC・alt「MicrosoftのCopilot Businessの価格ページで、Teamsが含まれるプラン・年払いのMicrosoft 365 Business Standard（Copilotを含む）のカード。ユーザー/月相当・年払いで3,523円、価格には消費税は含まれていませんと書かれている」・figcaption「Copilot Businessの価格ページ（2026年10月25日）」 -->
+<figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_ms_standard_copilot.png" alt="MicrosoftのCopilot Businessの価格ページで、Teamsが含まれるプラン・年払いのMicrosoft 365 Business Standard（Copilotを含む）のカード。ユーザー/月相当・年払いで3,523円、価格には消費税は含まれていませんと書かれている" loading="lazy"><figcaption>Copilot Businessの価格ページ（2026年10月25日）</figcaption></figure>
 
 人数の線はどちらのBusinessも300人です。料金ページによると、WorkspaceはStarter・Standard・Plusの購入で最大300人まで使え、Enterpriseのプランには上限も下限もありません。Copilotは[2024年1月のMicrosoftの発表](https://www.microsoft.com/en-us/microsoft-365/blog/2024/01/15/expanding-copilot-for-microsoft-365-to-businesses-of-all-sizes/)で300席の最低購入数がなくなり、1人から買えます。
 
@@ -62,7 +62,7 @@ Workspaceの最初の3か月の割引や、Copilot Businessの2,698円のよう�
 
 年払いの定価で、土台のプランの値段を含めた月額です。
 
-<!-- SHOT: 図 cvg_cost.html → cvg_02_cost.png・alt「50人に配ったときの月額を縦に並べた図。年払い・税抜の定価で、Workspace Business Standardは80,000円でGeminiは月額に込み、Business Starterは40,000円でGeminiはGmailとアプリだけ、Microsoft 365 Business Standardだけは104,900円でCopilot Chatは追加費用なし、Business StandardとCopilotの組み合わせは176,150円」 -->
+<figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_02_cost.png" alt="50人に配ったときの月額を縦に並べた図。年払い・税抜の定価で、Workspace Business Standardは80,000円でGeminiは月額に込み、Business Starterは40,000円でGeminiはGmailとアプリだけ、Microsoft 365 Business Standardだけは104,900円でCopilot Chatは追加費用なし、Business StandardとCopilotの組み合わせは176,150円" loading="lazy"></figure>
 
 | 契約（年払い・税抜） | 50人の月額 | 消費税を足すと |
 |---|---|---|
@@ -79,7 +79,7 @@ Workspaceの最初の3か月の割引や、Copilot Businessの2,698円のよう�
 
 土台ごと乗り換えるなら、費用の中心はAIの差額ではなくメールとファイルの移行と社員の慣れです。
 
-<!-- SHOT: 図 cvg_decide.html → cvg_03_decide.png・alt「CopilotとGeminiのどちらを入れるかを決める順番の図。1は今の土台がどちらか（メールとファイルの置き場所）、2は込みの範囲で足りるか（Copilot ChatかStarterのGemini）、3は読ませたいデータがどこにあるか（もう一方の側にあればコネクタ）、4は日本に置く決まりがあるか（Workspaceは米国とEUだけ）」 -->
+<figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_03_decide.png" alt="CopilotとGeminiのどちらを入れるかを決める順番の図。1は今の土台がどちらか（メールとファイルの置き場所）、2は込みの範囲で足りるか（Copilot ChatかStarterのGemini）、3は読ませたいデータがどこにあるか（もう一方の側にあればコネクタ）、4は日本に置く決まりがあるか（Workspaceは米国とEUだけ）" loading="lazy"></figure>
 
 Microsoft 365の会社なら、Copilot Chatで足りない仕事を書き出してから有料のCopilotを配る人を選ぶと無駄が出にくくなります。Workspaceの会社なら、StarterのままかドキュメントやMeetのGeminiが使えるStandardにするかが分かれ目です。ChatGPTも候補に入るなら「[CopilotとChatGPTの違い](/media/copilot-vs-chatgpt/)」を同じ軸で書いています。
 
@@ -103,13 +103,13 @@ Microsoft 365の会社なら、Copilot Chatで足りない仕事を書き出し�
 
 裏返すと、全社に共有されたままの人事や給与のファイルは、どちらのAIでも答えの材料になり得ます。SharePointやドライブの共有設定の見直しは、どちらを選んでも導入の前に必要です。
 
-<!-- SHOT: 図 cvg_data.html → cvg_04_data.png・alt「社内データへの届き方の図。Copilotは本人が閲覧できるものだけをMicrosoft Graph経由で読み、GoogleドライブはCopilotコネクタでつなぐ。WorkspaceのGeminiは本人が閲覧できるものだけをGmailやドライブとの連携で読み、SharePointはGemini Enterpriseのコネクタでつなぐ」 -->
+<figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_04_data.png" alt="社内データへの届き方の図。Copilotは本人が閲覧できるものだけをMicrosoft Graph経由で読み、GoogleドライブはCopilotコネクタでつなぐ。WorkspaceのGeminiは本人が閲覧できるものだけをGmailやドライブとの連携で読み、SharePointはGemini Enterpriseのコネクタでつなぐ" loading="lazy"></figure>
 
 もう一方の会社のデータを読ませる道も、公式に用意されています。Microsoftの[GoogleドライブのCopilotコネクタ](https://learn.microsoft.com/ja-jp/microsoftsearch/google-drive-overview)は、ドライブのアクセス制御を保ったままファイルを索引に取り込み、Copilotで検索できるようにします。[配置の手順](https://learn.microsoft.com/ja-jp/microsoftsearch/google-drive-connector)は、Google Workspaceの管理者とMicrosoft 365の管理者の2人がかりです。
 
 Google側でSharePoint・OneDrive・Outlook・Teamsとつなぐ道として公式に案内されているのは、WorkspaceのGeminiではなく別の製品のGemini Enterpriseです。[Gemini Enterpriseのコネクタの一覧](https://cloud.google.com/gemini-enterprise/docs/connectors/introduction-to-connectors-and-data-stores?hl=ja)に、Microsoftの4つのサービスとEntra ID、Jira、Salesforceが並びます。**WorkspaceのGeminiの機能の表にはMicrosoftのサービスとつなぐ項目が無いため、Microsoft 365のデータをGeminiに読ませるならGemini Enterpriseの契約を別に考えることになります。**
 
-<!-- SHOT: 画面 https://cloud.google.com/gemini-enterprise/docs/connectors/introduction-to-connectors-and-data-stores?hl=ja・本文だけにある探す語「Microsoft SharePoint Online に接続する」・赤枠にする語「Microsoft OneDrive を接続する」から「Microsoft Teams を接続する」までの並び・PC・alt「Gemini Enterpriseのドキュメントの左側の一覧。Microsoft Entra ID、Microsoft OneDrive、Microsoft Outlook、Microsoft SharePoint Online、Microsoft Teamsをそれぞれ接続する項目が並んでいる」・figcaption「Gemini Enterpriseのコネクタの一覧（2026年10月25日）」 -->
+<figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_ge_connectors.png" alt="Gemini Enterpriseのドキュメントの左側の一覧。Microsoft Entra ID、Microsoft OneDrive、Microsoft Outlook、Microsoft SharePoint Online、Microsoft Teamsをそれぞれ接続する項目が並んでいる" loading="lazy"><figcaption>Gemini Enterpriseのコネクタの一覧（2026年10月25日）</figcaption></figure>
 
 ## 学習の扱いと保存場所
 
@@ -128,7 +128,7 @@ Google側でSharePoint・OneDrive・Outlook・Teamsとつなぐ道として公�
 
 Googleの[データ リージョンの管理者ヘルプ](https://knowledge.workspace.google.com/admin/compliance/choose-a-geographic-location-for-your-data?hl=ja)では、保管場所に選べるのは米国・欧州連合・指定なしの3つです。[データ リージョンの対象となるデータ](https://knowledge.workspace.google.com/admin/compliance/data-covered-by-data-regions?hl=ja)にはGeminiのプロンプトと回答も入っていますが、選べる場所に日本はなく、Starterはデータ リージョン自体の対象外です。
 
-<!-- SHOT: 画面 https://knowledge.workspace.google.com/admin/compliance/choose-a-geographic-location-for-your-data?hl=ja・本文だけにある探す語「保管場所には、米国、欧州連合」・赤枠にする語「米国、欧州連合（Google 管理コンソールでは「ヨーロッパ」と表示されます）、指定なしのいずれかを選択できます」の文・PC・alt「Google Workspace管理者ヘルプのデータリージョンのページ。対応しているエディションの一覧の下に、保管場所には米国、欧州連合（管理コンソールではヨーロッパと表示）、指定なしのいずれかを選択できますと書かれている」・figcaption「Google Workspace 管理者ヘルプ「データ リージョン」（2026年10月25日）」 -->
+<figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_gws_dataregion.png" alt="Google Workspace管理者ヘルプのデータリージョンのページ。対応しているエディションの一覧の下に、保管場所には米国、欧州連合（管理コンソールではヨーロッパと表示）、指定なしのいずれかを選択できますと書かれている" loading="lazy"><figcaption>Google Workspace 管理者ヘルプ「データ リージョン」（2026年10月25日）</figcaption></figure>
 
 社内の規程や取引先との契約でデータを国内に置くと決めている会社は、Workspaceの側ではその決まりを満たせません。選ぶ前に、法務や情報システムの担当と規程の文言を確かめておきましょう。
 
