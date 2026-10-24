@@ -29,8 +29,8 @@
     "ai_mode": "2026-10-23"
   },
   "last_changed": {
-    "date": "2026-10-17",
-    "text": "AIモードで図やインフォグラフィックに向いた画像のモデルが、ヘルプの表記でNano Banana ProからNano Banana 2.1に。画像の作成の枚数の上限は変わらず"
+    "date": "2026-10-24",
+    "text": "AIモードで選べる上位モデルが、ヘルプの表記でGemini 3 ProからGemini 4 Argonに。使えるのはGoogle AI Pro・Ultraの18歳以上で、Plusは対象から外れ、英語だけという条件の記載はなくなった。1日の上限があるのは同じ"
   },
   "tables": [
     {
@@ -59,7 +59,7 @@
               ]
             },
             "ai_mode": {
-              "text": "通常の質問は記載なし。Pro・画像に1日の上限",
+              "text": "通常の質問は記載なし。Gemini 4 Argon・画像に1日の上限",
               "src": [
                 "m1",
                 "m2"
@@ -91,7 +91,7 @@
               ]
             },
             "ai_mode": {
-              "text": "高速モード（Gemini 3 Proは有料プランのみ）",
+              "text": "高速モード（Gemini 4 ArgonはGoogle AI Pro・Ultraのみ）",
               "src": [
                 "m1"
               ]
@@ -724,7 +724,7 @@
       "fetch_url": "https://support.google.com/websearch/answer/16011537?hl=ja",
       "auto": true,
       "watch": [
-        "Gemini 3 Pro には、1 日ごとの使用量制限",
+        "Gemini 4 Argon には 1 日ごとの使用量上限",
         "Google AI Ultra 定期購入者",
         "PDF などのファイルを使用して質問する"
       ],
@@ -838,6 +838,14 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-10-24",
+      "ai": "ai_mode",
+      "text": "AIモードで選べる上位モデルが、ヘルプの表記でGemini 3 ProからGemini 4 Argonに。使えるのはGoogle AI Pro・Ultraの18歳以上で、Plusは対象から外れ、英語だけという条件の記載はなくなった。1日の上限があり、上限に達したらリセット待ちかGoogle AIプランへ、は同じ",
+      "src": [
+        "m1"
+      ]
+    },
     {
       "date": "2026-10-17",
       "ai": "ai_mode",
