@@ -28,6 +28,8 @@ def theme_of(meta, body_html, slug=""):
 
 def product_of(slug):
     s = slug
+    if "-vs-" in s:  # 比較記事は片方の製品に寄せない（2026-10-25 希一さん）
+        return "AI"
     if s.startswith("chatgpt"):
         return "ChatGPT"
     if s.startswith("claude"):
