@@ -53,7 +53,7 @@ Googleは2024年8月に日本でAIによる概要を、2025年9月9日にAIモ�
 | Pew Research Center | 米国 | 2025年3月 | 成人900人の閲覧記録 | AIの要約がある検索で通常のリンクを押したのは8%。要約が無いと15% |
 | Ahrefs | 日本・米国 | 2026年6月 | 情報収集型の語で検索1位のクリック率 | 日本は予測24.1%に対し実測9.0% |
 
-<!-- SHOT: 図 zcs_01_numbers.html → zcs_01_numbers.png・alt「ゼロクリック検索の主な数字。米国は2026年1〜4月に68.01%、日本は2024年10月〜2025年12月に約41%、日本の情報収集型の語の検索1位のクリック率はAIによる概要が出ると予測24.1%に対し実測9.0%（2026年6月）」 -->
+<figure class="post-figure"><img src="/media/images/zero-click-strategy/zcs_01_numbers.png" alt="ゼロクリック検索の主な数字。米国は2026年1〜4月に68.01%、日本は2024年10月〜2025年12月に約41%、日本の情報収集型の語の検索1位のクリック率はAIによる概要が出ると予測24.1%に対し実測9.0%（2026年6月）" loading="lazy"></figure>
 
 ### 日本の数字の読み方
 
@@ -102,13 +102,13 @@ SimilarwebとSparkToroが2026年6月に出した分析でも、金融・旅行�
 | 横ばい | 下がった | 下がった | 順位の低下。競合や更新の影響を先に調べる |
 | 大きく減った | 下がった | 下がった | インデックスや技術的な不具合 |
 
-<!-- SHOT: 図 zcs_03_check.html → zcs_03_check.png・alt「ゼロクリックの影響の見分け方。表示回数が横ばいで順位も変わらないのにクリック率だけ下がったら、AIによる概要など検索結果の中で答えが済んでいる可能性がある」 -->
+<figure class="post-figure"><img src="/media/images/zero-click-strategy/zcs_03_check.png" alt="ゼロクリックの影響の見分け方。表示回数が横ばいで順位も変わらないのにクリック率だけ下がったら、AIによる概要など検索結果の中で答えが済んでいる可能性がある" loading="lazy"></figure>
 
 ### 生成AIパフォーマンスレポート
 
 Search Consoleの[生成AIパフォーマンスレポート](https://support.google.com/webmasters/answer/16984139?hl=ja)は2026年8月31日に全サイトに公開され、AIによる概要とAIモードでサイトへのリンクが表示された回数を、ページ・国・デバイス・日付ごとに出します。**見られる指標は表示回数だけで、クリックの数はありません。** AIによる概要やAIモードからのクリックは、通常の検索パフォーマンスの検索タイプ「ウェブ」に含まれて数えられます。
 
-<!-- SHOT: 画面 https://support.google.com/webmasters/answer/16984139?hl=ja・本文だけにある探す語「インプレッション数とは」・赤枠にする語「インプレッション数とは、Google 検索の生成 AI 機能でユーザーにサイトへのリンクが表示された回数です」・PC・alt「Search Consoleヘルプの生成AIパフォーマンスレポートの説明。インプレッション数はGoogle検索の生成AI機能でサイトへのリンクが表示された回数」・figcaption「Search Consoleヘルプ 生成AIパフォーマンスレポート（検索）（2026年10月25日）」 -->
+<figure class="post-figure"><img src="/media/images/zero-click-strategy/zcs_gsc_ai_report.png" alt="Search Consoleヘルプの生成AIパフォーマンスレポートの説明。インプレッション数はGoogle検索の生成AI機能でサイトへのリンクが表示された回数" loading="lazy"><figcaption>Search Consoleヘルプ 生成AIパフォーマンスレポート（検索）（2026年10月25日）</figcaption></figure>
 
 このレポートで表示が多いのに、検索パフォーマンスでクリックが減っているページが、ゼロクリックの影響を受けている候補です。レポートの開き方と数字の読み方は[サーチコンソールでAIモードの表示を見る方法](/media/gsc-ai-mode/)にまとめました。
 
@@ -155,7 +155,7 @@ AIの回答で名前を知った人は、次に「社名＋評判」「社名＋
 | 名前で探される | 社名を含む語の表示とクリック | Search Consoleで社名を含む語に絞る |
 | 問い合わせ | 何で知ったかの回答 | 問い合わせのフォーム・商談の最初の質問 |
 
-<!-- SHOT: 図 zcs_02_funnel.html → zcs_02_funnel.png・alt「ゼロクリック検索の時代の測り方の4段。検索で表示される、AIの回答に出る、名前で探される、問い合わせ。段ごとに見る数字と道具が違う」 -->
+<figure class="post-figure"><img src="/media/images/zero-click-strategy/zcs_02_funnel.png" alt="ゼロクリック検索の時代の測り方の4段。検索で表示される、AIの回答に出る、名前で探される、問い合わせ。段ごとに見る数字と道具が違う" loading="lazy"></figure>
 
 ChatGPTやPerplexityの回答はSearch Consoleに入らないため、AIの回答に出る段は、見込み客が聞きそうな質問を決めて定期的に聞き、社名が挙がった割合を記録します。指名検索の追い方は[指名検索が増えたら](/media/branded-search-signal/)、GA4でAIからの流入を分ける設定と、何で知ったかの聞き方は[AI検索対策の効果はどう測る？](/media/ai-search-measurement/)にあります。
 
