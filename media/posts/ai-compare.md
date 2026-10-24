@@ -16,7 +16,7 @@ ChatGPT・Gemini・Claude・GoogleのAIモードは、どれも無料で使い�
 
 :::takeaways
 - 無料の上限は、GeminiとClaudeが**使った量**で決まる。ChatGPTはテキストに回数の上限がなく、画像やファイルなど機能ごとに上限がある
-- GoogleのAIモードは、**ふだんの質問に上限の記載がない**。1日の上限があるのはProのモデルと画像の作成
+- GoogleのAIモードは、**ふだんの質問に上限の記載がない**。1日の上限があるのは上位のモデル（Gemini 4 Argon）と画像の作成
 - **Geminiの無料版は10月9日から、自分で選べるモデルがFlash-Liteだけ**になる（既定は「自動」。公式ヘルプの告知）
 - Claudeは写真やイラストを作らない。画像を作るならChatGPT・Gemini・AIモード
 - いちばん安い有料プランは、Gemini（AIモードと共通）が{{data:paid.entry.gemini}}、ChatGPTが{{data:paid.entry.chatgpt}}、Claudeが{{data:paid.entry.claude}}
