@@ -2,20 +2,23 @@
 title: 【2026年10月】CopilotとGeminiの違い｜会社に入れるならどっち？料金・データ・管理
 date: 2026-10-25
 category: AI活用
-description: Microsoft 365 CopilotとGoogle WorkspaceのGeminiを会社で入れる前提で比較。込みか足すかで変わる料金と50人の月額、Outlook・Gmailでの機能、社内データ、日本に保存できるか、管理の設定まで。
+description: Microsoft 365 CopilotとGoogle WorkspaceのGeminiを会社で入れる前提で比較。AIの入り方で変わる料金と50人の月額、Outlook・Gmailでの機能、社内データ、日本に保存できるか、管理の設定まで。
 cover_tag: 導入担当向け
 cover_headline: CopilotとGeminiの違い
 cover_sub: 料金・社内データ・管理で比べる
 cta: ai_agent
+cta_eyebrow: CopilotかGeminiを会社に入れる方へ
+cta_title: 導入したあと毎日の業務で使われる形まで決まっていますか
+cta_text: どちらを選んでも、ライセンスを配っただけでは毎日の業務のどこで使うかは決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。
 ---
 
-Google Workspaceの料金ページでは、Business Standardが1ユーザー月1,600円（年間プラン・税別）で、GmailやGoogleドキュメントのGeminiが含まれています。MicrosoftはBusiness StandardとCopilot Businessの組み合わせを月3,523円（年払い・税抜）と表示しています。いずれも2026年10月25日の表示です。
+Google Workspaceの料金ページでは、Business Standardが1ユーザー月1,600円（年間プラン・税別）で、GmailやGoogleドキュメントのGeminiが含まれています。MicrosoftはBusiness Standard（Copilotを含む）を月3,523円（年払い・税抜）と表示しています。いずれも2026年10月25日の表示です。
 
-同じStandardでも、AIが月額に込みなのか、あとから足すのかが違います。この記事は会社でAIを入れる担当者に向けて、CopilotとGeminiのどちらを選ぶかの判断に要る違いを公式の資料で並べます。
+同じStandardでも、AIの入り方が違います。この記事は会社でAIを入れる担当者に向けて、CopilotとGeminiのどちらを選ぶかの判断に要る違いを公式の資料で並べます。
 
 :::takeaways
-- **どちらを選ぶかの大半は、社員が今Microsoft 365とGoogle Workspaceのどちらで働いているかで決まる**。WorkspaceのGeminiは月額に込み、Microsoft 365はCopilot Chatが追加費用なしで、有料のCopilotは足す契約
-- 50人に年払いで配ると、Workspace Business Standardは月80,000円、Business StandardとCopilot Businessの組み合わせは月176,150円（どちらも税抜）。Businessのプランはどちらも300人まで
+- **どちらを選ぶかの大半は、社員が今Microsoft 365とGoogle Workspaceのどちらで働いているかで決まる**。WorkspaceのGeminiは月額に込み、Microsoft 365はCopilot Chatが追加費用なしで、有料のCopilotは足すか、Copilotを含むプランを選ぶ
+- 50人に年払いで配ると、Workspace Business Standardは月80,000円、Business Standard（Copilotを含む）は月176,150円（どちらも税抜）。Businessのプランはどちらも300人まで
 - **データを日本に置く約束があるのはMicrosoft側**。Workspaceのデータ リージョンで選べるのは米国・EU・指定なしの3つ
 :::
 
@@ -27,9 +30,9 @@ Google Workspaceの料金ページでは、Business Standardが1ユーザー月1
 
 <figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_01_lineup.png" alt="会社で比べる5つの契約を縦に並べた図。Microsoft側はCopilot Chat（Microsoft 365に追加費用なし）、Copilot Business（300人までの会社が足す）、法人向けMicrosoft 365 Copilot（E3やE5などに足す）、Google側はWorkspaceのGemini（BusinessとEnterpriseの月額に込み）とGemini Enterprise（エージェント用の別の契約）" loading="lazy"></figure>
 
-WorkspaceのGeminiは、GmailやドキュメントなどのアプリのなかのGeminiと、gemini.google.comのGeminiアプリの2つです。[PC Watchの2025年1月16日の記事](https://pc.watch.impress.co.jp/docs/news/1654889.html)によると、GoogleはGemini BusinessとGemini Enterpriseのアドオンをやめてプランの月額に組み込み、Business Standardの年間契約を1,360円から1,600円に改めました（新料金は2025年3月17日から）。**Gemini Businessの20ドル・Gemini Enterpriseの30ドルという金額は旧アドオンのもので、今の契約には当てはまりません。**
+WorkspaceのGeminiは、GmailやドキュメントなどのアプリのなかのGeminiと、gemini.google.comのGeminiアプリの2つです。[PC Watchの2025年1月16日の記事](https://pc.watch.impress.co.jp/docs/news/1654889.html)によると、GoogleはGemini BusinessとGemini Enterpriseのアドオンをやめてプランの月額に組み込み、Business Standardの年間契約を1,360円から1,600円に改めました（新料金は2025年3月17日から）。**以前のGemini BusinessとGemini Enterpriseのアドオンの金額は、今の契約には当てはまりません。**
 
-名前の似た「Gemini Enterprise - Businessエディション」はAIエージェントを作って共有するための別の製品で、[Workspaceの管理者ヘルプ](https://knowledge.workspace.google.com/admin/generative-ai/gemini-enterprise?hl=ja)によると営業担当者かGoogle Cloudパートナーを通して申し込みます。プログラミング用のGitHub Copilotも別物で、[GitHubのドキュメント](https://docs.github.com/ja/copilot/using-github-copilot/ai-models/using-gemini-in-github-copilot)のとおりモデルの1つとしてGeminiを選べます。
+名前の似た「Gemini Enterprise - Businessエディション」はAIエージェントを作って共有するための別の製品で、[Workspaceの管理者ヘルプ](https://knowledge.workspace.google.com/admin/generative-ai/gemini-enterprise?hl=ja)によると営業担当者かGoogle Cloudパートナーを通す申し込みと、サインアップのページから自分で申し込む方法の2つが案内されています。プログラミング用のGitHub Copilotも別物で、[GitHubのドキュメント](https://docs.github.com/ja/copilot/using-github-copilot/ai-models/using-gemini-in-github-copilot)のとおりモデルの1つとしてGeminiを選べます。
 
 ## 料金と最低席数
 
@@ -42,7 +45,7 @@ WorkspaceのGeminiは、Gmailやドキュメントなどのアプリのなかの
 | Workspace Business Plus | 2,500円 | 3,000円 | Geminiは込み |
 | Microsoft 365 Business Basic | 1,049円 | 1,259円 | Copilot Chatは追加費用なし |
 | Microsoft 365 Business Standard | 2,098円 | 2,518円 | Copilot Chatは追加費用なし |
-| Business StandardとCopilot Businessの組み合わせ | 3,523円 | 4,228円 | 有料のCopilotを含む |
+| Business Standard（Copilotを含む） | 3,523円 | 4,228円 | 有料のCopilotを含む |
 | Copilot Business（アドオン） | 2,698円（表示は3,148円からの割引） | 3,778円 | 土台のプランに足す |
 | 法人向けMicrosoft 365 Copilot | 4,497円 | 4,722円（年間契約の毎月払い） | E3・E5などに足す |
 
@@ -50,7 +53,7 @@ Workspaceの月払いの列は1年の契約をしないフレキシブルプラ�
 
 <figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_gws_pricing.png" alt="Google Workspaceの料金ページの年間プランのカード。Starter・Standard・Plusが並び、Standardは新規向けの3か月50%オフで800円、取り消し線の定価が1ユーザー月1,600円" loading="lazy"><figcaption>Google Workspaceの料金ページ（2026年10月25日）</figcaption></figure>
 
-**Workspaceは2025年1月からGeminiを月額に組み込んだのに対し、MicrosoftはCopilotを土台のプランに足す形のままです。**ただしMicrosoftの価格ページには、Business StandardとBusiness PremiumにCopilot Businessを組み合わせた価格があります。Business Standardの単体2,098円にCopilot Businessの定価3,148円を別に足すと5,246円、割引の表示の2,698円でも4,796円になり、組み合わせの3,523円のほうが安く済みます。
+**Workspaceは2025年1月からBusinessのどのプランにもGeminiを組み込みました。MicrosoftはCopilotの入っていないプランを残しており、Copilotは今のプランに足すか、Copilotを含むプランを選んで入れます。**Copilot Businessの価格ページには「Microsoft 365 Business Standard (Copilot を含む)」と「Business Premium (Copilot を含む)」が並んでいます。Business Standardの単体2,098円にCopilot Businessの定価3,148円を別に足すと5,246円、割引の表示の2,698円でも4,796円になり、組み合わせの3,523円のほうが安く済みます。
 
 <figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_ms_standard_copilot.png" alt="MicrosoftのCopilot Businessの価格ページで、Teamsが含まれるプラン・年払いのMicrosoft 365 Business Standard（Copilotを含む）のカード。ユーザー/月相当・年払いで3,523円、価格には消費税は含まれていませんと書かれている" loading="lazy"><figcaption>Copilot Businessの価格ページ（2026年10月25日）</figcaption></figure>
 
@@ -62,16 +65,16 @@ Workspaceの最初の3か月の割引や、Copilot Businessの2,698円のよう�
 
 年払いの定価で、土台のプランの値段を含めた月額です。
 
-<figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_02_cost.png" alt="50人に配ったときの月額を縦に並べた図。年払い・税抜の定価で、Workspace Business Standardは80,000円でGeminiは月額に込み、Business Starterは40,000円でGeminiはGmailとアプリだけ、Microsoft 365 Business Standardだけは104,900円でCopilot Chatは追加費用なし、Business StandardとCopilotの組み合わせは176,150円" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_02_cost.png" alt="50人に配ったときの月額を縦に並べた図。年払い・税抜の定価で、Workspace Business Standardは80,000円でGeminiは月額に込み、Business Starterは40,000円でGeminiはGmail・Vids・アプリだけ、Microsoft 365 Business Standardだけは104,900円でCopilot Chatは追加費用なし、Business Standard（Copilotを含む）は176,150円" loading="lazy"></figure>
 
 | 契約（年払い・税抜） | 50人の月額 | 消費税を足すと |
 |---|---|---|
 | Workspace Business Starter | 40,000円 | 44,000円 |
 | Workspace Business Standard | 80,000円 | 88,000円 |
 | Microsoft 365 Business Standard | 104,900円 | 115,390円 |
-| Business StandardとCopilot Businessの組み合わせ | 176,150円 | 193,765円 |
+| Business Standard（Copilotを含む） | 176,150円 | 193,765円 |
 
-**同じStandardの段で比べると、有料のCopilotまで入れたMicrosoftの組み合わせはWorkspaceより月に96,150円高くなります。**CoworkやAutopilotなどの高度な機能はライセンスとは別の従量課金で、エージェントの費用は「[Copilot Studioの料金](/media/copilot-studio/)」にまとめました。
+**同じStandardの段で比べると、Copilotを含むMicrosoftのプランはWorkspaceより月に96,150円高くなります。**CoworkやAutopilotなどの高度な機能はライセンスとは別の従量課金で、エージェントの費用は「[Copilot Studioの料金](/media/copilot-studio/)」にまとめました。
 
 ## 今使っている土台で大半が決まる
 
@@ -93,7 +96,7 @@ Microsoft 365の会社なら、Copilot Chatで足りない仕事を書き出し�
 | 文書と表計算の中 | 有料のCopilotでWord・Excel・PowerPoint | Standardからドキュメント・スプレッドシート（AI関数） |
 | 会議とチャット | 有料のCopilotでTeamsのチャットと通話 | StandardからMeetの自動メモ生成とChatの要約 |
 
-[Copilot Chatの概要](https://learn.microsoft.com/ja-jp/copilot/overview)によると、Copilot ChatのままではWord・Excel・PowerPoint・OneNoteの中のCopilotのチャットは使えません。Google側の[Businessエディションの比較](https://knowledge.workspace.google.com/admin/getting-started/editions/compare-business-editions?hl=ja)では、Starterの列にチェックが入るGeminiの機能はGmailのものだけです。**議事録をAIに任せたい会社は、WorkspaceならStandard以上、Microsoft 365なら有料のCopilotが前提です。**
+[Copilot Chatの概要](https://learn.microsoft.com/ja-jp/copilot/overview)によると、Copilot ChatのままではWord・Excel・PowerPoint・OneNoteの中のCopilotのチャットは使えません。Google側の[Businessエディションの比較](https://knowledge.workspace.google.com/admin/getting-started/editions/compare-business-editions?hl=ja)では、Starterの列にチェックが入るGeminiの機能はGmailとVidsのもので、ドキュメント・スプレッドシート・Meet・ChatのGeminiはStandardからです。**議事録をAIに任せたい会社は、WorkspaceならStandard以上が前提です。Microsoft 365なら、有料のCopilotか、アドオンの[Teams Premium](https://learn.microsoft.com/ja-jp/microsoftteams/enhanced-teams-experience)にある会議のインテリジェント要約が要ります。**
 
 [ユースフルの解説動画](https://www.youtube.com/watch?v=3l8t64BOKfI)では、Copilotのリサーチツールが調べる範囲・まとめ方・根拠の付け方を先に質問してから動く様子が実演され、社外の調べ物はGemini、社内の資料まで使う調べ物はCopilotという分け方が勧められていました。
 
@@ -118,7 +121,7 @@ Google側でSharePoint・OneDrive・Outlook・Teamsとつなぐ道として公�
 | 項目 | Copilot | WorkspaceのGemini |
 |---|---|---|
 | 入力を学習に使うか | 基礎LLMのトレーニングに使わない | 許可なくドメインの外でモデルのトレーニングに使わない |
-| 人によるレビュー | Azure OpenAIの不正使用の監視をオプトアウト | 人間によるレビューなし |
+| 人によるレビュー | 不正使用の監視（人によるレビューを含む）をオプトアウト | 人間によるレビューなし |
 | データを日本に置けるか | 日本のテナントは製品条項の対象 | データ リージョンは米国・EU・指定なし |
 | 会話の保持と検索 | Purviewの保持ポリシーとコンテンツ検索 | Vault、Geminiアプリの会話は管理者が保存の有無と期間を決める |
 
@@ -156,7 +159,7 @@ Googleは[Google管理コンソール](https://admin.google.com/)の［生成AI�
 
 ### CopilotとGeminiはどちらが安いですか？
 
-年払いの1人の月額で、Workspace Business Standardは1,600円（税別）、Business StandardとCopilot Businessの組み合わせは3,523円（税抜）です。Microsoft 365の会社なら、増えるのは有料のCopilotの分だけです。
+年払いの1人の月額で、Workspace Business Standardは1,600円（税別）、Business Standard（Copilotを含む）は3,523円（税抜）です。Microsoft 365の会社なら、増えるのは有料のCopilotの分だけです。
 
 ### CopilotとGeminiは同じAIですか？
 
