@@ -28,7 +28,7 @@ llms.txtは、2024年9月にAnswer.AIのJeremy Howard氏が提案したファイ
 
 提案の本文は[llmstxt.org](https://llmstxt.org/)にあり、2024年9月3日に公開され、2026年8月10日に第2版へ改められました。第2版の背景説明によると、数千のサイトが置いていて、文書を公開する仕組みの多くが自動で作ります。OpenAI・Anthropic・Geminiも自社の開発者向け資料に置いているとあります。**提案者自身も、いちばん使われているのはソフトウェアの資料をコーディング用のAIが読む場面だと書いています。**
 
-第2版で増えたのは3点です。サイトの途中のパス（`/docs/llms.txt`など）に置けばその下のページを指すと定めたこと、各ページのMarkdown版（`page.md`など）を同じURLの並びで出す形を認めたこと、HTMLの`link`要素でMarkdown版とllms.txtの場所を知らせる書き方を加えたことです。前の版にあった、ファイルを展開してAIに渡すための道具の説明は外れました。
+第2版で増えたのは3点です。サイトの途中のパス（`/docs/llms.txt`など）に置けばその下のページを指すと定めたこと、各ページのMarkdown版のURLに、第1版の`page.html.md`に加えて、拡張子を置き換えた`page.md`も認めたこと、HTMLの`link`要素でMarkdown版とllms.txtの場所を知らせる書き方を加えたことです。前の版にあった、ファイルを展開してAIに渡すための道具の説明は外れました。
 
 ### robots.txtやサイトマップとの違い
 
@@ -64,7 +64,7 @@ GoogleのJohn Mueller氏は2025年4月、どのAIサービスもllms.txtを使�
 
 ### OpenAIなど3社の公式ページ
 
-ほかのAIの会社については、クローラーの説明ページを2026年10月26日に直接読みました。
+ほかのAIの会社のクローラーの説明ページ（2026年10月26日時点）も見ます。
 
 | 会社 | クローラーの公式ページ | llms.txtを読むという記載 | 自社の資料のllms.txt |
 |---|---|---|---|
@@ -72,7 +72,7 @@ GoogleのJohn Mueller氏は2025年4月、どのAIサービスもllms.txtを使�
 | Anthropic | [クローラーのヘルプ](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler) | 無い。robots.txtの指示を守ると記載 | [あり](https://platform.claude.com/llms.txt) |
 | Perplexity | [Perplexity Crawlers](https://docs.perplexity.ai/docs/resources/perplexity-crawlers) | 無い。管理はrobots.txt | [あり](https://docs.perplexity.ai/llms.txt) |
 
-**3社とも自社の開発者向け資料にはllms.txtを置いていますが、自社のクローラーがほかのサイトのllms.txtを読むとはどこにも書いていません。**「AIの会社も使っている」という説明は、置く側としての話です。
+**3社とも自社の開発者向け資料にはllms.txtを置いていますが、自社のクローラーがほかのサイトのllms.txtを読むとはクローラーの公式ページには書いていません。**「AIの会社も使っている」という説明は、置く側としての話です。
 
 ### AIのクローラーは読みに来るか
 
@@ -80,15 +80,13 @@ Ahrefsは2026年6月15日に、自社の解析ツールを入れた137,210ドメ
 
 <figure class="post-figure"><img src="/media/images/llms-txt-structured-data/llt_01_who.png" alt="llms.txtを誰が取りに来たか。Ahrefsの調査で、置いた約3.8万ドメインの97%は2026年5月に取得ゼロ。取得のうちAIのボットは19.5%で、内訳はAIエージェント10.5%、学習用5.3%、利用者の操作用2.5%、AI検索用1.1%" loading="lazy"></figure>
 
-取得があった残り3%（約1,100ドメイン・約2.2万件）の内訳では、96%がボットでした。ただし77%はAIと関係のないボットで、SEOの監査ツール（21.7%）や技術の調査ツールが目立ちます。AIのボットは合計19.5%で、そのうちAI検索の回答のためにページを取るボット（OAI-SearchBot・PerplexityBotなど）は1.1%にとどまりました。単体ではGPTBotが最も多く、次がAnthropicのコーディング用エージェントClaude-Codeです。
+取得があった残り3%（約1,100ドメイン・約2.2万件）の内訳では、96%がボットでした。ただし77%はAIと関係のないボットで、SEOの監査ツール（21.7%）や技術の調査ツールが目立ちます。AIのボットは合計19.5%で、AI検索の回答のためにページを取るボット（OAI-SearchBot・PerplexityBotなど）は取得全体の1.1%にとどまりました。単体ではGPTBotが最も多く、次がAnthropicのコーディング用エージェントClaude-Codeです。
 
 置いていないサイトの`/llms.txt`（404）に、AIのボットは1件も来ていませんでした。**AIは無いファイルを探しに来ず、リンクや利用者の指示で場所を知ったときに取りに来る**、とAhrefsは読んでいます。取得した数は読んで使ったかを示さないため、どの数字も上限だという断りも付いています。
 
 ### 引用との関係を調べた調査
 
 SE Rankingは約30万ドメインを調べ、llms.txtを置いていたのは10.13%で、統計と機械学習のどちらでもAIに引用される回数との関係は見られなかったと[報告](https://seranking.com/blog/llms-txt/)しました（2026年10月15日更新の記事）。モデルからllms.txtの有無を外すと、予測の精度がむしろ上がったとも書いています。
-
-1つのサイトで試した例では、アドカルの解説動画が、置いた日の前後2週間でSearch Consoleの表示回数・AIによる概要の表示・AIからの流入に大きな変化は無かったと紹介していました。投稿者の実測で、第三者の検証はありません。
 
 ## llms.txtの書き方
 
@@ -103,27 +101,25 @@ SE Rankingは約30万ドメインを調べ、llms.txtを置いていたのは10.
 
 BtoBの会社のサイトなら、次のくらいの長さで足ります。
 
-```markdown
-# 株式会社サンプル
+    # 株式会社サンプル
 
-> 製造業向けの生産管理システムを開発・販売している会社です。導入は全国に対応しています。
+    > 製造業向けの生産管理システムを開発・販売している会社です。導入は全国に対応しています。
 
-導入の相談は問い合わせフォームで受け付けています。料金は個別見積もりです。
+    導入の相談は問い合わせフォームで受け付けています。料金は個別見積もりです。
 
-## サービス
+    ## サービス
 
-- [生産管理システム](https://example.com/service/): 主な機能と対応する業種
-- [料金と導入の流れ](https://example.com/price/): 見積もりの考え方と導入までの期間
+    - [生産管理システム](https://example.com/service/): 主な機能と対応する業種
+    - [料金と導入の流れ](https://example.com/price/): 見積もりの考え方と導入までの期間
 
-## 会社
+    ## 会社
 
-- [会社概要](https://example.com/company/): 所在地・設立・代表者
-- [導入事例](https://example.com/case/): 業種別の事例
+    - [会社概要](https://example.com/company/): 所在地・設立・代表者
+    - [導入事例](https://example.com/case/): 業種別の事例
 
-## Optional
+    ## Optional
 
-- [お知らせ](https://example.com/news/)
-```
+    - [お知らせ](https://example.com/news/)
 
 **リンクの先は人が読むページそのままでかまいません。**第2版はページのMarkdown版を用意する形も勧めていますが、llms.txt自体はそれが無くても書けます。「Optional」は後回しでよいリンクを置く慣習の見出しで、第2版では特別な意味が無くなりました。作ったらllms.txtだけを渡したAIに自社のことを質問して確かめるよう、提案のページは勧めています。
 
@@ -131,11 +127,11 @@ BtoBの会社のサイトなら、次のくらいの長さで足ります。
 
 ファイル名は`llms.txt`で、サイトのルートに置きます。置いたらブラウザで`https://自社のドメイン/llms.txt`を開き、文字化けせずテキストのまま表示されるかを見てください。ターミナルが使えるなら`curl -I https://自社のドメイン/llms.txt`で、状態コードが200で返るかを確かめられます。
 
-Ahrefsの調査でAIが取りに来ていたのは、リンクで場所を知ったときでした。**置くなら、HTMLの`head`に`<link rel="describedby" href="/llms.txt">`のように場所を書いておくと、第2版の仕様に沿った知らせ方になります。**CDNのボット対策でAIのユーザーエージェントを止めていると、置いても届きません。
+AIはリンクや利用者の指示で場所を知ったときに取りに来る、とAhrefsは見ています。**置くなら、HTMLの`head`に`<link rel="describedby" href="/llms.txt">`のように場所を書いておくと、第2版の仕様に沿った知らせ方になります。**CDNのボット対策でAIのユーザーエージェントを止めていると、置いても届きません。
 
 ### WordPressやWixで作る場合
 
-WordPressなら、SEOのプラグインの[Yoast SEO](https://yoast.com/features/llms-txt/)と[AIOSEO](https://aioseo.com/features/llms-txt/)にllms.txtを作る機能があります。Yoast SEOは主なページを自動で選んで作り、更新も自動で続けます。[Wix](https://support.wix.com/en/article/understanding-your-sites-llmstxt-file)はサイトごとに自動で作り、管理画面で中身を見て直せますが、一度直すと自動の更新は止まる仕組みです。
+WordPressなら、SEOのプラグインの[Yoast SEO](https://yoast.com/features/llms-txt/)と[AIOSEO](https://aioseo.com/features/llms-txt/)にllms.txtを作る機能があります。Yoast SEOは主なページを自動で選んで作り、更新も自動で続けます。[Wix](https://support.wix.com/en/article/understanding-your-sites-llmstxt-file)はサイトごとに自動で作り、管理画面で中身を見て直せますが、一度直すと自動の更新は止まり、初期の状態に戻すと自動の更新も再開します。
 
 自動で作られたファイルも、公開前に中身を読むようにしてください。終わったサービスや古い料金のページが並んでいれば、それがそのままAIへの案内になります。
 
@@ -145,7 +141,7 @@ WordPressなら、SEOのプラグインの[Yoast SEO](https://yoast.com/features
 
 ### 置く意味があるサイト
 
-調査で取りに来ていたのはAIエージェントとコーディング用のAIでした。そこから考えると、置く意味の大きさはサイトの種類で分かれます。
+調査のAIのボットの中で最も多かったのはClaude-Codeなどを含むAIエージェントの区分（取得全体の10.5%）でした。そこから考えると、置く意味の大きさはサイトの種類で分かれます。
 
 <figure class="post-figure"><img src="/media/images/llms-txt-structured-data/llt_02_decide.png" alt="llms.txtを置くかの決め方。APIや製品の技術資料があるなら置く価値がある。AIエージェントに予約や購入をさせたいなら試す価値がある。AI検索に社名を出したいだけなら先に本文と測り方を整える" loading="lazy"></figure>
 
@@ -191,7 +187,7 @@ llms.txtも構造化データも、AIに読まれる本文がある前提の補�
 
 ### Q. llms.txtを置くとChatGPTに引用されやすくなりますか？
 
-裏づけはありません。OpenAIのクローラーの公式ページにllms.txtを読むという記載は無く、Ahrefsの調査でもAI検索のボットの取得は1.1%でした。SE Rankingの約30万ドメインの分析でも、引用される回数との関係は見られていません。
+裏づけはありません。OpenAIのクローラーの公式ページにllms.txtを読むという記載は無く、Ahrefsの調査でもAI検索のボットの取得は取得全体の1.1%でした。SE Rankingの約30万ドメインの分析でも、引用される回数との関係は見られていません。
 
 ### Q. Google検索のAIによる概要やAIモードにllms.txtは効きますか？
 
@@ -199,7 +195,7 @@ llms.txtも構造化データも、AIに読まれる本文がある前提の補�
 
 ### Q. llms.txtとrobots.txtのどちらでAIのクローラーを止めますか？
 
-robots.txtです。OpenAI・Anthropic・Perplexityはどれも、クローラーの管理をrobots.txtで行うと公式ページに書いています。llms.txtにはアクセスを止める働きがありません。
+robots.txtです。OpenAI・Anthropic・Perplexityはどれも、クローラーの管理をrobots.txtで行うと公式ページに書いています。llms.txtにはアクセスを止める働きがありません。ただし、利用者の質問を受けてその場でページを開く仕組み（ChatGPT-User・Perplexity-User）は、robots.txtの指示が当てはまらない場合があるとOpenAIとPerplexityは書いています。
 
 ### Q. llms.txtとllms-full.txtの違いは何ですか？
 
