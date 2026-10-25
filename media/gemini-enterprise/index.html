@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Gemini Enterpriseとは？料金とWorkspaceのGeminiとの違い | nito Column</title>
+    <meta name="description" content="Google CloudのGemini Enterpriseを公式のページとドキュメントで解説。エディションごとの料金と割り当て、WorkspaceのGeminiで足りる範囲、申し込みの2通り、社内データのつなぎ方、データの扱いまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/gemini-enterprise/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Gemini Enterpriseとは？料金とWorkspaceのGeminiとの違い">
+    <meta property="og:description" content="Google CloudのGemini Enterpriseを公式のページとドキュメントで解説。エディションごとの料金と割り当て、WorkspaceのGeminiで足りる範囲、申し込みの2通り、社内データのつなぎ方、データの扱いまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/gemini-enterprise/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/gemini-enterprise.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/gemini-enterprise.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Gemini Enterpriseとは？料金とWorkspaceのGeminiとの違い", "description": "Google CloudのGemini Enterpriseを公式のページとドキュメントで解説。エディションごとの料金と割り当て、WorkspaceのGeminiで足りる範囲、申し込みの2通り、社内データのつなぎ方、データの扱いまで。", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/gemini-enterprise/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/gemini-enterprise.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Gemini Enterpriseとは？料金とWorkspaceのGeminiとの違い"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Gemini Enterpriseの料金はいくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "Businessエディションのページは、1シートあたり月額21ドルからと表示しています（2026年10月26日）。Standard・Plusの金額は公式の公開ページに無く、Google Cloudコンソールから買うか、営業担当者に問い合わせて確かめます。"}}, {"@type": "Question", "name": "Gemini Enterpriseは無料で試せますか？", "acceptedAnswer": {"@type": "Answer", "text": "BusinessとPlusに30日間の無料の試用があり、Businessは仕事用のメールアドレスで始められます。"}}, {"@type": "Question", "name": "Gemini Enterpriseは別契約ですか？", "acceptedAnswer": {"@type": "Answer", "text": "別の契約です。Workspaceの管理者ヘルプは、Google Workspaceのサブスクリプションに含まれず、ライセンスを買う必要があると書いています。"}}, {"@type": "Question", "name": "Gemini EnterpriseとGeminiの違いは？", "acceptedAnswer": {"@type": "Answer", "text": "WorkspaceのプランについてくるGeminiはGmailやドキュメントの中で働き、プランの料金に込みです。Gemini Enterpriseは別の契約で、Microsoft 365やSalesforceなどWorkspaceの外のデータも横断し、作ったエージェントを配って管理します。"}}, {"@type": "Question", "name": "Gemini EnterpriseはM365とつながる？", "acceptedAnswer": {"@type": "Answer", "text": "つなげます。OneDrive・Outlook・SharePoint・TeamsのコネクタがBusinessにもStandard・Plusにもあり、データの取り込みの方式ならMicrosoft Entra IDとの連携の設定が前提です。"}}, {"@type": "Question", "name": "Gemini Enterpriseは学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "使われません。製品ページとBusinessのページは、プロンプトや出力がGoogleや他社のモデルの学習に使われないと書いています。"}}, {"@type": "Question", "name": "Gemini Enterpriseは日本に保存できる？", "acceptedAnswer": {"@type": "Answer", "text": "Standard・Plusなら、Googleのアカウント チームに問い合わせて日本のasia-northeast1を許可リスト付きで選べます。Businessはデータ リージョンに対応していません。日本のリージョンではClaudeや一部のGeminiのモデル、Google検索のグラウンディングは使えません。"}}, {"@type": "Question", "name": "Gemini Enterpriseのログイン先は？", "acceptedAnswer": {"@type": "Answer", "text": "Businessエディションはbusiness.gemini.googleです。Standard・Plusは、管理者がGoogle Cloudコンソールで作ったGemini Enterpriseのウェブアプリから入ります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=051ff6b4">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Gemini Ent…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.26</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Gemini Enterpriseとは？料金とWorkspaceのGeminiとの違い</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/gemini-enterprise.jpg" alt="【2026年10月】Gemini Enterpriseとは？料金とWorkspaceのGeminiとの違い" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Gemini Enterprise Businessエディションのページは、料金を1シートあたり月額21ドルからと表示しています（2026年10月26日）。Workspaceの管理者ヘルプには、Gemini EnterpriseはGoogle Workspaceのサブスクリプションに含まれていないと書かれています。</p>
+<p>GmailやドキュメントのGeminiをもう使っている会社では、別の契約を足す理由があるかが判断の中心です。この記事は公式のページとドキュメントをもとに、できること・料金・Workspaceで足りる範囲・入れる前に決めることを並べます。契約と管理画面の操作は試していません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>Gemini Enterpriseは社内外のデータを横断して答え、エージェントを作って配るための別契約</strong>。Workspaceのプランには含まれない</li>
+<li>公開されているシートの金額はBusinessの月額21ドルからだけ。<strong>Standard・Plusの金額は公式の公開ページに無く、Google Cloudコンソールから買うか、営業担当者に見積もりを取って確かめる</strong></li>
+<li><strong>Workspaceの中の自動化なら、WorkspaceのBusinessの全プランに込みのWorkspace Studioで足りることがある</strong>。Microsoft 365やSalesforceのデータを読ませる・全社に配るならGemini Enterpriseが候補</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Gemini Enterpriseとは</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>何ができるか</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>Agent Platformとの違い</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>エディションと料金</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>Businessで足りない線</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>割り当てと超過料金</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>WorkspaceのGeminiで足りるか</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>申し込み方</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>Workspaceの契約は要るか</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>社内データへのつなぎ方</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>エージェントを誰が作って配るか</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>データの扱いと保存場所</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>Copilot Studioとの違い</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>入れる前に決めること</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Gemini Enterpriseとは</h2>
+<p>名前にGeminiが付くGoogleの会社向けの製品は、いま少なくとも4つあります。WorkspaceのプランについてくるGemini、Workspaceの中でエージェントを作るWorkspace Studio、Google CloudのGemini Enterprise、開発者向けのGemini Enterprise Agent Platformです。</p>
+<figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_01_position.png" alt="Googleの会社向けのGemini 4つを縦に並べた図。WorkspaceのGeminiはプランに込みでGmailやドキュメントの中で使う。Workspace StudioはWorkspaceのBusinessの全プランに込みでWorkspaceの中の作業を自動化する。Gemini Enterpriseは別の契約で社内外のデータを横断しエージェントを配る。Agent Platformは開発者向けの従量課金でエージェントを組む" loading="lazy"></figure>
+
+<p><a href="https://cloud.google.com/gemini-enterprise?hl=ja">Gemini Enterpriseの製品ページ</a>は、メール・ドキュメント・データ・業務アプリを横断して動くエージェントと説明し、つなぐ先にMicrosoft 365・Slack・Salesforce・BigQueryなどを挙げています。<strong>Gmailやドライブの中で働くWorkspaceのGeminiと違い、Gemini Enterpriseは1つの画面からいくつもの社内システムに聞く入り口になります。</strong></p>
+<p>前身はGoogle Agentspaceで、Googleは<a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise">2025年10月のブログ</a>で職場のAIの入り口として発表しました。2025年まで同じ名前で売られていたWorkspaceのアドオンとは別物で、その経緯は「<a href="/media/google-workspace-gemini/">Google WorkspaceのGeminiとは</a>」で扱っています。</p>
+<h2 id="s2">何ができるか</h2>
+<p><a href="https://cloud.google.com/gemini-enterprise/business?hl=ja">Businessエディションのページ</a>のよくある質問は、含まれる機能を次のように挙げています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>機能</th>
+<th>中身</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="機能">社内データの検索と回答</td>
+<td data-label="中身">つないだアプリの中身のうち、本人が見られるものから答える</td>
+</tr>
+<tr>
+<td data-label="機能">Gemini Notebook</td>
+<td data-label="中身">最大300件の社内資料から共有できるノートブックを作る</td>
+</tr>
+<tr>
+<td data-label="機能">Deep Research</td>
+<td data-label="中身">社内データとWebを調べて出典つきのレポートを書く</td>
+</tr>
+<tr>
+<td data-label="機能">Workflow Builder（プレビュー）</td>
+<td data-label="中身">繰り返しの作業を任せるエージェントを文で頼んで作る</td>
+</tr>
+</tbody>
+</table></div>
+<p><a href="https://docs.cloud.google.com/gemini/enterprise/docs/workflow-builder?hl=ja">Workflow Builderの概要</a>によると、作れるのは会話で動くチャット エージェントと、決まった手順で動くワークフローの2種類です。ワークフローには人の承認を挟めて、決まった時刻に動かす設定もできます。製品ページには一部の機能は早期アクセス版で今は使えない場合があるという注記もあり、<strong>ページで見た機能が自社の契約で使えるかは試用の期間に確かめるほうが確実です。</strong></p>
+<h3 id="s2-1">Agent Platformとの違い</h3>
+<p>名前の似た<a href="https://cloud.google.com/products/gemini-enterprise-agent-platform?hl=ja">Gemini Enterprise Agent Platform</a>は旧Vertex AIの新しい名前で、開発者がエージェントを組んで動かす場所です。コードで組んだエージェントは、管理者がGemini Enterpriseに登録すると社員の画面に並びます。作り方の選び方は「<a href="/media/ai-agent-build/">AIエージェントの作り方</a>」にまとめました。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">Gemini Enterpriseを検討している方へ</p>
+<p class="mcta__ttl">どの業務をエージェントに任せるかまで決まっていますか</p>
+<p class="mcta__txt">ライセンスを買っても、どの業務のどの手順を任せるかは社内で決めることになります。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">エディションと料金</h2>
+<p><a href="https://docs.cloud.google.com/gemini/enterprise/docs/editions?hl=ja">エディションの比較</a>（2026年10月24日更新）には5つのエディションが並びます。金額は比較の表には無く、公開ページで確かめられたのはBusinessだけでした。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>エディション</th>
+<th>料金</th>
+<th>人数</th>
+<th>ストレージと索引（1人あたり）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="エディション">Business</td>
+<td data-label="料金">1シート月額21ドルから</td>
+<td data-label="人数">1〜500ユーザー</td>
+<td data-label="ストレージと索引（1人あたり）">25GiB</td>
+</tr>
+<tr>
+<td data-label="エディション">Standard</td>
+<td data-label="料金">公開ページに記載なし</td>
+<td data-label="人数">1人以上</td>
+<td data-label="ストレージと索引（1人あたり）">30GiB</td>
+</tr>
+<tr>
+<td data-label="エディション">Plus</td>
+<td data-label="料金">公開ページに記載なし</td>
+<td data-label="人数">1人以上</td>
+<td data-label="ストレージと索引（1人あたり）">75GiB</td>
+</tr>
+<tr>
+<td data-label="エディション">従量課金制</td>
+<td data-label="料金">使った分だけ</td>
+<td data-label="人数">1シートから</td>
+<td data-label="ストレージと索引（1人あたり）">1GiBあたり月5ドル</td>
+</tr>
+<tr>
+<td data-label="エディション">Frontline</td>
+<td data-label="料金">公開ページに記載なし</td>
+<td data-label="人数">StandardかPlusのユーザーが150人以上</td>
+<td data-label="ストレージと索引（1人あたり）">2GiB</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_02_editions.png" alt="Gemini Enterpriseの4つのエディションを縦に並べた図。Businessは月額21ドルからで1〜500ユーザーと25GiB、Standardは公開ページに金額が無く1日160クエリと30GiB、Plusは公開ページに金額が無く1日200クエリと75GiB、従量課金制は使った分だけで1シートから" loading="lazy"></figure>
+
+<p>Businessの人数は、比較の表が1〜500ユーザー、Businessのページが最大300名までのチームと書いていて、2つのページで数字がそろっていません。Standard・Plusの金額は、2025年10月の発表を伝えた<a href="https://techcrunch.com/2025/10/09/google-ramps-up-its-ai-in-the-workplace-ambitions-with-gemini-enterprise/">TechCrunchの記事</a>では年払いで1シート月額30ドルからでした。<strong>いまの公式のページにはこの金額が無く、料金ページだったURLも開けません。Google Cloudコンソールから自分で買うか、営業担当者に見積もりを取る段階で、予算を確かめることになります。</strong></p>
+<figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_business_price.png" alt="Gemini Enterprise Businessエディションのページの冒頭。ビジネスとチームのためのAIの見出しの下に、データを管理するのはお客様でありGoogleがトレーニングに使用することはない、21ドルからシートあたり月額と書かれている" loading="lazy"><figcaption>Gemini Enterprise Businessエディションのページ（2026年10月26日）</figcaption></figure>
+
+<p>金額は米ドルで、税の扱いはどのページにも書かれていません。契約は月単位と年間の2つで、<a href="https://docs.cloud.google.com/gemini/enterprise/docs/licenses?hl=ja">ライセンスのドキュメント</a>によると自動更新も設定できます。</p>
+<h3 id="s3-1">Businessで足りない線</h3>
+<p>比較の表でBusinessに印が無いのは、データコネクタの全体・外で作ったフルコードのエージェント・エンタープライズ クラスのセキュリティなどです。SalesforceやServiceNowのコネクタも、<a href="https://cloud.google.com/gemini-enterprise/connectors?hl=ja">コネクタの一覧</a>ではStandard・Plusの側にだけ載っています。<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-enterprise/manage-your-gemini-enterprise-business-edition-subscription?hl=ja">Businessのサブスクリプションの管理のヘルプ</a>によると、<strong>BusinessのチャットはVaultの監査や保持の対象にならず、データ リージョンにも対応せず、利用状況は管理コンソールのレポートに出ません。</strong>記録の保存や監査の決まりがある会社は、最初からStandard・Plusで見積もりを取るほうが手戻りが少なくなります。</p>
+<figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_business_limits.png" alt="Workspace管理者ヘルプのBusinessエディションのサブスクリプションの管理のページ。Workspaceの機能への影響の節に、Vaultと保持では管理者がチャットの監査や保持ポリシーの設定を行えないこと、データ所在地ではデータ リージョンとデータ保護をサポートしていないことが並ぶ" loading="lazy"><figcaption>Workspace管理者ヘルプ（2026年10月26日）</figcaption></figure>
+
+<h3 id="s3-2">割り当てと超過料金</h3>
+<p>Standard・Plusのシートには1日に使える量の割り当てがあります。同じエディションのユーザー全員で共有するプールで、戻るのは太平洋時間の午前0時です。開発者向けツールのクレジットだけは、最初に使った時から7日ごとに戻ります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>割り当て</th>
+<th>Standard</th>
+<th>Plus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="割り当て">アシスタントへの質問</td>
+<td data-label="Standard">160件</td>
+<td data-label="Plus">200件</td>
+</tr>
+<tr>
+<td data-label="割り当て">ノーコードのエージェントの作成</td>
+<td data-label="Standard">1件</td>
+<td data-label="Plus">10件</td>
+</tr>
+<tr>
+<td data-label="割り当て">Deep Research</td>
+<td data-label="Standard">3回</td>
+<td data-label="Plus">10回</td>
+</tr>
+<tr>
+<td data-label="割り当て">開発者向けツールのクレジット</td>
+<td data-label="Standard">1人月10ドル分（7日ごとに区切って共有）</td>
+<td data-label="Plus">1人月15ドル分（同）</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_quota.png" alt="Gemini Enterpriseの割り当てと超過料金のドキュメントの表。StandardとPlusの列に、ストレージとデータ インデックス作成が30GiBと75GiB、アシスタントが1日あたり160クエリと200クエリ、ノーコードのエージェント作成が1日あたり1エージェントと10エージェントと並ぶ" loading="lazy"><figcaption>割り当てと超過料金のドキュメント（2026年10月26日）</figcaption></figure>
+
+<p>プールを使い切ると、管理者が超過料金を有効にしていない限りその機能は止まります。有効にすると従量課金で使い続けられ、その枠で選べるモデルにはAnthropicのClaudeも入っています。<a href="https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages?hl=ja">割り当てと超過料金</a>と<a href="https://docs.cloud.google.com/gemini/enterprise/docs/manage-costs-overview?hl=ja">費用の制御のドキュメント</a>によると、超過分を自動で止める手段はCloud Billingで決める1か月の費用の上限です。<strong>Gemini Enterpriseのアプリは割り当てに達したときも超過料金が始まったときもメールで知らせないため、予算のアラートはCloud Billingの側で設定しておく必要があります。</strong>ただし超過料金と費用の上限を使えるのは、請求書払いのCloud請求先アカウントで、無料の試用ではない契約がある場合だけです。</p>
+<p><a href="https://www.youtube.com/watch?v=_JHBwqf1XAc">AI番記者の解説動画</a>は、2026年8月26日に従量課金制と利用額の約束で割り引くFlexible Savings Plansが発表されたと伝え、エージェントが処理を重ねると請求が膨らむ点を注意に挙げていました（投稿者の解説で、第三者の検証はありません）。</p>
+<h2 id="s4">WorkspaceのGeminiで足りるか</h2>
+<p>Workspaceの会社がまず確かめたいのは、追加の契約なしで手が届く範囲です。<a href="https://knowledge.workspace.google.com/admin/getting-started/editions/compare-business-editions?hl=ja">Businessエディションの比較</a>では、エージェントを作るGoogle Workspace StudioがBusiness Starter・Standard・Plusのすべてに含まれています（ドメインの所有権の証明が条件）。</p>
+<figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_ws_studio.png" alt="Google WorkspaceのBusinessエディションの比較の表。Google Workspace Studioの行に、Business Starter・Business Standard・Business Plusの3列ともチェックと短剣の印が付いている" loading="lazy"><figcaption>Businessエディションの比較（2026年10月26日）</figcaption></figure>
+
+<p><a href="https://workspace.google.com/blog/ja/product-announcements/introducing-google-workspace-studio-agents-for-everyday-work">Workspace Studioを発表したブログ</a>によると、作ったエージェントはGmail・ドライブ・Chatの中で動き、Asana・Jira・Mailchimp・Salesforceにも手順の中でつなげます。受信したメールから請求書番号を拾ってラベルを付けるような、<strong>Workspaceの中で完結する作業の自動化なら、Gemini Enterpriseを足さずに始められます。</strong></p>
+<figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_03_decide.png" alt="Gemini Enterpriseを足すかを決める順番の図。1はWorkspaceの中で済むか（済むならWorkspace Studio）、2はWorkspaceの外のデータを読ませるか（Microsoft 365やSalesforce）、3は作ったエージェントを全社に配って管理するか、4は監査や保存場所の決まりがあるか（あればStandardかPlus）" loading="lazy"></figure>
+
+<p>Gemini Enterpriseが要るのは、答えの材料がWorkspaceの外にある場合です。SharePointやSalesforce、自社のデータベースを1つの画面から横断して聞く道は、Workspaceの機能の表にありません。作ったエージェントを全社に配って1か所で管理したい場合も同じです。Workspace側の料金とプランごとの機能の差は「<a href="/media/google-workspace-gemini/">Google WorkspaceのGeminiとは</a>」に書いています。</p>
+<h2 id="s5">申し込み方</h2>
+<p>Businessの申し込み方は2つあります。<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-enterprise?hl=ja">Workspace管理者ヘルプ</a>によると、Googleの営業担当者かGoogle Cloudパートナーを通す方法と、Businessのサインアップのページから自分で申し込む方法です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>申し込み方</th>
+<th>請求とシートの管理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="申し込み方">営業担当者・パートナー経由</td>
+<td data-label="請求とシートの管理">Google管理コンソール（admin.google.com）</td>
+</tr>
+<tr>
+<td data-label="申し込み方">サインアップのページから直接</td>
+<td data-label="請求とシートの管理">business.gemini.google</td>
+</tr>
+<tr>
+<td data-label="申し込み方">Google Cloudコンソール（Standard・Plus）</td>
+<td data-label="請求とシートの管理">Cloudの請求先アカウント</td>
+</tr>
+</tbody>
+</table></div>
+<p>営業・パートナー経由のときは管理者がライセンスを自分に1つ割り当て、business.gemini.googleにログインして環境を初期化します。組織ですでに別のGemini Enterpriseのプランを使っていると、Businessは買えません。</p>
+<p>Standard・PlusをGoogle Cloudコンソールで買う場合、ライセンスのドキュメントによるとセルフサービスの請求先アカウントは25シートまでです。請求書払いのアカウントは1,000シートまでで、それより多いと営業担当者を通します。<strong>30日間の無料の試用はBusinessとPlusにあり、Plusは製品ページの［30 日間の試用を開始］から申し込めます。</strong></p>
+<h3 id="s5-1">Workspaceの契約は要るか</h3>
+<p>Gemini Enterpriseだけを使うのに、Workspaceの契約は前提になっていません。<a href="https://docs.cloud.google.com/gemini/enterprise/docs/configure-identity-provider?hl=ja">IDプロバイダのドキュメント</a>は、Google Identityのほか、Microsoft Entra IDやOktaといったほかの会社のIDプロバイダでも入れると書いています。ただしWorkspaceのデータにつなぐならGoogle Identityが必須で、IDプロバイダを途中で変えるとチャットの履歴は引き継がれません。</p>
+<h2 id="s6">社内データへのつなぎ方</h2>
+<p>つなぎ方は3つに分かれます。Workspaceのデータは管理コンソールで許可し、ほかの会社のサービスは用意されたコネクタでつなぎ、一覧に無い自社のシステムはMCPサーバーを用意してつなぎます。</p>
+<figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_04_data.png" alt="Gemini Enterpriseに社内データをつなぐ3つの道を縦に並べた図。Google Workspaceは管理コンソールで許可しGoogle Identityが必須、ほかの会社のサービスは用意されたコネクタでつなぎMicrosoft 365はEntra IDとの連携が要る、自社のシステムはカスタムのMCPサーバーでつなぐ" loading="lazy"></figure>
+
+<p>Microsoft 365のOneDrive・Outlook・SharePoint・Teamsは、コネクタの一覧でBusinessにもStandard・Plusにも載っています。IDプロバイダのドキュメントによると、データの取り込みの方式でSharePointなどをつなぐならMicrosoft Entra IDとWorkforce Identity連携の設定が必須です。<strong>Microsoft 365とWorkspaceを両方使う会社では、2つのIDをどうそろえるかを情シスが先に決める必要があります。</strong></p>
+<p>どの方式でも、答えに使うのは社員が元のシステムで見られるものだけで、IDプロバイダのドキュメントは元のアクセス制御を飛び越えることは無いとしています。裏返すと、全社に公開されたままの人事のファイルは答えの材料になるため、共有の設定は入れる前に見直しておく必要があります。</p>
+<h2 id="s7">エージェントを誰が作って配るか</h2>
+<p><a href="https://docs.cloud.google.com/gemini/enterprise/docs/agents-overview?hl=ja">エージェントの概要</a>によると、エージェントの出どころは社員がWorkflow Builderで作るもの・Googleが用意したもの・開発者が作って管理者が登録するものの3つです。社員が作れるかは管理者が決め、Workflow Builderは［エンドユーザー機能コントロール］で有効にしたときだけ社員の画面に出ます。<a href="https://docs.cloud.google.com/gemini/enterprise/docs/share-custom-agents?hl=ja">エージェントの共有のドキュメント</a>によると、配る相手の選択肢はユーザー・グループ・組織の全員などです。</p>
+<p>Workspace側にも止める場所があります。<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-enterprise/control-access-to-gemini-enterprise-agents?hl=ja">エージェントへのアクセスの制御のヘルプ</a>によると、管理コンソールの［セキュリティ］［エージェント アクセスの制御］の既定は「許可する」です。<strong>Gemini EnterpriseのエージェントがWorkspaceのデータに届くかは、契約の前にWorkspaceの管理者と決めておくことになります。</strong></p>
+<h2 id="s8">データの扱いと保存場所</h2>
+<p>入力が学習に使われない点は、Businessのページにも製品ページのよくある質問にも書かれています。製品ページによるとプロンプトや出力はGoogleや他社のモデルの学習に使われず、広告にも使われません。</p>
+<p>保存場所はエディションで変わります。<a href="https://docs.cloud.google.com/gemini/enterprise/docs/locations?hl=ja">データ所在地のドキュメント</a>によると、Standard・Plusは米国とEUのマルチリージョンを選べて、日本のasia-northeast1も許可リスト付きの一般提供です。日本を使うにはGoogleのアカウント チームへの問い合わせが要ります。日本のリージョンではClaudeのモデルが使えず、Google検索のグラウンディングや動画の生成、一部の新しいGeminiのモデルはglobalのリージョンでしか使えません。Google検索のグラウンディングを有効にすると、この保存場所の約束は当てはまりません。</p>
+<p>Standard・Plusは、<a href="https://docs.cloud.google.com/gemini/enterprise/docs/compliance-security-controls?hl=ja">コンプライアンスのドキュメント</a>でISO 27001やSOC 2などの認証とVPC Service Controlsへの対応も示しています。<strong>Businessはデータ リージョンに対応していないため、保存場所の決まりがある会社の候補はStandard・Plusになります。</strong></p>
+<h2 id="s9">Copilot Studioとの違い</h2>
+<p>Microsoft側で対になるのはCopilot Studioで、払い方の考え方が違います。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>Gemini Enterprise</th>
+<th>Copilot Studio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">払い方</td>
+<td data-label="Gemini Enterprise">1人ごとのシート（ほかに従量課金制）</td>
+<td data-label="Copilot Studio">テナントで買うクレジット（1パック月29,985円で25,000）</td>
+</tr>
+<tr>
+<td data-label="項目">社内向けのエージェント</td>
+<td data-label="Gemini Enterprise">Frontline以外のエディションで作れる（Standardは1日1件、Plusは1日10件まで）</td>
+<td data-label="Copilot Studio">M365 Copilotのライセンスがあれば追加費用なし</td>
+</tr>
+</tbody>
+</table></div>
+<p>詳細は「<a href="/media/copilot-studio/">Copilot Studioの料金</a>」に、土台をどちらにするかは「<a href="/media/copilot-vs-gemini/">CopilotとGeminiの違い</a>」にまとめました。<strong>社員の大半がMicrosoft 365で働いているなら、Gemini Enterpriseは土台の外から足す道具になります。</strong></p>
+<h2 id="s10">入れる前に決めること</h2>
+<figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_not_included.png" alt="Workspace管理者ヘルプのユーザーに対してGemini Enterpriseを有効または無効にするのページ。ライセンスを取得するの節に、Gemini EnterpriseはGoogle Workspaceサブスクリプションに含まれていない、ライセンスを購入する必要があると書かれている" loading="lazy"><figcaption>Workspace管理者ヘルプ（2026年10月26日）</figcaption></figure>
+
+<p>ライセンスを買う前に決めておきたいのは次の3つです。</p>
+<ol>
+<li><strong>任せる業務を1つに絞る</strong>：Workspaceの中で済むならWorkspace Studioで試し、外のデータが要る業務だけをGemini Enterpriseの試用に回す</li>
+<li><strong>エディションを記録の決まりで選ぶ</strong>：Vaultの保持や保存場所の決まりがあればBusinessは外し、Standard・Plusの見積もりを取る</li>
+<li><strong>費用の止め方を決める</strong>：超過料金を有効にするか、Cloud Billingの費用の上限とアラートを誰が受けるか</li>
+</ol>
+<p>Workspaceの組織では、管理コンソールの［生成 AI］［Gemini Enterprise］でオンとオフを切り替え、組織部門やグループで使える人を分けます。反映には最長で24時間かかります。</p>
+<h2 id="s11">よくある質問</h2>
+<h3 id="s11-1">Gemini Enterpriseの料金はいくらですか？</h3>
+<p>Businessエディションのページは、1シートあたり月額21ドルからと表示しています（2026年10月26日）。Standard・Plusの金額は公式の公開ページに無く、Google Cloudコンソールから買うか、営業担当者に問い合わせて確かめます。</p>
+<h3 id="s11-2">Gemini Enterpriseは無料で試せますか？</h3>
+<p>BusinessとPlusに30日間の無料の試用があり、Businessは仕事用のメールアドレスで始められます。</p>
+<h3 id="s11-3">Gemini Enterpriseは別契約ですか？</h3>
+<p>別の契約です。Workspaceの管理者ヘルプは、Google Workspaceのサブスクリプションに含まれず、ライセンスを買う必要があると書いています。</p>
+<h3 id="s11-4">Gemini EnterpriseとGeminiの違いは？</h3>
+<p>WorkspaceのプランについてくるGeminiはGmailやドキュメントの中で働き、プランの料金に込みです。Gemini Enterpriseは別の契約で、Microsoft 365やSalesforceなどWorkspaceの外のデータも横断し、作ったエージェントを配って管理します。</p>
+<h3 id="s11-5">Gemini EnterpriseはM365とつながる？</h3>
+<p>つなげます。OneDrive・Outlook・SharePoint・TeamsのコネクタがBusinessにもStandard・Plusにもあり、データの取り込みの方式ならMicrosoft Entra IDとの連携の設定が前提です。</p>
+<h3 id="s11-6">Gemini Enterpriseは学習に使われますか？</h3>
+<p>使われません。製品ページとBusinessのページは、プロンプトや出力がGoogleや他社のモデルの学習に使われないと書いています。</p>
+<h3 id="s11-7">Gemini Enterpriseは日本に保存できる？</h3>
+<p>Standard・Plusなら、Googleのアカウント チームに問い合わせて日本のasia-northeast1を許可リスト付きで選べます。Businessはデータ リージョンに対応していません。日本のリージョンではClaudeや一部のGeminiのモデル、Google検索のグラウンディングは使えません。</p>
+<h3 id="s11-8">Gemini Enterpriseのログイン先は？</h3>
+<p>Businessエディションはbusiness.gemini.googleです。Standard・Plusは、管理者がGoogle Cloudコンソールで作ったGemini Enterpriseのウェブアプリから入ります。</p>
+<h2 id="s12">出典</h2>
+<ul>
+<li>Google Cloud「<a href="https://cloud.google.com/gemini-enterprise?hl=ja">Gemini Enterprise</a>」</li>
+<li>Google Cloud「<a href="https://cloud.google.com/gemini-enterprise/business?hl=ja">Gemini Enterprise Business エディション</a>」</li>
+<li>Google Cloud「<a href="https://cloud.google.com/gemini-enterprise/connectors?hl=ja">Gemini Enterprise のコネクタ</a>」</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini/enterprise/docs/editions?hl=ja">Gemini Enterprise のエディション比較</a>」</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini/enterprise/docs/licenses?hl=ja">Gemini Enterprise のサブスクリプションを取得してライセンスを割り当てる</a>」</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages?hl=ja">割り当てと超過料金</a>」</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini/enterprise/docs/manage-costs-overview?hl=ja">超過料金と費用の制御の概要</a>」</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini/enterprise/docs/configure-identity-provider?hl=ja">ID プロバイダを構成する</a>」</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini/enterprise/docs/locations?hl=ja">データ所在地</a>」</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini/enterprise/docs/compliance-security-controls?hl=ja">コンプライアンス認証とセキュリティ管理</a>」</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini/enterprise/docs/agents-overview?hl=ja">エージェントの概要</a>」「<a href="https://docs.cloud.google.com/gemini/enterprise/docs/workflow-builder?hl=ja">Workflow Builder の概要</a>」「<a href="https://docs.cloud.google.com/gemini/enterprise/docs/share-custom-agents?hl=ja">エージェントを共有する</a>」</li>
+<li>Google Workspace 管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-enterprise?hl=ja">Gemini Enterprise - Business エディションを追加して設定する</a>」「<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-enterprise/turn-gemini-enterprise-on-or-off-for-users?hl=ja">ユーザーに対して Gemini Enterprise を有効または無効にする</a>」「<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-enterprise/manage-your-gemini-enterprise-business-edition-subscription?hl=ja">Business エディションのサブスクリプションを管理する</a>」「<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-enterprise/control-access-to-gemini-enterprise-agents?hl=ja">Gemini Enterprise エージェントへのアクセスを制御する</a>」</li>
+<li>Google Workspace 管理者ヘルプ「<a href="https://knowledge.workspace.google.com/admin/getting-started/editions/compare-business-editions?hl=ja">Business エディションの比較</a>」</li>
+<li>Google Workspace ブログ「<a href="https://workspace.google.com/blog/ja/product-announcements/introducing-google-workspace-studio-agents-for-everyday-work">Google Workspace Studio のご紹介</a>」（2025年12月10日）</li>
+<li>Google Cloud ブログ「<a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise">Introducing Gemini Enterprise</a>」（2025年10月10日）</li>
+<li>TechCrunch「<a href="https://techcrunch.com/2025/10/09/google-ramps-up-its-ai-in-the-workplace-ambitions-with-gemini-enterprise/">Google ramps up its AI-in-the-workplace ambitions with Gemini Enterprise</a>」（2025年10月9日）</li>
+<li>Google Cloud「<a href="https://cloud.google.com/products/gemini-enterprise-agent-platform?hl=ja">Gemini Enterprise Agent Platform</a>」</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Gemini Enterpriseとは</a><a href="#s2">何ができるか</a><a href="#s3">エディションと料金</a><a href="#s4">WorkspaceのGeminiで足りるか</a><a href="#s5">申し込み方</a><a href="#s6">社内データへのつなぎ方</a><a href="#s7">エージェントを誰が作って配るか</a><a href="#s8">データの扱いと保存場所</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/copilot-vs-gemini/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CopilotとGeminiの違い"><defs><linearGradient id="ecg-730fa04d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-730fa04d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">CopilotとGeminiの違い</text><line x1="151.6" y1="365.9" x2="1048.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.25</div>
+                <div class="rel-card__ttl">【2026年10月】CopilotとGeminiの違い｜会社に入れるならどっち？料金・データ・管理</div>
+            </a>
+            <a href="/media/copilot-vs-chatgpt/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CopilotとChatGPTの違い"><defs><linearGradient id="ecg-10861cbc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-10861cbc)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">CopilotとChatGPTの違い</text><line x1="128.8" y1="365.9" x2="1071.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.24</div>
+                <div class="rel-card__ttl">【2026年10月】CopilotとChatGPTの違い｜会社に入れるならどっち？料金・データ・管理</div>
+            </a>
+            <a href="/media/claude-corporate-contract/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claudeの法人契約"><defs><linearGradient id="ecg-bf88281c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-bf88281c)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claudeの法人契約</text><line x1="273.2" y1="365.9" x2="926.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.23</div>
+                <div class="rel-card__ttl">【2026年10月】Claudeの法人契約の方法を解説｜請求書払い・AWS経由・代理店・稟議の準備</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'gemini-enterprise',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
