@@ -56,7 +56,7 @@ Googleは[生成AI機能向けの最適化ガイド](https://developers.google.c
 
 同じ節によれば、ほかのサービスのために作って維持するのは問題なく、Google検索では無視されるので表示や順位に影響しません。**置いて損をすることはないものの、AIによる概要やAIモードに出る助けにもならない、というのがGoogle検索の立場です。**
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja・本文だけにある探す語「Google 検索自体がこれらを使用しないため」・赤枠にする語「LLMS.txt ファイルやその他の「特別な」マークアップ」から「Google 検索自体がこれらを使用しないためです。」まで・PC・alt「Google検索セントラルの生成AI機能向けの最適化ガイド。Google検索は生成AI機能を含めてLLMS.txtなどの機械可読ファイルを使用しないと書かれている」・figcaption「Google 検索セントラル 生成 AI 機能向けの最適化ガイド（2026年10月26日）」 -->
+<figure class="post-figure"><img src="/media/images/llms-txt-structured-data/llt_google_guide.png" alt="Google検索セントラルの生成AI機能向けの最適化ガイド。Google検索は生成AI機能を含めてLLMS.txtなどの機械可読ファイルを使用しないと書かれている" loading="lazy"><figcaption>Google 検索セントラル 生成 AI 機能向けの最適化ガイド（2026年10月26日）</figcaption></figure>
 
 一方、Chromeの開発チームはLighthouseの実験的な監査「エージェントによるブラウジング」に[llms.txtの確認](https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt?hl=ja)を入れました（2026年5月5日更新）。ファイルが無いとエージェントがサイトの把握にクロールの時間を使う可能性があると説明し、取得でサーバーエラーが出たら指摘します。ただし404のときは、現時点では任意なので「該当なし」と扱う決まりです。
 
@@ -78,7 +78,7 @@ GoogleのJohn Mueller氏は2025年4月、どのAIサービスもllms.txtを使�
 
 Ahrefsは2026年6月15日に、自社の解析ツールを入れた137,210ドメインのサーバーへのリクエストを数えた[調査](https://ahrefs.com/blog/llmstxt-study/)を出しました。2026年5月に流入があったドメインが対象で、llms.txtを置いていたのは約38,000（28%。技術に詳しい利用者が多いので上限の値）です。**そのうち97%のファイルは、5月の1か月に人にもボットにも1回も取得されませんでした。**
 
-<!-- SHOT: 図 llt_01_who.html → llt_01_who.png・alt「llms.txtを誰が取りに来たか。Ahrefsの調査で、置いた約3.8万ドメインの97%は2026年5月に取得ゼロ。取得のうちAIのボットは19.5%で、内訳はAIエージェント10.5%、学習用5.3%、利用者の操作用2.5%、AI検索用1.1%」 -->
+<figure class="post-figure"><img src="/media/images/llms-txt-structured-data/llt_01_who.png" alt="llms.txtを誰が取りに来たか。Ahrefsの調査で、置いた約3.8万ドメインの97%は2026年5月に取得ゼロ。取得のうちAIのボットは19.5%で、内訳はAIエージェント10.5%、学習用5.3%、利用者の操作用2.5%、AI検索用1.1%" loading="lazy"></figure>
 
 取得があった残り3%（約1,100ドメイン・約2.2万件）の内訳では、96%がボットでした。ただし77%はAIと関係のないボットで、SEOの監査ツール（21.7%）や技術の調査ツールが目立ちます。AIのボットは合計19.5%で、そのうちAI検索の回答のためにページを取るボット（OAI-SearchBot・PerplexityBotなど）は1.1%にとどまりました。単体ではGPTBotが最も多く、次がAnthropicのコーディング用エージェントClaude-Codeです。
 
@@ -147,7 +147,7 @@ WordPressなら、SEOのプラグインの[Yoast SEO](https://yoast.com/features
 
 調査で取りに来ていたのはAIエージェントとコーディング用のAIでした。そこから考えると、置く意味の大きさはサイトの種類で分かれます。
 
-<!-- SHOT: 図 llt_02_decide.html → llt_02_decide.png・alt「llms.txtを置くかの決め方。APIや製品の技術資料があるなら置く価値がある。AIエージェントに予約や購入をさせたいなら試す価値がある。AI検索に社名を出したいだけなら先に本文と測り方を整える」 -->
+<figure class="post-figure"><img src="/media/images/llms-txt-structured-data/llt_02_decide.png" alt="llms.txtを置くかの決め方。APIや製品の技術資料があるなら置く価値がある。AIエージェントに予約や購入をさせたいなら試す価値がある。AI検索に社名を出したいだけなら先に本文と測り方を整える" loading="lazy"></figure>
 
 | サイトの種類 | 期待できること | 判断 |
 |---|---|---|
@@ -178,7 +178,7 @@ WordPressなら、SEOのプラグインの[Yoast SEO](https://yoast.com/features
 
 llms.txtも構造化データも、AIに読まれる本文がある前提の補助です。AI検索に名前を出したい会社が先に手を付けるのは次の順番です。
 
-<!-- SHOT: 図 llt_03_first.html → llt_03_first.png・alt「AI検索に向けて会社が先にやる順番。AIのクローラーを止めていないか確かめる、答えを本文のテキストで書く、Search Consoleで生成AIでの表示を測る、実際の質問でAIの回答を見る」 -->
+<figure class="post-figure"><img src="/media/images/llms-txt-structured-data/llt_03_first.png" alt="AI検索に向けて会社が先にやる順番。AIのクローラーを止めていないか確かめる、答えを本文のテキストで書く、Search Consoleで生成AIでの表示を測る、実際の質問でAIの回答を見る" loading="lazy"></figure>
 
 1. **AIのクローラーを止めていないか確かめる**。robots.txtとCDNの設定を見る（[AIクローラーの判断と書き方](/media/ai-crawler-robots/)）
 2. **答えを本文のテキストで書く**。AIによる概要やAIモードにリンクとして出るには、インデックスに登録され、スニペットが表示できることが条件だとGoogleは書いています。比較の軸・費用の目安・事例を画像の中だけに置かない（[AIによる概要に引用されるには](/media/cited-by-ai-overviews/)）
