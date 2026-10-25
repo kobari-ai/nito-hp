@@ -112,6 +112,8 @@ Microsoft 365の会社なら、Copilot Chatで足りない仕事を書き出し�
 
 Google側でSharePoint・OneDrive・Outlook・Teamsとつなぐ道として公式に案内されているのは、WorkspaceのGeminiではなく別の製品のGemini Enterpriseです。[Gemini Enterpriseのコネクタの一覧](https://cloud.google.com/gemini-enterprise/docs/connectors/introduction-to-connectors-and-data-stores?hl=ja)に、Microsoftの4つのサービスとEntra ID、Jira、Salesforceが並びます。**WorkspaceのGeminiの機能の表にはMicrosoftのサービスとつなぐ項目が無いため、Microsoft 365のデータをGeminiに読ませるならGemini Enterpriseの契約を別に考えることになります。**
 
+Gemini Enterpriseのエディションと料金は「[Gemini Enterpriseとは](/media/gemini-enterprise/)」で扱っています。
+
 <figure class="post-figure"><img src="/media/images/copilot-vs-gemini/cvg_ge_connectors.png" alt="Gemini Enterpriseのドキュメントの左側の一覧。Microsoft Entra ID、Microsoft OneDrive、Microsoft Outlook、Microsoft SharePoint Online、Microsoft Teamsをそれぞれ接続する項目が並んでいる" loading="lazy"><figcaption>Gemini Enterpriseのコネクタの一覧（2026年10月25日）</figcaption></figure>
 
 ## 学習の扱いと保存場所
