@@ -301,6 +301,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>学習の許可は広報・法務と経営、検索の許可は集客の責任者が決め、robots.txtの修正は制作会社かWebの担当に頼むのが一般的な分かれ方です。設定の持ち主の分け方は<a href="/media/chatgpt-search-citation/">ChatGPT検索で引用元に出る条件</a>の表にまとめています。</p>
 <h2 id="s5">robots.txtの書き方</h2>
 <p>robots.txtはサイトのルート（<code>https://自社のドメイン/robots.txt</code>）に置くテキストファイルです。<strong>サブドメインごとに1つずつ要る</strong>ため、<code>www</code>と<code>blog</code>のように分かれているサイトはそれぞれに書きます。</p>
+<p>同じくルートに置くllms.txtはAI向けにサイトを案内するファイルで、クローラーを止める働きはありません（<a href="/media/llms-txt-structured-data/">llms.txtとは</a>）。</p>
 <h3 id="s5-1">学習だけ止める書き方</h3>
 <p>検索用と利用者の操作用は許可したまま、学習用だけを止める形です。</p>
 <p>```

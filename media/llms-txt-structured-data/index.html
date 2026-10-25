@@ -12,12 +12,12 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために | nito Column</title>
-    <meta name="description" content="AI検索対策でよく話題になるllms.txtや構造化データは本当に必要なのか、Google公式の見解や独立した調査をもとに解説します。技術的な設定に時間をかける前に、優先すべきことは何かを実務目線で整理しました。">
+    <title>【2026年10月】llms.txtとは？意味ないと言われる理由・書き方・置くかの決め方 | nito Column</title>
+    <meta name="description" content="llms.txtとは何かを提案者の仕様（2026年8月の第2版）で確認。意味ないと言われる理由をGoogle・OpenAI・Anthropicの公式と13.7万サイトのログ調査で確かめ、書き方の例、置くかの決め方、構造化データの扱いまで。">
     <link rel="canonical" href="https://nito-0210.com/media/llms-txt-structured-data/">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために">
-    <meta property="og:description" content="AI検索対策でよく話題になるllms.txtや構造化データは本当に必要なのか、Google公式の見解や独立した調査をもとに解説します。技術的な設定に時間をかける前に、優先すべきことは何かを実務目線で整理しました。">
+    <meta property="og:title" content="【2026年10月】llms.txtとは？意味ないと言われる理由・書き方・置くかの決め方">
+    <meta property="og:description" content="llms.txtとは何かを提案者の仕様（2026年8月の第2版）で確認。意味ないと言われる理由をGoogle・OpenAI・Anthropicの公式と13.7万サイトのログ調査で確かめ、書き方の例、置くかの決め方、構造化データの扱いまで。">
     <meta property="og:url" content="https://nito-0210.com/media/llms-txt-structured-data/">
     <meta property="og:site_name" content="株式会社nito">
     <meta property="og:image" content="https://nito-0210.com/media/images/og/llms-txt-structured-data.jpg">
@@ -26,9 +26,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://nito-0210.com/media/images/og/llms-txt-structured-data.jpg">
     <link rel="icon" href="/favicon.png">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために", "description": "AI検索対策でよく話題になるllms.txtや構造化データは本当に必要なのか、Google公式の見解や独立した調査をもとに解説します。技術的な設定に時間をかける前に、優先すべきことは何かを実務目線で整理しました。", "datePublished": "2026-07-16", "dateModified": "2026-07-16", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/llms-txt-structured-data/"}, "articleSection": "AI検索対策", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/llms-txt-structured-data.jpg"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "llms.txtは設置しないほうがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "設置してもマイナスにはなりません。低コストで置けるため、将来のAIエージェント向けの備えとして設置するのは構いません。ただし、設置すればAIに引用されるものではなく、最優先事項ではないと理解しておくことが大切です。"}}, {"@type": "Question", "name": "構造化データは無駄ですか？", "acceptedAnswer": {"@type": "Answer", "text": "無駄ではありません。生成AI検索には必須ではありませんが、検索結果でのリッチな表示につながる場合があり、SEO戦略の一部としては有効です。ただし、土台のコンテンツが整ったうえでの補助と考えます。"}}, {"@type": "Question", "name": "技術的な設定で唯一やるべきことは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "robots.txtの点検です。AIのクローラーを意図せずブロックしていると、そもそも読まれません。これだけは、読まれる前提を整える意味で確認しておく価値があります。"}}, {"@type": "Question", "name": "結局、何に時間をかければいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "明確でよく整理されたコンテンツ、自社にしか出せない一次情報、第三者からの信頼できる言及です。Googleも公式ガイドで、コンテンツの質が最も効くと繰り返し示しています。技術設定よりここに集中するのが近道です。"}}, {"@type": "Question", "name": "なぜ技術的な設定を先にやりたくなるのですか？", "acceptedAnswer": {"@type": "Answer", "text": "分かりやすく、短時間で終わるからです。コンテンツづくりや第三者の言及は地道で時間がかかるため、つい手軽な技術設定に安心を求めがちです。しかし、効果があるのは時間のかかるほうだという点を意識することが重要です。"}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】llms.txtとは？意味ないと言われる理由・書き方・置くかの決め方", "description": "llms.txtとは何かを提案者の仕様（2026年8月の第2版）で確認。意味ないと言われる理由をGoogle・OpenAI・Anthropicの公式と13.7万サイトのログ調査で確かめ、書き方の例、置くかの決め方、構造化データの扱いまで。", "datePublished": "2026-07-16", "dateModified": "2026-10-26", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/llms-txt-structured-data/"}, "articleSection": "AI検索対策", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/llms-txt-structured-data.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】llms.txtとは？意味ないと言われる理由・書き方・置くかの決め方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "llms.txtを置くとChatGPTに引用されやすくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "裏づけはありません。OpenAIのクローラーの公式ページにllms.txtを読むという記載は無く、Ahrefsの調査でもAI検索のボットの取得は取得全体の1.1%でした。SE Rankingの約30万ドメインの分析でも、引用される回数との関係は見られていません。"}}, {"@type": "Question", "name": "Google検索のAIによる概要やAIモードにllms.txtは効きますか？", "acceptedAnswer": {"@type": "Answer", "text": "効きません。Googleの最適化ガイドは、生成AI機能を含むGoogle検索はllms.txtを使わず、置いても表示や順位に影響しないと書いています。"}}, {"@type": "Question", "name": "llms.txtとrobots.txtのどちらでAIのクローラーを止めますか？", "acceptedAnswer": {"@type": "Answer", "text": "robots.txtです。OpenAI・Anthropic・Perplexityはどれも、クローラーの管理をrobots.txtで行うと公式ページに書いています。llms.txtにはアクセスを止める働きがありません。ただし、利用者の質問を受けてその場でページを開く仕組み（ChatGPT-User・Perplexity-User）は、robots.txtの指示が当てはまらない場合があるとOpenAIとPerplexityは書いています。"}}, {"@type": "Question", "name": "llms.txtとllms-full.txtの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "llms-full.txtはリンク先の本文まで1つにまとめたファイルで、[Mintlify](https://www.mintlify.com/docs/ai/llmstxt)のような文書の公開ツールがllms.txtと一緒に作ります。llmstxt.orgの第2版の仕様にはllms-full.txtの定めが無く、仕様で決まっているのはllms.txtだけです。"}}, {"@type": "Question", "name": "WordPressでllms.txtを作るにはどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "Yoast SEOやAIOSEOのllms.txtの機能を使うか、テキストファイルを作ってサイトのルートに置きます。プラグインで作った場合も、並んだページと説明が今のサービスに合っているかを公開前に読んでください。"}}, {"@type": "Question", "name": "Claudeのコーディング用エージェントはllms.txtを読みますか？", "acceptedAnswer": {"@type": "Answer", "text": "Ahrefsの調査でClaude-Codeは、GPTBotに次いでllms.txtを多く取得していました。ただし、取得した中身をどう使っているかまでは調査で分かっていません。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@
     </header>
 
     <nav class="breadcrumb">
-        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>llms.txtや構造化データは必要？A…
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】llms.txtとは…
     </nav>
 
     <div class="page-wrap">
@@ -58,19 +58,18 @@
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.07.16</span>
         </div>
-        <h1 class="post-title">llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために</h1>
+        <h1 class="post-title">【2026年10月】llms.txtとは？意味ないと言われる理由・書き方・置くかの決め方</h1>
         <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
-        <div class="post-eyecatch"><img src="/media/images/og/llms-txt-structured-data.jpg" alt="llms.txtや構造化データは必要？AI検索対策で優先順位を間違えないために" width="1200" height="628" fetchpriority="high"></div>
+        <div class="post-eyecatch"><img src="/media/images/og/llms-txt-structured-data.jpg" alt="【2026年10月】llms.txtとは？意味ないと言われる理由・書き方・置くかの決め方" width="1200" height="628" fetchpriority="high"></div>
 
         <div class="post-content">
-<p>AI検索対策と聞いて、まずllms.txtや構造化データといった技術的な設定に手をつけようとする人は少なくありません。しかし、<strong>現時点でこれらの効果は公式にも実測でも限定的</strong>です。Googleは公式に「新しい機械可読ファイルを作る必要はない」と明言し、主要なAIのクローラーもllms.txtをほとんど読んでいないことが調査で分かっています。時間をかけるべきは、そこではありません。</p>
+<p>llms.txtは、2024年9月にAnswer.AIのJeremy Howard氏が提案したファイルで、2026年8月に第2版が出ました。Google検索はこのファイルを使わないと公式ガイドに書く一方で、同じGoogleのChromeは開発者向けの検査ツールLighthouseの確認項目に入れています。</p>
+<p>制作会社やSEOツールに「置いたほうがいい」と言われて迷っているサイト担当者・マーケ担当者に向けて、仕組み、意味ないと言われる理由の事実、書き方、置くかどうかの決め方を書きます。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
-<li>llms.txtは、主要なAIクローラーが<strong>ほとんど読んでいない</strong>という調査がある</li>
-<li>Googleは公式に「<strong>新しい機械可読ファイルを作る必要はない</strong>」と明言している</li>
-<li>構造化データも、生成AI検索には<strong>必須ではない</strong>（ただしSEOの補助にはなる）</li>
-<li>AIで実際に紹介されるサイトも、<strong>llms.txt未設置が多い</strong></li>
-<li>優先すべきは、明確なコンテンツ・一次情報・第三者からの言及</li>
+<li><strong>Google検索（AIによる概要・AIモードを含む）はllms.txtを使わないと公式ガイドに書いている</strong>。OpenAI・Anthropic・Perplexityのクローラーの公式ページにも、llms.txtを読むという記載は無い（2026年10月26日確認）</li>
+<li><strong>Ahrefsの13.7万ドメインの調査では、置いたサイトの97%が2026年5月の1か月に1回も取得されなかった</strong>。取りに来た中で大きいのはAIと関係のないボットで、AI検索のボットは1.1%</li>
+<li>置くかは<strong>AIエージェントに読ませたい資料があるか</strong>で決める。AI検索に名前を出したいなら、先に本文と測り方を整える</li>
 </ul></div></div>
 
 <div class="fork">
@@ -79,128 +78,268 @@
 <a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
 <a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
 </div>
-            <nav class="toc">
+            <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
-                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>llms.txtとは何か</a></li>
-                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>llms.txtは、実際にはほとんど読まれていない</a></li>
-                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>構造化データは「必須ではないが、補助にはなる」</a></li>
-                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>技術的な設定と、本当に効くことの整理</a></li>
-                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>では、何に時間をかけるべきか</a></li>
-                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>優先順位の設計から伴走するなら</a></li>
-                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>まとめ</a></li>
-                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>llms.txtとは</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>提案の出どころと第2版</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>robots.txtやサイトマップとの違い</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>意味ないと言われる理由</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>Googleの公式の書き方</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>OpenAIなど3社の公式ページ</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>AIのクローラーは読みに来るか</a></li>
+                    <li class="toc-h3"><a href="#s2-4"><span class="toc__n">2-4</span>引用との関係を調べた調査</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>llms.txtの書き方</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>最小の例</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>置き場所と確かめ方</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>WordPressやWixで作る場合</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>置くかどうかの決め方</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>置く意味があるサイト</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>工数と管理で決めること</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>構造化データの扱い</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>会社として先にやること</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
                 </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
             </nav>
 <script>
 (function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
 b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
 </script>
 
-<h2 id="s1">llms.txtとは何か</h2>
-<p>まず、llms.txtが何かを整理します。llms.txtは、2024年にAI向けのガイドファイルとして提唱された、Webサイトのルートに置くMarkdown形式のテキストファイルです。AIに対して、サイトの主要な情報のありかを伝える意図でつくられました。名前がrobots.txtに似ているため、「AI時代に必須の設定」と受け取られることがあります。</p>
-<p>しかし、提唱されてから現在まで、その効果は証明されていません。むしろ、主要なAIのクローラーがllms.txtを読んでいないという調査結果が複数出ています。</p>
-<h2 id="s2">llms.txtは、実際にはほとんど読まれていない</h2>
-<p>具体的に見ていきます。ChatGPTのGPTBot、ClaudeBot、PerplexityBot、Googleのクローラーといった主要なAIのクローラーは、llms.txtを無視して直接HTMLを読みに行く傾向があるとされています。独立した調査でも、ほとんどのサイトのllms.txtは、AIクローラーに読まれていないことが分かっています。</p>
-<p>Google自身も、生成AI検索に表示されるために新しいファイルを作る必要はないと明言しています。</p>
-<blockquote>
-<p>Google 検索（生成 AI 機能を含む）で表示されるようにするために、新たにコンピュータが解読可能なファイルや AI テキスト ファイル、マークアップ、マークダウンを作成する必要はありません。Google 検索自体がそれらを使用しないためです。</p>
-<p>出典：<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索の生成 AI 機能に関する最適化ガイド</a></p>
-</blockquote>
-<p>GoogleのJohn Mueller氏も、llms.txtはAIがどのサイトを参照先に選ぶかの決め手にはなりにくいという趣旨を述べています。実際に、AIで頻繁に紹介されているサイトを見ても、llms.txtを設置していないケースが多いのが実情です。</p>
-<p>つまり、llms.txtは「設置すればAIに引用される」ものではありません。低コストで設置できるため、将来のAIエージェントや開発ツール向けの備えとして置いておくのは構いませんが、AI検索対策の最優先事項ではない、というのが2026年時点の現実的な位置づけです。</p>
-<h2 id="s3">構造化データは「必須ではないが、補助にはなる」</h2>
-<p>もうひとつよく話題になるのが、構造化データ（schema.orgのマークアップ）です。これは、ページの内容をコンピュータが読み取れる形で示す仕組みで、商品情報やFAQ、企業情報などに使われます。</p>
-<p>構造化データについても、Googleは生成AI検索に必須ではないと明言しています。</p>
-<blockquote>
-<p>構造化データに過度に注力する: 生成 AI 検索に構造化データは必須ではありません。また、特別な schema.org のマークアップを追加する必要もありません。ただし、Google 検索のリッチリザルトの対象となる助けとなるため、SEO 戦略全体の一部として引き続き使用することをおすすめします。</p>
-<p>出典：<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索の生成 AI 機能に関する最適化ガイド</a></p>
-</blockquote>
-<p>llms.txtとの違いは、構造化データはSEOの文脈で補助的な意味を持つ点です。検索結果でのリッチな表示につながる場合があり、SEO戦略の一部としては引き続き有効です。ただし、これも「実装すればAIに引用される」直接のレバーではありません。土台のコンテンツが整ったうえでの補助と考えるのが適切です。</p>
-<h2 id="s4">技術的な設定と、本当に効くことの整理</h2>
-<p>ここまでを整理すると、技術的な設定の位置づけが見えてきます。</p>
+<h2 id="s1">llms.txtとは</h2>
+<p>サイトのルート（<code>https://自社のドメイン/llms.txt</code>）に置く、Markdownで書いたテキストファイルです。サイトが何者か、どのページに何が書いてあるかを短くまとめ、AIのエージェントが必要なページへたどり着けるようにする目的で提案されました。<strong>robots.txtと名前は似ていますが、何かを止めたり許したりする働きはありません。</strong></p>
+<h3 id="s1-1">提案の出どころと第2版</h3>
+<p>提案の本文は<a href="https://llmstxt.org/">llmstxt.org</a>にあり、2024年9月3日に公開され、2026年8月10日に第2版へ改められました。第2版の背景説明によると、数千のサイトが置いていて、文書を公開する仕組みの多くが自動で作ります。OpenAI・Anthropic・Geminiも自社の開発者向け資料に置いているとあります。<strong>提案者自身も、いちばん使われているのはソフトウェアの資料をコーディング用のAIが読む場面だと書いています。</strong></p>
+<p>第2版で増えたのは3点です。サイトの途中のパス（<code>/docs/llms.txt</code>など）に置けばその下のページを指すと定めたこと、各ページのMarkdown版のURLに、第1版の<code>page.html.md</code>に加えて、拡張子を置き換えた<code>page.md</code>も認めたこと、HTMLの<code>link</code>要素でMarkdown版とllms.txtの場所を知らせる書き方を加えたことです。前の版にあった、ファイルを展開してAIに渡すための道具の説明は外れました。</p>
+<h3 id="s1-2">robots.txtやサイトマップとの違い</h3>
+<p>3つとも同じくルートに置くファイルなので、制作の現場では混同されがちです。役割を並べると次のとおりです。</p>
 <div class="tbl"><table class="stack">
 <thead>
 <tr>
-<th>施策</th>
-<th>AI検索への直接効果</th>
-<th>位置づけ</th>
+<th>ファイル</th>
+<th>読む相手</th>
+<th>書くこと</th>
+<th>できること</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-label="施策">llms.txt</td>
-<td data-label="AI検索への直接効果">ほぼ確認されていない</td>
-<td data-label="位置づけ">最優先ではない。低コストなら任意で</td>
+<td data-label="ファイル">robots.txt</td>
+<td data-label="読む相手">検索・AIのクローラー</td>
+<td data-label="書くこと">どのボットにどこを見せるか</td>
+<td data-label="できること">取得を止める・許す</td>
 </tr>
 <tr>
-<td data-label="施策">構造化データ</td>
-<td data-label="AI検索への直接効果">必須ではない</td>
-<td data-label="位置づけ">SEOの補助。土台が整った上で</td>
+<td data-label="ファイル">sitemap.xml</td>
+<td data-label="読む相手">検索エンジン</td>
+<td data-label="書くこと">登録してほしいURLの一覧</td>
+<td data-label="できること">新しいページを早く見つけてもらう</td>
 </tr>
 <tr>
-<td data-label="施策">robots.txtの点検</td>
-<td data-label="AI検索への直接効果">間接的に重要</td>
-<td data-label="位置づけ">クロールを妨げていないかは確認する</td>
-</tr>
-<tr>
-<td data-label="施策">明確で質の高いコンテンツ</td>
-<td data-label="AI検索への直接効果">最も効く</td>
-<td data-label="位置づけ">ここに時間をかける</td>
-</tr>
-<tr>
-<td data-label="施策">一次情報・第三者の言及</td>
-<td data-label="AI検索への直接効果">最も効く</td>
-<td data-label="位置づけ">ここに時間をかける</td>
+<td data-label="ファイル">llms.txt</td>
+<td data-label="読む相手">AIのエージェント</td>
+<td data-label="書くこと">サイトの概要と主なページへのリンク</td>
+<td data-label="できること">読む側が使えば道案内になる</td>
 </tr>
 </tbody>
 </table></div>
-<p>技術ファイルは、やってもマイナスにはなりませんが、そこに時間をかけても引用は増えません。唯一、robots.txtでAIのクローラーを意図せずブロックしていないかの点検だけは、読まれる前提を整える意味で確認しておく価値があります。</p>
-<p>ChatGPTの検索用と学習用のクローラーの分け方は、<a href="/media/chatgpt-search-citation/">ChatGPT検索で引用元に出る条件</a>に書いています。</p>
-<p>OpenAI以外も含めたAIのボットを止めるか許すかの判断と書き方は、<a href="/media/ai-crawler-robots/">AIクローラーをrobots.txtで止めるかの判断</a>にまとめています。</p>
-<h2 id="s5">では、何に時間をかけるべきか</h2>
-<p>Googleが公式ガイドで繰り返し示しているのは、技術的な小細工ではなく、コンテンツの質こそが最も効くという一貫した考え方です。</p>
+<p>AIのクローラーを止めるか許すかはrobots.txtの話で、llms.txtを置いても置かなくても変わりません。止め方は<a href="/media/ai-crawler-robots/">AIクローラーをrobots.txtで止めるかの判断と書き方</a>にまとめています。</p>
+<h2 id="s2">意味ないと言われる理由</h2>
+<p>AI検索に名前を出すための施策としてllms.txtが紹介されてきたことに対し、「意味ない」という声が出ています。公式の文言と、ログを数えた調査に分けて確かめます。</p>
+<h3 id="s2-1">Googleの公式の書き方</h3>
+<p>Googleは<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">生成AI機能向けの最適化ガイド</a>（2026年10月9日更新）で、対応しなくてよいことの1つ目にllms.txtを挙げました。</p>
 <blockquote>
-<p>ユニークで魅力的で役立つと感じるコンテンツを作成すれば、このガイドで説明している他のどの提案よりも、生成AI検索でのウェブサイトのプレゼンスを長期的に高める</p>
-<p>出典：<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索の生成 AI 機能に関する最適化ガイド</a></p>
+<p>Google 検索（生成 AI 機能を含む）で表示されるようにするために、機械可読ファイル、AI テキスト ファイル、マークアップ、またはマークダウンを新たに作成する必要はありません。Google 検索自体がこれらを使用しないためです。</p>
+<p>出典：<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索の生成 AI 機能向けにウェブサイトを最適化する</a></p>
 </blockquote>
-<p>優先すべきは、明確でよく整理されたコンテンツ、自社にしか出せない一次情報、そして第三者からの信頼できる言及です。これらは地道で時間のかかる取り組みですが、AIに引用されるかを本当に左右するのはここです。技術設定に安心を求めるより、中身に力を注ぐほうが、結果的に近道になります。この点は「<a href="/media/no-quick-fix-llmo/">LLMOに小手先の戦略は通じない。nitoが実行まで伴走する理由</a>」でも詳しく扱っています。</p>
-<h2 id="s6">優先順位の設計から伴走するなら</h2>
-<p>技術的な設定は分かりやすく、つい先に手をつけたくなります。しかし、限られたリソースをどこに割くかを見極めないと、効果の薄い作業に時間を使ってしまいます。何を後回しにし、何に集中すべきかの判断は、AI検索の実態を踏まえて行う必要があります。</p>
-<p>nitoは、効果の薄い技術設定に振り回されず、コンテンツの質・一次情報・第三者の言及という、本当に効くところに集中する優先順位の設計から伴走します。やるべきことと後回しでよいことを切り分け、成果につながる取り組みに力を向けられる状態を一緒につくります。</p>
-<!-- 固定PRパート（ブログパーツ）: llmo-cta
-     このファイルを更新すると、埋め込んだ全記事に反映される。
-     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
-<div class="bp-cta">
-    <div class="bp-cta__body">
-        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（AIO）</p>
-        <p class="bp-cta__lead">nitoは、AI検索（AIO）での見え方を計測するだけ・提案するだけで終わらせません。<strong>効く施策に絞って、記事の制作と改善まで実行</strong>します。まず無料診断で、いまの見え方を数字にします。</p>
-        <ul class="bp-cta__points">
-            <li><strong>本当に効く施策を、ピンポイントで</strong>：AI経由の問い合わせ・購入まで毎日追ってきたから、効く施策を切り分けられる</li>
-            <li><strong>提案で終わらせず、実行まで</strong>：記事の制作・既存記事の改善まで手を動かす</li>
-            <li><strong>主要AIでの見え方を毎日計測</strong>：ChatGPT・Geminiなどでの言及・引用を自社基盤で毎日計測し、次に直す場所を数字で決める</li>
-        </ul>
-        <p class="bp-cta__lead">実際にあるSaaS企業では、AIでの言及率を10%から45%へ引き上げ、AI経由のコンバージョンを3.8倍に改善しました。</p>
-        <div class="bp-cta__actions">
-            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
-            <a href="/llmo/" class="bp-cta__link">サービス詳細を見る →</a>
-        </div>
-    </div>
+<p>同じ節によれば、ほかのサービスのために作って維持するのは問題なく、Google検索では無視されるので表示や順位に影響しません。<strong>置いて損をすることはないものの、AIによる概要やAIモードに出る助けにもならない、というのがGoogle検索の立場です。</strong></p>
+<figure class="post-figure"><img src="/media/images/llms-txt-structured-data/llt_google_guide.png" alt="Google検索セントラルの生成AI機能向けの最適化ガイド。Google検索は生成AI機能を含めてLLMS.txtなどの機械可読ファイルを使用しないと書かれている" loading="lazy"><figcaption>Google 検索セントラル 生成 AI 機能向けの最適化ガイド（2026年10月26日）</figcaption></figure>
+
+<p>一方、Chromeの開発チームはLighthouseの実験的な監査「エージェントによるブラウジング」に<a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt?hl=ja">llms.txtの確認</a>を入れました（2026年5月5日更新）。ファイルが無いとエージェントがサイトの把握にクロールの時間を使う可能性があると説明し、取得でサーバーエラーが出たら指摘します。ただし404のときは、現時点では任意なので「該当なし」と扱う決まりです。</p>
+<p>GoogleのJohn Mueller氏は2025年4月、どのAIサービスもllms.txtを使うとは言っておらず、サイトの持ち主の自己申告という点でkeywordsメタタグと同じだとRedditで書きました（<a href="https://www.searchenginejournal.com/google-says-llms-txt-comparable-to-keywords-meta-tag/544804/">Search Engine Journal</a>、2025年4月17日）。2026年6月にはGoogleのポッドキャストで、自己申告なのでAIがサイト同士を比べる材料にはならず、すでにサイトに来ている自動の仕組みには役立つかもしれないと話しています（<a href="https://www.searchenginejournal.com/googles-mueller-says-llms-txt-cant-help-llms-differentiate-sites/566027/">同</a>、2026年6月15日）。</p>
+<h3 id="s2-2">OpenAIなど3社の公式ページ</h3>
+<p>ほかのAIの会社のクローラーの説明ページ（2026年10月26日時点）も見ます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>会社</th>
+<th>クローラーの公式ページ</th>
+<th>llms.txtを読むという記載</th>
+<th>自社の資料のllms.txt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="会社">OpenAI</td>
+<td data-label="クローラーの公式ページ"><a href="https://developers.openai.com/api/docs/bots">Overview of OpenAI Crawlers</a></td>
+<td data-label="llms.txtを読むという記載">無い。管理はrobots.txt</td>
+<td data-label="自社の資料のllms.txt"><a href="https://developers.openai.com/llms.txt">あり</a></td>
+</tr>
+<tr>
+<td data-label="会社">Anthropic</td>
+<td data-label="クローラーの公式ページ"><a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">クローラーのヘルプ</a></td>
+<td data-label="llms.txtを読むという記載">無い。robots.txtの指示を守ると記載</td>
+<td data-label="自社の資料のllms.txt"><a href="https://platform.claude.com/llms.txt">あり</a></td>
+</tr>
+<tr>
+<td data-label="会社">Perplexity</td>
+<td data-label="クローラーの公式ページ"><a href="https://docs.perplexity.ai/docs/resources/perplexity-crawlers">Perplexity Crawlers</a></td>
+<td data-label="llms.txtを読むという記載">無い。管理はrobots.txt</td>
+<td data-label="自社の資料のllms.txt"><a href="https://docs.perplexity.ai/llms.txt">あり</a></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>3社とも自社の開発者向け資料にはllms.txtを置いていますが、自社のクローラーがほかのサイトのllms.txtを読むとはクローラーの公式ページには書いていません。</strong>「AIの会社も使っている」という説明は、置く側としての話です。</p>
+<h3 id="s2-3">AIのクローラーは読みに来るか</h3>
+<p>Ahrefsは2026年6月15日に、自社の解析ツールを入れた137,210ドメインのサーバーへのリクエストを数えた<a href="https://ahrefs.com/blog/llmstxt-study/">調査</a>を出しました。2026年5月に流入があったドメインが対象で、llms.txtを置いていたのは約38,000（28%。技術に詳しい利用者が多いので上限の値）です。<strong>そのうち97%のファイルは、5月の1か月に人にもボットにも1回も取得されませんでした。</strong></p>
+<figure class="post-figure"><img src="/media/images/llms-txt-structured-data/llt_01_who.png" alt="llms.txtを誰が取りに来たか。Ahrefsの調査で、置いた約3.8万ドメインの97%は2026年5月に取得ゼロ。取得のうちAIのボットは19.5%で、内訳はAIエージェント10.5%、学習用5.3%、利用者の操作用2.5%、AI検索用1.1%" loading="lazy"></figure>
+
+<p>取得があった残り3%（約1,100ドメイン・約2.2万件）の内訳では、96%がボットでした。ただし77%はAIと関係のないボットで、SEOの監査ツール（21.7%）や技術の調査ツールが目立ちます。AIのボットは合計19.5%で、AI検索の回答のためにページを取るボット（OAI-SearchBot・PerplexityBotなど）は取得全体の1.1%にとどまりました。単体ではGPTBotが最も多く、次がAnthropicのコーディング用エージェントClaude-Codeです。</p>
+<p>置いていないサイトの<code>/llms.txt</code>（404）に、AIのボットは1件も来ていませんでした。<strong>AIは無いファイルを探しに来ず、リンクや利用者の指示で場所を知ったときに取りに来る</strong>、とAhrefsは読んでいます。取得した数は読んで使ったかを示さないため、どの数字も上限だという断りも付いています。</p>
+<h3 id="s2-4">引用との関係を調べた調査</h3>
+<p>SE Rankingは約30万ドメインを調べ、llms.txtを置いていたのは10.13%で、統計と機械学習のどちらでもAIに引用される回数との関係は見られなかったと<a href="https://seranking.com/blog/llms-txt/">報告</a>しました（2026年10月15日更新の記事）。モデルからllms.txtの有無を外すと、予測の精度がむしろ上がったとも書いています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">AI のおすすめに自社の名前が挙がるか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
 </div>
-<h2 id="s7">まとめ</h2>
-<p>llms.txtは主要なAIクローラーにほとんど読まれておらず、AI検索対策の最優先事項ではありません。構造化データも生成AI検索には必須ではなく、SEOの補助という位置づけです。<strong>技術的な設定に時間をかける前に、明確なコンテンツ・一次情報・第三者からの言及に力を注ぐ</strong>ほうが、引用されるかを本当に左右します。</p>
-<p>技術ファイルに安心を求めず、中身を積み上げることに集中しましょう。robots.txtでクローラーをブロックしていないかの点検だけは、忘れずに行っておくのがおすすめです。</p>
-<h2 id="s8">よくある質問</h2>
-<h3 id="s8-1">Q. llms.txtは設置しないほうがいいですか？</h3>
-<p>設置してもマイナスにはなりません。低コストで置けるため、将来のAIエージェント向けの備えとして設置するのは構いません。ただし、設置すればAIに引用されるものではなく、最優先事項ではないと理解しておくことが大切です。</p>
-<h3 id="s8-2">Q. 構造化データは無駄ですか？</h3>
-<p>無駄ではありません。生成AI検索には必須ではありませんが、検索結果でのリッチな表示につながる場合があり、SEO戦略の一部としては有効です。ただし、土台のコンテンツが整ったうえでの補助と考えます。</p>
-<h3 id="s8-3">Q. 技術的な設定で唯一やるべきことは何ですか？</h3>
-<p>robots.txtの点検です。AIのクローラーを意図せずブロックしていると、そもそも読まれません。これだけは、読まれる前提を整える意味で確認しておく価値があります。</p>
-<h3 id="s8-4">Q. 結局、何に時間をかければいいですか？</h3>
-<p>明確でよく整理されたコンテンツ、自社にしか出せない一次情報、第三者からの信頼できる言及です。Googleも公式ガイドで、コンテンツの質が最も効くと繰り返し示しています。技術設定よりここに集中するのが近道です。</p>
-<h3 id="s8-5">Q. なぜ技術的な設定を先にやりたくなるのですか？</h3>
-<p>分かりやすく、短時間で終わるからです。コンテンツづくりや第三者の言及は地道で時間がかかるため、つい手軽な技術設定に安心を求めがちです。しかし、効果があるのは時間のかかるほうだという点を意識することが重要です。</p>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">llms.txtの書き方</h2>
+<p>仕様で必須なのは1行目の見出しだけです。あとは決まった順番で、概要・補足・リンクの一覧を並べます。</p>
+<ol>
+<li>H1（<code>#</code>）でサイト名や会社名</li>
+<li>引用（<code>&gt;</code>）で短い概要</li>
+<li>見出しを使わない段落で補足</li>
+<li>H2（<code>##</code>）で区切ったリンクの一覧。1行に<code>[ページ名](URL): 短い説明</code></li>
+</ol>
+<h3 id="s3-1">最小の例</h3>
+<p>BtoBの会社のサイトなら、次のくらいの長さで足ります。</p>
+<pre><code># 株式会社サンプル
+
+&gt; 製造業向けの生産管理システムを開発・販売している会社です。導入は全国に対応しています。
+
+導入の相談は問い合わせフォームで受け付けています。料金は個別見積もりです。
+
+## サービス
+
+- [生産管理システム](https://example.com/service/): 主な機能と対応する業種
+- [料金と導入の流れ](https://example.com/price/): 見積もりの考え方と導入までの期間
+
+## 会社
+
+- [会社概要](https://example.com/company/): 所在地・設立・代表者
+- [導入事例](https://example.com/case/): 業種別の事例
+
+## Optional
+
+- [お知らせ](https://example.com/news/)
+</code></pre>
+<p><strong>リンクの先は人が読むページそのままでかまいません。</strong>第2版はページのMarkdown版を用意する形も勧めていますが、llms.txt自体はそれが無くても書けます。「Optional」は後回しでよいリンクを置く慣習の見出しで、第2版では特別な意味が無くなりました。作ったらllms.txtだけを渡したAIに自社のことを質問して確かめるよう、提案のページは勧めています。</p>
+<h3 id="s3-2">置き場所と確かめ方</h3>
+<p>ファイル名は<code>llms.txt</code>で、サイトのルートに置きます。置いたらブラウザで<code>https://自社のドメイン/llms.txt</code>を開き、文字化けせずテキストのまま表示されるかを見てください。ターミナルが使えるなら<code>curl -I https://自社のドメイン/llms.txt</code>で、状態コードが200で返るかを確かめられます。</p>
+<p>AIはリンクや利用者の指示で場所を知ったときに取りに来る、とAhrefsは見ています。<strong>置くなら、HTMLの<code>head</code>に<code>&lt;link rel="describedby" href="/llms.txt"&gt;</code>のように場所を書いておくと、第2版の仕様に沿った知らせ方になります。</strong>CDNのボット対策でAIのユーザーエージェントを止めていると、置いても届きません。</p>
+<h3 id="s3-3">WordPressやWixで作る場合</h3>
+<p>WordPressなら、SEOのプラグインの<a href="https://yoast.com/features/llms-txt/">Yoast SEO</a>と<a href="https://aioseo.com/features/llms-txt/">AIOSEO</a>にllms.txtを作る機能があります。Yoast SEOは主なページを自動で選んで作り、更新も自動で続けます。<a href="https://support.wix.com/en/article/understanding-your-sites-llmstxt-file">Wix</a>はサイトごとに自動で作り、管理画面で中身を見て直せますが、一度直すと自動の更新は止まり、初期の状態に戻すと自動の更新も再開します。</p>
+<p>自動で作られたファイルも、公開前に中身を読むようにしてください。終わったサービスや古い料金のページが並んでいれば、それがそのままAIへの案内になります。</p>
+<h2 id="s4">置くかどうかの決め方</h2>
+<p>ファイル自体は数十行で書けるため、迷う理由は作る手間ではありません。決めることは<strong>誰に読ませたいのかと、内容を誰が最新に保つのか</strong>の2つです。</p>
+<h3 id="s4-1">置く意味があるサイト</h3>
+<p>調査のAIのボットの中で最も多かったのはClaude-Codeなどを含むAIエージェントの区分（取得全体の10.5%）でした。そこから考えると、置く意味の大きさはサイトの種類で分かれます。</p>
+<figure class="post-figure"><img src="/media/images/llms-txt-structured-data/llt_02_decide.png" alt="llms.txtを置くかの決め方。APIや製品の技術資料があるなら置く価値がある。AIエージェントに予約や購入をさせたいなら試す価値がある。AI検索に社名を出したいだけなら先に本文と測り方を整える" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>サイトの種類</th>
+<th>期待できること</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="サイトの種類">APIや製品の技術資料がある</td>
+<td data-label="期待できること">コーディング用のAIが資料を探しやすくなる</td>
+<td data-label="判断">置く価値がある</td>
+</tr>
+<tr>
+<td data-label="サイトの種類">AIエージェントに予約・購入・問い合わせをさせたい</td>
+<td data-label="期待できること">サイトに来たエージェントの道案内になる</td>
+<td data-label="判断">試す価値がある</td>
+</tr>
+<tr>
+<td data-label="サイトの種類">AI検索に社名やサービス名を出したい</td>
+<td data-label="期待できること">公式・調査ともに効果の裏づけが無い</td>
+<td data-label="判断">先に本文と測り方</td>
+</tr>
+</tbody>
+</table></div>
+<p>商材の単価が高いBtoBの会社がAI検索対策として検討するなら、3つ目に当たります。この場合、llms.txtを置いたことを成果として報告されても、AIの回答に出るかどうかは変わらないと考えておくのが安全です。</p>
+<h3 id="s4-2">工数と管理で決めること</h3>
+<p>置くと決めたら、robots.txtと同じくサイトの設定ファイルとして扱います。AIエージェントはこのファイルを信用して読む作りなので、書き換えられたファイルや古いファイルはエージェントを誤った先へ導く、とAhrefsは注意しています。同じ調査ではllms.txtを悪意ある指示を入れる場所として調べる研究用のボットも見つかりました。</p>
+<ul>
+<li>編集できる人を決め、変えた履歴を残す</li>
+<li>中身はページ名・リンク・短い説明だけにし、命令のような文を書かない</li>
+<li>リンクは自社が管理するページに限る</li>
+<li>サービスや料金を変えたら、同じ日にllms.txtも直す</li>
+</ul>
+<p><strong>制作会社に頼むなら、設置の費用より誰がいつ更新するかを契約の前に決めておきましょう。</strong></p>
+<h2 id="s5">構造化データの扱い</h2>
+<p>構造化データはページの中身（会社名・記事の著者・パンくずなど）を検索エンジンが読める形で書き足す仕組みです。Googleの最適化ガイドによれば、生成AI検索に構造化データは必要なく、特別なschema.orgのマークアップを足す必要もありません。そのうえで、リッチリザルトの対象になる助けになるため、SEO全体の一部として使い続けるよう勧めています。</p>
+<p><a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja">構造化データの説明ページ</a>（2025年12月18日更新）が勧める形式は、ほとんどの場合JSON-LDです。数を増やすより、完全で正確なプロパティを優先するよう求めています。<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI機能とウェブサイト</a>のページにも、構造化データをページに表示されるテキストと一致させる項目がありました。<strong>会社のサイトなら、組織・記事・パンくずリストのように公式の一覧にある種類を、表示している中身と同じ内容で入れておけば足ります。</strong></p>
+<h2 id="s6">会社として先にやること</h2>
+<p>llms.txtも構造化データも、AIに読まれる本文がある前提の補助です。AI検索に名前を出したい会社が先に手を付けるのは次の順番です。</p>
+<figure class="post-figure"><img src="/media/images/llms-txt-structured-data/llt_03_first.png" alt="AI検索に向けて会社が先にやる順番。AIのクローラーを止めていないか確かめる、答えを本文のテキストで書く、Search Consoleで生成AIでの表示を測る、実際の質問でAIの回答を見る" loading="lazy"></figure>
+
+<ol>
+<li><strong>AIのクローラーを止めていないか確かめる</strong>。robots.txtとCDNの設定を見る（<a href="/media/ai-crawler-robots/">AIクローラーの判断と書き方</a>）</li>
+<li><strong>答えを本文のテキストで書く</strong>。AIによる概要やAIモードにリンクとして出るには、インデックスに登録され、スニペットが表示できることが条件だとGoogleは書いています。比較の軸・費用の目安・事例を画像の中だけに置かない（<a href="/media/cited-by-ai-overviews/">AIによる概要に引用されるには</a>）</li>
+<li><strong>Search Consoleで測る</strong>。<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成AIパフォーマンスレポート</a>で、AIによる概要とAIモードでの表示をページごとに見る</li>
+<li><strong>実際の質問でAIの回答を見る</strong>。顧客が聞きそうな質問をChatGPT・Gemini・AIモードに入れ、自社の名前と根拠のページが出るかを定期的に記録する</li>
+</ol>
+<p>全体の考え方は<a href="/media/geo-taisaku/">GEO対策とは</a>と<a href="/media/what-is-llmo/">LLMOとは</a>に書いています。</p>
+<h2 id="s7">よくある質問</h2>
+<h3 id="s7-1">Q. llms.txtを置くとChatGPTに引用されやすくなりますか？</h3>
+<p>裏づけはありません。OpenAIのクローラーの公式ページにllms.txtを読むという記載は無く、Ahrefsの調査でもAI検索のボットの取得は取得全体の1.1%でした。SE Rankingの約30万ドメインの分析でも、引用される回数との関係は見られていません。</p>
+<h3 id="s7-2">Q. Google検索のAIによる概要やAIモードにllms.txtは効きますか？</h3>
+<p>効きません。Googleの最適化ガイドは、生成AI機能を含むGoogle検索はllms.txtを使わず、置いても表示や順位に影響しないと書いています。</p>
+<h3 id="s7-3">Q. llms.txtとrobots.txtのどちらでAIのクローラーを止めますか？</h3>
+<p>robots.txtです。OpenAI・Anthropic・Perplexityはどれも、クローラーの管理をrobots.txtで行うと公式ページに書いています。llms.txtにはアクセスを止める働きがありません。ただし、利用者の質問を受けてその場でページを開く仕組み（ChatGPT-User・Perplexity-User）は、robots.txtの指示が当てはまらない場合があるとOpenAIとPerplexityは書いています。</p>
+<h3 id="s7-4">Q. llms.txtとllms-full.txtの違いは何ですか？</h3>
+<p>llms-full.txtはリンク先の本文まで1つにまとめたファイルで、<a href="https://www.mintlify.com/docs/ai/llmstxt">Mintlify</a>のような文書の公開ツールがllms.txtと一緒に作ります。llmstxt.orgの第2版の仕様にはllms-full.txtの定めが無く、仕様で決まっているのはllms.txtだけです。</p>
+<h3 id="s7-5">Q. WordPressでllms.txtを作るにはどうしますか？</h3>
+<p>Yoast SEOやAIOSEOのllms.txtの機能を使うか、テキストファイルを作ってサイトのルートに置きます。プラグインで作った場合も、並んだページと説明が今のサービスに合っているかを公開前に読んでください。</p>
+<h3 id="s7-6">Q. Claudeのコーディング用エージェントはllms.txtを読みますか？</h3>
+<p>Ahrefsの調査でClaude-Codeは、GPTBotに次いでllms.txtを多く取得していました。ただし、取得した中身をどう使っているかまでは調査で分かっていません。</p>
+<h2 id="s8">出典</h2>
+<ul>
+<li>Jeremy Howard「<a href="https://llmstxt.org/">The /llms.txt file, v2</a>」2024年9月3日公開・2026年8月10日更新（2026年10月26日取得）</li>
+<li>llmstxt.org「<a href="https://llmstxt.org/changes.html">Changes</a>」（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索の生成 AI 機能向けにウェブサイトを最適化する</a>」2026年10月9日更新（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI 機能とウェブサイト</a>」2025年12月31日更新（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja">構造化データ マークアップとは</a>」2025年12月18日更新（同）</li>
+<li>Chrome for Developers「<a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt?hl=ja">llms.txt</a>」2026年5月5日更新（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/bots">Overview of OpenAI Crawlers</a>」（同）</li>
+<li>Anthropic「<a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">Does Anthropic crawl data from the web, and how can site owners block the crawler?</a>」（同）</li>
+<li>Perplexity「<a href="https://docs.perplexity.ai/docs/resources/perplexity-crawlers">Perplexity Crawlers</a>」（同）</li>
+<li>Ahrefs「<a href="https://ahrefs.com/blog/llmstxt-study/">We Analyzed 137K Sites: 97% of llms.txt Files Never Get Read</a>」2026年6月15日（同）</li>
+<li>SE Ranking「<a href="https://seranking.com/blog/llms-txt/">LLMs.txt: Why Brands Rely On It and Why It Doesn't Work</a>」2026年10月15日更新（同）</li>
+<li>Search Engine Journal「<a href="https://www.searchenginejournal.com/google-says-llms-txt-comparable-to-keywords-meta-tag/544804/">Google Says LLMs.Txt Comparable To Keywords Meta Tag</a>」2025年4月17日（同）</li>
+<li>Search Engine Journal「<a href="https://www.searchenginejournal.com/googles-mueller-says-llms-txt-cant-help-llms-differentiate-sites/566027/">Google's Mueller Says llms.txt Can't Help LLMs Differentiate Sites</a>」2026年6月15日（同）</li>
+<li>Mintlify「<a href="https://www.mintlify.com/docs/ai/llmstxt">llms.txt</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成 AI パフォーマンス レポート（検索）</a>」（同）</li>
+</ul>
         </div>
 
         <div class="ecta">
@@ -222,7 +361,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
             </div>
         </div>
     </main>
-    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">llms.txtとは何か</a><a href="#s2">llms.txtは、実際にはほとんど読まれていない</a><a href="#s3">構造化データは「必須ではないが、補助にはなる」</a><a href="#s4">技術的な設定と、本当に効くことの整理</a><a href="#s5">では、何に時間をかけるべきか</a><a href="#s6">優先順位の設計から伴走するなら</a><a href="#s7">まとめ</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">llms.txtとは</a><a href="#s2">意味ないと言われる理由</a><a href="#s3">llms.txtの書き方</a><a href="#s4">置くかどうかの決め方</a><a href="#s5">構造化データの扱い</a><a href="#s6">会社として先にやること</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
     </div>
 
     <section class="related">
