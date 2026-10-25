@@ -18,7 +18,7 @@ GmailやドキュメントのGeminiをもう使っている会社では、別の
 
 :::takeaways
 - **Gemini Enterpriseは社内外のデータを横断して答え、エージェントを作って配るための別契約**。Workspaceのプランには含まれない
-- 公開されているシートの金額はBusinessの月額21ドルからだけ。**Standard・Plusの金額は公式の公開ページに無く、営業担当者への問い合わせになる**
+- 公開されているシートの金額はBusinessの月額21ドルからだけ。**Standard・Plusの金額は公式の公開ページに無く、Google Cloudコンソールから買うか、営業担当者に見積もりを取って確かめる**
 - **Workspaceの中の自動化なら、WorkspaceのBusinessの全プランに込みのWorkspace Studioで足りることがある**。Microsoft 365やSalesforceのデータを読ませる・全社に配るならGemini Enterpriseが候補
 :::
 
@@ -41,7 +41,7 @@ GmailやドキュメントのGeminiをもう使っている会社では、別の
 | 社内データの検索と回答 | つないだアプリの中身のうち、本人が見られるものから答える |
 | Gemini Notebook | 最大300件の社内資料から共有できるノートブックを作る |
 | Deep Research | 社内データとWebを調べて出典つきのレポートを書く |
-| Workflow Builder | 繰り返しの作業を任せるエージェントを文で頼んで作る |
+| Workflow Builder（プレビュー） | 繰り返しの作業を任せるエージェントを文で頼んで作る |
 
 [Workflow Builderの概要](https://docs.cloud.google.com/gemini/enterprise/docs/workflow-builder?hl=ja)によると、作れるのは会話で動くチャット エージェントと、決まった手順で動くワークフローの2種類です。ワークフローには人の承認を挟めて、決まった時刻に動かす設定もできます。製品ページには一部の機能は早期アクセス版で今は使えない場合があるという注記もあり、**ページで見た機能が自社の契約で使えるかは試用の期間に確かめるほうが確実です。**
 
@@ -63,7 +63,7 @@ GmailやドキュメントのGeminiをもう使っている会社では、別の
 
 <figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_02_editions.png" alt="Gemini Enterpriseの4つのエディションを縦に並べた図。Businessは月額21ドルからで1〜500ユーザーと25GiB、Standardは公開ページに金額が無く1日160クエリと30GiB、Plusは公開ページに金額が無く1日200クエリと75GiB、従量課金制は使った分だけで1シートから" loading="lazy"></figure>
 
-Businessの人数は、比較の表が1〜500ユーザー、Businessのページが最大300名までのチームと書いていて、2つのページで数字がそろっていません。Standard・Plusの金額は、2025年10月の発表を伝えた[TechCrunchの記事](https://techcrunch.com/2025/10/09/google-ramps-up-its-ai-in-the-workplace-ambitions-with-gemini-enterprise/)では年払いで1シート月額30ドルからでした。**いまの公式のページにはこの金額が無く、料金ページだったURLも開けないため、予算は営業担当者の見積もりで組むことになります。**
+Businessの人数は、比較の表が1〜500ユーザー、Businessのページが最大300名までのチームと書いていて、2つのページで数字がそろっていません。Standard・Plusの金額は、2025年10月の発表を伝えた[TechCrunchの記事](https://techcrunch.com/2025/10/09/google-ramps-up-its-ai-in-the-workplace-ambitions-with-gemini-enterprise/)では年払いで1シート月額30ドルからでした。**いまの公式のページにはこの金額が無く、料金ページだったURLも開けません。Google Cloudコンソールから自分で買うか、営業担当者に見積もりを取る段階で、予算を確かめることになります。**
 
 <figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_business_price.png" alt="Gemini Enterprise Businessエディションのページの冒頭。ビジネスとチームのためのAIの見出しの下に、データを管理するのはお客様でありGoogleがトレーニングに使用することはない、21ドルからシートあたり月額と書かれている" loading="lazy"><figcaption>Gemini Enterprise Businessエディションのページ（2026年10月26日）</figcaption></figure>
 
@@ -77,18 +77,18 @@ Businessの人数は、比較の表が1〜500ユーザー、Businessのページ
 
 ### 割り当てと超過料金
 
-Standard・Plusのシートには1日に使える量の割り当てがあります。同じエディションのユーザー全員で共有するプールで、戻るのは太平洋時間の午前0時です。
+Standard・Plusのシートには1日に使える量の割り当てがあります。同じエディションのユーザー全員で共有するプールで、戻るのは太平洋時間の午前0時です。開発者向けツールのクレジットだけは、最初に使った時から7日ごとに戻ります。
 
-| 1日の割り当て | Standard | Plus |
+| 割り当て | Standard | Plus |
 |---|---|---|
 | アシスタントへの質問 | 160件 | 200件 |
 | ノーコードのエージェントの作成 | 1件 | 10件 |
 | Deep Research | 3回 | 10回 |
-| 開発者向けツールのクレジット | 月10ドル分 | 月15ドル分 |
+| 開発者向けツールのクレジット | 1人月10ドル分（7日ごとに区切って共有） | 1人月15ドル分（同） |
 
 <figure class="post-figure"><img src="/media/images/gemini-enterprise/gee_quota.png" alt="Gemini Enterpriseの割り当てと超過料金のドキュメントの表。StandardとPlusの列に、ストレージとデータ インデックス作成が30GiBと75GiB、アシスタントが1日あたり160クエリと200クエリ、ノーコードのエージェント作成が1日あたり1エージェントと10エージェントと並ぶ" loading="lazy"><figcaption>割り当てと超過料金のドキュメント（2026年10月26日）</figcaption></figure>
 
-プールを使い切ると、管理者が超過料金を有効にしていない限りその機能は止まります。有効にすると従量課金で使い続けられ、その枠で選べるモデルにはAnthropicのClaudeも入っています。[割り当てと超過料金](https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages?hl=ja)と[費用の制御のドキュメント](https://docs.cloud.google.com/gemini/enterprise/docs/manage-costs-overview?hl=ja)によると、超過分を自動で止める手段はCloud Billingで決める1か月の費用の上限です。**Gemini Enterpriseのアプリは割り当てに達したときも超過料金が始まったときもメールで知らせないため、予算のアラートはCloud Billingの側で設定しておく必要があります。**
+プールを使い切ると、管理者が超過料金を有効にしていない限りその機能は止まります。有効にすると従量課金で使い続けられ、その枠で選べるモデルにはAnthropicのClaudeも入っています。[割り当てと超過料金](https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages?hl=ja)と[費用の制御のドキュメント](https://docs.cloud.google.com/gemini/enterprise/docs/manage-costs-overview?hl=ja)によると、超過分を自動で止める手段はCloud Billingで決める1か月の費用の上限です。**Gemini Enterpriseのアプリは割り当てに達したときも超過料金が始まったときもメールで知らせないため、予算のアラートはCloud Billingの側で設定しておく必要があります。**ただし超過料金と費用の上限を使えるのは、請求書払いのCloud請求先アカウントで、無料の試用ではない契約がある場合だけです。
 
 [AI番記者の解説動画](https://www.youtube.com/watch?v=_JHBwqf1XAc)は、2026年8月26日に従量課金制と利用額の約束で割り引くFlexible Savings Plansが発表されたと伝え、エージェントが処理を重ねると請求が膨らむ点を注意に挙げていました（投稿者の解説で、第三者の検証はありません）。
 
@@ -104,7 +104,7 @@ Workspaceの会社がまず確かめたいのは、追加の契約なしで手�
 
 Gemini Enterpriseが要るのは、答えの材料がWorkspaceの外にある場合です。SharePointやSalesforce、自社のデータベースを1つの画面から横断して聞く道は、Workspaceの機能の表にありません。作ったエージェントを全社に配って1か所で管理したい場合も同じです。Workspace側の料金とプランごとの機能の差は「[Google WorkspaceのGeminiとは](/media/google-workspace-gemini/)」に書いています。
 
-## 申し込みは2通り
+## 申し込み方
 
 Businessの申し込み方は2つあります。[Workspace管理者ヘルプ](https://knowledge.workspace.google.com/admin/generative-ai/gemini-enterprise?hl=ja)によると、Googleの営業担当者かGoogle Cloudパートナーを通す方法と、Businessのサインアップのページから自分で申し込む方法です。
 
@@ -142,7 +142,7 @@ Workspace側にも止める場所があります。[エージェントへのア�
 
 入力が学習に使われない点は、Businessのページにも製品ページのよくある質問にも書かれています。製品ページによるとプロンプトや出力はGoogleや他社のモデルの学習に使われず、広告にも使われません。
 
-保存場所はエディションで変わります。[データ所在地のドキュメント](https://docs.cloud.google.com/gemini/enterprise/docs/locations?hl=ja)によると、Standard・Plusは米国とEUのマルチリージョンを選べて、日本のasia-northeast1も許可リスト付きの一般提供です。日本を使うにはGoogleのアカウント チームへの問い合わせが要ります。Google検索のグラウンディングを有効にすると、この保存場所の約束は当てはまりません。
+保存場所はエディションで変わります。[データ所在地のドキュメント](https://docs.cloud.google.com/gemini/enterprise/docs/locations?hl=ja)によると、Standard・Plusは米国とEUのマルチリージョンを選べて、日本のasia-northeast1も許可リスト付きの一般提供です。日本を使うにはGoogleのアカウント チームへの問い合わせが要ります。日本のリージョンではClaudeのモデルが使えず、Google検索のグラウンディングや動画の生成、一部の新しいGeminiのモデルはglobalのリージョンでしか使えません。Google検索のグラウンディングを有効にすると、この保存場所の約束は当てはまりません。
 
 Standard・Plusは、[コンプライアンスのドキュメント](https://docs.cloud.google.com/gemini/enterprise/docs/compliance-security-controls?hl=ja)でISO 27001やSOC 2などの認証とVPC Service Controlsへの対応も示しています。**Businessはデータ リージョンに対応していないため、保存場所の決まりがある会社の候補はStandard・Plusになります。**
 
@@ -153,7 +153,7 @@ Microsoft側で対になるのはCopilot Studioで、払い方の考え方が違
 | 項目 | Gemini Enterprise | Copilot Studio |
 |---|---|---|
 | 払い方 | 1人ごとのシート（ほかに従量課金制） | テナントで買うクレジット（1パック月29,985円で25,000） |
-| 社内向けのエージェント | どのエディションでも作れる | M365 Copilotのライセンスがあれば追加費用なし |
+| 社内向けのエージェント | Frontline以外のエディションで作れる（Standardは1日1件、Plusは1日10件まで） | M365 Copilotのライセンスがあれば追加費用なし |
 
 詳細は「[Copilot Studioの料金](/media/copilot-studio/)」に、土台をどちらにするかは「[CopilotとGeminiの違い](/media/copilot-vs-gemini/)」にまとめました。**社員の大半がMicrosoft 365で働いているなら、Gemini Enterpriseは土台の外から足す道具になります。**
 
@@ -173,7 +173,7 @@ Workspaceの組織では、管理コンソールの［生成 AI］［Gemini Ente
 
 ### Gemini Enterpriseの料金はいくらですか？
 
-Businessエディションのページは、1シートあたり月額21ドルからと表示しています（2026年10月26日）。Standard・Plusの金額は公式の公開ページに無く、営業担当者への問い合わせです。
+Businessエディションのページは、1シートあたり月額21ドルからと表示しています（2026年10月26日）。Standard・Plusの金額は公式の公開ページに無く、Google Cloudコンソールから買うか、営業担当者に問い合わせて確かめます。
 
 ### Gemini Enterpriseは無料で試せますか？
 
@@ -197,7 +197,7 @@ WorkspaceのプランについてくるGeminiはGmailやドキュメントの中
 
 ### Gemini Enterpriseは日本に保存できる？
 
-Standard・Plusなら、Googleのアカウント チームに問い合わせて日本のasia-northeast1を許可リスト付きで選べます。Businessはデータ リージョンに対応していません。
+Standard・Plusなら、Googleのアカウント チームに問い合わせて日本のasia-northeast1を許可リスト付きで選べます。Businessはデータ リージョンに対応していません。日本のリージョンではClaudeや一部のGeminiのモデル、Google検索のグラウンディングは使えません。
 
 ### Gemini Enterpriseのログイン先は？
 
