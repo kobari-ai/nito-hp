@@ -30,6 +30,8 @@ Google WorkspaceのBusinessプランには、追加料金なしでGeminiが入�
 
 名前の似た「Gemini Enterprise - Businessエディション」は、AIエージェントを作って共有するための別の製品で、いまのアドオンの一覧に載っています。以前Workspaceに足していたGemini BusinessとGemini Enterpriseのアドオンはこれとは別物で、[Geminiアプリ ヘルプ](https://support.google.com/gemini/answer/14620100?hl=ja)では「以前のエディション（現在は購入不可）」の扱いです。
 
+Gemini Enterpriseの料金とエディション、Workspaceのプランで足りる範囲は「[Gemini Enterpriseとは](/media/gemini-enterprise/)」にまとめました。
+
 ## プランごとの料金
 
 [Google Workspaceの料金ページ](https://workspace.google.com/intl/ja/pricing)に載っている日本の価格は次のとおりです。**すべて1ユーザーあたりの月額で、税別と明記されています。**
