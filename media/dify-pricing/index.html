@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】Difyの料金を解説｜プランの選び方・API代・セルフホスト | nito Column</title>
+    <meta name="description" content="Difyの料金を公式の料金ページ・利用規約・ライセンスから解説。クラウド版3プランの違い、クレジットの減り方、モデルのAPI代の見積もり、セルフホストとEnterpriseの条件、商用利用の注意まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/dify-pricing/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】Difyの料金を解説｜プランの選び方・API代・セルフホスト">
+    <meta property="og:description" content="Difyの料金を公式の料金ページ・利用規約・ライセンスから解説。クラウド版3プランの違い、クレジットの減り方、モデルのAPI代の見積もり、セルフホストとEnterpriseの条件、商用利用の注意まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/dify-pricing/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/dify-pricing.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/dify-pricing.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】Difyの料金を解説｜プランの選び方・API代・セルフホスト", "description": "Difyの料金を公式の料金ページ・利用規約・ライセンスから解説。クラウド版3プランの違い、クレジットの減り方、モデルのAPI代の見積もり、セルフホストとEnterpriseの条件、商用利用の注意まで。", "datePublished": "2026-10-27", "dateModified": "2026-10-27", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/dify-pricing/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/dify-pricing.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】Difyの料金を解説｜プランの選び方・API代・セルフホスト"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Difyは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。クラウド版のSandboxは無料で、メンバー1人・アプリ5個・200クレジット（一度きり）までです。セルフホストのコミュニティ版も無料ですが、サーバー代とモデルのAPI代は自社で払います。"}}, {"@type": "Question", "name": "Difyの料金は1人いくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "1人ごとの料金はありません。クラウド版はワークスペースごとで、Professionalは月59ドルで3人まで、Teamは月159ドルで50人までです。"}}, {"@type": "Question", "name": "DifyのProfessionalとTeamの違いは？", "acceptedAnswer": {"@type": "Answer", "text": "メンバーはProfessionalが3人・Teamが50人、アプリは50個と200個、クレジットは月5,000と月10,000です。WebAppのロゴの変更とSOC Type IIレポートはTeamだけにあります。"}}, {"@type": "Question", "name": "Difyの料金にAPI代は含まれますか？", "acceptedAnswer": {"@type": "Answer", "text": "付いてくるクレジットの範囲だけ含まれます。使い切った後や、クレジットで使えないモデルは、自社のAPIキーを登録して各社に払います。"}}, {"@type": "Question", "name": "Difyは請求書払いできますか？", "acceptedAnswer": {"@type": "Answer", "text": "クラウド版はまだできません。料金ページのよくある質問は、銀行振込の請求書払いを検討中で、案ではTeamの年払いだけが対象と書いています。"}}, {"@type": "Question", "name": "Difyを商用利用できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。ただしコミュニティ版で顧客ごとにワークスペースを分けて提供する場合と、フロントエンドのロゴや著作権の表示を変える場合は、書面の許可が要ります。"}}, {"@type": "Question", "name": "Dify Enterpriseの価格はいくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "公開されていません。Enterpriseのページは「Custom」で、Difyかリコージャパンなどの販売店に見積もりを頼みます。"}}, {"@type": "Question", "name": "Difyのデータは学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "LangGeniusはやり取りのデータを学習に使わないと、プライバシーポリシーに書かれています。自社のAPIキーを使う場合の扱いは、モデルの提供元との契約で決まります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=051ff6b4">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】Difyの料金を解説…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.27</span>
+        </div>
+        <h1 class="post-title">【2026年10月】Difyの料金を解説｜プランの選び方・API代・セルフホスト</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/dify-pricing.jpg" alt="【2026年10月】Difyの料金を解説｜プランの選び方・API代・セルフホスト" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Difyのクラウド版はProfessionalが月59ドル、Teamが月159ドルで、どちらもワークスペースごとの料金です。人数で月額は増えませんが、モデルを呼ぶ代金は別にかかります。</p>
+<p>社内のチャットボットやエージェントをDifyで作る話が出ると、担当者は年間の予算とプランを聞かれます。この記事は2026年10月27日に取得した料金ページ・利用規約・ライセンスをもとに、プランの選び方とAPI代の見積もり、セルフホストとEnterpriseの条件を扱います。契約とセルフホストの構築は試していません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>クラウド版はワークスペースごとの月額で、Professionalは月59ドルで3人まで、Teamは月159ドルで50人まで</strong>。税は別で、請求書払いはまだ無い</li>
+<li><strong>付いてくるクレジットはモデルによって減り方が違い、月5,000でもGPT-5.5なら200回分</strong>。本番は自社のAPIキーで各社に払う前提で見積もる</li>
+<li><strong>セルフホストのコミュニティ版は無料だが、サーバーと更新の人手は自社持ち</strong>。顧客ごとにワークスペースを分けて売るなら商用ライセンスが要る</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Difyの費用は3つに分かれる</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>クラウド版の3プランとEnterpriseの料金</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>支払いと契約の決まり</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>メッセージクレジットの減り方</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>モデルのAPI代の見積もり方</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>プランを決める4つの条件</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>セルフホストにかかる費用</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>ライセンスで気をつけること</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>Enterpriseと国内の窓口</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>Copilot StudioやGeminiとの違い</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Difyの費用は3つに分かれる</h2>
+<p>Difyはチャットボット・ワークフロー・エージェントを画面上で組み立てる開発基盤で、開発元は米国のLangGenius, Inc.です。ソースは<a href="https://github.com/langgenius/dify">GitHubのリポジトリ</a>で公開されていて、スターは約16万あります。作る手順は「<a href="/media/ai-agent-build/">AIエージェントの作り方</a>」のノーコードの節で扱いました。</p>
+<p>会社でDifyを使うときの費用は次の3つです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>費用</th>
+<th>中身</th>
+<th>払う先</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="費用">Difyの利用料</td>
+<td data-label="中身">クラウド版の月額か、Enterpriseのライセンス</td>
+<td data-label="払う先">LangGeniusか販売店</td>
+</tr>
+<tr>
+<td data-label="費用">モデルのAPI代</td>
+<td data-label="中身">OpenAI・Anthropic・Googleなどのモデルを呼ぶ代金</td>
+<td data-label="払う先">各モデルの提供元</td>
+</tr>
+<tr>
+<td data-label="費用">運用の人手とサーバー</td>
+<td data-label="中身">セルフホストのサーバー・更新・バックアップ</td>
+<td data-label="払う先">自社とクラウド事業者</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>月額のプラン料金だけで予算を組むと、モデルの代金と運用の人手が抜け落ちます。</strong> クラウド版なら3つ目はほぼ要りませんが、2つ目はどのプランでも残ります。</p>
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_01_cost.png" alt="Difyにかかる費用3つを縦に並べた図。Difyの利用料はクラウド版の月額かEnterpriseのライセンス、モデルのAPI代はOpenAIやAnthropicなど各社に払う、運用の人手とサーバーはセルフホストのときに自社が持つ" loading="lazy"></figure>
+
+<h2 id="s2">クラウド版の3プランとEnterpriseの料金</h2>
+<p><a href="https://dify.ai/jp/pricing">Difyの料金ページ</a>は、クラウド版の3プランと、セルフホスト向けのEnterpriseとコミュニティ版を並べています。金額はドル建ての税抜きで、税は支払いの画面で足される場合があると書かれています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>プラン</th>
+<th>料金（税抜き）</th>
+<th>メンバー</th>
+<th>アプリ</th>
+<th>クレジット</th>
+<th>ナレッジ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="プラン">Sandbox</td>
+<td data-label="料金（税抜き）">無料</td>
+<td data-label="メンバー">1人</td>
+<td data-label="アプリ">5個</td>
+<td data-label="クレジット">200（一度きり）</td>
+<td data-label="ナレッジ">50文書・50MB</td>
+</tr>
+<tr>
+<td data-label="プラン">Professional</td>
+<td data-label="料金（税抜き）">月59ドル（年払い590ドル）</td>
+<td data-label="メンバー">3人</td>
+<td data-label="アプリ">50個</td>
+<td data-label="クレジット">月5,000</td>
+<td data-label="ナレッジ">500文書・5GB</td>
+</tr>
+<tr>
+<td data-label="プラン">Team</td>
+<td data-label="料金（税抜き）">月159ドル（年払い1,590ドル）</td>
+<td data-label="メンバー">50人</td>
+<td data-label="アプリ">200個</td>
+<td data-label="クレジット">月10,000</td>
+<td data-label="ナレッジ">1,000文書・20GB</td>
+</tr>
+<tr>
+<td data-label="プラン">Enterprise</td>
+<td data-label="料金（税抜き）">問い合わせ</td>
+<td data-label="メンバー">記載なし</td>
+<td data-label="アプリ">記載なし</td>
+<td data-label="クレジット">記載なし</td>
+<td data-label="ナレッジ">記載なし</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>料金は「ワークスペースごと」で、Teamなら50人まで同じ月159ドルです。</strong> 年払いにすると1年でProfessionalは118ドル、Teamは318ドル安くなり（月あたり約49ドル・約133ドル）、ページの表示は年払いで17%お得です。1ドル157.45円（欧州中央銀行の参照レート、2026年10月26日）で換算すると、Professionalは月約9,300円、Teamは月約2万5千円です。年払いならTeamは1年で約25万円になります。</p>
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_pricing.png" alt="Difyの料金ページのクラウド版。プロフェッショナルはワークスペースごとに年590ドルで5,000メッセージクレジットとメンバー3名、チームは年1,590ドルで10,000クレジットとメンバー50名" loading="lazy"><figcaption>Difyの料金ページ（2026年10月27日）</figcaption></figure>
+
+<p>人数とアプリの数のほかにも、プランで変わる機能があります。料金ページの比較の表から抜き出すと次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>機能</th>
+<th>Sandbox</th>
+<th>Professional</th>
+<th>Team</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="機能">ロール管理（オーナー・管理者・エディター・一般）</td>
+<td data-label="Sandbox">なし</td>
+<td data-label="Professional">あり</td>
+<td data-label="Team">あり</td>
+</tr>
+<tr>
+<td data-label="機能">WebAppのロゴとUIの変更</td>
+<td data-label="Sandbox">なし</td>
+<td data-label="Professional">なし</td>
+<td data-label="Team">あり</td>
+</tr>
+<tr>
+<td data-label="機能">SOC Type IIレポート</td>
+<td data-label="Sandbox">なし</td>
+<td data-label="Professional">なし</td>
+<td data-label="Team">あり</td>
+</tr>
+<tr>
+<td data-label="機能">ログの保存</td>
+<td data-label="Sandbox">30日</td>
+<td data-label="Professional">無制限</td>
+<td data-label="Team">無制限</td>
+</tr>
+<tr>
+<td data-label="機能">サポート</td>
+<td data-label="Sandbox">コミュニティ</td>
+<td data-label="Professional">優先メール</td>
+<td data-label="Team">優先メール</td>
+</tr>
+</tbody>
+</table></div>
+<p>社内の情報システムの審査でSOC 2の報告書を求められる会社は、TeamかEnterpriseが候補になります。</p>
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_02_plans.png" alt="Difyクラウド版の3プランを縦に並べた図。Sandboxは無料で1人・5アプリ・200クレジットが一度きり、Professionalは月59ドルで3人・50アプリ・月5,000クレジット、Teamは月159ドルで50人・200アプリ・月10,000クレジット" loading="lazy"></figure>
+
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">支払いと契約の決まり</h2>
+<p>経理で引っかかりやすいのは支払い方法です。<a href="https://dify.ai/jp/pricing/dify-cloud">クラウド版の料金ページ</a>のよくある質問は、個人のクレジットカードの代わりに法人口座で払えるかという問いに、<strong>銀行振込の請求書払い（Pay by Invoice）は検討中で、まだ使えない</strong>と答えています。検討中の案もTeamの年払いだけが対象で、請求はLangGenius, Inc.から、米国外からは海外送金で手数料は利用者の負担です。</p>
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_invoice.png" alt="Dify Cloudの料金ページのよくある質問。法人口座で払えるかの問いに、銀行振込による請求書払いは検討中でまだ使えず、検討中の案はTeamプランの年払いだけと答えている" loading="lazy"><figcaption>Dify Cloudの料金ページのよくある質問（2026年10月27日）</figcaption></figure>
+
+<p>契約の条件は<a href="https://dify.ai/legal/terms-of-service">利用規約</a>（2026年6月30日更新）に書かれています。稟議に書いておきたいのは次の5つです。</p>
+<ul>
+<li>支払った料金は原則として返金されない</li>
+<li>解約しなければ同じ期間で自動更新され、解約は今の期間の終わりに効く</li>
+<li>料金は改定されることがあり、使っているプランの値上げは30日前に通知される</li>
+<li>クレジットや枠はプランに書かれていない限り、期間を越えて繰り越さない</li>
+<li>税はDifyの所得税を除いて利用者の負担</li>
+</ul>
+<p>もう1つ、よくある質問は<strong>Professionalで上限に達したときにストレージやメンバーの枠だけを買い足せるかという問いに、上位のプランへの切り替えを勧めています。</strong> Teamでも足りない場合はsupport@dify.aiに問い合わせるよう書かれています。4人目が加わる時点でTeamに上がる計算です。請求書と領収書はオーナーと管理者が設定の請求の画面からダウンロードできます。</p>
+<h2 id="s4">メッセージクレジットの減り方</h2>
+<p>プランに付くメッセージクレジットは、料金ページの説明では「さまざまなモデルを簡単に試すため」のものです。AIが1回答えるごとに減る量は、よくある質問にモデル別で載っています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>1回の応答で減る量</th>
+<th>月5,000で答えられる回数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">GPT-5.5</td>
+<td data-label="1回の応答で減る量">25</td>
+<td data-label="月5,000で答えられる回数">200回</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Opus 4.7</td>
+<td data-label="1回の応答で減る量">20</td>
+<td data-label="月5,000で答えられる回数">250回</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Sonnet 4.6・Gemini 3.5 Flash</td>
+<td data-label="1回の応答で減る量">10</td>
+<td data-label="月5,000で答えられる回数">500回</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Haiku 4.5・GPT-5</td>
+<td data-label="1回の応答で減る量">5</td>
+<td data-label="月5,000で答えられる回数">1,000回</td>
+</tr>
+<tr>
+<td data-label="モデル">GPT-5-mini・Gemini 2.5 Flash</td>
+<td data-label="1回の応答で減る量">1</td>
+<td data-label="月5,000で答えられる回数">5,000回</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>同じ5,000クレジットでも、GPT-5.5なら200回、GPT-5-miniなら5,000回で尽きます。</strong> Sandboxの200クレジットは、<a href="https://docs.dify.ai/en/quick-start">Difyのクイックスタート</a>によると一度きりの付与で、毎月は戻りません。GPT-5.5で試すと8回で使い切る量です。</p>
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_03_credits.png" alt="月5,000クレジットで答えられる回数の図。GPT-5.5は1回25で200回、Claude Sonnet 4.6は1回10で500回、Claude Haiku 4.5は1回5で1,000回、GPT-5-miniは1回1で5,000回" loading="lazy"></figure>
+
+<p>使い切った後は、自社で契約したモデルのAPIキーをDifyに登録して続けます。費用の都合でクレジットでは使えないモデルがあることも、よくある質問に書かれています。一覧には埋め込み（ナレッジを検索できる形にする処理）のモデルも載っているため、ナレッジを多く入れる使い方では、応答の回数だけで減り方を読まないほうが安全です。</p>
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_credit_faq.png" alt="Dify Cloudの料金ページのよくある質問。メッセージクレジットはモデルごとに1回の応答で減る量が違い、GPT-5.5は25クレジット、Claude Sonnet 4.6は10クレジットと並ぶ" loading="lazy"><figcaption>メッセージクレジットの使い方（2026年10月27日）</figcaption></figure>
+
+<h2 id="s5">モデルのAPI代の見積もり方</h2>
+<p>自社のAPIキーを使う分は、Difyではなく各モデルの提供元から請求されます。代金はトークン（文字の単位）の数で決まるので、次の掛け算で見積もれます。</p>
+<ul>
+<li>1回の代金：入力のトークン数×入力の単価＋出力のトークン数×出力の単価</li>
+<li>月の代金：1回の代金×使う人数×1日の回数×営業日</li>
+</ul>
+<p>社内の文書から答えるチャットボットでは、質問に加えてナレッジから引いた文書も入力に足されます。そこで1回を入力3,000トークン・出力500トークンと置き、50人が1日10回、月20日使う場合で試算しました。単価は<a href="https://platform.claude.com/docs/ja/about-claude/pricing">Anthropicの料金ページ</a>の100万トークンあたりの値です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>単価（入力・出力）</th>
+<th>1回</th>
+<th>月10,000回</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">Claude Sonnet 4.6</td>
+<td data-label="単価（入力・出力）">3ドル・15ドル</td>
+<td data-label="1回">約0.017ドル</td>
+<td data-label="月10,000回">約165ドル（約2万6千円）</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Haiku 4.5</td>
+<td data-label="単価（入力・出力）">1ドル・5ドル</td>
+<td data-label="1回">約0.006ドル</td>
+<td data-label="月10,000回">約55ドル（約8,700円）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>この使い方ではTeamに付く月10,000クレジットはSonnet 4.6で1,000回分にとどまり、使い切った後の9,000回はAPI代になります。</strong> 入力の長さは引く文書の量で大きく変わるため、試作のアプリで実際の質問を流し、提供元の管理画面で1回のトークン数を確かめてから掛け算すると見積もりが外れにくくなります（こちらでは試していません）。</p>
+<p>データの扱いも費用と一緒に確かめます。LangGeniusはやり取りのデータを学習に使わないと、Difyの<a href="https://dify.ai/privacy">プライバシーポリシー</a>に書かれています。自社のAPIキーを使うと、データは選んだ提供元へ直接送られ、学習に使われるかはその提供元との契約で決まります。</p>
+<h2 id="s6">プランを決める4つの条件</h2>
+<p>プランの差は月額よりも上限の差です。次の4つを順に当てはめると、候補が1つか2つに絞れます。</p>
+<ul>
+<li><strong>データを社外のクラウドに置けるか</strong>：置けないならクラウド版は外れ、セルフホストかEnterpriseになる</li>
+<li><strong>Difyにログインして作る人は何人か</strong>：1人で試すだけならSandbox（200クレジットは一度きり、アプリは5個まで）、本番で使うなら3人までProfessional、50人までTeam</li>
+<li><strong>アプリとナレッジの量</strong>：50アプリ・500文書・5GBを超えるならTeam</li>
+<li><strong>管理の要件</strong>：役割の分担はProfessionalから、自社のロゴとSOC 2の報告書はTeam、SSOはEnterpriseだけ</li>
+</ul>
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_04_choose.png" alt="Difyのプランを決める4つの条件を順に並べた図。データを社外に置けるか、作る人は何人か、アプリとナレッジの量、SSOやロゴなど管理の要件" loading="lazy"></figure>
+
+<p>メンバーの数に、公開したWebアプリを使うだけの社員が入るかは、料金ページに書かれていません。部署ごとに分けて作りたい場合も、クラウド版はどのプランも1ワークスペースなので、ワークスペースの数だけ契約も増える計算です。複数の部署で1つの管理にまとめたいなら、複数のワークスペースを持てるEnterpriseの見積もりを並べて比べます。</p>
+<h2 id="s7">セルフホストにかかる費用</h2>
+<p>コミュニティ版は無料で、料金ページでは単一のワークスペースで、Dify Open Source Licenseに従うと書かれています。<a href="https://docs.dify.ai/ja/self-host/quick-start/docker-compose">Docker Composeでの構築のドキュメント</a>の最小要件はCPU 2コア・メモリ4GiBで、起動すると、api・worker・webなど7つの中核のサービスに、データベース・Redis・ベクトルデータベースなど8つの部品が加わり、15のコンテナが動く構成です。</p>
+<p>ライセンス料がかからない代わりに、次の費用は自社で持ちます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>費用</th>
+<th>中身</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="費用">サーバー</td>
+<td data-label="中身">最小要件を満たすサーバーかクラウドの仮想マシン、保存領域</td>
+</tr>
+<tr>
+<td data-label="費用">モデルのAPI代</td>
+<td data-label="中身">クラウド版のクレジットは無いので、最初から自社のキーで払う</td>
+</tr>
+<tr>
+<td data-label="費用">更新の人手</td>
+<td data-label="中身">リリースによって手順が異なる場合があり、設定ファイルの差分を自分で当て直す</td>
+</tr>
+<tr>
+<td data-label="費用">守りの人手</td>
+<td data-label="中身">バックアップ・認証・脆弱性への対応</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>更新は一度きりの作業ではないため、人手の見積もりに入れておくのが安全です。</strong> 最新のリリースは2026年10月23日の1.18.0で、ドキュメントはアップグレードのたびに環境変数の見本と自社の設定を見比べるよう書いています。</p>
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_selfhost_req.png" alt="DifyのドキュメントのDocker Composeでのデプロイのページ。デプロイ前の準備の節に、ハードウェアの最小要件としてCPU 2コア以上とRAM 4GiB以上が並ぶ" loading="lazy"><figcaption>Dify DocsのDocker Composeでのデプロイ（2026年10月27日）</figcaption></figure>
+
+<p>セルフホストが向くのは、データを自社の環境から出せない決まりがあり、サーバーの面倒を見る人がいる会社です。クラウド版のデータの置き場所について、料金ページはマネージドクラウドリージョンとだけ書き、プライバシーポリシーはウェブサイトのサーバーが米国にあるとしています。国内に置く決まりがあるなら、クラウド版より先にセルフホストを検討することになります。</p>
+<h2 id="s8">ライセンスで気をつけること</h2>
+<p>コミュニティ版のライセンスは、<a href="https://github.com/langgenius/dify/blob/main/LICENSE">DifyのLICENSE</a>にあるApache License 2.0を改めたものです。ほかのアプリのバックエンドや企業のアプリ開発基盤としての利用も含め、商用での利用は認められています。そのうえで、次の2つに当たると商用ライセンスが要ります。</p>
+<ul>
+<li><strong>マルチテナント</strong>：書面の許可なく、Difyのソースでマルチテナントの環境を運用できない。テナントは1つのワークスペースを指す</li>
+<li><strong>ロゴと著作権の表示</strong>：Difyのフロントエンドを使う場合、コンソールやアプリのロゴと著作権の表示を消したり変えたりできない</li>
+</ul>
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_license.png" alt="DifyのLICENSEファイル。商用利用は認めたうえで、書面の許可なくマルチテナント環境を運用できないこと、フロントエンドを使う場合はロゴと著作権の表示を消せないことを条件にしている" loading="lazy"><figcaption>GitHubのDifyのLICENSE（2026年10月27日）</figcaption></figure>
+
+<p>会社の使い方に当てはめると、次のように読めます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>使い方</th>
+<th>ライセンスの文言との関係</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="使い方">社内向けに1つのワークスペースで使う</td>
+<td data-label="ライセンスの文言との関係">商用利用として認められている範囲</td>
+</tr>
+<tr>
+<td data-label="使い方">自社サービスの裏側でDifyのAPIを呼ぶ</td>
+<td data-label="ライセンスの文言との関係">バックエンドとしての利用が明記されている</td>
+</tr>
+<tr>
+<td data-label="使い方">顧客ごとにワークスペースを分けて提供する</td>
+<td data-label="ライセンスの文言との関係">マルチテナントに当たり、書面の許可が要る</td>
+</tr>
+<tr>
+<td data-label="使い方">画面のロゴを自社のものに替える</td>
+<td data-label="ライセンスの文言との関係">フロントエンドを使うなら許可が要る</td>
+</tr>
+</tbody>
+</table></div>
+<p>この表はライセンスの文言を読んだもので、法的な判断ではありません。受託で作って顧客に納める場合など、当てはまるか迷うときは、Enterpriseのページにある問い合わせ先（business@dify.ai）に書面で確かめておくと後で揉めません。</p>
+<h2 id="s9">Enterpriseと国内の窓口</h2>
+<p><a href="https://dify.ai/jp/pricing/dify-enterprise">Enterpriseのページ</a>の金額は「Custom」で、問い合わせて見積もりを取ります。含まれるのは商用ライセンス、複数のワークスペース、SSO（SAML・OIDC・OAuth2）、高可用性の構成、パートナーによるSLA、公式の更新と保守、技術サポートです。よくある質問によると、表示の料金はプランの中心の機能だけで、追加の機能・連携・専任のサポート・構築は別に見積もります。条件を満たすオープンソースのプロジェクト・教育機関・NGOには特別な価格があり、条件と割引の中身は問い合わせて確かめます。</p>
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_enterprise.png" alt="DifyのEnterpriseのページ。コミュニティ版は無料で単一ワークスペース、Enterpriseは個別見積もりで商用ライセンス・複数ワークスペース・SSO・パートナーによるSLAを含む" loading="lazy"><figcaption>Dify Enterpriseのページ（2026年10月27日）</figcaption></figure>
+
+<p>国内では<a href="https://www.ricoh.co.jp/products/list/dify">リコージャパン</a>がライセンスの販売と構築を受けています。ライセンスはコミュニティ・Essential（ワークスペース3・ユーザー20名）・Standard（ワークスペース10・ユーザー100名）・Enterpriseで、価格は問い合わせです。学校などの教育機関向けには、Enterpriseのアカデミックライセンスもあります。EssentialとStandardは<a href="https://digitalpr.jp/r/135862">2026年6月1日に提供が始まりました</a>。国内の会社と契約したい場合は、販売店を通す道もあります。</p>
+<p>もう1つ、Difyは<a href="https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6">AWS Marketplace</a>で、自社のAWS環境に1社専用で立てるDify Premiumも出しています。<a href="https://docs.dify.ai/en/self-host/deploy/platform-guides/dify-premium">Dify Premiumのドキュメント</a>によると、自社のAWSのVPCにEC2として立て、「Powered by Dify」の表示を消したり自社のロゴに替えたりできます。金額はリスティングの画面に出ますが、こちらでは読めていません。</p>
+<p>見積もりを頼むときはワークスペースの数・使う人数・SSOの方式・SLAの要否・構築を誰が持つかをそろえて出すと、販売店どうしを比べやすくなります。</p>
+<h2 id="s10">Copilot StudioやGeminiとの違い</h2>
+<p>同じ「社内でエージェントを作る」道具でも、払い方の単位が違います。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>製品</th>
+<th>払い方</th>
+<th>向く会社</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="製品">Dify（クラウド版）</td>
+<td data-label="払い方">ワークスペースごとの月額とモデルのAPI代</td>
+<td data-label="向く会社">モデルを選びたい・自社のサーバーにも置きたい</td>
+</tr>
+<tr>
+<td data-label="製品">Copilot Studio</td>
+<td data-label="払い方">テナントで買うクレジット（1パック月29,985円で25,000）</td>
+<td data-label="向く会社">社員の大半がMicrosoft 365で働いている</td>
+</tr>
+<tr>
+<td data-label="製品">Gemini Enterprise</td>
+<td data-label="払い方">1人ごとのシート（Businessは月21ドルから）</td>
+<td data-label="向く会社">Google Workspaceが土台</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Difyは人数で月額が増えない代わりに、モデルの代金を自分で見積もる必要があります。</strong> それぞれの料金は「<a href="/media/copilot-studio/">Copilot Studioの料金</a>」と「<a href="/media/gemini-enterprise/">Gemini Enterpriseとは</a>」にまとめました。</p>
+<h2 id="s11">よくある質問</h2>
+<p>金額はすべて、2026年10月27日に見た公式ページの税抜きの表示です。</p>
+<h3 id="s11-1">Difyは無料で使えますか？</h3>
+<p>使えます。クラウド版のSandboxは無料で、メンバー1人・アプリ5個・200クレジット（一度きり）までです。セルフホストのコミュニティ版も無料ですが、サーバー代とモデルのAPI代は自社で払います。</p>
+<h3 id="s11-2">Difyの料金は1人いくらですか？</h3>
+<p>1人ごとの料金はありません。クラウド版はワークスペースごとで、Professionalは月59ドルで3人まで、Teamは月159ドルで50人までです。</p>
+<h3 id="s11-3">DifyのProfessionalとTeamの違いは？</h3>
+<p>メンバーはProfessionalが3人・Teamが50人、アプリは50個と200個、クレジットは月5,000と月10,000です。WebAppのロゴの変更とSOC Type IIレポートはTeamだけにあります。</p>
+<h3 id="s11-4">Difyの料金にAPI代は含まれますか？</h3>
+<p>付いてくるクレジットの範囲だけ含まれます。使い切った後や、クレジットで使えないモデルは、自社のAPIキーを登録して各社に払います。</p>
+<h3 id="s11-5">Difyは請求書払いできますか？</h3>
+<p>クラウド版はまだできません。料金ページのよくある質問は、銀行振込の請求書払いを検討中で、案ではTeamの年払いだけが対象と書いています。</p>
+<h3 id="s11-6">Difyを商用利用できますか？</h3>
+<p>できます。ただしコミュニティ版で顧客ごとにワークスペースを分けて提供する場合と、フロントエンドのロゴや著作権の表示を変える場合は、書面の許可が要ります。</p>
+<h3 id="s11-7">Dify Enterpriseの価格はいくらですか？</h3>
+<p>公開されていません。Enterpriseのページは「Custom」で、Difyかリコージャパンなどの販売店に見積もりを頼みます。</p>
+<h3 id="s11-8">Difyのデータは学習に使われますか？</h3>
+<p>LangGeniusはやり取りのデータを学習に使わないと、プライバシーポリシーに書かれています。自社のAPIキーを使う場合の扱いは、モデルの提供元との契約で決まります。</p>
+<h2 id="s12">出典</h2>
+<ul>
+<li>Dify「<a href="https://dify.ai/jp/pricing">料金</a>」「<a href="https://dify.ai/jp/pricing/dify-cloud">Dify Cloudの料金</a>」「<a href="https://dify.ai/jp/pricing/dify-enterprise">Dify Enterpriseの料金</a>」</li>
+<li>Dify「<a href="https://dify.ai/legal/terms-of-service">Terms of Service</a>」（2026年6月30日更新）「<a href="https://dify.ai/privacy">Privacy Policy</a>」</li>
+<li>GitHub「<a href="https://github.com/langgenius/dify">langgenius/dify</a>」「<a href="https://github.com/langgenius/dify/blob/main/LICENSE">LICENSE</a>」</li>
+<li>Dify Docs「<a href="https://docs.dify.ai/ja/self-host/quick-start/docker-compose">Docker Compose で Dify をデプロイする</a>」「<a href="https://docs.dify.ai/en/quick-start">30-Minute Quick Start</a>」</li>
+<li>Anthropic「<a href="https://platform.claude.com/docs/ja/about-claude/pricing">料金</a>」</li>
+<li>リコージャパン「<a href="https://www.ricoh.co.jp/products/list/dify">Dify</a>」、リコー「<a href="https://digitalpr.jp/r/135862">Dify Essential/Standardライセンスと、Difyアプリケーションの無償テンプレートを提供開始</a>」</li>
+<li>AWS Marketplace「<a href="https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6">Dify Premium</a>」</li>
+<li>為替は<a href="https://frankfurter.dev/">Frankfurter</a>で取得した欧州中央銀行の参照レート</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Difyの費用は3つに分かれる</a><a href="#s2">クラウド版の3プランとEnterpriseの料金</a><a href="#s3">支払いと契約の決まり</a><a href="#s4">メッセージクレジットの減り方</a><a href="#s5">モデルのAPI代の見積もり方</a><a href="#s6">プランを決める4つの条件</a><a href="#s7">セルフホストにかかる費用</a><a href="#s8">ライセンスで気をつけること</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/gemini-enterprise/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gemini Enterpriseとは"><defs><linearGradient id="ecg-76a95603" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-76a95603)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Gemini Enterpriseとは</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.26</div>
+                <div class="rel-card__ttl">【2026年10月】Gemini Enterpriseとは？料金とWorkspaceのGeminiとの違い</div>
+            </a>
+            <a href="/media/copilot-vs-gemini/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CopilotとGeminiの違い"><defs><linearGradient id="ecg-730fa04d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-730fa04d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">CopilotとGeminiの違い</text><line x1="151.6" y1="365.9" x2="1048.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.25</div>
+                <div class="rel-card__ttl">【2026年10月】CopilotとGeminiの違い｜会社に入れるならどっち？料金・データ・管理</div>
+            </a>
+            <a href="/media/copilot-vs-chatgpt/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CopilotとChatGPTの違い"><defs><linearGradient id="ecg-10861cbc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-10861cbc)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">CopilotとChatGPTの違い</text><line x1="128.8" y1="365.9" x2="1071.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.24</div>
+                <div class="rel-card__ttl">【2026年10月】CopilotとChatGPTの違い｜会社に入れるならどっち？料金・データ・管理</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'dify-pricing',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
