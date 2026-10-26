@@ -1,7 +1,7 @@
 ---
 title: 【2026年10月】Google AIモードの回数制限を解説｜1日の上限・Pro・画像の枚数
 date: 2026-10-02
-modified: 2026-10-25
+modified: 2026-10-27
 category: AI検索対策
 description: Google AIモードの回数制限を公式ヘルプから解説。ふだんの質問に上限の記載はなく、1日の上限があるのは上位モデルと画像の作成です。Geminiアプリの5時間・週の上限との違い、日本語の画面で確かめた質問欄までまとめました。
 cover_tag: トラブル
@@ -11,12 +11,12 @@ cover_sub: 1日の上限・Pro・画像の枚数・Geminiとの違い
 
 Google検索のAIモードは無料で使え、ふだんの質問に答える「高速モード」のモデルには、Googleのヘルプに回数の上限が書かれていません。ヘルプが1日の上限を書いているのは、上位のモデルのGemini 4 Argon、画像の作成、画像のモデルのNano Banana 2.1の3つです。
 
-この記事は2026年10月2日に取得したGoogle 検索ヘルプとGeminiアプリのヘルプ（Nano Banana 2.1は10月17日、上位のモデルは10月25日に確認）をもとに、AIモードで上限があるものと無いものを分け、同じ日に日本語の画面で質問欄のメニューを確かめた結果を載せます。
+この記事は2026年10月2日に取得したGoogle 検索ヘルプとGeminiアプリのヘルプ（上位のモデルは10月25日、Nano Banana 2.1は10月27日に確認）をもとに、AIモードで上限があるものと無いものを分け、同じ日に日本語の画面で質問欄のメニューを確かめた結果を載せます。
 
 :::takeaways
 - ふだんの質問（高速モード）は、**ヘルプに回数の上限が書かれていない**
 - 1日の上限が書かれているのは**上位のモデルのGemini 4 Argon・画像の作成・Nano Banana 2.1の3つ**。枚数まで書かれているのは画像の作成だけで、プランなしは24時間に25枚
-- 2026年10月25日時点のヘルプでは、Gemini 4 Argonは18歳以上のGoogle AI Pro・Ultraの利用者向け。Nano Banana 2.1は日本では英語で使うProとUltraの利用者向け。**10月2日に日本語の画面で質問欄の＋を開くと、出たのは画像の追加・ファイルの追加・画像を作成の3つだった**
+- 2026年10月25日時点のヘルプでは、Gemini 4 Argonは18歳以上のGoogle AI Pro・Ultraの利用者向け。10月27日時点のNano Banana 2.1は英語だけで、使える人は英語版が「米国の18歳以上と、Pro・Ultraの加入者」、日本語版が「米国在住で18歳以上のPro・Ultra」。日本の加入者が対象かは読み方で分かれる。**10月2日に日本語の画面で質問欄の＋を開くと、出たのは画像の追加・ファイルの追加・画像を作成の3つだった**
 - **Geminiアプリの5時間ごと・週ごとの上限は、AIモードとは別のヘルプに書かれた別の上限**
 - 「次の質問をすると、新しい検索が開始します。」は上限の表示ではなく、ヘルプにも説明がない
 :::
@@ -25,14 +25,14 @@ Google検索のAIモードは無料で使え、ふだんの質問に答える「
 
 AIモードの上限は使う機能ごとに決まっています。2026年10月2日にGoogle 検索ヘルプの「[Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)」と「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」を読み、上限に触れている箇所を4つに分けました。
 
-<figure class="post-figure"><img src="/media/images/ai-mode-limit/01_fig_where.png" alt="AIモードで上限がヘルプに書かれているものの図。高速モードは回数の上限の記載がない。Pro（Gemini 3 Pro）は1日ごとの上限があり、英語で18歳以上のGoogle AI Plus・Pro・Ultraの利用者向けで、上限の数は書かれていない。画像を作成は24時間ごとにプランなし25枚・Plus 50枚・Pro 100枚・Ultra 1,000枚。Nano Banana 2.1は1日ごとの上限があり、日本では英語でGoogle AI ProとUltraの利用者向け" loading="lazy"><figcaption>AIモードの上限は機能ごと。数まで書かれているのは画像の作成だけ（図は2026年10月2日時点のヘルプで作ったもので、上位のモデルの名前と使える人は下の表が10月25日時点）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/ai-mode-limit/01_fig_where.png" alt="AIモードで上限がヘルプに書かれているものの図。高速モードは回数の上限の記載がない。Pro（Gemini 3 Pro）は1日ごとの上限があり、英語で18歳以上のGoogle AI Plus・Pro・Ultraの利用者向けで、上限の数は書かれていない。画像を作成は24時間ごとにプランなし25枚・Plus 50枚・Pro 100枚・Ultra 1,000枚。Nano Banana 2.1は1日ごとの上限があり、日本では英語でGoogle AI ProとUltraの利用者向け" loading="lazy"><figcaption>AIモードの上限は機能ごと。数まで書かれているのは画像の作成だけ（図は2026年10月2日時点のヘルプで作ったもので、上位のモデルとNano Banana 2.1の使える人は下の表と本文が新しい）</figcaption></figure>
 
 | 機能 | ヘルプにある上限 | 使える人 |
 |---|---|---|
 | 高速モード（ふだんの質問） | 記載なし | だれでも |
 | 上位のモデル（Gemini 4 Argon） | 1日ごと。数は書かれていない | 18歳以上のGoogle AI Pro・Ultraの利用者 |
 | 画像を作成 | 24時間に25〜1,000枚（プランで変わる） | ログインした18歳以上の利用者 |
-| Nano Banana 2.1 | 1日ごと。数は書かれていない | 日本では英語で使うGoogle AI ProとUltraの利用者 |
+| Nano Banana 2.1 | 1日ごと。数は書かれていない | 英語だけ。英語版と日本語版で書き方が違う（下に記載） |
 
 ### 高速モードには上限の記載がない
 
@@ -59,7 +59,7 @@ AIモードの画像の作成だけは、上限が枚数で書かれています
 | Google AI Pro | 100枚 |
 | Google AI Ultra | 1,000枚 |
 
-上限に達したあとの案内はGemini 4 Argonと同じで、リセットを待つかプランを上げるかです。図やインフォグラフィックに向いた画像のモデルのNano Banana 2.1にも別に1日の上限があり、日本では英語で使うGoogle AI ProとUltraの利用者だけが選べます。ヘルプでのこのモデルの名前は、2026年10月17日にNano Banana ProからNano Banana 2.1に変わりました。作り方や保存のしかたは[Google AIモードで画像を生成する方法](/media/ai-mode-image-generation/)にまとめました。
+上限に達したあとの案内はGemini 4 Argonと同じで、リセットを待つかプランを上げるかです。図やインフォグラフィックに向いた画像のモデルのNano Banana 2.1にも別に1日の上限があり、提供は英語だけです。2026年10月27日時点のヘルプは、使える人を英語版で「users over 18 in the US and Google AI Pro and Ultra subscribers」（米国の18歳以上の利用者と、Google AI Pro・Ultraの加入者）、日本語版で「米国にお住まいで18歳以上のGoogle AI ProまたはGoogle AI Ultraのユーザー」と書いていて、日本の加入者が対象かは読み方で分かれます。日本からは試していません。ヘルプでのこのモデルの名前は、2026年10月17日にNano Banana ProからNano Banana 2.1に変わりました。作り方や保存のしかたは[Google AIモードで画像を生成する方法](/media/ai-mode-image-generation/)にまとめました。
 
 ## 日本語の画面で質問欄を確かめた結果
 
@@ -140,7 +140,7 @@ Yahoo!知恵袋には2026年3月から6月にかけて、AIモードで会話を
 本文の上限と条件は2026年10月2日に取得した次のヘルプとプランのページで確認しています。AIモードの上位のモデルの名前と使える人は、10月25日に取得し直したヘルプに合わせました。質問欄のメニューは同じ日にパソコンとスマホの画面で確かめました。
 
 - [Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)（Google 検索ヘルプ。高速モード、Gemini 4 Argonの提供状況と1日ごとの使用量上限。Gemini 4 Argonの表記は2026年10月25日取得）
-- [Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)（Google 検索ヘルプ。画像の作成の24時間あたりの上限、Nano Banana 2.1の1日ごとの上限。Nano Banana 2.1の表記は2026年10月17日取得）
+- [Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)（Google 検索ヘルプ。画像の作成の24時間あたりの上限、Nano Banana 2.1の1日ごとの上限。Nano Banana 2.1の表記は2026年10月27日取得）
 - [Google AI のサブスクリプション プランに応じた Gemini アプリの使用量上限とアップグレード](https://support.google.com/gemini/answer/16275805?hl=ja)（Geminiアプリ ヘルプ。5時間ごと・週ごとの上限）
 - [Google AI のプラン](https://one.google.com/about/google-ai-plans/?hl=ja)（Google One。プランごとのAIモードとDeep Searchの扱い）
 - [Googleのaiモードで会話をしていたら急に、エラーが発生したため…](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10326493840)（Yahoo!知恵袋、2026年3月22日）

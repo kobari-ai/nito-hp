@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】Google AIモードで画像を生成する方法｜作り方・編集・保存・1日の上限・できないとき
 date: 2026-09-27
+modified: 2026-10-27
 category: AI検索対策
 description: Google AIモードで画像を作る手順をスマホとPCの実画面で解説。「画像を作成」の場所と日本語での作り方、編集と保存、1日の上限、ログインなしで送ったときの表示、通常の検索では作れなかった実測までまとめました。
 cover_tag: 使い方
@@ -75,11 +76,13 @@ Googleの発表によると、AIモードの画像を描いているのは画像
 | Google AI Pro | 100枚まで |
 | Google AI Ultra | 1,000枚まで |
 
-ただしGoogle AI のプランは地域やアカウントの種類によって使えない場合がある、とヘルプは注記しています。**上限に達したら、リセットされるまで待つかプランを上げるかのどちらかです。**上限は処理能力や需要によって変わることがある、ともヘルプは書いています。Proのモデルなど画像以外の上限は[Google AIモードの回数制限](/media/ai-mode-limit/)にまとめました。
+ただしGoogle AI のプランは地域やアカウントの種類によって使えない場合がある、とヘルプは注記しています。**上限に達したら、リセットされるまで待つかプランを上げるかのどちらかです。**上限は処理能力や需要によって変わることがある、ともヘルプは書いています。上位のモデル（Gemini 4 Argon）など画像以外の上限は[Google AIモードの回数制限](/media/ai-mode-limit/)にまとめました。
 
 ### Nano Banana 2.1を使う場合
 
-AIモードには図やインフォグラフィックに向いたNano Banana 2.1という画像のモデルもあります。ヘルプでは2026年10月16日までNano Banana Proと書かれていたモデルの枠で、10月17日にNano Banana 2.1の表記に変わりました。ヘルプによると、日本で使えるのはGoogle AI ProとGoogle AI Ultraの利用者で、言語は英語だけです。質問欄のメニューで「Pro」を選んでから「画像を作成」を選ぶ手順で、こちらにも1日の上限があります。
+AIモードには図やインフォグラフィックに向いたNano Banana 2.1という画像のモデルもあります。ヘルプでは2026年10月16日までNano Banana Proと書かれていたモデルの枠で、10月17日にNano Banana 2.1の表記に変わりました。言語は英語だけで、こちらにも1日の上限があります。
+
+2026年10月27日時点のヘルプは、使える人を英語版で「users over 18 in the US and Google AI Pro and Ultra subscribers」（米国の18歳以上の利用者と、Google AI Pro・Ultraの加入者）、日本語版で「米国にお住まいで18歳以上のGoogle AI ProまたはGoogle AI Ultraのユーザー」と書いていて、以前あった対象の国と地域の一覧は消えました。日本の加入者が対象かは読み方で分かれます。ヘルプの手順では質問欄のメニューで「3.8 Flash」か「4 Argon」を選び、そこから「画像を作成」を選びます。日本からは試していません。
 
 ## 通常の検索との違い
 
@@ -149,7 +152,7 @@ Googleの画像のモデル「Nano Banana 2」です。Googleは2026年2月26日
 
 ### AIモードでNano Banana 2.1は使えますか？
 
-日本ではGoogle AI ProとGoogle AI Ultraの利用者だけで、言語は英語です。ヘルプでは以前Nano Banana Proと書かれていた枠で、2026年10月17日にNano Banana 2.1の表記に変わりました。質問欄のメニューで「Pro」を選んでから「画像を作成」を選びます。
+2026年10月27日時点のヘルプは、英語版が「米国の18歳以上の利用者と、Google AI Pro・Ultraの加入者」、日本語版が「米国在住で18歳以上のPro・Ultraの利用者」と書いていて、日本の加入者が対象かは読み方で分かれます。どちらの版でも言語は英語です。ヘルプの手順では質問欄のメニューで「3.8 Flash」か「4 Argon」を選び、そこから「画像を作成」を選びます。ヘルプでは以前Nano Banana Proと書かれていた枠で、2026年10月17日にNano Banana 2.1の表記に変わりました。
 
 ### AIモードの画像生成の上限はいつリセットされますか？
 
@@ -161,7 +164,7 @@ Googleの画像のモデル「Nano Banana 2」です。Googleは2026年2月26日
 
 ## 出典
 
-- Google 検索ヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」（パソコン・Android・iPhone の各版。2026年10月6日取得。Nano Banana 2.1の表記は10月17日取得）
+- Google 検索ヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」（パソコン・Android・iPhone の各版。2026年10月6日取得。Nano Banana 2.1の表記は10月27日取得）
 - Google 検索ヘルプ「[Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)」（2026年10月6日取得）
 - Google「[Nano Banana 2: Google's latest AI image generation model](https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/)」（2026年2月26日、2026年10月6日取得）
 - Google「[Making it easier to understand how content was created and edited](https://blog.google/innovation-and-ai/products/identifying-ai-generated-media-online/)」（2026年5月19日、2026年10月6日取得）

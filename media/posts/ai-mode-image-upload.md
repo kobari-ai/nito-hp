@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】Google AIモードで写真・画像を送る方法｜スマホ・PC別と送れない原因
 date: 2026-09-26
+modified: 2026-10-27
 category: AI検索対策
 description: Google AIモードに写真や画像を送る方法を、スマホとパソコンに分けて解説。送れない・貼り付けできない4つの原因、受け付ける形式と枚数、送った写真が履歴に残るかと消し方まで、公式ヘルプと実際の画面で確認しました。
 cover_tag: 使い方
@@ -104,7 +105,7 @@ Googleのコミュニティでは、2026年7月にAndroidの利用者が「2枚�
 
 「画像を作成」の条件は、Googleのヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」に書かれています。日本語にも対応していますが、使えるのは18歳以上で、自分で管理する個人のGoogleアカウントにログインしている人です。
 
-作れる枚数には1日の上限があり、Google AIのプランなしで24時間あたり最大25枚です。Google AI Plusは50枚、Google AI Proは100枚、Google AI Ultraは1,000枚まで上がります。Proのモデルで使うNano Banana 2.1は、日本では英語で、Google AI ProかGoogle AI Ultraの利用者に限られます（ヘルプの表記は2026年10月17日にNano Banana Proから変わりました）。
+作れる枚数には1日の上限があり、Google AIのプランなしで24時間あたり最大25枚です。Google AI Plusは50枚、Google AI Proは100枚、Google AI Ultraは1,000枚まで上がります。図に向いた画像のモデルのNano Banana 2.1は英語だけの提供です（ヘルプの表記は2026年10月17日にNano Banana Proから変わりました）。2026年10月27日時点のヘルプは、使える人を英語版で「users over 18 in the US and Google AI Pro and Ultra subscribers」（米国の18歳以上の利用者と、Google AI Pro・Ultraの加入者）、日本語版で「米国にお住まいで18歳以上のGoogle AI ProまたはGoogle AI Ultraのユーザー」と書いていて、日本の加入者が対象かは読み方で分かれます。
 
 ## 送った写真はどこに残るか
 
@@ -175,7 +176,7 @@ AIモードに送った写真はGoogleアカウントの検索サービス履歴
 ## 出典
 
 - Google 検索 ヘルプ「[Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)」（2026年10月4日取得）
-- Google 検索 ヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」（同。Nano Banana 2.1の表記は2026年10月17日取得）
+- Google 検索 ヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」（同。Nano Banana 2.1の表記は2026年10月27日取得）
 - Google Chrome ヘルプ「[Chrome で AI モードを使用する](https://support.google.com/chrome/answer/16704170?hl=ja)」（同）
 - Google 検索 ヘルプ「[検索サービス履歴とパーソナライズされたおすすめ表示を使ってみる](https://support.google.com/websearch/answer/17025248?hl=ja)」（同）
 - Google 検索 ヘルプ「[検索サービス履歴に保存されるメディアを管理する](https://support.google.com/websearch/answer/17028154?hl=ja)」（同）
