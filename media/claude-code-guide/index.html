@@ -244,30 +244,36 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h3 id="s4-1">macOS・Linux・WSL</h3>
 <p>ターミナルを開いて、次の1行を貼り付けます。</p>
-<p><code>curl -fsSL https://claude.ai/install.sh | bash</code></p>
+<pre><code>curl -fsSL https://claude.ai/install.sh | bash
+</code></pre>
 <p>Homebrewを使っている人は <code>brew install --cask claude-code</code> でも入ります。ただし公式ドキュメントには、Homebrew版は自動更新されないので <code>brew upgrade claude-code</code> を定期的に実行するように書かれています。バックグラウンドで自動更新されるのはネイティブインストール版だけです。</p>
 <h3 id="s4-2">Windows</h3>
 <p>PowerShellを開いて、次を実行します。</p>
-<p><code>irm https://claude.ai/install.ps1 | iex</code></p>
+<pre><code>irm https://claude.ai/install.ps1 | iex
+</code></pre>
 <p><code>winget install Anthropic.ClaudeCode</code> でも入りますが、こちらも自動更新はされません。コマンドプロンプト（CMD）で <code>The token '&amp;&amp;' is not a valid statement separator</code> と出た場合は、CMDではなくPowerShellを使っている状態なので、公式のCMD用コマンドに切り替えます。</p>
 <h3 id="s4-3">入ったかどうかの確認</h3>
-<p><code>claude --version</code></p>
+<pre><code>claude --version
+</code></pre>
 <p>バージョン番号のあとに <code>(Claude Code)</code> と表示されれば完了です。以前はNode.jsのインストールが前提でしたが、いまのネイティブインストールではNode.jsは不要です。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-guide/ccg_01_docs_quickstart.jpg" alt="Claude Code公式ドキュメントのクイックスタート。ステップ1のインストールにネイティブインストール・Homebrew・WinGetの3つのタブ" loading="lazy"><figcaption>公式クイックスタートのインストール手順</figcaption></figure>
 
 <h2 id="s5">ログインと最初の起動</h2>
 <p>作業したいフォルダに移動して <code>claude</code> と打ちます。</p>
-<p><code>cd 作業フォルダのパス
-claude</code></p>
+<pre><code>cd 作業フォルダのパス
+claude
+</code></pre>
 <p>初回はログインを求められるので、案内に従ってブラウザで認証します。Pro・Max・Team・Enterpriseのアカウントでログインするのが公式の推奨で、一度ログインすれば認証情報が保存され、次回からは不要です。ログインし直したいときはセッション内で <code>/login</code> と打ちます。</p>
 <p>環境変数 <code>ANTHROPIC_API_KEY</code> が設定されていると、Claude Codeはログイン画面を出さずにAPIキーで認証し、従量課金になります。ProやMaxに加入していてもこの環境変数があるとAPIキーが優先される、と公式ヘルプに明記されているので、Proに入ったのにコンソールの残高が減るときは、最初に疑う場所がここです。</p>
 <p>起動すると画面上部に出るのはバージョン、使っているモデル、作業ディレクトリの3つです。<code>/help</code> で使えるコマンドの一覧が出ます。</p>
 <h2 id="s6">最初の質問と最初の変更</h2>
 <p>公式クイックスタートが最初にすすめるのは、コードを書かせることではなく、フォルダの中身を説明させることです。</p>
-<p><code>このプロジェクトは何をしていますか？</code></p>
+<pre><code>このプロジェクトは何をしていますか？
+</code></pre>
 <p>Claude Codeは必要なファイルを自分で読んで概要を返します。ファイルを添付したり、パスを指定したりする必要はありません。「フォルダ構成を説明して」「入口になるファイルはどれ？」と続けると、慣れていないプロジェクトの全体像がつかめます。</p>
 <p>次に、小さな変更を頼みます。</p>
-<p><code>メインファイルに hello world 関数を追加してください</code></p>
+<pre><code>メインファイルに hello world 関数を追加してください
+</code></pre>
 <p>Claude Codeは対象のファイルを見つけて変更内容を表示します。権限モードをManualにしていれば<strong>書き込む前に確認</strong>が出て、<code>Yes</code> を選ぶまでファイルは変わりません（既定のモードは次の節）。公式ドキュメントはこの流れを「有能な同僚と話すように」と表現しており、指示が具体的なほど結果は安定するというのが公式の助言です。「バグを直して」ではなく「ログインで間違ったパスワードを入れたあと画面が真っ白になるバグを直して」のように、状況と期待する結果を書くのがコツです。</p>
 <figure class="post-figure"><img src="/media/images/claude-code-guide/00_fig_terminal.png" alt="Claude Codeの操作の流れを示した画面イメージ。指示を打つと、ファイルを読み、変更内容を表示し、Yesで書き込む" loading="lazy"><figcaption>操作の流れ（画面イメージ）。指示→ファイルを読む→変更を提示→承認して書き込み</figcaption></figure>
 

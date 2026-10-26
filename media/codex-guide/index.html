@@ -164,7 +164,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s3">ターミナルから使う手順</h2>
 <p>CLIの導入は1行です。macOSとLinuxでは次のコマンドを実行します。</p>
-<p><code>curl -fsSL https://chatgpt.com/codex/install.sh | sh</code></p>
+<pre><code>curl -fsSL https://chatgpt.com/codex/install.sh | sh
+</code></pre>
 <p>同じコマンドが更新にも使えます。npmやHomebrew、Windows向けの手順も公式に載っています。</p>
 <p>インストールが終わったら、対象のプロジェクトのディレクトリで<code>codex</code>と打つだけです。はじめて触るなら、手元のコードを読ませて説明させるところから入るのが早道です。初回はChatGPTでのサインインか、別のサインイン方法かを選びます。ChatGPTでサインインすると、契約しているプランの利用量と請求の扱いになります。APIキーを使う場合はAPIの料金です。</p>
 <p>起動直後に案内されるコマンドが、そのまま最初にやることの並びです。</p>
@@ -190,8 +191,9 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Work とCodexで使うモデルは、通常のChatGPTのチャットとは別系統です。<strong>GPT-6 SolとGPT-6 Lunaは、WorkとCodexでのみ使えます</strong>。複雑なコーディングやエージェント的な作業にはSol、決まった形の反復作業にはLunaを公式が勧めています。</p>
 <p>入れ替えの最中なので、GPT-5.6のSol・Terra・Lunaも引き続き選べます。チャット側で使えるのはこの5.6系のほうです。</p>
 <p>CLIでは<code>/model</code>で切り替えるか、起動時に指定します。</p>
-<p><code>codex --model gpt-6-sol
-codex exec -m gpt-6-sol "Review the current changes"</code></p>
+<pre><code>codex --model gpt-6-sol
+codex exec -m gpt-6-sol &quot;Review the current changes&quot;
+</code></pre>
 <p>推論の深さはLow・Medium・High・Extra high・Max・Ultraの6段階です。<strong>最初に選ぶ深さはモデルごとに違い</strong>、公式はSolならMedium、LunaならHigh、AstraならLightから始めることを勧めています。</p>
 <p>呼び名も画面で違います。いちばん軽い段階はデスクトップアプリとウェブのWorkとIDE拡張ではLight、CLIではLowと表示されます。上の2つも役割が分かれていて、Maxは選んだモデルに同じ1つの仕事をより長く考えさせる段階、Ultraはサブエージェントに作業を分けて走らせる段階です。深くするほど時間もトークンも増えます。</p>
 <p>デスクトップアプリとウェブでは、入力欄の下のコントロールでモデルと推論の深さを選びます。CLIにスライダーはありません。Codexは手動で選んだモデルを保持します。</p>

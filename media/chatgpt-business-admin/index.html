@@ -128,10 +128,11 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p><strong>招待ごとにロールとシートタイプを選べるのは所有者だけです。</strong>管理者やメンバーが送った招待は、ワークスペースの既定のシートタイプで届きます。既定はプレミアムの席しか無いワークスペースを除いて標準で、所有者が［ワークスペース設定］→［請求］の［シート設定］で変えられます。</p>
 <h3 id="s1-1">CSVでまとめて招待する</h3>
 <p>人数が多いときに向くのがCSVです。ヘルプが示す形式は「メールアドレス,ロール,シートタイプ」の3列で、例は次のように書かれています。</p>
-<p><code>user1@company.com,member,standard
+<pre><code>user1@company.com,member,standard
 analyst1@company.com,analytics_viewer,standard
 admin@company.com,admin,premium
-it@company.com,owner,premium</code></p>
+it@company.com,owner,premium
+</code></pre>
 <p>ロールに使える値は member・admin・owner・analytics_viewer、シートタイプは standard・premium で、大文字と小文字は区別されません。<strong>analytics_viewer（分析閲覧者）を受け付けるのは、CSVを読み込む人が所有者のときだけです。</strong>ロールが空欄だったり読み込む人の権限を超えていたりすると、その行はメンバーとして招待されます。シートタイプが空欄なら既定のシートタイプになります。</p>
 <h3 id="s1-2">招待しても席は確保されない</h3>
 <p>招待を送っただけでは席を買ったことにも予約したことにもなりません。<strong>席の空きが確かめられるのは招待された人が承諾したときです。</strong>希望のシートタイプに空きが無ければ、招待された人は［参加をリクエスト］を選び、所有者が席を空けるか買い足してから承認します。</p>

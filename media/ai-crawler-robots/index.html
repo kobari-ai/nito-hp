@@ -304,30 +304,35 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>同じくルートに置くllms.txtはAI向けにサイトを案内するファイルで、クローラーを止める働きはありません（<a href="/media/llms-txt-structured-data/">llms.txtとは</a>）。</p>
 <h3 id="s5-1">学習だけ止める書き方</h3>
 <p>検索用と利用者の操作用は許可したまま、学習用だけを止める形です。</p>
-<p>```
-User-agent: GPTBot
-Disallow: /</p>
-<p>User-agent: ClaudeBot
-Disallow: /</p>
-<p>User-agent: Google-Extended
-Disallow: /</p>
-<p>User-agent: Applebot-Extended
-Disallow: /</p>
-<p>User-agent: CCBot
-Disallow: /</p>
-<p>User-agent: *
+<pre><code>User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: *
 Allow: /
-```</p>
+</code></pre>
 <p>この書き方でGoogle-Extendedを入れると、Geminiアプリが回答の根拠に自社のページを使わなくなります。Geminiでも見つけてもらいたい会社は、Google-Extendedの2行を外します。</p>
 <h3 id="s5-2">すべてのAIを止める書き方</h3>
 <p>新聞社のように検索用まで止めるなら、上の書き方の<code>User-agent: *</code>の前に次のグループを足し、検索用と利用者の操作用もまとめて止めます。</p>
-<p><code>User-agent: OAI-SearchBot
+<pre><code>User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
 User-agent: Claude-SearchBot
 User-agent: Claude-User
 User-agent: PerplexityBot
 User-agent: Perplexity-User
-Disallow: /</code></p>
+Disallow: /
+</code></pre>
 <p>ここにGooglebotを入れると通常の検索からも消えるため、Googleの検索のAIを断るならSearch Consoleの設定が先です。Perplexity-UserやChatGPT-Userは書いても止まらない場合がある点も、先に社内に伝えておきます。</p>
 <h3 id="s5-3">書くときの注意</h3>
 <p>robots.txtの規格（<a href="https://www.rfc-editor.org/rfc/rfc9309">RFC 9309</a>）では、ボットは自分の名前に合うグループのルールだけに従い、合うグループが無いときに限って<code>User-agent: *</code>に従います。<strong>GPTBot用のグループを作ると、<code>*</code>に書いた<code>Disallow</code>はGPTBotには効かなくなる</strong>ため、止めたい場所はGPTBotのグループにも書き直します。名前の大文字と小文字は区別されません。</p>

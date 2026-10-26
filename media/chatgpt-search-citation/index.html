@@ -181,12 +181,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h3 id="s2-1">学習は断って検索に出る書き方</h3>
 <p>公式ページによるとOAI-SearchBotとGPTBotの設定は互いに独立していて、OAI-SearchBotを許可したままGPTBotだけを止められます。学習には使わせず、検索には出したい会社のrobots.txtの例が次の形です。</p>
-<p>```
-User-agent: OAI-SearchBot
-Allow: /</p>
-<p>User-agent: GPTBot
+<pre><code>User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
 Disallow: /
-```</p>
+</code></pre>
 <p>robots.txtを直してから検索の側に反映されるまでは約24時間かかることがあると書かれています。両方を許可しているサイトでは、1回の巡回の結果を検索と学習の両方に使うことがあるとも説明されているため、<strong>学習を断るならGPTBotの行を明示しておく</strong>のが確実です。</p>
 <h3 id="s2-2">Disallowとnoindexの違い</h3>
 <p>robots.txtのDisallowは巡回を止める合図で、ページの存在を消すものではありません。今の公式ページも、OAI-SearchBotを止めたサイトがナビゲーション用のリンクとしては出ることがあると書いています。Atlas（ChatGPTのブラウザ）についての保存版のFAQ（10月4日保存）は、Atlasでリンクとページ名だけが出るのを防ぎたいならnoindexのメタタグを使い、<strong>そのタグを読めるようにクローラーの巡回は許可しておく</strong>よう案内していました。止めたいページを両方で塞ぐと、noindexが読まれないまま残ります。</p>

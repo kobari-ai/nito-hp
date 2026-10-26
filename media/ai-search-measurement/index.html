@@ -111,7 +111,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li>下の正規表現を貼り付け、「AI経由流入」として保存する</li>
 </ol>
 <p>主なAIサービスの参照元をまとめた正規表現は次のとおりです。新しいサービスが増えたら「|ドメイン名」を足すだけで拡張できます。</p>
-<p><code>chatgpt.com|chat.openai.com|perplexity.ai|gemini.google.com|copilot.microsoft.com|claude.ai</code></p>
+<pre><code>chatgpt.com|chat.openai.com|perplexity.ai|gemini.google.com|copilot.microsoft.com|claude.ai
+</code></pre>
 <p>なお<strong>2026年5月、GoogleはGA4のデフォルトチャネルグループに「AIアシスタント」チャネルを追加</strong>しました（<a href="https://support.google.com/analytics/answer/9756891">GA4ヘルプ：デフォルトチャネルグループ</a>）。ChatGPTやGemini、Claudeなどからの流入が専用チャネルへ自動分類されるようになっています。ただし<strong>この自動分類は参照元（リファラー）が頼り</strong>で、参照元を渡さないアプリ経由や、Perplexityのように対象外のサービスは拾いきれません。取りこぼしを防ぐには、上記の探索レポート＋正規表現をあわせて使うのが確実です。</p>
 <h2 id="s3">GA4だけでは効果を測れない理由</h2>
 <p>GA4の数字は、AI経由の実態より小さく出ます。理由は2つあります。<strong>リンクがクリックされた分しか記録されない</strong>ことと、<strong>参照元が欠落してDirectに混ざる</strong>ことです。</p>

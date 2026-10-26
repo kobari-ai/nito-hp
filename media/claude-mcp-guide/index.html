@@ -171,18 +171,22 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/claude-mcp-guide/00_fig_transports.png" alt="MCPサーバーを追加する4つの方法の図。HTTPは推奨でクラウド上のサービス向けOAuth対応、SSEは非推奨でHTTPと同じコマンド、stdioはローカルのプロセスで--の後ろがサーバーのコマンド、WebSocketはサーバー側からイベントを押し込みたいときでOAuthは使えない" loading="lazy"><figcaption>4つのトランスポートの選び分け</figcaption></figure>
 
 <p>リモートのサービスをつなぐならHTTPを選んでください。SSEしか公開していないサーバーも、HTTPと同じコマンドで追加できます。Claude CodeがまずHTTPを試し、受け付けられなければSSEに切り替えるためです。</p>
-<p><code>claude mcp add --transport http notion https://mcp.notion.com/mcp</code></p>
+<pre><code>claude mcp add --transport http notion https://mcp.notion.com/mcp
+</code></pre>
 <p>ローカルのプロセスを動かすstdioでは、<code>--</code>（ダブルダッシュ）の位置が重要です。<code>--</code> より後ろはすべてサーバーを起動するコマンドとして渡され、前にあるものはClaude Code自身のオプションとして解釈されます。</p>
-<p><code>claude mcp add --env AIRTABLE_API_KEY=YOUR_KEY --transport stdio airtable -- npx -y airtable-mcp-server</code></p>
+<pre><code>claude mcp add --env AIRTABLE_API_KEY=YOUR_KEY --transport stdio airtable -- npx -y airtable-mcp-server
+</code></pre>
 <p><code>--</code> を書かないと、サーバー側のフラグ（<code>--port</code> など）をClaude Codeが自分のオプションとして読もうとして失敗します。<code>--env</code> を複数渡すときは、サーバー名が <code>--env</code> の直後に来ないよう、間に別のオプションを挟みます。</p>
 <p>WebSocketだけは <code>claude mcp add --transport</code> が受け付けないため、<code>claude mcp add-json</code> で指定します。OAuthにも対応していないので、認証はヘッダーで渡します。<strong>サーバーがリクエストに応えるだけならHTTPを選ぶ</strong>、というのが公式の指針です。</p>
 <h2 id="s4">他のクライアント向けの手順を読み替える</h2>
 <p>MCPサーバーの導入手順は、Claude DesktopやCursor向けに書かれていることがあります。<code>claude mcp add</code> のコマンドが載っていなくても、手元にある情報は次の3つのどれかです。</p>
 <p><strong>URLがある場合</strong>、そのサーバーはリモートにあります。<code>https://</code> なら <code>--transport http</code> で追加し、<code>wss://</code> ならWebSocketの手順を使います。APIキーやトークンのヘッダーが指定されていれば <code>--header</code> で渡します。</p>
 <p><strong><code>npx -y @example/mcp-server</code> のような起動コマンドがある場合</strong>は、ローカルのstdioサーバーです。コマンド全体を <code>--</code> の後ろに置きます。</p>
-<p><code>claude mcp add example --env API_KEY=your-key -- npx -y @example/mcp-server</code></p>
+<pre><code>claude mcp add example --env API_KEY=your-key -- npx -y @example/mcp-server
+</code></pre>
 <p><strong><code>mcpServers</code> のJSONブロックがある場合</strong>は、<code>mcpServers</code> の中身のオブジェクトだけを <code>claude mcp add-json</code> に渡します。ラッパーごと渡すのではありません。</p>
-<p><code>claude mcp add-json example '{"command":"npx","args":["-y","@example/mcp-server"]}'</code></p>
+<pre><code>claude mcp add-json example '{&quot;command&quot;:&quot;npx&quot;,&quot;args&quot;:[&quot;-y&quot;,&quot;@example/mcp-server&quot;]}'
+</code></pre>
 <p>このとき2か所を直す必要があります。ひとつが、<code>url</code> はあるのに <code>type</code> がないエントリです。Claude Codeは <code>type</code> のないエントリをstdioサーバーとして読むため、<code>"type": "http"</code>（または <code>sse</code>、<code>ws</code>）を足さないとそのサーバーはスキップされます。もうひとつはサーバー名で、使えるのは英数字とハイフンとアンダースコアだけです。</p>
 <h2 id="s5">3つのスコープと優先順位</h2>
 <p><code>claude mcp add</code> は、<code>--scope</code> を付けなければローカルスコープに書き込みます。3つのスコープで違うのはこの2点です。どのプロジェクトで読み込まれるか、そしてチームと共有されるかどうか。</p>
@@ -224,10 +228,12 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s6">リモートサーバーで認証する</h2>
 <p>多くのクラウド型サーバーは認証を求めてきます。Claude CodeはOAuth 2.0に対応しており、<code>/mcp</code> を実行してブラウザでログインすれば、トークンは安全に保存され、以後の更新も自動です。</p>
 <p>ターミナルから直接サインインすることもできます。</p>
-<p><code>claude mcp login sentry</code></p>
+<pre><code>claude mcp login sentry
+</code></pre>
 <p>SSH越しなど、手元にブラウザがない環境では、このコマンドが認可URLを出力します。ローカルのマシンでそのURLを開き、リダイレクト先の完全なURLをプロンプトに貼り付けます。貼り付けの工程があるため、<code>ssh -t</code> で対話的な端末を確保しておきます。保存した認証情報を消すときは <code>claude mcp logout &lt;name&gt;</code> です。</p>
 <p>よくつまずくのが「Incompatible auth server: does not support dynamic client registration」というエラーです。これは動的クライアント登録に対応していないサーバーで、開発者ポータルでOAuthアプリを登録し、クライアントIDとシークレットを渡す必要があります。リダイレクトURIを登録する場合は <code>http://localhost:PORT/callback</code> の形にして、追加時の <code>--callback-port</code> と同じポートを指定します。</p>
-<p><code>claude mcp add --transport http --client-id your-client-id --client-secret --callback-port 8080 my-server https://mcp.example.com/mcp</code></p>
+<pre><code>claude mcp add --transport http --client-id your-client-id --client-secret --callback-port 8080 my-server https://mcp.example.com/mcp
+</code></pre>
 <p><code>--client-secret</code> は値を書きません。実行するとマスクされた入力でシークレットを聞かれるため、シェルの履歴には残らない形です。保存先はmacOSのキーチェーンか認証情報ファイルで、設定ファイルには書かれません。後から変更するなら、いったん <code>claude mcp remove</code> してから同じスコープで追加し直してください。</p>
 <p>なお、<code>headers.Authorization</code> を自分で設定したサーバーが認証に失敗した場合、Claude CodeはOAuthに切り替えず、接続失敗として報告します。トークンを直すか、ヘッダーを外してOAuthに任せるかのどちらかです。</p>
 <h2 id="s7">サーバーの状態を読む</h2>
@@ -293,7 +299,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s9">claude.aiのコネクターとの関係</h2>
 <p>claude.aiのアカウントでClaude Codeにログインしている場合、claude.aiに追加したMCPサーバー（コネクター）はClaude Codeでも自動的に使えます。設定は <a href="https://claude.ai/customize/connectors">claude.ai/customize/connectors</a> で行います。TeamとEnterpriseのプランでは、追加できるのは管理者だけです。</p>
 <p>Claude Desktopで設定済みのサーバーは、そのまま取り込めます。</p>
-<p><code>claude mcp add-from-claude-desktop</code></p>
+<pre><code>claude mcp add-from-claude-desktop
+</code></pre>
 <p>対話的なダイアログで取り込むサーバーを選ぶ形式で、macOSとWSLでのみ動きます。ひとつ注意点があり、<code>claude mcp</code> が受け付けるサーバー名は英数字とハイフンとアンダースコアだけなので、スペースを含む名前のサーバーは取り込めません。取り込みは拒否した名前を報告し、残りは通常どおり追加します。</p>
 <h2 id="s10">安全に使うために</h2>
 <p>公式ドキュメントには接続する前に<strong>そのサーバーを信頼できるか確認する</strong>よう明記されています。外部のコンテンツを取得するサーバーは、プロンプトインジェクションの経路になりうるためです。取ってきたページや課題の本文に指示のような文字列が混ざっていれば、それがAIへの入力になります。</p>
