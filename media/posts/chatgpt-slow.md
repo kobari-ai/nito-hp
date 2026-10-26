@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】ChatGPTが重い・遅いときの原因と対処法｜長いチャット・ブラウザ・思考レベル
 date: 2026-10-01
+modified: 2026-10-27
 category: AI活用
 description: ChatGPTが重い・遅いときの原因と直し方を、OpenAIのヘルプから解説。障害の確認、長くなった会話、ブラウザのキャッシュと拡張機能、思考レベル、回線まで、見る順番に沿ってまとめました。
 cover_tag: トラブル
@@ -62,11 +63,11 @@ ChatGPTの返事が遅い、入力の文字がカクつく、画面が固まる�
 
 ## 思考のレベルで待ち時間が変わる
 
-回答が出るまでに「思考中」の表示が長く続くときは、壊れているのではなく、思考のレベルが上がっていることがあります。OpenAIのヘルプ「[ChatGPT での GPT-5.6 と GPT-6 Pro](https://help.openai.com/ja-jp/articles/20001354-gpt-56-and-gpt-6-pro-in-chatgpt)」によると、**即時モードは日常的な質問にすばやく答え、有料プランでは思考スライダーで思考量を選べます。**
+回答が出るまでに「思考中」の表示が長く続くときは、壊れているのではなく、思考のレベルが上がっていることがあります。OpenAIのヘルプ「[ChatGPT の GPT-6 とその他のモデル](https://help.openai.com/ja-jp/articles/20001354-gpt-6-and-other-models-in-chatgpt)」によると、**即時モードは日常的な質問にすばやく答え、有料プランでは思考スライダーで思考量を選べます。**
 
-<figure class="post-figure"><img src="/media/images/chatgpt-slow/04_help_think.jpg" alt="OpenAIのヘルプの思考レベルの選択の節。即時モードは日常的な質問にすばやく回答し、対象の有料プランでは思考スライダーでChatGPTの思考量を選択できる。即時モードは有料プランではGPT-5.6 Sol、FreeとGoではGPT-5.6 Lunaを使用。中程度はGPT-5.6 Solによる標準的な思考、高は拡張思考、超高は最高の思考レベル、Proは難しいタスクや長時間のワークフロー向けのProモデル" loading="lazy"><figcaption>思考レベルの選択（OpenAIのヘルプ、2026年10月1日取得）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/chatgpt-slow/04_help_think.jpg" alt="OpenAIのヘルプの思考レベルの選択の節。即時モードは日常的な質問にすばやく回答し、対象の有料プランでは思考スライダーでChatGPTの思考量を選択できる。即時モードは有料プランではGPT-5.6 Sol、FreeとGoではGPT-5.6 Lunaを使用。中程度はGPT-5.6 Solによる標準的な思考、高は拡張思考、超高は最高の思考レベル、Proは難しいタスクや長時間のワークフロー向けのProモデル" loading="lazy"><figcaption>思考レベルの選択（OpenAIのヘルプ、2026年10月1日取得。10月7日から有料プランの即時モードから超高まではGPT-6 Sol）</figcaption></figure>
 
-<figure class="post-figure"><img src="/media/images/chatgpt-slow/05_fig_think.png" alt="ChatGPTの思考レベルの図。速い：即時モードは日常的な質問にすばやく答え、有料プランはGPT-5.6 Sol、無料版とGoはGPT-5.6 Luna、急ぎの質問はここで足りる。考える：中程度・高・超高は思考スライダーで選び、上げるほどGPT-5.6 Solの思考量が増え、上げたまま日常の質問をすると待ち時間が長くなりやすい。長時間：Proは難しいタスクや長時間のワークフロー向けのProモデルで、急ぎの質問なら即時モードのほうが向く" loading="lazy"><figcaption>思考レベルと待ち時間</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/chatgpt-slow/05_fig_think.png" alt="ChatGPTの思考レベルの図。速い：即時モードは日常的な質問にすばやく答え、有料プランはGPT-6 Sol、無料版とGoはヘルプではGPT-5.6 Luna、急ぎの質問はここで足りる。考える：中程度・高・超高は思考スライダーで選び、上げるほどGPT-6 Solの思考量が増え、上げたまま日常の質問をすると待ち時間が長くなりやすい。長時間：Proは難しいタスクや長時間のワークフロー向けのProモデルで、急ぎの質問なら即時モードのほうが向く" loading="lazy"><figcaption>思考レベルと待ち時間</figcaption></figure>
 
 **PlusとProのプランでは、即時モードから上の思考レベルへ自動では切り替わらない**とヘルプは書いています。ヘルプに時間の記述はないものの、思考量が増えるぶん、答えが出るまでの待ちは長くなりやすいと考えられます。前に難しい質問のために思考を「高」や「超高」に上げていたなら、上げたままになっていないかをモデルのメニューで確かめ、急ぎのときは即時モードを選びます。Proは難しいタスクや長時間の作業向けのモデルなので、速さを求める質問には使いません。
 
