@@ -492,7 +492,13 @@ def extract_faq(body_md: str):
     in_faq = False
     q = None
     ans = []
+    in_code = False
     for line in lines:
+        if line.lstrip().startswith("```"):  # コードの囲みの中の「## 」を見出しと数えない
+            in_code = not in_code
+            continue
+        if in_code:
+            continue
         if line.startswith("## "):
             in_faq = "よくある質問" in line
             if q:
@@ -876,7 +882,7 @@ def main():
         body_md = convert_takeaways_blocks(body_md)
         body_md = convert_point_blocks(body_md)
         body_md = convert_linkcard_blocks(body_md)
-        body_html = markdown.markdown(body_md, extensions=["tables", "sane_lists"])
+        body_html = markdown.markdown(body_md, extensions=["tables", "sane_lists", "fenced_code"])
         body_html = expand_blogparts(body_html)
         body_html = stack_tables(body_html)
         body_html, toc = add_heading_ids_and_toc(body_html)
