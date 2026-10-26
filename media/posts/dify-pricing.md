@@ -178,7 +178,7 @@ Difyはチャットボット・ワークフロー・エージェントを画面�
 
 国内では[リコージャパン](https://www.ricoh.co.jp/products/list/dify)がライセンスの販売と構築を受けています。ライセンスはコミュニティ・Essential（ワークスペース3・ユーザー20名）・Standard（ワークスペース10・ユーザー100名）・Enterpriseで、価格は問い合わせです。学校などの教育機関向けには、Enterpriseのアカデミックライセンスもあります。EssentialとStandardは[2026年6月1日に提供が始まりました](https://digitalpr.jp/r/135862)。国内の会社と契約したい場合は、販売店を通す道もあります。
 
-もう1つ、Difyは[AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6)で、自社のAWS環境に1社専用で立てるDify Premiumも出しています。自社のAWSのVPCにEC2として立て、「Powered by Dify」の表示を消したり自社のロゴに替えたりできます。金額はリスティングの画面に出ますが、こちらでは読めていません。
+もう1つ、Difyは[AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6)で、自社のAWS環境に1社専用で立てるDify Premiumも出しています。[Dify Premiumのドキュメント](https://docs.dify.ai/en/self-host/deploy/platform-guides/dify-premium)によると、自社のAWSのVPCにEC2として立て、「Powered by Dify」の表示を消したり自社のロゴに替えたりできます。金額はリスティングの画面に出ますが、こちらでは読めていません。
 
 見積もりを頼むときはワークスペースの数・使う人数・SSOの方式・SLAの要否・構築を誰が持つかをそろえて出すと、販売店どうしを比べやすくなります。
 
