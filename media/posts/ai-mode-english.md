@@ -1,7 +1,7 @@
 ---
 title: 【2026年10月】Google AIモードが英語になる原因と日本語に戻す方法｜回答が英語・表示が英語・出典が英語
 date: 2026-09-28
-modified: 2026-10-25
+modified: 2026-10-27
 category: AI検索対策
 description: Google AIモードの回答や画面が英語になる原因を、条件を変えた実測とGoogleのヘルプで整理。質問の言語、表示言語の設定、英語でだけ提供される機能の3つに分けて、日本語に戻す手順をまとめました。
 cover_tag: 使い方
@@ -20,7 +20,7 @@ Google検索のAIモードは日本語で使えます。Googleのヘルプ「[Go
 - 回答が英語になるのは、**英語で質問したとき**。表示言語を英語にしても、日本語の質問には日本語で答えた（実測）
 - 英語で始めた会話でも、**「日本語で答えて」と送ると、その回から日本語**に戻った（実測）
 - ボタンや見出しが英語なら、**検索の設定の「言語と地域」で表示言語を日本語に**する
-- AIモードのNano Banana 2.1など、**日本では英語でだけ提供される機能**がある
+- AIモードのNano Banana 2.1など、**英語でだけ提供される機能**がある
 :::
 
 ## 英語になる3つの場所
@@ -91,14 +91,16 @@ iPhoneのGoogleアプリは、端末の言語に合わせて表示が決まり�
 
 | 機能 | ヘルプに書かれた提供範囲 |
 |---|---|
-| AIモードのNano Banana 2.1（画像） | 米国の18歳以上と、日本を含む対象の国のGoogle AI Pro・Ultraの利用者に英語で提供 |
+| AIモードのNano Banana 2.1（画像） | 英語で提供。使える人の書き方は英語版と日本語版で違う（下に記載） |
 | インタラクティブなビジュアル | ログインしている利用者に英語で提供 |
 | ファイルの生成（PDFなど） | 18歳以上の利用者に英語で提供 |
 | AIで料金を確認・AIモードからの購入 | 米国の18歳以上に英語で提供 |
 
 AIモードの上位のモデルは、9月28日の取得時はGemini 3 Proとして英語での提供と書かれていました。2026年10月25日時点のヘルプでは名前がGemini 4 Argonに変わり、使える人は18歳以上のGoogle AI Pro・Ultraの定期購入者で、言語の条件は書かれていません。
 
-**「Pro」を選んだあとに回答が英語になったなら、メニューで高速モードに戻してから聞き直してください。**ヘルプでも、高速モードでほとんどの質問に対応できるとされています。画像を作るときの日本語の手順は[AIモードで画像を生成する方法](/media/ai-mode-image-generation/)で確かめてください。
+Nano Banana 2.1の使える人は、2026年10月27日時点のヘルプの英語版が「users over 18 in the US and Google AI Pro and Ultra subscribers」（米国の18歳以上の利用者と、Google AI Pro・Ultraの加入者）、日本語版が「米国にお住まいで18歳以上のGoogle AI ProまたはGoogle AI Ultraのユーザー」と書いています。以前あった対象の国と地域の一覧は消えていて、日本のPro・Ultraの加入者が対象かは読み方で分かれます。日本からは試していません。
+
+**上位のモデル（メニューの「4 Argon」）を選んだあとに回答が英語になったなら、メニューで高速モードに戻してから聞き直してください。**ヘルプでも、高速モードでほとんどの質問に対応できるとされています。画像を作るときの日本語の手順は[AIモードで画像を生成する方法](/media/ai-mode-image-generation/)で確かめてください。
 
 ## 出典のページが英語のとき
 
@@ -148,7 +150,7 @@ AIによる概要も、日本語に対応しています。英語で検索する
 - Google 検索ヘルプ「[Google が検索結果に表示する言語を判断する方法](https://support.google.com/websearch/answer/13511324?hl=ja)」（2026年9月28日取得）
 - Google 検索ヘルプ「[Google の表示言語を変更する](https://support.google.com/websearch/answer/3333234?hl=ja)」（パソコン・Android・iPhone、2026年9月28日取得）
 - Google 検索ヘルプ「[Google 検索の AI による概要で、情報をすばやく簡単に見つける](https://support.google.com/websearch/answer/14901683?hl=ja)」（2026年9月28日取得）
-- Google 検索ヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」（2026年9月28日取得。Nano Banana 2.1の表記は10月17日取得）
+- Google 検索ヘルプ「[Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)」（2026年9月28日取得。Nano Banana 2.1の表記は10月27日取得）
 - Google 検索ヘルプ「[Google 検索でファイルを生成する](https://support.google.com/websearch/answer/17586477?hl=ja)」（2026年9月28日取得）
 - Google 検索ヘルプ「[Google 検索で AI を使用してローカル ビジネスの料金を確認する方法](https://support.google.com/websearch/answer/16421135?hl=ja)」「[Google 検索の AI モードから直接購入と注文の管理を行う](https://support.google.com/websearch/answer/16833721?hl=ja)」（2026年9月28日取得）
 - AIモードの画面は、2026年9月28日にスマホ表示のブラウザ（ログインなし）で撮影
