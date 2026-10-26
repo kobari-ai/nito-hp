@@ -23,14 +23,14 @@
     }
   ],
   "checked": {
-    "chatgpt": "2026-10-06",
+    "chatgpt": "2026-10-27",
     "gemini": "2026-10-27",
     "claude": "2026-10-27",
     "ai_mode": "2026-10-27"
   },
   "last_changed": {
     "date": "2026-10-27",
-    "text": "AIモードの図やインフォグラフィック向けの画像モデル（Nano Banana 2.1）の対象から、国と地域の一覧が消えた。日本語のヘルプは「米国在住で18歳以上のGoogle AI Pro・Ultraの人」、英語の原文は「米国の18歳以上と、Google AI Pro・Ultraの加入者」の表記。英語だけなのと、画像の作成の枚数の上限は変わらず"
+    "text": "無料版のモデルが、料金ページの表記でGPT-5.6 LunaからGPT-6 Lunaに（10月7日のリリースノートで発表、10月8日から順に）。無料版のよくある質問はGPT-5.6 Lunaのまま"
   },
   "tables": [
     {
@@ -72,10 +72,10 @@
           "label": "無料で使えるモデル",
           "cells": {
             "chatgpt": {
-              "text": "GPT-5.6 Luna",
+              "text": "GPT-6 Luna",
               "src": [
                 "oa1",
-                "oa2"
+                "oa7"
               ]
             },
             "gemini": {
@@ -455,7 +455,7 @@
           "label": "法人向け（1人あたり月額）",
           "cells": {
             "chatgpt": {
-              "text": "Business 3,050円〜（2名から）",
+              "text": "Business 3,050円〜（年払い。月払いは3,850円。2名から）",
               "src": [
                 "oa1"
               ]
@@ -576,8 +576,8 @@
       "fetch_url": null,
       "auto": false,
       "watch": [],
-      "checked": "2026-10-06",
-      "note": "Cloudflare と OpenAI の規約により自動取得しない。アプリ内ブラウザで確認（個人向け: ￥0・￥1,400・￥3,000・Pro ￥16,800〜、ビジネス向けタブ: ￥3,050）。税の記載なし"
+      "checked": "2026-10-27",
+      "note": "Cloudflare と OpenAI の規約により自動取得しない。アプリ内ブラウザで確認（個人向け: ￥0・￥1,400・￥3,000・Pro ￥16,800〜、ビジネス向けタブ: スタンダード ￥3,050 年払い・￥3,850 月払い）。税の記載なし。無料版のモデルは料金表で GPT-6 Luna（10/27）"
     },
     {
       "id": "oa2",
@@ -587,7 +587,7 @@
       "fetch_url": null,
       "auto": false,
       "watch": [],
-      "checked": "2026-10-06"
+      "checked": "2026-10-27"
     },
     {
       "id": "oa3",
@@ -597,7 +597,7 @@
       "fetch_url": null,
       "auto": false,
       "watch": [],
-      "checked": "2026-10-06"
+      "checked": "2026-10-27"
     },
     {
       "id": "oa4",
@@ -607,17 +607,17 @@
       "fetch_url": null,
       "auto": false,
       "watch": [],
-      "checked": "2026-10-06"
+      "checked": "2026-10-27"
     },
     {
       "id": "oa5",
       "ai": "chatgpt",
-      "title": "ファイルアップロード FAQ（OpenAI ヘルプセンター）",
-      "url": "https://help.openai.com/ja-jp/articles/8555545-file-uploads-faq",
+      "title": "ChatGPT へのファイルと音声のアップロード（OpenAI ヘルプセンター）",
+      "url": "https://help.openai.com/ja-jp/articles/8555545-uploading-files-and-audio-to-chatgpt",
       "fetch_url": null,
       "auto": false,
       "watch": [],
-      "checked": "2026-10-06"
+      "checked": "2026-10-27"
     },
     {
       "id": "oa6",
@@ -627,7 +627,7 @@
       "fetch_url": null,
       "auto": false,
       "watch": [],
-      "checked": "2026-10-06"
+      "checked": "2026-10-27"
     },
     {
       "id": "oa7",
@@ -637,7 +637,7 @@
       "fetch_url": null,
       "auto": false,
       "watch": [],
-      "checked": "2026-10-06"
+      "checked": "2026-10-27"
     },
     {
       "id": "g1",
@@ -841,6 +841,15 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-10-27",
+      "ai": "chatgpt",
+      "text": "無料版のモデルが、料金ページの表記でGPT-5.6 LunaからGPT-6 Lunaに（10月7日のリリースノートで発表、10月8日から順に）。無料版のよくある質問はGPT-5.6 Lunaのまま",
+      "src": [
+        "oa1",
+        "oa7"
+      ]
+    },
     {
       "date": "2026-10-27",
       "ai": "ai_mode",
