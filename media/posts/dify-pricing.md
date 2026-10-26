@@ -33,7 +33,7 @@ Difyはチャットボット・ワークフロー・エージェントを画面�
 
 **月額のプラン料金だけで予算を組むと、モデルの代金と運用の人手が抜け落ちます。** クラウド版なら3つ目はほぼ要りませんが、2つ目はどのプランでも残ります。
 
-<!-- SHOT: 図 dfy_cost.html → dfy_01_cost.png・alt「Difyにかかる費用3つを縦に並べた図。Difyの利用料はクラウド版の月額かEnterpriseのライセンス、モデルのAPI代はOpenAIやAnthropicなど各社に払う、運用の人手とサーバーはセルフホストのときに自社が持つ」 -->
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_01_cost.png" alt="Difyにかかる費用3つを縦に並べた図。Difyの利用料はクラウド版の月額かEnterpriseのライセンス、モデルのAPI代はOpenAIやAnthropicなど各社に払う、運用の人手とサーバーはセルフホストのときに自社が持つ" loading="lazy"></figure>
 
 ## クラウド版の4プランと料金
 
@@ -48,7 +48,7 @@ Difyはチャットボット・ワークフロー・エージェントを画面�
 
 **料金は「ワークスペースごと」で、Teamなら50人まで同じ月159ドルです。** 年払いにするとProfessionalは118ドル、Teamは318ドル安くなり、ページの表示は年払いで17%お得です。1ドル157.45円（欧州中央銀行の参照レート、2026年10月26日）で換算すると、Professionalは月約9,300円、Teamは月約2万5千円です。年払いならTeamは1年で約25万円になります。
 
-<!-- SHOT: 画面 https://dify.ai/jp/pricing ・探す語「ワークスペースごと / 年」・赤枠「$590 ワークスペースごと / 年」と「$1590 ワークスペースごと / 年」・PC・alt「Difyの料金ページのクラウド版。プロフェッショナルはワークスペースごとに年590ドルで5,000メッセージクレジットとメンバー3名、チームは年1,590ドルで10,000クレジットとメンバー50名」・figcaption「Difyの料金ページ（2026年10月27日）」 -->
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_pricing.png" alt="Difyの料金ページのクラウド版。プロフェッショナルはワークスペースごとに年590ドルで5,000メッセージクレジットとメンバー3名、チームは年1,590ドルで10,000クレジットとメンバー50名" loading="lazy"><figcaption>Difyの料金ページ（2026年10月27日）</figcaption></figure>
 
 人数とアプリの数のほかにも、プランで変わる機能があります。料金ページの比較の表から抜き出すと次のとおりです。
 
@@ -62,13 +62,13 @@ Difyはチャットボット・ワークフロー・エージェントを画面�
 
 社内の情報システムの審査でSOC 2の報告書を求められる会社は、TeamかEnterpriseが候補になります。
 
-<!-- SHOT: 図 dfy_plans.html → dfy_02_plans.png・alt「Difyクラウド版の3プランを縦に並べた図。Sandboxは無料で1人・5アプリ・200クレジットが一度きり、Professionalは月59ドルで3人・50アプリ・月5,000クレジット、Teamは月159ドルで50人・200アプリ・月10,000クレジット」 -->
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_02_plans.png" alt="Difyクラウド版の3プランを縦に並べた図。Sandboxは無料で1人・5アプリ・200クレジットが一度きり、Professionalは月59ドルで3人・50アプリ・月5,000クレジット、Teamは月159ドルで50人・200アプリ・月10,000クレジット" loading="lazy"></figure>
 
 ## 支払いと契約の決まり
 
 経理で引っかかりやすいのは支払い方法です。[クラウド版の料金ページ](https://dify.ai/jp/pricing/dify-cloud)のよくある質問は、個人のクレジットカードの代わりに法人口座で払えるかという問いに、**銀行振込の請求書払い（Pay by Invoice）は検討中で、まだ使えない**と答えています。検討中の案もTeamの年払いだけが対象で、請求はLangGenius, Inc.から、米国外からは海外送金で手数料は利用者の負担です。
 
-<!-- SHOT: 画面 https://dify.ai/jp/pricing/dify-cloud ・探す語「Pay by Invoice」・赤枠「銀行振込によるPay by Invoiceの導入を検討していますが、現在はまだご利用いただけません」・PC・alt「Dify Cloudの料金ページのよくある質問。法人口座で払えるかの問いに、銀行振込による請求書払いは検討中でまだ使えず、検討中の案はTeamプランの年払いだけと答えている」・figcaption「Dify Cloudの料金ページのよくある質問（2026年10月27日）」 -->
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_invoice.png" alt="Dify Cloudの料金ページのよくある質問。法人口座で払えるかの問いに、銀行振込による請求書払いは検討中でまだ使えず、検討中の案はTeamプランの年払いだけと答えている" loading="lazy"><figcaption>Dify Cloudの料金ページのよくある質問（2026年10月27日）</figcaption></figure>
 
 契約の条件は[利用規約](https://dify.ai/legal/terms-of-service)（2026年6月30日更新）に書かれています。稟議に書いておきたいのは次の5つです。
 
@@ -94,11 +94,11 @@ Difyはチャットボット・ワークフロー・エージェントを画面�
 
 **同じ5,000クレジットでも、GPT-5.5なら200回、GPT-5-miniなら5,000回で尽きます。** Sandboxの200クレジットは、[Difyのクイックスタート](https://docs.dify.ai/en/quick-start)によると一度きりの付与で、毎月は戻りません。GPT-5.5で試すと8回で使い切る量です。
 
-<!-- SHOT: 図 dfy_credits.html → dfy_03_credits.png・alt「月5,000クレジットで答えられる回数の図。GPT-5.5は1回25で200回、Claude Sonnet 4.6は1回10で500回、Claude Haiku 4.5は1回5で1,000回、GPT-5-miniは1回1で5,000回」 -->
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_03_credits.png" alt="月5,000クレジットで答えられる回数の図。GPT-5.5は1回25で200回、Claude Sonnet 4.6は1回10で500回、Claude Haiku 4.5は1回5で1,000回、GPT-5-miniは1回1で5,000回" loading="lazy"></figure>
 
 使い切った後は、自社で契約したモデルのAPIキーをDifyに登録して続けます。費用の都合でクレジットでは使えないモデルがあることも、よくある質問に書かれています。一覧には埋め込み（ナレッジを検索できる形にする処理）のモデルも載っているため、ナレッジを多く入れる使い方では、応答の回数だけで減り方を読まないほうが安全です。
 
-<!-- SHOT: 画面 https://dify.ai/jp/pricing/dify-cloud ・よくある質問の「メッセージクレジットの使い方は？」を開く・探す語「gpt-5.5：25クレジット」・赤枠「gpt-5.6-sol / gpt-5.5：25クレジット」と「Claude Sonnet 4.6 / Claude Sonnet 4.5：10クレジット」・PC・alt「Dify Cloudの料金ページのよくある質問。メッセージクレジットはモデルごとに1回の応答で減る量が違い、GPT-5.5は25クレジット、Claude Sonnet 4.6は10クレジットと並ぶ」・figcaption「メッセージクレジットの使い方（2026年10月27日）」 -->
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_credit_faq.png" alt="Dify Cloudの料金ページのよくある質問。メッセージクレジットはモデルごとに1回の応答で減る量が違い、GPT-5.5は25クレジット、Claude Sonnet 4.6は10クレジットと並ぶ" loading="lazy"><figcaption>メッセージクレジットの使い方（2026年10月27日）</figcaption></figure>
 
 ## モデルのAPI代の見積もり方
 
@@ -127,7 +127,7 @@ Difyはチャットボット・ワークフロー・エージェントを画面�
 - **アプリとナレッジの量**：50アプリ・500文書・5GBを超えるならTeam
 - **管理の要件**：役割の分担はProfessionalから、自社のロゴとSOC 2の報告書はTeam、SSOはEnterpriseだけ
 
-<!-- SHOT: 図 dfy_choose.html → dfy_04_choose.png・alt「Difyのプランを決める4つの条件を順に並べた図。データを社外に置けるか、作る人は何人か、アプリとナレッジの量、SSOやロゴなど管理の要件」 -->
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_04_choose.png" alt="Difyのプランを決める4つの条件を順に並べた図。データを社外に置けるか、作る人は何人か、アプリとナレッジの量、SSOやロゴなど管理の要件" loading="lazy"></figure>
 
 メンバーの数に、公開したWebアプリを使うだけの社員が入るかは、料金ページに書かれていません。部署ごとに分けて作りたい場合も、クラウド版はどのプランも1ワークスペースなので、ワークスペースの数だけ契約も増える計算です。複数の部署で1つの管理にまとめたいなら、複数のワークスペースを持てるEnterpriseの見積もりを並べて比べます。
 
@@ -146,7 +146,7 @@ Difyはチャットボット・ワークフロー・エージェントを画面�
 
 **更新は一度きりの作業ではないため、人手の見積もりに入れておくのが安全です。** 最新のリリースは2026年10月23日の1.18.0で、ドキュメントはアップグレードのたびに環境変数の見本と自社の設定を見比べるよう書いています。
 
-<!-- SHOT: 画面 https://docs.dify.ai/ja/self-host/quick-start/docker-compose ・探す語「最小システム要件」・赤枠「CPU >= 2 コア」と「RAM >= 4 GiB」・PC・alt「DifyのドキュメントのDocker Composeでのデプロイのページ。デプロイ前の準備の節に、ハードウェアの最小要件としてCPU 2コア以上とRAM 4GiB以上が並ぶ」・figcaption「Dify DocsのDocker Composeでのデプロイ（2026年10月27日）」 -->
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_selfhost_req.png" alt="DifyのドキュメントのDocker Composeでのデプロイのページ。デプロイ前の準備の節に、ハードウェアの最小要件としてCPU 2コア以上とRAM 4GiB以上が並ぶ" loading="lazy"><figcaption>Dify DocsのDocker Composeでのデプロイ（2026年10月27日）</figcaption></figure>
 
 セルフホストが向くのは、データを自社の環境から出せない決まりがあり、サーバーの面倒を見る人がいる会社です。クラウド版のデータの置き場所について、料金ページはマネージドクラウドリージョンとだけ書き、プライバシーポリシーはウェブサイトのサーバーが米国にあるとしています。国内に置く決まりがあるなら、クラウド版より先にセルフホストを検討することになります。
 
@@ -157,7 +157,7 @@ Difyはチャットボット・ワークフロー・エージェントを画面�
 - **マルチテナント**：書面の許可なく、Difyのソースでマルチテナントの環境を運用できない。テナントは1つのワークスペースを指す
 - **ロゴと著作権の表示**：Difyのフロントエンドを使う場合、コンソールやアプリのロゴと著作権の表示を消したり変えたりできない
 
-<!-- SHOT: 画面 https://github.com/langgenius/dify/blob/main/LICENSE ・探す語「Multi-tenant service」・赤枠「a. Multi-tenant service」の段落と「b. LOGO and copyright information」の段落・PC・alt「DifyのLICENSEファイル。商用利用は認めたうえで、書面の許可なくマルチテナント環境を運用できないこと、フロントエンドを使う場合はロゴと著作権の表示を消せないことを条件にしている」・figcaption「GitHubのDifyのLICENSE（2026年10月27日）」 -->
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_license.png" alt="DifyのLICENSEファイル。商用利用は認めたうえで、書面の許可なくマルチテナント環境を運用できないこと、フロントエンドを使う場合はロゴと著作権の表示を消せないことを条件にしている" loading="lazy"><figcaption>GitHubのDifyのLICENSE（2026年10月27日）</figcaption></figure>
 
 会社の使い方に当てはめると、次のように読めます。
 
@@ -174,7 +174,7 @@ Difyはチャットボット・ワークフロー・エージェントを画面�
 
 [Enterpriseのページ](https://dify.ai/jp/pricing/dify-enterprise)の金額は「Custom」で、問い合わせて見積もりを取ります。含まれるのは商用ライセンス、複数のワークスペース、SSO（SAML・OIDC・OAuth2）、高可用性の構成、パートナーによるSLA、公式の更新と保守、技術サポートです。よくある質問によると、表示の料金はプランの中心の機能だけで、追加の機能・連携・専任のサポート・構築は別に見積もります。教育機関やオープンソースのプロジェクトには特別な価格があります。
 
-<!-- SHOT: 画面 https://dify.ai/jp/pricing/dify-enterprise ・探す語「エンタープライズ」・赤枠 Enterpriseのカードの「Custom」と含まれる機能の一覧・PC・alt「DifyのEnterpriseのページ。コミュニティ版は無料で単一ワークスペース、Enterpriseは個別見積もりで商用ライセンス・複数ワークスペース・SSO・パートナーによるSLAを含む」・figcaption「Dify Enterpriseのページ（2026年10月27日）」 -->
+<figure class="post-figure"><img src="/media/images/dify-pricing/dfy_enterprise.png" alt="DifyのEnterpriseのページ。コミュニティ版は無料で単一ワークスペース、Enterpriseは個別見積もりで商用ライセンス・複数ワークスペース・SSO・パートナーによるSLAを含む" loading="lazy"><figcaption>Dify Enterpriseのページ（2026年10月27日）</figcaption></figure>
 
 国内では[リコージャパン](https://www.ricoh.co.jp/products/list/dify)がライセンスの販売と構築を受けています。ライセンスはコミュニティ・Essential（ワークスペース3・ユーザー20名）・Standard（ワークスペース10・ユーザー100名）・Enterpriseで、価格は問い合わせです。EssentialとStandardは[2026年6月1日に提供が始まりました](https://digitalpr.jp/r/135862)。国内の会社と契約したい場合は、販売店を通す道もあります。
 
