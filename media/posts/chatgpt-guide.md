@@ -1,6 +1,7 @@
 ---
 title: 【2026年9月】ChatGPTの使い方を公式ヘルプで確認｜モデル選択・ファイル・プラグイン
 date: 2026-09-23
+modified: 2026-10-27
 category: AI検索対策
 description: ChatGPTの使い方を2026年9月の公式ヘルプで確認しました。Thinkingのスライダーによるモデル選択、ライブラリからのファイル参照、カスタムGPTの終了予定とプラグインへの移行までまとめます。
 cover_tag: 使い方
@@ -46,21 +47,23 @@ chatgpt.comはアカウントを作る前に入力欄へそのまま質問を打
 
 ## モデルは考える深さで選ぶ
 
-2026年9月時点のモデル選択は、モデル名の一覧から選ぶ形ではありません。**Thinkingのスライダー**で、どれだけ考えさせるかを選びます。
+2026年10月時点のモデル選択は、モデル名の一覧から選ぶ形ではありません。**Thinkingのスライダー**で、どれだけ考えさせるかを選びます。
 
 | 段階 | 中身 | 使えるプラン |
 |---|---|---|
-| Instant | 日常の質問向け。有料はGPT-5.6 Sol、無料とGoはGPT-5.6 Luna | 全プラン |
-| Medium | 標準の思考。GPT-5.6 Sol | Plus・Pro・Business・Enterprise |
-| High | 思考を延ばす。GPT-5.6 Sol | Plus・Pro・Business・Enterprise |
-| Extra High | GPT-5.6 Solで最も深い段階 | Pro・Business・Enterprise |
-| Pro | GPT-5.6 Sol ProとGPT-6 Pro | Pro・Business・Enterprise |
+| Instant | 日常の質問向け。有料はGPT-6 Sol、無料とGoはヘルプではGPT-5.6 Luna | 全プラン |
+| Medium | 標準の思考。GPT-6 Sol | Plus・Pro・Business・Enterprise |
+| High | 思考を延ばす。GPT-6 Sol | Plus・Pro・Business・Enterprise |
+| Extra High | GPT-6 Solで最も深い段階 | Pro・Business・Enterprise |
+| Pro | GPT-6 Pro（GPT-6 Astra）とGPT-5.6 Sol Pro | Pro・Business・Enterprise |
 
-<figure class="post-figure"><img src="/media/images/chatgpt-guide/cg_03_fig_thinking.png" alt="ChatGPTの思考の段階とプランの対応図。Instantは全プラン、MediumとHighはPlus以上、Extra HighとProはProとBusinessとEnterpriseのみ。無料とGoにはSolの段階がなくThinkはGPT-5.6 Lunaが担当する" loading="lazy"><figcaption>思考の段階と、それぞれが使えるプラン</figcaption></figure>
+10月7日から、有料プランでGPT-6を選ぶとInstantからExtra HighまではGPT-6 Solが動きます。GPT-5.6 Solを自分で選んだときはGPT-5.6のままです。
+
+<figure class="post-figure"><img src="/media/images/chatgpt-guide/cg_03_fig_thinking.png" alt="ChatGPTの思考の段階とプランの対応図。Instantは全プランで有料はGPT-6 Sol、MediumとHighはPlus以上、Extra HighとProはProとBusinessとEnterpriseのみ。無料とGoにはMedium以上の段階がなくThinkはヘルプではGPT-5.6 Lunaが担当する" loading="lazy"><figcaption>思考の段階と、それぞれが使えるプラン</figcaption></figure>
 
 選ぶときに効くのは、日常でどの段階まで使うかです。Highまでで足りるならPlus、それより上の段階を常用するなら上位プランという分かれ方になります。
 
-無料版とGoにはGPT-5.6 Solの段階がありません。難しい質問には「Think」を使いますが、中身はGPT-5.6 Lunaです。日常のテキストチャットの回数は、無料版とGoでも上限なしと公式に書かれています。ファイルのアップロード、画像生成、音声、データ分析などには別の上限があります。
+無料版とGoにはMedium以上の段階がありません。難しい質問には「Think」を使い、モデルのヘルプでは中身はGPT-5.6 Lunaです。料金ページの比較表と10月7日のリリースノートは無料とGoのモデルをGPT-6 Lunaと書いていて、公式の中で表記が分かれています（2026年10月27日確認）。日常のテキストチャットの回数は、無料版とGoでも上限なしと公式に書かれています。ファイルのアップロード、画像生成、音声、データ分析などには別の上限があります。
 
 GPT-6 Astraはチャットでは**GPT-6 Pro**という名前でProとBusinessとEnterpriseに提供されます。Plusの契約でAstraに触れるのは、チャットではなくChatGPT WorkとCodexの中です。料金ページの比較表ではPlusのGPT-6 Astraが「上限あり」と出ますが、これはチャットではなくChatGPT WorkとCodexでの提供を指します。
 

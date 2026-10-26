@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】GPT-6 Astraとは？ChatGPTで使えるプラン・上限・料金・GPT-5.6との違い
 date: 2026-09-17
+modified: 2026-10-27
 category: AI検索対策
 description: OpenAIのGPT-6 Astraを公式の発表とヘルプで確認。ChatGPTのどのプランのどの画面で使えるか、上限と料金、9月に加わったGPT-6.1 SolやPro 500との関係、GPT-5.6との使い分けを整理しました。
 cover_tag: 解説
@@ -56,6 +57,7 @@ GPT-6 Astra には呼び名が2つあります。APIのモデルIDと ChatGPT Wo
 | 9月22日 | GPT-6 Sol と GPT-6 Luna を Work・Codex・API に追加 | GPT-6 は3段構成に。チャットには来ていない |
 | 9月29日 | GPT-6.1 Sol を Work・Codex・API に追加 | Astra に近い性能を5分の1の API 単価で |
 | 9月29日 | 月500ドルの Pro 500 を新設、Pro 200 の新規受付を再開 | Astra を速く動かす Ultrafast は Pro の中では Pro 500 だけ |
+| 10月7日 | チャットのモデルが GPT-6 に（有料は GPT-6 Sol、無料・Go はリリースノートでは GPT-6 Luna） | 思考レベルの「Pro」は引き続き Astra の GPT-6 Pro |
 | 9月29日 | Astra で動く常時稼働のエージェント「dot」を発表 | Pro と Business Premium から順次 |
 
 出典は[ChatGPTのリリースノート](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)と各発表ページです。
@@ -64,7 +66,7 @@ GPT-6 Astra には呼び名が2つあります。APIのモデルIDと ChatGPT Wo
 
 [GPT-6 Sol と Luna の発表](https://openai.com/ja-JP/index/introducing-gpt-6-sol-and-luna/)で、Astra は3段の一番上という位置づけに変わりました。Sol は日常の難しい仕事向け、Luna は大量の定型処理向けで、どちらも Astra と同じ手法で学習しています。さらに9月29日の[GPT-6.1 Sol の発表](https://openai.com/ja-JP/index/introducing-gpt-6-1-sol/)は、**エージェント型のコーディングや画面操作で Astra に迫る性能を、Astra の5分の1の単価で出す**と書いています。
 
-この3つは今のところ ChatGPT Work と Codex と API の中だけのモデルです。**通常のチャットで動いているのは GPT-5.6 Sol のままで、チャットで GPT-6 世代を使えるのは「Pro」を選んだときの GPT-6 Pro だけ**という形は変わっていません。
+9月末の時点で、この3つは ChatGPT Work と Codex と API の中だけのモデルでした。**10月7日からは通常のチャットも GPT-6 になり、有料プランでは GPT-6 Sol、思考レベルの「Pro」では GPT-6 Astra の GPT-6 Pro が動きます。** GPT-6.1 Sol は今も Work と Codex で選ぶモデルです。
 
 ### Proのチャット回数がヘルプから消えた
 
@@ -103,7 +105,7 @@ Pro 200ドルで GPT-6 Pro の週の上限に達すると、ChatGPTは自動で 
 
 入力欄の右にある思考レベル（Instant・Medium・High・Extra High・Pro）で**「Pro」を選ぶ**と、対象プランでは GPT-6 Pro が使えます。GPT-5.6 Sol Pro を使いたいときはモデルメニューで GPT-5.6 Sol を選んでから Pro を選びます。9月14日に自動の切り替えが廃止されたので、「もっと考えて」と頼んでも思考レベルは上がりません（安全上の理由を除く）。
 
-無料と Go では Think（GPT-5.6 Luna）は選べますが、Pro の選択肢はありません。
+無料と Go では Think（モデルのヘルプでは GPT-5.6 Luna）は選べますが、Pro の選択肢はありません。
 
 
 ### ChatGPT Work で使う
@@ -150,7 +152,7 @@ Astra の追加で Plus と Pro の月額は変わっていません。日本の
 
 ドルでは Pro 100・Pro 200・Pro 500 の3つで、Ultrafast（Astra を速く動かす設定）が付くのは Pro の中では Pro 500 だけです。Ultrafast は通常（Standard）の8倍の速さで利用枠を減らすため、**同じ Pro でも速度を選ぶと使える量は大きく減ります**。
 
-料金ページの比較表を見ると Plus の列で GPT-6 Astra・GPT-6.1 Sol・GPT-6 Sol・GPT-6 Luna がすべて「上限あり」です。Pro の列は「拡張」で、無料と Go の列はどれも横棒の表示です。
+料金ページの比較表を見ると Plus の列で GPT-6 Astra・GPT-6.1 Sol・GPT-6 Sol・GPT-6 Luna がすべて「上限あり」です。Pro の列は「拡張」で、無料と Go の列で「はい」が付くのは GPT-6 Luna だけです。
 
 <figure class="post-figure post-figure--sp"><img src="/media/images/gpt-6-astra-guide/astra_08_pricing_models_v2.jpg" alt="ChatGPT料金ページの比較表のモデル欄でPlusを選んだ画面。GPT-6.1 Sol、GPT-6 Astra、GPT-6 Sol、GPT-6 Lunaが上限あり、GPT-5.6 Solなどが拡張と表示されている" loading="lazy"><figcaption>比較表のモデル欄（Plus を選んだ表示、2026年10月5日撮影）</figcaption></figure>
 
@@ -169,7 +171,7 @@ GPT-5.6 Sol の Standard は入力$4・出力$20なので、単純比較で2.5�
 
 ## GPT-5.6・GPT-6.1 Solとの違い
 
-チャットの普段使いは今も GPT-5.6 です。無料と Go の既定モデルは GPT-5.6 Luna、有料プランの Instant から Extra High までは GPT-5.6 Sol が動いています。Work・Codex・API では GPT-6.1 Sol が新しい選択肢になりました。
+10月7日から、チャットの普段使いは GPT-6 に変わりました。有料プランで GPT-6 を選ぶと、Instant から Extra High までは GPT-6 Sol が動きます。GPT-5.6 Sol を自分で選んだときは GPT-5.6 のままです。無料と Go のモデルはリリースノートと料金ページでは GPT-6 Luna、モデルのヘルプでは GPT-5.6 Luna と書かれていて、公式の中で表記が分かれています（2026年10月27日確認）。Work・Codex・API では GPT-6.1 Sol が新しい選択肢になりました。
 
 | | GPT-6 Astra | GPT-6.1 Sol | GPT-5.6 Sol |
 |---|---|---|---|
@@ -244,7 +246,7 @@ Astra は書かれた推論を人が監視しにくくなったと OpenAI が明
 
 ### GPT-6 Astraは無料版やGoで使えますか？
 
-使えません。無料とGoの既定モデルはGPT-5.6 Lunaです。料金ページの比較表でも、無料とGoの列は GPT-6 の4モデルがすべて横棒になっています。
+使えません。料金ページの比較表で、無料とGoに「はい」が付くGPT-6のモデルはGPT-6 Lunaだけです。GPT-6 Astra・GPT-6 Sol・GPT-6.1 Solは対象外です。
 
 ### GPT-6 Astraは3,000円のPlusで使えますか？
 
