@@ -28,7 +28,7 @@ AI Overviewsは、Google検索の結果の上に出る生成AIの要約です。
 
 Googleの[生成AI機能向けの最適化ガイド](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)は、回答の作り方を2つの手法で説明しています。1つはGoogle検索のインデックスから関連するページを取り出し、回答の根拠にするRAG（グラウンディング）です。もう1つは元の質問から関連する検索をいくつも同時に作るクエリファンアウトで、ガイドは「雑草だらけの芝生を直す方法」から除草剤や予防の検索へ広げる例を挙げています。**こうして集めた検索結果のうち、回答の根拠に選ばれたページがリンクとして表示されます。**
 
-<!-- SHOT: 図 cao_how.html → cao_how.png・alt「AIによる概要の引用元が選ばれるまで。利用者が質問する。関連する検索をいくつも同時に走らせる。インデックスから根拠になるページを取る。回答と一緒に選ばれたページをリンクで出す」 -->
+<figure class="post-figure"><img src="/media/images/cited-by-ai-overviews/cao_how.png" alt="AIによる概要の引用元が選ばれるまで。利用者が質問する。関連する検索をいくつも同時に走らせる。インデックスから根拠になるページを取る。回答と一緒に選ばれたページをリンクで出す" loading="lazy"></figure>
 
 AIによる概要は、すべての検索に出るわけではありません。AI 機能とウェブサイトは、従来の検索結果に付加価値があるとシステムが判断した場合にだけ表示されると説明し、通常は出ないと書いています（原文は「通常はトリガーされません」）。
 
@@ -46,7 +46,7 @@ AI 機能とウェブサイト（日本語版は2025年12月31日更新）の冒
 
 > SEO のベスト プラクティスは、引き続き Google 検索の AI 機能（AI による概要や AI モードなど）でも有効です。AI による概要や AI モードにコンテンツが表示されるための追加の要件はなく、別途特別な最適化を行う必要もありません。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/appearance/ai-features?hl=ja・本文だけにある探す語「別途特別な最適化を行う必要もありません」・赤枠にする語「SEO のベスト プラクティスは、引き続き」から「別途特別な最適化を行う必要もありません。」まで・PC・alt「Google検索セントラルのAI機能とウェブサイトのページ。AIによる概要やAIモードに表示されるための追加の要件はなく特別な最適化も必要ないと書かれている」・figcaption「Google 検索セントラル AI 機能とウェブサイト（2026年10月29日）」 -->
+<figure class="post-figure"><img src="/media/images/cited-by-ai-overviews/cao_ai_features.png" alt="Google検索セントラルのAI機能とウェブサイトのページ。AIによる概要やAIモードに表示されるための追加の要件はなく特別な最適化も必要ないと書かれている" loading="lazy"><figcaption>Google 検索セントラル AI 機能とウェブサイト（2026年10月29日）</figcaption></figure>
 
 同じページは、新しい機械可読のファイルやAIテキストファイル、特別なschema.orgの構造化データも要らないと書いています。最適化ガイドも、AEOやGEOと呼ばれる作業は、Google検索から見ればSEOであることに変わりはないという立場です。**Googleの公式の説明では、AIによる概要の対策は通常のSEOと同じ作業です。**
 
@@ -62,7 +62,7 @@ AI 機能とウェブサイトが、ページがリンクとして表示され�
 
 これは2026年8月31日に全サイトに入った[検索の生成 AI 設定](https://support.google.com/webmasters/answer/16908024?hl=ja)のことです。**既定は「含める」で、除外を選ぶとAIによる概要・AIモード・Discoverの生成AI機能にサイトが出なくなります。** 除外は通常の検索の順位や掲載の判断には使われず、AIの学習にも影響しないとヘルプは説明しています。
 
-<!-- SHOT: 画面 https://support.google.com/webmasters/answer/16908024?hl=ja・本文だけにある探す語「検索の生成 AI 機能にサイトのリンクとコンテンツを含める」・赤枠にする語「検索の生成 AI 機能にサイトのリンクとコンテンツを含める」から「検索の生成 AI 機能からサイトのリンクとコンテンツを除外する」の項目の終わりまで・PC・alt「Search Consoleヘルプの検索の生成AI設定。サイトのリンクとコンテンツを生成AI機能に含めるのがすべてのプロパティの既定で、除外を選ぶと生成AI機能に表示されなくなる」・figcaption「Search Console ヘルプ 検索の生成 AI 設定（2026年10月29日）」 -->
+<figure class="post-figure"><img src="/media/images/cited-by-ai-overviews/cao_gai_setting.png" alt="Search Consoleヘルプの検索の生成AI設定。サイトのリンクとコンテンツを生成AI機能に含めるのがすべてのプロパティの既定で、除外を選ぶと生成AI機能に表示されなくなる" loading="lazy"><figcaption>Search Console ヘルプ 検索の生成 AI 設定（2026年10月29日）</figcaption></figure>
 
 ### 独自のコンテンツの扱い
 
@@ -105,7 +105,7 @@ AI 機能とウェブサイトが、ページがリンクとして表示され�
 
 そのうえでURL検査でインデックスの登録を確かめ、robots.txtに加えてCDNやWAFでGooglebotを止めていないかを、サイトの管理者と一緒に見ます。
 
-<!-- SHOT: 図 cao_check.html → cao_check.png・alt「AIによる概要への表示を止める設定の確かめ方。Search Consoleの生成AI設定が含めるになっているか。URL検査でインデックスに登録されているか。nosnippetやmax-snippetを付けていないか。robots.txtやCDNでGooglebotを止めていないか」 -->
+<figure class="post-figure"><img src="/media/images/cited-by-ai-overviews/cao_check.png" alt="AIによる概要への表示を止める設定の確かめ方。Search Consoleの生成AI設定が含めるになっているか。URL検査でインデックスに登録されているか。nosnippetやmax-snippetを付けていないか。robots.txtやCDNでGooglebotを止めていないか" loading="lazy"></figure>
 
 ### スニペットの制御
 
@@ -183,7 +183,7 @@ AI機能の分だけを見るのが、2026年8月31日に全サイトに入っ�
 
 ガイドのすべてを行う必要は無いと、最適化ガイド自身が書いています。どこに手をかけるかを社内で先に決めておくと迷いません。
 
-<!-- SHOT: 図 cao_decide.html → cao_decide.png・alt「AIによる概要の対策で会社が決めること。対象にするページを事業に近い質問から選ぶ。生成AI設定と中身の担当を分ける。毎月の表示回数と手で検索した記録を測る」 -->
+<figure class="post-figure"><img src="/media/images/cited-by-ai-overviews/cao_decide.png" alt="AIによる概要の対策で会社が決めること。対象にするページを事業に近い質問から選ぶ。生成AI設定と中身の担当を分ける。毎月の表示回数と手で検索した記録を測る" loading="lazy"></figure>
 
 ### 対象にするページ
 
