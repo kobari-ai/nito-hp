@@ -61,7 +61,7 @@ SEO会社の記事ではエンティティを強くすると評価が上がる�
 
 [AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)のページは、AIによる概要とAIモードに出るための追加の要件や特別な最適化は無いとしています。そのうえで、SEOの基本に「構造化データをページに表示されるテキストと一致させます」とビジネス プロフィールの情報を最新に保つことを挙げました。
 
-同じ箇所によれば、特別なschema.orgの構造化データを足す必要もありません。**AI検索のための専用マークアップは無く、画面の表記と構造化データを食い違わせないことが公式の求めです。**
+同じ箇所によれば、特別なschema.orgの構造化データを足す必要もありません。**GoogleのAI機能（AIによる概要・AIモード）のための専用マークアップは無く、画面の表記と構造化データを食い違わせないことが公式の求めです。**
 
 <figure class="post-figure"><img src="/media/images/entity-seo/ent_ai_features.png" alt="AI機能とウェブサイトのページ。構造化データを表示されるテキストと一致させ、特別なschema.orgの構造化データを追加する必要は無いと書かれている" loading="lazy"><figcaption>AI 機能とウェブサイト（Google検索セントラル、2026年10月29日）</figcaption></figure>
 
@@ -73,14 +73,14 @@ SEO会社の記事ではエンティティを強くすると評価が上がる�
 |---|---|
 | 構造化データで組織を伝える | 書いてある。組織を明確化できる |
 | sameAsでSNSなどを結ぶ | 書いてある。追加情報があれば必要に応じて |
-| ナレッジパネルは申請で出せる | 書いていない。表示は自動で決まる |
+| ナレッジパネルは申請で出せる | 出せないと書いてある。手動では作れない |
 | エンティティを強くするとE-E-A-Tが上がる | 見当たらない |
 | エンティティが強いと順位が上がる | 見当たらない |
-| AI検索には専用のマークアップが要る | 要らないと書いてある |
+| GoogleのAI機能には専用のマークアップが要る | 要らないと書いてある |
 
 E-E-A-Tそのものは[E-E-A-Tとは](/media/eeat-for-ai-search/)、構造化データ全般の扱いは[llms.txtとは](/media/llms-txt-structured-data/)の構造化データの節に書いています。
 
-<figure class="post-figure"><img src="/media/images/entity-seo/ent_02_official.png" alt="Googleの文書に書いてあることと見当たらないことの図。書いてあるのは組織の明確化・ロゴとサイト名・ナレッジパネルは自動。見当たらないのは順位やE-E-A-Tが上がるという説明" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_02_official.png" alt="Googleの文書に書いてあることと見当たらないことの図。書いてあるのは組織の明確化・ロゴとサイト名・ナレッジパネルは手動で作れない・GoogleのAI機能に専用の記述は要らない。見当たらないのは順位やE-E-A-Tが上がるという説明" loading="lazy"></figure>
 
 ## 会社が整えること
 
@@ -90,7 +90,7 @@ E-E-A-Tそのものは[E-E-A-Tとは](/media/eeat-for-ai-search/)、構造化デ
 |---|---|---|
 | 名前の表記をそろえる | 広報・総務 | 決められる |
 | 基準の会社概要ページ | Web担当 | 決められる |
-| OrganizationとsameAs | Web担当・制作会社 | 決められる。反映はGoogleのクロール後 |
+| OrganizationとsameAs | Web担当・制作会社 | 入れるのは決められる。使うかはGoogleが決める |
 | サイト名の指定 | Web担当 | 指定はできる。表示はGoogleが決める |
 | Googleビジネスプロフィール | 拠点の担当 | 拠点で客に応対する会社なら決められる |
 | 社外のページ | 広報・営業 | 決められない。載せるのは相手 |
@@ -111,7 +111,7 @@ E-E-A-Tそのものは[E-E-A-Tとは](/media/eeat-for-ai-search/)、構造化デ
 
 ### ③ OrganizationとsameAsを入れる
 
-会社概要ページかホームページに、次のようなJSON-LDを入れます。値は架空の会社の例で、Googleの組織のページにあるプロパティから会社の見分けに関わるものを選びました。
+会社概要ページかホームページに、次のようなJSON-LDを入れます。値は架空の会社の例で、Googleの組織のページにあるプロパティから、会社概要に載る項目を選びました。
 
 ```json
 {
@@ -167,11 +167,11 @@ sameAsについて、schema.orgの定義は「その対象が何者かを曖昧�
 
 ナレッジパネルの表示は前の節のとおりGoogleの自動システムが決めます。出ていないパネルは申請では作れず、出てから認証を受け、誤りを公開ページのURLつきで報告する流れです。
 
-Wikipediaの記事も会社では決められません。[特筆性（組織）](https://ja.wikipedia.org/wiki/Wikipedia:%E7%89%B9%E7%AD%86%E6%80%A7_(%E7%B5%84%E7%B9%94))の目安では、企業に記事が立つのは、対象から独立した信頼できる二次情報源で報道されている場合です。[自分自身の記事を作らない](https://ja.wikipedia.org/wiki/Wikipedia:%E8%87%AA%E5%88%86%E8%87%AA%E8%BA%AB%E3%81%AE%E8%A8%98%E4%BA%8B%E3%82%92%E4%BD%9C%E3%82%89%E3%81%AA%E3%81%84)のページは「あなたの会社」も対象とし、自分についての記事を新しく作ることは基本的に推奨されないと書いています。**Wikipediaの記事の作成を請け負う提案を受けたら、このガイドラインと合うかを先に確かめてください。**
+Wikipediaの記事も会社では決められません。[特筆性（組織）](https://ja.wikipedia.org/wiki/Wikipedia:%E7%89%B9%E7%AD%86%E6%80%A7_(%E7%B5%84%E7%B9%94))の目安では、企業に記事が立つのは、対象から独立した信頼できる二次情報源で報道されている場合です。[自分自身の記事を作らない](https://ja.wikipedia.org/wiki/Wikipedia:%E8%87%AA%E5%88%86%E8%87%AA%E8%BA%AB%E3%81%AE%E8%A8%98%E4%BA%8B)のページは「あなたの会社」も対象とし、自分についての記事を新しく作ることは基本的に推奨されないと書いています。**Wikipediaの記事を報酬を受けて書く人は、依頼主を開示する義務があります。作成を請け負う提案を受けたら、開示の有無と特筆性の目安を先に確かめてください。**
 
 Wikidataの[自伝のガイドライン](https://www.wikidata.org/wiki/Wikidata:Autobiography)は自分の項目の編集を認めつつ、基準を満たすと確信できない限り新しく作るべきではないとしています。AIの答えも、会社が直接書き換える場所はありません。
 
-<figure class="post-figure"><img src="/media/images/entity-seo/ent_wp_self.png" alt="Wikipediaの自分自身の記事を作らないのページ。自分自身についての記事を新しく作ることは基本的に推奨されないと書かれている" loading="lazy"><figcaption>Wikipedia:自分自身の記事を作らない（ウィキペディア、2026年10月29日）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_wp_self.png" alt="Wikipediaの「自分自身の記事」のページ。自分自身についての記事を新しく作ることは基本的に推奨されないと書かれている" loading="lazy"><figcaption>Wikipedia:自分自身の記事（ウィキペディア、2026年10月29日）</figcaption></figure>
 
 ## AI検索との関係
 
@@ -189,7 +189,7 @@ nitoはこの記事のために、AIに同名の会社を取り違えさせる�
 
 ### 社名で検索する
 
-正式名と通称の両方で検索し、ナレッジパネルが出るか、中身が会社概要と合っているかを見ます。誤りがあれば、パネルの［フィードバック］から公開ページのURLを添えて報告します。ヘルプによれば、認証を受けたアカウントからの報告の審査は数日以内です。
+正式名と通称の両方で検索し、ナレッジパネルが出るか、中身が会社概要と合っているかを見ます。誤りがあれば、パネルの［フィードバック］から公開ページのURLを添えて報告します。ヘルプによれば、認証を受けたアカウントからの報告の審査は数日以内です（これより長くかかる場合もある、という但し書きつき）。
 
 ### 構造化データを確かめる
 
@@ -214,7 +214,7 @@ ChatGPT・Gemini・Perplexity・AIモードに同じ質問を入れて、答え�
 - **正式表記の決め手**: 表記の一覧を誰が持ち、変えるときに誰が承認するか
 - **直す順番**: 社名変更・移転・代表の交代のとき、会社概要・構造化データ・ビジネス プロフィール・SNS・社外の掲載先をどの順に直すか
 - **sameAsの範囲**: 更新を続けるアカウントだけを入れるか
-- **ナレッジパネルの認証**: 誰のGoogleアカウントで受けるか。ヘルプでは代表者にオーナー・管理者・投稿者の権限がある
+- **ナレッジパネルの認証**: 誰のGoogleアカウントで受けるか。認証のあとは別のGoogleアカウントを正式な代表者として足せ、権限はオーナー・管理者・投稿者に分かれる
 - **Wikipediaの方針**: 自社で書かない・頼まないと決めるか
 - **測り方**: 4つのAIに聞く質問と記録の頻度
 
@@ -272,4 +272,4 @@ Googleは期間を公表していません。構造化データは公開後の�
   - 「[AI Overviews: About last week](https://blog.google/products/search/ai-overviews-update-may-2024/)」（2024年5月30日）
 - schema.org「[sameAs](https://schema.org/sameAs)」「[Organization](https://schema.org/Organization)」
 - Wikidata「[Wikidata:Autobiography](https://www.wikidata.org/wiki/Wikidata:Autobiography)」
-- ウィキペディア「[Wikipedia:特筆性 (組織)](https://ja.wikipedia.org/wiki/Wikipedia:%E7%89%B9%E7%AD%86%E6%80%A7_(%E7%B5%84%E7%B9%94))」「[Wikipedia:自分自身の記事を作らない](https://ja.wikipedia.org/wiki/Wikipedia:%E8%87%AA%E5%88%86%E8%87%AA%E8%BA%AB%E3%81%AE%E8%A8%98%E4%BA%8B%E3%82%92%E4%BD%9C%E3%82%89%E3%81%AA%E3%81%84)」
+- ウィキペディア「[Wikipedia:特筆性 (組織)](https://ja.wikipedia.org/wiki/Wikipedia:%E7%89%B9%E7%AD%86%E6%80%A7_(%E7%B5%84%E7%B9%94))」「[Wikipedia:自分自身の記事](https://ja.wikipedia.org/wiki/Wikipedia:%E8%87%AA%E5%88%86%E8%87%AA%E8%BA%AB%E3%81%AE%E8%A8%98%E4%BA%8B)」「[Wikipedia:有償の寄稿の開示](https://ja.wikipedia.org/wiki/Wikipedia:%E6%9C%89%E5%84%9F%E3%81%AE%E5%AF%84%E7%A8%BF%E3%81%AE%E9%96%8B%E7%A4%BA)」（方針。報酬を受けて寄稿する人は雇用主・依頼主を開示しなければならない）
