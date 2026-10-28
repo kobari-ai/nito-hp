@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】社内チャットボットの選び方｜製品を買うか自社で作るか・費用・RAG | nito Column</title>
+    <meta name="description" content="社内チャットボットを製品で買うか、Microsoft 365・Google Workspace・ChatGPT・Difyで自社で組むかを公式の情報で比較。2つの型、費用の決まり方、RAGの仕組み、失敗しやすい所、会社が決めることまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/internal-chatbot/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】社内チャットボットの選び方｜製品を買うか自社で作るか・費用・RAG">
+    <meta property="og:description" content="社内チャットボットを製品で買うか、Microsoft 365・Google Workspace・ChatGPT・Difyで自社で組むかを公式の情報で比較。2つの型、費用の決まり方、RAGの仕組み、失敗しやすい所、会社が決めることまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/internal-chatbot/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/internal-chatbot.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/internal-chatbot.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】社内チャットボットの選び方｜製品を買うか自社で作るか・費用・RAG", "description": "社内チャットボットを製品で買うか、Microsoft 365・Google Workspace・ChatGPT・Difyで自社で組むかを公式の情報で比較。2つの型、費用の決まり方、RAGの仕組み、失敗しやすい所、会社が決めることまで。", "datePublished": "2026-10-29", "dateModified": "2026-10-29", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}}, "publisher": {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/internal-chatbot/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/internal-chatbot.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】社内チャットボットの選び方｜製品を買うか自社で作るか・費用・RAG"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "社内チャットボットは無料で作れますか？", "acceptedAnswer": {"@type": "Answer", "text": "すでに契約している基盤の中なら、新しい契約なしで始められます。M365 Copilotのライセンスを持つ社員がエージェント ビルダーで作って使う分には追加の費用がかかりません。Difyの無料のSandboxは1人・200クレジットが一度きりで、試作向けです。"}}, {"@type": "Question", "name": "M365 Copilotのエージェントは有料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "ライセンスを持つ社員がMicrosoft 365の中で使う分はかかりません（公正利用の上限あり）。ライセンスを持たない社員が使う分と、社外に公開する分はCopilot Studioのクレジットが減ります。"}}, {"@type": "Question", "name": "GeminiのGemは社内だけで共有できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。特定のユーザーを加えるか、一般的なアクセスを［組織内］にします。Gemに上げた指示とファイルは共有した相手全員が見られるので、見せたくない文書は入れません。"}}, {"@type": "Question", "name": "ChatGPTのGPTsで社内ボットを作れますか？", "acceptedAnswer": {"@type": "Answer", "text": "GPTsはプラグインへの移行が進んでいて、カスタムGPTは2026年12月11日に終了する予定です（FedRAMPのワークスペースと、延期が承認されたEnterpriseは2027年2月11日。アカウントに届く案内が優先）。これから作るならプラグインで作り、ワークスペースの中で共有します。"}}, {"@type": "Question", "name": "Difyの社内チャットボットは何人まで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "クラウド版のTeamはメンバー50人までで、月159ドルです。公開したWebアプリを使うだけの社員がメンバーの数に入るかは、料金ページに書かれていません。"}}, {"@type": "Question", "name": "社内チャットボットは製品と自作のどちらが安いですか？", "acceptedAnswer": {"@type": "Answer", "text": "人数と質問の回数で変わります。人数で月額が決まる製品は社員が多いほど高く、OfficeAI社員のBasicのような定額の製品は人数にかかわらず月15万円です。自社の契約で組むと追加の契約は小さく済む一方、文書を整えて直す人の時間がかかります。"}}, {"@type": "Question", "name": "社内チャットボットの効果は何で測りますか？", "acceptedAnswer": {"@type": "Answer", "text": "担当部署に届く問い合わせの件数と、ボットで終わった質問の割合を、入れる前と同じ数え方で比べます。答えられなかった質問の一覧は、次に足す文書を決める材料になります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=051ff6b4">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】社内チャットボットの…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.29</span>
+        </div>
+        <h1 class="post-title">【2026年10月】社内チャットボットの選び方｜製品を買うか自社で作るか・費用・RAG</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/internal-chatbot.jpg" alt="【2026年10月】社内チャットボットの選び方｜製品を買うか自社で作るか・費用・RAG" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Microsoft 365・Google Workspace・ChatGPT Businessはどれも、契約の中で社内の文書に答えるボットを作り、社員に配れるようになりました。社内問い合わせ向けの製品を新しく買う以外の道が、すでに手元にある会社は少なくありません。</p>
+<p>人事・総務・情シスに同じ質問が届き続ける会社で、製品を買うか自社の契約で組むかを決める担当者に向けて、型の違い・費用の決まり方・RAGの仕組み・失敗しやすい所を比べます。製品の契約と各社の画面での作成は試していません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>社内チャットボットは、登録した答えを返すシナリオ型と、社内文書を探して答える生成AIの型（RAG）に分かれる</strong></li>
+<li><strong>自社で組むなら、すでに契約している基盤から選ぶ</strong>。Microsoft 365はエージェント ビルダー、Google WorkspaceはGem、ChatGPT Businessはプラグイン、モデルを選びたいならDify</li>
+<li><strong>うまくいかない原因の多くは文書の側にある</strong>。古い規程・同じ文書の重複・更新する人の不在を、配る前に片づける</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>社内チャットボットの2つの型</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>製品を買う場合</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>自社の契約で組む場合</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>Microsoft 365で組む</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>Google Workspaceで組む</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>ChatGPT Businessで組む</a></li>
+                    <li class="toc-h3"><a href="#s3-4"><span class="toc__n">3-4</span>Difyで組む</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>RAGの仕組み</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>失敗しやすい4つの所</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>古い文書が残る</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>答えの根拠が見えない</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>更新する人がいない</a></li>
+                    <li class="toc-h3"><a href="#s5-4"><span class="toc__n">5-4</span>個人情報と権限</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>会社が決めること</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">社内チャットボットの2つの型</h2>
+<p>チャットボットを入れたのに使われない、という話は生成AIが出る前からありました。当時の主流は想定した質問と答えを登録しておき、選択肢をたどらせるか近い質問を選んで返すシナリオ型です。いま増えているのは規程やマニュアルを読ませておき、質問のたびに該当する箇所を探して文章で答える型で、この仕組みをRAG（検索拡張生成）と呼びます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th></th>
+<th>シナリオ型</th>
+<th>生成AI＋社内文書（RAG）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="">答えの作り方</td>
+<td data-label="シナリオ型">登録した答えをそのまま返す</td>
+<td data-label="生成AI＋社内文書（RAG）">文書から探した箇所をもとに文章を作る</td>
+</tr>
+<tr>
+<td data-label="">向く質問</td>
+<td data-label="シナリオ型">手順が決まった申請・パスワードの再設定</td>
+<td data-label="生成AI＋社内文書（RAG）">規程の読み方・どの書類が要るか</td>
+</tr>
+<tr>
+<td data-label="">手間がかかる所</td>
+<td data-label="シナリオ型">質問と答えを1件ずつ登録して直す</td>
+<td data-label="生成AI＋社内文書（RAG）">文書を整え、答えが合っているか試す</td>
+</tr>
+<tr>
+<td data-label="">外れたとき</td>
+<td data-label="シナリオ型">該当なしと返る</td>
+<td data-label="生成AI＋社内文書（RAG）">文書に無いことを答えることがある</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_01_types.png" alt="社内チャットボットの2つの型を縦に並べた図。シナリオ型は登録した答えを返し、決まった手続きに向く。生成AIと社内文書の型は文書から探した箇所で答えを作り、規程の読み方に向く" loading="lazy"></figure>
+
+<p>Microsoftの<a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-messages-management">請求レートと管理</a>でも、Copilot Studioは作成者が書いた決まった返事の「従来型の回答」を1クレジット、生成回答を2クレジットと分けて数えています。<strong>決まった手続きはシナリオ型、文書を読まないと答えられない質問は生成AIの型と、1つのボットの中で使い分けるのが現実的です。</strong> 申請の締め日のように1字違うと困る答えまで生成に任せると、確かめる手間が増えます。</p>
+<h2 id="s2">製品を買う場合</h2>
+<p>社内問い合わせ向けの製品は、TeamsやSlackのような社内チャットに窓口を置き、答えられない質問を担当者へ引き継ぐところまでを1つにしたものが中心です。たとえば<a href="https://aisaas.pkshatech.com/ai-helpdesk/">PKSHA AIヘルプデスク</a>は、Teamsに窓口を集め、FAQで答える・文書を読んで答えを作る・人が対応した記録からFAQを作る、の3つを1つの製品に入れています。</p>
+<p>選ぶときに差が出るのは機能の数より費用の決まり方です。2026年10月29日に各社の料金ページで確かめた例を並べます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>費用の決まり方</th>
+<th>例</th>
+<th>公式ページの記載</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="費用の決まり方">使う人数で月額</td>
+<td data-label="例"><a href="https://hitto.jp/price/">HiTTO</a></td>
+<td data-label="公式ページの記載">利用者数に応じた月額。質問と回答の数では課金せず、初期費用もなし。金額は問い合わせ</td>
+</tr>
+<tr>
+<td data-label="費用の決まり方">定額と回数の上限</td>
+<td data-label="例"><a href="https://officebot.jp/price/">OfficeAI社員</a></td>
+<td data-label="公式ページの記載">Basicは初期費用10万円・月15万円で質問応答が月5,000回。ユーザー数は無制限</td>
+</tr>
+<tr>
+<td data-label="費用の決まり方">見積もり</td>
+<td data-label="例"><a href="https://aisaas.pkshatech.com/ai-helpdesk/">PKSHA AIヘルプデスク</a></td>
+<td data-label="公式ページの記載">製品ページに料金の記載なし</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>人数で決まる製品は社員が多いほど高くなり、定額の製品は質問の回数が上限に収まるかが分かれ目です。</strong> OfficeAI社員のProは月20万円で、質問応答5,000回に加えて調査や資料作成のタスクが月1,000回付きます。EntraIDやOktaとのシングルサインオンは別のオプションで、初期費用5万円と月2万円です。</p>
+<p>見積もりを取る前に、次の4つを各社に同じ形で聞いておくと比べやすくなります。</p>
+<ul>
+<li>文書をどこから取り込むか（SharePointやGoogleドライブとつながるか、ファイルを手で上げるか）</li>
+<li>答えに出典の文書を添えられるか</li>
+<li>答えられない質問をだれに引き継ぎ、そのやり取りが記録に残るか</li>
+<li>データを保存する場所と、使う言語モデル</li>
+</ul>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">自社の契約で組む場合</h2>
+<p>社員の大半が使っている業務の基盤があるなら、新しい製品を買う前に、その契約の中で作れる範囲を確かめます。4つを並べると次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>基盤</th>
+<th>作る場所</th>
+<th>向く範囲</th>
+<th>読ませる文書</th>
+<th>費用のかかり方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="基盤">Microsoft 365</td>
+<td data-label="作る場所">エージェント ビルダー</td>
+<td data-label="向く範囲">小さなチーム。組織全体はCopilot Studio</td>
+<td data-label="読ませる文書">SharePointのファイル100個・OneDriveの50個など</td>
+<td data-label="費用のかかり方">M365 Copilotを持つ社員は追加なし。持たない社員はクレジット</td>
+</tr>
+<tr>
+<td data-label="基盤">Google Workspace</td>
+<td data-label="作る場所">GeminiアプリのGem</td>
+<td data-label="向く範囲">指定した人か組織内</td>
+<td data-label="読ませる文書">Googleドライブのファイル</td>
+<td data-label="費用のかかり方">Workspaceの1人あたりの料金</td>
+</tr>
+<tr>
+<td data-label="基盤">ChatGPT Business</td>
+<td data-label="作る場所">プラグイン</td>
+<td data-label="向く範囲">ワークスペースの中（2人から）</td>
+<td data-label="読ませる文書">スキルの参照ファイルとつないだアプリ</td>
+<td data-label="費用のかかり方">1人月3,050円（年額課金）</td>
+</tr>
+<tr>
+<td data-label="基盤">Dify</td>
+<td data-label="作る場所">チャットのアプリとナレッジ</td>
+<td data-label="向く範囲">公開したWebアプリ</td>
+<td data-label="読ませる文書">Difyのナレッジか、外部の検索</td>
+<td data-label="費用のかかり方">Teamは月159ドルで50人まで。モデルの代金は別</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_02_build.png" alt="自社の契約で社内チャットボットを組む4通りを縦に並べた図。Microsoft 365はエージェント ビルダーでSharePointの文書を読ませる。Google WorkspaceはGemでドライブの文書を読ませる。ChatGPT Businessはプラグインに参照ファイルを付ける。Difyはナレッジに文書を入れてWebアプリで配る" loading="lazy"></figure>
+
+<h3 id="s3-1">Microsoft 365で組む</h3>
+<p>Microsoft 365 Copilotのアプリにあるエージェント ビルダーでは、知識の元としてSharePointのファイルをエージェントごとに100個まで、OneDriveのファイルを50個まで、手元から上げるファイルを20個まで選べます。<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-add-knowledge">ナレッジ ソースを追加する</a>のページによると、SharePointとOneDriveのファイルは既存のアクセス許可と秘密度ラベルに従います。<strong>その文書を開く権限の無い社員が聞いても、文書の中身をもとにした答えは出てきません。ただし手元から上げたファイルは、エージェントを使える全員が中身を見られます。</strong></p>
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_shot_learn_limits.png" alt="Microsoft Learnのナレッジ ソースの制限の表。SharePointのファイルはエージェントごとに最大100個、SharePointのリストは1つ、OneDriveのファイルは50個で、既存のアクセス許可と秘密度ラベルを尊重する" loading="lazy"><figcaption>Microsoft Learn「エージェント ビルダーでエージェントにナレッジ ソースを追加する」（2026年10月29日）</figcaption></figure>
+
+<p>M365 Copilotのライセンスを持つ社員がMicrosoft 365の中で使う分は追加の費用がかからず、持たない社員が使うとクレジットが減ります。部署を越えて配る、業務システムにつなぐ段になったらCopilot Studioに移す流れです。払い方の3通りは<a href="/media/copilot-studio/">Copilot Studioの料金</a>で扱いました。</p>
+<h3 id="s3-2">Google Workspaceで組む</h3>
+<p>Geminiアプリで作るGemは、カスタムの指示と知識のファイルを持たせたボットです。<a href="https://support.google.com/gemini/answer/15146780?hl=ja">Gem を使用する</a>のヘルプによると、Googleドライブから加えたファイルは最新の版が使われるので、規程を直せばGemの答えにも反映されます。</p>
+<p>社内への配り方は<a href="https://support.google.com/gemini/answer/16504957?hl=ja">Gem を共有する</a>にあり、特定のユーザーを閲覧者か編集者として加えるか、一般的なアクセスを［組織内］にします。気をつけたいのは共有の相手です。<strong>Gemに上げた指示とファイルは、Gemを開ける全員が中身を見られます。</strong>NotebookLMのノートブックは共有するGemのソースに使えず、共有そのものもドライブの共有設定に従い管理者が止められます。部署をまたいで社内のシステムにつなぐエージェントは、別の製品の<a href="/media/gemini-enterprise/">Gemini Enterprise</a>の範囲です。</p>
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_shot_gem_share.png" alt="Gemini アプリ ヘルプのGemを共有するのページ。Gemにアップロードしたカスタム指示とファイルはGemにアクセスできるすべてのユーザーが閲覧できるという注意書き" loading="lazy"><figcaption>Gemini アプリ ヘルプ「Gemini アプリで Gem を共有する」（2026年10月29日）</figcaption></figure>
+
+<h3 id="s3-3">ChatGPT Businessで組む</h3>
+<p>ChatGPTで社内向けのボットといえばGPTsでしたが、GPTsは終了に向けてプラグインへ移る途中にあります。OpenAIの<a href="https://learn.chatgpt.com/docs/migrate-custom-gpts">移行ガイド</a>によると、プラグインはスキル（作業の指示と参照ファイル）とアプリ（ほかのサービスとの接続）をまとめたものです。アプリはその社員のアカウントで開ける範囲でしか動きません。Googleドライブにつないでも扱えるのは自分が開ける文書だけで、ほかのファイルが読めるようにはなりません。</p>
+<p><strong>これから作るなら、移行の手間を避けるためにプラグインで始めます。</strong> 共有の範囲と移行の日程は<a href="/media/gpts-internal-share/">GPTsを社内だけで共有する方法</a>、料金は<a href="/media/chatgpt-business/">ChatGPT Businessの解説</a>にまとめました。</p>
+<h3 id="s3-4">Difyで組む</h3>
+<p>Difyは使うモデルを自分で選べ、社内のサーバーにも置ける開発基盤です。<a href="https://docs.dify.ai/ja/use-dify/knowledge/readme">従来型ナレッジベース</a>のドキュメントでは、文書の切り方・探せる形にする方法・探し方を自分で設定し、すでに運用している外部の検索にもつなげられると説明しています。画面の操作で作れる反面、モデルの代金の見積もりと、設定を詰める担当者が要ります。プランと代金の見積もり方は<a href="/media/dify-pricing/">Difyの料金</a>で扱いました。</p>
+<h2 id="s4">RAGの仕組み</h2>
+<p>RAGのモデルは社内文書を覚えるわけではなく、質問のたびに文書を探して読む手順を踏みます。流れは4段です。</p>
+<ol>
+<li>文書を数百字ごとの断片（チャンク）に切り、探せる形で保存する</li>
+<li>質問が来たら、意味の近い断片を探す</li>
+<li>見つけた断片を質問と一緒にモデルに渡す</li>
+<li>モデルが断片をもとに答え、元の文書を出典として示す</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_03_rag.png" alt="RAGの流れを4段で縦に並べた図。文書を断片に切って保存する、質問に近い断片を探す、断片を質問と一緒にモデルに渡す、断片をもとに答えて出典を示す" loading="lazy"></figure>
+
+<p>Difyの<a href="https://docs.dify.ai/en/cloud/use-dify/knowledge-base/test-and-tune">Test and Tune Retrieval</a>は、本当の試験は利用者が聞く質問に正しい断片が返るかどうかだ、と書いています。<strong>答えの質はモデルより先に、正しい断片を探し出せるかで決まります。</strong></p>
+<p>断片に切ると、文書の前提が抜け落ちる場合もあります。池田朋弘さんのチャンネルの<a href="https://www.youtube.com/watch?v=YIxOw0EbM4M">RAGの精度を上げる6つのポイント</a>では、100ページのPDFで製品名が表紙にしか書かれておらず、本文の断片だけでは何の製品の話か分からなかった例が出てきました。文書名や対象を断片に添えると精度が2〜3割上がった、と出演者は話していました（出演者の経験値で、第三者の検証はありません）。添える情報の例です。</p>
+<pre><code class="language-text">文書名: 経費精算規程（2026年4月改定）
+対象: 正社員・契約社員
+担当部署: 経理
+断片: 立て替えた交通費は、翌月5日までに申請する。
+</code></pre>
+<h2 id="s5">失敗しやすい4つの所</h2>
+<p>製品を買っても自社で組んでも、つまずく所はほぼ同じです。</p>
+<h3 id="s5-1">古い文書が残る</h3>
+<p>同じ規程の旧版と新版が両方入っていれば、ボットはどちらも答えの材料にしてしまいます。DifyのAgent ナレッジベースの説明（<a href="https://docs.dify.ai/en/cloud/use-dify/knowledge-base/maintain-knowledge-base">Maintain an Agent Knowledge Base</a>）によると、同じ名前のファイルを上げても置き換わらず、2つ目の文書として加わる仕様です。同期が7日以上成功していない取り込み元には、古くなっているという警告が出ます。<strong>配る前に最新版を1か所に集め、旧版は外すか無効にしておきます。</strong></p>
+<h3 id="s5-2">答えの根拠が見えない</h3>
+<p>答えを信じてよいか社員が判断できなければ、問い合わせは担当者に戻ってきます。Gemには回答から知識の引用を消す設定がありますが、社内向けなら出典は残したほうが確かめやすいでしょう。Microsoftのナレッジ ソースのページも、知識の元を加えたら、その元で答えられる質問を試し、想定どおりの情報が使われたかを見るよう書いています。</p>
+<h3 id="s5-3">更新する人がいない</h3>
+<p>規程は毎年変わるのに、ボットを作った人が異動すると中身はそこで止まったままです。OpenAIの移行ガイドは、GPTごとに担当者を決め、目的・使う相手・指示・参照ファイル・連携先を書き残すよう勧めています。<strong>文書の持ち主（人事・総務・経理）と、ボットの設定を直す人を分けて名前で決めておきます。</strong></p>
+<h3 id="s5-4">個人情報と権限</h3>
+<p>権限の広すぎるフォルダーを読ませれば、本来は見られない社員の答えにも中身が出かねません。Microsoftの<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-share-manage-agents">エージェントの共有と管理</a>によると、エージェントを共有するときにSharePointのファイルとフォルダーも相手に共有でき、あとでエージェントから外しても、そのファイルへのアクセスは残ります。個人データを入力する場面について、<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/">個人情報保護委員会の注意喚起</a>（2023年6月2日）は、本人の同意なく入力した個人データが応答の出力以外の目的で扱われれば、法の規定に違反するおそれがあるとしています。入力した情報が機械学習に使われないかを十分に確かめるよう、同じ注意喚起は続けます。ChatGPT Businessの料金ページの記載は、既定でビジネスデータを学習に使わない、です。人事評価や給与の個別の情報は、最初の文書から外してください。</p>
+<h2 id="s6">会社が決めること</h2>
+<p>作り方より先に決めておくことは4つです。</p>
+<ul>
+<li><strong>対象の問い合わせ</strong>：人事・総務・情シスに届いた質問を多い順に並べ、上から選ぶ</li>
+<li><strong>最初に入れる文書</strong>：対象の質問に答える規程とマニュアルの最新版だけ</li>
+<li><strong>答えられないときの引き継ぎ先</strong>：部署ごとの窓口と、引き継いだ記録の置き場所</li>
+<li><strong>効いたかの測り方</strong>：担当部署に届く問い合わせの件数と、ボットで終わった質問の割合（自己解決率）</li>
+</ul>
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_04_decide.png" alt="社内チャットボットを入れる前に会社が決める4つを縦に並べた図。対象の問い合わせ、最初に入れる文書、答えられないときの引き継ぎ先、効いたかの測り方" loading="lazy"></figure>
+
+<p>問い合わせの件数は、入れる前と同じ数え方で比べないと増減が分かりません。答えられなかった質問も見ておきます。DifyのAgent ナレッジベース（Chatflow・Workflowのアプリで使う新しい種類）では、届いた質問を「何も見つからない」「見つかったが確度が低い」「答えた」に分けて数えられ、よく聞かれる質問を正解の断片と組で登録しておけば、設定を変えるたびに答えが崩れていないかを確かめられます。</p>
+<p>買うか組むかの分かれ目になる条件を表にしました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>条件</th>
+<th>向く方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="条件">社員の大半がMicrosoft 365かWorkspaceを使い、対象は社内規程の質問</td>
+<td data-label="向く方">自社の契約で組む</td>
+</tr>
+<tr>
+<td data-label="条件">担当者への引き継ぎと対応の記録まで1つの画面で回したい</td>
+<td data-label="向く方">製品を買う</td>
+</tr>
+<tr>
+<td data-label="条件">作って直す担当者を社内に置けない</td>
+<td data-label="向く方">製品を買う</td>
+</tr>
+<tr>
+<td data-label="条件">モデルを選びたい・自社のサーバーに置きたい</td>
+<td data-label="向く方">Difyで組む</td>
+</tr>
+</tbody>
+</table></div>
+<p>作り方そのものの3通りの比較は<a href="/media/ai-agent-build/">AIエージェントの作り方</a>にあります。</p>
+<h2 id="s7">よくある質問</h2>
+<h3 id="s7-1">社内チャットボットは無料で作れますか？</h3>
+<p>すでに契約している基盤の中なら、新しい契約なしで始められます。M365 Copilotのライセンスを持つ社員がエージェント ビルダーで作って使う分には追加の費用がかかりません。Difyの無料のSandboxは1人・200クレジットが一度きりで、試作向けです。</p>
+<h3 id="s7-2">M365 Copilotのエージェントは有料ですか？</h3>
+<p>ライセンスを持つ社員がMicrosoft 365の中で使う分はかかりません（公正利用の上限あり）。ライセンスを持たない社員が使う分と、社外に公開する分はCopilot Studioのクレジットが減ります。</p>
+<h3 id="s7-3">GeminiのGemは社内だけで共有できますか？</h3>
+<p>できます。特定のユーザーを加えるか、一般的なアクセスを［組織内］にします。Gemに上げた指示とファイルは共有した相手全員が見られるので、見せたくない文書は入れません。</p>
+<h3 id="s7-4">ChatGPTのGPTsで社内ボットを作れますか？</h3>
+<p>GPTsはプラグインへの移行が進んでいて、カスタムGPTは2026年12月11日に終了する予定です（FedRAMPのワークスペースと、延期が承認されたEnterpriseは2027年2月11日。アカウントに届く案内が優先）。これから作るならプラグインで作り、ワークスペースの中で共有します。</p>
+<h3 id="s7-5">Difyの社内チャットボットは何人まで使えますか？</h3>
+<p>クラウド版のTeamはメンバー50人までで、月159ドルです。公開したWebアプリを使うだけの社員がメンバーの数に入るかは、料金ページに書かれていません。</p>
+<h3 id="s7-6">社内チャットボットは製品と自作のどちらが安いですか？</h3>
+<p>人数と質問の回数で変わります。人数で月額が決まる製品は社員が多いほど高く、OfficeAI社員のBasicのような定額の製品は人数にかかわらず月15万円です。自社の契約で組むと追加の契約は小さく済む一方、文書を整えて直す人の時間がかかります。</p>
+<h3 id="s7-7">社内チャットボットの効果は何で測りますか？</h3>
+<p>担当部署に届く問い合わせの件数と、ボットで終わった質問の割合を、入れる前と同じ数え方で比べます。答えられなかった質問の一覧は、次に足す文書を決める材料になります。</p>
+<h2 id="s8">出典</h2>
+<ul>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder">エージェント ビルダーの概要</a>」「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-add-knowledge">エージェント ビルダーでエージェントにナレッジ ソースを追加する</a>」「<a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-messages-management">請求レートと管理</a>」</li>
+<li>Microsoft「<a href="https://www.microsoft.com/ja-jp/microsoft-365-copilot/pricing/copilot-studio">Microsoft Copilot Studio プランと価格</a>」</li>
+<li>Gemini アプリ ヘルプ「<a href="https://support.google.com/gemini/answer/15146780?hl=ja">Gemini アプリで Gem を使用する</a>」「<a href="https://support.google.com/gemini/answer/16504957?hl=ja">Gemini アプリで Gem を共有する</a>」</li>
+<li>Google Workspace「<a href="https://workspace.google.com/intl/ja/pricing.html">料金プラン</a>」</li>
+<li>OpenAI「<a href="https://learn.chatgpt.com/docs/migrate-custom-gpts">Moving your custom GPT workflows to plugins</a>」</li>
+<li>OpenAI「<a href="https://help.openai.com/ja-jp/articles/20001519">カスタム GPT の移行に関するよくある質問</a>」</li>
+<li>Microsoft「<a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-share-manage-agents">エージェントを共有して管理する</a>」</li>
+<li>Dify Docs「<a href="https://docs.dify.ai/ja/use-dify/knowledge/readme">従来型ナレッジベース</a>」「<a href="https://docs.dify.ai/en/cloud/use-dify/knowledge-base/test-and-tune">Test and Tune Retrieval</a>」「<a href="https://docs.dify.ai/en/cloud/use-dify/knowledge-base/maintain-knowledge-base">Maintain an Agent Knowledge Base</a>」、Dify「<a href="https://dify.ai/jp/pricing">料金</a>」</li>
+<li>HiTTO「<a href="https://hitto.jp/price/">料金体系</a>」、OfficeAI社員「<a href="https://officebot.jp/price/">料金プラン</a>」、PKSHA「<a href="https://aisaas.pkshatech.com/ai-helpdesk/">PKSHA AIヘルプデスク</a>」</li>
+<li>個人情報保護委員会「<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/">生成AIサービスの利用に関する注意喚起等について</a>」（2023年6月2日）</li>
+<li>池田朋弘の生成AIビジネス活用研究所「<a href="https://www.youtube.com/watch?v=YIxOw0EbM4M">RAGの精度を上げる6つのポイント</a>」</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">社内チャットボットの2つの型</a><a href="#s2">製品を買う場合</a><a href="#s3">自社の契約で組む場合</a><a href="#s4">RAGの仕組み</a><a href="#s5">失敗しやすい4つの所</a><a href="#s6">会社が決めること</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/dify-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Difyの料金"><defs><linearGradient id="ecg-5c6c5faa" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5c6c5faa)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Difyの料金</text><line x1="394.8" y1="365.9" x2="805.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.27</div>
+                <div class="rel-card__ttl">【2026年10月】Difyの料金を解説｜プランの選び方・API代・セルフホスト</div>
+            </a>
+            <a href="/media/gemini-enterprise/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gemini Enterpriseとは"><defs><linearGradient id="ecg-76a95603" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-76a95603)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Gemini Enterpriseとは</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.26</div>
+                <div class="rel-card__ttl">【2026年10月】Gemini Enterpriseとは？料金とWorkspaceのGeminiとの違い</div>
+            </a>
+            <a href="/media/copilot-vs-gemini/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CopilotとGeminiの違い"><defs><linearGradient id="ecg-730fa04d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-730fa04d)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">CopilotとGeminiの違い</text><line x1="151.6" y1="365.9" x2="1048.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.25</div>
+                <div class="rel-card__ttl">【2026年10月】CopilotとGeminiの違い｜会社に入れるならどっち？料金・データ・管理</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'internal-chatbot',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
