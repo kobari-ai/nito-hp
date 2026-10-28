@@ -23,7 +23,7 @@ SEO会社から「エンティティSEO」を勧められても、会社とし�
 
 英語のentityは実在するひとまとまりの対象を指す言葉で、Googleは2020年のブログでエンティティを人・場所・物事と説明しています。その事実を集めたしくみがナレッジグラフです。**会社・商品・代表者・本社の所在地は、どれもGoogleが見分ける対象になりえます。**
 
-<!-- SHOT: 図 ent_what.html → ent_01_what.png・alt「ウェブの情報からナレッジグラフができ、社名で検索するとナレッジパネルに出る流れの図。公式サイト・社外のページ・データベースが元になる」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_01_what.png" alt="ウェブの情報からナレッジグラフができ、社名で検索するとナレッジパネルに出る流れの図。公式サイト・社外のページ・Wikidataなどのデータベースが元になる" loading="lazy"></figure>
 
 ### キーワードとの違い
 
@@ -47,7 +47,7 @@ SEO会社の記事ではエンティティを強くすると評価が上がる�
 
 置き場所はホームページか企業情報ページのような単一のページで、全ページに入れる必要はありません。urlは「Google が組織を一意に識別するのに役立ちます」、logoは検索結果やナレッジパネルに出すロゴの把握に役立つ、という書き方です。**Googleが約束しているのは把握や識別に役立つところまでで、順位が上がるとは書いていません。**
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/appearance/structured-data/organization?hl=ja・本文だけにある探す語「組織の管理情報の詳細を把握して」・赤枠にする語「検索結果で組織を明確化できるようになります」・PC・alt「Google検索セントラルの組織の構造化データのページ冒頭。組織の構造化データを追加すると検索結果で組織を明確化できると書かれている」・figcaption「組織（Organization）の構造化データ（Google検索セントラル、2026年10月29日）」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_org_doc.png" alt="Google検索セントラルの組織の構造化データのページ冒頭。組織の構造化データを追加すると検索結果で組織を明確化できると書かれている" loading="lazy"><figcaption>組織（Organization）の構造化データ（Google検索セントラル、2026年10月29日）</figcaption></figure>
 
 ### ナレッジパネルのヘルプ
 
@@ -55,7 +55,7 @@ SEO会社の記事ではエンティティを強くすると評価が上がる�
 
 申請できるのは、すでに出ているパネルの認証です。[Google の認証を受ける](https://support.google.com/knowledgepanel/answer/7534902?hl=ja)の手順はパネル下部の［ナレッジパネルの認証を受ける］から始まります。本人の確認にはYouTube・Search Console・Twitter・Facebookのどれかへのログインを使います。すべてのパネルが認証を受けられるわけではない、という注意も添えられています。
 
-<!-- SHOT: 画面 https://support.google.com/knowledgepanel/answer/7534842?hl=ja・本文だけにある探す語「Google の自動システムによって決定されます」・赤枠にする語「現在のポリシーではナレッジパネルを手動で作成または削除することはできません」・PC・alt「ナレッジパネルのヘルプ。表示と非表示は自動システムが決め、手動で作成または削除はできないと書かれている」・figcaption「自分に関する情報についてフィードバックを送信する（ナレッジパネル ヘルプ、2026年10月29日）」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_kp_manual.png" alt="ナレッジパネルのヘルプ。表示と非表示は自動システムが決め、手動で作成または削除はできないと書かれている" loading="lazy"><figcaption>自分に関する情報についてフィードバックを送信する（ナレッジパネル ヘルプ、2026年10月29日）</figcaption></figure>
 
 ### AI機能のページ
 
@@ -63,7 +63,7 @@ SEO会社の記事ではエンティティを強くすると評価が上がる�
 
 同じ箇所によれば、特別なschema.orgの構造化データを足す必要もありません。**AI検索のための専用マークアップは無く、画面の表記と構造化データを食い違わせないことが公式の求めです。**
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/appearance/ai-features?hl=ja・本文だけにある探す語「構造化データをページに表示されるテキストと一致させます」・赤枠にする語「特別な schema.org の構造化データを追加する必要もありません」・PC・alt「AI機能とウェブサイトのページ。構造化データを表示されるテキストと一致させ、特別なschema.orgの構造化データを追加する必要は無いと書かれている」・figcaption「AI 機能とウェブサイト（Google検索セントラル、2026年10月29日）」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_ai_features.png" alt="AI機能とウェブサイトのページ。構造化データを表示されるテキストと一致させ、特別なschema.orgの構造化データを追加する必要は無いと書かれている" loading="lazy"><figcaption>AI 機能とウェブサイト（Google検索セントラル、2026年10月29日）</figcaption></figure>
 
 ### SEO会社の説明との違い
 
@@ -80,7 +80,7 @@ SEO会社の記事ではエンティティを強くすると評価が上がる�
 
 E-E-A-Tそのものは[E-E-A-Tとは](/media/eeat-for-ai-search/)、構造化データ全般の扱いは[llms.txtとは](/media/llms-txt-structured-data/)の構造化データの節に書いています。
 
-<!-- SHOT: 図 ent_official.html → ent_02_official.png・alt「Googleの文書に書いてあることと見当たらないことの図。書いてあるのは組織の明確化・ロゴとサイト名・ナレッジパネルは自動。見当たらないのは順位やE-E-A-Tが上がるという説明」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_02_official.png" alt="Googleの文書に書いてあることと見当たらないことの図。書いてあるのは組織の明確化・ロゴとサイト名・ナレッジパネルは自動。見当たらないのは順位やE-E-A-Tが上がるという説明" loading="lazy"></figure>
 
 ## 会社が整えること
 
@@ -95,7 +95,7 @@ E-E-A-Tそのものは[E-E-A-Tとは](/media/eeat-for-ai-search/)、構造化デ
 | Googleビジネスプロフィール | 拠点の担当 | 拠点で客に応対する会社なら決められる |
 | 社外のページ | 広報・営業 | 決められない。載せるのは相手 |
 
-<!-- SHOT: 図 ent_tasks.html → ent_03_tasks.png・alt「会社が整える6項目を、自社で決められるもの・Googleが決めるもの・相手が決めるものに分けた図」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_03_tasks.png" alt="会社が整える6項目を、自社で決められるもの・Googleが決めるもの・相手が決めるものに分けた図" loading="lazy"></figure>
 
 ### ① 名前の表記をそろえる
 
@@ -147,7 +147,7 @@ sameAsについて、schema.orgの定義は「その対象が何者かを曖昧�
 
 入れたら[リッチリザルト テスト](https://search.google.com/test/rich-results?hl=ja)か[スキーマ マークアップ検証ツール](https://validator.schema.org/)で読み取れるかを確かめます。公開後にクロールされるまで数日かかる場合がある、とGoogleの文書にあります。
 
-<!-- SHOT: 画面 https://schema.org/sameAs・本文だけにある探す語「unambiguously indicates the item's identity」・赤枠にする語「URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.」・PC・alt「schema.orgのsameAsのページ。対象が何者かを曖昧さなく示す参照先のURLと定義し、Wikipedia・Wikidata・公式サイトを例に挙げている」・figcaption「sameAs（schema.org、2026年10月29日）」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_sameas.png" alt="schema.orgのsameAsのページ。対象が何者かを曖昧さなく示す参照先のURLと定義し、Wikipedia・Wikidata・公式サイトを例に挙げている" loading="lazy"><figcaption>sameAs（schema.org、2026年10月29日）</figcaption></figure>
 
 ### ④ サイト名を指定する
 
@@ -171,7 +171,7 @@ Wikipediaの記事も会社では決められません。[特筆性（組織）]
 
 Wikidataの[自伝のガイドライン](https://www.wikidata.org/wiki/Wikidata:Autobiography)は自分の項目の編集を認めつつ、基準を満たすと確信できない限り新しく作るべきではないとしています。AIの答えも、会社が直接書き換える場所はありません。
 
-<!-- SHOT: 画面 https://ja.wikipedia.org/wiki/Wikipedia:%E8%87%AA%E5%88%86%E8%87%AA%E8%BA%AB%E3%81%AE%E8%A8%98%E4%BA%8B%E3%82%92%E4%BD%9C%E3%82%89%E3%81%AA%E3%81%84・本文だけにある探す語「あなたの会社」・赤枠にする語「自分自身についての記事を新しく作ることは、基本的に推奨されません」・PC・alt「Wikipediaの自分自身の記事を作らないのページ。自分自身についての記事を新しく作ることは基本的に推奨されないと書かれている」・figcaption「Wikipedia:自分自身の記事を作らない（ウィキペディア、2026年10月29日）」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_wp_self.png" alt="Wikipediaの自分自身の記事を作らないのページ。自分自身についての記事を新しく作ることは基本的に推奨されないと書かれている" loading="lazy"><figcaption>Wikipedia:自分自身の記事を作らない（ウィキペディア、2026年10月29日）</figcaption></figure>
 
 ## AI検索との関係
 
@@ -185,7 +185,7 @@ nitoはこの記事のために、AIに同名の会社を取り違えさせる�
 
 整えたあとの確認はGoogleの画面で見るものとAIに聞くものに分かれます。記録の頻度は月に1回、手順は毎回同じが目安です。
 
-<!-- SHOT: 図 ent_check.html → ent_04_check.png・alt「効いたかを確かめる4つの手順の図。社名で検索・構造化データのテスト・Googleトレンド・AIに社名を聞く」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_04_check.png" alt="効いたかを確かめる4つの手順の図。社名で検索・構造化データのテスト・Googleトレンド・AIに社名を聞く" loading="lazy"></figure>
 
 ### 社名で検索する
 
@@ -199,7 +199,7 @@ nitoはこの記事のために、AIに同名の会社を取り違えさせる�
 
 [Google トレンドのヘルプ](https://support.google.com/trends/answer/4359550?hl=ja)は、トピックを「すべての言語で共通の概念を持つキーワードのグループ」と説明しています。社名を入れたとき、候補に「会社」などのトピックが出れば、Googleがその名前を1つの対象としてまとめている目安です。トピックがナレッジグラフの項目だとは、ヘルプには書かれていません。
 
-<!-- SHOT: 画面 https://support.google.com/trends/answer/4359550?hl=ja・本文だけにある探す語「イギリスの首都」・赤枠にする語「トピックとは、すべての言語で共通の概念を持つキーワードのグループです」・PC・alt「Googleトレンドのヘルプのトピックの節。トピックはすべての言語で共通の概念を持つキーワードのグループと説明している」・figcaption「Google トレンドでの検索キーワードの比較（Google トレンド ヘルプ、2026年10月29日）」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_trends_topic.png" alt="Googleトレンドのヘルプのトピックの節。トピックはすべての言語で共通の概念を持つキーワードのグループと説明している" loading="lazy"><figcaption>Google トレンドでの検索キーワードの比較（Google トレンド ヘルプ、2026年10月29日）</figcaption></figure>
 
 ### AIに社名を聞く
 
@@ -218,7 +218,7 @@ ChatGPT・Gemini・Perplexity・AIモードに同じ質問を入れて、答え�
 - **Wikipediaの方針**: 自社で書かない・頼まないと決めるか
 - **測り方**: 4つのAIに聞く質問と記録の頻度
 
-<!-- SHOT: 図 ent_decide.html → ent_05_decide.png・alt「会社が決める6つのことの図。正式表記・直す順番・sameAsの範囲・ナレッジパネルの認証・Wikipediaの方針・測り方」 -->
+<figure class="post-figure"><img src="/media/images/entity-seo/ent_05_decide.png" alt="会社が決める6つのことの図。正式表記・直す順番・sameAsの範囲・ナレッジパネルの認証・Wikipediaの方針・測り方" loading="lazy"></figure>
 
 ### 失敗しやすい例
 
