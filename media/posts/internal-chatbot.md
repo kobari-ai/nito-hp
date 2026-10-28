@@ -30,7 +30,7 @@ Microsoft 365・Google Workspace・ChatGPT Businessはどれも、契約の中�
 | 手間がかかる所 | 質問と答えを1件ずつ登録して直す | 文書を整え、答えが合っているか試す |
 | 外れたとき | 該当なしと返る | 文書に無いことを答えることがある |
 
-<!-- SHOT: 図 icb_types.html → icb_01_types.png・alt「社内チャットボットの2つの型を縦に並べた図。シナリオ型は登録した答えを返し、決まった手続きに向く。生成AIと社内文書の型は文書から探した箇所で答えを作り、規程の読み方に向く」 -->
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_01_types.png" alt="社内チャットボットの2つの型を縦に並べた図。シナリオ型は登録した答えを返し、決まった手続きに向く。生成AIと社内文書の型は文書から探した箇所で答えを作り、規程の読み方に向く" loading="lazy"></figure>
 
 Microsoftの[請求レートと管理](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-messages-management)でも、Copilot Studioは作成者が書いた決まった返事の「従来型の回答」を1クレジット、生成回答を2クレジットと分けて数えています。**決まった手続きはシナリオ型、文書を読まないと答えられない質問は生成AIの型と、1つのボットの中で使い分けるのが現実的です。** 申請の締め日のように1字違うと困る答えまで生成に任せると、確かめる手間が増えます。
 
@@ -47,8 +47,6 @@ Microsoftの[請求レートと管理](https://learn.microsoft.com/ja-jp/microso
 | 見積もり | [PKSHA AIヘルプデスク](https://aisaas.pkshatech.com/ai-helpdesk/) | 製品ページに料金の記載なし |
 
 **人数で決まる製品は社員が多いほど高くなり、定額の製品は質問の回数が上限に収まるかが分かれ目です。** OfficeAI社員のProは月20万円で、質問応答5,000回に加えて調査や資料作成のタスクが月1,000回付きます。EntraIDやOktaとのシングルサインオンは別のオプションで、初期費用5万円と月2万円です。
-
-<!-- SHOT: 画面 https://officebot.jp/price/・探す語「アカウント不要、ユーザー無制限、月額固定制」・赤枠「月額費用 150,000円」と「QA 5,000回」・PC・alt「OfficeAI社員の料金ページ。Basicは初期費用10万円・月額15万円で質問応答が月5,000回、Proは月額20万円で質問応答5,000回とタスク1,000回。アカウント不要でユーザー無制限の月額固定制」・figcaption「OfficeAI社員の料金ページ（2026年10月29日）」 -->
 
 見積もりを取る前に、次の4つを各社に同じ形で聞いておくと比べやすくなります。
 
@@ -68,13 +66,13 @@ Microsoftの[請求レートと管理](https://learn.microsoft.com/ja-jp/microso
 | ChatGPT Business | プラグイン | ワークスペースの中 | スキルの参照ファイルとつないだアプリ | 1人月3,050円（年額課金） |
 | Dify | チャットのアプリとナレッジ | 公開したWebアプリ | Difyのナレッジか、外部の検索 | Teamは月159ドルで50人まで。モデルの代金は別 |
 
-<!-- SHOT: 図 icb_build.html → icb_02_build.png・alt「自社の契約で社内チャットボットを組む4通りを縦に並べた図。Microsoft 365はエージェント ビルダーでSharePointの文書を読ませる。Google WorkspaceはGemでドライブの文書を読ませる。ChatGPT Businessはプラグインに参照ファイルを付ける。Difyはナレッジに文書を入れてWebアプリで配る」 -->
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_02_build.png" alt="自社の契約で社内チャットボットを組む4通りを縦に並べた図。Microsoft 365はエージェント ビルダーでSharePointの文書を読ませる。Google WorkspaceはGemでドライブの文書を読ませる。ChatGPT Businessはプラグインに参照ファイルを付ける。Difyはナレッジに文書を入れてWebアプリで配る" loading="lazy"></figure>
 
 ### Microsoft 365で組む
 
 Microsoft 365 Copilotのアプリにあるエージェント ビルダーでは、知識の元としてSharePointのファイルをエージェントごとに100個まで、OneDriveのファイルを50個まで、手元から上げるファイルを20個まで選べます。[ナレッジ ソースを追加する](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-add-knowledge)のページによると、エージェントはファイルの既存のアクセス許可と秘密度ラベルに従います。**その文書を開く権限の無い社員が聞いても、文書の中身をもとにした答えは出てこない仕組みです。**
 
-<!-- SHOT: 画面 https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-add-knowledge・探す語「エージェントごとに最大 100 個の SharePoint ファイルを選択します」・赤枠 SharePoint と OneDrive の制限の表・PC・alt「Microsoft Learnのナレッジ ソースの制限の表。SharePointのファイルはエージェントごとに最大100個、SharePointのリストは1つ、OneDriveのファイルは50個で、既存のアクセス許可と秘密度ラベルを尊重する」・figcaption「Microsoft Learn「エージェント ビルダーでエージェントにナレッジ ソースを追加する」（2026年10月29日）」 -->
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_shot_learn_limits.png" alt="Microsoft Learnのナレッジ ソースの制限の表。SharePointのファイルはエージェントごとに最大100個、SharePointのリストは1つ、OneDriveのファイルは50個で、既存のアクセス許可と秘密度ラベルを尊重する" loading="lazy"><figcaption>Microsoft Learn「エージェント ビルダーでエージェントにナレッジ ソースを追加する」（2026年10月29日）</figcaption></figure>
 
 M365 Copilotのライセンスを持つ社員がMicrosoft 365の中で使う分は追加の費用がかからず、持たない社員が使うとクレジットが減ります。部署を越えて配る、業務システムにつなぐ段になったらCopilot Studioに移す流れです。払い方の3通りは[Copilot Studioの料金](/media/copilot-studio/)で扱いました。
 
@@ -84,7 +82,7 @@ Geminiアプリで作るGemは、カスタムの指示と知識のファイル�
 
 社内への配り方は[Gem を共有する](https://support.google.com/gemini/answer/16504957?hl=ja)にあり、特定のユーザーを閲覧者か編集者として加えるか、一般的なアクセスを［組織内］にします。気をつけたいのは共有の相手です。**Gemに上げた指示とファイルは、Gemを開ける全員が中身を見られます。**NotebookLMのノートブックは共有するGemのソースに使えず、共有そのものもドライブの共有設定に従い管理者が止められます。部署をまたいで社内のシステムにつなぐエージェントは、別の製品の[Gemini Enterprise](/media/gemini-enterprise/)の範囲です。
 
-<!-- SHOT: 画面 https://support.google.com/gemini/answer/16504957?hl=ja・探す語「Gem にアップロードした Gem カスタム指示とファイルは、Gem にアクセスできるすべてのユーザーが閲覧できます」・赤枠 その1文・PC・alt「Gemini アプリ ヘルプのGemを共有するのページ。Gemにアップロードしたカスタム指示とファイルはGemにアクセスできるすべてのユーザーが閲覧できるという注意書き」・figcaption「Gemini アプリ ヘルプ「Gemini アプリで Gem を共有する」（2026年10月29日）」 -->
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_shot_gem_share.png" alt="Gemini アプリ ヘルプのGemを共有するのページ。Gemにアップロードしたカスタム指示とファイルはGemにアクセスできるすべてのユーザーが閲覧できるという注意書き" loading="lazy"><figcaption>Gemini アプリ ヘルプ「Gemini アプリで Gem を共有する」（2026年10月29日）</figcaption></figure>
 
 ### ChatGPT Businessで組む
 
@@ -105,7 +103,7 @@ RAGのモデルは社内文書を覚えるわけではなく、質問のたび�
 3. 見つけた断片を質問と一緒にモデルに渡す
 4. モデルが断片をもとに答え、元の文書を出典として示す
 
-<!-- SHOT: 図 icb_rag.html → icb_03_rag.png・alt「RAGの流れを4段で縦に並べた図。文書を断片に切って保存する、質問に近い断片を探す、断片を質問と一緒にモデルに渡す、断片をもとに答えて出典を示す」 -->
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_03_rag.png" alt="RAGの流れを4段で縦に並べた図。文書を断片に切って保存する、質問に近い断片を探す、断片を質問と一緒にモデルに渡す、断片をもとに答えて出典を示す" loading="lazy"></figure>
 
 Difyの[Test and Tune Retrieval](https://docs.dify.ai/en/cloud/use-dify/knowledge-base/test-and-tune)は、本当の試験は利用者が聞く質問に正しい断片が返るかどうかだ、と書いています。**答えの質はモデルより先に、正しい断片を探し出せるかで決まります。**
 
@@ -147,7 +145,7 @@ Difyの[Test and Tune Retrieval](https://docs.dify.ai/en/cloud/use-dify/knowledg
 - **答えられないときの引き継ぎ先**：部署ごとの窓口と、引き継いだ記録の置き場所
 - **効いたかの測り方**：担当部署に届く問い合わせの件数と、ボットで終わった質問の割合（自己解決率）
 
-<!-- SHOT: 図 icb_decide.html → icb_04_decide.png・alt「社内チャットボットを入れる前に会社が決める4つを縦に並べた図。対象の問い合わせ、最初に入れる文書、答えられないときの引き継ぎ先、効いたかの測り方」 -->
+<figure class="post-figure"><img src="/media/images/internal-chatbot/icb_04_decide.png" alt="社内チャットボットを入れる前に会社が決める4つを縦に並べた図。対象の問い合わせ、最初に入れる文書、答えられないときの引き継ぎ先、効いたかの測り方" loading="lazy"></figure>
 
 問い合わせの件数は、入れる前と同じ数え方で比べないと増減が分かりません。答えられなかった質問も見ておきます。Difyのナレッジでは届いた質問を「何も見つからない」「見つかったが確度が低い」「答えた」に分けて数えられ、よく聞かれる質問を正解の断片と組で登録しておけば、設定を変えるたびに答えが崩れていないかを確かめられます。
 
