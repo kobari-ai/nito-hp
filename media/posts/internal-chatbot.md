@@ -59,18 +59,18 @@ Microsoftの[請求レートと管理](https://learn.microsoft.com/ja-jp/microso
 
 社員の大半が使っている業務の基盤があるなら、新しい製品を買う前に、その契約の中で作れる範囲を確かめます。4つを並べると次のとおりです。
 
-| 基盤 | 作る場所 | 配れる範囲 | 読ませる文書 | 費用のかかり方 |
+| 基盤 | 作る場所 | 向く範囲 | 読ませる文書 | 費用のかかり方 |
 |---|---|---|---|---|
 | Microsoft 365 | エージェント ビルダー | 小さなチーム。組織全体はCopilot Studio | SharePointのファイル100個・OneDriveの50個など | M365 Copilotを持つ社員は追加なし。持たない社員はクレジット |
 | Google Workspace | GeminiアプリのGem | 指定した人か組織内 | Googleドライブのファイル | Workspaceの1人あたりの料金 |
-| ChatGPT Business | プラグイン | ワークスペースの中 | スキルの参照ファイルとつないだアプリ | 1人月3,050円（年額課金） |
+| ChatGPT Business | プラグイン | ワークスペースの中（2人から） | スキルの参照ファイルとつないだアプリ | 1人月3,050円（年額課金） |
 | Dify | チャットのアプリとナレッジ | 公開したWebアプリ | Difyのナレッジか、外部の検索 | Teamは月159ドルで50人まで。モデルの代金は別 |
 
 <figure class="post-figure"><img src="/media/images/internal-chatbot/icb_02_build.png" alt="自社の契約で社内チャットボットを組む4通りを縦に並べた図。Microsoft 365はエージェント ビルダーでSharePointの文書を読ませる。Google WorkspaceはGemでドライブの文書を読ませる。ChatGPT Businessはプラグインに参照ファイルを付ける。Difyはナレッジに文書を入れてWebアプリで配る" loading="lazy"></figure>
 
 ### Microsoft 365で組む
 
-Microsoft 365 Copilotのアプリにあるエージェント ビルダーでは、知識の元としてSharePointのファイルをエージェントごとに100個まで、OneDriveのファイルを50個まで、手元から上げるファイルを20個まで選べます。[ナレッジ ソースを追加する](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-add-knowledge)のページによると、エージェントはファイルの既存のアクセス許可と秘密度ラベルに従います。**その文書を開く権限の無い社員が聞いても、文書の中身をもとにした答えは出てこない仕組みです。**
+Microsoft 365 Copilotのアプリにあるエージェント ビルダーでは、知識の元としてSharePointのファイルをエージェントごとに100個まで、OneDriveのファイルを50個まで、手元から上げるファイルを20個まで選べます。[ナレッジ ソースを追加する](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-add-knowledge)のページによると、SharePointとOneDriveのファイルは既存のアクセス許可と秘密度ラベルに従います。**その文書を開く権限の無い社員が聞いても、文書の中身をもとにした答えは出てきません。ただし手元から上げたファイルは、エージェントを使える全員が中身を見られます。**
 
 <figure class="post-figure"><img src="/media/images/internal-chatbot/icb_shot_learn_limits.png" alt="Microsoft Learnのナレッジ ソースの制限の表。SharePointのファイルはエージェントごとに最大100個、SharePointのリストは1つ、OneDriveのファイルは50個で、既存のアクセス許可と秘密度ラベルを尊重する" loading="lazy"><figcaption>Microsoft Learn「エージェント ビルダーでエージェントにナレッジ ソースを追加する」（2026年10月29日）</figcaption></figure>
 
@@ -86,7 +86,7 @@ Geminiアプリで作るGemは、カスタムの指示と知識のファイル�
 
 ### ChatGPT Businessで組む
 
-ChatGPTで社内向けのボットといえばGPTsでしたが、GPTsは終了に向けてプラグインへ移る途中にあります。OpenAIの[移行ガイド](https://learn.chatgpt.com/docs/migrate-custom-gpts)によると、プラグインはスキル（作業の指示と参照ファイル）とアプリ（ほかのサービスとの接続）をまとめたものです。アプリはその社員がもともと開ける範囲でしか動かず、Googleドライブにつないでも他人の文書は読めません。
+ChatGPTで社内向けのボットといえばGPTsでしたが、GPTsは終了に向けてプラグインへ移る途中にあります。OpenAIの[移行ガイド](https://learn.chatgpt.com/docs/migrate-custom-gpts)によると、プラグインはスキル（作業の指示と参照ファイル）とアプリ（ほかのサービスとの接続）をまとめたものです。アプリはその社員のアカウントで開ける範囲でしか動きません。Googleドライブにつないでも扱えるのは自分が開ける文書だけで、ほかのファイルが読めるようにはなりません。
 
 **これから作るなら、移行の手間を避けるためにプラグインで始めます。** 共有の範囲と移行の日程は[GPTsを社内だけで共有する方法](/media/gpts-internal-share/)、料金は[ChatGPT Businessの解説](/media/chatgpt-business/)にまとめました。
 
@@ -122,7 +122,7 @@ Difyの[Test and Tune Retrieval](https://docs.dify.ai/en/cloud/use-dify/knowledg
 
 ### 古い文書が残る
 
-同じ規程の旧版と新版が両方入っていれば、ボットはどちらも答えの材料にしてしまいます。Difyの[Maintain an Agent Knowledge Base](https://docs.dify.ai/en/cloud/use-dify/knowledge-base/maintain-knowledge-base)によると、同じ名前のファイルを上げても置き換わらず、2つ目の文書として加わる仕様です。同期が7日以上成功していない取り込み元には、古くなっているという警告が出ます。**配る前に最新版を1か所に集め、旧版は外すか無効にしておきます。**
+同じ規程の旧版と新版が両方入っていれば、ボットはどちらも答えの材料にしてしまいます。DifyのAgent ナレッジベースの説明（[Maintain an Agent Knowledge Base](https://docs.dify.ai/en/cloud/use-dify/knowledge-base/maintain-knowledge-base)）によると、同じ名前のファイルを上げても置き換わらず、2つ目の文書として加わる仕様です。同期が7日以上成功していない取り込み元には、古くなっているという警告が出ます。**配る前に最新版を1か所に集め、旧版は外すか無効にしておきます。**
 
 ### 答えの根拠が見えない
 
@@ -134,7 +134,7 @@ Difyの[Test and Tune Retrieval](https://docs.dify.ai/en/cloud/use-dify/knowledg
 
 ### 個人情報と権限
 
-権限の広すぎるフォルダーを読ませれば、本来は見られない社員の答えにも中身が出かねません。Microsoftの[エージェント ビルダーの概要](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder)は既知の制限として、SharePointのファイルの自動共有は特定のセキュリティ グループに共有するときだけで、組織の全員に共有するときには付かないと書いています。個人データを入力する場面について、[個人情報保護委員会の注意喚起](https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/)（2023年6月2日）は、本人の同意なく入力した個人データが応答の出力以外の目的で扱われれば、法の規定に違反するおそれがあるとしています。人事評価や給与の個別の情報は、最初の文書から外してください。
+権限の広すぎるフォルダーを読ませれば、本来は見られない社員の答えにも中身が出かねません。Microsoftの[エージェントの共有と管理](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-share-manage-agents)によると、エージェントを共有するときにSharePointのファイルとフォルダーも相手に共有でき、あとでエージェントから外しても、そのファイルへのアクセスは残ります。個人データを入力する場面について、[個人情報保護委員会の注意喚起](https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/)（2023年6月2日）は、本人の同意なく入力した個人データが応答の出力以外の目的で扱われれば、法の規定に違反するおそれがあるとしています。入力した情報が機械学習に使われないかを十分に確かめるよう、同じ注意喚起は続けます。ChatGPT Businessの料金ページの記載は、既定でビジネスデータを学習に使わない、です。人事評価や給与の個別の情報は、最初の文書から外してください。
 
 ## 会社が決めること
 
@@ -147,7 +147,7 @@ Difyの[Test and Tune Retrieval](https://docs.dify.ai/en/cloud/use-dify/knowledg
 
 <figure class="post-figure"><img src="/media/images/internal-chatbot/icb_04_decide.png" alt="社内チャットボットを入れる前に会社が決める4つを縦に並べた図。対象の問い合わせ、最初に入れる文書、答えられないときの引き継ぎ先、効いたかの測り方" loading="lazy"></figure>
 
-問い合わせの件数は、入れる前と同じ数え方で比べないと増減が分かりません。答えられなかった質問も見ておきます。Difyのナレッジでは届いた質問を「何も見つからない」「見つかったが確度が低い」「答えた」に分けて数えられ、よく聞かれる質問を正解の断片と組で登録しておけば、設定を変えるたびに答えが崩れていないかを確かめられます。
+問い合わせの件数は、入れる前と同じ数え方で比べないと増減が分かりません。答えられなかった質問も見ておきます。DifyのAgent ナレッジベース（Chatflow・Workflowのアプリで使う新しい種類）では、届いた質問を「何も見つからない」「見つかったが確度が低い」「答えた」に分けて数えられ、よく聞かれる質問を正解の断片と組で登録しておけば、設定を変えるたびに答えが崩れていないかを確かめられます。
 
 買うか組むかの分かれ目になる条件を表にしました。
 
@@ -168,7 +168,7 @@ Difyの[Test and Tune Retrieval](https://docs.dify.ai/en/cloud/use-dify/knowledg
 
 ### M365 Copilotのエージェントは有料ですか？
 
-ライセンスを持つ社員がMicrosoft 365の中で使う分はかかりません（公正利用の上限があります）。ライセンスを持たない社員が使う分と、社外に公開する分はCopilot Studioのクレジットが減ります。
+ライセンスを持つ社員がMicrosoft 365の中で使う分はかかりません（公正利用の上限あり）。ライセンスを持たない社員が使う分と、社外に公開する分はCopilot Studioのクレジットが減ります。
 
 ### GeminiのGemは社内だけで共有できますか？
 
@@ -176,7 +176,7 @@ Difyの[Test and Tune Retrieval](https://docs.dify.ai/en/cloud/use-dify/knowledg
 
 ### ChatGPTのGPTsで社内ボットを作れますか？
 
-GPTsはプラグインへの移行が進んでいて、Enterpriseは2026年12月11日に終了する予定です。これから作るならプラグインで作り、ワークスペースの中で共有します。
+GPTsはプラグインへの移行が進んでいて、カスタムGPTは2026年12月11日に終了する予定です（FedRAMPのワークスペースと、延期が承認されたEnterpriseは2027年2月11日。アカウントに届く案内が優先）。これから作るならプラグインで作り、ワークスペースの中で共有します。
 
 ### Difyの社内チャットボットは何人まで使えますか？
 
@@ -197,6 +197,8 @@ GPTsはプラグインへの移行が進んでいて、Enterpriseは2026年12月
 - Gemini アプリ ヘルプ「[Gemini アプリで Gem を使用する](https://support.google.com/gemini/answer/15146780?hl=ja)」「[Gemini アプリで Gem を共有する](https://support.google.com/gemini/answer/16504957?hl=ja)」
 - Google Workspace「[料金プラン](https://workspace.google.com/intl/ja/pricing.html)」
 - OpenAI「[Moving your custom GPT workflows to plugins](https://learn.chatgpt.com/docs/migrate-custom-gpts)」
+- OpenAI「[カスタム GPT の移行に関するよくある質問](https://help.openai.com/ja-jp/articles/20001519)」
+- Microsoft「[エージェントを共有して管理する](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-share-manage-agents)」
 - Dify Docs「[従来型ナレッジベース](https://docs.dify.ai/ja/use-dify/knowledge/readme)」「[Test and Tune Retrieval](https://docs.dify.ai/en/cloud/use-dify/knowledge-base/test-and-tune)」「[Maintain an Agent Knowledge Base](https://docs.dify.ai/en/cloud/use-dify/knowledge-base/maintain-knowledge-base)」、Dify「[料金](https://dify.ai/jp/pricing)」
 - HiTTO「[料金体系](https://hitto.jp/price/)」、OfficeAI社員「[料金プラン](https://officebot.jp/price/)」、PKSHA「[PKSHA AIヘルプデスク](https://aisaas.pkshatech.com/ai-helpdesk/)」
 - 個人情報保護委員会「[生成AIサービスの利用に関する注意喚起等について](https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/)」（2023年6月2日）
