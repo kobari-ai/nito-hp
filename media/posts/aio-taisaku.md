@@ -28,13 +28,13 @@ LLMO・GEO・AEOも指すものはほぼ同じで、呼び名の由来が違う�
 
 ただし「AIO」は、GoogleのAI Overviews（日本語の画面ではAIによる概要）の略として使われる場面もあります。提案書でAIOという言葉を見たら、どのAIを対象にした話なのかを最初に確かめてください。AIによる概要だけに絞った公式の条件は[AI Overview（AIによる概要）対策とは](/media/cited-by-ai-overviews/)にまとめています。
 
-<!-- SHOT: 図 aiot_what.html → aiot_01_what.png・alt「AIOという言葉の2つの使われ方を縦に並べた図。多くはAI Optimizationの総称で、ChatGPT・Gemini・Perplexity・GoogleのAIによる概要とAIモードが対象。AI Overviewsの略として使う場合は、GoogleのAIによる概要だけが対象」 -->
+<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_01_what.png" alt="AIOという言葉の2つの使われ方を縦に並べた図。多くはAI Optimizationの総称で、ChatGPT・Gemini・Perplexity・GoogleのAIによる概要とAIモードが対象。AI Overviewsの略として使う場合は、GoogleのAIによる概要だけが対象" loading="lazy"></figure>
 
 ## AIO対策のやり方5つの手順
 
 AIO対策で挙がる施策はFAQ・一次情報・構造化データ・社外の言及と幅が広く、どれから手を付けるかで迷いやすいところです。**施策を選ぶ前に今の答えを測り、引用元を読んで直すページを決めると、手を付ける順が決まります。**
 
-<!-- SHOT: 図 aiot_steps.html → aiot_02_steps.png・alt「AIO対策を進める5つの手順を縦に並べた図。今の答えを測る、引用元から直すページを決める、ページを直して足す、社外の情報をそろえる、同じ問いで測り直す」 -->
+<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_02_steps.png" alt="AIO対策を進める5つの手順を縦に並べた図。今の答えを測る、引用元から直すページを決める、ページを直して足す、社外の情報をそろえる、同じ問いで測り直す" loading="lazy"></figure>
 
 各手順では、公式に書いてあることと、支援会社などが言う主張や経験則を分けて並べます。始め方の考え方は[AI検索対策は何から始める？](/media/ai-search-first-steps/)にもあります。
 
@@ -68,7 +68,7 @@ AIO対策で挙がる施策はFAQ・一次情報・構造化データ・社外�
 
 Googleの最適化ガイドによると、AIによる概要やAIモードは、元の問いに関連する複数の検索（クエリ ファンアウト）を同時に行って結果を集めます。ガイドの例では「雑草だらけの芝生を直す方法」という問いに、「芝生に最適な除草剤」などの検索が加わっていました。**狙った問いそのものではなく周りの問いで拾われたページが引用元に付くこともあるので、引用元のページがどの問いに答えているかまで読みます。**
 
-<!-- SHOT: 図 aiot_sources.html → aiot_03_sources.png・alt「引用元の種類ごとに次の手を決める図。自社のページなら古い紹介を直す、競合のサイトなら同じ問いに答えるページを足す、比較サイトや口コミなら社外の情報を確かめる、引用元が無ければほかの問いを先にする」 -->
+<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_03_sources.png" alt="引用元の種類ごとに次の手を決める図。自社のページなら古い紹介を直す、競合のサイトなら同じ問いに答えるページを足す、比較サイトや口コミなら社外の情報を確かめる、引用元が無ければほかの問いを先にする" loading="lazy"></figure>
 
 「AIはFAQの形を好む」という説明もよく耳にしますが、3社の公式ページにそう書いたものは見つけられませんでした。自社の問いの引用元を数えた結果をもとに、直す場所を決めてください。
 
@@ -86,11 +86,11 @@ Googleの最適化ガイドによると、AIによる概要やAIモードは、�
 
 Googleのガイドは誰でも書ける一般論（ガイドの例は「初めて住宅を購入する人向けの 7 つのヒント」）より、独自の専門的な見解や経験に基づく内容を勧めています。[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)のページには、AIによる概要とAIモードに出るための「追加の要件はなく」、インデックスに登録されてスニペットが表示されることが条件だと書かれています。同じページは重要なコンテンツをテキストで示すことや、構造化データをページに表示されるテキストと一致させることを挙げています。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/appearance/ai-features?hl=ja・探す語「AI による概要や AI モードにコンテンツが表示されるための追加の要件はなく」・赤枠 その1文と「ページがインデックスに登録されており」の1文・PC・alt「Google検索セントラルのAI機能とウェブサイトのページ。AIによる概要やAIモードに表示されるための追加の要件はなく、ページがインデックスに登録されスニペットが表示されることが条件と書かれている」・figcaption「AI 機能とウェブサイト（Google 検索セントラル、2026年10月30日）」 -->
+<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_05_google_ai_features.png" alt="Google検索セントラルのAI機能とウェブサイトのページ。AIによる概要やAIモードに表示されるための追加の要件はなく、ページがインデックスに登録されスニペットが表示されることが条件と書かれている" loading="lazy"><figcaption>AI 機能とウェブサイト（Google 検索セントラル、2026年10月30日）</figcaption></figure>
 
 技術の確かめもこの手順の一部です。OpenAIの[クローラーの説明](https://developers.openai.com/api/docs/bots)によると、robots.txtでOAI-SearchBotを止めたサイトはChatGPTの検索の回答に出ません。Perplexityも[PerplexityBot](https://docs.perplexity.ai/guides/bots)という検索用のクローラーを学習用と分けています。robots.txtで許可していてもCDNの設定で止まっていることがあり、確かめ方は[ChatGPT検索で引用元に出る条件](/media/chatgpt-search-citation/)に書きました。
 
-<!-- SHOT: 画面 https://developers.openai.com/api/docs/bots・探す語「Sites that are opted out of OAI-SearchBot will not be shown in ChatGPT search answers」・赤枠 OAI-SearchBot の行のその1文・PC・alt「OpenAIのクローラーの説明ページ。OAI-SearchBotはChatGPTの検索機能でサイトを出すためのもので、止めたサイトはChatGPTの検索の回答に出ないと書かれている」・figcaption「Overview of OpenAI Crawlers（OpenAI、2026年10月30日）」 -->
+<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_06_openai_bots.png" alt="OpenAIのクローラーの説明ページ。OAI-SearchBotはChatGPTの検索機能でサイトを出すためのもので、止めたサイトはChatGPTの検索の回答に出ないと書かれている" loading="lazy"><figcaption>Overview of OpenAI Crawlers（OpenAI、2026年10月30日）</figcaption></figure>
 
 ### ④ 社外の情報をそろえる
 
@@ -120,7 +120,7 @@ AIO対策の提案や記事でよく見る説明を、公式の文書の記述�
 | AIのボットを全部止めても影響はない | OAI-SearchBotを止めるとChatGPTの検索の回答に出ない | OpenAIのクローラーの説明 |
 | 上位表示や引用を保証できる | 外部のツールはGoogle内部のランキングやAIのシステムにアクセスできない | Googleの最適化ガイド |
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja・探す語「提案されている「ハック」の多くは効果がなく」・赤枠 その1文・PC・alt「Googleの生成AI機能向けの最適化ガイド。AEOやGEOなどの用語がよく使われるが、提案されているハックの多くは効果がなく、Google検索の実際の仕組みでもサポートされていないと書かれている」・figcaption「Google 検索の生成 AI 機能向けにウェブサイトを最適化する（Google 検索セントラル、2026年10月30日）」 -->
+<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_07_google_ai_optimization.png" alt="Googleの生成AI機能向けの最適化ガイド。AEOやGEOなどの用語がよく使われるが、提案されているハックの多くは効果がなく、Google検索の実際の仕組みでもサポートされていないと書かれている" loading="lazy"><figcaption>Google 検索の生成 AI 機能向けにウェブサイトを最適化する（Google 検索セントラル、2026年10月30日）</figcaption></figure>
 
 Googleのガイドが扱うのは、Google検索の生成AI機能だけです。ChatGPTやPerplexityについては、何が効くかを両社とも細かく書いていません。**ほかのAIに効くかどうかは、⑤の測り直しで自社の問いを使って確かめます。**
 
@@ -158,7 +158,7 @@ Googleのガイドが扱うのは、Google検索の生成AI機能だけです。
 
 2つ目はGoogleの数字です。Search Consoleの生成 AI パフォーマンス レポートは2026年8月31日に全サイトに提供され、AIによる概要とAIモードで自社へのリンクが表示された回数をページごとに出します。表示が少ないサイトではレポート自体が出ないこともあります。見方は[サーチコンソールでAIモード・AIによる概要の表示を見る方法](/media/gsc-ai-mode/)にあります。
 
-<!-- SHOT: 画面 https://support.google.com/webmasters/answer/16984139?hl=ja・探す語「生成 AI 機能でユーザーにサイトへのリンクが表示された回数」・赤枠 インプレッション数の定義の文・PC・alt「Search Consoleヘルプの生成AIパフォーマンスレポートのページ。表示回数はGoogle検索の生成AI機能でユーザーにサイトへのリンクが表示された回数と書かれている」・figcaption「生成 AI パフォーマンス レポート（検索）（Search Console ヘルプ、2026年10月30日）」 -->
+<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_08_gsc_ai_report.png" alt="Search Consoleヘルプの生成AIパフォーマンスレポートのページ。表示回数はGoogle検索の生成AI機能でユーザーにサイトへのリンクが表示された回数と書かれている" loading="lazy"><figcaption>生成 AI パフォーマンス レポート（検索）（Search Console ヘルプ、2026年10月30日）</figcaption></figure>
 
 3つ目は問い合わせです。AIの回答で社名を知った人がリンクを押さずにあとで社名を検索して来ると、GA4ではAIから来たと記録されません。**nitoが支援するSaaS企業では、GA4でAIから来た割合が0.007%だった同じ期間に、会員登録のアンケートではAI検索で知った・比べたという人が26.7%いました。** 問い合わせのフォームや商談の最初に何で知ったかを聞き、AIと答えた数まで数えるのが確実な方法です。GA4での見方は[AI検索対策の効果はどう測る？](/media/ai-search-measurement/)にまとめています。
 
@@ -166,7 +166,7 @@ Googleのガイドが扱うのは、Google検索の生成AI機能だけです。
 
 AIO対策は担当1人の作業に見えても、決める人は社内に何人も要るのが実情です。始める前に次の3つを決め、よくある失敗を避けると途中で止まりにくくなります。
 
-<!-- SHOT: 図 aiot_decide.html → aiot_04_decide.png・alt「AIO対策を始める前に会社が決める3つを縦に並べた図。測る問いと対象のAI、直す担当と権限、何か月目に何を見て判断するか」 -->
+<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_04_decide.png" alt="AIO対策を始める前に会社が決める3つを縦に並べた図。測る問いと対象のAI、直す担当と権限、何か月目に何を見て判断するか" loading="lazy"></figure>
 
 ### 測る問いと対象のAI
 
