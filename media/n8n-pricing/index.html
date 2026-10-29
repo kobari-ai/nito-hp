@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】n8nの料金を解説｜プランの選び方・実行回数・セルフホスト｜株式会社nito</title>
+    <meta name="description" content="n8nの料金を公式の料金ページ・ドキュメント・ライセンスから解説。クラウド版のプランの違い、実行回数の数え方、Businessの超過料金、セルフホストの費用、社内利用と外販のライセンスの線引きまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/n8n-pricing/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】n8nの料金を解説｜プランの選び方・実行回数・セルフホスト">
+    <meta property="og:description" content="n8nの料金を公式の料金ページ・ドキュメント・ライセンスから解説。クラウド版のプランの違い、実行回数の数え方、Businessの超過料金、セルフホストの費用、社内利用と外販のライセンスの線引きまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/n8n-pricing/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/n8n-pricing.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/n8n-pricing.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】n8nの料金を解説｜プランの選び方・実行回数・セルフホスト", "description": "n8nの料金を公式の料金ページ・ドキュメント・ライセンスから解説。クラウド版のプランの違い、実行回数の数え方、Businessの超過料金、セルフホストの費用、社内利用と外販のライセンスの線引きまで。", "datePublished": "2026-10-30", "dateModified": "2026-10-30", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/n8n-pricing/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/n8n-pricing.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】n8nの料金を解説｜プランの選び方・実行回数・セルフホスト"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "n8nは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "自社のサーバーで動かすCommunity版は無料で、実行回数の上限もありません。n8nのクラウドは14日間の無料試用のあと有料のプランになります。"}}, {"@type": "Question", "name": "n8nの料金は1人いくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "1人ごとの料金はありません。どのプランもユーザーの数は無制限で、月の実行回数で値段が決まります。"}}, {"@type": "Question", "name": "n8nのStarterとProの違いは？", "acceptedAnswer": {"@type": "Answer", "text": "年払いで月20ユーロと月50ユーロで、実行回数は月2,500回と1万回です。Proは同時実行が20に増え、実行の記録を30日残せて、管理者のロールが付きます。"}}, {"@type": "Question", "name": "n8nの実行回数を超えるとどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "BusinessとEnterpriseはワークフローが止まらず、上の段に上げなければ超過料金がかかることがあります。StarterとProは超過料金がなく、上限に達した後の動きは料金ページに書かれていません。"}}, {"@type": "Question", "name": "n8nのBusinessプランはクラウドで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "今は使えません。Businessはセルフホストだけで、クラウドで使えるようにする待ちリストがあります。"}}, {"@type": "Question", "name": "n8nは請求書払いできますか？", "acceptedAnswer": {"@type": "Answer", "text": "年払いのBusinessとEnterpriseは請求書と銀行振込で払えます。StarterとProは比較表では請求書払いがありません。"}}, {"@type": "Question", "name": "n8nを商用利用できますか？", "acceptedAnswer": {"@type": "Answer", "text": "社内の業務に使う、顧客のための自動化を作って料金を取る、といった使い方はCommunity版で認められています。顧客が自分でワークフローを作れる形で提供するには、n8nとの別の契約が要ります。"}}, {"@type": "Question", "name": "n8nのクラウド版のデータはどこに保存されますか？", "acceptedAnswer": {"@type": "Answer", "text": "ドイツのフランクフルトのサーバーで、EUの中に置かれます。セルフホストなら自社が選んだ場所です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=051ff6b4">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】n8nの料金を解説｜…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.30</span>
+        </div>
+        <h1 class="post-title">【2026年10月】n8nの料金を解説｜プランの選び方・実行回数・セルフホスト</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/n8n-pricing.jpg" alt="【2026年10月】n8nの料金を解説｜プランの選び方・実行回数・セルフホスト" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>n8nのクラウド版は、年払いならStarterが月20ユーロ、Proが月50ユーロです。料金は使う人数ではなく、ワークフローを月に何回動かすか（実行回数）で決まります。</p>
+<p>社内の自動化やAIエージェントをn8nで組む話が出ると、担当者はプランと年間の費用を聞かれます。この記事は2026年10月30日に取得した料金ページ・ドキュメント・ライセンスをもとに、プランの選び方と実行回数の見積もり、セルフホストの費用とライセンスの線引きを扱います。契約・試用・セルフホストの構築はどれも試していません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>クラウド版は実行回数で値段が決まり、Starterは月2,500回、Proは月1万回か5万回</strong>。ユーザーとワークフローの数はどのプランも無制限</li>
+<li><strong>SSOが要る会社は、セルフホストのBusiness（年払いで月約667ユーロ）かEnterpriseになる</strong>。共有だけならクラウド版のStarterとProにもある。無料のCommunity版では、ワークフローを開けるのは作った人とオーナーだけ</li>
+<li><strong>社内の業務に使うならCommunity版は無料だが、顧客が自分でワークフローを作れる形で売るには別の契約が要る</strong>。AIのモデルの代金はどのプランでも別</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>n8nの料金は3つに分かれる</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>n8nクラウド版の料金とプラン</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>実行回数の数え方と見積もり</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>n8nのBusinessプランの料金と超過料金</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>セルフホストにかかる費用</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>n8nのライセンスで許されること</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>AIを呼ぶ代金は別にかかる</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>DifyやZapierとの料金の違い</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>n8nを入れる前に会社が決めること</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">n8nの料金は3つに分かれる</h2>
+<p>n8nは画面でノードをつないでワークフローやAIエージェントを組む自動化の道具です。ソースは<a href="https://github.com/n8n-io/n8n">GitHubのリポジトリ</a>で公開されていて、スターは約20万9千あります。作り方の選び方は「<a href="/media/ai-agent-build/">AIエージェントの作り方</a>」のノーコードの節で扱いました。</p>
+<p>会社でn8nを使うときの費用は次の3つです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>費用</th>
+<th>中身</th>
+<th>払う先</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="費用">n8nの利用料</td>
+<td data-label="中身">クラウド版の月額か、セルフホストのBusiness・Enterpriseのライセンス</td>
+<td data-label="払う先">n8n</td>
+</tr>
+<tr>
+<td data-label="費用">AIのモデルの代金</td>
+<td data-label="中身">OpenAI・Anthropic・Googleなどのモデルを呼ぶ代金</td>
+<td data-label="払う先">各モデルの提供元か、n8nのGatewayクレジット</td>
+</tr>
+<tr>
+<td data-label="費用">サーバーと人手</td>
+<td data-label="中身">セルフホストのサーバー・更新・バックアップ・守り</td>
+<td data-label="払う先">自社とクラウド事業者</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>料金ページの金額は1つ目だけで、AIを呼ぶワークフローなら2つ目が、セルフホストなら3つ目が加わります。</strong></p>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_01_cost.png" alt="n8nにかかる費用3つを縦に並べた図。n8nの利用料はクラウド版の月額かセルフホストのライセンス、AIのモデルの代金は各社かGatewayクレジットに払う、サーバーと人手はセルフホストのときに自社が持つ" loading="lazy"></figure>
+
+<h2 id="s2">n8nクラウド版の料金とプラン</h2>
+<p><a href="https://n8n.io/pricing/">n8nの料金ページ</a>は冒頭で、どのプランもユーザーとワークフローの数は無制限で、料金は月の実行回数で決まると書いています。日本から開くとユーロで表示され、支払いもユーロです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>プラン</th>
+<th>年払い（月あたり）</th>
+<th>月払い</th>
+<th>実行回数（月）</th>
+<th>同時実行</th>
+<th>動かす場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="プラン">Starter</td>
+<td data-label="年払い（月あたり）">20ユーロ</td>
+<td data-label="月払い">24ユーロ</td>
+<td data-label="実行回数（月）">2,500回</td>
+<td data-label="同時実行">5</td>
+<td data-label="動かす場所">n8nのクラウド</td>
+</tr>
+<tr>
+<td data-label="プラン">Pro</td>
+<td data-label="年払い（月あたり）">50ユーロ</td>
+<td data-label="月払い">60ユーロ</td>
+<td data-label="実行回数（月）">1万回</td>
+<td data-label="同時実行">20</td>
+<td data-label="動かす場所">n8nのクラウド</td>
+</tr>
+<tr>
+<td data-label="プラン">Pro（5万回）</td>
+<td data-label="年払い（月あたり）">120ユーロ（年1,440ユーロ）</td>
+<td data-label="月払い">144ユーロ</td>
+<td data-label="実行回数（月）">5万回</td>
+<td data-label="同時実行">50</td>
+<td data-label="動かす場所">n8nのクラウド</td>
+</tr>
+<tr>
+<td data-label="プラン">Business</td>
+<td data-label="年払い（月あたり）">約667ユーロ（年8,000ユーロ）</td>
+<td data-label="月払い">800ユーロ</td>
+<td data-label="実行回数（月）">4万回</td>
+<td data-label="同時実行">無制限</td>
+<td data-label="動かす場所">セルフホストだけ</td>
+</tr>
+<tr>
+<td data-label="プラン">Enterprise</td>
+<td data-label="年払い（月あたり）">問い合わせ</td>
+<td data-label="月払い">問い合わせ</td>
+<td data-label="実行回数（月）">個別</td>
+<td data-label="同時実行">200以上</td>
+<td data-label="動かす場所">クラウドかセルフホスト</td>
+</tr>
+</tbody>
+</table></div>
+<p>1ユーロ175.92円（欧州中央銀行の参照レート、2026年10月29日）で換算すると、年払いのStarterは月約3,500円、Proは月約8,800円です。料金ページの金額は税抜きで、日本から申し込むと消費税10%が加わります（Starterの年払いは240ユーロが264ユーロ）。<strong>年払いにすると、月払いより17%安くなります。</strong> ページの説明ではProは本番で自動化を回す個人と小さなチーム向けで、Businessは従業員100人未満の会社向けです。</p>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_pricing.png" alt="n8nの料金ページのプランの並び。年払いでStarterは月20ユーロで2,500回、Proは月50ユーロで1万回、Businessは月667ユーロで4万回、Enterpriseは問い合わせ" loading="lazy"><figcaption>n8nの料金ページ（2026年10月30日）</figcaption></figure>
+
+<p>金額のほかにも、プランで変わる項目があります。料金ページのクラウド版の比較表から、会社の判断に関わる行を抜き出しました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>Starter</th>
+<th>Pro</th>
+<th>Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">共有できるプロジェクト</td>
+<td data-label="Starter">1</td>
+<td data-label="Pro">3</td>
+<td data-label="Enterprise">無制限</td>
+</tr>
+<tr>
+<td data-label="項目">実行の記録を残す日数</td>
+<td data-label="Starter">7日</td>
+<td data-label="Pro">30日</td>
+<td data-label="Enterprise">無制限</td>
+</tr>
+<tr>
+<td data-label="項目">1回の実行の上限時間</td>
+<td data-label="Starter">5分</td>
+<td data-label="Pro">40分</td>
+<td data-label="Enterprise">40分</td>
+</tr>
+<tr>
+<td data-label="項目">管理者のロール</td>
+<td data-label="Starter">なし</td>
+<td data-label="Pro">あり</td>
+<td data-label="Enterprise">あり</td>
+</tr>
+<tr>
+<td data-label="項目">SSO・LDAP</td>
+<td data-label="Starter">なし</td>
+<td data-label="Pro">なし</td>
+<td data-label="Enterprise">あり</td>
+</tr>
+<tr>
+<td data-label="項目">メールのサポート</td>
+<td data-label="Starter">なし</td>
+<td data-label="Pro">なし</td>
+<td data-label="Enterprise">あり</td>
+</tr>
+<tr>
+<td data-label="項目">請求書払い</td>
+<td data-label="Starter">なし</td>
+<td data-label="Pro">なし</td>
+<td data-label="Enterprise">あり</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>クラウド版でSSOを使いたい会社は、StarterとProでは足りず、Enterpriseの見積もりになります。</strong> SSOのあるBusinessはセルフホストだけで、n8nのクラウドで使えるようにする待ちリストがある段階です。</p>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_02_plans.png" alt="n8nのプランを縦に並べた図。Starterは年払いで月20ユーロ・2,500回、Proは月50ユーロ・1万回、Businessは月約667ユーロ・4万回でセルフホストだけ、Enterpriseは問い合わせでクラウドかセルフホスト" loading="lazy"></figure>
+
+<p>最初は14日間の無料試用で試せます。料金ページのよくある質問によると、試用はProの機能つきで実行1,000回・同時実行5・1回180秒までで、カードは要りません。<a href="https://docs.n8n.io/deploy/use-n8n-cloud/start-your-free-trial">試用の説明</a>には、有料に切り替えずに期間が終わるとインスタンスが消え、ワークフローは90日のあいだダウンロードできると書かれています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">実行回数の数え方と見積もり</h2>
+<p>料金ページのよくある質問は、実行を「ワークフロー全体の1回の実行」と定めています。<strong>ステップがいくつあっても、扱うデータが多くても、ワークフロー1回の実行は1回です。</strong> 他社の道具が数えるオペレーションやタスクとの違いとして、n8nが前に出している点です。</p>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_exec_faq.png" alt="n8nの料金ページのよくある質問。実行はワークフロー全体の1回の実行で、ステップの数や扱うデータの量に関係なく1回と数えると答えている" loading="lazy"><figcaption>n8nの料金ページのよくある質問（2026年10月30日）</figcaption></figure>
+
+<p><a href="https://docs.n8n.io/build/understand-workflows/understand-executions">実行の数え方の説明</a>によると、回数に入るのはトリガーやスケジュールで自動で動いた本番の実行だけです。エディターでの手動のテスト、サブワークフロー、エラー時のワークフロー、新しいデータが無かったポーリング、始まる前に失敗したWebhookは数えません。スケジュールで動いた実行は失敗しても1回です。</p>
+<p>AIエージェントでは数え方に注意が要ります。料金ページは<strong>エージェントの会話の1ターンを1回の実行と数える</strong>と書き、忙しいチャットのエージェントは同時実行の上限に先に当たるとしています。</p>
+<p>見積もりの例として、よくある質問は次の数え方を挙げています。</p>
+<ul>
+<li>決まった時刻に動くワークフロー：毎日1回なら月30〜31回、5分ごとなら月約8,600〜8,900回</li>
+<li>Webhookで動くワークフロー：きっかけになる出来事が1日に起きる数が、1日の実行回数</li>
+<li>チャットボット：週の会話の数に、1会話あたりのメッセージの数を掛ける</li>
+</ul>
+<p>この数え方で試算すると、社員50人が社内の問い合わせに答えるエージェントに1日5回ずつ聞き、月20日使えば月5,000回です。毎朝1回の集計を10本足すと月300回、1日100件届く問い合わせフォームの処理を足すと月約3,000回が加わります。<strong>合計の約8,300回なら、月1万回のProに収まる計算です</strong>（試算です）。</p>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_03_exec.png" alt="n8nの実行回数の数え方の図。ステップの数は数えずワークフロー1回の実行で1回、エージェントは会話の1ターンで1回、毎日1回の集計は月30回、5分ごとなら月約8,600回" loading="lazy"></figure>
+
+<p>回数のほかに同時実行の上限もあります。<a href="https://docs.n8n.io/deploy/use-n8n-cloud/understand-concurrency">同時実行の説明</a>によると、上限はWebhookやトリガーから始まる本番の実行だけにかかり、超えた分は待ち行列に入って古い順に処理されます。手動のテスト、サブワークフロー、エラー時のワークフローは数えません。1回の実行の上限時間はStarterが5分で、待ちのノードや人の承認を待つ時間は数えない決まりです。</p>
+<p>StarterとProは超過料金の欄が「Capped」で、超えた分は請求されない仕組みです。上限に達した後にワークフローがどう扱われるかは料金ページに書かれていません。使った回数は分析の画面（Insights）で見られます。</p>
+<h2 id="s4">n8nのBusinessプランの料金と超過料金</h2>
+<p>BusinessはSSO・LDAP、6つの共有プロジェクト、開発と本番を分ける環境、Gitでの版の管理が付くプランです。動かせるのはセルフホストだけで、年8,000ユーロ（約141万円）で月4万回、月払いなら800ユーロです。サポートはフォーラムだけで、担当者のつくサポートはEnterpriseに限られます。</p>
+<p>回数を増やす段も料金ページに載っていて、年払いで5万回は年9,852ユーロ、10万回は年17,260ユーロ、50万回は年52,450ユーロです。上限を超えても<strong>ワークフローは止まらず、上の段に上げなければ超過料金がかかることがある</strong>と、よくある質問は答えています。上限が近づくと営業から連絡があり、年払いのBusinessは年間の量の80%に近づいた時点で連絡が来ます。</p>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_overage.png" alt="n8nの料金ページの比較表のセルフホストの超過料金の行。Businessは上限を超えた分30万回ごとに4,000ユーロまたは4,800ドル" loading="lazy"><figcaption>n8nの料金ページの超過料金（2026年10月30日）</figcaption></figure>
+
+<p>Businessの超過料金は<strong>上限を超えた分30万回ごとに4,000ユーロ（4,800ドル）</strong>です。料金ページはこの値を2026年10月26日からの価格として載せています。1回あたりに直すと約2.3円で、4万回の段を年払いしたときの1回あたり約2.9円を下回ります。</p>
+<p>ライセンスキーは何台のインスタンスにも入れられ、回数は全台の合計で数えます。キーは毎日n8nのライセンスサーバーと通信して実行回数などを送るため、社外への通信を絞っている会社は<a href="https://docs.n8n.io/deploy/host-n8n/configure-n8n/manage-your-license">ライセンスの管理</a>のとおりCloudflareのIPの範囲を許可します。社外と通信できない環境向けには、n8nが発行する通信の要らないライセンス証明書を環境変数（N8N_LICENSE_CERT）で入れる方法も同じページに載っています。</p>
+<p>従業員20人未満で、調達額の合計が500万ユーロ未満などの条件を満たす会社は、<a href="https://n8n.io/pricing/startup-plan/">Startupプラン</a>でBusinessが半額になり、年払いで月333ユーロ（約5万9千円）です。</p>
+<p>月払いの解約はその請求期間の終わりに、年払いは年の終わりに効き、日割りの返金はありません。</p>
+<h2 id="s5">セルフホストにかかる費用</h2>
+<p><a href="https://docs.n8n.io/choose-how-to-use-n8n">n8nを使う形の選び方</a>は、自社のサーバーで動かすCommunity版を、ほぼ全部の機能が無料で使える版と説明しています。メールアドレスを登録すると、フォルダー・過去の実行を編集画面で再現する機能・実行に独自のデータを付ける機能も無料で加わります。</p>
+<p>ただし<a href="https://docs.n8n.io/deploy/host-n8n/community-edition-features">版ごとの違い</a>を読むと、会社で使うときに要る機能がCommunity版には入っていません。</p>
+<ul>
+<li>ワークフローと認証情報の共有（開けるのはインスタンスのオーナーと作った人だけ）</li>
+<li>プロジェクトでの分け方</li>
+<li>SSO（SAML・LDAP）</li>
+<li>開発と本番の環境の分離と、Gitでの版の管理</li>
+<li>外部の秘密情報の保管庫との連携と、ログの外部への送信</li>
+</ul>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_editions.png" alt="n8nのドキュメントの版の比較。Community版に入っていない機能として、環境・外部の秘密情報・プロジェクト・SSO・ワークフローと認証情報の共有・Gitでの版の管理が並ぶ" loading="lazy"><figcaption>n8n Docsの版の比較（2026年10月30日）</figcaption></figure>
+
+<p><strong>ライセンス料が0円でも、複数人で同じワークフローを直す運用になった時点でBusinessの費用がかかります</strong>（クラウド版ならStarterから共有できます）。1人か2人が作って全社で結果を使う形なら、Community版のまま回せることもあります。</p>
+<p>起動そのものは短く、<a href="https://docs.n8n.io/deploy/host-n8n/install-options/install-with-docker">Dockerでのインストールの説明</a>の例からタイムゾーンなどの設定を省くと次の2行です。</p>
+<pre><code class="language-shell">docker volume create n8n_data
+docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
+</code></pre>
+<p>既定のデータベースはSQLiteで、PostgreSQLへの切り替えにも対応しています。同じページはサーバーとコンテナの設定・資源の増やし方・守り・n8nの設定の知識が要るとし、セルフホストは慣れた人に勧めると書いています。<strong>設定を誤るとデータの消失やセキュリティの問題、停止につながる</strong>という注意も添えられていました。</p>
+<p>ライセンス料の代わりに、自社で持つ費用は次の4つです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>費用</th>
+<th>中身</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="費用">サーバー</td>
+<td data-label="中身">仮想マシンと保存領域、PostgreSQLを使うならデータベース</td>
+</tr>
+<tr>
+<td data-label="費用">更新の人手</td>
+<td data-label="中身">新しい版への更新。安定版の最新は2026年10月29日の2.45.6</td>
+</tr>
+<tr>
+<td data-label="費用">守りの人手</td>
+<td data-label="中身">外から届く入口の守り・認証・バックアップと戻す手順の確認</td>
+</tr>
+<tr>
+<td data-label="費用">モデルの代金</td>
+<td data-label="中身">Gatewayクレジットは使えないので、自社で契約したキーで払う</td>
+</tr>
+</tbody>
+</table></div>
+<p>セルフホストが向くのはデータを自社の環境から出せない決まりがあり、サーバーの面倒を見る人がいる会社です。クラウド版でもよいなら、更新と守りの人手が消える分を月額と比べて決めます。</p>
+<h2 id="s6">n8nのライセンスで許されること</h2>
+<p>Community版のライセンスは、n8nが2022年に作ったSustainable Use Licenseです。<a href="https://github.com/n8n-io/n8n/blob/master/LICENSE.md">GitHubのLICENSE</a>の制限は次の3つです。</p>
+<ul>
+<li>自社の内部の業務か、非商用・個人の用途に限って使い、手を加えられる</li>
+<li>他人に配ったり渡したりできるのは、非商用の目的で無料で行う場合だけ</li>
+<li>ライセンスや著作権の表示を消したり、変えたり、隠したりできない</li>
+</ul>
+<p>ファイル名に「.ee.」が入るソースは別のEnterpriseのライセンスで、キーが要る機能に当たります。</p>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_license_faq.png" alt="n8nのライセンスのよくある質問。自社の人だけがワークフローを作り直すならCommunityのライセンスで無料で使えると書き、できることとできないことを並べている" loading="lazy"><figcaption>n8n Docsのライセンスのよくある質問（2026年10月30日）</figcaption></figure>
+
+<p><a href="https://docs.n8n.io/n8n-community-license/community-license/license-faq">ライセンスのよくある質問</a>は、<strong>自社の人だけがワークフローを作ったり直したりするなら、無料で使える</strong>と書いています。会社の使い方に当てはめると次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>使い方</th>
+<th>ライセンスのよくある質問での扱い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="使い方">社内の業務の自動化に使う</td>
+<td data-label="ライセンスのよくある質問での扱い">できる</td>
+</tr>
+<tr>
+<td data-label="使い方">顧客のための自動化を自社のインスタンスで作る（顧客は作れず直せない）</td>
+<td data-label="ライセンスのよくある質問での扱い">できる</td>
+</tr>
+<tr>
+<td data-label="使い方">ワークフローの作成・保守・研修・コンサルの料金を取る</td>
+<td data-label="ライセンスのよくある質問での扱い">できる</td>
+</tr>
+<tr>
+<td data-label="使い方">自社製品の裏側で使い、利用者は作られた自動化を動かすだけ</td>
+<td data-label="ライセンスのよくある質問での扱い">できる</td>
+</tr>
+<tr>
+<td data-label="使い方">n8nをサービスとして置き、顧客にワークフローを作らせる</td>
+<td data-label="ライセンスのよくある質問での扱い">できない</td>
+</tr>
+<tr>
+<td data-label="使い方">外部の利用者が独自の画面・API・MCP・AIエージェント経由で自分のワークフローを作る</td>
+<td data-label="ライセンスのよくある質問での扱い">できない</td>
+</tr>
+<tr>
+<td data-label="使い方">ロゴを外して、n8nをそのまま自社の名前で出す</td>
+<td data-label="ライセンスのよくある質問での扱い">できない</td>
+</tr>
+</tbody>
+</table></div>
+<p>画面を自社のものに替えても、外部の利用者がワークフローの中身を決められるなら認められない、という例も同じページに載っています。利用者がワークフローを組める機能を製品に入れたい場合は営業（sales@n8n.io）にEnterpriseのライセンスを相談する形です。</p>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_04_license.png" alt="n8nのCommunityのライセンスでできることとできないことの図。社内の業務の自動化・顧客のための自動化を自社で作る・作成と保守の料金を取るはできる、顧客にワークフローを作らせる・ロゴを外して出すはできない" loading="lazy"></figure>
+
+<p>このよくある質問はセルフホストの話で、n8nのクラウドは別の利用規約に従います。表は文言を読んだもので法的な判断ではないため、迷う使い方はlicense@n8n.ioに書面で確かめておくと後で揉めません。</p>
+<h2 id="s7">AIを呼ぶ代金は別にかかる</h2>
+<p>n8nの料金に含まれるのは実行の回数で、ワークフローの中でAIのモデルを呼ぶ代金は別です。払い方は2通りあります。</p>
+<p>1つはn8nの<a href="https://docs.n8n.io/deploy/use-n8n-cloud/gateway-credits">Gatewayクレジット</a>です。クラウド版のStarterとProで使え、OpenAI・Anthropic・Google Geminiのモデルや、Web検索などの外部のサービスを、各社のアカウントやAPIキーなしで呼べます。前払いの残高から使った分が引かれ、単価はn8nのサービスの料金ページに載っています。残高が0になると、Gatewayクレジットを使うノードは止まります。<strong>買い足したクレジットは12か月で失効し、使い残しは返金されません。</strong> EnterpriseとセルフホストではGatewayクレジットは使えません。</p>
+<p>もう1つは自社で契約したモデルのAPIキーを登録する方法です。請求は各社から届き、データの扱いもその会社との契約で決まります。</p>
+<p>これとは別に、ワークフローを作るのを手伝うAssistant（プレビュー）のクレジットが、Starterに月1,600、Proに月4,000か9,600付きます。毎月戻り、繰り越しはできない決まりです。モデルの代金の見積もり方は「<a href="/media/dify-pricing/">Difyの料金</a>」のAPI代の節と同じ掛け算で出せます。エージェントは1ターンの中でモデルを何回も呼ぶことがあるため、試作で提供元の管理画面の数字を見てから掛け算すると外れにくくなります。</p>
+<h2 id="s8">DifyやZapierとの料金の違い</h2>
+<p>同じように業務を自動化する道具でも、料金を数える単位はそれぞれ別です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>製品</th>
+<th>数える単位</th>
+<th>入り口の料金</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="製品">n8n</td>
+<td data-label="数える単位">ワークフロー1回の実行（ステップの数は数えない）</td>
+<td data-label="入り口の料金">Starterが年払いで月20ユーロ・2,500回</td>
+</tr>
+<tr>
+<td data-label="製品">Dify</td>
+<td data-label="数える単位">ワークスペースごとの月額と、付いてくるクレジット</td>
+<td data-label="入り口の料金">Professionalが月59ドル</td>
+</tr>
+<tr>
+<td data-label="製品">Zapier</td>
+<td data-label="数える単位">成功したステップ1つで1タスク（トリガーは数えない）</td>
+<td data-label="入り口の料金">Professionalが年払いで月19.99ドル・750タスク</td>
+</tr>
+<tr>
+<td data-label="製品">Make</td>
+<td data-label="数える単位">ほとんどのアクションが1クレジット（データの読み込みも数える）</td>
+<td data-label="入り口の料金">クレジットの量で段がある</td>
+</tr>
+<tr>
+<td data-label="製品">Copilot Studio</td>
+<td data-label="数える単位">Copilotクレジット</td>
+<td data-label="入り口の料金">1パック月29,985円で25,000クレジット</td>
+</tr>
+</tbody>
+</table></div>
+<p><a href="https://zapier.com/pricing">Zapierの料金ページ</a>はタスクを、成功した1つの作業ごとに数えます。<a href="https://www.make.com/en/pricing">Makeの料金ページ</a>は1回の実行で2から数千のクレジットを使うことがあるとしています。<strong>ステップの多いワークフローほど、ステップ数で値段が変わらないn8nは見積もりを立てやすくなります。</strong> 1ドル158.06円（2026年10月29日のユーロ円とユーロドルから算出）で換算すると、DifyのProfessionalは月約9,300円、ZapierのProfessionalは月約3,200円です。</p>
+<p>チャットの会話が多い用途ではn8nの回数が先に増えるため、Difyとは両方の数え方で見積もって比べます。細部は「<a href="/media/dify-pricing/">Difyの料金</a>」と「<a href="/media/copilot-studio/">Copilot Studioの料金</a>」にまとめました。</p>
+<h2 id="s9">n8nを入れる前に会社が決めること</h2>
+<p>プランの差は月額より上限の差です。次の4つを決めると、候補が1つか2つに絞れます。</p>
+<ul>
+<li><strong>月に何回動かすか</strong>：ワークフローごとに回数を数えて足す。チャットのエージェントはメッセージの数で数える</li>
+<li><strong>データを社外に出せるか</strong>：n8nのクラウドのデータはフランクフルトに置かれる。出せないならセルフホスト</li>
+<li><strong>SSOが要るか</strong>：SSOでログインさせるならBusiness（セルフホスト）かEnterprise。複数人で同じワークフローや認証情報を使うだけなら、クラウド版のStarter（共有プロジェクト1つ）とPro（3つ）でもできる。セルフホストのCommunity版ではできない</li>
+<li><strong>保守を誰が持つか</strong>：セルフホストの更新・守り・バックアップを担う人がいなければ、クラウド版</li>
+</ul>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_05_choose.png" alt="n8nのプランを決める4つの条件の図。月に何回動かすか、データを社外に出せるか、SSOが要るか、保守を誰が持つか" loading="lazy"></figure>
+
+<p>もう1つ、顧客に渡す仕組みにn8nを使うなら、ライセンスの表で外部の人がワークフローを作れる形になっていないかを先に確かめます。そこに当たるなら、プランの比較より前にEnterpriseの相談が要るためです。</p>
+<h2 id="s10">よくある質問</h2>
+<p>金額はすべて2026年10月30日に見た公式ページの表示です。</p>
+<h3 id="s10-1">n8nは無料で使えますか？</h3>
+<p>自社のサーバーで動かすCommunity版は無料で、実行回数の上限もありません。n8nのクラウドは14日間の無料試用のあと有料のプランになります。</p>
+<h3 id="s10-2">n8nの料金は1人いくらですか？</h3>
+<p>1人ごとの料金はありません。どのプランもユーザーの数は無制限で、月の実行回数で値段が決まります。</p>
+<h3 id="s10-3">n8nのStarterとProの違いは？</h3>
+<p>年払いで月20ユーロと月50ユーロで、実行回数は月2,500回と1万回です。Proは同時実行が20に増え、実行の記録を30日残せて、管理者のロールが付きます。</p>
+<h3 id="s10-4">n8nの実行回数を超えるとどうなりますか？</h3>
+<p>BusinessとEnterpriseはワークフローが止まらず、上の段に上げなければ超過料金がかかることがあります。StarterとProは超過料金がなく、上限に達した後の動きは料金ページに書かれていません。</p>
+<h3 id="s10-5">n8nのBusinessプランはクラウドで使えますか？</h3>
+<p>今は使えません。Businessはセルフホストだけで、クラウドで使えるようにする待ちリストがあります。</p>
+<h3 id="s10-6">n8nは請求書払いできますか？</h3>
+<p>年払いのBusinessとEnterpriseは請求書と銀行振込で払えます。StarterとProは比較表では請求書払いがありません。</p>
+<h3 id="s10-7">n8nを商用利用できますか？</h3>
+<p>社内の業務に使う、顧客のための自動化を作って料金を取る、といった使い方はCommunity版で認められています。顧客が自分でワークフローを作れる形で提供するには、n8nとの別の契約が要ります。</p>
+<h3 id="s10-8">n8nのクラウド版のデータはどこに保存されますか？</h3>
+<p>ドイツのフランクフルトのサーバーで、EUの中に置かれます。セルフホストなら自社が選んだ場所です。</p>
+<h2 id="s11">出典</h2>
+<ul>
+<li>n8n「<a href="https://n8n.io/pricing/">Pricing</a>」「<a href="https://n8n.io/pricing/startup-plan/">Startup plan</a>」</li>
+<li>n8n Docs「<a href="https://docs.n8n.io/choose-how-to-use-n8n">Choose how to use n8n</a>」「<a href="https://docs.n8n.io/deploy/use-n8n-cloud/start-your-free-trial">Try free then choose a plan</a>」「<a href="https://docs.n8n.io/deploy/use-n8n-cloud/understand-concurrency">Understand concurrency</a>」「<a href="https://docs.n8n.io/build/understand-workflows/understand-executions">Understand executions</a>」「<a href="https://docs.n8n.io/deploy/use-n8n-cloud/gateway-credits">Gateway credits</a>」</li>
+<li>n8n Docs「<a href="https://docs.n8n.io/deploy/host-n8n/community-edition-features">Compare editions</a>」「<a href="https://docs.n8n.io/deploy/host-n8n/install-options/install-with-docker">Install with Docker</a>」「<a href="https://docs.n8n.io/deploy/host-n8n/configure-n8n/manage-your-license">Manage your license</a>」</li>
+<li>n8n Docs「<a href="https://docs.n8n.io/n8n-community-license">Community license</a>」「<a href="https://docs.n8n.io/n8n-community-license/community-license/license-faq">License FAQ</a>」</li>
+<li>GitHub「<a href="https://github.com/n8n-io/n8n">n8n-io/n8n</a>」「<a href="https://github.com/n8n-io/n8n/blob/master/LICENSE.md">LICENSE.md</a>」</li>
+<li>Zapier「<a href="https://zapier.com/pricing">Pricing</a>」、Make「<a href="https://www.make.com/en/pricing">Pricing</a>」</li>
+<li>為替は欧州中央銀行の参照レート（<a href="https://frankfurter.dev/">Frankfurter</a>で取得）。ドル円はユーロ円とユーロドルから求めた値</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">n8nの料金は3つに分かれる</a><a href="#s2">n8nクラウド版の料金とプラン</a><a href="#s3">実行回数の数え方と見積もり</a><a href="#s4">n8nのBusinessプランの料金と超過料金</a><a href="#s5">セルフホストにかかる費用</a><a href="#s6">n8nのライセンスで許されること</a><a href="#s7">AIを呼ぶ代金は別にかかる</a><a href="#s8">DifyやZapierとの料金の違い</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/internal-chatbot/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="社内チャットボットの選び方"><defs><linearGradient id="ecg-0aeb1e92" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-0aeb1e92)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">社内チャットボットの選び方</text><line x1="106.0" y1="365.9" x2="1094.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.29</div>
+                <div class="rel-card__ttl">【2026年10月】社内チャットボットの選び方｜製品を買うか自社で作るか・費用・RAG</div>
+            </a>
+            <a href="/media/dify-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Difyの料金"><defs><linearGradient id="ecg-5c6c5faa" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5c6c5faa)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Difyの料金</text><line x1="394.8" y1="365.9" x2="805.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.27</div>
+                <div class="rel-card__ttl">【2026年10月】Difyの料金を解説｜プランの選び方・API代・セルフホスト</div>
+            </a>
+            <a href="/media/gemini-enterprise/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gemini Enterpriseとは"><defs><linearGradient id="ecg-76a95603" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-76a95603)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Gemini Enterpriseとは</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.26</div>
+                <div class="rel-card__ttl">【2026年10月】Gemini Enterpriseとは？料金とWorkspaceのGeminiとの違い</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'n8n-pricing',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
