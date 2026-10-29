@@ -2,7 +2,7 @@
 title: LLMOの読み方・意味とは。SEOとの違いを一次データより先に確認
 date: 2026-09-12
 category: AI検索対策
-description: LLMOの読み方は「エルエルエムオー」。Large Language Model Optimization（大規模言語モデル最適化）の略で、生成AIの回答に自社の情報が反映されるようにする取り組みです。SEOとの違いも短く整理しました。
+description: LLMOの読み方は「エルエルエムオー」。意味はLarge Language Model Optimization（大規模言語モデル最適化）の略で、生成AIの回答に自社の情報が反映されるようにする取り組みです。SEOとの違いも整理しました。
 cover_tag: 用語解説
 cover_headline: LLMOの読み方
 cover_sub: 意味とSEOとの違い

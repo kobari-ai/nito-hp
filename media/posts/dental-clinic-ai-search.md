@@ -2,7 +2,7 @@
 title: 歯科医院のAI検索対策。4媒体の実測でわかった選ばれる条件
 date: 2026-08-01
 category: AI検索対策
-description: 歯科医院のAI検索対策を、ChatGPT・Gemini・Google AIモード・Perplexityの4媒体の実測から解説します。AIがサイトを読むことと薦めることの差は4つの型に分かれ、自院の型の診断方法と打ち手までまとめました。
+description: 自費診療の歯科医院を、ChatGPT・Gemini・Google AIモード・Perplexityの4媒体で実測しました。AIがサイトを読むことと薦めることの差は4つの型に分かれ、自院の型の診断方法と打ち手までまとめました。
 cover_tag: 実測レポート
 cover_headline: 歯科医院のAI検索対策
 cover_sub: 4媒体の実測でわかった条件
