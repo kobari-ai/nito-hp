@@ -12,13 +12,25 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>株式会社nito | AI時代のブランディング支援</title>
+    <title>AI検索対策（AIO）とAIエージェント構築の支援｜株式会社nito</title>
     <meta property="og:site_name" content="株式会社nito">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"株式会社nito","alternateName":["nito"],"url":"https://nito-0210.com/"}</script>
-    <meta name="description" content="ChatGPT・Geminiなど実際のAIの画面で回答を毎日計測し、ページ・記事の制作から改善まで実行します。AI検索対策（AIO／LLMO）は無料の現状分析レポートから。">
+    <!-- 会社の実体（Organization）。記事の publisher・/llmo/・/ai-agent/ の provider はこの @id を指す -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[
+      {"@type":"Organization","@id":"https://nito-0210.com/#organization","name":"株式会社nito","alternateName":["nito"],"url":"https://nito-0210.com/",
+       "logo":{"@type":"ImageObject","url":"https://nito-0210.com/nito-logo-black.png","width":1000,"height":463},
+       "description":"株式会社nitoは、AI検索対策（AIO）とAIエージェント構築支援の会社です。",
+       "foundingDate":"2026-10-02",
+       "founder":[{"@type":"Person","name":"岡村 希一","jobTitle":"代表取締役","image":"https://nito-0210.com/profile_okamura.jpg"},{"@type":"Person","name":"小林 稜生","jobTitle":"共同創業者","image":"https://nito-0210.com/profile_kobayashi.jpg"}],
+       "address":{"@type":"PostalAddress","addressCountry":"JP","addressRegion":"東京都","addressLocality":"江東区"},       "knowsAbout":["AI検索対策","AIO","LLMO","GEO","AIエージェント構築"],
+       "contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://nito-0210.com/contact.html","availableLanguage":"ja"}},
+      {"@type":"WebSite","@id":"https://nito-0210.com/#website","name":"株式会社nito","alternateName":["nito"],"url":"https://nito-0210.com/","inLanguage":"ja","publisher":{"@id":"https://nito-0210.com/#organization"}}
+    ]}
+    </script>
+    <meta name="description" content="株式会社nitoは、AI検索対策（AIO）とAIエージェント構築支援の会社です。ChatGPT・Geminiなどの回答を毎日計測してページの制作と改善まで行い、業務に合わせたAIエージェントを構築します。">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="株式会社nito | AI時代のブランディング支援">
-    <meta property="og:description" content="ChatGPT・Geminiなど実際のAIの画面で回答を毎日計測し、ページ・記事の制作から改善まで実行します。AI検索対策（AIO／LLMO）は無料の現状分析レポートから。">
+    <meta property="og:title" content="AI検索対策（AIO）とAIエージェント構築の支援｜株式会社nito">
+    <meta property="og:description" content="株式会社nitoは、AI検索対策（AIO）とAIエージェント構築支援の会社です。ChatGPT・Geminiなどの回答を毎日計測してページの制作と改善まで行い、業務に合わせたAIエージェントを構築します。">
     <meta property="og:url" content="https://nito-0210.com/">
     <meta property="og:image" content="https://nito-0210.com/og-default.png">
     <meta property="og:image:width" content="1200">
@@ -604,6 +616,32 @@
             clip-path: inset(0 100% 0 0);
         }
 
+        /* h1 の頭に置く会社名とサービス名。見た目は小さいラベル、検索とAIには h1 の一部として読ませる */
+        .hero-kicker {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.6;
+            letter-spacing: 0.04em;
+            color: var(--color-primary-deep);
+            margin-bottom: 18px;
+        }
+        .hero-kicker .nw { display: inline-block; }
+
+        /* 会社概要（罫線の一覧） */
+        .company-lead { font-size: 16px; line-height: 1.9; margin-bottom: 28px; }
+        .company-table { border-top: 1px solid #e5e5e5; }
+        .company-row { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 18px 0; border-bottom: 1px solid #e5e5e5; font-size: 15px; line-height: 1.8; }
+        .company-row dt { font-weight: 700; color: var(--color-text); }
+        .company-row dd { margin: 0; color: var(--color-text); }
+        .company-row a { color: var(--color-primary-deep); text-decoration: underline; text-underline-offset: 3px; }
+
+        @media (max-width: 768px) {
+            .hero-kicker { font-size: 13px; margin-bottom: 12px; }
+            .hero-subtitle br { display: none; }
+            .company-row { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
+        }
+
         @media (max-width: 768px) {
             .hero {
                 height: auto;
@@ -1176,9 +1214,10 @@
         <div class="container hero-container">
             <div class="hero-text">
                 <h1 class="hero-title">
+                    <span class="hero-kicker"><span class="nw">株式会社nito｜</span><span class="nw">AI検索対策（AIO）と</span><span class="nw">AIエージェント構築支援</span></span>
                     いいモノが<br><span style="color: var(--color-primary-deep); display: inline-block;">自然に広まる仕組み</span>をつくる
                 </h1>
-                <p class="hero-subtitle">「生活者」起点で考え、<br>企業の成長を加速させるパートナー</p>
+                <p class="hero-subtitle">AIのおすすめに自社の名前が挙がるためのAI検索対策と、<br>業務を進めるAIエージェントの構築を支援しています。</p>
             </div>
         </div>
         <div class="scroll-sign">SCROLL</div>
@@ -1253,7 +1292,7 @@
                     <div class="member-info">
                         <span class="member-name">岡村 希一</span>
                         <span class="member-en-name">Kiichi Okamura</span>
-                        <span class="member-role">代表</span>
+                        <span class="member-role">代表取締役</span>
                         <p class="member-desc">
                             早稲田大学を卒業後、株式会社サイバーエージェントに入社。広告の新規事業開発に携わりながら、新卒採用や育成部門での責任者も務める。トップレベルのマーケターが集まる株式会社刀の選抜型マーケティングプログラムを修了。
                         </p>
@@ -1276,6 +1315,28 @@
         </section>
     </div>
 
+    <div class="divider"></div>
+
+    <div class="container">
+        <!-- Company Section -->
+        <section id="company" class="section section-company">
+            <div class="section-header ani-show-up">
+                <div class="sec-subtitle">会社概要</div>
+                <h2 class="sec-title">Company</h2>
+            </div>
+            <div class="ani-fade-bottom">
+                <p class="company-lead">株式会社nitoは、AI検索対策（AIO）とAIエージェント構築支援の会社です。ChatGPT・Gemini・AIモードなどの回答を毎日計測してページの制作と改善まで行い、社内の業務に合わせたAIエージェントを設計して作り、運用まで支えます。</p>
+                <dl class="company-table">
+                    <div class="company-row"><dt>会社名</dt><dd>株式会社nito</dd></div>
+                    <div class="company-row"><dt>設立</dt><dd>2026年10月</dd></div>
+                    <div class="company-row"><dt>代表取締役</dt><dd>岡村 希一</dd></div>
+                    <div class="company-row"><dt>所在地</dt><dd>東京都江東区</dd></div>
+                    <div class="company-row"><dt>事業内容</dt><dd><a href="https://nito-0210.com/llmo/">AI検索対策（AIO）の支援</a><br><a href="https://nito-0210.com/ai-agent/">AIエージェント構築支援</a></dd></div>
+                    <div class="company-row"><dt>お問い合わせ</dt><dd><a href="contact.html">お問い合わせフォーム</a></dd></div>
+                </dl>
+            </div>
+        </section>
+    </div>
     <!-- COLUMN:START 最新記事はbuild.pyが自動挿入（手で編集しない） -->
     <div class="divider"></div>
 
@@ -1325,6 +1386,7 @@
                     <div class="footer-nav-links">
                         <a href="/#about">ビジョン</a>
                         <a href="/#member">メンバー</a>
+                        <a href="/#company">会社概要</a>
                     </div>
                 </div>
                 <div class="footer-nav-col">
