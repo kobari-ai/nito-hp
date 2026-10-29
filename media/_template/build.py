@@ -522,7 +522,9 @@ def build_jsonld(post) -> str:
     import json as _json
     meta = post["meta"]
     url = f"{SITE}/media/{post['slug']}/"
-    publisher = {"@type": "Organization", "name": "株式会社nito", "alternateName": "nito", "url": f"{SITE}/"}
+    # @id はトップの Organization と同じ。記事の発行元をトップの会社情報（ロゴ・設立者・所在地）に結びつける
+    publisher = {"@type": "Organization", "@id": f"{SITE}/#organization", "name": "株式会社nito", "alternateName": "nito", "url": f"{SITE}/",
+                 "logo": {"@type": "ImageObject", "url": f"{SITE}/nito-logo-black.png"}}
     author_name = meta.get("author", DEFAULT_AUTHOR)
     author_profile = AUTHORS.get(author_name, {"role": DEFAULT_AUTHOR_ROLE, "bio": DEFAULT_AUTHOR_BIO})
     author_person = {
