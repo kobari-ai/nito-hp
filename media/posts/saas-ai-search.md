@@ -2,7 +2,7 @@
 title: SaaS企業のためのAI検索対策｜独自機能をAIにどう伝えるか
 date: 2026-07-07
 category: AI検索対策
-description: SaaS企業向けにAI検索対策（LLMO）の考え方を解説します。「引用されているのに推薦されない」Zapierパラドックスの構造、AIが情報源として重視するレビューサイトやコミュニティの役割、独自機能を伝えるためのコンテンツ設計を実務目線でまとめました。
+description: SaaS企業向けにAI検索対策（LLMO）の考え方を解説します。「引用されているのに推薦されない」Zapierパラドックスの構造、AIが重視するレビューサイトやコミュニティの役割、独自機能を伝えるコンテンツ設計をまとめました。
 cover_tag: SaaS向け
 cover_headline: 独自機能をAIにどう伝えるか
 cover_sub: SaaS企業のAI検索対策

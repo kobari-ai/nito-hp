@@ -2,7 +2,7 @@
 title: 【2026年9月】Jev（TypeSafe AI）とは？文章を書かないAIの仕組み・料金・使い方・苦手なこと
 date: 2026-09-19
 category: AI検索対策
-description: 2026年9月15日にTypeSafe AIが公開した「Jev」は、文章を生成せずに判断だけを返す「System One」モデルです。公式ドキュメント全体を一次ソースに、仕組み、3種類の質問、料金と上限、LLMの出力検査（Verifier）としての使い方、公式が認めている苦手なこと、日本語の注意点まで書いています。
+description: Jev（TypeSafe AI）の仕組み・料金・使い方・苦手なことを、公式ドキュメントからまとめました。2026年9月15日に公開された、文章を生成せず判断だけを返すモデルです。出力検査（Verifier）での使い方も書いています。
 cover_tag: 解説
 cover_headline: Jev（TypeSafe AI）とは
 cover_sub: 判断だけを返すAIの仕組みと使いどころ
