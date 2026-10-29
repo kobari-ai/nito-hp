@@ -16,7 +16,7 @@ n8nのクラウド版は、年払いならStarterが月20ユーロ、Proが月50
 
 :::takeaways
 - **クラウド版は実行回数で値段が決まり、Starterは月2,500回、Proは月1万回か5万回**。ユーザーとワークフローの数はどのプランも無制限
-- **SSOとワークフローの共有が要る会社は、セルフホストのBusiness（年払いで月約667ユーロ）かEnterpriseになる**。無料のCommunity版では、ワークフローを開けるのは作った人とオーナーだけ
+- **SSOが要る会社は、セルフホストのBusiness（年払いで月約667ユーロ）かEnterpriseになる**。共有だけならクラウド版のStarterとProにもある。無料のCommunity版では、ワークフローを開けるのは作った人とオーナーだけ
 - **社内の業務に使うならCommunity版は無料だが、顧客が自分でワークフローを作れる形で売るには別の契約が要る**。AIのモデルの代金はどのプランでも別
 :::
 
@@ -36,19 +36,19 @@ n8nは画面でノードをつないでワークフローやAIエージェント
 
 <figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_01_cost.png" alt="n8nにかかる費用3つを縦に並べた図。n8nの利用料はクラウド版の月額かセルフホストのライセンス、AIのモデルの代金は各社かGatewayクレジットに払う、サーバーと人手はセルフホストのときに自社が持つ" loading="lazy"></figure>
 
-## クラウド版のプランと料金
+## n8nクラウド版の料金とプラン
 
-[n8nの料金ページ](https://n8n.io/pricing/)は冒頭で、どのプランもユーザーとワークフローの数は無制限で、料金は月の実行回数で決まると書いています。金額はユーロで表示されました（こちらで取得したときの表示で、ドルでの見え方は確かめていません）。
+[n8nの料金ページ](https://n8n.io/pricing/)は冒頭で、どのプランもユーザーとワークフローの数は無制限で、料金は月の実行回数で決まると書いています。日本から開くとユーロで表示され、支払いもユーロです。
 
 | プラン | 年払い（月あたり） | 月払い | 実行回数（月） | 同時実行 | 動かす場所 |
 |---|---|---|---|---|---|
 | Starter | 20ユーロ | 24ユーロ | 2,500回 | 5 | n8nのクラウド |
 | Pro | 50ユーロ | 60ユーロ | 1万回 | 20 | n8nのクラウド |
 | Pro（5万回） | 120ユーロ（年1,440ユーロ） | 144ユーロ | 5万回 | 50 | n8nのクラウド |
-| Business | 約667ユーロ（年8,000ユーロ） | 800ユーロ | 4万回 | 記載なし | セルフホストだけ |
+| Business | 約667ユーロ（年8,000ユーロ） | 800ユーロ | 4万回 | 無制限 | セルフホストだけ |
 | Enterprise | 問い合わせ | 問い合わせ | 個別 | 200以上 | クラウドかセルフホスト |
 
-1ユーロ175.92円（欧州中央銀行の参照レート、2026年10月29日）で換算すると、年払いのStarterは月約3,500円、Proは月約8,800円です。**年払いにすると、月払いより17%安くなります。** ページの説明ではProは本番で自動化を回す個人と小さなチーム向けで、Businessは従業員100人未満の会社向けです。
+1ユーロ175.92円（欧州中央銀行の参照レート、2026年10月29日）で換算すると、年払いのStarterは月約3,500円、Proは月約8,800円です。料金ページの金額は税抜きで、日本から申し込むと消費税10%が加わります（Starterの年払いは240ユーロが264ユーロ）。**年払いにすると、月払いより17%安くなります。** ページの説明ではProは本番で自動化を回す個人と小さなチーム向けで、Businessは従業員100人未満の会社向けです。
 
 <figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_pricing.png" alt="n8nの料金ページのプランの並び。年払いでStarterは月20ユーロで2,500回、Proは月50ユーロで1万回、Businessは月667ユーロで4万回、Enterpriseは問い合わせ" loading="lazy"><figcaption>n8nの料金ページ（2026年10月30日）</figcaption></figure>
 
@@ -72,9 +72,11 @@ n8nは画面でノードをつないでワークフローやAIエージェント
 
 ## 実行回数の数え方と見積もり
 
-料金ページのよくある質問は、実行を「ワークフロー全体の1回の実行」と定めています。**ステップがいくつあっても、扱うデータが多くても、最後まで1回動けば1回です。** 他社の道具が数えるオペレーションやタスクとの違いとして、n8nが前に出している点です。
+料金ページのよくある質問は、実行を「ワークフロー全体の1回の実行」と定めています。**ステップがいくつあっても、扱うデータが多くても、ワークフロー1回の実行は1回です。** 他社の道具が数えるオペレーションやタスクとの違いとして、n8nが前に出している点です。
 
 <figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_exec_faq.png" alt="n8nの料金ページのよくある質問。実行はワークフロー全体の1回の実行で、ステップの数や扱うデータの量に関係なく1回と数えると答えている" loading="lazy"><figcaption>n8nの料金ページのよくある質問（2026年10月30日）</figcaption></figure>
+
+[実行の数え方の説明](https://docs.n8n.io/build/understand-workflows/understand-executions)によると、回数に入るのはトリガーやスケジュールで自動で動いた本番の実行だけです。エディターでの手動のテスト、サブワークフロー、エラー時のワークフロー、新しいデータが無かったポーリング、始まる前に失敗したWebhookは数えません。スケジュールで動いた実行は失敗しても1回です。
 
 AIエージェントでは数え方に注意が要ります。料金ページは**エージェントの会話の1ターンを1回の実行と数える**と書き、忙しいチャットのエージェントは同時実行の上限に先に当たるとしています。
 
@@ -84,25 +86,25 @@ AIエージェントでは数え方に注意が要ります。料金ページは
 - Webhookで動くワークフロー：きっかけになる出来事が1日に起きる数が、1日の実行回数
 - チャットボット：週の会話の数に、1会話あたりのメッセージの数を掛ける
 
-この数え方で試算すると、社員50人が社内の問い合わせに答えるエージェントに1日5回ずつ聞き、月20日使えば月5,000回です。毎朝1回の集計を10本足すと月300回、1日100件届く問い合わせフォームの処理を足すと月約3,000回が加わります。**合計の約8,300回なら、月1万回のProに収まる計算です**（試算で、実際の回数は試していません）。
+この数え方で試算すると、社員50人が社内の問い合わせに答えるエージェントに1日5回ずつ聞き、月20日使えば月5,000回です。毎朝1回の集計を10本足すと月300回、1日100件届く問い合わせフォームの処理を足すと月約3,000回が加わります。**合計の約8,300回なら、月1万回のProに収まる計算です**（試算です）。
 
-<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_03_exec.png" alt="n8nの実行回数の数え方の図。ワークフローは最後まで1回動けば1回、エージェントは会話の1ターンで1回、毎日1回の集計は月30回、5分ごとなら月約8,600回" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_03_exec.png" alt="n8nの実行回数の数え方の図。ステップの数は数えずワークフロー1回の実行で1回、エージェントは会話の1ターンで1回、毎日1回の集計は月30回、5分ごとなら月約8,600回" loading="lazy"></figure>
 
 回数のほかに同時実行の上限もあります。[同時実行の説明](https://docs.n8n.io/deploy/use-n8n-cloud/understand-concurrency)によると、上限はWebhookやトリガーから始まる本番の実行だけにかかり、超えた分は待ち行列に入って古い順に処理されます。手動のテスト、サブワークフロー、エラー時のワークフローは数えません。1回の実行の上限時間はStarterが5分で、待ちのノードや人の承認を待つ時間は数えない決まりです。
 
-StarterとProは超過料金の欄が「Capped」で、超えた分は請求されない仕組みです。上限に達した後にワークフローがどう扱われるかは料金ページに書かれておらず、こちらでは試していません。使った回数は分析の画面（Insights）で見られます。
+StarterとProは超過料金の欄が「Capped」で、超えた分は請求されない仕組みです。上限に達した後にワークフローがどう扱われるかは料金ページに書かれていません。使った回数は分析の画面（Insights）で見られます。
 
-## Businessプランと超過料金
+## n8nのBusinessプランの料金と超過料金
 
-BusinessはSSO・LDAP、6つの共有プロジェクト、開発と本番を分ける環境、Gitでの版の管理、負荷を分けるキューモードが付くプランです。動かせるのはセルフホストだけで、年8,000ユーロ（約141万円）で月4万回、月払いなら800ユーロです。サポートはフォーラムだけで、担当者のつくサポートはEnterpriseに限られます。
+BusinessはSSO・LDAP、6つの共有プロジェクト、開発と本番を分ける環境、Gitでの版の管理が付くプランです。動かせるのはセルフホストだけで、年8,000ユーロ（約141万円）で月4万回、月払いなら800ユーロです。サポートはフォーラムだけで、担当者のつくサポートはEnterpriseに限られます。
 
-回数を増やす段も料金ページに載っていて、年払いで5万回は年9,852ユーロ、10万回は年17,260ユーロ、50万回は年52,450ユーロです。上限を超えても**ワークフローは止まらず、上の段に上げなければ超過料金がかかる**と、よくある質問は答えています。上限が近づくと営業から連絡があり、年払いのBusinessは年間の量の80%に近づいた時点で連絡が来ます。
+回数を増やす段も料金ページに載っていて、年払いで5万回は年9,852ユーロ、10万回は年17,260ユーロ、50万回は年52,450ユーロです。上限を超えても**ワークフローは止まらず、上の段に上げなければ超過料金がかかることがある**と、よくある質問は答えています。上限が近づくと営業から連絡があり、年払いのBusinessは年間の量の80%に近づいた時点で連絡が来ます。
 
-<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_overage.png" alt="n8nの料金ページの比較表のセルフホストの超過料金の行。Businessは30万回を超えるごとに4,000ユーロまたは4,800ドル" loading="lazy"><figcaption>n8nの料金ページの超過料金（2026年10月30日）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_overage.png" alt="n8nの料金ページの比較表のセルフホストの超過料金の行。Businessは上限を超えた分30万回ごとに4,000ユーロまたは4,800ドル" loading="lazy"><figcaption>n8nの料金ページの超過料金（2026年10月30日）</figcaption></figure>
 
-Businessの超過料金は**30万回を超えるごとに4,000ユーロ（4,800ドル）**です。料金ページはこの値を2026年10月26日からの価格として載せています。1回あたりに直すと約2.3円で、4万回の段を年払いしたときの1回あたり約2.9円を下回ります。
+Businessの超過料金は**上限を超えた分30万回ごとに4,000ユーロ（4,800ドル）**です。料金ページはこの値を2026年10月26日からの価格として載せています。1回あたりに直すと約2.3円で、4万回の段を年払いしたときの1回あたり約2.9円を下回ります。
 
-ライセンスキーは何台のインスタンスにも入れられ、回数は全台の合計で数えます。キーは毎日n8nのライセンスサーバーと通信して実行回数などを送るため、社外への通信を絞っている会社は[ライセンスの管理](https://docs.n8n.io/deploy/host-n8n/configure-n8n/manage-your-license)のとおりCloudflareのIPの範囲を許可します。
+ライセンスキーは何台のインスタンスにも入れられ、回数は全台の合計で数えます。キーは毎日n8nのライセンスサーバーと通信して実行回数などを送るため、社外への通信を絞っている会社は[ライセンスの管理](https://docs.n8n.io/deploy/host-n8n/configure-n8n/manage-your-license)のとおりCloudflareのIPの範囲を許可します。社外と通信できない環境向けには、n8nが発行する通信の要らないライセンス証明書を環境変数（N8N_LICENSE_CERT）で入れる方法も同じページに載っていました。
 
 従業員20人未満で、調達額の合計が500万ユーロ未満などの条件を満たす会社は、[Startupプラン](https://n8n.io/pricing/startup-plan/)でBusinessが半額になり、年払いで月333ユーロ（約5万9千円）です。
 
@@ -122,7 +124,7 @@ Businessの超過料金は**30万回を超えるごとに4,000ユーロ（4,800�
 
 <figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_editions.png" alt="n8nのドキュメントの版の比較。Community版に入っていない機能として、環境・外部の秘密情報・プロジェクト・SSO・ワークフローと認証情報の共有・Gitでの版の管理が並ぶ" loading="lazy"><figcaption>n8n Docsの版の比較（2026年10月30日）</figcaption></figure>
 
-**ライセンス料が0円でも、複数人で同じワークフローを直す運用になった時点でBusinessの費用がかかります。** 1人か2人が作って全社で結果を使う形なら、Community版のまま回せることもあります。
+**ライセンス料が0円でも、複数人で同じワークフローを直す運用になった時点でBusinessの費用がかかります**（クラウド版ならStarterから共有できます）。1人か2人が作って全社で結果を使う形なら、Community版のまま回せることもあります。
 
 起動そのものは短く、[Dockerでのインストールの説明](https://docs.n8n.io/deploy/host-n8n/install-options/install-with-docker)の例からタイムゾーンなどの設定を省くと次の2行です。
 
@@ -138,7 +140,7 @@ docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8
 | 費用 | 中身 |
 |---|---|
 | サーバー | 仮想マシンと保存領域、PostgreSQLを使うならデータベース |
-| 更新の人手 | 新しい版への更新。最新は2026年10月29日の2.45.6 |
+| 更新の人手 | 新しい版への更新。安定版の最新は2026年10月29日の2.45.6 |
 | 守りの人手 | 外から届く入口の守り・認証・バックアップと戻す手順の確認 |
 | モデルの代金 | Gatewayクレジットは使えないので、自社で契約したキーで払う |
 
@@ -168,7 +170,7 @@ Community版のライセンスは、n8nが2022年に作ったSustainable Use Lic
 | 外部の利用者が独自の画面・API・MCP・AIエージェント経由で自分のワークフローを作る | できない |
 | ロゴを外して、n8nをそのまま自社の名前で出す | できない |
 
-画面を自社のものに替えても、外部の利用者がワークフローの中身を決められるなら認められない、という例も同じページに載っています。製品に組み込みたい場合は営業（sales@n8n.io）にEnterpriseのライセンスを相談する形です。
+画面を自社のものに替えても、外部の利用者がワークフローの中身を決められるなら認められない、という例も同じページに載っています。利用者がワークフローを組める機能を製品に入れたい場合は営業（sales@n8n.io）にEnterpriseのライセンスを相談する形です。
 
 <figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_04_license.png" alt="n8nのCommunityのライセンスでできることとできないことの図。社内の業務の自動化・顧客のための自動化を自社で作る・作成と保守の料金を取るはできる、顧客にワークフローを作らせる・ロゴを外して出すはできない" loading="lazy"></figure>
 
@@ -182,7 +184,7 @@ n8nの料金に含まれるのは実行の回数で、ワークフローの中�
 
 もう1つは自社で契約したモデルのAPIキーを登録する方法です。請求は各社から届き、データの扱いもその会社との契約で決まります。
 
-これとは別に、ワークフローを作るのを手伝うAssistant（プレビュー）のクレジットが、Starterに月1,600、Proに月4,000か9,600付きます。毎月戻り、繰り越しはできない決まりです。モデルの代金の見積もり方は「[Difyの料金](/media/dify-pricing/)」のAPI代の節と同じ掛け算で出せます。エージェントは1ターンの中でモデルを何回も呼ぶことがあるため、試作で提供元の管理画面の数字を見てから掛け算すると外れにくくなります（こちらでは試していません）。
+これとは別に、ワークフローを作るのを手伝うAssistant（プレビュー）のクレジットが、Starterに月1,600、Proに月4,000か9,600付きます。毎月戻り、繰り越しはできない決まりです。モデルの代金の見積もり方は「[Difyの料金](/media/dify-pricing/)」のAPI代の節と同じ掛け算で出せます。エージェントは1ターンの中でモデルを何回も呼ぶことがあるため、試作で提供元の管理画面の数字を見てから掛け算すると外れにくくなります。
 
 ## DifyやZapierとの料金の違い
 
@@ -196,7 +198,7 @@ n8nの料金に含まれるのは実行の回数で、ワークフローの中�
 | Make | ほとんどのアクションが1クレジット（データの読み込みも数える） | クレジットの量で段がある |
 | Copilot Studio | Copilotクレジット | 1パック月29,985円で25,000クレジット |
 
-[Zapierの料金ページ](https://zapier.com/pricing)はタスクを、成功した1つの作業ごとに数えます。[Makeの料金ページ](https://www.make.com/en/pricing)は1回の実行で2から数千のクレジットを使うことがあるとしています。**ステップの多いワークフローほど、ステップ数で値段が変わらないn8nは見積もりを立てやすくなります。** 1ドル158.06円（2026年10月29日）で換算すると、DifyのProfessionalは月約9,300円、ZapierのProfessionalは月約3,200円です。
+[Zapierの料金ページ](https://zapier.com/pricing)はタスクを、成功した1つの作業ごとに数えます。[Makeの料金ページ](https://www.make.com/en/pricing)は1回の実行で2から数千のクレジットを使うことがあるとしています。**ステップの多いワークフローほど、ステップ数で値段が変わらないn8nは見積もりを立てやすくなります。** 1ドル158.06円（2026年10月29日のユーロ円とユーロドルから算出）で換算すると、DifyのProfessionalは月約9,300円、ZapierのProfessionalは月約3,200円です。
 
 チャットの会話が多い用途ではn8nの回数が先に増えるため、Difyとは両方の数え方で見積もって比べます。細部は「[Difyの料金](/media/dify-pricing/)」と「[Copilot Studioの料金](/media/copilot-studio/)」にまとめました。
 
@@ -206,10 +208,10 @@ n8nの料金に含まれるのは実行の回数で、ワークフローの中�
 
 - **月に何回動かすか**：ワークフローごとに回数を数えて足す。チャットのエージェントはメッセージの数で数える
 - **データを社外に出せるか**：n8nのクラウドのデータはフランクフルトに置かれる。出せないならセルフホスト
-- **共有とSSOが要るか**：複数人で同じワークフローや認証情報を使う、SSOでログインさせるなら、BusinessかEnterprise
+- **SSOが要るか**：SSOでログインさせるならBusiness（セルフホスト）かEnterprise。複数人で同じワークフローや認証情報を使うだけなら、クラウド版のStarter（共有プロジェクト1つ）とPro（3つ）でもできる。セルフホストのCommunity版ではできない
 - **保守を誰が持つか**：セルフホストの更新・守り・バックアップを担う人がいなければ、クラウド版
 
-<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_05_choose.png" alt="n8nのプランを決める4つの条件の図。月に何回動かすか、データを社外に出せるか、共有とSSOが要るか、保守を誰が持つか" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/n8n-pricing/n8n_05_choose.png" alt="n8nのプランを決める4つの条件の図。月に何回動かすか、データを社外に出せるか、SSOが要るか、保守を誰が持つか" loading="lazy"></figure>
 
 もう1つ、顧客に渡す仕組みにn8nを使うなら、ライセンスの表で外部の人がワークフローを作れる形になっていないかを先に確かめます。そこに当たるなら、プランの比較より前にEnterpriseの相談が要るためです。
 
@@ -231,7 +233,7 @@ n8nの料金に含まれるのは実行の回数で、ワークフローの中�
 
 ### n8nの実行回数を超えるとどうなりますか？
 
-BusinessとEnterpriseはワークフローが止まらず、上の段に上げなければ超過料金がかかります。StarterとProは超過料金がなく、上限に達した後の動きは料金ページに書かれていません。
+BusinessとEnterpriseはワークフローが止まらず、上の段に上げなければ超過料金がかかることがあります。StarterとProは超過料金がなく、上限に達した後の動きは料金ページに書かれていません。
 
 ### n8nのBusinessプランはクラウドで使えますか？
 
@@ -252,9 +254,9 @@ BusinessとEnterpriseはワークフローが止まらず、上の段に上げ�
 ## 出典
 
 - n8n「[Pricing](https://n8n.io/pricing/)」「[Startup plan](https://n8n.io/pricing/startup-plan/)」
-- n8n Docs「[Choose how to use n8n](https://docs.n8n.io/choose-how-to-use-n8n)」「[Try free then choose a plan](https://docs.n8n.io/deploy/use-n8n-cloud/start-your-free-trial)」「[Understand concurrency](https://docs.n8n.io/deploy/use-n8n-cloud/understand-concurrency)」「[Gateway credits](https://docs.n8n.io/deploy/use-n8n-cloud/gateway-credits)」
+- n8n Docs「[Choose how to use n8n](https://docs.n8n.io/choose-how-to-use-n8n)」「[Try free then choose a plan](https://docs.n8n.io/deploy/use-n8n-cloud/start-your-free-trial)」「[Understand concurrency](https://docs.n8n.io/deploy/use-n8n-cloud/understand-concurrency)」「[Understand executions](https://docs.n8n.io/build/understand-workflows/understand-executions)」「[Gateway credits](https://docs.n8n.io/deploy/use-n8n-cloud/gateway-credits)」
 - n8n Docs「[Compare editions](https://docs.n8n.io/deploy/host-n8n/community-edition-features)」「[Install with Docker](https://docs.n8n.io/deploy/host-n8n/install-options/install-with-docker)」「[Manage your license](https://docs.n8n.io/deploy/host-n8n/configure-n8n/manage-your-license)」
 - n8n Docs「[Community license](https://docs.n8n.io/n8n-community-license)」「[License FAQ](https://docs.n8n.io/n8n-community-license/community-license/license-faq)」
 - GitHub「[n8n-io/n8n](https://github.com/n8n-io/n8n)」「[LICENSE.md](https://github.com/n8n-io/n8n/blob/master/LICENSE.md)」
 - Zapier「[Pricing](https://zapier.com/pricing)」、Make「[Pricing](https://www.make.com/en/pricing)」
-- 為替は[Frankfurter](https://frankfurter.dev/)で取得した欧州中央銀行の参照レート
+- 為替は欧州中央銀行の参照レート（[Frankfurter](https://frankfurter.dev/)で取得）。ドル円はユーロ円とユーロドルから求めた値
