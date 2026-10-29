@@ -10,14 +10,14 @@ cover_sub: SEO・AIO・GEOとの違いと公式見解
 cta: llmo
 ---
 
-Googleは2026年10月9日に更新した生成AI機能向けの公式ガイドで、AEO・GEOとして提案される「ハック」の多くは効果がなく、Google検索の実際の仕組みにも支えられていないと書きました。
+Googleは2026年5月に公開した生成AI機能向けの公式ガイドで、AEO・GEOとして提案される「ハック」の多くは効果がなく、Google検索の実際の仕組みにも支えられていないと書いています。
 
 AEO対策の提案を受けて、SEOやAIO対策と何が違うのか、社内で説明を求められている方に向けた記事です。何が同じで何が違うか、FAQや構造化データがどこまで効くか、会社がやることを公式の文書で確かめて書きます。
 
 :::takeaways
 - AEOはAnswer Engine Optimizationの略です。**SEO・AIO・GEO・LLMOとやることはほぼ同じで、違うのは呼び名と出どころです**
 - Googleの公式ガイドは、**生成AI向けの最適化もGoogle検索から見ればSEOであり、AEO・GEOの「ハック」の多くは効果がない**と書いています
-- **FAQのリッチリザルトは2026年5月7日にGoogle検索での表示が終わりました。** FAQの本文は読者のために残してよく、Google検索のためにマークアップを新しく足す理由は公式の記述からは見当たりません
+- **FAQのリッチリザルトは2026年5月7日にGoogle検索での表示が終わりました。** FAQの本文は読者のために残してよく、Google検索のためにFAQPageのマークアップを新しく足す理由はなくなりました
 :::
 
 ## AEO対策とは
@@ -26,7 +26,7 @@ AEO（Answer Engine Optimization）は、日本語で回答エンジン最適化
 
 ### 回答エンジンとは
 
-この言葉が最初に指していたのはGoogleの強調スニペットや音声アシスタントでした。強調スニペットは検索結果の上に答えの抜き出しを出す枠で、音声アシスタントは1つの答えだけを読み上げます。リンクが10本並ぶ検索と違い、答えに選ばれるかどうかが分かれ目になるため、検索エンジン最適化とは別の呼び名が付きました。
+当初、主にGoogleの強調スニペットや音声アシスタントを念頭に使われていました。強調スニペットは検索結果の上に答えの抜き出しを出す枠で、音声アシスタントは1つの答えだけを読み上げます。リンクが10本並ぶ検索と違い、答えに選ばれるかどうかが分かれ目になるため、検索エンジン最適化とは別の呼び名が付きました。
 
 その後、生成AIが答えを文章で組み立てるようになり、回答エンジンの中心はChatGPT・Gemini・Perplexity・GoogleのAIモードに移っています。
 
@@ -34,21 +34,21 @@ AEO（Answer Engine Optimization）は、日本語で回答エンジン最適化
 
 ### 語の出どころ
 
-誰が最初に使ったかははっきりしません。マーケターのJason Barnard氏の会社[Kalicube](https://kalicube.com/entity/answer-engine-optimization/)は、同氏が2017年に作った語だと説明しています。ただし本人の会社の説明で、同じページの中にも2018年という表記があり、第三者の記録では確かめられませんでした。
+誰が最初に使ったかははっきりしません。マーケターのJason Barnard氏の会社[Kalicube](https://kalicube.com/entity/answer-engine-optimization/)は、同氏が2017年に作った語だと説明しています。ただし本人の会社の説明で、同じページの中には2018年という表記もあります。
 
-日本ではSpeeeが2025年7月30日に[AEOサービスの正式提供](https://prtimes.jp/main/html/rd/p/000000242.000014788.html)を発表しています。同社のコラムは対話型AIのアプリ全体を指すにはLLMOでは意味が狭いとして、AEOという言葉を選んだと書いています。**同じ取り組みを会社ごとに違う名前で呼んでいるのが今の状態です。**
+日本ではSpeeeが2025年7月30日に[AEOサービスの正式提供](https://prtimes.jp/main/html/rd/p/000000242.000014788.html)を発表しました。[同社のコラム](https://webanalytics.speee.jp/media/article/what-is-aeo/)は対話型AIのアプリ全体を指すにはLLMOでは意味が狭いとして、AEOという言葉を選んだと書いています。なお、同社のプレスリリースでのAEOはAI Engine Optimizationの略です。**同じ取り組みを会社ごとに違う名前で呼んでいるのが今の状態です。**
 
 ## SEO・AIO・GEO・LLMOとの違い
 
 AEO対策の提案書とAIO対策の提案書を並べると、中身の項目がほとんど同じことに気づきます。呼び名ごとの出どころは次のとおりです。
 
-| 呼び名 | 正式名 | 出どころ | 主に指す回答 |
+| 呼び名 | 正式名 | 主に使われてきた所 | 主に指す回答 |
 |---|---|---|---|
-| SEO | Search Engine Optimization | 検索エンジンの最適化 | 検索結果の順位とクリック |
+| SEO | Search Engine Optimization | 検索エンジン全般 | 検索結果の順位とクリック |
 | AEO | Answer Engine Optimization | 海外のSEO業界。強調スニペット・音声検索の頃から | 強調スニペット・音声・生成AIの回答 |
 | GEO | Generative Engine Optimization | 2023年11月の論文 | 生成AIの回答 |
-| LLMO | Large Language Model Optimization | 日本の支援会社 | 生成AIの回答 |
-| AIO | AI Optimization など | 日本の支援会社 | 生成AIの回答。GoogleのAI Overviewsを指す会社もある |
+| LLMO | Large Language Model Optimization | 日本の支援会社がよく使う | 生成AIの回答 |
+| AIO | AI Optimization など | 日本の支援会社がよく使う | 生成AIの回答。GoogleのAI Overviewsを指す会社もある |
 
 **やることはほぼ同じで、呼び名と出どころが違うだけです。** GEOの元の論文が何を確かめたか、各語の細かい違いは[GEO対策とは](/media/geo-taisaku/)に書いています。
 
@@ -60,7 +60,7 @@ Googleの立場ではAEOはSEOの一部です。違いが出るのは測るも�
 
 ## Googleが公式に書いていること
 
-AEO対策の提案でよく引かれるのがGoogleの見解です。Googleは[生成AI機能向けの最適化ガイド](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)（2026年10月9日更新）で、AEOという語を何度か出しています。中心になるのは次の2か所です。
+AEO対策の提案でよく引かれるのがGoogleの見解です。Googleは[生成AI機能向けの最適化ガイド](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)（2026年5月15日公開、日本語版は10月9日更新）で、AEOという語を何度か出しています。中心になるのは次の2か所です。
 
 1か所目はSEOが生成AI検索でも有効かを答える節です。
 
@@ -72,7 +72,7 @@ AEO対策の提案でよく引かれるのがGoogleの見解です。Googleは[�
 
 <figure class="post-figure"><img src="/media/images/aeo-taisaku/aeo_04_google_ai_guide.png" alt="Google検索セントラルの生成AI機能向けの最適化ガイドの、する必要のないことの節。AEOやGEOの用語がよく使われるが、提案されているハックの多くは効果がなくGoogle検索の仕組みにも支えられていないと書かれている" loading="lazy"><figcaption>Google 検索の生成 AI 機能向けにウェブサイトを最適化する（Google 検索セントラル、2026年10月30日）</figcaption></figure>
 
-英語版の原文は「many suggested "hacks" aren't effective」です。**全部が効かないとは書いておらず、多くは効果がないという強さです。**
+英語版の原文も「many」（多く）です。**全部が効かないとは書いておらず、多くは効果がないという強さです。**
 
 ### する必要のないこと
 
@@ -83,7 +83,7 @@ AEO対策の提案でよく引かれるのがGoogleの見解です。Googleは[�
 | llms.txtなど特別なファイルやマークアップ | Google検索自体が使わない。ほかのサービスのために置くのは問題ない |
 | 文章のチャンク化 | 細かく分ける必要はない。理想的なページの長さも無い |
 | AI向けの書き換え | AIは類義語や意味を理解する。言い回しの網羅を心配しなくてよい |
-| 不正確な言及を集める | 一見役立ちそうだが、実際にはそれほど役に立たない |
+| 不自然な言及を集める | 一見役立ちそうだが、実際にはそれほど役に立たない |
 | 構造化データへの過剰な取り組み | 生成AI検索に構造化データは要らない。リッチリザルトのためには引き続き使うよう勧める |
 
 ガイドの末尾はAEO・GEOのハックより効果的なSEOの戦略を優先するよう求めています。**Googleが一番強く勧めているのは、読者が独自で役に立つと感じる内容を作ることでした。**
@@ -94,7 +94,7 @@ Googleの[サードパーティのSEOに関するガイダンス](https://develo
 
 ### Google以外のAIの公式の記述
 
-ここまではGoogle検索の話で、ChatGPTやPerplexityの扱いはこのガイドの範囲外です。Microsoft BingのプロダクトマネージャーはMicrosoft Advertisingのブログ（[2025年10月8日](https://about.ads.microsoft.com/en/blog/post/october-2025/optimizing-your-content-for-inclusion-in-ai-search-answers)）で、問いと答えの組はAIの回答にそのまま使われることがよくあり、スキーマで内容を商品・レビュー・FAQ・イベントなどと示せると書きました。同じ記事はAIの回答に選ばれることを保証する方法は無いとも書いています。**Googleは構造化データを要らないとし、Bing側は勧めているため、どのAIを狙うかで判断が分かれます。**
+ここまではGoogle検索の話で、ChatGPTやPerplexityの扱いはこのガイドの範囲外です。Microsoft BingのプロダクトマネージャーはMicrosoft Advertisingのブログ（[2025年10月8日](https://about.ads.microsoft.com/en/blog/post/october-2025/optimizing-your-content-for-inclusion-in-ai-search-answers)）で、問いと答えの組はAIの回答にそのまま使われることがよくあり、スキーマで内容を商品・レビュー・FAQ・イベントなどと示せると書きました。同じ記事はAIの回答に選ばれることを保証する方法は無いとも書いています。**Googleは生成AI検索のためには構造化データは要らないとし（リッチリザルトのためには勧めています）、Bing側はAIの回答のために勧めているため、どのAIを狙うかで判断が分かれます。**
 
 ## AEO対策で勧められる手の効き目
 
@@ -158,11 +158,11 @@ AEOと呼んでもAIO・LLMOと呼んでも、会社が進める順番は変わ�
 
 1つ目は、見込み客がAIに聞きそうな質問を決めることです。社名を入れない質問（〇〇を相談できる会社はどこか）で候補に入るかどうかが、新しい顧客につながります。質問の案は商談の最初に聞かれることや比べられた相手から集めると、実際の聞かれ方に近づきます。
 
-2つ目はページが読まれる状態かの確認です。GoogleのAI機能に出る条件はインデックスに登録され、スニペットを表示できることで、Search Consoleの生成AI設定で除外していないことも要ります。ChatGPTについてはOpenAIの[クローラーの説明](https://developers.openai.com/api/docs/bots)が、OAI-SearchBotを止めたサイトはChatGPTの検索の回答に出ないと書いています。
+2つ目はページが読まれる状態かの確認です。GoogleのAI機能に出る条件はインデックスに登録され、スニペットを表示できることで、Search Consoleの生成AI設定で除外していないことも要ります。ChatGPTについてはOpenAIの[クローラーの説明](https://developers.openai.com/api/docs/bots)が、OAI-SearchBotを止めたサイトはChatGPTの検索の回答に出ない（ナビゲーション用のリンクとしては出ることがある）と書いています。
 
 3つ目に、料金の決まり方・納期・対応できない条件・事例の数字のように、社内にしかない情報をページに載せます。4つ目はGoogleビジネスプロフィールや業界の比較サイトなど社外の情報をそろえることです。
 
-5つ目は同じ質問を同じ条件で何回か聞き、出た割合で見ることです。**nitoが支援するSaaS企業では、会員登録のときのアンケートで26.7%がAI検索で知った・比べたと答えた一方、同じ期間のGA4でAIから来た割合は0.007%でした。** 回答への言及の割合だけでなく、問い合わせで何で知ったかを聞く数まで目標に置きます。各段階の進め方は[AIO対策とは](/media/aio-taisaku/)に書いています。
+5つ目は同じ質問を同じ条件で何回か聞き、出た割合で見ることです。**nitoが支援するSaaS企業では、会員登録のときのアンケートで26.7%がAI検索で知った・比べたと答えた一方、同じ期間のGA4でAI経由として記録された会員登録は、全体の0.007%でした。** 回答への言及の割合だけでなく、問い合わせで何で知ったかを聞く数まで目標に置きます。各段階の進め方は[AIO対策とは](/media/aio-taisaku/)に書いています。
 
 ## AEOツールの見方
 
@@ -210,10 +210,10 @@ Googleの分は確かめられます。Search Consoleの生成AIパフォーマ�
 
 ## 出典
 
-- Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」2026年10月9日更新（2026年10月30日取得）
+- Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」2026年5月15日公開、日本語版は10月9日更新（2026年10月30日取得）
 - Google 検索セントラル「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」2025年12月31日更新（同）
 - Google 検索セントラル「[サードパーティの SEO ツール、サービス、アドバイスの使用に関する Google 検索のガイダンス](https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja)」（同）
-- Google 検索セントラル「[ドキュメントの最新の更新内容](https://developers.google.com/search/updates?hl=ja)」2026年5月8日・6月15日の項（同）
+- Google 検索セントラル「[ドキュメントの最新の更新内容](https://developers.google.com/search/updates?hl=ja)」2026年5月8日・5月15日・6月15日の項（同）
 - Google 検索セントラル ブログ「[How-to とよくある質問のリッチリザルトの変更](https://developers.google.com/search/blog/2023/08/howto-faq-changes?hl=ja)」2023年8月8日（9月14日更新）（同）
 - Google 検索セントラル「[Q&A（QAPage）の構造化データ](https://developers.google.com/search/docs/appearance/structured-data/qapage?hl=ja)」2026年9月12日更新（同）
 - Google 検索セントラル「[強調スニペットとウェブサイト](https://developers.google.com/search/docs/appearance/featured-snippets?hl=ja)」2025年12月18日更新（同）
@@ -222,3 +222,4 @@ Googleの分は確かめられます。Search Consoleの生成AIパフォーマ�
 - OpenAI「[Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots)」（同）
 - Kalicube「[Answer Engine Optimization](https://kalicube.com/entity/answer-engine-optimization/)」（同）
 - 株式会社Speee「[ChatGPTなどAIに自社を推奨されやすくするための「AEOサービス」を正式提供開始](https://prtimes.jp/main/html/rd/p/000000242.000014788.html)」PR TIMES、2025年7月30日（同）
+- 株式会社Speee「[AEO対策とは？SEOとの違いから具体的な手法、成功へのロードマップを徹底解説](https://webanalytics.speee.jp/media/article/what-is-aeo/)」2025年10月30日（2026年9月30日更新）（同）
