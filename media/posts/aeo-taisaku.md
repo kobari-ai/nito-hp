@@ -30,7 +30,7 @@ AEO（Answer Engine Optimization）は、日本語で回答エンジン最適化
 
 その後、生成AIが答えを文章で組み立てるようになり、回答エンジンの中心はChatGPT・Gemini・Perplexity・GoogleのAIモードに移っています。
 
-<!-- SHOT: 図 aeo_engines.html → aeo_01_engines.png・alt「AEOが対象にしてきた回答の場を縦に並べた図。Googleの強調スニペット、音声アシスタント、生成AIの回答。どれも答えを1つに絞って返す」 -->
+<figure class="post-figure"><img src="/media/images/aeo-taisaku/aeo_01_engines.png" alt="AEOが対象にしてきた回答の場を縦に並べた図。Googleの強調スニペット、音声アシスタント、生成AIの回答。どれも答えを1つに絞って返す" loading="lazy"></figure>
 
 ### 語の出どころ
 
@@ -70,7 +70,7 @@ AEO対策の提案でよく引かれるのがGoogleの見解です。Googleは[�
 
 > オンラインでは、回答エンジン最適化（AEO）や生成エンジン最適化（GEO）などの用語がよく使われますが、提案されている「ハック」の多くは効果がなく、Google 検索の実際の仕組みによってもサポートされていません。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja・探す語「提案されている「ハック」の多くは効果がなく」・赤枠「提案されている「ハック」の多くは効果がなく、Google 検索の実際の仕組みによってもサポートされていません」・PC・alt「Google検索セントラルの生成AI機能向けの最適化ガイドの、する必要のないことの節。AEOやGEOの用語がよく使われるが、提案されているハックの多くは効果がなくGoogle検索の仕組みにも支えられていないと書かれている」・figcaption「Google 検索の生成 AI 機能向けにウェブサイトを最適化する（Google 検索セントラル、2026年10月30日）」 -->
+<figure class="post-figure"><img src="/media/images/aeo-taisaku/aeo_04_google_ai_guide.png" alt="Google検索セントラルの生成AI機能向けの最適化ガイドの、する必要のないことの節。AEOやGEOの用語がよく使われるが、提案されているハックの多くは効果がなくGoogle検索の仕組みにも支えられていないと書かれている" loading="lazy"><figcaption>Google 検索の生成 AI 機能向けにウェブサイトを最適化する（Google 検索セントラル、2026年10月30日）</figcaption></figure>
 
 英語版の原文は「many suggested "hacks" aren't effective」です。**全部が効かないとは書いておらず、多くは効果がないという強さです。**
 
@@ -109,15 +109,13 @@ AEO対策の記事や提案でよく並ぶ手を、公式の文書と並べま�
 | 構造化データ全般 | AIの理解を助ける | 生成AI検索には不要。リッチリザルトのために勧める |
 | llms.txtを置く | AIに読まれやすくなる | Google検索は使わない |
 
-<!-- SHOT: 図 aeo_tactics.html → aeo_02_tactics.png・alt「AEO対策で勧められる手をGoogleの公式の記述で分けた図。読者のために続けるのは問いの見出しと先に答える書き方、FAQの本文、表示と一致した構造化データ。Google検索のために新しく足す理由が無いのはFAQPageのマークアップとllms.txt」 -->
+<figure class="post-figure"><img src="/media/images/aeo-taisaku/aeo_02_tactics.png" alt="AEO対策で勧められる手をGoogleの公式の記述で分けた図。読者のために続けるのは問いの見出しと先に答える書き方、FAQの本文、表示と一致した構造化データ。Google検索のために新しく足す理由が無いのはFAQPageのマークアップとllms.txt" loading="lazy"></figure>
 
 ### FAQの構造化データ
 
 FAQPageはschema.orgの型の1つで、[schema.orgの定義](https://schema.org/FAQPage)は、1つ以上のよくある質問を載せたウェブページです。同じページには使っているドメインが100万〜1,000万あると出ています（2026年8月時点のGoogleの集計）。
 
 Googleはこの型を使ったリッチリザルトを段階的に絞りました。2023年8月の[ブログ](https://developers.google.com/search/blog/2023/08/howto-faq-changes?hl=ja)で、表示をよく知られた信頼できる政府と医療のサイトに限ると発表しています。さらに[ドキュメントの更新履歴](https://developers.google.com/search/updates?hl=ja)では、2026年5月7日から表示されなくなると5月8日に告知し、6月15日に説明のページそのものを外しました。
-
-<!-- SHOT: 画面 https://developers.google.com/search/updates?hl=ja#removing-faq-rich-result・探す語「Removing documentation for the FAQ rich result feature」・赤枠「The FAQ rich result feature is no longer shown in Google Search results」・PC・alt「Google検索セントラルのドキュメントの更新履歴。2026年6月15日の項にFAQのリッチリザルトの説明を削除したとあり、理由としてFAQのリッチリザルトはGoogle検索の結果に表示されなくなったと書かれている」・figcaption「ドキュメントの最新の更新内容（Google 検索セントラル、2026年10月30日）」 -->
 
 **すでに入れているマークアップは外す必要がありません。** 2023年のブログは使われていない構造化データが検索で問題を起こすことは無いと書いています。新しく入れるかどうかはBingのように公式に勧めているAIを狙うかで決めます。
 
@@ -156,7 +154,7 @@ FAQのページで答える質問の選び方は[AIに引用されるFAQペー�
 
 AEOと呼んでもAIO・LLMOと呼んでも、会社が進める順番は変わりません。
 
-<!-- SHOT: 図 aeo_steps.html → aeo_03_steps.png・alt「AEO対策で会社がやる5つの順番を縦に並べた図。測る質問を決める、読まれる状態か確かめる、社内にしかない情報を載せる、外部の情報をそろえる、同じ条件で測る」 -->
+<figure class="post-figure"><img src="/media/images/aeo-taisaku/aeo_03_steps.png" alt="AEO対策で会社がやる5つの順番を縦に並べた図。測る質問を決める、読まれる状態か確かめる、社内にしかない情報を載せる、外部の情報をそろえる、同じ条件で測る" loading="lazy"></figure>
 
 1つ目は、見込み客がAIに聞きそうな質問を決めることです。社名を入れない質問（〇〇を相談できる会社はどこか）で候補に入るかどうかが、新しい顧客につながります。質問の案は商談の最初に聞かれることや比べられた相手から集めると、実際の聞かれ方に近づきます。
 
