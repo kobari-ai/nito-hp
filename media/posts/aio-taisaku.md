@@ -2,7 +2,7 @@
 title: 【2026年10月】AIO対策とは？やり方の5手順と公式の情報・費用・効果の測り方
 date: 2026-10-30
 category: AI検索対策
-description: AIO対策とは何かと、会社が進めるやり方を5つの手順で解説。今の答えの測り方、引用元から直すページの決め方、Google・OpenAIの公式の記述と各社の主張の違い、効かない手、費用の入口まで。
+description: AIO対策とは何かと、会社が進めるやり方を5つの手順で解説。今の答えの測り方、引用元から直すページの決め方、Google・OpenAIの公式の記述とよく見る説明の違い、効かない手、費用の入口まで。
 keyword: aio対策
 cover_tag: 解説
 cover_headline: AIO対策とは
@@ -12,12 +12,12 @@ cta: llmo
 
 米国の[Pew Research Center](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/)が2025年3月の閲覧記録を調べたところ、GoogleでAIの要約が出た検索では、通常の結果のリンクが押されたのは訪問の8%でした。要約が出ないときは15%です。
 
-社内でAIO対策をやるよう言われた方や、支援会社から提案を受けた方に向けて、この記事では会社が進める順番を5つの手順で書きます。各手順で、Google・OpenAI・Perplexityの公式に書いてあることと、各社の主張を分けます。
+社内でAIO対策をやるよう言われた方や、支援会社から提案を受けた方に向けて、この記事では会社が進める順番を5つの手順で書きます。各手順で、Google・OpenAI・Perplexityの公式に書いてあることと、支援会社などの主張を分けます。
 
 :::takeaways
 - AIO対策は、ChatGPT・Gemini・Perplexity・GoogleのAIによる概要などの回答に自社が出るようにする取り組みの総称です。**LLMO・GEOと、会社がやることはほぼ同じです**
 - 順番は**今の答えを測る・引用元を読む・ページを直す・社外の情報をそろえる・同じ問いで測り直す**の5つ。直すページは引用元から決めます
-- Googleは公式ガイドで、**llms.txt・文章の細切れ・AI向けの書き換え・生成AI検索のための構造化データは要らない**と書いています。ChatGPTやPerplexityでの効き方は自社の問いで確かめます
+- Googleは公式ガイドで、**Google検索ではllms.txt・文章の細切れ・AI向けの書き換え・生成AI検索のための構造化データは要らない**と書いています。ChatGPTやPerplexityでの効き方は自社の問いで確かめます
 :::
 
 ## AIO対策とは
@@ -52,7 +52,7 @@ AIO対策で挙がる施策はFAQ・一次情報・構造化データ・社外�
 | 生産管理システムを比べたい | AIモード | 3番目 | 安さが売り（2年前の料金） | 自社の古い料金ページ |
 | 〇〇社の評判は？ | Perplexity | 出る | 事例が少ない | 口コミサイトC |
 
-問いごとに自社が出たかを数える公式の道具はありません。Googleの[生成 AI パフォーマンス レポート](https://support.google.com/webmasters/answer/16984139?hl=ja)はAIによる概要とAIモードでサイトへのリンクが表示された回数を出すものの、内訳はページ・国・日付・デバイスで、検索語は入っていません。**問いごとの出方は手で聞くかツールで測るしかありません。** ツールは回答の数え方が製品ごとに違うので、[GEO対策ツール・AIO対策ツール10製品の比較](/media/geo-aio-tools/)で確かめてから選びます。
+問いごとに自社が出たかを数える公式の道具は、Google・OpenAI・Perplexityにはありません。Googleの[生成 AI パフォーマンス レポート](https://support.google.com/webmasters/answer/16984139?hl=ja)はAIによる概要とAIモードでサイトへのリンクが表示された回数を出すものの、内訳はページ・国・日付・デバイスで、検索語は入っていません。Microsoftが2026年2月にプレビューで出したBing Webmaster Toolsの[AI Performance](https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview)は、Copilotなどで自社のページが引用された数と、AIが取りに行った語句の標本までを出します。**問いごとの出方は手で聞くかツールで測るしかありません。** ツールは回答の数え方が製品ごとに違うので、[GEO対策ツール・AIO対策ツール10製品の比較](/media/geo-aio-tools/)で確かめてから選びます。
 
 ### ② 引用元から直すページを決める
 
@@ -70,7 +70,7 @@ Googleの最適化ガイドによると、AIによる概要やAIモードは、�
 
 <figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_03_sources.png" alt="引用元の種類ごとに次の手を決める図。自社のページなら古い紹介を直す、競合のサイトなら同じ問いに答えるページを足す、比較サイトや口コミなら社外の情報を確かめる、引用元が無ければほかの問いを先にする" loading="lazy"></figure>
 
-「AIはFAQの形を好む」という説明もよく耳にしますが、3社の公式ページにそう書いたものは見つけられませんでした。自社の問いの引用元を数えた結果をもとに、直す場所を決めてください。
+「AIはFAQの形を好む」という説明もよく耳にします。Googleのガイドが勧めるのは形式ではなく、読者の問いに独自の中身で答えることです。自社の問いの引用元を数えた結果をもとに、直す場所を決めてください。
 
 ### ③ ページを直して足す
 
@@ -86,9 +86,11 @@ Googleの最適化ガイドによると、AIによる概要やAIモードは、�
 
 Googleのガイドは誰でも書ける一般論（ガイドの例は「初めて住宅を購入する人向けの 7 つのヒント」）より、独自の専門的な見解や経験に基づく内容を勧めています。[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)のページには、AIによる概要とAIモードに出るための「追加の要件はなく」、インデックスに登録されてスニペットが表示されることが条件だと書かれています。同じページは重要なコンテンツをテキストで示すことや、構造化データをページに表示されるテキストと一致させることを挙げています。
 
+ただし最適化ガイドが挙げる条件はこれに加えてもう1つあり、Search Consoleの検索の生成 AI 機能にサイトが含まれていることです。この[設定](https://support.google.com/webmasters/answer/16908024?hl=ja)（［設定］>［検索の生成 AI］）は2026年8月31日から全サイトで選べるようになり、除外を選んだサイトはAIによる概要・AIモードに出ません。
+
 <figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_05_google_ai_features.png" alt="Google検索セントラルのAI機能とウェブサイトのページ。AIによる概要やAIモードに表示されるための追加の要件はなく、ページがインデックスに登録されスニペットが表示されることが条件と書かれている" loading="lazy"><figcaption>AI 機能とウェブサイト（Google 検索セントラル、2026年10月30日）</figcaption></figure>
 
-技術の確かめもこの手順の一部です。OpenAIの[クローラーの説明](https://developers.openai.com/api/docs/bots)によると、robots.txtでOAI-SearchBotを止めたサイトはChatGPTの検索の回答に出ません。Perplexityも[PerplexityBot](https://docs.perplexity.ai/guides/bots)という検索用のクローラーを学習用と分けています。robots.txtで許可していてもCDNの設定で止まっていることがあり、確かめ方は[ChatGPT検索で引用元に出る条件](/media/chatgpt-search-citation/)に書きました。
+技術の確かめもこの手順の一部です。Googleは Search Console の検索の生成 AI 設定が除外になっていないかを見ます。OpenAIの[クローラーの説明](https://developers.openai.com/api/docs/bots)によると、robots.txtでOAI-SearchBotを止めたサイトはChatGPTの検索の回答に出ません（ナビゲーション用のリンクとしては出ることがあります）。Perplexityも、[PerplexityBot](https://docs.perplexity.ai/guides/bots)は検索結果にサイトを出すためのクローラーで、AIの基盤モデルの学習用の収集には使わないと書き、robots.txtでの許可を勧めています。robots.txtで許可していてもCDNの設定で止まっていることがあり、確かめ方は[ChatGPT検索で引用元に出る条件](/media/chatgpt-search-citation/)に書きました。
 
 <figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_06_openai_bots.png" alt="OpenAIのクローラーの説明ページ。OAI-SearchBotはChatGPTの検索機能でサイトを出すためのもので、止めたサイトはChatGPTの検索の回答に出ないと書かれている" loading="lazy"><figcaption>Overview of OpenAI Crawlers（OpenAI、2026年10月30日）</figcaption></figure>
 
@@ -98,7 +100,7 @@ AIの材料は自社サイトだけではなく、比較サイト・業界団体
 
 GoogleのガイドはGoogleビジネスプロフィールやMerchant Centerを使うと「AI の回答と Google 検索のその他の検索結果の両方で商品やサービスが表示されやすくなります」と書いています。店舗や事務所を持つ会社なら、プロフィールを最新にしておくのが公式に沿った手で、整え方は[GoogleビジネスプロフィールのAI対策](/media/gbp-ai-search/)にまとめました。
 
-「サイテーションを増やせばAIに推薦される」という説明もあります。同じガイドはウェブ全体で不正確な言及を探すことは「実際にはそれほど役に立ちません」と書きました。**社外で手を打つなら、言及の数を増やすより、載っている情報の誤りを直し、第三者が書ける事実（事例・受賞・取材）を出すほうを先にします。** 社名の表記のそろえ方は[エンティティSEOとは](/media/entity-seo/)、社外での語られ方は[サイテーションとは](/media/citation-for-ai/)で扱っています。
+「サイテーションを増やせばAIに推薦される」という説明もあります。同じガイドはウェブ全体で不自然な言及を集めることは「実際にはそれほど役に立ちません」と書いています（日本語版はこの箇所を「不正確な言及」と訳していますが、英語版の inauthentic は、まとめの節の訳どおり「不自然な」の意味です）。**社外で手を打つなら、言及を作りにいくより、載っている情報の誤りを直し、第三者が書ける事実（事例・受賞・取材）を出すほうを先にします。** 社名の表記のそろえ方は[エンティティSEOとは](/media/entity-seo/)、社外での語られ方は[サイテーションとは](/media/citation-for-ai/)で扱っています。
 
 ### ⑤ 同じ問いで測り直す
 
@@ -106,7 +108,7 @@ GoogleのガイドはGoogleビジネスプロフィールやMerchant Centerを�
 
 反映までの時間は手の種類で違います。robots.txtの変更は、OpenAIが約24時間、Perplexityが最大24時間で反映されると公式ページに書いています。ページの修正はGoogleならインデックスが更新されてからで、日数の目安は公式にありません。nitoの支援先では新しく公開したページが3日後にAIの回答の引用元に入った例がありました。
 
-## 公式の記述と各社の主張
+## 公式の記述とよく見る説明
 
 AIO対策の提案や記事でよく見る説明を、公式の文書の記述と並べます。
 
@@ -140,27 +142,27 @@ Googleのガイドが扱うのは、Google検索の生成AI機能だけです。
 
 自社でやる場合に要るのはお金より人の時間と権限です。20問を4つのAIに2回ずつ聞くと、1回の測定で160件の回答を読んで引用元を記録することになります。そのうえで、サイトを直す権限とGoogleビジネスプロフィールを更新する権限が担当にあるかどうかが、進む速さを左右します。
 
-外に頼む場合の見積もりは診断だけの単発か毎月の伴走かで大きく変わります。伴走の中でも、方針と報告だけか、ページの修正や記事の制作まで入るかで幅が出るところです。金額の幅は[LLMO対策の費用相場](/media/llmo-cost/)に、社内との分け方は[内製と外注どちらがいい？](/media/llmo-inhouse-vs-outsource/)にまとめました。
+外に頼む場合の見積もりは診断だけの単発か毎月の伴走かで大きく変わります。伴走の中でも、方針と報告だけか、ページの直し方の指示や記事の制作まで入るかで幅が出るところです。金額の幅は[LLMO対策の費用相場](/media/llmo-cost/)に、社内との分け方は[内製と外注どちらがいい？](/media/llmo-inhouse-vs-outsource/)にまとめました。
 
 | 手順 | 自社でやる場合に要るもの | 外に頼みやすいか |
 |---|---|---|
 | ① 今の答えを測る | 問いを決める人と、回答を記録する時間 | 頼みやすい。問いは社内で決める |
 | ② 引用元を読む | 記録を種類ごとに数える時間 | 頼みやすい |
-| ③ ページを直す | 事実と数字を出す人と、サイトの更新の権限 | 文章と実装は頼める。中身は社内から |
+| ③ ページを直す | 事実と数字を出す人と、サイトの更新の権限 | 直す箇所の指示・文章・実装は頼める。中身は社内から |
 | ④ 社外の情報 | 広報や店舗の担当と、プロフィールの権限 | 一部は頼める |
 | ⑤ 測り直す | ①と同じ | 頼みやすい |
 
-**見積もりを比べるときは金額より先に①〜⑤のどこまでが入っているかをそろえます。** 測るだけの契約で③のページの修正が入っていなければ、社内で直す人を別に用意しなければなりません。
+**見積もりを比べるときは金額より先に①〜⑤のどこまでが入っているかをそろえます。** ③の作業が直す箇所と書き方の指示までか、実装までかは会社ごとに違うところです。指示までの契約なら、サイトを更新する人（社内か制作会社）に渡す段取りを先に決めておきます。
 
 ## 効いたかの測り方
 
 効果は3つの層で見ます。1つ目は回答そのもので、①の問いで社名が出た割合（言及率）・紹介の中身が正しいか・自社のページが引用元に付いたかを並べます。言及率は週ごとに大きく揺れることがあるため、比べるのは月単位です。
 
-2つ目はGoogleの数字です。Search Consoleの生成 AI パフォーマンス レポートは2026年8月31日に全サイトに提供され、AIによる概要とAIモードで自社へのリンクが表示された回数をページごとに出します。表示が少ないサイトではレポート自体が出ないこともあります。見方は[サーチコンソールでAIモード・AIによる概要の表示を見る方法](/media/gsc-ai-mode/)にあります。
+2つ目はGoogleの数字です。Search Consoleの生成 AI パフォーマンス レポートは2026年8月31日に全サイトに提供され、AIによる概要とAIモードで自社へのリンクが表示された回数をページごとに出します。表示が少ないサイトや、生成AI機能から除外しているサイトでは、レポート自体が出ないこともあります。見方は[サーチコンソールでAIモード・AIによる概要の表示を見る方法](/media/gsc-ai-mode/)にあります。
 
 <figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_08_gsc_ai_report.png" alt="Search Consoleヘルプの生成AIパフォーマンスレポートのページ。表示回数はGoogle検索の生成AI機能でユーザーにサイトへのリンクが表示された回数と書かれている" loading="lazy"><figcaption>生成 AI パフォーマンス レポート（検索）（Search Console ヘルプ、2026年10月30日）</figcaption></figure>
 
-3つ目は問い合わせです。AIの回答で社名を知った人がリンクを押さずにあとで社名を検索して来ると、GA4ではAIから来たと記録されません。**nitoが支援するSaaS企業では、GA4でAIから来た割合が0.007%だった同じ期間に、会員登録のアンケートではAI検索で知った・比べたという人が26.7%いました。** 問い合わせのフォームや商談の最初に何で知ったかを聞き、AIと答えた数まで数えるのが確実な方法です。GA4での見方は[AI検索対策の効果はどう測る？](/media/ai-search-measurement/)にまとめています。
+3つ目は問い合わせです。AIの回答で社名を知った人がリンクを押さずにあとで社名を検索して来ると、GA4ではAIから来たと記録されません。**nitoが支援するSaaS企業では、同じ期間のGA4でAI経由として記録された会員登録は全体の0.007%で、会員登録時のアンケートでは26.7%がAI検索で知った・比べたと答えていました。** 問い合わせのフォームや商談の最初に何で知ったかを聞き、AIと答えた数まで数えるのが確実な方法です。GA4での見方は[AI検索対策の効果はどう測る？](/media/ai-search-measurement/)にまとめています。
 
 ## 会社が決めること
 
@@ -190,7 +192,7 @@ AIO対策は担当1人の作業に見えても、決める人は社内に何人�
 
 ### Q. AIO対策とSEO対策は何が違いますか？
 
-Googleによれば、生成AI向けの最適化もSEOであることに変わりはありません。違いは見る数字で、AIO対策はChatGPTやPerplexityも含めて、回答に社名が出たか・どう紹介されたかを見ます。
+Googleによれば、Google検索の観点では生成AI向けの最適化もSEOであることに変わりはありません。違いは見る数字で、AIO対策はChatGPTやPerplexityも含めて、回答に社名が出たか・どう紹介されたかを見ます。
 
 ### Q. AIO対策はAI Overviews（AIによる概要）の対策と同じですか？
 
@@ -206,7 +208,7 @@ robots.txtとCDNでOAI-SearchBotを止めていないかです。OpenAIの公式
 
 ### Q. AIO対策の効果はどれくらいで出ますか？
 
-公式に期間の目安はありません。robots.txtの変更はChatGPTとPerplexityで24時間ほどで反映されますが、ページの修正はインデックスが更新されてからです。nitoの支援先の実測では、新しいページが公開3日で引用元に入った例と、取り組みから3か月で言及率が10%から45%になった例があります。
+公式に期間の目安はありません。robots.txtの変更はChatGPTとPerplexityで24時間ほどで反映されますが、ページの修正はインデックスが更新されてからです。nitoの支援先の実測では、新しいページが公開3日で引用元に入った例と、取り組みから3か月である問いの言及率が10%から45%になった例があります。
 
 ### Q. llms.txtや構造化データはAIO対策に必要ですか？
 
@@ -219,6 +221,8 @@ Google検索については必要ありません。Googleの公式ガイドは�
 - Google 検索セントラル「[Google 検索のスパムに関するポリシー](https://developers.google.com/search/docs/essentials/spam-policies?hl=ja)」（同）
 - Google 検索セントラル「[サードパーティの SEO ツール、サービス、アドバイスの使用に関する Google 検索のガイダンス](https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja)」（同）
 - Search Console ヘルプ「[生成 AI パフォーマンス レポート（検索）](https://support.google.com/webmasters/answer/16984139?hl=ja)」（同）
+- Search Console ヘルプ「[検索の生成 AI 設定](https://support.google.com/webmasters/answer/16908024?hl=ja)」（同）
+- Microsoft Bing Webmaster Blog「[Introducing AI Performance in Bing Webmaster Tools Public Preview](https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview)」2026年2月10日（同）
 - OpenAI「[Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots)」（同）
 - Perplexity「[Perplexity Crawlers](https://docs.perplexity.ai/guides/bots)」（同）
 - Perplexity Help Center「[How does Perplexity work?](https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work)」（同）
