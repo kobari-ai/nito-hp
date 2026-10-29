@@ -38,7 +38,7 @@ GEO・LLMO・AIO・AEOは、どれも生成AIの回答に自社の情報を出�
 | GEO | Generative Engine Optimization | 2023年の論文が由来。海外の記事と、論文を引く日本の解説 |
 | LLMO | Large Language Model Optimization | 日本の支援会社のサービス名や解説 |
 | AIO | AI Optimization など | 日本の支援会社。GoogleのAI Overviewsへの対策の意味で使う会社もある |
-| AEO | Answer Engine Optimization | 海外のSEO会社。Googleのガイドも名前を挙げる |
+| AEO | Answer Engine Optimization | 海外のSEO会社。Googleのガイドも名前を挙げる（[AEO対策とは](/media/aeo-taisaku/)） |
 
 呼び名で依頼先を選び分ける理由はなく、見積もりでは診断・ページの修正・記事の制作・測定のどこまで入るかを先に確かめます。用語の成り立ちとSEOとの違いは[LLMOとは？SEOとの違い](/media/what-is-llmo/)に書いています。AIO対策として会社が進める順番は[AIO対策とは？やり方の5手順](/media/aio-taisaku/)にまとめました。
 
