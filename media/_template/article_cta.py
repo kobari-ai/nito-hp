@@ -124,7 +124,7 @@ def mid_cta_llmo(meta, slug):
     title = meta.get("cta_title") or (f"{n} に自社がどう紹介されているか調べてみませんか" if n != "AI"
                                       else "AI のおすすめに自社の名前が挙がるか調べてみませんか")
     text = meta.get("cta_text") or ("調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。"
-                                    "nito は ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。")
+                                    "nito は ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。")
     return (f'<div class="mcta">\n<div class="mcta__body">\n'
             f'<p class="mcta__eyebrow">{_e(eyebrow)}</p>\n'
             f'<p class="mcta__ttl">{_e(title)}</p>\n'
@@ -155,7 +155,7 @@ def end_cta(slug, theme):
     if theme == "llmo":
         return ('<div class="ecta">\n<div class="ecta__label">CONTACT</div>\n'
                 '<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>\n'
-                '<p class="ecta__desc">ChatGPT・Gemini・AIモードの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>\n'
+                '<p class="ecta__desc">ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>\n'
                 '<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a>'
                 '<a class="sec" href="/llmo/">支援内容を見る</a></div>\n'
                 '<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>\n</div>')
@@ -174,7 +174,7 @@ def rail(toc_html, theme):
     links = "".join(f'<a href="#{i}">{t}</a>' for i, t in items[:8])
     if theme == "llmo":
         cta = ('<div class="rail__cta"><b>AI での見え方を無料で調べる</b>'
-               '<p>ChatGPT・Gemini・AIモードで自社の名前が挙がるかを数字で出します。</p>'
+               '<p>ChatGPT・Gemini・AIモードなどで自社の名前が挙がるかを数字で出します。</p>'
                '<a href="/llmo/">現状分析レポート</a></div>')
     else:
         cta = ('<div class="rail__cta"><b>会社での AI 活用の相談</b>'
