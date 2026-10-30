@@ -26,7 +26,7 @@ SEOを担当していて、AIの時代に今のSEOのままでよいのか、何
 
 **この記事が主に扱うのは2つ目で、1つ目はAIで書いた記事をGoogleがどう扱うかの1節だけにします。** ツールの使い方を探している場合は、ほかの記事のほうが役に立つはずです。AIの回答に自社を出す取り組みの全体の進め方は[AIO対策とは？やり方の5手順](/media/aio-taisaku/)にまとめています。
 
-<!-- SHOT: 図 aiseo_two.html → aiseo_01_two.png・alt「AI SEO対策という言葉の2つの意味を縦に並べた図。1つ目はAIのツールでキーワード調査や記事の下書きをするAIを使ったSEO。2つ目はAIによる概要やChatGPTの回答に自社が出るようにするAI検索の時代のSEO」 -->
+<figure class="post-figure"><img src="/media/images/ai-seo-taisaku/aiseo_01_two.png" alt="AI SEO対策という言葉の2つの意味を縦に並べた図。1つ目はAIのツールでキーワード調査や記事の下書きをするAIを使ったSEO。2つ目はAIによる概要やChatGPTの回答に自社が出るようにするAI検索の時代のSEO" loading="lazy"></figure>
 
 ## 従来のSEOで変わらないこと
 
@@ -34,7 +34,7 @@ SEOを担当していて、AIの時代に今のSEOのままでよいのか、何
 
 **Google検索のAI機能に出る土台は、インデックスに登録されてスニペットが表示されるという従来の条件そのものです。** 検索セントラルの「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」も、表示されるための「追加の要件はなく、別途特別な最適化を行う必要もありません」と書いています。最適化ガイドはこれに加えて、Search Consoleの検索の生成AI機能にサイトが含まれていることを条件に挙げています。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja・探す語「手短に言えば、有効です」・赤枠 その1文と次の「Google 検索の生成 AI 機能は、コアとなる検索ランキングと品質システムに根差している」の1文・PC・alt「Googleの生成AI機能向けの最適化ガイド。生成AI検索でも引き続きSEOは有効かという問いに、手短に言えば有効で、生成AI機能はコアとなる検索ランキングと品質システムに根差していると書かれている」・figcaption「Google 検索の生成 AI 機能向けにウェブサイトを最適化する（Google 検索セントラル、2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-seo-taisaku/aiseo_04_ai-optimization.png" alt="Googleの生成AI機能向けの最適化ガイド。生成AI検索でも引き続きSEOは有効かという問いに、手短に言えば有効で、生成AI機能はコアとなる検索ランキングと品質システムに根差していると書かれている" loading="lazy"><figcaption>Google 検索の生成 AI 機能向けにウェブサイトを最適化する（Google 検索セントラル、2026年10月31日）</figcaption></figure>
 
 中身の評価の考え方も変わっていません。ガイドは誰でも書ける一般論の例に「初めて住宅を購入する人向けの 7 つのヒント」を挙げ、独自の経験や専門の見解に基づく内容を勧めています。AIは複数のページを見比べて答えを作るため、ほかのページを言い換えただけの記事は材料に選ばれる理由が薄くなります。SEOで言われてきた独自性と、AIに引用される条件はここで重なるわけです。
 
@@ -50,7 +50,7 @@ ChatGPTの検索・Perplexity・MicrosoftのCopilotはGoogleとは別の仕組�
 
 OpenAIの[クローラーの説明](https://developers.openai.com/api/docs/bots)によると、OAI-SearchBotを止めたサイトはChatGPTの検索の回答に出ません。学習用のGPTBotとは別々の設定です。Perplexityも[PerplexityBot](https://docs.perplexity.ai/guides/bots)を検索結果にサイトを出すためのクローラーと説明し、robots.txtでの許可を勧めています。CopilotはBingの検索の上に作られており、Bing Webmaster Toolsで引用の数が見られます。
 
-<!-- SHOT: 図 aiseo_gates.html → aiseo_02_gates.png・alt「AI検索の入口ごとに確かめる所を縦に並べた図。GoogleのAIによる概要とAIモードはインデックス登録とSearch Consoleの検索の生成AI設定、ChatGPTの検索はOAI-SearchBotの許可、PerplexityはPerplexityBotの許可、CopilotはBingの索引」 -->
+<figure class="post-figure"><img src="/media/images/ai-seo-taisaku/aiseo_02_gates.png" alt="AI検索の入口ごとに確かめる所を縦に並べた図。GoogleのAIによる概要とAIモードはインデックス登録とSearch Consoleの検索の生成AI設定、ChatGPTの検索はOAI-SearchBotの許可、PerplexityはPerplexityBotの許可、CopilotはBingの索引" loading="lazy"></figure>
 
 **robots.txtで許可していても、CDNやセキュリティの設定でAIのクローラーが止まっていることがあります。** Googleの「AI 機能とウェブサイト」も、robots.txtに加えてCDNやホスティングでクロールが許可されているかを確かめるよう書いています。どのクローラーが学習用でどれが検索用か、止めると何が起きるかは[AIクローラーをrobots.txtで止めるかの判断](/media/ai-crawler-robots/)、ChatGPTの条件の細部は[ChatGPT検索で引用元に出る条件](/media/chatgpt-search-citation/)が詳しいです。
 
@@ -84,19 +84,19 @@ GoogleのAIモードもGoogle検索の一部で、公式の条件はAIによる�
 
 **作業の大半は続けるもので、足すのは入口の確認と回答の記録、やめるのは問いの言い換えごとのページ量産です。** ガイドも結びで明示的なSEOをまったく行わなくても多くのコンテンツが成功していると書き、ガイドの全項目をやる必要はないと断っています。
 
-<!-- SHOT: 図 aiseo_sort.html → aiseo_03_sort.png・alt「SEOの作業を3つに分けた図。続けるのはキーワード調査、独自の中身の制作、内部リンクと技術の整備、構造化データ。足すのはAIのクローラーとCDNの確認、AIに聞く問いの記録、Search Consoleの生成AIの設定とレポート。やめるのは言い換えごとのページ量産と不自然な言及集め」 -->
+<figure class="post-figure"><img src="/media/images/ai-seo-taisaku/aiseo_03_sort.png" alt="SEOの作業を3つに分けた図。続けるのはキーワード調査、独自の中身の制作、内部リンクと技術の整備、構造化データ。足すのはAIのクローラーとCDNの確認、AIに聞く問いの記録、Search Consoleの生成AIの設定。やめるのは言い換えごとのページ量産と不自然な言及集め" loading="lazy"></figure>
 
 ## AIで書いた記事のGoogleの扱い
 
 「AIで書いた記事はGoogleに嫌われる」という説明と「AIで書いても問題ない」という説明が、上位の記事に両方並んでいるのが現状です。Googleの「[ウェブサイトで生成 AI によるコンテンツを使用するための Google 検索のガイダンス](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content?hl=ja)」は、生成AIはトピックを調べるときなどに便利だとしたうえで、ユーザーにとっての価値を付加することなく大量のページを生成すると、大量生成されたコンテンツの不正使用に関するスパムポリシーに「違反してしまう可能性があります」と書いています。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/fundamentals/using-gen-ai-content?hl=ja・探す語「ユーザーにとっての価値を付加することなく大量のページを生成すると」・赤枠 その1文・PC・alt「Googleの生成AIによるコンテンツを使用するためのガイダンス。生成AIツールなどでユーザーにとっての価値を付加することなく大量のページを生成すると、大量生成されたコンテンツの不正使用に関するスパムポリシーに違反してしまう可能性があると書かれている」・figcaption「ウェブサイトで生成 AI によるコンテンツを使用するための Google 検索のガイダンス（Google 検索セントラル、2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-seo-taisaku/aiseo_05_genai-content.png" alt="Googleの生成AIによるコンテンツを使用するためのガイダンス。生成AIツールなどでユーザーにとっての価値を付加することなく大量のページを生成すると、大量生成されたコンテンツの不正使用に関するスパムポリシーに違反してしまう可能性があると書かれている" loading="lazy"><figcaption>ウェブサイトで生成 AI によるコンテンツを使用するための Google 検索のガイダンス（Google 検索セントラル、2026年10月31日）</figcaption></figure>
 
 [スパムに関するポリシー](https://developers.google.com/search/docs/essentials/spam-policies?hl=ja)の側は、大量生成されたコンテンツの不正使用を「検索ランキングの操作を主な目的として大量のページを生成すること」と定め、価値のないコンテンツを「その作成方法は問わず」大量に作ることだと書いています。**Googleが問題にするのはAIで書いたかどうかではなく、価値を足さずに大量に作ることです。** 人が書いても同じ扱いになり、AIで書いても価値があれば当てはまりません。
 
 ガイダンスは公開前に人の手で事実を確かめることも求めています。対象は本文だけでなく、title・メタディスクリプション・構造化データ・画像の代替テキストまで含みます。AIで記事を作る会社なら、本数の目標より先に誰が事実を確かめて公開を決めるかを決めておくと、このガイダンスに沿った運用になるでしょう。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/essentials/spam-policies?hl=ja・探す語「その作成方法は問わず」・赤枠 大量生成されたコンテンツの不正使用の定義の段落・PC・alt「Googleのスパムに関するポリシーの大量生成されたコンテンツの不正使用の節。検索ランキングの操作を主な目的として大量のページを生成することで、価値のないコンテンツをその作成方法は問わず大量に作ることと書かれている」・figcaption「Google 検索のスパムに関するポリシー（Google 検索セントラル、2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-seo-taisaku/aiseo_06_spam-policy.png" alt="Googleのスパムに関するポリシーの大量生成されたコンテンツの不正使用の節。検索ランキングの操作を主な目的として大量のページを生成することで、価値のないコンテンツをその作成方法は問わず大量に作ることと書かれている" loading="lazy"><figcaption>Google 検索のスパムに関するポリシー（Google 検索セントラル、2026年10月31日）</figcaption></figure>
 
 ## 今のSEOに足す5つの手順
 
