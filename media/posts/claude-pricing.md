@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】Claudeの料金プランを比較｜Free・Pro $18・Max・Teamの違いと選び方
 date: 2026-09-22
+modified: 2026-10-31
 category: AI検索対策
 description: Claudeの料金プランを公式ページの表示で比較。Proの年払いと月払い、MaxとUltraの違い、Teamのシート2種、表示価格に消費税10%が含まれる点まで整理しました。
 cover_tag: 料金
@@ -13,8 +14,8 @@ Claudeの料金でつまずきやすいのは、ドル表示なのに**日本の
 ここではAnthropicの[料金ページ](https://claude.com/pricing)（2026年9月22日取得。APIクレジットは10月11日、Enterpriseの最低シート数は10月17日、MaxとUltraの区分は10月31日に確認）から、個人向けとチーム向けの金額、使用量の仕組み、プランごとに使えるモデルを並べます。ターミナルで使うClaude Code側の見方は[Claude Codeの料金](https://nito-0210.com/media/claude-code-pricing/)にまとめています。
 
 :::takeaways
-- 個人向けは**Free $0・Pro $18・Max $110・Ultra $220**。Proの$18は年払いの月額で、月払いなら$22。Ultraの$220は$200＋消費税で計算した額
-- **Max 20xは2026年10月にUltraへ名前が変わった**。Ultraは週の使用量がProの10倍で、認証済みのアカウントには5時間の枠がない
+- 個人向けは**Free $0・Pro $18・Max $110・Ultra $220**。Proの$18は年払いの月額で、月払いなら$22
+- **Ultraは週の使用量がProの10倍**で、認証済みのアカウントには5時間の枠がない
 - **Maxには月$100、Ultraには月$200のAPIクレジット**が付く。使えるのはClaude Platformでの開発（API・Agent SDK）で、Claude Codeとアプリの追加使用量には使えない
 - **表示価格には消費税10%が含まれる**（公式の注記は「Prices include 10% JCT」）
 - **個人向けで年払いを選べるのはProだけ**。MaxとUltraは月払いのみ
@@ -31,9 +32,9 @@ Claudeの料金でつまずきやすいのは、ドル表示なのに**日本の
 | Free | $0 | 課金なし |
 | Pro | $18（年払いの月額。$220を一括） | 月払いなら$22 |
 | Max | $110 | 月払いのみ |
-| Ultra | $220（$200＋消費税10%で計算） | 月払いのみ |
+| Ultra | $220 | 月払いのみ |
 
-Proの$18は年間サブスクリプションの割引が入った月額で、請求は$220の一括です。月払いを選ぶと$22になります。**これまでMaxの中で選んでいた「5x」と「20x」は、2026年10月にMaxとUltraという別のプランに分かれました。**Max 20xの名前がUltraに変わったことと、契約中の人は価格が変わらないまま自動で移ることはUltraのヘルプに書かれています。Ultraの$220は日本の画面ではまだ確かめておらず、米国の表示の$200に消費税10%を足して計算した額です。
+Proの$18は年間サブスクリプションの割引が入った月額で、請求は$220の一括です。月払いを選ぶと$22になります。**これまでMaxの中で選んでいた「5x」と「20x」は、2026年10月にMaxとUltraという別のプランに分かれました。**[Ultraのヘルプ](https://support.claude.com/ja/articles/17728952)によると、Max 20xはUltraに名前が変わり、契約中の人は同じ価格のままUltraに移ります。
 
 <figure class="post-figure"><img src="/media/images/claude-pricing/00_fig_plans.png" alt="Claudeの個人向け4プランの比較図。Free $0はSonnetとHaikuが使えてOpusとClaude Codeは使えない、Pro $18はOpusとClaude Codeが使えて使用量はFreeの5倍以上、Max $110は5時間ごとと毎週の使用量がProの5倍、Ultra $220は週の使用量がProの10倍で認証済みなら5時間の枠がない" loading="lazy"><figcaption>4つのプランと、それぞれが向く人</figcaption></figure>
 
@@ -43,7 +44,7 @@ Proの$18は年間サブスクリプションの割引が入った月額で、�
 
 <figure class="post-figure"><img src="/media/images/claude-pricing/cl_03_jct.jpg" alt="Claude料金ページのカード下の注記。使用量制限が適用されます、価格およびプランはAnthropicの裁量により変更される場合があります、Prices include 10% JCT と表示されている" loading="lazy"><figcaption>カードの下に置かれた注記</figcaption></figure>
 
-税抜の$20に消費税を足して請求額を見積もると、実際とずれます。円でいくらになるかは決済時の為替によって変わるため、金額を確定させたい場合は請求の履歴で確認してください。
+米国向けのページの$20や$100は税別の金額で、日本からの請求にはその10%の消費税が加わります。円でいくらになるかは決済時の為替によって変わるため、金額を確定させたい場合は請求の履歴で確認してください。
 
 ## 使える量の決まり方
 
@@ -133,11 +134,11 @@ Claudeを自分で使うことと、自社がClaudeの回答に登場するこ�
 
 ## よくある質問
 
-金額はすべて2026年9月22日時点の公式ページの表示で、消費税10%を含みます。
+金額は2026年9月22日時点の公式ページの表示で、消費税10%を含みます。MaxとUltraの金額は2026年10月31日に料金ページで確かめました。
 
 ### Claudeの有料プランはいくらですか？
 
-個人向けはProが月$18（年払いの月額、$220を一括）、月払いなら$22です。Maxは月$110、Ultraは月$220（$200＋消費税で計算）で、どちらも月払いのみです。表示価格には消費税10%が含まれます。
+個人向けはProが月$18（年払いの月額、$220を一括）、月払いなら$22です。Maxは月$110、Ultraは月$220で、どちらも月払いのみです。表示価格には消費税10%が含まれます。
 
 ### Claudeは無料でどこまで使えますか？
 
@@ -157,7 +158,7 @@ Claudeを自分で使うことと、自社がClaudeの回答に登場するこ�
 
 ### MaxとUltraは何が違いますか？
 
-Ultraは週の使用量がProの10倍で、認証済みのアカウントには5時間の枠がありません。月額は$220（$200＋消費税で計算。Maxは$110）、APIクレジットは月$200（Maxは月$100）です。2026年10月にMax 20xから名前が変わったプランで、契約中の人は価格が変わらないまま自動でUltraに移りました。
+Ultraは週の使用量がProの10倍で、認証済みのアカウントには5時間の枠がありません。月額は$220（Maxは$110）、APIクレジットは月$200（Maxは月$100）です。
 
 ### Claude Codeは別料金ですか？
 
@@ -181,4 +182,5 @@ Ultraは週の使用量がProの10倍で、認証済みのアカウントには5
 
 - [プランと料金（Claude by Anthropic）](https://claude.com/pricing) — 個人向け・Team・Enterpriseの金額、プラン比較表、消費税の注記、使用量とプランのFAQ
 - [Ultraプランとは？（Anthropic ヘルプセンター）](https://support.claude.com/ja/articles/17728952) — Max 20xからの名前の変更、週の使用量、認証済みアカウントと5時間の枠
+- [日本の顧客向け消費税（JCT）に関するお知らせ（Anthropic ヘルプセンター）](https://support.claude.com/ja/articles/14051822) — 日本の顧客への請求に消費税10%がかかること
 - [Maxプラン、Ultraプラン、およびTeamプランのAPIクレジット（Claude Platform ドキュメント）](https://platform.claude.com/docs/ja/about-claude/api-credits-for-subscribers) — APIクレジットの金額、使える先と使えない先（Claude Code・アプリの追加使用量）、有効期限、受け取り方

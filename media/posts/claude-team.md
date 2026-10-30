@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】Claude Teamプランとは？料金とProとの違い｜学習させない設定・2人から
 date: 2026-10-05
+modified: 2026-10-31
 category: AI活用
 description: Claude Teamプランの料金とProとの違いを公式の料金ページとヘルプで解説。スタンダードとプレミアムの使用量、会話が既定で学習に使われない点、2人からの条件、Proから移るときの注意、席の減らし方まで。
 cover_tag: 料金

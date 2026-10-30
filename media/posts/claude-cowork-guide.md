@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】Claude Coworkとは？使い方・できること・料金｜チャットとの統合で変わった点
 date: 2026-09-20
+modified: 2026-10-31
 category: AI検索対策
 description: Claude Coworkの使い方を公式ヘルプ10本を一次ソースに解説。何ができるか、始め方、権限の設定、フォルダ・ブラウザ・コンピュータ操作、スケジュール、安全に使う条件、2026年9月のチャットとの統合まで。
 cover_tag: 使い方
@@ -163,7 +164,7 @@ Google Drive・Gmail・Microsoft 365・Slackなどを「カスタマイズ > コ
 
 ## 料金
 
-Coworkに追加料金はなく、Claudeの有料プランに含まれます。日本向けの料金ページ（[claude.com/ja/pricing](https://claude.com/ja/pricing)）は消費税込みの表示で、Proは月$22（年払いなら月$18）、Maxは月$110です。2026年10月にMax 20xから名前が変わったUltraは、米国の表示の$200に消費税10%を足して計算すると月$220です。使用量はチャットと同じ枠から減り、解説動画では「エージェントとして裏で動く指示が長いので、通常のチャットより枠に達しやすい」と説明されていました。プランの違いと上限の仕組みは[Claude Codeの料金プランの記事](https://nito-0210.com/media/claude-code-pricing/)に表でまとめています。
+Coworkに追加料金はなく、Claudeの有料プランに含まれます。日本向けの料金ページ（[claude.com/ja/pricing](https://claude.com/ja/pricing)）は消費税込みの表示で、Proは月$22（年払いなら月$18）、Maxは月$110、Ultraは月$220です。使用量はチャットと同じ枠から減り、解説動画では「エージェントとして裏で動く指示が長いので、通常のチャットより枠に達しやすい」と説明されていました。プランの違いと上限の仕組みは[Claude Codeの料金プランの記事](https://nito-0210.com/media/claude-code-pricing/)に表でまとめています。
 
 ## 最初に試すとよい3つ
 

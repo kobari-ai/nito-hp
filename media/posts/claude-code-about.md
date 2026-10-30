@@ -1,6 +1,7 @@
 ---
-title: 【2026年9月】Claude Codeとは？仕組み・できること・他のAIコーディングツールとの違い
+title: 【2026年10月】Claude Codeとは？仕組み・できること・他のAIコーディングツールとの違い
 date: 2026-09-19
+modified: 2026-10-31
 category: AI検索対策
 description: Claude Codeとは何かを公式ドキュメント「Claude Codeの仕組み」から解説。agenticループ、5つのツール、補完型・チャット型との違い、できること、料金、安全の仕組み、向き不向きまで。
 cover_tag: 徹底解説
@@ -121,7 +122,7 @@ Claude Codeは無料プランでは使えません。Claude Pro（月$22、年�
 |---|---|---|
 | Free | $0 | 使えない |
 | Pro | $22（年払いは月$18） | 使える |
-| Max | $110／$220 | 使える（Proの5倍／20倍の使用量） |
+| Max・Ultra | $110・$220 | 使える（MaxはProの5倍、Ultraは週の使用量がProの10倍） |
 | Team・Enterprise | 1シート$27.50〜 | 使える |
 | API | 従量課金 | 使える |
 

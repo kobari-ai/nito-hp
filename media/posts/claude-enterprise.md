@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】Claude Enterpriseとは？料金の仕組み・Teamとの違い・20席から
 date: 2026-10-13
+modified: 2026-10-31
 category: AI活用
 description: Claude EnterpriseとTeamの違いを公式の料金ページとヘルプで整理。席料US$20に使った分のAPI料金が乗る仕組み、20席からの条件、SCIM・監査ログ・データ保持の差、申し込みと移行の注意まで。
 cover_tag: 法人
@@ -180,7 +181,7 @@ SCIMや権限、使用量の上限を整えたあと、決まった仕事をClau
 
 ## 出典
 
-すべて2026年10月13日に取得。料金ページのEnterpriseの欄の「最低20シート」は2026年10月17日、APIクレジットの対象にUltraが加わったことは2026年10月31日に確認。
+すべて2026年10月13日に取得。料金ページのEnterpriseの欄の「最低20シート」は2026年10月17日、APIクレジットの対象の表記がMax・Ultra・Teamになったことは2026年10月31日に確認。
 
 - Claude「[料金](https://claude.com/ja/pricing)」Team & Enterpriseタブ、プラン間の機能の比較表、FAQ
 - Claude「[Pricing](https://claude.com/pricing)」（米国向け）Team & Enterpriseタブ
