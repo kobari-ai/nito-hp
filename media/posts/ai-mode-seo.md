@@ -34,11 +34,11 @@ AIモードの回答はAIが知識だけで書いた文章でなく、Googleの�
 
 日本ブログはクエリファンアウトを、質問をサブトピックに分解し、利用者に代わってサブクエリで検索を実行する技術と説明しています。たとえば「社内研修の外注先の選び方」という問いなら、費用の相場・内製との違い・比べる観点といった周りの問いでも検索が走る、という動きです（この例はnitoが作ったもので、実際にどの問いが走るかは公開されていません）。
 
-<!-- SHOT: 図 aims_fanout.html → aims_01_fanout.png・alt「AIモードが答えを作る流れを縦に並べた図。利用者の1つの問いを関連する複数の問いに分け、それぞれをGoogleのインデックスで検索し、見つけたページを材料に回答を組み立ててリンクを添える。追加の質問は新しい検索として同じ流れを繰り返す」 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_01_fanout.png" alt="AIモードが答えを作る流れを縦に並べた図。利用者の1つの問いを関連する複数の問いに分け、それぞれをGoogleのインデックスで検索し、見つけたページを材料に回答を組み立ててリンクを添える。追加の質問は新しい検索として同じ流れを繰り返す" loading="lazy"></figure>
 
 ページを選ぶのは通常の検索と同じ仕組みです。日本ブログによるとAIモードは「Google の品質およびランキング システムに基づいて」おり、信頼性が低いと判断した場合は回答の代わりにウェブ検索の結果を出すとしています。**AIモードの材料になるのは、Googleのインデックスにあり、通常の検索で関連が高いと判断されたページです。** 通常の検索と違って、AIモードでは元の問いだけでなく周りの問いの検索結果からもページが拾われます。
 
-<!-- SHOT: 画面 https://blog.google/intl/ja-jp/products/explore-get-answers/ai-mode-search/・探す語「クエリ ファンアウトと呼ばれる技術」・赤枠 クエリファンアウトを説明する2文（クエリ ファンアウトと呼ばれる技術を使用しています、から、サブクエリに対して検索を実行します、まで）・PC・alt「Googleの日本ブログのAIモードの発表。AIモードはクエリファンアウトと呼ばれる技術を使い、質問をサブトピックに分解して利用者に代わりサブクエリで検索を実行すると書かれている」・figcaption「Google 検索における AI モードを日本語で提供開始（Google Japan Blog、2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_s1_blog.png" alt="Googleの日本ブログのAIモードの発表。AIモードはクエリファンアウトと呼ばれる技術を使い、質問をサブトピックに分解して利用者に代わりサブクエリで検索を実行すると書かれている" loading="lazy"><figcaption>Google 検索における AI モードを日本語で提供開始（Google Japan Blog、2026年10月31日）</figcaption></figure>
 
 ### 追加の質問は新しい検索
 
@@ -54,11 +54,11 @@ AIモードに出るための条件は、検索セントラルの2つの文書�
 
 「AI 機能とウェブサイト」は、AIモードでページがリンクとして表示される条件に、インデックスに登録されていること・Google検索でスニペットが表示されること・検索の技術要件を満たすことの3つを挙げ、「これ以外に追加の技術要件はありません」と書いています。2026年5月15日に公開された「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」は、ここにSearch Consoleの検索の生成AI機能にサイトが含まれていることを足しています。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/appearance/ai-features?hl=ja・探す語「これ以外に追加の技術要件はありません」・赤枠 「AI 機能での表示に関する技術要件」の見出しの下の段落・PC・alt「Google検索セントラルのAI機能とウェブサイト。AIによる概要やAIモードでサポートリンクとして表示されるには、インデックスに登録され、スニペットが表示され、検索の技術要件を満たす必要があり、これ以外に追加の技術要件はないと書かれている」・figcaption「AI 機能とウェブサイト（Google 検索セントラル、2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_s2_aifeatures.png" alt="Google検索セントラルのAI機能とウェブサイト。AIによる概要やAIモードでサポートリンクとして表示されるには、インデックスに登録され、スニペットが表示され、検索の技術要件を満たす必要があり、これ以外に追加の技術要件はないと書かれている" loading="lazy"><figcaption>AI 機能とウェブサイト（Google 検索セントラル、2026年10月31日）</figcaption></figure>
 
 4つ目の[検索の生成 AI 設定](https://support.google.com/webmasters/answer/16908024?hl=ja)は2026年8月31日に全サイトに入り、既定は含める側です。除外を選ぶとAIモードにリンクが出なくなるだけでなく、回答の根拠にも使われません。**条件を満たしても表示は保証されないと、どちらの文書も断っています。**
 
-<!-- SHOT: 図 aims_conditions.html → aims_02_conditions.png・alt「AIモードにページが出るためのGoogleの公式の条件を縦に並べた図。インデックスに登録されている、スニペットが表示される、検索の技術要件を満たす、Search Consoleの検索の生成AI設定で含めている、の4つ。満たしても表示は保証されない」 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_02_conditions.png" alt="AIモードにページが出るためのGoogleの公式の条件を縦に並べた図。インデックスに登録されている、スニペットが表示される、検索の技術要件を満たす、Search Consoleの検索の生成AI設定で含めている、の4つ。満たしても表示は保証されない" loading="lazy"></figure>
 
 Geminiの学習などにサイトを使わせないためのGoogle-Extendedは、Googleの[クローラーの説明](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers?hl=ja)によるとGoogle検索での登録やランキングに影響しません。AIモードに出すかどうかを決めるのはGooglebotのクロールと生成AI設定です。
 
@@ -76,7 +76,7 @@ Geminiの学習などにサイトを使わせないためのGoogle-Extendedは�
 
 ファンアウトの問いの言い換えごとにページを作ることを、最適化ガイドは順位や回答の操作が主な目的なら大量生成されたコンテンツの不正使用に当たるとしています。問いとページの言葉が完全に一致しなくてもGoogleのシステムは関連を理解できるようになった、とも書かれています。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja・探す語「ユーザーが求めるものに焦点を当て、やりすぎないようにする」・赤枠 その項目の段落全体・PC・alt「Googleの生成AI機能向けの最適化ガイド。ファンアウトクエリなどのバリエーションごとにコンテンツを個別に作ることを、主にランキングや生成AIの回答の操作を目的に行うと、大量生成されたコンテンツの不正使用に違反すると書かれている」・figcaption「Google 検索の生成 AI 機能向けにウェブサイトを最適化する（Google 検索セントラル、2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_s3_optguide.png" alt="Googleの生成AI機能向けの最適化ガイド。ファンアウトクエリなどのバリエーションごとにコンテンツを個別に作ることを、主にランキングや生成AIの回答の操作を目的に行うと、大量生成されたコンテンツの不正使用に違反すると書かれている" loading="lazy"><figcaption>Google 検索の生成 AI 機能向けにウェブサイトを最適化する（Google 検索セントラル、2026年10月31日）</figcaption></figure>
 
 **会社がやるのは、問いの数だけページを増やすことでなく、1つの主題のページで周りの問いまで答えることです。** サービスのページなら、費用の決まり方・期間・社内で用意するもの・向かない会社の条件・失敗の例までを同じページか、つながった数ページに書きます。周りにある問いを探すなら、商談で営業が受けた質問を集めるのが早道です。
 
@@ -113,7 +113,7 @@ Search Consoleの生成AI設定が含める側か、nosnippetやmax-snippetで�
 | 追加の質問 | できる。新しい検索として数える | 1回の要約 |
 | 公式の条件 | 4つの条件で同じ | 4つの条件で同じ |
 
-<!-- SHOT: 図 aims_vs_aio.html → aims_03_vs-aio.png・alt「AIモードとAIによる概要の違いを縦に並べた図。AIモードは利用者が開いたときに出て、比較や調査の長い問いに答え、追加の質問ができる。AIによる概要は付加価値があると判断された検索だけに出て、要点をまとめる。公式の表示条件は同じだが、引用されるページは重なりが少ない」 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_03_vs-aio.png" alt="AIモードとAIによる概要の違いを縦に並べた図。AIモードは利用者が開いたときに出て、比較や調査の長い問いに答え、追加の質問ができる。AIによる概要は付加価値があると判断された検索だけに出て、要点をまとめる。公式の表示条件は同じだが、引用されるページは重なりが少ない" loading="lazy"></figure>
 
 選ばれるページの違いは、第三者の調査で数字が出ています。いずれも米国のデータです。
 
@@ -131,7 +131,7 @@ AIモードの数字は通常の検索の数字に混ざって入るため、見
 
 [Search Consoleのヘルプ](https://support.google.com/webmasters/answer/7042828?hl=ja)によると、AIモードに出たページは検索タイプがウェブのパフォーマンスレポートに入ります。外部ページへのリンクのクリックは1回で1クリック、掲載順位は通常の検索結果ページと同じ方法です。追加の質問のデータは、その新しい問いの分として数えられます。
 
-<!-- SHOT: 画面 https://support.google.com/webmasters/answer/7042828?hl=ja・探す語「フォローアップの質問をすると」・赤枠 「AI モード」の見出しの下のクリック数・表示回数・掲載順位と、フォローアップの質問の段落・PC・alt「Search Consoleのヘルプの表示回数、掲載順位、クリック数とは。AIモードでは外部ページへのリンクのクリックが1回のクリックとして数えられ、掲載順位は通常の検索結果と同じ方法で計算され、追加の質問は新しいクエリとして数えると書かれている」・figcaption「表示回数、掲載順位、クリック数とは（Search Console ヘルプ、2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_s4_gschelp.png" alt="Search Consoleのヘルプの表示回数、掲載順位、クリック数とは。AIモードでは外部ページへのリンクのクリックが1回のクリックとして数えられ、掲載順位は通常の検索結果と同じ方法で計算され、追加の質問は新しいクエリとして数えると書かれている" loading="lazy"><figcaption>表示回数、掲載順位、クリック数とは（Search Console ヘルプ、2026年10月31日）</figcaption></figure>
 
 2026年8月31日に全サイトに入った[生成 AI パフォーマンス レポート](https://support.google.com/webmasters/answer/16984139?hl=ja)では、AIによる概要とAIモードでリンクが表示された回数を、ページ・国・デバイス・日付ごとに見られます。**AIモードとAIによる概要を分けた数字は、どちらのレポートでも出ません。** レポートの読み方は[サーチコンソールでAIモード・AIによる概要の表示を見る方法](/media/gsc-ai-mode/)にあります。
 
@@ -143,7 +143,7 @@ GA4でAIモードからの訪問を通常の検索と分ける方法は、Google
 
 Search Consoleでは、回答の本文で社名が勧められたかまでは分かりません。見込み客が使う問いを20問ほど決め、AIモードで月に1回聞き、社名が出たか・どう紹介されたか・どのページが引用元に付いたかを記録します。SE Rankingの調査では、同じ語を同じ日に3回聞いてURLが重なったのは9.2%でした。**1回の結果で判断せず、同じ問いを日を変えて2回以上聞いた結果で見ます。**
 
-<!-- SHOT: 図 aims_measure.html → aims_04_measure.png・alt「AIモードの効果を見る3つの場所を縦に並べた図。Search Consoleの生成AIレポートでリンクが表示された回数、問い合わせの入口でAIで知った人の数、決めた問いを自分でAIモードに聞いて社名と引用元の記録。AIモードとAIによる概要はSearch Consoleでは分けられない」 -->
+<figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_04_measure.png" alt="AIモードの効果を見る3つの場所を縦に並べた図。Search Consoleの生成AIレポートでリンクが表示された回数、問い合わせの入口でAIで知った人の数、決めた問いを自分でAIモードに聞いて社名と引用元の記録。AIモードとAIによる概要はSearch Consoleでは分けられない" loading="lazy"></figure>
 
 ## AIモードのSEOでやっても効かない手
 
