@@ -38,7 +38,7 @@ AIエージェントが道具の1つとして社内文書を探すときも、�
 | 費用の数え方 | 1人あたりの月額に含まれる | プランの月額とモデルの代金 | 保存量と質問の回数 |
 | 保守 | 提供元が直す | 設定と取り込みは自社 | 全部自社か外注先 |
 
-<!-- SHOT: 図 rag1031_three.html → rag_01_three.png・alt「RAG構築の作り方3通りを縦に並べた図。既製品の機能は契約の中ですぐ試せる。ノーコードとローコードは画面で分け方や探し方を詰める。クラウドの部品は自社のシステムに組み込む」 -->
+<figure class="post-figure"><img src="/media/images/rag-build/rag_01_three.png" alt="RAG構築の作り方3通りを縦に並べた図。既製品の機能は契約の中ですぐ試せる。ノーコードとローコードは画面で分け方や探し方を詰める。クラウドの部品は自社のシステムに組み込む" loading="lazy"></figure>
 
 **選ぶ基準は答えが外れたときにどこまで自分で直したいかです。** ①は直せる所が少ない代わりに保守が要らず、③は分け方から権限まで全部を決められる代わりに直す人が要ります。AIエージェント全体の作り方を3通りに分けた[AIエージェントの作り方](/media/ai-agent-build/)では、Copilot Studioを既製の基盤の例に置きました。文書の取り込みと検索の設定を画面で触れるため、RAGの話では②に入れています。
 
@@ -58,7 +58,7 @@ Difyは文書の切り方と探し方を画面で選べる道具です。[Dify�
 
 上位の解説記事が挙げる手順は、文書の収集・分割・ベクトル化・検索・回答の生成の5段が中心でした。会社で作るときはその前後に目的の決定と権限・運用が入ります。
 
-<!-- SHOT: 図 rag1031_steps.html → rag_02_steps.png・alt「RAG構築の手順を6段で縦に並べた図。目的と問いを決める、文書を集めて整える、分け方と探し方を決める、答えを確かめる、権限とログを決める、運用で直し続ける」 -->
+<figure class="post-figure"><img src="/media/images/rag-build/rag_02_steps.png" alt="RAG構築の手順を6段で縦に並べた図。目的と問いを決める、文書を集めて整える、分け方と探し方を決める、答えを確かめる、権限とログを決める、運用で直し続ける" loading="lazy"></figure>
 
 ### 目的と問いを決める
 
@@ -98,7 +98,7 @@ Microsoftの[チャンク分割の解説](https://learn.microsoft.com/ja-jp/azur
 
 **既定の読み取り方のままだと、表や図の中身が失われることがあります。** Amazon Bedrockの[解析の設定](https://docs.aws.amazon.com/bedrock/latest/userguide/kb-advanced-parsing.html)によると、既定のパーサーはテキストだけを取り出す仕様です。そのため図・グラフ・表・画像を含む文書には、Bedrock Data Automationか基盤モデルでの解析を勧めています。Googleの[ドキュメントの解析とチャンク化](https://docs.cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents?hl=ja)でも、既定のデジタル パーサーは表・リスト・見出しを検出しません。料金表や手当の一覧が表で書かれた規程なら、解析の方法を変えて試すか、表を文章に直してから取り込みます。
 
-<!-- SHOT: 画面 https://docs.aws.amazon.com/bedrock/latest/userguide/kb-advanced-parsing.html・Only parses text in text files・赤枠「Amazon Bedrock default parser – Only parses text」の段落と「Because the default parser only outputs text」の段落・PC・alt「Amazon Bedrockのユーザーガイド。既定のパーサーはテキストファイルのテキストだけを解析し、図やグラフや表や画像を含む文書にはBedrock Data Automationか基盤モデルでの解析を勧めると書かれている」・figcaption「Amazon Bedrock ユーザーガイド「Parsing options for your data source」（2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/rag-build/rag_shot_bedrock_parser.png" alt="Amazon Bedrockのユーザーガイド。既定のパーサーはテキストファイルのテキストだけを解析し、図やグラフや表や画像を含む文書にはBedrock Data Automationか基盤モデルでの解析を勧めると書かれている" loading="lazy"><figcaption>Amazon Bedrock ユーザーガイド「Parsing options for your data source</figcaption></figure>
 
 Copilot Studioに上げたファイルの画像は、PDFに埋め込まれて代替テキストが付いたものしか読みません。秘密度ラベルやパスワードで暗号化したファイルも上げられない仕様です。
 
@@ -112,7 +112,7 @@ Difyのナレッジベースは、作った後に汎用か親子かのチャン�
 
 **n8nのSimple Vector Storeは検証だけに使う置き場です。** [n8nのドキュメント](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/)によると、データはメモリにだけ置かれ、n8nを再起動するとすべて消えます。保存先のキーもワークフローごとに分かれておらず、同じn8nを使う全員が読めてしまいます。
 
-<!-- SHOT: 画面 https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/・Data safety limitations・赤枠「Vector store data isn't persistent」と「All instance users can access vector store data」の2つの小見出しと本文・PC・alt「n8nのSimple Vector Storeノードのドキュメント。データはメモリだけに保存されn8nの再起動で消えること、保存先のキーは全体で共通でインスタンスの全ユーザーが読めることが書かれている」・figcaption「n8n Docs「Simple Vector Store node」（2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/rag-build/rag_shot_n8n_simple_store.png" alt="n8nのSimple Vector Storeノードのドキュメント。データはメモリだけに保存されn8nの再起動で消えること、保存先のキーは全体で共通でインスタンスの全ユーザーが読めることが書かれている" loading="lazy"><figcaption>n8n Docs「Simple Vector Store node</figcaption></figure>
 
 ### 答えの確かめ方がない
 
@@ -167,7 +167,7 @@ Azureの金額はMicrosoftの価格APIで東日本の単価を引き、月730時
 - **ログと保存場所**：質問と答えをどこに何日残すか、データをどの地域に置くか
 - **直す人**：文書の持ち主と、設定を直す担当の名前
 
-<!-- SHOT: 図 rag1031_decide.html → rag_03_decide.png・alt「RAG構築の前に会社が決める5つを縦に並べた図。対象の質問、最初に入れる文書、権限の扱い、ログと保存場所、直す人」 -->
+<figure class="post-figure"><img src="/media/images/rag-build/rag_03_decide.png" alt="RAG構築の前に会社が決める5つを縦に並べた図。対象の質問、最初に入れる文書、権限の扱い、ログと保存場所、直す人" loading="lazy"></figure>
 
 ## よくある質問
 
