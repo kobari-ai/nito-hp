@@ -12,7 +12,7 @@ cta: llmo
 
 GoogleのAIモードの日本語での提供は2025年9月9日に始まりました。検索セントラルの「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」は、AIモードに表示されるための「追加の要件はなく、別途特別な最適化を行う必要もありません」と書いています。
 
-それでも社内では「AIモードに自社が出てこないが、SEOで何をすればよいのか」と聞かれる場面が増えました。AIモードがページを選ぶ仕組みとGoogleの公式の記述を先に置き、会社がやること・AIによる概要との違い・測り方を分けて書きます。
+それでも「AIモードに自社が出てこないが、SEOで何をすればよいのか」という疑問は残ります。AIモードがページを選ぶ仕組みとGoogleの公式の記述を先に置き、会社がやること・AIによる概要との違い・測り方を分けて書きます。
 
 :::takeaways
 - AIモードは1つの問いを関連する複数の問いに分けて検索し、見つけたページを材料に答える。追加の質問は新しい検索として数えられる
@@ -38,13 +38,13 @@ AIモードの回答はAIが知識だけで書いた文章でなく、Googleの�
 
 ページを選ぶのは通常の検索と同じ仕組みです。日本ブログによるとAIモードは「Google の品質およびランキング システムに基づいて」おり、信頼性が低いと判断した場合は回答の代わりにウェブ検索の結果を出すとしています。**AIモードの材料になるのは、Googleのインデックスにあり、通常の検索で関連が高いと判断されたページです。** 通常の検索と違って、AIモードでは元の問いだけでなく周りの問いの検索結果からもページが拾われます。
 
-<figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_s1_blog.png" alt="Googleの日本ブログのAIモードの発表。AIモードはクエリファンアウトと呼ばれる技術を使い、質問をサブトピックに分解して利用者に代わりサブクエリで検索を実行すると書かれている" loading="lazy"><figcaption>Google 検索における AI モードを日本語で提供開始（Google Japan Blog、2026年10月31日）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_s1_blog.png" alt="Googleの日本ブログのAIモードの発表。AIモードはクエリファンアウトと呼ばれる技術を使い、質問をサブトピックに分解して利用者に代わりサブクエリで検索を実行すると書かれている" loading="lazy"><figcaption>Google 検索における「AI モード」を日本語で提供開始（Google Japan Blog、2026年10月31日）</figcaption></figure>
 
 ### 追加の質問は新しい検索
 
 Googleで検索の責任者を務めるLiz Reidの講演をまとめた[日本ブログの記事](https://blog.google/intl/ja-jp/products/explore-get-answers/ai-powered-search-innovation-takeaways/)（2026年3月17日）は、AIモードの検索の大多数が深掘りの追加の質問につながっていると書いています。Search Consoleのヘルプも、AIモードで追加の質問をすると「実質的には新しいクエリが実行されます」と説明しています。
 
-1回目の答えで比較の候補が挙がり、2回目以降に「費用は？」「導入にかかる期間は？」と絞り込んでいく使われ方です。**最初の問いで名前が出なくても、条件を絞った2回目以降の問いで材料に選ばれる余地があります。** 費用・期間・向かない条件まで書いたページが拾われやすくなるのは、このためと考えられます（Googleが順位の要因として書いているわけではありません）。
+1回目の答えで比較の候補が挙がり、2回目以降に「費用は？」「導入にかかる期間は？」と絞り込んでいく使われ方です。**最初の問いで名前が出なくても、条件を絞った2回目以降の問いで材料に選ばれる余地があります。** 費用・期間・向かない条件まで書いておくと、こうした絞り込みの問いにも答えられるページになります（Googleが順位の要因として書いているわけではありません）。
 
 ## AIモードのSEOでGoogleが公式に書いていること
 
@@ -82,7 +82,7 @@ Geminiの学習などにサイトを使わせないためのGoogle-Extendedは�
 
 ### ② 比較と条件を本文に書く
 
-「AI 機能とウェブサイト」は、重要なコンテンツをテキストで示すよう求めています。AIモードが比較の問いで使われることと合わせると、料金表や対応範囲を画像やPDFだけに載せているページは材料にしにくいと考えられます。
+「AI 機能とウェブサイト」は、AIモードのための特別な最適化は要らないとしたうえで、引き続き重要なSEOの基本に、重要なコンテンツをテキストで示すことを挙げています。AIモードが比較の問いで使われることと合わせると、料金表や対応範囲を画像やPDFだけに載せているページは材料にしにくいと考えられます。
 
 各社の解説がよく勧める見出しの直後に答えを書く形は、Googleが条件にしたものではありません。読者が早く答えにたどり着ける書き方として、人のために続けてよいでしょう。
 
@@ -94,23 +94,23 @@ Geminiの学習などにサイトを使わせないためのGoogle-Extendedは�
 
 ### ④ 画像と動画・商品と店舗の情報
 
-最適化ガイドは高品質の画像と動画を足すとリンク以外でも表示される機会が増えると書いています。「AI 機能とウェブサイト」は、Merchant CenterとGoogleビジネスプロフィールの情報を最新に保つよう求めています。商品の枠への載せ方は[AIモードのショッピング](/media/ai-mode-shopping/)、店舗の情報は[GoogleビジネスプロフィールのAI対策](/media/gbp-ai-search/)に書きました。
+最適化ガイドは高品質の画像と動画を足すとリンク以外でも表示される機会が増えると書いています。「AI 機能とウェブサイト」は、Merchant CenterとGoogleビジネスプロフィールの情報を最新に保つことも、同じSEOの基本に挙げています。商品の枠への載せ方は[AIモードのショッピング](/media/ai-mode-shopping/)、店舗の情報は[GoogleビジネスプロフィールのAI対策](/media/gbp-ai-search/)に書きました。
 
 ### ⑤ 構造化データと設定
 
-生成AI検索に構造化データは必要なく、特別なschema.orgのマークアップも無いというのが最適化ガイドの立場です。**入れる場合に公式が求めるのは、画面に出ている文章と中身を一致させることだけです。**
+生成AI検索に構造化データは必要なく、特別なschema.orgのマークアップも無いというのが最適化ガイドの立場です。そのうえでガイドはリッチリザルトの対象になる助けになるとして、SEO全体の一部で使い続けることを勧めています。ただし、よくある質問（FAQ）のリッチリザルトは2026年5月7日からGoogle検索に表示されていません。**入れる場合は「AI 機能とウェブサイト」が挙げるとおり、中身を画面に表示される文章と一致させます。**
 
 Search Consoleの生成AI設定が含める側か、nosnippetやmax-snippetでスニペットを絞っていないか、robots.txtに加えてCDNやWAFでGooglebotを止めていないかを見ます。max-snippetの文字数はAIの回答に使われる量の上限にもなります。項目ごとの確かめ方は[AI Overview（AIによる概要）対策とは](/media/cited-by-ai-overviews/)のチェックリストと同じです。
 
 ## AIモードとAIによる概要の違い
 
-公式の条件は同じでも、出る場面と選ばれるページは違います。「AI 機能とウェブサイト」は、2つの機能は使うモデルや手法が異なる場合があり、回答やリンクの内容にも違いがあると書いています。
+公式の条件は同じでも、出る場面と選ばれるページは違います。「AI 機能とウェブサイト」は、2つの機能は使うモデルや手法が異なる場合があり、回答やリンクの内容にも違いがあると書いています。Googleの2026年5月19日の発表によると、AIによる概要から追加の質問をするとAIモードの会話に移る形が、パソコンとスマホの両方で全世界に広がっています。
 
 | 項目 | AIモード | AIによる概要 |
 |---|---|---|
 | 出る場面 | 利用者がタブなどから開いたとき | 通常の検索で付加価値があるとシステムが判断したときだけ |
 | 向いた問い | 調査・根拠・複雑な比較 | 要点をすばやくつかむ |
-| 追加の質問 | できる。新しい検索として数える | 1回の要約 |
+| 追加の質問 | できる。新しい検索として数える | その場では1回の要約。追加の質問をするとAIモードの会話に移る |
 | 公式の条件 | 4つの条件で同じ | 4つの条件で同じ |
 
 <figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_03_vs-aio.png" alt="AIモードとAIによる概要の違いを縦に並べた図。AIモードは利用者が開いたときに出て、比較や調査の長い問いに答え、追加の質問ができる。AIによる概要は付加価値があると判断された検索だけに出て、要点をまとめる。公式の表示条件は同じだが、引用されるページは重なりが少ない" loading="lazy"></figure>
@@ -119,7 +119,7 @@ Search Consoleの生成AI設定が含める側か、nosnippetやmax-snippetで�
 
 - [Ahrefsの調査](https://ahrefs.com/blog/ai-overviews-vs-ai-mode)（2025年12月15日公開、2025年9月の54万組の問い）では、同じ問いのAIモードとAIによる概要で引用元のURLが重なったのは13.7%。回答の意味は平均86%近かった
 - 同じ調査では引用元の無い回答がAIモードが3%、AIによる概要が11%。AIモードの回答は約4倍の長さだった
-- [SE Rankingの調査](https://seranking.com/blog/ai-mode-research/)（2025年6月20日、1万語）では、AIモードの1回答あたりの引用元は平均12.6URL。通常の検索の上位10件とURLが重なったのは14%、重なりが1件も無い問いが17.9%あった
+- [SE Rankingの調査](https://seranking.com/blog/ai-mode-research/)（2025年8月29日公開、2025年6月20日に米国の1万語で集計）では、AIモードの1回答あたりの引用元は平均12.6URL。通常の検索の上位10件とURLが重なったのは平均14%、重なりが1件も無い問いが17.9%あった
 
 **AIによる概要に出ているページが、AIモードにも出ているとは限りません。** 同じ問いでも引用元が入れ替わるため、AIモードは別に測る必要があります。順位が10位より下のページが引用されることもあり、上位に入っていないことを理由に諦める根拠にはなりません。AIによる概要に絞った条件は[AI Overview（AIによる概要）対策とは](/media/cited-by-ai-overviews/)で扱っています。
 
@@ -129,7 +129,7 @@ AIモードの数字は通常の検索の数字に混ざって入るため、見
 
 ### Search Consoleでの数え方
 
-[Search Consoleのヘルプ](https://support.google.com/webmasters/answer/7042828?hl=ja)によると、AIモードに出たページは検索タイプがウェブのパフォーマンスレポートに入ります。外部ページへのリンクのクリックは1回で1クリック、掲載順位は通常の検索結果ページと同じ方法です。追加の質問のデータは、その新しい問いの分として数えられます。
+「AI 機能とウェブサイト」によると、AIモードに出たページは検索タイプがウェブのパフォーマンスレポートに入ります。[Search Consoleのヘルプ](https://support.google.com/webmasters/answer/7042828?hl=ja)では、外部ページへのリンクのクリックは1回で1クリック、掲載順位は通常の検索結果ページと同じ方法です。追加の質問のデータはその新しい問いの分として数えられます。
 
 <figure class="post-figure"><img src="/media/images/ai-mode-seo/aims_s4_gschelp.png" alt="Search Consoleのヘルプの表示回数、掲載順位、クリック数とは。AIモードでは外部ページへのリンクのクリックが1回のクリックとして数えられ、掲載順位は通常の検索結果と同じ方法で計算され、追加の質問は新しいクエリとして数えると書かれている" loading="lazy"><figcaption>表示回数、掲載順位、クリック数とは（Search Console ヘルプ、2026年10月31日）</figcaption></figure>
 
@@ -151,7 +151,7 @@ AIモード向けの対策として紹介される手と、Googleの公式の記
 
 | よく見る説明 | Googleの公式の記述 |
 |---|---|
-| FAQの構造化データで引用されやすくなる | 生成AI検索に構造化データは必要ない |
+| FAQの構造化データで引用されやすくなる | 生成AI検索に構造化データは必要ない。FAQのリッチリザルトも2026年5月7日から表示されていない |
 | llms.txtを置くとAIモードに読まれる | Google検索はllms.txtを使わない |
 | AIが読みやすいよう文章を短く切る | 細かく分ける必要はなく理想のページの長さも無い |
 | 関連する問いごとにページを作る | 操作が主な目的なら大量生成されたコンテンツの不正使用 |
@@ -159,7 +159,7 @@ AIモード向けの対策として紹介される手と、Googleの公式の記
 | Google-Extendedを許可するとAIモードに出る | 検索の登録や順位に影響しない |
 | AIモードの評価を測れる専用ツール | 外部のツールはGoogle内部のランキングやAIのシステムにアクセスできない |
 
-いずれもGoogle検索についての記述で、ChatGPTやPerplexityでの扱いは別です。Google以外の入口を含めた整理は[AI SEO対策とは](/media/ai-seo-taisaku/)にまとめています。**AIモードに限れば、表の左の手より①〜③の中身に予算を回すほうが公式の記述に沿うはずです。**
+いずれもGoogle検索についての記述で、ChatGPTやGeminiアプリでの扱いは別です。Google以外の入口を含めた整理は[AI SEO対策とは](/media/ai-seo-taisaku/)にまとめています。**AIモードに限れば、表の左の手より①〜③の中身に予算を回すほうが公式の記述に沿うはずです。**
 
 ## 会社が決めること
 
@@ -189,7 +189,7 @@ Googleの「AI 機能とウェブサイト」は、AIモードに表示される
 
 ### Q. AIモードは検索順位が低いページも引用しますか？
 
-引用することがあります。SE Rankingの米国の調査では、AIモードの引用元のうち通常の検索の上位10件と重なったURLは平均14%でした。関連する複数の問いで検索して材料を集める仕組みだと、Googleは説明しています。
+引用することがあります。SE Rankingの米国の調査では、AIモードの引用元と通常の検索の上位10件で重なったURLは平均14%で、1件も重ならない問いが17.9%ありました。関連する複数の問いで検索して材料を集める仕組みだと、Googleは説明しています。
 
 ### Q. AIモードに自社のページを出したくないときはどうしますか？
 
@@ -199,8 +199,10 @@ Search Consoleの検索の生成AI設定で除外を選ぶと、AIによる概�
 
 - Google 検索セントラル「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」日本語版 2025年12月31日更新（2026年10月31日取得）
 - Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」日本語版 2026年10月30日更新、英語版「[Optimizing your website for generative AI features on Google Search](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=en)」2026年7月10日更新（同）
-- Google Japan Blog「[Google 検索における AI モードを日本語で提供開始](https://blog.google/intl/ja-jp/products/explore-get-answers/ai-mode-search/)」2025年9月9日（同）
+- Google 検索セントラル「[ドキュメントの最新の更新内容](https://developers.google.com/search/updates?hl=ja)」2026年5月8日の項（同）
+- Google Japan Blog「[Google 検索における「AI モード」を日本語で提供開始](https://blog.google/intl/ja-jp/products/explore-get-answers/ai-mode-search/)」2025年9月9日（同）
 - Google Japan Blog「[AI 時代のマーケティングにおいて知っておきたい Google 検索の 5 つのポイント](https://blog.google/intl/ja-jp/products/explore-get-answers/ai-powered-search-innovation-takeaways/)」2026年3月17日（同）
+- Google「[Google Search’s I/O 2026 updates: AI agents and more](https://blog.google/products-and-platforms/products/search/search-io-2026/)」2026年5月19日（同）
 - Search Console ヘルプ「[表示回数、掲載順位、クリック数とは](https://support.google.com/webmasters/answer/7042828?hl=ja)」（同）
 - Search Console ヘルプ「[生成 AI パフォーマンス レポート（検索）](https://support.google.com/webmasters/answer/16984139?hl=ja)」（同）
 - Search Console ヘルプ「[検索の生成 AI 設定](https://support.google.com/webmasters/answer/16908024?hl=ja)」（同）
