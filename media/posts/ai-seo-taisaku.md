@@ -1,6 +1,6 @@
 ---
 title: 【2026年11月】AI SEO対策とは？従来のSEOとの違いと会社が足すこと・効かない手
-date: 2026-10-31
+date: 2026-11-01
 category: AI検索対策
 description: AI SEO対策とは何かを2つの意味に分けて解説。Googleの公式ガイドで確かめた従来のSEOで変わらないこと・変わること、SEOの作業ごとの続ける・足す・やめるの棚卸し、効かない手と測り方まで。
 keyword: ai seo対策
@@ -16,7 +16,7 @@ SEOを担当していて、AIの時代に今のSEOのままでよいのか、何
 
 :::takeaways
 - AI SEO対策には**AIを使ってSEOをする意味と、AI検索の時代のSEOという意味**の2つがある。この記事は後者が主
-- Googleは生成AI向けの最適化も**SEOであることに変わりはない**と書き、llms.txt・文章の細切れ・AI向けの書き換え・生成AI用の構造化データは要らないとしている
+- Googleは**Google検索の観点では生成AI向けの最適化もSEOであることに変わりはない**と書き、llms.txt・文章の細切れ・AI向けの書き換え・生成AI用の構造化データもGoogle検索には要らないとしている
 - 足すのはGoogle以外の入口（ChatGPT・Perplexity・Copilot）のクローラーの確認と、**AIの回答そのものを記録して測る作業**
 :::
 
@@ -48,18 +48,17 @@ SEOを担当していて、AIの時代に今のSEOのままでよいのか、何
 
 ChatGPTの検索・Perplexity・MicrosoftのCopilotはGoogleとは別の仕組みで検索するため、Search Consoleの設定や数字はそこまで届きません。OpenAIのヘルプ「[Searching the web with ChatGPT](https://help.openai.com/en/articles/9237897-chatgpt-search)」によると、ChatGPTは外部の検索の提供元と組み、質問を検索向けの語に書き換えて送ることがあります。提供元のプライバシーの案内に挙がるのはMicrosoftとShopifyで、Bingが提供元の1つである強い示唆にはなるものの、Bingの索引に載ることが条件とは書かれていません。同じヘルプが載る条件として挙げるのは、OAI-SearchBotの許可と、ホストやCDNがOpenAIのIPアドレスからの通信を通すことです。
 
-OpenAIの[クローラーの説明](https://developers.openai.com/api/docs/bots)によると、OAI-SearchBotを止めたサイトはChatGPTの検索の回答に出ません。学習用のGPTBotとは別々の設定です。Perplexityも[PerplexityBot](https://docs.perplexity.ai/guides/bots)を検索結果にサイトを出すためのクローラーと説明し、robots.txtでの許可を勧めています。CopilotはBingの検索の上に作られており、Bing Webmaster Toolsで引用の数が見られます。
+OpenAIの[クローラーの説明](https://developers.openai.com/api/docs/bots)によると、OAI-SearchBotを止めたサイトはChatGPTの検索の回答に出ません（ナビゲーション用のリンクとしては出ることがあります）。学習用のGPTBotとは別々の設定です。Perplexityも[PerplexityBot](https://docs.perplexity.ai/guides/bots)を検索結果にサイトを出すためのクローラーと説明し、robots.txtでの許可を勧めています。CopilotはBingの検索の上に作られており、Bing Webmaster Toolsで引用の数が見られます。
 
 <figure class="post-figure"><img src="/media/images/ai-seo-taisaku/aiseo_02_gates.png" alt="AI検索の入口ごとに確かめる所を縦に並べた図。GoogleのAIによる概要とAIモードはインデックス登録とSearch Consoleの検索の生成AI設定、ChatGPTの検索はOAI-SearchBotの許可、PerplexityはPerplexityBotの許可、CopilotはBingの索引" loading="lazy"></figure>
 
 **robots.txtで許可していても、CDNやセキュリティの設定でAIのクローラーが止まっていることがあります。** Googleの「AI 機能とウェブサイト」も、robots.txtに加えてCDNやホスティングでクロールが許可されているかを確かめるよう書いています。どのクローラーが学習用でどれが検索用か、止めると何が起きるかは[AIクローラーをrobots.txtで止めるかの判断](/media/ai-crawler-robots/)、ChatGPTの条件の細部は[ChatGPT検索で引用元に出る条件](/media/chatgpt-search-citation/)が詳しいです。
 
 GoogleのAIモードもGoogle検索の一部で、公式の条件はAIによる概要と同じページにあります。AIによる概要に絞った公式の条件は[AI Overview（AIによる概要）対策とは](/media/cited-by-ai-overviews/)にまとめました。
-<!-- LINK: ai-mode-seo が公開されたら、この段落に「AIモードに絞った話は〜」の1文とリンクを足す -->
 
 ### Search Consoleの設定とレポート
 
-2026年8月31日から、Search Consoleに[検索の生成 AI 設定](https://support.google.com/webmasters/answer/16908024?hl=ja)が全サイトで入りました。除外を選んだサイトはAIによる概要・AIモードに出なくなります。既定は含める側なので、**誰かが除外に切り替えていないかを1度だけ確かめておけば足ります。** 同じ日にはAIによる概要とAIモードで自社のページへのリンクが表示された回数を出す[生成 AI パフォーマンス レポート](https://support.google.com/webmasters/answer/16984139?hl=ja)も全サイトに広がりました。
+2026年8月31日から、Search Consoleに[検索の生成 AI 設定](https://support.google.com/webmasters/answer/16908024?hl=ja)が全サイトで入りました。除外を選んだサイトはAIによる概要・AIモードに出なくなります。既定は含める側なので、**除外に切り替わっていないかを確かめておけば足ります。** 同じ日にはAIによる概要とAIモードで自社のページへのリンクが表示された回数を出す[生成 AI パフォーマンス レポート](https://support.google.com/webmasters/answer/16984139?hl=ja)も全サイトに広がりました。
 
 ### 見る数字
 
@@ -78,9 +77,9 @@ GoogleのAIモードもGoogle検索の一部で、公式の条件はAIによる�
 | 構造化データ | リッチリザルトのために続ける。AI用の特別なものは要らない | ガイド |
 | llms.txt | Google検索のためには要らない。ほかのサービス用に置くのは自由 | ガイド |
 | robots.txt・CDN | Googlebotに加えOAI-SearchBot・PerplexityBot・bingbotを確かめる | OpenAI・Perplexityの説明 |
-| 被リンク・言及の獲得 | 不自然な言及は集めない。第三者が書ける事実を出す | ガイド |
+| 被リンク・言及の獲得 | 不自然な言及は集めない。第三者が取り上げられる事実を自社で出す | ガイドは不自然な言及を探してもそれほど役に立たないと書く |
 | 順位の計測 | 続ける。AIの回答の記録とSearch Consoleのレポートを足す | 生成AIパフォーマンスレポート |
-| Googleビジネスプロフィール・Merchant Center | 最新に保つ | ガイド |
+| Googleビジネスプロフィール・Merchant Center | 最新に保つ | 「AI 機能とウェブサイト」のベストプラクティス |
 
 **作業の大半は続けるもので、足すのは入口の確認と回答の記録、やめるのは問いの言い換えごとのページ量産です。** ガイドも結びで明示的なSEOをまったく行わなくても多くのコンテンツが成功していると書き、ガイドの全項目をやる必要はないと断っています。
 
@@ -94,7 +93,7 @@ GoogleのAIモードもGoogle検索の一部で、公式の条件はAIによる�
 
 [スパムに関するポリシー](https://developers.google.com/search/docs/essentials/spam-policies?hl=ja)の側は、大量生成されたコンテンツの不正使用を「検索ランキングの操作を主な目的として大量のページを生成すること」と定め、価値のないコンテンツを「その作成方法は問わず」大量に作ることだと書いています。**Googleが問題にするのはAIで書いたかどうかではなく、価値を足さずに大量に作ることです。** 人が書いても同じ扱いになり、AIで書いても価値があれば当てはまりません。
 
-ガイダンスは公開前に人の手で事実を確かめることも求めています。対象は本文だけでなく、title・メタディスクリプション・構造化データ・画像の代替テキストまで含みます。AIで記事を作る会社なら、本数の目標より先に誰が事実を確かめて公開を決めるかを決めておくと、このガイダンスに沿った運用になるでしょう。
+ガイダンスは、公開前に人の手で事実を確かめることが重要だとも書いています。対象は本文だけでなく、title・メタディスクリプション・構造化データ・画像の代替テキストまで含みます。AIで記事を作る会社なら、本数の目標より先に誰が事実を確かめて公開を決めるかを決めておくと、このガイダンスに沿った運用になるでしょう。
 
 <figure class="post-figure"><img src="/media/images/ai-seo-taisaku/aiseo_06_spam-policy.png" alt="Googleのスパムに関するポリシーの大量生成されたコンテンツの不正使用の節。検索ランキングの操作を主な目的として大量のページを生成することで、価値のないコンテンツをその作成方法は問わず大量に作ることと書かれている" loading="lazy"><figcaption>Google 検索のスパムに関するポリシー（Google 検索セントラル、2026年10月31日）</figcaption></figure>
 
@@ -102,7 +101,7 @@ GoogleのAIモードもGoogle検索の一部で、公式の条件はAIによる�
 
 SEOの担当にとって新しいのは最初の2つで、残りの3つは今の作業の延長です。
 
-1. **今の答えを測る**: 見込み客がAIに聞きそうな問いを20〜30問書き出し、ChatGPT・Gemini・Perplexity・GoogleのAIモードに日を変えて2回以上聞く
+1. **今の答えを測る**: 見込み客がAIに聞きそうな問いを20〜30問書き出し、ChatGPT・Gemini・GoogleのAIモードに日を変えて2回以上聞く。AIによる概要は同じ問いをGoogleで検索して出方を見る
 2. **引用元を読む**: 回答に付いたURLを、自社・競合・比較サイト・口コミに分けて数える
 3. **ページを直す**: 自社が材料に使われていない問いに答えるページを直すか足す
 4. **社外の情報をそろえる**: 比較サイトやGoogleビジネスプロフィールの誤りを直す
@@ -149,7 +148,7 @@ AI SEO対策は今のSEOと作業の大半が重なるため、新しい部署�
 
 ### 外の提案を見る物差し
 
-AEO・GEO・AI SEOの名前で、新しい施策の提案を受ける機会が増えました。Googleは[サードパーティの SEO に関するガイダンス](https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja)で、外部の助言を公式のガイドに照らして評価するよう求めています。**提案の中の今のSEOと同じ作業と、回答の記録のように新しく足す作業を分けて見積もってもらうと比べやすくなります。**
+AEO・GEO・AI SEOの名前で、新しい施策の提案を受ける機会が増えました。Googleは[サードパーティの SEO に関するガイダンス](https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja)で、外部の助言を公式のガイドに照らして評価し、自分で判断するよう勧めています。**提案の中の今のSEOと同じ作業と、回答の記録のように新しく足す作業を分けて見積もってもらうと比べやすくなります。**
 
 ### AIで書くときの社内の決まり
 
@@ -167,7 +166,7 @@ Google検索については必要ありません。最適化ガイドはGoogle�
 
 ### Q. AIで書いた記事はGoogleで不利になりますか？
 
-AIで書いたこと自体を理由にするとは書かれていません。スパムポリシーが問題にするのは検索順位の操作を主な目的に価値のないページを大量に作ることで、作成方法は問わないと書かれています。公開前に人が事実を確かめることがガイダンスで求められています。
+AIで書いたこと自体を理由にするとは書かれていません。スパムポリシーが問題にするのは検索順位の操作を主な目的に価値のないページを大量に作ることで、作成方法は問わないと書かれています。ガイダンスは、公開前に人が事実を確かめることが重要だとしています。
 
 ### Q. ChatGPTに自社を出すにはBingへの登録が必要ですか？
 
@@ -179,12 +178,12 @@ AIによる概要とAIモードでリンクが表示された回数は、生成A
 
 ## 出典
 
-- Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」日本語版 2026年10月30日更新（2026年10月31日取得）。英語版「[Optimizing your website for generative AI features on Google Search](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=en)」（同）
+- Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」日本語版 2026年10月30日更新（2026年10月31日取得）。英語版「[Optimizing your website for generative AI features on Google Search](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=en)」2026年7月10日更新（同）
 - Google 検索セントラル ブログ「[Google 検索の生成 AI 向けに最適化するための新しいリソース](https://developers.google.com/search/blog/2026/05/a-new-resource-for-optimizing?hl=ja)」2026年5月15日（同）
 - Google 検索セントラル「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」2025年12月31日更新（同）
 - Google 検索セントラル「[ウェブサイトで生成 AI によるコンテンツを使用するための Google 検索のガイダンス](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content?hl=ja)」2026年10月6日更新（同）
 - Google 検索セントラル「[Google 検索のスパムに関するポリシー](https://developers.google.com/search/docs/essentials/spam-policies?hl=ja)」2026年9月2日更新（同）
-- Google 検索セントラル「[サードパーティの SEO ツール、サービス、アドバイスの使用に関する Google 検索のガイダンス](https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja)」（同）
+- Google 検索セントラル「[サードパーティの SEO ツール、サービス、アドバイスの使用に関する Google 検索のガイダンス](https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=ja)」2026年6月10日更新（同）
 - Google 検索セントラル ブログ「[Search Console に検索の生成 AI のパフォーマンス レポートを導入](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports?hl=ja)」2026年6月3日（同）
 - Search Console ヘルプ「[生成 AI パフォーマンス レポート（検索）](https://support.google.com/webmasters/answer/16984139?hl=ja)」（同）
 - Search Console ヘルプ「[検索の生成 AI 設定](https://support.google.com/webmasters/answer/16908024?hl=ja)」（同）
