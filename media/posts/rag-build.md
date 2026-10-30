@@ -16,13 +16,13 @@ Amazon Bedrockは、社内文書の取り込みから検索までをAWSに任せ
 
 :::takeaways
 - **RAG構築は既製品の機能・ノーコードの道具・クラウドの部品の3通りから選ぶ**。差は検索の部分をどこまで自分で持つか
-- **検索の部品の月額は文書2GB・月1万回の試算で数千円から1.5万円ほど**。費用の大半は文書を整えて答えを確かめる人の時間
+- **検索の部品の月額は文書2GB・月1万回の試算で0円から1.5万円ほど**。費用の大半は文書を整えて答えを確かめる人の時間
 - **つまずくのは表や図の多いPDF・権限・答えの確かめ方**。どれも作る前に決めておくことがある
 :::
 
 ## RAG構築とは
 
-RAG（検索拡張生成）は質問のたびに社内の文書から関係する箇所を探し、その箇所をAIに渡して答えさせる仕組みです。AIが社内文書を覚えるわけではないので、規程を直せば次の質問から新しい版で答えます。**文書を取り込んで探せる形にし、探した結果をAIに渡す流れを自社用に組むのがRAG構築です。** 文書を断片に切って探す4段の流れは[社内チャットボットの選び方](/media/internal-chatbot/)で図にしました。ここではその流れを作る側の決めごとを扱います。
+RAG（検索拡張生成）は質問のたびに社内の文書から関係する箇所を探し、その箇所をAIに渡して答えさせる仕組みです。AIが社内文書を覚えるわけではないので、直した規程を取り込み直せば次の質問から新しい版で答えます。**文書を取り込んで探せる形にし、探した結果をAIに渡す流れを自社用に組むのがRAG構築です。** 文書を断片に切って探す4段の流れは[社内チャットボットの選び方](/media/internal-chatbot/)で図にしました。ここではその流れを作る側の決めごとを扱います。
 
 AIエージェントが道具の1つとして社内文書を探すときも、その中身はRAGと同じです。エージェントそのものの説明は[AIエージェントとは](/media/ai-agent-guide/)にあります。
 
@@ -48,15 +48,15 @@ Microsoft 365・Google Workspace・ChatGPT Businessの契約があれば、そ�
 
 ### ノーコード・ローコードで作る
 
-Difyは文書の切り方と探し方を画面で選べる道具です。[Difyのチャンク設定](https://docs.dify.ai/ja/use-dify/knowledge/create-knowledge/chunking-and-cleaning-text)には、すべての断片を同じ長さで切る汎用モードと、小さな断片で探して前後を含む大きな断片を返す親子モードがあります。Copilot Studioは[ファイルのアップロード](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-file-upload)で500個までのファイルを持たせられ、SharePointにもつなげます。n8nは業務の自動化の流れに検索を差し込む使い方が中心です。料金はそれぞれ[Difyの料金](/media/dify-pricing/)・[Copilot Studioの料金](/media/copilot-studio/)・[n8nの料金](/media/n8n-pricing/)にまとめました。
+Difyは文書の切り方と探し方を画面で選べる道具です。[Difyのチャンク設定](https://docs.dify.ai/ja/use-dify/knowledge/create-knowledge/chunking-and-cleaning-text)には、すべての断片を同じ区切り文字と最大の長さで切る汎用モードと、小さな断片で探してその断片を含む大きな断片を返す親子モードがあります。Copilot Studioは[ファイルのアップロード](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-file-upload)で500個までのファイルを持たせられ、SharePointにもつなげます。n8nは業務の自動化の流れに検索を差し込む使い方が中心です。料金はそれぞれ[Difyの料金](/media/dify-pricing/)・[Copilot Studioの料金](/media/copilot-studio/)・[n8nの料金](/media/n8n-pricing/)にまとめました。
 
 ### クラウドの部品で組む
 
-自社の業務システムや社外向けの画面に組み込むなら、クラウドの検索の部品を使います。**Amazon Bedrockの[ナレッジベースの概要](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html)によると、Managed Knowledge BaseはS3・SharePoint・Confluence・Googleドライブ・OneDriveにつなぎ、文書ごとの権限で検索結果を絞れます。** 自分で検索の土台を選ぶ従来の型では、外部へのコネクタと文書単位の権限は使えません。Googleは同じ役目の製品をVertex AI SearchからAgent Searchへ改名中で、社内データの検索を含む全体は[Gemini Enterprise](/media/gemini-enterprise/)の範囲です。
+自社の業務システムや社外向けの画面に組み込むなら、クラウドの検索の部品を使います。**Amazon Bedrockの[ナレッジベースの概要](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html)によると、Managed Knowledge BaseはS3・SharePoint・Confluence・Googleドライブ・OneDriveにつなぎ、文書ごとの権限で検索結果を絞れます。** 自分で検索の土台を選ぶ従来の型では、外部へのコネクタと文書単位の権限は使えません。Googleのドキュメントでは2026年4月からVertex AI SearchがAgent Searchの名前に変わり、Google Cloud コンソールの画面は今もVertex AI SearchとAI Applicationsの名前のままです。社内データの検索を含む全体は[Gemini Enterprise](/media/gemini-enterprise/)の範囲です。
 
 ## RAG構築の手順
 
-上位の解説記事が挙げる手順は、文書の収集・分割・ベクトル化・検索・回答の生成の5段が中心でした。会社で作るときはその前後に目的の決定と権限・運用が入ります。
+技術の面の手順は文書の収集・分割・ベクトル化・検索・回答の生成の5段です。会社で作るときはその前後に目的の決定と権限・運用が入ります。
 
 <figure class="post-figure"><img src="/media/images/rag-build/rag_02_steps.png" alt="RAG構築の手順を6段で縦に並べた図。目的と問いを決める、文書を集めて整える、分け方と探し方を決める、答えを確かめる、権限とログを決める、運用で直し続ける" loading="lazy"></figure>
 
@@ -70,7 +70,7 @@ Difyは文書の切り方と探し方を画面で選べる道具です。[Dify�
 
 ### 分け方と探し方を決める
 
-Microsoftの[チャンク分割の解説](https://learn.microsoft.com/ja-jp/azure/search/vector-search-how-to-chunk-documents)は、200語や600文字ほどの固定の長さに10〜15%の重なりを持たせる方法を最初に挙げています。[OpenAIのファイル検索](https://developers.openai.com/api/docs/guides/retrieval)の既定は800トークンで、前後400トークンを重ねる設定です。意味の近さで探すベクトル検索と語の一致で探す全文検索を組み合わせるハイブリッド検索も、各社の部品で選べます。
+Microsoftの[チャンク分割の解説](https://learn.microsoft.com/ja-jp/azure/search/vector-search-how-to-chunk-documents)は、200語や600文字ほどの固定の長さに10〜15%の重なりを持たせる方法を最初に挙げています。[OpenAIのファイル検索](https://developers.openai.com/api/docs/guides/retrieval)の既定は800トークンで、隣り合う断片と400トークンを重ねる設定です。意味の近さで探すベクトル検索と語の一致で探す全文検索を組み合わせるハイブリッド検索も、各社の部品で選べます。
 
 ### 答えの確かめ方を決める
 
@@ -92,15 +92,15 @@ Microsoftの[チャンク分割の解説](https://learn.microsoft.com/ja-jp/azur
 
 ## RAG構築でつまずく所
 
-上位の記事が共通して挙げるのはデータの質と評価の不足でした。ここでは公式の文書に書かれた仕様のうち、作り始めてから気づきやすいものを4つ挙げます。
+各社の公式の文書に書かれた仕様のうち、作り始めてから気づきやすいものを4つ挙げます。
 
 ### 表や図の多いPDF
 
-**既定の読み取り方のままだと、表や図の中身が失われることがあります。** Amazon Bedrockの[解析の設定](https://docs.aws.amazon.com/bedrock/latest/userguide/kb-advanced-parsing.html)によると、既定のパーサーはテキストだけを取り出す仕様です。そのため図・グラフ・表・画像を含む文書には、Bedrock Data Automationか基盤モデルでの解析を勧めています。Googleの[ドキュメントの解析とチャンク化](https://docs.cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents?hl=ja)でも、既定のデジタル パーサーは表・リスト・見出しを検出しません。料金表や手当の一覧が表で書かれた規程なら、解析の方法を変えて試すか、表を文章に直してから取り込みます。
+**既定の読み取り方のままだと、表や図の中身が失われることがあります。** Amazon Bedrockで検索の土台を自分で選ぶ従来の型では、[解析の設定](https://docs.aws.amazon.com/bedrock/latest/userguide/kb-advanced-parsing.html)によると既定のパーサーがテキストだけを取り出します。そのため図・グラフ・表・画像を含む文書には、Bedrock Data Automationか基盤モデルでの解析を勧めています。Managed Knowledge Baseは表や画像も読む解析が標準で付き、追加の料金はかかりません。Googleの[ドキュメントの解析とチャンク化](https://docs.cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents?hl=ja)でも、既定のデジタル パーサーは表・リスト・見出しを検出しません。料金表や手当の一覧が表で書かれた規程なら、解析の方法を変えて試すか、表を文章に直してから取り込みます。
 
-<figure class="post-figure"><img src="/media/images/rag-build/rag_shot_bedrock_parser.png" alt="Amazon Bedrockのユーザーガイド。既定のパーサーはテキストファイルのテキストだけを解析し、図やグラフや表や画像を含む文書にはBedrock Data Automationか基盤モデルでの解析を勧めると書かれている" loading="lazy"><figcaption>Amazon Bedrock ユーザーガイド「Parsing options for your data source</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/rag-build/rag_shot_bedrock_parser.png" alt="Amazon Bedrockのユーザーガイド。既定のパーサーはテキストファイルのテキストだけを解析し、図やグラフや表や画像を含む文書にはBedrock Data Automationか基盤モデルでの解析を勧めると書かれている" loading="lazy"><figcaption>Amazon Bedrock ユーザーガイド「Parsing options for your data source」（2026年10月31日）</figcaption></figure>
 
-Copilot Studioに上げたファイルの画像は、PDFに埋め込まれて代替テキストが付いたものしか読みません。秘密度ラベルやパスワードで暗号化したファイルも上げられない仕様です。
+Copilot Studioに上げたファイルの画像はPDFに埋め込まれたものだけが対象で、代替テキストを付けておくと画像の情報からも答えられます。秘密度ラベルやパスワードで暗号化したファイルも上げられない仕様です。
 
 ### 分け方を後から変えられない
 
@@ -112,11 +112,11 @@ Difyのナレッジベースは、作った後に汎用か親子かのチャン�
 
 **n8nのSimple Vector Storeは検証だけに使う置き場です。** [n8nのドキュメント](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/)によると、データはメモリにだけ置かれ、n8nを再起動するとすべて消えます。保存先のキーもワークフローごとに分かれておらず、同じn8nを使う全員が読めてしまいます。
 
-<figure class="post-figure"><img src="/media/images/rag-build/rag_shot_n8n_simple_store.png" alt="n8nのSimple Vector Storeノードのドキュメント。データはメモリだけに保存されn8nの再起動で消えること、保存先のキーは全体で共通でインスタンスの全ユーザーが読めることが書かれている" loading="lazy"><figcaption>n8n Docs「Simple Vector Store node</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/rag-build/rag_shot_n8n_simple_store.png" alt="n8nのSimple Vector Storeノードのドキュメント。データはメモリだけに保存されn8nの再起動で消えること、保存先のキーは全体で共通でインスタンスの全ユーザーが読めることが書かれている" loading="lazy"><figcaption>n8n Docs「Simple Vector Store node」（2026年10月31日）</figcaption></figure>
 
 ### 答えの確かめ方がない
 
-試験問題を作らずに公開すると、設定を変えたときに良くなったのか悪くなったのかが分かりません。Amazon Bedrockの[RAGの評価の指標](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-evaluation-metrics.html)は、検索だけの評価と検索と答えの両方の評価に分かれています。返した断片が正解の文書をどれだけ含むかを測る指標には、正解を添えた質問の一覧が必要です。答えが取り出した文書に沿っているか、引用が正しいかを見る指標も並んでいます。
+試験問題を作らずに公開すると、設定を変えたときに良くなったのか悪くなったのかが分かりません。Amazon Bedrockの[RAGの評価の指標](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-evaluation-metrics.html)は、検索だけの評価と検索と答えの両方の評価に分かれています。返した断片が正解の文章の情報をどれだけ含むかを測る指標には、正解を添えた質問の一覧が必要です。答えが取り出した文書に沿っているか、引用が正しいかを見る指標も並んでいます。
 
 ## RAG構築の費用
 
@@ -129,7 +129,7 @@ Difyのナレッジベースは、作った後に汎用か親子かのチャン�
 | [Google Agent Search](https://cloud.google.com/generative-ai-app-builder/pricing) | 1GiBあたり月約5ドル（月10GiBは無料） | Standardは1,000回あたり1.5ドル（月1万回の無料トライアルあり） |
 | [OpenAIのファイル検索](https://developers.openai.com/api/docs/pricing) | 1GBあたり1日0.1ドル（1GBは無料） | 1,000回あたり2.5ドル |
 
-Azureの金額はMicrosoftの価格APIで東日本の単価を引き、月730時間で数えています。Bedrockは文書の解析・ベクトル化・並べ替えに標準のモデルを使う限り0ドルで、自分で選んだモデルを使うと別料金です。GoogleのEnterpriseは1,000回あたり4ドルで、検索結果からの答えの生成まで含みます。
+Azureの金額はMicrosoftの価格APIで東日本の単価を引き、月730時間で数えています。Bedrockは文書の解析・ベクトル化・並べ替えに標準のモデルを使う限り0ドルで、自分で選んだモデルを使うと別料金です。OpenAIの保存量は元のファイルでなく、切った断片と埋め込みの大きさで数えます。GoogleのEnterpriseは1,000回あたり4ドルで、検索結果からの答えの生成まで含みます。
 
 同じ前提で月額を試算しました（試算。文書2GB・月1万回の質問を仮定し、答えを作るモデルの代金は含めていません）。円は三菱UFJ銀行の[公示仲値](https://www.murc-kawasesouba.jp/fx/index.php)1ドル157.54円（2026年10月30日）での換算です。
 
@@ -140,13 +140,11 @@ Azureの金額はMicrosoftの価格APIで東日本の単価を引き、月730時
 | Google Agent Search Standard | 保存・回数とも無料枠の範囲 | 0ドル |
 | OpenAIのファイル検索 | 超過1GB×0.1ドル×30日＋1万回×2.5ドル/1,000回 | 28ドル（約4,400円） |
 
-**この規模なら検索の部品の代金は月数千円から1.5万円ほどに収まります。** Bedrockの料金ページの例でも、SharePointから50GB・約10万文書を取り込んで月10万回検索し、月350ドルです。表の多い文書をData Automationで解析すると1ページ0.01ドルかかり、1,000ページで10ドルになります。予算を左右するのは部品の単価より、文書を整えて試験問題を作り、答えを直し続ける人の時間です。
+**この規模なら検索の部品の代金は月0円から1.5万円ほどに収まります。** Bedrockの料金ページの例でも、SharePointから50GB・約10万文書を取り込んで月10万回検索し、月350ドルです。従来の型で表の多い文書をData Automationで解析すると1ページ0.01ドルかかり、1,000ページで10ドルになります。予算を左右するのは部品の単価より、文書を整えて試験問題を作り、答えを直し続ける人の時間です。
 
 ## 自社で作るか外に頼むか
 
-開発を外に頼むときの相場は、一次の資料で確かめられるものが見つかりませんでした。公開されている金額の例では、横浜市が2025年10月に入札した[RAG機能と高度モデルを備えた生成AIサービスの提供及び活用支援業務委託](https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2025/itaku/digital/rag.html)が税抜5,261,600円で落札されています（もう1社の入札は850万円）。サービスの提供と活用の支援をまとめた契約で、個別の開発費ではありません。仕様書の掲載が終わっていたため、期間と利用人数は確かめられませんでした。
-
-金額より先に次の条件で向く方を決めます。
+外に頼む費用は対象の文書の量と権限の条件、公開後の運用まで頼むかで変わります。金額を比べる前に、次の条件で自社と外のどちらが向くかを決めます。
 
 | 条件 | 向く方 |
 |---|---|
@@ -193,11 +191,11 @@ Simple Vector Storeに入れたデータは、n8nの再起動で消えます。�
 
 ### Agent Searchの旧名は何ですか？
 
-Vertex AI Searchです。Googleのドキュメントには、Vertex AI SearchをAgent Searchに改名中と表示されています。
+Vertex AI Searchです。Googleは2026年4月にドキュメントでの名前をAgent Searchに変え、ほかの場所の名前も変えている途中です。Google Cloud コンソールの画面では今もVertex AI SearchとAI Applicationsの名前で表示されます。
 
 ### RAG構築を外注するといくらかかりますか？
 
-公開された相場の資料は見つかりませんでした。対象の文書の量や権限の条件、運用まで頼むかで費用は変わるため、条件を書面にそろえて複数の会社から見積もりを取ります。
+対象の文書の量や権限の条件、運用まで頼むかで費用は変わります。対象の質問・文書の量・権限の条件・ログの残し方を書面にそろえ、複数の会社から見積もりを取って比べます。
 
 ## 出典
 
@@ -208,5 +206,4 @@ Vertex AI Searchです。Googleのドキュメントには、Vertex AI Searchを
 - OpenAI「[Pricing](https://developers.openai.com/api/docs/pricing)」「[Retrieval](https://developers.openai.com/api/docs/guides/retrieval)」
 - Dify Docs「[チャンク設定](https://docs.dify.ai/ja/use-dify/knowledge/create-knowledge/chunking-and-cleaning-text)」「[インデックス方法と検索設定](https://docs.dify.ai/ja/use-dify/knowledge/create-knowledge/setting-indexing-methods)」
 - n8n Docs「[RAG in n8n](https://docs.n8n.io/advanced-ai/rag-in-n8n/)」「[Simple Vector Store node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/)」
-- 横浜市「[RAG機能と高度モデルを備えた生成AIサービスの提供及び活用支援業務委託](https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2025/itaku/digital/rag.html)」入札結果（2025年10月14日）
 - 三菱UFJリサーチ&コンサルティング「[外国為替相場](https://www.murc-kawasesouba.jp/fx/index.php)」（2026年10月30日）
