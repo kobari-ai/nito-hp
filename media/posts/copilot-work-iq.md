@@ -129,7 +129,7 @@ Microsoft Copilotのアドオン ライセンスを持つ人は、Copilot Chat�
 Microsoft Learnのドキュメントによると、2026年6月16日に一般提供になりました。プレビュー版を使っていた場合は、一般提供版への更新が必要です。
 
 ### Work IQ自体はいつから使えますか？
-Microsoftは2025年11月18日、Microsoft Igniteに合わせたMicrosoft 365のブログでWork IQを発表しています。Copilot Chatの画面に［Work IQ］ボタンが出た日付は、公式のサポート記事には書かれていません。開発者向けのWork IQ CLIは、1つ前の質問のとおり2026年6月16日に一般提供になりました。
+Work IQは2025年11月18日、Microsoft Igniteに合わせたMicrosoft 365のブログで発表されました。Copilot Chatの画面に［Work IQ］ボタンが出た日は、Microsoftのサポート記事には載っていません。開発者向けのWork IQ CLIは、1つ前の質問のとおり2026年6月16日に一般提供になりました。
 
 ## 出典
 
