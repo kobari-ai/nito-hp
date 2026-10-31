@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】Claude Enterpriseとは？料金の仕組み・Teamとの違い・20席から
 date: 2026-10-13
+modified: 2026-10-31
 category: AI活用
 description: Claude EnterpriseとTeamの違いを公式の料金ページとヘルプで整理。席料US$20に使った分のAPI料金が乗る仕組み、20席からの条件、SCIM・監査ログ・データ保持の差、申し込みと移行の注意まで。
 cover_tag: 法人
@@ -132,7 +133,7 @@ TeamとEnterpriseで印が違う行だけを抜き出すと、次のとおりで
 
 **この経路での移行は元に戻せません。**移った直後はスキル・コード実行とファイル作成・Claude Design・Claude in ChromeなどがEnterpriseでは既定でオフになり、席が割り当てられないメンバーが出ることもあります。ヘルプは切り替えのあとに機能の設定と席の割り当てを見直すよう書いています。
 
-[MaxとTeamのAPIクレジットのドキュメント](https://platform.claude.com/docs/ja/about-claude/api-credits-for-subscribers)のとおり、毎月のAPIクレジットはMaxとTeamだけが対象で、Enterpriseは含まれません。Teamで受け取っていた組織は、移行すると新しいクレジットが止まります。手元に残っている分は期限まで使えて、Teamで買った使用クレジットの残りも引き継がれます。
+[Max・Ultra・TeamのAPIクレジットのドキュメント](https://platform.claude.com/docs/ja/about-claude/api-credits-for-subscribers)のとおり、毎月のAPIクレジットはMax・Ultra・Teamだけが対象で、Enterpriseは含まれません。Teamで受け取っていた組織は、移行すると新しいクレジットが止まります。手元に残っている分は期限まで使えて、Teamで買った使用クレジットの残りも引き継がれます。
 
 ## Enterpriseにするかの目安
 
@@ -176,11 +177,11 @@ SCIMや権限、使用量の上限を整えたあと、決まった仕事をClau
 
 ### Q. Claude EnterpriseにAPIクレジットは付きますか？
 
-付きません。毎月のAPIクレジットの対象はMaxとTeamで、Enterpriseは対象外です。TeamからEnterpriseに移ると、新しいクレジットは止まります。
+付きません。毎月のAPIクレジットの対象はMax・Ultra・Teamで、Enterpriseは対象外です。TeamからEnterpriseに移ると、新しいクレジットは止まります。
 
 ## 出典
 
-すべて2026年10月13日に取得。料金ページのEnterpriseの欄の「最低20シート」は2026年10月17日に取得。
+すべて2026年10月13日に取得。料金ページのEnterpriseの欄の「最低20シート」は2026年10月17日、APIクレジットの対象の表記がMax・Ultra・Teamになったことは2026年10月31日に確認。
 
 - Claude「[料金](https://claude.com/ja/pricing)」Team & Enterpriseタブ、プラン間の機能の比較表、FAQ
 - Claude「[Pricing](https://claude.com/pricing)」（米国向け）Team & Enterpriseタブ
@@ -194,6 +195,6 @@ SCIMや権限、使用量の上限を整えたあと、決まった仕事をClau
 - Anthropic ヘルプセンター「[エンタープライズプランでカスタムロールを管理する](https://support.claude.com/ja/articles/13930452)」
 - Anthropic ヘルプセンター「[監査ログへのアクセス](https://support.claude.com/ja/articles/9970975)」
 - Anthropic ヘルプセンター「[エンタープライズプランのカスタムデータ保持制御を設定する](https://support.claude.com/ja/articles/10440198)」
-- Claude Platform ドキュメント「[MaxプランおよびTeamプランのAPIクレジット](https://platform.claude.com/docs/ja/about-claude/api-credits-for-subscribers)」
+- Claude Platform ドキュメント「[Maxプラン、Ultraプラン、およびTeamプランのAPIクレジット](https://platform.claude.com/docs/ja/about-claude/api-credits-for-subscribers)」
 - Claude Platform ドキュメント「[料金](https://platform.claude.com/docs/ja/about-claude/pricing)」
 - claude.ai「[Enterpriseの申し込み](https://claude.ai/create/enterprise)」（ログインせずに表示した最初の画面）

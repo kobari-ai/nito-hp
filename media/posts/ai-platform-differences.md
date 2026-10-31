@@ -2,7 +2,7 @@
 title: ChatGPT・Perplexity・Gemini・Google AIモードで「出方」はどう違う？実測で比較
 date: 2026-07-16
 category: AI検索対策
-description: ChatGPT・Perplexity・Gemini・GoogleのAIモードで、同じ質問への回答や引用元の出し方がどう違うかを、実際に計測したデータをもとに解説します。プラットフォームごとの特性を踏まえた、AI検索対策の考え方をまとめました。
+description: ChatGPT・Perplexity・Gemini・GoogleのAIモードで、同じ質問への回答や引用元の出し方がどう違うかを実測データで解説します。プラットフォームごとの特性を踏まえた、AI検索対策の考え方もまとめました。
 cover_tag: 徹底比較
 cover_headline: 4つのAIで出方は違う？
 cover_sub: 実測で比較する引用のクセ

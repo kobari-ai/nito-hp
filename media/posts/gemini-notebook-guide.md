@@ -2,7 +2,7 @@
 title: 【2026年9月】NotebookLM（Gemini Notebook）の使い方とは？無料の上限・できること・ChatGPTとの違い
 date: 2026-09-17
 category: AI検索対策
-description: NotebookLMは2026年7月にGemini Notebookへ名前が変わりました。改名後の実画面で、ノートブックの作り方からStudioの9機能、無料プランの上限、ChatGPTとの違いまで、公式ヘルプを一次ソースにして書いています。
+description: NotebookLMは2026年7月にGemini Notebookへ名前が変わりました。改名後の実画面で、使い方（ノートブックの作り方・Studioの9機能）、無料プランの上限、ChatGPTとの違いを公式ヘルプをもとに書いています。
 cover_tag: 使い方
 cover_headline: NotebookLMの使い方
 cover_sub: 改名後の画面と無料の上限を公式で確認
