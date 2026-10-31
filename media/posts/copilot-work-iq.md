@@ -34,7 +34,7 @@ Copilotが理解するのに役立つものとして、次の4つが挙がって
 
 <figure class="post-figure"><img src="/media/images/copilot-work-iq/01_fig_layers.png" alt="Work IQの3つの層の図。データはファイル・メール・会議・チャット・ビジネスアプリのシグナルをまとめる。メモリは利用者やチームの働き方を継続して理解する。推論はモデル・スキル・ツールをまとめてエージェントが動けるようにする" loading="lazy"><figcaption>Work IQはデータ・メモリ・推論の3層（Copilot Studioのドキュメントの説明）</figcaption></figure>
 
-データ・メモリ・推論の3層は、開発者がエージェントにWork IQを組み込むときの[Copilot Studioのドキュメント](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-work-iq)にある説明です。利用者が画面で意識するのは、次の節のオンとオフだけです。
+データ・メモリ・推論の3層は、開発者がエージェントにWork IQを組み込むときの[Copilot Studioのドキュメント](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq)にある説明です。利用者が画面で意識するのは、次の節のオンとオフだけです。
 
 ## 使える人とライセンス
 
@@ -97,9 +97,9 @@ Work IQがオンでも、Copilotが見に行けるのは、その人がもとも
 1. **誰にアドオン ライセンスを割り当てるか**。Copilot ChatのWork IQは、ライセンスを持つ人に初期設定でオンになる
 2. **従量課金を使わせるか**。Work IQ APIの課金は、Microsoft 365 管理センターで管理する
 3. **CLIとMCPを許可するか**。組織のデータに触れるにはテナント管理者の同意が要る
-4. **書き込みを許可するか**。Copilot StudioのWork IQ（プレビュー）は、管理者が管理センターで書き込みを明示的にオンにしない限り読み取り専用で、利用には別の支出ポリシーを作る必要がある
+4. **書き込みをどこまで許すか**。Copilot StudioのWork IQは一般提供になり、GitHub Copilotのハーネスで作る新しいエージェントには初めから追加される。書き込みの操作は初期設定でオンで、組織の権限やポリシーはそのまま効き、別の支出ポリシーは要らない。ビジネスアプリなど一部のワークロードはプレビューのまま
 
-4つ目はプレビューの機能についての記述で、管理センターでツールやMCPサーバーを許可・拒否する機能は、地域によってはまだ使えない場合がある、ともドキュメントに書かれています。
+Copilot StudioのWork IQは以前はプレビューで、書き込みは管理者がオンにしない限り使えない形でした。2026年10月22日に更新されたドキュメントで、4つ目に書いた形に変わっています。管理センターでツールやMCPサーバーを許可・拒否する機能は、地域によってはまだ使えない場合がある、ともドキュメントに書かれています。
 
 ## AI検索での見え方は別の話
 
@@ -139,7 +139,7 @@ Work IQは2025年11月18日、Microsoft Igniteに合わせたMicrosoft 365のブ
 - [Microsoft Copilot Chatの回答のソースを制御および確認する](https://support.microsoft.com/ja-jp/Microsoft-365-Copilot/control-review-sources-copilot-chat)（Microsoft サポート。データソースの変更、すべて無効にする）
 - [Work IQ の概要](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/)（Microsoft Learn。A2A・MCP・REST、ライセンスと従量課金）
 - [Microsoft Work IQ CLI](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-cli)（Microsoft Learn。一般提供の日付、使う条件）
-- [Microsoft Copilot Studio での Work IQ（プレビュー）](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-work-iq)（Microsoft Learn。3つの層、読み取り専用、支出ポリシー）
+- [Microsoft Copilot Studio での Work IQ](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq)（Microsoft Learn。3つの層。一般提供・書き込みの初期設定・支出ポリシーは2026年10月31日に取得した版で確認）
 - [Microsoft Copilot 従量課金制サービスの概要](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/overview)（Microsoft Learn。Work IQ APIの課金を管理センターで管理）
 
 2026年10月31日に次のページで、Work IQの発表日を確認しました。
