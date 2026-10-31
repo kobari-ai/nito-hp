@@ -19,7 +19,7 @@ Claude Teamプランは、2〜150人の組織が使う人数分を契約するCl
 - **スタンダードはProの1.25倍の値段で、5時間の枠も1.25倍**。上のプランほど量あたりが割安になるわけではない
 - **差が出るのは学習の管理・退職時の会話・請求書の本数**
 - **全員の学習の設定を確かめられる少人数なら、会社でも個人プランで足りる**。人の出入りがある・設定を確かめきれない人数になったらTeam
-- **たくさん使う人にはUltra**。5時間の枠が無いのはUltraだけで、月$200のAPIクレジットも付く。150人超や請求書払いはEnterprise
+- **5時間の枠を気にせず使いたい人にはUltra**。認証済みのアカウントなら5時間の枠が無いのはUltraだけで、月$200のAPIクレジットも付く。Teamの中ならプレミアム。150人超や請求書払いはEnterprise
 :::
 
 ## Claude Teamプランとは
@@ -47,7 +47,7 @@ Teamを始めるときのヘルプは最低2人とし、「個人での利用を
 
 スタンダードはProの1.25倍の値段ですが、5時間の枠もProの1.25倍です。月払いで5時間の枠の倍率あたりに直すと、Pro（$22÷1）・Max（$110÷5）・スタンダード（$27.50÷1.25）・プレミアム（$137.50÷6.25）はどれも$22になります（nitoの試算。Teamの週の上限の倍率は公開されていないため、5時間の枠だけで比べた値）。**5時間の枠で見た量あたりの値段が変わらないので、料金だけではTeamか個人プランかは決まりません。**
 
-支払額だけならProを配るほうが1人あたり月$4〜5.50安くなります（Proは月払い$22・年払いなら月$18）。
+支払額だけならProを配るほうが1人あたり月$4〜5.50安くなります（Proは月払い$22・年払いなら月$18）。その差で増えるのは1.25倍の5時間の枠と会社の管理の機能です。
 
 ### 1人ずつ選べるスタンダードとプレミアム
 
@@ -141,7 +141,7 @@ Teamの請求のよくある質問によると、Teamの請求書は組織設定
 
 ## 会社でもClaudeの個人プランを導入するのはあり？
 
-**全員の学習の設定を自分たちで確かめられる少人数なら、会社でも個人プランを導入するのはありです。**創業メンバーだけで使う場合などで、全員が学習の設定をオフにして評価のボタンを押さない決まりにすれば、学習の扱いはTeamとほぼ同じです。安全性の確認の対象になった会話を学習に使う条件だけは個人向けの規約にあり、Teamと異なります。
+**全員の学習の設定を自分たちで確かめられる少人数なら、会社でも個人プランを導入するのはありです。**創業メンバーだけで使う場合などで、全員が学習の設定をオフにして評価のボタンを押さない決まりにすれば、学習の扱いはTeamとほぼ同じです。安全性の確認の対象になった会話を学習に使う条件だけは個人向けの規約にあり、Teamと異なります。またMaxとUltraのヘルプは個人消費者向けのプランだとし、組織のチームで使うならTeamとEnterpriseを案内しています。
 
 <figure class="post-figure"><img src="/media/images/claude-team/ctm_06_decide.png" alt="Teamか個人プランかを決める目安の図。1人ならPro・Max・Ultra、全員の設定を確かめられる少人数なら個人プランで足り、人の出入りがあるか人数が増えたらTeamのスタンダード、使う量が多い人はUltraかTeamのプレミアム、150人超や請求書払いならEnterpriseを検討" loading="lazy"></figure>
 
@@ -168,7 +168,7 @@ MaxやUltraには管理の機能が無く規約も個人向けのため、Team�
 
 Ultraが割安になるのは、5時間の枠が無いことと、月$200のAPIクレジットが付くことの2点です。月額のAPIクレジットはMaxが$100で、Teamはスタンダード1人$20・プレミアム1人$100を全員分合算して上限$500です。使える先はClaude PlatformのAPIで、Claude Codeやアプリの追加の利用には使えず、枠を使い切ったときの穴埋めにもなりません。
 
-**APIを毎月それだけ使う会社なら、クレジットの分だけ実質の負担が下がります。**2人ならUltraを2人で月$440・クレジット$400、プレミアムを2人で月$275・クレジット$200です（nitoの試算）。APIを使わないなら、Ultraは使える量が多いだけで量あたりの値段はProと変わりません。
+**APIを毎月それだけ使う会社なら、クレジットの分だけ実質の負担が下がります。**2人ならUltraを2人で月$440・クレジット$400、プレミアムを2人で月$275・クレジット$200です（nitoの試算）。ただし使わなかったクレジットは翌月に繰り越せません。Ultraのクレジットは1人ずつ別のConsoleの組織に入ります。1つの組織が受け取れるのは1つのプランの分だけなので、2人分を会社の1つの組織にまとめることはできません。Teamは全員分が1つの組織に入ります。APIを使わないなら、Ultraは使える量が多いだけで量あたりの値段はProと変わりません。
 
 ### Enterpriseを検討するとき
 
@@ -248,7 +248,7 @@ Team全体を解約しても、今の請求期間の終わりまでは使えま�
 
 - **1人で使う場合**：Pro・Max・Ultraから使う量で選ぶ（Teamは2人から）
 - **全員の設定を確かめられる少人数の場合**：個人プランで足りる。全員が学習をオフにし評価のボタンを押さない
-- **使う量が多い人がいる場合**：その人はUltra（5時間の枠が無く月$200のAPIクレジット付き）
+- **使う量が多い人がいる場合**：その人はUltra（認証済みなら5時間の枠が無く月$200のAPIクレジット付き）。Teamの中ならプレミアム
 - **人の出入りがある・人数が増えた場合**：Teamのスタンダードで始め、上限に当たる人だけプレミアムに上げる
 - **150人超・請求書払いが要る場合**：Enterpriseを検討する
 
@@ -260,6 +260,7 @@ Team全体を解約しても、今の請求期間の終わりまでは使えま�
 - Anthropic ヘルプセンター「[Team プランとは何ですか？](https://support.claude.com/ja/articles/9266767)」
 - Anthropic ヘルプセンター「[Team プランを始める](https://support.claude.com/ja/articles/9267247)」
 - Anthropic ヘルプセンター「[Team プランのシートを購入・管理する](https://support.claude.com/ja/articles/12004354)」
+- Anthropic ヘルプセンター「[Team プランのメンバーを管理する](https://support.claude.com/ja/articles/13133750)」
 - Anthropic ヘルプセンター「[チームプランの請求額はどのように計算されますか](https://support.claude.com/ja/articles/9267289)」
 - Anthropic ヘルプセンター「[チームプラン請求に関するよくある質問](https://support.claude.com/ja/articles/12997503)」
 - Anthropic ヘルプセンター「[Team および座席ベースの Enterprise プランの使用クレジットを管理する](https://support.claude.com/ja/articles/12005970)」
@@ -269,11 +270,13 @@ Team全体を解約しても、今の請求期間の終わりまでは使えま�
 - Anthropic ヘルプセンター「[ユーザーがTeamまたはEnterpriseの組織から削除された場合、そのユーザーのデータはどうなりますか](https://support.claude.com/ja/articles/12053672)」
 - Anthropic ヘルプセンター「[View usage analytics for Team and Enterprise plans](https://support.claude.com/en/articles/12883420)」
 - Anthropic ヘルプセンター「[Team プランまたは Enterprise プランで Claude Code を使用する](https://support.claude.com/ja/articles/11845131)」
+- Anthropic ヘルプセンター「[Artifactsの共有](https://support.claude.com/ja/articles/9547008)」
 - Anthropic ヘルプセンター「[Claude Coworkをウェブ、デスクトップ、モバイルで使用する](https://support.claude.com/ja/articles/15520349)」
 - Anthropic ヘルプセンター「[個人用Claudeアカウントをチームまたはエンタープライズ組織に移動する](https://support.claude.com/ja/articles/9267400)」
 - Anthropic ヘルプセンター「[組織の Team プラン購読をキャンセルする](https://support.claude.com/ja/articles/9267323)」
 - Anthropic ヘルプセンター「[Maxプランとは？](https://support.claude.com/ja/articles/11049741)」「[Ultraプランとは？](https://support.claude.com/ja/articles/17728952)」
 - Anthropic プライバシーセンター「[Is my data used for model training?](https://privacy.claude.com/en/articles/10023580)」（個人向け）
 - Anthropic プライバシーセンター「[私のデータはモデルトレーニングに使用されていますか？](https://privacy.claude.com/ja/articles/7996868)」（商用製品）
+- Anthropic プライバシーセンター「[How long do you store my data?](https://privacy.claude.com/en/articles/10023548)」（個人向け）「[How long do you store my organization's data?](https://privacy.claude.com/en/articles/7996866)」（商用製品）
 - Anthropic「[Consumer Terms of Service](https://www.anthropic.com/legal/consumer-terms)」「[Commercial Terms of Service](https://www.anthropic.com/legal/commercial-terms)」
 - Claude Code Docs「[Agent Teams](https://code.claude.com/docs/ja/agent-teams)」
