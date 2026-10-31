@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】Work IQとは？Copilotのオン・オフ・ライセンス・Work IQ APIの料金
 date: 2026-10-03
+modified: 2026-10-31
 category: AI活用
 description: Microsoft 365 CopilotのWork IQを公式ドキュメントから解説。使えるライセンス、Chat画面の左上のボタンでのオン・オフ、オフのときの答え方、Work IQ APIとCLIの従量課金、管理者が決めることまで。
 cover_tag: 使い方
@@ -128,7 +129,7 @@ Microsoft Copilotのアドオン ライセンスを持つ人は、Copilot Chat�
 Microsoft Learnのドキュメントによると、2026年6月16日に一般提供になりました。プレビュー版を使っていた場合は、一般提供版への更新が必要です。
 
 ### Work IQ自体はいつから使えますか？
-2025年のMicrosoft Igniteで発表され、2026年5月にCopilotの新しい層として組み込まれたと伝える記事があります（二次情報・本文未確認、要一次確認）。開発者向けのWork IQ APIは前述のとおり2026年6月16日に一般提供、Copilot Studio側ではまだプレビュー機能として扱われています。
+Microsoftは2025年11月18日、Microsoft Igniteに合わせたMicrosoft 365のブログでWork IQを発表しています。Copilot Chatの画面に［Work IQ］ボタンが出た日付は、公式のサポート記事には書かれていません。開発者向けのWork IQ CLIは、1つ前の質問のとおり2026年6月16日に一般提供になりました。
 
 ## 出典
 
@@ -140,3 +141,7 @@ Microsoft Learnのドキュメントによると、2026年6月16日に一般提�
 - [Microsoft Work IQ CLI](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-cli)（Microsoft Learn。一般提供の日付、使う条件）
 - [Microsoft Copilot Studio での Work IQ（プレビュー）](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-work-iq)（Microsoft Learn。3つの層、読み取り専用、支出ポリシー）
 - [Microsoft Copilot 従量課金制サービスの概要](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/overview)（Microsoft Learn。Work IQ APIの課金を管理センターで管理）
+
+2026年10月31日に次のページで、Work IQの発表日を確認しました。
+
+- [Microsoft Ignite 2025: Copilot and agents built to power the Frontier Firm](https://www.microsoft.com/en-us/microsoft-365/blog/2025/11/18/microsoft-ignite-2025-copilot-and-agents-built-to-power-the-frontier-firm/)（Microsoft 365 ブログ、2025年11月18日）
