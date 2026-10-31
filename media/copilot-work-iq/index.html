@@ -111,7 +111,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
 <figure class="post-figure"><img src="/media/images/copilot-work-iq/01_fig_layers.png" alt="Work IQの3つの層の図。データはファイル・メール・会議・チャット・ビジネスアプリのシグナルをまとめる。メモリは利用者やチームの働き方を継続して理解する。推論はモデル・スキル・ツールをまとめてエージェントが動けるようにする" loading="lazy"><figcaption>Work IQはデータ・メモリ・推論の3層（Copilot Studioのドキュメントの説明）</figcaption></figure>
 
-<p>データ・メモリ・推論の3層は、開発者がエージェントにWork IQを組み込むときの<a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-work-iq">Copilot Studioのドキュメント</a>にある説明です。利用者が画面で意識するのは、次の節のオンとオフだけです。</p>
+<p>データ・メモリ・推論の3層は、開発者がエージェントにWork IQを組み込むときの<a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq">Copilot Studioのドキュメント</a>にある説明です。利用者が画面で意識するのは、次の節のオンとオフだけです。</p>
 <h2 id="s2">使える人とライセンス</h2>
 <p>Work IQを使えるのは、Microsoft Copilotのアドオン ライセンスを持つ人です。サポート記事にはこう書かれていて、ライセンスを持っていれば<strong>初期設定でオン</strong>になっています。</p>
 <p>開発者向けのMicrosoft Learnでは、課金の説明に「Microsoft 365 Copilot ライセンス」という名前が使われています。あとの節の課金の図もこちらの名前です。</p>
@@ -197,9 +197,9 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li><strong>誰にアドオン ライセンスを割り当てるか</strong>。Copilot ChatのWork IQは、ライセンスを持つ人に初期設定でオンになる</li>
 <li><strong>従量課金を使わせるか</strong>。Work IQ APIの課金は、Microsoft 365 管理センターで管理する</li>
 <li><strong>CLIとMCPを許可するか</strong>。組織のデータに触れるにはテナント管理者の同意が要る</li>
-<li><strong>書き込みを許可するか</strong>。Copilot StudioのWork IQ（プレビュー）は、管理者が管理センターで書き込みを明示的にオンにしない限り読み取り専用で、利用には別の支出ポリシーを作る必要がある</li>
+<li><strong>書き込みをどこまで許すか</strong>。Copilot StudioのWork IQは一般提供になり、GitHub Copilotのハーネスで作る新しいエージェントには初めから追加される。書き込みの操作は初期設定でオンで、組織の権限やポリシーはそのまま効き、別の支出ポリシーは要らない。ビジネスアプリなど一部のワークロードはプレビューのまま</li>
 </ol>
-<p>4つ目はプレビューの機能についての記述で、管理センターでツールやMCPサーバーを許可・拒否する機能は、地域によってはまだ使えない場合がある、ともドキュメントに書かれています。</p>
+<p>Copilot StudioのWork IQは以前はプレビューで、書き込みは管理者がオンにしない限り使えない形でした。2026年10月22日に更新されたドキュメントで、4つ目に書いた形に変わっています。管理センターでツールやMCPサーバーを許可・拒否する機能は、地域によってはまだ使えない場合がある、ともドキュメントに書かれています。</p>
 <h2 id="s7">AI検索での見え方は別の話</h2>
 <p>Work IQは社内のデータを答えに乗せる仕組みで、Copilotが社外の質問に答えるときに自社をどう紹介するかとは別の話です。そちらは<a href="https://nito-0210.com/llmo/">AI検索対策</a>として扱います。</p>
 <h2 id="s8">よくある質問</h2>
@@ -226,7 +226,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <li><a href="https://support.microsoft.com/ja-jp/Microsoft-365-Copilot/control-review-sources-copilot-chat">Microsoft Copilot Chatの回答のソースを制御および確認する</a>（Microsoft サポート。データソースの変更、すべて無効にする）</li>
 <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/">Work IQ の概要</a>（Microsoft Learn。A2A・MCP・REST、ライセンスと従量課金）</li>
 <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-cli">Microsoft Work IQ CLI</a>（Microsoft Learn。一般提供の日付、使う条件）</li>
-<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-work-iq">Microsoft Copilot Studio での Work IQ（プレビュー）</a>（Microsoft Learn。3つの層、読み取り専用、支出ポリシー）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq">Microsoft Copilot Studio での Work IQ</a>（Microsoft Learn。3つの層。一般提供・書き込みの初期設定・支出ポリシーは2026年10月31日に取得した版で確認）</li>
 <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/overview">Microsoft Copilot 従量課金制サービスの概要</a>（Microsoft Learn。Work IQ APIの課金を管理センターで管理）</li>
 </ul>
 <p>2026年10月31日に次のページで、Work IQの発表日を確認しました。</p>
