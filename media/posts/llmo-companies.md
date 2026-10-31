@@ -36,7 +36,7 @@ AI検索対策の依頼先は自社に何が足りないかで選ぶと迷いま
 
 LLMO対策の支援はどの会社でもおおむね「現状の分析・戦略・施策の実行・効果の測定と改善」の4段階で進みます。型の違いはこの4段階のどこに強みを置き、どこから先を依頼する側に任せるかにあります。
 
-<!-- SHOT: 図 llmoc_types.html → llmoc-types.png・alt「LLMO対策会社の4つの型。SEO会社の延長型、戦略コンサル型、計測ツール型、制作・実行まで一括型と、それぞれが向いている会社」 -->
+<figure class="post-figure"><img src="/media/images/llmo-companies/llmoc-types.png" alt="LLMO対策会社の4つの型。SEO会社の延長型、戦略コンサル型、計測ツール型、制作・実行まで一括型と、それぞれが向いている会社" loading="lazy"></figure>
 
 ### SEO会社の延長型
 
@@ -66,7 +66,7 @@ AIが回答を作るときは検索結果のページを読みに行くため、
 
 支援会社の提案を比べるときは、次の5つを同じ質問で聞くと違いがはっきりします。
 
-<!-- SHOT: 図 llmoc_questions.html → llmoc-questions.png・alt「LLMO対策会社に契約前に聞く5つの質問。何を目標に置くか、どのAIでどう測るか、どこまで作るか、社外の言及まで扱うか、料金と契約の範囲」 -->
+<figure class="post-figure"><img src="/media/images/llmo-companies/llmoc-questions.png" alt="LLMO対策会社に契約前に聞く5つの質問。何を目標に置くか、どのAIでどう測るか、どこまで作るか、社外の言及まで扱うか、料金と契約の範囲" loading="lazy"></figure>
 
 | 物差し | 契約前に聞く質問 | 答えで見分けること |
 |---|---|---|
@@ -200,7 +200,7 @@ Faber Companyの「ミエルカGEO」は、専任のコンサルタントがつ�
 
 支援会社の提案の質は依頼する側が渡せる情報で決まります。次の5つを先にそろえておくと、最初の提案から自社に合った中身になります。
 
-<!-- SHOT: 図 llmoc_prep.html → llmoc-prep.png・alt「LLMO対策を頼む前にそろえる5つ。問い合わせの件数と経路、狙う質問、社内で書ける人、公開の基準、1件の価値」 -->
+<figure class="post-figure"><img src="/media/images/llmo-companies/llmoc-prep.png" alt="LLMO対策を頼む前にそろえる5つ。問い合わせの件数と経路、狙う質問、社内で書ける人、公開の基準、1件の価値" loading="lazy"></figure>
 
 1. **ウェブ経由の問い合わせの月の件数と、知った経路の内訳。** 増えたかどうかを比べる起点になります
 2. **AIに聞かれたい質問の候補。** 商談で客が最初に口にする悩みや比較の言い方を5〜10個
