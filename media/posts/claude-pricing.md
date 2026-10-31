@@ -1,5 +1,5 @@
 ---
-title: 【2026年10月】Claudeの料金プランを比較｜Free・Pro $18・Max・Teamの違いと選び方
+title: 【2026年10月】Claudeの料金プランを比較｜Free・Pro・Max・Ultra・Teamの違いと選び方
 date: 2026-09-22
 modified: 2026-10-31
 category: AI検索対策
