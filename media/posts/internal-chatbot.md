@@ -116,6 +116,8 @@ Difyの[Test and Tune Retrieval](https://docs.dify.ai/en/cloud/use-dify/knowledg
 断片: 立て替えた交通費は、翌月5日までに申請する。
 ```
 
+RAGを自社で組むときの作り方・手順・費用は[RAG構築の進め方](/media/rag-build/)にまとめました。
+
 ## 失敗しやすい4つの所
 
 製品を買っても自社で組んでも、つまずく所はほぼ同じです。
