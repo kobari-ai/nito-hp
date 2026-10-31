@@ -1,0 +1,233 @@
+---
+title: 【2026年10月】Claude Ultraとは？月$220で週はProの10倍・Maxとの違い
+date: 2026-10-31
+category: AI活用
+description: Claude UltraはMax 20xの名前を変えた個人向けの最上位プランです。日本の表示で月$220、週の使用量はProの10倍で、認証済みなら5時間の上限がありません。Maxとの違いと移行・解約の扱いを公式ヘルプで確かめました。
+keyword: claude ultra
+cover_tag: 料金
+cover_headline: Claude Ultraとは
+cover_sub: Maxとの違いと移行
+cta: ai_agent
+---
+
+Anthropicは2026年10月31日（米国時間30日）、個人向けプランのMax 20xをUltraに改め、認証済みのUltraアカウントから5時間の使用上限を外しました。Max 5xはMaxという名前になり、どちらも価格は変わっていません。
+
+Max 20xを契約中の人には手続きが要るのか、会社で配るならMax・Ultra・Teamのどれにするのか、という判断が出てきます。料金ページとヘルプセンターの記述から、Maxとの違い、認証済みアカウントの意味、切り替えと解約の扱いを確かめます。
+
+:::takeaways
+- Ultraは旧Max 20x。日本の料金ページで**月$220（消費税10%込み、税別$200）**、週の使用量はProの10倍で、認証済みなら5時間の上限がない
+- Maxとの違いは**5時間の上限・週の倍率・APIクレジットの額の3つ**。週の使用量あたりの単価は、Proの月払いと比べるとMax・Ultraでも変わらない
+- Max 20xの契約者は**手続き不要で同じ価格のまま移る**。Ultraは個人向けのプランで、会社で人に配るならTeamかEnterprise
+:::
+
+## Claude Ultraとは
+
+Claudeの個人向けプランは、2026年10月31日からFree・Pro・Max・Ultraの4段になりました。発表はClaudeの公式Xアカウントの[投稿](https://x.com/claudeai/status/2116220869479428500)で、Max 5xをMaxに、Max 20xをUltraに名前を変えること、契約者は何もしなくてよいこと、週の上限は変えないことが書かれています。**UltraはMax 20xの後を継ぐ個人向けの最上位プランで、中身で変わったのは認証済みのアカウントの5時間の上限が外れたことです。**
+
+[Ultraプランのヘルプ](https://support.claude.com/ja/articles/17728952)と[料金ページ](https://claude.com/ja/pricing)を合わせると、Ultraに含まれるものは次のとおりです。
+
+- 週の使用量はProの10倍。認証済みのアカウントには5時間の上限がない
+- Claude Platformで使える月$200分のAPIクレジット（Maxは月$100）
+- Claude Fableは週の上限の50%まで追加料金なしで使える
+- 支払いは月払いだけで、年払いは無い
+- Claude Codeも同じ契約で使え、ウェブ・デスクトップ・Claude Codeの使用量は同じ枠から引かれる
+
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_01_rename.png" alt="Claudeの個人向けプランの名前の変わり方を縦に並べた図。旧Max 5xはMaxになり月$110で5時間ごとと毎週の使用量がどちらもProの5倍。旧Max 20xはUltraになり月$220で毎週の使用量がProの10倍、認証済みなら5時間の上限なし。どちらも価格は据え置き" loading="lazy"></figure>
+
+金額の見え方は画面によって2通りです。日本向けの料金ページはUltraを「$220 月額」、Maxを「$110 月額」と表示し、「Prices include 10% JCT」と注記しています。**ヘルプの「Ultraプランは月額$200で利用できます」は消費税を含まない額で、$200に10%を足すと日本の画面の$220になります。**Anthropicは[消費税（JCT）のお知らせ](https://support.claude.com/ja/articles/14051822)のとおり、2026年4月1日から日本の顧客に10%の消費税を加えるようになりました。ヘルプの価格はウェブで申し込んだ場合のもので、スマホのアプリから申し込むとストアによって異なる場合があると注記されています。
+
+「claude ultra」で検索すると、Claude Codeの機能の記事も一緒に出てきます。Claude Codeにはultracodeという機能があり、以前はUltraplanという機能もありました（すでに廃止）。どちらも名前が似ているだけで、料金プランのUltraとは関係がありません。
+
+## Claude UltraとMaxの違い
+
+料金ページの比較表で、MaxとUltraの列が違うのは使用量とAPIクレジットの行だけです。Claude Code・Claude in Chrome・Researchなど機能の欄は、どちらも「はい」が並びます。
+
+| 項目 | Max | Ultra |
+|---|---|---|
+| 月額（日本の表示） | $110 | $220 |
+| 月額（税別） | $100 | $200 |
+| 5時間ごとの上限 | Proの5倍 | なし（認証済みのアカウント） |
+| 毎週の上限 | Proの5倍 | Proの10倍 |
+| 月間のAPIクレジット | $100 | $200 |
+| Claude Fable | 週の上限の50%まで | 週の上限の50%まで |
+| 高トラフィック時の優先アクセス | あり | あり |
+| 支払い | 月払いのみ | 月払いのみ |
+
+**機能は同じで、差は5時間の上限・週の倍率・APIクレジットの額の3つに集まっています。**旧Max 5xだった人は名前がMaxに変わっただけで、5時間ごとと毎週の枠はどちらもProの5倍のままです。Maxには5時間の上限が残ります。
+
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_02_diff.png" alt="MaxとUltraで違う3つの項目を縦に並べた図。5時間ごとの上限はMaxがProの5倍でUltraは認証済みならなし。毎週の上限はMaxがProの5倍でUltraがProの10倍。月間のAPIクレジットはMaxが$100でUltraが$200。機能の欄は同じ" loading="lazy"></figure>
+
+### 20xと10xの食い違い
+
+Max 20xという名前と週の上限は、改称の前から合っていませんでした。[テクノエッジの記事](https://www.techno-edge.net/article/2026/10/31/5656.html)によると、Claudeのサブスクリプションを担当するプロダクト責任者のMike Overell氏は、2025年4月にMax 20xを出した当時は上限が5時間単位の1種類だけで、使える量がProの20倍だったためにこの名前にしたと説明しています。週の上限はその後に加わり、Max 20xの週の設定はProの20倍ではなく10倍でした。Overell氏が紛らわしい状態だったと謝罪したことも同記事は伝えています。
+
+**Ultraの週の10倍はMax 20xのときと同じ設定です。**発表の投稿も週の上限は変わらないとしており、変わったのは名前と、認証済みのアカウントの5時間の上限です。
+
+### 週の使用量あたりの単価
+
+月額と週の倍率を並べると、週の使用量あたりの単価はどのプランでも同じになります。日本の表示でProの月払いは$22、Maxは$110でProの5倍、Ultraは$220で10倍です。テクノエッジの記事も、上位プランを選んでも単価は割安にならず、割引があるのはProの年払いだけだと指摘しています。**Ultraに上げて得られるのは単価の割引ではなく、5時間の上限が無いこととAPIクレジットの上乗せです。**
+
+## 5時間の上限と認証済みアカウント
+
+ヘルプの書き方では5時間の上限が外れるのは認証済みのUltraアカウントだけで、ここでいう認証は利用者が申し込む手続きではなくAnthropicの側で自動に行われるものです。
+
+[Ultraプランのヘルプ](https://support.claude.com/ja/articles/17728952)は、詐欺と悪用を防ぐために、アカウントと支払い履歴などの要因からUltraアカウントを自動で認証すると書いています。**認証が済むまでは一時的な制限がかかり、済めば自動で外れるため、利用者がする操作はありません。**申し込みの画面で電話番号を認証する手順は別のステップで、通してもこの制限は外れないと明記されています。[The New Stackの記事](https://thenewstack.io/claude-ultra-session-limit/)も、認証を申し込んだり早めたりする方法は無いと書いています。
+
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_shot_verified.png" alt="AnthropicヘルプのUltraプランとは？の認証済みUltraアカウントとは？の節。アカウントと支払い履歴などの要因で自動的に認証し、認証済みには5時間制限がない、電話番号の認証は別のステップで制限は外れない、設定の使用量で現在のセッションのバーが表示されなければ認証済みと書かれている" loading="lazy"><figcaption>Ultraプランとは？（Anthropic ヘルプセンター、2026年10月31日）</figcaption></figure>
+
+自分のアカウントが認証済みかは、設定の使用量の画面で分かります。ヘルプが示す見分け方は**現在のセッションのバーが表示されなければ認証済み**というものです。このバーは5時間の枠の使用率を示すもので、表示されているうちは5時間の枠が数えられています。
+
+<figure class="post-figure"><img src="/media/images/claude-usage-limits/cul_01_usage.jpg" alt="Claudeの設定の使用量の画面。1の現在のセッションに16:30にリセットされます 9%使用済み、2の今週に2:00木曜日にリセット 14%使用済み、今週のFableに別の週間上限、3のリセットの欄に無料でリセットのボタンがある" loading="lazy"><figcaption>設定の使用量の画面（2026年9月25日撮影）。1が5時間の枠を示す現在のセッションのバー</figcaption></figure>
+
+発表の投稿によると、5時間の上限は既存の契約者の大半から外し始め、新しいアカウントには認証までの一時的な上限が残り、外れたときはメールで知らせます。**認証の細かな基準・何日で済むか・一時的な上限の量は公表されていません。**
+
+5時間の上限が無くても、週の上限は残ります。ヘルプによると、すべてのモデルにかかる週の上限とFableだけの週の上限があり、容量を管理するために週や月の上限など追加の制限をかける場合があります。中断のないサービスの保証もありません。**Ultraは無制限のプランではなく、使える量の総量を決めるのは週の上限です。**5時間ごとに止まらない分、使い方によっては週の上限に早く届きます。
+
+[Fableのヘルプ](https://support.claude.com/ja/articles/15424964)によると、MaxとUltraではFable 5と5.1を週の上限の50%まで追加料金なしで使えます。Fable用に枠が足されるのではなく、同じ週の上限のうち半分までをFableに回せるという意味です。上限に当たったあとは、[使用クレジット](https://support.claude.com/ja/articles/12429409)をオンにするとAPIの標準料金で続けられます。
+
+## Max 20xの契約者がすること
+
+Ultraのヘルプは「既存のMax 20xサブスクライバーは自動的にUltraに移行され、価格は変わりません」と書いています。**解約や申し込み直しは要らず、請求額は日本の表示で月$220のまま、月$200分のAPIクレジットも同じです。**
+
+移ったあとに確かめておくのは次の2つです。
+
+1. 設定の使用量の画面で、現在のセッションのバーが消えているか。残っていれば認証の前で、外れるとメールが届く
+2. 週の上限の残り。5時間で止まらなくなった分、週の上限への届き方が前と変わる
+
+## Ultraを選ぶ目安
+
+料金ページはMaxを「終日の業務に」、Ultraを「最も長いタスクに対応」と書き分けていますが、使用量の目安までは示していません。手がかりは自分がどちらの上限で止まっているかです。設定の使用量の画面を1〜2週間見て、5時間の枠と週の枠のどちらが先に尽きるかを確かめると決めやすくなります。
+
+| 使い方 | 向くプラン | 理由 |
+|---|---|---|
+| 5時間の枠で止まる日が多く週の枠は余る | Ultra | 5時間の上限が外れ週の枠も2倍になる |
+| 週の枠がリセットより前に尽きる | Ultra | 週の枠は2倍になるが月額も2倍 |
+| Claude APIに月$100以上払っている | Ultra | APIクレジットがMaxより月$100多い |
+| どちらの枠にもほとんど当たらない | Max | 単価は同じで余る量に払うことになる |
+| 会社で複数人に配る | TeamかEnterprise | Ultraは個人向けで管理機能が無い |
+
+[The New Stackの記事](https://thenewstack.io/claude-ultra-session-limit/)は、週の枠を余したまま5時間の枠に当たり続ける人にはUltraに月$100多く払う意味があり、週の終わりより前に使い切る人には5時間の上限を外しても使える量は増えないと書いています。**週の枠が足りない人にUltraが効くのは、週の枠が2倍になる点だけです。**
+
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_03_choose.png" alt="Claude Ultraを選ぶ目安を縦に並べた図。5時間の枠で止まる日が多く週の枠は余るならUltra。週の枠が先に尽きるならUltraで量も月額も2倍。APIに月$100以上使うならUltraのクレジットが効く。どちらの枠にも当たらないならMax。会社で複数人に配るならTeamかEnterprise" loading="lazy"></figure>
+
+### APIクレジットの使い道
+
+Ultraの月$200のAPIクレジットは、対話で使うClaude Codeの使用量には使えません。[月間APIクレジットのヘルプ](https://support.claude.com/ja/articles/17154008)と[開発者向けのドキュメント](https://platform.claude.com/docs/ja/about-claude/api-credits-for-subscribers)には、使える先と条件が次のように書かれています。
+
+| 項目 | 内容 |
+|---|---|
+| 使える先 | Claude API・Claude Agent SDK・リンクした組織のAPIキーで動かす `claude -p` |
+| 使えない先 | 対話で使うClaude Code（ターミナル・IDE・デスクトップ・ウェブ）と上限を超えたあとの追加使用 |
+| 受け取れる時期 | 対象のプランに入って7日後から |
+| 受け取り方 | 設定の請求からClaude Consoleの組織を1つリンクする |
+| 繰り越し | なし。請求サイクルの終わりで失効する |
+
+**Claude Codeを対話で長く使うためにUltraを選ぶ人にとって、APIクレジットは自作のアプリやエージェント向けの別枠です。**
+
+## 会社で配るときのUltraとTeam
+
+Ultraのヘルプは冒頭で、個人消費者向けの有料プランの説明であり、組織でチームとして使うならTeamとEnterpriseのプランを見るよう案内しています。個人向けのプランには消費者向けの利用規約が、TeamとEnterpriseには商用の規約が適用されます。規約の違いと法人での契約の窓口は[Claudeの法人契約の記事](/media/claude-corporate-contract/)にあります。
+
+料金ページの比較表で、SSO・請求の一元化・管理者の権限はFreeからUltraまでの列がすべて「いいえ」です。**社員にUltraを1つずつ契約させると、会社の側から席の管理や一括の請求はできません。**人に配るときに比べる相手は、Teamのプレミアムシートです。
+
+| 項目 | Ultra | Teamのプレミアムシート |
+|---|---|---|
+| 月額（日本の表示） | $220（月払いのみ） | 年払い$110・月払い$137.50 |
+| 使用量 | 週はProの10倍 | 1セッションはProの6.25倍で週の上限あり |
+| 5時間の上限 | なし（認証済み） | あり |
+| Claude Fable | 週の上限の50%まで | 週の上限の50%まで |
+| APIクレジット | 月$200 | 1席$100で組織の合計は上限$500 |
+| 管理機能 | なし | SSO・請求の一元化・権限の管理 |
+| 人数 | 1人 | 2〜150席 |
+
+Ultraは5時間の上限が無い点で上回り、プレミアムシートは管理機能と年払いの割引で上回ります。プレミアムシートの使用量は[Teamプランのヘルプ](https://support.claude.com/ja/articles/9266767)の1セッションあたりの倍率で示されていて、週の上限をProの何倍とする数字は出ていません。**MaxやUltraの倍率とTeamの倍率は基準が違うため、数字だけで比べないほうが安全です。**スタンダードとプレミアムを混ぜた席の組み方は[Teamプランの記事](/media/claude-team/)、より大きな組織の契約は[Enterpriseの記事](/media/claude-enterprise/)にまとめています。
+
+経費で落とすなら請求書の扱いも見ておきます。JCTのお知らせによると、消費税の対象となる法人顧客はAnthropicの適格請求書で仕入税額控除を受けられ、個人顧客は控除を受けられません。Ultraの$220のうち$20が消費税です。個人向けプランの請求書の開き方と宛名の変え方は[Claudeの請求書の記事](/media/claude-invoice/)にあります。
+
+## 申し込みと切り替えと解約
+
+プランを変えるときのお金の動きは、どこから移るかで違います。
+
+| 場面 | 扱い |
+|---|---|
+| MaxからUltraに上げる | 請求サイクルの残りを日割りで請求。APIクレジットも日割りですぐ付与され、次から月$200 |
+| 年払いのProから移る | Proの残高がUltraの価格を超えた分はクレジットとして残る。請求先住所が同じことが条件 |
+| Google Playで契約している | 上げた時点で新しいプランの全額を請求し、前のプランの残りは日数に換算 |
+| 解約する | 請求期間の終わりまで使える。次の請求日の24時間前までに手続き |
+| UltraからMaxやProに下げる | 今の請求期間の終わりに切り替わる |
+
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_04_switch.png" alt="Claude Ultraへの切り替えと解約の扱いを縦に並べた図。MaxからUltraへは残りの期間を日割りで請求しAPIクレジットも日割りですぐ付与。年払いのProからは残高をクレジットとして残し請求先住所が同じことが条件。解約は請求期間の終わりまで使えて次の請求日の24時間前までに手続き" loading="lazy"></figure>
+
+### 新しく申し込む
+
+料金ページのUltraの欄にある「Claude を試す」から申し込みます。ProやMaxを契約中の人は、設定のお支払いで「サブスクリプションを管理」を選んでUltraに変えます。[料金ページのよくある質問](https://claude.com/ja/pricing)によると、アップグレードはすぐに効き、今のプランで使っていない期間は新しいプランに充てられるため、同じ日数に二重に払うことはありません。
+
+### MaxからUltraに上げる
+
+[Maxプランのヘルプ](https://support.claude.com/ja/articles/11049741)の請求情報によると、MaxからUltraに上げると、請求サイクルの残りの期間が日割りで請求されます。月間のAPIクレジットを受け取っている場合は、日割りのクレジットがすぐに付き、次の請求サイクルからは高いほうの額（月$200）になります。
+
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_shot_max_upgrade.png" alt="AnthropicヘルプのMaxプランとは？の請求情報。MaxからUltraにアップグレードすると請求サイクルの残りの期間を日割りで請求し、月額APIクレジットを受け取っていれば日割りのクレジットがすぐ付き、その後の請求サイクルで高い金額になると書かれている" loading="lazy"><figcaption>Maxプランとは？（Anthropic ヘルプセンター、2026年10月31日）</figcaption></figure>
+
+### 年払いのProから移る
+
+Ultraのヘルプによると、年払いのProの残高がUltraの価格より大きいときは、超えた分がクレジットとしてアカウントに付き、次からの料金に充てられます。**Ultraを買うときの請求先住所が前の契約と同じでないと、このクレジットは受け取れません。**住所が変わった場合はProを解約して期間の終わりまで待ち、新しい住所でUltraに申し込み直す手順が示されています。Google Playで契約している人は、上げた時点で新しいプランの全額が請求され、前のプランの残りは新しいプランの日数に換算されるため、更新日が数日後ろにずれます。
+
+### 解約とダウングレード
+
+[解約のヘルプ](https://support.claude.com/ja/articles/8325617)によると、Ultraはいつでも解約でき、解約は今の請求期間の終わりに効き、それまでは有料プランをそのまま使えます。**次の請求を止めたいなら、次の請求日の少なくとも24時間前までの解約が必要です。**ウェブとデスクトップでは左下のイニシャルか名前からSettings > Billingに進んでCancelを押し、iPhoneとAndroidのアプリでは右上のイニシャルからBilling、Manage subscriptionの順に進みます。
+
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_shot_cancel.png" alt="AnthropicヘルプのPro、Max、またはUltraサブスクリプションをキャンセルする。いつでもキャンセルでき、キャンセルは現在の請求期間の終了時に有効になる、次の請求を避けるには次の請求日の少なくとも24時間前にキャンセルする、と書かれている" loading="lazy"><figcaption>Pro、Max、またはUltraサブスクリプションをキャンセルする（Anthropic ヘルプセンター、2026年10月31日）</figcaption></figure>
+
+APIクレジットは買ったものではないため払い戻しは無く、解約すると新しいクレジットは止まり、すでにある分は期限まで使えます。**UltraからMaxやProに下げる変更が効くのは、今の請求期間の終わりです。**[料金ページのよくある質問](https://claude.com/ja/pricing)によると、個人プランの変更は設定のお支払いで「サブスクリプションを管理」から行い、チャット・プロジェクト・ファイルはどのプランに移っても残ります。画面ごとの解約の流れは[Claudeの解約の記事](/media/claude-cancel/)にあります。
+
+## よくある質問
+
+### Claude Ultraは無制限ですか？
+
+無制限ではありません。認証済みのアカウントには5時間の上限がありませんが、Proの10倍の量の週の上限は残ります。容量の管理のために追加の制限をかける場合があるとヘルプは書いています。
+
+### Claude Ultraの料金は税込みでいくらですか？
+
+日本向けの料金ページの表示で月$220です。消費税10%を含む額で、ヘルプにある月額$200は税を含まない額です。
+
+### Max 20xの契約者は何か手続きが必要ですか？
+
+必要ありません。自動でUltraに移り、価格も変わりません。5時間の上限が外れたかどうかは設定の使用量の画面で確かめられ、現在のセッションのバーが無ければ外れています。
+
+### Claude Ultraの認証はいつ終わりますか？
+
+日数は公表されていません。認証はアカウントと支払い履歴などから自動で行われ、5時間の上限が外れるとメールで知らせると発表されています。
+
+### Claude Ultraは年払いできますか？
+
+できません。Ultraは月払いだけで、個人向けで年払いを選べるのはProだけです。
+
+### Claude UltraのAPIクレジットの使い道は？
+
+対話で使うClaude Codeには使えません。使えるのはClaude APIやAgent SDKなど、Claude Platformで自分のアプリやエージェントを動かす分です。
+
+### Claude Ultraは会社で契約できますか？
+
+Ultraは個人消費者向けのプランで、SSOや請求の一元化などの管理機能は付きません。会社で複数人に配るなら、TeamかEnterpriseが対象です。
+
+### Claude UltraとUltraplanは同じですか？
+
+別のものです。UltraplanはClaude Codeにあった機能の名前で、すでに廃止されています。料金プランのUltraとは関係がありません。
+
+## 出典
+
+すべて2026年10月31日に取得。
+
+- Anthropic「[プランと料金](https://claude.com/ja/pricing)」
+- Anthropic ヘルプセンター「[Ultraプランとは？](https://support.claude.com/ja/articles/17728952)」
+- Anthropic ヘルプセンター「[Maxプランとは？](https://support.claude.com/ja/articles/11049741)」
+- Anthropic ヘルプセンター「[有料Claude プランの使用クレジットを管理する](https://support.claude.com/ja/articles/12429409)」
+- Anthropic ヘルプセンター「[あなたのプランのClaudeフェーブルモデル](https://support.claude.com/ja/articles/15424964)」
+- Anthropic ヘルプセンター「[Max、Ultra、Team プランの月間 API クレジット](https://support.claude.com/ja/articles/17154008)」
+- Claude Platform Docs「[Maxプラン、Ultraプラン、およびTeamプランのAPIクレジット](https://platform.claude.com/docs/ja/about-claude/api-credits-for-subscribers)」
+- Anthropic ヘルプセンター「[Pro、Max、またはUltraサブスクリプションをキャンセルする](https://support.claude.com/ja/articles/8325617)」
+- Anthropic ヘルプセンター「[日本の顧客向け消費税（JCT）に関するお知らせ](https://support.claude.com/ja/articles/14051822)」2026年3月13日
+- Anthropic ヘルプセンター「[Team プランとは何ですか？](https://support.claude.com/ja/articles/9266767)」
+- Claude（@claudeai）の[X の投稿](https://x.com/claudeai/status/2116220869479428500) 2026年10月30日（米国時間）
+- テクノエッジ「[Claudeが有料プラン刷新、Max 20xは5時間制限なしの「Ultra」へ](https://www.techno-edge.net/article/2026/10/31/5656.html)」2026年10月31日
+- The New Stack「[Anthropic just removed one of Claude's biggest usage limits — but not for everyone](https://thenewstack.io/claude-ultra-session-limit/)」
