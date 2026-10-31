@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年10月】RAG構築とは？作り方3通りと手順・費用・自社で作るか外注か｜株式会社nito</title>
+    <meta name="description" content="RAG構築の方法を既製品の機能・ノーコード・クラウドの部品の3通りで比較。手順と表の多いPDFや権限でつまずく所、Azure・AWS・Google・OpenAIの公式料金での試算、自社で作るか外注かの分かれ目まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/rag-build/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年10月】RAG構築とは？作り方3通りと手順・費用・自社で作るか外注か">
+    <meta property="og:description" content="RAG構築の方法を既製品の機能・ノーコード・クラウドの部品の3通りで比較。手順と表の多いPDFや権限でつまずく所、Azure・AWS・Google・OpenAIの公式料金での試算、自社で作るか外注かの分かれ目まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/rag-build/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/rag-build.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/rag-build.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年10月】RAG構築とは？作り方3通りと手順・費用・自社で作るか外注か", "description": "RAG構築の方法を既製品の機能・ノーコード・クラウドの部品の3通りで比較。手順と表の多いPDFや権限でつまずく所、Azure・AWS・Google・OpenAIの公式料金での試算、自社で作るか外注かの分かれ目まで。", "datePublished": "2026-10-31", "dateModified": "2026-10-31", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/rag-build/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/rag-build.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年10月】RAG構築とは？作り方3通りと手順・費用・自社で作るか外注か"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "RAG構築はCopilotやGemの機能でできますか？", "acceptedAnswer": {"@type": "Answer", "text": "社内規程やマニュアルのように文章が中心の文書なら、M365 Copilotのエージェント ビルダー・GeminiのGem・ChatGPT Businessのプラグインで作れます。断片の切り方や探し方は選べません。表の多い文書や自社のシステムへの組み込みが要るなら、②か③の作り方に進みます。"}}, {"@type": "Question", "name": "Amazon BedrockのRAGは月いくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "Managed Knowledge Baseなら保存が元データ1GBあたり月5ドル、検索が1,000回あたり1ドルです。文書2GB・月1万回の試算では検索の部品が月20ドルで、答えを作るモデルの代金が別にかかります。"}}, {"@type": "Question", "name": "Azure AI Searchで権限は効きますか？", "acceptedAnswer": {"@type": "Answer", "text": "SharePointの権限をそのまま使う方法は、2026年10月31日時点でプレビューです。一般提供の方法で作るなら、文書にだれが見られるかの情報を持たせて検索のたびに絞り込みます。"}}, {"@type": "Question", "name": "Difyのチャンクの設定は後から変えられますか？", "acceptedAnswer": {"@type": "Answer", "text": "区切り文字や最大の長さはいつでも変えられます。汎用か親子かのチャンクモードは、ナレッジベースを作った後には変えられません。"}}, {"@type": "Question", "name": "n8nで作ったRAGのデータは消えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Simple Vector Storeに入れたデータは、n8nの再起動で消えます。本番では外部のベクトルデータベースのノードに保存先を変えてください。"}}, {"@type": "Question", "name": "Agent Searchの旧名は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Vertex AI Searchです。Googleは2026年4月にドキュメントでの名前をAgent Searchに変え、ほかの場所の名前も変えている途中です。Google Cloud コンソールの画面では今もVertex AI SearchとAI Applicationsの名前で表示されます。"}}, {"@type": "Question", "name": "RAG構築を外注するといくらかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "対象の文書の量や権限の条件、運用まで頼むかで費用は変わります。対象の質問・文書の量・権限の条件・ログの残し方を書面にそろえ、複数の会社から見積もりを取って比べます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=051ff6b4">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年10月】RAG構築とは？作り…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.10.31</span>
+        </div>
+        <h1 class="post-title">【2026年10月】RAG構築とは？作り方3通りと手順・費用・自社で作るか外注か</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/rag-build.jpg" alt="【2026年10月】RAG構築とは？作り方3通りと手順・費用・自社で作るか外注か" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Amazon Bedrockは、社内文書の取り込みから検索までをAWSに任せるManaged Knowledge Baseを料金表に載せています。Microsoft・Google・OpenAIも同じ役目の部品を出しており、RAGは一から組むより、どの部品をどこまで使うかを選ぶものになりました。</p>
+<p>社内の文書にAIを答えさせたい情シス・DX担当や経営者に向けて、作り方の3通りと手順・つまずく所・公式の料金での試算、自社で作るか外注かの分かれ目を書きます。各社のサービスでの構築は試していません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>RAG構築は既製品の機能・ノーコードの道具・クラウドの部品の3通りから選ぶ</strong>。差は検索の部分をどこまで自分で持つか</li>
+<li><strong>検索の部品の月額は文書2GB・月1万回の試算で0円から1.5万円ほど</strong>。費用の大半は文書を整えて答えを確かめる人の時間</li>
+<li><strong>つまずくのは表や図の多いPDF・権限・答えの確かめ方</strong>。どれも作る前に決めておくことがある</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>RAG構築とは</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>RAG構築の作り方は3通り</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>既製品の機能で作る</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>ノーコード・ローコードで作る</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>クラウドの部品で組む</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>RAG構築の手順</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>目的と問いを決める</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>文書を集めて整える</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>分け方と探し方を決める</a></li>
+                    <li class="toc-h3"><a href="#s3-4"><span class="toc__n">3-4</span>答えの確かめ方を決める</a></li>
+                    <li class="toc-h3"><a href="#s3-5"><span class="toc__n">3-5</span>権限とログを決める</a></li>
+                    <li class="toc-h3"><a href="#s3-6"><span class="toc__n">3-6</span>運用で直し続ける</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>RAG構築でつまずく所</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>表や図の多いPDF</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>分け方を後から変えられない</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>権限が検索に効かない</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>答えの確かめ方がない</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>RAG構築の費用</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>自社で作るか外に頼むか</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>会社が決めること</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">RAG構築とは</h2>
+<p>RAG（検索拡張生成）は質問のたびに社内の文書から関係する箇所を探し、その箇所をAIに渡して答えさせる仕組みです。AIが社内文書を覚えるわけではないので、直した規程を取り込み直せば次の質問から新しい版で答えます。<strong>文書を取り込んで探せる形にし、探した結果をAIに渡す流れを自社用に組むのがRAG構築です。</strong> 文書を断片に切って探す4段の流れは<a href="/media/internal-chatbot/">社内チャットボットの選び方</a>で図にしました。ここではその流れを作る側の決めごとを扱います。</p>
+<p>AIエージェントが道具の1つとして社内文書を探すときも、その中身はRAGと同じです。エージェントそのものの説明は<a href="/media/ai-agent-guide/">AIエージェントとは</a>にあります。</p>
+<h2 id="s2">RAG構築の作り方は3通り</h2>
+<p>検索の部分をどこまで自分で持つかで、作り方は3つに分かれます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th></th>
+<th>①既製品の機能</th>
+<th>②ノーコード・ローコード</th>
+<th>③クラウドの部品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="">例</td>
+<td data-label="①既製品の機能">M365 Copilotのエージェント ビルダー・GeminiのGem・ChatGPT Businessのプラグイン</td>
+<td data-label="②ノーコード・ローコード">Dify・Copilot Studio・n8n</td>
+<td data-label="③クラウドの部品">Azure AI Search・Amazon Bedrock ナレッジベース・Google Agent Search・OpenAIのファイル検索</td>
+</tr>
+<tr>
+<td data-label="">向く会社</td>
+<td data-label="①既製品の機能">社員の大半が同じ業務基盤を使っている</td>
+<td data-label="②ノーコード・ローコード">担当者が画面で設定を詰められる</td>
+<td data-label="③クラウドの部品">自社のシステムや画面に組み込みたい</td>
+</tr>
+<tr>
+<td data-label="">試作までの手間</td>
+<td data-label="①既製品の機能">契約の中ですぐ試せる</td>
+<td data-label="②ノーコード・ローコード">アカウントと文書の取り込み</td>
+<td data-label="③クラウドの部品">開発者がAPIをつなぐ</td>
+</tr>
+<tr>
+<td data-label="">費用の数え方</td>
+<td data-label="①既製品の機能">1人あたりの月額に含まれる</td>
+<td data-label="②ノーコード・ローコード">プランの月額とモデルの代金</td>
+<td data-label="③クラウドの部品">保存量と質問の回数</td>
+</tr>
+<tr>
+<td data-label="">保守</td>
+<td data-label="①既製品の機能">提供元が直す</td>
+<td data-label="②ノーコード・ローコード">設定と取り込みは自社</td>
+<td data-label="③クラウドの部品">全部自社か外注先</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/rag-build/rag_01_three.png" alt="RAG構築の作り方3通りを縦に並べた図。既製品の機能は契約の中ですぐ試せる。ノーコードとローコードは画面で分け方や探し方を詰める。クラウドの部品は自社のシステムに組み込む" loading="lazy"></figure>
+
+<p><strong>選ぶ基準は答えが外れたときにどこまで自分で直したいかです。</strong> ①は直せる所が少ない代わりに保守が要らず、③は分け方から権限まで全部を決められる代わりに直す人が要ります。AIエージェント全体の作り方を3通りに分けた<a href="/media/ai-agent-build/">AIエージェントの作り方</a>では、Copilot Studioを既製の基盤の例に置きました。文書の取り込みと検索の設定を画面で触れるため、RAGの話では②に入れています。</p>
+<h3 id="s2-1">既製品の機能で作る</h3>
+<p>Microsoft 365・Google Workspace・ChatGPT Businessの契約があれば、その中で文書に答えるボットを作れます。M365 Copilotのエージェント ビルダーはSharePointのファイルを100個まで読み、GeminiのGemはGoogleドライブの最新の版を使います。分け方や探し方は選べません。規程集やマニュアルのように文章が中心の文書から始める用途に向き、基盤ごとの上限と共有の範囲は<a href="/media/internal-chatbot/">社内チャットボットの選び方</a>で比べました。</p>
+<h3 id="s2-2">ノーコード・ローコードで作る</h3>
+<p>Difyは文書の切り方と探し方を画面で選べる道具です。<a href="https://docs.dify.ai/ja/use-dify/knowledge/create-knowledge/chunking-and-cleaning-text">Difyのチャンク設定</a>には、すべての断片を同じ区切り文字と最大の長さで切る汎用モードと、小さな断片で探してその断片を含む大きな断片を返す親子モードがあります。Copilot Studioは<a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-file-upload">ファイルのアップロード</a>で500個までのファイルを持たせられ、SharePointにもつなげます。n8nは業務の自動化の流れに検索を差し込む使い方が中心です。料金はそれぞれ<a href="/media/dify-pricing/">Difyの料金</a>・<a href="/media/copilot-studio/">Copilot Studioの料金</a>・<a href="/media/n8n-pricing/">n8nの料金</a>にまとめました。</p>
+<h3 id="s2-3">クラウドの部品で組む</h3>
+<p>自社の業務システムや社外向けの画面に組み込むなら、クラウドの検索の部品を使います。<strong>Amazon Bedrockの<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html">ナレッジベースの概要</a>によると、Managed Knowledge BaseはS3・SharePoint・Confluence・Googleドライブ・OneDriveにつなぎ、文書ごとの権限で検索結果を絞れます。</strong> 自分で検索の土台を選ぶ従来の型では、外部へのコネクタと文書単位の権限は使えません。Googleのドキュメントでは2026年4月からVertex AI SearchがAgent Searchの名前に変わり、Google Cloud コンソールの画面は今もVertex AI SearchとAI Applicationsの名前のままです。社内データの検索を含む全体は<a href="/media/gemini-enterprise/">Gemini Enterprise</a>の範囲です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">RAG構築の手順</h2>
+<p>技術の面の手順は文書の収集・分割・ベクトル化・検索・回答の生成の5段です。会社で作るときはその前後に目的の決定と権限・運用が入ります。</p>
+<figure class="post-figure"><img src="/media/images/rag-build/rag_02_steps.png" alt="RAG構築の手順を6段で縦に並べた図。目的と問いを決める、文書を集めて整える、分け方と探し方を決める、答えを確かめる、権限とログを決める、運用で直し続ける" loading="lazy"></figure>
+
+<h3 id="s3-1">目的と問いを決める</h3>
+<p>人事・総務・情シスに届いた質問を集め、答えに使う文書がはっきりしている質問から30〜50問を選びます。だれのどんな質問に答えさせるかが決まらないと、入れる文書も決まりません。<strong>この質問の一覧が後の手順で答えを確かめる試験問題になります。</strong></p>
+<h3 id="s3-2">文書を集めて整える</h3>
+<p>対象の質問に答える文書の最新版だけを集めます。旧版や下書きが混ざるとAIは古い規程を根拠に答えてしまうため、置き場所は1か所にまとめます。断片に切った後も何の文書か読み取れるよう、文書名・改定日・対象者を文書に添えておくのが基本です。</p>
+<h3 id="s3-3">分け方と探し方を決める</h3>
+<p>Microsoftの<a href="https://learn.microsoft.com/ja-jp/azure/search/vector-search-how-to-chunk-documents">チャンク分割の解説</a>は、200語や600文字ほどの固定の長さに10〜15%の重なりを持たせる方法を最初に挙げています。<a href="https://developers.openai.com/api/docs/guides/retrieval">OpenAIのファイル検索</a>の既定は800トークンで、隣り合う断片と400トークンを重ねる設定です。意味の近さで探すベクトル検索と語の一致で探す全文検索を組み合わせるハイブリッド検索も、各社の部品で選べます。</p>
+<h3 id="s3-4">答えの確かめ方を決める</h3>
+<p>選んだ質問を流し、正しい文書の断片が返ったかと答えが文書に沿っているかを見ます。正解の文書と答えを質問と組にしておけば、設定を変えるたびに同じ問題で比べられるでしょう。</p>
+<pre><code class="language-text">質問: 立て替えた交通費はいつまでに申請する？
+正解の文書: 経費精算規程（2026年4月改定）第5条
+正解: 翌月5日まで
+</code></pre>
+<h3 id="s3-5">権限とログを決める</h3>
+<p>だれがどの文書の中身を答えとして受け取れるかを、元の文書の権限に合わせます。質問と答えと使った文書のログを、どこに何日残すかもこの段階で決めておきます。</p>
+<h3 id="s3-6">運用で直し続ける</h3>
+<p>答えられなかった質問と、利用者が誤りと指摘した答えを週に1度読み、足す文書と直す設定を決めます。文書の持ち主と設定を直す人は、分けて名前で決めておくのが前提です。</p>
+<h2 id="s4">RAG構築でつまずく所</h2>
+<p>各社の公式の文書に書かれた仕様のうち、作り始めてから気づきやすいものを4つ挙げます。</p>
+<h3 id="s4-1">表や図の多いPDF</h3>
+<p><strong>既定の読み取り方のままだと、表や図の中身が失われることがあります。</strong> Amazon Bedrockで検索の土台を自分で選ぶ従来の型では、<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-advanced-parsing.html">解析の設定</a>によると既定のパーサーがテキストだけを取り出します。そのため図・グラフ・表・画像を含む文書には、Bedrock Data Automationか基盤モデルでの解析を勧めています。Managed Knowledge Baseは表や画像も読む解析が標準で付き、追加の料金はかかりません。Googleの<a href="https://docs.cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents?hl=ja">ドキュメントの解析とチャンク化</a>でも、既定のデジタル パーサーは表・リスト・見出しを検出しません。料金表や手当の一覧が表で書かれた規程なら、解析の方法を変えて試すか、表を文章に直してから取り込みます。</p>
+<figure class="post-figure"><img src="/media/images/rag-build/rag_shot_bedrock_parser.png" alt="Amazon Bedrockのユーザーガイド。既定のパーサーはテキストファイルのテキストだけを解析し、図やグラフや表や画像を含む文書にはBedrock Data Automationか基盤モデルでの解析を勧めると書かれている" loading="lazy"><figcaption>Amazon Bedrock ユーザーガイド「Parsing options for your data source」（2026年10月31日）</figcaption></figure>
+
+<p>Copilot Studioに上げたファイルの画像はPDFに埋め込まれたものだけが対象で、代替テキストを付けておくと画像の情報からも答えられます。秘密度ラベルやパスワードで暗号化したファイルも上げられない仕様です。</p>
+<h3 id="s4-2">分け方を後から変えられない</h3>
+<p>Difyのナレッジベースは、作った後に汎用か親子かのチャンクモードを変えられません。高品質のインデックスで作ったものを、エコノミーへ切り替えることもできない仕様です。<strong>試作の段階で2つのモードを別のナレッジベースとして作り、同じ質問で比べてから本番の形を決めます。</strong></p>
+<h3 id="s4-3">権限が検索に効かない</h3>
+<p>元のフォルダーで見られない社員でも、取り込んだ後の検索では中身が出てしまうことがあります。Azure AI Searchの<a href="https://learn.microsoft.com/ja-jp/azure/search/search-document-level-access-overview">ドキュメント レベルのアクセス制御</a>では、SharePointの権限や秘密度ラベルをそのまま使う方法が2026年10月31日時点でプレビューでした。一般提供の方法で作るなら、文書にだれが見られるかの情報を持たせて検索のたびに絞り込みます。</p>
+<p><strong>n8nのSimple Vector Storeは検証だけに使う置き場です。</strong> <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/">n8nのドキュメント</a>によると、データはメモリにだけ置かれ、n8nを再起動するとすべて消えます。保存先のキーもワークフローごとに分かれておらず、同じn8nを使う全員が読めてしまいます。</p>
+<figure class="post-figure"><img src="/media/images/rag-build/rag_shot_n8n_simple_store.png" alt="n8nのSimple Vector Storeノードのドキュメント。データはメモリだけに保存されn8nの再起動で消えること、保存先のキーは全体で共通でインスタンスの全ユーザーが読めることが書かれている" loading="lazy"><figcaption>n8n Docs「Simple Vector Store node」（2026年10月31日）</figcaption></figure>
+
+<h3 id="s4-4">答えの確かめ方がない</h3>
+<p>試験問題を作らずに公開すると、設定を変えたときに良くなったのか悪くなったのかが分かりません。Amazon Bedrockの<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-evaluation-metrics.html">RAGの評価の指標</a>は、検索だけの評価と検索と答えの両方の評価に分かれています。返した断片が正解の文章の情報をどれだけ含むかを測る指標には、正解を添えた質問の一覧が必要です。答えが取り出した文書に沿っているか、引用が正しいかを見る指標も並んでいます。</p>
+<h2 id="s5">RAG構築の費用</h2>
+<p><strong>費用は作る人の時間・検索の部品・答えを作るモデルの3つに分かれます。</strong> このうち公式の料金表で数えられるのは検索の部品とモデルの代金です。2026年10月31日に各社の料金ページで確かめた単価を並べました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>部品</th>
+<th>保存</th>
+<th>質問</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="部品"><a href="https://azure.microsoft.com/ja-jp/pricing/details/search/">Azure AI Search</a> Basic（東日本）</td>
+<td data-label="保存">1時間0.133ドルの定額で15GBまで</td>
+<td data-label="質問">定額に含む</td>
+</tr>
+<tr>
+<td data-label="部品"><a href="https://aws.amazon.com/bedrock/pricing/">Amazon Bedrock</a> Managed Knowledge Base</td>
+<td data-label="保存">元データ1GBあたり月5ドル</td>
+<td data-label="質問">1,000回あたり1ドル</td>
+</tr>
+<tr>
+<td data-label="部品"><a href="https://cloud.google.com/generative-ai-app-builder/pricing">Google Agent Search</a></td>
+<td data-label="保存">1GiBあたり月約5ドル（月10GiBは無料）</td>
+<td data-label="質問">Standardは1,000回あたり1.5ドル（月1万回の無料トライアルあり）</td>
+</tr>
+<tr>
+<td data-label="部品"><a href="https://developers.openai.com/api/docs/pricing">OpenAIのファイル検索</a></td>
+<td data-label="保存">1GBあたり1日0.1ドル（1GBは無料）</td>
+<td data-label="質問">1,000回あたり2.5ドル</td>
+</tr>
+</tbody>
+</table></div>
+<p>Azureの金額はMicrosoftの価格APIで東日本の単価を引き、月730時間で数えています。Bedrockは文書の解析・ベクトル化・並べ替えに標準のモデルを使う限り0ドルで、自分で選んだモデルを使うと別料金です。OpenAIの保存量は元のファイルでなく、切った断片と埋め込みの大きさで数えます。GoogleのEnterpriseは1,000回あたり4ドルで、検索結果からの答えの生成まで含みます。</p>
+<p>同じ前提で月額を試算しました（試算。文書2GB・月1万回の質問を仮定し、答えを作るモデルの代金は含めていません）。円は三菱UFJ銀行の<a href="https://www.murc-kawasesouba.jp/fx/index.php">公示仲値</a>1ドル157.54円（2026年10月30日）での換算です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>部品</th>
+<th>試算の内訳</th>
+<th>月額</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="部品">Azure AI Search Basic</td>
+<td data-label="試算の内訳">0.133ドル×730時間</td>
+<td data-label="月額">約97ドル（約1.5万円）</td>
+</tr>
+<tr>
+<td data-label="部品">Bedrock Managed Knowledge Base</td>
+<td data-label="試算の内訳">2GB×5ドル＋1万回×1ドル/1,000回</td>
+<td data-label="月額">20ドル（約3,200円）</td>
+</tr>
+<tr>
+<td data-label="部品">Google Agent Search Standard</td>
+<td data-label="試算の内訳">保存・回数とも無料枠の範囲</td>
+<td data-label="月額">0ドル</td>
+</tr>
+<tr>
+<td data-label="部品">OpenAIのファイル検索</td>
+<td data-label="試算の内訳">超過1GB×0.1ドル×30日＋1万回×2.5ドル/1,000回</td>
+<td data-label="月額">28ドル（約4,400円）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>この規模なら検索の部品の代金は月0円から1.5万円ほどに収まります。</strong> Bedrockの料金ページの例でも、SharePointから50GB・約10万文書を取り込んで月10万回検索し、月350ドルです。従来の型で表の多い文書をData Automationで解析すると1ページ0.01ドルかかり、1,000ページで10ドルになります。予算を左右するのは部品の単価より、文書を整えて試験問題を作り、答えを直し続ける人の時間です。</p>
+<h2 id="s6">自社で作るか外に頼むか</h2>
+<p>外に頼む費用は対象の文書の量と権限の条件、公開後の運用まで頼むかで変わります。金額を比べる前に、次の条件で自社と外のどちらが向くかを決めます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>条件</th>
+<th>向く方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="条件">既製品の機能かノーコードで足り、設定を直す担当者を置ける</td>
+<td data-label="向く方">自社で作る</td>
+</tr>
+<tr>
+<td data-label="条件">自社のシステムや社外向けの画面に組み込む</td>
+<td data-label="向く方">外に頼むか開発者を置く</td>
+</tr>
+<tr>
+<td data-label="条件">文書ごとの権限を検索に効かせる必要がある</td>
+<td data-label="向く方">外に頼むか開発者を置く</td>
+</tr>
+<tr>
+<td data-label="条件">公開後に試験問題を回して直す人を社内に置けない</td>
+<td data-label="向く方">運用まで含めて外に頼む</td>
+</tr>
+</tbody>
+</table></div>
+<p>試験問題の質問と正解・文書の持ち主は外に頼む場合でも社内で用意するものです。<strong>対象の質問・文書の量・権限の条件・ログの残し方の4つを書面にしてから見積もりを取ると、各社の答えを同じ形で比べられます。</strong></p>
+<h2 id="s7">会社が決めること</h2>
+<p>作り方より先に社内で決めることが5つあります。</p>
+<ul>
+<li><strong>対象の質問</strong>：だれのどんな質問に答えさせるかと、試験に使う30〜50問</li>
+<li><strong>最初に入れる文書</strong>：対象の質問に答える最新版だけ。表の多い文書は解析の方法も</li>
+<li><strong>権限の扱い</strong>：元の文書の権限を検索に効かせるか、全員が見てよい文書だけにするか</li>
+<li><strong>ログと保存場所</strong>：質問と答えをどこに何日残すか、データをどの地域に置くか</li>
+<li><strong>直す人</strong>：文書の持ち主と、設定を直す担当の名前</li>
+</ul>
+<figure class="post-figure"><img src="/media/images/rag-build/rag_03_decide.png" alt="RAG構築の前に会社が決める5つを縦に並べた図。対象の質問、最初に入れる文書、権限の扱い、ログと保存場所、直す人" loading="lazy"></figure>
+
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">RAG構築はCopilotやGemの機能でできますか？</h3>
+<p>社内規程やマニュアルのように文章が中心の文書なら、M365 Copilotのエージェント ビルダー・GeminiのGem・ChatGPT Businessのプラグインで作れます。断片の切り方や探し方は選べません。表の多い文書や自社のシステムへの組み込みが要るなら、②か③の作り方に進みます。</p>
+<h3 id="s8-2">Amazon BedrockのRAGは月いくらですか？</h3>
+<p>Managed Knowledge Baseなら保存が元データ1GBあたり月5ドル、検索が1,000回あたり1ドルです。文書2GB・月1万回の試算では検索の部品が月20ドルで、答えを作るモデルの代金が別にかかります。</p>
+<h3 id="s8-3">Azure AI Searchで権限は効きますか？</h3>
+<p>SharePointの権限をそのまま使う方法は、2026年10月31日時点でプレビューです。一般提供の方法で作るなら、文書にだれが見られるかの情報を持たせて検索のたびに絞り込みます。</p>
+<h3 id="s8-4">Difyのチャンクの設定は後から変えられますか？</h3>
+<p>区切り文字や最大の長さはいつでも変えられます。汎用か親子かのチャンクモードは、ナレッジベースを作った後には変えられません。</p>
+<h3 id="s8-5">n8nで作ったRAGのデータは消えますか？</h3>
+<p>Simple Vector Storeに入れたデータは、n8nの再起動で消えます。本番では外部のベクトルデータベースのノードに保存先を変えてください。</p>
+<h3 id="s8-6">Agent Searchの旧名は何ですか？</h3>
+<p>Vertex AI Searchです。Googleは2026年4月にドキュメントでの名前をAgent Searchに変え、ほかの場所の名前も変えている途中です。Google Cloud コンソールの画面では今もVertex AI SearchとAI Applicationsの名前で表示されます。</p>
+<h3 id="s8-7">RAG構築を外注するといくらかかりますか？</h3>
+<p>対象の文書の量や権限の条件、運用まで頼むかで費用は変わります。対象の質問・文書の量・権限の条件・ログの残し方を書面にそろえ、複数の会社から見積もりを取って比べます。</p>
+<h2 id="s9">出典</h2>
+<ul>
+<li>Microsoft「<a href="https://azure.microsoft.com/ja-jp/pricing/details/search/">Azure AI Search の価格</a>」、Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/azure/search/search-document-level-access-overview">ドキュメント レベルのアクセス制御</a>」「<a href="https://learn.microsoft.com/ja-jp/azure/search/vector-search-how-to-chunk-documents">RAG とベクター検索用の大きなドキュメントをチャンクする</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-file-upload">ナレッジ ソースとしてファイルをアップロードする</a>」</li>
+<li>AWS「<a href="https://aws.amazon.com/bedrock/pricing/">Amazon Bedrock pricing</a>」、Amazon Bedrock ユーザーガイド「<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html">Knowledge Bases</a>」「<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-advanced-parsing.html">Parsing options for your data source</a>」「<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-evaluation-metrics.html">Use metrics to understand RAG system performance</a>」</li>
+<li>Google Cloud「<a href="https://cloud.google.com/generative-ai-app-builder/pricing">Agent Search pricing</a>」「<a href="https://docs.cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents?hl=ja">ドキュメントを解析してチャンク化する</a>」</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/pricing">Pricing</a>」「<a href="https://developers.openai.com/api/docs/guides/retrieval">Retrieval</a>」</li>
+<li>Dify Docs「<a href="https://docs.dify.ai/ja/use-dify/knowledge/create-knowledge/chunking-and-cleaning-text">チャンク設定</a>」「<a href="https://docs.dify.ai/ja/use-dify/knowledge/create-knowledge/setting-indexing-methods">インデックス方法と検索設定</a>」</li>
+<li>n8n Docs「<a href="https://docs.n8n.io/advanced-ai/rag-in-n8n/">RAG in n8n</a>」「<a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/">Simple Vector Store node</a>」</li>
+<li>三菱UFJリサーチ&amp;コンサルティング「<a href="https://www.murc-kawasesouba.jp/fx/index.php">外国為替相場</a>」（2026年10月30日）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">RAG構築とは</a><a href="#s2">RAG構築の作り方は3通り</a><a href="#s3">RAG構築の手順</a><a href="#s4">RAG構築でつまずく所</a><a href="#s5">RAG構築の費用</a><a href="#s6">自社で作るか外に頼むか</a><a href="#s7">会社が決めること</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/n8n-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="n8nの料金"><defs><linearGradient id="ecg-054ed8fd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-054ed8fd)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">n8nの料金</text><line x1="417.6" y1="365.9" x2="782.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.30</div>
+                <div class="rel-card__ttl">【2026年10月】n8nの料金を解説｜プランの選び方・実行回数・セルフホスト</div>
+            </a>
+            <a href="/media/internal-chatbot/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="社内チャットボットの選び方"><defs><linearGradient id="ecg-0aeb1e92" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-0aeb1e92)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">社内チャットボットの選び方</text><line x1="106.0" y1="365.9" x2="1094.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.29</div>
+                <div class="rel-card__ttl">【2026年10月】社内チャットボットの選び方｜製品を買うか自社で作るか・費用・RAG</div>
+            </a>
+            <a href="/media/dify-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Difyの料金"><defs><linearGradient id="ecg-5c6c5faa" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5c6c5faa)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Difyの料金</text><line x1="394.8" y1="365.9" x2="805.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.27</div>
+                <div class="rel-card__ttl">【2026年10月】Difyの料金を解説｜プランの選び方・API代・セルフホスト</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'rag-build',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
