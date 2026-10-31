@@ -25,15 +25,13 @@ Claude Teamプランは、2〜150名の組織が席の単位で契約するClaud
 
 Anthropicは会社向けの契約をClaude for Workと呼び、TeamとEnterpriseがこれに入ります。[Team プランとは何ですか？](https://support.claude.com/ja/articles/9266767)のヘルプによると、TeamはProの機能（全モデル・Claude Code・Cowork・プロジェクト・コネクタ）に、請求と管理の一元化・SSO・支出上限・エンタープライズ検索を足したプランです。
 
-<!-- SHOT: 図 ctm_overview.html → ctm_00_overview_1031.png・alt「Claude Teamプランと個人プランの違いの概要図。個人プランは本人のアカウントで学習は本人が設定し請求は1人ずつ、Teamプランは組織のアカウントで学習は既定で使わず請求は組織で1枚」 -->
+<figure class="post-figure"><img src="/media/images/claude-team/ctm_00_overview_1031.png" alt="Claude Teamプランと個人プランの違いの概要図。個人プランは本人のアカウントで学習は本人が設定し請求は1人ずつ、Teamプランは組織のアカウントで学習は既定で使わず請求は組織で1枚" loading="lazy"></figure>
 
 席はスタンダードとプレミアムの2種類で、組み合わせて2席から150席まで契約します。古い記事に最低5名とあるものが残っていますが、今のヘルプの条件は最低2人です。[Team プランを始める](https://support.claude.com/ja/articles/9267247)のヘルプは「個人での利用を想定していない」とし、申し込む人には会社のドメインのメールアドレスを求めています（@gmail.comなどは不可）。
 
 ## Claude Teamプランの料金
 
 [Claudeの料金ページ](https://claude.com/ja/pricing)のTeam & Enterpriseタブには、次の金額が並びます。
-
-<!-- SHOT: 画面 https://claude.com/ja/pricing のTeam & Enterpriseタブ・本文だけにある探す語「年払い時のシートあたり月額」・赤枠「$22」「$27.50」「$110」「$137.50」・スマホ・alt「Claudeの料金ページのTeam & Enterpriseタブをスマホで開いた画面。Teamは2〜150名のチーム向けで、スタンダードシートは年払い時$22・月払い$27.50、プレミアムシートは年払い時$110・月払い$137.50」・figcaption「Claudeの料金ページ（2026年10月31日、スマホ表示）」 → ctm_01_pricing_1031_sp.jpg -->
 
 | 席の種類 | 年払い（月あたり） | 月払い | 1セッションの量 |
 |---|---|---|---|
@@ -87,7 +85,7 @@ Teamには別に月額のAPIクレジットが全席の合算で最大$500付き
 
 **金額の差は小さく、はっきり違うのは学習・規約・データの持ち主・管理の4つです。**会社の判断に効く順に下で取り上げます。
 
-<!-- SHOT: 画面 https://claude.com/ja/pricing の個人タブの比較表・本文だけにある探す語「ユーザーおよび組織レベルの支出管理」・赤枠「モデルのトレーニング」の行と「一元的な請求と管理」の行・スマホ・alt「Claudeの料金ページの個人プランの比較表をスマホで開いた画面。Pro・Max・Ultraの列で、モデルのトレーニングはオプトアウト、ユーザーおよび組織レベルの支出管理と一元的な請求と管理はいいえ」・figcaption「個人プランの比較表の管理の行（2026年10月31日）」 → ctm_02_personal_compare_sp.jpg -->
+<figure class="post-figure"><img src="/media/images/claude-team/ctm_02_personal_compare_sp.jpg" alt="Claudeの料金ページの個人プランの比較表をスマホで開いた画面。列は左からFree・Pro・Max・Ultraで、モデルのトレーニングはどの列もオプトアウト、ユーザーおよび組織レベルの支出管理と一元的な請求と管理はどの列もいいえ" loading="lazy"><figcaption>個人プランの比較表の管理の行（左からFree・Pro・Max・Ultra、2026年10月31日）</figcaption></figure>
 
 ### 学習の扱い
 
@@ -101,13 +99,13 @@ Teamには別に月額のAPIクレジットが全席の合算で最大$500付き
 
 **ただしアカウントのログイン情報を他人と共有すること、アカウントを他人に使わせることは禁じられています。**1つのProを部署で回して使う形は規約に反します。会社のメールアドレスで作った個人アカウントは、会社の法人向けアカウントに結び付けられ、管理者に会話を見られることがある（事前に通知あり）とも書かれています。
 
-<!-- SHOT: 画面 https://www.anthropic.com/legal/consumer-terms・本文だけにある探す語「Business Domains」・赤枠「You may not share your Account login information」の文と「Business Domains」の段落・PC・alt「Anthropicの個人向け利用規約の2章。アカウントのログイン情報を共有してはならない、他人にアカウントを使わせてはならないという文と、勤務先のメールアドレスを使うとその組織のアカウントに結び付けられることがあるというBusiness Domainsの段落」・figcaption「Anthropicの個人向け利用規約（2026年10月31日）」 → ctm_03_consumer_terms.jpg -->
+<figure class="post-figure"><img src="/media/images/claude-team/ctm_03_consumer_terms.jpg" alt="Anthropicの個人向け利用規約の2章。アカウントのログイン情報を共有してはならない、他人にアカウントを使わせてはならないという文と、勤務先のメールアドレスを使うとその組織のアカウントに結び付けられることがあるというBusiness Domainsの段落" loading="lazy"><figcaption>Anthropicの個人向け利用規約（2026年10月31日）</figcaption></figure>
 
 ### 会話の持ち主と退職したとき
 
 個人プランの会話と成果物は、規約上その人のアカウントのものです。社員が辞めたあとに会社がアカウントを止めたり引き継いだりする仕組みはありません。
 
-<!-- SHOT: 図 ctm_data_owner.html → ctm_04_data_owner.png・alt「社員が辞めたときのデータの扱いを比べた図。個人プランは会話も成果物も本人のアカウントに残り会社は止められない。Teamプランは管理者が外し、データは消えず組織のエクスポートに残り、共有していたプロジェクトは残る」 -->
+<figure class="post-figure"><img src="/media/images/claude-team/ctm_04_data_owner.png" alt="社員が辞めたときのデータの扱いを比べた図。個人プランは会話も成果物も本人のアカウントに残り会社は止められない。Teamプランは管理者が外し、データは消えず組織のエクスポートに残り、共有していたプロジェクトは残る" loading="lazy"></figure>
 
 Teamのメンバーのデータは、[チームのデータの所有者のヘルプ](https://support.claude.com/ja/articles/9265372)にあるとおりプライマリオーナーが管理します。[メンバーを外したときのヘルプ](https://support.claude.com/ja/articles/12053672)によると、外しただけではアカウントもデータも消えません。
 
@@ -121,7 +119,7 @@ Teamのメンバーのデータは、[チームのデータの所有者のヘル
 
 **辞めた人の会話を会社に残すなら、プライマリオーナーが組織のデータをエクスポートしておきます。**外した人のデータも入っていて、完全な削除をサポートに頼むのはそのあとです。削除は取り消せません。
 
-<!-- SHOT: 画面 https://support.claude.com/ja/articles/12053672・本文だけにある探す語「データエクスポート」・赤枠 外したユーザーのデータもエクスポートに含まれるという文・PC・alt「Claudeのヘルプの組織からメンバーを削除したときの説明。削除してもアカウントとデータは消えず、完全に削除する前にプライマリオーナーのアカウントで組織のデータをエクスポートするよう案内している」・figcaption「メンバーを外したときのデータの扱い（Anthropicヘルプセンター、2026年10月31日）」 → ctm_05_remove_member.jpg -->
+<figure class="post-figure"><img src="/media/images/claude-team/ctm_05_remove_member.jpg" alt="Claudeのヘルプの組織からメンバーを削除したときの説明。削除してもアカウントとデータは消えず、完全に削除する前にプライマリオーナーのアカウントで組織のデータをエクスポートするよう案内している" loading="lazy"><figcaption>メンバーを外したときのデータの扱い（Anthropicヘルプセンター、2026年10月31日）</figcaption></figure>
 
 ### 管理者ができることと見えるもの
 
@@ -149,7 +147,7 @@ SCIM・監査ログ・データ保持期間の設定・細かな権限設定（R
 
 人数・扱う情報・使う量の3つで分けると、次のように決まります。
 
-<!-- SHOT: 図 ctm_decide.html → ctm_06_decide.png・alt「Teamか個人プランかを決める目安の図。1人ならPro・Max・Ultra、社員が会社の情報を入れるなら2人からTeam、150席超・請求書払い・SCIMや監査ログが要るならEnterprise」 -->
+<figure class="post-figure"><img src="/media/images/claude-team/ctm_06_decide.png" alt="Teamか個人プランかを決める目安の図。1人ならPro・Max・Ultra、社員が会社の情報を入れるなら2人からTeam、150席超・請求書払い・SCIMや監査ログが要るならEnterprise" loading="lazy"></figure>
 
 **1人で使うなら個人プランです。**Teamは2席からなので、1人のために2席分を払うことになります。
 
@@ -187,7 +185,7 @@ Teamにはプレミアムを超える席がないため、Ultra並みの量が�
 | Claude Fable 5・5.1 | 最初から使用クレジットで従量 | 週の枠の50%までプラン内 |
 | 月額APIクレジット | 1席$20 | 1席$100 |
 
-<!-- SHOT: 画面 https://support.claude.com/ja/articles/9266767・本文だけにある探す語「1.25 倍」・赤枠「1.25 倍」「6.25 倍」の2文と、使用量制限はメンバーごとという文・PC・alt「ClaudeのヘルプのTeamプランの使用量の節。StandardシートはProのセッションあたりの上限の1.25倍、Premiumシートは6.25倍で、どちらも週単位の上限があり、上限はチーム全体でなくメンバーごとに付く」・figcaption「Teamプランの使用量（Anthropicヘルプセンター、2026年10月31日）」 → ctm_07_usage_1031.jpg -->
+<figure class="post-figure"><img src="/media/images/claude-team/ctm_07_usage_1031.jpg" alt="ClaudeのヘルプのTeamプランの使用量の節。StandardシートはProのセッションあたりの上限の1.25倍、Premiumシートは6.25倍で、どちらも週単位の上限があり、上限はチーム全体でなくメンバーごとに付く" loading="lazy"><figcaption>Teamプランの使用量（Anthropicヘルプセンター、2026年10月31日）</figcaption></figure>
 
 **上限はメンバーごとに付き、チームの中で分け合えません。**1つの席は指名された1人だけが使え、ログインの共有や1席を何人かで順番に使う形はヘルプで認められていません。週の上限はどちらの席にもあり、その倍率は公開されていません。5時間と週の枠の仕組みは[Claudeの使用制限の記事](/media/claude-usage-limits/)で扱っています。
 
@@ -201,7 +199,7 @@ Teamにはプレミアムを超える席がないため、Ultra並みの量が�
 
 **持ち込みは一方通行で、組織に移した中身は個人に戻せません。**社員の個人アカウントを管理者が強制的に移す機能はEnterpriseだけで、Teamでは本人が選びます。
 
-<!-- SHOT: 図 ctm_migrate.html → ctm_08_migrate.png・alt「個人アカウントからTeamにデータを持ち込むときに移るものと移らないものの図。移るのはチャット・プロジェクト・アップロードしたファイル・メモリ・Claude Codeのメモリと設定。移らないのはカスタムのSkills・自分で足したコネクタ・公開したArtifacts・共有リンク・Coworkのセッション」 -->
+<figure class="post-figure"><img src="/media/images/claude-team/ctm_08_migrate.png" alt="個人アカウントからTeamにデータを持ち込むときに移るものと移らないものの図。移るのはチャット・プロジェクト・アップロードしたファイル・メモリ・Claude Codeのメモリと設定。移らないのはカスタムのSkills・自分で足したコネクタ・公開したArtifacts・共有リンク・Coworkのセッション" loading="lazy"></figure>
 
 | 移るもの | 移らないもの |
 |---|---|
