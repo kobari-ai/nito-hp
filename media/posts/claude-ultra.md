@@ -32,11 +32,9 @@ Claudeの個人向けプランは、2026年10月31日からFree・Pro・Max・Ul
 - 支払いは月払いだけで、年払いは無い
 - Claude Codeも同じ契約で使え、ウェブ・デスクトップ・Claude Codeの使用量は同じ枠から引かれる
 
-<!-- SHOT: 図 clu_rename.html → clu_01_rename.png・alt「Claudeの個人向けプランの名前の変わり方を縦に並べた図。旧Max 5xはMaxになり月$110で5時間ごとと毎週の使用量がどちらもProの5倍。旧Max 20xはUltraになり月$220で毎週の使用量がProの10倍、認証済みなら5時間の上限なし。どちらも価格は据え置き」 -->
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_01_rename.png" alt="Claudeの個人向けプランの名前の変わり方を縦に並べた図。旧Max 5xはMaxになり月$110で5時間ごとと毎週の使用量がどちらもProの5倍。旧Max 20xはUltraになり月$220で毎週の使用量がProの10倍、認証済みなら5時間の上限なし。どちらも価格は据え置き" loading="lazy"></figure>
 
 金額の見え方は画面によって2通りです。日本向けの料金ページはUltraを「$220 月額」、Maxを「$110 月額」と表示し、「Prices include 10% JCT」と注記しています。**ヘルプの「Ultraプランは月額$200で利用できます」は消費税を含まない額で、$200に10%を足すと日本の画面の$220になります。**Anthropicは[消費税（JCT）のお知らせ](https://support.claude.com/ja/articles/14051822)のとおり、2026年4月1日から日本の顧客に10%の消費税を加えるようになりました。ヘルプの価格はウェブで申し込んだ場合のもので、スマホのアプリから申し込むとストアによって異なる場合があると注記されています。
-
-<!-- SHOT: 画面 https://claude.com/ja/pricing・個人タブのUltraの欄（最も長いタスクに対応）・赤枠「$220 月額」と「5 時間制限なし」と「Pro の 10 倍の使用量（毎週）」・PC・alt「Claudeの料金ページの個人向けプラン。Ultraは最も長いタスクに対応と書かれ、$220の月額で、5時間制限なし、Proの10倍の使用量（毎週）、月額$200分のAPIクレジットが並ぶ」・figcaption「Claude の料金ページ「プランと料金」（2026年10月31日）」 -->
 
 「claude ultra」で検索すると、Claude Codeの機能であるUltraplanやultracodeの記事も一緒に出てきます。これらはClaude Codeの中の機能の名前で、料金プランのUltraとは関係がありません。
 
@@ -57,7 +55,7 @@ Claudeの個人向けプランは、2026年10月31日からFree・Pro・Max・Ul
 
 **機能は同じで、差は5時間の上限・週の倍率・APIクレジットの額の3つに集まっています。**旧Max 5xだった人は名前がMaxに変わっただけで、5時間ごとと毎週の枠はどちらもProの5倍のままです。Maxには5時間の上限が残ります。
 
-<!-- SHOT: 図 clu_diff.html → clu_02_diff.png・alt「MaxとUltraで違う3つの項目を縦に並べた図。5時間ごとの上限はMaxがProの5倍でUltraは認証済みならなし。毎週の上限はMaxがProの5倍でUltraがProの10倍。月間のAPIクレジットはMaxが$100でUltraが$200。機能の欄は同じ」 -->
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_02_diff.png" alt="MaxとUltraで違う3つの項目を縦に並べた図。5時間ごとの上限はMaxがProの5倍でUltraは認証済みならなし。毎週の上限はMaxがProの5倍でUltraがProの10倍。月間のAPIクレジットはMaxが$100でUltraが$200。機能の欄は同じ" loading="lazy"></figure>
 
 ### 20xと10xの食い違い
 
@@ -75,7 +73,7 @@ Max 20xという名前と週の上限は、改称の前から合っていませ�
 
 [Ultraプランのヘルプ](https://support.claude.com/ja/articles/17728952)は、詐欺と悪用を防ぐために、アカウントと支払い履歴などの要因からUltraアカウントを自動で認証すると書いています。**認証が済むまでは一時的な制限がかかり、済めば自動で外れるため、利用者がする操作はありません。**申し込みの画面で電話番号を認証する手順は別のステップで、通してもこの制限は外れないと明記されています。[The New Stackの記事](https://thenewstack.io/claude-ultra-session-limit/)も、認証を申し込んだり早めたりする方法は無いと書いています。
 
-<!-- SHOT: 画面 https://support.claude.com/ja/articles/17728952・認証済みUltraアカウントとは？・赤枠「アカウントと支払い履歴などの要因を使用してUltraアカウントを自動的に認証します」と「チェックアウト時に電話番号を認証することは別のステップであり、この制限は削除されません」と「「現在のセッション」バーが表示されない場合、アカウントは認証済みです」・PC・alt「AnthropicヘルプのUltraプランとは？の認証済みUltraアカウントとは？の節。アカウントと支払い履歴などの要因で自動的に認証し、認証済みには5時間制限がない、電話番号の認証は別のステップで制限は外れない、設定の使用量で現在のセッションのバーが表示されなければ認証済みと書かれている」・figcaption「Ultraプランとは？（Anthropic ヘルプセンター、2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_shot_verified.png" alt="AnthropicヘルプのUltraプランとは？の認証済みUltraアカウントとは？の節。アカウントと支払い履歴などの要因で自動的に認証し、認証済みには5時間制限がない、電話番号の認証は別のステップで制限は外れない、設定の使用量で現在のセッションのバーが表示されなければ認証済みと書かれている" loading="lazy"><figcaption>Ultraプランとは？（Anthropic ヘルプセンター、2026年10月31日）</figcaption></figure>
 
 自分のアカウントが認証済みかは、設定の使用量の画面で分かります。ヘルプが示す見分け方は**現在のセッションのバーが表示されなければ認証済み**というものです。このバーは5時間の枠の使用率を示すもので、表示されているうちは5時間の枠が数えられています。
 
@@ -112,7 +110,7 @@ Anthropicは「この使い方ならUltra」という基準を出していませ
 
 [The New Stackの記事](https://thenewstack.io/claude-ultra-session-limit/)は、週の枠を余したまま5時間の枠に当たり続ける人にはUltraに月$100多く払う意味があり、週の終わりより前に使い切る人には5時間の上限を外しても使える量は増えないと書いています。**週の枠が足りない人にUltraが効くのは、週の枠が2倍になる点だけです。**
 
-<!-- SHOT: 図 clu_choose.html → clu_03_choose.png・alt「Claude Ultraを選ぶ目安を縦に並べた図。5時間の枠で止まる日が多く週の枠は余るならUltra。週の枠が先に尽きるならUltraで量も月額も2倍。APIに月$100以上使うならUltraのクレジットが効く。どちらの枠にも当たらないならMax。会社で複数人に配るならTeamかEnterprise」 -->
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_03_choose.png" alt="Claude Ultraを選ぶ目安を縦に並べた図。5時間の枠で止まる日が多く週の枠は余るならUltra。週の枠が先に尽きるならUltraで量も月額も2倍。APIに月$100以上使うならUltraのクレジットが効く。どちらの枠にも当たらないならMax。会社で複数人に配るならTeamかEnterprise" loading="lazy"></figure>
 
 ### APIクレジットの使い道
 
@@ -159,7 +157,7 @@ Ultraは5時間の上限が無い点で上回り、プレミアムシートは�
 | Google Playで契約している | 上げた時点で新しいプランの全額を請求し、前のプランの残りは日数に換算 |
 | 解約する | 請求期間の終わりまで使える。次の請求日の24時間前までに手続き |
 
-<!-- SHOT: 図 clu_switch.html → clu_04_switch.png・alt「Claude Ultraへの切り替えと解約の扱いを縦に並べた図。MaxからUltraへは残りの期間を日割りで請求しAPIクレジットも日割りですぐ付与。年払いのProからは残高をクレジットとして残し請求先住所が同じことが条件。解約は請求期間の終わりまで使えて次の請求日の24時間前までに手続き」 -->
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_04_switch.png" alt="Claude Ultraへの切り替えと解約の扱いを縦に並べた図。MaxからUltraへは残りの期間を日割りで請求しAPIクレジットも日割りですぐ付与。年払いのProからは残高をクレジットとして残し請求先住所が同じことが条件。解約は請求期間の終わりまで使えて次の請求日の24時間前までに手続き" loading="lazy"></figure>
 
 ### 新しく申し込む
 
@@ -169,7 +167,7 @@ Ultraは5時間の上限が無い点で上回り、プレミアムシートは�
 
 [Maxプランのヘルプ](https://support.claude.com/ja/articles/11049741)の請求情報によると、MaxからUltraに上げると、請求サイクルの残りの期間が日割りで請求されます。月間のAPIクレジットを受け取っている場合は、日割りのクレジットがすぐに付き、次の請求サイクルからは高いほうの額（月$200）になります。
 
-<!-- SHOT: 画面 https://support.claude.com/ja/articles/11049741・請求情報・赤枠「MaxからUltraにアップグレードする場合、アカウントは請求サイクルの残りの期間について日割り計算で請求されます。」と続く月額APIクレジットの文・PC・alt「AnthropicヘルプのMaxプランとは？の請求情報。MaxからUltraにアップグレードすると請求サイクルの残りの期間を日割りで請求し、月額APIクレジットを受け取っていれば日割りのクレジットがすぐ付き、その後の請求サイクルで高い金額になると書かれている」・figcaption「Maxプランとは？（Anthropic ヘルプセンター、2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_shot_max_upgrade.png" alt="AnthropicヘルプのMaxプランとは？の請求情報。MaxからUltraにアップグレードすると請求サイクルの残りの期間を日割りで請求し、月額APIクレジットを受け取っていれば日割りのクレジットがすぐ付き、その後の請求サイクルで高い金額になると書かれている" loading="lazy"><figcaption>Maxプランとは？（Anthropic ヘルプセンター、2026年10月31日）</figcaption></figure>
 
 ### 年払いのProから移る
 
@@ -179,7 +177,7 @@ Ultraのヘルプによると、年払いのProの残高がUltraの価格より�
 
 [解約のヘルプ](https://support.claude.com/ja/articles/8325617)によると、Ultraはいつでも解約でき、解約は今の請求期間の終わりに効き、それまでは有料プランをそのまま使えます。**次の請求を止めたいなら、次の請求日の少なくとも24時間前までの解約が必要です。**ウェブとデスクトップでは左下のイニシャルか名前からSettings > Billingに進んでCancelを押し、iPhoneとAndroidのアプリでは右上のイニシャルからBilling、Manage subscriptionの順に進みます。
 
-<!-- SHOT: 画面 https://support.claude.com/ja/articles/8325617・Pro、Max、またはUltraサブスクリプションをキャンセルする・赤枠「キャンセルは現在の請求期間の終了時に有効になり」と「次の請求日の少なくとも24時間前にサブスクリプションをキャンセルしてください」・PC・alt「AnthropicヘルプのPro、Max、またはUltraサブスクリプションをキャンセルする。いつでもキャンセルでき、キャンセルは現在の請求期間の終了時に有効になる、次の請求を避けるには次の請求日の少なくとも24時間前にキャンセルする、と書かれている」・figcaption「Pro、Max、またはUltraサブスクリプションをキャンセルする（Anthropic ヘルプセンター、2026年10月31日）」 -->
+<figure class="post-figure"><img src="/media/images/claude-ultra/clu_shot_cancel.png" alt="AnthropicヘルプのPro、Max、またはUltraサブスクリプションをキャンセルする。いつでもキャンセルでき、キャンセルは現在の請求期間の終了時に有効になる、次の請求を避けるには次の請求日の少なくとも24時間前にキャンセルする、と書かれている" loading="lazy"><figcaption>Pro、Max、またはUltraサブスクリプションをキャンセルする（Anthropic ヘルプセンター、2026年10月31日）</figcaption></figure>
 
 APIクレジットは買ったものではないため払い戻しは無く、解約すると新しいクレジットは止まり、すでにある分は期限まで使えます。**UltraからMaxやProに下げる手順と、その変更がいつ効くかは、ヘルプに記載が見つかりません（2026年10月31日時点）。**画面ごとの解約の流れは[Claudeの解約の記事](/media/claude-cancel/)にあります。
 
