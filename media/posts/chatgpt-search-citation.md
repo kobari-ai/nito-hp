@@ -151,6 +151,8 @@ OAI-SearchBotを許可するのは、ChatGPTが自社のページを読める状
 
 そのため、引用元に出る条件を整えたあとに見るのは、自社の見込み客がAIに聞きそうな質問で実際に社名が出るか、どのページが引かれているかです。回答は同じ質問でも毎回変わるので、何度か聞いて出た回数で見ます。自社のサイト以外にどんな第三者の記事が要るかは[サイテーションの増やし方](/media/citation-for-ai/)、名前が出ない原因の切り分けは[ChatGPTに自社が出てこない原因](/media/chatgpt-not-appearing/)に書いています。GeminiとPerplexityで引用元を探す先の違いと確かめ方は、[Gemini・Perplexityに自社が引用されるには？](/media/gemini-perplexity-citation/)で扱っています。
 
+ChatGPTを記事づくりの道具として使うSEOの手順とプロンプト例は、[ChatGPTをSEO対策に使う方法](/media/chatgpt-seo/)にまとめました。
+
 ## よくある質問
 
 ### Q. ChatGPTの検索に出るにはBingへの登録が必要ですか？
