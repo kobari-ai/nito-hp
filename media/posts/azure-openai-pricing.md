@@ -26,7 +26,7 @@ Microsoftの価格表で2026年11月のAzure OpenAIの最も新しいモデル�
 
 **Azure OpenAIに月額の定額は無く、使ったトークンの分だけ払う形が基本です。** 初期費用や最低料金も無く、固定費が出るのは処理能力を予約するPTUを選んだときだけです。1人あたりの月額で払うChatGPT Businessとは、費用の数え方がそもそも違います。
 
-<!-- SHOT: 図 azop_overview.html → azop_01_overview.png・alt「Azure OpenAIの料金を決める4つの要素。使うモデルは同じ量でも単価に最大100倍の差がある。課金の型は従量・PTUの予約・BatchとFlex。処理する場所はグローバルが最安でデータゾーンは1.1倍。使う量は入力と出力のトークン数を別々に数える」 -->
+<figure class="post-figure"><img src="/media/images/azure-openai-pricing/azop_01_overview.png" alt="Azure OpenAIの料金を決める4つの要素。使うモデルは同じ量でも単価に最大100倍の差がある。課金の型は従量・PTUの予約・BatchとFlex。処理する場所はグローバルが最安でデータゾーンは1.1倍。使う量は入力と出力のトークン数を別々に数える" loading="lazy"></figure>
 
 トークンは文章を区切った単位で、入力（送る指示文・会話の履歴・参照させる文書）と出力（返ってくる答え）で別の単価が付きます。日本語はおおむね1文字が1〜2トークンで、同じ内容でも英語より多く数えられる点に注意が要ります。GPT-6系の出力の単価は入力の5倍で、長い答えを返す使い方ほど高くつく作りです。
 
@@ -60,7 +60,7 @@ PTUは使っても使わなくても時間で課金され、月や年の予約�
 
 **国外で処理してよいかは料金より先に社内の規程で決まる話です。** Learnのデータプライバシーの説明では、プロンプトと出力はモデルの学習やMicrosoftの製品の改善に使われず、保存されるデータは指定した地域に残ります。そのうえで処理の場所を国内やアジア太平洋に絞る必要があるかを、情報セキュリティの担当と先に決めておくと、見積もりのやり直しが減ります。
 
-<!-- SHOT: 画面 https://learn.microsoft.com/ja-jp/azure/foundry/foundry-models/concepts/deployment-types・本文だけにある探す語「グローバル標準から始める」・赤枠にする語「ほとんどのワークロードでは、 Global Standard から始めます」・PC・alt「Microsoft Learnの展開の種類のページ。ほとんどの用途ではグローバル標準から始め、データ所在地や予約済みスループットなどの理由があるときだけ別の種類に移るよう書かれている」・figcaption「Microsoft Learn「Microsoft Foundry Models の展開の種類」（2026年11月2日）」 -->
+<figure class="post-figure"><img src="/media/images/azure-openai-pricing/azop_03_deploy.png" alt="Microsoft Learnの展開の種類のページ。ほとんどの用途ではグローバル標準から始め、データ所在地や予約済みスループットなどの理由があるときだけ別の種類に移るよう書かれている" loading="lazy"><figcaption>Microsoft Learn「Microsoft Foundry Models の展開の種類」（2026年11月2日）</figcaption></figure>
 
 ## GPT-6系のモデル別の料金
 
@@ -76,7 +76,7 @@ PTUは使っても使わなくても時間で課金され、月や年の予約�
 
 金額は100万トークンあたりで、入力が短い要求（短いコンテキスト）の単価です。**いちばん高いAstraと安いLunaでは、同じ量でも100倍の差があります。** Astraは画面の操作まで任せる用途を前面に出した最上位のモデルで、社内の質問に答えるだけなら、まずTerraかLunaで答えの質を試すのが費用の面では合理的です。
 
-<!-- SHOT: 画面 https://azure.microsoft.com/ja-jp/pricing/details/azure-openai/・本文だけにある探す語「GPT-6.1 Series」・赤枠にする語「GPT-6.1 Terra Short Context Global」・PC（撮る前に通貨を「日本 – 円 (¥) JPY」、リージョンを「東日本」に切り替える）・alt「Azure OpenAI Serviceの価格ページのGPT-6.1シリーズの表。通貨を日本円にするとGPT-6.1 Terraの短いコンテキストのグローバルの入力・キャッシュされた入力・出力の単価が100万トークンあたりの円で表示される」・figcaption「Azure OpenAI Service の価格（2026年11月2日、東日本・日本円）」 -->
+<figure class="post-figure"><img src="/media/images/azure-openai-pricing/azop_04_price.png" alt="Azure OpenAI Serviceの価格ページのGPT-6.1シリーズの表。通貨を日本円にするとGPT-6.1 Terraの短いコンテキストのグローバルの入力・キャッシュされた入力・出力の単価が100万トークンあたりの円で表示される" loading="lazy"><figcaption>Azure OpenAI Service の価格（2026年11月2日、東日本・日本円）</figcaption></figure>
 
 ### 長いコンテキストとキャッシュ
 
@@ -109,7 +109,7 @@ GPT-6系とGPT-5.6系は、1回の要求の入力が長いと「長いコンテ�
 | GPT-6.1 Sol | 9,493.8円 | 9,493.8円 | 約1万9,000円 |
 | GPT-6 Astra | 47,469円 | 47,469円 | 約9万5,000円 |
 
-<!-- SHOT: 図 azop_calc.html → azop_02_calc.png・alt「社内チャットの月額の試算。1日500回で月20日、1回あたり入力3,000トークン・出力600トークンのとき、GPT-6 Lunaは約950円、GPT-6.1 Terraは約9,500円、GPT-6.1 Solは約1.9万円、GPT-6 Astraは約9.5万円。グローバル標準の円単価で計算したモデルの代金だけの試算」 -->
+<figure class="post-figure"><img src="/media/images/azure-openai-pricing/azop_02_calc.png" alt="社内チャットの月額の試算。1日500回で月20日、1回あたり入力3,000トークン・出力600トークンのとき、GPT-6 Lunaは約950円、GPT-6.1 Terraは約9,500円、GPT-6.1 Solは約1.9万円、GPT-6 Astraは約9.5万円。グローバル標準の円単価で計算したモデルの代金だけの試算" loading="lazy"></figure>
 
 **この規模なら、モデルの代金はTerraで月1万円に届きません。** 同じ条件をデータゾーンで動かすと約1万400円です。式は「月の入力トークン÷100万×入力の単価＋月の出力トークン÷100万×出力の単価」で、表計算に入れておけば人数や回数が変わったときもすぐ出し直せます。
 
