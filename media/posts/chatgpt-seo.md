@@ -26,17 +26,17 @@ ChatGPTで記事づくりを速くするよう言われ、あわせて「ChatGPT
 
 **同じ「SEO対策」でも、1つ目は作業の効率化で、2つ目は新しい集客の入口への対策です。** 社内で「ChatGPTでSEOをやって」と言われたら、どちらを求められているかを先に確かめると話が早く進みます。この記事は1つ目を中心に書き、2つ目は後半の1節にまとめます。AI検索の時代のSEO全体で何を続け何を足すかは[AI SEO対策とは](/media/ai-seo-taisaku/)に書きました。
 
-<!-- SHOT: 図 cgseo_two.html → cgseo_01_two.png・alt「ChatGPTのSEO対策の2つの意味。1つ目はChatGPTでキーワード案や下書きを作りGoogleの上位を狙う作業を速くすること。2つ目はChatGPTの検索で自社のページが引用され社名が挙がるようにすること」 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-seo/cgseo_01_two.png" alt="ChatGPTのSEO対策の2つの意味。1つ目はChatGPTでキーワード案や下書きを作りGoogleの上位を狙う作業を速くすること。2つ目はChatGPTの検索で自社のページが引用され社名が挙がるようにすること" loading="lazy"></figure>
 
 ## AIで書いた記事のGoogleでの扱い
 
 AIで書いた記事はGoogleに嫌われる、という話はいまも社内でよく出ます。Googleは2023年2月の検索セントラル ブログ「AI 生成コンテンツに関する Google 検索のガイダンス」で、AIや自動化は適切に使っている限りガイドラインの違反にならず、検索ランキングの操作を主な目的に使うとスパムポリシーの違反になると答えています。同じ記事のよくある質問には、AIを使ったからといってランキングで特別に有利になることはない、とも書かれています。
 
-<!-- SHOT: 画面 https://developers.google.com/search/blog/2023/02/google-search-and-ai-content?hl=ja・本文だけにある探す語「適切に使用している限りは」・赤枠にする語「AI や自動化は、適切に使用している限りは Google のガイドラインの違反になりません」・PC・alt「Google検索セントラル ブログのAI生成コンテンツのよくある質問。AIや自動化は適切に使用している限りGoogleのガイドラインの違反にならず、検索ランキングの操作を主な目的に使うとスパムポリシーの違反とみなされると書かれている」・figcaption「AI 生成コンテンツに関する Google 検索のガイダンス（Google 検索セントラル ブログ、2026年11月2日）」 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-seo/cgseo_g1.png" alt="Google検索セントラル ブログのAI生成コンテンツのよくある質問。AIや自動化は適切に使用している限りGoogleのガイドラインの違反にならず、検索ランキングの操作を主な目的に使うとスパムポリシーの違反とみなされると書かれている" loading="lazy"><figcaption>AI 生成コンテンツに関する Google 検索のガイダンス（Google 検索セントラル ブログ、2026年11月2日）</figcaption></figure>
 
 2026年10月6日に更新されたガイダンスは、もう一歩具体的です。生成モデルは事実を取りにいくのでなく、学習したデータからありそうな単語の並びを予測するため、出力に誤りが混ざると説明し、**公開前に人の手で事実を確かめるよう求めています。** その対象は本文だけでなく、title・メタディスクリプション・構造化データ・画像の代替テキストにも及びます。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/fundamentals/using-gen-ai-content?hl=ja・本文だけにある探す語「正確性、品質、関連性を優先する」・赤枠にする語「AI 生成コンテンツを公開する前に、手動でファクト チェックを行い」・PC・alt「Googleの生成AIコンテンツのガイダンスの正確性の節。AI生成コンテンツを公開する前に手動でファクトチェックを行うことが重要で、titleやメタディスクリプション、構造化データ、画像の代替テキストにも適用されると書かれている」・figcaption「ウェブサイトで生成 AI によるコンテンツを使用するための Google 検索のガイダンス（Google 検索セントラル、2026年11月2日）」 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-seo/cgseo_g2.png" alt="Googleの生成AIコンテンツのガイダンスの正確性の節。AI生成コンテンツを公開する前に手動でファクトチェックを行うことが重要で、titleやメタディスクリプション、構造化データ、画像の代替テキストにも適用されると書かれている" loading="lazy"><figcaption>ウェブサイトで生成 AI によるコンテンツを使用するための Google 検索のガイダンス（Google 検索セントラル、2026年11月2日）</figcaption></figure>
 
 ここから読み取れるのは、ChatGPTに任せがちな細かい所ほど人の確認が要るということです。タイトルや説明文は短いので見落とされやすいのですが、ガイダンスは名指しで審査の対象にしています。ガイダンスはさらに、どのような自動化を使ったかを読者に伝えることを検討するよう勧め、2023年のよくある質問でも「どう作られたのか」と思わせるページでは開示が有益だとしています。大量に作ったページがスパムに当たる条件は、[AI SEO対策の記事の生成AIの節](/media/ai-seo-taisaku/)に公式の文を並べました。
 
@@ -63,7 +63,7 @@ SEOの作業を1つずつ見ると、ChatGPTが速くできる所と、どうし
 
 いきなり「記事を書いて」と頼むと、どこかで見たような一般論の記事が出てきます。人が記事を作るときの工程を分けて、工程ごとにChatGPTに頼み、出てきたものを人が直して次の工程に渡すのが基本の流れです。
 
-<!-- SHOT: 図 cgseo_steps.html → cgseo_02_steps.png・alt「ChatGPTでSEO記事を作る5つの手順。語と意図を洗い出す、上位の見出しと比べる、構成案を作る、見出しごとに下書きする、タイトルと説明文を作る。各手順のあとに人が確かめる」 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-seo/cgseo_02_steps.png" alt="ChatGPTでSEO記事を作る5つの手順。語と意図を洗い出す、上位の見出しと比べる、構成案を作る、見出しごとに下書きする、タイトルと説明文を作る。各手順のあとに人が確かめる" loading="lazy"></figure>
 
 下のプロンプトは、そのまま貼って［ ］の中を自社の内容に置き換える形にしています。出力の例は載せていません。同じ指示でも答えは毎回変わるためです。
 
@@ -139,7 +139,7 @@ SEOの作業を1つずつ見ると、ChatGPTが速くできる所と、どうし
 
 ChatGPTの下書きを公開できる記事にする作業は、事実を確かめることと、自社にしか書けない中身を足すことの2つに分かれます。
 
-<!-- SHOT: 図 cgseo_check.html → cgseo_03_check.png・alt「ChatGPTの下書きで公開前に人が確かめる5つ。数字と固有名詞を一次情報で確かめる、日付が新しいか見る、ほかの記事と似ていないか見る、自社の一次情報を足す、titleと説明文とaltも読む」 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-seo/cgseo_03_check.png" alt="ChatGPTの下書きで公開前に人が確かめる5つ。数字と固有名詞を一次情報で確かめる、日付が新しいか見る、ほかの記事と似ていないか見る、自社の一次情報を足す、titleと説明文とaltも読む" loading="lazy"></figure>
 
 1. **数字・固有名詞・法令・料金**: 公式ページや発表元で確かめ、出典を残す
 2. **情報の新しさ**: 製品名・プラン・仕様は数か月で変わる。日付を入れて書く
@@ -159,8 +159,6 @@ OpenAIのヘルプも、ChatGPTの検索結果や引用は不完全だったり�
 
 ChatGPTの個人向けプラン（無料版・Plus・Pro）は、初期の設定では会話がモデルの学習に使われ、設定のデータコントロールで「すべての人のためにモデルを改善する」をオフにすると、新しい会話は学習に使われなくなります。ChatGPT BusinessとEnterpriseは、OpenAIのエンタープライズプライバシーのページで、既定ではデータを学習に使わないとされています。
 
-<!-- SHOT: 画面 https://openai.com/ja-JP/enterprise-privacy/・本文だけにある探す語「当社のコミットメント」・赤枠にする語「デフォルトでは、ユーザーのデータを使用してモデルが学習することはありません」・PC・alt「OpenAIのエンタープライズプライバシーのページ。ChatGPT BusinessやEnterpriseなどではデフォルトでユーザーのデータを使ってモデルが学習することはないと書かれている」・figcaption「OpenAI におけるエンタープライズプライバシー（OpenAI、2026年11月2日）」 -->
-
 **学習に使われないことと、何を入れてもよいことは別の話です。** 未公開の商品情報・顧客の名前・Search Consoleやアクセス解析の生データのうち、何を入れてよいかは社内で決めておきます。設定の手順は[ChatGPTに学習させない設定](/media/chatgpt-training-off/)、会社向けプランの違いは[ChatGPT Businessとは](/media/chatgpt-business/)にあります。
 
 ### 事実確認と公開の責任者
@@ -177,11 +175,9 @@ ChatGPTを入れると下書きの本数は増えますが、確かめる人の�
 
 OpenAIのヘルプによると、ChatGPTのウェブ検索は無料版から有料プラン、会社向けプランまで使え、ログインしていなくても使えます。検索するときは質問を検索向けの語に書き換えて外部の検索サービスに送ることがあり、ヘルプは提供元としてMicrosoftとShopifyのプライバシーの案内を挙げています。
 
-<!-- SHOT: 画面 https://help.openai.com/ja-jp/articles/9237897-chatgpt-search・本文だけにある探す語「利用できるプランと環境」・赤枠にする語「ログインしていない場合でもウェブ検索を利用できます」・PC・alt「OpenAIヘルプのChatGPTでウェブを検索するのページ。ウェブ検索は無料版、Go、Plus、Pro、Business、Enterprise、Eduで利用でき、ログインしていない場合でも使えると書かれている」・figcaption「ChatGPT でウェブを検索する（OpenAI Help Center、2026年11月2日）」 -->
-
 公式に書かれている引用元に出る条件は、OpenAIのクローラーの説明ページにある2つです。ChatGPTの検索用のOAI-SearchBotをrobots.txtで許可すること、OpenAIが公開するIPアドレスからの通信をサーバーやCDNが通すことです。学習用のGPTBotは別の設定で、GPTBotを止めても検索には出られます。
 
-<!-- SHOT: 図 cgseo_cite.html → cgseo_04_cite.png・alt「ChatGPTの検索で自社が引用されるまでの4つ。OAI-SearchBotをrobots.txtで許可する、CDNとサーバーがOpenAIのIPを通す、質問に答えるページを持つ、実際に質問して出方を記録する」 -->
+<figure class="post-figure"><img src="/media/images/chatgpt-seo/cgseo_04_cite.png" alt="ChatGPTの検索で自社が引用されるまでの4つ。OAI-SearchBotをrobots.txtで許可する、CDNとサーバーがOpenAIのIPを通す、質問に答えるページを持つ、実際に質問して出方を記録する" loading="lazy"></figure>
 
 ただし、許可はChatGPTが読める状態にするところまでで、掲載の位置は保証されません。**社名が挙がるかを決めるのは、見込み客が聞く質問に答えるページが自社にあるかと、比較記事などの第三者のページに自社が何と書かれているかです。** 今のSEOの作業と、ChatGPTに出るために足す作業を並べると次のとおりです。
 
