@@ -4,7 +4,7 @@ date: 2026-10-15
 modified: 2026-11-02
 category: AI活用
 keyword: googleに質問する 消す
-description: Chromeのアドレスバーに出る「このページについてGoogleに質問する」を消す方法。flagsの項目は期限切れで出ず、今使えるのは検索エンジンの変更とポリシー。スマホの下に出る「質問する」の見分け方も。
+description: Chromeのアドレスバーに出る「このページについて Google に質問」（Googleに質問する）を消す方法。flagsの項目は期限切れで出ず、今使えるのは検索エンジンの変更とポリシー。スマホの下に出る「質問する」の見分け方も。
 cover_tag: 設定
 cover_headline: Chromeの「Googleに質問」を止める
 cover_sub: flagsが無い今の止め方
@@ -36,20 +36,20 @@ Chromeには名前の似たAIの入口が3つあり、別の入口の消し方�
 | 入口 | 出る場所 | 消し方 |
 |---|---|---|
 | 「このページについて Google に質問」 | アドレスバーの候補 | この記事の方法 |
-| 「AI モード」 | アドレスバーの右・新しいタブの検索ボックス | アドレスバーを右クリックして「AI モードを常に表示する」を外す |
+| 「AI モード」 | アドレスバーの右・新しいタブの検索ボックス | アドレスバーを右クリックして「AI モードを常に表示する」を外す（アドレスバーのボタンだけ） |
 | 「Gemini に相談」 | ブラウザの上部のボタン | 右クリックで「Gemini の固定を解除」 |
 
 「Gemini に相談」は[Chromeの「Geminiに相談」を消す方法](/media/chrome-gemini-remove/)にまとめています。
 
 ## 「Googleに質問する」と出たときの消し方
 
-止め方は3つで、どれから試すかは使っているパソコンと、どこまで消したいかで決まります。
+この表示を止めるのは②と③で、①はAIモードのボタンを隠すだけの方法です。使っているパソコンとどこまで消したいかで、どれを選ぶかが決まります。
 
 1. 個人のパソコンでボタンが減れば十分なら、①でAIモードのボタンを隠す。すぐ戻せるが、「このページについて Google に質問」は残る
 2. この表示も消したいなら、②で既定の検索エンジンをGoogle以外にする。アドレスバーの検索先も変わる
 3. 会社のパソコンなら、管理者に③のポリシーを頼む
 
-<figure class="post-figure"><img src="/media/images/chrome-ask-google-page/07_fig_choose_1101.png" alt="Googleに質問するの止め方の順番の図。表示されるだけで困っていないなら設定は変えない。個人のパソコンはまずアドレスバーの右クリックでAIモードのボタンを隠すが、Googleに質問するは残る。それでも表示が気になるなら既定の検索エンジンをGoogle以外にし、アドレスバーの検索先も変わる。会社のパソコンは管理者にSearchContentSharingSettingsを1にしてもらう" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/chrome-ask-google-page/07_fig_choose_1101.png" alt="「Googleに質問する」の止め方の図。表示されるだけで困っていないなら設定は変えない。アドレスバーのボタンが減れば十分なら右クリックでAIモードのボタンを隠すが、「このページについて Google に質問」は残る。この表示も消したいなら既定の検索エンジンをGoogle以外にし、アドレスバーの検索先も変わる。会社のパソコンは管理者にSearchContentSharingSettingsを1にしてもらう" loading="lazy"></figure>
 
 ### ① AIモードのボタンを隠す
 
@@ -65,7 +65,7 @@ Chromeには名前の似たAIの入口が3つあり、別の入口の消し方�
 
 <figure class="post-figure"><img src="/media/images/chrome-ask-google-page/04_set_search.jpg" alt="Chromeの設定の検索エンジンの画面。検索エンジンの欄にGoogleと表示され、右端の変更ボタンが赤い枠と番号1で示されている" loading="lazy"><figcaption>「設定」の「検索エンジン」で「変更」を押す</figcaption></figure>
 
-**この表示を元から止められる個人向けの方法はこれだけですが、アドレスバーに打った言葉の検索先も変わります。**アドレスバーからGoogle検索することが多い人には向きません。画面から消えるところまでは手元で試していません。
+**設定画面から止められる方法はこれだけですが、アドレスバーに打った言葉の検索先も変わります。**アドレスバーからGoogle検索することが多い人には向きません。画面から消えるところまでは手元で試していませんが、Chromiumのソースでも、この候補はレンズが使えるときだけ出る作りで、レンズはGoogleが既定の検索エンジンでないと有効になりません。
 
 ### ③ ポリシーで止める
 
@@ -83,13 +83,13 @@ Chromiumのソースでは、この項目の期限はChrome 150までです。�
 
 ## スマホの下に「質問する」と出るとき
 
-スマホの画面の下に出る「質問する」は、Chromeのヘルプに説明が無く、正体を確かめられていません。海外の報道では次の3つが挙がっていて、どれもテスト中の機能です。
+スマホの画面の下に出る「質問する」は、Chromeのヘルプに説明が無く、正体を確かめられていません。報道と相談から考えられる候補は次の3つで、どれもテスト中か、配信が広がっていると報じられた機能です。
 
-- Googleアプリで検索結果から開いたページに出る「Ask」のボタン（Android）
-- AndroidのChromeで、アドレスバーを下に移した人に出るGeminiのボタン
-- iPhoneのChromeの新しいツールバー。日本でも「質問する」「新しいタブ」「すべてのタブ」が一番下に並んだという相談がある
+- Googleアプリで検索結果から開いたページに「Ask」のボタンを加えるテスト（Android。Android Authority、2026年5月）
+- AndroidのChromeで、アドレスバーを下に移した人にGeminiのボタンを出す新しい下のバー（Android Headlines、2026年7月）
+- iPhoneのChromeの新しいツールバー（PiunikaWeb、2026年7月・9月）。知恵袋にも「質問する」「新しいタブ」「すべてのタブ」が一番下に並んだという相談があり、並びがこれと同じ
 
-**まず、ホーム画面のChromeとGoogleアプリのどちらから開いたかを確かめてください。**Googleアプリの画面なら、Chromeの設定とは別の話です。アドレスバーはどちらのアプリでも下に置けるので、位置では見分けられません。
+**まず、ホーム画面のChromeとGoogleアプリのどちらから開いたかを確かめてください。**Googleアプリの画面なら、Chromeの設定とは別の話です。ChromeはiPhoneでもAndroidでもアドレスバーを画面の下に移せるので、位置では見分けられません。
 
 iPhoneのChromeの新しいツールバーなら、chrome://flags の ChromeNextIa を「Disabled」にすると元に戻る、と海外のサイトPiunikaWebが報じています。nitoでは試しておらず、flagsは予告なく消えることがあります。画面の下の「質問する」を切る手順は、Chromeのヘルプにもありません。
 
@@ -125,7 +125,7 @@ google.com を開けば今までどおり検索できます。変わるのはア
 あります。管理者がポリシーで止めている場合と、既定の検索エンジンがGoogle以外の場合です。chrome://policy で、SearchContentSharingSettingsやGenAiDefaultSettingsが入っているかを確かめられます。
 
 ### iPhoneのChromeで下に出る質問するは消せますか？
-Chromeのヘルプに、画面の下の「質問する」を切る手順は見当たりません。Googleアプリの画面のこともあるので、先にどのアプリかを確かめます。会社が管理するiPhoneなら、GeminiのボタンはGeminiSettings、AIモードのボタンはAIModeSettingsが管理者向けのポリシーです。
+Chromeのヘルプに、画面の下の「質問する」を切る手順は見当たりません。Googleアプリの画面のこともあるので、先にどのアプリかを確かめます。iPhoneのChromeの新しいツールバーなら、flagsの ChromeNextIa を「Disabled」にすると戻るとPiunikaWebが報じていますが、nitoでは試していません。会社が管理するiPhoneなら、GeminiのボタンはGeminiSettings、AIモードのボタンはAIModeSettingsが管理者向けのポリシーです。
 
 ## 出典
 
@@ -134,7 +134,8 @@ Chromeのヘルプに、画面の下の「質問する」を切る手順は見�
 - [Google レンズ in Chrome を使用して検索する](https://support.google.com/chrome/answer/15086890?hl=ja)（Chrome ヘルプ。アドレスバーの「このページについて Google に質問」とページのデータの処理）
 - [Chrome で AI モードを使用する](https://support.google.com/chrome/answer/16704170?hl=ja)（Chrome ヘルプ。AIモードのボタンの隠し方）
 - [SearchContentSharingSettings](https://chromeenterprise.google/policies/#SearchContentSharingSettings)・[AIModeSettings](https://chromeenterprise.google/policies/#AIModeSettings)・[GenAiDefaultSettings](https://chromeenterprise.google/policies/#GenAiDefaultSettings)・[GeminiSettings](https://chromeenterprise.google/policies/#GeminiSettings)（Chrome Enterprise のポリシー一覧）
-- [flag-metadata.json](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/chrome/browser/flag-metadata.json)・[flag_expiry.md](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/docs/flag_expiry.md)（Chromium のソース、タグ 156.0.8078.80。flagsの期限）
+- [flag-metadata.json](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/chrome/browser/flag-metadata.json)・[flag_expiry.md](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/docs/flag_expiry.md)・[about_flags.cc](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/chrome/browser/about_flags.cc)（Chromium のソース、タグ 156.0.8078.80。flagsの期限と、期限切れのflagを一覧と設定から外す処理）
+- [contextual_search_provider.cc](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/components/omnibox/browser/contextual_search_provider.cc)・[lens_overlay_entry_point_controller.cc](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/chrome/browser/ui/lens/lens_overlay_entry_point_controller.cc)（Chromium のソース、同じタグ。候補を出す条件と、レンズがGoogleの既定を前提にする処理）
 - [『Googleで調べる』『このページについてGoogleに質問する』を消す方法](https://support.google.com/chrome/thread/387019511?hl=ja)（Chrome ヘルプ コミュニティ、2025年11月12日）
 - [【Chrome】『このページについてGoogleに質問する』を削除する](https://qiita.com/rana_kualu/items/83d1272a2f92422f9304)（Qiita、2025年8月24日。flagsの手順）
 - [Chromeを開いたら、急に1番下に、質問する、新しいタブ、すべてのタブと表示される様になった](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13331282393)（Yahoo!知恵袋、2026年9月11日）
