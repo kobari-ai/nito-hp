@@ -198,7 +198,9 @@ Google WorkspaceのGeminiは、Workspaceのプライバシー ハブで、内容
 | Google AI Pro | 2,900円 | 無料の4倍の上限・Proモデル・ドキュメントの中のGemini |
 | Google AI Ultra | 14,500円から | Proの5倍の上限（32,000円で20倍） |
 
-<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_05_price.png" alt="Geminiの料金ページの個人向けプラン。無料は0円、Google AI Plusは月725円、Google AI Proは月2,900円、Google AI Ultraは月14,500円からと表示されている" loading="lazy"><figcaption>Gemini の定期購入プラン（Google、2026年11月3日）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_05a_price.png" alt="Geminiの料金ページの個人向けプラン（左2つ）。無料は0円、Google AI Plusは月725円と表示されている" loading="lazy"><figcaption>Gemini の定期購入プラン 無料とPlus（Google、2026年11月3日）</figcaption></figure>
+
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_05b_price.png" alt="Geminiの料金ページの個人向けプラン（右2つ）。Google AI Proは月2,900円、Google AI Ultraは月14,500円からと表示されている" loading="lazy"><figcaption>Gemini の定期購入プラン ProとUltra（Google、2026年11月3日）</figcaption></figure>
 
 語の候補出しと下書きだけなら無料でも始められます。**ただ、個人のプランを会社の仕事に使うと、入力した内容は前の節の個人アカウントの扱いになります。** チームで使うと決めたら、管理者が設定を持てるWorkspaceのGeminiを候補にするのが安全です。個人向けプランの違いは[Geminiの料金プラン](/media/gemini-pricing/)で比べています。
 
