@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】AIエージェント導入の進め方と費用｜自社で作るか頼むか・国内事例｜株式会社nito</title>
+    <meta name="description" content="AIエージェント導入の進め方を4段階で解説。Agentforce・Copilot Studio・Dify・n8nの公式料金、自社で作るか外に頼むかの判断、パナソニック コネクトなど国内の導入事例、権限とデータのつまずきまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/ai-agent-introduction/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】AIエージェント導入の進め方と費用｜自社で作るか頼むか・国内事例">
+    <meta property="og:description" content="AIエージェント導入の進め方を4段階で解説。Agentforce・Copilot Studio・Dify・n8nの公式料金、自社で作るか外に頼むかの判断、パナソニック コネクトなど国内の導入事例、権限とデータのつまずきまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/ai-agent-introduction/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/ai-agent-introduction.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/ai-agent-introduction.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】AIエージェント導入の進め方と費用｜自社で作るか頼むか・国内事例", "description": "AIエージェント導入の進め方を4段階で解説。Agentforce・Copilot Studio・Dify・n8nの公式料金、自社で作るか外に頼むかの判断、パナソニック コネクトなど国内の導入事例、権限とデータのつまずきまで。", "datePublished": "2026-11-01", "dateModified": "2026-11-01", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-agent-introduction/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/ai-agent-introduction.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】AIエージェント導入の進め方と費用｜自社で作るか頼むか・国内事例"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AIエージェントの導入費用はいくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "型によって変わります。既製の製品ならAgentforceが会話1件240円、Copilot Studioが月29,985円で25,000クレジットのように、量に応じた月額が基本です。ノーコードはツールの月額にAIモデルの代金が足され、作り込みは業務と連携先の数で見積もりが決まります。"}}, {"@type": "Question", "name": "AIエージェントの導入にはどれくらいの期間がかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "経理向けの導入ガイドを出しているファーストアカウンティングは、試験導入の目安を1〜3か月としました。全社で効果が見えるまでには年単位の時間がかかります。パナソニック コネクトが年間の総労働時間の3.4%に当たる時間を減らしたのは、業務利用を始めてから3年が経った2025年度でした。"}}, {"@type": "Question", "name": "AIエージェントは何の業務から導入するのがよいですか？", "acceptedAnswer": {"@type": "Answer", "text": "向いているのは毎月の工数が多く判断が少しずつ変わり、効果を数字で測れる業務です。手順が完全に決まっている転記のような作業は、RPAや定型の自動化のほうが安く確実です。"}}, {"@type": "Question", "name": "AIエージェントは自社で作るべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "社内に設定を直せる担当がいて連携先が少ないなら自社で作れます。連携する社内システムが多い場合や、何から始めるか決まっていない場合は、外部の導入支援に棚卸しから頼むほうが進めやすくなります。"}}, {"@type": "Question", "name": "AIエージェントの導入で社内に必要な人は誰ですか？", "acceptedAnswer": {"@type": "Answer", "text": "本番に進むかを決める責任者、試験に付き合う現場の担当者、回答の中身を更新する人、権限とセキュリティを管理する人です。外に頼む場合でも責任者と権限の線引きは自社に残ります。"}}, {"@type": "Question", "name": "AIエージェントの導入にガイドラインはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "総務省と経済産業省のAI事業者ガイドラインがあり、2026年3月31日の第1.2版でAIエージェントの定義と留意点が加わりました。法的な拘束力はありませんが、操作履歴の確認や人の判断の介在など、社内の決まりを作るときの土台に使えます。"}}, {"@type": "Question", "name": "AIエージェントの導入はなぜ失敗しやすいのですか？", "acceptedAnswer": {"@type": "Answer", "text": "Gartnerが中止の理由に挙げたのは費用の膨らみ・価値の不明確さ・リスク管理の不足でした。対象業務と目標の数字を決めずに試験を始めると、効果を示せないまま止まりやすくなります。"}}, {"@type": "Question", "name": "AIエージェントとRPAはどう使い分けますか？", "acceptedAnswer": {"@type": "Answer", "text": "手順が決まっている定型作業はRPAや自動化のツール、判断が要る部分はエージェントに任せます。既存の自動化を置き換えるのではなく、判断が要る手前の工程にだけエージェントを足す形が無駄がありません。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】AIエージェント導入…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.01</span>
+        </div>
+        <h1 class="post-title">【2026年11月】AIエージェント導入の進め方と費用｜自社で作るか頼むか・国内事例</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/ai-agent-introduction.jpg" alt="【2026年11月】AIエージェント導入の進め方と費用｜自社で作るか頼むか・国内事例" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Gartnerは2025年6月、エージェント型AIのプロジェクトの40%超が2027年末までに中止されるという予測を出しました。理由として挙げたのは費用の膨らみ・価値の不明確さ・リスク管理の不足です。</p>
+<p>社内でAIエージェントを入れる話が出ると、担当者は何から始めていくらかかり誰に頼むのかを聞かれます。この記事は2026年11月1日に取得した各社の料金ページと公開資料をもとに、会社として導入を進める段取りと費用、頼み方、国内の事例を扱います。製品の契約や試用はしていません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>導入は業務を選ぶ・小さく試す・本番に移す・広げるの4段階</strong>。最初に決めるのは製品でなく、対象の業務と効果を測る数字</li>
+<li><strong>費用は既製の製品・ノーコード・作り込みの3つの型で桁が変わる</strong>。公式の料金表に出ないデータ整備と社内の時間も見積もりに入れる</li>
+<li><strong>つまずくのは権限・データ・誰が直すかの3点</strong>。AI事業者ガイドライン第1.2版も操作履歴の確認と人の判断の介在を重要としている</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>AIエージェント導入の進め方は4段階</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>① 任せる業務を選ぶ</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>② 小さく試す</a></li>
+                    <li class="toc-h3"><a href="#s1-3"><span class="toc__n">1-3</span>③ 本番に移す</a></li>
+                    <li class="toc-h3"><a href="#s1-4"><span class="toc__n">1-4</span>④ 他の業務に広げる</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>AIエージェント導入にかかる費用</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>既製の製品の公式料金</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>ノーコードの公式料金</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>作り込みの費用</a></li>
+                    <li class="toc-h3"><a href="#s2-4"><span class="toc__n">2-4</span>料金表に出ない費用</a></li>
+                    <li class="toc-h3"><a href="#s2-5"><span class="toc__n">2-5</span>費用対効果の見積もり方</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>AIエージェント導入は自社で作るか外に頼むか</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>導入支援に頼めること</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>依頼先を比べる観点</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>国内のAIエージェント導入事例</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>パナソニック コネクト</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>トヨタ自動車</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>事例を読むときの注意</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>AIエージェント導入でつまずく所</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>権限を渡しすぎる</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>データが整っていない</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>誰が直すかが決まっていない</a></li>
+                    <li class="toc-h3"><a href="#s5-4"><span class="toc__n">5-4</span>出力の誤り</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>AIエージェント導入前のチェックリスト</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">AIエージェント導入の進め方は4段階</h2>
+<p>ITベンダーや会計システムの会社が出している導入ガイドを読み比べても、流れはほぼ同じ4段階です。<strong>違いが出るのは各段で会社が何を決めるかで、ここを曖昧にしたまま進むと試験導入で止まります</strong>。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-introduction/aiai_01_steps.png" alt="AIエージェント導入の4段階を縦に並べた図。業務を選ぶでは対象業務と目標の数字と責任者を決める、小さく試すでは期間と評価と中止の基準を決める、本番に移すでは権限と承認と直す人を決める、広げるでは次の業務と共有の場を決める" loading="lazy"></figure>
+
+<p>AIエージェントそのものの定義や生成AIとの違いは、<a href="/media/ai-agent-guide/">AIエージェントとは</a>で扱っています。ここで扱うのは会社として入れるときの段取りだけです。</p>
+<h3 id="s1-1">① 任せる業務を選ぶ</h3>
+<p>最初に部門の反復業務を書き出し、それぞれに月何時間かかっているかを数えます。<strong>エージェントに向くのは毎回少しずつ判断が変わり、複数のシステムをまたぐ業務です</strong>。請求書の転記のように手順が固定の作業はRPAや定型の自動化で足り、そのほうが安く確実に動きます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>部門</th>
+<th>向く業務の例</th>
+<th>効果を測る数字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="部門">営業</td>
+<td data-label="向く業務の例">商談メモから次の行動と追加提案を出す</td>
+<td data-label="効果を測る数字">入力・整理にかかる時間、提案件数</td>
+</tr>
+<tr>
+<td data-label="部門">カスタマーサポート</td>
+<td data-label="向く業務の例">問い合わせの一次回答と担当への振り分け</td>
+<td data-label="効果を測る数字">一次解決率、対応時間</td>
+</tr>
+<tr>
+<td data-label="部門">経理</td>
+<td data-label="向く業務の例">経費の規定違反や二重申請を見つける</td>
+<td data-label="効果を測る数字">確認にかかる時間、差し戻し件数</td>
+</tr>
+<tr>
+<td data-label="部門">情報システム</td>
+<td data-label="向く業務の例">社内の問い合わせと障害の切り分け</td>
+<td data-label="効果を測る数字">解決までの時間、問い合わせ件数</td>
+</tr>
+<tr>
+<td data-label="部門">設計・開発</td>
+<td data-label="向く業務の例">社内の設計資料や過去の知見の検索</td>
+<td data-label="効果を測る数字">調べ物にかかる時間</td>
+</tr>
+</tbody>
+</table></div>
+<p>目標は「問い合わせ対応を効率化する」ではなく、「一次回答にかかる時間を月20時間減らす」のように数字で書きます。<strong>この段で決めるのは対象の業務・目標の数字・決める責任者の3つ</strong>です。責任者が決まっていないと、試験の結果が出ても本番に進むかを誰も判断できません。</p>
+<h3 id="s1-2">② 小さく試す</h3>
+<p>1つの部門・1つの業務に絞って試験導入（PoC）をします。経理向けの導入ガイドを出しているファーストアカウンティングは、期間の目安を1〜3か月としています。評価は目標の数字だけでなく、使う人の受け止めと、社内で直せるかも合わせて見るのがおすすめです。</p>
+<ul>
+<li>数字: 目標の数字に届いたか</li>
+<li>使う人: 担当者が本番でも使い続けたいと言っているか</li>
+<li>運用: 回答の中身や設定の手直しを社内の担当者ができたか</li>
+</ul>
+<p>本物の業務データで試すほど結果は信頼できますが、個人情報や機密を含むなら伏せ字にしてから使います。<strong>始める前に届かなかったら止める基準も書いておくのがおすすめです</strong>。止める基準が無いと効果のはっきりしない試験がずるずる続きます。</p>
+<h3 id="s1-3">③ 本番に移す</h3>
+<p>本番ではエージェントに渡す権限と、人が承認する操作の線引きを決めます。社外への送信・契約・支払い・公開のように取り消せない操作は、AIが下書きを作り人が確認してから実行する形が安全です。</p>
+<p>運用では参照する資料と回答の中身を誰が更新し、利用状況を見て誰が設定を直し、誰が権限を管理するかを決めておくのがおすすめです。社員への説明会や使い方の手引きもこの段で用意します。</p>
+<h3 id="s1-4">④ 他の業務に広げる</h3>
+<p>1つの業務で効果が出たら、うまくいった使い方を社内で共有し、次の業務に進みます。後で紹介するパナソニック コネクトは、生成AIの業務利用を始めてから3年が経った2025年度に、年間の総労働時間の3.4%に当たる時間を減らしました。<strong>全社の数字が動くまでには年単位の時間がかかる</strong>ので、最初の業務で小さく確実に結果を出すことが次の予算の根拠になります。</p>
+<h2 id="s2">AIエージェント導入にかかる費用</h2>
+<p>費用はどの型で入れるかで大きく変わり、型は既製の製品・ノーコードのツール・作り込みの3つに分かれます。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-introduction/aiai_02_cost.png" alt="AIエージェント導入の費用の3つの型を縦に並べた図。既製の製品はユーザー数や会話数で月額が決まる、ノーコードはツールの月額にAIモデルの代金が足される、作り込みは構築費と運用費を見積もりで決める。どの型でもデータ整備と社内の時間がかかる" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>型</th>
+<th>例</th>
+<th>費用の決まり方</th>
+<th>向いている会社</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="型">既製の製品</td>
+<td data-label="例">Agentforce、Copilot Studio、Gemini Enterprise</td>
+<td data-label="費用の決まり方">ユーザー数・会話数・クレジットで月額</td>
+<td data-label="向いている会社">その会社の業務基盤をもう使っている</td>
+</tr>
+<tr>
+<td data-label="型">ノーコード</td>
+<td data-label="例">Dify、n8n</td>
+<td data-label="費用の決まり方">ツールの月額＋AIモデルの代金</td>
+<td data-label="向いている会社">社内に設定を触れる担当がいる</td>
+</tr>
+<tr>
+<td data-label="型">作り込み</td>
+<td data-label="例">モデルのAPIで自社の仕組みに組み込む</td>
+<td data-label="費用の決まり方">構築費＋月々の運用費</td>
+<td data-label="向いている会社">社内システムとの連携が多い、業務が独自</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s2-1">既製の製品の公式料金</h3>
+<p>SalesforceのAgentforceの料金ページは、支払い方としてFlexクレジット・会話単位・ユーザー単位の3つを並べています。社員向けの使い方には別にアドオンとAgentforce 1 Editionsがあります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>支払い方</th>
+<th>公式の表示（2026年11月1日）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="支払い方">Flexクレジット</td>
+<td data-label="公式の表示（2026年11月1日）">10万クレジットあたり60,000円。1アクションは20クレジット</td>
+</tr>
+<tr>
+<td data-label="支払い方">会話単位</td>
+<td data-label="公式の表示（2026年11月1日）">会話1件あたり240円</td>
+</tr>
+<tr>
+<td data-label="支払い方">ユーザー単位</td>
+<td data-label="公式の表示（2026年11月1日）">1ユーザー月600円（別にFlexクレジットが要る）</td>
+</tr>
+<tr>
+<td data-label="支払い方">Agentforceアドオン（社員向け）</td>
+<td data-label="公式の表示（2026年11月1日）">1ユーザー月125ドル（Sales・Service・フィールドサービスに追加し、社員は無制限に利用）</td>
+</tr>
+<tr>
+<td data-label="支払い方">Agentforce 1 Editions（社員向け）</td>
+<td data-label="公式の表示（2026年11月1日）">1ユーザー月550ドルから（Flexクレジットは1組織に年250万付き）</td>
+</tr>
+</tbody>
+</table></div>
+<p>Flexクレジットで換算すると、エージェントが1回の操作をするたびに12円かかる計算です。<strong>請求額は依頼の件数ではなく、1件の依頼でエージェントが何回操作するかで決まります</strong>。レコードの更新と要約と返信の下書きを1件でこなすなら、それだけ操作の回数が増えます。料金の表示は情報提供のためで変わることがあり、詳しい価格は営業担当者に問い合わせるよう書かれています。</p>
+<p>MicrosoftのCopilot Studioは、容量パックが1パック月29,985円で25,000クレジットで、余りは翌月に繰り越しません。Microsoft 365 Copilotのライセンスを持つ社員なら、社内で使うエージェントを追加費用なしで作って使えます。詳しくは<a href="/media/copilot-studio/">Copilot Studioの料金</a>で扱っています。</p>
+<p>GoogleのGemini Enterpriseは、Businessエディションが1シート月21ドルからの表示です（<a href="/media/gemini-enterprise/">Gemini Enterprise</a>）。</p>
+<h3 id="s2-2">ノーコードの公式料金</h3>
+<p>Difyのクラウド版はワークスペース単位の料金で、Professionalが月59ドル、Teamが月159ドルです（月払い。年払いなら17%安く、税は別）。n8nのクラウド版は年払いでStarterが月20ユーロ（月2,500回の実行）、Proが月50ユーロ（月1万回）です。</p>
+<p><strong>どちらもツールの料金とは別に、呼び出すAIモデルの代金がかかります</strong>。人数より使う量で費用が伸びる点に注意が必要です。見積もり方は<a href="/media/dify-pricing/">Difyの料金</a>と<a href="/media/n8n-pricing/">n8nの料金</a>にまとめています。</p>
+<h3 id="s2-3">作り込みの費用</h3>
+<p>作り込みには定価がなく、開発会社の見積もりで決まります。見積もりの中身は要件定義・設計・実装・社内システムとの連携・テスト・引き渡し後の修正が一般的です。<strong>金額を左右するのは任せる業務の数と、つなぐシステムの数です</strong>。連携先が1つ増えるたびに、権限の設定とテストが増えます。</p>
+<h3 id="s2-4">料金表に出ない費用</h3>
+<p>どの型でも料金表に出ない費用があります。</p>
+<ul>
+<li>参照させる社内資料やFAQの整理</li>
+<li>試験導入に付き合う現場の担当者の時間</li>
+<li>回答の中身の更新と設定の調整（本番後も続く）</li>
+<li>社員への説明と手引きづくり</li>
+</ul>
+<p><strong>AIが参照するデータの整備は、導入の費用のなかで見落とされやすい部分です</strong>。パナソニック コネクトも、生成AIの活用と並行して社内データの統合を進めたと発表しています。</p>
+<h3 id="s2-5">費用対効果の見積もり方</h3>
+<p>効果は「減った時間×時間あたりの人件費」で出すのが基本です。たとえば月40時間かかる業務の半分をエージェントに任せられ、時間あたりの人件費を3,000円と置くと効果は月6万円で年72万円です（数字はどれも説明のための仮定です）。これを初期費用と月々の費用の合計と比べ、何か月で回収できるかを経営に示します。</p>
+<p>時間に換算しにくい効果（対応の速さ・ミスの減少・担当者の負担）は金額にせず別に並べておくほうが説明しやすくなります。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">AIエージェント導入は自社で作るか外に頼むか</h2>
+<p>MITのProject NANDAが2025年に出した報告書「The GenAI Divide」は、企業向けに作った専用のAIツールのうち本番に至ったのは5%だったとしています。同じ報告書では外部の会社と組み、使いながら改善できるよう作り込んだツールを入れた場合の本番化が約67%、社内だけで作った場合が約33%でした。</p>
+<p>ただしこの数字は52組織への聞き取りをもとにした自己申告で、報告書自身が他の要因を取り除けていないと断っています。外部と組んだ会社はもともと技術や調達の力が違う可能性があり、差は進め方だけでは説明できないとも書いています。<strong>外に頼めば成功するという意味ではなく、社内の力に合わない進め方を選ぶと止まりやすい、と読むのが妥当です</strong>。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-introduction/aiai_03_buy.png" alt="自社で作るか外に頼むかの判断の目安を縦に並べた図。社内に設定を直せる人がいて連携先が少ないなら自社で作る、連携先が多く業務が独自なら外に頼む、どちらでも業務の棚卸しと承認の線引きは自社で決める" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>状況</th>
+<th>向く進め方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="状況">既に使っている業務基盤に機能がある</td>
+<td data-label="向く進め方">その製品の既製のエージェントから試す</td>
+</tr>
+<tr>
+<td data-label="状況">設定を直せる担当が社内にいて、連携先が1〜2個</td>
+<td data-label="向く進め方">ノーコードで自社で作る</td>
+</tr>
+<tr>
+<td data-label="状況">連携する社内システムが多い、業務が独自</td>
+<td data-label="向く進め方">外部の導入支援に頼む</td>
+</tr>
+<tr>
+<td data-label="状況">何から手を付けるか決まっていない</td>
+<td data-label="向く進め方">業務の棚卸しから外部に相談する</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s3-1">導入支援に頼めること</h3>
+<p>導入支援の会社に頼めるのは業務の棚卸し・要件の整理・試験導入・構築・本番後の運用の見直しです。どこまで頼むかで費用が変わるので、最初に範囲を区切るのが無難です。複数の会社を比べるなら、要件と予算を書いた依頼書（RFP）を同じ内容で渡し、数社に絞ってから試験導入に進む形が比べやすくなります。</p>
+<p><strong>任せる業務の範囲と、AIに承認なしでやらせる操作の線引きは、外に頼む場合でも自社で決めます</strong>。ここを依頼先に預けると、引き渡し後に誰も判断できなくなるためです。</p>
+<p>nitoのAIエージェント構築支援は、無料の業務棚卸しから始め、優先度の高い業務でデモを作り、構築と月1回の運用の見直しまでを行います。費用は構築費と月額の2つで、金額は棚卸しで対象業務と範囲が決まってから提示する形です。</p>
+<h3 id="s3-2">依頼先を比べる観点</h3>
+<ul>
+<li>実績: 事例が公式の発表や顧客の名前で確かめられるか</li>
+<li>権限とログ: 操作履歴を残し、エージェントの権限を絞る設計になっているか</li>
+<li>セキュリティ: データの保存場所・学習に使わない設定・ISMSやSOC2などの認証</li>
+<li>引き渡し後: 担当者が替わっても直せる手順書と、仕様の変更への追随があるか</li>
+</ul>
+<p>Gartnerは既存のチャットボットやRPAをエージェントと呼び替えて売る動きを「エージェント・ウォッシング」と呼び、数千ある提供会社のうち実態があるのは約130社と見積もっています。製品名にエージェントと付いているかではなく、実際に何を自動で判断し、何を人に戻すかを確かめるのが確実です。</p>
+<h2 id="s4">国内のAIエージェント導入事例</h2>
+<p>ここでは企業や提供元の公式発表で、時期・人数・数字まで確かめられた2社を挙げます。</p>
+<h3 id="s4-1">パナソニック コネクト</h3>
+<p>パナソニック コネクトは2026年7月29日、社内向けのAIアシスタント「ConnectAI」の2025年度の実績を発表しました。国内の全社員約11,800人が対象で、AI活用による削減時間は78.8万時間、年間の総労働時間の3.4%に当たります。利用は361万回で1回あたりの削減時間は33分、月に1回以上使った社員の割合は61%でした。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-introduction/aiai_05_panasonic.png" alt="パナソニック コネクトの発表。2025年度の削減時間は78.8万時間、利用回数361万回、1回あたり33分、月間ユニークユーザー率61%" loading="lazy"><figcaption>パナソニック コネクトのプレスリリース（2026年7月29日発表）</figcaption></figure>
+
+<p>同社は2023年2月に生成AIの業務利用を始めています。発表によると50の社内業務システムの構造化データとつないだデータ基盤を整え、2026年度から業務データと連携するエージェントを広げる計画です。図面と設計仕様を照合するエージェントはすでに使い始めており、2030年に総労働時間の10%削減を目標にしています。<strong>3年かけてデータの整備と利用の定着を先に進め、そのうえでエージェントに広げている順番</strong>が、導入を進める会社には参考になります。</p>
+<h3 id="s4-2">トヨタ自動車</h3>
+<p>Microsoftが2024年11月19日に公開した記事によると、トヨタ自動車は社内の知見を共有するエージェントの仕組み「O-Beya（大部屋）」を2024年1月から使っています。対象はパワートレーンを担当する約800人のエンジニアで、振動や燃費などの分野ごとに9つのエージェントがあり、月に数百回使われていました。基盤はAzure OpenAI Serviceです。</p>
+<p>目的は社内の専門知識を蓄えて共有し、新しい車の開発を速めることでした。<strong>業務を選ぶ段で「ベテランの知見を探す時間」を対象にした例</strong>として読めます。</p>
+<h3 id="s4-3">事例を読むときの注意</h3>
+<p>事例の数字を自社の稟議に使うときは、時期・対象の人数・何を数えたかを一緒に写します。パナソニック コネクトの3.4%は全社員の総労働時間に対する割合で、1部門の業務の削減率とは分母が違います。「ある企業」「大手IT企業」のように社名の無い事例は、条件が分からないので比べる材料にしにくいものです。</p>
+<h2 id="s5">AIエージェント導入でつまずく所</h2>
+<p>総務省と経済産業省は2026年3月31日、AI事業者ガイドラインの第1.2版を公表しました。AIエージェントを「特定の目標を達成するために、環境を感知し自律的に行動するAIシステム」と定義し、利用する会社に向けて、定期的な操作履歴の確認と報告、重大な影響が出るときの人の判断の介在、扱うデータを必要な分に絞ることを加えています。</p>
+<figure class="post-figure"><img src="/media/images/ai-agent-introduction/aiai_04_trip.png" alt="AIエージェント導入でつまずく3点を縦に並べた図。権限ではエージェントに渡す操作を必要な分に絞る、データでは参照する資料の置き場と更新者を決める、誰が直すかでは回答の更新と設定の調整の担当を決める" loading="lazy"></figure>
+
+<h3 id="s5-1">権限を渡しすぎる</h3>
+<p>エージェントは社内のシステムに自分でアクセスして動くので、渡した権限の分だけ影響が広がります。ガイドラインの更新内容は外部のシステムとつながる際に社内のデータが外に送られるリスクも挙げています。<strong>最初は読むだけの権限から始め、書き込みや送信は人の承認を挟んで足していくのが安全です</strong>。</p>
+<h3 id="s5-2">データが整っていない</h3>
+<p>社内の資料が古いまま、置き場所がばらばらのままだと、エージェントは古い情報で答えます。どの資料を参照させるか、誰がいつ更新するかを決めてから試験導入に入ります。</p>
+<h3 id="s5-3">誰が直すかが決まっていない</h3>
+<p>業務の手順が変わっても、エージェントの設定は自動では変わりません。回答の中身を更新する人と設定を調整する人が決まっていないと、数か月で現場が使わなくなります。ガイドラインもAIでコードが作りやすくなったぶん保守が難しくなり得るとして、社内にノウハウを蓄えることの大事さを書きました。</p>
+<h3 id="s5-4">出力の誤り</h3>
+<p>エージェントはもっともらしい誤りを返すことがあるものです。法務や財務のように正確さが要る業務では、出典を示させて人が一次の資料で確かめる手順を残します。ガイドラインはAIが示す判断の理由も内部の決め方の説明ではなく、もっともらしい理由の出力にすぎないと注意しています。</p>
+<h2 id="s6">AIエージェント導入前のチェックリスト</h2>
+<p>試験導入に入る前に次の項目が埋まっているかを確かめます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>観点</th>
+<th>確かめること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="観点">業務</td>
+<td data-label="確かめること">対象業務と、今の月の工数が数字で分かっているか</td>
+</tr>
+<tr>
+<td data-label="観点">目標</td>
+<td data-label="確かめること">効果を測る数字と、止める基準が決まっているか</td>
+</tr>
+<tr>
+<td data-label="観点">責任者</td>
+<td data-label="確かめること">本番に進むかを決める人がいるか</td>
+</tr>
+<tr>
+<td data-label="観点">権限</td>
+<td data-label="確かめること">エージェントに渡す操作と、人が承認する操作が分かれているか</td>
+</tr>
+<tr>
+<td data-label="観点">データ</td>
+<td data-label="確かめること">参照させる資料の置き場と更新する人が決まっているか</td>
+</tr>
+<tr>
+<td data-label="観点">ログ</td>
+<td data-label="確かめること">操作履歴を残し、定期的に確認する担当がいるか</td>
+</tr>
+<tr>
+<td data-label="観点">費用</td>
+<td data-label="確かめること">初期費用・月額・AIモデルの代金・社内の時間を見積もったか</td>
+</tr>
+<tr>
+<td data-label="観点">運用</td>
+<td data-label="確かめること">回答の更新と設定の調整を誰がするか決まっているか</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="s7">まとめ</h2>
+<ul>
+<li>何から始めるか決まっていないなら、部門の反復業務と月の工数を書き出すところから始めるのがおすすめ</li>
+<li>既にSalesforceやMicrosoft 365を使っているなら、その製品の既製のエージェントで1業務を試すのが早い</li>
+<li>連携する社内システムが多く業務が独自なら、試験導入の段から外部の導入支援に入ってもらうほうが止まりにくい</li>
+<li>どの進め方でも権限の線引きと直す担当は自社で決めておく必要がある</li>
+</ul>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">AIエージェントの導入費用はいくらですか？</h3>
+<p>型によって変わります。既製の製品ならAgentforceが会話1件240円、Copilot Studioが月29,985円で25,000クレジットのように、量に応じた月額が基本です。ノーコードはツールの月額にAIモデルの代金が足され、作り込みは業務と連携先の数で見積もりが決まります。</p>
+<h3 id="s8-2">AIエージェントの導入にはどれくらいの期間がかかりますか？</h3>
+<p>経理向けの導入ガイドを出しているファーストアカウンティングは、試験導入の目安を1〜3か月としました。全社で効果が見えるまでには年単位の時間がかかります。パナソニック コネクトが年間の総労働時間の3.4%に当たる時間を減らしたのは、業務利用を始めてから3年が経った2025年度でした。</p>
+<h3 id="s8-3">AIエージェントは何の業務から導入するのがよいですか？</h3>
+<p>向いているのは毎月の工数が多く判断が少しずつ変わり、効果を数字で測れる業務です。手順が完全に決まっている転記のような作業は、RPAや定型の自動化のほうが安く確実です。</p>
+<h3 id="s8-4">AIエージェントは自社で作るべきですか？</h3>
+<p>社内に設定を直せる担当がいて連携先が少ないなら自社で作れます。連携する社内システムが多い場合や、何から始めるか決まっていない場合は、外部の導入支援に棚卸しから頼むほうが進めやすくなります。</p>
+<h3 id="s8-5">AIエージェントの導入で社内に必要な人は誰ですか？</h3>
+<p>本番に進むかを決める責任者、試験に付き合う現場の担当者、回答の中身を更新する人、権限とセキュリティを管理する人です。外に頼む場合でも責任者と権限の線引きは自社に残ります。</p>
+<h3 id="s8-6">AIエージェントの導入にガイドラインはありますか？</h3>
+<p>総務省と経済産業省のAI事業者ガイドラインがあり、2026年3月31日の第1.2版でAIエージェントの定義と留意点が加わりました。法的な拘束力はありませんが、操作履歴の確認や人の判断の介在など、社内の決まりを作るときの土台に使えます。</p>
+<h3 id="s8-7">AIエージェントの導入はなぜ失敗しやすいのですか？</h3>
+<p>Gartnerが中止の理由に挙げたのは費用の膨らみ・価値の不明確さ・リスク管理の不足でした。対象業務と目標の数字を決めずに試験を始めると、効果を示せないまま止まりやすくなります。</p>
+<h3 id="s8-8">AIエージェントとRPAはどう使い分けますか？</h3>
+<p>手順が決まっている定型作業はRPAや自動化のツール、判断が要る部分はエージェントに任せます。既存の自動化を置き換えるのではなく、判断が要る手前の工程にだけエージェントを足す形が無駄がありません。</p>
+<h2 id="s9">出典</h2>
+<p>いずれも2026年11月1日に取得。</p>
+<ul>
+<li>Salesforce「<a href="https://www.salesforce.com/jp/agentforce/pricing/">Agentforceの料金</a>」（Flexクレジット・会話・ユーザーライセンス・アドオン・Agentforce 1 Editions）</li>
+<li>Microsoft「<a href="https://www.microsoft.com/ja-jp/copilot/pricing/copilot-studio">Copilot Studio プランと価格</a>」・Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/billing-licensing">標準ハーネスライセンス</a>」（クレジットの繰り越し）</li>
+<li>Dify「<a href="https://dify.ai/jp/pricing">料金</a>」</li>
+<li>n8n「<a href="https://n8n.io/pricing/">Pricing</a>」</li>
+<li>Gartner「<a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027">Gartner Predicts Over 40% of Agentic AI Projects Will Be Canceled by End of 2027</a>」（2025年6月25日）</li>
+<li>MIT Project NANDA「<a href="https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf">The GenAI Divide: State of AI in Business 2025</a>」（調査期間2025年1〜6月）</li>
+<li>パナソニック コネクト「<a href="https://news.panasonic.com/jp/press/jn260729-1">パナソニック コネクト、AI活用で総労働時間の3.4％削減</a>」（2026年7月29日）</li>
+<li>Microsoft「<a href="https://news.microsoft.com/source/asia/features/toyota-is-deploying-ai-agents-to-harness-the-collective-wisdom-of-engineers-and-innovate-faster/">Toyota is deploying AI agents to harness the collective wisdom of engineers and innovate faster</a>」（2024年11月19日）</li>
+<li>総務省「<a href="https://www.soumu.go.jp/main_sosiki/kenkyu/ai_network/02ryutsu20_04000019.html">AI事業者ガイドライン</a>」（第1.2版、2026年3月31日）・「<a href="https://www.soumu.go.jp/main_content/001064301.pdf">AI事業者ガイドラインの令和7年度更新内容</a>」</li>
+<li>ファーストアカウンティング「<a href="https://www.fastaccounting.jp/blog/%E5%A4%A7%E4%BC%81%E6%A5%AD%E5%90%91%E3%81%91ai%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E5%B0%8E%E5%85%A5%E3%82%AC%E3%82%A4%E3%83%89%E5%A4%B1%E6%95%97%E3%81%97%E3%81%AA%E3%81%84/">大企業向けAIエージェント導入ガイド</a>」（2025年5月9日。試験導入の期間の目安）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">AIエージェント導入の進め方は4段階</a><a href="#s2">AIエージェント導入にかかる費用</a><a href="#s3">AIエージェント導入は自社で作るか外に頼むか</a><a href="#s4">国内のAIエージェント導入事例</a><a href="#s5">AIエージェント導入でつまずく所</a><a href="#s6">AIエージェント導入前のチェックリスト</a><a href="#s7">まとめ</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-efficiency-cases/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI業務効率化の事例"><defs><linearGradient id="ecg-e17a6697" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e17a6697)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI業務効率化の事例</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.02</div>
+                <div class="rel-card__ttl">【2026年11月】AI業務効率化の事例10選｜業務別の削減時間と条件・進め方</div>
+            </a>
+            <a href="/media/azure-openai-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Azure OpenAIの料金"><defs><linearGradient id="ecg-573e4f06" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-573e4f06)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Azure OpenAIの料金</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.02</div>
+                <div class="rel-card__ttl">【2026年11月】Azure OpenAIの料金｜Foundryでの課金の仕組みと月額の計算例</div>
+            </a>
+            <a href="/media/claude-ultra/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Ultraとは"><defs><linearGradient id="ecg-278e5418" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-278e5418)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Ultraとは</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.31</div>
+                <div class="rel-card__ttl">【2026年10月】Claude Ultraとは？月$220で週はProの10倍・Maxとの違い</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'ai-agent-introduction',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
