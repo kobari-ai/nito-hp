@@ -31,7 +31,7 @@ ChatGPTの対策を進めた会社でも、GeminiとPerplexityは引用元を探
 | 引用の回数を見る管理画面 | 公式の案内なし | 一般のサイト向けの案内なし |
 | 公式の資料に書かれていないこと | 引用元を選ぶ基準 | 今もBingなど外部の検索を使うか |
 
-ChatGPTの検索で引用元に出る条件は[ChatGPT検索で引用元に出る条件](/media/chatgpt-search-citation/)に、Google検索のAIによる概要は[AI Overviewsに引用されるには？](/media/cited-by-ai-overviews/)に分けて書いています。AIによる概要とAIモードはGoogle検索の中の機能で、この記事ではGeminiアプリと別の製品として扱います。
+ChatGPTの検索で引用元に出る条件は[ChatGPT検索で引用元に出る条件](/media/chatgpt-search-citation/)に、Google検索のAIによる概要は[AI Overviewsに引用されるには？](/media/cited-by-ai-overviews/)に分けて書いています。AIによる概要とAIモードはGoogle検索の中の機能で、この記事ではGeminiアプリと別の製品として扱います。Geminiを記事づくりやキーワード選びに使う側の話は、[GeminiのSEO対策](/media/gemini-seo/)に分けました。
 
 <figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_01_overview.png" alt="GeminiとPerplexityが引用元を探す先の違い。GeminiはGoogle検索の索引から、Perplexityは自前の索引から読み、サイト側で外す設定はGoogle-ExtendedとPerplexityBot" loading="lazy"></figure>
 
