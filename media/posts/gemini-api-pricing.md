@@ -26,8 +26,7 @@ Gemini APIの主力のGemini 3.8 Flashは、100万トークンあたり入力0.7
 
 **Gemini APIに月額の定額は無く、使ったトークンの分だけ払う従量課金です。** 出力の単価には回答の本文だけでなくモデルが答える前に考える分（思考トークン）も含まれます。そのため推論の深いモデルほど、同じ長さの回答でも出力のトークンが増えます。
 
-<!-- SHOT: 図 gapi_overview.html → gapi_01_overview.png・alt「Gemini APIの料金を決める4つの要素。使うモデルはテキストの出力単価が100万トークンあたり0.40〜20ドルまで開く。入力と出力の量は出力に考える途中の分も入る。処理の型はBatchとFlexが標準の半額。検索などのツールは月5,000件を超えると別料金」 -->
-
+<figure class="post-figure"><img src="/media/images/gemini-api-pricing/gapi_01_overview.png" alt="Gemini APIの料金を決める4つの要素。使うモデルはテキストの出力単価が100万トークンあたり0.40〜20ドルまで開く。入力と出力の量は出力に考える途中の分も入る。処理の型はBatchとFlexが標準の半額。検索などのツールは月5,000件を超えると別料金" loading="lazy"></figure>
 GeminiアプリやGoogle AI Proの月額とは別の請求です。個人のプランの料金は[Geminiの料金プラン](/media/gemini-pricing/)で扱っていて、APIの有料枠はAI Studioでプロジェクトに請求先アカウントを紐づけてから使います。
 
 ## 無料枠と有料枠の違い
@@ -99,16 +98,14 @@ Priorityは混み合う時間でも優先して処理する型で、単価はSta
 
 **Agent Platformで東京などのリージョンを指定すると、Gemini 3以降の単価は約1.1倍です。** 料金ページによると、グローバル以外の料金は2026年7月1日から適用されています。グローバルを選ぶと処理するリージョンは選べず、ロケーションのページも、エンドポイントだけではデータの所在地を保証しないと書いています。
 
-<!-- SHOT: 画面 https://cloud.google.com/vertex-ai/generative-ai/pricing?hl=ja・本文の「Gemini 3.8 Flash*」と「2026 年 12 月 31 日まで」の行・赤枠は「グローバル $0.75」と「非グローバル $0.825」の2行・PC・alt「Agent Platformの料金ページのGemini 3.8 Flashの行。2026年12月31日までの入力はグローバルが100万トークンあたり0.75ドル、非グローバルが0.825ドル」・figcaption「Agent Platformの料金ページ。リージョンを指定すると単価が上がる（2026年11月3日）」 -->
-
+<figure class="post-figure"><img src="/media/images/gemini-api-pricing/gapi_05_agent_pricing.png" alt="Agent Platformの料金ページのGemini 3.8 Flashの行。2026年12月31日までの入力はグローバルが100万トークンあたり0.75ドル、非グローバルが0.825ドル" loading="lazy"><figcaption>Agent Platformの料金ページ。リージョンを指定すると単価が上がる（2026年11月3日）</figcaption></figure>
 ### どちらで払うかの決め方
 
 **すでに会社でGoogle Cloudを使っているなら、請求がまとまるAgent Platformが扱いやすくなります。** Developer APIの前払いのクレジットはGemini APIにしか使えず、Agent Platformはほかのサービスと同じ月の請求に入る仕組みです。課金のページでは請求書払い（オフライン）の請求先アカウントは前払いもプロジェクトの上限も使えないとされています。
 
 データの扱いも比べておきたい点です。Agent Platformのデータ保持ゼロのページによると、事前の許可なく顧客のデータで学習やチューニングをしない一方、不正使用を見つけるための記録や検索のグラウンディングの記録は残ります。保持をゼロにするには機能ごとに手続きが要ります。
 
-<!-- SHOT: 図 gapi_route.html → gapi_02_route.png・alt「Gemini Developer APIとAgent Platformの払い方の目安。Developer APIはAI Studioでキーを作ってすぐ試せ、前払いのクレジットから引かれ、月の上限は利用の段階で決まる。Agent PlatformはGoogle Cloudの請求にまとまり、東京などリージョンを選べるが、リージョン指定は単価が1.1倍」 -->
-
+<figure class="post-figure"><img src="/media/images/gemini-api-pricing/gapi_02_route.png" alt="Gemini Developer APIとAgent Platformの払い方の目安。Developer APIはAI Studioでキーを作ってすぐ試せ、前払いのクレジットから引かれ、月の上限は利用の段階で決まる。Agent PlatformはGoogle Cloudの請求にまとまり、東京などリージョンを選べるが、リージョン指定は単価が1.1倍" loading="lazy"></figure>
 小さく試すならDeveloper APIの無料枠で動きを見て、社内のデータを流す段階で有料枠に移ります。本番で部署の請求やリージョンの要件があるなら、その時点でAgent Platformに載せ替えるかを決めるのが現実的です。社内の仕組みをどこまで自社で組むか決めきれない場合は、nitoの[AIエージェント構築支援](/ai-agent/)で要件の整理から相談できます。
 
 ## 社内問い合わせの月額の計算例
@@ -133,8 +130,7 @@ Priorityは混み合う時間でも優先して処理する型で、単価はSta
 | Gemini 4 Argon | 120.00 | 約1万8,900円 |
 | Gemini 3.1 Pro Preview | 132.00 | 約2万800円 |
 
-<!-- SHOT: 図 gapi_calc.html → gapi_03_calc.png・alt「社内の問い合わせを1日500回、月20日、1回は入力3,000トークンと出力600トークンで動かしたときの月額。3.1 Flash-Liteは約2,600円、3.5 Flash-Liteは約3,800円、3.8 Flashは約7,100円で2027年1月からは約1万4,200円、3.1 Pro Previewは約2万800円。標準の型で1ドル157.80円で換算した試算」 -->
-
+<figure class="post-figure"><img src="/media/images/gemini-api-pricing/gapi_03_calc.png" alt="社内の問い合わせを1日500回、月20日、1回は入力3,000トークンと出力600トークンで動かしたときの月額。3.1 Flash-Liteは約2,600円、3.5 Flash-Liteは約3,800円、3.8 Flashは約7,100円で2027年1月からは約1万4,200円、3.1 Pro Previewは約2万800円。標準の型で1ドル157.80円で換算した試算" loading="lazy"></figure>
 **この規模なら、どのモデルでもモデルの代金は月2万円前後までに収まります。** 式は「月の入力トークン÷100万×入力の単価＋月の出力トークン÷100万×出力の単価」で、表計算に入れておけば人数や回数が変わってもすぐ出し直せます。同じ前提でAzure OpenAIのGPT-6.1 Terraは約9,500円だったので、3.8 Flashはそれより安く、2027年からはそれを上回ります。ただし4 Argonや3.1 Proは考える分が出力に乗るため、600トークンの想定より請求が膨らみやすい点に注意が必要です。
 
 全社に広げた場合も数えます。1,000人が1日3回、検索した社内文書を毎回8,000トークン渡して800トークンで答える形だと、月の入力は4億8,000万トークン、出力は4,800万トークンです。3.8 Flashで540ドル（約8万5,200円）、3.5 Flash-Liteで264ドル（約4万1,700円）になります（試算）。
@@ -163,13 +159,11 @@ Developer APIの有料枠には利用の段階（Tier）があり、段階ごと
 | Tier 2 | 100ドル払い初回から3日 | 2,000ドル |
 | Tier 3 | 1,000ドル払い初回から30日 | 2万〜10万ドル以上 |
 
-<!-- SHOT: 図 gapi_tier.html → gapi_04_tier.png・alt「Gemini APIの利用の段階と月の上限。Tier 1は請求先を紐づけた直後で月250ドル、Tier 2は100ドル払って3日たつと上がり月2,000ドル、Tier 3は1,000ドル払って30日たつと上がり月2万ドルから。上限に届くと翌月1日まで全プロジェクトが止まる」 -->
-
+<figure class="post-figure"><img src="/media/images/gemini-api-pricing/gapi_04_tier.png" alt="Gemini APIの利用の段階と月の上限。Tier 1は請求先を紐づけた直後で月250ドル、Tier 2は100ドル払って3日たつと上がり月2,000ドル、Tier 3は1,000ドル払って30日たつと上がり月2万ドルから。上限に届くと翌月1日まで全プロジェクトが止まる" loading="lazy"></figure>
 **上限に届くと、紐づく全プロジェクトが翌月1日まで止まります。** 上限は申請で引き上げられるので、本番に出す前に段階と見込みの月額を照らし合わせておくのが安全です。レート制限のページによると10分あたりの使用額にも上限があり（Tier 1は10ドル、Tier 2と3は200ドル）、超えると429のエラーが返ります。
 
 部署ごとに予算を分けたいときは、プロジェクトごとの月の上限をAI StudioのSpendの画面で決める仕組みです。設定できるのはプロジェクトの編集者・オーナー・管理者で、試験的な機能のため約10分の遅れのあいだは上限を超えることがあります。APIキーが漏れて他人に使われた分もそのプロジェクトの請求に入るので、キーはプロジェクトの上限とあわせて管理します。
 
-<!-- SHOT: 画面 https://aistudio.google.com/spend・本文の「Monthly spend cap」と「Edit spend cap」・赤枠は「Edit spend cap」・PC・ログインが要る（テスト用のプロジェクトだけを写し、ほかのプロジェクト名・アカウントのアイコン・名前を写さない）・alt「Google AI StudioのSpendの画面。プロジェクトごとの月の上限をEdit spend capから設定する」・figcaption「AI StudioのSpendの画面でプロジェクトの月の上限を決める（2026年11月3日）」 -->
 
 ### 使った量の確かめ方
 
