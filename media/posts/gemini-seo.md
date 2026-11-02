@@ -26,7 +26,7 @@ Geminiを記事づくりに使うよう言われ、同時に「GeminiやAIによ
 
 **1つ目は制作の効率化、2つ目はAIの答えという新しい入口への対策で、担当も測り方も違います。** 依頼を受けたら、どちらの話かを最初に確かめておくと手戻りが減ります。この記事は1つ目を中心に書き、2つ目は後半の1節にまとめました。
 
-<!-- SHOT: 図 gmseo_two.html → gmseo_01_two.png・alt「GeminiのSEO対策の2つの意味。1つ目はGeminiを使って語の候補や下書きを作りGoogleの上位を狙うこと。2つ目はGeminiとAI検索の答えに自社が引用されるようにすること」 -->
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_01_two.png" alt="GeminiのSEO対策の2つの意味。1つ目はGeminiを使って語の候補や下書きを作りGoogleの上位を狙うこと。2つ目はGeminiとAI検索の答えに自社が引用されるようにすること" loading="lazy"></figure>
 
 ## Geminiに任せられるSEOの作業
 
@@ -75,7 +75,7 @@ Googleの検索セントラルには、生成AIで作ったコンテンツの扱
 
 「この語で記事を書いて」と一度に頼むと、どこかで読んだような一般論の記事になりやすくなります。人が記事を作るときの工程を分け、工程ごとにGeminiに頼み、出てきたものを人が確かめてから次の工程に渡すのが基本の進め方です。
 
-<!-- SHOT: 図 gmseo_steps.html → gmseo_02_steps.png・alt「GeminiでSEO記事を作る5つの手順。語と意図を広げる、上位の見出しと比べる、構成案を作る、見出しごとに下書きする、タイトルと説明文を作る。各手順のあとに人が確かめる」 -->
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_02_steps.png" alt="GeminiでSEO記事を作る5つの手順。語と意図を広げる、上位の見出しと比べる、構成案を作る、見出しごとに下書きする、タイトルと説明文を作る。各手順のあとに人が確かめる" loading="lazy"></figure>
 
 プロンプトは［ ］の中を自社の内容に置き換えて使う形にしました。同じ指示でも答えは毎回変わるため、出力の例は載せていません。
 
@@ -183,7 +183,7 @@ GoogleのE-E-A-T（経験・専門性・権威性・信頼性）のうち、経�
 
 個人のGoogleアカウントでGeminiアプリを使う場合、プライバシー ハブによると［アクティビティの保存］がオンのときは、チャットの一部を人間のレビュアーが確認することがあり、生成AIモデルのトレーニングを含むサービスの改善に使われます。オフにすると以降のチャットはトレーニングに使われず、応答などのために72時間だけ保持される仕組みです。
 
-<!-- SHOT: 画面 https://support.google.com/gemini/answer/13594961?hl=ja・本文だけにある探す語「アクティビティの保存 の設定がオフの場合」・赤枠にする語「AI モデルのトレーニングに使用されることもありません」・PC・alt「Geminiアプリのプライバシー ハブ。アクティビティの保存がオフの場合、今後のチャットはアクティビティに表示されず、AIモデルのトレーニングに使用されることもないと書かれている」・figcaption「Gemini アプリのプライバシー ハブ（Gemini アプリ ヘルプ、2026年11月3日）」 -->
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_04_privacy.png" alt="Geminiアプリのプライバシー ハブ。アクティビティの保存がオフの場合、今後のチャットはアクティビティに表示されず、AIモデルのトレーニングに使用されることもないと書かれている" loading="lazy"><figcaption>Gemini アプリのプライバシー ハブ（Gemini アプリ ヘルプ、2026年11月3日）</figcaption></figure>
 
 Google WorkspaceのGeminiは、Workspaceのプライバシー ハブで、内容を人間がレビューせず、許可なく組織の外でモデルのトレーニングに使わないとされています。**学習に使われるかどうかと、何を入力してよいかは別に決める必要があります。** 未公開の商品情報・顧客の名前・アクセス解析の生データのどれを入れてよいかは、社内の決まりとして書いておきます。Workspace側の設定と学習の条件は[Google WorkspaceのGeminiとは](/media/google-workspace-gemini/)にまとめました。
 
@@ -198,7 +198,7 @@ Google WorkspaceのGeminiは、Workspaceのプライバシー ハブで、内容
 | Google AI Pro | 2,900円 | 無料の4倍の上限・Proモデル・ドキュメントの中のGemini |
 | Google AI Ultra | 14,500円から | Proの5倍の上限（32,000円で20倍） |
 
-<!-- SHOT: 画面 https://gemini.google/subscriptions/?hl=ja・本文だけにある探す語「最適なプランをお選びください」・赤枠にする語「￥ 2,900 JPY / 月」・PC・alt「Geminiの料金ページの個人向けプラン。無料は0円、Google AI Plusは月725円、Google AI Proは月2,900円、Google AI Ultraは月14,500円からと表示されている」・figcaption「Gemini の定期購入プラン（Google、2026年11月3日）」 -->
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_05_price.png" alt="Geminiの料金ページの個人向けプラン。無料は0円、Google AI Plusは月725円、Google AI Proは月2,900円、Google AI Ultraは月14,500円からと表示されている" loading="lazy"><figcaption>Gemini の定期購入プラン（Google、2026年11月3日）</figcaption></figure>
 
 語の候補出しと下書きだけなら無料でも始められます。**ただ、個人のプランを会社の仕事に使うと、入力した内容は前の節の個人アカウントの扱いになります。** チームで使うと決めたら、管理者が設定を持てるWorkspaceのGeminiを候補にするのが安全です。個人向けプランの違いは[Geminiの料金プラン](/media/gemini-pricing/)で比べています。
 
@@ -218,7 +218,7 @@ Geminiを入れると下書きの本数は増えますが、確かめる人の�
 
 Geminiアプリが引用元を選ぶ基準そのものは公開されていません。**見込み客が聞く問いに答えるページが自社にあるか、比較記事のような第三者のページに自社が何と書かれているかで、社名が挙がるかが変わります。** 今のSEOで続けることと、足すことを並べると次のとおりです。
 
-<!-- SHOT: 図 gmseo_cite.html → gmseo_03_cite.png・alt「GeminiとAI検索に引用されるまでの4つ。Googleの索引に載る、Google-Extendedを確かめる、見込み客の問いに答えるページを持つ、同じ問いを何度か聞いて記録する」 -->
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_03_cite.png" alt="GeminiとAI検索に引用されるまでの4つ。Googleの索引に載る、Google-Extendedを確かめる、見込み客の問いに答えるページを持つ、同じ問いを何度か聞いて記録する" loading="lazy"></figure>
 
 | 今のSEOで続けること | Geminiに出るために足すこと |
 |---|---|
