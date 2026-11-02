@@ -4,28 +4,38 @@ date: 2026-10-15
 modified: 2026-11-02
 category: AI活用
 keyword: googleに質問する 消す
-description: Chromeのアドレスバーに出る「このページについて Google に質問」（Googleに質問する）を消す方法。flagsの項目は期限切れで出ず、今使えるのは検索エンジンの変更とポリシー。スマホの下に出る「質問する」の見分け方も。
+description: Chromeのアドレスバーの候補に出る「このページについて Google に質問」と、新しいタブの検索ボックスの「Google に質問する」を消す方法。flagsの項目は期限切れで、今使えるのは検索エンジンの変更とポリシー。
 cover_tag: 設定
 cover_headline: Chromeの「Googleに質問」を止める
 cover_sub: flagsが無い今の止め方
 ---
 
 
-Chromeのアドレスバーを押すと出る「このページについて Google に質問」（Googleに質問する）は、開いているページをGoogleレンズで調べる入口です。設定画面にこれだけを消すスイッチは無く、2025年に広まった chrome://flags の手順も今のChromeでは使えません。
+Chromeで「Google に質問」と出る場所は2つあります。サイトを開いてアドレスバーを押したときに候補の一番上に出る「このページについて Google に質問」と、新しいタブの検索ボックスに薄い字で出る「Google に質問する」です。
 
-消すなら、個人のパソコンは既定の検索エンジンをGoogle以外にし、会社のパソコンは管理者にポリシーで止めてもらいます。AIモードのボタンを隠すだけなら右クリックで済みますが、この表示は残ります。
+どちらも設定画面に消すスイッチは無く、個人のパソコンで確実なのは既定の検索エンジンをGoogle以外にすることです。2025年に広まった chrome://flags の手順は、今のChromeでは使えません。
 
 :::takeaways
-- 正体は**Googleレンズの入口**。選ばなければページの内容は調べられない
-- 設定画面に**この表示だけを消すスイッチは無い**
-- flagsの項目は**期限切れで今のChromeに出てこない**
-- 個人のパソコンは**既定の検索エンジンをGoogle以外に**、会社のパソコンは管理者のポリシー
+- 出る場所は**アドレスバーの候補と新しいタブの検索ボックスの2つ**
+- どちらも設定画面に**消すスイッチは無い**
+- 個人のパソコンで確実なのは**既定の検索エンジンをGoogle以外にする**こと
+- 会社のパソコンは**管理者のポリシー**で止められる
 - スマホの下の「質問する」は、**先にChromeかGoogleアプリかを確かめる**
 :::
 
-## 「Googleに質問する」と出るのは何か
+## 「Google に質問」が出る2つの場所
 
-Chromeヘルプの「[Google レンズ in Chrome を使用して検索する](https://support.google.com/chrome/answer/15086890?hl=ja)」には、特定のページではこの項目がアドレスバーに既定で表示されることがある、と書かれています。頼んでいないのに出てくるのは、不具合や設定の誤りではありません。
+画面に出ているのがどちらかで、消し方が変わります。
+
+<figure class="post-figure"><img src="/media/images/chrome-ask-google-page/01_omnibox_ask.jpg" alt="Chromeでウィキペディアのページを開き、アドレスバーを押したところ。候補の一番上に、このページについて Google に質問 - ja.wikipedia.org の1行が赤い枠で示されている" loading="lazy"><figcaption>サイトを開いてアドレスバーを押すと、候補の一番上に出る（2026年11月2日、MacのChrome 156）</figcaption></figure>
+
+<figure class="post-figure"><img src="/media/images/chrome-ask-google-page/05_ntp_ask_google.jpg" alt="Chromeの新しいタブの画面。Googleのロゴの下の検索ボックスに、薄い字でGoogle に質問すると出ている部分が赤い枠で示されている。検索ボックスの右にはAI モードのボタン、下にはAI モードでさらに便利に、画像を作成するの2枚のカードがある" loading="lazy"><figcaption>新しいタブの検索ボックスに薄い字で出る（同じ日・同じ版）</figcaption></figure>
+
+アドレスバーの候補なら次の節から、新しいタブの検索ボックスなら「新しいタブに出るとき」の節を読んでください。
+
+## アドレスバーの候補に出る1行の正体
+
+アドレスバーの候補の「このページについて Google に質問」は、開いているページをGoogleレンズで調べる入口です。Chromeヘルプの「[Google レンズ in Chrome を使用して検索する](https://support.google.com/chrome/answer/15086890?hl=ja)」には、特定のページではこの項目がアドレスバーに既定で表示されることがある、と書かれています。頼んでいないのに出てくるのは、不具合や設定の誤りではありません。
 
 選ぶと、ページの内容をレンズで調べた答えがサイドパネルに出ます。ページのスクリーンショットとデータがGoogleに送られるのはこのときで、表示されているだけで送られるとはヘルプに書かれていません。**表示が目に入るだけで困っていないなら、設定を変えずに選ばないでおけば足ります。**
 
@@ -41,7 +51,7 @@ Chromeには名前の似たAIの入口が3つあり、別の入口の消し方�
 
 「Gemini に相談」は[Chromeの「Geminiに相談」を消す方法](/media/chrome-gemini-remove/)にまとめています。
 
-## 「Googleに質問する」と出たときの消し方
+## アドレスバーの候補から消す方法
 
 この表示を止めるのは②と③で、①はAIモードのボタンを隠すだけの方法です。使っているパソコンとどこまで消したいかで、どれを選ぶかが決まります。
 
@@ -73,6 +83,19 @@ Chromeには名前の似たAIの入口が3つあり、別の入口の消し方�
 
 このポリシーは自分のパソコンにも入れられ、Windowsはレジストリの Software\Policies\Google\Chrome に SearchContentSharingSettings をREG_DWORDの1で作り、Macは構成プロファイルで同じ名前に1を入れます。効いたかは chrome://policy で確かめられます。**ただし設定画面に「お使いのブラウザは組織によって管理されています」と出続けるので、それが気にならない人向けです。**この方法も手元では試していません。
 
+## 新しいタブに「Google に質問する」と出るとき
+
+新しいタブの検索ボックスの薄い字は、前は「Google で検索または URL を入力」でした。Chromiumのソースでは、Chrome 152から新しい検索ボックスが既定になり、AIモードが使える状態だと「Google に質問する」と出る作りです。下の「AI モードでさらに便利に」「画像を作成する」のカードも同じ条件で出ます。
+
+「Chrome をカスタマイズ」には、この文言やカードを消す項目はありません。ヘルプに載っているのも、ショートカット・デザイン・カード・フッターの設定までです。
+
+止める方法はアドレスバーの候補と同じ2つです。
+
+1. **既定の検索エンジンをGoogle以外にする**：2026年11月2日にMacのChrome 156でMicrosoft Bingに変えると、新しいタブはBingのページに変わり、「Google に質問する」の検索ボックスもカードも出なくなりました。手順は上の②と同じです
+2. **会社のパソコンは管理者にAIModeSettingsを1にしてもらう**：ポリシーの説明は、アドレスバーと新しいタブの検索ボックスのAIモードを止めるとしています。このときも元の文言に戻る作りがソースにあります。手元では試していません
+
+**Googleを既定のまま、文言だけを元に戻す設定はありません。**ソースには chrome://flags/#ntp-realbox-next を「Disabled」にすると元の文言に戻る作りがありますが、nitoでは試しておらず、この項目もChrome 160で期限が来ます。
+
 ## flagsで消す方法が使えなくなった
 
 2025年に広まった手順は、chrome://flags で「Omnibox contextual suggestions」を「Disabled」にして再起動するものでした。2026年10月15日にMacのChrome 155で探すと、項目は出てきませんでした。
@@ -99,12 +122,16 @@ iPhoneのChromeの新しいツールバーなら、chrome://flags の ChromeNext
 - **個人のパソコンで消したい場合**：既定の検索エンジンをGoogle以外にする。AIモードのボタンを隠すだけでは「このページについて Google に質問」は残る
 - **Google検索を既定のまま使いたい場合**：設定画面では消せない。自分でポリシーを入れれば止まるが、「組織によって管理されています」と出続ける
 - **会社のパソコンの場合**：管理者にSearchContentSharingSettingsを1にしてもらう
+- **新しいタブの「Google に質問する」が気になる場合**：既定の検索エンジンをGoogle以外にする。新しいタブがその検索エンジンのページに変わる
 - **スマホの場合**：先にChromeの画面かGoogleアプリの画面かを確かめる
 
 ## よくある質問
 
 ### ChromeのGoogleに質問するは非表示にできますか？
 設定画面に、この表示だけを消すスイッチはありません。止めるなら、既定の検索エンジンをGoogle以外にするか、管理者のポリシー（SearchContentSharingSettings）を使います。
+
+### 新しいタブのGoogleに質問するは消せますか？
+設定画面に、文言だけを元に戻すスイッチはありません。既定の検索エンジンをGoogle以外にすると、新しいタブがその検索エンジンのページに変わり、表示されなくなります。会社のパソコンなら、管理者がAIModeSettingsを1にする方法もあります。
 
 ### Chromeのflagsで消す方法は今も使えますか？
 使えません。2026年10月15日にChrome 155で探したところ項目が無く、Chromiumのソースでも期限がChrome 150までになっています。
@@ -129,10 +156,12 @@ Chromeのヘルプに、画面の下の「質問する」を切る手順は見�
 
 ## 出典
 
-ヘルプとポリシーの記述、Chromiumのソースは2026年11月1日に取り直して確認しています。flagsと設定画面は2026年10月15日にMacのChrome 155.0.8059.40で開いて確かめました。
+ヘルプとポリシーの記述、Chromiumのソースは2026年11月1日・2日に取り直して確認しています。flagsと設定画面は2026年10月15日にMacのChrome 155.0.8059.40で、アドレスバーの候補と新しいタブの画面、検索エンジンを変えたときの新しいタブは2026年11月2日にMacのChrome 156.0.8078.76（新しいプロファイル）で確かめました。
 
 - [Google レンズ in Chrome を使用して検索する](https://support.google.com/chrome/answer/15086890?hl=ja)（Chrome ヘルプ。アドレスバーの「このページについて Google に質問」とページのデータの処理）
 - [Chrome で AI モードを使用する](https://support.google.com/chrome/answer/16704170?hl=ja)（Chrome ヘルプ。AIモードのボタンの隠し方）
+- [新しいタブページをカスタマイズする](https://support.google.com/chrome/answer/11032183?hl=ja)（Chrome ヘルプ。新しいタブで変えられる項目）
+- [new_tab_page_ui.cc](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/chrome/browser/ui/webui/new_tab_page/new_tab_page_ui.cc)・[composebox_fieldtrial.cc](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/chrome/browser/ui/webui/new_tab_page/composebox/variations/composebox_fieldtrial.cc)・[aim_eligibility_service.cc](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/components/omnibox/browser/aim_eligibility_service.cc)（Chromium のソース、タグ 156.0.8078.80。新しいタブの検索ボックスの文言と、それを出す条件）
 - [SearchContentSharingSettings](https://chromeenterprise.google/policies/#SearchContentSharingSettings)・[AIModeSettings](https://chromeenterprise.google/policies/#AIModeSettings)・[GenAiDefaultSettings](https://chromeenterprise.google/policies/#GenAiDefaultSettings)・[GeminiSettings](https://chromeenterprise.google/policies/#GeminiSettings)（Chrome Enterprise のポリシー一覧）
 - [flag-metadata.json](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/chrome/browser/flag-metadata.json)・[flag_expiry.md](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/docs/flag_expiry.md)・[about_flags.cc](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/chrome/browser/about_flags.cc)（Chromium のソース、タグ 156.0.8078.80。flagsの期限と、期限切れのflagを一覧と設定から外す処理）
 - [contextual_search_provider.cc](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/components/omnibox/browser/contextual_search_provider.cc)・[lens_overlay_entry_point_controller.cc](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/chrome/browser/ui/lens/lens_overlay_entry_point_controller.cc)（Chromium のソース、同じタグ。候補を出す条件と、レンズがGoogleの既定を前提にする処理）
