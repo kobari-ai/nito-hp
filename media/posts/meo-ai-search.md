@@ -42,7 +42,7 @@ AIモードの答えにGoogle上の店舗情報がどれだけ使われている
 
 上位の解説記事の多くは「AIはビジネスプロフィールを参照する」とひとまとめにしています。各社の公式ヘルプを並べると、Googleの3つのAIと、ChatGPT・Perplexityでは書いてあることが違いました。
 
-<!-- SHOT: 図 meo_sources.html → 01_fig_sources.png・alt「AIごとに店舗情報をどこから読むかの図。GoogleのAIモードとAIによる概要、マップに相談、GeminiアプリはGoogleマップとビジネスプロフィールの情報、ChatGPTは提携する検索の提供元と第三者の提供元、Perplexityは公式の説明なし」 -->
+<figure class="post-figure"><img src="/media/images/meo-ai-search/01_fig_sources.png" alt="AIごとに店舗情報をどこから読むかの図。GoogleのAIモードとAIによる概要、マップに相談、GeminiアプリはGoogleマップとビジネスプロフィールの情報、ChatGPTは提携する検索の提供元と第三者の提供元、Perplexityは公式の説明なし" loading="lazy"></figure>
 
 | AI | 店舗情報について公式に書いてあること | 公式に書いていないこと |
 |---|---|---|
@@ -68,7 +68,7 @@ Google 検索セントラルの「AI 機能とウェブサイト」は、AIに�
 
 Geminiアプリのヘルプ「Gemini アプリで場所や経路の検索をする」には、GeminiがGoogleマップの公開情報を使うとはっきり書かれています。店や施設を探すこと、場所の住所・説明・ウェブサイト・評価・営業時間を確かめることができ、使うには［アクティビティの保存］をオンにしておく必要があります。質問の例には「近くに本格的なメキシコ料理店はない？テーブル席があるところで。」のような条件つきの相談が並んでいました。
 
-<!-- SHOT: 画面 https://support.google.com/gemini/answer/16622866?hl=ja&co=GENIE.Platform%3DDesktop・本文だけにある探す語「Google マップの公開情報を使用して」・赤枠にする語「場所の住所、説明、ウェブサイト、評価、営業時間を確認する」・PC・alt「Gemini アプリ ヘルプの場所や経路の検索のページ。Google マップの公開情報を使って場所の住所や評価、営業時間を確認できると書かれている」・figcaption「Gemini アプリで場所や経路の検索をする（Gemini アプリ ヘルプ、2026年11月4日）」 -->
+<figure class="post-figure"><img src="/media/images/meo-ai-search/04_help_gemini_maps.png" alt="Gemini アプリ ヘルプの場所や経路の検索のページ。Google マップの公開情報を使って場所の住所や評価、営業時間を確認できると書かれている" loading="lazy"><figcaption>Gemini アプリで場所や経路の検索をする（Gemini アプリ ヘルプ、2026年11月4日）</figcaption></figure>
 
 nitoが2026年10月7日に、ある士業の案件で地域名をつけた質問をGeminiに10回聞いたところ、9回はGoogleマップの店舗カードで答え、引用元のリンクは0件でした。1つの案件の実測ですが、ヘルプの記述と合っています。**Geminiはビジネスプロフィールに書いたことを読む**と考えて差し支えありません。GeminiとPerplexityの引用の違いは[GeminiとPerplexityの引用の記事](/media/gemini-perplexity-citation/)で詳しく扱っています。
 
@@ -88,7 +88,7 @@ Googleの3つのAIはビジネスプロフィールとGoogleマップの情報�
 
 ビジネスプロフィールのヘルプが勧める施策は、AI検索が広がった後もそのまま土台になります。Googleの3つのAIがGoogleマップの情報を使う以上、MEOで整えてきた情報はAIの答えの材料です。
 
-<!-- SHOT: 図 meo_keep_add.html → 02_fig_keep_add.png・alt「MEOで続けることと足すことの図。続けるのはビジネス情報の充実、クチコミと返信、写真と動画、店名と住所と電話番号の一致。足すのは条件を文で書く、サイトに料金と対応範囲、外部の掲載先をそろえる、AIに聞いて記録する」 -->
+<figure class="post-figure"><img src="/media/images/meo-ai-search/02_fig_keep_add.png" alt="MEOで続けることと足すことの図。続けるのはビジネス情報の充実、クチコミと返信、写真と動画、店名と住所と電話番号の一致。足すのは条件を文で書く、サイトに料金と対応範囲、外部の掲載先をそろえる、AIに聞いて記録する" loading="lazy"></figure>
 
 ### ① ビジネス情報の充実と正確さ
 
