@@ -24,7 +24,7 @@ Microsoft Learnの2026年9〜10月の更新で、Copilot Studioのホーム画�
 
 Microsoft 365 Copilotのライセンスがある会社には、エージェントを作る入口が2つあります。CopilotのアプリやTeamsの中で開くエージェント ビルダーと、専用の画面で開くCopilot Studioです。Learnの「エージェント ビルダーと Copilot Studio のどちらかを選択」（2026年10月28日更新）は、使う人の数ではなく、要る機能と運用の仕方で選ぶよう書いています。
 
-<!-- SHOT: 図 csag_choose.html → csag_01_choose.png・alt「エージェント ビルダーかCopilot Studioかを決める3つの問い。社外のチャネルが要るか、外部サービスのアクションや開発と本番の環境が要るか、M365 Copilotの指示と社内の知識で足りるか」 -->
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_01_choose.png" alt="エージェント ビルダーかCopilot Studioかを決める3つの問い。社外のチャネルが要るか、外部サービスのアクションや開発と本番の環境が要るか、M365 Copilotの指示と社内の知識で足りるか" loading="lazy"></figure>
 
 | 問い | 答えがはいなら |
 |---|---|
@@ -66,7 +66,7 @@ Teamsの中のCopilot Studioアプリで従来型のエージェントを作る�
 
 今のCopilot Studioでは、作るものを選ぶ前に、どの実行の仕組み（ハーネス）で動かすかを選ぶ流れです。Learnの「構築を開始する」（2026年9月21日更新）によると、ホームのカードから作るのはGitHub Copilotハーネスのエージェントとワークフローで、標準ハーネスのエージェントは「その他のビルド方法」から作ります。標準ハーネスのクイックスタート（2026年9月22日更新）も、新しい画面の表示をオフにする手順から始まります。
 
-<!-- SHOT: 図 csag_harness.html → csag_02_harness.png・alt「Copilot Studioのホーム画面で選ぶハーネス。社内のQ&Aや申請の受付はその他のビルド方法から標準ハーネス。書類を作る多段階の作業はカードからGitHub Copilotハーネスでクレジットを使う」 -->
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_02_harness.png" alt="Copilot Studioのホーム画面で選ぶハーネス。社内のQ&Aや申請の受付はその他のビルド方法から標準ハーネス。書類を作る多段階の作業はカードからGitHub Copilotハーネスでクレジットを使う" loading="lazy"></figure>
 
 | | 標準ハーネス | GitHub Copilotハーネス |
 |---|---|---|
@@ -75,17 +75,15 @@ Teamsの中のCopilot Studioアプリで従来型のエージェントを作る�
 | 課金 | M365 Copilotのライセンスを持つ社員の社内利用は追加なし（公正利用の上限あり） | Copilotクレジット。構築・テスト・評価でも使うことがある |
 | 公開先 | Teams・M365 Copilot・Web・SharePointなど | Teams・M365 Copilot・Web（SharePointのチャネルは非対応） |
 
-<!-- SHOT: 画面 https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview・本文だけにある探す語「ハーネスの比較」・赤枠にする語「請求書」の行・PC・alt「Microsoft Learnのハーネスの比較表。GitHub Copilotハーネスは複雑で多段階のビジネスプロセス、標準ハーネスはルールベースのエージェントと構造化された会話に向き、請求は前者がCopilotクレジット」・figcaption「Microsoft Learn「Copilot Studioのハーネス」（2026年11月4日）」 -->
-
 **社内のQ&Aや申請の受付を作るなら、標準ハーネスを選ぶのがおすすめです。** 2つのハーネスの間でエージェントは移せないため、作り始めの選択が後まで残ります。GitHub Copilotハーネスは書類を作る長い作業や複数のツールをまたぐ処理に強い一方、Learnの説明ではエージェントの構築とテストでもクレジットを消費することがあります。顧客の電話やWebのチャットに答える窓口には、3つ目のCustomer Conversationハーネスがあります。このあとの手順は標準ハーネスのものです。
 
 ## Copilot Studioでのエージェント作成の手順
 
-<!-- SHOT: 図 csag_flow.html → csag_03_flow.png・alt「Copilot Studioのエージェント作成から公開までの6段。環境とハーネスを選ぶ、名前と説明と指示を書く、SharePointのナレッジを足す、トピックとツールを足す、テストで確かめる、TeamsとM365 Copilotに公開する」 -->
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_03_flow.png" alt="Copilot Studioのエージェント作成から公開までの6段。環境とハーネスを選ぶ、名前と説明と指示を書く、SharePointのナレッジを足す、トピックとツールを足す、テストで確かめる、TeamsとM365 Copilotに公開する" loading="lazy"></figure>
 
 ### ① 説明から作るか手動で作るか
 
-標準ハーネスのホームの入力欄に、エージェントにしてほしいことを書くと、AIが名前・説明・指示の案を作ります。説明は1,024文字まで書けて、ナレッジやツールの候補も一緒に出ます。候補はその場限りのもので、次の作業には残りません。手動で作る場合は名前を入れて作成し、作成時の設定で言語を日本語にしておきます。
+標準ハーネスのホームの入力欄に、エージェントにしてほしいことを書くと、AIが名前・説明・指示の案を作ります。説明は1,024文字まで書けて、ナレッジやツールの候補も一緒に出ます。手動で作る場合は名前を入れて作成し、作成時の設定で言語を日本語にしておきます。
 
 ### ② 名前・説明・指示を書く
 
@@ -100,17 +98,17 @@ Teamsの中のCopilot Studioアプリで従来型のエージェントを作る�
 
 ### ③ モデルを選ぶ
 
-概要ページのモデルの欄で、推論に使うモデルを選べます。2026年6月ごろの検証記事では、GPTとClaudeが並び、既定にClaude Sonnet 4.6が選ばれていた例がありました（DevelopersIO）。既定と並ぶモデルは地域・管理者の設定・時期で変わり、プレビューの印が付いたモデルも混ざります。**モデルを変えると同じ質問でも答え方が変わるため、変えたらテストをやり直します。**
+概要ページのモデルの欄で、推論に使うモデルを選べます。2026年6月ごろの検証記事では、GPTとClaudeが並び、既定にClaude Sonnet 4.6が選ばれていた例がありました（DevelopersIO）。既定と並ぶモデルは地域・管理者の設定・時期で変わります。**モデルを変えると同じ質問でも答え方が変わるため、変えたらテストをやり直します。**
 
 ### ④ 紹介メッセージと推奨プロンプト
 
-会話開始のトピックで最初のあいさつを直し、何を聞けるかを例で示します。推奨プロンプトは10個まで設定でき、TeamsとMicrosoft 365 Copilotで会話を始める前に表示されます（テストの画面には出ません）。アイコンはPNGで、72KB未満・192×192ピクセルまでです。
+会話開始のトピックで最初のあいさつを直し、何を聞けるかを例で示します。推奨プロンプトは10個まで設定でき、TeamsとMicrosoft 365 Copilotで会話を始める前に表示されます（テストの画面には出ません）。
 
 ## ナレッジにSharePointを入れる
 
 社内の規程やマニュアルに答えさせるなら、ナレッジの中心はSharePointになります。概要ページかナレッジのページの「ナレッジの追加」からSharePointを選び、URLと名前と説明を入れます。
 
-<!-- SHOT: 画面 https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-sharepoint・本文だけにある探す語「SharePointサイトをナレッジソースとして追加する」・赤枠にする語「Featured セクションで、 SharePoint を選択します」・PC・alt「Microsoft LearnのSharePointをナレッジソースとして追加する手順。ナレッジの追加でSharePointを選び、URLと名前と説明を入れてエージェントに追加する」・figcaption「Microsoft Learn「ナレッジ ソースとしてSharePointを追加する」（2026年11月4日）」 -->
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_05_sharepoint.png" alt="Microsoft LearnのSharePointをナレッジソースとして追加する手順。ナレッジの追加でSharePointを選び、URLと名前と説明を入れてエージェントに追加する" loading="lazy"><figcaption>Microsoft Learn「ナレッジ ソースとしてSharePointを追加する」（2026年11月4日）</figcaption></figure>
 
 **エージェントは、使う人が読める文書しか答えに使いません。** Learnの「ナレッジ ソースとしてSharePointを追加する」（2026年8月5日更新）によると、SharePointのナレッジは使う人のアカウントで検索され、読み取りの権限が無い人には答えが返りません。秘密度ラベルも効き、暗号化やパスワードで保護したファイルは、開ける人が聞いても答えに使われません。
 
@@ -131,28 +129,21 @@ Teamsの中のCopilot Studioアプリで従来型のエージェントを作る�
 
 標準ハーネスの新しいエージェントは、既定で生成オーケストレーションで動きます。質問が来るたびに、トピック・ツール・ナレッジ・他のエージェントの中から、名前と説明を手がかりに使うものを選ぶ仕組みです。設定の生成AIの項目でオーケストレーションを「いいえ」にするとクラシックになり、トリガーフレーズに一致したトピックだけが動きます。
 
-| 部品 | 役割 | 選ばれる手がかり |
-|---|---|---|
-| トピック | 決まった会話の流れ（質問・分岐・メッセージ） | 説明 |
-| ツール | コネクタ・エージェントフロー・プロンプト・MCP | 名前と説明 |
-| ナレッジ | 答えの根拠 | 説明 |
-| 他のエージェント | 子エージェント・つないだエージェント | 説明 |
-
 **説明があいまいだと、エージェントは正しい部品を選べません。** 経費精算と出張申請のように似たトピックが並ぶときは、説明に対象と使う場面を書き分けます。
 
 ### トピック
 
-申請の受付のように、聞く順番と分岐を決めたい会話はトピックで組みます。質問ノードで値を聞いて変数に入れ、条件ノードで分け、最後にツールのノードでフローを呼ぶ流れです。自由に書かせるより選択肢を出して選んでもらうほうが、聞き取りがぶれません。あいさつや会話の終了のトピックは最初から用意されているので、足すのは業務のトピックだけです。
+申請の受付のように、聞く順番と分岐を決めたい会話はトピックで組みます。質問ノードで値を聞いて変数に入れ、条件ノードで分け、最後にツールのノードでフローを呼ぶ流れです。
 
 ### ツールとエージェントフロー
 
 申請をSharePointのリストに書き込む、担当者にTeamsで知らせる、といった処理はエージェントフローで作り、ツールとしてエージェントに足します。Learnの「エージェント フローの概要」（2026年10月26日更新）によると、フローはアクションごとにCopilot Studioの容量を使い、前払いの容量を使い切ると新しい実行が止まります。**フロー デザイナーとテストチャットからの実行は容量を使わないため、作り込みはテストの画面で進められます。**
 
-既にあるPower Automateのクラウドフローも、エージェントフローへの変換が可能です。ただし変換は一方向で戻せず、請求がPower AutomateからCopilot Studioの容量に変わります。スケジュールやSharePointへのファイル追加などのトリガーで、人が話しかけなくても動く自律型のエージェントも作れますが、エージェントから呼ばれる以外のトリガーで動くフローはM365 Copilotのライセンスに含まれず、クレジットがかかります。
+既にあるPower Automateのクラウドフローも、エージェントフローへの変換が可能です。ただし変換は一方向で戻せず、請求がPower AutomateからCopilot Studioの容量に変わります。エージェントから呼ばれる以外のトリガー（スケジュールなど）で動くフローはM365 Copilotのライセンスに含まれず、クレジットがかかります。
 
 ## テストで確かめること
 
-画面右のテストのパネルで質問し、指示やナレッジを直しながら繰り返します。生成オーケストレーションのエージェントなら、どの部品を選んだかはアクティビティマップで追えるため、意図しない動きの原因探しに迷いません。公開前に見ておきたいのは次の5つです。
+画面右のテストのパネルで質問し、指示やナレッジを直しながら繰り返します。生成オーケストレーションのエージェントなら、どの部品を選んだかはアクティビティマップで追えるため。公開前に見ておきたいのは次の5つです。
 
 - 規程にある質問に、出典つきで答えるか
 - 規程に無い質問に、作り話をせず案内先を返すか
@@ -160,13 +151,13 @@ Teamsの中のCopilot Studioアプリで従来型のエージェントを作る�
 - フローが最後まで動き、書き込み先に結果が残るか
 - ナレッジを読む権限の無い社員には、答えが返らないか
 
-最後の項目は公開した後に権限の違う社員のアカウントで試すのが確実です。Learnのクイックスタートが勧めるとおり、指示を1か所変えたら同じ質問をもう一度投げ、答えの変化を見ます。
+最後の項目は公開した後に権限の違う社員のアカウントで試すのが確実です。指示を1か所変えたら、同じ質問をもう一度投げて答えの変化を見ます。
 
 ## TeamsとM365 Copilotに公開する
 
 公開は発行・チャネルの接続・自分で試す・広げるの順で進みます。Learnの「Teams とMicrosoft 365のエージェントを接続して構成する」の手順は次のとおりです。
 
-<!-- SHOT: 図 csag_publish.html → csag_04_publish.png・alt「Teamsへの公開の3段階。自分にインストールして試す、共有した社員のエージェントストアに出す、組織カタログに提出して管理者の承認を受けて全員に出す」 -->
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_04_publish.png" alt="Teamsへの公開の3段階。自分にインストールして試す、共有した社員のエージェントストアに出す、組織カタログに提出して管理者の承認を受けて全員に出す" loading="lazy"></figure>
 
 1. 上部の発行を選ぶ（数分かかる）
 2. チャネルでTeamsとMicrosoft 365 Copilotを開き、「Microsoft Copilotでエージェントを利用可能」を選んで追加する（選ばないとTeamsだけ）
@@ -174,11 +165,11 @@ Teamsの中のCopilot Studioアプリで従来型のエージェントを作る�
 4. 可用性オプションで、リンクを渡すか、共有した社員のエージェントストアに出す
 5. 全員に出すときは「組織内の全員に表示」から組織カタログに提出し、管理者の承認を待つ
 
-<!-- SHOT: 画面 https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams・本文だけにある探す語「管理者の承認のためにエージェントを提出してください」・赤枠にする語「組織カタログに提出」・PC・alt「Microsoft Learnの管理者の承認のためにエージェントを提出する手順。可用性オプションで組織内の全員に表示を選び、組織カタログに提出する」・figcaption「Microsoft Learn「Teams とMicrosoft 365のエージェントを接続して構成する」（2026年11月4日）」 -->
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_06_teams_submit.png" alt="Microsoft Learnの管理者の承認のためにエージェントを提出する手順。可用性オプションで組織内の全員に表示を選び、組織カタログに提出する" loading="lazy"><figcaption>Microsoft Learn「Teams とMicrosoft 365のエージェントを接続して構成する」（2026年11月4日）</figcaption></figure>
 
 **リンクを渡しても、エージェントを共有されていない社員はチャットできません。** 共有の設定とインストールのリンクは別物で、Teamsのモバイルアプリではリンクからのインストールもできないため、スマホで使う社員にはストアに出す必要があります。組織がTeamsへのPower Platformアプリの追加を止めている場合は、Teams管理センターで許可してもらうまでインストールもできません。
 
-承認後は中身の更新なら再提出は要らず、アイコンと説明を変えたときだけ出し直します。管理者はTeams管理センターのセットアップポリシーで、全員に自動でインストールしてピン留めすることも可能です。公開した中身は新しい会話から効くので、Teamsでは「start over」と打つと最新版で始まります。認証は既定の「Microsoft による認証」のままが無難です。「認証なし」にすると、リンクを知っている人なら誰でも話せてしまいます。
+承認後は中身の更新なら再提出は要らず、アイコンと説明を変えたときだけ出し直します。管理者はTeams管理センターのセットアップポリシーで、全員に自動でインストールしてピン留めすることも可能です。認証は既定の「Microsoft による認証」のままが無難です。「認証なし」にすると、リンクを知っている人なら誰でも話せてしまいます。
 
 ## マルチエージェントにする目安
 
@@ -194,7 +185,7 @@ Teamsの中のCopilot Studioアプリで従来型のエージェントを作る�
 
 ## 作った後に決めておくこと
 
-公開した後の手入れが無いと、文書の更新と業務の変化にエージェントの答えが追いつきません。公開の前に、次の4つを担当と一緒に決めておきます。
+公開の前に、次の4つを担当と一緒に決めておきます。
 
 - 環境のDLPで、つないでよいコネクタと止めるコネクタを分ける
 - Power Platform管理センターで、使ってよいチャネルを絞る
@@ -216,14 +207,6 @@ Teamsの中のCopilot Studioアプリで従来型のエージェントを作る�
 
 試用版で作成とテストまではできますが、公開はできません。M365 Copilotのライセンスを持つ人はそのライセンスで作って公開でき、標準ハーネスで作った社内向けのエージェントをライセンスを持つ社員が使う分には、追加の費用はかかりません。
 
-### Copilot Studioとビルダーの違いは？
-
-エージェント ビルダーはMicrosoft 365 Copilotのアプリの中で、指示と社内の知識に答えるエージェントを作る入口です。Copilot Studioは、外部サービスのアクション・ワークフロー・社外のチャネル・開発と本番の環境の分離が要るときに使います。ビルダーで作ったものはCopilot Studioへのコピーも可能です。
-
-### Copilot StudioからTeamsに出すには？
-
-発行してから、チャネルでTeamsとMicrosoft 365 Copilotを追加し、自分にインストールして試します。広げるときは共有した社員のエージェントストアに出すか、組織カタログに提出して管理者の承認を受けます。
-
 ### Copilot Studioは権限を超えて答えますか？
 
 SharePointのナレッジは使う人のアカウントで検索するため、その人が読めない文書は答えに使いません。ただし広い権限のフォルダーを入れると、そこを開ける人全員の答えに中身が出ます。
@@ -244,22 +227,22 @@ Teamsのモバイルアプリで使えますが、インストールのリンク
 
 いずれも2026年11月4日に取得。更新日はLearnのページの表示です。
 
-- [エージェント ビルダーと Copilot Studio のどちらかを選択してエージェントを構築します](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copilot-studio-experience)（Microsoft Learn、2026年10月28日更新。決め方の3つの問い）
-- [エージェント ビルダーの概要](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder)（Microsoft Learn、2026年10月26日更新。作れる場所と既知の制限）
-- [エージェント ビルダーから Copilot Studio にエージェントをコピーする](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copy-agent-to-copilot-studio)（Microsoft Learn、2026年9月30日更新）
-- [構築を開始する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-first-bot)（Microsoft Learn、2026年9月21日更新。ホームのカードとその他のビルド方法）
-- [GitHub Copilot Harnessによるエージェント概要](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/overview)（Microsoft Learn、2026年10月20日更新。構築とテストでのクレジット・機能比較）
-- [Copilot Studioのハーネス](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview)（Microsoft Learn、2026年10月23日更新）
-- [クイックスタート：標準ハーネスでエージェントを作成・展開する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/fundamentals-get-started)（Microsoft Learn、2026年9月22日更新）
-- [Copilot Studio の課金とライセンスに関するよくある質問](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-billing-licensing)（Microsoft Learn、2026年10月20日更新。公開に要るライセンス）
-- [標準ハーネス駆動のエージェントのライセンス取得](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/billing-licensing)（Microsoft Learn。試用版）
-- [知識源の概要](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-copilot-studio)（Microsoft Learn、2026年8月4日更新。上限・根拠のない応答・Web検索）
-- [ナレッジ ソースとしてSharePointを追加する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-sharepoint)（Microsoft Learn、2026年8月5日更新）
-- [生成 AI でエージェントの動作を調整する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-generative-actions)（Microsoft Learn、2026年8月26日更新。生成とクラシック）
-- [トピックの作成と編集](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-create-edit-topics)（Microsoft Learn、2026年7月6日更新）
-- [エージェント フローの概要](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/flows-overview)（Microsoft Learn、2026年10月26日更新。容量の消費と変換）
-- [他のエージェントの概要を追加](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents)（Microsoft Learn。子エージェントと接続の目安）
-- [重要な概念 - エージェントの公開と展開](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-fundamentals-publish-channels)（Microsoft Learn、2026年10月16日更新。認証とチャネル）
-- [Teams とMicrosoft 365のエージェントを接続して構成する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams)（Microsoft Learn。公開と組織カタログ）
-- [MC1315217 Classic agent creation moves from Teams to web experience](https://mc.merill.net/message/MC1315217)（Microsoft 365 メッセージ センターの告知を転載したページ、英語。2026年5月18日公開）
-- [【Copilot Studio】初めてのエージェントを作ってみた：作成・指示・テスト](https://dev.classmethod.jp/articles/copilot-studio-create-first-agent/)（DevelopersIO。モデルの欄の表示例）
+- [エージェント ビルダーと Copilot Studio のどちらかを選択してエージェントを構築します](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copilot-studio-experience)（2026年10月28日更新）
+- [エージェント ビルダーの概要](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder)（2026年10月26日更新）
+- [エージェント ビルダーから Copilot Studio にエージェントをコピーする](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copy-agent-to-copilot-studio)（2026年9月30日更新）
+- [構築を開始する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-first-bot)（2026年9月21日更新）
+- [GitHub Copilot Harnessによるエージェント概要](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/overview)（2026年10月20日更新）
+- [Copilot Studioのハーネス](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview)（2026年10月23日更新）
+- [クイックスタート：標準ハーネスでエージェントを作成・展開する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/fundamentals-get-started)（2026年9月22日更新）
+- [Copilot Studio の課金とライセンスに関するよくある質問](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-billing-licensing)（2026年10月20日更新）
+- [標準ハーネス駆動のエージェントのライセンス取得](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/billing-licensing)
+- [知識源の概要](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-copilot-studio)（2026年8月4日更新）
+- [ナレッジ ソースとしてSharePointを追加する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-sharepoint)（2026年8月5日更新）
+- [生成 AI でエージェントの動作を調整する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-generative-actions)（2026年8月26日更新）
+- [トピックの作成と編集](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-create-edit-topics)（2026年7月6日更新）
+- [エージェント フローの概要](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/flows-overview)（2026年10月26日更新）
+- [他のエージェントの概要を追加](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents)
+- [重要な概念 - エージェントの公開と展開](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-fundamentals-publish-channels)（2026年10月16日更新）
+- [Teams とMicrosoft 365のエージェントを接続して構成する](https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams)
+- [MC1315217 Classic agent creation moves from Teams to web experience](https://mc.merill.net/message/MC1315217)（Microsoft 365 メッセージ センターの告知を転載したページ、英語）
+- [【Copilot Studio】初めてのエージェントを作ってみた：作成・指示・テスト](https://dev.classmethod.jp/articles/copilot-studio-create-first-agent/)（DevelopersIO）
