@@ -33,7 +33,7 @@ Microsoft 365 Copilotを入れた会社には、エージェントを作る入�
 | 向くもの | 社内の資料に答えるQ&A | 複数の手順・承認・業務システムとの連携 |
 | 管理する場所 | Microsoft 365 管理センター | Power Platform 管理センター |
 
-**料金の見積もりが要るのは主にCopilot Studioのほうで、エージェント ビルダーで作ったものは後からCopilot Studioへコピーして機能を足せます。** [エージェント ビルダーの概要](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder)によると、エージェント ビルダーは外部のサービスを呼ぶアクションを作れません。業務システムにつなぐ段になったら、コピーしてCopilot Studioで続きを作る流れです。
+**料金の見積もりが要るのは主にCopilot Studioのほうで、エージェント ビルダーで作ったものは後からCopilot Studioへコピーして機能を足せます。** [エージェント ビルダーの概要](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder)によると、エージェント ビルダーは外部のサービスを呼ぶアクションを作れません。業務システムにつなぐ段になったら、コピーしてCopilot Studioで続きを作る流れです。作成からTeamsへの公開までの手順は[Copilot Studioのエージェント作成](/media/copilot-studio-agent/)で扱っています。
 
 ## 料金の払い方は3通り
 
