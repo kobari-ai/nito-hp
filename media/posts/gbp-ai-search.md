@@ -39,6 +39,8 @@ GMO TECHが[2026年8月6日に公表した調査](https://prtimes.jp/main/html/r
 
 利用者の側から見たマップのGeminiの入口と設定は、[GoogleマップのGeminiの記事](/media/google-maps-gemini/)にまとめています。
 
+MEOの施策のうち何を続けて何を足すかと、ChatGPTやPerplexityが店舗情報をどこから読むかは、[MEO対策へのAI検索の影響の記事](/media/meo-ai-search/)で扱っています。
+
 ## Googleが書いていることと書いていないこと
 
 業者の提案資料にはAIが重視する項目を言い切るものもあります。Googleの公式ページで確かめられる範囲を、書いてあることと書いていないことに分けました。
