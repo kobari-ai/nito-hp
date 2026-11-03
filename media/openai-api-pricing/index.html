@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】OpenAI APIの料金｜モデル別の単価と月額の計算例・使用量の確認｜株式会社nito</title>
+    <meta name="description" content="OpenAI APIの料金を2026年11月の公式料金ページで解説。GPT-6系のモデル別単価、Batch・Flex・Fastの違い、社内の問い合わせ対応の月額の計算例、前払いクレジット・使用量の確認・上限の設定まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/openai-api-pricing/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】OpenAI APIの料金｜モデル別の単価と月額の計算例・使用量の確認">
+    <meta property="og:description" content="OpenAI APIの料金を2026年11月の公式料金ページで解説。GPT-6系のモデル別単価、Batch・Flex・Fastの違い、社内の問い合わせ対応の月額の計算例、前払いクレジット・使用量の確認・上限の設定まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/openai-api-pricing/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/openai-api-pricing.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/openai-api-pricing.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】OpenAI APIの料金｜モデル別の単価と月額の計算例・使用量の確認", "description": "OpenAI APIの料金を2026年11月の公式料金ページで解説。GPT-6系のモデル別単価、Batch・Flex・Fastの違い、社内の問い合わせ対応の月額の計算例、前払いクレジット・使用量の確認・上限の設定まで。", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/openai-api-pricing/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/openai-api-pricing.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】OpenAI APIの料金｜モデル別の単価と月額の計算例・使用量の確認"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "OpenAI APIは1回いくらかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "1回の代金は決まっておらず、送ったトークン数と返ってきたトークン数にモデルの単価を掛けて決まります。GPT-6.1 Terraで入力4,000トークン・出力500トークンなら通常の入力の単価で1回0.0065ドルで、1ドル157.80円なら約1円です（税抜き）。"}}, {"@type": "Question", "name": "OpenAI APIに無料枠はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "新規の利用者に一律で付く無料枠は、OpenAIのヘルプには書かれていません。新しいAPIの組織は前払いで、最低5ドルのクレジットを買って始めます。ChatGPTのProかBusinessを契約していれば、条件を満たすと毎月のAPIクレジットを受け取れます。"}}, {"@type": "Question", "name": "OpenAI APIはChatGPT Plusで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "含まれません。ChatGPTの月額とAPIは別の請求で、Plusの契約者はAPIクレジットの特典の対象でもありません。"}}, {"@type": "Question", "name": "OpenAI APIの料金は円で払えますか？", "acceptedAnswer": {"@type": "Answer", "text": "料金とクレジットは米ドルで表示されます。日本の利用者には10%の消費税が加わり、適格請求書には税額が円で記載されます。"}}, {"@type": "Question", "name": "OpenAI APIのクレジットに有効期限はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "購入したクレジットは1年で失効し、延長はできません。ChatGPTの契約で受け取るAPIクレジットは、その請求期間の終わりで失効します。"}}, {"@type": "Question", "name": "OpenAI APIの使いすぎを止められますか？", "acceptedAnswer": {"@type": "Answer", "text": "組織かプロジェクトにハードリミットを設定すると、上限に達した後の要求は429のエラーになります。反映は即時ではないため、記録上の代金が設定額を少し超えることがあります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】OpenAI API…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.03</span>
+        </div>
+        <h1 class="post-title">【2026年11月】OpenAI APIの料金｜モデル別の単価と月額の計算例・使用量の確認</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/openai-api-pricing.jpg" alt="【2026年11月】OpenAI APIの料金｜モデル別の単価と月額の計算例・使用量の確認" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>2026年11月3日のOpenAIの料金ページでは、社内の仕組みに組み込む候補になるGPT-6.1 Terraが100万トークンあたり入力1ドル・出力5ドル、GPT-6系で最も安いGPT-6 Lunaが入力0.1ドル・出力0.5ドルです。</p>
+<p>社内の問い合わせ対応や文書の要約にOpenAIのAPIを使うよう言われ、月にいくらかかるか、どう払い、使った分をどこで確かめるかを説明する必要がある情シス・DX担当の方に向けて、単価と課金の型、自社の数字で置き換えられる月額の計算例、支払いと上限の設定をまとめました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>料金は<strong>モデル・処理の速さの段階・入力と出力のトークン数・ツールの呼び出し</strong>で決まり、定額は無い</li>
+<li>1日300件の社内の問い合わせ対応なら、GPT-6.1 Terraで<strong>モデルの代金は月約39ドル</strong>の試算（通常の単価。キャッシュの設定で約31〜45ドル）。急がない一括処理はBatchで半額になる</li>
+<li>支払いは前払いのクレジットで、購入から1年で失効する。<strong>使いすぎはハードリミットで止められる</strong>が、反映は即時ではない</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>OpenAI APIの料金が決まる仕組み</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>ChatGPTの料金プランとの違い</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>モデル別のOpenAI API料金</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>長い入力とGPT-5.6系の単価</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>音声と画像の単価</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>処理の速さで変わる課金の型</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>キャッシュ入力</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>ツールの料金</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>社内の問い合わせ対応の月額</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>夜間の一括処理はBatchで半額</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>モデル以外にかかる費用</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>支払いとクレジットの仕組み</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>利用ティアと月の上限</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>使用量の確認と上限の設定</a></li>
+                    <li class="toc-h3"><a href="#s7-1"><span class="toc__n">7-1</span>使用量のダッシュボード</a></li>
+                    <li class="toc-h3"><a href="#s7-2"><span class="toc__n">7-2</span>1件ごとの使用量</a></li>
+                    <li class="toc-h3"><a href="#s7-3"><span class="toc__n">7-3</span>アラートとハードリミット</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>Azure OpenAIやGemini APIと比べる観点</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">OpenAI APIの料金が決まる仕組み</h2>
+<p>見積もりを頼まれて料金ページを開くと、モデルの名前と米ドルの単価が何十行も並んでいて、月の金額がすぐには出ません。料金を決める要素を先に4つに分けておくと、表の行を迷わず読み解けます。</p>
+<p><strong>OpenAI APIに月額の定額や初期費用は無く、使ったトークンの分だけ払う従量課金です。</strong> トークンは文章を区切った単位で、送る指示文・会話の履歴・参照させる資料が入力、返ってくる答えが出力として別々に数えられます。GPT-6系の出力の単価は入力の5倍のため、長い答えを返す使い方ほど費用が膨らむ作りです。</p>
+<figure class="post-figure"><img src="/media/images/openai-api-pricing/oapi_01_overview.png" alt="OpenAI APIの料金を決める4つの要素。使うモデルはAstraとLunaで同じ量でも単価に100倍の差がある。処理の段階はStandardを基準にBatchとFlexが半額、Fastが2倍。トークンは入力・キャッシュ入力・出力を別々に数える。ツールはWeb検索やファイル検索の呼び出しごとに加算される" loading="lazy"></figure>
+
+<p>日本語が何トークンになるかの比率は、料金ページにもトークンの数え方の説明にも載っていません。英語はおおむね1トークン4文字とされますが、日本語の資料を渡す場合は、実際の文章をOpenAIのTokenizerに貼るか、試しに送った応答に返ってくる使用量の欄で数えるのが確実です。<strong>推論するモデルは答えの前に見えない推論のトークンを作り、これも出力として課金されます。</strong> 画面に出た答えが短くても、出力のトークン数は多く記録されることがあります。</p>
+<p>Responses APIやChat Completions APIなど、呼び出すAPIの種類ごとの別料金はありません。どのAPIで呼んでも、選んだモデルの入力と出力の単価で数えられます。</p>
+<h2 id="s2">ChatGPTの料金プランとの違い</h2>
+<p>よく混同されるのが、社員が画面で使うChatGPTの月額とAPIの料金です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>比べる点</th>
+<th>ChatGPT Business</th>
+<th>ChatGPT Enterprise</th>
+<th>OpenAI API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="比べる点">払い方</td>
+<td data-label="ChatGPT Business">1人あたりの月額</td>
+<td data-label="ChatGPT Enterprise">個別の見積もり</td>
+<td data-label="OpenAI API">使ったトークン</td>
+</tr>
+<tr>
+<td data-label="比べる点">金額</td>
+<td data-label="ChatGPT Business">スタンダード3,050円から（年額課金）</td>
+<td data-label="ChatGPT Enterprise">営業に問い合わせ</td>
+<td data-label="OpenAI API">モデルごとの単価</td>
+</tr>
+<tr>
+<td data-label="比べる点">使う形</td>
+<td data-label="ChatGPT Business">ChatGPTの画面</td>
+<td data-label="ChatGPT Enterprise">ChatGPTの画面</td>
+<td data-label="OpenAI API">自社の仕組みに組み込む</td>
+</tr>
+<tr>
+<td data-label="比べる点">対象</td>
+<td data-label="ChatGPT Business">2〜200名</td>
+<td data-label="ChatGPT Enterprise">大規模な組織</td>
+<td data-label="OpenAI API">制限なし</td>
+</tr>
+</tbody>
+</table></div>
+<p>Businessのスタンダードは年額課金で1人月20ドル（3,050円から）、月額課金で25ドル、プレミアムは年額課金で15,250円からです（OpenAIのビジネス向け料金ページ、2026年11月3日）。Enterpriseはクレジット制とトークン制の料金を選べます。</p>
+<p><strong>ChatGPTの月額にAPIの利用料は含まれず、APIは別の請求です。</strong> ただしOpenAIの開発者向けの案内によると、条件を満たすProとBusinessの契約者は、毎月のAPIクレジットを受け取れます。Businessはスタンダード1人分ごとに月20ドル、プレミアム1人分ごとに100ドルで、ワークスペース全体で月500ドルが上限です。受け取るには7日以上続いている有料の契約（無料の試用は対象外）と、ChatGPTの契約とAPIの組織の両方のオーナーであること、両方で同じメールアドレスを使っていることが要り、Plus・Go・Free・Enterpriseは対象外です。使い残しは請求期間の終わりに失効して繰り越せず、年額で前払いしているBusinessには1年分がまとめて付与され（年6,000ドルまで）、年の請求期間の終わりに失効します。</p>
+<p><strong>すでにBusinessを契約している会社なら、試作の段階のAPIの代金はこのクレジットで賄える可能性があります。</strong> 特典の内容は変わることがあるため、使う前に管理画面の請求の設定で受け取れる額を確かめておくのがおすすめです。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">モデル別のOpenAI API料金</h2>
+<p>OpenAIの料金ページの、通常の処理（Standard）の単価です。金額は100万トークンあたりの米ドルで、入力が27万2,000トークン以下の要求の値です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>入力</th>
+<th>キャッシュ入力</th>
+<th>出力</th>
+<th>向く使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">GPT-6 Astra</td>
+<td data-label="入力">10ドル</td>
+<td data-label="キャッシュ入力">1ドル</td>
+<td data-label="出力">50ドル</td>
+<td data-label="向く使い方">画面の操作まで任せる処理</td>
+</tr>
+<tr>
+<td data-label="モデル">GPT-6.1 Sol</td>
+<td data-label="入力">2ドル</td>
+<td data-label="キャッシュ入力">0.1ドル</td>
+<td data-label="出力">10ドル</td>
+<td data-label="向く使い方">込み入った判断・コード</td>
+</tr>
+<tr>
+<td data-label="モデル">GPT-6.1 Terra</td>
+<td data-label="入力">1ドル</td>
+<td data-label="キャッシュ入力">0.05ドル</td>
+<td data-label="出力">5ドル</td>
+<td data-label="向く使い方">社内の問い合わせ・要約</td>
+</tr>
+<tr>
+<td data-label="モデル">GPT-6 Luna</td>
+<td data-label="入力">0.1ドル</td>
+<td data-label="キャッシュ入力">0.01ドル</td>
+<td data-label="出力">0.5ドル</td>
+<td data-label="向く使い方">分類・抽出・大量処理</td>
+</tr>
+<tr>
+<td data-label="モデル">GPT-5.4 mini</td>
+<td data-label="入力">0.75ドル</td>
+<td data-label="キャッシュ入力">0.075ドル</td>
+<td data-label="出力">4.5ドル</td>
+<td data-label="向く使い方">前の世代の軽いモデル</td>
+</tr>
+<tr>
+<td data-label="モデル">GPT-5 nano</td>
+<td data-label="入力">0.05ドル</td>
+<td data-label="キャッシュ入力">0.005ドル</td>
+<td data-label="出力">0.4ドル</td>
+<td data-label="向く使い方">短い文の仕分け</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>いちばん高いAstraと安いLunaでは、同じ量でも100倍の差があります。</strong> 社内の質問に答える程度ならTerraかLunaで答えの質を試し、足りない種類の質問だけSolに上げるのが費用の面では合理的です。</p>
+<h3 id="s3-1">長い入力とGPT-5.6系の単価</h3>
+<p>1回の入力が27万2,000トークンを超えると、GPT-6系は入力の単価が2倍、出力が1.5倍になります。Terraなら入力2ドル・出力7.5ドルです。社内規程を丸ごと毎回渡すような作りにすると、気づかないうちに高い側の単価に入ります。</p>
+<p>ひとつ前のGPT-5.6系は、Solが入力4ドル・出力20ドル、Terraが2ドル・12ドル、Lunaが0.2ドル・1.2ドルです。<strong>GPT-5.6 Solの単価は販促の価格で、料金ページには少なくとも2026年11月21日まで適用すると書かれています。</strong> 期限の後の値は料金ページに載っていないため、Solで見積もる場合は採用の直前に取り直してください。</p>
+<h3 id="s3-2">音声と画像の単価</h3>
+<p>声で受け答えするRealtime APIのgpt-realtime-2.1は、音声の入力が100万トークンあたり32ドル、出力が64ドルで、テキストの入出力は4ドルと24ドルです。安いgpt-realtime-2.1-miniは音声の入力10ドル・出力20ドルです。音声の会話を扱うGPT-Live 1は1分0.05ドルで、秒単位で数えられ、裏で使うモデルとツールの代金は別にかかります。</p>
+<p>文字起こしのgpt-transcribeは1分0.0045ドル、画像を作るgpt-image-2.5は画像の入力8ドル・出力30ドルです。電話の自動応答のように音声を扱う仕組みは、テキストだけの仕組みより1件あたりの単価が1桁上がる点に注意が要ります。</p>
+<h2 id="s4">処理の速さで変わる課金の型</h2>
+<p>同じモデルでも、答えを返す速さの段階で単価が変わります。リクエストの<code>service_tier</code>の指定で選び、指定しなければStandardです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>段階</th>
+<th>単価</th>
+<th>速さと条件</th>
+<th>向く処理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="段階">Standard</td>
+<td data-label="単価">基準</td>
+<td data-label="速さと条件">通常</td>
+<td data-label="向く処理">社内チャット・問い合わせ対応</td>
+</tr>
+<tr>
+<td data-label="段階">Batch</td>
+<td data-label="単価">半額</td>
+<td data-label="速さと条件">24時間以内に返す</td>
+<td data-label="向く処理">夜間の一括の要約や分類</td>
+</tr>
+<tr>
+<td data-label="段階">Flex</td>
+<td data-label="単価">半額（Batchと同じ）</td>
+<td data-label="速さと条件">遅く処理できない時間がある（ベータ）</td>
+<td data-label="向く処理">評価・データの整理</td>
+</tr>
+<tr>
+<td data-label="段階">Fast</td>
+<td data-label="単価">2倍</td>
+<td data-label="速さと条件">最大2.5倍速く応答が安定</td>
+<td data-label="向く処理">顧客向けで待たせたくない画面</td>
+</tr>
+<tr>
+<td data-label="段階">Ultrafast</td>
+<td data-label="単価">6倍</td>
+<td data-label="速さと条件">さらに速い（GPT-6 AstraとGPT-6.1 Solのみ）</td>
+<td data-label="向く処理">速さが売上に直結する処理</td>
+</tr>
+</tbody>
+</table></div>
+<p>Batchは要求をまとめたファイルを送り、24時間以内に結果を受け取る方式で、通常とは別の大きい処理枠が使えます。Flexは普通の呼び出しのまま安くなる代わりに、応答が遅れたり資源が足りず断られたりすることがあり、使えるモデルが限られます。Fastは2026年7月30日にPriority processingから名前が変わった段階です。</p>
+<p><strong>社員が画面で待つ処理はStandard、翌朝まででよい処理はBatchに分けるだけで、まとめて流す分の代金は半分になります。</strong> Fastは顧客が使う画面で応答の速さを揃えたいときに検討する段階で、社内向けの仕組みで最初から選ぶ必要はありません。</p>
+<h3 id="s4-1">キャッシュ入力</h3>
+<p>前と同じ指示文や資料を先頭に付けて送ると、一致した部分がキャッシュから読まれ、安い単価になります。GPT-6.1 SolとTerraの読み取りは通常の入力の0.05倍、ほかのGPT-5.6以降の多くのモデルは0.1倍です。GPT-5.6以降はキャッシュに書き込む分にも単価があり、既定の30分の保持なら入力の1.25倍、Responses APIで選べる12時間の保持なら2.5倍です。</p>
+<p>GPT-5.6以降でキャッシュされるのは1,024トークン以上の前置きです。<strong>既定の設定では区切りが最後の質問の後ろに置かれるため、質問が毎回変わる使い方だと前置きは使い回されず、毎回の入力が書き込みの単価で数えられます。</strong> 指示文と社内資料を毎回同じ順で先頭に置き、その直後に区切りを明示して（explicit）、質問を最後に付ける作りにすると、前置きがキャッシュから読まれます。</p>
+<h3 id="s4-2">ツールの料金</h3>
+<p>モデルにWeb検索やファイル検索をさせると、トークンとは別に呼び出しの料金がかかります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>ツール</th>
+<th>料金</th>
+<th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="ツール">Web検索</td>
+<td data-label="料金">1,000回で10ドル</td>
+<td data-label="注意点">検索結果を読んだトークンも入力として課金</td>
+</tr>
+<tr>
+<td data-label="ツール">ファイル検索の呼び出し</td>
+<td data-label="料金">1,000回で2.5ドル</td>
+<td data-label="注意点">Responses APIでの料金</td>
+</tr>
+<tr>
+<td data-label="ツール">ファイル検索の保存</td>
+<td data-label="料金">1GBにつき1日0.1ドル</td>
+<td data-label="注意点">最初の1GBは無料</td>
+</tr>
+<tr>
+<td data-label="ツール">コンテナ（コード実行など）</td>
+<td data-label="料金">1GBで20分0.03ドル</td>
+<td data-label="注意点">分単位・1回は最低5分</td>
+</tr>
+</tbody>
+</table></div>
+<p>文章をベクトルに変える埋め込みはtext-embedding-3-smallが100万トークンあたり0.02ドル、3-largeが0.13ドル、不適切な内容を判定するモデレーションは無料です。</p>
+<h2 id="s5">社内の問い合わせ対応の月額</h2>
+<p>社員から総務や情シスへの問い合わせに、社内の規程を参照してAPIが答える仕組みを想定して、モデルの代金を数えます。前提は次のとおりで、自社の件数とトークン数に置き換えれば同じ式で出せます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>前提</th>
+<th>値</th>
+<th>置き換える所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="前提">1日の件数</td>
+<td data-label="値">300件</td>
+<td data-label="置き換える所">社員数×1人あたりの件数</td>
+</tr>
+<tr>
+<td data-label="前提">月の営業日</td>
+<td data-label="値">20日</td>
+<td data-label="置き換える所">自社の営業日</td>
+</tr>
+<tr>
+<td data-label="前提">1件の入力</td>
+<td data-label="値">4,000トークン（指示文1,500＋規程の抜粋2,000＋質問と履歴500）</td>
+<td data-label="置き換える所">渡す資料の長さ</td>
+</tr>
+<tr>
+<td data-label="前提">1件の出力</td>
+<td data-label="値">500トークン</td>
+<td data-label="置き換える所">答えの長さ</td>
+</tr>
+<tr>
+<td data-label="前提">段階</td>
+<td data-label="値">Standard・短い入力</td>
+<td data-label="置き換える所">待てる処理はBatch</td>
+</tr>
+</tbody>
+</table></div>
+<p>この前提で月の入力は300件×20日×4,000で2,400万トークン、出力は300万トークンです。式は「月の入力トークン÷100万×入力の単価＋月の出力トークン÷100万×出力の単価」で、キャッシュの書き込みと読み取りは数えず、入力はすべて通常の単価で数えています。円は三菱UFJ銀行の2026年11月2日の公表仲値（1ドル157.80円）で換算し、消費税10%を足した額も並べました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>入力の代金</th>
+<th>出力の代金</th>
+<th>月額（ドル）</th>
+<th>円・税込の目安</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">GPT-6 Luna</td>
+<td data-label="入力の代金">2.4ドル</td>
+<td data-label="出力の代金">1.5ドル</td>
+<td data-label="月額（ドル）">3.9ドル</td>
+<td data-label="円・税込の目安">約680円</td>
+</tr>
+<tr>
+<td data-label="モデル">GPT-6.1 Terra</td>
+<td data-label="入力の代金">24ドル</td>
+<td data-label="出力の代金">15ドル</td>
+<td data-label="月額（ドル）">39ドル</td>
+<td data-label="円・税込の目安">約6,800円</td>
+</tr>
+<tr>
+<td data-label="モデル">GPT-6.1 Sol</td>
+<td data-label="入力の代金">48ドル</td>
+<td data-label="出力の代金">30ドル</td>
+<td data-label="月額（ドル）">78ドル</td>
+<td data-label="円・税込の目安">約1万3,500円</td>
+</tr>
+<tr>
+<td data-label="モデル">GPT-6 Astra</td>
+<td data-label="入力の代金">240ドル</td>
+<td data-label="出力の代金">150ドル</td>
+<td data-label="月額（ドル）">390ドル</td>
+<td data-label="円・税込の目安">約6万7,700円</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/openai-api-pricing/oapi_02_calc.png" alt="社内の問い合わせ対応の月額の試算。1日300件で月20日、1件あたり入力4,000トークン・出力500トークンのとき、GPT-6 Lunaは月3.9ドル、GPT-6.1 Terraは39ドル、GPT-6.1 Solは78ドル、GPT-6 Astraは390ドル。Standardの単価で、キャッシュは数えない、モデルの代金だけの試算" loading="lazy"></figure>
+
+<p><strong>この規模なら、Terraで組んでもモデルの代金は月50ドルに届きません。</strong> ただしGPT-5.6以降のモデルを既定の設定のまま使うと、毎回の入力が書き込みの単価（1.25倍）で数えられ、Terraは月約45ドル（約7,800円）になります。指示文の直後に区切りを明示して1,500トークンを使い回すと、月約31ドルまで下がる試算です（1日20回書き込む前提）。反対に、資料の抜粋を毎回1万トークン渡す作りにすると、通常の単価でもTerraの月額は約87ドルになります。<strong>月額を動かすのは件数より、1件で渡す資料の長さです。</strong></p>
+<p>件数を10倍の1日3,000件に広げると、Terraで通常の単価なら月約390ドル、既定のキャッシュの設定のままなら約450ドルです。後で説明する利用ティアの最初の段階は月の上限が500ドルで、ほぼ上限に届きます。累計の購入額が100ドルに達すると次の段階（月5,000ドル）に自動で上がるため、全社に広げる前に今の段階を確かめておきます。</p>
+<h3 id="s5-1">夜間の一括処理はBatchで半額</h3>
+<p>日中に届いた問い合わせの記録を、夜のうちに分類して要約する処理も数えておきます。1日2,000件、1件の入力2,000トークン・出力200トークンで30日動かすと、月の入力は1億2,000万トークン、出力は1,200万トークンです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>Standard</th>
+<th>Batch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">GPT-6 Luna</td>
+<td data-label="Standard">18ドル</td>
+<td data-label="Batch">9ドル</td>
+</tr>
+<tr>
+<td data-label="モデル">GPT-6.1 Terra</td>
+<td data-label="Standard">180ドル</td>
+<td data-label="Batch">90ドル</td>
+</tr>
+</tbody>
+</table></div>
+<p>結果が翌朝そろえばよい処理なので、Batchに回すだけでTerraなら月90ドル下がります。分類のような決まった作業はLunaで質が足りるかを先に試すと、さらに1桁下げられます。</p>
+<h3 id="s5-2">モデル以外にかかる費用</h3>
+<p>上の金額はモデルの代金だけです。社内の文書をOpenAIのファイル検索に置いて探させる場合、5GBの文書なら保存で月約12ドル、月6,000回の検索の呼び出しで15ドルが加わります。自前の検索の部品を使うなら、その部品とサーバーの費用が別にかかります。部品ごとの費用の考え方は<a href="/media/rag-build/">RAG構築の費用</a>にあります。</p>
+<p>規模の大きい仕組みほど、画面や社内システムとのつなぎ込みを作る開発費と保守の費用がモデルの代金を上回りがちです。APIの代金と開発費を分けて見積もりに示しておくと、毎月かかる額が稟議で伝わりやすくなります。</p>
+<h2 id="s6">支払いとクレジットの仕組み</h2>
+<p><strong>新しく作ったAPIの組織は前払いで、先にクレジットを買い、使った分が残高から引かれます。</strong> OpenAIのヘルプによると、最初の購入は最低5ドル・既定10ドルです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">購入の単位</td>
+<td data-label="内容">最低5ドル（既定10ドル）</td>
+</tr>
+<tr>
+<td data-label="項目">有効期限</td>
+<td data-label="内容">購入から1年で失効・延長できない</td>
+</tr>
+<tr>
+<td data-label="項目">返金</td>
+<td data-label="内容">原則できない（請求の誤りや不正利用などの例外あり）</td>
+</tr>
+<tr>
+<td data-label="項目">自動リチャージ</td>
+<td data-label="内容">設定時は既定でオン。しきい値と月の上限を決められる</td>
+</tr>
+<tr>
+<td data-label="項目">残高が尽きたとき</td>
+<td data-label="内容"><code>credit_balance_exhausted</code>のエラーで止まる</td>
+</tr>
+<tr>
+<td data-label="項目">消費税</td>
+<td data-label="内容">2025年1月1日から10%が加わる</td>
+</tr>
+</tbody>
+</table></div>
+<p>残高が決めた額を下回ると自動で買い足す自動リチャージは、最初の設定画面で既定でオンになっています。月のリチャージ上限は自動で買う額の上限で、使う量の上限ではありません。<strong>会社のカードで払うなら、自動リチャージを切るか月の上限を決めてから最初の購入を確定するのがおすすめです。</strong></p>
+<p>残高が尽きても、APIがすぐに止まるとは限りません。止まるまでに処理された分はマイナスの残高として記録され、次の購入から差し引かれます。前払いの残高を支出をすぐ止める上限として当てにしないよう、ヘルプにも書かれています。</p>
+<p>料金は米ドルで表示され、日本の利用者にはOpenAI OpCo, LLCが10%の消費税を加えて請求します。発行される適格請求書には税額が円で記載され、登録番号はT3700150133253です。Enterpriseのような個別の契約で買う法人には、一般的にリバースチャージの仕組みが適用されるため請求書に消費税は加わらず、受け取る側の会社が税額を自ら計算して申告・納付します。</p>
+<h3 id="s6-1">利用ティアと月の上限</h3>
+<p>OpenAIは組織ごとに、累計の購入額に応じて利用ティアを決め、月に使える上限を割り当てています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>ティア</th>
+<th>条件（累計の購入額）</th>
+<th>月の利用上限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="ティア">Build</td>
+<td data-label="条件（累計の購入額）">5ドル</td>
+<td data-label="月の利用上限">500ドル</td>
+</tr>
+<tr>
+<td data-label="ティア">Launch</td>
+<td data-label="条件（累計の購入額）">100ドル</td>
+<td data-label="月の利用上限">5,000ドル</td>
+</tr>
+<tr>
+<td data-label="ティア">Grow</td>
+<td data-label="条件（累計の購入額）">500ドル</td>
+<td data-label="月の利用上限">20万ドル</td>
+</tr>
+</tbody>
+</table></div>
+<p>ティアは購入額が条件に届くと自動で上がり、1分あたりの要求数とトークン数の上限も上がります。Buildの上限はTerraが1分5,000回・100万トークン、Lunaが1分5,000回・200万トークンです。<strong>本番の前に、見込みの月額と朝の始業直後のような混む時間の量が、今のティアに収まるかを比べておきます。</strong> 上限は組織とプロジェクトの単位でかかり、社員1人ずつではありません。</p>
+<h2 id="s7">使用量の確認と上限の設定</h2>
+<p>使った分を確かめる場所は使用量のダッシュボード・応答の使用量の欄・上限の設定の3つです。</p>
+<figure class="post-figure"><img src="/media/images/openai-api-pricing/oapi_03_check.png" alt="OpenAI APIで使った分を確かめる3つの場所。使用量のダッシュボードでプロジェクトや利用者ごとの量と代金を見る。応答の使用量の欄で1件ごとの入力・出力・キャッシュ・推論のトークン数を見る。上限の設定で月の金額のアラートとハードリミットを決める" loading="lazy"></figure>
+
+<h3 id="s7-1">使用量のダッシュボード</h3>
+<p>API Platformの使用量のダッシュボードは、組織のオーナーか、使用量を見る権限を持つ人が開けます。<strong>表示は協定世界時（UTC）なので、日本時間の社内の記録と比べるときは9時間のずれに注意が要ります。</strong> プロジェクトの絞り込みは画面の他の場所とは別にあり、何も選ばなければ組織の全体が出ます。Responses APIとChat Completions APIの分なら、利用者ごとの絞り込みも可能です。</p>
+<p>書き出しの期間に制限は無く、月の請求と突き合わせる明細も出せます。ひとつのAPIキーを複数のアプリで使い回すと、ダッシュボードの合計からはどのアプリの分かを区別できません。<strong>部門やアプリごとにプロジェクトを分け、キーもプロジェクトごとに発行しておくと、代金を部門に割り振れます。</strong> 開発者が試しに使うPlaygroundの分も、APIの使用量に含まれる点は見落としがちです。</p>
+<h3 id="s7-2">1件ごとの使用量</h3>
+<p>APIの応答にはその要求で使ったトークン数が付いてきます。Responses APIなら<code>usage.input_tokens</code>と<code>usage.output_tokens</code>で、モデルによってはキャッシュから読んだ分と推論の分の内訳も入るため、答えの長さと代金が合わない理由もここで分かります。この数を自社の記録に残しておけば、部門別や機能別の代金を自分で集計でき、ダッシュボードの数字との照合にも使えます。</p>
+<h3 id="s7-3">アラートとハードリミット</h3>
+<p>上限を決められる場所は組織全体とプロジェクトごとの2か所です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>種類</th>
+<th>設定額に達すると</th>
+<th>向く使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="種類">アラート</td>
+<td data-label="設定額に達すると">通知が届く。APIは止まらない</td>
+<td data-label="向く使い方">使いすぎに早く気づく</td>
+</tr>
+<tr>
+<td data-label="種類">ハードリミット</td>
+<td data-label="設定額に達すると">対象の要求が429のエラーになる</td>
+<td data-label="向く使い方">月の予算を超えさせない</td>
+</tr>
+</tbody>
+</table></div>
+<p>組織の上限はOrganization limitsのSpendから「Edit spend limit」を選び、月の上限額を入れて「Enforce a hard limit」をオンにして保存します。プロジェクトの上限もProject settingsのLimitsにある同じ項目からで、手順は変わりません。上限に達すると、組織なら<code>organization_spend_limit_exceeded</code>、プロジェクトなら<code>project_spend_limit_exceeded</code>のエラーで要求が断られます。</p>
+<p><strong>反映は即時ではないため、記録上の代金が設定額をわずかに超えることがあります。</strong> ハードリミットは本番の利用も止めるので、手前の額にアラートを置き、通知を受けたら上限を上げるか原因を調べる流れを決めておくのがおすすめです。上限は月が替わると元に戻ります。キーが外に漏れたときの被害も、プロジェクトごとの上限があれば、そのプロジェクトの額までに抑えられます。</p>
+<h2 id="s8">Azure OpenAIやGemini APIと比べる観点</h2>
+<p>同じOpenAIのモデルは、MicrosoftのAzure OpenAIからも使えます。2026年11月2日に比べたGPT-6系の通常の単価は、Azureのグローバル標準と同じでした。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>比べる点</th>
+<th>OpenAI API</th>
+<th>Azure OpenAI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="比べる点">請求</td>
+<td data-label="OpenAI API">OpenAIへ米ドルで前払い</td>
+<td data-label="Azure OpenAI">Azureの請求にまとまる</td>
+</tr>
+<tr>
+<td data-label="比べる点">単価</td>
+<td data-label="OpenAI API">基準</td>
+<td data-label="Azure OpenAI">GPT-6系はグローバル標準で同じ</td>
+</tr>
+<tr>
+<td data-label="比べる点">予算で止める上限</td>
+<td data-label="OpenAI API">ハードリミットがある</td>
+<td data-label="Azure OpenAI">無い（アラートを自分で組む）</td>
+</tr>
+<tr>
+<td data-label="比べる点">処理する場所</td>
+<td data-label="OpenAI API">2026年3月5日以降のモデルは、データ所在地の指定で10%上乗せ</td>
+<td data-label="Azure OpenAI">データゾーン・リージョンを選ぶ</td>
+</tr>
+<tr>
+<td data-label="比べる点">権限の管理</td>
+<td data-label="OpenAI API">OpenAIの組織とプロジェクト</td>
+<td data-label="Azure OpenAI">Entra IDやAzureの権限</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>単価で差がつかない以上、選ぶ理由は請求と管理の側にあります。</strong> すでにAzureで社員のアカウントと請求を管理している会社にはAzureが向き、月の上限で確実に止めたい会社や、新しいモデルをすぐ試したい会社にはOpenAIのAPIが向いています。Azureの料金の詳細は<a href="/media/azure-openai-pricing/">Azure OpenAIの料金</a>が扱う範囲です。</p>
+<p>データを処理する場所を指定する場合、OpenAIのAPIは2026年3月5日以降に出たモデルで10%上乗せになります。日本の地域を選べるのは保存の場所で、OpenAIのデータの扱いのページでは、処理の地域に日本は入っていません。米国以外の地域を使うには営業への相談と追加の承認が要ります。2023年3月1日以降、APIに送ったデータはオプトインしない限りモデルの学習に使われません。</p>
+<p>GoogleのGemini APIなど他社のAPIと比べるときも、単価の表だけでなく、無料で試せる範囲・請求の窓口・月の上限で止められるか・処理する場所の4つを並べると、社内の稟議で聞かれる点を先に埋められます。</p>
+<p>社内のAIをAPIでどこまで組むか、どのモデルと段階で始めるかを決めきれない場合は、nitoの<a href="/ai-agent/">AIエージェント構築支援</a>で要件の整理から相談できます。</p>
+<h2 id="s9">まとめ</h2>
+<ul>
+<li><strong>まず試す段階なら</strong>、5ドルのクレジットでTerraとLunaに同じ質問を送り、答えの質と1件あたりのトークン数を測る。Businessを契約していれば、APIクレジットの特典を先に確かめる</li>
+<li><strong>社内に配る段階なら</strong>、件数×1件のトークン数で月額を出し、ティアの月の上限に収まるかを見る。プロジェクトを部門ごとに分け、ハードリミットとアラートを置いてから公開する</li>
+<li><strong>待てる処理が多いなら</strong>、Batchに回して半額にする。月額が膨らむときは件数より渡す資料の長さを先に見直す</li>
+</ul>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">OpenAI APIは1回いくらかかりますか？</h3>
+<p>1回の代金は決まっておらず、送ったトークン数と返ってきたトークン数にモデルの単価を掛けて決まります。GPT-6.1 Terraで入力4,000トークン・出力500トークンなら通常の入力の単価で1回0.0065ドルで、1ドル157.80円なら約1円です（税抜き）。</p>
+<h3 id="s10-2">OpenAI APIに無料枠はありますか？</h3>
+<p>新規の利用者に一律で付く無料枠は、OpenAIのヘルプには書かれていません。新しいAPIの組織は前払いで、最低5ドルのクレジットを買って始めます。ChatGPTのProかBusinessを契約していれば、条件を満たすと毎月のAPIクレジットを受け取れます。</p>
+<h3 id="s10-3">OpenAI APIはChatGPT Plusで使えますか？</h3>
+<p>含まれません。ChatGPTの月額とAPIは別の請求で、Plusの契約者はAPIクレジットの特典の対象でもありません。</p>
+<h3 id="s10-4">OpenAI APIの料金は円で払えますか？</h3>
+<p>料金とクレジットは米ドルで表示されます。日本の利用者には10%の消費税が加わり、適格請求書には税額が円で記載されます。</p>
+<h3 id="s10-5">OpenAI APIのクレジットに有効期限はありますか？</h3>
+<p>購入したクレジットは1年で失効し、延長はできません。ChatGPTの契約で受け取るAPIクレジットは、その請求期間の終わりで失効します。</p>
+<h3 id="s10-6">OpenAI APIの使いすぎを止められますか？</h3>
+<p>組織かプロジェクトにハードリミットを設定すると、上限に達した後の要求は429のエラーになります。反映は即時ではないため、記録上の代金が設定額を少し超えることがあります。</p>
+<h2 id="s11">出典</h2>
+<ul>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/pricing">Pricing</a>」（2026年11月3日取得）</li>
+<li>OpenAI「<a href="https://openai.com/ja-JP/business/pricing/">ビジネス向け料金</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/guides/chatgpt-api-credits">API credits for ChatGPT subscribers</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/guides/rate-limits">Rate limits</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/guides/spend-limits">Spend limits</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/guides/batch">Batch API</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/guides/flex-processing">Flex processing</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/guides/fast-mode">Fast mode</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/guides/prompt-caching">Prompt caching</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/guides/reasoning">Reasoning models</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/guides/your-data">Your data</a>」（同）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/8264644-how-can-i-set-up-prepaid-billing">API のプリペイド請求の設定と管理</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/10478918-api-usage-dashboard">Reviewing API usage and costs</a>」（同）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/10242647-the-japanese-consumption-tax-on-your-openai-invoices">OpenAI の請求書における日本の消費税</a>」（同）</li>
+<li>三菱UFJリサーチ&amp;コンサルティング「<a href="https://www.murc-kawasesouba.jp/fx/past/index.php?id=261102">2026年11月2日の為替相場</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">OpenAI APIの料金が決まる仕組み</a><a href="#s2">ChatGPTの料金プランとの違い</a><a href="#s3">モデル別のOpenAI API料金</a><a href="#s4">処理の速さで変わる課金の型</a><a href="#s5">社内の問い合わせ対応の月額</a><a href="#s6">支払いとクレジットの仕組み</a><a href="#s7">使用量の確認と上限の設定</a><a href="#s8">Azure OpenAIやGemini APIと比べる観点</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-efficiency-cases/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI業務効率化の事例"><defs><linearGradient id="ecg-e17a6697" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e17a6697)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI業務効率化の事例</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.02</div>
+                <div class="rel-card__ttl">【2026年11月】AI業務効率化の事例10選｜業務別の削減時間と条件・進め方</div>
+            </a>
+            <a href="/media/azure-openai-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Azure OpenAIの料金"><defs><linearGradient id="ecg-573e4f06" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-573e4f06)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Azure OpenAIの料金</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.02</div>
+                <div class="rel-card__ttl">【2026年11月】Azure OpenAIの料金｜Foundryでの課金の仕組みと月額の計算例</div>
+            </a>
+            <a href="/media/ai-agent-introduction/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIエージェント導入"><defs><linearGradient id="ecg-65781d01" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-65781d01)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AIエージェント導入</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.01</div>
+                <div class="rel-card__ttl">【2026年11月】AIエージェント導入の進め方と費用｜自社で作るか頼むか・国内事例</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'openai-api-pricing',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>

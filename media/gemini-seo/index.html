@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】GeminiのSEO対策｜使い方とプロンプト例・自社が出る対策｜株式会社nito</title>
+    <meta name="description" content="GeminiをSEO対策に使う方法を、任せられる作業、ChatGPTとの使い分け、手順とプロンプト例、会社で決めることの順に解説。GeminiやGoogleのAI検索に自社が引用される側の対策もまとめます。">
+    <link rel="canonical" href="https://nito-0210.com/media/gemini-seo/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】GeminiのSEO対策｜使い方とプロンプト例・自社が出る対策">
+    <meta property="og:description" content="GeminiをSEO対策に使う方法を、任せられる作業、ChatGPTとの使い分け、手順とプロンプト例、会社で決めることの順に解説。GeminiやGoogleのAI検索に自社が引用される側の対策もまとめます。">
+    <meta property="og:url" content="https://nito-0210.com/media/gemini-seo/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/gemini-seo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/gemini-seo.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】GeminiのSEO対策｜使い方とプロンプト例・自社が出る対策", "description": "GeminiをSEO対策に使う方法を、任せられる作業、ChatGPTとの使い分け、手順とプロンプト例、会社で決めることの順に解説。GeminiやGoogleのAI検索に自社が引用される側の対策もまとめます。", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/gemini-seo/"}, "articleSection": "AI検索対策", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/gemini-seo.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】GeminiのSEO対策｜使い方とプロンプト例・自社が出る対策"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Geminiで書いた記事はGoogleで不利になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "Geminiで書いたこと自体で不利にはなりません。Googleの説明ではAIや自動化を適切に使っている限りガイドラインの違反にならず、ランキングの操作を主な目的に価値を足さず大量に作るとスパムポリシーの違反になるとしています。公開前に事実を確かめ、自社の一次情報を足すのが前提です。"}}, {"@type": "Question", "name": "Geminiでキーワードの検索ボリュームは調べられますか？", "acceptedAnswer": {"@type": "Answer", "text": "検索ボリュームはGeminiでなくキーワードツールで調べます。GoogleはGeminiアプリがそのデータを返すとは説明しておらず、聞いて出てきた数の出どころが分からないためです。Geminiは関連する語の候補を広げる役に置き、数はSearch Consoleでも確かめます。"}}, {"@type": "Question", "name": "Geminiの無料版でもSEOに使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。料金ページでは無料版でもFlash-LiteモデルとGem、Deep Researchが使える表示です。上限に当たる回数や、ドキュメントの中で使いたいかを見て、Google AI ProやWorkspaceのGeminiを選びます。"}}, {"@type": "Question", "name": "Geminiに入力した下書きは学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "個人のアカウントで［アクティビティの保存］がオンのときは、トレーニングを含む改善に使われ、人間のレビュアーが確認することもあります。オフにすると、フィードバックを送った場合を除き、以降のチャットはトレーニングに使われません。Google WorkspaceのGeminiは、Geminiアプリがコアサービスに入っているエディションなら、許可なくドメインの外でトレーニングに使われません。"}}, {"@type": "Question", "name": "Geminiに自社サイトを引用させるには何が必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Google検索の索引に載っていることが出発点で、robots.txtでGoogle-Extendedを止めていないかも確かめます。そのうえで、見込み客がGeminiに聞く問いに答えるページがあるかで、引用されるかが変わります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】GeminiのSEO…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.11.03</span>
+        </div>
+        <h1 class="post-title">【2026年11月】GeminiのSEO対策｜使い方とプロンプト例・自社が出る対策</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/gemini-seo.jpg" alt="【2026年11月】GeminiのSEO対策｜使い方とプロンプト例・自社が出る対策" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>GoogleはGeminiアプリのプライバシー ハブで、Geminiの回答の一部はGoogle検索の検索結果に基づいて作られると説明しています。</p>
+<p>Geminiを記事づくりに使うよう言われ、同時に「GeminiやAIによる概要にうちの会社は出ているのか」とも聞かれているマーケ担当・Web担当の方に向けて、Geminiに任せる作業の範囲と手順、プロンプト例、会社で決めること、Geminiに自社が引用される側の入口までを書きます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>Geminiで速くなるのは<strong>語の候補・構成・下書き・タイトルと説明文・データの読み取り</strong>で、検索ボリュームの実数と自社の一次情報は出せない</li>
+<li>Googleが見るのは作り方でなく価値で、<strong>公開前の事実確認はtitle・説明文・構造化データ・altまで人が行う</strong>とガイダンスにある</li>
+<li>Geminiに引用されるかは別の作業で、<strong>入口はGoogleの索引に載ることとGoogle-Extendedの設定</strong>。AIによる概要とAIモードも同じ索引を使う</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>GeminiのSEO対策は2つに分かれる</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Geminiに任せられるSEOの作業</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>GeminiとChatGPTの使い分け</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>AIで書いた記事のGoogleでの扱い</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>GeminiでSEO記事を作る5つの手順</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>① 語と意図を広げる</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>② 上位の見出しと比べる</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>③ 構成案を作る</a></li>
+                    <li class="toc-h3"><a href="#s5-4"><span class="toc__n">5-4</span>④ 見出しごとに下書きする</a></li>
+                    <li class="toc-h3"><a href="#s5-5"><span class="toc__n">5-5</span>⑤ タイトルと説明文を作る</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>Geminiならではの3つの使い方</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>Gemで社内の決まりを固定する</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>ドキュメントとスプレッドシートの中で使う</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>Deep Researchの出典を開く</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>公開前に人が確かめること</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>会社で使うときに決めること</a></li>
+                    <li class="toc-h3"><a href="#s8-1"><span class="toc__n">8-1</span>アカウントの種類と入力してよい情報</a></li>
+                    <li class="toc-h3"><a href="#s8-2"><span class="toc__n">8-2</span>プランの選び方</a></li>
+                    <li class="toc-h3"><a href="#s8-3"><span class="toc__n">8-3</span>事実確認と公開の責任者</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>GeminiとGoogleのAI検索で自社が引用される対策</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">GeminiのSEO対策は2つに分かれる</h2>
+<p>社内で「GeminiでSEOをやろう」と言われたとき、指している中身は2通りあります。1つ目はGeminiを使ってキーワードの候補出しや記事の下書きを進め、Google検索で上位を狙う作業を速くすることです。2つ目はGeminiやGoogle検索のAIによる概要・AIモードが質問に答えるとき、自社のページが引用元に入り、社名が挙がるようにすることを指します。</p>
+<p><strong>1つ目は制作の効率化、2つ目はAIの答えという新しい入口への対策で、担当も測り方も違います。</strong> 依頼を受けたら、どちらの話かを最初に確かめておくと手戻りが減ります。この記事は1つ目を中心に書き、2つ目は後半の1節にまとめました。</p>
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_01_two.png" alt="GeminiのSEO対策の2つの意味。1つ目はGeminiを使って語の候補や下書きを作りGoogleの上位を狙うこと。2つ目はGeminiとAI検索の答えに自社が引用されるようにすること" loading="lazy"></figure>
+
+<h2 id="s2">Geminiに任せられるSEOの作業</h2>
+<p>SEOの作業を工程に分けると、Geminiが速くできる所と、人やほかの道具が持つ所に分かれます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>作業</th>
+<th>Geminiに任せる所</th>
+<th>人やほかの道具が持つ所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="作業">キーワード選び</td>
+<td data-label="Geminiに任せる所">関連する語と悩みの言い換えを出す</td>
+<td data-label="人やほかの道具が持つ所">検索ボリュームはキーワードツールで取る</td>
+</tr>
+<tr>
+<td data-label="作業">検索意図</td>
+<td data-label="Geminiに任せる所">調べる人の立場と知りたいことの仮説</td>
+<td data-label="人やほかの道具が持つ所">実際の上位が何に答えているかで決める</td>
+</tr>
+<tr>
+<td data-label="作業">競合の分析</td>
+<td data-label="Geminiに任せる所">貼った見出しから共通点と抜けを出す</td>
+<td data-label="人やほかの道具が持つ所">上位の一覧は自分で検索して写す</td>
+</tr>
+<tr>
+<td data-label="作業">構成案と下書き</td>
+<td data-label="Geminiに任せる所">見出しの案と見出しごとの叩き台</td>
+<td data-label="人やほかの道具が持つ所">自社の材料を足し、事実を確かめる</td>
+</tr>
+<tr>
+<td data-label="作業">タイトルと説明文</td>
+<td data-label="Geminiに任せる所">字数を決めた案を複数出す</td>
+<td data-label="人やほかの道具が持つ所">狙う語の位置と言い過ぎを確かめる</td>
+</tr>
+<tr>
+<td data-label="作業">構造化データ</td>
+<td data-label="Geminiに任せる所">JSON-LDのひな形</td>
+<td data-label="人やほかの道具が持つ所">リッチリザルト テストで検証する</td>
+</tr>
+<tr>
+<td data-label="作業">効果の分析</td>
+<td data-label="Geminiに任せる所">Search Consoleの書き出しの傾向を読む</td>
+<td data-label="人やほかの道具が持つ所">数字の計算と判断は人が確かめる</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Geminiに競合の順位や検索ボリュームを聞いて出てきた数は、そのまま使わないようにします。</strong> プライバシー ハブが書いているのは回答の一部が検索結果に基づくことまでで、Geminiの答えに並ぶ記事の順番が検索結果の順位と同じだという説明は、Googleの公式の資料にありません。語を決める数字はキーワードツールとSearch Consoleで取り、Geminiは候補を広げる役に置くと迷いません。</p>
+<p>プランの名前も変わっています。以前の有料版の名前だったGemini Advancedは、今の料金ページにはありません。今の個人向けはGoogle AI Plus・Pro・Ultraで、会社で選ぶときの見方は後の節に書きました。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">Gemini に自社がどう紹介されているか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">GeminiとChatGPTの使い分け</h2>
+<p>SEOの作業の多くはGeminiとChatGPTのどちらでもこなせます。違いが出るのはウェブの情報の取り方と、普段使っている道具とのつながりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>Gemini</th>
+<th>ChatGPT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">開発元</td>
+<td data-label="Gemini">Google</td>
+<td data-label="ChatGPT">OpenAI</td>
+</tr>
+<tr>
+<td data-label="項目">ウェブの情報</td>
+<td data-label="Gemini">回答の一部がGoogle検索の結果に基づく</td>
+<td data-label="ChatGPT">検索するとき外部の検索サービスに語を送ることがある</td>
+</tr>
+<tr>
+<td data-label="項目">普段の道具</td>
+<td data-label="Gemini">Google AI ProかWorkspaceなら、Gmail・ドキュメントの中で呼べる</td>
+<td data-label="ChatGPT">ChatGPTの中で外部のアプリを使える</td>
+</tr>
+<tr>
+<td data-label="項目">会社向けの契約</td>
+<td data-label="Gemini">Google WorkspaceのGemini</td>
+<td data-label="ChatGPT">ChatGPT Business・Enterprise</td>
+</tr>
+</tbody>
+</table></div>
+<p>社内のメールや文書をGoogle Workspaceで扱っている会社なら、下書きをドキュメントに置いたままGeminiを呼べる分、作業の行き来が減ります。ChatGPTの使い方は<a href="/media/chatgpt-seo/">ChatGPTのSEO対策</a>に同じ形でまとめています。</p>
+<p><strong>Google製のGeminiで書いても、検索の順位で有利になるわけではありません。</strong> Googleは2023年のガイダンスで、AIを使ったからといってランキングで特別なメリットがあるわけではないと答えています。どちらのAIで書いても、Googleが見るのは出来上がったページの中身です。</p>
+<h2 id="s4">AIで書いた記事のGoogleでの扱い</h2>
+<p>Googleの検索セントラルには、生成AIで作ったコンテンツの扱いを書いたガイダンスがあり、2026年10月に更新されました。生成AIはトピックを調べたり構造化データを足したりするときに特に便利だと、冒頭に書かれています。同時に、読者への価値を足さずに大量のページを作ると、大量生成されたコンテンツの不正使用というスパムポリシーに違反するおそれがあるとしています。</p>
+<p>ガイダンスはその理由も書いています。生成モデルは事実を取りにいくのでなく、学習したデータからありそうな単語の並びを予測するため、出力に誤りが混ざるという説明です。<strong>そのため公開前に人の手でファクトチェックを行い、その対象はtitle・メタディスクリプション・構造化データ・画像の代替テキストにも及ぶとしています。</strong></p>
+<figure class="post-figure"><img src="/media/images/chatgpt-seo/cgseo_g2.png" alt="Googleの生成AIコンテンツのガイダンスの正確性の節。AI生成コンテンツを公開する前に手動でファクトチェックを行うことが重要で、titleやメタディスクリプション、構造化データ、画像の代替テキストにも適用されると書かれている" loading="lazy"><figcaption>ウェブサイトで生成 AI によるコンテンツを使用するための Google 検索のガイダンス（Google 検索セントラル、2026年11月2日）</figcaption></figure>
+
+<p>ここで気をつけたいのは、Geminiに任せやすい短い部品ほど見落としやすいことです。説明文やaltは本文より読み返される回数が少なく、誤りが残ったまま公開されがちです。どのような自動化を使ったかを読者に伝えることも、ガイダンスは検討するよう勧めています。</p>
+<h2 id="s5">GeminiでSEO記事を作る5つの手順</h2>
+<p>「この語で記事を書いて」と一度に頼むと、どこかで読んだような一般論の記事になりやすくなります。人が記事を作るときの工程を分け、工程ごとにGeminiに頼み、出てきたものを人が確かめてから次の工程に渡すのが基本の進め方です。</p>
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_02_steps.png" alt="GeminiでSEO記事を作る5つの手順。語と意図を広げる、上位の見出しと比べる、構成案を作る、見出しごとに下書きする、タイトルと説明文を作る。各手順のあとに人が確かめる" loading="lazy"></figure>
+
+<p>プロンプトは［ ］の中を自社の内容に置き換えて使う形にしました。同じ指示でも答えは毎回変わるため、出力の例は載せていません。</p>
+<h3 id="s5-1">① 語と意図を広げる</h3>
+<p>最初に、狙う語の周りにある語と、それぞれの語で調べる人の状況を広げます。</p>
+<pre><code>あなたはBtoB企業のWeb担当者です。
+［狙う語］を調べる人について、次を表にしてください。
+- 一緒に検索していそうな語を15個
+- その語で知りたいこと（1行）
+- 調べている人の立場（現場の担当者・決裁者など）
+検索ボリュームと順位は書かないでください。
+</code></pre>
+<p>出てきた語はキーワードツールでボリュームを取り、実際に検索して上位の顔ぶれを見てから選んでください。</p>
+<h3 id="s5-2">② 上位の見出しと比べる</h3>
+<p>狙う語で検索した上位5〜10本の見出しを自分で写し、Geminiに貼って比べさせます。Geminiに上位の記事を挙げさせると、実際の検索結果と並びが違うことがあるためです。</p>
+<pre><code>次は［狙う語］の検索結果の上位の記事の見出しです。
+［記事ごとに見出しを貼る］
+1. 2本以上が扱っている論点を一覧にしてください
+2. 1本だけが扱っている論点を一覧にしてください
+3. どの記事にも答えが無い読者の疑問を挙げてください
+</code></pre>
+<h3 id="s5-3">③ 構成案を作る</h3>
+<p>②で出た論点に、自社だけが持つ材料を足して構成を頼みます。</p>
+<pre><code>［読者］が［狙う語］で調べたときに読む記事の構成案を作ってください。
+- 入れる論点: ［②の共通の論点］
+- 自社の材料: ［自社の数字・事例・試した結果］
+- h2は6〜8個、h2の下のh3は0〜3個
+- 自社の材料を使う見出しの後ろに【自社】と付ける
+見出しだけを階層で出してください。
+</code></pre>
+<h3 id="s5-4">④ 見出しごとに下書きする</h3>
+<p>本文は記事全体でなく、見出し1つずつ頼みます。<strong>見出しごとに頼むと、誤りが混ざったときにどこを直せばよいかが分かりやすくなります。</strong></p>
+<pre><code>次の見出しの本文を400字程度で書いてください。
+- 見出し: ［h2またはh3］
+- 読者: ［読者］
+- 使ってよい事実: ［確かめた事実と出典］
+ここに無い数字・社名・制度名は書かず、要るときは［要確認］と書いてください。
+</code></pre>
+<p>使ってよい事実を先に渡しておくと、Geminiが数字を補って作る余地を小さくできるからです。</p>
+<h3 id="s5-5">⑤ タイトルと説明文を作る</h3>
+<p>最後にタイトルとメタディスクリプションの案を出させ、上位に並ぶタイトルと見比べて人が選ぶ流れです。</p>
+<pre><code>［記事の要点を3行］の記事に、タイトル案を5つ出してください。
+- ［狙う語］を先頭から15字以内に入れる
+- 全角32字前後
+- 本文で裏付けられない言葉（No.1・必ず など）は使わない
+120字以内の説明文も3つ出してください。
+</code></pre>
+<p>FAQの構造化データも同じ要領でJSON-LDのひな形を頼めますが、ページに見えている文と一致しているかを確かめ、リッチリザルト テストを通してから載せます。</p>
+<h2 id="s6">Geminiならではの3つの使い方</h2>
+<p>ここまでの5つの手順はどの生成AIでも同じように回せる内容です。Geminiで差が出るのは、指示の使い回しとGoogleの道具の中での作業、長い調べものの3つです。</p>
+<h3 id="s6-1">Gemで社内の決まりを固定する</h3>
+<p>GemはGeminiアプリを目的に合わせて設定しておく機能で、ウェブアプリでは左側の［Gem を表示］から［Gem を作成］に進みます。ヘルプは指示に入れる観点として、ペルソナ・タスク・コンテキスト・形式の4つを挙げ、ファイルを読み込ませて前提を渡せるとしています。表記の決まりや禁止の表現、読者像をGemにしておけば、<strong>担当者が替わっても同じ前提で下書きや見直しを頼めます。</strong> 毎回のプロンプトに前提を貼る手間も要りません。</p>
+<h3 id="s6-2">ドキュメントとスプレッドシートの中で使う</h3>
+<p>料金ページを見ると、Googleドキュメントの中で呼べるGeminiはGoogle AI Proの特典に入っています。Google Workspaceの料金ページには、ドキュメントに加えてスプレッドシートのGeminiも並びます。Search Consoleの検索パフォーマンスを書き出し、「先月より表示が増えたのにクリックが減った語」のように問いを決めて読ませると、傾向の洗い出しにかかる時間を縮められるでしょう。<strong>ただ、集計の数字そのものは表の上で計算して確かめ、Geminiの要約だけで判断しないようにします。</strong></p>
+<h3 id="s6-3">Deep Researchの出典を開く</h3>
+<p>Deep Researchは多くのページを読んで報告書の形にまとめる機能で、料金ページでは無料版の欄にも載っています。ヘルプによると、有料のプランに入っていない場合は混み合う時間に使えないことがあります。記事の下調べに向いていますが、報告書に出てくる数字や公式の名前は引用元のページを開いて確かめます。出典が付いていても、そのページにそう書いてあるとは限らないためです。</p>
+<h2 id="s7">公開前に人が確かめること</h2>
+<p>Geminiの下書きを公開できる記事にする作業は、事実を確かめることと、Geminiが書けない中身を足すことの2つです。</p>
+<ol>
+<li><strong>数字・固有名詞・料金・制度</strong>: 公式ページや発表元で確かめ、取得した日付と出典を残す</li>
+<li><strong>製品名と仕様の新しさ</strong>: AIの製品は数か月で名前や上限が変わる</li>
+<li><strong>ほかのページとの重なり</strong>: 似た文章が無いかをコピーチェックの道具で見る</li>
+<li><strong>自社の一次情報</strong>: 事例・数字・試した結果・現場の判断を足す</li>
+<li><strong>メタ情報</strong>: title・説明文・構造化データ・altも本文と同じように読む</li>
+</ol>
+<p>GoogleのE-E-A-T（経験・専門性・権威性・信頼性）のうち、経験はGeminiが持てない部分です。実際に使った、現場で見たという中身を足せるのは人だけで、ここが上位の記事との違いにもなります。</p>
+<h2 id="s8">会社で使うときに決めること</h2>
+<p>担当者が1人で試す段階から、チームで記事を作る段階に移るときに、先に決めておくことが3つあります。</p>
+<h3 id="s8-1">アカウントの種類と入力してよい情報</h3>
+<p>個人のGoogleアカウントでGeminiアプリを使う場合、プライバシー ハブによると［アクティビティの保存］がオンのときは、チャットの一部を人間のレビュアーが確認することがあり、生成AIモデルのトレーニングを含むサービスの改善に使われます。オフにすると、Googleにフィードバックを送った場合を除き、以降のチャットはトレーニングに使われません。応答などのために72時間は保持される仕組みです。</p>
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_04_privacy.png" alt="Geminiアプリのプライバシー ハブ。アクティビティの保存がオフの場合、今後のチャットはアクティビティに表示されず、AIモデルのトレーニングに使用されることもないと書かれている" loading="lazy"><figcaption>Gemini アプリのプライバシー ハブ（Gemini アプリ ヘルプ、2026年11月3日）</figcaption></figure>
+
+<p>Google WorkspaceのGeminiは、Workspaceのプライバシー ハブによると、ほとんどのエディションでWorkspaceのコアサービスに入り、内容を人間がレビューせず、許可なくドメインの外でモデルのトレーニングに使わないとされています。Workspace Individualなど、Geminiアプリを追加サービスとして使う契約は個人と同じ扱いになるため、契約のエディションも要確認です。<strong>学習に使われるかどうかと、何を入力してよいかは別に決める必要があります。</strong> 未公開の商品情報・顧客の名前・アクセス解析の生データのどれを入れてよいかは、社内の決まりとして書いておきます。Workspace側の設定と学習の条件は<a href="/media/google-workspace-gemini/">Google WorkspaceのGeminiとは</a>にまとめました。</p>
+<h3 id="s8-2">プランの選び方</h3>
+<p>2026年11月3日に日本の料金ページで見た個人向けのプランは次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>プラン</th>
+<th>月額</th>
+<th>料金ページの主な記載</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="プラン">無料</td>
+<td data-label="月額">0円</td>
+<td data-label="料金ページの主な記載">Flash-Liteモデル・Deep Research・Gem・画像の生成</td>
+</tr>
+<tr>
+<td data-label="プラン">Google AI Plus</td>
+<td data-label="月額">725円</td>
+<td data-label="料金ページの主な記載">無料の2倍の上限・Flashモデル</td>
+</tr>
+<tr>
+<td data-label="プラン">Google AI Pro</td>
+<td data-label="月額">2,900円</td>
+<td data-label="料金ページの主な記載">無料の4倍の上限・Proモデル・ドキュメントの中のGemini</td>
+</tr>
+<tr>
+<td data-label="プラン">Google AI Ultra</td>
+<td data-label="月額">14,500円から</td>
+<td data-label="料金ページの主な記載">Proの5倍の上限（32,000円で20倍）</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_05a_price.png" alt="Geminiの料金ページの個人向けプラン（左2つ）。無料は0円、Google AI Plusは月725円と表示されている" loading="lazy"><figcaption>Gemini の定期購入プラン 無料とPlus（Google、2026年11月3日）</figcaption></figure>
+
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_05b_price.png" alt="Geminiの料金ページの個人向けプラン（右2つ）。Google AI Proは月2,900円、Google AI Ultraは月14,500円からと表示されている" loading="lazy"><figcaption>Gemini の定期購入プラン ProとUltra（Google、2026年11月3日）</figcaption></figure>
+
+<p>語の候補出しと下書きだけなら無料でも始められます。<strong>ただ、個人のプランを会社の仕事に使うと、入力した内容は前の節の個人アカウントの扱いになります。</strong> チームで使うと決めたら、管理者が設定を持てるWorkspaceのGeminiを候補にするのが安全です。個人向けプランの違いは<a href="/media/gemini-pricing/">Geminiの料金プラン</a>で比べています。</p>
+<h3 id="s8-3">事実確認と公開の責任者</h3>
+<p>Geminiを入れると下書きの本数は増えますが、確かめる人の時間は増えません。誰が事実を確かめ、誰が公開を決めるかを先に決めておくと、ガイダンスに沿った運用になります。<strong>本数を目標にすると、ガイダンスがスパムの例に挙げる大量生成に近づくため、目標は記事ごとの流入や問い合わせに置きます。</strong></p>
+<h2 id="s9">GeminiとGoogleのAI検索で自社が引用される対策</h2>
+<p>ここまではGeminiを使って記事を作る話でした。もう1つのGeminiのSEO対策は、見込み客がGeminiアプリやGoogle検索のAIによる概要・AIモードに質問したとき、答えの中に自社のページや社名が出るようにすることです。</p>
+<p>3つの入口はどれもGoogle検索の索引を使う仕組みです。Googleの「AI 機能とウェブサイト」は、AIによる概要とAIモードのリンクに表示されるための技術要件を、索引に登録されていること、スニペットを表示できること、検索の技術要件を満たすことの3つとし、ほかに専用のファイルや特別な構造化データは要らないとしています。要件を満たしても表示されるとは限らない点も、同じページに書かれています。Geminiアプリについては、Googleのクローラーの一覧がグラウンディングを「プロンプト入力時に Google の検索インデックスからモデルにコンテンツを提供すること」と説明しています。</p>
+<p><strong>robots.txtでGoogle-Extendedを止めていると、Geminiアプリの回答の根拠に自社のページが使われません。</strong> Google検索の登録と順位には影響しないため、AIによる概要とAIモードに出るかとは別の設定です。学習用のボットをまとめて止めている会社は、この行を先に確かめてください。</p>
+<figure class="post-figure"><img src="/media/images/gemini-perplexity-citation/gpc_shot_google_extended.png" alt="Googleの一般的なクローラーの一覧のGoogle-Extendedの節。Geminiアプリでのグラウンディングに自社サイトの内容を使うかを管理できると書かれている" loading="lazy"><figcaption>Google 検索セントラル『Google の一般的なクローラー』のGoogle-Extendedの節（2026年10月24日）</figcaption></figure>
+
+<p>Geminiアプリが引用元を選ぶ基準そのものは公開されていません。<strong>見込み客が聞く問いに答えるページが自社にあるか、比較記事のような第三者のページに自社が何と書かれているかで、社名が挙がるかが変わります。</strong> 今のSEOで続けることと、足すことを並べると次のとおりです。</p>
+<figure class="post-figure"><img src="/media/images/gemini-seo/gmseo_03_cite.png" alt="GeminiとAI検索に引用されるまでの4つ。Googleの索引に載る、Google-Extendedを確かめる、見込み客の問いに答えるページを持つ、同じ問いを何度か聞いて記録する" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>今のSEOで続けること</th>
+<th>Geminiに出るために足すこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="今のSEOで続けること">検索する人の問いに答えるページ</td>
+<td data-label="Geminiに出るために足すこと">見込み客がAIに聞く問いを書き出して答える</td>
+</tr>
+<tr>
+<td data-label="今のSEOで続けること">robots.txtとサイトマップの管理</td>
+<td data-label="Geminiに出るために足すこと">Google-Extendedの行を確かめる</td>
+</tr>
+<tr>
+<td data-label="今のSEOで続けること">Search Consoleの順位とクリック</td>
+<td data-label="Geminiに出るために足すこと">生成AIパフォーマンスレポートとAIへの質問の記録</td>
+</tr>
+<tr>
+<td data-label="今のSEOで続けること">被リンクと指名検索</td>
+<td data-label="Geminiに出るために足すこと">比較記事や口コミでの自社の書かれ方を確かめる</td>
+</tr>
+</tbody>
+</table></div>
+<p>Search Consoleの生成AIパフォーマンスレポートで見えるのは、AIによる概要とAIモードでリンクが表示された回数で、Geminiアプリの分は入りません。Geminiアプリは同じ問いを日を変えて何度か聞き、社名と引用元を記録して判断します。</p>
+<p>細部は記事を分けました。Geminiアプリのソースボタンの見方と測り方は<a href="/media/gemini-perplexity-citation/">Gemini・Perplexityに自社が引用されるには</a>、AIモードがページを選ぶ仕組みは<a href="/media/ai-mode-seo/">AIモードのSEO対策</a>、AIによる概要の条件とチェックリストは<a href="/media/cited-by-ai-overviews/">AI Overview対策とは</a>にあります。</p>
+<p>問いの設計と毎日の記録には手間がかかります。nitoのLLMO支援では、見込み客がAIに聞く問いを決めて回答を毎日記録し、引用元を読んでページを直すところまで受けています。士業の支援では新しいページが公開3日後からGemini・Perplexity・AIモードの回答の引用元に入りました。社内で回す余力がなければ、<a href="/llmo/">LLMO支援</a>の内容を見てください。</p>
+<h2 id="s10">まとめ</h2>
+<ul>
+<li><strong>記事づくりを速くしたい場合</strong>: 工程を5つに分け、見出しごとに頼む。数字と固有名詞は公式で確かめる</li>
+<li><strong>チームの書き方をそろえたい場合</strong>: 表記の決まりと読者像をGemにして共有する</li>
+<li><strong>会社で使い始める場合</strong>: アカウントの種類と入力してよい情報、確かめる人を先に決める</li>
+<li><strong>Geminiに自社が出るか聞かれた場合</strong>: Google-Extendedの行を確かめ、見込み客の問いで実際に聞いて記録する</li>
+</ul>
+<h2 id="s11">よくある質問</h2>
+<h3 id="s11-1">Q. Geminiで書いた記事はGoogleで不利になりますか？</h3>
+<p>Geminiで書いたこと自体で不利にはなりません。Googleの説明ではAIや自動化を適切に使っている限りガイドラインの違反にならず、ランキングの操作を主な目的に価値を足さず大量に作るとスパムポリシーの違反になるとしています。公開前に事実を確かめ、自社の一次情報を足すのが前提です。</p>
+<h3 id="s11-2">Q. Geminiでキーワードの検索ボリュームは調べられますか？</h3>
+<p>検索ボリュームはGeminiでなくキーワードツールで調べます。GoogleはGeminiアプリがそのデータを返すとは説明しておらず、聞いて出てきた数の出どころが分からないためです。Geminiは関連する語の候補を広げる役に置き、数はSearch Consoleでも確かめます。</p>
+<h3 id="s11-3">Q. Geminiの無料版でもSEOに使えますか？</h3>
+<p>使えます。料金ページでは無料版でもFlash-LiteモデルとGem、Deep Researchが使える表示です。上限に当たる回数や、ドキュメントの中で使いたいかを見て、Google AI ProやWorkspaceのGeminiを選びます。</p>
+<h3 id="s11-4">Q. Geminiに入力した下書きは学習に使われますか？</h3>
+<p>個人のアカウントで［アクティビティの保存］がオンのときは、トレーニングを含む改善に使われ、人間のレビュアーが確認することもあります。オフにすると、フィードバックを送った場合を除き、以降のチャットはトレーニングに使われません。Google WorkspaceのGeminiは、Geminiアプリがコアサービスに入っているエディションなら、許可なくドメインの外でトレーニングに使われません。</p>
+<h3 id="s11-5">Q. Geminiに自社サイトを引用させるには何が必要ですか？</h3>
+<p>Google検索の索引に載っていることが出発点で、robots.txtでGoogle-Extendedを止めていないかも確かめます。そのうえで、見込み客がGeminiに聞く問いに答えるページがあるかで、引用されるかが変わります。</p>
+<h2 id="s12">出典</h2>
+<ul>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/fundamentals/using-gen-ai-content?hl=ja">ウェブサイトで生成 AI によるコンテンツを使用するための Google 検索のガイダンス</a>」2026年10月6日更新（2026年11月3日取得）</li>
+<li>Google 検索セントラル ブログ「<a href="https://developers.google.com/search/blog/2023/02/google-search-and-ai-content?hl=ja">AI 生成コンテンツに関する Google 検索のガイダンス</a>」2023年2月8日（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI 機能とウェブサイト</a>」2025年12月31日更新（同）</li>
+<li>Google「<a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers?hl=ja">Google のクロール インフラストラクチャ（一般的なクローラー）</a>」（同）</li>
+<li>Google「<a href="https://support.google.com/gemini/answer/13594961?hl=ja">Gemini アプリのプライバシー ハブ</a>」Gemini アプリ ヘルプ（同）</li>
+<li>Google「<a href="https://support.google.com/gemini/answer/15235603?hl=ja">カスタム Gem 作成のヒント</a>」Gemini アプリ ヘルプ（同）</li>
+<li>Google「<a href="https://gemini.google/subscriptions/?hl=ja">Gemini の定期購入プラン</a>」（同）</li>
+<li>Google Workspace 管理者ヘルプ「<a href="https://support.google.com/a/answer/15706919?hl=ja">Google Workspace の生成 AI に関するプライバシー ハブ</a>」（同）</li>
+<li>Google Workspace「<a href="https://workspace.google.com/intl/ja/pricing">料金プラン</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成 AI パフォーマンス レポート（検索）</a>」（同）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/ja-jp/articles/9237897-chatgpt-search">ChatGPT でウェブを検索する</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">GeminiのSEO対策は2つに分かれる</a><a href="#s2">Geminiに任せられるSEOの作業</a><a href="#s3">GeminiとChatGPTの使い分け</a><a href="#s4">AIで書いた記事のGoogleでの扱い</a><a href="#s5">GeminiでSEO記事を作る5つの手順</a><a href="#s6">Geminiならではの3つの使い方</a><a href="#s7">公開前に人が確かめること</a><a href="#s8">会社で使うときに決めること</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードなどで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-seo/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのSEO対策"><defs><linearGradient id="ecg-fe318625" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-fe318625)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのSEO対策</text><line x1="258.0" y1="365.9" x2="942.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.02</div>
+                <div class="rel-card__ttl">【2026年11月】ChatGPTのSEO対策｜使い方とプロンプト例・自社が出る対策</div>
+            </a>
+            <a href="/media/llmo-case-studies/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMO対策の事例16選"><defs><linearGradient id="ecg-6cdb6439" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6cdb6439)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">事例比較</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMO対策の事例16選</text><line x1="235.2" y1="365.9" x2="964.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.01</div>
+                <div class="rel-card__ttl">【2026年11月】LLMO対策の事例16選・推奨率と問い合わせの変化を出典つきで比較</div>
+            </a>
+            <a href="/media/llmo-companies/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLMO対策の会社10選"><defs><linearGradient id="ecg-9fe1ae64" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-9fe1ae64)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="477.5" y="176.1" width="245.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">支援会社の比較</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LLMO対策の会社10選</text><line x1="235.2" y1="365.9" x2="964.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.01</div>
+                <div class="rel-card__ttl">【2026年11月】LLMO対策の会社おすすめ10選・AIO対策の依頼先の選び方と費用</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'gemini-seo',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
