@@ -56,7 +56,7 @@ AIモードの答えにGoogle上の店舗情報がどれだけ使われている
 
 Google 検索セントラルの「AI 機能とウェブサイト」は、AIによる概要とAIモードに出るための追加の要件も特別な最適化も無いと書いています。そのうえで引き続き大事なSEOの基本のひとつに、Merchant Centerとビジネス プロフィールの情報を最新に保つことを挙げました。AIモードの日本語の提供を知らせたブログは、ウェブのページに加えてナレッジグラフなどの最新の情報源も使うと説明しています。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/appearance/ai-features?hl=ja・本文だけにある探す語「Merchant Center と ビジネス プロフィール の情報が最新のものであることを確認します」・赤枠にする語 同じ行・PC・alt「Google 検索セントラルの AI 機能とウェブサイトのページ。SEO の基本として Merchant Center とビジネス プロフィールの情報を最新に保つと書かれている」・figcaption「AI 機能とウェブサイト（Google 検索セントラル、2026年11月4日）」 -->
+<figure class="post-figure"><img src="/media/images/meo-ai-search/03_help_ai_features.png" alt="Google 検索セントラルの AI 機能とウェブサイトのページ。SEO の基本として Merchant Center とビジネス プロフィールの情報を最新に保つと書かれている" loading="lazy"><figcaption>AI 機能とウェブサイト（Google 検索セントラル、2026年11月4日）</figcaption></figure>
 
 検索ヘルプによるとAIモードは店のサイトに予約枠や在庫が載っていないとき、利用者の代わりに店へ電話して確かめます。ただしこの機能は18歳以上のログインした利用者に英語で提供するものとされ、2026年11月4日時点で日本語での提供は書かれていません。**Googleの検索のAIに対して公式に言えるのは、ビジネスプロフィールを最新に保つことと、ウェブのSEOの基本の2つ**です。ページの側の手入れは[AIモードのSEOの記事](/media/ai-mode-seo/)と[AIによる概要の対策の記事](/media/cited-by-ai-overviews/)で扱っています。
 
