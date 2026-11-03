@@ -1,7 +1,7 @@
 ---
 title: 【2026年11月】「Googleに質問する」を消す方法・flags以外の止め方
 date: 2026-10-15
-modified: 2026-11-02
+modified: 2026-11-03
 category: AI活用
 keyword: googleに質問する 消す
 description: Chromeのアドレスバーの候補に出る「このページについて Google に質問」と、新しいタブの検索ボックスの「Google に質問する」を消す方法。設定画面にスイッチは無く、止めるなら検索エンジンの変更かポリシー。
