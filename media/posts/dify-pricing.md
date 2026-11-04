@@ -21,7 +21,7 @@ Difyのクラウド版はProfessionalが月59ドル、Teamが月159ドルで、�
 
 ## Difyの費用は3つに分かれる
 
-Difyはチャットボット・ワークフロー・エージェントを画面上で組み立てる開発基盤で、開発元は米国のLangGenius, Inc.です。ソースは[GitHubのリポジトリ](https://github.com/langgenius/dify)で公開されていて、スターは約16万あります。作る手順は「[AIエージェントの作り方](/media/ai-agent-build/)」のノーコードの節で扱いました。
+Difyはチャットボット・ワークフロー・エージェントを画面上で組み立てる開発基盤で、開発元は米国のLangGenius, Inc.です。ソースは[GitHubのリポジトリ](https://github.com/langgenius/dify)で公開されていて、スターは約16万あります。作る手順は「[AIエージェントの作り方](/media/ai-agent-build/)」のノーコードの節で扱いました。Difyで何ができるかと使い方は「[Difyとは](/media/dify-guide/)」にまとめています。
 
 会社でDifyを使うときの費用は次の3つです。
 
