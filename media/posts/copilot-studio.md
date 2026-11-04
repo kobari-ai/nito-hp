@@ -24,15 +24,15 @@ Copilot Studioの課金の単位は、2025年9月1日に「メッセージ」か
 
 ## Copilot Studioとエージェント ビルダー
 
-Microsoft 365 Copilotを入れた会社には、エージェントを作る入口が2つあります。Copilotのアプリの中で開くエージェント ビルダーと、専用の画面で開くCopilot Studioです。Microsoft Learnの「[エージェント ビルダーと Copilot Studio のどちらかを選択してエージェントを構築します](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copilot-studio-experience)」（2026年10月28日更新）は、使う相手・共有する広さ・できること・管理の細かさで選ぶよう書いています。複数の部署にまたがって使うというだけならCopilot Studioは要らない、というのも同じページの説明です。
+Microsoft 365 Copilotを入れた会社には、エージェントを作る入口が2つあります。Copilotのアプリの中で開くエージェント ビルダーと、専用の画面で開くCopilot Studioです。Microsoft Learnの「[エージェント ビルダーと Copilot Studio のどちらかを選択してエージェントを構築します](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copilot-studio-experience)」（2026年10月28日更新）は、使う相手の多さだけでなく、要る機能と運用のしかたで選ぶよう書いています。複数の部署にまたがって使うというだけならCopilot Studioは要らない、というのも同じページの説明です。
 
 | | エージェント ビルダー | Copilot Studio |
 |---|---|---|
 | 開く場所 | Microsoft 365 Copilotのアプリ | Copilot Studio |
-| 作る人 | 一般の社員 | 作成者と開発者 |
+| 作り方 | 画面で言葉で設定する（コードは書かない） | 手順・ツール・ワークフローを組む |
 | 使う相手 | 社内の人（共有と組織カタログで部署をまたいで配れる） | 社内と社外の顧客（チャネルで配る） |
 | 向くもの | 社内の資料に答えるQ&A | 複数の手順・承認・業務システムとの連携 |
-| 管理する場所 | Microsoft 365 管理センター | Power Platform 管理センター |
+| 管理 | Microsoft 365 のエージェントの管理 | Power Platform の環境とコネクタの管理（Microsoft 365 側の管理も加わる） |
 
 **料金の見積もりが要るのは主にCopilot Studioのほうで、エージェント ビルダーで作ったものは後からCopilot Studioへコピーして機能を足せます。** [エージェント ビルダーの概要](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder)によると、エージェント ビルダーは外部のサービスを呼ぶアクションを作れません。業務システムにつなぐ段になったら、コピーしてCopilot Studioで続きを作る流れです。
 
