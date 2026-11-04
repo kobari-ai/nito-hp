@@ -32,7 +32,7 @@ n8nのワークフローは3つの部品でできています。
 | ノード | 1つずつの処理 | メールを読む、AIで分類する、Slackに送る、シートに書く |
 | ワークフロー | ノードを線でつないだ流れ全体 | 受信したメールを分類して担当に知らせる |
 
-<!-- SHOT: 図 n8n_guide_overview.html → n8n_01_overview.png・alt「n8nの3つの部品の図。トリガーはいつ動くかを決める起点、ノードはメール取得や分類や通知などの1つの処理、ワークフローはノードを線でつないだ流れ全体。AIを使う所だけAIのノードに置き換える」 -->
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_01_overview.png" alt="n8nの3つの部品の図。トリガーはいつ動くかを決める起点、ノードはメール取得や分類や通知などの1つの処理、ワークフローはノードを線でつないだ流れ全体。AIを使う所だけAIのノードに置き換える" loading="lazy"></figure>
 
 前のノードの出力が次のノードの入力として渡るため、画面の線を追えば処理の順番が分かります。**SlackやGmailの認証情報は一度登録すれば、ほかのワークフローでも選ぶだけで使い回せます。** 細かい加工はJavaScriptやPythonでも書けて、ノーコードとコードの中間の位置づけです。
 
@@ -84,7 +84,7 @@ Difyとn8nは取り合う関係より、組み合わせて使われることが�
 
 n8nの使い始めで最初に決めるのが、n8n社のクラウドを契約するか、自社のサーバーに置くかです。公式の選び方のページはすぐ始めたい・技術者がいない・保守をしたくない場合はクラウド、環境を全部自分で管理したい場合はセルフホストを勧めています。本番の運用はどちらでもできるとしています。
 
-<!-- SHOT: 図 n8n_guide_choose.html → n8n_02_choose.png・alt「n8nをクラウドとセルフホストのどちらにするかを決める4つの問い。データを社外に出せないならセルフホスト、サーバーを保守する人がいなければクラウド、無料版では複数人で同じフローを共有できない、まず試すだけならクラウドの無料試用から」 -->
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_02_choose.png" alt="n8nをクラウドとセルフホストのどちらにするかを決める4つの問い。データを社外に出せないならセルフホスト、サーバーを保守する人がいなければクラウド、無料版では複数人で同じフローを共有できない、まず試すだけならクラウドの無料試用から" loading="lazy"></figure>
 
 | 決めること | クラウドが向く | セルフホストが向く |
 |---|---|---|
@@ -113,7 +113,7 @@ n8nでAIエージェントを作るときの中心がAI Agentノードです。�
 
 MCPはAIと外部のツールをつなぐ共通の決まりで、n8nとのつなぎ方は3通りあります。
 
-<!-- SHOT: 図 n8n_guide_mcp.html → n8n_03_mcp.png・alt「n8nとMCPの3つのつなぎ方の図。MCP Client Toolはn8nのエージェントが外のツールを使う、MCP Server Triggerは1つのフローのツールを外のAIに渡す、インスタンスのMCPは許可したフローを外のAIから動かす。2と3は社内の処理の入口になるため認証が要る」 -->
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_03_mcp.png" alt="n8nとMCPの3つのつなぎ方の図。MCP Client Toolはn8nのエージェントが外のツールを使う、MCP Server Triggerは1つのフローのツールを外のAIに渡す、インスタンスのMCPは許可したフローを外のAIから動かす。2と3は社内の処理の入口になるため認証が要る" loading="lazy"></figure>
 
 | つなぎ方 | 向き | できること |
 |---|---|---|
@@ -123,7 +123,7 @@ MCPはAIと外部のツールをつなぐ共通の決まりで、n8nとのつな
 
 3つ目のインスタンスのMCPは、設定のInstance-level MCPでオーナーか管理者がオンにし、ワークフローを1本ずつ許可して使います。つなぎ方はOAuthかAPIキーです。**つないだAIはどれも、許可したワークフローを全部見られるため、AIごとに見せるフローを分けることはできません。** 社外の人が使うAIをつなぐ前に、許可するフローを絞ることが先です。2.13.0からはつないだAIにワークフローを作らせたり直させたりもできます。
 
-<!-- SHOT: 画面 https://docs.n8n.io/advanced-ai/accessing-n8n-mcp-server/ ・本文の画像「The Instance-level MCP page after you enable MCP access, showing Connection details, Access, and Connected clients」の1枚だけを切り出す・赤枠は Connection details と Access の見出し・PC・alt「n8nの設定のInstance-level MCPの画面。MCPを有効にした後で、接続の状態、許可したワークフローの数、つないだクライアントが並ぶ」・figcaption「n8n Docsの Instance-level MCP の画面（2026年11月5日）」 -->
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_05_mcp_settings.png" alt="n8nの設定のInstance-level MCPの画面。MCPを有効にした後で、接続の状態、許可したワークフローの数、つないだクライアントが並ぶ" loading="lazy"><figcaption>n8n Docsの Instance-level MCP の画面（2026年11月5日）</figcaption></figure>
 
 MCP Server Triggerの認証は、なし・n8nのユーザー認証・Bearer・ヘッダーから選びます。**社内の処理の入口になるURLなので、認証なしで公開しないことが前提です。** 負荷分散のためにWebhookを受けるサーバーを複数台にしている場合、MCPの通信を1台に寄せないと接続が頻繁に切れるとドキュメントに注意書きがあります。
 
@@ -131,7 +131,7 @@ MCP Server Triggerの認証は、なし・n8nのユーザー認証・Bearer・�
 
 入力と出力がはっきりしていて止まっても業務が止まらない処理が、最初の1本に向いています。ここでは問い合わせ窓口のGmailに届くメールを分類し、担当に知らせる流れを例に、ドキュメントのノードの説明から手順を組みました。
 
-<!-- SHOT: 図 n8n_guide_first.html → n8n_04_first.png・alt「問い合わせメールを振り分けるワークフローの図。Gmail Triggerで未読の新着メールを取り、Text Classifierで見積・不具合・請求・その他に分け、分類ごとにSlackに通知してシートに記録し、返信の下書きは送る前に担当者が確かめる」 -->
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_04_first.png" alt="問い合わせメールを振り分けるワークフローの図。Gmail Triggerで未読の新着メールを取り、Text Classifierで見積・不具合・請求・その他に分け、分類ごとにSlackに通知してシートに記録し、返信の下書きは送る前に担当者が確かめる" loading="lazy"></figure>
 
 ### ① 作る前に入力と出力を書く
 
@@ -145,7 +145,7 @@ MCP Server Triggerの認証は、なし・n8nのユーザー認証・Bearer・�
 
 次にText Classifierをつなぎ、チャットモデルのノードをぶら下げます。カテゴリには見積依頼・不具合・請求・その他のように名前と説明を書き、説明で判断の基準をモデルに伝えます。**どのカテゴリにも当たらないメールは既定では捨てられるため、その他の分岐に出す設定に変えておきます。**
 
-<!-- SHOT: 画面 https://docs.n8n.io/try-it-out/quickstart/ ・本文の画像「Successful workflow run after execution」の1枚だけを切り出す（4つのノードに緑のチェックが付いたキャンバス）・赤枠はノードの緑のチェック・PC・alt「n8nのワークフローの画面。4つのノードが線でつながり、テストで実行したノードに緑のチェックが付いている」・figcaption「n8n Docsの最初のワークフローの画面（2026年11月5日）」 -->
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_06_canvas.png" alt="n8nのワークフローの画面。4つのノードが線でつながり、テストで実行したノードに緑のチェックが付いている" loading="lazy"><figcaption>n8n Docsの最初のワークフローの画面（2026年11月5日）</figcaption></figure>
 
 ### ④ 分類ごとの処理をつなぐ
 
