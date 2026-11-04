@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】Copilot Studioの料金を解説｜M365 Copilotの範囲・作れる人
 date: 2026-10-20
+modified: 2026-11-05
 category: AI活用
 description: Microsoft Copilot Studioの料金を価格ページとライセンスガイドから解説。25,000クレジットのパック・従量課金・事前購入の違い、M365 Copilotで追加費用なく作れる範囲、作れる人の決め方まで。
 cover_tag: 導入担当向け
@@ -23,13 +24,13 @@ Copilot Studioの課金の単位は、2025年9月1日に「メッセージ」か
 
 ## Copilot Studioとエージェント ビルダー
 
-Microsoft 365 Copilotを入れた会社には、エージェントを作る入口が2つあります。Copilotのアプリの中で開くエージェント ビルダーと、専用の画面で開くCopilot Studioです。Microsoft Learnの「[エージェント ビルダーと Copilot Studio のどちらかを選択してエージェントを構築します](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copilot-studio-experience)」（2026年9月30日更新）は、使う相手・共有する広さ・できること・管理の細かさで選ぶよう書いています。
+Microsoft 365 Copilotを入れた会社には、エージェントを作る入口が2つあります。Copilotのアプリの中で開くエージェント ビルダーと、専用の画面で開くCopilot Studioです。Microsoft Learnの「[エージェント ビルダーと Copilot Studio のどちらかを選択してエージェントを構築します](https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copilot-studio-experience)」（2026年10月28日更新）は、使う相手・共有する広さ・できること・管理の細かさで選ぶよう書いています。複数の部署にまたがって使うというだけならCopilot Studioは要らない、というのも同じページの説明です。
 
 | | エージェント ビルダー | Copilot Studio |
 |---|---|---|
 | 開く場所 | Microsoft 365 Copilotのアプリ | Copilot Studio |
 | 作る人 | 一般の社員 | 作成者と開発者 |
-| 使う相手 | 自分か小さなチーム | 部署・組織全体・社外の顧客 |
+| 使う相手 | 社内の人（共有と組織カタログで部署をまたいで配れる） | 社内と社外の顧客（チャネルで配る） |
 | 向くもの | 社内の資料に答えるQ&A | 複数の手順・承認・業務システムとの連携 |
 | 管理する場所 | Microsoft 365 管理センター | Power Platform 管理センター |
 
@@ -177,7 +178,7 @@ GitHub Copilotハーネスは名前にGitHubと付きますが、Copilot Studio�
 
 ### Copilot Studioのエージェント ビルダーとは？
 
-エージェント ビルダーはMicrosoft 365 Copilotのアプリの中で、自分や小さなチーム向けのQ&Aを作る入口です。部署全体や社外に出すときや業務システムにつなぐときにCopilot Studioを使い、作ったものはCopilot Studioへコピーできます。
+エージェント ビルダーはMicrosoft 365 Copilotのアプリの中で、社内向けのQ&Aを作る入口で、共有と組織カタログで部署をまたいで配れます。社外に出すときや業務システムにつなぐときは、作ったものをCopilot Studioへコピーして続きを作る形です。
 
 ### Copilot StudioはTeamsだけで使えますか？
 
