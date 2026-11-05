@@ -10,7 +10,7 @@ cta: ai_agent
 keyword: openai agent builder
 ---
 
-OpenAIは2026年6月3日、画面でAIエージェントの流れを組むAgent Builderを2026年11月30日に終了すると告知しました。2025年10月の発表から1年余りで、今から使い始められる期間は1か月を切っています。
+OpenAIは2026年6月3日、画面でAIエージェントの流れを組むAgent Builderを2026年11月30日に終了すると告知しました。今から使い始められる期間は1か月を切っています。
 
 社内でAgent Builderを試したか導入の候補に挙げている担当の方に向けて、何ができる道具だったのかと料金、作ったワークフローの移し先、会社で使うときに決めることを公式ドキュメントで確かめた範囲でまとめました。画面での作成と移行は試していません。
 
@@ -24,7 +24,7 @@ OpenAIは2026年6月3日、画面でAIエージェントの流れを組むAgent 
 
 Agent Builderは、OpenAIの開発者向けの画面（OpenAI Platform）で、AIエージェントの処理の流れを部品をつないで組む道具です。テンプレートから部品（ノード）を置いて入出力を決め、実際のデータで試してから、自社のサイトに埋め込むかコードとして書き出します。
 
-**コードを書かずに組める点が売りで、Difyやn8nのようなノーコードの道具と同じ場所を狙っていました。** 2025年10月6日の開発者向けイベント（DevDay 2025）で、エージェント開発の道具一式であるAgentKitの一部として発表され、当時はベータとして公開されています。
+**コードを書かずに組める点が売りで、Difyやn8nのようなノーコードの道具と同じ場所を狙っていました。** 2025年10月6日の開発者向けイベント（DevDay 2025）で、エージェント開発の道具一式であるAgentKitの一部として発表され。
 
 ### AgentKitの中での位置
 
@@ -38,7 +38,7 @@ AgentKitは3つの部品でできていました。
 
 ### 2026年11月30日に終わるもの
 
-<!-- SHOT: 図 oab_end.html → oab_01_end.png・alt「2026年11月30日に終わるもの。Agent Builder、10月31日から読み取り専用になるEvals、中身をアプリのコードへ移す再利用プロンプトの3つ。ChatKitは残り、自社のサーバーにつなぎ直して使う」 -->
+<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_01_end.png" alt="2026年11月30日に終わるもの。Agent Builder、10月31日から読み取り専用になるEvals、中身をアプリのコードへ移す再利用プロンプトの3つ。ChatKitは残り、自社のサーバーにつなぎ直して使う" loading="lazy"></figure>
 
 OpenAIの廃止予定のページには、2026年6月3日に3つの機能の終了がまとめて載りました。
 
@@ -90,7 +90,7 @@ Platformの[Agent Builder](https://platform.openai.com/agent-builder)を開き�
 
 ## OpenAI Agent Builderの料金
 
-**Agent Builderそのものに利用料は無く、ワークフローを動かしたときに使ったモデルとツールの分だけAPIの料金がかかります。** 組み立てている間は無料ですが、プレビューで実際にモデルを呼べば、その分は課金の対象です。ファイル検索を使うなら、上げた文書の保存とその検索の呼び出しにも料金が付く仕組みです。
+**Agent Builderそのものに利用料は無く、ワークフローを動かしたときに使ったモデルとツールの分だけAPIの料金がかかります。** プレビューで実際にモデルを呼んだ分も課金の対象です。ファイル検索を使うなら、上げた文書の保存とその検索の呼び出しにも料金が付く仕組みです。
 
 モデルごとの単価と月額の試算、使いすぎを止める上限の設定は[OpenAI APIの料金](/media/openai-api-pricing/)で扱っています。
 
@@ -98,7 +98,7 @@ Platformの[Agent Builder](https://platform.openai.com/agent-builder)を開き�
 
 ## 移行先の選び方
 
-<!-- SHOT: 図 oab_move.html → oab_02_move.png・alt「Agent Builderで作ったワークフローの移し先3つ。決まった手順を崩したくないなら自社のアプリでコードとして動かすAgents SDK、Business・Enterpriseで社内に配るならChatGPTの中で言葉で作り直すワークスペースエージェント、他社のモデルや既存の連携を使うならDify・n8n・Copilot Studio」 -->
+<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_02_move.png" alt="Agent Builderで作ったワークフローの移し先3つ。決まった手順を崩したくないなら自社のアプリでコードとして動かすAgents SDK、Business・Enterpriseで社内に配るならChatGPTの中で言葉で作り直すワークスペースエージェント、他社のモデルや既存の連携を使うならDify・n8n・Copilot Studio" loading="lazy"></figure>
 
 公式の移行ガイドが示す道は2つです。
 
@@ -106,11 +106,11 @@ Platformの[Agent Builder](https://platform.openai.com/agent-builder)を開き�
 
 書き出したTypeScriptかPythonのコードを自社のアプリに入れ、Agents SDKを入れて動かす道です。**条件分岐の順番や出力の形をきっちり守らせたいワークフローは、こちらでないと崩れやすくなります。** ガイドにも、決まった処理が中心のワークフローはワークスペースエージェントに忠実には移らないことがあると書かれています。その代わり実行環境・ツール・認証・権限・公開の設定は自分たちで確かめる必要があり、開発の手が要ります。
 
-ChatKitで社外向けのチャットを出していた場合は、ChatKitを自社のサーバーにつなぐ形（ChatKitのガイドでいうadvanced integration）に切り替えるのが公式の案内です。Agent Builderが持っていたワークフローにつなぐ今の形は、移行期間のあいだしか使えません。
+ChatKitで社外向けのチャットを出していた場合は、ChatKitを自社のサーバーにつなぐ形（ChatKitのガイドでいうadvanced integration）に切り替えるのが公式の案内です。
 
 ### ワークスペースエージェントに作り直す
 
-ワークスペースエージェントは、ChatGPTの中で業務を言葉で説明してエージェントを作り、チームで共有する機能です。2026年4月22日に始まり、Codexを土台にクラウドで動くため、手を離している間もスケジュールどおりに動いたり、Slackのチャンネルで依頼に答えたりできるのが特徴です。
+ワークスペースエージェントは、ChatGPTの中で業務を言葉で説明して作り、チームで共有する機能です。2026年4月22日に始まり、Codexを土台にクラウドで動くため、手を離している間もスケジュールどおりに動いたり、Slackのチャンネルで依頼に答えたりできるのが特徴です。
 
 移す作業にはChatGPT Business・Enterprise・Eduのワークスペースと、エージェントを作る権限が要ります。ChatGPTでエージェントの作成を開き、書き出したコードを貼って「このワークフローをエージェントに変換して」と頼み、作り手の画面が直す必要があると示した所を見直します。そのうえで次の点を確かめてから作成を押します。
 
@@ -157,8 +157,6 @@ OpenAIの安全のガイドは、外から入った文章が指示を書き換�
 
 ## Dify・n8n・Copilot Studioとの使い分け
 
-Agent Builderが終わったあとの候補を、会社で選ぶときの観点で並べました。
-
 | 道具 | 向いている使い方 | 料金の決まり方 | 動く場所 |
 |---|---|---|---|
 | Agents SDK | 決まった手順を自社のアプリで動かす | APIの代金とサーバー代 | 自社の環境 |
@@ -167,7 +165,7 @@ Agent Builderが終わったあとの候補を、会社で選ぶときの観点�
 | n8n | 業務システムどうしの自動化にAIを挟む | 実行回数で決まる月額とモデル代。セルフホストは無料版あり | クラウドか自社のサーバー |
 | Copilot Studio | Microsoft 365とTeamsの中で使う | クレジットのパックか従量課金 | Microsoftのクラウド |
 
-**OpenAIのモデルだけで組み、決まった手順を守らせたいならAgents SDK、ChatGPTを全社で契約していて現場に作らせたいならワークスペースエージェントが近い候補です。** 他社のモデルも使いたい、社外の業務システムとの連携が多い、データを自社のサーバーに置きたい場合はDifyかn8nが候補です。Microsoft 365が中心の会社はCopilot Studioが第一の候補でしょう。料金の詳細は[Difyの料金](/media/dify-pricing/)・[n8nの料金](/media/n8n-pricing/)・[Copilot Studioの料金](/media/copilot-studio/)にまとめています。
+**OpenAIのモデルだけで組み、決まった手順を守らせたいならAgents SDK、ChatGPTを全社で契約していて現場に作らせたいならワークスペースエージェントが近い候補です。** 他社のモデルも使いたい、業務システムとの連携が多い、データを自社のサーバーに置きたい場合はDifyかn8nが候補です。Microsoft 365が中心の会社はCopilot Studioが第一の候補でしょう。料金の詳細は[Difyの料金](/media/dify-pricing/)・[n8nの料金](/media/n8n-pricing/)・[Copilot Studioの料金](/media/copilot-studio/)にまとめています。
 
 移行と同時に社内のエージェントの作り方そのものを見直す場合は、nitoの[AIエージェント構築支援](/ai-agent/)でも設計から運用まで相談を受けています。
 
@@ -182,7 +180,7 @@ Agent Builderが終わったあとの候補を、会社で選ぶときの観点�
 
 ### OpenAI Agent Builderはいつ終わりますか？
 
-2026年11月30日に終了する予定です。OpenAIが2026年6月3日に利用者へ告知し、廃止予定のページとAgent Builderのガイドに載っています。それまでは既存の利用者が使い続けられる移行期間です。
+2026年11月30日に終了する予定です。OpenAIが2026年6月3日に告知しました。
 
 ### OpenAI Agent Builderは無料で使えますか？
 
@@ -190,7 +188,7 @@ Agent Builder自体の利用料はかかりません。ワークフローを動�
 
 ### Agent BuilderはPlusで使えますか？
 
-使えません。Agent BuilderはChatGPTではなく、APIを使うためのOpenAI Platformの機能で、APIのアカウントと支払い方法の登録が必要でした。移し先のワークスペースエージェントもPlusやProでは使えず、Business・Enterprise・Eduが対象です。
+使えません。Agent BuilderはChatGPTではなく、APIを使うためのOpenAI Platformの機能です。移し先のワークスペースエージェントもBusiness・Enterprise・Eduが対象です。
 
 ### Agent Builderで作ったものはどうなりますか？
 
