@@ -170,6 +170,8 @@ WordPressなら、SEOのプラグインの[Yoast SEO](https://yoast.com/features
 
 [構造化データの説明ページ](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja)（2025年12月18日更新）が勧める形式は、ほとんどの場合JSON-LDです。数を増やすより、完全で正確なプロパティを優先するよう求めています。[AI機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)のページにも、構造化データをページに表示されるテキストと一致させる項目がありました。**会社のサイトなら、組織・記事・パンくずリストのように公式の一覧にある種類を、表示している中身と同じ内容で入れておけば足ります。**
 
+構造化データとAI検索の関係、種類ごとの入れ方と確かめ方は[構造化データはAI検索に必要？](/media/structured-data-ai-search/)にまとめています。
+
 ## 会社として先にやること
 
 llms.txtも構造化データも、AIに読まれる本文がある前提の補助です。AI検索に名前を出したい会社が先に手を付けるのは次の順番です。
