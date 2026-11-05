@@ -38,7 +38,7 @@ AI検索で構造化データが効くかは、どのAI検索の話かで答え�
 
 > 構造化データに対する過剰な取り組み : 生成 AI 検索に構造化データは必要ありません。追加する必要がある特別な schema.org マークアップもありません。ただし、Google 検索のリッチリザルトの対象となる助けとなるため、SEO 戦略全体の一部として引き続き使用することをおすすめします。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja・本文だけにある探す語「構造化データに対する過剰な取り組み」・赤枠にする語「生成 AI 検索に構造化データは必要ありません」・PC・alt「Googleの最適化ガイドで、生成AI検索に構造化データは必要ないと書かれた箇所」・figcaption「Google検索セントラルの最適化ガイド（2026年11月6日）」 -->
+<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_guide.png" alt="Googleの最適化ガイドで、生成AI検索に構造化データは必要ないと書かれた箇所" loading="lazy"><figcaption>Google検索セントラルの最適化ガイド（2026年11月6日）</figcaption></figure>
 
 「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」のページも同じ立場です。AIによる概要やAIモードに出るための追加の要件は無いとし、特別なschema.orgの構造化データを足す必要も無いと書いています。代わりに挙げているのは構造化データをページに表示されるテキストと一致させることでした。
 
@@ -59,7 +59,7 @@ AIによる概要とAIモードにリンクとして出る条件は、ページ�
 
 確かめられないのは構造化データとAIの回答での引用の関係です。最適化ガイドは生成AI機能がGoogle検索のコアのランキングと品質のシステムに根差していると書いています。通常の検索でページの理解に使われる以上、間接的な関わりまでは否定できません。ただし**Google自身は、それをAIのために構造化データを足す理由としては挙げていません。**構造化データでE-E-A-Tが上がるという説明も、今回読んだGoogleの文書には見当たりませんでした。
 
-<!-- SHOT: 図 sdai_scope.html → sdai_scope.png・alt「構造化データとAI検索について、Googleの公式の文で確かめられる範囲と確かめられない範囲を分けた図」 -->
+<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_scope.png" alt="構造化データとAI検索について、Googleの公式の文で確かめられる範囲と確かめられない範囲を分けた図" loading="lazy"></figure>
 
 ### ChatGPT・Perplexity・Bingの公式の記述
 
@@ -81,7 +81,7 @@ Perplexityの[クローラーのページ](https://docs.perplexity.ai/guides/bot
 | 2026年5月7日 | FAQのリッチリザルトが検索結果に出なくなる |
 | 2026年6月 | FAQのリッチリザルトの説明ページを削除 |
 
-<!-- SHOT: 画面 https://developers.google.com/search/updates?hl=ja・本文だけにある探す語「よくある質問のリッチリザルト機能のサポートを終了」・赤枠にする語「2026 年 5 月 7 日以降、この機能が Google 検索に表示されなくなる」・PC・alt「Google検索セントラルの更新履歴で、FAQのリッチリザルトの表示が2026年5月7日に終わると書かれた箇所」・figcaption「Google検索セントラルのドキュメントの更新履歴（2026年11月6日）」 -->
+<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_updates.png" alt="Google検索セントラルの更新履歴で、FAQのリッチリザルトの表示が2026年5月7日に終わると書かれた箇所" loading="lazy"><figcaption>Google検索セントラルのドキュメントの更新履歴（2026年11月6日）</figcaption></figure>
 
 残した構造化データが害になるかについて、[2023年8月のGoogleのブログ](https://developers.google.com/search/blog/2023/08/howto-faq-changes?hl=ja)は、使われていない構造化データで検索に問題が起きることはないと書いています。外す義務はありません。
 
@@ -100,7 +100,7 @@ Perplexityの[クローラーのページ](https://docs.perplexity.ai/guides/bot
 | 商品の詳細 | Product | 価格・在庫・評価を検索結果に出す | [商品のガイド](https://developers.google.com/search/docs/appearance/structured-data/product?hl=ja) |
 | よくある質問 | FAQPage | Google検索での表示は終了。画面から自動で出せるなら残してよい | 更新履歴・2023年のブログ |
 
-<!-- SHOT: 図 sdai_pages.html → sdai_pages.png・alt「会社サイトのページごとに入れる構造化データの型。会社概要にOrganization、記事にArticleとBreadcrumbList、拠点にLocalBusiness、商品にProduct」 -->
+<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_pages.png" alt="会社サイトのページごとに入れる構造化データの型。会社概要にOrganization、記事にArticleとBreadcrumbList、拠点にLocalBusiness、商品にProduct" loading="lazy"></figure>
 
 BtoBのサービス会社なら、**Organization・Article・BreadcrumbListの3つで足ります。**組織のガイドはOrganizationに必須プロパティを設けず、ホームページか会社概要の1ページに置けばよく、全ページに入れる必要は無いと書いています。記事のガイドもArticleに必須プロパティを設けていません。パンくずリストの表示はパソコン版の機能とされています。
 
@@ -167,13 +167,12 @@ scriptタグはheadとbodyのどちらに置いても読まれます。Googleタ
 
 確かめる道具は3つあり、見えるものがそれぞれ違います。テストが通っても、リッチリザルトやAIの回答に出る約束にはなりません。
 
-<!-- SHOT: 図 sdai_check.html → sdai_check.png・alt「構造化データを確かめる3つの道具。公開前のリッチリザルトテスト、文法を見るSchema Markup Validator、公開後のSearch Console」 -->
+<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_check.png" alt="構造化データを確かめる3つの道具。公開前のリッチリザルトテスト、文法を見るSchema Markup Validator、公開後のSearch Console" loading="lazy"></figure>
 
 ### リッチリザルトテスト
 
 [リッチリザルト テスト](https://search.google.com/test/rich-results?hl=ja)は、URLかコードを入れて、Googleのリッチリザルトの対象になる型とエラーを表示するツールです。[ヘルプ](https://support.google.com/webmasters/answer/7445569?hl=ja)によれば、既定ではスマートフォンとして読み込みます。JSON-LDの中のコメントはテストでは無視されますが、実際の利用ではエラーになりうるため、公開前に消すよう書かれています。
 
-<!-- SHOT: 画面 https://search.google.com/test/rich-results?hl=ja・本文だけにある探す語「リッチリザルト テスト」・赤枠にする語「URL」と「コード」の切り替え・PC・alt「Googleのリッチリザルトテストの入力画面。URLかコードを入れて構造化データを確かめる」・figcaption「Googleのリッチリザルトテスト（2026年11月6日）」 -->
 
 **テストが対応する型の一覧に、FAQとHowToはもうありません。**FAQPageを残しているページで「アイテムが検出されませんでした」と出ても、書き方の誤りとは限らないということです。エラーが出たときは「無効な JSON ドキュメントです」「解析エラー: 「,」または「}」がありません」のような名前で原因が表示されるので、カンマや括弧の抜けから見ます。
 
@@ -181,7 +180,6 @@ scriptタグはheadとbodyのどちらに置いても読まれます。Googleタ
 
 [Schema Markup Validator](https://validator.schema.org/)は、schema.orgの語彙として正しく書けているかを確かめるツールです。Google検索の要件までは見ないため、Googleが使わなくなったFAQPageや、Google以外のサービス向けに入れた型の文法を確かめるときに使います。
 
-<!-- SHOT: 画面 https://validator.schema.org/・本文だけにある探す語「Schema Markup Validator」・赤枠にする語「FETCH URL」と「CODE SNIPPET」・PC・alt「Schema Markup Validatorの入力画面。URLかコードでschema.orgの文法を確かめる」・figcaption「Schema Markup Validator（2026年11月6日）」 -->
 
 ### Search Console
 
