@@ -194,7 +194,7 @@ Agent Builder自体の利用料はかかりません。ワークフローを動�
 
 ### Agent BuilderはPlusで使えますか？
 
-使えません。Agent BuilderはChatGPTではなく、APIを使うためのOpenAI Platformの機能で、PlusはAPIの無料クレジットの対象外です。移し先のワークスペースエージェントもBusiness・Enterprise・Eduが対象です。
+Plusの契約には含まれません。Agent BuilderはChatGPTではなく、APIを使うためのOpenAI Platformの機能で、使うにはAPIのアカウントに支払い方法を登録してクレジットを買います（PlusはAPIの無料クレジットの対象外です）。移し先のワークスペースエージェントもBusiness・Enterprise・Eduが対象です。
 
 ### Agent Builderで作ったものはどうなりますか？
 
