@@ -148,7 +148,7 @@ Chrome 154 では消せません。記事で紹介されている「AI mode」�
 「NTP Realbox Dynamic AI Mode Button」は chrome://flags に残っている4項目のうちの1つで、新しいタブの検索ボックス（Realbox）に出る［AI モード］ボタンを状況に応じて出し分ける設定です。入口を消すスイッチではないため、オフにしてもボタンは消えません。消したい場合は前の節のアドレスバーの右クリックの設定を使ってください。
 
 ### AIM 3P entrypointとは何ですか？
-chrome://flags に残っている4項目のうちの1つで、説明文は「Google以外の検索エンジンでもアドレスバーにAIモードの入口を出す」です。名前の3Pは third-party（サードパーティ、Google以外の検索エンジン）を指すと見られ、こちらもボタンの出し方を変える項目でオフにしても入口自体は消えません。
+chrome://flags に残っている4項目のうちの1つで、Google以外の検索エンジンを既定にしているときにも、アドレスバーにAIモードの入口を出す設定です。画面の説明文は「Enables the omnibox AI Mode entrypoint for third party search engines.」で、3Pは third party（Google以外の検索エンジン）を指します。Googleを既定にしている場合の入口を消すスイッチではないので、消したい場合は前の節のアドレスバーの右クリックの設定を使ってください。
 
 ### iPhoneでAIモードを消せますか？
 iPhoneのChromeとSafariには、AIモードの入口を非表示にする設定がありません。検索結果の上のAIの要約を出したくない場合は、［ウェブ］タブを使うか、`udm=14` を付けたURLをブックマークしておく方法があります。
