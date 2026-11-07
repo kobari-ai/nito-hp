@@ -61,7 +61,7 @@ Coworkは有料プランだけで使えます。始められる場所は4つあ�
 | デスクトップアプリ（macOS・Windows） | Pro・Max・Team・Enterprise | 手元のファイル・組み込みブラウザ・コンピュータ操作はここが開いているときだけ |
 | ウェブ（claude.ai） | Pro・Max・Team（ベータ）、Enterpriseは管理者が有効化 | クラウドで実行 |
 | スマホ（iOS・Android） | 同上 | 進捗の確認、質問への返答、外出先からの開始 |
-| Chromeのサイドパネル | Max・Team。Proは配信中。Enterpriseは管理者が有効化 | 開くとそのままセッションが始まる |
+| Chromeのサイドパネル | Max・Ultra・Team。Proは配信中。Enterpriseは管理者が有効化 | 開くとそのままセッションが始まる |
 
 <figure class="post-figure"><img src="/media/images/claude-cowork-guide/00_fig_places.png" alt="Coworkを使える4つの場所（デスクトップアプリ・ウェブ・スマホ・Chromeサイドパネル）と、それぞれで使える機能。手元のファイル・組み込みブラウザ・コンピュータ操作はデスクトップアプリが開いているときだけ" loading="lazy"><figcaption>どこからでも始められる。手元のファイルを触る作業だけはデスクトップアプリが必要</figcaption></figure>
 
