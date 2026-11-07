@@ -1,6 +1,7 @@
 ---
 title: 【2026年10月】社内チャットボットの選び方｜製品を買うか自社で作るか・費用・RAG
 date: 2026-10-29
+modified: 2026-11-05
 category: AI活用
 description: 社内チャットボットを製品で買うか、Microsoft 365・Google Workspace・ChatGPT・Difyで自社で組むかを公式の情報で比較。2つの型、費用の決まり方、RAGの仕組み、失敗しやすい所、会社が決めることまで。
 cover_tag: 導入担当向け
@@ -61,7 +62,7 @@ Microsoftの[請求レートと管理](https://learn.microsoft.com/ja-jp/microso
 
 | 基盤 | 作る場所 | 向く範囲 | 読ませる文書 | 費用のかかり方 |
 |---|---|---|---|---|
-| Microsoft 365 | エージェント ビルダー | 小さなチーム。組織全体はCopilot Studio | SharePointのファイル100個・OneDriveの50個など | M365 Copilotを持つ社員は追加なし。持たない社員はクレジット |
+| Microsoft 365 | エージェント ビルダー | 社内（共有と組織カタログで部署をまたいで配れる）。社外はCopilot Studio | SharePointのファイル100個・OneDriveの50個など | M365 Copilotを持つ社員は追加なし。持たない社員はクレジット |
 | Google Workspace | GeminiアプリのGem | 指定した人か組織内 | Googleドライブのファイル | Workspaceの1人あたりの料金 |
 | ChatGPT Business | プラグイン | ワークスペースの中（2人から） | スキルの参照ファイルとつないだアプリ | 1人月3,050円（年額課金） |
 | Dify | チャットのアプリとナレッジ | 公開したWebアプリ | Difyのナレッジか、外部の検索 | Teamは月159ドルで50人まで。モデルの代金は別 |
@@ -74,7 +75,7 @@ Microsoft 365 Copilotのアプリにあるエージェント ビルダーでは�
 
 <figure class="post-figure"><img src="/media/images/internal-chatbot/icb_shot_learn_limits.png" alt="Microsoft Learnのナレッジ ソースの制限の表。SharePointのファイルはエージェントごとに最大100個、SharePointのリストは1つ、OneDriveのファイルは50個で、既存のアクセス許可と秘密度ラベルを尊重する" loading="lazy"><figcaption>Microsoft Learn「エージェント ビルダーでエージェントにナレッジ ソースを追加する」（2026年10月29日）</figcaption></figure>
 
-M365 Copilotのライセンスを持つ社員がMicrosoft 365の中で使う分は追加の費用がかからず、持たない社員が使うとクレジットが減ります。部署を越えて配る、業務システムにつなぐ段になったらCopilot Studioに移す流れです。払い方の3通りは[Copilot Studioの料金](/media/copilot-studio/)で扱いました。
+M365 Copilotのライセンスを持つ社員がMicrosoft 365の中で使う分は追加の費用がかからず、持たない社員が使うとクレジットが減ります。部署をまたいで配るだけならエージェント ビルダーのままでよく、社外に出すときや業務システムにつなぐ段になったらCopilot Studioに移す流れです。払い方の3通りは[Copilot Studioの料金](/media/copilot-studio/)で扱いました。
 
 ### Google Workspaceで組む
 
