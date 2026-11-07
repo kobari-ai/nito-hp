@@ -23,7 +23,7 @@ AIを組み込んだコードエディタのCursorは、2026年10月12日からG
 
 Cursorを開発するAnysphereは、今はSpaceXSIと同じ会社のグループにあり、10月12日の発表でGrok・Grok Bot・Cursor・X Premiumを1つの契約にまとめました。**月額で払うのは同じでも、使える量の数え方と他社モデルの扱いが変わっています。**
 
-<figure class="post-figure"><img src="/media/images/cursor-guide/cur1108_01_overview.png" alt="Cursorの月々の支払いの図。①プランの月額（Plus $8・Premium $30・Super $100・Ultra $200、Teamsは1人$30・$100・$200）に、②前払いクレジットから引く分（週の枠を超えたGrokとComposer、ClaudeやGPTなど他社のモデル）が加わる。税別のドル建てで、Teamsの他社モデルには100万トークンあたり$0.25が上乗せされる" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/cursor-guide/cur1108_01_overview.png" alt="Cursorの月々の支払いの図。①プランの月額（Plus $8・Premium $30・Super $100・Ultra $200、Teamsは1人$30・$100・$200）に、②前払いクレジットから引く分（週の枠を超えたGrokとComposer、ClaudeやGPTなど他社のモデル）が加わる。税別のドルで、Teamsの他社モデルには100万トークンあたり$0.25が上乗せされる" loading="lazy"></figure>
 
 変わった点は3つあります。
 
