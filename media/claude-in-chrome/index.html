@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Claude in Chromeとは？できること・料金・使い方と会社で使うときの設定｜株式会社nito</title>
+    <meta name="description" content="Claude in Chromeは有料プランで使えるChrome拡張機能です。できること、プラン別の料金、インストールの手順、3つの権限モード、管理者が決める許可サイトとプロンプトインジェクション対策を公式ヘルプで整理しました。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-in-chrome/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Claude in Chromeとは？できること・料金・使い方と会社で使うときの設定">
+    <meta property="og:description" content="Claude in Chromeは有料プランで使えるChrome拡張機能です。できること、プラン別の料金、インストールの手順、3つの権限モード、管理者が決める許可サイトとプロンプトインジェクション対策を公式ヘルプで整理しました。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-in-chrome/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-in-chrome.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-in-chrome.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Claude in Chromeとは？できること・料金・使い方と会社で使うときの設定", "description": "Claude in Chromeは有料プランで使えるChrome拡張機能です。できること、プラン別の料金、インストールの手順、3つの権限モード、管理者が決める許可サイトとプロンプトインジェクション対策を公式ヘルプで整理しました。", "datePublished": "2026-11-08", "dateModified": "2026-11-08", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-in-chrome/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/claude-in-chrome.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Claude in Chromeとは？できること・料金・使い方と会社で使うときの設定"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude in Chromeは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "無料プランでは使えません。Pro・Max・Ultra・Team・Enterpriseのどれかに入っていれば、追加の料金なしで使えます。"}}, {"@type": "Question", "name": "Claude in ChromeはEdgeでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "ヘルプではGoogle Chrome以外のChromium系のブラウザとスマホは対象外です。Claude Codeからつなぐ場合だけ、EdgeやBraveなどでも動くと説明書に書かれています。"}}, {"@type": "Question", "name": "Claude in ChromeのProで使えるモデルは？", "acceptedAnswer": {"@type": "Answer", "text": "ヘルプにはすべての公開モデルで使えるとあります。プランで違うのはモデルではなく、使える量です。"}}, {"@type": "Question", "name": "Claude in Chromeは会社で止められますか？", "acceptedAnswer": {"@type": "Answer", "text": "TeamとEnterpriseでは、オーナーが「組織設定 > Chrome用Claude」で組織全体をオフにできます。許可リストと拒否リストで使えるサイトを絞ることもできます。"}}, {"@type": "Question", "name": "Claude in Chromeはパスワードを見ますか？", "acceptedAnswer": {"@type": "Answer", "text": "1Passwordとの連携を使えば、パスワードとワンタイムコードはClaudeに渡りません。それ以外は画面に出ているものがスクリーンショットで会話に入ります。"}}, {"@type": "Question", "name": "Claude in Chromeと組み込みブラウザの違いは？", "acceptedAnswer": {"@type": "Answer", "text": "組み込みブラウザはデスクトップアプリの中にあり、インストールが要らず普段のブラウザとは分かれています。Claude in Chromeはふだんログインしているブラウザで動きます。管理者の許可リストと拒否リストは両方に同じものが効く点は共通です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Claude in …
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.08</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Claude in Chromeとは？できること・料金・使い方と会社で使うときの設定</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/claude-in-chrome.jpg" alt="【2026年11月】Claude in Chromeとは？できること・料金・使い方と会社で使うときの設定" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Claude in Chromeは、AnthropicのAIであるClaudeがChromeの中でページを読み、クリックや入力まで行う拡張機能です。2026年8月26日にClaudeの有料プランすべてで一般提供が始まり、操作ごとに承認しなくても作業を進められるようになりました。ベータ版と書いた解説が多いものの、提供の扱いは8月の発表が新しい情報です。</p>
+<p>社員に使わせてよいかを決める立場なら、何ができるかと同じくらい、どこまで任せるかが判断の中心になります。この記事ではできること・プランと料金・入れ方を公式ヘルプで確かめたうえで、会社で使わせる前に管理者が決めておく設定と安全面をまとめます。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>有料プラン（Pro・Max・Ultra・Team・Enterprise）なら追加料金なしで使え、使用量はチャットと同じ枠から減る</li>
+<li>Teamは組織の設定で最初からオン。サイドパネルの既定は自動的に承認で、会話は履歴に残る</li>
+<li>会社で決めるのは有効にするか・許可するサイト・権限モードの決まり・扱わない業務・配り方と試験の5つ</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Claude in Chromeとは</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>チャットやRPAとの違い</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Claude in Chromeでできること</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>ページを読んで操作する</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>複数のタブと定期実行</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>ショートカットと記録</a></li>
+                    <li class="toc-h3"><a href="#s2-4"><span class="toc__n">2-4</span>Claude CodeとCoworkとの連携</a></li>
+                    <li class="toc-h3"><a href="#s2-5"><span class="toc__n">2-5</span>公式が挙げる使い道</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>使えるプランと料金</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>モデルと使用量</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>インストールと使い方</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>対応ブラウザと端末</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>デスクトップアプリからつなぐ</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>権限モードと安全の仕組み</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>モードに関係なく決まっていること</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>プロンプトインジェクションへの対策</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>画面の情報と会話の履歴</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>会社で使わせるときに決めること</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>① 組織で有効にするか</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>② 許可するサイト</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>③ 権限モードの決まり</a></li>
+                    <li class="toc-h3"><a href="#s6-4"><span class="toc__n">6-4</span>④ 扱わない業務とデータ</a></li>
+                    <li class="toc-h3"><a href="#s6-5"><span class="toc__n">6-5</span>⑤ 配り方と試験の進め方</a></li>
+                    <li class="toc-h3"><a href="#s6-6"><span class="toc__n">6-6</span>情シスが確かめておく条件</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>使う前に知っておきたい注意点</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Claude in Chromeとは</h2>
+<p>Google Chromeに追加して使う、Claudeの拡張機能です。ツールバーのアイコンを押すとページの横にサイドパネルが開き、頼みたいことを書くと、Claudeが見ているページを読んでリンクを押し、文字を入力してフォームを埋めます。<strong>ログインしたまま開いている社内ツールや管理画面でも動くため、APIやエクスポートの無いサイトの作業を任せられるのが特徴です。</strong>公式のページも、社内ツール・古いポータル・管理コンソール・請求書のシステムを例に挙げています。</p>
+<p>ヘルプによると、Claudeは作業中のタブのスクリーンショットを撮ってページを把握し、次に何をするかを決めます。ストアの提供元はAnthropicです。名前の似た拡張機能はほかにもあるので、社員に案内するときはストアのURLごと渡すと取り違えが起きません。</p>
+<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_01_overview.png" alt="Claude in Chromeの全体像を4段で並べた図。Chromeの拡張機能でページを読みクリックと入力をする、Pro・Max・Ultra・Team・Enterpriseの有料プランで使える、入口はサイドパネル・Cowork・Claude Codeの3つ、会社では管理者が有効にするかと許可するサイトを決める" loading="lazy"></figure>
+
+<h3 id="s1-1">チャットやRPAとの違い</h3>
+<p>ふつうのチャットではページの文章をコピーして貼り、返ってきた答えをもとに自分で操作します。Claude in Chromeは開いているタブを直接読み、操作まで進めるところが違います。RPAは決めた手順を正確に繰り返すのが得意な一方、画面の配置が変わると止まりやすい道具です。Claude in Chromeは画面を見てその場で次の手を選ぶため、手順が毎回少しずつ違う作業に向いています。<strong>その代わり毎回同じ結果になる保証は無く、件数の多い定型の転記はRPAのほうが確実です。</strong></p>
+<p>AIを組み込んだ別のブラウザに乗り換える製品とは違い、Claude in Chromeは今のChromeに足す形なので、ブックマークやログインの状態、ほかの拡張機能をそのまま使えます。入れ替えずに試せる反面、社員が普段のログインのまま動くため、許可サイトの設計が大事になります。ChatGPTで同じような作業を頼む方法は<a href="/media/chatgpt-agent-mode/">ChatGPTエージェントモードの記事</a>にまとめています。</p>
+<h2 id="s2">Claude in Chromeでできること</h2>
+<h3 id="s2-1">ページを読んで操作する</h3>
+<p>ヘルプが挙げるサイドパネルの使い道は、タブで開いているものの要約や比較、ページの内容をメモ・文書・フォームへ移すこと、サイトの手続きを見守りながら進めることです。Slack・Googleカレンダー・Gmail・Googleドキュメント・GitHubは操作の仕方を最初から知っているので、会議を入れて、のような短い指示でも進みます。画像を渡して経費の報告書やフォームの添付欄にアップロードさせることもできます。開発者向けにはブラウザのコンソールに出るエラー・通信・DOMの状態を読む機能もあります。</p>
+<h3 id="s2-2">複数のタブと定期実行</h3>
+<p>タブをClaudeのタブグループにドラッグすると、グループに入れたタブすべてを読んで操作します。決めた作業は毎日・毎週・毎月・毎年の予定で動かせ、設定は拡張機能のパネル右上にある時計のアイコンからです。タブを切り替えても作業は続きますが、<strong>動いている間はChromeを開いておく必要があります。</strong>終わったときや許可が要るときには、通知をオンにしておくと、パソコンに通知が届きます。</p>
+<h3 id="s2-3">ショートカットと記録</h3>
+<p>うまくいった指示はショートカットとして保存でき、入力欄で「/」と打てば呼び出せます。手順を自分で操作して覚えさせる記録の機能もありますが、<strong>ヘルプによると記録が使えるのはクラシックのサイドパネルだけ</strong>です。Coworkのセッションとして動く今のサイドパネルでは使えないため、記録を前提に業務を組むならパネル右上の3つの点から「クラシックに戻す」を選びます。</p>
+<h3 id="s2-4">Claude CodeとCoworkとの連携</h3>
+<p>公式が示す入口は3つあります。目の前のページだけで済むならサイドパネル、ファイルやほかのアプリも使う長い仕事の1工程ならデスクトップアプリのCowork、作っているサイトの確認ならClaude Codeです。Coworkと組むと、Chromeで集めた情報をExcelの表やPowerPointの資料に仕上げるところまで進みます。Coworkそのものの使い方は<a href="/media/claude-cowork-guide/">Claude Coworkの記事</a>で扱っています。Claude Codeからは <code>claude --chrome</code> で起動するとつながり、<code>/chrome</code> で接続の状態を確かめたり、毎回つなぐ設定にしたりできます。</p>
+<h3 id="s2-5">公式が挙げる使い道</h3>
+<p>公式のページが例に出す業務は次のとおりです。右の列は権限のヘルプの決まりと利用者の報告から付けた注意です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>作業</th>
+<th>公式が示すやり方</th>
+<th>気をつける点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="作業">分析ダッシュボード</td>
+<td data-label="公式が示すやり方">画面を操作して数値を抜き出し要約にまとめる</td>
+<td data-label="気をつける点">グラフから読んだ数値はCSVの値と照らす</td>
+</tr>
+<tr>
+<td data-label="作業">Googleドライブの整理</td>
+<td data-label="公式が示すやり方">フォルダを作って振り分け、重複や古いファイルに印を付ける</td>
+<td data-label="気をつける点">移動と削除は承認してから</td>
+</tr>
+<tr>
+<td data-label="作業">会議の準備</td>
+<td data-label="公式が示すやり方">カレンダーとメールから準備の要る会議を拾い、会議室も押さえる</td>
+<td data-label="気をつける点">毎晩動かすならChromeを開いておく</td>
+</tr>
+<tr>
+<td data-label="作業">競合の調査</td>
+<td data-label="公式が示すやり方">各社サイトの価格と機能を集め、CoworkでPowerPointにする</td>
+<td data-label="気をつける点">ログインの要るサイトは許可リストに入れる</td>
+</tr>
+<tr>
+<td data-label="作業">訪問営業の記録</td>
+<td data-label="公式が示すやり方">カレンダーとSalesforceの連絡先を照らして活動ログを作る</td>
+<td data-label="気をつける点">作成の前にメモを足して承認する</td>
+</tr>
+<tr>
+<td data-label="作業">宣伝メールの片づけ</td>
+<td data-label="公式が示すやり方">宣伝・ニュースレター・自動通知を一覧にして一括で削除</td>
+<td data-label="気をつける点">削除には明示の許可が要る</td>
+</tr>
+</tbody>
+</table></div>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">使えるプランと料金</h2>
+<p>Claude in Chromeに別の料金はありません。<strong>有料プランに入っていれば追加料金なしで使え、無料プランでは使えません。</strong>下の表の金額は料金ページを取得した米国向けの税別の値です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>プラン</th>
+<th>料金（米国向け・税別）</th>
+<th>Claude in Chrome</th>
+<th>サイドパネル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="プラン">Free</td>
+<td data-label="料金（米国向け・税別）">$0</td>
+<td data-label="Claude in Chrome">使えない</td>
+<td data-label="サイドパネル">なし</td>
+</tr>
+<tr>
+<td data-label="プラン">Pro</td>
+<td data-label="料金（米国向け・税別）">月払い$20・年払いで月$17</td>
+<td data-label="Claude in Chrome">使える</td>
+<td data-label="サイドパネル">Coworkのセッション（順次）</td>
+</tr>
+<tr>
+<td data-label="プラン">Max</td>
+<td data-label="料金（米国向け・税別）">月$100</td>
+<td data-label="Claude in Chrome">使える</td>
+<td data-label="サイドパネル">Coworkのセッション</td>
+</tr>
+<tr>
+<td data-label="プラン">Ultra</td>
+<td data-label="料金（米国向け・税別）">月$200</td>
+<td data-label="Claude in Chrome">使える</td>
+<td data-label="サイドパネル">Coworkのセッション</td>
+</tr>
+<tr>
+<td data-label="プラン">Team（2〜150人）</td>
+<td data-label="料金（米国向け・税別）">1人あたりスタンダード$25（年払い$20）・プレミアム$125（年払い$100）</td>
+<td data-label="Claude in Chrome">使える</td>
+<td data-label="サイドパネル">Coworkのセッション</td>
+</tr>
+<tr>
+<td data-label="プラン">Enterprise</td>
+<td data-label="料金（米国向け・税別）">1人あたり月US$20（年払い・20人から）に使った分を足す</td>
+<td data-label="Claude in Chrome">使える</td>
+<td data-label="サイドパネル">管理者が有効にした後</td>
+</tr>
+</tbody>
+</table></div>
+<p>日本の料金ページは消費税10%込みで表示され、nitoが10月に日本の画面で確かめた値ではProが月払い$22（年払いで月$18）、Maxが$110、Ultraが$220、Teamのスタンダードが$27.50（年払いで$22）でした。<strong>同じプランの同じ値段を税別と税込みで見ているだけ</strong>なので、稟議に書くときはどちらの値かを添えてください。プランの比べ方は<a href="/media/claude-pricing/">Claudeの料金プランの記事</a>、Teamと個人プランの選び方は<a href="/media/claude-team/">Claude Teamの記事</a>にあります。</p>
+<h3 id="s3-1">モデルと使用量</h3>
+<p>2026年前半の解説にはProではHaikuしか使えないと書くものがありますが、今のヘルプには「Chrome用Claudeはすべてのパブリックモデルで利用可能です」とあります。プランで変わるのはモデルではなく使える量です。使用量はチャットやClaude Codeと同じ枠から減り、ヘルプは<strong>ブラウザの操作は通常のチャットより計算が多く、枠を多く使う</strong>と書いています。長く続く作業ほど割り当てを使う、という説明も載っています。</p>
+<p>Proで2時間を超える作業をさせると1回で上限に届いた、Proの5倍の枠のMaxでは3〜5時間続けても止まらなかったという利用者の報告があります。毎日長い作業を任せる社員がいるなら、Teamのプレミアムか個人のMaxを考える目安です。</p>
+<h2 id="s4">インストールと使い方</h2>
+<p>入れるのは数分で済み、ヘルプの手順は次のとおりです。</p>
+<ol>
+<li>Google Chromeを開く</li>
+<li><a href="https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn?hl=ja">Chromeウェブストアのページ</a>で「Chromeに追加」を押す</li>
+<li>求められたらClaudeのアカウントでサインインする</li>
+<li>ツールバーのパズルのアイコンを押し、Claudeの横のピンで固定する</li>
+<li>Claudeがブラウザを操作するための権限を許可する</li>
+<li>ツールバーのClaudeのアイコンを押してサイドパネルを開く</li>
+</ol>
+<p>インストールのときにChromeが求める権限は15種類あります。クリックや入力やスクリーンショットに使うdebugger、決まった時間に動かすalarms、ファイルを保存するdownloads、デスクトップアプリやClaude Codeとつなぐ nativeMessaging などです。<strong>ヘルプは権限ごとに理由を書いているので、情シスが拡張機能を審査するときの根拠に使えます。</strong>ストアのプライバシーの欄には、扱うデータとして個人を特定できる情報・個人的なコミュニケーション・位置情報・ウェブ履歴・ユーザーのアクティビティ・ウェブサイトのコンテンツが並んでいます。</p>
+<h3 id="s4-1">対応ブラウザと端末</h3>
+<p>ヘルプとストアはGoogle Chrome以外のChromium系のブラウザとスマホでは使えないと書いています。Claude Codeの説明書だけは書き方が違い、Claude CodeからつなぐときはMicrosoft Edgeでも動き、Brave・Arc・Vivaldi・Operaでも拡張機能を見つけてつなぐとあります（WSLは対象外）。<strong>社員の標準ブラウザがEdgeの会社では、サイドパネルを使う人にChromeを入れてもらう必要があります。</strong></p>
+<h3 id="s4-2">デスクトップアプリからつなぐ</h3>
+<p>Claudeのデスクトップアプリから使うときは、左下のイニシャルから設定、カスタマイズ、コネクタと進み、Chrome用Claudeをオンにします。この接続は既定で無効になっていて、会話ごとにコネクタの一覧から有効にする仕組みです。CoworkにはChrome拡張の要らない組み込みのブラウザもあり、Claude in Chromeを使っていない人にはこちらが既定になります。どちらを使うかを選ぶ場所は「設定 &gt; Cowork &gt; 優先ブラウザ」です。チャットとCoworkが1つになった新しい画面（Pro・Max・Ultraに順次配信中）について、英語の公式ページは、選ぶ場所を機能（Capabilities）の設定の中と書いています。</p>
+<h2 id="s5">権限モードと安全の仕組み</h2>
+<p>Claudeにどこまで任せるかは、サイドパネルの入力欄のメニューで3つのモードから選びます。</p>
+<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_02_modes.png" alt="Claude in Chromeの3つの権限モードの図。手動で承認は操作の前に毎回許可を求める、自動的に承認は安全確認を通った操作だけ進みCoworkのサイドパネルの既定、すべての承認をスキップは確認も自動のチェックも無い。どのモードでも購入や取引は行わない" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モード</th>
+<th>動き方</th>
+<th>向く場面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モード">手動で承認</td>
+<td data-label="動き方">操作の前に許可を求める。サイトごとにすべてを許可・今回のみ・拒否を選ぶ</td>
+<td data-label="向く場面">初めてのサイト・送信や削除のある作業</td>
+</tr>
+<tr>
+<td data-label="モード">自動的に承認</td>
+<td data-label="動き方">操作ごとに安全を確かめ、危ないものは止める。止まり続けると許可を求める形に戻る</td>
+<td data-label="向く場面">慣れたサイトでの読み取りと整理</td>
+</tr>
+<tr>
+<td data-label="モード">すべての承認をスキップ</td>
+<td data-label="動き方">確認も自動のチェックも無い</td>
+<td data-label="向く場面">関わるサイトとデータを全部信頼できるときだけ</td>
+</tr>
+</tbody>
+</table></div>
+<p>手動で承認は以前の「実行する前に確認」、すべての承認をスキップは以前の「確認なしで実行」にあたります。<strong>Coworkのサイドパネルの既定は自動的に承認で（Coworkの管理者ヘルプでは、Enterpriseは新しい作業を手動で承認から始めるのが既定）、選んだモードは次の作業にも引き継がれます。</strong>社員が一度スキップに切り替えると、そのまま使い続けることになります。お金・本人として送るメッセージ・重要なファイルが関わる作業は、確認するか手動に戻すのがヘルプの勧めです。</p>
+<h3 id="s5-1">モードに関係なく決まっていること</h3>
+<p>権限のガイドにはどのモードでも明示の許可が要る操作と、そもそも行わない操作が書かれています。</p>
+<ul>
+<li>明示の許可が要る操作: 権限の設定の変更・認可の付与・機密情報の入力・完全な削除（ゴミ箱を空にする、メールやファイルやメッセージの削除）</li>
+<li>行わない操作: 購入や金融の取引・アカウントの作成・クレジットカードや身分証のデータの処理・信頼できない元からのダウンロード・投資の助言・システムファイルの変更・メールやウェブの中の指示に従うこと</li>
+</ul>
+<p>安全のヘルプはこれに加えて、株の取引・CAPTCHAの突破・機密データの入力・顔画像の収集を禁じています。macOSでベータの1Passwordとの連携を使えば、ログインの要る作業もClaudeがパスワードやワンタイムコードを見ないままサインインまで進められます。</p>
+<h3 id="s5-2">プロンプトインジェクションへの対策</h3>
+<p>ページやメールに隠した指示でAIを操る攻撃は、プロンプトインジェクションと呼ばれるものです。安全のヘルプが挙げる例は一見ふつうのToDoリストに銀行の明細を取り出して共有させる隠れた文が入っているもの。Anthropicの対策は、悪い指示を見抜くようモデルを訓練すること、読み込む内容を調べる分類器と実行前の操作を調べる分類器、危ないサイトのブロック、危ない操作の確認、人の研究者によるレッドチームの組み合わせです。</p>
+<p>公式が出している攻撃成功率は発表ごとに測り方が違い、過去の数字は出典の欄に並べました。最新の一般提供の発表で、プロのレッドチームの強い攻撃に対し、プローブと分類器をつけたSonnet 5・Opus 5・Mythos 5では攻撃が成功せず、Fable 5は0.3%でした。</p>
+<p><strong>数字は下がってきたものの、どの発表も攻撃がゼロになったとは言っていません。</strong>2025年11月の発表は1%の成功率でも意味のあるリスクだと書き、ヘルプも評価から漏れた新しい攻撃が成功すればデータの流出につながりうると書いています。会社としては分類器だけを頼りにせず、そもそも危ないサイトに行かせない設定を先に置くのが筋です。</p>
+<h3 id="s5-3">画面の情報と会話の履歴</h3>
+<p>Claudeは作業のためにタブのスクリーンショットを撮り、写ったものは会話の一部になります。Claudeは見たものから機密を取り除けないため、ヘルプは機密のサイトで使わないことと、機密のアカウントにつながない別のブラウザのプロファイルを使うことを勧めています。<strong>今のサイドパネルでは会話が履歴に残り、ほかの端末からも開けます。</strong>残したくない情報を出しているページではパネルを開かない、という決まりは社員向けの案内にも入れておきたいところです。</p>
+<h2 id="s6">会社で使わせるときに決めること</h2>
+<p>管理者向けのヘルプには組織で使うときの設定がまとまっています。設定の場所はオーナーかプライマリーオーナーでサインインした「組織設定 &gt; Chrome用Claude」です。決めることを5つに分けると次のようになります。</p>
+<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_03_admin.png" alt="会社でClaude in Chromeを使わせる前に決める5つの項目の図。組織で有効にするか（Teamは最初からオン）、許可するサイト（狭い許可リストから始める）、権限モードの決まり（送信や削除の前は人が確かめる）、扱わない業務とデータ（お金・契約・医療・個人情報）、配り方と試験の範囲（少人数で試してから広げる）" loading="lazy"></figure>
+
+<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_05_admin_help.png" alt="Claudeの管理者向けヘルプ。Teamプランでは拡張機能が既定で有効、Enterpriseプランも既に無効にしていなければオンと書かれている" loading="lazy"><figcaption>Chrome管理者コントロールのClaude（2026年11月8日）</figcaption></figure>
+
+<h3 id="s6-1">① 組織で有効にするか</h3>
+<p><strong>Teamプランでは拡張機能が最初から有効</strong>で、止めたいときだけ切ります。Enterpriseも、以前に無効にしていなければオンです。ただし、Teamから移行したEnterpriseについては、移行のヘルプがClaude in Chromeを「Enterpriseでは既定でオフ」の機能に挙げています。移行したあとは「組織設定 &gt; Chrome用Claude」で状態を確かめてください。また、EnterpriseでサイドパネルをCoworkのセッションとして使うには、クラウドのCoworkも有効にする必要があり（Enterpriseでは既定でオフ）、それまではクラシックのサイドパネルです。社員から使いたいと言われた時点で、Teamの会社ではもう使える状態にあると考えてください。HIPAAを有効にした組織だけは既定でオフで、オンにしても許可するサイトを決めるまではどのサイトも開けません。その場合もClaude in ChromeはBAA（医療情報の扱いの契約）の対象外です。Enterpriseで有効にしても社員には通知が届かないため、社内の連絡で知らせる必要があります。</p>
+<h3 id="s6-2">② 許可するサイト</h3>
+<p>許可リストに入れたサイトだけで動かすことも、拒否リストで特定のサイトを止めることもでき、同じリストがCoworkの組み込みブラウザにも効きます。ヘルプの推奨は<strong>狭い許可リストから始めて、慣れてから広げる</strong>ことです。社内のダッシュボードや決まったSaaSだけを入れ、銀行・会計・人事の画面は拒否リストに入れておくと、社員のログインのまま動く拡張機能でも行き先を絞れます。</p>
+<p>トラブルシューティングのヘルプは既定でブロックする種類として金融・銀行・投資・暗号資産取引所・成人向け・海賊版を挙げていますが、安全のヘルプは金融のサイトについて開く前に許可を求めると書いています。ページによって扱いの書き方が違うので、会社の側で金融系を拒否リストに入れておくほうが確実です。</p>
+<h3 id="s6-3">③ 権限モードの決まり</h3>
+<p>Claude in Chromeの管理者ヘルプには権限モードの設定がありません。一方、Coworkの管理者ヘルプには、組織設定の機能の画面に2つの設定があります。1つは自動的に承認を社員に使わせるか、もう1つは新しい作業を自動的に承認で始めるかで、後者はPro・Max・Ultra・Teamでは既定でオン、Enterpriseでは既定でオフです。サイドパネルはCoworkのセッションとして動くので、この設定がサイドパネルにも効くかを管理画面で確かめてください。そのうえで、初めてのサイトや送信・公開・削除・お金が関わる作業は手動で承認、すべての承認をスキップは使わない、という線を社内の決まりにも書いておきます。</p>
+<h3 id="s6-4">④ 扱わない業務とデータ</h3>
+<p>安全のヘルプが使わないよう強く勧めているのは、金融口座や投資の管理・法的な文書や契約・医療や健康の情報・機密な会社データのある仕事用アカウント・他人の個人情報を含むサイトです。<strong>Claudeが代わりにした操作の責任は使った本人にある</strong>とヘルプは書いており、公開や送信をしたもの、購入、変えたデータ、第三者のサイトの規約を守ることまで含みます。社内の規程にはこの一覧をそのまま使える業務の外として書いておくと迷いが減ります。</p>
+<h3 id="s6-5">⑤ 配り方と試験の進め方</h3>
+<p>配り方は社員が自分でストアから入れる方法と、Google Workspaceの管理コンソールやMDMで決めた人に配る方法の2つです。ヘルプは本格的に広げる前の試験として、次の順番を示しています。</p>
+<ol>
+<li>組織で拡張機能を有効にする</li>
+<li>信頼できるサイトに絞った許可リストを作る</li>
+<li>ITの管理で、入れられる社員を限る</li>
+<li>安全な使い方のヘルプを試す人に共有する</li>
+<li>意見を集めて、時間をかけて広げる</li>
+</ol>
+<h3 id="s6-6">情シスが確かめておく条件</h3>
+<p>技術の面で事前に確かめておきたいのは次の点です。Claude in Chromeの通信はclaude.ai・api.anthropic.com・platform.claude.comと、デスクトップアプリと同じwss://bridge.claudeusercontent.comを通るので、絞ったネットワークでは許可が要ります。Chromeの企業ポリシーのforceLoginOrgUUIDを配ると、自社の組織以外のアカウントでは使えなくなります。データを残さない契約（ZDR）にはCoworkと同じく対応していません。Claude Codeからつなぐ場合は、Bedrockなどのクラウド経由やAPIキーでのログインでは使えません。</p>
+<p><strong>Claude in ChromeはCoworkの権限を引き継がず、組織のトグルと（Enterpriseのカスタムロールでは）ロールごとの機能で別に管理します。</strong>デスクトップアプリから使わせたくないときは、拡張機能をオフにするか、Enterpriseの設定でisLocalDevMcpEnabledを切ります。1Passwordとの連携も組織では既定でオフです。プランごとの管理の違いは<a href="/media/claude-enterprise/">Claude Enterpriseの記事</a>にまとめています。社内の決まりや許可の設計まで含めてAIエージェントを業務に入れたい場合は、nitoの<a href="/ai-agent/">AIエージェント構築支援</a>でも相談を受けています。</p>
+<h2 id="s7">使う前に知っておきたい注意点</h2>
+<p>公式の説明に出てこない使い心地を知るには、試した人の報告が参考です。Rimo社の記事では人の手で10分の作業に30分から2時間かかった、慣れない管理画面のエディタを操作しきれなかった、グラフから数値を一度で正しく読めなかった、サイトによっては操作ごとに許可を押す必要があった、と報告されています。<strong>不慣れな画面での調べものや毎回少しずつ違う入力は任せる意味が大きく、慣れた人が手早く済ませる作業は向きません。</strong></p>
+<p>止まる場面もありました。Qiitaの投稿ではログインのページやCAPTCHAに当たると一時停止し、人が通してから続けてと伝えると再開しました。JavaScriptの確認のダイアログで操作が止まることもあったそうです。入れられないときやサイトを開けないときは、ヘルプのトラブルシューティングが有料プランか、管理者が有効にしているか、そのサイトを許可しているか、管理者が止めていないかの順で確かめるよう案内しています。</p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li>自分で試したいだけなら、Pro以上で拡張機能を入れ、手動で承認のまま公開されたページの要約から始める</li>
+<li>Teamで社員が使い始めているなら、最初から有効なので許可リストと扱わない業務を先に決めて社内に知らせる</li>
+<li>Enterpriseで入れるなら、管理者がオンにしたあと狭い許可リストと少人数の試験で始め、通信やZDRの条件を確かめる</li>
+<li>医療など規制のあるデータを扱うなら、HIPAAの組織では既定でオフでBAAの対象外なので、データの無いサイトに範囲を限る</li>
+</ul>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">Claude in Chromeは無料で使えますか？</h3>
+<p>無料プランでは使えません。Pro・Max・Ultra・Team・Enterpriseのどれかに入っていれば、追加の料金なしで使えます。</p>
+<h3 id="s9-2">Claude in ChromeはEdgeでも使えますか？</h3>
+<p>ヘルプではGoogle Chrome以外のChromium系のブラウザとスマホは対象外です。Claude Codeからつなぐ場合だけ、EdgeやBraveなどでも動くと説明書に書かれています。</p>
+<h3 id="s9-3">Claude in ChromeのProで使えるモデルは？</h3>
+<p>ヘルプにはすべての公開モデルで使えるとあります。プランで違うのはモデルではなく、使える量です。</p>
+<h3 id="s9-4">Claude in Chromeは会社で止められますか？</h3>
+<p>TeamとEnterpriseでは、オーナーが「組織設定 &gt; Chrome用Claude」で組織全体をオフにできます。許可リストと拒否リストで使えるサイトを絞ることもできます。</p>
+<h3 id="s9-5">Claude in Chromeはパスワードを見ますか？</h3>
+<p>1Passwordとの連携を使えば、パスワードとワンタイムコードはClaudeに渡りません。それ以外は画面に出ているものがスクリーンショットで会話に入ります。</p>
+<h3 id="s9-6">Claude in Chromeと組み込みブラウザの違いは？</h3>
+<p>組み込みブラウザはデスクトップアプリの中にあり、インストールが要らず普段のブラウザとは分かれています。Claude in Chromeはふだんログインしているブラウザで動きます。管理者の許可リストと拒否リストは両方に同じものが効く点は共通です。</p>
+<h2 id="s10">出典</h2>
+<p>情報はいずれも2026年11月8日に確認しました。料金の表は料金ページを取得したときの米国向けの税別の値で、日本の税込みの値はnitoが2026年10月に日本の画面で確かめたものです。利用者の報告はそれぞれの記事の書き手が試したときの結果です。攻撃成功率の過去の数字として、2025年8月のパイロットが対策なし23.6%・対策後11.2%（29のシナリオ・123の試験、自律モード）、2025年11月の発表がOpus 4.5で1.4%（社内の攻撃役が1つの環境で100回試す、改良した安全策つき）、安全のヘルプの現在の記載が0.08%未満（既知の攻撃を組み合わせた社内試験）です。</p>
+<ul>
+<li><a href="https://claude.com/ja/claude-in-chrome">Claude in Chrome（Anthropic）</a></li>
+<li><a href="https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn?hl=ja">Claude（Chrome ウェブストア）</a></li>
+<li><a href="https://support.claude.com/ja/articles/12012173">ChromeでClaudeを始める（Anthropicヘルプセンター）</a></li>
+<li><a href="https://support.claude.com/ja/articles/12902428">Chromeで安全にClaudeを使用する（Anthropicヘルプセンター）</a></li>
+<li><a href="https://support.claude.com/ja/articles/12902446">Chrome内のClaudeの権限ガイド（Anthropicヘルプセンター）</a></li>
+<li><a href="https://support.claude.com/ja/articles/13065128">Chrome管理者コントロールのClaude（Anthropicヘルプセンター）</a></li>
+<li><a href="https://support.claude.com/ja/articles/12902405">Chrome での Claude のトラブルシューティング（Anthropicヘルプセンター）</a></li>
+<li><a href="https://claude.com/ja/resources/articles/claude-in-chrome-generally-available">Claude in Chrome が一般提供開始（Anthropic、2026年8月26日）</a></li>
+<li><a href="https://claude.com/blog/claude-for-chrome">Claude in Chrome のパイロット試験（Anthropic、2025年8月25日）</a></li>
+<li><a href="https://www.anthropic.com/news/prompt-injection-defenses">Mitigating the risk of prompt injections in browser use（Anthropic、2025年11月24日）</a></li>
+<li><a href="https://code.claude.com/docs/ja/chrome">Use Claude Code with Chrome（Claude Code Docs）</a></li>
+<li><a href="https://claude.com/ja/pricing">料金プラン（Claude）</a></li>
+<li><a href="https://rimo.app/blogs/claude-in-chrome">Claude in Chrome実践ガイド（Rimo）</a></li>
+<li><a href="https://qiita.com/Dinn/items/488afd83954c524954a0">「Claude in Chrome」と「Claude Code」の連携を試してみた（Qiita）</a></li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Claude in Chromeとは</a><a href="#s2">Claude in Chromeでできること</a><a href="#s3">使えるプランと料金</a><a href="#s4">インストールと使い方</a><a href="#s5">権限モードと安全の仕組み</a><a href="#s6">会社で使わせるときに決めること</a><a href="#s7">使う前に知っておきたい注意点</a><a href="#s8">まとめ</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-agent-mode/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのエージェントモード"><defs><linearGradient id="ecg-facc52b5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-facc52b5)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのエー</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ジェントモード</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.07</div>
+                <div class="rel-card__ttl">【2026年11月】ChatGPTエージェントモード終了後の頼み方・Deep Researchとの違い</div>
+            </a>
+            <a href="/media/claude-code-skills/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Code Skills"><defs><linearGradient id="ecg-9954945f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-9954945f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Code Skills</text><line x1="189.6" y1="365.9" x2="1010.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.07</div>
+                <div class="rel-card__ttl">【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方</div>
+            </a>
+            <a href="/media/mcp-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MCPとは"><defs><linearGradient id="ecg-ae627a98" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ae627a98)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">MCPとは</text><line x1="455.6" y1="365.9" x2="744.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'claude-in-chrome',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
