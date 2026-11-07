@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】AI Overviewの自社サイト表示チェック方法・表示率と引用率の出し方｜株式会社nito</title>
+    <meta name="description" content="AI Overview（AIによる概要）に自社サイトが表示・引用されているかのチェック方法。手で検索する条件、表示率と引用率の出し方、Search Consoleで分かる範囲、計測ツールの機能を公式の情報で整理しました。">
+    <link rel="canonical" href="https://nito-0210.com/media/ai-overview-check/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】AI Overviewの自社サイト表示チェック方法・表示率と引用率の出し方">
+    <meta property="og:description" content="AI Overview（AIによる概要）に自社サイトが表示・引用されているかのチェック方法。手で検索する条件、表示率と引用率の出し方、Search Consoleで分かる範囲、計測ツールの機能を公式の情報で整理しました。">
+    <meta property="og:url" content="https://nito-0210.com/media/ai-overview-check/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/ai-overview-check.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/ai-overview-check.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】AI Overviewの自社サイト表示チェック方法・表示率と引用率の出し方", "description": "AI Overview（AIによる概要）に自社サイトが表示・引用されているかのチェック方法。手で検索する条件、表示率と引用率の出し方、Search Consoleで分かる範囲、計測ツールの機能を公式の情報で整理しました。", "datePublished": "2026-11-05", "dateModified": "2026-11-05", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-overview-check/"}, "articleSection": "AI検索対策", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/ai-overview-check.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】AI Overviewの自社サイト表示チェック方法・表示率と引用率の出し方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "GoogleのAI Overviewに自社サイトが出ているかを無料で確かめられますか？", "acceptedAnswer": {"@type": "Answer", "text": "確かめられます。シークレットウィンドウで狙う語を検索し、概要の出典に自社のドメインがあるかを見る方法は費用がかかりません。Search Consoleの生成AIのレポートも無料で、AI機能に出た表示回数をページごとに見られます。"}}, {"@type": "Question", "name": "AI Overviewの表示率と引用率は何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "表示率はその語で概要が出た割合、引用率は概要が出たときに自社が出典に入った割合です。表示率が下がるのは概要を出す語が変わったとき、引用率が下がるのは他社が選ばれたときで、打つ手が違うため分けて数えます。"}}, {"@type": "Question", "name": "Search ConsoleでAI Overviewに出た検索語は分かりますか？", "acceptedAnswer": {"@type": "Answer", "text": "分かりません。生成AIのレポートの分け方はページ・国・デバイス・日付で、検索語はありません。どの語で概要に出たかは手で検索するか、語ごとに記録するツールで確かめます。"}}, {"@type": "Question", "name": "AI Overviewのチェックはシークレットモードでするべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "基準の数字はシークレットで取るのがおすすめです。閲覧履歴とログインの影響を減らせるため、月ごとの比較がしやすくなります。ふだんのブラウザでの結果も別の列に残すと、見込み客の画面との差に気づけます。"}}, {"@type": "Question", "name": "AI Overviewはパソコンとスマホで結果が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "違うことがあるため、両方を記録するのがおすすめです。Search Consoleの生成AIのレポートもデバイス別に表示回数を出すため、自社のサイトでどちらに多く出ているかは数字で確かめられます。"}}, {"@type": "Question", "name": "AI Overviewの計測ツールは何を基準に選べばよいですか？", "acceptedAnswer": {"@type": "Answer", "text": "見たい語の数、出典に自社が入ったかまで記録できるか、パソコンとスマホや地域を選べるかの3点で比べるのがおすすめです。ChatGPTなども同時に測りたいなら、複数のAIに対応する製品が候補です。"}}, {"@type": "Question", "name": "AI Overviewに自社が一度も引用されないときは何を確かめますか？", "acceptedAnswer": {"@type": "Answer", "text": "Search Consoleの検索の生成 AI 設定でサイトを除外していないか、ページがインデックスに登録されているか、スニペットの表示を止める設定が入っていないかを確かめます。そのうえで、狙う語で概要が出ているかを表示率で見ます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】AI Overvie…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.11.05</span>
+        </div>
+        <h1 class="post-title">【2026年11月】AI Overviewの自社サイト表示チェック方法・表示率と引用率の出し方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/ai-overview-check.jpg" alt="【2026年11月】AI Overviewの自社サイト表示チェック方法・表示率と引用率の出し方" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Googleの説明では、AIによる概要（AI Overview）は通常の検索結果に付加価値があるとシステムが判断した検索でだけ表示されます。2026年6月の発表によると、月に25億人以上が使う機能です。</p>
+<p>自社が狙う語で概要が出るのか、出たときに自社のページが出典に入るのかは、Search Consoleの数字だけでは分かりません。手で検索して確かめる手順と、それを表示率・引用率として数字にする方法、Search Consoleとツールで分かる範囲をまとめました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>概要が出るか（表示）と自社が出典に入るか（引用）は<strong>別の率として数える</strong></li>
+<li>語は20本ほど選び、<strong>端末と日を変えて同じ条件で繰り返し検索</strong>して回数で割る</li>
+<li>Search Consoleで分かるのは<strong>AI機能に出た表示回数まで</strong>で、どの語で出たかは手で確かめる</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>AI Overviewの自社サイト表示チェックとは</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>手で検索して確かめる手順</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>確かめる語を20本選ぶ</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>条件をそろえて検索する</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>出典の一覧で自社を探す</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>表示率と引用率の出し方</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>3つの率の意味</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>例として20語を4回ずつ見た場合</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>条件ごとの差を読む</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>Search Consoleで分かること・分からないこと</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>AI Overviewをチェックできるツール</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>社内への報告と数字の使い方</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">AI Overviewの自社サイト表示チェックとは</h2>
+<p>社内で「うちはAIによる概要に出ているのか」と聞かれたとき、答えは2つに分かれます。1つは狙っている語でそもそも概要が出るかどうか、もう1つは概要が出たときに自社のページが出典のリンクに入っているかどうかです。<strong>この2つを分けずに「出ている・出ていない」で報告すると、競合だけが出典に並んでいる状態を見逃します。</strong></p>
+<p>概要が出る語で自社が選ばれていないなら、直す対象はページの中身や順位です。概要がほとんど出ない語なら、AIによる概要より通常の検索結果の方が先に見る場所になります。どちらなのかで次の手が変わるため、チェックは表示と引用を別々に記録します。</p>
+<figure class="post-figure"><img src="/media/images/ai-overview-check/aioc_00_overview.png" alt="自社がAIによる概要に出ているかを確かめる3つの方法。手で検索するとどの語で出て誰が出典かが分かる。Search ConsoleはAI機能に出た表示回数をページ別に見られる。計測ツールは多くの語を毎日同じ条件で記録する" loading="lazy"></figure>
+
+<p>確かめる方法は手での検索、Search Console、計測ツールの3つです。語ごとに誰が出典に入ったかまで分かるのは、手での検索とツールだけになります。Search Consoleは公式の数字ですが、どの語で出たかは出ません。</p>
+<h2 id="s2">手で検索して確かめる手順</h2>
+<p>費用をかけずに今日始められるのが手での確認です。AIが自社や競合をどう説明しているかという文面まで読めるのはこの方法だけです。</p>
+<h3 id="s2-1">確かめる語を20本選ぶ</h3>
+<p><strong>語は思いつきで選ばず、売上に近い順に20本ほど決めて固定します。</strong>途中で語を入れ替えると、先月と比べられなくなるためです。選ぶ元は次の4つが使えます。</p>
+<ul>
+<li>Search Consoleでクリックが多い語の上位</li>
+<li>「〇〇とは」「〇〇 やり方」のような説明を求める語</li>
+<li>「〇〇 比較」「〇〇 おすすめ」のような比べる語</li>
+<li>社名やサービス名での検索</li>
+</ul>
+<p>語の型によって概要の出やすさは違います。VicMe社の記事は情報を探す語で65〜75%、比較の語で45〜60%、購入や申し込みの語で5〜15%という目安を挙げていますが、元の調査は確かめられませんでした。購入の語や社名の語ばかりだと概要がほとんど出ないので、型を混ぜて選ぶと全体の傾向がつかめます。</p>
+<h3 id="s2-2">条件をそろえて検索する</h3>
+<p>同じ語でも、検索するたびに同じ画面が出るとは限りません。Search Consoleのヘルプは検索結果の掲載順位について、検索履歴や場所などの多くの変数で平均と違う場合があると書いています。AIによる概要とAIモードは使うモデルや手法が違う場合があり、回答とリンクにも違いが出るとGoogleは説明しています。</p>
+<figure class="post-figure"><img src="/media/images/ai-overview-check/aioc_01_conditions.png" alt="検索するときにそろえる条件。ブラウザの状態はシークレットを基準にして普段の画面は別に記録する。端末はパソコンとスマホを両方見る。日を変えて2回以上見る。すべてのタブの上の概要だけを数える" loading="lazy"></figure>
+
+<p><strong>そろえる条件は、ブラウザの状態・端末・日と時間・見る場所の4つです。</strong>基準にするのはシークレットウィンドウで、閲覧履歴とログインの影響を減らした画面になります。ふだんのブラウザで確かめ続けると、自社のサイトをよく開く担当者の画面だけ出やすく見えることがあり、Uravation社も失敗例に挙げました。</p>
+<p>ただし実際の見込み客の多くはログインしたまま検索しています。シークレットの結果を基準の数字にしつつ、ふだんのブラウザでの結果も別の列に残しておくと、両者の差が大きい語に気づけます。端末はパソコンとスマホの両方を見て、日を変えて2回以上確かめるのがおすすめです。言語と国を固定したいときは、検索のURLに <code>hl=ja&amp;gl=jp</code> を付ける方法をUravation社が挙げています。</p>
+<p>見る場所の取り違えにも注意が必要です。Googleの検索ヘルプによると、検索したあとに［ウェブ］のフィルタを選ぶと、AIによる概要のない文字のリンクだけの結果になります。確かめるのは［すべて］の結果の上に出る概要で、別の画面で会話するAIモードとは分けて数えます。</p>
+<figure class="post-figure"><img src="/media/images/ai-overview-check/aioc_03_webfilter.png" alt="Google検索ヘルプのAIによる概要のページ。機能は無効にできないが、検索のあとにウェブのフィルタを選ぶと概要のないテキストのリンクだけが表示されると書かれている" loading="lazy"><figcaption>Google 検索ヘルプのAIによる概要のページ（2026年11月5日）</figcaption></figure>
+
+<h3 id="s2-3">出典の一覧で自社を探す</h3>
+<p>概要が出たら、本文の横や下に並ぶ出典のリンクを開き、自社のドメインがあるかを探します。リンクが折りたたまれている場合は、すべて表示を押してから数えるのが確実です。1回の検索で残す項目は次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>列</th>
+<th>書くこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="列">日時・端末・ブラウザの状態</td>
+<td data-label="書くこと">例: 11/5 10時・スマホ・シークレット</td>
+</tr>
+<tr>
+<td data-label="列">語</td>
+<td data-label="書くこと">固定した20語のどれか</td>
+</tr>
+<tr>
+<td data-label="列">概要</td>
+<td data-label="書くこと">出た／出ない</td>
+</tr>
+<tr>
+<td data-label="列">自社</td>
+<td data-label="書くこと">出典に入った／入らない</td>
+</tr>
+<tr>
+<td data-label="列">入ったページと位置</td>
+<td data-label="書くこと">自社のURLと出典の何番目か</td>
+</tr>
+<tr>
+<td data-label="列">競合</td>
+<td data-label="書くこと">出典に入った他社のドメイン</td>
+</tr>
+<tr>
+<td data-label="列">回答の要旨</td>
+<td data-label="書くこと">自社や競合がどう説明されたか</td>
+</tr>
+</tbody>
+</table></div>
+<p>位置は記録しますが、良し悪しの判断には使いません。Search Consoleの数え方では、概要の中のリンクはすべて同じ掲載順位です。Gyro-n社も自社の計測画面の番号について、一覧を見やすくするためのもので順位や評価を示すものではないと注記しています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">AI のおすすめに自社の名前が挙がるか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">表示率と引用率の出し方</h2>
+<p>手で集めた記録はそのまま並べるより、率にした方が社内で比べやすくなります。<strong>表示率という言葉は概要が出た割合と自社が出典に入った割合の両方の意味で使われることがあるため、社内では名前を分けて定義しておきます。</strong></p>
+<figure class="post-figure"><img src="/media/images/ai-overview-check/aioc_02_rates.png" alt="数字は3つに分けて出す。表示率は概要が出た回数を検索した回数で割る。引用率は自社が出典に入った回数を概要が出た回数で割る。露出率は自社が出典に入った回数を検索した回数で割り、表示率と引用率を掛けた値になる" loading="lazy"></figure>
+
+<h3 id="s3-1">3つの率の意味</h3>
+<p>表示率は、その語のまとまりで概要がどれだけ出るかを表します。引用率は概要が出たときに自社が選ばれる割合を指します。露出率は検索全体のうち自社が出典に入った割合で、表示率と引用率を掛けた値です。</p>
+<p>下がったときの原因が違うので、分けておく意味があります。表示率が下がったなら、Googleが概要を出す語が変わった可能性があり、自社のページを直しても戻りません。引用率が下がったなら、概要は出ているのに他社が選ばれているので、出典に入った競合のページと自社のページを比べる段階です。</p>
+<h3 id="s3-2">例として20語を4回ずつ見た場合</h3>
+<p>20語をパソコンとスマホで1回ずつ、日を変えて2日見ると、検索は80回になります。次の表は計算の形を見せるために作った例で、実測の数字ではありません。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>条件</th>
+<th>検索</th>
+<th>概要が出た</th>
+<th>自社が出典</th>
+<th>表示率</th>
+<th>引用率</th>
+<th>露出率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="条件">パソコン・シークレット</td>
+<td data-label="検索">40回</td>
+<td data-label="概要が出た">22回</td>
+<td data-label="自社が出典">6回</td>
+<td data-label="表示率">55%</td>
+<td data-label="引用率">27%</td>
+<td data-label="露出率">15%</td>
+</tr>
+<tr>
+<td data-label="条件">スマホ・シークレット</td>
+<td data-label="検索">40回</td>
+<td data-label="概要が出た">24回</td>
+<td data-label="自社が出典">5回</td>
+<td data-label="表示率">60%</td>
+<td data-label="引用率">21%</td>
+<td data-label="露出率">13%</td>
+</tr>
+<tr>
+<td data-label="条件">合計</td>
+<td data-label="検索">80回</td>
+<td data-label="概要が出た">46回</td>
+<td data-label="自社が出典">11回</td>
+<td data-label="表示率">58%</td>
+<td data-label="引用率">24%</td>
+<td data-label="露出率">14%</td>
+</tr>
+</tbody>
+</table></div>
+<p>80回だと1回の差で1.25ポイント動くので、<strong>前月と2〜3ポイント違うだけで良くなった・悪くなったと判断しない</strong>方が安全です。語ごとの率は回数が少なすぎるため、4回のうち何回入ったかで「毎回入る」「ときどき入る」「入らない」の3つに分けて見ます。ときどき入る語はページを少し直せば毎回入る側に動く候補になります。</p>
+<h3 id="s3-3">条件ごとの差を読む</h3>
+<p>合計の数字のほかに、端末・ブラウザの状態・日で分けた率も出しておきます。パソコンとスマホで引用率が大きく違う語は、どちらか一方だけで確かめていると判断を誤りかねません。シークレットとふだんのブラウザで差が大きい語は、担当者の画面での印象と見込み客の画面がずれている可能性がある語です。</p>
+<p>比べる語のまとまりも決めておくと、報告が読みやすくなります。説明を求める語・比べる語・社名の語のように型で分けると、比べる語で引用率が低いといった形で、どのページから直すかまで話が進みます。</p>
+<h2 id="s4">Search Consoleで分かること・分からないこと</h2>
+<p>Search Consoleは無料で使える公式の数字ですが、手での確認の代わりにはなりません。Googleのヘルプと検索セントラルに書かれている範囲を並べました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>知りたいこと</th>
+<th>Search Consoleで</th>
+<th>根拠</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="知りたいこと">AI機能に自社が出た表示回数</td>
+<td data-label="Search Consoleで">生成AIのレポートでページ・国・デバイス・日付ごとに見られる</td>
+<td data-label="根拠">生成 AI パフォーマンス レポートのヘルプ</td>
+</tr>
+<tr>
+<td data-label="知りたいこと">通常のレポートとの関係</td>
+<td data-label="Search Consoleで">AI機能の分は通常の検索パフォーマンスのウェブに含まれる</td>
+<td data-label="根拠">AI 機能とウェブサイト</td>
+</tr>
+<tr>
+<td data-label="知りたいこと">AIによる概要の中の順位</td>
+<td data-label="Search Consoleで">概要全体で1つの掲載順位。中のリンクは同じ順位</td>
+<td data-label="根拠">表示回数、掲載順位、クリック数とは</td>
+</tr>
+<tr>
+<td data-label="知りたいこと">どの語で概要に出たか</td>
+<td data-label="Search Consoleで">生成AIのレポートに検索語の分け方は無い</td>
+<td data-label="根拠">生成 AI パフォーマンス レポートのヘルプ</td>
+</tr>
+<tr>
+<td data-label="知りたいこと">AIによる概要とAIモードの内訳</td>
+<td data-label="Search Consoleで">生成AIのレポートは両方を合わせた表示回数</td>
+<td data-label="根拠">同上</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>生成AIのレポートはどのページがAI機能に使われているかを見つける道具で、語ごとの表示率や引用率は出せません。</strong>2026年8月31日に全サイトに提供されたレポートで、開き方や月次の報告の作り方は<a href="/media/gsc-ai-mode/">サーチコンソールでAIモード・AIによる概要の表示を見る方法</a>にまとめています。</p>
+<p>数字を読むときの注意は2つです。1つはデータの欠けで、Search Consoleのデータの異常のページは、生成AIのレポートの表示回数が2026年8月13日〜17日にロギングのエラーで少なく出たことと、8月21日に欠けた分を復元したことを載せています。急な増減を見たら、まずこのページに同じ期間の障害が載っていないかを確かめます。</p>
+<p>もう1つはページ別の表示で <code>#:~:text=</code> が付いたURLの行です。Uravation社は2026年9月の自社サイトで、ページ別の表示回数の約37%がこの形のURLで、クリックはほぼ0だったと書いています。同社は強調スニペットなども同じ形を使うのでAIによる概要だけとは限らないとし、自社の観測で公式の説明ではないと断っています。上の表のヘルプと検索セントラルのAI機能のページを探した範囲では、この形のURLの扱いを書いた箇所は見つけられませんでした。ページ別に合計するときは <code>#</code> の付いた行を分けて集計すると数字が膨らみません。</p>
+<p>GA4でも、AIによる概要からのクリックだけを取り出すことはできません。概要のリンクはGoogle検索の結果ページから開かれるため、通常の自然検索と同じ参照元に入ります。ChatGPTなど別のサービスからの流入の見方は<a href="/media/ai-search-measurement/">AI検索対策の効果の測り方</a>で扱っています。</p>
+<p>順位が高いのにクリック率が低い語は、手で確かめる語の候補になります。ただしクリック率が下がった理由が概要なのか、タイトルや季節なのかはSearch Consoleだけでは決められません。</p>
+<h2 id="s5">AI Overviewをチェックできるツール</h2>
+<p>語が増えてくると、手での確認は回らなくなります。2026年11月5日に各社の公式ページで確かめた範囲で、AIによる概要に関わる機能を並べました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>ツール</th>
+<th>概要が出るか</th>
+<th>自社が出典か</th>
+<th>公式ページにある主な点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="ツール">Gyro-n SEO</td>
+<td data-label="概要が出るか">語ごとに見られる</td>
+<td data-label="自社が出典か">アイコンで区別</td>
+<td data-label="公式ページにある主な点">パソコンとスマホ・概要の文の記録・時系列のグラフ。月500〜16,800円（税別）の4段</td>
+</tr>
+<tr>
+<td data-label="ツール">Semrush</td>
+<td data-label="概要が出るか">見られる</td>
+<td data-label="自社が出典か">Position Trackingで絞り込める</td>
+<td data-label="公式ページにある主な点">出典に入ると1位として記録。概要を含む順位と含まない順位を切り替えられる</td>
+</tr>
+<tr>
+<td data-label="ツール">Ahrefs Rank Tracker</td>
+<td data-label="概要が出るか">19種の検索結果の要素に含む</td>
+<td data-label="自社が出典か">自社が持つ要素と持たない要素を分けて表示（概要の出典かどうかの説明は無し）</td>
+<td data-label="公式ページにある主な点">パソコンとスマホ、国から郵便番号までの位置、要素の日々の動き</td>
+</tr>
+<tr>
+<td data-label="ツール">yoriaiSEO</td>
+<td data-label="概要が出るか">サイト単位で調べる</td>
+<td data-label="自社が出典か">言及・引用回数を出す</td>
+<td data-label="公式ページにある主な点">2026年3月26日にAI検索機能を追加。月30,000円（税抜）から</td>
+</tr>
+<tr>
+<td data-label="ツール">Otterly.AI</td>
+<td data-label="概要が出るか">見られる</td>
+<td data-label="自社が出典か">見られる</td>
+<td data-label="公式ページにある主な点">ChatGPT・Perplexity・Copilotと同時に測る。月29ドルで15問から</td>
+</tr>
+<tr>
+<td data-label="ツール">AIOチェッカー（ディーボ）</td>
+<td data-label="概要が出るか">見られる</td>
+<td data-label="自社が出典か">参照リンクを表示</td>
+<td data-label="公式ページにある主な点">無料のツール</td>
+</tr>
+</tbody>
+</table></div>
+<p>Gyro-n SEOの料金表の機能の欄にAIによる概要の計測の行は無く、製品ページでは3か月の無料トライアルを案内しています。Semrushの1位として記録する扱いは、通常の検索の順位とは別の数字です。社内で順位の推移を見るときは、概要を含めた順位か含めない順位かを決めてから比べます。</p>
+<p>手からツールに切り替える目安として、Uravation社は数十件以下なら手動でよいとし、AI検索パートナーズは追いたい語が20個以上になったらツールを挙げています。本記事の手での確認は20語が前提なので、まず手で始め、語が増えて回らなくなったらツールに替える流れが無理がありません。<strong>ツールに替えても、売上に近い数本の語は手で開いて回答の文面を読む方がおすすめです。</strong>ツールは出典に入ったかを記録しますが、自社がどう説明されたかまでは読み取りにくいためです。ChatGPTなどを含めた料金と製品の比べ方は<a href="/media/geo-aio-tools/">GEO対策ツール・AIO対策ツール10製品の比較</a>で扱っています。</p>
+<h2 id="s6">社内への報告と数字の使い方</h2>
+<p>毎月の報告で確かな数字と推定を分けて書いておくと、後で数字の意味を問われても説明がぶれません。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>報告する数字</th>
+<th>元のデータ</th>
+<th>確かさ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="報告する数字">20語の表示率・引用率・露出率</td>
+<td data-label="元のデータ">手での記録かツール</td>
+<td data-label="確かさ">見た時点の事実。回によって動く</td>
+</tr>
+<tr>
+<td data-label="報告する数字">AI機能での表示回数とページの上位</td>
+<td data-label="元のデータ">Search Consoleの生成AIのレポート</td>
+<td data-label="確かさ">Googleの数字</td>
+</tr>
+<tr>
+<td data-label="報告する数字">出典に入った競合</td>
+<td data-label="元のデータ">手での記録かツール</td>
+<td data-label="確かさ">見た時点の事実</td>
+</tr>
+<tr>
+<td data-label="報告する数字">流入や問い合わせへの影響</td>
+<td data-label="元のデータ">Search ConsoleとGA4の突き合わせ</td>
+<td data-label="確かさ">推定。概要だけが原因とは言えない</td>
+</tr>
+</tbody>
+</table></div>
+<p>頻度の目安は20語の記録を月に1回、売上に近い数本は週に1回くらいで、そこから始めると続けやすいはずです。誰が記録し、誰が読むかも決めておきます。担当者が替わったときに条件がずれると、前の月と比べられなくなるためです。</p>
+<p>20語のうち一度も出典に入らないなら、先に確かめることがあります。Search Consoleの<a href="https://search.google.com/search-console/settings/search-gen-ai">検索の生成 AI 設定</a>でサイトが除外になっていないか、ページがインデックスに登録されているか、スニペットの表示を止めていないかの3点です。Googleが挙げる条件と直し方は<a href="/media/cited-by-ai-overviews/">AI Overview（AIによる概要）対策とは</a>、進め方の全体は<a href="/media/aio-taisaku/">AIO対策とは</a>にまとめました。</p>
+<p>語のリストづくりから、AIによる概要とChatGPTなどの回答を同じ質問で定期的に測る作業まで外に任せたい場合は、nitoの<a href="/llmo/">AI検索対策（LLMO）の支援</a>でも相談を受けています。</p>
+<h2 id="s7">まとめ</h2>
+<ul>
+<li><strong>まず現状を知りたい</strong>: 20語を決め、シークレットでパソコンとスマホを2日見て、表示率・引用率・露出率を出す</li>
+<li><strong>経営に毎月出したい</strong>: 手での露出率とSearch Consoleの生成AIの表示回数を並べ、確かな数字と推定を分けて書く</li>
+<li><strong>語が多い・競合と比べたい</strong>: ツールに切り替え、売上に近い数本の語だけは手で回答の文面を読む</li>
+<li><strong>一度も出典に入らない</strong>: 生成AIの設定の除外・インデックス・スニペットの3つを先に確かめる</li>
+</ul>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Q. GoogleのAI Overviewに自社サイトが出ているかを無料で確かめられますか？</h3>
+<p>確かめられます。シークレットウィンドウで狙う語を検索し、概要の出典に自社のドメインがあるかを見る方法は費用がかかりません。Search Consoleの生成AIのレポートも無料で、AI機能に出た表示回数をページごとに見られます。</p>
+<h3 id="s8-2">Q. AI Overviewの表示率と引用率は何が違いますか？</h3>
+<p>表示率はその語で概要が出た割合、引用率は概要が出たときに自社が出典に入った割合です。表示率が下がるのは概要を出す語が変わったとき、引用率が下がるのは他社が選ばれたときで、打つ手が違うため分けて数えます。</p>
+<h3 id="s8-3">Q. Search ConsoleでAI Overviewに出た検索語は分かりますか？</h3>
+<p>分かりません。生成AIのレポートの分け方はページ・国・デバイス・日付で、検索語はありません。どの語で概要に出たかは手で検索するか、語ごとに記録するツールで確かめます。</p>
+<h3 id="s8-4">Q. AI Overviewのチェックはシークレットモードでするべきですか？</h3>
+<p>基準の数字はシークレットで取るのがおすすめです。閲覧履歴とログインの影響を減らせるため、月ごとの比較がしやすくなります。ふだんのブラウザでの結果も別の列に残すと、見込み客の画面との差に気づけます。</p>
+<h3 id="s8-5">Q. AI Overviewはパソコンとスマホで結果が違いますか？</h3>
+<p>違うことがあるため、両方を記録するのがおすすめです。Search Consoleの生成AIのレポートもデバイス別に表示回数を出すため、自社のサイトでどちらに多く出ているかは数字で確かめられます。</p>
+<h3 id="s8-6">Q. AI Overviewの計測ツールは何を基準に選べばよいですか？</h3>
+<p>見たい語の数、出典に自社が入ったかまで記録できるか、パソコンとスマホや地域を選べるかの3点で比べるのがおすすめです。ChatGPTなども同時に測りたいなら、複数のAIに対応する製品が候補です。</p>
+<h3 id="s8-7">Q. AI Overviewに自社が一度も引用されないときは何を確かめますか？</h3>
+<p>Search Consoleの検索の生成 AI 設定でサイトを除外していないか、ページがインデックスに登録されているか、スニペットの表示を止める設定が入っていないかを確かめます。そのうえで、狙う語で概要が出ているかを表示率で見ます。</p>
+<h2 id="s9">出典</h2>
+<ul>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI 機能とウェブサイト</a>」（2026年11月5日取得）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成 AI パフォーマンス レポート（検索）</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/7042828?hl=ja">表示回数、掲載順位、クリック数とは</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/6211453?hl=ja">Search Console のデータの異常</a>」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16908024?hl=ja">検索の生成 AI 設定</a>」（同）</li>
+<li>Google 検索ヘルプ「<a href="https://support.google.com/websearch/answer/14901683?hl=ja">Google 検索の AI による概要で、情報をすばやく簡単に見つける</a>」（同）</li>
+<li>Google Search Central ブログ「<a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports">Search Console に検索の生成 AI のパフォーマンス レポートを導入</a>」2026年6月3日（同）</li>
+<li>Google「<a href="https://blog.google/products-and-platforms/products/search/new-controls-website-owners/">New opportunities, control and insights for website owners</a>」2026年6月3日・8月31日更新（同）</li>
+<li>Gyro-n「<a href="https://www.gyro-n.com/seo/aio/">AI Overview 計測ツールならGyro-n SEO</a>」「<a href="https://www.gyro-n.com/seo/price/">料金プラン</a>」（同）</li>
+<li>Semrush「<a href="https://www.semrush.com/kb/1435-ai-overview">SERP Features: AI Overview</a>」（同）</li>
+<li>Ahrefs「<a href="https://ahrefs.com/rank-tracker">Rank Tracker</a>」（同）</li>
+<li>yoriai「<a href="https://yori-ai.com/ai_overview_keisoku_tool/">AI Overviewの計測ツールならyoriaiSEO</a>」（同）</li>
+<li>OtterlyAI「<a href="https://otterly.ai/pricing">Pricing</a>」（同）</li>
+<li>ディーボ「<a href="https://devo.jp/free-seo-tools/aio-check-tool/">AIOチェッカー</a>」（同）</li>
+<li>Uravation「<a href="https://uravation.com/llmo/ai-overview-hyoji-check-measurement/">AI Overviewの計測方法</a>」「<a href="https://uravation.com/llmo/aio-taisaku/">AI Overview対策（AIO対策）のやり方</a>」（同）</li>
+<li>VicMe「<a href="https://vicme.jp/media/aio-complete-manual/">AI Overviewに自社サイトが表示されるかチェックする方法</a>」（同）</li>
+<li>AI検索パートナーズ「<a href="https://ai-search.techsuite.co.jp/13461/">AI Overview確認ツールおすすめ9選</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">AI Overviewの自社サイト表示チェックとは</a><a href="#s2">手で検索して確かめる手順</a><a href="#s3">表示率と引用率の出し方</a><a href="#s4">Search Consoleで分かること・分からないこと</a><a href="#s5">AI Overviewをチェックできるツール</a><a href="#s6">社内への報告と数字の使い方</a><a href="#s7">まとめ</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードなどで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/meo-ai-search/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MEO対策とAI検索"><defs><linearGradient id="ecg-a90dffc2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a90dffc2)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">MEO対策とAI検索</text><line x1="296.0" y1="365.9" x2="904.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.04</div>
+                <div class="rel-card__ttl">【2026年11月】MEO対策へのAI検索の影響とは？続けること・足すこと・AI別の情報源</div>
+            </a>
+            <a href="/media/gemini-seo/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GeminiのSEO対策"><defs><linearGradient id="ecg-dce53668" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-dce53668)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GeminiのSEO対策</text><line x1="280.8" y1="365.9" x2="919.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.03</div>
+                <div class="rel-card__ttl">【2026年11月】GeminiのSEO対策｜使い方とプロンプト例・自社が出る対策</div>
+            </a>
+            <a href="/media/chatgpt-seo/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのSEO対策"><defs><linearGradient id="ecg-fe318625" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-fe318625)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのSEO対策</text><line x1="258.0" y1="365.9" x2="942.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.02</div>
+                <div class="rel-card__ttl">【2026年11月】ChatGPTのSEO対策｜使い方とプロンプト例・自社が出る対策</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'ai-overview-check',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
