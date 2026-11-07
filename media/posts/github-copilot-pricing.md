@@ -33,11 +33,11 @@ GitHub Copilotは2026年6月1日に、プレミアムリクエストの回数で
 | Business | 1人19ドル | 1人1,900を共有 | 組織・企業 |
 | Enterprise | 1人39ドル | 1人3,900を共有 | GitHub Enterprise Cloudの企業 |
 
-<!-- SHOT: 図 ghc_overview.html → ghc_01_overview.png・alt「GitHub Copilotの6つのプランの月額とAIクレジット。Free 0ドル、Pro 10ドルで1,500クレジット、Pro+ 39ドルで7,000、Max 100ドルで20,000、Business 1人19ドルで1,900を共有、Enterprise 1人39ドルで3,900を共有」 -->
+<figure class="post-figure"><img src="/media/images/github-copilot-pricing/ghc_01_overview.png" alt="GitHub Copilotの6つのプランの月額とAIクレジット。Free 0ドル、Pro 10ドルで1,500クレジット、Pro+ 39ドルで7,000、Max 100ドルで20,000、Business 1人19ドルで1,900を共有、Enterprise 1人39ドルで3,900を共有" loading="lazy"></figure>
 
 1クレジットは0.01ドルです。料金ページの金額はドル建てで、三菱UFJ銀行の2026年11月6日の仲値（1ドル157.77円）で換算すると、Proは約1,578円、Businessは1人約2,998円、Enterpriseは1人約6,153円になります。料金ページの表からは消費税の加わり方を読み取れないため、請求書で確かめてください。
 
-<!-- SHOT: 画面 https://github.com/features/copilot/plans?locale=ja・本文だけにある探す語「Pro プラン向けに毎月合計 15 ドル分のクレジットを提供」・赤枠にする語「$10 USD ユーザー/月」と「毎月合計 15 ドル分のクレジット」・PC・alt「GitHub Copilotの日本語の料金ページ。Proは月10ドルで毎月合計15ドル分のクレジット、Pro+は39ドルで70ドル分、Maxは100ドルで200ドル分と表示されている」・figcaption「GitHub Copilotの料金ページ（2026年11月8日）」 -->
+<figure class="post-figure"><img src="/media/images/github-copilot-pricing/ghc_04_plans.png" alt="GitHub Copilotの日本語の料金ページ。Proは月10ドルで毎月合計15ドル分のクレジット、Pro+は39ドルで70ドル分、Maxは100ドルで200ドル分と表示されている" loading="lazy"><figcaption>GitHub Copilotの料金ページ（2026年11月8日）</figcaption></figure>
 
 ## 無料版でできること
 
@@ -87,7 +87,7 @@ Freeを使えるのは組織や企業からCopilotを割り当てられていな
 
 Copilot アクセスは営業の担当がいる企業向けに2026年10月28日から始まり、自分で契約を管理する会社とGitHub Free・Teamの組織はまだ使えません。同じ企業の中でBusiness・Enterpriseの席と混ぜることもできません。
 
-<!-- SHOT: 画面 https://docs.github.com/ja/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing・本文だけにある探す語「190,000 AI credits の共有プール」・赤枠にする語「Copilot Business 1,900」「Copilot Enterprise 3,900」の表と「190,000 AI credits の共有プール」の文・PC・alt「GitHub Docsの組織と企業の使用量ベースの課金のページ。ユーザーごとの月間のAIクレジットはBusinessが1,900、Enterpriseが3,900で、100人のBusinessなら190,000クレジットの共有プールになると書かれている」・figcaption「組織と企業の課金の説明（GitHub Docs、2026年11月8日）」 -->
+<figure class="post-figure"><img src="/media/images/github-copilot-pricing/ghc_05_docs_pool.png" alt="GitHub Docsの組織と企業の使用量ベースの課金のページ。ユーザーごとの月間のAIクレジットはBusinessが1,900、Enterpriseが3,900で、100人のBusinessなら190,000クレジットの共有プールになると書かれている" loading="lazy"><figcaption>組織と企業の課金の説明（GitHub Docs、2026年11月8日）</figcaption></figure>
 
 ## 会社で入れるときの月額の見積もり
 
@@ -101,7 +101,7 @@ Business・Enterpriseでは、席の料金と同じ額のクレジットが共�
 | 1,750ドル分 | 1,750ドル | 1,950ドル |
 | 3,000ドル分 | 3,000ドル | 3,000ドル |
 
-<!-- SHOT: 図 ghc_estimate.html → ghc_02_estimate.png・alt「50人で入れたときの月額の試算。使用量500ドルではBusiness 950ドル・Enterprise 1,950ドル、1,750ドルではBusiness 1,750ドル・Enterprise 1,950ドル、3,000ドルではどちらも3,000ドル」 -->
+<figure class="post-figure"><img src="/media/images/github-copilot-pricing/ghc_02_estimate.png" alt="50人で入れたときの月額の試算。使用量500ドルではBusiness 950ドル・Enterprise 1,950ドル、1,750ドルではBusiness 1,750ドル・Enterprise 1,950ドル、3,000ドルではどちらも3,000ドル" loading="lazy"></figure>
 
 使う量が多い会社ほど、2つのプランの差は小さくなり、最後は同じ額になります。**Enterpriseを選ぶ理由は使える量ではなく、新しいモデルを先に使えることと、GitHub Enterprise Cloudの機能です。**Enterpriseの席にはGitHub Enterprise Cloudの契約が要り、その料金はこの表に入っていません。
 
@@ -126,7 +126,7 @@ BusinessとEnterpriseでは、プールを使い切った後の利用が初め�
 | 組織 | 組織に請求される超過分 | 同上 |
 | エンタープライズ | 会社全体の超過分 | 同上 |
 
-<!-- SHOT: 図 ghc_budget.html → ghc_03_budget.png・alt「Copilotの利用が止まるかの判定の順番。1 ユーザー単位の予算を超えたらすぐ止まる、2 会社の共有プールが残っていれば追加料金なし、3 有料使用のポリシーがオフならプールが尽きた時点で止まる、4 部署・組織・会社の予算は使用を停止する設定がオフなら超えても続く」 -->
+<figure class="post-figure"><img src="/media/images/github-copilot-pricing/ghc_03_budget.png" alt="Copilotの利用が止まるかの判定の順番。1 ユーザー単位の予算を超えたらすぐ止まる、2 会社の共有プールが残っていれば追加料金なし、3 有料使用のポリシーがオフならプールが尽きた時点で止まる、4 部署・組織・会社の予算は使用を停止する設定がオフなら超えても続く" loading="lazy"></figure>
 
 **「予算の上限に達したときに使用を停止する」は既定でオフです。**オフのままでは予算は知らせるだけで、請求が続いてしまいます。予算を作るときは必ずオンにしてください。
 
