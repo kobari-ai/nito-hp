@@ -26,7 +26,7 @@ Google Chromeに追加して使う、Claudeの拡張機能です。ツールバ�
 
 ヘルプによると、Claudeは作業中のタブのスクリーンショットを撮ってページを把握し、次に何をするかを決めます。ストアの提供元はAnthropicで、2026年11月8日時点の表示は利用者2,100万人・評価3.6（1,939件）、最新版は11月4日更新の1.0.105でした。名前の似た拡張機能はほかにもあるので、社員に案内するときはストアのURLごと渡すと取り違えが起きません。
 
-<!-- SHOT: 図 cic_overview.html → cic_01_overview.png・alt「Claude in Chromeの全体像を4段で並べた図。Chromeの拡張機能でページを読みクリックと入力をする、Pro・Max・Ultra・Team・Enterpriseの有料プランで使える、入口はサイドパネル・Cowork・Claude Codeの3つ、会社では管理者が有効にするかと許可するサイトを決める」 -->
+<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_01_overview.png" alt="Claude in Chromeの全体像を4段で並べた図。Chromeの拡張機能でページを読みクリックと入力をする、Pro・Max・Ultra・Team・Enterpriseの有料プランで使える、入口はサイドパネル・Cowork・Claude Codeの3つ、会社では管理者が有効にするかと許可するサイトを決める" loading="lazy"></figure>
 
 ### 一般提供までの流れ
 
@@ -103,7 +103,6 @@ Claude in Chromeに別の料金はありません。**有料プランに入っ�
 5. Claudeがブラウザを操作するための権限を許可する
 6. ツールバーのClaudeのアイコンを押してサイドパネルを開く
 
-<!-- SHOT: 画面 https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn?hl=ja・本文だけにある探す語「表示されているウェブサイトの所有者によって作成されました」・赤枠にする語「Chrome に追加」と提供元の行・PC・alt「ChromeウェブストアのClaudeのページ。提供元がAnthropicのサイトの所有者であることと、Chromeに追加のボタンが表示されている」・figcaption「Chromeウェブストアの公式の拡張機能（2026年11月8日）」 -->
 
 インストールのときにChromeが求める権限は15種類あります。クリックや入力やスクリーンショットに使うdebugger、決まった時間に動かすalarms、ファイルを保存するdownloads、デスクトップアプリやClaude Codeとつなぐ nativeMessaging などです。**ヘルプは権限ごとに理由を書いているので、情シスが拡張機能を審査するときの根拠に使えます。**ストアのプライバシーの欄には、扱うデータとして個人を特定できる情報・個人的なコミュニケーション・位置情報・ウェブ履歴・ユーザーのアクティビティ・ウェブサイトのコンテンツが並んでいます。
 
@@ -119,7 +118,7 @@ Claudeのデスクトップアプリから使うときは、左下のイニシ�
 
 Claudeにどこまで任せるかは、サイドパネルの入力欄のメニューで3つのモードから選びます。
 
-<!-- SHOT: 図 cic_modes.html → cic_02_modes.png・alt「Claude in Chromeの3つの権限モードの図。手動で承認は操作の前に毎回許可を求める、自動的に承認は安全確認を通った操作だけ進みCoworkのサイドパネルの既定、すべての承認をスキップは確認も自動のチェックも無い。どのモードでも購入や取引は行わない」 -->
+<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_02_modes.png" alt="Claude in Chromeの3つの権限モードの図。手動で承認は操作の前に毎回許可を求める、自動的に承認は安全確認を通った操作だけ進みCoworkのサイドパネルの既定、すべての承認をスキップは確認も自動のチェックも無い。どのモードでも購入や取引は行わない" loading="lazy"></figure>
 
 | モード | 動き方 | 向く場面 |
 |---|---|---|
@@ -161,9 +160,9 @@ Claudeは作業のためにタブのスクリーンショットを撮り、写�
 
 管理者向けのヘルプには、組織で使うときの設定がまとまっています。設定の場所は、オーナーかプライマリーオーナーでサインインした「組織設定 > Chrome用Claude」です。決めることを5つに分けると次のようになります。
 
-<!-- SHOT: 図 cic_admin.html → cic_03_admin.png・alt「会社でClaude in Chromeを使わせる前に決める5つの項目の図。組織で有効にするか（Teamは最初からオン）、許可するサイト（狭い許可リストから始める）、権限モードの決まり（送信や削除の前は人が確かめる）、扱わない業務とデータ（お金・契約・医療・個人情報）、配り方と試験の範囲（少人数で試してから広げる）」 -->
+<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_03_admin.png" alt="会社でClaude in Chromeを使わせる前に決める5つの項目の図。組織で有効にするか（Teamは最初からオン）、許可するサイト（狭い許可リストから始める）、権限モードの決まり（送信や削除の前は人が確かめる）、扱わない業務とデータ（お金・契約・医療・個人情報）、配り方と試験の範囲（少人数で試してから広げる）" loading="lazy"></figure>
 
-<!-- SHOT: 画面 https://support.claude.com/ja/articles/13065128・本文だけにある探す語「チームに対して有効にする」・赤枠にする語「Teamプラン: 拡張機能はデフォルトで有効になっています」の行・PC・alt「Claudeの管理者向けヘルプ。Teamプランでは拡張機能が既定で有効、Enterpriseプランも既に無効にしていなければオンと書かれている」・figcaption「Chrome管理者コントロールのClaude（2026年11月8日）」 -->
+<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_05_admin_help.png" alt="Claudeの管理者向けヘルプ。Teamプランでは拡張機能が既定で有効、Enterpriseプランも既に無効にしていなければオンと書かれている" loading="lazy"><figcaption>Chrome管理者コントロールのClaude（2026年11月8日）</figcaption></figure>
 
 ### ① 組織で有効にするか
 
