@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Claude APIの料金はいくら？単価表と月約1万3,500円の計算例｜株式会社nito</title>
+    <meta name="description" content="Claude APIの料金を2026年11月4日の公式ページで確認。Fable・Opus・Sonnet・Haikuの単価、キャッシュとBatchの割引、社内の問い合わせ対応の月額、Consoleでの使用量の確認と上限の設定まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-api-pricing/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Claude APIの料金はいくら？単価表と月約1万3,500円の計算例">
+    <meta property="og:description" content="Claude APIの料金を2026年11月4日の公式ページで確認。Fable・Opus・Sonnet・Haikuの単価、キャッシュとBatchの割引、社内の問い合わせ対応の月額、Consoleでの使用量の確認と上限の設定まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-api-pricing/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-api-pricing.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-api-pricing.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Claude APIの料金はいくら？単価表と月約1万3,500円の計算例", "description": "Claude APIの料金を2026年11月4日の公式ページで確認。Fable・Opus・Sonnet・Haikuの単価、キャッシュとBatchの割引、社内の問い合わせ対応の月額、Consoleでの使用量の確認と上限の設定まで。", "datePublished": "2026-11-04", "dateModified": "2026-11-04", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-api-pricing/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/claude-api-pricing.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Claude APIの料金はいくら？単価表と月約1万3,500円の計算例"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude APIは1回いくらかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "1回の代金は決まっておらず、送ったトークン数と返ってきたトークン数にモデルの単価を掛けて決まります。Sonnet 5.5で入力4,000トークン・出力500トークンなら1回0.013ドルで、1ドル157.80円なら約2円です（税抜き）。"}}, {"@type": "Question", "name": "Claude APIに無料枠はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "料金ページには新規の利用者にAPIを試すための少額の無料クレジットが付くとありますが、額は書かれていません。MaxとUltraとTeamの契約には、毎月のAPIクレジットが付きます。"}}, {"@type": "Question", "name": "Claude APIはProプランで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Proの月額にAPIの利用料は含まれず、APIはConsoleで別に払います。Proは毎月のAPIクレジットの対象外です。"}}, {"@type": "Question", "name": "Claude APIの料金は円で払えますか？", "acceptedAnswer": {"@type": "Answer", "text": "請求は米ドル建てで、円建ての請求はありません。2026年4月1日からは10%の消費税が加わり、請求書には消費税の額が円で記載されます。"}}, {"@type": "Question", "name": "Claude APIのキーの発行に料金はかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "料金ページで課金の対象として挙がっているのはトークン・ツールの呼び出し・実行時間で、キーの発行は載っていません。代金がかかるのはキーを使って要求を送ったときです。"}}, {"@type": "Question", "name": "Claude APIの使いすぎを止められますか？", "acceptedAnswer": {"@type": "Answer", "text": "ConsoleのBillingで組織の月の上限を、Workspacesでワークスペースごとの上限とメール通知を決められます。上限に達した後の要求はエラーになり、上限を上げるか翌月になるまで止まります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Claude API…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.04</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Claude APIの料金はいくら？単価表と月約1万3,500円の計算例</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/claude-api-pricing.jpg" alt="【2026年11月】Claude APIの料金はいくら？単価表と月約1万3,500円の計算例" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>2026年11月4日のAnthropicの料金ページでは、社内の仕組みに組み込む候補になるClaude Sonnet 5.5が100万トークンあたり入力2ドル・出力10ドル、最も安いClaude Haiku 5.5が入力0.10ドル・出力0.50ドルです。</p>
+<p>社内の問い合わせ対応や文書の要約にClaudeのAPIを使うことになり、月にいくらかかるか、どう払い、使った分と上限をどこで確かめるかを社内に説明する必要がある情シス・DX担当の方に向けて、単価と割引の条件、自社の数字で置き換えられる月額の計算例、Claude Consoleでの確かめ方をまとめました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>料金は<strong>モデル・入力と出力のトークン数・キャッシュとBatchの使い方・ツールの呼び出し</strong>で決まり、定額は無い</li>
+<li>1日300件の社内の問い合わせ対応なら、Sonnet 5.5で<strong>キャッシュを付けない既定のままなら月約78ドル（税込み約1万3,500円）</strong>の試算。指示文の末尾に区切りを明示すると約62ドル、自動のキャッシュだけ付けて区切りが質問の後ろに来ると約90ドルに上がる</li>
+<li>支払いは前払いのクレジットで、購入から1年で失効する。<strong>月の上限はConsoleのBillingとワークスペースの支出制限で決められる</strong></li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Claude APIの料金が決まる仕組み</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>個人やTeamのプランとAPIの違い</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>モデル別のClaude API料金</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>長い入力と旧いモデル</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>キャッシュとBatchの割引</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>プロンプトキャッシュの単価と既定の扱い</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>Batchで半額</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>速さと処理する場所の上乗せ</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>ツールとエージェントの料金</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>社内の問い合わせ対応の月額</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>夜間の一括処理はBatchで半額</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>モデル以外にかかる費用</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>支払いと請求書</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>使用量と上限の確かめ方</a></li>
+                    <li class="toc-h3"><a href="#s8-1"><span class="toc__n">8-1</span>Consoleの使用状況とコスト</a></li>
+                    <li class="toc-h3"><a href="#s8-2"><span class="toc__n">8-2</span>1件ごとの使用量</a></li>
+                    <li class="toc-h3"><a href="#s8-3"><span class="toc__n">8-3</span>支出の上限とワークスペース</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>AWSやGoogle Cloud経由で払う場合</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Claude APIの料金が決まる仕組み</h2>
+<p>見積もりを頼まれて料金ページを開くと、「$2 / MTok」のような米ドルの単価が何十行も並んでいて、月の金額はすぐには出ません。MTokは100万トークンのことで、料金を動かす要素を先に4つに分けておくと表の行を読み解けます。</p>
+<p><strong>Claude APIに月額の定額や初期費用は無く、使ったトークンの分だけ払う従量課金です。</strong> トークンは文章を区切った単位で、送る指示文・会話の履歴・参照させる資料が入力、返ってくる答えが出力として別々に数えられます。現行の4つのモデルはどれも出力の単価が入力の5倍のため、長い答えを返させる使い方ほど費用が膨らみます。</p>
+<figure class="post-figure"><img src="/media/images/claude-api-pricing/capi_01_overview.png" alt="Claude APIの料金を決める4つの要素。使うモデルはHaiku 5.5とFable 5.1で同じ量でも単価に100倍の差がある。入力と出力は別々に数え、出力は入力の5倍。キャッシュとBatchは条件を満たすと安くなり、Fast modeや米国内の処理の指定は高くなる。ツールはWeb検索の回数やエージェントの実行時間で加算される" loading="lazy"></figure>
+
+<p>日本語の文章が何トークンになるかの比率は、料金ページに載っていません。料金ページの注記にあるのは、<strong>Claude 4.7以降のモデルは新しい区切り方を使うため、同じ文章でも以前のモデルより約30%多くトークンが数えられる</strong>という点です。旧いモデルの見積もりをそのまま新しいモデルに当てると、トークン数が少なく出ます。社内の資料が何トークンになるかは、実際の文章をトークン数を数えるAPIに通すか、試しに送った応答の使用量の欄で確かめるのが確実です。</p>
+<p>課金されるのは成功した呼び出しだけで、エラーで失敗した要求は請求されません。ただしAnthropicのヘルプによると、成功するはずの要求を自社のシステムが途中で切断したりタイムアウトさせたりした場合は請求されます。応答を待つ時間を短く設定しすぎると、使えない答えにも代金を払うことになります。</p>
+<h2 id="s2">個人やTeamのプランとAPIの違い</h2>
+<p>よく混同されるのが、社員が画面で使うClaudeの月額とAPIの料金です。<strong>Pro・Max・Ultra・Team・Enterpriseの月額にAPIの利用料は含まれず、APIはClaude Consoleで別に払います。</strong> プランごとの金額と選び方は<a href="/media/claude-pricing/">Claudeの料金プラン</a>にまとめています。</p>
+<p>ただしMax・Ultra・Teamの契約には、毎月のAPIクレジットが付きます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>契約</th>
+<th>毎月のAPIクレジット</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="契約">Max</td>
+<td data-label="毎月のAPIクレジット">100ドル</td>
+</tr>
+<tr>
+<td data-label="契約">Ultra</td>
+<td data-label="毎月のAPIクレジット">200ドル</td>
+</tr>
+<tr>
+<td data-label="契約">Team スタンダード</td>
+<td data-label="毎月のAPIクレジット">1人分ごとに20ドル</td>
+</tr>
+<tr>
+<td data-label="契約">Team プレミアム</td>
+<td data-label="毎月のAPIクレジット">1人分ごとに100ドル</td>
+</tr>
+</tbody>
+</table></div>
+<p>Teamは全員分を合わせて月500ドルが上限で、スタンダード10人分なら月200ドルです。<strong>すでにTeamを契約している会社は、試作の段階のAPIの代金をこのクレジットで賄える可能性があります。</strong> 受け取るにはclaude.aiの組織の設定にある請求の画面で、Claude Consoleの組織を紐づけます。Team側はオーナー、Console側はOwner・Admin・Billingのどれかの役割が要り、加入から7日たってから受け取れます。Free・Pro・Enterpriseは対象外です。</p>
+<p>クレジットは請求の期間ごとに付与され、使い残しは期間の終わりに失効して繰り越せません。使える先はClaude API・Managed Agents・Agent SDK・ConsoleのPlaygroundで、Claude Code・アプリの追加使用量・AWSやGoogle Cloud経由の利用には使えません。Claude CodeをAPIで使う場合の費用は<a href="/media/claude-code-pricing/">Claude Codeの料金</a>が扱う範囲です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">モデル別のClaude API料金</h2>
+<p>料金ページの通常の単価です。金額は100万トークンあたりの米ドルで、税は含みません。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>入力</th>
+<th>出力</th>
+<th>キャッシュの読み取り</th>
+<th>向く使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">Claude Fable 5.1</td>
+<td data-label="入力">10ドル</td>
+<td data-label="出力">50ドル</td>
+<td data-label="キャッシュの読み取り">0.25ドル</td>
+<td data-label="向く使い方">長時間のエージェントの作業</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Opus 5.5</td>
+<td data-label="入力">4ドル</td>
+<td data-label="出力">20ドル</td>
+<td data-label="キャッシュの読み取り">0.20ドル</td>
+<td data-label="向く使い方">込み入った判断・コード</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Sonnet 5.5</td>
+<td data-label="入力">2ドル</td>
+<td data-label="出力">10ドル</td>
+<td data-label="キャッシュの読み取り">0.10ドル</td>
+<td data-label="向く使い方">社内の問い合わせ・要約</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Haiku 5.5</td>
+<td data-label="入力">0.10ドル</td>
+<td data-label="出力">0.50ドル</td>
+<td data-label="キャッシュの読み取り">0.01ドル</td>
+<td data-label="向く使い方">分類・抽出・振り分け</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/claude-api-pricing/capi_04_pricing.png" alt="Claude Platform Docsの料金ページのモデル料金の表。Claude Sonnet 5.5は入力が100万トークンあたり2ドル、出力が10ドル、5分のキャッシュ書き込みが2.50ドル、キャッシュの読み取りが0.10ドル" loading="lazy"><figcaption>Claude Platform Docsの料金ページ（2026年11月4日）</figcaption></figure>
+
+<p><strong>いちばん高いFable 5.1と安いHaiku 5.5では、同じ量でも100倍の差があります。</strong> 料金ページの案内も、単純な作業はHaiku、本番の多くはSonnet、最も込み入った推論はOpusという使い分けです。社内の質問に答える程度ならSonnetとHaikuに同じ質問を送って答えの質を比べ、足りない種類の質問だけOpusに上げるのが費用の面では合理的です。</p>
+<h3 id="s3-1">長い入力と旧いモデル</h3>
+<p>Claude 4.6以降のモデルは、Haiku 5.5を除いて100万トークンまで同じ単価で使えます。Haiku 5.5だけは1回のプロンプトが10万トークンを超えると入力0.50ドル・出力2.50ドルの高い単価になり、キャッシュから読んだ分も長さに数えられます。<strong>Haiku 5.5で社内規程を丸ごと渡す作りにすると、単価が5倍の側に入ります。</strong></p>
+<p>旧いモデルの方が高い点も見落とされがちです。Claude Sonnet 4.6は入力3ドル・出力15ドルで、Sonnet 5.5の1.5倍です。Claude Opus 5とOpus 4.8は入力5ドル・出力25ドルで、Opus 5.5より高く設定されています。数か月前に組んだ仕組みが旧いモデルの名前を指定したままなら、新しいモデルに替えるだけで単価が下がるかを先に確かめておくのがおすすめです。</p>
+<h2 id="s4">キャッシュとBatchの割引</h2>
+<p>同じモデルでも、送り方を変えると単価が下がる仕組みが2つあります。どちらも条件を満たさないと効かず、キャッシュは設定を誤ると逆に高くなります。</p>
+<h3 id="s4-1">プロンプトキャッシュの単価と既定の扱い</h3>
+<p>前と同じ指示文や資料を先頭に付けて送ると、一致した部分をキャッシュから読む安い単価になります。読み取りは通常の入力の0.1倍が基本で、Opus 5.5とSonnet 5.5は0.05倍、Fable 5.1は0.025倍です。その代わり、キャッシュに書き込む分には割増があり、5分保持なら入力の1.25倍、1時間保持なら2倍です。</p>
+<p><strong>Messages APIでは、要求に<code>cache_control</code>を付けない限りキャッシュは使われず、すべての入力が通常の単価で数えられます。</strong> 付け方は2通りです。要求の一番上の階層（トップレベル）に1つ付ける自動の方式は、最後のキャッシュできるブロックに区切りを置き、会話が伸びるたびに区切りを後ろへ動かします。続いていく会話には合いますが、1回ごとに質問が変わる問い合わせ対応では、毎回変わる質問の後ろに区切りが置かれます。プロンプトキャッシュの説明でも「よくある間違い」として挙げられている形で、毎回の入力が書き込みの単価で数えられ、読み取りは一度も起きません。</p>
+<p>指示文と社内資料のように毎回同じ部分を先頭に置き、その末尾のブロックに区切りを明示すると、2回目からはそこまでがキャッシュから読まれます。保持は既定で5分で、読まれるたびに追加料金なしで数え直され、間が5分を超えると次の1回は書き込みからやり直しです。5.5系のモデルでキャッシュできるのは512トークン以上で、短い指示文は区切りを付けてもエラーにならずに素通りします。キャッシュはワークスペースごとに分かれるため、同じ指示文を使う仕組みを別のワークスペースに分けると、それぞれで書き込みが発生してしまう点に注意が必要です。</p>
+<h3 id="s4-2">Batchで半額</h3>
+<p>Message Batches APIで要求をまとめて送ると、入力も出力も半額になります。Sonnet 5.5なら入力1ドル・出力5ドル、Haiku 5.5なら0.05ドル・0.25ドルです。結果はすぐには返らないため、社員が画面で待つ処理には使えません。キャッシュの割引とは重ねられるので、<strong>夜のうちに済めばよい要約や分類は、Batchとキャッシュの両方を当てると最も安くなります。</strong></p>
+<h3 id="s4-3">速さと処理する場所の上乗せ</h3>
+<p>反対に単価が上がる指定もあります。出力を速くするFast modeは、Opus 5.5で入力8ドル・出力40ドルと通常の2倍で、Batchとは併用できません。Claude 4.6以降のモデルで処理を米国内に限る指定（<code>inference_geo</code>を<code>us</code>）をすると、入力・出力・キャッシュのすべてが1.1倍になります。料金ページに載っている処理の場所の指定は米国だけで、既定は場所を限らない扱いの標準の単価です。</p>
+<h2 id="s5">ツールとエージェントの料金</h2>
+<p>モデルにWeb検索などのツールを使わせると、トークンとは別の料金や、ツールの定義の分の入力トークンが加わります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>機能</th>
+<th>料金</th>
+<th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="機能">Web検索</td>
+<td data-label="料金">1,000回で10ドル</td>
+<td data-label="注意点">検索結果は入力として課金。失敗した検索は無料</td>
+</tr>
+<tr>
+<td data-label="機能">Webページの取得</td>
+<td data-label="料金">追加料金なし</td>
+<td data-label="注意点">取得した本文が入力になる（平均的なページで約2,500トークン）</td>
+</tr>
+<tr>
+<td data-label="機能">コード実行</td>
+<td data-label="料金">組織あたり月1,550時間まで無料</td>
+<td data-label="注意点">超えると1コンテナ1時間0.05ドル。Web検索か取得と一緒なら無料。1回は最低5分で数え、ファイルを付けると呼ばなくても数える</td>
+</tr>
+<tr>
+<td data-label="機能">Managed Agents</td>
+<td data-label="料金">実行中1時間0.08ドル</td>
+<td data-label="注意点">トークンの代金は別。Batchの割引は無い</td>
+</tr>
+</tbody>
+</table></div>
+<p>ツールを1つでも渡すと、ツールを使うための指示が入力に加わります。5.5系では1回につき286トークンほどで、件数が多い仕組みでは無視できない量です。Webページの取得は無料でも、500KBのPDFなら約12万5,000トークンが入力になるため、取得する長さの上限（<code>max_content_tokens</code>）を決めておくと代金の振れ幅が小さくなります。</p>
+<h2 id="s6">社内の問い合わせ対応の月額</h2>
+<p>社員から総務や情シスへの問い合わせに、社内の規程を参照してAPIが答える仕組みを想定して、モデルの代金を数えます。自社の件数とトークン数に置き換えれば同じ式で出せます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>前提</th>
+<th>値</th>
+<th>置き換える所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="前提">1日の件数</td>
+<td data-label="値">300件</td>
+<td data-label="置き換える所">社員数×1人あたりの件数</td>
+</tr>
+<tr>
+<td data-label="前提">月の営業日</td>
+<td data-label="値">20日</td>
+<td data-label="置き換える所">自社の営業日</td>
+</tr>
+<tr>
+<td data-label="前提">1件の入力</td>
+<td data-label="値">4,000トークン（指示文1,500＋規程の抜粋2,000＋質問と履歴500）</td>
+<td data-label="置き換える所">渡す資料の長さ</td>
+</tr>
+<tr>
+<td data-label="前提">1件の出力</td>
+<td data-label="値">500トークン</td>
+<td data-label="置き換える所">答えの長さ</td>
+</tr>
+<tr>
+<td data-label="前提">キャッシュ</td>
+<td data-label="値">使わない（既定）</td>
+<td data-label="置き換える所">区切りの置き方</td>
+</tr>
+</tbody>
+</table></div>
+<p>この前提で月の入力は2,400万トークン、出力は300万トークンです。式は「月の入力トークン÷100万×入力の単価＋月の出力トークン÷100万×出力の単価」です。円は三菱UFJ銀行の2026年11月2日の公表仲値（1ドル157.80円）で換算し、消費税10%を足しました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>入力の代金</th>
+<th>出力の代金</th>
+<th>月額（ドル）</th>
+<th>円・税込の目安</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">Haiku 5.5</td>
+<td data-label="入力の代金">2.4ドル</td>
+<td data-label="出力の代金">1.5ドル</td>
+<td data-label="月額（ドル）">3.9ドル</td>
+<td data-label="円・税込の目安">約680円</td>
+</tr>
+<tr>
+<td data-label="モデル">Sonnet 5.5</td>
+<td data-label="入力の代金">48ドル</td>
+<td data-label="出力の代金">30ドル</td>
+<td data-label="月額（ドル）">78ドル</td>
+<td data-label="円・税込の目安">約1万3,500円</td>
+</tr>
+<tr>
+<td data-label="モデル">Opus 5.5</td>
+<td data-label="入力の代金">96ドル</td>
+<td data-label="出力の代金">60ドル</td>
+<td data-label="月額（ドル）">156ドル</td>
+<td data-label="円・税込の目安">約2万7,100円</td>
+</tr>
+<tr>
+<td data-label="モデル">Fable 5.1</td>
+<td data-label="入力の代金">240ドル</td>
+<td data-label="出力の代金">150ドル</td>
+<td data-label="月額（ドル）">390ドル</td>
+<td data-label="円・税込の目安">約6万7,700円</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/claude-api-pricing/capi_02_calc.png" alt="Claude Sonnet 5.5で1日300件の社内の問い合わせに答えるときの月額の試算。キャッシュを使わない既定の設定で78ドル、自動のキャッシュだけを付けて区切りが毎回変わる質問の後ろに置かれると90ドル、指示文の末尾に区切りを明示すると約62ドル。1件あたり入力4,000トークン・出力500トークン、モデルの代金だけの試算" loading="lazy"></figure>
+
+<p><strong>この規模なら、Sonnet 5.5で組んでもモデルの代金は月100ドルに届きません。</strong> キャッシュの置き方で、この78ドルは上にも下にも動きます。自動のキャッシュだけを付けると、毎回の入力4,000トークンがすべて書き込みの単価で数えられ、月約90ドル（約1万5,600円）に上がります。規程の抜粋は質問ごとに変わるため、キャッシュに乗せられるのは毎回同じ指示文1,500トークンです。その末尾に5分保持の区切りを明示し、間が空いて書き込みからやり直す回を1日20回と見て数えると、月約62ドル（約1万800円）です。Opus 5.5なら同じ置き方で月約125ドルになります。</p>
+<p>金額を動かすもう1つの要素は、1件で渡す資料の長さです。規程の抜粋を毎回1万トークン渡す作りにすると、キャッシュを使わないSonnet 5.5で月約174ドルになり、件数を増やすより先に代金が倍を超えます。<strong>月額を下げたいときは件数より先に、渡す資料の長さと毎回同じ部分をキャッシュに乗せられているかを見直します。</strong></p>
+<p>件数を10倍の1日3,000件に広げると、Sonnet 5.5でキャッシュを使わなければ月約780ドルです。後で説明する標準の最初の段階（Startティア）の月の上限は500ドルのため、全社に広げる前に次の段階へ上げる手続きが要ります。</p>
+<h3 id="s6-1">夜間の一括処理はBatchで半額</h3>
+<p>日中に届いた問い合わせの記録を、夜のうちに分類して要約する処理も数えておきます。1日2,000件、1件の入力2,000トークン・出力200トークンで30日動かすと、月の入力は1億2,000万トークン、出力は1,200万トークンです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>通常</th>
+<th>Batch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">Haiku 5.5</td>
+<td data-label="通常">18ドル</td>
+<td data-label="Batch">9ドル</td>
+</tr>
+<tr>
+<td data-label="モデル">Sonnet 5.5</td>
+<td data-label="通常">360ドル</td>
+<td data-label="Batch">180ドル</td>
+</tr>
+</tbody>
+</table></div>
+<p>結果が翌朝そろえばよい処理なので、Batchに回すだけでSonnet 5.5なら月180ドル下がります。分類のような決まった作業はHaiku 5.5で質が足りるかを先に試すと、さらに1桁下げられます。</p>
+<h3 id="s6-2">モデル以外にかかる費用</h3>
+<p>上の金額はモデルの代金だけです。社内の文書を探して渡す部品やサーバーの費用は別にかかり、その考え方は<a href="/media/rag-build/">RAG構築の費用</a>にあります。規模の大きい仕組みほど、画面や社内システムとのつなぎ込みを作る開発費と保守の費用がモデルの代金を上回りがちです。外部に開発を頼む場合は見積もりのAPIの欄にどのモデルとキャッシュの前提を置いたかを聞いておくと、稟議で月額の根拠を示せます。</p>
+<h2 id="s7">支払いと請求書</h2>
+<p><strong>ConsoleでAPIを使う組織の多くは前払いで、先にクレジットを買い、使った分が残高から引かれます。</strong> 購入できるのはAdminかBillingの役割を持つ人で、場所はConsoleのBillingのページです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">支払い方法</td>
+<td data-label="内容">主要なクレジットカード。営業経由の契約なら請求書払い</td>
+</tr>
+<tr>
+<td data-label="項目">有効期限</td>
+<td data-label="内容">購入から1年で失効・延長できない</td>
+</tr>
+<tr>
+<td data-label="項目">返金</td>
+<td data-label="内容">できない</td>
+</tr>
+<tr>
+<td data-label="項目">自動リロード</td>
+<td data-label="内容">残高がしきい値を下回ると、決めた残高まで買い足す</td>
+</tr>
+<tr>
+<td data-label="項目">残高が尽きたとき</td>
+<td data-label="内容">追加するまでAPIを呼べない</td>
+</tr>
+<tr>
+<td data-label="項目">消費税</td>
+<td data-label="内容">2026年4月1日から10%が加わる</td>
+</tr>
+</tbody>
+</table></div>
+<p>自動リロードはしきい値と戻す先の残高を入れてオンにし、オンにした時点で残高がしきい値を下回っていれば、すぐに税込みの額が請求されます。残高が尽きるとAPIが止まるため、<strong>社員が使う仕組みを動かすなら、自動リロードの額と後で説明する月の上限を一緒に決めておく</strong>のがおすすめです。新規の利用者には少額の無料クレジットが付くと料金ページにはありますが、額は書かれていません。</p>
+<p>単価表の金額は税抜きの米ドルです。Anthropicの告知では、2026年4月1日から日本の顧客に提供するサービスに10%の消費税を別に請求し、適格請求書発行事業者の登録番号はT7700150134388です。請求の通貨は米ドルのままで、消費税の額が円で記載されます。</p>
+<p>前払いの組織にはクレジットを買うたびに受領書がメールで届き、自動リロードで買った分も同じです。ConsoleのBillingのページにある請求履歴からも取り出せ、0.50ドル未満の請求は次の請求に繰り越されます。営業を通じて請求の契約を結んだ組織は、暦月の終わりにまとめて請求書を受け取る後払いになります。宛名や受け取り先の詳細は<a href="/media/claude-invoice/">Claudeの領収書</a>にまとめました。</p>
+<h2 id="s8">使用量と上限の確かめ方</h2>
+<p>使った分と上限を確かめる場所は、Consoleの使用状況とコストのページ・応答の使用量の欄・BillingとWorkspacesの上限の設定の3つです。</p>
+<figure class="post-figure"><img src="/media/images/claude-api-pricing/capi_03_check.png" alt="Claude APIで使った分と上限を確かめる3つの場所。Claude Consoleの使用状況とコストのページでモデル・APIキー・ワークスペースごとの量と代金を見る。応答の使用量の欄で1件ごとの入力・出力・キャッシュの書き込みと読み取りを見る。BillingとWorkspacesで組織とワークスペースの月の上限とメール通知を決める" loading="lazy"></figure>
+
+<h3 id="s8-1">Consoleの使用状況とコスト</h3>
+<p>Consoleの<a href="https://platform.claude.com/usage">Usage</a>では、使ったトークン数をモデル・日時・APIキーごとに見られ、ワークスペース・モデル・月・キーで絞り込めます。レート制限に当たって断られた要求の数と、1分あたりの量が制限のどこまで来ているかのグラフもここにあります。<a href="https://platform.claude.com/cost">Cost</a>は代金の側で、モデル別・日別の金額と、Web検索やコード実行の分を含めた合計が出ます。</p>
+<p>どちらもCSVで書き出せ、見られるのは開発者・請求・管理者の役割を持つ人です。<strong>ヘルプによると、使用量や代金を個人ごとに分けて見ることは今はできません。</strong> 部門やアプリごとに代金を割り振るなら、ワークスペースを分けてAPIキーをそれぞれで発行しておきます。キーは作ったワークスペースに紐づき、後から別のワークスペースへ移せないため、分け方は最初に決めておく必要があります。</p>
+<h3 id="s8-2">1件ごとの使用量</h3>
+<p>APIの応答にはその要求で使ったトークン数が<code>usage</code>の欄で返ってきます。<code>input_tokens</code>はキャッシュの区切りより後ろの入力だけで、<code>cache_creation_input_tokens</code>（書き込み）と<code>cache_read_input_tokens</code>（読み取り）を足したものが入力の全体です。Web検索を使えば、その回数も<code>server_tool_use</code>に入ります。</p>
+<p>書き込みばかりで読み取りが0のまま続くなら、区切りが毎回変わる質問の後ろにないか、区切りより前に日時のような毎回変わる部分が入っていないか、要求の間が5分を超えていないかを確かめます。この4つの数を自社の記録に残しておけば、部門別や機能別の代金を自分で集計でき、Costのページとの照合にも使えます。</p>
+<h3 id="s8-3">支出の上限とワークスペース</h3>
+<p>月の上限は次の3つの段階です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>種類</th>
+<th>上限</th>
+<th>達するとどうなるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="種類">ティアの上限</td>
+<td data-label="上限">Start 500ドル・Build 1,000ドル・Scale 20万ドル</td>
+<td data-label="達するとどうなるか">翌月1日9時（日本時間）まで429のエラーで止まる</td>
+</tr>
+<tr>
+<td data-label="種類">組織の独自の上限</td>
+<td data-label="上限">ティアの上限以下で自由に決める</td>
+<td data-label="達するとどうなるか">400のエラーで止まる。上げれば戻る</td>
+</tr>
+<tr>
+<td data-label="種類">ワークスペースの上限</td>
+<td data-label="上限">組織の上限以下</td>
+<td data-label="達するとどうなるか">そのワークスペースだけ止まる。金額ごとのメール通知を付けられる</td>
+</tr>
+</tbody>
+</table></div>
+<p>ティアは使った履歴とアカウントの状態で自動で上がり、新しい組織は標準より低いEvaluationの段階から始まることもあるため、今のティアはConsoleの<a href="https://platform.claude.com/usage/limits">Rate limits</a>のページで確かめておくのが安全です。急ぐ場合は同じページの「Request tier increase」から引き上げを申し込みます。<strong>ティアの上限で止まると、SDKの自動の再試行も翌月まで失敗し続けるため、本番の前に見込みの月額と今のティアを比べておくのが無難です。</strong> TeamやMaxのクレジットを紐づけた組織は少なくともStartに、月のクレジットが200ドルを超えればBuildに引き上げられます。</p>
+<p>組織の独自の上限はConsoleの<a href="https://platform.claude.com/settings/billing">Billing</a>のページの「Spend limits」で金額を入れて決めます。ワークスペースの上限は<a href="https://platform.claude.com/settings/workspaces">Workspaces</a>のページでワークスペースを選び、「支出制限」で月の上限とメール通知の金額を設定する手順です。最初からあるDefaultのワークスペースには上限を付けられないため、<strong>本番の仕組みは専用のワークスペースに置き、そこに上限と通知を付ける</strong>のが確実です。キーが外に漏れたときの被害も、そのワークスペースの上限までに抑えられます。</p>
+<h2 id="s9">AWSやGoogle Cloud経由で払う場合</h2>
+<p>ClaudeのモデルはAnthropicのConsoleのほかにクラウドの事業者経由でも使えます。すでにAWSやGoogle Cloudで請求をまとめている会社では、こちらの方が社内の手続きが短く済むことがあります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>経路</th>
+<th>請求</th>
+<th>単価</th>
+<th>月のAPIクレジット</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="経路">Claude API（Console）</td>
+<td data-label="請求">Anthropicへ前払い（米ドル）</td>
+<td data-label="単価">料金ページのとおり</td>
+<td data-label="月のAPIクレジット">使える</td>
+</tr>
+<tr>
+<td data-label="経路">Claude Platform on AWS</td>
+<td data-label="請求">AWSの請求に後払い</td>
+<td data-label="単価">Claude APIと同じ</td>
+<td data-label="月のAPIクレジット">使えない</td>
+</tr>
+<tr>
+<td data-label="経路">Amazon Bedrock・Google Cloud（Googleが運営する経路）</td>
+<td data-label="請求">各クラウドの請求</td>
+<td data-label="単価">各社の料金ページ</td>
+<td data-label="月のAPIクレジット">使えない</td>
+</tr>
+</tbody>
+</table></div>
+<p>Claude Platform on AWSはAnthropicが運営する経路で、AWS Marketplaceを通して1単位0.01ドルの換算で請求され、前払いのクレジットはありません。Microsoft Foundryと、Google CloudのうちAnthropicが運営する経路も、それぞれのマーケットプレイスを通して同じ単位で請求されます。BedrockとGoogleが運営するGoogle Cloudの経路はクラウドの事業者が請求し、Claude 4.5以降のモデルで地域を限るエンドポイントを選ぶと、限らない場合より10%高くなります。</p>
+<p><strong>単価だけでは差が見えにくいため、比べるのは請求の窓口・月の上限で止められるか・処理する場所・クレジットが使えるかの4つです。</strong> OpenAIのAPIと比べる場合の観点は<a href="/media/openai-api-pricing/">OpenAI APIの料金</a>、手続きの全体は<a href="/media/claude-corporate-contract/">Claudeの法人契約</a>にあります。</p>
+<p>社内のAIをAPIでどこまで組むか、どのモデルとキャッシュの置き方で始めるかを決めきれない場合は、nitoの<a href="/ai-agent/">AIエージェント構築支援</a>で要件の整理から相談できます。</p>
+<h2 id="s10">まとめ</h2>
+<ul>
+<li><strong>まず試す段階なら</strong>、Sonnet 5.5とHaiku 5.5に同じ質問を送り、答えの質と1件あたりのトークン数を測る。TeamやMaxを契約していれば、APIクレジットを先に紐づける</li>
+<li><strong>社内に配る段階なら</strong>、件数×1件のトークン数で月額を出し、ティアの上限に収まるかを見る。専用のワークスペースに上限とメール通知を付けてから公開する</li>
+<li><strong>月額が膨らむときは</strong>、毎回同じ部分の末尾にキャッシュの区切りを置けているかを応答の使用量で確かめ、待てる処理はBatchに回す</li>
+</ul>
+<h2 id="s11">よくある質問</h2>
+<h3 id="s11-1">Claude APIは1回いくらかかりますか？</h3>
+<p>1回の代金は決まっておらず、送ったトークン数と返ってきたトークン数にモデルの単価を掛けて決まります。Sonnet 5.5で入力4,000トークン・出力500トークンなら1回0.013ドルで、1ドル157.80円なら約2円です（税抜き）。</p>
+<h3 id="s11-2">Claude APIに無料枠はありますか？</h3>
+<p>料金ページには新規の利用者にAPIを試すための少額の無料クレジットが付くとありますが、額は書かれていません。MaxとUltraとTeamの契約には、毎月のAPIクレジットが付きます。</p>
+<h3 id="s11-3">Claude APIはProプランで使えますか？</h3>
+<p>Proの月額にAPIの利用料は含まれず、APIはConsoleで別に払います。Proは毎月のAPIクレジットの対象外です。</p>
+<h3 id="s11-4">Claude APIの料金は円で払えますか？</h3>
+<p>請求は米ドル建てで、円建ての請求はありません。2026年4月1日からは10%の消費税が加わり、請求書には消費税の額が円で記載されます。</p>
+<h3 id="s11-5">Claude APIのキーの発行に料金はかかりますか？</h3>
+<p>料金ページで課金の対象として挙がっているのはトークン・ツールの呼び出し・実行時間で、キーの発行は載っていません。代金がかかるのはキーを使って要求を送ったときです。</p>
+<h3 id="s11-6">Claude APIの使いすぎを止められますか？</h3>
+<p>ConsoleのBillingで組織の月の上限を、Workspacesでワークスペースごとの上限とメール通知を決められます。上限に達した後の要求はエラーになり、上限を上げるか翌月になるまで止まります。</p>
+<h2 id="s12">出典</h2>
+<ul>
+<li>Anthropic「<a href="https://platform.claude.com/docs/ja/about-claude/pricing">料金</a>」（2026年11月4日取得）</li>
+<li>Anthropic「<a href="https://platform.claude.com/docs/ja/about-claude/api-credits-for-subscribers">Maxプラン、Ultraプラン、およびTeamプランのAPIクレジット</a>」（同）</li>
+<li>Anthropic「<a href="https://platform.claude.com/docs/ja/api/rate-limits">レート制限</a>」（同）</li>
+<li>Anthropic「<a href="https://platform.claude.com/docs/ja/build-with-claude/prompt-caching">プロンプトキャッシング</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/8977456">Claude APIの使用料金をどのように支払いますか？</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/14051822">日本の顧客向け消費税（JCT）に関するお知らせ</a>」（同）</li>
+<li>Claude Help Center「<a href="https://support.claude.com/en/articles/16608069-understanding-your-claude-api-invoices">Understanding your Claude API invoices</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/9534590">Claude コンソールのコストと使用状況レポート</a>」（同）</li>
+<li>Claude ヘルプセンター「<a href="https://support.claude.com/ja/articles/9796807">Claude コンソールでワークスペースを作成・管理する</a>」（同）</li>
+<li>三菱UFJリサーチ&amp;コンサルティング「<a href="https://www.murc-kawasesouba.jp/fx/past/index.php?id=261102">2026年11月2日の為替相場</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Claude APIの料金が決まる仕組み</a><a href="#s2">個人やTeamのプランとAPIの違い</a><a href="#s3">モデル別のClaude API料金</a><a href="#s4">キャッシュとBatchの割引</a><a href="#s5">ツールとエージェントの料金</a><a href="#s6">社内の問い合わせ対応の月額</a><a href="#s7">支払いと請求書</a><a href="#s8">使用量と上限の確かめ方</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/n8n-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="n8nとは"><defs><linearGradient id="ecg-34e7ea92" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-34e7ea92)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">n8nとは</text><line x1="455.6" y1="365.9" x2="744.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.05</div>
+                <div class="rel-card__ttl">【2026年11月】n8nとは？できること・使い方・AIエージェントとMCPで作れるもの</div>
+            </a>
+            <a href="/media/copilot-studio-agent/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilot Studioのエージェント作成"><defs><linearGradient id="ecg-e32c1cbb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e32c1cbb)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilot Studioの</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">エージェント作成</text><line x1="242.8" y1="416.8" x2="957.2" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.04</div>
+                <div class="rel-card__ttl">【2026年11月】Copilot Studioのエージェント作成手順｜Teams公開とビルダーの使い分け</div>
+            </a>
+            <a href="/media/gemini-api-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gemini APIの料金"><defs><linearGradient id="ecg-c8158192" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-c8158192)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Gemini APIの料金</text><line x1="258.0" y1="365.9" x2="942.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.03</div>
+                <div class="rel-card__ttl">【2026年11月】Gemini APIの料金は？無料枠と単価・月約7,100円の計算例</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'claude-api-pricing',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
