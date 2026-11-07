@@ -67,7 +67,7 @@ ChatGPT Businessを全社で入れている会社なら、Codexは追加の契�
 
 入口の額はそろっていますが、中身の分け方が違います。**CodexはBusinessの1種類に管理機能が付き、ClaudeはTeamの中で使える量の違う2種類の契約を1人ずつ混ぜて買えます。**開発者だけ量の多いプレミアムにし、ほかの社員はスタンダードにする、という組み方ができるのはClaude側の特徴です。
 
-Claudeの料金ページには、2026年11月7日時点でMaxに月$100分、Ultraに月$200分のAPIクレジットが付くと書かれていました。Teamにも最大で月$500分の共有のAPIクレジットが付いています。プランごとの金額と上限の詳しい仕組みは、[Codexの使い方](/media/codex-guide/)と[Claude Codeの料金プラン](/media/claude-code-pricing/)にまとめています。
+Claudeの料金ページには、2026年11月7日時点でMaxに月$100分、Ultraに月$200分のAPIクレジットが付くと書かれていました。Teamにも最大で月$500分の共有のAPIクレジットが付いています。プランごとの金額と上限の詳しい仕組みは、[Codexの使い方](/media/codex-guide/)と[Claude Codeの料金プラン](/media/claude-code-pricing/)にまとめています。GitHub CopilotのBusiness・Enterpriseの料金と従量課金の見積もり方は[GitHub Copilotの料金](/media/github-copilot-pricing/)で扱っています。
 
 ## 使える量と上限の違い
 
