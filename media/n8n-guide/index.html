@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】n8nとは？できること・使い方・AIエージェントとMCPで作れるもの｜株式会社nito</title>
+    <meta name="description" content="n8nとは何かを公式の資料から解説。できること、Zapier・Power Automate・Difyとの違い、クラウドかセルフホストか、AI AgentノードとMCPで作れるもの、問い合わせメールを振り分ける最初のワークフローまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/n8n-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】n8nとは？できること・使い方・AIエージェントとMCPで作れるもの">
+    <meta property="og:description" content="n8nとは何かを公式の資料から解説。できること、Zapier・Power Automate・Difyとの違い、クラウドかセルフホストか、AI AgentノードとMCPで作れるもの、問い合わせメールを振り分ける最初のワークフローまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/n8n-guide/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/n8n-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/n8n-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】n8nとは？できること・使い方・AIエージェントとMCPで作れるもの", "description": "n8nとは何かを公式の資料から解説。できること、Zapier・Power Automate・Difyとの違い、クラウドかセルフホストか、AI AgentノードとMCPで作れるもの、問い合わせメールを振り分ける最初のワークフローまで。", "datePublished": "2026-11-05", "dateModified": "2026-11-05", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/n8n-guide/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/n8n-guide.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】n8nとは？できること・使い方・AIエージェントとMCPで作れるもの"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "n8nの読み方は？", "acceptedAnswer": {"@type": "Answer", "text": "エヌエイトエヌです。nodeとautomationを合わせたnodemationを縮めた名前とされています。"}}, {"@type": "Question", "name": "n8nは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "自社のサーバーで動かすCommunity版は無料です。n8n社のクラウドは14日間の無料試用のあと有料のプランになり、無料のプランはありません。"}}, {"@type": "Question", "name": "n8nはオープンソースですか？", "acceptedAnswer": {"@type": "Answer", "text": "ソースは公開されていますが、使い方を制限するSustainable Use Licenseのため、n8n社は自らをオープンソースと呼んでいません。社内の業務に使う分は無料です。"}}, {"@type": "Question", "name": "n8nは日本語に対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "管理画面とドキュメントは英語が中心で、管理画面の公式の翻訳は英語だけです。日本語のメールやチャットの中身を、ワークフローの中で扱うことに問題はありません。"}}, {"@type": "Question", "name": "n8nでAIエージェントは作れますか？", "acceptedAnswer": {"@type": "Answer", "text": "作れます。AI Agentノードにチャットモデルと1つ以上のツールをつなぐと、エージェントがどのツールを使うかを決めます。作ってあるワークフローもツールとして渡せる仕組みです。"}}, {"@type": "Question", "name": "n8nはMCPに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "対応しています。外部のMCPサーバーを使うMCP Client Tool、1つのワークフローをMCPサーバーにするMCP Server Trigger、許可したワークフローを外のAIから動かすインスタンスのMCPの3通りです。"}}, {"@type": "Question", "name": "n8nとDifyはどちらを使えばよいですか？", "acceptedAnswer": {"@type": "Answer", "text": "社内文書を読むチャットボットのようにAIアプリが主ならDify、複数のシステムをまたぐ処理を動かすならn8nが向きます。回答をDifyで作り、登録や通知をn8nが受け持つ組み合わせの例もあります。"}}, {"@type": "Question", "name": "n8nを使うのにプログラミングの知識は要りますか？", "acceptedAnswer": {"@type": "Answer", "text": "ノードを置いてつなぐ基本の操作に、コードは要りません。APIの応答の加工や細かい条件にはJavaScriptかPythonを書く場面があり、セルフホストではDockerとサーバーの知識が要ります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】n8nとは？できるこ…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.05</span>
+        </div>
+        <h1 class="post-title">【2026年11月】n8nとは？できること・使い方・AIエージェントとMCPで作れるもの</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/n8n-guide.jpg" alt="【2026年11月】n8nとは？できること・使い方・AIエージェントとMCPで作れるもの" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>n8n（エヌエイトエヌ）は、アプリやAIのモデルをノードでつないで業務を自動化するワークフローの基盤です。公式サイトは500を超える連携先と、MCPでAIエージェントとつながることを掲げています。</p>
+<p>社内の自動化やAIエージェントの候補にn8nが挙がると、担当者は何ができるか・どこに置くか・何から作るかを決める必要があります。この記事は2026年11月5日に読んだ公式のドキュメントとライセンスをもとに、その3つを順に扱います。n8nの画面での操作は試していません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>n8nはトリガーとノードをつないで動かす自動化の基盤</strong>で、AIを使う所だけAIのノードに置き換えられる</li>
+<li><strong>データを社外に出せないならセルフホスト、保守する人がいないならクラウド</strong>。無料のセルフホストは複数人での共有ができない</li>
+<li><strong>AI AgentノードとMCPで、社内のワークフローをChatGPTやClaudeから呼ぶ形まで組める</strong>。送信や書き換えの前には人の承認を挟める</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>n8nとはどんなツールか</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>n8nでできること</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>n8nとZapier・Difyなどの違い</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>クラウドかセルフホストか</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>AI AgentノードとMCPで作れるもの</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>最初のワークフローの作り方</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>① 作る前に入力と出力を書く</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>② ワークフローを作ってトリガーを置く</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>③ Text Classifierで分ける</a></li>
+                    <li class="toc-h3"><a href="#s6-4"><span class="toc__n">6-4</span>④ 分類ごとの処理をつなぐ</a></li>
+                    <li class="toc-h3"><a href="#s6-5"><span class="toc__n">6-5</span>⑤ 試してから公開する</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>n8nを社内に入れるときの進め方</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">n8nとはどんなツールか</h2>
+<p>読み方は公式の表記どおりエヌエイトエヌで、node（ノード）とautomation（自動化）を合わせたnodemationを縮めた名前として紹介されています。開発元はドイツのn8n社です。</p>
+<p>n8nのワークフローは3つの部品でできています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>部品</th>
+<th>役割</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="部品">トリガー</td>
+<td data-label="役割">ワークフローが動くきっかけ</td>
+<td data-label="例">毎朝8時、メールの受信、フォームの送信、Webhook</td>
+</tr>
+<tr>
+<td data-label="部品">ノード</td>
+<td data-label="役割">1つずつの処理</td>
+<td data-label="例">メールを読む、AIで分類する、Slackに送る、シートに書く</td>
+</tr>
+<tr>
+<td data-label="部品">ワークフロー</td>
+<td data-label="役割">ノードを線でつないだ流れ全体</td>
+<td data-label="例">受信したメールを分類して担当に知らせる</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_01_overview.png" alt="n8nの3つの部品の図。トリガーはいつ動くかを決める起点、ノードはメール取得や分類や通知などの1つの処理、ワークフローはノードを線でつないだ流れ全体。AIを使う所だけAIのノードに置き換える" loading="lazy"></figure>
+
+<p>前のノードの出力が次のノードの入力として渡るため、画面の線を追えば処理の順番が分かります。<strong>SlackやGmailの認証情報は一度登録すれば、ほかのワークフローでも選ぶだけで使い回せます。</strong> 細かい加工はJavaScriptやPythonでも書けて、ノーコードとコードの中間の位置づけです。</p>
+<p>公式サイトのトップは連携を「500以上のネイティブ連携、HTTPで任意のAPI、MCPで任意のエージェント」と説明しています。専用のノードが無いサービスでも、APIがあればHTTP Requestノードでつなげます。GitHubのスターは約20万9千です。</p>
+<p>ソースは公開されていますが、n8nは自らをオープンソースと呼んでいません。ライセンスは2022年にn8n社が作ったSustainable Use Licenseで、使い方を自社の内部の業務か非商用に限るためです。<strong>社内の業務に使うのは無料で認められていて、顧客が自分でワークフローを作れる形で提供するには別の契約が要ります。</strong> 線引きの表と料金は「<a href="/media/n8n-pricing/">n8nの料金</a>」にまとめました。</p>
+<h2 id="s2">n8nでできること</h2>
+<p>n8nで組まれる処理は2つに分かれます。決まった手順を流すだけの自動化と、途中にAIのノードを挟んで判断を任せる処理です。</p>
+<p>決まった手順の例は次のようなものです。</p>
+<ul>
+<li>フォームに入力があったら顧客管理に登録し、営業のSlackに知らせる</li>
+<li>受信したメールの内容をスプレッドシートに書き写す</li>
+<li>毎朝の売上の数字を集めて報告をメールで送る</li>
+<li>設備やサーバーの異常値を受け取り、担当者に知らせる</li>
+</ul>
+<p>AIを使う処理には専用のノードがあります。ドキュメントのノードの一覧から、会社の業務で使いやすいものを抜き出しました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>ノード</th>
+<th>すること</th>
+<th>使いどころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="ノード">Basic LLM Chain</td>
+<td data-label="すること">モデルに1回だけ処理させる</td>
+<td data-label="使いどころ">要約、返信の下書き</td>
+</tr>
+<tr>
+<td data-label="ノード">Information Extractor</td>
+<td data-label="すること">文章から項目を抜き出す</td>
+<td data-label="使いどころ">メールから会社名・期限・金額を取る</td>
+</tr>
+<tr>
+<td data-label="ノード">Text Classifier</td>
+<td data-label="すること">決めたカテゴリに分ける</td>
+<td data-label="使いどころ">問い合わせを見積・不具合・その他に分ける</td>
+</tr>
+<tr>
+<td data-label="ノード">Summarization Chain</td>
+<td data-label="すること">長い文書を要約する</td>
+<td data-label="使いどころ">議事録や報告書の要点</td>
+</tr>
+<tr>
+<td data-label="ノード">AI Agent</td>
+<td data-label="すること">ツールを選んで使いながら目的を果たす</td>
+<td data-label="使いどころ">複数のシステムを見て答える一次対応</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>毎回同じ基準で分ければよい処理はText ClassifierやInformation Extractorで足り、AI Agentが要るのは呼ぶ先が状況で変わる処理だけです。</strong> 分類で済む所にエージェントを使うと、結果が安定しにくくなります。</p>
+<p>国内では京セラコミュニケーションシステムが2025年10月から社内に入れた例を開発者向けのブログに公開しています。問い合わせが届くとDifyのナレッジで回答案を作って通知し、人が確かめて返信する流れで、1件平均1時間の対応が約20分になったそうです。メールから案件・期限・金額を抜き出してシートに書く仕組みは11種類の業務に広げ、合わせて月5時間以上を減らしたと書かれています。エクサウィザーズは広告バナー15枚に約15時間かかっていた作業が約10分になった社内の例を挙げています。どちらも各社の公開記事の数字です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">n8nとZapier・Difyなどの違い</h2>
+<p>自動化の候補に並ぶ製品とは、数える単位と置き場所が違います。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>製品</th>
+<th>料金の数え方</th>
+<th>動かす場所</th>
+<th>向く用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="製品">n8n</td>
+<td data-label="料金の数え方">ワークフロー1回の実行（ステップは数えない）</td>
+<td data-label="動かす場所">n8nのクラウドか自社のサーバー</td>
+<td data-label="向く用途">システム間の連携（AIエージェントも組める）</td>
+</tr>
+<tr>
+<td data-label="製品">Zapier</td>
+<td data-label="料金の数え方">成功したステップごとのタスク</td>
+<td data-label="動かす場所">Zapierのクラウド</td>
+<td data-label="向く用途">SaaSどうしを手早くつなぐ</td>
+</tr>
+<tr>
+<td data-label="製品">Power Automate</td>
+<td data-label="料金の数え方">ユーザーごとかボットごとの月額</td>
+<td data-label="動かす場所">Microsoftのクラウド（PC操作の自動化もある）</td>
+<td data-label="向く用途">Microsoft 365の中の業務</td>
+</tr>
+<tr>
+<td data-label="製品">Dify</td>
+<td data-label="料金の数え方">ワークスペースの月額とクレジット</td>
+<td data-label="動かす場所">Difyのクラウドか自社のサーバー</td>
+<td data-label="向く用途">チャットボットや社内文書を読むAIアプリ</td>
+</tr>
+</tbody>
+</table></div>
+<p>社内の業務がMicrosoft 365で回っているなら、TeamsやOutlookとの近さでPower Automateが先に候補になります。<strong>データを社内に置いたまま、複数のシステムをまたぐ処理を組みたいなら、n8nが向きます。</strong></p>
+<p>Difyとn8nは得意な所が異なり、組み合わせて使う例もある製品です。前の節の同社の例でも、回答案はDifyのナレッジで作り、問い合わせの登録やナレッジの更新はn8nが受け持っていました。Difyの費用は「<a href="/media/dify-pricing/">Difyの料金</a>」で扱っています。</p>
+<h2 id="s4">クラウドかセルフホストか</h2>
+<p>n8nの使い始めで最初に決めるのが、n8n社のクラウドを契約するか、自社のサーバーに置くかです。公式の選び方のページはすぐ始めたい・技術者がいない・保守をしたくない場合はクラウド、環境を全部自分で管理したい場合はセルフホストを勧めています。本番の運用はどちらでもできるとしています。</p>
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_02_choose.png" alt="n8nをクラウドとセルフホストのどちらにするかを決める4つの問い。データを社外に出せないならセルフホスト、サーバーを保守する人がいなければクラウド、無料版では複数人で同じフローを共有できない、まず試すだけならクラウドの無料試用から" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>決めること</th>
+<th>クラウドが向く</th>
+<th>セルフホストが向く</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="決めること">データの置き場所</td>
+<td data-label="クラウドが向く">n8n社のサーバー（EUのフランクフルト）でよい</td>
+<td data-label="セルフホストが向く">社外に出せない、社内のネットワークの中で動かしたい</td>
+</tr>
+<tr>
+<td data-label="決めること">保守</td>
+<td data-label="クラウドが向く">更新やバックアップを任せたい</td>
+<td data-label="セルフホストが向く">更新・バックアップ・障害対応を担う人がいる</td>
+</tr>
+<tr>
+<td data-label="決めること">複数人での編集</td>
+<td data-label="クラウドが向く">共有できるプロジェクトがある</td>
+<td data-label="セルフホストが向く">共有は有料のBusiness以上</td>
+</tr>
+<tr>
+<td data-label="決めること">費用</td>
+<td data-label="クラウドが向く">月の実行回数で決まる</td>
+<td data-label="セルフホストが向く">ライセンスは無料、サーバーと人手は自社</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>無料のセルフホスト（Community版）はほぼ全部の機能が使えますが、ワークフローと認証情報の共有、プロジェクト、SSO、Gitでの版の管理は有料の版に限られます。</strong> 1〜2人が作って結果を全社で使う形なら無料で回せても、部署ごとに何人もが直す運用には向きません。</p>
+<p>クラウドは14日間の無料試用から始められます。セルフホストは<a href="https://docs.n8n.io/deploy/host-n8n">公式のドキュメント</a>にある1行のコマンド（<code>curl -fsSL https://get.n8n.io | sh</code>）でDockerの上に立ち上がり、本番はDocker Composeでデータベースと一緒に組む形が勧められています。npmでのインストールはn8n 3.0から非推奨です。スケジュールの時刻はインスタンスのタイムゾーンに従い、セルフホストの既定はAmerica/New_York（ニューヨーク）のため、そのままだと毎朝8時のつもりのワークフローが日本時間の夜9時か10時に動きます。起動のときに環境変数のGENERIC_TIMEZONEとTZをAsia/Tokyoにしておくと防げます。</p>
+<p>セルフホストで自社に残る仕事は、更新・バックアップ・外から届く入口の守りです。n8nは年に1〜2回のメジャーな版を出す方針で、2.0のときは古い1.xの修正が3か月で終わりました。管理画面とドキュメントは英語が中心で、管理画面の公式の翻訳は英語だけです。費用の比べ方は「<a href="/media/n8n-pricing/">n8nの料金</a>」のセルフホストの節にあります。</p>
+<h2 id="s5">AI AgentノードとMCPで作れるもの</h2>
+<p>n8nでAIエージェントを作るときの中心がAI Agentノードです。ドキュメントによると、チャットモデルと1つ以上のツールをつなぐと、どのツールを呼ぶかをエージェントが決めます。</p>
+<ul>
+<li>チャットモデル：OpenAI・Anthropic・Google Gemini・Azure・AWS Bedrockなどから選ぶ</li>
+<li>ツール：Web検索、計算、社内のデータベース、作ってあるワークフロー（最低1つ）</li>
+<li>メモリ：チャットで前のやり取りを覚えさせるときにつなぐ</li>
+</ul>
+<p><strong>作ってあるワークフローをそのままエージェントのツールに渡せることが、n8nらしい使い方です。</strong> 在庫を調べるフローや見積書を作るフローを用意しておけば、エージェントは問い合わせの中身を読んでどれを呼ぶかを決めます。エージェントを別のエージェントのツールにして、受付から専門の担当に振り分ける形も組める設計です。</p>
+<p>任せる範囲に上限を設けたいときは、AI Agentのツールごとに人の承認を付けると、エージェントがそのツールを使う直前にワークフローが止まり、担当者が承認すれば実行、却下すれば取り消しになります。承認の依頼はSlack・Microsoft Teams・Gmail・Outlook・n8nのチャットなどに届けられます。<strong>メールの送信やデータの書き換え・削除のように戻せない操作には承認を付け、読む・分類する・下書きするまでをAIに任せる組み方</strong>が始めやすい形です。</p>
+<p>MCPはAIと外部のツールをつなぐ共通の決まりで、n8nとのつなぎ方は3通りあります。</p>
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_03_mcp.png" alt="n8nとMCPの3つのつなぎ方の図。MCP Client Toolはn8nのエージェントが外のツールを使う、MCP Server Triggerは1つのフローのツールを外のAIに渡す、インスタンスのMCPは許可したフローを外のAIから動かす。2と3は社内の処理の入口になるため認証が要る" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>つなぎ方</th>
+<th>向き</th>
+<th>できること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="つなぎ方">MCP Client Tool</td>
+<td data-label="向き">n8nが外のMCPを使う</td>
+<td data-label="できること">外部のMCPサーバーのツールをエージェントに渡す。渡すツールは全部・選んだものだけ・指定したもの以外から選べる</td>
+</tr>
+<tr>
+<td data-label="つなぎ方">MCP Server Trigger</td>
+<td data-label="向き">外のAIがn8nを使う</td>
+<td data-label="できること">1つのワークフローの中のツールを、テスト用と本番用のURLで外に出す</td>
+</tr>
+<tr>
+<td data-label="つなぎ方">インスタンスのMCP</td>
+<td data-label="向き">外のAIがn8nを使う</td>
+<td data-label="できること">許可したワークフローを、Claude・ChatGPT・Claude Code・Cursorなどから探して動かす</td>
+</tr>
+</tbody>
+</table></div>
+<p>3つ目のインスタンスのMCPは、設定のInstance-level MCPでオーナーか管理者がオンにし、ワークフローを1本ずつ許可して使います。つなぎ方はOAuthかAPIキーです。<strong>つないだAIはどれも、許可したワークフローを全部見られるため、AIごとに見せるフローを分けることはできません。</strong> 社外の人が使うAIをつなぐ前に、許可するフローを絞ることが先です。</p>
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_05_mcp_settings.png" alt="n8nの設定のInstance-level MCPの画面。MCPを有効にした後で、接続の状態、許可したワークフローの数、つないだクライアントが並ぶ" loading="lazy"><figcaption>n8n Docsの Instance-level MCP の画面（2026年11月5日）</figcaption></figure>
+
+<p>MCP Server Triggerの認証は、なし・n8nのユーザー認証・Bearer・ヘッダーから選びます。<strong>社内の処理の入口になるURLなので、認証なしで公開しないことが前提です。</strong> 負荷分散のためにWebhookを受けるサーバーを複数台にしている場合、MCPの通信を1台に寄せないと接続が頻繁に切れるとドキュメントに注意書きがあります。</p>
+<h2 id="s6">最初のワークフローの作り方</h2>
+<p>入力と出力がはっきりしていて止まっても業務が止まらない処理が、最初の1本に向いています。ここでは問い合わせ窓口のGmailに届くメールを分類し、担当に知らせる流れを例に、ドキュメントのノードの説明から手順を組みました。</p>
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_04_first.png" alt="問い合わせメールを振り分けるワークフローの図。Gmail Triggerで未読の新着メールを取り、Text Classifierで見積・不具合・請求・その他に分け、分類ごとにSlackに通知してシートに記録し、返信の下書きは送る前に担当者が確かめる" loading="lazy"></figure>
+
+<h3 id="s6-1">① 作る前に入力と出力を書く</h3>
+<p>どのメールを（入力）、どう分けて（処理）、どこに知らせるか（出力）を1行ずつ書きます。同社は社内への聞き取りでこの3つを書いてもらい、そのままノードの設計に移したと紹介していました。分類のカテゴリと人が確かめる場所も、この時点で決めておくのがおすすめです。</p>
+<h3 id="s6-2">② ワークフローを作ってトリガーを置く</h3>
+<p><a href="https://app.n8n.cloud/register">n8nのクラウドの試用</a>に登録するか自社のn8nにログインし、左のメニューのPersonalからCreate workflowで新しいワークフローを作ります。最初のステップにGmail Triggerを選び、Googleのアカウントを認証情報として登録する流れです。このトリガーは決めた間隔で新着を取りに行き、既定では未読のメールだけを対象に、1回に10件（最大50件）まで取ります。差出人やGmailの検索条件、ラベルで絞り込めるため、窓口のアドレス宛てだけに絞っておくと誤って拾うメールが減ります。Outlookを使う会社ならMicrosoft Outlook Triggerが同じ役割です。</p>
+<h3 id="s6-3">③ Text Classifierで分ける</h3>
+<p>次にText Classifierをつなぎ、チャットモデルのノードをぶら下げます。カテゴリには見積依頼・不具合・請求・その他のように名前と説明を書き、説明で判断の基準をモデルに伝えます。<strong>どのカテゴリにも当たらないメールは既定では捨てられるため、その他の分岐に出す設定に変えておきます。</strong></p>
+<h3 id="s6-4">④ 分類ごとの処理をつなぐ</h3>
+<p>分岐ごとにSlackのノードで担当のチャンネルに知らせ、Google Sheetsのノードで記録を残します。返信の下書きまで作るならBasic LLM Chainで下書きを作り、Gmailの下書きとして置くところで止めます。送るのは担当者が中身を確かめてからです。</p>
+<h3 id="s6-5">⑤ 試してから公開する</h3>
+<p>ノードごとにExecute stepで動かし、左の入力と右の出力を画面で確かめます。全体はExecuteで通して試し、問題がなければPublishで本番に出します。<strong>2.0からは保存と公開が分かれ、保存しただけでは本番の動きは変わりません。</strong> 公開した後の動きは実行の一覧で実行ごとに追える作りです。</p>
+<figure class="post-figure"><img src="/media/images/n8n-guide/n8n_06_canvas.png" alt="n8nのワークフローの画面。天気のサンプルの4つのノードが線でつながり、実行したノードに緑のチェックが付いている。画面の下のExecuteのボタンに赤枠を付けている" loading="lazy"><figcaption>n8n Docsの最初のワークフローの画面（2026年11月5日）。赤枠のExecuteで全体を通して試す</figcaption></figure>
+
+<p>止まったときの知らせ先も、公開の前に決めておく必要があります。Error Triggerで始まるワークフローを1本作り、対象のワークフローの設定でエラー時のワークフローに指定しておくと、失敗した実行の知らせが担当に届く作りです。文章で頼むとワークフローを組むn8n Assistantもあり、クラウドのStarterとPro、セルフホストの無料版とBusinessで使えます。月に何回動くかの見積もりは「<a href="/media/n8n-pricing/">n8nの料金</a>」の実行回数の節を見てください。</p>
+<h2 id="s7">n8nを社内に入れるときの進め方</h2>
+<p>京セラコミュニケーションシステムの記事では、2025年7月から導入の準備を次の4つの段階で進めています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>段階</th>
+<th>期間</th>
+<th>中身</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="段階">比較と需要の調査</td>
+<td data-label="期間">約1か月</td>
+<td data-label="中身">Zapier・Make・Workatoなどと比べ、社内アンケートで自動化したい業務を集める</td>
+</tr>
+<tr>
+<td data-label="段階">セキュリティのリスクの整理</td>
+<td data-label="期間">約1か月半</td>
+<td data-label="中身">IT部門と接続の環境を決め、トリガーとアクションごとのリスクを洗い出す</td>
+</tr>
+<tr>
+<td data-label="段階">環境の構築</td>
+<td data-label="期間">約2か月</td>
+<td data-label="中身">AWSの構成、監視、手順書、バックアップ</td>
+</tr>
+<tr>
+<td data-label="段階">運用の体制づくり</td>
+<td data-label="期間">約1か月</td>
+<td data-label="中身">異常時の対応、利用ガイド、更新の手順</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>セルフホストで全社に開くなら、京セラコミュニケーションシステムがセキュリティの整理に約1か月半をかけたように、環境の構築より前にこの期間を計画に入れておきます。</strong> 管理画面とWebhookの入口を分け、外から届く範囲を絞る設計もこの段階で決まります。</p>
+<p>外部のAPIにつなぐたびに社内のセキュリティの申請が要る会社では、ワークフローを作ってもつながらない期間が生まれがちです。エクサウィザーズは使う予定のAPIの申請を設計と並べて早めに進めることを勧めていました。</p>
+<p>クラウドで小さく試す場合も、最初の1本を2〜4週間動かして実行回数と止まった回数を数えると、プランを選ぶ材料がそろいます。設計から運用までを社外に頼む場合は、nitoの<a href="/ai-agent/">AIエージェント構築支援</a>でも、n8nを含めた社内の自動化の作り方から相談を受けています。</p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li><strong>まず試したい</strong>：クラウドの14日間の試用で、問い合わせメールの振り分けのような1本を作る</li>
+<li><strong>社内のデータを外に出せない</strong>：セルフホストにして、更新と守りの担当を先に決める</li>
+<li><strong>何人もで同じワークフローを直す</strong>：無料版では共有できないため、クラウドか有料の版を前提に見積もる</li>
+<li><strong>ChatGPTやClaudeから社内の処理を呼びたい</strong>：インスタンスのMCPで、許可するワークフローを絞ってからつなぐ</li>
+<li><strong>Microsoft 365の中で完結する</strong>：Power Automateと並べて比べる</li>
+</ul>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">n8nの読み方は？</h3>
+<p>エヌエイトエヌです。nodeとautomationを合わせたnodemationを縮めた名前とされています。</p>
+<h3 id="s9-2">n8nは無料で使えますか？</h3>
+<p>自社のサーバーで動かすCommunity版は無料です。n8n社のクラウドは14日間の無料試用のあと有料のプランになり、無料のプランはありません。</p>
+<h3 id="s9-3">n8nはオープンソースですか？</h3>
+<p>ソースは公開されていますが、使い方を制限するSustainable Use Licenseのため、n8n社は自らをオープンソースと呼んでいません。社内の業務に使う分は無料です。</p>
+<h3 id="s9-4">n8nは日本語に対応していますか？</h3>
+<p>管理画面とドキュメントは英語が中心で、管理画面の公式の翻訳は英語だけです。日本語のメールやチャットの中身を、ワークフローの中で扱うことに問題はありません。</p>
+<h3 id="s9-5">n8nでAIエージェントは作れますか？</h3>
+<p>作れます。AI Agentノードにチャットモデルと1つ以上のツールをつなぐと、エージェントがどのツールを使うかを決めます。作ってあるワークフローもツールとして渡せる仕組みです。</p>
+<h3 id="s9-6">n8nはMCPに対応していますか？</h3>
+<p>対応しています。外部のMCPサーバーを使うMCP Client Tool、1つのワークフローをMCPサーバーにするMCP Server Trigger、許可したワークフローを外のAIから動かすインスタンスのMCPの3通りです。</p>
+<h3 id="s9-7">n8nとDifyはどちらを使えばよいですか？</h3>
+<p>社内文書を読むチャットボットのようにAIアプリが主ならDify、複数のシステムをまたぐ処理を動かすならn8nが向きます。回答をDifyで作り、登録や通知をn8nが受け持つ組み合わせの例もあります。</p>
+<h3 id="s9-8">n8nを使うのにプログラミングの知識は要りますか？</h3>
+<p>ノードを置いてつなぐ基本の操作に、コードは要りません。APIの応答の加工や細かい条件にはJavaScriptかPythonを書く場面があり、セルフホストではDockerとサーバーの知識が要ります。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li>n8n「<a href="https://n8n.io/">n8n.io</a>」「<a href="https://blog.n8n.io/introducing-n8n-2-0/">Introducing n8n 2.0</a>」</li>
+<li>n8n Docs「<a href="https://docs.n8n.io/choose-how-to-use-n8n">Choose how to use n8n</a>」「<a href="https://docs.n8n.io/try-it-out/quickstart/">Build your first workflow</a>」「<a href="https://docs.n8n.io/hosting/">Host n8n</a>」</li>
+<li>n8n Docs「<a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/">AI Agent</a>」「<a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier/">Text Classifier</a>」「<a href="https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/">Gmail Trigger</a>」「<a href="https://docs.n8n.io/advanced-ai/human-in-the-loop-tools/">Human-in-the-loop for tools</a>」</li>
+<li>n8n Docs「<a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/">MCP Client Tool</a>」「<a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger/">MCP Server Trigger</a>」「<a href="https://docs.n8n.io/advanced-ai/accessing-n8n-mcp-server/">Connect to n8n MCP server</a>」</li>
+<li>n8n Docs「<a href="https://docs.n8n.io/sustainable-use-license/">Community license</a>」</li>
+<li>Microsoft「<a href="https://www.microsoft.com/ja-jp/power-platform/products/power-automate/pricing">Power Automate の価格</a>」</li>
+<li>京セラコミュニケーションシステム「<a href="https://qiita.com/kccs_izumi-egashira/items/020726a7b96662f6c1b2">業務フロー自動化ツール「n8n」社内導入の取り組みについて</a>」（Qiita、2026年3月6日）</li>
+<li>エクサウィザーズ「<a href="https://exawizards.com/column/article/n8n-how-to/">n8nの使い方｜導入から自動化ワークフロー作成まで6ステップ</a>」（AI新聞、2026年8月23日更新）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">n8nとはどんなツールか</a><a href="#s2">n8nでできること</a><a href="#s3">n8nとZapier・Difyなどの違い</a><a href="#s4">クラウドかセルフホストか</a><a href="#s5">AI AgentノードとMCPで作れるもの</a><a href="#s6">最初のワークフローの作り方</a><a href="#s7">n8nを社内に入れるときの進め方</a><a href="#s8">まとめ</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/claude-code-skills/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Code Skills"><defs><linearGradient id="ecg-9954945f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-9954945f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Code Skills</text><line x1="189.6" y1="365.9" x2="1010.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.07</div>
+                <div class="rel-card__ttl">【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方</div>
+            </a>
+            <a href="/media/mcp-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MCPとは"><defs><linearGradient id="ecg-ae627a98" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ae627a98)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">MCPとは</text><line x1="455.6" y1="365.9" x2="744.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること</div>
+            </a>
+            <a href="/media/openai-agent-builder/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OpenAI Agent Builder"><defs><linearGradient id="ecg-b76c31de" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b76c31de)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">OpenAI Agent Builder</text><line x1="144.0" y1="365.9" x2="1056.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】OpenAI Agent Builderとは？11月30日の終了と移行先・料金</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'n8n-guide',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>

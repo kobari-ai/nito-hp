@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Copilot Studioのエージェント作成手順｜Teams公開とビルダーの使い分け｜株式会社nito</title>
+    <meta name="description" content="Copilot Studioのエージェント作成を、今のホーム画面でのハーネスの選び方から指示・SharePointのナレッジ・テスト・Teamsへの公開まで手順で解説。エージェント ビルダーとの使い分けと公開に要る権限も。">
+    <link rel="canonical" href="https://nito-0210.com/media/copilot-studio-agent/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Copilot Studioのエージェント作成手順｜Teams公開とビルダーの使い分け">
+    <meta property="og:description" content="Copilot Studioのエージェント作成を、今のホーム画面でのハーネスの選び方から指示・SharePointのナレッジ・テスト・Teamsへの公開まで手順で解説。エージェント ビルダーとの使い分けと公開に要る権限も。">
+    <meta property="og:url" content="https://nito-0210.com/media/copilot-studio-agent/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/copilot-studio-agent.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/copilot-studio-agent.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Copilot Studioのエージェント作成手順｜Teams公開とビルダーの使い分け", "description": "Copilot Studioのエージェント作成を、今のホーム画面でのハーネスの選び方から指示・SharePointのナレッジ・テスト・Teamsへの公開まで手順で解説。エージェント ビルダーとの使い分けと公開に要る権限も。", "datePublished": "2026-11-04", "dateModified": "2026-11-04", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/copilot-studio-agent/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/copilot-studio-agent.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Copilot Studioのエージェント作成手順｜Teams公開とビルダーの使い分け"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Copilot Studioは無料で作れますか？", "acceptedAnswer": {"@type": "Answer", "text": "試用版で作成とテストまではできますが、公開はできません。M365 Copilotのライセンスを持つ人はそのライセンスで作って公開でき、標準ハーネスで作った社内向けのエージェントを、ライセンスを持つ社員が自分のアカウントでサインインして使う分には、追加の費用はかかりません（公正利用の上限あり）。"}}, {"@type": "Question", "name": "Copilot Studioは権限を超えて答えますか？", "acceptedAnswer": {"@type": "Answer", "text": "SharePointのナレッジは使う人のアカウントで検索するため、その人が読めない文書は答えに使いません。ただし広い権限のフォルダーを入れると、そこを開ける人全員の答えに中身が出ます。"}}, {"@type": "Question", "name": "Copilot Studioで答えが出ないのはなぜ？", "acceptedAnswer": {"@type": "Answer", "text": "ナレッジを読む権限が無い、ファイルが暗号化されている、答えに引用が付かず隠された、の3つが多い原因です。3つ目は指示に出典を必ず付けるよう書くと起きにくくなります。"}}, {"@type": "Question", "name": "Copilot Studioはスマホで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Teamsのモバイルアプリで使えますが、インストールのリンクはモバイルでは使えません。スマホの社員にはストアに出すか、管理者に自動インストールを設定してもらいます。"}}, {"@type": "Question", "name": "Copilot Studioのフローは有料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "フローはアクションごとにCopilot Studioの容量を使います。フロー デザイナーとテストチャットからの実行は容量を使いません。M365 Copilotのライセンスを持つ社員と話しているエージェントから呼ばれて動くフローは、追加の費用がかかりません。スケジュールなど別のトリガーで動くフローや、自律で動くエージェントから呼ばれたフローはクレジットを使います。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Copilot St…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.04</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Copilot Studioのエージェント作成手順｜Teams公開とビルダーの使い分け</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/copilot-studio-agent.jpg" alt="【2026年11月】Copilot Studioのエージェント作成手順｜Teams公開とビルダーの使い分け" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>今のCopilot Studioのホーム画面では、カードから作るのはGitHub Copilotハーネスのエージェントで、標準ハーネスのエージェントは「その他のビルド方法」から作ります。社内のQ&amp;Aを作るつもりでカードを押すと、作る・試す段階でもCopilotクレジットを消費することがある種類から始めることになります。</p>
+<p>この記事ではMicrosoft 365を使う会社で社内向けのエージェントを作る担当者に向けて、作る前の判断から指示・SharePointのナレッジ・テスト・Teamsへの公開までを順に扱います。手順と画面の名前は2026年11月4日時点のMicrosoft Learnに沿ったものです。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>社内のQ&amp;Aや申請の受付なら、ホームの「その他のビルド方法」から標準ハーネスで作る</strong>。カードのGitHub Copilotハーネスはテストでもクレジットを使うことがある</li>
+<li><strong>部署をまたいで社員に配るだけならエージェント ビルダーで足りる</strong>。社外への公開・業務システムとの連携・開発と本番の分離が要るときにCopilot Studio</li>
+<li><strong>Teamsへは発行・チャネル追加・自分で試す・共有の順</strong>。全員に出すには組織カタログへの提出と管理者の承認が要る</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Copilot を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>ビルダーとCopilot Studioの使い分け</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>エージェント ビルダーで足りる場合</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>Copilot Studioで作る場合</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>作る前に要る権限と環境</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>ホーム画面でハーネスを選ぶ</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>Copilot Studioでのエージェント作成の手順</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>① 説明から作るか手動で作るか</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>② 名前・説明・指示を書く</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>③ モデルを選ぶ</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>④ 紹介メッセージと推奨プロンプト</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>ナレッジにSharePointを入れる</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>トピックとツールとエージェントフロー</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>トピック</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>ツールとエージェントフロー</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>テストで確かめること</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>TeamsとM365 Copilotに公開する</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>マルチエージェントにする目安</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>作った後に決めておくこと</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s13"><span class="toc__n">13</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">ビルダーとCopilot Studioの使い分け</h2>
+<p>Microsoft 365 Copilotのライセンスがある会社には、エージェントを作る入口が2つあります。CopilotのアプリやTeamsの中で開くエージェント ビルダーと、専用の画面で開くCopilot Studioです。Learnの「エージェント ビルダーと Copilot Studio のどちらかを選択」（2026年10月28日更新）は、使う人の数だけで決めず、要る機能と運用の仕方で選ぶよう書いています。</p>
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_01_choose.png" alt="エージェント ビルダーかCopilot Studioかを決める3つの問い。社外のチャネルが要るか、外部サービスのアクションや開発と本番の環境が要るか、M365 Copilotの指示と社内の知識で足りるか" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>問い</th>
+<th>答えがはいなら</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="問い">顧客向けのWebサイトなど社外のチャネルが要るか</td>
+<td data-label="答えがはいなら">Copilot Studio</td>
+</tr>
+<tr>
+<td data-label="問い">外部サービスのアクション・ワークフロー・開発とテストと本番の環境が要るか</td>
+<td data-label="答えがはいなら">Copilot Studio</td>
+</tr>
+<tr>
+<td data-label="問い">M365 Copilotの指示と社内の知識で足りるか</td>
+<td data-label="答えがはいなら">エージェント ビルダー</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>部署をまたいで社員に配るだけなら、エージェント ビルダーで足ります。</strong> ビルダーで作ったエージェントも組織カタログに出せるため、Learnは複数の部門で使うという理由だけではCopilot Studioは要らないという立場です。ビルダーにできないのは外部サービスを呼ぶアクションの作成で、業務システムにつなぐ段になったらCopilot Studioへコピーします。</p>
+<h3 id="s1-1">エージェント ビルダーで足りる場合</h3>
+<p>Learnが挙げる例はオンボーディングやプロジェクトの情報に答えるエージェントです。作れるのは<a href="https://www.microsoft365.com/chat">microsoft365.com/chat</a>・<a href="https://www.office.com/chat">office.com/chat</a>・Teamsのデスクトップ版とWeb版で、モバイルのアプリでは作れません。知識の元にはSharePointのファイルを100個まで選べます（上限の表は<a href="/media/internal-chatbot/">社内チャットボットの選び方</a>に載せました）。</p>
+<p>気をつけたいのは配り方の制約です。ビルダーで作ったエージェントはTeamsのグループチャットや1対1のチャットでは使えず、SharePointのファイルの権限は特定のセキュリティグループと共有したときしか自動で付きません。<strong>全社に共有しても、ナレッジのファイルを読めない社員には答えが返らない</strong>ので、ファイルの権限は手で合わせる必要があります。</p>
+<h3 id="s1-2">Copilot Studioで作る場合</h3>
+<p>承認を伴うIT申請の受付や、外部のサービスとつないで担当者に引き継ぐ問い合わせ窓口がLearnの例です。Power Platformの環境ごとにデータポリシー（DLP）やコネクタの制御をかけられ、開発・テスト・本番を分けて出せます。</p>
+<p>ビルダーからのコピーは同期ではなく別のスナップショットなので、コピーした後にビルダー側を直しても反映されません。Learnの「エージェント ビルダーから Copilot Studio にエージェントをコピーする」（2026年9月30日更新）で、引き継がれるものは次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>引き継がれる</th>
+<th>引き継がれない（コピー後の作業）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="引き継がれる">名前・説明・指示・推奨プロンプト・アイコン</td>
+<td data-label="引き継がれない（コピー後の作業）">埋め込みのファイル（アップロードし直す）</td>
+</tr>
+<tr>
+<td data-label="引き継がれる">SharePointのファイル・フォルダー・サイト</td>
+<td data-label="引き継がれない（コピー後の作業）">Copilotコネクタ（設定し直す）</td>
+</tr>
+<tr>
+<td data-label="引き継がれる">ナレッジに入れたWebサイト</td>
+<td data-label="引き継がれない（コピー後の作業）">Teamsのチャットと会議・メール（コネクタを足す）</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="s2">作る前に要る権限と環境</h2>
+<p><strong>作成とテストは試用版でもできますが、公開はできません。</strong> LearnのFAQ（2026年10月20日更新）は、公開できる条件を次のいずれかとしています。</p>
+<ul>
+<li>Microsoft 365 Copilotのライセンスがある</li>
+<li>Copilot Studioのユーザーライセンスがあり、環境にクレジットが割り当てられているか、テナントの容量から引き出す設定がオンになっている</li>
+<li>Officeのライセンスだけでも、エージェントが生成AIの機能を使っていない</li>
+</ul>
+<p>試用版は社員が自分でサインアップでき、管理者はそのサインアップを止められます。試用版で作り始めたら、公開の前に上のどれに当たるかを管理者と確かめましょう。</p>
+<p>料金の払い方（容量パック・従量課金・事前購入）と、M365 Copilotのライセンスで追加費用なく使える範囲は<a href="/media/copilot-studio/">Copilot Studioの料金</a>が詳しいです。</p>
+<p><a href="https://copilotstudio.microsoft.com/">Copilot Studio</a>を開くと、まずPower Platformの環境を選びます。一覧には作成の権限がある環境だけが出るため、空のときは管理者への権限の確認が先です。<strong>試しに作るエージェントは、本番と別の環境に置きます。</strong> DLPや容量の上限を環境ごとに分けられるので、試作が本番の枠を使い切る心配がありません。</p>
+<p>Teamsの中のCopilot Studioアプリで従来型のエージェントを作る方法は、2026年6月末で終わりました。Learnの「クイック スタート: クラシック エージェントを作成してMicrosoft Teamsに発行する」（2026年10月29日更新）によると、Teamsのアプリからはウェブ版へ移るよう案内されます。Microsoft 365 メッセージ センターの告知（MC1315217）では、E1・E3・E5・F1に付く権利で作る従来型もWeb版で作る形に移り、既存のエージェントはそのまま動きます。この権利で作るエージェントは生成AIの機能を含みません。<strong>Teamsの中で作る手順を書いた古い記事は、今はWeb版の手順に読み替えます。</strong></p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Copilot を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">ホーム画面でハーネスを選ぶ</h2>
+<p>今のCopilot Studioでは、作るものを選ぶ前に、どの実行の仕組み（ハーネス）で動かすかを選ぶ流れです。Learnの「構築を開始する」（2026年9月21日更新）によると、ホームのカードから作るのはGitHub Copilotハーネスのエージェントとワークフローで、標準ハーネスのエージェントは「その他のビルド方法」から作ります。標準ハーネスのクイックスタート（2026年9月22日更新）には、ホームの新しいエクスペリエンス（英語版の表記はNew experience）をオフにすると標準ハーネスのホームに切り替わる、という入り方も書かれています。</p>
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_02_harness.png" alt="Copilot Studioのホーム画面で選ぶハーネス。社内のQ&Aや申請の受付はその他のビルド方法から標準ハーネス。書類を作る多段階の作業はカードからGitHub Copilotハーネスでクレジットを使う" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th></th>
+<th>標準ハーネス</th>
+<th>GitHub Copilotハーネス</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="">向くもの</td>
+<td data-label="標準ハーネス">社内ヘルプデスクのQ&amp;A・決まった依頼の受付</td>
+<td data-label="GitHub Copilotハーネス">多段階の業務・Word・Excel・PDFを作る作業</td>
+</tr>
+<tr>
+<td data-label="">会話の組み立て</td>
+<td data-label="標準ハーネス">トピック・トリガー・分岐</td>
+<td data-label="GitHub Copilotハーネス">自然言語の説明とスキル（トピックはフックに置き換え）</td>
+</tr>
+<tr>
+<td data-label="">課金</td>
+<td data-label="標準ハーネス">M365 Copilotのライセンスを持つ社員の社内利用は追加なし（公正利用の上限あり）</td>
+<td data-label="GitHub Copilotハーネス">Copilotクレジット。構築・テスト・評価でも使うことがある</td>
+</tr>
+<tr>
+<td data-label="">公開先</td>
+<td data-label="標準ハーネス">Teams・M365 Copilot・Web・SharePointなど</td>
+<td data-label="GitHub Copilotハーネス">Teams・M365 Copilot・Web（SharePointのチャネルは非対応）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>社内のQ&amp;Aや申請の受付を作るなら、標準ハーネスを選ぶのがおすすめです。</strong> 2つのハーネスの間でエージェントは移せないため、作り始めの選択が後まで残ります。GitHub Copilotハーネスは書類を作る長い作業や複数のツールをまたぐ処理に強い一方、Learnの説明ではエージェントの構築とテストでもクレジットを消費することがあります。顧客の電話やWebのチャットに答える窓口には、3つ目のCustomer Conversationハーネスがあります。このあとの手順は標準ハーネスのものです。</p>
+<h2 id="s4">Copilot Studioでのエージェント作成の手順</h2>
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_03_flow.png" alt="Copilot Studioのエージェント作成から公開までの6段。環境とハーネスを選ぶ、名前と説明と指示を書く、SharePointのナレッジを足す、トピックとツールを足す、テストで確かめる、TeamsとM365 Copilotに公開する" loading="lazy"></figure>
+
+<h3 id="s4-1">① 説明から作るか手動で作るか</h3>
+<p>標準ハーネスのホームの入力欄に、エージェントにしてほしいことを書くと、AIが名前・説明・指示の案を作ります。説明は1,024文字まで書けて、ナレッジやツールの候補も一緒に出ます。手動で作る場合は名前を入れて作成し、作成時の設定で言語を日本語にしておきます。説明を書く欄が出ないときは、管理者がクロスジオチェックをオフにしている場合で、ホームの「最初から作成を開始」の「エージェント」か、エージェントのページの「空のエージェントを作成」から作る形です。</p>
+<h3 id="s4-2">② 名前・説明・指示を書く</h3>
+<p>概要ページの各欄の編集から入力します。名前は42文字、説明は1,024文字、指示は8,000文字まで書けます。指示はエージェントの振る舞いを決める文です。Teamsのストアで社員が読む説明は、公開の段でチャネルの「詳細の編集」から別に入れます。指示には次のような中身を書きます。</p>
+<ul>
+<li>役割と範囲（例: 社内の経費規程に答える。規程に無いことは答えない）</li>
+<li>答えられないときの案内先（担当部署・申請フォームのURL）</li>
+<li>答えに必ず出典を付けること</li>
+<li>口調（です・ます、短く答える）</li>
+</ul>
+<p><strong>指示に、答えへ出典を付けるよう求める1文を入れます。</strong> Learnのナレッジの説明によると、根拠のない応答を許可しない設定では、正しい答えでも引用が付かないと隠され、見つからなかったように返ることがあるためです。「JSONだけで答える」のように形式を強く縛る指示も、引用の印を消してしまいます。</p>
+<h3 id="s4-3">③ モデルを選ぶ</h3>
+<p>概要ページのモデルの欄で、推論に使うモデルを選べます。Learnの「エージェントの主要なAIモデルを選択する」（2026年10月23日更新）の表では、標準ハーネスの既定は日本を含めてGPT Chat Latestで、GPT-5.5 ChatやClaude Sonnet 4.6なども選べます。ClaudeはAnthropicの外部モデルの扱いで、管理者がPower Platform管理センターで外部モデルをオンにし、Microsoft 365 管理センターでAnthropicを許可しないと使えません。<strong>モデルを変えると同じ質問でも答え方が変わるため、変えたらテストをやり直します。</strong></p>
+<h3 id="s4-4">④ 紹介メッセージと推奨プロンプト</h3>
+<p>会話開始のトピックで最初のあいさつを直し、何を聞けるかを例で示します。推奨プロンプトは10個まで設定でき、TeamsとMicrosoft 365 Copilotで会話を始める前に表示されます（テストの画面には出ません）。</p>
+<h2 id="s5">ナレッジにSharePointを入れる</h2>
+<p>社内の規程やマニュアルに答えさせるなら、ナレッジの中心はSharePointになります。概要ページかナレッジのページの「ナレッジの追加」からSharePointを選び、URLと名前と説明を入れます。</p>
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_05_sharepoint.png" alt="Microsoft LearnのSharePointをナレッジソースとして追加する手順。ナレッジの追加でSharePointを選び、URLと名前と説明を入れてエージェントに追加する" loading="lazy"><figcaption>Microsoft Learn「ナレッジ ソースとしてSharePointを追加する」（2026年11月4日）</figcaption></figure>
+
+<p><strong>エージェントは、使う人が読める文書しか答えに使いません。</strong> Learnの「ナレッジ ソースとしてSharePointを追加する」（2026年8月5日更新）によると、SharePointのナレッジは使う人のアカウントで検索され、読み取りの権限が無い人には答えが返りません。秘密度ラベルも効き、暗号化やパスワードで保護したファイルは、開ける人が聞いても答えに使われません。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>点</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="点">検索する範囲</td>
+<td data-label="内容">登録したURLとその下の階層だけ。親や隣のフォルダーは別に登録する</td>
+</tr>
+<tr>
+<td data-label="点">数の上限</td>
+<td data-label="内容">生成オーケストレーションではSharePointのURLが25まで</td>
+</tr>
+<tr>
+<td data-label="点">文書の中のリンク</td>
+<td data-label="内容">たどらない。リンク先も使うなら別に登録する</td>
+</tr>
+<tr>
+<td data-label="点">名前の変更</td>
+<td data-label="内容">サイトやフォルダーの名前を変えるとリンクが切れる</td>
+</tr>
+<tr>
+<td data-label="点">説明</td>
+<td data-label="内容">詳しく書くほど、どのナレッジを使うかの判断に効く</td>
+</tr>
+<tr>
+<td data-label="点">絞り込み</td>
+<td data-label="内容">変更日・作成者などの条件で対象を絞れる</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>権限が広すぎるフォルダーを入れると、そのフォルダーを開ける人への答えに中身が出ます。</strong> 逆に、全社に配るのに一部の部署しか読めないフォルダーを入れると、多くの社員に答えが返りません。入れる前に古い版のファイルを外し、配る相手と読める人がそろっているかを確かめておくと、公開後の問い合わせが減ります。</p>
+<p>公開Webサイトもナレッジに入れられますが、こちらの検索はBing経由です。概要ページのWeb検索をオンにするとBingの検索結果全体も答えに混ざるため、<strong>社内規程だけで答えさせたいエージェントでは、Web検索と一般知識の利用をオフにします。</strong> オフにすると、ナレッジに答えが無いときは「応答なし」と返ります。M365 Copilotのライセンスを持たない社員も使う場合、テナントグラフとセマンティック検索の設定で検索の質を上げられますが、この機能には追加のクレジットがかかります。</p>
+<h2 id="s6">トピックとツールとエージェントフロー</h2>
+<p>標準ハーネスの新しいエージェントは、既定で生成オーケストレーションで動きます。質問が来るたびに、トピック・ツール・ナレッジ・他のエージェントの中から、名前と説明を手がかりに使うものを選ぶ仕組みです。設定の生成AIの項目でオーケストレーションを「いいえ」にするとクラシックになり、トリガーフレーズに一致したトピックだけが動きます。</p>
+<p><strong>説明があいまいだと、エージェントは正しい部品を選べません。</strong> 経費精算と出張申請のように似たトピックが並ぶときは、説明に対象と使う場面を書き分けます。</p>
+<h3 id="s6-1">トピック</h3>
+<p>申請の受付のように、聞く順番と分岐を決めたい会話はトピックで組みます。質問ノードで値を聞いて変数に入れ、条件ノードで分け、最後にツールのノードでフローを呼ぶ流れです。</p>
+<h3 id="s6-2">ツールとエージェントフロー</h3>
+<p>申請をSharePointのリストに書き込む、担当者にTeamsで知らせる、といった処理はエージェントフローで作り、ツールとしてエージェントに足します。Learnの「エージェント フローの概要」（2026年10月26日更新）によると、フローはアクションごとにCopilot Studioの容量を使い、前払いの容量を使い切ると新しい実行が止まります。<strong>フロー デザイナーとテストチャットからの実行は容量を使わないため、作り込みはテストの画面で進められます。</strong></p>
+<p>既にあるPower Automateのクラウドフローも、エージェントフローへの変換が可能です。ただし変換は一方向で戻せず、請求がPower AutomateからCopilot Studioの容量に変わります。M365 Copilotのライセンスを持つ社員と話しているエージェントから呼ばれて動くフローは、追加の費用がかかりません。スケジュールなど別のトリガーで動くフローや、自律で動くエージェントから呼ばれたフローはクレジットを使います。</p>
+<h2 id="s7">テストで確かめること</h2>
+<p>画面右のテストのパネルで質問し、指示やナレッジを直しながら繰り返します。生成オーケストレーションのエージェントなら、どの部品を選んだかをテストの画面のアクティビティマップで追えます。公開前に見ておきたいのは次の5つです。</p>
+<ul>
+<li>規程にある質問に、出典つきで答えるか</li>
+<li>規程に無い質問に、作り話をせず案内先を返すか</li>
+<li>似た2つの依頼で、別のトピックやツールが選ばれるか</li>
+<li>フローが最後まで動き、書き込み先に結果が残るか</li>
+<li>ナレッジを読む権限の無い社員には、答えが返らないか</li>
+</ul>
+<p>最後の項目は公開した後に権限の違う社員のアカウントで試すのが確実です。指示を1か所変えたら、同じ質問をもう一度投げて答えの変化を見ます。</p>
+<h2 id="s8">TeamsとM365 Copilotに公開する</h2>
+<p>公開は発行・チャネルの接続・自分で試す・広げるの順で進みます。Learnの「Teams とMicrosoft 365のエージェントを接続して構成する」の手順は次のとおりです。</p>
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_04_publish.png" alt="Teamsへの公開の3段階。自分にインストールして試す、共有した社員のエージェントストアに出す、組織カタログに提出して管理者の承認を受けて全員に出す" loading="lazy"></figure>
+
+<ol>
+<li>上部の発行を選ぶ（数分かかる）</li>
+<li>チャネルでTeamsとMicrosoft 365 Copilotを開き、「Microsoft Copilotでエージェントを利用可能」を選んで追加する（選ばないとTeamsだけ）</li>
+<li>「Teamsでエージェントを表示する」で自分にインストールして試す</li>
+<li>可用性オプションで、リンクを渡すか、共有した社員のエージェントストアに出す</li>
+<li>全員に出すときは「組織内の全員に表示」から組織カタログに提出し、管理者の承認を待つ</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/copilot-studio-agent/csag_06_teams_submit.png" alt="Microsoft Learnの管理者の承認のためにエージェントを提出する手順。可用性オプションで組織内の全員に表示を選び、組織カタログに提出する" loading="lazy"><figcaption>Microsoft Learn「Teams とMicrosoft 365のエージェントを接続して構成する」（2026年11月4日）</figcaption></figure>
+
+<p><strong>リンクを渡しても、エージェントを共有されていない社員はチャットできません。</strong> 共有の設定とインストールのリンクは別物で、Teamsのモバイルアプリではリンクからのインストールもできないため、スマホで使う社員にはストアに出す必要があります。組織がTeamsへのPower Platformアプリの追加を止めている場合は、<a href="https://admin.teams.microsoft.com/">Teams管理センター</a>で許可してもらうまでインストールもできません。</p>
+<p>承認後は中身の更新なら再提出は要らず、アイコンと説明を変えたときだけ出し直します。管理者は<a href="https://admin.teams.microsoft.com/">Teams管理センター</a>のセットアップポリシーで、全員に自動でインストールしてピン留めすることも可能です。認証は既定の「Microsoft による認証」のままが無難です。「認証なし」にすると、リンクを知っている人なら誰でも話せてしまいます。</p>
+<h2 id="s9">マルチエージェントにする目安</h2>
+<p>1つのエージェントに部品を足し続けると、どれを使うかの選び分けが崩れていきます。Learnの「他のエージェントの概要を追加」によると、ツール・トピック・他のエージェントを合わせた選択肢が30〜40を超えるあたりで精度が落ちる場合があるという目安です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>形</th>
+<th>向く場面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="形">子エージェント</td>
+<td data-label="向く場面">1つのチームが管理し、単独では公開しない作業のまとまり</td>
+</tr>
+<tr>
+<td data-label="形">環境内の別のエージェントにつなぐ</td>
+<td data-label="向く場面">部署ごとに別のチームが作り、単独でも使わせる</td>
+</tr>
+<tr>
+<td data-label="形">外部のエージェントにつなぐ</td>
+<td data-label="向く場面">A2Aでつなぐエージェント、Microsoft Foundry・Fabric・Microsoft 365 Agents SDKのエージェント（A2A以外はプレビュー）</td>
+</tr>
+</tbody>
+</table></div>
+<p>分けると、つなぐ段が増える分だけ答えが遅くなり、テストの範囲も広がります。<strong>分ける前に、まず部品の説明を書き分けて、選び分けが戻るかを試します。</strong></p>
+<h2 id="s10">作った後に決めておくこと</h2>
+<p>公開の前に、次の4つを担当と一緒に決めておきます。</p>
+<ul>
+<li>環境のDLPで、つないでよいコネクタと止めるコネクタを分ける</li>
+<li><a href="https://admin.powerplatform.microsoft.com/">Power Platform管理センター</a>で、使ってよいチャネルを絞る（チャネルの絞り込みはプレビュー）</li>
+<li>分析で答えられなかった質問を見て、指示とナレッジを直す人と頻度</li>
+<li>クレジットを使う使い方なら、エージェントごとの月の上限（この上限は、そのエージェントが呼ぶエージェントフローを止めません）</li>
+</ul>
+<p>社外向けの公開や業務システムとの連携まで含めて組む場合は、設計から運用までを外部に頼む方法もあります。進め方と費用の考え方は<a href="/media/ai-agent-introduction/">AIエージェント導入の進め方</a>で扱い、nitoも<a href="/ai-agent/">AIエージェント構築支援</a>で相談を受けています。</p>
+<h2 id="s11">まとめ</h2>
+<ul>
+<li>社員向けのQ&amp;Aを部署で使うだけ: エージェント ビルダーで作り、組織カタログに出す</li>
+<li>申請の受付や業務システムとの連携が要る: Copilot Studioの標準ハーネスで作り、SharePointの権限を整えてからTeamsに公開する</li>
+<li>書類を作る長い作業を任せたい: GitHub Copilotハーネスで、作る前にクレジットを見積もる</li>
+<li>試用版で作り始めた: 公開の前に、作る人のライセンスと環境の容量を管理者とそろえる</li>
+</ul>
+<h2 id="s12">よくある質問</h2>
+<h3 id="s12-1">Copilot Studioは無料で作れますか？</h3>
+<p>試用版で作成とテストまではできますが、公開はできません。M365 Copilotのライセンスを持つ人はそのライセンスで作って公開でき、標準ハーネスで作った社内向けのエージェントを、ライセンスを持つ社員が自分のアカウントでサインインして使う分には、追加の費用はかかりません（公正利用の上限あり）。</p>
+<h3 id="s12-2">Copilot Studioは権限を超えて答えますか？</h3>
+<p>SharePointのナレッジは使う人のアカウントで検索するため、その人が読めない文書は答えに使いません。ただし広い権限のフォルダーを入れると、そこを開ける人全員の答えに中身が出ます。</p>
+<h3 id="s12-3">Copilot Studioで答えが出ないのはなぜ？</h3>
+<p>ナレッジを読む権限が無い、ファイルが暗号化されている、答えに引用が付かず隠された、の3つが多い原因です。3つ目は指示に出典を必ず付けるよう書くと起きにくくなります。</p>
+<h3 id="s12-4">Copilot Studioはスマホで使えますか？</h3>
+<p>Teamsのモバイルアプリで使えますが、インストールのリンクはモバイルでは使えません。スマホの社員にはストアに出すか、管理者に自動インストールを設定してもらいます。</p>
+<h3 id="s12-5">Copilot Studioのフローは有料ですか？</h3>
+<p>フローはアクションごとにCopilot Studioの容量を使います。フロー デザイナーとテストチャットからの実行は容量を使いません。M365 Copilotのライセンスを持つ社員と話しているエージェントから呼ばれて動くフローは、追加の費用がかかりません。スケジュールなど別のトリガーで動くフローや、自律で動くエージェントから呼ばれたフローはクレジットを使います。</p>
+<h2 id="s13">出典</h2>
+<p>いずれも2026年11月4日に取得。更新日はLearnのページの表示です。</p>
+<ul>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copilot-studio-experience">エージェント ビルダーと Copilot Studio のどちらかを選択してエージェントを構築します</a>（2026年10月28日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder">エージェント ビルダーの概要</a>（2026年10月26日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/copy-agent-to-copilot-studio">エージェント ビルダーから Copilot Studio にエージェントをコピーする</a>（2026年9月30日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-first-bot">構築を開始する</a>（2026年9月21日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/overview">GitHub Copilot Harnessによるエージェント概要</a>（2026年10月20日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview">Copilot Studioのハーネス</a>（2026年10月23日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/fundamentals-get-started">クイックスタート：標準ハーネスでエージェントを作成・展開する</a>（2026年9月22日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-billing-licensing">Copilot Studio の課金とライセンスに関するよくある質問</a>（2026年10月20日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/requirements-messages-management">Copilot Studio の請求レートと管理</a>（2026年10月31日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/billing-licensing">標準ハーネス駆動のエージェントのライセンス取得</a></li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-copilot-studio">知識源の概要</a>（2026年8月4日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-sharepoint">ナレッジ ソースとしてSharePointを追加する</a>（2026年8月5日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-generative-actions">生成 AI でエージェントの動作を調整する</a>（2026年8月26日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-create-edit-topics">トピックの作成と編集</a>（2026年7月6日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/flows-overview">エージェント フローの概要</a>（2026年10月26日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents">他のエージェントの概要を追加</a></li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-fundamentals-publish-channels">重要な概念 - エージェントの公開と展開</a>（2026年10月16日更新）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams">Teams とMicrosoft 365のエージェントを接続して構成する</a></li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/fundamentals-get-started-teams">クイック スタート: クラシック エージェントを作成してMicrosoft Teamsに発行する</a>（2026年10月29日更新）</li>
+<li><a href="https://mc.merill.net/message/MC1315217">MC1315217 Classic agent creation moves from Teams to web experience</a>（Microsoft 365 メッセージ センターの告知を転載したページ、英語）</li>
+<li><a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model">エージェントの主要なAIモデルを選択する</a>（2026年10月23日更新）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Copilot を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">ビルダーとCopilot Studioの使い分け</a><a href="#s2">作る前に要る権限と環境</a><a href="#s3">ホーム画面でハーネスを選ぶ</a><a href="#s4">Copilot Studioでのエージェント作成の手順</a><a href="#s5">ナレッジにSharePointを入れる</a><a href="#s6">トピックとツールとエージェントフロー</a><a href="#s7">テストで確かめること</a><a href="#s8">TeamsとM365 Copilotに公開する</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/claude-code-skills/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Code Skills"><defs><linearGradient id="ecg-9954945f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-9954945f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Code Skills</text><line x1="189.6" y1="365.9" x2="1010.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.07</div>
+                <div class="rel-card__ttl">【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方</div>
+            </a>
+            <a href="/media/mcp-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MCPとは"><defs><linearGradient id="ecg-ae627a98" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ae627a98)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">MCPとは</text><line x1="455.6" y1="365.9" x2="744.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること</div>
+            </a>
+            <a href="/media/openai-agent-builder/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OpenAI Agent Builder"><defs><linearGradient id="ecg-b76c31de" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b76c31de)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">OpenAI Agent Builder</text><line x1="144.0" y1="365.9" x2="1056.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】OpenAI Agent Builderとは？11月30日の終了と移行先・料金</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'copilot-studio-agent',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>

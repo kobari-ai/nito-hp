@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】OpenAI Agent Builderとは？11月30日の終了と移行先・料金｜株式会社nito</title>
+    <meta name="description" content="OpenAI Agent Builderとは何かを公式ドキュメントで解説。2026年11月30日の提供終了とできること・使い方・料金、Agents SDKとワークスペースエージェントへの移し方、Dify・n8nとの使い分けまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/openai-agent-builder/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】OpenAI Agent Builderとは？11月30日の終了と移行先・料金">
+    <meta property="og:description" content="OpenAI Agent Builderとは何かを公式ドキュメントで解説。2026年11月30日の提供終了とできること・使い方・料金、Agents SDKとワークスペースエージェントへの移し方、Dify・n8nとの使い分けまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/openai-agent-builder/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/openai-agent-builder.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/openai-agent-builder.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】OpenAI Agent Builderとは？11月30日の終了と移行先・料金", "description": "OpenAI Agent Builderとは何かを公式ドキュメントで解説。2026年11月30日の提供終了とできること・使い方・料金、Agents SDKとワークスペースエージェントへの移し方、Dify・n8nとの使い分けまで。", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/openai-agent-builder/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/openai-agent-builder.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】OpenAI Agent Builderとは？11月30日の終了と移行先・料金"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "OpenAI Agent Builderはいつ終わりますか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年11月30日に終了する予定です。OpenAIが2026年6月3日に告知しました。"}}, {"@type": "Question", "name": "OpenAI Agent Builderは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Agent Builder自体の利用料はかかりません。ワークフローを動かすと、使ったモデルとツールの分のAPI料金がかかり、プレビューで実行した分も対象です。2026年10月28日からは、ChatGPTのProかBusinessを契約していればAPIの無料クレジットを充てられます。"}}, {"@type": "Question", "name": "Agent BuilderはPlusで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Plusの契約には含まれません。Agent BuilderはChatGPTではなく、APIを使うためのOpenAI Platformの機能で、使うにはAPIのアカウントに支払い方法を登録してクレジットを買います（PlusはAPIの無料クレジットの対象外です）。移し先のワークスペースエージェントもBusiness・Enterprise・Eduが対象です。"}}, {"@type": "Question", "name": "Agent Builderで作ったものはどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "終了後はAgent Builderの画面で開けなくなる予定です。11月30日までにCodeからAgents SDKのコードを書き出せば、自社のアプリで動かすか、ChatGPTのワークスペースエージェントに作り直す材料にできます。"}}, {"@type": "Question", "name": "終了後もChatKitは使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "ChatKitは終了の対象に入っていません。ただしAgent Builderのワークフローにつなぐ形は移行期間だけのもので、続けるには自社のサーバーにつなぐ形に切り替えます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】OpenAI Age…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.06</span>
+        </div>
+        <h1 class="post-title">【2026年11月】OpenAI Agent Builderとは？11月30日の終了と移行先・料金</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/openai-agent-builder.jpg" alt="【2026年11月】OpenAI Agent Builderとは？11月30日の終了と移行先・料金" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>OpenAIは2026年6月3日、画面でAIエージェントの流れを組むAgent Builderを2026年11月30日に終了すると告知しました。すでに使っている場合も、移行の期間中に使える残りは1か月を切っています。</p>
+<p>社内でAgent Builderを試したか導入の候補に挙げている担当の方に向けて、何ができる道具だったのかと料金、作ったワークフローの移し先、会社で使うときに決めることを公式ドキュメントで確かめた範囲でまとめました。画面での作成と移行は試していません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>Agent Builderは2026年11月30日に終了する予定で、同じ日にEvalsと再利用プロンプトも終わる</strong>。チャット画面の部品のChatKitは残る</li>
+<li><strong>ツールの利用料は無く、払うのはワークフローを動かしたときのAPIの代金だけ</strong>。新しく入れる理由は今は薄い</li>
+<li><strong>作ったものはコードとして書き出し、Agents SDKかChatGPTのワークスペースエージェントに移す</strong>。どちらも中身がそのまま移る保証は無い</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>OpenAI Agent Builderとは</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>AgentKitの中での位置</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>2026年11月30日に終わるもの</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Agent Builderでできること</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>OpenAI Agent Builderの使い方と書き出し</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>使い始める前の準備</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>作って試して公開する</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>Codeから書き出す</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>OpenAI Agent Builderの料金</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>移行先の選び方</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>Agents SDKで続ける</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>ワークスペースエージェントに作り直す</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>会社で使うときに決めること</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>誰が作れて誰に配れるか</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>データの扱い</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>誤った操作を止める仕組み</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>Dify・n8n・Copilot Studioとの使い分け</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">OpenAI Agent Builderとは</h2>
+<p>Agent Builderは、OpenAIの開発者向けの画面（OpenAI Platform）で、AIエージェントの処理の流れを部品をつないで組む道具です。テンプレートから部品（ノード）を置いて入出力を決め、実際のデータで試してから、自社のサイトに埋め込むかコードとして書き出します。</p>
+<p><strong>コードを書かずに組める点が売りで、Difyやn8nのようなノーコードの道具と同じ場所を狙っていました。</strong> 2025年10月6日の開発者向けイベント（DevDay 2025）で、エージェント開発の道具一式であるAgentKitの一部として発表されました。</p>
+<h3 id="s1-1">AgentKitの中での位置</h3>
+<p>AgentKitは3つの部品でできていました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>部品</th>
+<th>役割</th>
+<th>発表時の提供状況</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="部品">Agent Builder</td>
+<td data-label="役割">画面でワークフローを組み、版を管理する</td>
+<td data-label="発表時の提供状況">ベータ</td>
+</tr>
+<tr>
+<td data-label="部品">ChatKit</td>
+<td data-label="役割">作ったエージェントを自社のサイトやアプリにチャット画面として埋め込む</td>
+<td data-label="発表時の提供状況">全開発者に一般提供</td>
+</tr>
+<tr>
+<td data-label="部品">Connector Registry</td>
+<td data-label="役割">Google Drive・SharePoint・Teamsなどへの接続を管理者がまとめて管理する</td>
+<td data-label="発表時の提供状況">一部のAPI・ChatGPT Enterprise・Eduにベータ</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s1-2">2026年11月30日に終わるもの</h3>
+<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_01_end.png" alt="2026年11月30日に終わるもの。Agent Builder、10月31日から読み取り専用になるEvals、中身をアプリのコードへ移す再利用プロンプトの3つ。ChatKitは残り、自社のサーバーにつなぎ直して使う" loading="lazy"></figure>
+
+<p>OpenAIの廃止予定のページには、2026年6月3日に3つの機能の終了がまとめて載りました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>機能</th>
+<th>告知</th>
+<th>終了</th>
+<th>案内されている移し先</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="機能">Agent Builder</td>
+<td data-label="告知">2026年6月3日</td>
+<td data-label="終了">2026年11月30日</td>
+<td data-label="案内されている移し先">Agents SDKかChatGPTのワークスペースエージェント</td>
+</tr>
+<tr>
+<td data-label="機能">Evals（評価の画面とAPI）</td>
+<td data-label="告知">2026年6月3日</td>
+<td data-label="終了">10月31日に読み取り専用、11月30日に終了</td>
+<td data-label="案内されている移し先">Promptfoo</td>
+</tr>
+<tr>
+<td data-label="機能">再利用プロンプト</td>
+<td data-label="告知">2026年6月3日</td>
+<td data-label="終了">2026年11月30日</td>
+<td data-label="案内されている移し先">アプリのコードに移す</td>
+</tr>
+</tbody>
+</table></div>
+<p>AgentKitの発表記事の冒頭にも、2026年6月3日付けで「11月30日以降はOpenAIのプラットフォームで使えなくなる。コードで続けるならAgents SDK、言葉の指示に向いた用途ならChatGPTのワークスペースエージェントを勧める」という追記が入りました。<strong>Agent Builderで評価に使っていたトレースの採点もEvalsの一部なので、11月30日に一緒に使えなくなります。</strong></p>
+<h2 id="s2">Agent Builderでできること</h2>
+<p>ワークフローはStartから始まりEndで終わり、その間にノードを線でつないで作る形でした。線には型があり、前のノードが出すデータと次のノードが受け取るデータが合っているかを画面で確かめられます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>分類</th>
+<th>ノード</th>
+<th>使い道</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="分類">基本</td>
+<td data-label="ノード">Start・Agent・End・Note</td>
+<td data-label="使い道">入力の受け取り、モデルへの指示とツールの設定、出力の形、メモ</td>
+</tr>
+<tr>
+<td data-label="分類">ツール</td>
+<td data-label="ノード">File search・Guardrails・MCP</td>
+<td data-label="使い道">上げた文書の検索、個人情報や不正な入力の検出、外部サービスの呼び出し</td>
+</tr>
+<tr>
+<td data-label="分類">制御</td>
+<td data-label="ノード">If/else・While・User approval</td>
+<td data-label="使い道">条件分岐、繰り返し、人の承認を待つ</td>
+</tr>
+<tr>
+<td data-label="分類">データ</td>
+<td data-label="ノード">Transform・Set state</td>
+<td data-label="使い道">データの形の変換、ワークフロー全体で使う変数</td>
+</tr>
+</tbody>
+</table></div>
+<p>条件分岐や繰り返しの条件はCEL（Common Expression Language）という短い式で書くため、<strong>画面で組めるとはいえ、変数と式を扱えないと分岐のあるワークフローは作れません。</strong></p>
+<p>作られていた例には社内文書を検索して答えるFAQの窓口、問い合わせを分類して担当のエージェントに振り分ける仕組み、Web検索で調べてまとめる調査役、2つの文書を比べる仕組みがあります。発表の記事ではLINEヤフー（LY Corporation）が作業アシスタントのエージェントを2時間足らずで作った例が紹介されていました。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">OpenAI Agent Builderの使い方と書き出し</h2>
+<h3 id="s3-1">使い始める前の準備</h3>
+<p>Agent BuilderはChatGPTではなく、APIを使うためのOpenAI Platformの中にあります。使うにはAPIのアカウントに支払い方法を登録してクレジットを買うか、ChatGPTのPro・Businessに付くAPIの無料クレジットを使うかのどちらかです。プレビューや公開の操作で組織の認証のエラーが出た場合は、Platformの設定で組織の本人確認（Verify organization）を済ませます。</p>
+<h3 id="s3-2">作って試して公開する</h3>
+<p>Platformの<a href="https://platform.openai.com/agent-builder">Agent Builder</a>を開き、Createから空のキャンバスかテンプレートを選ぶところから始まりました。ノードを置いたら右上のPreviewで実際に入力し、各ノードの動きを見ます。</p>
+<p>作業は自動で保存され、Publishを押すとその時点の内容が新しい版として固定され、ワークフローのIDが発行されます。このIDをChatKitに渡すと、自社のサイトにチャット画面として埋め込めました。</p>
+<h3 id="s3-3">Codeから書き出す</h3>
+<p>終了に備えて今やっておくのは書き出しです。公式の移行ガイドの手順は次のとおりです。</p>
+<ol>
+<li><a href="https://platform.openai.com/agent-builder">Agent Builder</a>で対象のワークフローを開く</li>
+<li>上のメニューのCodeを選ぶ</li>
+<li>出てきた画面でAgents SDKを選ぶ</li>
+<li>TypeScriptかPythonを選び、出てきたコードを全部コピーする</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_03_getcode.png" alt="Agent BuilderのGet codeの画面。3はAgents SDKのタブ、4はTypeScriptとPythonの言語の選択とコードをコピーするアイコン" loading="lazy"><figcaption>OpenAI「Migrate from Agent Builder」</figcaption></figure>
+
+<p><strong>書き出しは11月30日までしかできないため、使っていなくても一度作ったワークフローは控えておくのが安全です。</strong> この書き出しはワークフローの図をそのまま変換するものではなく、すべての動きが変わらず移る保証も無いとガイドは断っています。</p>
+<h2 id="s4">OpenAI Agent Builderの料金</h2>
+<p><strong>Agent Builderそのものに利用料は無く、ワークフローを動かしたときに使ったモデルとツールの分だけAPIの料金がかかります。</strong> プレビューで実際にモデルを呼んだ分も課金の対象です。ファイル検索を使うなら、上げた文書の保存とその検索の呼び出しにも料金が付く仕組みです。</p>
+<p>2026年10月28日からは、ChatGPTのProかBusinessを契約していれば、毎月のAPIの無料クレジット（ワークスペースで月500ドルまで）を自分のAPIの組織に付けられ、ワークフローを動かした分に充てられます。Plusは対象外です。</p>
+<p>モデルごとの単価と月額の試算、使いすぎを止める上限の設定は<a href="/media/openai-api-pricing/">OpenAI APIの料金</a>で扱っています。</p>
+<p>移し先では費用の形も別物です。Agents SDKはコードの道具なので、払うのはAPIの代金と自社で動かすサーバー代です。ワークスペースエージェントはChatGPT Business以上の契約が前提で、発表では2026年5月6日まで無料とされ、今はクレジット制です。GPT-5.6で1回動かすと、目安は5〜25クレジットです（ChatGPTのレートカード）。</p>
+<h2 id="s5">移行先の選び方</h2>
+<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_02_move.png" alt="Agent Builderで作ったワークフローの移し先3つ。決まった手順を崩したくないなら自社のアプリでコードとして動かすAgents SDK、Business・Enterpriseで社内に配るならChatGPTの中で言葉で作り直すワークスペースエージェント、他社のモデルや既存の連携を使うならDify・n8n・Copilot Studio" loading="lazy"></figure>
+
+<p>公式の移行ガイドが示す道は2つです。</p>
+<h3 id="s5-1">Agents SDKで続ける</h3>
+<p>書き出したTypeScriptかPythonのコードを自社のアプリに入れ、Agents SDKを入れて動かす道です。<strong>条件分岐の順番や出力の形をきっちり守らせたいワークフローは、こちらが向いています。</strong> ガイドにも、決まった処理が中心のワークフローはワークスペースエージェントに忠実には移らないことがあると書かれています。その代わり実行環境・ツール・認証・権限・公開の設定は自分たちで確かめる必要があり、開発の手が要ります。</p>
+<p>ChatKitで社外向けのチャットを出していた場合は、ChatKitを自社のサーバーにつなぐ形（ChatKitのガイドでいうadvanced integration）に切り替えるのが公式の案内です。</p>
+<h3 id="s5-2">ワークスペースエージェントに作り直す</h3>
+<p>ワークスペースエージェントは、ChatGPTの中で業務を言葉で説明して作り、チームで共有する機能です。2026年4月22日に始まり、Codexを土台にクラウドで動くため、手を離している間もスケジュールどおりに動いたり、Slackのチャンネルで依頼に答えたりできるのが特徴です。</p>
+<p>移す作業にはChatGPT Business・Enterprise・Eduのワークスペースと、エージェントを作る権限が要ります。ChatGPTでエージェントの作成を開き、書き出したコードを貼って「このワークフローをエージェントに変換して」と頼み、作り手の画面が直す必要があると示した所を見直します。そのうえで次の点を確かめてから作成を押します。</p>
+<ul>
+<li>生成された指示と持たせた機能</li>
+<li>つなぐアプリ・ツール・スキル・認証と接続の権限</li>
+<li>元のワークフローに入れていた代表的な入力をPreviewで試し、結果を比べる</li>
+</ul>
+<p><strong>個人向けのPlusやProではワークスペースエージェントは使えません。</strong> ChatGPTの料金表で、無料版からProまですべて対象外になっています。</p>
+<h2 id="s6">会社で使うときに決めること</h2>
+<h3 id="s6-1">誰が作れて誰に配れるか</h3>
+<p>移し先のワークスペースエージェントでは、管理者が役割ごとに4つを分けて許可できる作りです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>管理者が許可するもの</th>
+<th>できるようになること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="管理者が許可するもの">エージェントを使う</td>
+<td data-label="できるようになること">社内のエージェントを探して動かす</td>
+</tr>
+<tr>
+<td data-label="管理者が許可するもの">エージェントを作る</td>
+<td data-label="できるようになること">作る・直す・複製する</td>
+</tr>
+<tr>
+<td data-label="管理者が許可するもの">ディレクトリに公開する</td>
+<td data-label="できるようになること">組織の一覧に載せて全員に見せる</td>
+</tr>
+<tr>
+<td data-label="管理者が許可するもの">エージェント所有の接続で公開する</td>
+<td data-label="できるようになること">作った人の接続を使うエージェントを公開する</td>
+</tr>
+</tbody>
+</table></div>
+<p>Enterpriseでは最初はオフになっていて、管理者が有効にしてから使えます。共有先は自分だけ・組織内のリンク・組織の一覧の3段階です。<strong>4つ目の許可を出すと他の社員が作り手の権限でデータを読んだり操作したりできるため、ヘルプも理解している人にだけ渡すよう求めています。</strong></p>
+<h3 id="s6-2">データの扱い</h3>
+<p>2023年3月1日以降、OpenAIのAPIに送ったデータは本人が共有に同意しない限りモデルの学習に使われていません。一方で不正利用の監視のためのログは既定で最大30日残り、これを残さない設定（Zero Data Retention）は事前の承認が要ります。ChatKitの会話のスレッドは、消すまで保存される扱いです。</p>
+<p>ワークスペースエージェントがアプリにつなぐときは、使う人それぞれのアカウントで認証する方法と、エージェントが持つ共有の接続を使う方法を選べます。共有の接続には個人のアカウントでなくサービス用のアカウントを使い、権限を必要な範囲に絞るよう案内されています。</p>
+<h3 id="s6-3">誤った操作を止める仕組み</h3>
+<p>OpenAIの安全のガイドは、外から入った文章が指示を書き換えるプロンプトインジェクションと、意図しない情報の持ち出しを主なリスクに挙げ、次の7つの対策を示しています。</p>
+<ul>
+<li>信頼できない入力を開発者向けの指示に混ぜない</li>
+<li>ノード間の受け渡しを決まった形（選択肢や固定のJSON）にする</li>
+<li>方針と例を指示に書いて迷う場面を減らす</li>
+<li>指示に従いやすいGPT-5かGPT-5-miniを使う</li>
+<li>外部ツールの読み書きには毎回人の承認を挟む</li>
+<li>Guardrailsで個人情報を伏せ、不正な入力を見つける</li>
+<li>実行の記録を採点して評価を回す</li>
+</ul>
+<p>ただしGPT-5とGPT-5-miniは2026年12月11日にAPIから外れる予定です。廃止予定のページは後継にGPT-5.6 Sol・GPT-5.6 Terraを挙げています。評価に使うEvalsも11月30日に終わるため、移し先ではPromptfooなど別の道具での評価が必要です。</p>
+<p>これらを組み合わせてもリスクは大きく減るだけで、無くなりはしないというのがガイドの立場です。ワークスペースエージェントでも、アプリへの書き込みは既定で毎回確認が出る設定で、送信先のドメインを限るような制約もかけられます。<strong>メール送信やデータの削除のような取り返しのつかない操作は、どの道具でも承認を外さないのが基本です。</strong></p>
+<h2 id="s7">Dify・n8n・Copilot Studioとの使い分け</h2>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>道具</th>
+<th>向いている使い方</th>
+<th>料金の決まり方</th>
+<th>動く場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="道具">Agents SDK</td>
+<td data-label="向いている使い方">決まった手順を自社のアプリで動かす</td>
+<td data-label="料金の決まり方">APIの代金とサーバー代</td>
+<td data-label="動く場所">自社の環境</td>
+</tr>
+<tr>
+<td data-label="道具">ワークスペースエージェント</td>
+<td data-label="向いている使い方">社内の定型業務をChatGPTやSlackで共有する</td>
+<td data-label="料金の決まり方">ChatGPTの契約とクレジット</td>
+<td data-label="動く場所">OpenAIのクラウド</td>
+</tr>
+<tr>
+<td data-label="道具">Dify</td>
+<td data-label="向いている使い方">社内チャットボットやRAGを画面で組む</td>
+<td data-label="料金の決まり方">ワークスペースごとの月額とモデル代。セルフホストは無料版あり</td>
+<td data-label="動く場所">クラウドか自社のサーバー</td>
+</tr>
+<tr>
+<td data-label="道具">n8n</td>
+<td data-label="向いている使い方">業務システムどうしの自動化にAIを挟む</td>
+<td data-label="料金の決まり方">実行回数で決まる月額とモデル代。セルフホストは無料版あり</td>
+<td data-label="動く場所">クラウドか自社のサーバー</td>
+</tr>
+<tr>
+<td data-label="道具">Copilot Studio</td>
+<td data-label="向いている使い方">Microsoft 365とTeamsの中で使う</td>
+<td data-label="料金の決まり方">クレジットのパックか従量課金</td>
+<td data-label="動く場所">Microsoftのクラウド</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>OpenAIのモデルだけで組み、決まった手順を守らせたいならAgents SDK、ChatGPTのBusiness以上を契約していて、使う人が自分でエージェントを作るならワークスペースエージェントが近い候補です。</strong> 他社のモデルも使いたい、業務システムとの連携が多い、データを自社のサーバーに置きたい場合はDifyかn8nが候補です。Microsoft 365が中心の会社はCopilot Studioが第一の候補でしょう。料金の詳細は<a href="/media/dify-pricing/">Difyの料金</a>・<a href="/media/n8n-pricing/">n8nの料金</a>・<a href="/media/copilot-studio/">Copilot Studioの料金</a>にまとめています。</p>
+<p>移行と同時に社内のエージェントの作り方そのものを見直す場合は、nitoの<a href="/ai-agent/">AIエージェント構築支援</a>でも設計から運用まで相談を受けています。</p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li><strong>Agent Builderで作ったワークフローがある場合</strong>は、11月30日までにCodeからAgents SDKのコードを書き出し、移し先を決める</li>
+<li><strong>社外向けのチャットをChatKitで出している場合</strong>は、自社のサーバーにつなぐ形への切り替えを先に進める</li>
+<li><strong>これから社内にエージェントを入れる場合</strong>は、Agent Builderは選ばず、ワークスペースエージェント・Agents SDK・Dify・n8n・Copilot Studioから選ぶ</li>
+<li><strong>ワークスペースエージェントを使う場合</strong>は、作る・公開する・共有の接続を使う権限を誰に渡すかを先に決める</li>
+</ul>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">OpenAI Agent Builderはいつ終わりますか？</h3>
+<p>2026年11月30日に終了する予定です。OpenAIが2026年6月3日に告知しました。</p>
+<h3 id="s9-2">OpenAI Agent Builderは無料で使えますか？</h3>
+<p>Agent Builder自体の利用料はかかりません。ワークフローを動かすと、使ったモデルとツールの分のAPI料金がかかり、プレビューで実行した分も対象です。2026年10月28日からは、ChatGPTのProかBusinessを契約していればAPIの無料クレジットを充てられます。</p>
+<h3 id="s9-3">Agent BuilderはPlusで使えますか？</h3>
+<p>Plusの契約には含まれません。Agent BuilderはChatGPTではなく、APIを使うためのOpenAI Platformの機能で、使うにはAPIのアカウントに支払い方法を登録してクレジットを買います（PlusはAPIの無料クレジットの対象外です）。移し先のワークスペースエージェントもBusiness・Enterprise・Eduが対象です。</p>
+<h3 id="s9-4">Agent Builderで作ったものはどうなりますか？</h3>
+<p>終了後はAgent Builderの画面で開けなくなる予定です。11月30日までにCodeからAgents SDKのコードを書き出せば、自社のアプリで動かすか、ChatGPTのワークスペースエージェントに作り直す材料にできます。</p>
+<h3 id="s9-5">終了後もChatKitは使えますか？</h3>
+<p>ChatKitは終了の対象に入っていません。ただしAgent Builderのワークフローにつなぐ形は移行期間だけのもので、続けるには自社のサーバーにつなぐ形に切り替えます。</p>
+<h2 id="s10">出典</h2>
+<p>2026年11月6日に取得した公式ページです。</p>
+<ul>
+<li>OpenAI API Docs「<a href="https://developers.openai.com/api/docs/guides/agent-builder">Agent Builder</a>」「<a href="https://developers.openai.com/api/docs/guides/agent-builder/migrate-from-agent-builder">Migrate from Agent Builder</a>」「<a href="https://developers.openai.com/api/docs/guides/agent-builder-safety">Safety in building agents</a>」</li>
+<li>OpenAI API Docs「<a href="https://developers.openai.com/api/docs/deprecations">Deprecations</a>」「<a href="https://developers.openai.com/api/docs/changelog">Changelog</a>」</li>
+<li>OpenAI API Docs「<a href="https://developers.openai.com/api/docs/guides/chatkit">ChatKit</a>」「<a href="https://developers.openai.com/api/docs/guides/agents">Agents</a>」「<a href="https://developers.openai.com/api/docs/guides/your-data">Data controls in the OpenAI platform</a>」</li>
+<li>OpenAI「<a href="https://openai.com/index/introducing-agentkit/">Introducing AgentKit</a>」（2025年10月6日、2026年6月3日追記）</li>
+<li>OpenAI「<a href="https://openai.com/ja-JP/index/introducing-workspace-agents-in-chatgpt/">ChatGPT にワークスペースエージェントが登場</a>」（2026年4月22日）</li>
+<li>OpenAI Help Center「<a href="https://help.openai.com/en/articles/20001143-chatgpt-workspace-agents-for-enterprise-and-business">ChatGPT Workspace Agents for Enterprise and Business</a>」</li>
+<li>ChatGPT「<a href="https://chatgpt.com/ja-JP/pricing">料金</a>」</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">OpenAI Agent Builderとは</a><a href="#s2">Agent Builderでできること</a><a href="#s3">OpenAI Agent Builderの使い方と書き出し</a><a href="#s4">OpenAI Agent Builderの料金</a><a href="#s5">移行先の選び方</a><a href="#s6">会社で使うときに決めること</a><a href="#s7">Dify・n8n・Copilot Studioとの使い分け</a><a href="#s8">まとめ</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/claude-code-skills/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Code Skills"><defs><linearGradient id="ecg-9954945f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-9954945f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Code Skills</text><line x1="189.6" y1="365.9" x2="1010.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.07</div>
+                <div class="rel-card__ttl">【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方</div>
+            </a>
+            <a href="/media/mcp-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MCPとは"><defs><linearGradient id="ecg-ae627a98" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ae627a98)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">MCPとは</text><line x1="455.6" y1="365.9" x2="744.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること</div>
+            </a>
+            <a href="/media/n8n-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="n8nとは"><defs><linearGradient id="ecg-34e7ea92" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-34e7ea92)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">n8nとは</text><line x1="455.6" y1="365.9" x2="744.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.05</div>
+                <div class="rel-card__ttl">【2026年11月】n8nとは？できること・使い方・AIエージェントとMCPで作れるもの</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'openai-agent-builder',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>

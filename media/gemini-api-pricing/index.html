@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Gemini APIの料金は？無料枠と単価・月約7,100円の計算例｜株式会社nito</title>
+    <meta name="description" content="Gemini APIの料金を2026年11月3日の公式ページで確認。無料枠と有料枠のデータの違い、モデル別の単価と12月からの値上げ、Agent Platformとの払い方の違い、社内の問い合わせ対応の月額と上限の設定まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/gemini-api-pricing/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Gemini APIの料金は？無料枠と単価・月約7,100円の計算例">
+    <meta property="og:description" content="Gemini APIの料金を2026年11月3日の公式ページで確認。無料枠と有料枠のデータの違い、モデル別の単価と12月からの値上げ、Agent Platformとの払い方の違い、社内の問い合わせ対応の月額と上限の設定まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/gemini-api-pricing/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/gemini-api-pricing.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/gemini-api-pricing.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Gemini APIの料金は？無料枠と単価・月約7,100円の計算例", "description": "Gemini APIの料金を2026年11月3日の公式ページで確認。無料枠と有料枠のデータの違い、モデル別の単価と12月からの値上げ、Agent Platformとの払い方の違い、社内の問い合わせ対応の月額と上限の設定まで。", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/gemini-api-pricing/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/gemini-api-pricing.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Gemini APIの料金は？無料枠と単価・月約7,100円の計算例"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Gemini APIは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。3.8 Flash・3.5 Flash-Liteなどに無料枠があり、請求先アカウントを紐づけなければ請求は発生しません。4 Argonと3.1 Pro Previewは無料枠の対象外で、無料枠に送った内容は製品の改善に使われます。"}}, {"@type": "Question", "name": "Gemini APIの無料枠の内容は学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "使われます。追加利用規約は無料のサービスに送った内容と回答を製品や機械学習の改善に使い、人が読むこともあるとしています。有料枠では改善に使われません。"}}, {"@type": "Question", "name": "Google AI ProはAPIにも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "APIの料金はGoogle AI Proの月額とは別です。APIの有料枠はAI Studioでプロジェクトに請求先アカウントを紐づけ、前払いのクレジットなどで払います。"}}, {"@type": "Question", "name": "Gemini APIの料金は日本円で払えますか？", "acceptedAnswer": {"@type": "Answer", "text": "払えます。料金表は米ドル建てですが、請求はGoogle Cloudの請求先アカウントで行われ、Google Cloudの通貨のページでは日本の請求先アカウントは日本円で請求されます。米ドルの料金は月の初めに決まる換算レートで円に直され、通貨はアカウントを作ったあとは変えられません。税のページによると日本の利用者には10%の消費税がかかり、契約の相手はGoogle Cloud Japan G.K.です。"}}, {"@type": "Question", "name": "Gemini APIの料金は今後上がりますか？", "acceptedAnswer": {"@type": "Answer", "text": "4 Argonは2026年12月1日から、3.8 Flashと3.6 Flashは2027年1月1日から単価が2倍になると料金ページにあります。2.5 Proと2.5 Flashは12月1日から別のモデルに自動で切り替わり、その単価で請求されます。"}}, {"@type": "Question", "name": "Gemini APIは失敗したリクエストも課金されますか？", "acceptedAnswer": {"@type": "Answer", "text": "400番台・500番台のエラーで失敗したリクエストは課金されません。ただしレート制限の回数には数えられます。Agent Platformも200を返したリクエストだけが課金の対象ですが、Gemini 4は11月13日から、32,000トークンを超える出力がタイムアウトで失敗した場合も、取り出せた分のトークンが課金の対象です。"}}, {"@type": "Question", "name": "Gemini APIの上限に達するとどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "利用の段階の月の上限に届くと、翌月1日まで紐づく全プロジェクトが止まります。前払いの残高が0ドルになった場合も全APIキーが止まり、HTTP 402のエラーになります。"}}, {"@type": "Question", "name": "Gemini APIとVertex AIは同じ料金ですか？", "acceptedAnswer": {"@type": "Answer", "text": "3.8 Flashのグローバルの単価は同じです。Agent Platform（旧Vertex AI）で東京などのリージョンを指定すると約1.1倍になり、今の値下げはクレジットで還元される形です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Gemini API…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.03</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Gemini APIの料金は？無料枠と単価・月約7,100円の計算例</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/gemini-api-pricing.jpg" alt="【2026年11月】Gemini APIの料金は？無料枠と単価・月約7,100円の計算例" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Gemini APIの主力のGemini 3.8 Flashは、100万トークンあたり入力0.75ドル・出力3.75ドルです。ただしこの単価は2026年12月31日までで、2027年1月1日からは2倍になると料金ページに書かれています。</p>
+<p>社内の仕組みにGeminiを組み込むよう言われ、無料でどこまで試せるか、月にいくらかかるか、会社としてどう払うかを調べている情シス・DX担当の方に向けて、2026年11月3日に取得した公式ページの値で料金の決まり方と計算例をまとめました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>料金は<strong>モデル・入力と出力の量・処理の型・ツール</strong>で決まる。無料枠でも試せるが、送った内容はGoogleの製品の改善に使われる</li>
+<li>1日500回の社内問い合わせなら、3.8 Flashで<strong>月約7,100円</strong>の試算。2027年1月からは約1万4,200円になる。4 Argonは12月1日から約3万7,900円</li>
+<li>会社で払うなら<strong>Developer APIの前払いか、Google Cloudの請求にまとまるAgent Platformか</strong>を先に決める。前者は利用の段階ごとに月の上限がある</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Gemini を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Gemini APIの料金を決める4つ</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>無料枠と有料枠の違い</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>無料枠で使えるモデル</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>入力した内容の扱い</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>有料枠に移ると変わること</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>Gemini APIのモデル別の料金</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>12月と1月の値上げ</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>Batch・Flex・Priority</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>検索のグラウンディングと画像</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>Gemini APIとVertex AIの違い</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>どちらで払うかの決め方</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>社内問い合わせの月額の計算例</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>請求と上限の設定</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>前払いと後払い</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>月の上限と利用の段階</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>使った量の確かめ方</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>ほかのAPIと比べる観点</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Gemini APIの料金を決める4つ</h2>
+<p>料金ページ（英語のみ）を開くと、モデルごとにStandard・Batch・Flex・Priorityのタブが並び、表の行も入力・出力・キャッシュ・検索に分かれています。見積もりで押さえる軸は使うモデル・入力と出力のトークンの量・処理の型・検索などのツールの4つです。</p>
+<p><strong>Gemini APIに月額の定額は無く、使ったトークンの分だけ払う従量課金です。</strong> 出力の単価には回答の本文だけでなくモデルが答える前に考える分（思考トークン）も含まれます。そのため推論の深いモデルほど、同じ長さの回答でも出力のトークンが増えます。</p>
+<figure class="post-figure"><img src="/media/images/gemini-api-pricing/gapi_01_overview.png" alt="Gemini APIの料金を決める4つの要素。使うモデルはテキストの出力単価が100万トークンあたり0.40〜20ドルまで開く。入力と出力の量は出力に考える途中の分も入る。処理の型はBatchとFlexが標準の半額。検索などのツールは月5,000件を超えると別料金" loading="lazy"></figure>
+<p>GeminiアプリやGoogle AI Proの月額とは別の請求です。個人のプランの料金は<a href="/media/gemini-pricing/">Geminiの料金プラン</a>で扱っていて、APIの有料枠はAI Studioでプロジェクトに請求先アカウントを紐づけてから使います。</p>
+<h2 id="s2">無料枠と有料枠の違い</h2>
+<p>AI StudioでAPIキーを作ると、新しいアカウントは無料枠から始まります。請求先アカウントを紐づけるまでは有料にならず、上限を超えたリクエストはエラーで返るだけで請求は発生しません。</p>
+<h3 id="s2-1">無料枠で使えるモデル</h3>
+<p>料金ページで無料枠が「Free of charge」になっているのは、3.8 Flash・3.6 Flash・3.5 Flash-Lite・3.1 Flash-Lite・2.5 Flash-Liteなどです。<strong>最上位の4 Argonと3.1 Pro Previewは無料枠の対象外</strong>で、画像生成のNano Banana系も有料枠だけです。</p>
+<p>無料枠の回数は1分あたりのリクエスト数（RPM）・1分あたりの入力トークン数（TPM）・1日のリクエスト数（RPD）で決まります。レート制限のページによると上限はAPIキーごとではなくプロジェクトごとで、RPDは太平洋時間の0時（日本時間の17時、夏時間の間は16時）に戻ります。具体的な数はモデルとプロジェクトで違うため、AI Studioのレート制限の画面で自社のプロジェクトの値を見るのが確実です。</p>
+<h3 id="s2-2">入力した内容の扱い</h3>
+<p><strong>無料枠に送った内容はGoogleの製品や機械学習の改善に使われ、人が読むこともあります。</strong> Gemini APIの追加利用規約は無料のサービスについてこう定め、機密の情報や個人の情報を送らないよう求めています。社内の規程や顧客の問い合わせを流す検証は、最初から有料枠で組むほうが安全です。</p>
+<p>有料枠ならプロンプトと回答は製品の改善に使われません。禁止された使い方を見つけるために一定の期間は記録が残ります。規約では欧州経済領域・スイス・英国の利用者には無料のサービスでも有料と同じデータの扱いが適用され、AI Studioの画面も、請求が有効なプロジェクトを持つアカウントなら有料の扱いです。</p>
+<h3 id="s2-3">有料枠に移ると変わること</h3>
+<p>有料枠では上限が上がり、4 Argonや3.1 Proのような上位のモデル、コンテキストキャッシュ、半額のBatchが使えるようになります。2026年3月23日からは前払いと後払いの2つの払い方が導入され、新しい利用者は前払いが既定です。払い方の違いは「請求と上限の設定」の節で扱います。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Gemini を導入する方へ</p>
+<p class="mcta__ttl">導入したあと毎日の業務で使われる形まで決まっていますか</p>
+<p class="mcta__txt">ライセンスを配っただけでは、毎日の業務のどこで使うかが決まりません。nito は業務の棚卸しから、指示しなくても動く AI エージェントの構築まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">Gemini APIのモデル別の料金</h2>
+<p><strong>同じ量を処理しても、モデルを1段上げると出力の単価は数倍になります。</strong> 下の表はStandardの有料枠の値で、単位は100万トークンあたりの米ドルです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>入力</th>
+<th>出力</th>
+<th>無料枠</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">Gemini 4 Argon</td>
+<td data-label="入力">2.00（12月1日から4.00）</td>
+<td data-label="出力">10.00（12月1日から20.00）</td>
+<td data-label="無料枠">なし</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.8 Flash</td>
+<td data-label="入力">0.75（2027年1月1日から1.50）</td>
+<td data-label="出力">3.75（2027年1月1日から7.50）</td>
+<td data-label="無料枠">あり</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.6 Flash</td>
+<td data-label="入力">0.75（2027年1月1日から1.50）</td>
+<td data-label="出力">3.75（2027年1月1日から7.50）</td>
+<td data-label="無料枠">あり</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.5 Flash-Lite</td>
+<td data-label="入力">0.30</td>
+<td data-label="出力">2.50</td>
+<td data-label="無料枠">あり</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.1 Flash-Lite</td>
+<td data-label="入力">0.25（音声は0.50）</td>
+<td data-label="出力">1.50</td>
+<td data-label="無料枠">あり</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.1 Pro Preview</td>
+<td data-label="入力">2.00（20万トークン超は4.00）</td>
+<td data-label="出力">12.00（20万トークン超は18.00）</td>
+<td data-label="無料枠">なし</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 2.5 Flash-Lite</td>
+<td data-label="入力">0.10（音声は0.30）</td>
+<td data-label="出力">0.40</td>
+<td data-label="無料枠">あり</td>
+</tr>
+</tbody>
+</table></div>
+<p>3.1 Pro Previewは、1回のプロンプトが20万トークンを超えると入力も出力も高い単価に変わります。長い資料を毎回そのまま渡す使い方では、必要な部分だけを検索して渡す作り（RAG）にするかどうかで単価の段が変わります。</p>
+<h3 id="s3-1">12月と1月の値上げ</h3>
+<p>4 Argonは2026年12月1日から、3.8 Flashと3.6 Flashは2027年1月1日から、入力・出力・キャッシュの単価がそれぞれ2倍になります。3.5 Flash-Liteや3.1 Flash-Liteには、11月3日の時点で改定日の記載はありません。</p>
+<p><strong>今の単価で年間の予算を組むと、年明けから実際の請求は倍になる計算です。</strong> また2.5 Proは12月1日から3.8 Flashに、2.5 Flashは3.5 Flash-Liteに自動で切り替わり、切り替わった先の単価で請求されます。2.5 Proの出力10ドルが3.8 Flashの3.75ドルに変わるため、12月の時点では旧モデルのまま動かしている仕組みは安くなる一方で、回答の中身が変わります。</p>
+<h3 id="s3-2">Batch・Flex・Priority</h3>
+<p>処理の型を変えると、同じモデルでも単価が変わります。料金ページの値で比べると、BatchとFlexはStandardの半額で、3.8 Flashなら入力0.375ドル・出力1.875ドルです。Batchは急がない大量の処理を後でまとめて返す型（最大24時間）、Flexは返事まで数分（目安は1〜15分）かかり、空きがあるときに処理する代わりに安い型で、Priorityとともにプレビューの機能です。</p>
+<p>Priorityは混み合う時間でも優先して処理する型で、単価はStandardの1.8倍です（3.8 Flashなら入力1.35ドル・出力6.75ドル）。夜間の要約や問い合わせの仕分けはBatch、社員が画面で待つ回答はStandardと分けると、待たせずに費用を下げられます。</p>
+<h3 id="s3-3">検索のグラウンディングと画像</h3>
+<p>回答の根拠にGoogle検索を使う機能（グラウンディング）は、トークンとは別に数えます。Gemini 3以降のモデルは全モデルを合わせて月5,000件まで無料で、超えると1,000件あたり14ドルです。Developer APIでは1プロジェクトで1日1,500件が既定の上限です。</p>
+<p>キャッシュに乗った入力の単価は3.8 Flashで0.075ドルと通常の10分の1になります。毎回同じ指示文や規程集を前に付ける使い方ほど効きますが、明示的に保存する場合は100万トークンを1時間置くごとに保存料がかかり、3.8 Flashは0.50ドル、3.5 Flash-Liteは1.00ドル、3.1 Pro Previewは4.50ドルです。4 Argonは自動のキャッシュだけで、明示的な保存はできません。画像の生成は出力の画像1枚ごとの目安が示されていて、Nano Banana 2は1K（1024×1024）で0.067ドルです。PDFは画像と同じ単価で数えます。</p>
+<h2 id="s4">Gemini APIとVertex AIの違い</h2>
+<p>同じGeminiはGoogle Cloudの<a href="/media/gemini-enterprise/">Agent Platform</a>（旧Vertex AI）からも呼べます。Developer APIの料金ページにも、Agent Platformの料金はここと異なる場合があると注記されています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>Gemini Developer API</th>
+<th>Agent Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">始め方</td>
+<td data-label="Gemini Developer API">AI StudioでAPIキーを作る</td>
+<td data-label="Agent Platform">Google Cloudのプロジェクトで有効にする</td>
+</tr>
+<tr>
+<td data-label="項目">払い方</td>
+<td data-label="Gemini Developer API">前払いのクレジットが既定</td>
+<td data-label="Agent Platform">Google Cloudの通常の請求</td>
+</tr>
+<tr>
+<td data-label="項目">3.8 Flashの単価</td>
+<td data-label="Gemini Developer API">入力0.75・出力3.75ドル</td>
+<td data-label="Agent Platform">グローバルは同じ・リージョン指定は0.825・4.125ドル</td>
+</tr>
+<tr>
+<td data-label="項目">今の値下げの扱い</td>
+<td data-label="Gemini Developer API">表の値で請求</td>
+<td data-label="Agent Platform">50%をクレジットで還元</td>
+</tr>
+<tr>
+<td data-label="項目">検索の1日の上限</td>
+<td data-label="Gemini Developer API">1プロジェクト1,500件</td>
+<td data-label="Agent Platform">既定で100万件</td>
+</tr>
+<tr>
+<td data-label="項目">処理する場所</td>
+<td data-label="Gemini Developer API">指定できない</td>
+<td data-label="Agent Platform">東京などのリージョンを選べる</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Agent Platformで東京などのリージョンを指定すると、一般提供のGemini 3以降のモデルは単価が1.1倍です。</strong> 料金ページによると、グローバル以外の料金は2026年7月1日から適用され、3.1 Pro Previewにはグローバルの料金だけが載っています。グローバルを選ぶと処理するリージョンは選べず、ロケーションのページも、エンドポイントだけではデータの所在地を保証しないと書いています。</p>
+<figure class="post-figure"><img src="/media/images/gemini-api-pricing/gapi_05_agent_pricing.png" alt="Agent Platformの料金ページのGemini 3.8 Flashの行。2026年12月31日までの入力はグローバルが100万トークンあたり0.75ドル、非グローバルが0.825ドル" loading="lazy"><figcaption>Agent Platformの料金ページ（ほかのモデルの行は省いて表示）。Gemini 3.8 Flashの100万トークンあたりの米ドルで、リージョンを指定すると単価が上がる（2026年11月3日）</figcaption></figure>
+<h3 id="s4-1">どちらで払うかの決め方</h3>
+<p><strong>すでに会社でGoogle Cloudを使っているなら、請求がまとまるAgent Platformが扱いやすくなります。</strong> Developer APIの前払いのクレジットはGemini APIにしか使えず、Agent Platformはほかのサービスと同じ月の請求に入る仕組みです。課金のページでは請求書払い（オフライン）の請求先アカウントは前払いもプロジェクトの上限も使えないとされています。</p>
+<p>データの扱いも比べておきたい点です。Agent Platformのデータ保持ゼロのページによると、事前の許可なく顧客のデータで学習やチューニングをしない一方、不正使用を見つけるための記録や検索のグラウンディングの記録は残ります。保持をゼロにするには機能ごとに手続きが要ります。</p>
+<figure class="post-figure"><img src="/media/images/gemini-api-pricing/gapi_02_route.png" alt="Gemini Developer APIとAgent Platformの払い方の目安。Developer APIはAI Studioでキーを作ってすぐ試せ、前払いのクレジットから引かれ、月の上限は利用の段階で決まる。Agent PlatformはGoogle Cloudの請求にまとまり、東京などリージョンを選べるが、リージョン指定は単価が1.1倍" loading="lazy"></figure>
+<p>小さく試すならDeveloper APIの無料枠で動きを見て、社内のデータを流す段階で有料枠に移ります。本番で部署の請求やリージョンの要件があるなら、その時点でAgent Platformに載せ替えるかを決めるのが現実的です。社内の仕組みをどこまで自社で組むか決めきれない場合は、nitoの<a href="/ai-agent/">AIエージェント構築支援</a>で要件の整理から相談できます。</p>
+<h2 id="s5">社内問い合わせの月額の計算例</h2>
+<p>社員が規程や手続きをチャットで聞く仕組みを、Developer APIのStandardで動かしたときの、モデルの代金の試算です。前提は<a href="/media/azure-openai-pricing/">Azure OpenAIの料金</a>の計算例とそろえたので、同じ規模で比べられます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>前提</th>
+<th>値</th>
+<th>置き換える所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="前提">1日の質問の回数</td>
+<td data-label="値">500回（100人が5回ずつ）</td>
+<td data-label="置き換える所">使う人数×1人の回数</td>
+</tr>
+<tr>
+<td data-label="前提">月の営業日</td>
+<td data-label="値">20日</td>
+<td data-label="置き換える所">自社の営業日</td>
+</tr>
+<tr>
+<td data-label="前提">1回の入力</td>
+<td data-label="値">3,000トークン（指示文1,000＋履歴と質問2,000）</td>
+<td data-label="置き換える所">指示文と渡す資料の長さ</td>
+</tr>
+<tr>
+<td data-label="前提">1回の出力</td>
+<td data-label="値">600トークン</td>
+<td data-label="置き換える所">答えの長さと考える分</td>
+</tr>
+</tbody>
+</table></div>
+<p>この前提で月の入力は3,000万トークン、出力は600万トークンです。円は三菱UFJ銀行の2026年11月2日の公表仲値（1ドル157.80円）で換算した目安で、日本の請求に加わる10%の消費税は含めていません。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>ドル</th>
+<th>円の目安</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">Gemini 3.1 Flash-Lite</td>
+<td data-label="ドル">16.50</td>
+<td data-label="円の目安">約2,600円</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.5 Flash-Lite</td>
+<td data-label="ドル">24.00</td>
+<td data-label="円の目安">約3,800円</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.8 Flash</td>
+<td data-label="ドル">45.00</td>
+<td data-label="円の目安">約7,100円</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.8 Flash（2027年1月から）</td>
+<td data-label="ドル">90.00</td>
+<td data-label="円の目安">約1万4,200円</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 4 Argon</td>
+<td data-label="ドル">120.00</td>
+<td data-label="円の目安">約1万8,900円</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 4 Argon（12月1日から）</td>
+<td data-label="ドル">240.00</td>
+<td data-label="円の目安">約3万7,900円</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.1 Pro Preview</td>
+<td data-label="ドル">132.00</td>
+<td data-label="円の目安">約2万800円</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/gemini-api-pricing/gapi_03_calc.png" alt="社内の問い合わせを1日500回、月20日、1回は入力3,000トークンと出力600トークンで動かしたときの月額。3.1 Flash-Liteは約2,600円、3.5 Flash-Liteは約3,800円、3.8 Flashは約7,100円で2027年1月からは約1万4,200円、4 Argonは約1万8,900円で12月1日から約3万7,900円、3.1 Pro Previewは約2万800円。標準の型で1ドル157.80円で換算した試算" loading="lazy"></figure>
+<p><strong>この規模なら、11月の単価ではどのモデルもモデルの代金は月2万円前後までに収まります。</strong> ただし4 Argonは12月1日から約3万7,900円、3.8 Flashは2027年1月から約1万4,200円です。式は「月の入力トークン÷100万×入力の単価＋月の出力トークン÷100万×出力の単価」で、表計算に入れておけば人数や回数が変わってもすぐ出し直せます。同じ前提でAzure OpenAIのGPT-6.1 Terraは約9,500円だったので、3.8 Flashはそれより安く、2027年からはそれを上回ります。ただし4 Argonや3.1 Proは考える分が出力に乗るため、600トークンの想定より請求が膨らみやすい点に注意が必要です。</p>
+<p>全社に広げた場合も数えます。1,000人が1日3回、検索した社内文書を毎回8,000トークン渡して800トークンで答える形だと、月の入力は4億8,000万トークン、出力は4,800万トークンです。3.8 Flashで540ドル（約8万5,200円）、3.5 Flash-Liteで264ドル（約4万1,700円）になります（試算）。</p>
+<p><strong>この規模になると、利用の段階がTier 1のままでは月の上限250ドルに届いて止まります。</strong> 全問で検索のグラウンディングを使う場合も、1日3,000件はDeveloper APIの1日1,500件の上限を超えます。検索の代金は小さいほうの例でも、1問で検索が1回なら、月1万件のうち無料の5,000件を超えた分が70ドル（約1万1,000円）です。1問で検索が複数回走ると、その回数だけ数えます。</p>
+<h2 id="s6">請求と上限の設定</h2>
+<p>課金のページの決まりは会社の経理の流れに直接かかわるため、払い方・月の上限・使った量の確かめ方の順に整理しました。</p>
+<h3 id="s6-1">前払いと後払い</h3>
+<p>前払いはAI Studioの請求の画面でクレジットを買い、使った分がほぼすぐに差し引かれる払い方です。購入は5ドルからで、課金のページは前払いできる上限を5,000ドルとし、最低額と一度に置ける上限は地域と段階に応じて購入の画面に出ます。買ったクレジットは12か月で失効し、後払いに切り替える場合を除いて返金されません。</p>
+<p><strong>残高が0ドルになると、その請求先アカウントにつながる全プロジェクトのAPIキーが同時に止まります。</strong> 止まったリクエストはHTTP 402のエラーになり、反映に約10分の遅れがあるため、Batchやエージェントのように長く動く処理は残高を超えて使ってしまう点に注意が必要です。残高が一定を下回ったら自動で買い足す設定と、その自動の買い足しの月の上限も決められます。後払いは月末か、利用の段階の上限に達したときに請求されます。</p>
+<p>Google Cloudを初めて使うと付く300ドルのクレジットは、2026年3月2日より後に開いたアカウントではGemini APIとAI Studioの支払いに使えません。</p>
+<h3 id="s6-2">月の上限と利用の段階</h3>
+<p>Developer APIの有料枠には利用の段階（Tier）があり、段階ごとに請求先アカウント全体の月の上限が決まっています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>段階</th>
+<th>上がる条件</th>
+<th>月の上限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="段階">Tier 1</td>
+<td data-label="上がる条件">請求先アカウントを紐づける</td>
+<td data-label="月の上限">250ドル</td>
+</tr>
+<tr>
+<td data-label="段階">Tier 2</td>
+<td data-label="上がる条件">100ドル払い初回から3日</td>
+<td data-label="月の上限">2,000ドル</td>
+</tr>
+<tr>
+<td data-label="段階">Tier 3</td>
+<td data-label="上がる条件">1,000ドル払い初回から30日</td>
+<td data-label="月の上限">2万〜10万ドル以上</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/gemini-api-pricing/gapi_04_tier.png" alt="Gemini APIの利用の段階と月の上限。Tier 1は請求先を紐づけた直後で月250ドル、Tier 2は100ドル払って3日たつと上がり月2,000ドル、Tier 3は1,000ドル払って30日たつと上がり月2万ドルから。上限に届くと翌月1日まで全プロジェクトが止まる" loading="lazy"></figure>
+<p><strong>上限に届くと、紐づく全プロジェクトが翌月1日まで止まります。</strong> 上限は申請で引き上げられるので、本番に出す前に段階と見込みの月額を照らし合わせておくのが安全です。レート制限のページによると10分あたりの使用額にも上限があり（Tier 1は10ドル、Tier 2と3は200ドル）、超えると429のエラーが返ります。</p>
+<p>部署ごとに予算を分けたいときは、プロジェクトごとの月の上限をAI StudioのSpendの画面で決める仕組みです。設定できるのはプロジェクトの編集者・オーナー・管理者で、試験的な機能のため約10分の遅れのあいだは上限を超えることがあります。APIキーが漏れて他人に使われた分もそのプロジェクトの請求に入るので、キーはプロジェクトの上限とあわせて管理します。</p>
+<h3 id="s6-3">使った量の確かめ方</h3>
+<p>使った量の確認先はAI StudioのDashboardの中のUsageです。費用はGoogle Cloudコンソールの請求のレポートにも出て、サービスをGemini API、まとめ方をSKUにすると、Gemini APIの費用を料金の項目ごとに分けて見られる形です。</p>
+<p><strong>AI Studioの請求とSpendの画面の費用のグラフは、反映に最大24時間かかります。</strong> 400番台や500番台のエラーで失敗したリクエストは課金されませんが、レート制限の回数には数えられます。</p>
+<h2 id="s7">ほかのAPIと比べる観点</h2>
+<p>OpenAIのAPI、ClaudeのAPI、Azure OpenAIと並べるときは、単価の表だけで決めずに次の4つをそろえて比べるのがおすすめです。</p>
+<ul>
+<li>同じ前提の月額：回数・入力・出力のトークン数を固定して、各社の単価で数え直す</li>
+<li>無料で試すときのデータ：Gemini APIの無料枠は送った内容が製品の改善に使われる</li>
+<li>請求の形：Gemini APIは前払いが既定、Azure OpenAIはAzureの請求、Agent PlatformはGoogle Cloudの請求</li>
+<li>処理の場所：リージョンを指定すると単価が上がる点はAgent PlatformもAzure OpenAIも同じ</li>
+</ul>
+<p><strong>単価の差より、どこの請求にまとめられるかで決まる場面のほうが多くなります。</strong> 社内でGoogle Workspaceを使い、Google Cloudの請求先アカウントがすでにあるならGemini、Microsoft 365とAzureが中心ならAzure OpenAIのほうが、権限と請求の手続きが少なく済みます。</p>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">Gemini APIは無料で使えますか？</h3>
+<p>使えます。3.8 Flash・3.5 Flash-Liteなどに無料枠があり、請求先アカウントを紐づけなければ請求は発生しません。4 Argonと3.1 Pro Previewは無料枠の対象外で、無料枠に送った内容は製品の改善に使われます。</p>
+<h3 id="s8-2">Gemini APIの無料枠の内容は学習に使われますか？</h3>
+<p>使われます。追加利用規約は無料のサービスに送った内容と回答を製品や機械学習の改善に使い、人が読むこともあるとしています。有料枠では改善に使われません。</p>
+<h3 id="s8-3">Google AI ProはAPIにも使えますか？</h3>
+<p>APIの料金はGoogle AI Proの月額とは別です。APIの有料枠はAI Studioでプロジェクトに請求先アカウントを紐づけ、前払いのクレジットなどで払います。</p>
+<h3 id="s8-4">Gemini APIの料金は日本円で払えますか？</h3>
+<p>払えます。料金表は米ドル建てですが、請求はGoogle Cloudの請求先アカウントで行われ、Google Cloudの通貨のページでは日本の請求先アカウントは日本円で請求されます。米ドルの料金は月の初めに決まる換算レートで円に直され、通貨はアカウントを作ったあとは変えられません。税のページによると日本の利用者には10%の消費税がかかり、契約の相手はGoogle Cloud Japan G.K.です。</p>
+<h3 id="s8-5">Gemini APIの料金は今後上がりますか？</h3>
+<p>4 Argonは2026年12月1日から、3.8 Flashと3.6 Flashは2027年1月1日から単価が2倍になると料金ページにあります。2.5 Proと2.5 Flashは12月1日から別のモデルに自動で切り替わり、その単価で請求されます。</p>
+<h3 id="s8-6">Gemini APIは失敗したリクエストも課金されますか？</h3>
+<p>400番台・500番台のエラーで失敗したリクエストは課金されません。ただしレート制限の回数には数えられます。Agent Platformも200を返したリクエストだけが課金の対象ですが、Gemini 4は11月13日から、32,000トークンを超える出力がタイムアウトで失敗した場合も、取り出せた分のトークンが課金の対象です。</p>
+<h3 id="s8-7">Gemini APIの上限に達するとどうなりますか？</h3>
+<p>利用の段階の月の上限に届くと、翌月1日まで紐づく全プロジェクトが止まります。前払いの残高が0ドルになった場合も全APIキーが止まり、HTTP 402のエラーになります。</p>
+<h3 id="s8-8">Gemini APIとVertex AIは同じ料金ですか？</h3>
+<p>3.8 Flashのグローバルの単価は同じです。Agent Platform（旧Vertex AI）で東京などのリージョンを指定すると約1.1倍になり、今の値下げはクレジットで還元される形です。</p>
+<h2 id="s9">出典</h2>
+<ul>
+<li>Google AI Studio「<a href="https://aistudio.google.com/docs/pricing">Gemini Developer API pricing</a>」（2026年11月3日取得）</li>
+<li>Google AI Studio「<a href="https://aistudio.google.com/docs/billing">Billing</a>」（同）</li>
+<li>Google AI Studio「<a href="https://aistudio.google.com/docs/rate-limits">Rate limits</a>」（同）</li>
+<li>Google AI Studio「<a href="https://aistudio.google.com/docs/terms">Gemini API Additional Terms of Service</a>」（同）</li>
+<li>Google Cloud「<a href="https://cloud.google.com/vertex-ai/generative-ai/pricing?hl=ja">Agent Platform の料金</a>」（同）</li>
+<li>Google Cloud「<a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention?hl=ja">Gemini Enterprise Agent Platform とデータの保持ゼロ</a>」（同）</li>
+<li>Google Cloud「<a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations?hl=ja">デプロイとエンドポイントのロケーション</a>」（同）</li>
+<li>Google Cloud「<a href="https://docs.cloud.google.com/free/docs/free-cloud-features?hl=ja">Google Cloud の無料プログラム</a>」（同）</li>
+<li>三菱UFJリサーチ&amp;コンサルティング「<a href="https://www.murc-kawasesouba.jp/fx/past/index.php?id=261102">2026年11月2日の為替相場</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Gemini を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Gemini APIの料金を決める4つ</a><a href="#s2">無料枠と有料枠の違い</a><a href="#s3">Gemini APIのモデル別の料金</a><a href="#s4">Gemini APIとVertex AIの違い</a><a href="#s5">社内問い合わせの月額の計算例</a><a href="#s6">請求と上限の設定</a><a href="#s7">ほかのAPIと比べる観点</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/claude-code-skills/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude Code Skills"><defs><linearGradient id="ecg-9954945f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-9954945f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude Code Skills</text><line x1="189.6" y1="365.9" x2="1010.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.07</div>
+                <div class="rel-card__ttl">【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方</div>
+            </a>
+            <a href="/media/mcp-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MCPとは"><defs><linearGradient id="ecg-ae627a98" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ae627a98)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">MCPとは</text><line x1="455.6" y1="365.9" x2="744.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること</div>
+            </a>
+            <a href="/media/openai-agent-builder/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OpenAI Agent Builder"><defs><linearGradient id="ecg-b76c31de" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b76c31de)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">OpenAI Agent Builder</text><line x1="144.0" y1="365.9" x2="1056.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】OpenAI Agent Builderとは？11月30日の終了と移行先・料金</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'gemini-api-pricing',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
