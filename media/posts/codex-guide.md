@@ -48,6 +48,8 @@ Businessは2人以上で年額課金のときの金額で、月額課金なら1�
 
 ChatGPT WorkとCodexは利用量を共有します。料金ページの説明はコーディングの作業を前提にしているので、Workで文書や資料を作る場合の消費は作業ごとに変わります。
 
+Claude Codeと比べて会社でどちらを入れるかは、[CodexとClaude Codeの比較](/media/codex-vs-claude-code/)にまとめました。
+
 ## ターミナルから使う手順
 
 CLIの導入は1行です。macOSとLinuxでは次のコマンドを実行します。

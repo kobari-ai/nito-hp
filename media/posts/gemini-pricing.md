@@ -14,6 +14,8 @@ Geminiは無料で使えます。有料プランに上げると何が変わる�
 
 会社で契約するGoogle WorkspaceのGeminiの料金と個人版との違いは[Google WorkspaceのGemini](/media/google-workspace-gemini/)で扱っています。
 
+社内のシステムにGeminiを組み込むときのAPIの料金は[Gemini APIの料金](/media/gemini-api-pricing/)で扱っています。
+
 :::takeaways
 - 日本の月額は**Plus 725円・Pro 2,900円・Ultra 14,500円から**。無料プランは0円
 - 有料で増えるのは**使用量の上限・一度に読ませられる長さ・一部の機能**の3つ。**無料で選べるモデルは2026年10月9日からFlash-Liteだけ**
