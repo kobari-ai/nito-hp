@@ -99,6 +99,8 @@ AIでコードを書くツールは大きく3つの型に分かれます。3つ�
 
 OpenAIのCodexとの料金・管理機能・データの扱いの違いは、[CodexとClaude Codeの比較](/media/codex-vs-claude-code/)で並べています。
 
+エディタ型のCursorの料金プランと、会社で入れるときの比べ方は[Cursorの料金と使い方](/media/cursor-guide/)にまとめています。
+
 ## Claude Codeでできること
 
 公式ドキュメントとクイックスタートに例として挙げられているものを整理すると、次の8つになります。
