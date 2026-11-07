@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること｜株式会社nito</title>
+    <meta name="description" content="MCPとは何かを公式資料で解説。MCPサーバーの仕組みとできること、Claude・ChatGPT・Copilot Studio・Geminiの対応、freeeやSlackなど国内SaaSの公式MCPサーバー、管理者が決めることまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/mcp-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること">
+    <meta property="og:description" content="MCPとは何かを公式資料で解説。MCPサーバーの仕組みとできること、Claude・ChatGPT・Copilot Studio・Geminiの対応、freeeやSlackなど国内SaaSの公式MCPサーバー、管理者が決めることまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/mcp-guide/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/mcp-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/mcp-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること", "description": "MCPとは何かを公式資料で解説。MCPサーバーの仕組みとできること、Claude・ChatGPT・Copilot Studio・Geminiの対応、freeeやSlackなど国内SaaSの公式MCPサーバー、管理者が決めることまで。", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/mcp-guide/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/mcp-guide.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "MCPとは簡単に言うと何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "AIアプリと外部のツールやデータをつなぐ共通規格です。Anthropicが2024年11月に公開し、2025年12月からはLinux Foundation傘下の財団で管理されています。"}}, {"@type": "Question", "name": "MCPは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "規格はオープンソースで無料ですが、使うAIツールやサービスの契約は別です。ChatGPTでMCPの全機能を使えるのはBusinessとEnterprise・Eduで、Claudeは無料プランでもカスタムコネクタを1つ使えます。"}}, {"@type": "Question", "name": "ChatGPTでMCPサーバーを使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "BusinessとEnterprise・Eduのウェブ版で追加でき、Businessで作成と公開ができるのは管理者とオーナーです。Proは読み取りと取得の権限で接続できます。"}}, {"@type": "Question", "name": "MCPとA2Aの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "MCPはAIとツールやデータをつなぐ規格、A2AはAIエージェント同士がやり取りする規格です。役割が違い、組み合わせて使えます。"}}, {"@type": "Question", "name": "freeeやマネーフォワードはMCPに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "どちらも公式のMCPサーバーがあります。freeeは12のAPIに対応し、マネーフォワード クラウド会計は2026年3月26日からリモートMCPサーバーを全プランで提供しています。"}}, {"@type": "Question", "name": "MCPを社内で使うときの一番のリスクは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "読み込んだ内容に紛れた指示で意図しない操作をするプロンプトインジェクションです。信頼できるサーバーだけをつなぎ、書き換えの前に人の確認を挟みます。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】MCPとは？仕組みと…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.06</span>
+        </div>
+        <h1 class="post-title">【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/mcp-guide.jpg" alt="【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>MCP（Model Context Protocol）は、Claudeの開発元のAnthropicが2024年11月25日に公開した、AIアプリと外部のツールやデータをつなぐ共通規格です。いまはChatGPTやMicrosoft Copilot、Geminiも対応しています。</p>
+<p>社内でAIを広げる担当者には、社員が会計や顧客のデータを勝手につないでよいのかが気になるところです。この記事ではMCPの仕組みに加えて、対応しているAIツールと国内SaaSの公式MCPサーバー、管理者が決めることを公式の資料で整理しました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>MCPはAIと外部のツールをつなぐ<strong>共通の差し込み口</strong>。AIツール側とサービス側がそれぞれ1回対応すれば組み合わせが広がる</li>
+<li>ClaudeもChatGPTも、<strong>会社のプランで接続を足せるのは管理者やオーナー</strong>。誰に許すかを先に決める</li>
+<li>freee・マネーフォワード・Slackは<strong>提供元がホストするリモート型</strong>、kintone・Backlogは<strong>手元で動かすローカル型</strong>が公式。鍵の持ち方が変わる</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>MCPとは何か</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>MCPの仕組みとMCPサーバーとは</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>MCPでできること</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>APIやRAGとの違い</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>MCPに対応しているAIツール</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>国内でよく使うSaaSの公式MCPサーバー</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>会社で使うときに管理者が決めること</a></li>
+                    <li class="toc-h3"><a href="#s7-1"><span class="toc__n">7-1</span>接続を足せる人</a></li>
+                    <li class="toc-h3"><a href="#s7-2"><span class="toc__n">7-2</span>つなぐサーバー</a></li>
+                    <li class="toc-h3"><a href="#s7-3"><span class="toc__n">7-3</span>読むだけか書き換えるか</a></li>
+                    <li class="toc-h3"><a href="#s7-4"><span class="toc__n">7-4</span>実行前の確認と記録</a></li>
+                    <li class="toc-h3"><a href="#s7-5"><span class="toc__n">7-5</span>ID基盤でまとめて管理する</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>MCPのリスクと対策</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>MCPサーバーの作り方の概要</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">MCPとは何か</h2>
+<p>AIのチャットに社内の資料を貼り付けて質問した経験がある人は少なくないはずです。MCPはその貼り付けの代わりに<strong>AIが自分で外部のシステムを読み書きできるようにするための接続の決まり</strong>です。公式サイトはMCPをAIアプリと外部のシステムをつなぐオープンソースの標準と説明し、USB-Cの差し込み口にたとえています。</p>
+<p>MCPが出る前はSlack・Googleドライブ・社内のデータベースと、接続先ごとに専用の連携を作る必要がありました。AIアプリが3つ、つなぎたいサービスが5つなら15通りの連携が要ります。MCPの形にそろえれば、AIアプリ側の対応3つとサービス側の対応5つの計8つで足ります。</p>
+<p>Anthropicは2025年12月9日、MCPをLinux Foundationの下にあるAgentic AI Foundationに寄贈しました。この財団はAnthropic・Block・OpenAIが共同で設立し、Google・Microsoft・AWS・Cloudflare・Bloombergが支援しています。同じ発表の時点で公開されているMCPサーバーは1万を超えていました。<strong>1社の製品の機能ではなく業界の共通規格になったため、特定のAIツールに縛られずに選べる</strong>のが会社にとっての意味です。</p>
+<h2 id="s2">MCPの仕組みとMCPサーバーとは</h2>
+<p>MCPには3つの役割が出てきます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>役割</th>
+<th>何をするか</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="役割">ホスト</td>
+<td data-label="何をするか">利用者が操作するAIアプリ</td>
+<td data-label="例">Claude、ChatGPT、Copilot Studio、Cursor</td>
+</tr>
+<tr>
+<td data-label="役割">クライアント</td>
+<td data-label="何をするか">ホストの中でサーバーとの接続を受け持つ部品</td>
+<td data-label="例">ホストに組み込まれている</td>
+</tr>
+<tr>
+<td data-label="役割">サーバー</td>
+<td data-label="何をするか">外部のサービスの窓口。AIに使わせる操作を決める</td>
+<td data-label="例">freeeのMCPサーバー、SlackのMCPサーバー</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/mcp-guide/mcp_01_structure.png" alt="MCPの3つの役割を上から順に並べた図。利用者が操作するAIアプリがホストで、その中のクライアントがMCPサーバーにつなぎ、MCPサーバーが会計や社内チャットなどのサービスを操作する" loading="lazy"></figure>
+
+<p><strong>MCPサーバーとは、サービスの側に置く「AI用の窓口」です。</strong> 何を読ませ、何を書き換えさせるかはサーバーが決めます。サーバーがAIに渡せるものは3種類あり、操作を実行するツール、読み取るためのデータであるリソース、決まった頼み方のひな形であるプロンプトです。</p>
+<p>流れは次のとおりです。利用者が「先月の〇〇社への請求書を探して」と頼むと、AIが使うツールを選び、クライアントが会計サービスのMCPサーバーに依頼します。サーバーがサービスのAPIを呼んで結果を返し、AIがそれを読んで答える流れです。通信はJSON-RPCという形式で、手元のパソコンでサーバーを動かすローカル型と、インターネット上のサーバーにつなぐリモート型があります。</p>
+<p>気をつけたいのは<strong>MCPそのものはAIエージェントの作り方を決めるものではない</strong>ことです。どのツールをいつ呼ぶかを判断するのはAIの側で、MCPはつなぎ方をそろえるだけです。AIエージェントの考え方は<a href="/media/ai-agent-guide/">AIエージェントとは</a>にまとめています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">MCPでできること</h2>
+<p>MCPサーバーのツールでできることを、Claudeのヘルプはデータを読む・データを作成や変更や削除する・利用者の代わりに操作する、の3つで説明しています。会話の中にダッシュボードなどの操作画面を出すコネクタもあります。業務に置き換えた使い方は次のとおりです。</p>
+<ul>
+<li>会計ソフトの仕訳を探し、試算表をまとめてレポートにする</li>
+<li>課題管理ツールの未対応の課題を拾い、担当ごとに一覧にする</li>
+<li>社内チャットの過去のやり取りから、決まったことを探して要約する</li>
+<li>社内の文書を探して、提案書の下書きの材料をそろえる</li>
+</ul>
+<p>公式サイトはこのほかに、Figmaのデザインからウェブアプリを作る、社内の複数のデータベースにチャットで質問する、といった例を挙げています。<strong>大事なのは読むだけか書き換えまでかで、書き換えを許すと誤操作の影響が実際の業務データに及びます。</strong> この区別は後の管理の節でも使うので、覚えておいてください。</p>
+<h2 id="s4">APIやRAGとの違い</h2>
+<p>APIとの違いは誰が読む前提で作られているかです。APIは開発者が仕様書を読み、コードから呼び出します。MCPサーバーはツールごとに名前・説明・入力の形をAIに渡すので、AIはその一覧から選んで呼び出せるわけです。実際には多くのMCPサーバーが中でサービスのAPIを呼んでおり、APIの上にかぶせる層と考えると分かりやすくなります。</p>
+<p>RAGは社内の文書を検索して答えの材料にする仕組みです。MCPは情報を取るだけでなく、登録や更新のような操作まで含みます。社内文書の検索だけが目的ならRAGで足りることも多く、作り方は<a href="/media/rag-build/">RAG構築とは</a>で比べています。</p>
+<h2 id="s5">MCPに対応しているAIツール</h2>
+<p>会社でよく検討されるAIツールについて、各社の公式ドキュメントで確かめた対応状況です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>AIツール</th>
+<th>MCPサーバーの追加</th>
+<th>会社のプランで足せる人</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="AIツール">Claude（claude.ai・Desktop）</td>
+<td data-label="MCPサーバーの追加">カスタムコネクタでリモートのサーバーを追加</td>
+<td data-label="会社のプランで足せる人">Teamはオーナー、Enterpriseはオーナーと管理権限のあるロール</td>
+</tr>
+<tr>
+<td data-label="AIツール">ChatGPT</td>
+<td data-label="MCPサーバーの追加">カスタムMCPサーバーを追加（ウェブ版のみ）</td>
+<td data-label="会社のプランで足せる人">Businessは管理者とオーナー、Enterpriseは権限を与えたメンバーも作成可</td>
+</tr>
+<tr>
+<td data-label="AIツール">Copilot Studio</td>
+<td data-label="MCPサーバーの追加">エージェントのツールとして追加</td>
+<td data-label="会社のプランで足せる人">エージェントを作る人</td>
+</tr>
+<tr>
+<td data-label="AIツール">Gemini Enterprise</td>
+<td data-label="MCPサーバーの追加">コネクタの一覧からカスタムMCPサーバーを接続</td>
+<td data-label="会社のプランで足せる人">管理者</td>
+</tr>
+<tr>
+<td data-label="AIツール">Gemini CLI</td>
+<td data-label="MCPサーバーの追加">設定ファイルにサーバーを書く</td>
+<td data-label="会社のプランで足せる人">使う人それぞれ</td>
+</tr>
+</tbody>
+</table></div>
+<p>Claudeのカスタムコネクタは、無料プランを含む全プランで使えます（無料は1つまで）。TeamとEnterpriseでは管理者側が組織に追加し、社員は一覧から自分のアカウントで接続します。<strong>接続がAPIキーのような共有の認証情報だと、使う人全員がそのキーの権限を持つ</strong>ので、渡すキーは社員に見せてよい範囲に絞る必要があります。また、ClaudeはAnthropicのクラウドからサーバーにつなぐため、社内ネットワークの中のサーバーにはそのままでは届きません。</p>
+<p>ChatGPTでMCPの全機能を使えるのはBusinessとEnterprise・Eduで、Proは読み取りと取得だけです。管理者が承認した時点のツールの一覧が固定され、サーバー側でツールが増えても管理者が更新して公開するまで反映されません。反対にCopilot Studioは、サーバー側の変更がそのままエージェントに反映されると説明しています。<strong>同じMCPサーバーでも、変更を止めて確かめる作りと自動で追う作りがある</strong>ため、書き込みのあるサーバーをつなぐときは差を知っておく必要があります。</p>
+<p>ChatGPTのアプリ全体の管理画面は<a href="/media/chatgpt-connectors-admin/">ChatGPTコネクタの管理者設定</a>、Claude Codeでの接続の手順は<a href="/media/claude-mcp-guide/">Claude MCPとは</a>で扱っています。</p>
+<h2 id="s6">国内でよく使うSaaSの公式MCPサーバー</h2>
+<p>日本の会社でよく使うSaaSのうち、提供元が公式にMCPサーバーを出しているものをまとめました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>サービス</th>
+<th>提供の形</th>
+<th>主にできること</th>
+<th>認証</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="サービス">freee</td>
+<td data-label="提供の形">リモート（推奨）とローカル</td>
+<td data-label="主にできること">会計・人事労務・請求書など12のAPIとサイン</td>
+<td data-label="認証">OAuth</td>
+</tr>
+<tr>
+<td data-label="サービス">マネーフォワード クラウド会計</td>
+<td data-label="提供の形">リモート（2026年3月26日から全プラン）</td>
+<td data-label="主にできること">仕訳入力・帳簿検索・レポート作成</td>
+<td data-label="認証">OAuthかAPIキー</td>
+</tr>
+<tr>
+<td data-label="サービス">kintone</td>
+<td data-label="提供の形">ローカル</td>
+<td data-label="主にできること">アプリとレコードの取得・追加・更新・削除</td>
+<td data-label="認証">パスワードかAPIトークン</td>
+</tr>
+<tr>
+<td data-label="サービス">Backlog</td>
+<td data-label="提供の形">ローカル（自前でHTTP化も可）</td>
+<td data-label="主にできること">課題・Wiki・プルリクエストの操作</td>
+<td data-label="認証">APIキー（自前のOAuthも可）</td>
+</tr>
+<tr>
+<td data-label="サービス">Slack</td>
+<td data-label="提供の形">リモート</td>
+<td data-label="主にできること">メッセージの検索・送信、キャンバス、リスト</td>
+<td data-label="認証">OAuth（登録済みのアプリ）</td>
+</tr>
+<tr>
+<td data-label="サービス">Notion</td>
+<td data-label="提供の形">リモート</td>
+<td data-label="主にできること">ページの検索・作成・編集、データベース</td>
+<td data-label="認証">OAuth</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>リモート型は提供元がサーバーを動かし、社員は自分のアカウントでログインして使います。</strong> freeeは公式のURLを示したうえで、公式以外のURLを入れないよう注意を書いています。マネーフォワードはそれまでプラチナランク以上の士業事務所向けのβ版だったリモートMCPサーバーを全プランに広げました。MCPから操作できる範囲は、マネーフォワードではアプリポータルの権限で決まる形です。会計の側の権限にかかわらず、アプリポータルで許可したユーザーはMCPから会計の操作ができると注意しています。</p>
+<p><strong>ローカル型は社員のパソコンでサーバーを動かし、パスワードやAPIキーを設定ファイルに書きます。</strong> kintoneの公式サーバーはレコードの削除やアプリ設定の本番反映のツールも持っており、設定したユーザーかAPIトークンの権限で動きます。社員それぞれが自分の鍵を置く形になるため、誰のパソコンにどの鍵があるかを会社がつかみにくいのが難点です。</p>
+<p>SlackのMCPサーバーは、Slackに登録されたアプリを通す決まりで、ワークスペースの管理者が承認し、操作は監査ログで追える作りです。使っているSaaSが対応しているかは、使っているAIツールのコネクタの一覧と、SaaSの公式ヘルプやGitHubで確かめられます。</p>
+<figure class="post-figure"><img src="/media/images/mcp-guide/mcp_04_freee.jpg" alt="freee公式のMCPサーバーの説明。推奨はfreeeが提供するリモートMCPサーバーに接続する方法で、freee公式以外のURLを入力しないよう注意がある" loading="lazy"><figcaption>freee公式MCPサーバーの接続方法（GitHub、2026年11月6日）</figcaption></figure>
+
+<h2 id="s7">会社で使うときに管理者が決めること</h2>
+<p>MCPは便利な半面、決めごとのないまま広がれば社員が個人で会社のデータをつなぐ状態になりかねません。上位のAIツールとSaaSの公式の説明から、管理者が先に決めることを5つに分けました。</p>
+<figure class="post-figure"><img src="/media/images/mcp-guide/mcp_02_admin.png" alt="会社でMCPを使うときに管理者が決める5つを縦に並べた図。接続を足せる人、つなぐサーバー、読むだけか書き換えるか、実行前の確認、記録の残し方" loading="lazy"></figure>
+
+<h3 id="s7-1">接続を足せる人</h3>
+<p>ClaudeのTeamとEnterprise、ChatGPTのBusinessは、最初から管理者側しか組織のコネクタを足せない作りです。ChatGPTのEnterpriseは作成の権限をロールで配れ、公開は管理者とオーナーに残るので、<strong>開発部門に作成とテストを許し、公開は情報システムの担当が見る</strong>、といった分け方ができます。ClaudeのEnterpriseは、コネクタを管理する権限を含むカスタムロールに組織への追加を任せられる作りです。</p>
+<h3 id="s7-2">つなぐサーバー</h3>
+<p>使ってよいのは提供元の公式サーバーと、中身を確かめた社内のサーバーだけ、と決めます。Claudeのヘルプも、Anthropicが検証していないサービスにつながると明記し、信頼できるサーバーだけにつなぐよう求めています。</p>
+<h3 id="s7-3">読むだけか書き換えるか</h3>
+<p>最初は読み取りだけで始め、効果を確かめてから書き込みを許すのが安全です。ChatGPTのEnterpriseはアプリごとに許す操作を選べ、新しい操作は既定で無効になります。Backlogの公式サーバーのように、使うツールの組を絞れるサーバーもあります。</p>
+<h3 id="s7-4">実行前の確認と記録</h3>
+<p>書き換えの前に人が確かめる設定と、誰がいつ何をしたかの記録を用意します。Claudeでは調査の機能（Research）が承認なしでツールを呼ぶため、書き込みのツールは切っておくのが公式の案内です。ChatGPTのEnterpriseはCompliance APIで、アプリを使った会話も取得できます。</p>
+<h3 id="s7-5">ID基盤でまとめて管理する</h3>
+<p>2026年6月18日、会社のID基盤からMCPサーバーへの接続をまとめて管理するEnterprise-Managed Authorizationが安定版になりました。社員一人ひとりがサービスごとに許可していく形をやめ、<strong>管理者がID基盤で許可したサーバーに、社員が最初のログインでつながる</strong>仕組みです。ID基盤・AIツール・サーバーの3つが対応している必要があるものです。発表の時点でID基盤はOkta、AIツールはClaudeとVisual Studio Code、サーバーはAsana・Atlassian・Figmaなどでした。使っている組み合わせが対応しているかを確かめてから計画に入れます。</p>
+<p>社員が個人のAIアカウントで同じことを始めているなら、先に<a href="/media/shadow-ai/">シャドーAI対策</a>の進め方で現状をつかむのが近道です。</p>
+<h2 id="s8">MCPのリスクと対策</h2>
+<p>一番よく挙がるのはプロンプトインジェクションです。<strong>AIが読み込んだページや課題の本文に指示のような文が紛れていると、AIがそれに従って意図しない操作をすることがあります。</strong> 悪意のあるMCPサーバーが説明文に隠れた指示を入れる手口もあり、Claudeのヘルプも注意を促しています。</p>
+<p>次に、サーバーの中身が後から変わる問題です。一度承認したサーバーでも、提供者がツールの動きを変えれば挙動が変わります。ChatGPTは承認した時点のツールの一覧を固定し、Claudeのヘルプはツールの動きの変化を見張るよう書いています。</p>
+<p>MCPの公式サイトはセキュリティの手引きを公開しており、利用者の同意を飛ばして認可を奪う「混乱した代理（confused deputy）」などの攻撃と対策をまとめています。利用する会社の側でできる対策は、次のとおりです。</p>
+<ul>
+<li>公式の提供元か、中身を確かめたサーバーだけをつなぐ</li>
+<li>権限は読み取りから始め、要るものだけ広げる</li>
+<li>書き換えや送信の前に人の確認を挟む</li>
+<li>操作の記録を残し、定期的に見直す</li>
+</ul>
+<h2 id="s9">MCPサーバーの作り方の概要</h2>
+<p>自社のシステムをAIにつなぐなら、MCPサーバーを作ります。公式のSDKが主な言語で用意されており、受け付ける操作と入力を書いて公開する形です。</p>
+<p>最初にリモート型かローカル型かを決めます。ClaudeやChatGPTの会社向けの画面からつなぐなら、HTTPSのリモート型が前提です。2026年7月28日の仕様改定で接続はステートレスになり、古いHTTP+SSEの方式は2025年3月の版から非推奨で、新しく作るならStreamable HTTPを選びます。</p>
+<p><strong>機能を全部ツールにするとAIがどれを使うか選びにくくなる</strong>ので、業務の手順として決まっている処理は1つのツールにまとめます。業務の設計から相談したい場合は、<a href="/ai-agent/">AIエージェント構築支援</a>でお手伝いしています。</p>
+<h2 id="s10">まとめ</h2>
+<ul>
+<li><strong>まず試したい</strong>: 使っているSaaSに公式のリモート型MCPサーバーがあれば、管理者が組織に1つだけ追加し、読み取りだけで数人に使わせる</li>
+<li><strong>社員が個人で使い始めている</strong>: 接続を足せる人を管理者に絞り、つないでよいサーバーの一覧を先に出す</li>
+<li><strong>書き込みまで任せたい</strong>: 実行前の確認と記録を用意し、ChatGPTのように承認時のツールを固定できるかを確かめてから広げる</li>
+<li><strong>社内システムをつなぎたい</strong>: リモート型で作り、手順の決まった処理を少数のツールにまとめる</li>
+</ul>
+<h2 id="s11">よくある質問</h2>
+<h3 id="s11-1">MCPとは簡単に言うと何ですか？</h3>
+<p>AIアプリと外部のツールやデータをつなぐ共通規格です。Anthropicが2024年11月に公開し、2025年12月からはLinux Foundation傘下の財団で管理されています。</p>
+<h3 id="s11-2">MCPは無料で使えますか？</h3>
+<p>規格はオープンソースで無料ですが、使うAIツールやサービスの契約は別です。ChatGPTでMCPの全機能を使えるのはBusinessとEnterprise・Eduで、Claudeは無料プランでもカスタムコネクタを1つ使えます。</p>
+<h3 id="s11-3">ChatGPTでMCPサーバーを使えますか？</h3>
+<p>BusinessとEnterprise・Eduのウェブ版で追加でき、Businessで作成と公開ができるのは管理者とオーナーです。Proは読み取りと取得の権限で接続できます。</p>
+<h3 id="s11-4">MCPとA2Aの違いは何ですか？</h3>
+<p>MCPはAIとツールやデータをつなぐ規格、A2AはAIエージェント同士がやり取りする規格です。役割が違い、組み合わせて使えます。</p>
+<h3 id="s11-5">freeeやマネーフォワードはMCPに対応していますか？</h3>
+<p>どちらも公式のMCPサーバーがあります。freeeは12のAPIに対応し、マネーフォワード クラウド会計は2026年3月26日からリモートMCPサーバーを全プランで提供しています。</p>
+<h3 id="s11-6">MCPを社内で使うときの一番のリスクは何ですか？</h3>
+<p>読み込んだ内容に紛れた指示で意図しない操作をするプロンプトインジェクションです。信頼できるサーバーだけをつなぎ、書き換えの前に人の確認を挟みます。</p>
+<h2 id="s12">出典</h2>
+<p>本文の内容は次の公式ページで2026年11月6日に確かめています。</p>
+<ul>
+<li>Model Context Protocol「<a href="https://modelcontextprotocol.io/docs/getting-started/intro">What is the Model Context Protocol (MCP)?</a>」</li>
+<li>Model Context Protocol「<a href="https://modelcontextprotocol.io/specification/2026-07-28/changelog">Key Changes（2026-07-28）</a>」</li>
+<li>Model Context Protocol「<a href="https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices">Security Best Practices</a>」</li>
+<li>MCP Blog「<a href="https://blog.modelcontextprotocol.io/tags/oauth/">Enterprise-Managed Authorization</a>」</li>
+<li>Anthropic「<a href="https://www.anthropic.com/news/model-context-protocol">Introducing the Model Context Protocol</a>」</li>
+<li>Anthropic「<a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation">Donating the Model Context Protocol and establishing the Agentic AI Foundation</a>」</li>
+<li>Anthropicヘルプセンター「<a href="https://support.claude.com/ja/articles/11175166">リモートMCPを使用したカスタムコネクタの開始</a>」</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/12584461">ChatGPT でのカスタム MCP サーバーへの接続</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-extend-action-mcp">モデル コンテキスト プロトコルを使用してエージェントを拡張する</a>」</li>
+<li>Google Cloud「<a href="https://cloud.google.com/gemini-enterprise/connectors?hl=ja">Gemini Enterprise エディションのコネクタ</a>」</li>
+<li>Gemini CLI「<a href="https://geminicli.com/docs/tools/mcp-server/">MCP servers with Gemini CLI</a>」</li>
+<li>freee「<a href="https://github.com/freee/freee-mcp">freee-mcp</a>」</li>
+<li>マネーフォワード「<a href="https://corp.moneyforward.com/news/release/service/20260326-mf-press-1/">『マネーフォワード クラウド会計』、リモートMCPサーバーを全プランで提供開始</a>」</li>
+<li>サイボウズ「<a href="https://github.com/kintone/mcp-server">kintone MCP Server</a>」</li>
+<li>ヌーラボ「<a href="https://github.com/nulab/backlog-mcp-server">Backlog MCP Server</a>」</li>
+<li>Slack「<a href="https://docs.slack.dev/ai/mcp-server/">Slack MCP server overview</a>」</li>
+<li>Notion「<a href="https://developers.notion.com/docs/mcp">Notion MCP</a>」</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">MCPとは何か</a><a href="#s2">MCPの仕組みとMCPサーバーとは</a><a href="#s3">MCPでできること</a><a href="#s4">APIやRAGとの違い</a><a href="#s5">MCPに対応しているAIツール</a><a href="#s6">国内でよく使うSaaSの公式MCPサーバー</a><a href="#s7">会社で使うときに管理者が決めること</a><a href="#s8">MCPのリスクと対策</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/n8n-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="n8nとは"><defs><linearGradient id="ecg-34e7ea92" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-34e7ea92)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">n8nとは</text><line x1="455.6" y1="365.9" x2="744.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.05</div>
+                <div class="rel-card__ttl">【2026年11月】n8nとは？できること・使い方・AIエージェントとMCPで作れるもの</div>
+            </a>
+            <a href="/media/claude-api-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude APIの料金"><defs><linearGradient id="ecg-f29af68c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f29af68c)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Claude APIの料金</text><line x1="258.0" y1="365.9" x2="942.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.04</div>
+                <div class="rel-card__ttl">【2026年11月】Claude APIの料金はいくら？単価表と月約1万3,500円の計算例</div>
+            </a>
+            <a href="/media/copilot-studio-agent/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copilot Studioのエージェント作成"><defs><linearGradient id="ecg-e32c1cbb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e32c1cbb)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="125.2" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Copilot Studioの</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">エージェント作成</text><line x1="242.8" y1="416.8" x2="957.2" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.04</div>
+                <div class="rel-card__ttl">【2026年11月】Copilot Studioのエージェント作成手順｜Teams公開とビルダーの使い分け</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'mcp-guide',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
