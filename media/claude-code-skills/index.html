@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方｜株式会社nito</title>
+    <meta name="description" content="Claude Code Skillsとは何かを公式ドキュメントで解説。SKILL.mdの作り方と使い方に加え、個人・プロジェクト・プラグイン・管理設定の置き場所と、入れる前に確かめる点を表にしました。">
+    <link rel="canonical" href="https://nito-0210.com/media/claude-code-skills/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方">
+    <meta property="og:description" content="Claude Code Skillsとは何かを公式ドキュメントで解説。SKILL.mdの作り方と使い方に加え、個人・プロジェクト・プラグイン・管理設定の置き場所と、入れる前に確かめる点を表にしました。">
+    <meta property="og:url" content="https://nito-0210.com/media/claude-code-skills/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/claude-code-skills.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/claude-code-skills.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方", "description": "Claude Code Skillsとは何かを公式ドキュメントで解説。SKILL.mdの作り方と使い方に加え、個人・プロジェクト・プラグイン・管理設定の置き場所と、入れる前に確かめる点を表にしました。", "datePublished": "2026-11-07", "dateModified": "2026-11-07", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/claude-code-skills/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/claude-code-skills.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude Code Skillsは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code自体はProやMaxなどの有料プランかAPIの従量課金で使います。スキルの説明は使わなくても毎ターンの文脈に入ります。呼べば本文も読み込まれるため、その分だけプランの使用量が増えます（APIなら料金に出ます）。"}}, {"@type": "Question", "name": "Claude CodeのスキルとCLAUDE.mdの違いは？", "acceptedAnswer": {"@type": "Answer", "text": "毎回守らせる規約はCLAUDE.md、ときどき使う手順や参考資料はスキルに書くのが基本です。公式の目安はCLAUDE.mdが200行を超えてきたら手順の部分をスキルに移すことです。"}}, {"@type": "Question", "name": "Claude Codeの古いコマンドは使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。`.claude/commands/` のファイルはスキルと同じ `/名前` で動きます。補助ファイルも置きたいなら、スキルの形に移します。"}}, {"@type": "Question", "name": "Claude Codeのスキルはclaude.aiと共通？", "acceptedAnswer": {"@type": "Answer", "text": "同じ形式ですが、置き場所は別です。claude.aiで有効にしたスキルは、同じアカウントでサインインしたClaude Codeに同期されます。claude.aiやAPIにアップロードするときは、Claude Codeの独自項目を含めるとエラーで止まるため、共通に使うなら規格の6項目に絞ります。"}}, {"@type": "Question", "name": "Claude Codeのスキルは何個まで入れられますか？", "acceptedAnswer": {"@type": "Answer", "text": "数の上限は書かれていませんが、説明の一覧にはコンテキストの1%という枠があり、多いと説明が削られます。"}}, {"@type": "Question", "name": "Claude Codeのスキルを社内で配る注意点は？", "acceptedAnswer": {"@type": "Answer", "text": "クラウドのセッションはPCの個人スキルや、PCで入れたプラグインを読まないこと、`allowed-tools` は信頼していないフォルダでも効くこと、プラグインは自動更新で中身が変わり得ることの3つです。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Claude Cod…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.07</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/claude-code-skills.jpg" alt="【2026年11月】Claude Code Skillsとは？作り方・使い方とチームでの配り方" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Anthropicは2025年10月16日にAgent Skills（スキル）を発表し、12月18日にはオープンな規格として公開しました。Claude Codeでは <code>SKILL.md</code> を1つ置くだけで、チームの手順をClaudeに覚えさせられます。</p>
+<p>使い始めたチームで次に困るのは、作ったスキルをどこに置けば全員に届くのか、人が作ったスキルをそのまま入れてよいのかです。この記事は公式ドキュメントをもとに、仕組みと作り方・使い方を押さえたうえで、配り方と入れる前の確認を表にします。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>スキルは手順や資料を入れたフォルダで、ふだんは名前と説明だけが読み込まれ、本文は使うときに読まれる</li>
+<li>置き場所で届く範囲が変わる。チームならリポジトリにコミット、複数のリポジトリならプラグイン、全社なら管理設定</li>
+<li>人が作ったスキルはソフトウェアのインストールと同じ扱い。スクリプト・allowed-tools・外への通信を読んでから入れる</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で Claude を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Claude Code Skillsとは</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>CLAUDE.md・MCP・サブエージェント・フックとの違い</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>スキルが読み込まれる仕組み</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>SKILL.mdの作り方</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Claude Code Skillsの使い方</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>チームで配る置き場所と配り方</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>入れる前に確かめること</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>おすすめのスキルと一覧の探し方</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>うまく動かないときの直し方</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>出典</a></li>
+                </ol>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Claude Code Skillsとは</h2>
+<p><strong>Claude Code Skillsは、Claudeに特定の作業のやり方を教えるためのフォルダです。</strong> 中心は <code>SKILL.md</code> で、先頭の設定欄（フロントマター）に名前と説明を書き、その下に手順を書きます。必要ならスクリプトや参考資料のファイルも同じフォルダに入れられます。Claudeは会話が説明に合うと自分でスキルを読み込み、人が <code>/スキル名</code> と打って呼ぶこともできます。</p>
+<p>公式ドキュメントが挙げるスキルを作る目安は、「同じ指示、チェックリスト、または複数ステップの手順をチャットに何度も貼り付けている場合」です。毎回同じ説明をしている作業が、スキルにする候補です。</p>
+<p>以前からあったカスタムコマンド（<code>.claude/commands/</code> のMarkdown）は、いまはスキルに統合されています。<code>.claude/commands/deploy.md</code> と <code>.claude/skills/deploy/SKILL.md</code> はどちらも <code>/deploy</code> になり、古いコマンドファイルもそのまま動きます。</p>
+<p>同じフォルダを規格に対応する他のAIツールで読めるのは、形式がAgent Skillsというオープンな規格に沿っているからです。Claude Codeはこの規格に、呼び出す人の制御・サブエージェントでの実行・コマンド結果の差し込みといった機能を足しています。</p>
+<figure class="post-figure"><img src="/media/images/claude-code-skills/01_overview.png" alt="Claude Code Skillsの読み込みの3段階。起動時は名前と説明だけ、呼び出し時にSKILL.mdの本文、必要なときだけ参考資料とスクリプトの出力" loading="lazy"></figure>
+
+<p>Claude Codeには最初から入っているバンドルスキルもあり、<code>/code-review</code>・<code>/debug</code>・<code>/loop</code>・<code>/verify</code> などがあります。</p>
+<h2 id="s2">CLAUDE.md・MCP・サブエージェント・フックとの違い</h2>
+<p>Claudeを拡張する手段はスキルのほかにもあり、読み込まれ方と向く用途が違います。迷いやすい5つの比較は次の表のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>拡張</th>
+<th>読み込まれ方</th>
+<th>向いている用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="拡張">CLAUDE.md</td>
+<td data-label="読み込まれ方">毎回のセッションで全文</td>
+<td data-label="向いている用途">常に守る規約・ビルドコマンド</td>
+</tr>
+<tr>
+<td data-label="拡張">スキル</td>
+<td data-label="読み込まれ方">説明は毎回、本文は使うとき</td>
+<td data-label="向いている用途">手順・チェックリスト・参考資料</td>
+</tr>
+<tr>
+<td data-label="拡張">MCP</td>
+<td data-label="読み込まれ方">外部サービスにつなぐ</td>
+<td data-label="向いている用途">データベースやSlackなどの操作</td>
+</tr>
+<tr>
+<td data-label="拡張">サブエージェント</td>
+<td data-label="読み込まれ方">別の文脈で動き要約を返す</td>
+<td data-label="向いている用途">多くのファイルを読む調査・並列作業</td>
+</tr>
+<tr>
+<td data-label="拡張">フック</td>
+<td data-label="読み込まれ方">決まったイベントで必ず動く</td>
+<td data-label="向いている用途">編集後のlintや危ない操作の拒否</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>常に必要ならCLAUDE.md、ときどき必要ならスキルに書くと分けられます。</strong></p>
+<p>MCPとは競合しません。MCPが接続を受け持ち、スキルがそのスキーマや問い合わせの書き方を教える、という組み合わせを公式は例に挙げています。</p>
+<p>見落としやすいのはフックとの違いです。公式は「<code>.env</code> は決して編集しない」のような指示をCLAUDE.mdやスキルに書いても「要望であり、保証ではありません」としています。<strong>公式は必ず守らせたい決まりをフックに移し、判断しながら当てはめる手順をスキルに残すよう勧めています。</strong></p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で Claude を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">スキルが読み込まれる仕組み</h2>
+<p>スキルは3段階で読み込まれます。起動時に入るのは各スキルの名前と説明だけで、仕様では1つあたり約100トークンです。会話が説明に合うと <code>SKILL.md</code> の本文が読まれ、本文で指したファイルやスクリプトは必要なときだけ使われます。スクリプトで文脈に入るのは実行結果だけです。</p>
+<p>Claude Codeでは、説明（<code>description</code> と <code>when_to_use</code> の合計）が1つあたり1,536文字で切られます。スキルの一覧全体にもコンテキストの1%という枠があり、超えると呼び出しの少ないスキルから説明が削られます。<strong>説明の最初に主な用途を書いておくと、切られても判断に要る語が残ります。</strong></p>
+<p>一度呼んだスキルの本文はその後のターンにも残りますが、ファイルは読み直されません。作業の間ずっと効かせたい指示は、「編集のたびにテストを回す」のように作業全体にかかる書き方にします。会話が自動で圧縮されたときに戻るのは各スキルの先頭5,000トークンまでなので、重要な指示は <code>SKILL.md</code> の上に置きます。</p>
+<h2 id="s4">SKILL.mdの作り方</h2>
+<p><strong>作り方はフォルダを作って <code>SKILL.md</code> を1つ置くだけで、追加の登録は要りません。</strong> </p>
+<ol>
+<li>フォルダを作る。自分用なら <code>mkdir -p ~/.claude/skills/summarize-changes</code>、リポジトリの皆で使うなら <code>.claude/skills/</code> の下に作る</li>
+<li><code>SKILL.md</code> を書く。先頭の <code>---</code> で囲んだ欄に <code>description</code>、その下に手順を書く。公式の例は本文に <code>!`git diff HEAD`</code> を入れ、実行時の差分を差し込んでいる</li>
+<li>試す。説明に合う質問で自動で呼ばれるかを見て、<code>/summarize-changes</code> でも呼んでみる</li>
+</ol>
+<p>追加や編集は再起動なしで反映されます。セッションの開始後に新しく作ったトップレベルのフォルダだけは、<code>/reload-skills</code> で読み込ませます。</p>
+<p>フロントマターの項目はすべて省略でき、公式が推奨するのは <code>description</code> だけです。主なものを並べます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">name</td>
+<td data-label="役割">コマンド名。省略するとフォルダ名</td>
+</tr>
+<tr>
+<td data-label="項目">description</td>
+<td data-label="役割">何をするか・いつ使うか。自動で呼ぶ判断に使う</td>
+</tr>
+<tr>
+<td data-label="項目">disable-model-invocation</td>
+<td data-label="役割">true で人が呼んだときだけ動く</td>
+</tr>
+<tr>
+<td data-label="項目">user-invocable</td>
+<td data-label="役割">false で/メニューから消えClaudeだけが使う</td>
+</tr>
+<tr>
+<td data-label="項目">context と agent</td>
+<td data-label="役割">fork でサブエージェントとして実行</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>description</code> は一番効く欄です。Anthropicのベストプラクティスは、悪い例に「Helps with documents」を挙げ、良い例には何をするかと「Use when〜」の使う場面を両方書いています。</p>
+<p>長くなったら分けるのが基本です。公式は <code>SKILL.md</code> を500行未満に保ち、詳しい資料は <code>reference.md</code> などに移して本文からリンクするよう勧めています。リンクは本文から1段だけにします。たどらせすぎると、Claudeが先頭だけ読んで済ませることがあるためです。名前は規格では小文字・数字・ハイフンで64文字まで、説明は1,024文字までです。</p>
+<h2 id="s5">Claude Code Skillsの使い方</h2>
+<p>使い方は自動と手動の2通りです。<strong>既定では人もClaudeもどのスキルも呼べ、2つの項目でこれを絞ります。</strong> <code>disable-model-invocation: true</code> なら人が呼んだときだけ動き、<code>user-invocable: false</code> ならClaudeだけが使えます。</p>
+<p>デプロイやSlackへの投稿のように副作用がある手順は、<code>disable-model-invocation: true</code> にしておくよう公式は勧めています。</p>
+<p><code>allowed-tools</code> は誤解されやすい項目です。呼んだターンの間だけ確認なしで使えるツールを足す設定で、使えるツールを絞るものではありません。絞りたいときは <code>disallowed-tools</code> か権限設定の拒否ルールを使います。</p>
+<p><code>!`コマンド`</code> は、本文がClaudeに渡る前にシェルで実行され、その出力に置き換わります。PRの差分を取り込んでから要約させる、といった使い方です。</p>
+<h2 id="s6">チームで配る置き場所と配り方</h2>
+<p><strong>どこに置くかで、スキルが誰に届くかが決まります。</strong> </p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>置き場所</th>
+<th>書く場所</th>
+<th>届く範囲</th>
+<th>向いている場面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="置き場所">個人</td>
+<td data-label="書く場所">~/.claude/skills/</td>
+<td data-label="届く範囲">自分のPCの全プロジェクト</td>
+<td data-label="向いている場面">自分の好みや試作</td>
+</tr>
+<tr>
+<td data-label="置き場所">プロジェクト</td>
+<td data-label="書く場所">リポジトリの .claude/skills/</td>
+<td data-label="届く範囲">コミット後はそのリポジトリで作業する全員</td>
+<td data-label="向いている場面">チームの手順</td>
+</tr>
+<tr>
+<td data-label="置き場所">プラグイン</td>
+<td data-label="書く場所">プラグインの skills/</td>
+<td data-label="届く範囲">プラグインを入れた人</td>
+<td data-label="向いている場面">複数のリポジトリで同じセット</td>
+</tr>
+<tr>
+<td data-label="置き場所">管理設定</td>
+<td data-label="書く場所">管理設定ディレクトリの .claude/skills/</td>
+<td data-label="届く範囲">組織がデプロイしたPCの全ユーザー</td>
+<td data-label="向いている場面">全社で必ず使わせたいもの</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/claude-code-skills/02_where.png" alt="スキルの置き場所と届く範囲。個人は自分のPC、プロジェクトはリポジトリの全員、プラグインは入れた人、管理設定は組織のPC全部" loading="lazy"></figure>
+
+<p>同じ名前が重なったときは、管理設定が個人より、個人がプロジェクトより優先されます。プラグインのスキルは <code>/プラグイン名:スキル名</code> と名前空間が付くため、ぶつかりません。</p>
+<p>迷ったら、まずプロジェクトに置いてコミットします。公式は「2つ目のリポジトリで同じセットアップが必要になった」ときにプラグインにまとめるよう書いています。プラグインはスキル・フック・MCPサーバーなどを1つにまとめた単位で、社内のGitHubリポジトリに <code>.claude-plugin/marketplace.json</code> を置けば社内用のマーケットプレイスになります。</p>
+<p>全社で配るなら管理設定です。経路はサーバー管理設定・MDM・<code>managed-settings.json</code> の3つで、<code>extraKnownMarketplaces</code> と <code>enabledPlugins</code> を組み合わせると、社内のプラグインを全員のPCに入れられます。</p>
+<p><strong>クラウドには落とし穴が一つあります。クラウドのセッションとクラウドのスケジュールタスクは、PCの <code>~/.claude/skills/</code> を読みません。</strong> 個人の場所にしかないスキルをクラウドのタスクから呼ぶと、スキルが見つからないと返されるだけです。使わせたいなら、claude.aiのアカウントでそのスキルを有効にするか、リポジトリの <code>.claude/skills/</code> にコミットします。プラグインも同じで、PCで入れたものやリポジトリの <code>.claude/settings.json</code> で有効にしたものはクラウドのセッションに入りません。クラウドまで届くのは claude.aiの管理画面から配るサーバー管理設定のプラグインです。</p>
+<p>claude.ai側から配る道もあります。TeamとEnterpriseではオーナーが組織にスキルをプロビジョニングでき、Claude Code v2.1.273以降は同じアカウントのターミナルにも同期されます。同期されないのはAPIキーやAmazon Bedrockで動かしているClaude Codeです。</p>
+<p>会社で入れるときは誰が作り誰が確かめて配るかを先に決めておくと後で揉めません。nitoの<a href="/ai-agent/">AIエージェント構築支援</a>でも、この置き場所と確認の流れから一緒に組んでいます。</p>
+<h2 id="s7">入れる前に確かめること</h2>
+<p><strong>人が作ったスキルはソフトウェアをインストールするのと同じ重さで扱います。</strong> Anthropicの文書は、使うのは自分で作ったものかAnthropicのものに限るよう勧め、悪意のあるスキルがデータを外に送る危険を挙げています。承認の前に見る項目は次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>見る所</th>
+<th>何を探すか</th>
+<th>公式の重さ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="見る所">スクリプト</td>
+<td data-label="何を探すか">.py・.sh・.js などの実行ファイル</td>
+<td data-label="公式の重さ">高</td>
+</tr>
+<tr>
+<td data-label="見る所">指示の書き方</td>
+<td data-label="何を探すか">安全の決まりを無視させる・操作を隠させる文</td>
+<td data-label="公式の重さ">高</td>
+</tr>
+<tr>
+<td data-label="見る所">MCPの参照</td>
+<td data-label="何を探すか">ServerName:tool_name の形のツール指定</td>
+<td data-label="公式の重さ">高</td>
+</tr>
+<tr>
+<td data-label="見る所">外への通信</td>
+<td data-label="何を探すか">URL・curl・fetch・requests</td>
+<td data-label="公式の重さ">高</td>
+</tr>
+<tr>
+<td data-label="見る所">認証情報</td>
+<td data-label="何を探すか">APIキーやパスワードの直書き</td>
+<td data-label="公式の重さ">高</td>
+</tr>
+<tr>
+<td data-label="見る所">ファイルの範囲</td>
+<td data-label="何を探すか">スキルのフォルダ外や ../ を指すパス</td>
+<td data-label="公式の重さ">中</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/claude-code-skills/03_check.png" alt="スキルを入れる前に確かめる順番。全ファイルを読む、スクリプトを隔離して動かす、外への通信を探す、allowed-toolsを確かめる" loading="lazy"></figure>
+
+<p>Claude Code特有の注意が <code>allowed-tools</code> です。この欄は一度も信頼していないフォルダでもプロジェクトのスキルに適用される、というのが公式の記述です。<strong>他人のリポジトリでClaude Codeを動かす前に、そこにコミットされているスキルの <code>allowed-tools</code> を先に読んでおくと安全です。</strong> </p>
+<p><code>!`コマンド`</code> は、スキルを呼んだ時点で確認の画面を出さずに実行されます。自動モード以外では権限ルールで許可されていないコマンドは止まります。ただしスキルの <code>allowed-tools</code> で許可されていれば実行されるため、2つを合わせて読みます。全社で止めたいときは管理設定で <code>disableSkillShellExecution</code> をtrueにします（バンドルスキルと管理設定のスキルは対象外）。</p>
+<p>プラグインで入れるときは公式のセキュリティのページにある手順で中身を確かめます。</p>
+<ol>
+<li><code>claude plugin marketplace list</code> で、マーケットプレイスがどこから追加されたかを見る</li>
+<li><code>/plugin</code> の詳細で「Will install」の欄を読み、入るスキル・フック・MCPサーバーを確かめる</li>
+<li>ソースの <code>hooks/hooks.json</code>・<code>.mcp.json</code>・<code>bin/</code> を開き、何が実行されるかを読む</li>
+</ol>
+<p>一度確かめても安心はできません。自動更新がオンだと、確かめたファイルが後から変わることがあります。社内で配るなら、管理設定の <code>strictKnownMarketplaces</code> で社内とAnthropic公式だけに絞る形を公式は例に挙げています。</p>
+<h2 id="s8">おすすめのスキルと一覧の探し方</h2>
+<p><strong>最初は自作するより、Anthropicが管理しているものから試すのが安全です。</strong> 探す先を確かめやすい順に並べます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>探す先</th>
+<th>中身</th>
+<th>入れ方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="探す先">バンドルスキル</td>
+<td data-label="中身">/code-review・/debug・/verify など</td>
+<td data-label="入れ方">最初から入っている</td>
+</tr>
+<tr>
+<td data-label="探す先">公式マーケットプレイス</td>
+<td data-label="中身">317のプラグイン。Anthropicが作ったものは約40で、残りは提携先などが作ったもの（2026年11月7日時点）</td>
+<td data-label="入れ方">/plugin の Discover</td>
+</tr>
+<tr>
+<td data-label="探す先">anthropics/skills</td>
+<td data-label="中身">19のスキル例</td>
+<td data-label="入れ方">/plugin marketplace add anthropics/skills</td>
+</tr>
+<tr>
+<td data-label="探す先">第三者のリポジトリ</td>
+<td data-label="中身">有志がまとめたスキル集</td>
+<td data-label="入れ方">中身を読んでから</td>
+</tr>
+</tbody>
+</table></div>
+<p>公式マーケットプレイス（<code>claude-plugins-official</code>）は、対話型のターミナルを初めて開いたときに自動で追加されます。スキルを作る人に役立つのは、作成と評価を手伝う <code>skill-creator</code> です。ほかにコミットからPR作成までの <code>commit-commands</code>、CLAUDE.mdを点検する <code>claude-md-management</code> があります。公式マーケットプレイスに載っていても、作り手が提携先のものは前の節の手順で中身を読みます。</p>
+<p>anthropics/skillsには、Word・Excel・PowerPoint・PDFを扱う文書スキルや <code>frontend-design</code> などが入っています。READMEは「デモと教育目的」と断っており、文書の4つはソース公開でオープンソースではありません。</p>
+<p>第三者のスキル集もあります。alirezarezvani/claude-skillsは410以上のスキルを集め、GitHubのスターは約2.9万です（2026年11月7日時点）。<strong>使うものだけを選んで前の節の表で読み、プロジェクトにコミットしてから配る</strong>のが無理のない進め方です。</p>
+<h2 id="s9">うまく動かないときの直し方</h2>
+<p>呼ばれないときは説明にユーザーが言う語を入れて <code>/スキル名</code> で直接呼び、呼ばれすぎるときは説明を具体的にするか手動専用にします。途中で従わなくなるときの直し方は、必ず守る決まりをフックへ移し重要な指示を本文の上に置くことです。説明が切れているときは使っていないスキルを <code>/skill-doctor</code> で探して止めます。</p>
+<p><code>/名前</code> では動くのに自動で呼ばれないときは、<code>claude plugin validate .claude/skills</code> でフロントマターの崩れを探します。</p>
+<p>効いたかどうかはスキルありとなしで同じ質問を新しいセッションに投げて比べます。企業向けの文書は呼ばれるべき質問・呼ばれるべきでない質問・あいまいな質問を3〜5件用意し、別の人が確かめる体制を求める内容です。</p>
+<h2 id="s10">まとめ</h2>
+<ul>
+<li>自分の作業を楽にしたいだけなら、<code>~/.claude/skills/</code> に1つ作り、説明に使う場面を書いて試す</li>
+<li>チームの手順を揃えたいなら、リポジトリの <code>.claude/skills/</code> に置いてコミットし、PRでレビューする</li>
+<li>複数のリポジトリや部署で使うなら、プラグインにまとめて社内のマーケットプレイスから配る</li>
+<li>全社で統制したいなら、管理設定で配る先と許すマーケットプレイスを決め、<code>allowed-tools</code> とシェル実行の扱いも決めておく</li>
+<li>人が作ったスキルは、スクリプトと外への通信を読んでから入れる</li>
+</ul>
+<h2 id="s11">よくある質問</h2>
+<h3 id="s11-1">Claude Code Skillsは無料で使えますか？</h3>
+<p>Claude Code自体はProやMaxなどの有料プランかAPIの従量課金で使います。スキルの説明は使わなくても毎ターンの文脈に入ります。呼べば本文も読み込まれるため、その分だけプランの使用量が増えます（APIなら料金に出ます）。</p>
+<h3 id="s11-2">Claude CodeのスキルとCLAUDE.mdの違いは？</h3>
+<p>毎回守らせる規約はCLAUDE.md、ときどき使う手順や参考資料はスキルに書くのが基本です。公式の目安はCLAUDE.mdが200行を超えてきたら手順の部分をスキルに移すことです。</p>
+<h3 id="s11-3">Claude Codeの古いコマンドは使えますか？</h3>
+<p>使えます。<code>.claude/commands/</code> のファイルはスキルと同じ <code>/名前</code> で動きます。補助ファイルも置きたいなら、スキルの形に移します。</p>
+<h3 id="s11-4">Claude Codeのスキルはclaude.aiと共通？</h3>
+<p>同じ形式ですが、置き場所は別です。claude.aiで有効にしたスキルは、同じアカウントでサインインしたClaude Codeに同期されます。claude.aiやAPIにアップロードするときは、Claude Codeの独自項目を含めるとエラーで止まるため、共通に使うなら規格の6項目に絞ります。</p>
+<h3 id="s11-5">Claude Codeのスキルは何個まで入れられますか？</h3>
+<p>数の上限は書かれていませんが、説明の一覧にはコンテキストの1%という枠があり、多いと説明が削られます。</p>
+<h3 id="s11-6">Claude Codeのスキルを社内で配る注意点は？</h3>
+<p>クラウドのセッションはPCの個人スキルや、PCで入れたプラグインを読まないこと、<code>allowed-tools</code> は信頼していないフォルダでも効くこと、プラグインは自動更新で中身が変わり得ることの3つです。</p>
+<h2 id="s12">出典</h2>
+<p>すべて2026年11月7日に取得。</p>
+<ul>
+<li>Claude Code Docs「<a href="https://code.claude.com/docs/ja/skills">Claude をスキルで拡張する</a>」</li>
+<li>Claude Code Docs「<a href="https://code.claude.com/docs/ja/features-overview">Claude Code を拡張する</a>」</li>
+<li>Claude Code Docs「<a href="https://code.claude.com/docs/ja/plugins/overview">プラグインの概要</a>」</li>
+<li>Claude Code Docs「<a href="https://code.claude.com/docs/ja/plugins/org">組織向けの Claude Code プラグインを管理する</a>」</li>
+<li>Claude Code Docs「<a href="https://code.claude.com/docs/ja/plugins/security">プラグインのセキュリティと信頼</a>」</li>
+<li>Claude Platform Docs「<a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview">Agent Skills</a>」</li>
+<li>Claude Platform Docs「<a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices">Skill authoring best practices</a>」</li>
+<li>Claude Platform Docs「<a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/enterprise">Skills for enterprise</a>」</li>
+<li>Agent Skills「<a href="https://agentskills.io/specification">Specification</a>」</li>
+<li>Anthropic「<a href="https://www.anthropic.com/news/skills">エージェントスキルの紹介</a>」（2025年10月16日、12月18日追記）</li>
+<li>Anthropicヘルプセンター「<a href="https://support.claude.com/ja/articles/12512180">Claudeでスキルを使用する</a>」</li>
+<li>GitHub「<a href="https://github.com/anthropics/skills">anthropics/skills</a>」「<a href="https://github.com/anthropics/claude-plugins-official">anthropics/claude-plugins-official</a>」</li>
+<li>Claude Code Docs「<a href="https://code.claude.com/docs/en/plugins/anthropic-marketplaces">Anthropicのマーケットプレイス</a>」「<a href="https://code.claude.com/docs/en/cloud-environments">クラウド環境</a>」</li>
+<li>GitHub「<a href="https://github.com/anthropics/claude-plugins-official/blob/main/.claude-plugin/marketplace.json">claude-plugins-official の marketplace.json</a>」</li>
+<li>GitHub「<a href="https://github.com/alirezarezvani/claude-skills">alirezarezvani/claude-skills</a>」</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">Claude を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Claude Code Skillsとは</a><a href="#s2">CLAUDE.md・MCP・サブエージェント・フックとの違い</a><a href="#s3">スキルが読み込まれる仕組み</a><a href="#s4">SKILL.mdの作り方</a><a href="#s5">Claude Code Skillsの使い方</a><a href="#s6">チームで配る置き場所と配り方</a><a href="#s7">入れる前に確かめること</a><a href="#s8">おすすめのスキルと一覧の探し方</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/chatgpt-agent-mode/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのエージェントモード"><defs><linearGradient id="ecg-facc52b5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-facc52b5)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのエー</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ジェントモード</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.07</div>
+                <div class="rel-card__ttl">【2026年11月】ChatGPTエージェントモード終了後の頼み方・Deep Researchとの違い</div>
+            </a>
+            <a href="/media/mcp-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MCPとは"><defs><linearGradient id="ecg-ae627a98" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ae627a98)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">MCPとは</text><line x1="455.6" y1="365.9" x2="744.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること</div>
+            </a>
+            <a href="/media/openai-agent-builder/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OpenAI Agent Builder"><defs><linearGradient id="ecg-b76c31de" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b76c31de)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">OpenAI Agent Builder</text><line x1="144.0" y1="365.9" x2="1056.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】OpenAI Agent Builderとは？11月30日の終了と移行先・料金</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'claude-code-skills',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
