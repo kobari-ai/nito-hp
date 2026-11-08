@@ -54,7 +54,7 @@ nitoが試したのはログインしていないブラウザで、Chromeのシ�
 
 ## Googleアプリのシークレットモードはブラウザと別物
 
-ここまではChromeのシークレットウィンドウで検証した内容です。iOS版のGoogleアプリには、ブラウザの機能とは別に、**アプリ自身に切り替え式のシークレットモードがあります。**ホーム画面右上のGoogleアカウントアイコンをタップ（または長押し）し、「シークレットモードをオンにする」を選ぶと切り替わると報じられています（jetstream.blog、2026年5月）。検索結果やヘルプで見る「シークレットモード」が、このアプリの切り替えかChromeのウィンドウかで操作も中身も変わるため、どちらを指しているかを先に確かめる必要があります。Android版のGoogleアプリでは同じ切り替えは確認できておらず、一次情報は未確認です（要一次確認）。
+ここまではChromeのシークレットウィンドウで確かめた内容です。iPhone・iPad版のGoogleアプリには、ブラウザとは別に、**アプリ自身のシークレットモードがあります。**Google検索ヘルプ「[Google アプリの設定を変更する](https://support.google.com/websearch/answer/2839743?hl=ja&co=GENIE.Platform%3DiOS)」のiPhone・iPad版には、「シークレット モードで Face ID を有効にする」という設定があり、15分以上たってからシークレットモードのセッションに戻るときにFace IDで本人確認できると書かれています。切り替えはホーム画面右上のGoogleアカウントのアイコンから行う、と紹介されています（jetstream.blog、2026年5月）。「シークレットモード」と書かれた手順を読むときは、Chromeのウィンドウの話か、Googleアプリの切り替えの話かを先に確かめます。
 
 ## オフにしてと書かれたヘルプ
 
@@ -105,7 +105,7 @@ Googleアカウントのヘルプは、シークレットウィンドウでロ�
 通常のウィンドウでログインしているアカウントか、ブラウザに残っているデータの側に原因があると考えられます。通常のウィンドウでログアウトして同じ検索をすると、どちらかを切り分けられます。
 
 ### Googleアプリのシークレットモードは別物ですか？
-別の機能です。Chromeのシークレットウィンドウはブラウザ全体の機能ですが、iOS版のGoogleアプリにはアプリ自身の切り替え式のシークレットモードがあり、アカウントアイコンから切り替えると報じられています（要一次確認）。どちらを指しているかで操作が変わります。
+別の機能です。Chromeのシークレットウィンドウはブラウザの機能で、iPhone・iPad版のGoogleアプリにはアプリ自身のシークレットモードがあります。Googleのヘルプには、アプリの設定に「シークレット モードで Face ID を有効にする」という項目があると書かれています。どちらを指しているかで操作が変わります。
 
 ### シークレットモードで続きから会話を再開できますか？
 できません。ログインしていないと履歴に入らないため、ウィンドウを閉じると続きから開き直せなくなります。残したい回答は閉じる前にコピーしておきます。
@@ -119,5 +119,6 @@ Googleアカウントのヘルプは、シークレットウィンドウでロ�
 - Google アカウント ヘルプ「[アクティビティを削除する](https://support.google.com/accounts/answer/465?hl=ja)」（2026年9月30日取得）
 - Google 検索 ヘルプ「[Search Labs の「AI モード」](https://support.google.com/websearch/answer/16296315?hl=ja)」「[Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)」（2026年9月30日取得）
 - Yahoo!知恵袋「[GoogleAI検索ですが通常だとこの機能が出ないのですがシークレットウインドウだと出ました](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10320126715)」（2025年9月19日）
-- jetstream.blog「[知らなかった。iOS Google「シークレット モード」ジェスチャー切り替え](https://jetstream.blog/2026/05/11/ios-google-incognito-mode-switch-gesture/)」（2026年5月。二次情報・本文未確認。Googleの公式ヘルプは `support.google.com` がクラウド実行環境から到達できず確認できていない）
+- Google 検索 ヘルプ「[Google アプリの設定を変更する](https://support.google.com/websearch/answer/2839743?hl=ja&co=GENIE.Platform%3DiOS)」（iPhone と iPad、2026年11月9日取得）
+- jetstream.blog「[知らなかった。iOS Google「シークレット モード」ジェスチャー切り替え](https://jetstream.blog/2026/05/11/ios-google-incognito-mode-switch-gesture/)」（2026年5月11日）
 - AIモードの画面は、2026年9月30日にGoogleにログインしていないスマホ表示のブラウザ（Chrome 154）で撮影
