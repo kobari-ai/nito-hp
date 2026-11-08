@@ -24,19 +24,19 @@ GoogleはVertex AIを2026年4月23日にGemini Enterprise Agent Platformへ切�
 
 ### 2026年4月に名前が変わった
 
-Google Cloudのブログは2026年4月23日、Gemini Enterprise Agent Platformを「Vertex AIの進化形」として公開しました。同じ記事にはVertex AIのサービスとロードマップは今後すべてAgent Platformを通して届け、単独のサービスとしては出さないと書かれています。**Vertex AIで使えていたモデルやエージェントの部品は、Agent Platformの中にそのまま続いています。** ドキュメントの概要ページも、200以上の基盤モデルへのアクセスからエージェントのデプロイと管理まで、AIのライフサイクル全体を支える統合プラットフォームと説明しています。
+Google Cloudのブログは2026年4月23日、Gemini Enterprise Agent Platformを「Vertex AIの進化形」として公開しました。同じ記事にはVertex AIのサービスとロードマップは今後すべてAgent Platformを通して届け、単独のサービスとしては出さないと書かれています。**Vertex AIで使えていたモデルやエージェントの部品は、Agent Platformの中にそのまま続いています。** 
 
-<!-- SHOT: 画面 https://cloud.google.com/products/gemini-enterprise-agent-platform?hl=ja・本文だけにある探す語「Gemini プラットフォーム」・赤枠にする語 H1 の「Gemini プラットフォーム」・PC・alt「Google Cloudの日本語の製品ページ。以前Vertex AIと呼ばれていた製品の見出しがGemini プラットフォームになっている」・figcaption「Google Cloudの製品ページ（2026年11月9日）」 -->
+<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_product.png" alt="Google Cloudの日本語の製品ページ。以前Vertex AIと呼ばれていた製品の見出しがGemini プラットフォームになっている" loading="lazy"><figcaption>Google Cloudの製品ページ（2026年11月9日）</figcaption></figure>
 
-名前が変わっていない所もあります。Google Apps Scriptから呼ぶ機能は今も「Vertex AI サービス」で、APIのアドレスはaiplatform.googleapis.comのままです。社内文書を検索させる部品は2026年4月からドキュメントでAgent Searchと呼ばれ、自社のデータセンターで動かすGoogle Distributed Cloudのエアギャップ版のドキュメントは「Vertex AI の概要」の題で更新が続いています。**社内の資料にVertex AIとAgent Platformが混ざっていても、同じ基盤を指していると読んでかまいません。** この記事では今の名前のAgent Platformを使い、旧名は必要な所だけ添えます。
+名前が変わっていない所もあります。Google Apps Scriptから呼ぶ機能は今も「Vertex AI サービス」で、APIのアドレスはaiplatform.googleapis.comのままです。社内文書を検索させる部品は2026年4月からAgent Searchと呼ばれます。**社内の資料にVertex AIとAgent Platformが混ざっていても、同じ基盤を指していると読んでかまいません。** この記事では今の名前のAgent Platformを使い、旧名は必要な所だけ添えます。
 
 ### 何をする基盤か
 
-Agent Platformは、Google Cloudの上でAIのモデルを選び、自社のアプリやエージェントに組み込んで、本番で動かし続けるための開発基盤です。社員が画面で質問するチャットの製品ではなく、開発者やデータの担当が使う土台にあたります。概要ページは機能を「ビルド」「スケーリング」「管理」「最適化」の4つの柱に分けていて、作る段階から本番での監視までが1か所にそろいます。BigQueryやCloud StorageなどGoogle Cloudのほかのサービスとつながる点は、名前が変わる前から同じです。
+Agent Platformは、Google Cloudの上でAIのモデルを選び、自社のアプリやエージェントに組み込んで、本番で動かし続けるための開発基盤です。社員が画面で質問するチャットの製品ではなく、開発者やデータの担当が使う土台にあたります。概要ページは機能を「ビルド」「スケーリング」「管理」「最適化」の4つの柱に分けていて、作る段階から本番での監視までが1か所にそろいます。
 
 ### これまでの経緯
 
-Vertex AIは2021年5月18日に、それまで別々だったAutoMLとAI Platformをまとめた機械学習の基盤として一般提供が始まりました。2023年6月に生成AIの機能が一般提供になり、2024年4月にはエージェントを作るVertex AI Agent Builderが加わっています。**予測や分類のモデルを作る基盤から、生成AIとエージェントの基盤へと中心が移ってきた流れの先に、今回の改名があります。** 料金や部品の名前は、古い解説でなく今のページで確かめる必要があります。
+Vertex AIは2021年5月18日に、それまで別々だったAutoMLとAI Platformをまとめた機械学習の基盤として一般提供が始まりました。2023年6月に生成AIの機能が一般提供になり、2024年4月にはエージェントを作るVertex AI Agent Builderが加わっています。**予測や分類のモデルを作る基盤から、生成AIとエージェントの基盤へと中心が移ってきた流れの先に、今回の改名があります。**
 
 ## Vertex AIでできること
 
@@ -54,7 +54,7 @@ Vertex AIは2021年5月18日に、それまで別々だったAutoMLとAI Platfor
 | 運用 | Pipelines・Model Registry・Feature Store | Vertex AI Pipelines など |
 | 守る・見張る | Agent Identity・Agent Gateway・評価 | 改名と同時に発表 |
 
-<!-- SHOT: 図 vtx_overview.html → vtx_overview.png・alt「Agent Platform（旧Vertex AI）の4つの柱。ビルドはModel GardenとAgent StudioとADK、スケーリングはAgent Runtimeとメモリーバンク、管理はAgent IdentityとAgent Gateway、最適化は評価とシミュレーションと監視」 -->
+<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_overview.png" alt="Agent Platform（旧Vertex AI）の4つの柱。ビルドはModel GardenとAgent StudioとADK、スケーリングはAgent Runtimeとメモリーバンク、管理はAgent IdentityとAgent Gateway、最適化は評価とシミュレーションと監視" loading="lazy"></figure>
 
 ### モデルを選んで試す
 
@@ -62,17 +62,17 @@ Model Gardenには、Gemini 4 ArgonなどのGoogleのモデル、AnthropicのCla
 
 ### エージェントを作って動かす
 
-ADKは特定のモデルに縛られないエージェントの開発の枠組みで、Agent Studioで作った処理をADKに書き出してコードで続けることもできます。Agent Runtimeはエージェントを本番で動かす場所で、ブログでは1秒未満の起動と、何日も動き続けるエージェントへの対応が挙がっています。会話をまたいで利用者のことを覚えるメモリーバンクや、請求書の処理などのテンプレートを集めたAgent Gardenも同じ基盤の部品です。**作ったエージェントを社員の画面に並べるなら、管理者がGemini Enterpriseに登録する流れになります。** 社員向けのアプリの側は「[Gemini Enterpriseとは](/media/gemini-enterprise/)」に、作り方の選び方は「[AIエージェントの作り方](/media/ai-agent-build/)」にまとめています。
+ADKは特定のモデルに縛られないエージェントの開発の枠組みで、Agent Studioで作った処理をADKに書き出してコードで続けることもできます。Agent Runtimeはエージェントを本番で動かす場所で、ブログでは1秒未満の起動と、何日も動き続けるエージェントへの対応が挙がっています。会話をまたいで利用者のことを覚えるメモリーバンクも同じ基盤の部品です。**作ったエージェントを社員の画面に並べるなら、管理者がGemini Enterpriseに登録します。** 社員向けのアプリの側は「[Gemini Enterpriseとは](/media/gemini-enterprise/)」に、作り方の選び方は「[AIエージェントの作り方](/media/ai-agent-build/)」にまとめています。
 
 改名と同時に、管理の部品も増えました。Agent Identityはエージェントごとに一意のIDを付けて操作を監査できるようにし、Agent Gatewayはエージェントとツールのやり取りをまとめて通し、Model Armorでプロンプトインジェクションやデータの漏えいを防ぎます。
 
 ### 社内データを検索させる
 
-社内の規程やマニュアルを根拠に答えさせるなら、Agent SearchかRAG Engineが候補です。製品ページのよくある質問によると、標準的な文書検索は1,000クエリあたり約4ドルで、ほかにインデックスの保存料がかかります。RAG Engineは非公開の社内データをモデルにつなぎ、回答の精度を上げてハルシネーションを減らすための部品です。部品の選び方と手順は「[RAG構築とは](/media/rag-build/)」で、Azure・AWSと並べて書きました。
+社内の規程やマニュアルを根拠に答えさせるなら、Agent SearchかRAG Engineが候補です。製品ページのよくある質問によると、標準的な文書検索は1,000クエリあたり約4ドルで、ほかにインデックスの保存料がかかります。部品の選び方と手順は「[RAG構築とは](/media/rag-build/)」で、Azure・AWSと並べて書きました。
 
 ### 予測や分類のモデルを作る
 
-生成AI以前からある機械学習の機能は改名の後もそのまま使えます。AutoMLはアルゴリズムやパラメータの選定を自動にした学習で、カスタム トレーニングは使うフレームワークや学習のコードを自分で決められます。作ったモデルはModel Registryで版を管理し、Pipelinesで手順を自動にし、モニタリングで入力の偏りや時間とともに起きるずれを見張ります。画面の上では表のデータならCSVかBigQueryから取り込んでデータセットを作り、学習を始めて精度の指標を確かめる流れです。**学習にも計算の料金がかかるため、試すときは小さなデータから始めるのが安全です。**
+生成AI以前からある機械学習の機能は改名の後もそのまま使えます。AutoMLは選定を自動にした学習、カスタム トレーニングは学習のコードを自分で決められる学習です。作ったモデルはModel Registryで版を管理し、Pipelinesで手順を自動にし、モニタリングで入力の偏りやずれを見張ります。**学習にも計算の料金がかかるため、試すときは小さなデータから始めるのが安全です。**
 
 ## Vertex AIの料金
 
@@ -97,9 +97,7 @@ ADKは特定のモデルに縛られないエージェントの開発の枠組�
 
 期限つきの安い単価は対象期間の費用の50%をクレジットで戻す形で提供されます。料金ページにはGemini 3.8 Flashなどのプロモーションの期間が2026年8月13日から12月31日まで、Gemini 4 Argonは10月13日から11月30日までと書かれています。**12月と1月に単価が2倍に戻るモデルがあるため、年間の予算は戻った後の単価で組むほうが安全です。**
 
-ほかにも細かい決まりがあります。入力が20万トークンを超えると、そのリクエストの全トークンが長いコンテキストの単価になります。Gemini 4は2026年11月13日から、32,000トークンを超える出力がタイムアウトで失敗しても、取り出せた分は課金の対象です。バッチはGemini 4 Argonで入力1.00ドル・出力5.00ドルと標準の半額で、優先度の高い処理は1.8倍です。400番台と500番台のエラーで失敗したリクエストは課金されません。
-
-<!-- SHOT: 画面 https://cloud.google.com/model-garden/pricing?hl=ja・本文だけにある探す語「Gemini 3.8 Flash」・赤枠にする語「2026 年 12 月 31 日まで」と「非グローバル」の行・PC・alt「Agent Platformの料金ページのGemini 3.8 Flashの行。2026年12月31日までの単価と2027年1月1日以降の単価が、グローバルと非グローバルに分けて並んでいる」・figcaption「Agent Platformの料金ページ（2026年11月9日）」 -->
+ほかにも細かい決まりがあります。入力が20万トークンを超えると、そのリクエストの全トークンが長いコンテキストの単価になります。バッチはGemini 4 Argonで入力1.00ドル・出力5.00ドルと標準の半額で、優先度の高い処理は1.8倍です。400番台と500番台のエラーで失敗したリクエストは課金されません。
 
 ### 検索とランタイムの料金
 
@@ -109,7 +107,7 @@ Google検索で回答の根拠を取るグラウンディングは、Gemini 3と
 
 新しくGoogle Cloudを使う場合は、90日間有効な300ドルのウェルカム クレジットがあり、自動で請求に切り替わることはありません。ただし無料プログラムのドキュメントには対象外がはっきり書かれています。**300ドルのクレジットはAI StudioのGemini APIの費用にも、マネージドAPIとして出ているパートナーのモデルにも使えません。** Model GardenのClaudeを試したい場合は、最初から有料の請求先アカウントにする必要があります。
 
-無料トライアルの請求先アカウントでは、GPUの追加やMarketplaceの利用、割り当ての引き上げもできません。90日の間に有料のアカウントへ切り替えないか、クレジットを使い切ると、請求先アカウントが閉じてプロジェクトとリソースが止まります。社内の検証を止めたくなければ、期限の前に切り替えるかを決めておく必要があります。
+無料トライアルの請求先アカウントでは、GPUの追加やMarketplaceの利用もできません。90日の間に有料へ切り替えないか、クレジットを使い切ると、プロジェクトとリソースが止まります。検証を止めたくなければ、期限の前に切り替えるかを決めておきます。
 
 ### 月額の試算
 
@@ -132,7 +130,6 @@ GoogleのGeminiを会社で使う入口は大きく3つあり、同じGeminiの�
 | 始め方 | Workspaceの契約と管理者の設定 | AI StudioでAPIキーを作る | Google Cloudのプロジェクトで有効にする |
 | 認証 | 社員のGoogleアカウント | APIキー | サービスアカウントなどのIAM |
 | 学習への利用 | 対象のエディションは人がレビューせず許可なくドメイン外の学習に使わない | 無料枠は改善に使われ人が読むこともある・有料枠は使わない | 事前の許可なく学習やファインチューニングに使わない |
-| 処理する地域 | この記事では確かめていない | 選べない | グローバルか東京などのリージョンを選ぶ |
 | 払い方 | Workspaceの契約 | 前払いのクレジットが既定 | Google Cloudの通常の請求 |
 | 管理 | Workspaceの管理コンソール | AI Studioとプロジェクト | IAM・組織のポリシー・監査ログ |
 
@@ -144,9 +141,9 @@ Gemini APIのドキュメントには、2つのAPIの選び方が次のように
 
 > Most developers should use the Gemini Developer API unless there is a need for specific enterprise controls.
 
-特定の企業向けの管理が必要でない限り、ほとんどの開発者はGemini Developer APIを使うべき、という意味です。同じページはAgent Platformを、Google Cloudが支える企業向けの機能とサービスの集まりと位置づけています。**データの保持や処理する地域を契約と設定で説明する必要がある会社、BigQueryの社内データとつなぐ会社にはAgent Platformが向いています。** 社員がチャットで使うだけなら、どちらのAPIも要らず、WorkspaceのGeminiで足ります。
+特定の企業向けの管理が必要でない限り、ほとんどの開発者はGemini Developer APIを使うべき、という意味です。**データの保持や処理する地域を契約と設定で説明する必要がある会社、BigQueryの社内データとつなぐ会社にはAgent Platformが向いています。**
 
-<!-- SHOT: 図 vtx_choose.html → vtx_choose.png・alt「Googleの3つの入口の選び方。社員がチャットで使うならWorkspaceのGeminiアプリ、自社のアプリに早く組み込むならGemini API、企業の管理と地域が要るならAgent Platform」 -->
+<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_choose.png" alt="Googleの3つの入口の選び方。社員がチャットで使うならWorkspaceのGeminiアプリ、自社のアプリに早く組み込むならGemini API、企業の管理と地域が要るならAgent Platform" loading="lazy"></figure>
 
 WorkspaceのGeminiの料金と設定は「[Google WorkspaceのGeminiとは](/media/google-workspace-gemini/)」、Gemini APIの無料枠と単価は「[Gemini APIの料金](/media/gemini-api-pricing/)」で詳しく書いています。
 
@@ -173,19 +170,17 @@ Agent Platformのデータ保持のページは、事前の許可や指示なし
 - Interactions API：storeの既定がtrueで会話が保存される。falseを明示する
 - 暗黙のキャッシュ：既定で有効、24時間以内に削除。プロジェクトごとに無効にできる
 
-キャッシュを止める操作には、Agent Platformの管理者のロールが要ります。永続キャッシュは顧客管理の暗号鍵（CMEK）に対応していない点も、暗号鍵を自社で持つ方針の会社は押さえておく必要があります。OpenAIのモデルは既定で米国のマルチリージョンに最大30日記録され、保持ゼロはプロジェクトごとの承認制です。
+キャッシュを止める操作には、Agent Platformの管理者のロールが要ります。永続キャッシュは顧客管理の暗号鍵（CMEK）に対応していない点も、暗号鍵を自社で持つ方針の会社は押さえておく必要があります。
 
 ### 処理する地域
 
-ロケーションのドキュメントは「エンドポイントは、データ所在地やリージョン内の ML 処理を保証するものではありません」と書いています。グローバルのエンドポイントは混雑によるエラーが減る代わりに、どのリージョンで処理されるかを選べません。**社内規程で国内での処理を求めているなら、東京（asia-northeast1）を指定したうえで、データ所在地のページまで確かめる必要があります。** グローバルではチューニング、AnthropicのモデルのバッチやRAGのコーパスが使えないという制限もあります。
-
-外部とつながない環境が要る場合は、自社のデータセンターで動かすGoogle Distributed Cloudのエアギャップ版も選べます。
+ロケーションのドキュメントは「エンドポイントは、データ所在地やリージョン内の ML 処理を保証するものではありません」と書いています。グローバルのエンドポイントは、どのリージョンで処理されるかを選べません。**社内規程で国内での処理を求めているなら、東京（asia-northeast1）を指定したうえで、データ所在地のページまで確かめる必要があります。** グローバルではチューニング、AnthropicのモデルのバッチやRAGのコーパスが使えないという制限もあります。
 
 ### 権限と費用の管理
 
-Agent Platformの権限はGoogle CloudのIAMで分け、閲覧だけの担当、使う担当、設定を変える管理者のロールが用意されています。エージェントにはAgent Identityで個別のIDを付けられるので、どのエージェントが何をしたかを後から追える仕組みです。費用は公式の料金計算ツールで試算でき、規模が大きい場合はGoogleの営業から見積もりを取れます。支払いはクレジットカードかデビットカードが基本で、販売パートナーの請求代行を通すと請求書払いにできる場合があります。
+Agent Platformの権限はGoogle CloudのIAMで分け、閲覧だけの担当、使う担当、設定を変える管理者のロールが用意されています。費用は公式の料金計算ツールで試算でき、規模が大きい場合はGoogleの営業から見積もりを取れます。
 
-始める前には目的を決め、データの質をそろえ、AIの答えを人が確かめる流れを残しておくと安全です。**検証用と本番用のプロジェクトを分けておくと、権限と費用の両方を分けて見られます。**
+**検証用と本番用のプロジェクトを分けておくと、権限と費用の両方を分けて見られます。**
 
 ## Vertex AIの始め方
 
@@ -197,7 +192,7 @@ Google Cloudのアカウントがあれば、検証は1日で始められます�
 4. Agent Studioでプロンプトを試し、使うモデルを決める
 5. Google GenAI SDK（Python・JavaScript・Java・Goなど）で自社のアプリから呼ぶ
 
-<!-- SHOT: 図 vtx_start.html → vtx_start.png・alt「Agent Platformを試すまでの4つの手順。請求先アカウントを作る、プロジェクトを選ぶ、APIを有効にする、Agent Studioで試す」 -->
+<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_start.png" alt="Agent Platformを試すまでの4つの手順。請求先アカウントを作る、プロジェクトを選ぶ、APIを有効にする、Agent Studioで試す" loading="lazy"></figure>
 
 スプレッドシートなどからGeminiを呼びたい場合は、Apps Scriptの高度なサービスが入口です。
 
@@ -205,7 +200,7 @@ Google Cloudのアカウントがあれば、検証は1日で始められます�
 
 改名を伝えた公式ブログには、Agent Platformを使う企業の声が並んでいます。ぐるなびは飲食店を探すアプリ「UMAME!」でメモリーバンクを使い、利用者の過去の行動や好みを覚えて候補を出しています。CTOの見込みは満足度の30%以上の向上です。経費精算のPayhawkは、利用者の習慣を覚えたエージェントで経費の提出時間を50%以上短くしたと書いています。
 
-通信のComcastはADKとAgent Runtimeで顧客向けのアシスタントを作り直しました。**これらは各社が公式ブログに寄せた説明で、第三者が検証した数字ではありません。** 自社で効果を見積もるときは、対象の業務で小さく試した結果を物差しにするのが確実です。
+通信のComcastはADKとAgent Runtimeで顧客向けのアシスタントを作り直しました。**これらは各社が公式ブログに寄せた説明で、第三者が検証した数字ではありません。**
 
 ## まとめ
 
@@ -218,27 +213,27 @@ Google Cloudのアカウントがあれば、検証は1日で始められます�
 
 ### Vertex AIはなくなったのですか？
 
-なくなってはいません。2026年4月23日から名前がGemini Enterprise Agent Platformに変わり、Vertex AIのサービスはAgent Platformの中で続いています。以前のVertex AIの製品ページのURLは、今の製品ページへ転送されます。
+なくなってはいません。2026年4月23日にGemini Enterprise Agent Platformへ名前が変わり、機能は引き継がれています。
 
 ### Vertex AIは無料で試せますか？
 
-新しくGoogle Cloudを使う場合は、90日間有効な300ドルのクレジットで試せます。ただしAI StudioのGemini APIの費用と、Claudeなどパートナーのモデルには使えません。
+新規なら90日間有効な300ドルのクレジットで試せます。Gemini APIやClaudeなどパートナーのモデルには使えません。
 
 ### Vertex AIとGeminiは何が違いますか？
 
-Geminiはモデルとアプリの名前で、Vertex AI（今のAgent Platform）はそのGeminiを含むモデルを自社のシステムに組み込むための基盤です。社員がチャットで使うならGemini アプリ、自社のアプリに組み込むならGemini APIかAgent Platformを使います。
+Geminiはモデルとアプリの名前で、Vertex AI（今のAgent Platform）はそのモデルを自社のシステムに組み込む基盤です。
 
 ### Vertex AIでClaudeは使えますか？
 
-使えます。Model GardenにAnthropicのClaudeが並んでいます。無料トライアルの請求先アカウントではパートナーのモデルを使えないため、有料のアカウントが必要です。
+使えます。Model GardenにClaudeが並びますが、有料の請求先アカウントが必要です。
 
 ### Vertex AIに入力したデータは学習に使われますか？
 
-事前の許可や指示がなければ、学習やファインチューニングには使われません。ただし不正利用の監視やGoogle検索のグラウンディングなどで一定期間ログが残るため、保持をゼロにするには設定と機能の選び方を確かめる必要があります。
+事前の許可がなければ学習には使われません。ただしログが一定期間残る機能があります。
 
 ### Vertex AI Searchは今どこにありますか？
 
-2026年4月からドキュメントではAgent Searchと呼ばれ、Agent Platformの部品の1つです。製品ページによると、標準的な文書検索は1,000クエリあたり約4ドルです。
+2026年4月からAgent Searchと呼ばれ、Agent Platformの部品の1つです。
 
 ## 出典
 
