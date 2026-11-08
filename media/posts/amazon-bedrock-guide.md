@@ -98,7 +98,7 @@ AgentCoreの主な部品は東京リージョンで使えます。ただしpayme
 
 ### 料金の決まり方
 
-文章のモデルは入力と出力のトークン数に単価をかけて数えます。単価はモデルごとに違い、さらに呼び出すリージョンと、処理する場所を限るかどうかで変わります。ナレッジベースやガードレールなどの部品は、保存量や回数で別に数えます。**ClaudeやGPTのような他社のモデルはAWS Marketplace経由の請求になり、Cost Explorerでは提供元の名前で表示され、Amazon Bedrockの行には含まれません。**
+文章のモデルは入力と出力のトークン数に単価をかけて数えます。単価はモデルごとに違い、さらに呼び出すリージョンと、処理する場所を限るかどうかで変わります。ナレッジベースやガードレールなどの部品は、保存量や回数に応じた別の料金です。**ClaudeやGPTのような他社のモデルはAWS Marketplace経由の請求になり、Cost Explorerでは提供元の名前で表示され、Amazon Bedrockの行には含まれません。**
 
 ### 4つの階層とバッチ
 
@@ -187,7 +187,7 @@ Claude Sonnet 5.5は、料金ページの東京の欄が空いています（米
 
 ### Bedrockで使えないClaudeの機能
 
-Anthropicのドキュメントによると、Bedrock経由のClaudeでは使えない機能があります。
+Bedrock経由のClaudeで使えない機能は、Anthropicのドキュメントによると次の3つです。
 
 - コード実行・Web検索・Web取得などAnthropic側で動くツール
 - Agent Skills・MCPコネクタ・Claude Managed Agents
@@ -261,7 +261,7 @@ Globalで呼べば、Claude Sonnet 5.5やOpus 5.5の単価はClaude APIと同じ
 
 ### Amazon BedrockでGPTは使えますか？
 
-使えます。GPT-5.6の3モデルとGPT-6 Astraが提供されています。
+使えます。提供中のモデルはGPT-5.6の3モデルとGPT-6 Astraです。
 
 ### BedrockでClaude Codeは使えますか？
 
