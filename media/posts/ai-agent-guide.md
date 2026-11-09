@@ -10,7 +10,7 @@ cover_sub: 定義・生成AIとの違い・仕組み・身近な例・使いど�
 
 AIエージェントとは、与えられた目標に向かって、自分で手順を考え、ツールを使い、結果を確かめながら作業を進めるソフトウェアです。チャット型の生成AIは聞かれたことに答えて終わりますが、AIエージェントは頼まれた仕事を終わらせるところまで進みます。
 
-言葉の定義は提供する会社ごとに少しずつ違い、解説記事も自社製品の説明に寄りがちです。この記事では[Google Cloud](https://cloud.google.com/discover/what-are-ai-agents?hl=ja)、[Anthropic](https://www.anthropic.com/engineering/building-effective-agents)、[OpenAI](https://openai.com/index/new-tools-for-building-agents/)、[Gartner](https://www.gartner.co.jp/ja/articles/ai-agents)、[AWS](https://aws.amazon.com/jp/what-is/ai-agents/)の一次ソース（いずれも2026年9月19日取得）の定義を並べたうえで、生成AIとの違い、仕組み、種類、身近な例、向いている仕事と向いていない仕事、導入で失敗しないための考え方までを順番に書きます。
+言葉の定義は提供する会社ごとに少しずつ違い、解説記事も自社製品の説明に寄りがちです。この記事では[Google Cloud](https://cloud.google.com/discover/what-are-ai-agents?hl=ja)、[Anthropic](https://www.anthropic.com/engineering/building-effective-agents)、[OpenAI](https://openai.com/index/new-tools-for-building-agents/)、[Gartner](https://www.gartner.co.jp/ja/articles/ai-agents)、[AWS](https://aws.amazon.com/jp/what-is/ai-agents/)の一次ソース（いずれも2026年9月19日取得）の定義を並べたうえで、生成AIとの違い、仕組み、種類、身近な例、向き不向き、導入で失敗しないための考え方までを順番に書きます。
 
 :::takeaways
 - AIエージェントは**目標を渡すと、手順・ツール・確認を自分で回して仕事を終わらせる**ソフトウェア。各社の定義に共通するのは「自律」「目標」「行動」の3語
@@ -129,7 +129,7 @@ Anthropicが挙げるワークフローの型は5つです。
 | [GeminiのDeep Research](https://gemini.google/overview/deep-research/) | 調査計画を立て、何十ものサイトを回って読み、出典つきのレポートにまとめる | Geminiアプリの「Deep Research」 |
 | Microsoft 365 Copilotのエージェント | メール・Teams・ファイルを横断して、定型の業務（議事録作成・タスク整理など）を代行する | Microsoft 365のCopilot |
 
-このほか、Perplexityやその他の検索サービスにもDeep Research型の機能があり、Googleの検索結果に出るAIモードも、複数の検索を裏で回して答えを組み立てる点ではエージェントの仕組みを使っています（[AIモードの記事](https://nito-0210.com/media/google-ai-mode-guide/)）。「AIエージェント」と名乗っていなくても、裏で観測と行動のループを回している製品は増えています。
+このほか、Perplexityやその他の検索サービスにもDeep Research型の機能があり、Googleの検索結果に出るAIモードも、複数の検索を裏で回して答えを組み立てる点ではエージェントの仕組みを使っています（[AIモードの記事](https://nito-0210.com/media/google-ai-mode-guide/)）。「AIエージェント」と名乗っていなくても、裏で観測と行動のループを回している製品は増えています。調べ物からスライド・表の作成、電話の代行までを1つの画面にまとめた製品もあり、会社で使う前に確かめたい点は[Gensparkの記事](/media/genspark-guide/)で整理しています。
 
 <figure class="post-figure"><img src="/media/images/ai-agent-guide/aag_01_openai_agent.jpg" alt="OpenAIの「ChatGPT エージェントが登場」の発表ページ。2025年7月17日、自ら思考して行動し、タスク達成のためのスキルを自律的に選択すると説明" loading="lazy"><figcaption>OpenAIの発表ページ（2025年7月17日公開）。Operatorとdeep researchを統合したと説明している</figcaption></figure>
 
