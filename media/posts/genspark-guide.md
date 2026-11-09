@@ -24,7 +24,7 @@ Gensparkは、調べ物・スライドや表の作成・データ分析・画像
 
 GensparkはAIエージェントを中心にした「オールインワンAIワークスペース」です。完成形を伝えてファイルを添えると、手順を計画してクラウド上のコンピューターで作業し、そのまま開けるスライド・表・文書を返します。**ChatGPT・Claude・Gemini・Grokを含む70以上のモデルを1つの契約で使い、作業ごとにGenspark側が組み合わせる**のが基本の考え方です。
 
-<!-- SHOT: 図 gsp_overview.html → gsp_00_overview.png・alt「Gensparkの概要。何をするか、料金の仕組み、運営会社、法人向けの管理の4点」 -->
+<figure class="post-figure"><img src="/media/images/genspark-guide/gsp_00_overview.png" alt="Gensparkの概要。何をするか、料金の仕組み、運営会社、法人向けの管理の4点" loading="lazy"></figure>
 
 もとは検索結果を1枚のページ（Sparkpage）にまとめるAI検索として始まりました。2025年4月に複数の手順をまとめて実行する「スーパーエージェント」が加わり、今はメール・会議メモ・チームでの共同作業まで扱う仕事の道具に広がっています。上位の解説記事にはAI検索として紹介している古いものもあるため、**今の中心は検索ではなくエージェント**と捉えておくと混乱しません。
 
@@ -39,7 +39,6 @@ GensparkはAIエージェントを中心にした「オールインワンAIワ�
 | 日本の利用者の個人データの管理 | Genspark, Inc. | 米国カリフォルニア州パロアルト |
 | 日本での法人向けの販売・導入支援 | Genspark株式会社（2026年1月設立） | 東京都港区虎ノ門 |
 
-<!-- SHOT: 画面 https://www.genspark.ai/ja/tokusho・本文だけにある探す語「販売業者」・赤枠にする語「MAINFUNC PTE. LTD.」・PC・alt「Gensparkの特定商取引法に基づく表記。販売業者はシンガポールのMAINFUNC PTE. LTD.で、適格請求書発行事業者の登録番号も記載」・figcaption「Gensparkの特定商取引法に基づく表記（2026年11月10日）」 -->
 
 公式のFAQは「中国の会社ですか」という質問に「アメリカの会社」と答えています。CEOのエリック・ジン氏はMicrosoftのBingの立ち上げメンバー、CTOのカイ・ジュー氏はGoogle検索の開発に関わった人物です。会社概要によると2026年7月時点でシリーズBの調達額が4億8,500万ドル、企業価値が26億ドル、拠点はパロアルト・東京・シンガポール・ソウルの4都市とされています。**請求書の発行元はシンガポール法人で、適格請求書発行事業者の登録もある**ため、経理には特商法の表記を渡すと話が早く進みます。
 
@@ -93,7 +92,6 @@ desc: ChatGPT・Gemini・Claude・Perplexityのディープリサーチの違い
 | Team | 1人$40 | 1人$35 | 1人10,000 | 2〜150人の組織 |
 | Enterprise | 個別見積もり | 個別見積もり | 1人20,000から（契約で設定） | 大規模・契約書が必要な組織 |
 
-<!-- SHOT: 画面 https://www.genspark.ai/ja/business/pricing・本文だけにある探す語「Custom Pricing」・赤枠にする語「Teamプラン」「Enterpriseプラン」・PC・alt「Gensparkの法人向け料金ページ。TeamプランとEnterpriseプランの内容を並べ、EnterpriseはSCIMやIPアドレス制限、監査ログ、日本データレジデンシーを含む」・figcaption「Gensparkの法人向け料金プラン（2026年11月10日）」 -->
 
 Plus・Proは同じプランの中で量を選ぶ段階制で、年払いはどの段階でも約20%安くなります。Freeの1日100クレジットは無料分の生涯の上限に達すると補充が止まるため、**無料のまま業務で使い続けるのは難しい**と考えておきましょう。足りない月はPlus・Proなら$20で7,500クレジットのパック（3か月有効）、Teamなら$45で10,000クレジットの追加分を買えます。
 
@@ -117,7 +115,6 @@ Plus・Proは同じプランの中で量を選ぶ段階制で、年払いはど�
 
 アカウントはGoogle・Apple・Microsoft・メールアドレスで作れて、無料プランならカードの登録はいりません。
 
-<!-- SHOT: 画面 https://www.genspark.ai/ja・本文だけにある探す語「無料で試す」・赤枠にする語 入力欄・スマホ・alt「Gensparkのトップページ。中央の入力欄にやりたい作業を書いて送る」・figcaption「Gensparkのトップページ（2026年11月10日）」 -->
 
 1. [Gensparkのトップページ](https://www.genspark.ai/ja)を開き、サインインする
 2. 入力欄の「+」で「新しいスーパーエージェント」がオンになっているか確かめる（有料プランは既定でオン）
@@ -132,7 +129,7 @@ Plus・Proは同じプランの中で量を選ぶ段階制で、年払いはど�
 
 **稟議で聞かれやすい5つの点は、どれも公式の規約やヘルプに答えがある項目です。**
 
-<!-- SHOT: 図 gsp_decide.html → gsp_01_decide.png・alt「Gensparkを会社で使う前に決める5つ。契約の相手、データの学習と保存先、プラン、管理の範囲、費用の上限」 -->
+<figure class="post-figure"><img src="/media/images/genspark-guide/gsp_01_decide.png" alt="Gensparkを会社で使う前に決める5つ。契約の相手、データの学習と保存先、プラン、管理の範囲、費用の上限" loading="lazy"></figure>
 
 | 決めること | 公式に書かれていること | 決め方の目安 |
 |---|---|---|
@@ -142,7 +139,7 @@ Plus・Proは同じプランの中で量を選ぶ段階制で、年払いはど�
 | 管理の範囲 | TeamはSSO（SAML）、コネクタ管理、使用量の分析。EnterpriseはさらにSCIM、権限の細かい設定、IPアドレス制限、監査ログ、使えるモデルの制限 | 退職者のアカウント停止を自動にしたいならEnterprise |
 | 費用と返金 | Teamはカード払いのみで途中解約の返金なし。個人のPlus・Proは日本では請求から72時間以内かつ利用50%未満なら1回だけ返金 | 試験導入は月払いのTeamで少人数から |
 
-<!-- SHOT: 画面 https://www.genspark.ai/ja/helpcenter/team-enterprise-plans・本文だけにある探す語「データを学習に使用しない」・赤枠にする語「自動的にモデル学習の対象外」・PC・alt「GensparkのTeam & Enterpriseプランのヘルプ。両プランとも自動的にモデル学習の対象外になり、データは保存時と転送時に暗号化されると説明」・figcaption「GensparkヘルプのTeam & Enterpriseプラン（2026年11月10日）」 -->
+<figure class="post-figure"><img src="/media/images/genspark-guide/gsp_05_help.png" alt="GensparkのTeam &amp; Enterpriseプランのヘルプ。両プランとも自動的にモデル学習の対象外になり、データは保存時と転送時に暗号化されると説明" loading="lazy"><figcaption>GensparkヘルプのTeam &amp; Enterpriseプラン（2026年11月10日）</figcaption></figure>
 
 認証はSOC 2 Type IIとISO 27001:2022を取得していて、SOC 2のレポートは秘密保持契約（NDA）を結べば受け取れます。管理者でもメンバーの非公開のプロジェクトやチャットの中身は見られず、ログに残るのは活動の記録だけです。**情報システム部門の確認には、Trust CenterとSOC 2のレポートを営業に依頼するのが早い**方法です。
 
