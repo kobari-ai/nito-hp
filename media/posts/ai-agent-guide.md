@@ -131,6 +131,8 @@ Anthropicが挙げるワークフローの型は5つです。
 
 このほか、Perplexityやその他の検索サービスにもDeep Research型の機能があり、Googleの検索結果に出るAIモードも、複数の検索を裏で回して答えを組み立てる点ではエージェントの仕組みを使っています（[AIモードの記事](https://nito-0210.com/media/google-ai-mode-guide/)）。「AIエージェント」と名乗っていなくても、裏で観測と行動のループを回している製品は増えています。調べ物からスライド・表の作成、電話の代行までを1つの画面にまとめた製品もあり、会社で使う前に確かめたい点は[Gensparkの記事](/media/genspark-guide/)で整理しています。
 
+単体のサービスとして提供されている汎用のAIエージェントには[Manus](/media/manus-ai/)もあり、別の記事で料金や運営会社、データの扱いまで説明しています。
+
 <figure class="post-figure"><img src="/media/images/ai-agent-guide/aag_01_openai_agent.jpg" alt="OpenAIの「ChatGPT エージェントが登場」の発表ページ。2025年7月17日、自ら思考して行動し、タスク達成のためのスキルを自律的に選択すると説明" loading="lazy"><figcaption>OpenAIの発表ページ（2025年7月17日公開）。Operatorとdeep researchを統合したと説明している</figcaption></figure>
 
 ## 向いている仕事と向いていない仕事
