@@ -65,7 +65,7 @@
 
         <div class="post-content">
 <p>AIエージェントとは、与えられた目標に向かって、自分で手順を考え、ツールを使い、結果を確かめながら作業を進めるソフトウェアです。チャット型の生成AIは聞かれたことに答えて終わりますが、AIエージェントは頼まれた仕事を終わらせるところまで進みます。</p>
-<p>言葉の定義は提供する会社ごとに少しずつ違い、解説記事も自社製品の説明に寄りがちです。この記事では<a href="https://cloud.google.com/discover/what-are-ai-agents?hl=ja">Google Cloud</a>、<a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic</a>、<a href="https://openai.com/index/new-tools-for-building-agents/">OpenAI</a>、<a href="https://www.gartner.co.jp/ja/articles/ai-agents">Gartner</a>、<a href="https://aws.amazon.com/jp/what-is/ai-agents/">AWS</a>の一次ソース（いずれも2026年9月19日取得）の定義を並べたうえで、生成AIとの違い、仕組み、種類、身近な例、向いている仕事と向いていない仕事、導入で失敗しないための考え方までを順番に書きます。</p>
+<p>言葉の定義は提供する会社ごとに少しずつ違い、解説記事も自社製品の説明に寄りがちです。この記事では<a href="https://cloud.google.com/discover/what-are-ai-agents?hl=ja">Google Cloud</a>、<a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic</a>、<a href="https://openai.com/index/new-tools-for-building-agents/">OpenAI</a>、<a href="https://www.gartner.co.jp/ja/articles/ai-agents">Gartner</a>、<a href="https://aws.amazon.com/jp/what-is/ai-agents/">AWS</a>の一次ソース（いずれも2026年9月19日取得）の定義を並べたうえで、生成AIとの違い、仕組み、種類、身近な例、向き不向き、導入で失敗しないための考え方までを順番に書きます。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
 <li>AIエージェントは<strong>目標を渡すと、手順・ツール・確認を自分で回して仕事を終わらせる</strong>ソフトウェア。各社の定義に共通するのは「自律」「目標」「行動」の3語</li>
 <li>生成AI（ChatGPT のチャット）との違いは<strong>1問1答か、複数の手順を続けて実行するか</strong>。中身の言語モデルは同じでも、ツールと記憶とループが付くとエージェントになる</li>
@@ -377,7 +377,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>このほか、Perplexityやその他の検索サービスにもDeep Research型の機能があり、Googleの検索結果に出るAIモードも、複数の検索を裏で回して答えを組み立てる点ではエージェントの仕組みを使っています（<a href="https://nito-0210.com/media/google-ai-mode-guide/">AIモードの記事</a>）。「AIエージェント」と名乗っていなくても、裏で観測と行動のループを回している製品は増えています。</p>
+<p>このほか、Perplexityやその他の検索サービスにもDeep Research型の機能があり、Googleの検索結果に出るAIモードも、複数の検索を裏で回して答えを組み立てる点ではエージェントの仕組みを使っています（<a href="https://nito-0210.com/media/google-ai-mode-guide/">AIモードの記事</a>）。「AIエージェント」と名乗っていなくても、裏で観測と行動のループを回している製品は増えています。調べ物からスライド・表の作成、電話の代行までを1つの画面にまとめた製品もあり、会社で使う前に確かめたい点は<a href="/media/genspark-guide/">Gensparkの記事</a>で整理しています。</p>
 <figure class="post-figure"><img src="/media/images/ai-agent-guide/aag_01_openai_agent.jpg" alt="OpenAIの「ChatGPT エージェントが登場」の発表ページ。2025年7月17日、自ら思考して行動し、タスク達成のためのスキルを自律的に選択すると説明" loading="lazy"><figcaption>OpenAIの発表ページ（2025年7月17日公開）。Operatorとdeep researchを統合したと説明している</figcaption></figure>
 
 <h2 id="s7">向いている仕事と向いていない仕事</h2>
