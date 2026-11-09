@@ -167,7 +167,7 @@ Cloudflareが、アクセスが人かボットかを確かめる仕組みの総�
 
 ### cloudflare_challengeとは何ですか？
 
-Cloudflareの確認（Challenge）を、英語の名前をアンダースコアでつないで書いたものです。Cloudflareのドキュメントはこの確認を「Challenges」と呼び、確認画面・Turnstile・JavaScript Detectionsをまとめてそう説明しています。ChatGPTで「challenges.cloudflare.comのブロックを解除してください」と出るのもこの確認なので、原因と対処は上の各節と同じです。
+Cloudflareの確認（Challenges）を指す書き方と見られます。この表記そのものを説明した公式の資料は見当たりません。Cloudflareのドキュメントはこの確認を「Challenges」と呼び、確認画面・Turnstile・JavaScript Detectionsをまとめてそう説明しています。ChatGPTで「challenges.cloudflare.comのブロックを解除してください」と出るのもこの確認なので、原因と対処は上の各節と同じです。
 
 ### Cloudflareの障害はどこで確認できますか？
 
