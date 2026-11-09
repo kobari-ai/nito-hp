@@ -35,7 +35,7 @@ Google Antigravityは、AIエージェントにコードの調査・編集・コ
 | Antigravity CLI | ターミナルから使う。Gemini CLIの移行先 | 対応 |
 | Antigravity SDK | Pythonで自社用のエージェントを作る | 対応 |
 
-すでにIDEを入れていた人は、次の更新で2.0が自動で入り、IDEを残すかを聞かれます。Googleは2.0と使い慣れたIDEを並べて使う形を勧めていて、IDEの中のAgent Managerは今後のリリースで外す予定と書いています。**これから入れるなら、Appを入口にし、コードは手元のIDEか拡張機能で触る形が公式の想定に近い**でしょう。
+Googleは2.0と使い慣れたIDEを並べて使う形を勧めていて、IDEの中のAgent Managerは今後のリリースで外す予定と書いています。**これから入れるなら、Appを入口にし、コードは手元のIDEか拡張機能で触る形が公式の想定に近い**でしょう。
 
 ## Antigravityで何ができるのか
 
@@ -216,10 +216,6 @@ desc: Gemini CLIの無料枠の終了と、Antigravity CLIへの移行で変わ�
 
 使えます。Googleアカウントがあれば、月$0のプランでGemini 3.8 Flashなどを週ごとの枠の範囲で使えます。Tab補完とコマンドは無制限です。
 
-### Antigravity 2.0は何が違いますか？
-
-2.0は2025年11月に出たIDEの中のAgent Managerを独立させたデスクトップアプリです。今は「Antigravity」と言うと2.0のアプリを指すことが多く、IDEは別のアプリとして残っています。
-
 ### Antigravityは会社のWorkspaceで使えますか？
 
 Workspaceの管理者がAntigravityを有効にすれば使えます。有効になっていないとログインに失敗します。Gemini Enterpriseのライセンスで使う場合は、ログイン時に「ビジネスアカウント」を選びます。
@@ -235,10 +231,6 @@ Workspaceの管理者がAntigravityを有効にすれば使えます。有効に
 ### 企業向けでもAntigravity IDEは使えますか？
 
 単体のAntigravity IDEは企業向けの対象外です。企業向けで使えるのはApp・CLIと、VS CodeなどのIDE拡張機能です（JetBrains・Zed・Xcode・Eclipseはプレビュー）。
-
-### Google Antigravityを日本語で使えますか？
-
-日本語で指示を出せます。回答の言語をそろえたい場合は、Rulesに「日本語で書く」と入れておくと全プロジェクトに効きます。
 
 ### Antigravity CLIは自動化に使えますか？
 
