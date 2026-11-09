@@ -164,6 +164,10 @@ Cloudflareのドキュメントは、不安定な回線、拡張機能やブラ�
 
 Cloudflareが、アクセスが人かボットかを確かめる仕組みの総称です。サイトの前に出る確認画面、サイトの中に置く確認欄のTurnstile、裏で動く判定のJavaScript Detectionsが含まれます。
 
+### cloudflare_challengeとは何ですか？
+
+「challenge」はCloudflareがこの確認そのものを呼ぶ名前で、developers.cloudflare.com のドキュメントでも challenge という語で説明されています。ChatGPT側の画面でこの英語表記そのものを確認できていませんが、通信の記録やエラー表示の中でこの語を見た場合も、仕組みは上の各節と同じCloudflareの確認です。対処も同じ手順で切り分けてください（二次情報・要一次確認）。
+
 ### Cloudflareの障害はどこで確認できますか？
 
 [Cloudflareのステータスページ](https://www.cloudflarestatus.com/)で、進行中の障害と過去の障害を見られます。ChatGPTは[OpenAIのステータスページ](https://status.openai.com/)、Claudeは[Claudeのステータスページ](https://status.claude.com/)も合わせて確認してください。
