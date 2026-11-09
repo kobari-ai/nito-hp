@@ -4,7 +4,7 @@ date: 2026-10-06
 category: AI活用
 description: ChatGPT・Gemini・Claude・GoogleのAIモードの無料の上限・上限に当たったときの続け方・有料プランの料金を、公式ページで確かめた値で比べます。確認した日はAIごとに表示し、公式の変更は日付つきで残します。
 cover_tag: 比較
-cover_headline: 4つのAIを比較
+cover_headline: 主要なAIを比較
 cover_sub: 無料でできること・上限・料金
 ---
 
