@@ -92,7 +92,7 @@ Gemini CLIの側に無料で使う道は案内されていません。無料で�
 
 ### Antigravity CLIとは何ですか？
 
-Google Antigravityというエージェント中心の開発プラットフォームに含まれる、新しいターミナル向けのツールです。Goで書かれていて、複数のエージェントを背後で動かす非同期の作業に対応しています。デスクトップアプリのAntigravity 2.0と同じ土台を共有します。
+Google Antigravityというエージェント中心の開発プラットフォームに含まれる、新しいターミナル向けのツールです。Goで書かれていて、複数のエージェントを背後で動かす非同期の作業に対応しています。デスクトップアプリのAntigravity 2.0と同じ土台を共有します。Antigravity全体の料金や企業向けの条件は[Google Antigravityとは？料金・使い方・日本語化と企業向けの条件](/media/google-antigravity/)にまとめています。
 
 ### 以前の機能はAntigravity CLIに残りますか？
 
