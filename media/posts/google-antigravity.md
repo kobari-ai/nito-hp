@@ -51,9 +51,9 @@ Antigravityの特徴は、エージェントが作業の途中と結果をアー
 
 ### ブラウザ操作と定期実行
 
-/browser を付けると、エージェントがChromeを開いて画面を操作し、表示を確かめます。使うにはChromeを既定のブラウザにしておく必要があります。/schedule や画面の「スケジュール」では、曜日と時刻を決めて同じ指示を繰り返し実行できます。
+/browser を付けると、エージェントがChromeを開いて画面を操作し、表示を確かめます。使うにはChromeを既定のブラウザにしておく必要です。/schedule や画面の「スケジュール」では、曜日と時刻を決めて同じ指示を繰り返し実行できます。
 
-ほかに、手元のPCで動いているエージェントをブラウザから操作するRemote Control（2026年8月）、音声で話しかける音声モード（2026年11月）、開発以外の作業向けに画面を簡単にしたKnowledge Workの表示も加わっています。
+ほかに、手元のPCで動いているエージェントをブラウザから操作するRemote Control（2026年8月）、音声で話しかける音声モード（2026年11月）、開発以外の作業向けに画面を簡単にしたKnowledge Workの表示も加わりました。
 
 ## Google Antigravityの料金はいくら？
 
@@ -70,11 +70,11 @@ Antigravityの特徴は、エージェントが作業の途中と結果をアー
 
 Ultraは2026年5月19日に月$100の段が新しくでき、上の段は$250から$200に下がりました。Geminiのモデルは使える量が1つの枠にまとまっていて、APIの価格に合わせて減ります。安いFlashを使えば、同じ枠でPro系より多くの処理ができる仕組みです。ClaudeなどGemini以外のモデルは、別の固定の枠になります。
 
-**枠を使い切ったあとに払うかどうかは、利用者が決めます。**ProとUltraでは購入したAIクレジットを枠の超過分に充てられます。設定の「AI Credit Overages」で、自動で使う（Always）か、枠が戻るまで待つ（Never）かを選びます。自分のAPIキーを持ち込んで枠を増やすことや、個別の契約で組織向けの枠を作ることには対応していません。
+**枠を使い切ったあとに払うかどうかは、利用者が決めます。**ProとUltraでは購入したAIクレジットを枠の超過分に充てられます。設定の「AI Credit Overages」で、自動で使う（Always）か、枠が戻るまで待つ（Never）かを選ぶ形です。自分のAPIキーを持ち込んで枠を増やすことや、個別の契約で組織向けの枠を作ることには対応していません。
 
 使える量を減らすのは指示の数ではなくエージェントの作業量です。簡単な指示なら多く送れ、複雑な作業ほど枠を使います。公式も、上限は混み具合に合わせて変わることがあると書いています。
 
-日本でGoogle AI ProやUltraを申し込むと、Google Oneの円建ての価格になります。円の金額とプランの違いは別の記事にまとめています。
+日本でGoogle AI ProやUltraを申し込むと、Google Oneの円建ての価格です。円の金額とプランの違いは別の記事にまとめています。
 
 :::linkcard
 url: /media/gemini-pricing/
@@ -122,7 +122,7 @@ Claude Opus 5.5・Sonnet 5.5は、管理者がGoogle Cloudのコンソールで�
 
 ### 管理者が先にやること
 
-入れる前に、情報システムやGoogle Cloudの管理者が次の4つを済ませておく必要があります。
+入れる前に、情報システムやGoogle Cloudの管理者が次の4つを済ませておく必要です。
 
 1. Gemini Enterpriseの設定の「AI developer tools」を、契約したリージョンで有効にする（既存の契約では既定でオフのことがある）
 2. ライセンスを買う前に、Gemini EnterpriseのAPIを有効にして約5分待つ（先に買うと割り当てに失敗することがある）
@@ -135,13 +135,13 @@ Google Workspaceのアカウントで社員に使わせる場合も、Workspace�
 
 試しに数人だけ使わせるなら、個人のGoogleアカウントでも始められます。その場合は会社の管理の外になり、やり取りを製品とモデルの改善に提供するかどうかは、本人がAccountの設定（Enable Telemetry）で決めます。**社内のコードを扱うなら、試用の段階から企業向けで始めたほうが、あとで設定と記録をそろえ直す手間がありません。**
 
-エージェントにコマンドの実行やブラウザの操作を任せる以上、どこまで自動で許すかの線引きは導入の前に決めておく必要があります。nitoでも、会社でAIエージェントを入れるときの権限とルールの設計を支援しています。
+エージェントにコマンドの実行やブラウザの操作を任せる以上、どこまで自動で許すかの線引きは導入の前に決めておく必要です。nitoでも、会社でAIエージェントを入れるときの権限とルールの設計を支援しています。
 
 ## Antigravityの始め方と使い方
 
 個人で試すなら、公式サイトからアプリを入れて、Googleアカウントでログインするだけで始められます。対応OSはmacOS・Windows・Linuxで、ブラウザ操作を使うならChromeも必要です。18歳未満は使えず、日本は提供国に入っています。
 
-<figure class="post-figure"><img src="/media/images/google-antigravity/agv_03_download.png" alt="Google Antigravityのダウンロードページ。macOS・Windows・Linux向けのアプリを選んでダウンロードする" loading="lazy"><figcaption>Google Antigravityのダウンロードページ（2026年11月10日）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/google-antigravity/agv_03_download.png" alt="Google Antigravityのダウンロードページの一部。Apple Silicon向けのダウンロードボタンを赤枠で示している" loading="lazy"><figcaption>Google Antigravityのダウンロードページ（2026年11月10日）</figcaption></figure>
 
 1. [ダウンロードページ](https://antigravity.google/download)でOSに合ったアプリを入れる
 2. 起動して「Google で続行」（個人）か「ビジネスアカウント」（企業）を選び、ブラウザでログインする
@@ -193,9 +193,9 @@ Google Workspaceのアカウントで社員に使わせる場合も、Workspace�
 
 すでにGoogle Cloudで請求とIDを管理している会社なら、Antigravityは新しい契約先を増やさずに入れられます。エディタの使い心地を重視するならCursor、ターミナル中心の開発ならClaude Codeも候補です。料金と管理の細かい違いは[Cursorの料金と使い方](/media/cursor-guide/)と[CodexとClaude Codeの比較](/media/codex-vs-claude-code/)で解説しています。
 
-1つ注意があります。**Antigravityのログインを、Claude Codeなど他社のツールから使うことは規約違反**で、アカウントの停止もありえます。他社のエージェントでGeminiを使いたいなら、Gemini EnterpriseかGoogle AI StudioのAPIキーを使うよう公式が案内しています。
+1つ注意があります。**Antigravityのログインを、Claude Codeなど他社のツールから使うことは規約違反**で、アカウントの停止もありえます。他社のエージェントでGeminiを使いたいなら、Gemini EnterpriseかGoogle AI StudioのAPIキーを使うよう、公式が案内しているとおりです。
 
-Gemini CLIを無料やGoogle AI Pro・Ultraで使っていた人は、2026年6月18日からAntigravity CLIへ移っています。
+Gemini CLIを無料やGoogle AI Pro・Ultraで使っていた人は、2026年6月18日からAntigravity CLIへ移りました。
 
 :::linkcard
 url: /media/gemini-cli-guide/
@@ -216,7 +216,7 @@ desc: Gemini CLIの無料枠の終了と、Antigravity CLIへの移行で変わ�
 
 使えます。Googleアカウントがあれば、月$0のプランでGemini 3.8 Flashなどを週ごとの枠の範囲で使えます。Tab補完とコマンドは無制限です。
 
-### Antigravityは会社のWorkspaceで使えますか？
+### 会社のWorkspaceで使えますか？
 
 Workspaceの管理者がAntigravityを有効にすれば使えます。有効になっていないとログインに失敗します。Gemini Enterpriseのライセンスで使う場合は、ログイン時に「ビジネスアカウント」を選びます。
 
@@ -226,7 +226,7 @@ Workspaceの管理者がAntigravityを有効にすれば使えます。有効に
 
 ### AntigravityでClaudeは使えますか？
 
-使えます。Google AI Pro（試用を除く）とUltraではClaude Sonnet 5.5・Opus 5.5を選べます。企業向けでは管理者が有効にする必要があり、トークンの量に応じて別に請求されます。
+使えます。Google AI Pro（試用を除く）とUltraではClaude Sonnet 5.5・Opus 5.5を選べます。企業向けでは管理者が有効にする必要があり、トークンの量に応じて別に請求される形です。
 
 ### 企業向けでもAntigravity IDEは使えますか？
 
