@@ -1,6 +1,7 @@
 ---
 title: 【2026年9月】「challenges.cloudflare.comのブロックを解除してください」の原因と対処｜ChatGPT・Claude・障害の見分け方
 date: 2026-09-27
+modified: 2026-11-10
 category: AI検索対策
 description: ChatGPTやClaudeで出る「challenges.cloudflare.comのブロックを解除してください」の原因と対処。障害か手元の設定かの見分け方を、公式ドキュメントと検査ツールの実測で確かめました。
 cover_tag: 使い方
@@ -166,7 +167,7 @@ Cloudflareが、アクセスが人かボットかを確かめる仕組みの総�
 
 ### cloudflare_challengeとは何ですか？
 
-「challenge」はCloudflareがこの確認そのものを呼ぶ名前で、developers.cloudflare.com のドキュメントでも challenge という語で説明されています。ChatGPT側の画面でこの英語表記そのものを確認できていませんが、通信の記録やエラー表示の中でこの語を見た場合も、仕組みは上の各節と同じCloudflareの確認です。対処も同じ手順で切り分けてください（二次情報・要一次確認）。
+Cloudflareの確認（Challenge）を、英語の名前をアンダースコアでつないで書いたものです。Cloudflareのドキュメントはこの確認を「Challenges」と呼び、確認画面・Turnstile・JavaScript Detectionsをまとめてそう説明しています。ChatGPTで「challenges.cloudflare.comのブロックを解除してください」と出るのもこの確認なので、原因と対処は上の各節と同じです。
 
 ### Cloudflareの障害はどこで確認できますか？
 
