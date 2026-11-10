@@ -10,7 +10,7 @@ cover_sub: Search・Computer・Cometの違いと選び方
 
 Perplexityを「検索して要約してくれるAI」と説明する記事は多いのですが、それは入口の1つにすぎません。いまの公式サイトは**Search・Computer・Comet**の3本立てで、調べるだけでなく、ツールをまたいだ作業の実行まで守備範囲に入っています。
 
-ここでは公式の[はじめようページ](https://www.perplexity.ai/hub/getting-started)と[料金ページ](https://www.perplexity.ai/hub/pricing)（2026年9月22日取得）から、3つの入口の違い、無料と有料の線、使いこなしの勘所をまとめます。実際にPerplexityを含む4つのAI検索へ同じ質問を投げた結果は[AI検索エンジンの比較記事](https://nito-0210.com/media/ai-search-engine-comparison/)にあります。
+ここでは公式の[はじめようページ](https://www.perplexity.ai/hub/getting-started)と[料金ページ](https://www.perplexity.ai/hub/pricing)（2026年9月22日取得）から、3つの入口の違い、無料と有料の線、使いこなしの勘所をまとめます。実際にPerplexityとほかの主要なAI検索へ同じ質問を投げた結果は[AI検索エンジンの比較記事](https://nito-0210.com/media/ai-search-engine-comparison/)にあります。
 
 :::takeaways
 - 入口は**Search（調べる）・Computer（作業させる）・Comet（ブラウザ）**の3つ
@@ -88,7 +88,7 @@ Proのボーナスクレジットは4,000、Maxは35,000に加えて月10,000の
 
 Perplexityは回答に必ず出典を並べるため、自社のページが引用されるかどうかがそのまま露出の差になります。投げられている質問は月に15億件という規模です。引用されない状態が続けば、検索の順位とは別のところで機会を落とします。
 
-どの質問でどのサイトが引用されているかは、実際に質問を投げて数えるのが早道です。測り方と、4つのサービスで結果がどう割れたかは[AI検索エンジンの比較記事](https://nito-0210.com/media/ai-search-engine-comparison/)にまとめました。
+どの質問でどのサイトが引用されているかは、実際に質問を投げて数えるのが早道です。測り方と、サービスごとに結果がどう割れたかは[AI検索エンジンの比較記事](https://nito-0210.com/media/ai-search-engine-comparison/)にまとめました。
 
 ## よくある質問
 
