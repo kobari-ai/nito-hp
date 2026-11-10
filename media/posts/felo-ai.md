@@ -24,7 +24,7 @@ Feloは東京都千代田区のFelo株式会社が運営するAI検索です。�
 
 **Feloは「調べる」と「資料にする」を1つの画面で続けられるAI検索です。**質問を受けるとWebを検索し、複数の情報源を読んで要約し、文中に番号つきで出典のリンクを付けて返します。日本語の質問を自動で翻訳して海外の情報源にも当たり、結果を日本語でまとめる多言語検索が特徴です。
 
-<!-- SHOT: 図 felo_overview.html → felo-ai/00_overview.png・alt「Feloの概要。日本語で聞くと海外の情報も集めて回答し資料に変換する、運営はFelo株式会社、料金は無料とPro、法人の契約は学習に使わないと明記、の4点」 -->
+<figure class="post-figure"><img src="/media/images/felo-ai/00_overview.png" alt="Feloの概要。日本語で聞くと海外の情報も集めて回答し資料に変換する、運営はFelo株式会社、料金は無料とPro、法人の契約は学習に使わないと明記、の4点" loading="lazy"></figure>
 
 検索のモードは短く答える通常の検索と、質問を分解して多くの情報源から深く調べるPro検索の2つです。回答の画面から、マインドマップ・スライド・レポート・Webページへ変換したり、PDFやWordで書き出したりできます。2026年は検索のほかに、資料や画像をまとめて扱う作業場所（LiveDoc）や、AIエージェントによる作業の代行にも広がっています。
 
@@ -95,7 +95,7 @@ desc: Gensparkの料金・運営会社・法人プランの管理機能を解説
 
 **料金は円で表示され、特商法の表示では消費税込みの金額です。**個人向けは無料とProの2つ、法人向けはEnterpriseで1人単位の料金になります。
 
-<!-- SHOT: 画面 https://felo.ai/ja/pricing・本文だけにある探す語「20,998 円/年」・赤枠にする語「1,750」「2,099」・PC・alt「Feloの料金ページ。Proの年額プランは月1,750円、月額プランは2,099円」・figcaption「Feloの料金ページ（2026年11月11日）」 -->
+<figure class="post-figure"><img src="/media/images/felo-ai/02_pricing.png" alt="Feloの料金ページ。Proの年額プランは月1,750円、月額プランは2,099円" loading="lazy"><figcaption>Feloの料金ページ（2026年11月11日）</figcaption></figure>
 
 | プラン | 料金 | 毎月のクレジット | 主な内容 |
 |---|---|---|---|
@@ -146,7 +146,7 @@ desc: ChatGPT・Gemini・Claude・Perplexityのディープリサーチの違い
 
 **稟議で聞かれやすい点の答えは、利用規約・特商法の表示・Enterpriseのページにほぼそろっています。**決める項目ごとに公式の記載を並べました。
 
-<!-- SHOT: 図 felo_decide.html → felo-ai/01_decide.png・alt「Feloを会社で使う前に決める5つ。契約の相手と条件、どのプランで使うか、入力データの扱い、管理の範囲、費用の上限」 -->
+<figure class="post-figure"><img src="/media/images/felo-ai/01_decide.png" alt="Feloを会社で使う前に決める5つ。契約の相手と条件、どのプランで使うか、入力データの扱い、管理の範囲、費用の上限" loading="lazy"></figure>
 
 | 決めること | 公式に書かれていること | 決め方の目安 |
 |---|---|---|
