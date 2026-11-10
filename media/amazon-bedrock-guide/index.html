@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Amazon Bedrockとは？料金・始め方・AgentCoreとの違い｜株式会社nito</title>
+    <meta name="description" content="Amazon Bedrockとは何かを公式の料金ページとドキュメントで解説。使えるモデル、東京でClaudeを使う条件と地域指定の料金、AgentCoreと旧Agentsの違い、ナレッジベース、始め方まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/amazon-bedrock-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Amazon Bedrockとは？料金・始め方・AgentCoreとの違い">
+    <meta property="og:description" content="Amazon Bedrockとは何かを公式の料金ページとドキュメントで解説。使えるモデル、東京でClaudeを使う条件と地域指定の料金、AgentCoreと旧Agentsの違い、ナレッジベース、始め方まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/amazon-bedrock-guide/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/amazon-bedrock-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/amazon-bedrock-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Amazon Bedrockとは？料金・始め方・AgentCoreとの違い", "description": "Amazon Bedrockとは何かを公式の料金ページとドキュメントで解説。使えるモデル、東京でClaudeを使う条件と地域指定の料金、AgentCoreと旧Agentsの違い、ナレッジベース、始め方まで。", "datePublished": "2026-11-09", "dateModified": "2026-11-09", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/amazon-bedrock-guide/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/amazon-bedrock-guide.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Amazon Bedrockとは？料金・始め方・AgentCoreとの違い"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Amazon Bedrockは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使った分だけ払う従量課金です。AWSの新しい利用者は最大200米ドル分のクレジットを受け取れます。"}}, {"@type": "Question", "name": "Amazon BedrockのClaudeは東京で使える？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。Opus 5.5とHaiku 5.5は日本の中に限るjp.でも呼べますが、Sonnet 5.5は東京からはglobal.だけです。"}}, {"@type": "Question", "name": "Bedrock Agentsは今から使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "新しく登録はできません。2026年7月30日にAgents Classicとして新規の受付を終え、すでに使っている会社だけが使い続けられる状態です。これから作るならAgentCoreです。"}}, {"@type": "Question", "name": "BedrockとClaude APIで料金は違う？", "acceptedAnswer": {"@type": "Answer", "text": "Globalで呼べば、Claude Sonnet 5.5やOpus 5.5の単価はClaude APIと同じです。jp.のように地域を限ると1割高くなります。"}}, {"@type": "Question", "name": "Amazon Bedrockのデータは学習に使われる？", "acceptedAnswer": {"@type": "Answer", "text": "使われません。Bedrockはモデルの学習のためにデータを保存・使用しません。"}}, {"@type": "Question", "name": "Amazon BedrockでGPTは使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。GPT-6 Astra・GPT-6 Sol・GPT-6 Luna・GPT-6.1 Terra・GPT-5.6の3モデルなどを東京からglobal.で呼べます。GPT-6.1 Solは今は米国のリージョンだけです。"}}, {"@type": "Question", "name": "BedrockでClaude Codeは使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。Bedrockの認証で動かせ、代金はBedrockで使ったトークンの分です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Amazon Bed…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.09</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Amazon Bedrockとは？料金・始め方・AgentCoreとの違い</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/amazon-bedrock-guide.jpg" alt="【2026年11月】Amazon Bedrockとは？料金・始め方・AgentCoreとの違い" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Amazon Bedrockは、AWSの上で複数の会社のAIモデルを1つの窓口から呼び出し、社内文書の検索やエージェントまで組める基盤です。世界で10万を超える組織が使っています。</p>
+<p>2026年7月30日には旧来のエージェント機能が新規の受付を止め、似た機能を求める会社にはAgentCoreが案内されています。この記事ではできることと料金、東京でClaudeを使うときの条件、AgentCoreとの違い、始め方を公式の料金ページとドキュメントで確かめました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>Amazon BedrockはAIモデルと周りの部品をAWSの請求でまとめて使う基盤</strong>。モデルは100種類以上、エージェントはAgentCoreで組む</li>
+<li><strong>料金は使ったトークンの数で決まり、東京から日本に限って呼ぶとGlobalより約1割高い</strong>。月6,000件の社内の問い合わせの試算でClaude Sonnet 5（global.）は月66ドル</li>
+<li><strong>東京でClaudeを使うならモデルごとの提供地域を先に見る</strong>。Sonnet 5.5には日本に限る呼び方がまだ無い</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Amazon Bedrockとは</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>何をするサービスか</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>SageMakerとの違い</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Amazon Bedrockで使えるモデル</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>提供元と主なモデル</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>提供が終わるときの決まり</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>Amazon Bedrockでできること</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>ナレッジベースで社内文書に答える</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>ガードレールで入出力を絞る</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>AgentCoreでエージェントを動かす</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>BedrockとAgentCoreの違い</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>旧Agents（Agents Classic）との関係</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>どれを選ぶか</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Amazon Bedrockの料金</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>料金の決まり方</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>4つの階層とバッチ</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>地域を限ると約1割高い</a></li>
+                    <li class="toc-h3"><a href="#s5-4"><span class="toc__n">5-4</span>主なモデルの単価</a></li>
+                    <li class="toc-h3"><a href="#s5-5"><span class="toc__n">5-5</span>部品の料金</a></li>
+                    <li class="toc-h3"><a href="#s5-6"><span class="toc__n">5-6</span>月額の試算</a></li>
+                    <li class="toc-h3"><a href="#s5-7"><span class="toc__n">5-7</span>無料で試せる範囲</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>ClaudeをBedrockで使う条件</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>東京で使えるClaudeのモデル</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>初回の利用目的フォーム</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>Bedrockで使えないClaudeの機能</a></li>
+                    <li class="toc-h3"><a href="#s6-4"><span class="toc__n">6-4</span>Claude Platform on AWSとの違い</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>Amazon Bedrockの始め方</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>会社で使うときに決めること</a></li>
+                    <li class="toc-h3"><a href="#s8-1"><span class="toc__n">8-1</span>データの扱い</a></li>
+                    <li class="toc-h3"><a href="#s8-2"><span class="toc__n">8-2</span>権限と費用の管理</a></li>
+                    <li class="toc-h3"><a href="#s8-3"><span class="toc__n">8-3</span>請求と契約の窓口</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Amazon Bedrockとは</h2>
+<h3 id="s1-1">何をするサービスか</h3>
+<p>Amazon Bedrockは自社のシステムからAPIでAIモデルを呼ぶための基盤です。2023年9月に一般提供が始まり、サーバーやGPUはAWSが管理するので、呼び出す量に応じて払うだけで済みます。複数の会社のモデルを同じ書き方で呼べるうえ、社内文書を検索させるナレッジベース、入出力を絞るガードレール、エージェントを動かすAgentCoreまでが同じAWSの請求に載ります。<strong>モデルを1社に決め打ちせず、AWSの権限・ログ・請求の中で切り替えられる点が、会社で使うときのいちばんの違いです。</strong></p>
+<figure class="post-figure"><img src="/media/images/amazon-bedrock-guide/brk_01_overview.png" alt="Amazon Bedrockの3つの層を縦に並べた図。1はClaudeやGPTやNovaなど100種類以上のモデルを選んで呼ぶ層、2はナレッジベースとガードレールで業務に合わせる層、3はAgentCoreで実行環境と記憶とツールの接続を担う層" loading="lazy"></figure>
+
+<p>すでにAWSでS3やLambdaを使っている会社なら、文書の置き場所や業務の処理とそのままつなげます。</p>
+<h3 id="s1-2">SageMakerとの違い</h3>
+<p>同じAWSのAmazon SageMakerは、機械学習のモデルを自分で作り、学習させ、配備するためのサービスです。Bedrockは各社が作った学習済みのモデルを呼ぶのが基本で、自社のデータで調整する機能も持っています。<strong>自社データで一からモデルを学習させる予定が無いなら、Bedrockから始めるのが近道です。</strong></p>
+<h2 id="s2">Amazon Bedrockで使えるモデル</h2>
+<h3 id="s2-1">提供元と主なモデル</h3>
+<p>料金ページに並ぶ提供元はAnthropic・OpenAI・Amazon・Google・Meta・Mistral AI・xAIなど19社です。2026年に入ってOpenAIはGPT-5.4からGPT-6.1 Terra（10月26日）まで、xAIはGrok 4.3からGrok 4.7（9月28日）までが加わりました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>用途</th>
+<th>候補になる主なモデル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="用途">込み入った判断・長い作業</td>
+<td data-label="候補になる主なモデル">Claude Opus 5.5・Claude Fable 5.1・GPT-6 Astra</td>
+</tr>
+<tr>
+<td data-label="用途">社内の問い合わせ・要約</td>
+<td data-label="候補になる主なモデル">Claude Sonnet 5.5・Claude Sonnet 5</td>
+</tr>
+<tr>
+<td data-label="用途">大量の分類・抽出</td>
+<td data-label="候補になる主なモデル">Claude Haiku 5.5・Amazon Nova 2 Lite</td>
+</tr>
+<tr>
+<td data-label="用途">画像・動画の生成</td>
+<td data-label="候補になる主なモデル">Stability AI（Stable Image Ultraなど）・Luma AI Ray2</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>まずはSonnetの系統とHaiku 5.5に同じ質問を送り、答えの質と使ったトークンの数を並べて比べるのがおすすめです。</strong></p>
+<h3 id="s2-2">提供が終わるときの決まり</h3>
+<p>Bedrockのモデルには、提供中・終了予定（Legacy）・終了（EOL）の3つの状態があります。2026年9月7日以降に出たモデルは、終了の前に原則6か月の予告期間を置きます。予告期間に入ると新しい利用者は使えなくなり、終了日を過ぎると呼び出しが失敗します。新しいモデルへの切り替えは自動では起きません。</p>
+<p>モデルカードの終了の最短日（EOL no sooner than）は公開の1年後で、Opus 5.5なら2027年9月22日です。<strong>本番の仕組みでは1年ごとにモデルを乗り換える作業を最初から予定に入れておくのが無難です。</strong></p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">Amazon Bedrockでできること</h2>
+<h3 id="s3-1">ナレッジベースで社内文書に答える</h3>
+<p>社内の規程やマニュアルを根拠に答えさせる仕組み（RAG）は、ナレッジベースで作ります。2026年3月2日からは保存・索引・検索の土台をBedrockが管理するマネージド型が加わりました。S3・SharePoint・Confluenceなどから文書を取り込み、読み取りと検索用の変換、結果の並べ替えまでを自動で行います。</p>
+<p>従来の型ではベクトルデータベースや埋め込みのモデルを自分で選びます。作り方の比較は<a href="/media/rag-build/">RAG構築とは</a>にあります。</p>
+<h3 id="s3-2">ガードレールで入出力を絞る</h3>
+<p>ガードレールは質問と答えの両方を検査する部品です。有害な内容のフィルター、扱わない話題の指定、個人情報の検出と伏せ字、禁止語、答えが参照文書に基づいているかの確認などを組み合わせます。製品ページは有害な内容を最大88%遮断できます。</p>
+<p><strong>ガードレールはモデルを替えても同じ設定を使えるため、社内ルールを1か所で決めておけます。</strong></p>
+<h3 id="s3-3">AgentCoreでエージェントを動かす</h3>
+<p>AgentCoreはAIエージェントを本番で動かすための実行環境と部品の集まりです。旧来のAgentsとの違いと合わせた詳しい説明は次の節です。</p>
+<h2 id="s4">BedrockとAgentCoreの違い</h2>
+<p>AgentCoreはBedrockの中でエージェントを動かす部品の集まりで、モデルを呼ぶBedrock本体とは料金も別に数えます。</p>
+<p>AgentCoreの中身は、エージェントを1回のAPI呼び出しで定義して動かすHarness、隔離された環境で動かすRuntime、会話をまたいで覚えるMemory、社内のAPIやLambdaをMCPのツールに変えるGateway、利用者の権限で外部につなぐIdentityなどです。ツールの呼び出しをルールで止めるPolicy、動きを追うObservability、品質を測るEvaluationsもあります。主なフレームワークに対応し、Bedrockの外のモデルとも組めます。</p>
+<h3 id="s4-1">旧Agents（Agents Classic）との関係</h3>
+<p>2023年11月に始まったAmazon Bedrock Agentsは、今はAgents Classicという名前になっています。2026年7月30日から新しい利用者は登録できなくなりました。すでに使っている会社はそのまま使い続けられ、似た機能を求める会社にはAgentCoreが案内されています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th></th>
+<th>AgentCore</th>
+<th>Agents Classic</th>
+<th>ナレッジベース</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="">役割</td>
+<td data-label="AgentCore">エージェントの実行と運用の部品</td>
+<td data-label="Agents Classic">画面で組むエージェント</td>
+<td data-label="ナレッジベース">社内文書の検索</td>
+</tr>
+<tr>
+<td data-label="">作り方</td>
+<td data-label="AgentCore">コードか1回のAPI呼び出し</td>
+<td data-label="Agents Classic">コンソールで設定</td>
+<td data-label="ナレッジベース">コンソールかAPI</td>
+</tr>
+<tr>
+<td data-label="">モデル</td>
+<td data-label="AgentCore">Bedrockの外のモデルも可</td>
+<td data-label="Agents Classic">Bedrockのモデル</td>
+<td data-label="ナレッジベース">Bedrockのモデル</td>
+</tr>
+<tr>
+<td data-label="">新規の利用</td>
+<td data-label="AgentCore">できる</td>
+<td data-label="Agents Classic">できない</td>
+<td data-label="ナレッジベース">できる</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s4-2">どれを選ぶか</h3>
+<figure class="post-figure"><img src="/media/images/amazon-bedrock-guide/brk_02_agents.png" alt="エージェントを作る場所の選び方を3段で示した図。これから作るならAgentCore、文書に答えるだけならナレッジベースを単体で使う、旧Agentsは2026年7月30日に新規受付を終了し既存の利用者だけが使える" loading="lazy"></figure>
+
+<p><strong>これから作るならAgentCoreを選び、社内文書に答えるだけならナレッジベースを単体で使うのが基本です。</strong>社内システムの更新や申請の代行のように複数の手順を進めさせるときは、AgentCoreが向いています。</p>
+<p>AgentCoreの主な部品は東京リージョンで使えます。ただし決済（payments）とWeb Answerは東京で使えません。Web Searchのツールは東京でも使え、1,000回7ドルです。エージェントの設計は<a href="/media/ai-agent-build/">AIエージェントの作り方</a>にまとめています。</p>
+<h2 id="s5">Amazon Bedrockの料金</h2>
+<h3 id="s5-1">料金の決まり方</h3>
+<p>文章のモデルは入力と出力のトークン数に単価をかけて数えます。単価はモデルごとに違い、さらに呼び出すリージョンと、処理する場所を限るかどうかで変わります。ナレッジベースやガードレールなどの部品は、保存量や回数に応じた別の料金です。<strong>ClaudeやGPTのようにAWS Marketplaceで売られるモデルは、請求もAWS Marketplace経由になり、Cost Explorerでは提供元の名前で表示され、Amazon Bedrockの行には含まれません。</strong></p>
+<h3 id="s5-2">4つの階層とバッチ</h3>
+<p>呼び出すたびに4つの階層から選べます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>階層</th>
+<th>中身</th>
+<th>向く処理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="階層">Standard</td>
+<td data-label="中身">既定の従量課金</td>
+<td data-label="向く処理">ふだんの問い合わせや要約</td>
+</tr>
+<tr>
+<td data-label="階層">Priority</td>
+<td data-label="中身">割増で優先して処理</td>
+<td data-label="向く処理">顧客が待つ画面</td>
+</tr>
+<tr>
+<td data-label="階層">Flex</td>
+<td data-label="中身">割引で処理を待てる</td>
+<td data-label="向く処理">評価や夜間の要約</td>
+</tr>
+<tr>
+<td data-label="階層">Reserved</td>
+<td data-label="中身">1か月か3か月で処理量を予約</td>
+<td data-label="向く処理">止められない基幹の処理</td>
+</tr>
+</tbody>
+</table></div>
+<p>別にバッチ推論があり、対応するモデルはオンデマンドの半額です。ただしバッチは完了が保証されません。<strong>Claudeの5.5の世代は、モデルカードではStandardだけの対応です。</strong></p>
+<h3 id="s5-3">地域を限ると約1割高い</h3>
+<p>東京から呼ぶとき処理する場所の決め方は3つあります。東京だけで処理するIn-Region、日本の中（東京と大阪）で振り分けるGeo、世界に振り分けるGlobalです。Globalは標準料金より約10%安く、地域を限る呼び方には10%の割増があります。振り分けの転送料はかからず、料金は呼び出し元のリージョンの単価で数えます。</p>
+<figure class="post-figure"><img src="/media/images/amazon-bedrock-guide/brk_03_region.png" alt="東京からClaudeを呼ぶ2つの道を縦に並べた図。jp.を付けると東京と大阪で処理しGlobalより約1割高い。global.を付けると世界で処理し単価はClaude APIと同じ水準" loading="lazy"></figure>
+
+<p><strong>社外に出せない情報を扱うならjp.を付けた日本の中の呼び方、そうでなければglobal.を付けた安い呼び方、と用途ごとに分けられます。</strong></p>
+<h3 id="s5-4">主なモデルの単価</h3>
+<p>東京のリージョンから呼んだときの単価です。100万トークンあたりの米ドルで、Standardの階層の値です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>Global（入力/出力）</th>
+<th>地域を限る（入力/出力）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">Claude Opus 5.5</td>
+<td data-label="Global（入力/出力）">4 / 20</td>
+<td data-label="地域を限る（入力/出力）">4.4 / 22</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Sonnet 5</td>
+<td data-label="Global（入力/出力）">2 / 10</td>
+<td data-label="地域を限る（入力/出力）">東京からは呼べない（global.だけ）</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Sonnet 4.6</td>
+<td data-label="Global（入力/出力）">3 / 15</td>
+<td data-label="地域を限る（入力/出力）">3.3 / 16.5</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Haiku 5.5</td>
+<td data-label="Global（入力/出力）">0.1 / 0.5</td>
+<td data-label="地域を限る（入力/出力）">0.11 / 0.55</td>
+</tr>
+<tr>
+<td data-label="モデル">Amazon Nova 2 Lite</td>
+<td data-label="Global（入力/出力）">0.36 / 3.01</td>
+<td data-label="地域を限る（入力/出力）">0.396 / 3.311</td>
+</tr>
+</tbody>
+</table></div>
+<p>Claude Sonnet 5.5は、料金ページの東京の欄が空いています（米国東部からのGlobalは入力2ドル・出力10ドル）。Claude Fable 5.1はGlobalだけで入力10ドル・出力50ドルです。<strong>Globalの単価はAnthropicが直接売るClaude APIの単価と同じです。</strong>単価と割引の仕組みは<a href="/media/claude-api-pricing/">Claude APIの料金</a>で詳しく扱いました。</p>
+<h3 id="s5-5">部品の料金</h3>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>部品</th>
+<th>単価</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="部品">ナレッジベース（マネージド）の保存</td>
+<td data-label="単価">元データ1GBあたり月5ドル</td>
+</tr>
+<tr>
+<td data-label="部品">ナレッジベースの検索</td>
+<td data-label="単価">1,000回1ドル（エージェント型は1,000回4ドル＋内部の検索代）</td>
+</tr>
+<tr>
+<td data-label="部品">ガードレールの内容フィルター</td>
+<td data-label="単価">1,000テキスト単位0.15ドル</td>
+</tr>
+<tr>
+<td data-label="部品">AgentCore Runtime（v1）</td>
+<td data-label="単価">1vCPU時間0.0895ドル・1GB時間0.00945ドル（v2は1vCPU時間0.1276ドル・1GB時間0.0169ドル）</td>
+</tr>
+<tr>
+<td data-label="部品">AgentCore Gateway</td>
+<td data-label="単価">1,000回の呼び出しで0.005ドル</td>
+</tr>
+</tbody>
+</table></div>
+<p>ガードレールの1テキスト単位は1,000文字までです。<strong>AgentCore Memoryの短期の記憶は、取り込み1GBあたり1ドルに加え、読み出し1GBあたり0.2ドル・保存1GB月0.1ドルがかかります。</strong></p>
+<h3 id="s5-6">月額の試算</h3>
+<p>社内の問い合わせに1日300件、月20日で6,000件答える仕組みを想定しました（試算）。1件に入力3,000トークン、出力500トークンを使うとして、月に入力1,800万トークン・出力300万トークンです。円は2026年11月6日の仲値、1ドル157.77円で換算しています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>日本に限る</th>
+<th>Global</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">Claude Opus 5.5</td>
+<td data-label="日本に限る">145.2ドル（約2.3万円）</td>
+<td data-label="Global">132ドル（約2.1万円）</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Sonnet 5</td>
+<td data-label="日本に限る">東京からは呼べない</td>
+<td data-label="Global">66ドル（約1.0万円）</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Haiku 5.5</td>
+<td data-label="日本に限る">3.63ドル（約570円）</td>
+<td data-label="Global">3.3ドル（約520円）</td>
+</tr>
+<tr>
+<td data-label="モデル">Amazon Nova 2 Lite</td>
+<td data-label="日本に限る">17.06ドル（約2,700円）</td>
+<td data-label="Global">15.51ドル（約2,400円）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>金額の差を生むのはモデルの選び方で、地域を限るかどうかの差は1割にとどまります。</strong></p>
+<h3 id="s5-7">無料で試せる範囲</h3>
+<p>AWSの新しい利用者は最大200米ドル分のクレジットを受け取れます。クレジットの対象と期限はAWSの無料利用枠のページで確かめてください。</p>
+<h2 id="s6">ClaudeをBedrockで使う条件</h2>
+<h3 id="s6-1">東京で使えるClaudeのモデル</h3>
+<p>同じClaudeでも、モデルごとに東京から呼べる方法が違います。モデルカードの地域の表を3つ確かめました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>東京からの呼び方</th>
+<th>Bedrockでの公開日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">Claude Opus 5.5</td>
+<td data-label="東京からの呼び方">jp.とglobal.</td>
+<td data-label="Bedrockでの公開日">2026年9月22日</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Sonnet 5.5</td>
+<td data-label="東京からの呼び方">global.だけ</td>
+<td data-label="Bedrockでの公開日">2026年9月28日</td>
+</tr>
+<tr>
+<td data-label="モデル">Claude Haiku 5.5</td>
+<td data-label="東京からの呼び方">jp.とglobal.</td>
+<td data-label="Bedrockでの公開日">2026年10月7日</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/amazon-bedrock-guide/brk_05_modelcard.png" alt="Claude Sonnet 5.5のモデルカードの地域の表。東京の行はIn-RegionとGeoが対応外で、Globalだけが対応" loading="lazy"><figcaption>Amazon BedrockのClaude Sonnet 5.5のモデルカード（2026年11月9日）</figcaption></figure>
+
+<p><strong>Sonnet 5.5を日本の中だけで処理させる呼び方は、まだありません。</strong>社内の規程で日本国外での処理を避けたい会社は、Opus 5.5かHaiku 5.5、またはSonnet 4.6を選ぶことになります。jp.を付けた呼び方は東京と大阪の2か所で処理されます。</p>
+<h3 id="s6-2">初回の利用目的フォーム</h3>
+<p>ほとんどのモデルは正しいIAMの権限があれば最初から使える状態です。「モデルアクセス」の画面から申請する手順は、今は米国の政府向けリージョン（GovCloud）だけです。ただしAnthropicのモデルは、初めて使う前に会社名・ウェブサイト・用途を書くフォームを1回出す必要があります。</p>
+<p>出した後に保留の状態になることがあり、その間の呼び出しは拒否されます。Opus 5.5・Sonnet 5.5・Haiku 5.5はコンソールで条件を確かめるよう案内されています。</p>
+<h3 id="s6-3">Bedrockで使えないClaudeの機能</h3>
+<p>Bedrock経由のClaudeで使えない主な機能は次のとおりです。</p>
+<ul>
+<li>コード実行・Web検索・Web取得・advisorなどAnthropic側で動くツール</li>
+<li>Agent Skills・MCPコネクタ・programmatic tool calling・Claude Managed Agents</li>
+<li>Files APIとURLで渡す画像・文書、Message Batches API</li>
+</ul>
+<p>自動のプロンプトキャッシュも、AWSのモデルカードでは対応外です。</p>
+<p><strong>Web検索させたいエージェントなら、AgentCoreのWeb Searchか自前の検索ツールを組み合わせることになります。</strong></p>
+<h3 id="s6-4">Claude Platform on AWSとの違い</h3>
+<p>AWSの請求でClaudeを使う道はBedrockだけではありません。Claude Platform on AWSはAnthropicが運営するClaude APIをAWSの認証と請求で使う経路で、新しい機能が同じ日に届くことが多いとされます。</p>
+<p><strong>データをAWSの境界の中に置き、ナレッジベースやガードレールと組むならBedrock、Claudeの最新の機能をすぐ使いたいならPlatform on AWSが向いています。</strong>契約の経路ごとの違いは<a href="/media/claude-corporate-contract/">Claudeの法人契約</a>にまとめています。</p>
+<h2 id="s7">Amazon Bedrockの始め方</h2>
+<ol>
+<li><strong>AWSアカウントと権限を用意する</strong>: 管理者がIAMでBedrockの権限を付ける。AnthropicやOpenAIのモデルにはAWS Marketplaceの購読の権限も要る（Meta・Mistral AI・xAIなどは不要）</li>
+<li><strong>リージョンを東京にする</strong>: コンソールの右上でアジアパシフィック（東京）を選び、検索窓に「Bedrock」と入れて開く</li>
+<li><strong>モデルカタログからプレイグラウンドで試す</strong>: モデルを選んで開き、チャットの画面で質問を送る</li>
+<li><strong>APIキーかIAMロールでSDKから呼ぶ</strong>: Converse APIならモデルを替えても同じ書き方で呼べる</li>
+<li><strong>本番の呼び方を決める</strong>: モデルIDの頭にjp.かglobal.を付け、データの扱いと単価のどちらを優先するかを決める</li>
+</ol>
+<p>プレイグラウンドでは回答の下に入力と出力のトークン数が出ます。この数を控えておくと、上の試算に自社の数字を入れられます。</p>
+<h2 id="s8">会社で使うときに決めること</h2>
+<h3 id="s8-1">データの扱い</h3>
+<p>Bedrockはモデルの学習のためにデータを保存したり使ったりしません。モデルの提供元はBedrockが運用するアカウントに入れず、プロンプトや答えを見られません。一方でGlobalの呼び方では日本の外で処理されることがあります。<strong>社外秘の情報を流す仕組みは、jp.の呼び方とログの保存先を最初に決めておくのが安全です。</strong></p>
+<h3 id="s8-2">権限と費用の管理</h3>
+<p>利用規約を法務が読む前に使われたくないなら、組織のSCPで先に呼び出しを止め、読み終えてから許可する順番がユーザーガイドで勧められています。部門ごとの費用はIAMのタグで分けて集計できます。</p>
+<h3 id="s8-3">請求と契約の窓口</h3>
+<p>支払いはAWSの請求書にまとまり、AnthropicやOpenAIのモデルの代金はAWS Marketplace経由で、同じAWSの請求書に載ります。Claudeの販売代理の扱いは<a href="/media/claude-corporate-contract/">Claudeの法人契約</a>に書いたとおりです。</p>
+<p>どの業務にどの部品で組むかを決めきれない場合は、nitoの<a href="/ai-agent/">AIエージェント構築支援</a>で要件の整理から相談できます。</p>
+<h2 id="s9">まとめ</h2>
+<ul>
+<li><strong>社内文書に答えるボットを作るなら</strong>、マネージド型のナレッジベースとSonnetの系統から始める。月6,000件でもモデルと検索で月100ドル前後</li>
+<li><strong>複数の手順を進めるエージェントを作るなら</strong>、AgentCoreを選ぶ。旧Agentsは新規に使えない</li>
+<li><strong>日本の外での処理を避けたいなら</strong>、jp.で呼べるモデルを選ぶ。Sonnet 5.5はまだglobal.だけ</li>
+<li><strong>Claudeの最新の機能が要るなら</strong>、Bedrockで使えない機能を先に確かめ、Claude Platform on AWSと比べる</li>
+</ul>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">Amazon Bedrockは無料で使えますか？</h3>
+<p>使った分だけ払う従量課金です。AWSの新しい利用者は最大200米ドル分のクレジットを受け取れます。</p>
+<h3 id="s10-2">Amazon BedrockのClaudeは東京で使える？</h3>
+<p>使えます。Opus 5.5とHaiku 5.5は日本の中に限るjp.でも呼べますが、Sonnet 5.5は東京からはglobal.だけです。</p>
+<h3 id="s10-3">Bedrock Agentsは今から使えますか？</h3>
+<p>新しく登録はできません。2026年7月30日にAgents Classicとして新規の受付を終え、すでに使っている会社だけが使い続けられる状態です。これから作るならAgentCoreです。</p>
+<h3 id="s10-4">BedrockとClaude APIで料金は違う？</h3>
+<p>Globalで呼べば、Claude Sonnet 5.5やOpus 5.5の単価はClaude APIと同じです。jp.のように地域を限ると1割高くなります。</p>
+<h3 id="s10-5">Amazon Bedrockのデータは学習に使われる？</h3>
+<p>使われません。Bedrockはモデルの学習のためにデータを保存・使用しません。</p>
+<h3 id="s10-6">Amazon BedrockでGPTは使えますか？</h3>
+<p>使えます。GPT-6 Astra・GPT-6 Sol・GPT-6 Luna・GPT-6.1 Terra・GPT-5.6の3モデルなどを東京からglobal.で呼べます。GPT-6.1 Solは今は米国のリージョンだけです。</p>
+<h3 id="s10-7">BedrockでClaude Codeは使えますか？</h3>
+<p>使えます。Bedrockの認証で動かせ、代金はBedrockで使ったトークンの分です。</p>
+<h2 id="s11">出典</h2>
+<ul>
+<li>AWS「<a href="https://aws.amazon.com/jp/bedrock/">Amazon Bedrock</a>」「<a href="https://aws.amazon.com/jp/bedrock/pricing/">Amazon Bedrock の料金</a>」「<a href="https://aws.amazon.com/bedrock/agentcore/pricing/">Amazon Bedrock AgentCore pricing</a>」（2026年11月9日取得）</li>
+<li>Amazon Bedrock ユーザーガイド「<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html">Overview</a>」「<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html">Cross-Region inference</a>」「<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html">Model lifecycle</a>」「<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/doc-history.html">Document history</a>」</li>
+<li>Amazon Bedrock モデルカード「<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-opus-5-5.html">Claude Opus 5.5</a>」「<a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-5-5.html">Claude Sonnet 5.5</a>」</li>
+<li>Anthropic「<a href="https://platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock">Claude in Amazon Bedrock</a>」「<a href="https://claude.com/ja/partners/claude-on-aws">Claude on AWS</a>」</li>
+<li>三菱UFJリサーチ＆コンサルティング「<a href="https://www.murc-kawasesouba.jp/fx/index.php">外国為替相場</a>」（2026年11月6日の公示相場）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Amazon Bedrockとは</a><a href="#s2">Amazon Bedrockで使えるモデル</a><a href="#s3">Amazon Bedrockでできること</a><a href="#s4">BedrockとAgentCoreの違い</a><a href="#s5">Amazon Bedrockの料金</a><a href="#s6">ClaudeをBedrockで使う条件</a><a href="#s7">Amazon Bedrockの始め方</a><a href="#s8">会社で使うときに決めること</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/genspark-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gensparkとは"><defs><linearGradient id="ecg-2fe06f1e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-2fe06f1e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Gensparkとは</text><line x1="341.6" y1="365.9" x2="858.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.10</div>
+                <div class="rel-card__ttl">【2026年11月】Gensparkとは？料金・どこの国の会社か・法人プランと安全性を解説</div>
+            </a>
+            <a href="/media/manus-ai/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manus AIとは"><defs><linearGradient id="ecg-1371fa3f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1371fa3f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Manus AIとは</text><line x1="341.6" y1="365.9" x2="858.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.10</div>
+                <div class="rel-card__ttl">【2026年11月】Manus AIとは？料金・無料枠・どこの国の会社か・危険性を解説</div>
+            </a>
+            <a href="/media/chatgpt-projects/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのプロジェクト"><defs><linearGradient id="ecg-7698c1b5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7698c1b5)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのプロジェクト</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.09</div>
+                <div class="rel-card__ttl">【2026年11月】ChatGPTのプロジェクトとは？使い方・チームでの共有・GPTsとの違い</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'amazon-bedrock-guide',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
