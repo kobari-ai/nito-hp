@@ -28,7 +28,7 @@ Notion AIはNotionに組み込まれたAIの機能をまとめた呼び名です
 
 公式ヘルプはNotion AIを使えるのはビジネスとエンタープライズのプランだと明記しています。フリーとプラスでは限られた数の無料の回答で試せるだけで、議事録やエンタープライズサーチのような会社向けの機能はビジネス以上に入っています。
 
-<!-- SHOT: 図 ntn_overview.html → ntn_00_overview.png・alt「Notion AIの主な4つの機能を縦に並べた図。Notionエージェントは頼んだ作業をページで進める。エンタープライズサーチは社内とつないだアプリを横断する。AIミーティングノートは会議を文字起こしして要約する。カスタムエージェントは決めた時刻や出来事で自動で動く。本格的に使えるのはビジネス以上」 -->
+<figure class="post-figure"><img src="/media/images/notion-ai/ntn_00_overview.png" alt="Notion AIの主な4つの機能を縦に並べた図。Notionエージェントは頼んだ作業をページで進める。エンタープライズサーチは社内とつないだアプリを横断する。AIミーティングノートは会議を文字起こしして要約する。カスタムエージェントは決めた時刻や出来事で自動で動く。本格的に使えるのはビジネス以上" loading="lazy"></figure>
 
 ## Notion AIでできること
 
@@ -84,19 +84,19 @@ desc: AIとほかのサービスをつなぐMCPの仕組みと、会社で管理
 | ビジネス | 3,150円 | 3,800円 | 含まれる |
 | エンタープライズ | 営業に問い合わせ | 営業に問い合わせ | 含まれる・ゼロ保持 |
 
-<!-- SHOT: 画面 https://www.notion.com/ja/pricing・本文だけにある探す語「大事な仕事のためのAIワークスペース」・赤枠にする語「￥3,150」「Notionエージェント」「AI ミーティングノート」・PC・alt「Notionの料金ページ。ビジネスプランは1メンバー月3,150円で、NotionエージェントとAIミーティングノートが含まれる」・figcaption「Notion 料金プラン（2026年11月11日）」 -->
+<figure class="post-figure"><img src="/media/images/notion-ai/ntn_shot_pricing.png" alt="Notionの料金ページ。ビジネスプランは1メンバー月3,150円で、NotionエージェントとAIミーティングノートが含まれる" loading="lazy"><figcaption>Notion 料金プラン（2026年11月11日）</figcaption></figure>
 
 **ビジネスにしても使い放題になるわけではありません。** 1人に毎月Standardクレジット1,500とSelectクレジット500が付き、どちらも翌月に繰り越せず、ほかのメンバーにも移せません。Autoに任せる作業と議事録はStandard、自分でモデルを選ぶ作業と自分のカスタムエージェントはSelectから減ります。
 
 使い切ると、その種類のクレジットを使う機能は次のリセットまで止まります。止めずに続けたいときは会社でNotionクレジットを買い、オーナーがメンバーごとの上限を決めます。Notionクレジットは月間なら1,000あたり10ドル、年間なら1,000あたり13ドルで、年間の方が高い代わりに契約期間のどこでも使える仕組みです。
 
-<!-- SHOT: 図 ntn_credits.html → ntn_01_credits.png・alt「Notion AIのクレジット3種類を縦に並べた図。Standardは1人月1,500でAutoの作業と議事録に使う。Selectは1人月500でモデル指定と自分のエージェントに使う。Notionクレジットは会社で買い1,000で10ドル。使い切ると次のリセットまで止まり、追加の利用はオーナーが許可する」 -->
+<figure class="post-figure"><img src="/media/images/notion-ai/ntn_01_credits.png" alt="Notion AIのクレジット3種類を縦に並べた図。Standardは1人月1,500でAutoの作業と議事録に使う。Selectは1人月500でモデル指定と自分のエージェントに使う。Notionクレジットは会社で買い1,000で10ドル。使い切ると次のリセットまで止まり、追加の利用はオーナーが許可する" loading="lazy"></figure>
 
 減り方の目安もヘルプにあります。Autoで処理した場合、メールの推敲のような単純な作業で約5、作業の進捗の追跡で約10、データベースの設計のような複雑な作業で約25です。最上位のモデルを自分で選ぶと同じ作業が約50〜150になるため、**全社に配るならAutoのまま使うのが費用を抑える近道**になります。
 
 議事録には近く変更があります。**AIミーティングノートは2026年12月1日からStandardクレジットを使い始め、1時間の会議で約10を見込む**とヘルプに書かれています。毎日会議を記録する部署では、月の枠のうち議事録で減る分を見積もっておくと安心です。
 
-<!-- SHOT: 画面 https://www.notion.com/ja/help/standard-select-and-notion-credits-eligible-features・本文だけにある探す語「各クレジットを使用する機能」・赤枠にする語「AIミーティングノート」「2026年12月1日」・PC・alt「Notionヘルプのクレジットの対象機能の表。AIミーティングノートはStandardクレジットを使い、2026年12月1日から月の枠が減る」・figcaption「Notion ヘルプ「Standard、Select、Notionクレジット：対象機能」（2026年11月11日）」 -->
+<figure class="post-figure"><img src="/media/images/notion-ai/ntn_shot_credits_table.png" alt="Notionヘルプのクレジットの対象機能の表。AIミーティングノートはStandardクレジットを使い、2026年12月1日から月の枠が減る" loading="lazy"><figcaption>Notion ヘルプ「Standard、Select、Notionクレジット：対象機能」（2026年11月11日）</figcaption></figure>
 
 ### カスタムエージェントの費用
 
@@ -139,7 +139,7 @@ desc: AIとほかのサービスをつなぐMCPの仕組みと、会社で管理
 | 議事録の文字起こしの自動削除 | 手動で削除 | 削除の予定を設定できる |
 | 監査ログ・SCIM | なし | あり |
 
-<!-- SHOT: 画面 https://www.notion.com/ja/help/notion-ai-security-practices・本文だけにある探す語「データの保護と保持について」・赤枠にする語「デフォルトでは、NotionもAIプロバイダーも」「フリー、プラス、ビジネス」・PC・alt「NotionヘルプのNotion AIのセキュリティの節。既定では顧客データを学習に使わず、フリー・プラス・ビジネスはAIの提供元が30日以下で削除する」・figcaption「Notion ヘルプ「Notion AIのセキュリティとプライバシー対策」（2026年11月11日）」 -->
+<figure class="post-figure"><img src="/media/images/notion-ai/ntn_shot_security.png" alt="NotionヘルプのNotion AIのセキュリティの節。既定では顧客データを学習に使わず、フリー・プラス・ビジネスはAIの提供元が30日以下で削除する" loading="lazy"><figcaption>Notion ヘルプ「Notion AIのセキュリティとプライバシー対策」（2026年11月11日）</figcaption></figure>
 
 一部のモデルは例外です。Claude Fable 5を使う場合、Anthropicが安全のためにプロンプトと応答を一定期間保存することがあり、そのため管理者がオンにするまで使えません。議事録の音声は文字起こしの事業者（OpenAI・Anthropicなど）に送られますが保存はされず、処理に失敗したときだけNotionが最大3日保持します。
 
@@ -147,7 +147,7 @@ desc: AIとほかのサービスをつなぐMCPの仕組みと、会社で管理
 
 上で見た料金・クレジット・保持の条件は、どれも管理者の設定と契約で変わります。全社に配る前に、次の6つを担当者の間で決めておくと、使い始めてから止まったり請求が膨らんだりするのを防げます。
 
-<!-- SHOT: 図 ntn_decide.html → ntn_02_decide.png・alt「会社でNotion AIを入れる前に決める6つを縦に並べた図。プランと人数、クレジットの上限、エージェントの費用負担、管理者の設定、学習と保持の条件、録音の同意」 -->
+<figure class="post-figure"><img src="/media/images/notion-ai/ntn_02_decide.png" alt="会社でNotion AIを入れる前に決める6つを縦に並べた図。プランと人数、クレジットの上限、エージェントの費用負担、管理者の設定、学習と保持の条件、録音の同意" loading="lazy"></figure>
 
 | 決めること | 設定や確認の場所 | 対象 |
 |---|---|---|
