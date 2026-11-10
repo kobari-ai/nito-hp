@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Vertex AIとは？新名称・料金とGemini APIとの違い｜株式会社nito</title>
+    <meta name="description" content="Vertex AIとは何かを公式ページで解説。2026年4月のGemini Enterprise Agent Platformへの改名とできること、料金と月額の試算、Gemini アプリ・Gemini APIとの違い、始め方まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/vertex-ai-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Vertex AIとは？新名称・料金とGemini APIとの違い">
+    <meta property="og:description" content="Vertex AIとは何かを公式ページで解説。2026年4月のGemini Enterprise Agent Platformへの改名とできること、料金と月額の試算、Gemini アプリ・Gemini APIとの違い、始め方まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/vertex-ai-guide/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/vertex-ai-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/vertex-ai-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Vertex AIとは？新名称・料金とGemini APIとの違い", "description": "Vertex AIとは何かを公式ページで解説。2026年4月のGemini Enterprise Agent Platformへの改名とできること、料金と月額の試算、Gemini アプリ・Gemini APIとの違い、始め方まで。", "datePublished": "2026-11-09", "dateModified": "2026-11-09", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/vertex-ai-guide/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/vertex-ai-guide.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Vertex AIとは？新名称・料金とGemini APIとの違い"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vertex AIはなくなったのですか？", "acceptedAnswer": {"@type": "Answer", "text": "なくなってはいません。2026年4月22日（米国時間）にGemini Enterprise Agent Platformへ名前が変わり、機能は引き継がれています。"}}, {"@type": "Question", "name": "Vertex AIは無料で試せますか？", "acceptedAnswer": {"@type": "Answer", "text": "新規なら90日間有効な300ドルのクレジットで試せます。AI StudioのGemini APIと、Claudeなどパートナーのモデルには使えません。Agent Platformで呼ぶGeminiには使えます。"}}, {"@type": "Question", "name": "Vertex AIとGeminiは何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "Geminiはモデルとアプリの名前で、Vertex AI（今のAgent Platform）はそのモデルを自社のシステムに組み込む基盤です。"}}, {"@type": "Question", "name": "Vertex AIでClaudeは使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。Model GardenにClaudeが並びますが、有料の請求先アカウントが必要です。"}}, {"@type": "Question", "name": "Vertex AIに入力したデータは学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "事前の許可がなければ学習には使われません。ただしログが一定期間残る機能があります。"}}, {"@type": "Question", "name": "Vertex AI Searchは今どこにありますか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年4月からAgent Searchと呼ばれ、Agent Platformの部品の1つです。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Vertex AIと…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.09</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Vertex AIとは？新名称・料金とGemini APIとの違い</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/vertex-ai-guide.jpg" alt="【2026年11月】Vertex AIとは？新名称・料金とGemini APIとの違い" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Vertex AIは、Google Cloudの上でAIのモデルを選んで自社のアプリやエージェントに組み込み、本番で動かすための開発基盤です。2026年4月22日（米国時間）にGemini Enterprise Agent Platformへ切り替わり、製品ページは日本語・英語とも「Gemini プラットフォーム（Gemini platform）」の名前になりました。</p>
+<p>社内の資料やAPIの名前にはVertex AIが残り、検索で見つかる説明と今の画面の名前が合わないことがあります。この記事では今の名前とできること、料金、Gemini アプリ・Gemini APIとの違い、始め方までを公式のページで確かめました。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>Vertex AIは2026年4月22日（米国時間）から<strong>Gemini Enterprise Agent Platform</strong>。機能は引き継がれ、新しい機能はAgent Platformでだけ出る</li>
+<li>料金はモデルのトークン単価が中心。<strong>東京などのリージョンを指定すると約1.1倍</strong>で、Gemini 3.8 Flashの今の単価は12月31日までのクレジット還元つき</li>
+<li>Gemini APIの公式ドキュメントは、<strong>企業向けの管理が要らなければGemini APIを勧めている</strong>。データの扱い・処理する地域・社内の権限を説明する必要があるときにAgent Platformを選ぶ</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Vertex AIとは</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>何をする基盤か</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>2026年4月に名前が変わった</a></li>
+                    <li class="toc-h3"><a href="#s1-3"><span class="toc__n">1-3</span>これまでの経緯</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Vertex AIでできること</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>モデルを選んで試す</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>エージェントを作って動かす</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>社内データを検索させる</a></li>
+                    <li class="toc-h3"><a href="#s2-4"><span class="toc__n">2-4</span>予測や分類のモデルを作る</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>Vertex AIの料金</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>料金の決まり方</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>主なモデルの単価</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>検索とランタイムの料金</a></li>
+                    <li class="toc-h3"><a href="#s3-4"><span class="toc__n">3-4</span>無料クレジットで試せる範囲</a></li>
+                    <li class="toc-h3"><a href="#s3-5"><span class="toc__n">3-5</span>月額の試算</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>Gemini アプリ・Gemini APIとの違い</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>公式が勧める選び方</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>移るときに変わること</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>会社で使うときに決めること</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>データを残さない設定</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>処理する地域</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>権限と費用の管理</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>Vertex AIの始め方</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>Vertex AIの活用事例</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Vertex AIとは</h2>
+<h3 id="s1-1">何をする基盤か</h3>
+<p>Agent Platformは、Google Cloudの上でAIのモデルを選び、自社のアプリやエージェントに組み込んで、本番で動かし続けるための開発基盤です。社員が画面で質問するチャットの製品ではなく、開発者やデータの担当が使う土台にあたります。概要ページは機能を「ビルド」「スケーリング」「管理」「最適化」の4つの柱に分けていて、作る段階から本番での監視までが1か所にそろいます。</p>
+<h3 id="s1-2">2026年4月に名前が変わった</h3>
+<p>Google Cloudは2026年4月22日（米国時間）、Gemini Enterprise Agent Platformを「Vertex AIの進化形」として公開しました。Vertex AIのサービスとロードマップは今後すべてAgent Platformを通して届け、単独のサービスとしては出しません。以前のVertex AIのURLも製品ページへ転送されます。<strong>Vertex AIで使えていたモデルやエージェントの部品は、Agent Platformの中にそのまま続いています。</strong> </p>
+<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_product.png" alt="Google Cloudの日本語の製品ページ。以前Vertex AIと呼ばれていた製品の見出しがGemini プラットフォームになっている" loading="lazy"><figcaption>Google Cloudの製品ページ（2026年11月9日）</figcaption></figure>
+
+<p>名前が変わっていない所もあります。Google Apps Scriptから呼ぶ機能は今も「Vertex AI サービス」で、APIのアドレスはaiplatform.googleapis.comのままです。社内文書を検索させる部品は2026年4月からAgent Searchと呼ばれます。<strong>社内の資料にVertex AIとAgent Platformが混ざっていても、同じ基盤を指していると読んでかまいません。</strong> ドキュメントとリリースノートでは「Gemini Enterprise Agent Platform」の名前が使われています。この記事では今の名前のAgent Platformを使い、旧名は必要な所だけ添えます。</p>
+<h3 id="s1-3">これまでの経緯</h3>
+<p>Vertex AIは2021年5月18日に、それまで別々だったAutoMLとAI Platformをまとめた機械学習の基盤として一般提供が始まりました。2023年6月に生成AIの機能が一般提供になり、2024年4月にはエージェントを作るVertex AI Agent Builderが加わっています。<strong>予測や分類のモデルを作る基盤から、生成AIとエージェントの基盤へと中心が移ってきた流れの先に、今回の改名があります。</strong></p>
+<h2 id="s2">Vertex AIでできること</h2>
+<p>今の公式の名前と2026年4月までの名前を、よく使われる機能ごとに並べると次のとおりです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>今の名前</th>
+<th>2026年4月までの名前</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="やりたいこと">モデルを選ぶ</td>
+<td data-label="今の名前">Model Garden</td>
+<td data-label="2026年4月までの名前">同じ</td>
+</tr>
+<tr>
+<td data-label="やりたいこと">画面でプロンプトを試す</td>
+<td data-label="今の名前">Agent Studio</td>
+<td data-label="2026年4月までの名前">Vertex AI Studio</td>
+</tr>
+<tr>
+<td data-label="やりたいこと">コードでエージェントを組む</td>
+<td data-label="今の名前">Agent Development Kit（ADK）</td>
+<td data-label="2026年4月までの名前">同じ</td>
+</tr>
+<tr>
+<td data-label="やりたいこと">エージェントを動かす</td>
+<td data-label="今の名前">Agent Runtime・メモリーバンク</td>
+<td data-label="2026年4月までの名前">Agent Engine</td>
+</tr>
+<tr>
+<td data-label="やりたいこと">社内文書を検索させる</td>
+<td data-label="今の名前">Agent Search・RAG Engine・ベクトル検索</td>
+<td data-label="2026年4月までの名前">Vertex AI Search</td>
+</tr>
+<tr>
+<td data-label="やりたいこと">予測や分類のモデルを作る</td>
+<td data-label="今の名前">カスタム トレーニング・AutoML</td>
+<td data-label="2026年4月までの名前">同じ</td>
+</tr>
+<tr>
+<td data-label="やりたいこと">開発の作業場</td>
+<td data-label="今の名前">Colab Enterprise・Workbench</td>
+<td data-label="2026年4月までの名前">Vertex AI Workbench</td>
+</tr>
+<tr>
+<td data-label="やりたいこと">運用</td>
+<td data-label="今の名前">Pipelines・Model Registry・Feature Store</td>
+<td data-label="2026年4月までの名前">Vertex AI Pipelines など</td>
+</tr>
+<tr>
+<td data-label="やりたいこと">守る・見張る</td>
+<td data-label="今の名前">Agent Identity・Agent Gateway・評価</td>
+<td data-label="2026年4月までの名前">（改名と同時に追加）</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_overview.png" alt="Agent Platform（旧Vertex AI）の4つの柱。ビルドはModel GardenとAgent StudioとADK、スケーリングはAgent Runtimeとメモリーバンク、管理はAgent IdentityとAgent Gateway、最適化は評価とシミュレーションと監視" loading="lazy"></figure>
+
+<h3 id="s2-1">モデルを選んで試す</h3>
+<p>Model Gardenには、Gemini 4 ArgonなどのGoogleのモデル、AnthropicのClaude、オープンモデルのGemmaが並び、モデルとツールは200以上です。Agent Studioでは文章・コード・画像・動画を使ってプロンプトを作り、試し、保存できます。モデルを比べる部品はモデル評価サービスです。<strong>最初の検証はコードを書かずにAgent Studioで済ませ、使うモデルを決めてから開発に移るのが向いています。</strong></p>
+<h3 id="s2-2">エージェントを作って動かす</h3>
+<p>ADKは特定のモデルに縛られないエージェントの開発の枠組みで、Agent Studioで作った処理をADKに書き出してコードで続けることもできます。Agent Runtimeはエージェントを本番で動かす場所で、1秒未満の起動と、何日も動き続けるエージェントに対応します。会話をまたいで利用者のことを覚えるメモリーバンクも同じ基盤の部品です。<strong>作ったエージェントを社員の画面に並べるなら、管理者がGemini Enterpriseに登録します。</strong> 社員向けのアプリの側は「<a href="/media/gemini-enterprise/">Gemini Enterpriseとは</a>」に、作り方の選び方は「<a href="/media/ai-agent-build/">AIエージェントの作り方</a>」にまとめています。</p>
+<p>改名と同時に、管理の部品も増えました。Agent Identityはエージェントごとに一意のIDを付けて操作を監査できるようにし、Agent Gatewayはエージェントとツールのやり取りをまとめて通し、Model Armorでプロンプトインジェクションやデータの漏えいを防ぎます。</p>
+<h3 id="s2-3">社内データを検索させる</h3>
+<p>社内の規程やマニュアルを根拠に答えさせるなら、Agent SearchかRAG Engineが候補です。標準的な文書検索は1,000クエリあたり約4ドルで、ほかにインデックスの保存料がかかります。部品の選び方と手順は「<a href="/media/rag-build/">RAG構築とは</a>」で、Azure・AWSと並べて書きました。</p>
+<h3 id="s2-4">予測や分類のモデルを作る</h3>
+<p>生成AI以前からある機械学習の機能は改名の後もそのまま使えます。AutoMLは選定を自動にした学習、カスタム トレーニングは学習のコードを自分で決められる学習です。作ったモデルはModel Registryで版を管理し、Pipelinesで手順を自動にし、モニタリングで入力の偏りやずれを見張ります。<strong>学習にも計算の料金がかかるため、試すときは小さなデータから始めるのが安全です。</strong></p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">Vertex AIの料金</h2>
+<h3 id="s3-1">料金の決まり方</h3>
+<p>費用は使うモデルとインフラの量で決まります。モデルはトークンの量に応じて払い、標準の従量課金のほかに、遅れてもよい処理向けの割安なFlex、優先して処理するPriority、決まった処理量を契約で確保するプロビジョンド スループットがあります。エージェントをAgent Runtimeで動かすと、CPU・メモリ・ストレージの3つの量も料金の対象です。<strong>生成AIの費用はまずモデルのトークン単価で決まり、エージェントを動かす分がその上に乗る</strong>と考えると見積もりやすくなります。</p>
+<p>もう1つの分かれ目が処理する場所です。料金表は「グローバル」と「非グローバル」に分かれていて、東京などのリージョンを指定すると、一般提供のGemini 3以降のモデルは2026年7月1日から約1.1倍の単価になりました。</p>
+<h3 id="s3-2">主なモデルの単価</h3>
+<p>標準の従量課金の単価です。単位は100万トークンあたりのドルで、左がグローバル、右がリージョン指定の値です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モデル</th>
+<th>期間</th>
+<th>入力</th>
+<th>出力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モデル">Gemini 4 Argon</td>
+<td data-label="期間">11月30日まで</td>
+<td data-label="入力">2.00／2.20</td>
+<td data-label="出力">10.00／11.00</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 4 Argon</td>
+<td data-label="期間">12月1日から</td>
+<td data-label="入力">4.00／4.40</td>
+<td data-label="出力">20.00／22.00</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.8 Flash</td>
+<td data-label="期間">12月31日まで</td>
+<td data-label="入力">0.75／0.825</td>
+<td data-label="出力">3.75／4.125</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.8 Flash</td>
+<td data-label="期間">2027年1月1日から</td>
+<td data-label="入力">1.50／1.65</td>
+<td data-label="出力">7.50／8.25</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.5 Flash-Lite</td>
+<td data-label="期間">期限なし</td>
+<td data-label="入力">0.30／0.33</td>
+<td data-label="出力">2.50／2.75</td>
+</tr>
+<tr>
+<td data-label="モデル">Gemini 3.1 Pro プレビュー</td>
+<td data-label="期間">期限なし</td>
+<td data-label="入力">2.00／なし</td>
+<td data-label="出力">12.00／なし</td>
+</tr>
+</tbody>
+</table></div>
+<p>期限つきの安い単価は対象期間の費用の50%をクレジットで戻す形で提供されます。プロモーションはGemini 3.8 Flashなどが2026年8月13日から12月31日まで、Gemini 4 Argonが10月13日から11月30日までです。<strong>12月と1月に単価が2倍に戻るモデルがあるため、年間の予算は戻った後の単価で組むほうが安全です。</strong></p>
+<p>ほかにも細かい決まりがあります。長いコンテキストの単価があるモデル（表ではGemini 3.1 Pro プレビュー）は、入力が20万トークンを超えると、そのリクエストの全トークンがその単価になります。バッチはGemini 4 Argonで入力1.00ドル・出力5.00ドルと標準の半額で、優先度の高い処理は1.8倍です。400番台と500番台のエラーで失敗したリクエストは課金されません。ただしGemini 4は11月13日から、出力が3万2,000トークンを超えたリクエストは、タイムアウトで失敗しても取り出せた分のトークンが課金されます。</p>
+<h3 id="s3-3">検索とランタイムの料金</h3>
+<p>Google検索で回答の根拠を取るグラウンディングは、Gemini 3と4を合わせて月5,000件まで無料で、超えると1,000件あたり14ドルです。Googleマップのグラウンディングも同じ条件で、自社のデータを根拠にする場合は1,000件あたり2.50ドルです。Agent Runtimeには請求先アカウントごとに月の無料枠があり、CPUは最初の50時間、メモリは最初の100時間、ストレージは最初の1GiBまでかかりません。</p>
+<h3 id="s3-4">無料クレジットで試せる範囲</h3>
+<p>新しくGoogle Cloudを使う場合は、90日間有効な300ドルのウェルカム クレジットがあり、自動で請求に切り替わることはありません。ただし対象外があります。<strong>300ドルのクレジットはAI StudioのGemini APIの費用にも、マネージドAPIとして出ているパートナーのモデルにも使えません。</strong> Model GardenのClaudeを試すには、有料の請求先アカウントへ切り替える必要があり、300ドルのクレジットはClaudeの費用には充てられません。</p>
+<p>無料トライアルの請求先アカウントでは、GPUの追加やMarketplaceの利用もできません。90日の間に有料へ切り替えないか、クレジットを使い切ると、プロジェクトとリソースが止まります。検証を止めたくなければ、期限の前に切り替えるかを決めておきます。</p>
+<h3 id="s3-5">月額の試算</h3>
+<p>社内の問い合わせに答えるアプリで、1日1,000回、1回あたり入力3,000トークン・出力500トークン、月22日動かす場合を、Gemini 3.8 Flashの標準の単価で計算しました。入力は月6,600万トークン、出力は1,100万トークンです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>条件</th>
+<th>12月31日まで</th>
+<th>2027年1月から</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="条件">グローバル</td>
+<td data-label="12月31日まで">90.75ドル</td>
+<td data-label="2027年1月から">181.50ドル</td>
+</tr>
+<tr>
+<td data-label="条件">東京などのリージョン指定</td>
+<td data-label="12月31日まで">99.83ドル</td>
+<td data-label="2027年1月から">199.65ドル</td>
+</tr>
+</tbody>
+</table></div>
+<p>モデルの費用だけを見ると、この規模なら月200ドル前後です。キャッシュを使えば入力の単価は10分の1になり、毎回同じ規程集を前に付ける使い方ほど下がる計算です。一方でGoogle検索のグラウンディングを毎回使うと、月2万2,000回のうち無料の5,000件を超えた1万7,000件で約238ドルが加わります。1回の質問で検索が何回か走れば、その分だけ増える計算です。<strong>検索を毎回使うと、モデルの費用と同じくらいの額が上乗せされます。</strong></p>
+<h2 id="s4">Gemini アプリ・Gemini APIとの違い</h2>
+<p>GoogleのGeminiを会社で使う入口は大きく3つあり、同じGeminiのモデルでも契約・認証・データの扱いが違います。社員が使うチャットのGemini アプリ、開発者がAI Studioで使うGemini API、Google Cloudの上のAgent Platformです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>Gemini アプリ（Workspace）</th>
+<th>Gemini API（AI Studio）</th>
+<th>Agent Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">使う人</td>
+<td data-label="Gemini アプリ（Workspace）">社員がチャットで</td>
+<td data-label="Gemini API（AI Studio）">開発者が自社のアプリで</td>
+<td data-label="Agent Platform">開発者とデータの担当が業務システムで</td>
+</tr>
+<tr>
+<td data-label="項目">始め方</td>
+<td data-label="Gemini アプリ（Workspace）">Workspaceの契約と管理者の設定</td>
+<td data-label="Gemini API（AI Studio）">AI StudioでAPIキーを作る</td>
+<td data-label="Agent Platform">Google Cloudのプロジェクトで有効にする</td>
+</tr>
+<tr>
+<td data-label="項目">認証</td>
+<td data-label="Gemini アプリ（Workspace）">社員のGoogleアカウント</td>
+<td data-label="Gemini API（AI Studio）">APIキー</td>
+<td data-label="Agent Platform">サービスアカウントなどのIAM</td>
+</tr>
+<tr>
+<td data-label="項目">学習への利用</td>
+<td data-label="Gemini アプリ（Workspace）">対象のエディションは人がレビューせず許可なくドメイン外の学習に使わない</td>
+<td data-label="Gemini API（AI Studio）">無料枠は改善に使われ人が読むこともある・有料枠は使わない</td>
+<td data-label="Agent Platform">事前の許可なく学習やファインチューニングに使わない</td>
+</tr>
+<tr>
+<td data-label="項目">払い方</td>
+<td data-label="Gemini アプリ（Workspace）">Workspaceの契約</td>
+<td data-label="Gemini API（AI Studio）">前払いのクレジットが既定</td>
+<td data-label="Agent Platform">Google Cloudの通常の請求</td>
+</tr>
+<tr>
+<td data-label="項目">管理</td>
+<td data-label="Gemini アプリ（Workspace）">Workspaceの管理コンソール</td>
+<td data-label="Gemini API（AI Studio）">AI Studioとプロジェクト</td>
+<td data-label="Agent Platform">IAM・組織のポリシー・監査ログ</td>
+</tr>
+</tbody>
+</table></div>
+<p>Agent Platformも試すだけならAPIキーで呼べますが、移行ではサービスアカウントでの認証が前提です。</p>
+<h3 id="s4-1">公式が勧める選び方</h3>
+<p>Gemini APIの公式ドキュメントが示す2つのAPIの選び方は次のように示されています。</p>
+<blockquote>
+<p>Most developers should use the Gemini Developer API unless there is a need for specific enterprise controls.</p>
+</blockquote>
+<p>特定の企業向けの管理が必要でない限り、ほとんどの開発者はGemini Developer APIを使うべき、という意味です。<strong>データの保持や処理する地域を契約と設定で説明する必要がある会社、BigQueryの社内データとつなぐ会社にはAgent Platformが向いています。</strong></p>
+<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_choose.png" alt="Googleの3つの入口の選び方。社員がチャットで使うならWorkspaceのGeminiアプリ、自社のアプリに早く組み込むならGemini API、企業の管理と地域が要るならAgent Platform" loading="lazy"></figure>
+
+<p>WorkspaceのGeminiの料金と設定は「<a href="/media/google-workspace-gemini/">Google WorkspaceのGeminiとは</a>」、Gemini APIの無料枠と単価は「<a href="/media/gemini-api-pricing/">Gemini APIの料金</a>」で詳しく書いています。</p>
+<h3 id="s4-2">移るときに変わること</h3>
+<p>Gemini APIからAgent Platformに移る場合も、コードの書き換えは小さく済みます。どちらもGoogle GenAI SDKとInteractions APIで呼べるためで、変わるのは認証と設定の部分です。移行の注意は次のとおりです。</p>
+<ul>
+<li>認証はGoogle Cloudのサービスアカウントに変わる</li>
+<li>APIキーを作ったのと同じプロジェクトを使ってよい</li>
+<li>対応するリージョンが2つのAPIで違い、プレビュー中のInteractions APIはグローバルだけ</li>
+<li>AI Studioで作ったモデルはAgent Platformで作り直す</li>
+<li>使わなくなったAPIキーは削除する</li>
+</ul>
+<h2 id="s5">会社で使うときに決めること</h2>
+<h3 id="s5-1">データを残さない設定</h3>
+<p>Agent Platformは、事前の許可や指示なしに顧客のデータを学習やファインチューニングに使いません。<strong>ただし学習に使われないことと、データが一定期間残ることは別の話です。</strong> 保持をゼロにするには次の点を1つずつ確かめる必要があります。</p>
+<ul>
+<li>不正利用を見つけるためのプロンプトの記録：利用規約にもとづいて記録されることがある</li>
+<li>Google検索のグラウンディング：最大3日のログが残り止められない。保持ゼロが要るならWeb Grounding for Enterprise</li>
+<li>Googleマップのグラウンディング：30日保存され止められない</li>
+<li>リクエストとレスポンスの記録：既定でオフ。有効にするとBigQueryに書き込まれる</li>
+<li>Interactions API：storeの既定がtrueで会話が保存される。falseを明示する</li>
+<li>暗黙のキャッシュ：既定で有効、24時間以内に削除。プロジェクトごとに無効にできる</li>
+</ul>
+<p>キャッシュを止める操作には、Agent Platformの管理者のロールが要ります。永続キャッシュは顧客管理の暗号鍵（CMEK）に対応していない点も、暗号鍵を自社で持つ方針の会社は押さえておく必要があります。</p>
+<h3 id="s5-2">処理する地域</h3>
+<p>データ所在地やリージョン内の ML 処理は、エンドポイントでは保証されません。グローバルのエンドポイントは、どのリージョンで処理されるかを選べません。<strong>社内規程で国内での処理を求めているなら、東京（asia-northeast1）を指定したうえで、データ所在地のページまで確かめる必要があります。</strong> グローバルではチューニング、AnthropicのモデルのバッチやRAGのコーパスが使えないという制限もあります。</p>
+<h3 id="s5-3">権限と費用の管理</h3>
+<p>Agent Platformの権限はGoogle CloudのIAMで分け、閲覧だけの担当、使う担当、設定を変える管理者のロールが用意されています。費用は公式の料金計算ツールで試算でき、規模が大きい場合はGoogleの営業から見積もりを取る流れです。</p>
+<p><strong>検証用と本番用のプロジェクトを分けておくと、権限と費用の両方を分けて見られるので便利です。</strong></p>
+<h2 id="s6">Vertex AIの始め方</h2>
+<p>Google Cloudのアカウントがあれば、検証は1日で始められます。Apps Scriptから呼ぶときの前提も、課金を有効にしたプロジェクトとAPIの有効化の2つです。</p>
+<ol>
+<li>Google Cloudにログインし、請求先アカウントを作る（新規なら無料トライアルを選べる）</li>
+<li>検証用のプロジェクトを作るか選ぶ</li>
+<li>プロジェクトを開き、Google Cloudのコンソールで<a href="https://console.cloud.google.com/apis/library/aiplatform.googleapis.com">Agent Platform API</a>（旧Vertex AI API）を有効にする</li>
+<li>Agent Studioでプロンプトを試し、使うモデルを決める</li>
+<li>Google GenAI SDK（Python・JavaScript・Java・Goなど）で自社のアプリから呼ぶ</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_start.png" alt="Agent Platformを試すまでの4つの手順。請求先アカウントを作る、プロジェクトを選ぶ、APIを有効にする、Agent Studioで試す" loading="lazy"></figure>
+
+<p>スプレッドシートなどからGeminiを呼びたい場合は、Apps Scriptの高度なサービスが入口です。</p>
+<h2 id="s7">Vertex AIの活用事例</h2>
+<p>Agent Platformを使う企業の例です。ぐるなびは飲食店を探すアプリ「UMAME!」でメモリーバンクを使い、利用者の過去の行動や好みを覚えて候補を出しています。CTOの見込みは満足度の30%以上の向上です。経費精算のPayhawkは、利用者の習慣を覚えたエージェントで経費の提出時間を50%以上短くしました。</p>
+<p>通信のComcastはADKとAgent Runtimeで顧客向けのアシスタントを作り直しました。<strong>これらは各社が公式ブログに寄せた説明で、第三者が検証した数字ではありません。</strong></p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li>社員にチャットで使わせたいだけなら、WorkspaceのGeminiかGemini Enterpriseが向いています</li>
+<li>自社のアプリに早く組み込み、企業向けの管理が要らないなら、Gemini APIから始めるのがおすすめです</li>
+<li>データの保持・処理する地域・社内の権限を説明する必要があるなら、Agent Platformで検証用のプロジェクトを作るのがおすすめです</li>
+<li>予算は、12月と2027年1月に戻る単価と、検索のグラウンディングの件数で組みます</li>
+</ul>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">Vertex AIはなくなったのですか？</h3>
+<p>なくなってはいません。2026年4月22日（米国時間）にGemini Enterprise Agent Platformへ名前が変わり、機能は引き継がれています。</p>
+<h3 id="s9-2">Vertex AIは無料で試せますか？</h3>
+<p>新規なら90日間有効な300ドルのクレジットで試せます。AI StudioのGemini APIと、Claudeなどパートナーのモデルには使えません。Agent Platformで呼ぶGeminiには使えます。</p>
+<h3 id="s9-3">Vertex AIとGeminiは何が違いますか？</h3>
+<p>Geminiはモデルとアプリの名前で、Vertex AI（今のAgent Platform）はそのモデルを自社のシステムに組み込む基盤です。</p>
+<h3 id="s9-4">Vertex AIでClaudeは使えますか？</h3>
+<p>使えます。Model GardenにClaudeが並びますが、有料の請求先アカウントが必要です。</p>
+<h3 id="s9-5">Vertex AIに入力したデータは学習に使われますか？</h3>
+<p>事前の許可がなければ学習には使われません。ただしログが一定期間残る機能があります。</p>
+<h3 id="s9-6">Vertex AI Searchは今どこにありますか？</h3>
+<p>2026年4月からAgent Searchと呼ばれ、Agent Platformの部品の1つです。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li>Google Cloud ブログ「<a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform">Introducing Gemini Enterprise Agent Platform, powering the next wave of agents</a>」（2026年4月22日（米国時間）公開、2026年11月9日取得）</li>
+<li>Google Cloud「<a href="https://cloud.google.com/products/gemini-enterprise-agent-platform?hl=ja">Gemini プラットフォーム</a>」製品ページ（2026年11月9日取得）</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview?hl=ja">Agent Platform の概要</a>」（同）</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/vertex-ai-name-changes">Vertex AI の名称変更</a>」と「<a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes?hl=en">リリースノート</a>」（同）</li>
+<li>Google Cloud「<a href="https://cloud.google.com/model-garden/pricing?hl=ja">Agent Platform の料金</a>」（同）</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention?hl=ja">Gemini Enterprise Agent Platform とデータの保持ゼロ</a>」（同）</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations?hl=ja">デプロイとエンドポイントのロケーション</a>」（同）</li>
+<li>Google Cloud ドキュメント「<a href="https://docs.cloud.google.com/free/docs/free-cloud-features?hl=ja">Google Cloud の無料プログラム</a>」（同）</li>
+<li>Google AI Studio「<a href="https://ai.google.dev/gemini-api/docs/migrate-to-cloud">Gemini Developer API vs. Gemini platform</a>」（同）</li>
+<li>Google AI Studio「<a href="https://aistudio.google.com/docs/terms">Gemini API Additional Terms of Service</a>」（同）</li>
+<li>Google Workspace 管理者ヘルプ「<a href="https://support.google.com/a/answer/15706919?hl=ja">Google Workspace の生成 AI に関するプライバシー ハブ</a>」（同）</li>
+<li>Google Apps Script「<a href="https://developers.google.com/apps-script/advanced/vertex-ai?hl=ja">Vertex AI サービス</a>」（同）</li>
+<li>Google Distributed Cloud エアギャップ「<a href="https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-overview?hl=ja">Vertex AI の概要</a>」（同）</li>
+<li>Wikipedia「<a href="https://ja.wikipedia.org/wiki/Vertex_AI">Vertex AI</a>」（2026年5月26日更新版、経緯の日付）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Vertex AIとは</a><a href="#s2">Vertex AIでできること</a><a href="#s3">Vertex AIの料金</a><a href="#s4">Gemini アプリ・Gemini APIとの違い</a><a href="#s5">会社で使うときに決めること</a><a href="#s6">Vertex AIの始め方</a><a href="#s7">Vertex AIの活用事例</a><a href="#s8">まとめ</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/genspark-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gensparkとは"><defs><linearGradient id="ecg-2fe06f1e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-2fe06f1e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Gensparkとは</text><line x1="341.6" y1="365.9" x2="858.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.10</div>
+                <div class="rel-card__ttl">【2026年11月】Gensparkとは？料金・どこの国の会社か・法人プランと安全性を解説</div>
+            </a>
+            <a href="/media/manus-ai/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manus AIとは"><defs><linearGradient id="ecg-1371fa3f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-1371fa3f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Manus AIとは</text><line x1="341.6" y1="365.9" x2="858.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.10</div>
+                <div class="rel-card__ttl">【2026年11月】Manus AIとは？料金・無料枠・どこの国の会社か・危険性を解説</div>
+            </a>
+            <a href="/media/chatgpt-projects/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのプロジェクト"><defs><linearGradient id="ecg-7698c1b5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7698c1b5)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのプロジェクト</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.09</div>
+                <div class="rel-card__ttl">【2026年11月】ChatGPTのプロジェクトとは？使い方・チームでの共有・GPTsとの違い</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'vertex-ai-guide',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
