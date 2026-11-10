@@ -34,7 +34,7 @@ KiroはAWSが作って運用しているAI開発ツールです。**指示から
 | Mobile | スマホからセッションの確認と指示 | iOSの早期アクセスのみ |
 | Crew | 手元のPCで動き続ける個人向けのエージェント | 無料から |
 
-<!-- SHOT: 図 kiro_overview.html → kiro1111_01_overview.png・alt「Kiroの5つの入口。IDEはVS Codeベースのエディタ、CLIはターミナルでkiro-cliを使う、Webはブラウザで任せてPRまで、MobileはiOSの早期アクセスのみ、Crewは手元で動き続ける個人エージェント。.kiroの設定とクレジットは共通」 -->
+<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_01_overview.png" alt="Kiroの5つの入口。IDEはVS Codeベースのエディタ、CLIはターミナルでkiro-cliを使う、Webはブラウザで任せてPRまで、MobileはiOSの早期アクセスのみ、Crewは手元で動き続ける個人エージェント。.kiroの設定とクレジットは共通" loading="lazy"></figure>
 
 どの入口でも、プロジェクトの`.kiro`フォルダに置いた設定とプランのクレジットは共通です。**まずIDEかCLIのどちらか1つから始め、慣れたら任せたい作業だけWebに回す**、という順で十分です。以前「Kiro Autonomous Agent」と呼ばれていたIssueからPRまで自動で進める機能は、今はWeb版の自律モードとして提供されています。
 
@@ -44,7 +44,7 @@ AWSの開発AIには以前からAmazon Q Developerがありました。**Q Devel
 
 **仕様駆動開発はいきなりコードを書かせず、先に何を作るかを文書にしてから実装させる進め方です。**AIに思いつきで指示を重ねると、どんな前提で作ったのかが後から分からなくなります。Kiroは1つの指示から3つのファイルを順に作り、人が各段で確かめてから次に進みます。
 
-<!-- SHOT: 図 kiro_spec_flow.html → kiro1111_02_spec.png・alt「仕様駆動開発の3つのファイル。requirements.mdは要件と受け入れ基準、design.mdは構成図とデータの設計、tasks.mdは順番つきの実装タスク。各段を人が確認してから次へ進む」 -->
+<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_02_spec.png" alt="仕様駆動開発の3つのファイル。requirements.mdは要件と受け入れ基準、design.mdは構成図とデータの設計、tasks.mdは順番つきの実装タスク。各段を人が確認してから次へ進む" loading="lazy"></figure>
 
 - **requirements.md**: ユーザーストーリーと受け入れ基準。EARS（要件を「〜のとき、システムは〜する」の形でそろえる書き方）で書かれる
 - **design.md**: 構成図、データの流れ、APIやデータベースの設計、エラー処理とテストの方針
@@ -83,7 +83,7 @@ AWSの開発AIには以前からAmazon Q Developerがありました。**Q Devel
 | Power | $200 | 10,000 | $0.04/クレジット |
 | チーム・企業 | 1シート$20（2人以上） | 1シート500を共有 | $0.04/クレジット |
 
-<!-- SHOT: 画面 https://kiro.dev/pricing/・本文だけにある探す語「Teams and enterprises」・赤枠にする語「$20 per seat / month」・PC・alt「Kiroの料金ページ。Free $0、Pro $20、Pro+ $40、Pro Max $100、Power $200の個人プランと、チーム向けの1シート$20のクレジット共有が並ぶ」・figcaption「Kiroの料金ページ（2026年11月11日）。表示は税別のドル」 -->
+<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_04_pricing.png" alt="Kiroの料金ページ。Free $0、Pro $20、Pro+ $40、Pro Max $100、Power $200の個人プランと、チーム向けの1シート$20のクレジット共有が並ぶ" loading="lazy"><figcaption>Kiroの料金ページ（2026年11月11日）。表示は税別のドル</figcaption></figure>
 
 クレジットは作業の量を表す単位です。短い質問なら1クレジット未満で、Specのタスクを実行すると1を超えるのが普通です。チャット・Specの作成・タスクの実行・フックの実行のどれもクレジットを使います。
 
@@ -128,7 +128,6 @@ kiro-cli chat
 
 macOSは`brew install kiro-cli`でも入り、Windowsは`irm 'https://cli.kiro.dev/install.ps1' | iex`を使います。初回の`kiro-cli`でブラウザのサインインに進み、ブラウザの無いサーバーでは、表示されたURLとコードを別の端末で入力します。
 
-<!-- SHOT: 画面 https://kiro.dev/・本文だけにある探す語「Install CLI」・赤枠にする語「curl -fsSL https://cli.kiro.dev/install | bash」・PC・alt「Kiroの公式サイトのトップ。Download Kiro CrewとInstall CLIの下にCLIのインストールの1行が表示されている」・figcaption「Kiroの公式サイト（2026年11月11日）」 -->
 
 CLIでもSpecは`/spec new <名前>`で作り、`/spec run <名前>`でタスクを実行できます。役割ごとに道具と指示を絞ったカスタムエージェントや、手順書をまとめるSkills（`.kiro/skills/`）もCLIの機能です。CI/CDで動かすときは有料プランで発行できるAPIキーを環境変数`KIRO_API_KEY`に入れて非対話で実行します。
 
@@ -140,7 +139,7 @@ Pro以上なら[app.kiro.dev](https://app.kiro.dev/)でGitHubかGitLabをつな�
 
 **会社で使うなら、AWSのIAM Identity CenterかOkta・Microsoft Entra IDで組織としてサインインさせるのが前提です。**同じKiroでも、個人のサインインと組織のサインインでは、データの扱い・保存先・請求・管理の範囲が変わります。
 
-<!-- SHOT: 図 kiro_team_check.html → kiro1111_03_team.png・alt「サインイン方法で変わる条件。個人のサインイン（Google・GitHub・AWS Builder ID）は内容が改善に使われうる（停止できる）、保存先は米国東部、カードで1人ずつ支払う。組織のサインイン（IAM Identity Center・Okta・Entra ID）は内容を改善に使わない、保存先は米国東部か欧州、AWSの請求にまとまる、モデルとMCPを管理者が制限」 -->
+<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_03_team.png" alt="サインイン方法で変わる条件。個人のサインイン（Google・GitHub・AWS Builder ID）は内容が改善に使われうる（停止できる）、保存先は米国東部、カードで1人ずつ支払う。組織のサインイン（IAM Identity Center・Okta・Entra ID）は内容を改善に使わない、保存先は米国東部か欧州、AWSの請求にまとまる、モデルとMCPを管理者が制限" loading="lazy"></figure>
 
 | 確かめること | 個人のサインイン | 組織のサインイン |
 |---|---|---|
