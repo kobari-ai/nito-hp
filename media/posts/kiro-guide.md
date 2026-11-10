@@ -56,7 +56,7 @@ AWSの開発AIには以前からAmazon Q Developerがありました。**Q Devel
 
 すべての作業に文書は要りません。**小さな修正や試作はVibe（会話で直接書かせる）、複数のファイルにまたがる機能追加や改修はSpec**、と分けるのが基本です。
 
-不具合には原因・修正方針・変えない振る舞いを書き出すBugfix Specがあります。内容が固まっている機能なら、承認の手間を省いて3つのファイルを一度に作るQuick Specも選べます。Specの質は最初の指示の具体さで決まります。対象の画面、守る制約、既存のコードの場所まで書いてから始めると、手戻りが減ります。
+不具合向けの形が、原因・修正方針・変えない振る舞いを書き出すBugfix Specです。内容が固まっている機能なら、承認の手間を省いて3つのファイルを一度に作るQuick Specも選べます。Specの質は最初の指示の具体さで決まります。対象の画面、守る制約、既存のコードの場所まで書いてから始めると、手戻りが減ります。
 
 ## ステアリングとフックで何ができる？
 
@@ -85,7 +85,7 @@ AWSの開発AIには以前からAmazon Q Developerがありました。**Q Devel
 
 <figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_04_pricing.png" alt="Kiroの料金ページ。Free $0、Pro $20、Pro+ $40、Pro Max $100、Power $200の個人プランと、チーム向けの1シート$20のクレジット共有が並ぶ" loading="lazy"><figcaption>Kiroの料金ページ（2026年11月11日）。表示は税別のドル</figcaption></figure>
 
-クレジットは作業の量を表す単位です。短い質問なら1クレジット未満で、Specのタスクを実行すると1を超えるのが普通です。チャット・Specの作成・タスクの実行・フックの実行のどれもクレジットを使います。
+クレジットは作業の量を表す単位です。短い質問なら1クレジット未満で、Specのタスクを実行すると1を超えるのが普通です。チャット・Specの作成・タスクの実行・フックの実行のどれもクレジットの消費対象です。
 
 **クレジットの減り方は選ぶモデルで変わります。**既定のAutoを1倍として、Claude Opus 5.5は2倍、Sonnet 4.6は1.3倍、Haiku 5.5は0.06倍といった倍率が決まっています。Autoは軽いモデルで始め、行き詰まりを検知すると上位のモデルに引き継ぐ仕組みで、有料プランではClaude Opus並みの品質を基準にしています。迷ったらAutoのまま使うのが、量あたりでは得です。
 
@@ -155,7 +155,7 @@ Pro以上なら[app.kiro.dev](https://app.kiro.dev/)でGitHubかGitLabをつな�
 
 公式の書き方は2か所で分かれています。企業向けのページはPro〜Powerの購読では内容を基盤モデルの学習に使わないと書いています。**一方でデータ保護のページは、FreeとGoogle・GitHub・Builder IDで払う個人の購読者の内容は、モデルの学習を含むサービス改善に使われることがある**とし、停止の手順を載せています。
 
-社員が個人のアカウントで会社のコードを開くと、この後者に当たります。IDEなら設定のUser、Application、Telemetry and Contentの順に開き、2つのチェックを外すと止められます。組織のサインインの利用者は、最初から収集の対象外です。
+社員が個人のアカウントで会社のコードを開いた場合は、この後者です。IDEなら設定のUser、Application、Telemetry and Contentの順に開き、2つのチェックを外すと止められます。組織のサインインの利用者は、最初から収集の対象外です。
 
 ### リージョンと請求
 
@@ -163,7 +163,7 @@ Pro以上なら[app.kiro.dev](https://app.kiro.dev/)でGitHubかGitLabをつな�
 
 GPT-5.6系のように、世界の商用リージョンで処理されるモデルもあります。データを国外に出す範囲に社内の決まりがあるなら、管理者がモデルの許可リストを使い、対象のモデルだけを選んでおくのが確実です。その場合、Autoは許可リストの外のモデルに振ることがあるため、Autoを止めて既定のモデルを決めておきます。
 
-請求はAWSのBilling and Cost Managementに「Kiro」として載り、ほかのAWSの費用と一緒に管理できます。同じプロファイルの中で1人を2重に登録しても1回分ですが、別のリージョンのプロファイルに登録すると2重に請求されます。
+請求はAWSのBilling and Cost Managementに「Kiro」として載り、ほかのAWSの費用と一緒に管理できます。同じプロファイルの中で1人を2重に登録しても1回分ですが、別のリージョンのプロファイルに登録すると2重に請求されるので注意が必要です。
 
 ### 導入の手順と管理できること
 
@@ -174,7 +174,7 @@ GPT-5.6系のように、世界の商用リージョンで処理されるモデ�
 
 管理者は、使えるモデル・MCPサーバー・Web検索の可否・APIキーの発行を決められます。**社用のPCに設定ファイルを配れば、サインイン画面から個人の方法（Google・GitHub・Builder ID）を消すこともできます。**ブラウザ版のWebは管理者がCloud Sessionsをオンにするまで使えません。
 
-監査や調達の確認ではKiroのIDEとCLIがHIPAAの対象で、AWSのISO/IEC 27001:2022の範囲に含まれる点が材料になります。報告書はAWS Artifactから取れます。Pro以上の出力には知的財産の補償も付きますが、一部のモデルは除外されています。
+監査や調達の確認ではKiroのIDEとCLIがHIPAAの対象で、AWSのISO/IEC 27001:2022の範囲に含まれる点が材料になります。報告書の入手先はAWS Artifactです。Pro以上の出力には知的財産の補償も付きますが、一部のモデルは除外されています。
 
 国内では東京製鐵が全社に入れた事例をAWSが公開しています。情報システム部門を除いても、利用者は2026年7月の149人から9月の192人に増えました。最初は全社のルールをステアリングに書き、後から権限の設定と組み合わせた運用です。
 
@@ -198,7 +198,7 @@ desc: Kiroの土台にもなっているAmazon Bedrockの料金と、東京でCl
 | モデル | Claude・GPT・オープンウェイト | 自社と他社 | Claude | Gemini中心 |
 | 管理の土台 | AWS（IAM・請求） | Cursorの管理画面 | Claudeの管理画面 | Google Cloud |
 
-すでにAWSでIDと請求を管理している会社なら、Kiroは新しい契約先を増やさずに入れられます。エディタの補完を中心に使いたいならCursor、ターミナル中心でClaudeを使い込むならClaude Code、Google Cloudの会社ならAntigravityが候補です。ほかの道具の細かい条件は[Cursorの料金と使い方](/media/cursor-guide/)と[Google Antigravityとは](/media/google-antigravity/)で解説しています。
+すでにAWSでIDと請求を管理している会社なら、Kiroは新しい契約先を増やさずに入れられます。エディタの補完を中心に使いたいならCursor、ターミナル中心でClaudeを使い込むならClaude Code、Google Cloudの会社ならAntigravityが候補です。ほかの道具の細かい条件は[Cursorの料金と使い方](/media/cursor-guide/)と[Google Antigravityとは](/media/google-antigravity/)が詳しいです。
 
 :::linkcard
 url: /media/codex-vs-claude-code/
@@ -238,7 +238,7 @@ Q Developerは既存のエディタに補完やチャットを足すアシスタ
 
 ### Kiroで使えるプログラミング言語は何ですか？
 
-Python・Java・JavaScript・TypeScript・C#・Go・Rust・PHP・Ruby・Kotlin・C・C++・SQLなど、日常の開発で使う主な言語に対応しています。TerraformのHCLやYAMLも扱えます。
+Python・Java・JavaScript・TypeScript・C#・Go・Rust・PHP・Ruby・Kotlin・C・C++・SQLなど、日常の開発で使う主な言語に対応しています。TerraformのHCLやYAMLも対象です。
 
 ### Kiroのクレジットが足りなくなったらどうなりますか？
 
