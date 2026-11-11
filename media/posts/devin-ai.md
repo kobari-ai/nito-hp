@@ -33,7 +33,7 @@ DevinはCognitionが作る自律型のAIソフトウェアエンジニアです�
 | Devin CLI | ターミナルで動くエージェント。長い作業はクラウドに引き継げる |
 | Devin Review | プルリクエストを読み、不具合の候補を指摘する |
 
-<!-- SHOT: 図 dvn_overview.html → dvn1112_01_overview.png・alt「Devinの4つの製品。Devin Cloudはクラウドで作業を任せてPRまで、Devin Desktopは旧Windsurfのエディタ、Devin CLIはターミナルで動くエージェント、Devin Reviewはプルリクエストを自動でレビュー。どれも同じプランの利用枠を使う」 -->
+<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_01_overview.png" alt="Devinの4つの製品。Devin Cloudはクラウドで作業を任せてPRまで、Devin Desktopは旧Windsurfのエディタ、Devin CLIはターミナルで動くエージェント、Devin Reviewはプルリクエストを自動でレビュー。どれも同じプランの利用枠を使う" loading="lazy"></figure>
 
 **Cognitionは2025年7月にエディタのWindsurfを買収し、2026年6月2日にWindsurfをDevin Desktopへ改名しました。**エディタ・拡張機能・設定はそのまま引き継がれ、料金も変わっていません。社用PCの管理ツールで「Windsurf」だけを許可していた会社は、アプリ名が「Devin」に変わったため許可リストの更新が必要です。
 
@@ -68,11 +68,11 @@ DevinはCognitionが作る自律型のAIソフトウェアエンジニアです�
 | Teams | $80から（毎日使う人は1人$40） | 2〜100人のチーム |
 | Enterprise | 要相談 | 100人超・閉域網・専用環境が必要な会社 |
 
-<!-- SHOT: 画面 https://devin.ai/ja/pricing・探す語「表示価格はすべて10%の消費税」・赤枠「Pro $22」「Teams $88」と消費税の注記・PC・alt「Devinの日本語の料金ページ。Free $0、Pro $22、Max $220、Teams $88＋フル開発者シート1名あたり$44、Enterpriseはご相談ください。表示価格は10%の消費税込み」・figcaption「Devinの日本語の料金ページ（2026年11月12日）。表示は消費税込み」 -->
+<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_04_pricing.png" alt="Devinの日本語の料金ページ。Free $0、Pro $22、Max $220、Teams $88＋フル開発者シート1名あたり$44、Enterpriseはご相談ください。表示価格は10%の消費税込み" loading="lazy"><figcaption>Devinの日本語の料金ページ（2026年11月12日）。表示は消費税込み</figcaption></figure>
 
 有料プランには日ごと・週ごとに戻る利用枠が付き、Cloud・Desktop・CLIで共有します。超えた分は前払いのクレジットを使い、各モデルのAPIの定価で引かれます。クレジットは翌月に繰り越され、期限はありません。個人のChatGPT Plus・Proを契約していれば、GPTのモデルを使った分をChatGPT側の枠に回すこともできます。
 
-<!-- SHOT: 図 dvn_plans.html → dvn1112_02_plans.png・alt「Devinのプランの選び方。まず触るならFree、1人で毎日使うならPro 月$20で多く使うならMax 月$200、チームならTeams 月$80からで常用者は1人$40、100人超や閉域網ならEnterpriseでACUで契約。金額は税別のドル」 -->
+<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_02_plans.png" alt="Devinのプランの選び方。まず触るならFree、1人で毎日使うならPro 月$20で多く使うならMax 月$200、チームならTeams 月$80からで常用者は1人$40、100人超や閉域網ならEnterpriseでACUで契約。金額は税別のドル" loading="lazy"></figure>
 
 ### Teamsはいくらになる？
 
@@ -142,13 +142,13 @@ Cognitionは2026年4月に日本法人を立ち上げました。伊藤忠テク
 
 **Devinは既定でデータをモデルの学習に使うことがあり、止めるには有料プランで設定が必要です。**Teamsでは停止できるのは管理者だけです。Enterpriseは書面での同意が無いかぎり学習に使わない、と公式は説明しています。
 
-<!-- SHOT: 画面 https://docs.devin.ai/ja/admin/security・探す語「オプトアウト」・赤枠「デフォルトでは」から始まる学習の段落・PC・alt「Devinの公式ドキュメントのセキュリティのページ。データは既定で学習に使われることがあり、有料プランではデータ管理の設定でオプトアウトできる。Teamsでは管理者だけが停止できる」・figcaption「Devinのドキュメント「Cognition におけるセキュリティ」（2026年11月12日）」 -->
+<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_05_security.png" alt="Devinの公式ドキュメントのセキュリティのページ。データは既定で学習に使われることがあり、有料プランではデータ管理の設定でオプトアウトできる。Teamsでは管理者だけが停止できる" loading="lazy"><figcaption>Devinのドキュメント「Cognition におけるセキュリティ</figcaption></figure>
 
 ## 会社で入れる前に決めること
 
 **試用を始める前に、プランと人数・利用量の上限・コードとデータの扱い・人が確認する所の4つを、開発と情報システムの担当で決めておきます。**
 
-<!-- SHOT: 図 dvn_decide.html → dvn1112_03_decide.png・alt「Devinを入れる前に決める4つ。プランと人数は毎日使う人だけフルシートに、利用量の上限は1人ごとの上限と月の予算、コードとデータの扱いは対象リポジトリと学習の停止、人が確認する所はPRレビューと本番ブランチの保護」 -->
+<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_03_decide.png" alt="Devinを入れる前に決める4つ。プランと人数は毎日使う人だけフルシートに、利用量の上限は1人ごとの上限と月の予算、コードとデータの扱いは対象リポジトリと学習の停止、人が確認する所はPRレビューと本番ブランチの保護" loading="lazy"></figure>
 
 | 決めること | 公式の条件 | 決め方の例 |
 |---|---|---|
