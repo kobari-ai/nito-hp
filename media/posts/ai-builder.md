@@ -24,7 +24,7 @@ AI Builderは、Power AppsやPower Automateのアプリとフローに、請求�
 
 **AI BuilderはMicrosoftが用意した学習済みのAIをそのまま使うか、自社の書類やデータで学習させたAIを作って、Power Platformの業務に組み込む機能です。** 使うにはDataverseのあるPower Platformの環境が必要で、Microsoft 365のライセンスだけでは使えません。Power AppsかPower Automateにサインインし、左の「…その他」から「AI ハブ」を開くと、AIモデルとプロンプトの一覧が出ます。
 
-<!-- SHOT: 図 aib_overview.html → aib_01_overview.png・alt「AI Builderの3つの機能。学習済みの事前構築済みモデル、自社のデータで学習させるカスタムモデル、生成AIに指示を書くプロンプト」 -->
+<figure class="post-figure"><img src="/media/images/ai-builder/aib_01_overview.png" alt="AI Builderの3つの機能。学習済みの事前構築済みモデル、自社のデータで学習させるカスタムモデル、生成AIに指示を書くプロンプト" loading="lazy"></figure>
 
 AI Builderの中身は大きく3つに分かれます。
 
@@ -51,7 +51,7 @@ AI Builderの中身は大きく3つに分かれます。
 
 **同じ請求書の読み取りでも、Power Automateのフローで動かすか、Copilot Studioのエージェントから動かすかで、減るクレジットが変わります。** AI Builderで作ったモデルとプロンプトは、Power Apps・Power Automate・Copilot Studioの3つから呼べます。
 
-<!-- SHOT: 図 aib_where.html → aib_02_where.png・alt「AI Builderを呼ぶ場所と減るクレジット。Power AppsとPower AutomateはAI Builderクレジットが先で次にCopilotクレジット、Copilot Studioのエージェントとエージェントフローは最初からCopilotクレジット」 -->
+<figure class="post-figure"><img src="/media/images/ai-builder/aib_02_where.png" alt="AI Builderを呼ぶ場所と減るクレジット。Power AppsとPower AutomateはAI Builderクレジットが先で次にCopilotクレジット、Copilot Studioのエージェントとエージェントフローは最初からCopilotクレジット" loading="lazy"></figure>
 
 Power Automateのクラウドフローでは、メールに付いた請求書を受け取ったら読み取り、結果をSharePointのリストやExcel、Dataverseに書き込む、という流れを組みます。Power Appsならスマホで撮った領収書をその場で読み取る画面を作り、Teamsに置いて社員に配れます。
 
@@ -102,9 +102,9 @@ Power Appsの側は、2つのページとも、アプリにAI Builderを足す�
 
 **2026年11月1日から、新しく買ったり更新したりしたPower PlatformとDynamics 365のライセンスには、AI Builderクレジットが付かなくなりました。** AI Builderの機能そのものは終わらず、Copilotクレジットで引き続き使えます。
 
-<!-- SHOT: 図 aib_timeline.html → aib_03_timeline.png・alt「AI Builderクレジットの移り変わり。2025年11月1日にアドオンの新規販売が終了、2026年11月1日にアドオンの提供とライセンスに付くクレジットが終了、その後は契約が切れるまで残りを使える」 -->
+<figure class="post-figure"><img src="/media/images/ai-builder/aib_03_timeline.png" alt="AI Builderクレジットの移り変わり。2025年11月1日にアドオンの新規販売が終了、2026年11月1日にアドオンの提供とライセンスに付くクレジットが終了、その後は契約が切れるまで残りを使える" loading="lazy"></figure>
 
-<!-- SHOT: 画面 https://learn.microsoft.com/ja-jp/ai-builder/endofaibcredits・探す語「詳細な予定表」・赤枠「11/01/2026」の2行・PC・alt「Microsoft Learnの『AI Builder クレジットの期間終了』の予定表。2026年11月1日にアドオンの有効期間とシード クレジットの提供が終わる」・figcaption「Microsoft Learn『AI Builder クレジットの期間終了』の予定表（2026年11月12日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-builder/aib_06_schedule.png" alt="Microsoft Learnの『AI Builder クレジットの期間終了』の予定表。2026年11月1日にアドオンの有効期間とシード クレジットの提供が終わる" loading="lazy"><figcaption>Microsoft Learn『AI Builder クレジットの期間終了』の予定表（2026年11月12日）</figcaption></figure>
 
 Microsoftが段階的な終了を発表したのは2025年10月です。AI Builderクレジットの入手先は2つあり、終わり方が違います。
 
@@ -124,7 +124,7 @@ AI Builderの30日の試用版も廃止されました。上位の解説で「30
 
 **請求書の読み取りなら、事前構築済みモデルを選んでフローに入れるだけで、学習もサンプルの準備も要りません。** メールに届いた請求書のPDFを読んでSharePointのリストに書き込む流れは、次の5つの手順で組めます。
 
-<!-- SHOT: 図 aib_steps.html → aib_04_steps.png・alt「請求書を読み取るフローの5つの手順。AIハブで請求書処理を選ぶ、テストする、フローで使う、トリガーを決める、読み取った項目を書き込む」 -->
+<figure class="post-figure"><img src="/media/images/ai-builder/aib_04_steps.png" alt="請求書を読み取るフローの5つの手順。AIハブで請求書処理を選ぶ、テストする、フローで使う、トリガーを決める、読み取った項目を書き込む" loading="lazy"></figure>
 
 ### ① AIハブで請求書処理を選ぶ
 
@@ -184,7 +184,7 @@ Power Platform管理センターでは、クレジットを環境ごとに割り
 
 **AI Builderを本番の業務に入れる前に、次の5つを社内で決めておくと、費用と停止の事故を避けられます。**
 
-<!-- SHOT: 図 aib_decide.html → aib_05_decide.png・alt「AI Builderを入れる前に決める5つ。対象の業務と月の件数、どこで動かすか、クレジットの払い方と割り当て先、作れる人の範囲、人が確認する所」 -->
+<figure class="post-figure"><img src="/media/images/ai-builder/aib_05_decide.png" alt="AI Builderを入れる前に決める5つ。対象の業務と月の件数、どこで動かすか、クレジットの払い方と割り当て先、作れる人の範囲、人が確認する所" loading="lazy"></figure>
 
 1. **対象の業務と月の件数**: 請求書なら月何枚・何ページか。費用はページ数で決まる
 2. **どこで動かすか**: Power Automateのフローか、Copilot Studioのエージェントか。減るクレジットと必要なライセンスが変わる
