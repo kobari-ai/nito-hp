@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Kiroとは？AWSのAI開発ツールの料金・使い方・企業で使う条件｜株式会社nito</title>
+    <meta name="description" content="Kiroとは何かをAWSの公式情報で解説。仕様駆動開発・ステアリング・フックの中身、Free〜Power（月$20〜$200）の料金とクレジット、IDEとCLIの始め方、IAM Identity Centerで会社に入れる条件まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/kiro-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Kiroとは？AWSのAI開発ツールの料金・使い方・企業で使う条件">
+    <meta property="og:description" content="Kiroとは何かをAWSの公式情報で解説。仕様駆動開発・ステアリング・フックの中身、Free〜Power（月$20〜$200）の料金とクレジット、IDEとCLIの始め方、IAM Identity Centerで会社に入れる条件まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/kiro-guide/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/kiro-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/kiro-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Kiroとは？AWSのAI開発ツールの料金・使い方・企業で使う条件", "description": "Kiroとは何かをAWSの公式情報で解説。仕様駆動開発・ステアリング・フックの中身、Free〜Power（月$20〜$200）の料金とクレジット、IDEとCLIの始め方、IAM Identity Centerで会社に入れる条件まで。", "datePublished": "2026-11-11", "dateModified": "2026-11-11", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/kiro-guide/"}, "articleSection": "AIエージェント", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/kiro-guide.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Kiroとは？AWSのAI開発ツールの料金・使い方・企業で使う条件"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kiroは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。Freeは月50クレジットで、Auto・Claude Sonnet 4.5・オープンウェイトのモデルなどを制限つきで使えます。ブラウザ版のWebと追加クレジットの購入は有料プランだけです。"}}, {"@type": "Question", "name": "KiroはAWSのアカウントがないと使えませんか？", "acceptedAnswer": {"@type": "Answer", "text": "個人ならAWSアカウントは要りません。Google・GitHub・AWS Builder IDのどれかでサインインできます。会社でIAM Identity Centerを使って管理する場合は、AWSアカウントでKiroのプロファイルを作ります。"}}, {"@type": "Question", "name": "Kiroは日本語で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "チャットやSpecの指示は日本語で書けます。返答も日本語で返り、ステアリングに「日本語で答える」と書いておくと安定します。"}}, {"@type": "Question", "name": "KiroのCLIでも仕様駆動開発はできますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。`/spec new <名前>`でSpecを作り、`/spec run <名前>`でタスクを実行します。プロパティベーステストによる確認はIDEだけの機能です。"}}, {"@type": "Question", "name": "KiroとQ Developerはどう違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "Q Developerは既存のエディタに補完やチャットを足すアシスタントで、KiroはSpec・フック・ステアリングを持つエージェントの開発環境です。Q DeveloperのIDEプラグインと有償サブスクリプションは2027年4月30日にサポートを終えます。"}}, {"@type": "Question", "name": "Kiroで使えるプログラミング言語は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Python・Java・JavaScript・TypeScript・C#・Go・Rust・PHP・Ruby・Kotlin・C・C++・SQLなど、日常の開発で使う主な言語に対応しています。TerraformのHCLやYAMLも対象です。"}}, {"@type": "Question", "name": "Kiroのクレジットが足りなくなったらどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "個人の有料プランなら$0.04/クレジットで買い足せます。チームの共有プールでは上限やプールの残りに達した人は、管理者が上限を上げるかクレジットを買い足すまで止まります。月のクレジットは翌月に繰り越されません。"}}, {"@type": "Question", "name": "Kiroに会社のコードを読ませても学習に使われませんか？", "acceptedAnswer": {"@type": "Answer", "text": "組織のサインイン（IAM Identity Center・Okta・Entra ID）なら、内容はサービス改善に使われません。Google・GitHub・Builder IDで使う場合は使われることがあるため、設定で停止してください。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Kiroとは？AWS…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AIエージェント</span>
+            <span class="post-date">2026.11.11</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Kiroとは？AWSのAI開発ツールの料金・使い方・企業で使う条件</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/kiro-guide.jpg" alt="【2026年11月】Kiroとは？AWSのAI開発ツールの料金・使い方・企業で使う条件" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>KiroはAWSが作って運用しているAI開発ツールです。<strong>指示から要件・設計・タスクの文書を作り、それに沿ってエージェントがコードを書く仕様駆動開発が特徴</strong>で、無料プランは月50クレジット、有料は1人月$20〜$200です。</p>
+<p>エディタ（IDE）とターミナル（CLI）を中心に、ブラウザ版や常駐するエージェントまで入口が増えました。この記事では今の製品の構成、仕様駆動開発の進め方、料金、始め方、会社で入れるときの条件、ほかの開発AIとの違いを順に説明します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>中心は<strong>要件・設計・タスクの3つの文書を作ってから実装する仕様駆動開発</strong>。IDE・CLI・Webで同じ設定を使える</li>
+<li>個人はFree（月50クレジット）とPro $20〜Power $200。<strong>チームは1人$20のシートでクレジットを共有する</strong></li>
+<li>会社のコードを扱うなら<strong>IAM Identity Centerなど組織のサインインで入れる</strong>。個人のサインインでは内容が改善に使われうる</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Kiroとは何か</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Kiroの仕様駆動開発とは</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>VibeとSpecの使い分け</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>ステアリングとフックで何ができる？</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>Kiroの料金はいくら？</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>初めて有料にするときの無料月</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>チームのクレジット共有</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Kiroの始め方と使い方</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>IDEの始め方</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>CLIの始め方</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>Webに任せる使い方</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>会社で入れるときの条件は？</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>学習とデータの扱い</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>リージョンと請求</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>導入の手順と管理できること</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>Cursor・Claude Codeとの違いは？</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Kiroとは何か</h2>
+<p><strong>Kiroは1つのエージェントをエディタ・ターミナル・ブラウザなど5つの入口から使える、AWSの開発ツールです。</strong>2025年7月にプレビューとして公開され、2025年11月に一般提供が始まりました。裏側ではAmazon Bedrockの上で複数の基盤モデルが動いています。</p>
+<p>最初はVS Codeの土台（Code OSS）で作ったエディタでしたが、今は次の5つの形で提供されています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>入口</th>
+<th>何をするものか</th>
+<th>使える人</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="入口">IDE</td>
+<td data-label="何をするものか">VS Codeベースのエディタ。仕様駆動開発の中心</td>
+<td data-label="使える人">無料から</td>
+</tr>
+<tr>
+<td data-label="入口">CLI</td>
+<td data-label="何をするものか">ターミナルで動く<code>kiro-cli</code>。SSH先やCI/CDでも使う</td>
+<td data-label="使える人">無料から</td>
+</tr>
+<tr>
+<td data-label="入口">Web</td>
+<td data-label="何をするものか">ブラウザでリポジトリを指定し、PRまで任せる</td>
+<td data-label="使える人">Pro以上</td>
+</tr>
+<tr>
+<td data-label="入口">Mobile</td>
+<td data-label="何をするものか">スマホからセッションの確認と指示</td>
+<td data-label="使える人">iOSの早期アクセスのみ</td>
+</tr>
+<tr>
+<td data-label="入口">Crew</td>
+<td data-label="何をするものか">手元のPCで動き続ける個人向けのエージェント</td>
+<td data-label="使える人">無料から</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_01_overview.png" alt="Kiroの5つの入口。IDEはVS Codeベースのエディタ、CLIはターミナルでkiro-cliを使う、Webはブラウザで任せてPRまで、MobileはiOSの早期アクセスのみ、Crewは手元で動き続ける個人エージェント。.kiroの設定とクレジットは共通" loading="lazy"></figure>
+
+<p>どの入口でも、プロジェクトの<code>.kiro</code>フォルダに置いた設定とプランのクレジットは共通です。<strong>まずIDEかCLIのどちらか1つから始め、慣れたら任せたい作業だけWebに回す</strong>、という順で十分です。以前「Kiro Autonomous Agent」と呼ばれていたIssueからPRまで自動で進める機能は、今はWeb版の自律モードとして提供されています。</p>
+<p>AWSの開発AIには以前からAmazon Q Developerがありました。<strong>Q DeveloperのIDEプラグインと有償サブスクリプションは2027年4月30日にサポートを終え、Kiroが後継になります。</strong>2026年5月15日から新規の申し込みは止まっており、Q Developer CLIもKiro CLIに置き換わりました。AWSコンソールの中やSlack・Teamsで使うQ Developerは終了の対象外です。</p>
+<h2 id="s2">Kiroの仕様駆動開発とは</h2>
+<p><strong>仕様駆動開発はいきなりコードを書かせず、先に何を作るかを文書にしてから実装させる進め方です。</strong>AIに思いつきで指示を重ねると、どんな前提で作ったのかが後から分からなくなります。Kiroは1つの指示から3つのファイルを順に作り、人が各段で確かめてから次に進みます。</p>
+<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_02_spec.png" alt="仕様駆動開発の3つのファイル。requirements.mdは要件と受け入れ基準、design.mdは構成図とデータの設計、tasks.mdは順番つきの実装タスク。各段を人が確認してから次へ進む" loading="lazy"></figure>
+
+<ul>
+<li><strong>requirements.md</strong>: ユーザーストーリーと受け入れ基準。EARS（要件を「〜のとき、システムは〜する」の形でそろえる書き方）で書かれる</li>
+<li><strong>design.md</strong>: 構成図、データの流れ、APIやデータベースの設計、エラー処理とテストの方針</li>
+<li><strong>tasks.md</strong>: 依存関係の順に並んだ実装タスク。タスクごとにテストやアクセシビリティの観点も入る</li>
+</ul>
+<p>ファイルは<code>.kiro/specs/&lt;名前&gt;/</code>に置かれるので、Gitに入れればチームでレビューできます。タスクは1つずつでも全部まとめてでも実行でき、全部のときは依存の無いタスクを同時に進めます。IDEでは要件から性質を取り出し、数百通りの入力で確かめるプロパティベーステストも使えます。</p>
+<h3 id="s2-1">VibeとSpecの使い分け</h3>
+<p>すべての作業に文書は要りません。<strong>小さな修正や試作はVibe（会話で直接書かせる）、複数のファイルにまたがる機能追加や改修はSpec</strong>、と分けるのが基本です。</p>
+<p>不具合向けの形が、原因・修正方針・変えない振る舞いを書き出すBugfix Specです。内容が固まっている機能なら、承認の手間を省いて3つのファイルを一度に作るQuick Specも選べます。Specの質は最初の指示の具体さで決まります。対象の画面、守る制約、既存のコードの場所まで書いてから始めると、手戻りが減ります。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">ステアリングとフックで何ができる？</h2>
+<p><strong>チームで使うときに効くのは、ルールを覚えさせるステアリングと、決まった作業を自動で走らせるフックの2つです。</strong></p>
+<p>ステアリングはプロジェクトの決まりをMarkdownで書いて<code>.kiro/steering/</code>に置く仕組みです。IDEのボタンで製品の概要（product.md）・技術スタック（tech.md）・フォルダ構成（structure.md）の3つを作れます。常に読む、特定のファイルを触るときだけ読む、呼んだときだけ読む、と読み込み方を選べるので、APIの規約はAPIのファイルを触るときだけ効かせる、といった使い分けができます。AGENTS.mdにも対応しています。</p>
+<p>フックはファイルの保存やツールの実行などをきっかけに、コマンドかエージェントへの指示を自動で走らせる仕組みです。設定は<code>.kiro/hooks/</code>のJSONで、「TypeScriptを保存したらESLintをかける」「新しい部品を作ったらテストの雛形も作る」といった使い方をします。IDEとCLIで動き、Web版のセッションでは動きません。</p>
+<p><strong>どちらもGitでリポジトリに入れれば、全員が同じルールで動くエージェントを使えます。</strong>属人化しがちなプロンプトの工夫を、コードと同じようにレビューして管理できるのがKiroらしい点です。</p>
+<p>外部の道具とつなぐにはMCPが使えます。FigmaやStripe、Supabaseなどの使い方とMCPの設定をまとめたPowersもあり、追加料金はかかりません。</p>
+<h2 id="s4">Kiroの料金はいくら？</h2>
+<p><strong>Kiroの料金は毎月のクレジットの量で決まる5つの個人プランと、チームで共有するシートの2本立てです。</strong>金額は税別のドルで、日本の請求先住所なら消費税が加わります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>プラン</th>
+<th>月額（1人）</th>
+<th>月のクレジット</th>
+<th>追加購入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="プラン">Free</td>
+<td data-label="月額（1人）">$0</td>
+<td data-label="月のクレジット">50</td>
+<td data-label="追加購入">できない</td>
+</tr>
+<tr>
+<td data-label="プラン">Pro</td>
+<td data-label="月額（1人）">$20</td>
+<td data-label="月のクレジット">1,000</td>
+<td data-label="追加購入">$0.04/クレジット</td>
+</tr>
+<tr>
+<td data-label="プラン">Pro+</td>
+<td data-label="月額（1人）">$40</td>
+<td data-label="月のクレジット">2,000</td>
+<td data-label="追加購入">$0.04/クレジット</td>
+</tr>
+<tr>
+<td data-label="プラン">Pro Max</td>
+<td data-label="月額（1人）">$100</td>
+<td data-label="月のクレジット">5,000</td>
+<td data-label="追加購入">$0.04/クレジット</td>
+</tr>
+<tr>
+<td data-label="プラン">Power</td>
+<td data-label="月額（1人）">$200</td>
+<td data-label="月のクレジット">10,000</td>
+<td data-label="追加購入">$0.04/クレジット</td>
+</tr>
+<tr>
+<td data-label="プラン">チーム・企業</td>
+<td data-label="月額（1人）">1シート$20（2人以上）</td>
+<td data-label="月のクレジット">1シート500を共有</td>
+<td data-label="追加購入">$0.04/クレジット</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_04_pricing.png" alt="Kiroの料金ページ。Free $0、Pro $20、Pro+ $40、Pro Max $100、Power $200の個人プランと、チーム向けの1シート$20のクレジット共有が並ぶ" loading="lazy"><figcaption>Kiroの料金ページ（2026年11月11日）。表示は税別のドル</figcaption></figure>
+
+<p>クレジットは作業の量を表す単位です。短い質問なら1クレジット未満で、Specのタスクを実行すると1を超えるのが普通です。チャット・Specの作成・タスクの実行・フックの実行のどれもクレジットの消費対象です。</p>
+<p><strong>クレジットの減り方は選ぶモデルで変わります。</strong>既定のAutoを1倍として、Claude Opus 5.5は2倍、Sonnet 4.6は1.3倍、Haiku 5.5は0.06倍（10万トークンまで。超えると0.3倍）といった倍率が決まっています。Autoは軽いモデルで始め、行き詰まりを検知すると上位のモデルに引き継ぐ仕組みで、有料プランではClaude Opus並みの品質を基準にしています。迷ったらAutoのまま使うのが、量あたりでは得です。</p>
+<p>Freeで選べるのはAuto、Claude Sonnet 4.5・4.0、オープンウェイトのモデルで、GPT-5.6やClaude Opusなどは有料プランから選べます。</p>
+<h3 id="s4-1">初めて有料にするときの無料月</h3>
+<p>2026年11月1日から、Freeから初めて有料プランに上げると、<strong>その月の残りのPro料金が無料になり、12か月使える試用クレジット500が付きます。</strong>料金とクレジットは秒単位の日割りです。たとえば30日の月の15日にProへ上げると、支払いは$0で、日割りの533クレジットと試用の500クレジットを受け取れます。</p>
+<p>月のクレジットは翌月に繰り越されません。足りなくなったら$5（125クレジット）から$100までのパックで買い足せ、買った分は12か月有効です。プランを上げると即時に切り替わり、下げると翌月から切り替わります。</p>
+<h3 id="s4-2">チームのクレジット共有</h3>
+<p>チーム・企業向けは1シート月$20でシートごとに500クレジットが共有のプールに入る形です（2人以上）。<strong>よく使う人が、あまり使わない人の余りを使えるので、1人ずつProを配るより無駄が出にくくなります。</strong></p>
+<p>管理者は利用者・グループ・プロファイルごとに上限を決め、80%と100%で通知を受けられます。上限やプールの残りに達した人は、管理者が上限を上げるかクレジットを買い足すまで使えなくなるため、月末に想定外の請求が来ることはありません。新しく企業で契約する場合はこの共有の形が既定です。ただしクレジット共有は今はIAM Identity Centerのプロファイルだけが対象で、OktaやEntra IDを直接つないだプロファイルでは使えません。</p>
+<h2 id="s5">Kiroの始め方と使い方</h2>
+<p><strong>個人で試すならIDEかCLIを入れ、Google・GitHub・AWS Builder IDのどれかでサインインすれば数分で使えます。</strong>会社で入れる場合のサインインは次の節で扱います。</p>
+<h3 id="s5-1">IDEの始め方</h3>
+<ol>
+<li><a href="https://kiro.dev/">kiro.dev</a>からOSに合うインストーラーを落として実行する（macOS・Windows 10/11・Linux）</li>
+<li>初回の画面でサインイン方法を選ぶと、ブラウザが開いて認証が終わる</li>
+<li>VS Codeを使っていれば、設定・拡張機能・キー割り当てを取り込む（任意）</li>
+<li>作業するフォルダを開き、チャットかSpecで始める</li>
+</ol>
+<p>使える拡張機能はOpen VSXに公開されているものです。JetBrainsのIDEを使っている人は、CLIを入れてACP（エディタとエージェントをつなぐ仕組み）経由で使えます。</p>
+<h3 id="s5-2">CLIの始め方</h3>
+<p>CLIはmacOS・Linux・Windows 11（PowerShell）で動きます。macOSとLinuxなら次の1行です。</p>
+<pre><code class="language-bash">curl -fsSL https://cli.kiro.dev/install | bash
+cd my-project
+kiro-cli chat
+</code></pre>
+<p>macOSは<code>brew install kiro-cli</code>でも入り、Windowsは<code>irm 'https://cli.kiro.dev/install.ps1' | iex</code>を使います。初回の<code>kiro-cli</code>でブラウザのサインインに進み、ブラウザの無いサーバーでは、表示されたURLとコードを別の端末で入力します。</p>
+<p>CLIでもSpecは<code>/spec new &lt;名前&gt;</code>で作り、<code>/spec run &lt;名前&gt;</code>でタスクを実行できます。役割ごとに道具と指示を絞ったカスタムエージェントや、手順書をまとめるSkills（<code>.kiro/skills/</code>）もCLIで使えます（IDEやWebでも使えます）。CI/CDで動かすときは有料プランで発行できるAPIキーを環境変数<code>KIRO_API_KEY</code>に入れて非対話で実行します。</p>
+<h3 id="s5-3">Webに任せる使い方</h3>
+<p>Pro以上なら<a href="https://app.kiro.dev/">app.kiro.dev</a>でGitHubかGitLabをつなぎ、ブラウザから作業を頼めます。<strong>自律モードをオンにすると、計画から実装までを任せ、最後にPRを開くところまで進みます。</strong>Kiroは自動でマージしないため、取り込む判断は常に人の側です。</p>
+<h2 id="s6">会社で入れるときの条件は？</h2>
+<p><strong>会社で使うなら、AWSのIAM Identity CenterかOkta・Microsoft Entra IDで組織としてサインインさせるのが前提です。</strong>同じKiroでも、個人のサインインと組織のサインインでは、データの扱い・保存先・請求・管理の範囲が変わります。</p>
+<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_03_team.png" alt="サインイン方法で変わる条件。個人のサインイン（Google・GitHub・AWS Builder ID）は内容が改善に使われうる（停止できる）、保存先は米国東部、カードで1人ずつ支払う。組織のサインイン（IAM Identity Center・Okta・Entra ID）は内容を改善に使わない、保存先は米国東部か欧州、AWSの請求にまとまる、モデルとMCPを管理者が制限" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>確かめること</th>
+<th>個人のサインイン</th>
+<th>組織のサインイン</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="確かめること">方法</td>
+<td data-label="個人のサインイン">Google・GitHub・AWS Builder ID</td>
+<td data-label="組織のサインイン">IAM Identity Center・Okta・Entra ID</td>
+</tr>
+<tr>
+<td data-label="確かめること">内容の利用</td>
+<td data-label="個人のサインイン">サービス改善に使われうる（設定で停止できる）</td>
+<td data-label="組織のサインイン">改善に使わない</td>
+</tr>
+<tr>
+<td data-label="確かめること">保存先</td>
+<td data-label="個人のサインイン">米国東部（バージニア北部）</td>
+<td data-label="組織のサインイン">Kiroプロファイルのリージョン</td>
+</tr>
+<tr>
+<td data-label="確かめること">支払い</td>
+<td data-label="個人のサインイン">クレジットカード</td>
+<td data-label="組織のサインイン">AWSアカウントの請求</td>
+</tr>
+<tr>
+<td data-label="確かめること">管理</td>
+<td data-label="個人のサインイン">なし</td>
+<td data-label="組織のサインイン">モデル・MCP・Web検索・APIキーを管理者が制御</td>
+</tr>
+<tr>
+<td data-label="確かめること">記録</td>
+<td data-label="個人のサインイン">なし</td>
+<td data-label="組織のサインイン">プロンプトのログを自社のS3に保存できる</td>
+</tr>
+<tr>
+<td data-label="確かめること">無料プラン</td>
+<td data-label="個人のサインイン">使える</td>
+<td data-label="組織のサインイン">使えない（有料のみ）</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s6-1">学習とデータの扱い</h3>
+<p>公式の書き方は2か所で分かれています。企業向けのページはPro〜Powerの購読では内容を基盤モデルの学習に使わないと書いています。<strong>一方でデータ保護のページは、FreeとGoogle・GitHub・Builder IDで払う個人の購読者の内容は、モデルの学習を含むサービス改善に使われることがある</strong>とし、停止の手順を載せています。AWSのサービス規約（50.3）も、Freeと個人の購読者の内容を改善に使える対象に挙げ、その分は別のリージョンに保存されることもある、という書き方です。</p>
+<p>社員が個人のアカウントで会社のコードを開いた場合は、この後者です。IDEなら設定のUser、Application、Telemetry and Contentの順に開き、2つのチェックを外せば止められます。組織のサインインの利用者は、最初から収集の対象外です。ただしFreeでは、停止しても不正利用の検知のために入力が最大60日残ります。</p>
+<h3 id="s6-2">リージョンと請求</h3>
+<p><strong>Kiroのプロファイルを作れるのは米国東部（バージニア北部）と欧州（フランクフルト）、GovCloudだけで、東京は選べません。</strong>プロファイルのリージョンにデータが保存され、推論も同じ地域の中で行われます。社員のIDを置くIAM Identity Centerのほうは、東京・大阪を含む19のリージョンで使えます。</p>
+<p>GPT-5.6系のように、世界の商用リージョンで処理されるモデルもあります。データを国外に出す範囲に社内の決まりがあるなら、管理者がモデルの許可リストを使い、対象のモデルだけを選んでおくのが確実です。その場合、Autoは許可リストの外のモデルに振ることがあるため、Autoを止めて既定のモデルを決めておきます。</p>
+<p>請求はAWSのBilling and Cost Managementに「Kiro」として載り、ほかのAWSの費用と一緒に管理できます。同じプロファイルの中で1人を2重に登録しても1回分ですが、別のリージョンのプロファイルに登録すると2重に請求されるので注意が必要です。</p>
+<h3 id="s6-3">導入の手順と管理できること</h3>
+<ol>
+<li>AWSアカウントにログインし、IAM Identity Centerか外部のIDプロバイダーをつなぐ（クレジット共有を使うならIAM Identity Center）</li>
+<li>AWSコンソールのKiroコンソールでプロファイルを作り、シートを買う</li>
+<li>利用者かグループをプールに追加し、上限を決める</li>
+<li>社員にIDEかCLIを配り、「Your organization」でサインインさせる</li>
+</ol>
+<p>管理者は、使えるモデル・MCPサーバー・Web検索の可否・APIキーの発行を決められます。<strong>社用のPCに設定ファイルを配れば、サインイン画面から個人の方法（Google・GitHub・Builder ID）を消すこともできます。</strong>ブラウザ版のWebは管理者がCloud Sessionsをオンにするまで使えません。Webのセッションが動く地域は米国東部（バージニア北部）だけです。</p>
+<p>監査や調達の確認ではKiroのIDEとCLIがHIPAAの対象で、AWSのISO/IEC 27001:2022の範囲に含まれる点が材料になります。報告書の入手先はAWS Artifactです。Pro以上の出力には知的財産の補償も付きますが、一部のモデルは除外されています。</p>
+<p>国内では東京製鐵が全社に入れた事例をAWSが公開しています。情報システム部門を除いても、利用者は2026年7月の149人から9月の192人に増えました。最初は全社のルールをステアリングに書き、後から権限の設定と組み合わせた運用です。</p>
+<p>会社の業務やデータにつないで動かす所まで作るなら、権限と運用の設計が必要です。nitoも<a href="/ai-agent/">AIエージェントの構築と運用の支援</a>を行っています。</p>
+<div class="in-link-card"><a href="/media/amazon-bedrock-guide/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">【2026年11月】Amazon Bedrockとは？料金・始め方・AgentCoreとの違い</div><div class="in-link-card__desc">Kiroの土台にもなっているAmazon Bedrockの料金と、東京でClaudeを使う条件を解説しています。</div></div></a></div>
+<h2 id="s7">Cursor・Claude Codeとの違いは？</h2>
+<p><strong>Kiroの強みは要件と設計の文書を残しながら進める仕様駆動開発と、AWSのIDと請求にそのまま乗る企業向けの形です。</strong>指示を受けてコードを書き、動かして直すエージェントである点はどれも同じです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>比べる点</th>
+<th>Kiro</th>
+<th>Cursor</th>
+<th>Claude Code</th>
+<th>Google Antigravity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="比べる点">主な形</td>
+<td data-label="Kiro">IDE・CLI・Web</td>
+<td data-label="Cursor">エディタ</td>
+<td data-label="Claude Code">ターミナル・IDE拡張</td>
+<td data-label="Google Antigravity">管理アプリ・IDE・CLI</td>
+</tr>
+<tr>
+<td data-label="比べる点">個人の入口</td>
+<td data-label="Kiro">Pro $20</td>
+<td data-label="Cursor">Plus $8（Grokのみ）、Premium $30</td>
+<td data-label="Claude Code">Pro $20</td>
+<td data-label="Google Antigravity">Pro $20</td>
+</tr>
+<tr>
+<td data-label="比べる点">会社向け</td>
+<td data-label="Kiro">1シート$20</td>
+<td data-label="Cursor">Teams 1人$30から</td>
+<td data-label="Claude Code">Team 1人$25（年払い$20）</td>
+<td data-label="Google Antigravity">Gemini Enterprise 1人$30から</td>
+</tr>
+<tr>
+<td data-label="比べる点">モデル</td>
+<td data-label="Kiro">Claude・GPT・オープンウェイト</td>
+<td data-label="Cursor">Grok（他社のモデルは使った分を別料金）</td>
+<td data-label="Claude Code">Claude</td>
+<td data-label="Google Antigravity">Gemini中心</td>
+</tr>
+<tr>
+<td data-label="比べる点">管理の土台</td>
+<td data-label="Kiro">AWS（IAM・請求）</td>
+<td data-label="Cursor">Cursorの管理画面</td>
+<td data-label="Claude Code">Claudeの管理画面</td>
+<td data-label="Google Antigravity">Google Cloud</td>
+</tr>
+</tbody>
+</table></div>
+<p>すでにAWSでIDと請求を管理している会社なら、Kiroは新しい契約先を増やさずに入れられます。エディタの補完を中心に使いたいならCursor、ターミナル中心でClaudeを使い込むならClaude Code、Google Cloudの会社ならAntigravityが候補です。ほかの道具の細かい条件は<a href="/media/cursor-guide/">Cursorの料金と使い方</a>と<a href="/media/google-antigravity/">Google Antigravityとは</a>が詳しいです。</p>
+<div class="in-link-card"><a href="/media/codex-vs-claude-code/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">【2026年11月】CodexとClaude Codeを比較｜料金・管理機能・データ・併用</div><div class="in-link-card__desc">CodexとClaude Codeの料金・使える量・管理者の設定・学習の扱いを同じ物差しで比べています。</div></div></a></div>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li>まず試すなら、FreeでIDEかCLIを入れ、小さな機能を1つSpecで作ってみる</li>
+<li>毎日使う開発者はPro、Specのタスクを大量に回す人はPro+以上</li>
+<li>会社で入れるならIAM Identity Centerで組織のサインインにし、クレジット共有のシートで上限を決める</li>
+<li>Q Developerの有償版を使っている会社は、2027年4月30日までにKiroへの移行計画を立てる</li>
+<li>データの置き場所に決まりがあるなら、許可するモデルを選んでから配る</li>
+</ul>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">Kiroは無料で使えますか？</h3>
+<p>使えます。Freeは月50クレジットで、Auto・Claude Sonnet 4.5・オープンウェイトのモデルなどを制限つきで使えます。ブラウザ版のWebと追加クレジットの購入は有料プランだけです。</p>
+<h3 id="s9-2">KiroはAWSのアカウントがないと使えませんか？</h3>
+<p>個人ならAWSアカウントは要りません。Google・GitHub・AWS Builder IDのどれかでサインインできます。会社でIAM Identity Centerを使って管理する場合は、AWSアカウントでKiroのプロファイルを作ります。</p>
+<h3 id="s9-3">Kiroは日本語で使えますか？</h3>
+<p>チャットやSpecの指示は日本語で書けます。返答も日本語で返り、ステアリングに「日本語で答える」と書いておくと安定します。</p>
+<h3 id="s9-4">KiroのCLIでも仕様駆動開発はできますか？</h3>
+<p>できます。<code>/spec new &lt;名前&gt;</code>でSpecを作り、<code>/spec run &lt;名前&gt;</code>でタスクを実行します。プロパティベーステストによる確認はIDEだけの機能です。</p>
+<h3 id="s9-5">KiroとQ Developerはどう違いますか？</h3>
+<p>Q Developerは既存のエディタに補完やチャットを足すアシスタントで、KiroはSpec・フック・ステアリングを持つエージェントの開発環境です。Q DeveloperのIDEプラグインと有償サブスクリプションは2027年4月30日にサポートを終えます。</p>
+<h3 id="s9-6">Kiroで使えるプログラミング言語は何ですか？</h3>
+<p>Python・Java・JavaScript・TypeScript・C#・Go・Rust・PHP・Ruby・Kotlin・C・C++・SQLなど、日常の開発で使う主な言語に対応しています。TerraformのHCLやYAMLも対象です。</p>
+<h3 id="s9-7">Kiroのクレジットが足りなくなったらどうなりますか？</h3>
+<p>個人の有料プランなら$0.04/クレジットで買い足せます。チームの共有プールでは上限やプールの残りに達した人は、管理者が上限を上げるかクレジットを買い足すまで止まります。月のクレジットは翌月に繰り越されません。</p>
+<h3 id="s9-8">Kiroに会社のコードを読ませても学習に使われませんか？</h3>
+<p>組織のサインイン（IAM Identity Center・Okta・Entra ID）なら、内容はサービス改善に使われません。Google・GitHub・Builder IDで使う場合は使われることがあるため、設定で停止してください。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li><a href="https://kiro.dev/pricing/">Kiro 料金ページ</a>（2026年11月11日取得）</li>
+<li><a href="https://kiro.dev/docs/billing/">Kiro ドキュメント Billing</a></li>
+<li><a href="https://kiro.dev/docs/getting-started/installation/">Kiro ドキュメント Installation</a></li>
+<li><a href="https://kiro.dev/docs/getting-started/authentication/">Kiro ドキュメント Authentication</a></li>
+<li><a href="https://kiro.dev/docs/specs/">Kiro ドキュメント Specs</a></li>
+<li><a href="https://kiro.dev/docs/steering/">Kiro ドキュメント Steering</a></li>
+<li><a href="https://kiro.dev/docs/hooks/">Kiro ドキュメント Hooks</a></li>
+<li><a href="https://kiro.dev/docs/models/">Kiro ドキュメント Models</a></li>
+<li><a href="https://kiro.dev/docs/privacy-and-security/data-protection/">Kiro ドキュメント Data protection</a></li>
+<li><a href="https://kiro.dev/docs/enterprise/supported-regions/">Kiro ドキュメント Supported regions</a></li>
+<li><a href="https://kiro.dev/docs/enterprise/governance/">Kiro ドキュメント Governance</a></li>
+<li><a href="https://kiro.dev/docs/enterprise/billing/">Kiro ドキュメント Enterprise billing</a></li>
+<li><a href="https://kiro.dev/docs/privacy-and-security/compliance-validation/">Kiro ドキュメント Compliance validation</a></li>
+<li><a href="https://kiro.dev/enterprise/">Kiro for enterprise</a></li>
+<li><a href="https://aws.amazon.com/jp/blogs/news/general-availability/">AWS ブログ Kiro が一般提供開始</a>（2025年11月18日）</li>
+<li><a href="https://aws.amazon.com/jp/blogs/news/amazon-q-developer-end-of-support-announcement/">AWS ブログ Amazon Q Developer のサポート終了に関するお知らせ</a>（2026年5月1日）</li>
+<li><a href="https://aws.amazon.com/jp/blogs/news/credit-pooling/">AWS ブログ クレジットプーリングで Kiro のクレジットをチーム全体で共有する</a>（2026年11月5日）</li>
+<li><a href="https://aws.amazon.com/jp/blogs/news/model-cascade/">AWS ブログ Kiro の Auto がモデルカスケードで作業に合ったモデルを使い分ける仕組み</a>（2026年11月7日）</li>
+<li><a href="https://aws.amazon.com/jp/blogs/news/tokyo-steel-kiro-case-study/">AWS ブログ 東京製鐵株式会社の Kiro 全社導入事例</a>（2026年11月9日）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Kiroとは何か</a><a href="#s2">Kiroの仕様駆動開発とは</a><a href="#s3">ステアリングとフックで何ができる？</a><a href="#s4">Kiroの料金はいくら？</a><a href="#s5">Kiroの始め方と使い方</a><a href="#s6">会社で入れるときの条件は？</a><a href="#s7">Cursor・Claude Codeとの違いは？</a><a href="#s8">まとめ</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/google-antigravity/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Antigravityとは"><defs><linearGradient id="ecg-3332488b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-3332488b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Google Antigravityとは</text><line x1="113.6" y1="365.9" x2="1086.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.10</div>
+                <div class="rel-card__ttl">【2026年11月】Google Antigravityとは？料金・使い方・日本語化と企業向けの条件</div>
+            </a>
+            <a href="/media/cursor-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cursorの料金と使い方"><defs><linearGradient id="ecg-8cad2eee" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-8cad2eee)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Cursorの料金と使い方</text><line x1="197.2" y1="365.9" x2="1002.8" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.08</div>
+                <div class="rel-card__ttl">【2026年11月】Cursorの料金と使い方・月$8〜$200の新プランとTeamsの選び方</div>
+            </a>
+            <a href="/media/github-copilot-pricing/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub Copilotの料金"><defs><linearGradient id="ecg-ae920465" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ae920465)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">料金</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">GitHub Copilotの料金</text><line x1="166.8" y1="365.9" x2="1033.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.08</div>
+                <div class="rel-card__ttl">【2026年11月】GitHub Copilotの料金・プラン別の月額と従量課金の見積もり方</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'kiro-guide',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
