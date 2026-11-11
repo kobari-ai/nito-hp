@@ -38,6 +38,8 @@ Microsoftは2025年11月のIgniteで、AIアプリの開発基盤だったAzure 
 
 Foundryには料金計算ツールの専用のページが無く、Learnのコスト管理のページはモデル・検索・音声を1つずつ計算ツールに足す手順を示しています。
 
+FoundryでできることやCopilot Studioとの選び方は、[Microsoft Foundryとは](/media/microsoft-foundry/)で扱っています。
+
 ## Azure OpenAIの3つの課金の型
 
 料金ページが挙げる課金の型は、従量のStandard、処理能力を確保するProvisioned（PTU）、まとめて流すBatchの3つです。これに、急がない処理を安くするFlex（プレビュー）と、応答を速くするPriorityが加わりますが、どれも使えるモデルが限られます。
