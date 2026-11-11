@@ -26,7 +26,7 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 
 作れるものは大きく3つです。1つ目はエージェントで、指示とツールを組み合わせて質問への回答や業務の処理を行います。2つ目はモデルの利用で、OpenAI・Anthropic・Meta・Microsoftなどの11,000を超えるモデルから用途に合うものを選び、APIで呼び出します。3つ目はツールと知識で、Web検索・ファイル検索・コードの実行に加え、SharePointや業務システムの情報をエージェントが参照できるようにします。
 
-<!-- SHOT: 図 mfd_overview.html → mfd_01_overview.png・alt「Microsoft Foundryでできること。モデルを選ぶ、エージェントを作る、社内データとつなぐ、評価と監視、権限で管理の5つ」 -->
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_01_overview.png" alt="Microsoft Foundryでできること。モデルを選ぶ、エージェントを作る、社内データとつなぐ、評価と監視、権限で管理の5つ" loading="lazy"></figure>
 
 完成品のAIを使うMicrosoft 365 Copilotと違い、Foundryは自社専用のAIを作る側の製品です。WordやTeamsの作業を楽にしたいだけなら、まずは[Microsoft 365 Copilotの使い方](/media/copilot-guide/)で足りるかを確認するのがおすすめです。
 
@@ -34,7 +34,7 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 
 **Azure AI Studio、Azure AI Foundry、Microsoft Foundryは同じ製品で、2025年11月のIgniteで今の名前になりました。** 2023年にAzure AI Studioとして始まり、2024年にAzure AI Foundryへ改名され、2025年11月に「Azure」の冠が外れています。Azure AI ServicesもFoundry Toolsに名前が変わりましたが、Azureのリソースの種類は前と同じです。
 
-<!-- SHOT: 画面 https://learn.microsoft.com/ja-jp/azure/foundry/what-is-foundry・本文だけにある探す語「以前の概念とその現在の同等の概念」・赤枠にする語「Azure AI Studio/ Azure AI Foundry」と「Microsoft Foundry」の行・PC・alt「Microsoft Learnの表。ブランドはAzure AI StudioとAzure AI FoundryからMicrosoft Foundryへ、ポータルはFoundry（クラシック）からFoundryへ、エージェントのAPIはAssistants APIからResponses APIへ変わった」・figcaption「Microsoft Learn「Microsoft Foundry とは」の進化の表（2026年11月12日）」 -->
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_05_learn.png" alt="Microsoft Learnの表。ブランドはAzure AI StudioとAzure AI FoundryからMicrosoft Foundryへ、ポータルはFoundry（クラシック）からFoundryへ、エージェントのAPIはAssistants APIからResponses APIへ変わった" loading="lazy"><figcaption>Microsoft Learn「Microsoft Foundry とは</figcaption></figure>
 
 名前より注意が必要なのは、ポータルが新旧2つある点です。今のポータル（ai.azure.com）に出るのはFoundryプロジェクトだけで、ハブベースのプロジェクトとプロンプトフローは画面上部の切り替えで開くクラシックのポータルに残っています。**検索で見つかる解説にハブやプロンプトフローの手順が出てきたら、それはクラシックの話**です。新しく作るならFoundryプロジェクトから始めます。
 
@@ -68,7 +68,7 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 
 **作るものが社員向けのチャットならCopilot Studio、業務システムを動かすエージェントか自社アプリならFoundryを選ぶのが基本です。** Azure OpenAIは別の製品というより、Foundryの中でOpenAIのモデルを使う部分にあたり、Azureの価格ページでも「Azure OpenAI in Foundry Models」と表示されています。
 
-<!-- SHOT: 図 mfd_choose.html → mfd_02_choose.png・alt「作るもので選ぶ入口。社員がTeamsで聞く社内チャットはCopilot Studio、業務システムを動かすエージェントはMicrosoft Foundry、自社アプリや顧客向けサービスはFoundryのモデルをAPIで使う。迷ったら両方で1〜2週間ずつ試作する」 -->
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_02_choose.png" alt="作るもので選ぶ入口。社員がTeamsで聞く社内チャットはCopilot Studio、業務システムを動かすエージェントはMicrosoft Foundry、自社アプリや顧客向けサービスはFoundryのモデルをAPIで使う。迷ったら両方で1〜2週間ずつ試作する" loading="lazy"></figure>
 
 | 作るもの | 選ぶ入口 | 決め手 |
 |---|---|---|
@@ -131,7 +131,7 @@ Foundryには料金計算ツールの専用ページが無く、モデル・検�
 
 **Foundryの基盤とプロンプト エージェントには追加料金がかからず、払うのはモデルのトークンと、使ったツール・検索・コンテナーの分です。** 価格ページのFAQは「Foundry プラットフォームは無料でご利用、探索していただけます」と書き、使った個々の機能が通常の料金で請求されるとしています。
 
-<!-- SHOT: 画面 https://azure.microsoft.com/ja-jp/pricing/details/ai-foundry/・本文だけにある探す語「Foundry は無料ですか?」（FAQ は畳まれているので開いてから撮る）・赤枠にする語「Foundry プラットフォームは無料でご利用、探索していただけます」・PC・alt「Microsoft Foundryの価格ページのよくある質問。Foundryプラットフォームは無料で利用でき、使った個々の機能が通常の料金で請求される」・figcaption「Azure「Microsoft Foundry の価格」のよくある質問（2026年11月12日）」 -->
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_06_price.png" alt="Microsoft Foundryの価格ページのよくある質問。Foundryプラットフォームは無料で利用でき、使った個々の機能が通常の料金で請求される" loading="lazy"><figcaption>Azure「Microsoft Foundry の価格</figcaption></figure>
 
 費用の項目は次のとおりです。Agent Serviceの価格ページは、プロンプトとワークフローで作るエージェントの作成と実行に追加料金は無いと書いています。
 
@@ -144,7 +144,7 @@ Foundryには料金計算ツールの専用ページが無く、モデル・検�
 
 社員100人が社内規程のQ&Aのエージェントを1日5回ずつ使う場合で数えます。プロンプト エージェントで作り、1回の入力が3,000トークン・出力が600トークン、月20日とすると、モデルにGPT-6.1 Terra（グローバル標準）を選んだときの代金は**月約9,500円（税抜き）**です。ファイル検索の保存が1GBに収まればそこは0円で、SharePointの文書をFoundry IQで検索させる場合はAzure AI検索の料金は別です。
 
-<!-- SHOT: 図 mfd_cost.html → mfd_03_cost.png・alt「社内規程のQ&Aの月額の内訳。100人が1日5回・月20日の試算で、Foundryの基盤とプロンプト エージェントは0円、モデルの代金はGPT-6.1 Terraで約9,500円、ファイル検索の保存は1GBまで0円、社内データの検索は別料金」 -->
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_03_cost.png" alt="社内規程のQ&Aの月額の内訳。100人が1日5回・月20日の試算で、Foundryの基盤とプロンプト エージェントは0円、モデルの代金はGPT-6.1 Terraで約9,500円、ファイル検索の保存は1GBまで0円、社内データの検索は別料金" loading="lazy"></figure>
 
 **この規模なら費用の大半はモデルの代金で、モデルの選び方で桁が変わります。** モデルごとの単価・展開の型・計算式の詳細は次の記事にまとめました。
 
@@ -162,7 +162,7 @@ Foundryのポータルの「操作」の概要にある推定コストと、Azur
 
 **AzureでOpenAIなどのモデルを使う場合、プロンプトと出力はほかの顧客やOpenAIに渡されず、許可なくモデルの学習にも使われません。** Learnの「Azure が販売するモデルのデータ、プライバシー、セキュリティ」は、Azure OpenAIを含むAzureが販売するモデルについて、この扱いを明記しています。
 
-<!-- SHOT: 画面 https://learn.microsoft.com/ja-jp/azure/foundry/responsible-ai/openai/data-privacy・本文だけにある探す語「他のお客様には利用できません」・赤枠にする語 冒頭の「重要」の箇条全体・PC・alt「Microsoft Learnの重要の欄。プロンプト・出力・埋め込み・トレーニングデータはほかの顧客に利用できず、OpenAIなどに提供されず、許可なく基盤モデルのトレーニングに使われない」・figcaption「Microsoft Learn「Azure が販売するモデルのデータ、プライバシー、セキュリティ」（2026年11月12日）」 -->
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_07_privacy.png" alt="Microsoft Learnの重要の欄。プロンプト・出力・埋め込み・トレーニングデータはほかの顧客に利用できず、OpenAIなどに提供されず、許可なく基盤モデルのトレーニングに使われない" loading="lazy"><figcaption>Microsoft Learn「Azure が販売するモデルのデータ、プライバシー、セキュリティ</figcaption></figure>
 
 情報セキュリティの担当と確認しておきたい点は次の4つです。
 
@@ -177,7 +177,7 @@ Foundryのポータルの「操作」の概要にある推定コストと、Azur
 
 **Azureのサブスクリプションを用意し、Foundryのリソースとプロジェクトを作って、プロンプト エージェントを1つ作るところから始めます。** Foundryのポータルを見て回るだけならAzureのアカウントは不要ですが、エージェントを作るにはサブスクリプションが必要です。
 
-<!-- SHOT: 図 mfd_start.html → mfd_04_start.png・alt「Microsoft Foundryを始める順番。Azureのサブスクリプション、リソースとプロジェクト、モデルを展開、エージェントを作成してプレイグラウンドで回答を確認、Teamsへ公開して予算アラートを設定」 -->
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_04_start.png" alt="Microsoft Foundryを始める順番。Azureのサブスクリプション、リソースとプロジェクト、モデルを展開、エージェントを作成してプレイグラウンドで回答を確認、Teamsへ公開して予算アラートを設定" loading="lazy"></figure>
 
 1. Azureのサブスクリプションを用意する（無料アカウントでも可）
 2. Azureポータルか[Foundryのポータル](https://ai.azure.com/)で、Foundryのリソースとプロジェクトを作る。プロジェクトは用途やチームごとに分けられる
