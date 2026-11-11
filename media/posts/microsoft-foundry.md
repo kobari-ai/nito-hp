@@ -24,7 +24,7 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 
 **Microsoft Foundryは、モデルの選択からエージェントの作成、社内データとの接続、品質の評価と監視までを1つのAzureリソースで扱う基盤です。** Microsoft Learnの「Microsoft Foundry とは」は、エージェント・モデル・ツールを1つの管理単位にまとめ、権限・ネットワーク・ポリシーも同じ場所で管理できると説明しています。
 
-作れるものは大きく3つです。1つ目はエージェントで、指示とツールを組み合わせて質問への回答や業務の処理を行います。2つ目はモデルの利用で、OpenAI・Anthropic・Meta・Microsoftなどの11,000を超えるモデルから用途に合うものを選び、APIで呼び出します。3つ目はツールと知識で、Web検索・ファイル検索・コードの実行に加え、SharePointや業務システムの情報をエージェントが参照できるようにします。
+作れるものは大きく3つです。1番目はエージェントで、指示とツールを組み合わせて質問への回答や業務の処理を行います。2番目はモデルの利用で、OpenAI・Anthropic・Meta・Microsoftなどの11,000を超えるモデルから用途に合うものを選び、APIで呼び出します。3番目はツールと知識で、Web検索・ファイル検索・コードの実行に加え、SharePointや業務システムの情報をエージェントが参照できるようにします。
 
 <figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_01_overview.png" alt="Microsoft Foundryでできること。モデルを選ぶ、エージェントを作る、社内データとつなぐ、評価と監視、権限で管理の5つ" loading="lazy"></figure>
 
@@ -76,7 +76,7 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 | 業務システムを動かすエージェント | Microsoft Foundry | モデルの選択・コード・評価まで自社で制御できる |
 | 自社アプリや顧客向けのAI機能 | Foundryのモデル（API） | Azure OpenAIを含むモデルをアプリから直接呼ぶ |
 
-2つの製品の差が出るのは、作る人・払い方・自由度です。どちらで作ってもTeamsやMicrosoft 365 Copilotに公開でき、Entra IDで社内の人に限って使わせられる点は共通です。
+両製品の差が出るのは、作る人・払い方・自由度です。どちらで作ってもTeamsやMicrosoft 365 Copilotに公開でき、Entra IDで社内の人に限って使わせられる点は共通です。
 
 | 比べる点 | Copilot Studio | Microsoft Foundry |
 |---|---|---|
@@ -87,7 +87,7 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 
 MicrosoftのCloud Adoption Framework（Azure導入の公式ガイド）も、Copilot Studioは最小限のコーディングで速く作る場面、Foundryは深い統合と独自の処理が必要な場面と分けています。そのうえで、**候補ごとに1〜2週間の試作を作って比べ、ローコードで機能とセキュリティの要件を満たせるならそちらに進む**よう勧めています。
 
-2つは組み合わせることもできます。Copilot StudioのエージェントからFoundryのエージェントを呼び出す接続は、2026年11月12日時点でプレビューです。Foundry側でActivityプロトコルのエンドポイントをREST APIかPython SDKで有効にする必要があり、新しいポータルで作ったエージェントだけがつながります。
+両者は組み合わせることもできます。Copilot StudioのエージェントからFoundryのエージェントを呼び出す接続は、2026年11月12日時点でプレビューです。Foundry側でActivityプロトコルのエンドポイントをREST APIかPython SDKで有効にする必要があり、新しいポータルで作ったエージェントだけがつながります。
 
 :::linkcard
 url: /media/copilot-studio-agent/
