@@ -57,7 +57,7 @@ Power Automateのクラウドフローでは、メールに付いた請求書を
 
 Copilot Studioでは、エージェントのトピックやツールの中でプロンプトを使ったり、エージェントフローの中で請求書処理などのモデルを動かしたりできます。**エージェントとエージェントフローは、Copilotクレジットしか使えません。** 今あるPower Automateのクラウドフローをエージェントフローに変えると、その中のプロンプトとモデルもCopilotクレジットだけで動くようになります。
 
-社員がTeamsで「この請求書を処理して」と話しかける形にしたいならCopilot Studio、決まった受付箱に届いたものを毎回同じように処理するだけならPower Automateが向いています。エージェントの作り方は別の記事にまとめています。
+社員がTeamsで「この請求書を処理して」と話しかける形にしたいならCopilot Studio、決まった受付箱に届いたものを毎回同じように処理するだけならPower Automateが合う場面です。エージェントの作り方は別の記事にまとめています。
 
 :::linkcard
 url: /media/copilot-studio-agent/
@@ -67,7 +67,7 @@ desc: Copilot Studioでエージェントを作り、SharePointのナレッジ�
 
 ## AI Builderの料金はいくら？
 
-**AI Builderに月額の定価は無く、使った分だけCopilotクレジットかAI Builderクレジットが減る仕組みです。** 加えて、フローやアプリを動かすPower AutomateやPower Appsのライセンスが要ります。
+**AI Builderに月額の定価は無く、使った分だけCopilotクレジットかAI Builderクレジットが減る仕組みです。** 加えて、フローやアプリを動かすPower AutomateやPower Appsのライセンスも必要です。
 
 Power AppsとPower Automateでは、テナントにAI Builderクレジットが残っていればそちらが先に減り、無くなるとCopilotクレジットに切り替わります。**両方とも無い環境ではAI Builderのアクションが止まります。** フローは「EntitlementNotAvailable」や「QuotaExceeded」のエラーで失敗し、フローの編集画面には「この環境のすべてのAI Builder クレジットが使用されました」と出ます。Copilot Studioの中で使う分は、最初からCopilotクレジットです。
 
@@ -94,7 +94,7 @@ desc: Copilotクレジットの3つの払い方と、エージェントの動き
 
 ### Power Automate Premiumは必要か
 
-**AI Builderを使うPower Automateのフローに、Power Automate Premiumが必要かどうかは、Learnの2つのページで書き方が分かれています。** 「ライセンスの概要」では名刺リーダーを含むAI Builderのアクションをプレミアム コネクタとし、使うフローはプレミアム フローでPremiumのライセンスが要る、と書いています。一方で「ライセンスとAI Builder クレジット」は、フローにAI Builderのアクションを足してもプレミアム フローにはならない、と書いています。英語版も同じ食い違いです。
+**AI Builderを使うPower Automateのフローに、Power Automate Premiumが必要かどうかは、Learnの2つのページで書き方が分かれています。** 「ライセンスの概要」では名刺リーダーを含むAI Builderのアクションをプレミアム コネクタとし、使うフローはプレミアム フローでPremiumのライセンスが要る、という書き方です。一方で「ライセンスとAI Builder クレジット」は、フローにAI Builderのアクションを足してもプレミアム フローにはならない、と書いています。英語版も同じ食い違いです。
 
 Power Appsの側は、2つのページとも、アプリにAI Builderを足すとPremiumのアプリになり、Premiumのライセンスが要る、と一致しています。Power Automate Premiumは日本の価格ページで1ユーザー月2,248円（年払い、税抜）です。**フローを使う人の分のライセンスを見積もりに入れるかは、契約の窓口のMicrosoftの担当かライセンスのパートナーに確認するのが確実です。**
 
@@ -128,11 +128,11 @@ AI Builderの30日の試用版も廃止されました。上位の解説で「30
 
 ### ① AIハブで請求書処理を選ぶ
 
-Power Automateにサインインし、左の「…その他」から「AI ハブ」、「AI モデル」の順に開きます。一覧から請求書処理の事前構築済みモデルを選ぶところから始めます。
+Power Automateにサインインし、左の「…その他」から「AI ハブ」、「AI モデル」の順に開きます。一覧から請求書処理の事前構築済みモデルを選ぶところが出発点です。
 
 ### ② 自社の請求書でテストする
 
-選んだモデルの画面で、自社に届いた請求書を数枚読ませます。**テストはクレジットを使わないので、取引先ごとの形を一通り試せます。** ファイルはJPEG・PNG・PDFで20MBまで、PDFは先頭の2,000ページまでが読まれます。
+選んだモデルの画面で、自社に届いた請求書を数枚読ませます。**テストはクレジットを使わないので、取引先ごとの形を一通り試せます。** ファイルはJPEG・PNG・PDFで20MBまで、PDFは先頭の2,000ページまでが読み取りの対象です。
 
 ### ③ フローで使う
 
@@ -158,7 +158,7 @@ Power Automateにサインインし、左の「…その他」から「AI ハブ
 
 ### 社内のデータの置き場とつながる
 
-読み取った結果をSharePoint・Excel・Dataverse・Teamsへそのまま流せます。データは自社のPower Platformの環境の中で扱われ、モデルは環境をホストする地域のデータセンターに置かれます。
+読み取った結果をSharePoint・Excel・Dataverse・Teamsへそのまま流せます。データは自社のPower Platformの環境の中で扱われ、モデルは環境をホストする地域のデータセンターに置かれる仕様です。
 
 ### 管理センターで使う量を絞れる
 
@@ -207,7 +207,7 @@ Power Platform管理センターでは、クレジットを環境ごとに割り
 
 モデルの学習と、AIモデルのページやプロンプトビルダーでのテストは無料です。本番のアプリやフロー、エージェントで動かすとクレジットが減ります。AI Builderの試用版は廃止されています。
 
-### AI BuilderはMicrosoft 365に含まれますか？
+### AI BuilderはMicrosoft 365に含まれる？
 
 含まれません。DataverseのあるPower Platformの環境と、AI Builderクレジットか Copilotクレジットの容量が必要です。アプリで使うならPower AppsのPremiumのライセンスも要ります。
 
@@ -229,7 +229,7 @@ Power Platform管理センターでは、クレジットを環境ごとに割り
 
 ### AI Builderでエージェントを作れますか？
 
-エージェントそのものはCopilot Studioで作ります。AI Builderのプロンプトやモデルは、そのエージェントのトピックやエージェントフローの中で部品として使えます。
+エージェントそのものを作るのはCopilot Studioです。AI Builderのプロンプトやモデルは、そのエージェントのトピックやエージェントフローの中で部品として使えます。
 
 ### AI BuilderとAzureはどう使い分けますか？
 
