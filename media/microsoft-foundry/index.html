@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Microsoft Foundryとは？旧Azure AI Foundryの機能・料金・選び方｜株式会社nito</title>
+    <meta name="description" content="Microsoft Foundry（旧Azure AI Foundry）とは何かを解説。できること・Copilot StudioやAzure OpenAIとの選び方・料金の考え方・データの扱い・始め方まで、作るもので入口を決める早見つき。">
+    <link rel="canonical" href="https://nito-0210.com/media/microsoft-foundry/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Microsoft Foundryとは？旧Azure AI Foundryの機能・料金・選び方">
+    <meta property="og:description" content="Microsoft Foundry（旧Azure AI Foundry）とは何かを解説。できること・Copilot StudioやAzure OpenAIとの選び方・料金の考え方・データの扱い・始め方まで、作るもので入口を決める早見つき。">
+    <meta property="og:url" content="https://nito-0210.com/media/microsoft-foundry/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/microsoft-foundry.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/microsoft-foundry.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Microsoft Foundryとは？旧Azure AI Foundryの機能・料金・選び方", "description": "Microsoft Foundry（旧Azure AI Foundry）とは何かを解説。できること・Copilot StudioやAzure OpenAIとの選び方・料金の考え方・データの扱い・始め方まで、作るもので入口を決める早見つき。", "datePublished": "2026-11-12", "dateModified": "2026-11-12", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/microsoft-foundry/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/microsoft-foundry.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Microsoft Foundryとは？旧Azure AI Foundryの機能・料金・選び方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Azure AI Foundryと同じ製品ですか？", "acceptedAnswer": {"@type": "Answer", "text": "同じ製品です。Azure AI Studio、Azure AI Foundryと名前が変わり、2025年11月のIgniteでMicrosoft Foundryになりました。ハブベースのプロジェクトなど古い仕組みはクラシックのポータルに残っています。"}}, {"@type": "Question", "name": "Microsoft Foundryは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "基盤とポータルは無料で、プロンプト エージェントの作成と実行にも追加料金はかかりません。使ったモデルのトークン、ツール、検索、ホスト型エージェントのコンテナーの分が、Azureの請求に載ります。"}}, {"@type": "Question", "name": "Azure OpenAIとの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Azure OpenAIは、Foundryの中でOpenAIのモデルを使う部分です。FoundryはOpenAI以外のモデル、エージェント、ツール、評価までを含む基盤全体の名前です。既存のAzure OpenAIのリソースは、エンドポイントとAPIキーを保ったままFoundryのリソースにアップグレードできます。"}}, {"@type": "Question", "name": "Copilot Studioとどちらを選びますか？", "acceptedAnswer": {"@type": "Answer", "text": "社員向けのチャットを画面で早く作るならCopilot Studio、業務システムの操作や自社アプリへの組み込みならMicrosoft Foundryが向いています。Microsoftの導入ガイドの勧めは、両方で1〜2週間ずつ試作して比べることです。"}}, {"@type": "Question", "name": "FoundryでClaudeは使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。AnthropicのClaudeはFoundryのモデルカタログにあり、使用量の請求もAzure経由です。ただしAzureの前払いクレジットはMarketplace経由のモデルには使えないとLearnに書かれています。契約の経路の違いは[Claudeの法人契約](/media/claude-corporate-contract/)にまとめました。"}}, {"@type": "Question", "name": "FoundryのエージェントはTeamsで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。発行したエージェントをTeamsやMicrosoft 365 Copilotに公開する機能は一般提供されています。Copilot Studioのエージェントから呼び出す接続はプレビューです。"}}, {"@type": "Question", "name": "Foundryのデータは学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "Azure OpenAIを含むAzureが販売するモデルでは、プロンプトと出力は許可なくモデルの学習に使われず、OpenAIにも渡されません。パートナーのモデルは各モデルの条件を確認する必要があります。"}}, {"@type": "Question", "name": "Microsoft Foundryのハブはまだ使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "ハブベースのプロジェクトは、クラシックのポータルで引き続き使えます。今のポータルにはFoundryプロジェクトだけが表示され、新しいエージェントの機能もFoundryプロジェクトでしか使えないため、新しく作るならFoundryプロジェクトがおすすめです。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Microsoft …
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.12</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Microsoft Foundryとは？旧Azure AI Foundryの機能・料金・選び方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/microsoft-foundry.jpg" alt="【2026年11月】Microsoft Foundryとは？旧Azure AI Foundryの機能・料金・選び方" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェントやAIアプリを作り、評価と監視まで1か所で行うMicrosoftの開発基盤です。基盤そのものは無料で、使ったモデルやツールの分だけAzureの請求に載ります。</p>
+<p>この記事ではMicrosoft 365やAzureを使う会社で社内向けのエージェントや自社アプリを作るか決めたい担当者に向けて、できること・Copilot StudioやAzure OpenAIとの選び方・料金の考え方・データの扱い・始め方を扱います。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>Microsoft FoundryはAzure AI Studio・Azure AI Foundryの今の名前</strong>。モデル・エージェント・ツール・評価を1つのリソースで管理する</li>
+<li><strong>社員がTeamsで聞く社内チャットならCopilot Studio、業務システムを動かすエージェントや自社アプリならFoundry</strong>が向いている</li>
+<li><strong>基盤は無料で、モデルとツールの使った分を払う</strong>。予算を超えても自動では止まらないので、アラートの設定が必要</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Microsoft Foundryとは？何ができる？</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>名前とポータルはどう変わった？</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>エージェントは何種類ある？</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Microsoft Foundryの活用例は？</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>Copilot Studioとどう違う？</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>Microsoft Foundryを使うメリットは？</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>モデルを選び替えられる</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>評価と監視が最初から付いている</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>Azureの権限と統制に乗る</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Microsoft Foundryの注意点は？</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>費用が分かれ上限で止まらない</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>プレビューが多く変化が速い</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>作る側に開発の知識が必要</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>Microsoft Foundryの料金はいくらかかる？</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>入力したデータはどう扱われる？</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>Microsoft Foundryの始め方は？</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Microsoft Foundryとは？何ができる？</h2>
+<p><strong>Microsoft Foundryは、モデルの選択からエージェントの作成、社内データとの接続、品質の評価と監視までを1つのAzureリソースで扱う基盤です。</strong> Microsoft Learnの「Microsoft Foundry とは」は、エージェント・モデル・ツールを1つの管理単位にまとめ、権限・ネットワーク・ポリシーも同じ場所で管理できると説明しています。</p>
+<p>機能は大きく3つに分かれます。エージェントは指示とツールを組み合わせて質問への回答や業務の処理を行います。モデルはOpenAI・Anthropic・Meta・Microsoftなどの11,000を超えるモデルから用途に合うものを選び、APIで呼び出します。ツールと知識はWeb検索・ファイル検索・コードの実行に加え、SharePointや業務システムの情報をエージェントが参照できるようにします。</p>
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_01_overview.png" alt="Microsoft Foundryでできること。モデルを選ぶ、エージェントを作る、社内データとつなぐ、評価と監視、権限で管理の5つ" loading="lazy"></figure>
+
+<p>完成品のAIを使うMicrosoft 365 Copilotと違い、Foundryは自社専用のAIを作る側の製品です。WordやTeamsの作業を楽にしたいだけなら、まずは<a href="/media/copilot-guide/">Microsoft 365 Copilotの使い方</a>で足りるかを確認するのがおすすめです。</p>
+<h3 id="s1-1">名前とポータルはどう変わった？</h3>
+<p><strong>Azure AI Studio、Azure AI Foundry、Microsoft Foundryは同じ製品で、2025年11月のIgniteで今の名前になりました。</strong> 2023年にAzure AI Studioとして始まり、2024年にAzure AI Foundryへ改名され、2025年11月に「Azure」の冠が外れています。Azure AI ServicesもFoundry Toolsに名前が変わりましたが、Azureのリソースの種類は前と同じです。</p>
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_05_learn.png" alt="Microsoft Learnの表。ブランドはAzure AI StudioとAzure AI FoundryからMicrosoft Foundryへ、ポータルはFoundry（クラシック）からFoundryへ、エージェントのAPIはAssistants APIからResponses APIへ変わった" loading="lazy"><figcaption>Microsoft Learn「Microsoft Foundry とは」</figcaption></figure>
+
+<p>名前より注意が必要なのは、ポータルが新旧2つある点です。今のポータル（ai.azure.com）に出るのはFoundryプロジェクトだけで、ハブベースのプロジェクトとプロンプトフローは画面上部の切り替えで開くクラシックのポータルに残っています。<strong>検索で見つかる解説にハブやプロンプトフローの手順が出てきたら、それはクラシックの話</strong>です。新しく作るならFoundryプロジェクトから始めます。</p>
+<p>エージェントのAPIも変わりました。古いAssistants APIは2026年8月26日に終了し、今のエージェントはResponses APIで動きます。モデルを呼ぶSDKのazure-ai-inferenceも同じ日に廃止されています。Azure OpenAIのリソースを使っている会社は、エンドポイントとAPIキーを保ったままFoundryのリソースにアップグレードできます。</p>
+<h3 id="s1-2">エージェントは何種類ある？</h3>
+<p><strong>Foundryのエージェントは3種類で、コードを書かずに作るプロンプト エージェントから始めるのが公式の勧めです。</strong> どれを選ぶかで、自社で保守する範囲と費用の型が変わります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>種類</th>
+<th>作り方</th>
+<th>費用の型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="種類">プロンプト エージェント</td>
+<td data-label="作り方">画面かSDKで指示・モデル・ツールを設定</td>
+<td data-label="費用の型">モデルとツールの使った分</td>
+</tr>
+<tr>
+<td data-label="種類">音声のプロンプト エージェント（プレビュー）</td>
+<td data-label="作り方">同じ設定に音声を追加</td>
+<td data-label="費用の型">上記に音声の処理の分</td>
+</tr>
+<tr>
+<td data-label="種類">ホスト型エージェント</td>
+<td data-label="作り方">自社のコードをコンテナーで持ち込む</td>
+<td data-label="費用の型">上記にコンテナーの時間の分</td>
+</tr>
+</tbody>
+</table></div>
+<p>プロンプト エージェントは、指示・モデル・ツールを決めればFoundryが実行まで受け持つため、保守するアプリのコードもサーバーもありません。ホスト型エージェントはMicrosoft Agent Framework・LangGraph・OpenAI Agents SDKなどで書いたコードを動かす型で、承認の流れや社内システムの操作を細かく組みたいときに向いています。宣言型で始めて、必要になったらコードに移れる作りです。</p>
+<h2 id="s2">Microsoft Foundryの活用例は？</h2>
+<p><strong>Foundryの使い道は社内の規程や手順に答えるエージェント、業務システムを操作するエージェント、自社サービスに組み込むAI機能の3つに分けられます。</strong> Azureの製品ページにも、簡単なQ&amp;Aのチャットボットから複数のエージェントが連携する業務の流れ・RPAに近い自動化まで作れるとあります。</p>
+<ul>
+<li><strong>社内の規程・手順のQ&amp;A</strong>: SharePointなどの文書をFoundry IQ（プレビュー）で知識として登録し、権限に沿って根拠つきで答える</li>
+<li><strong>業務システムを動かすエージェント</strong>: Logic Appsの1,400を超える接続（SAP・Salesforce・Dynamics 365など）やMCPで、起票・通知・照会まで行う</li>
+<li><strong>自社サービスへの組み込み</strong>: エージェントやモデルをAPIで呼び、顧客ポータルのサポートや見積もりの下書きに使う</li>
+<li><strong>音声の窓口</strong>: 音声のプロンプト エージェントをTeams PhoneやTwilioの電話番号につなぐ（音声のエージェントはプレビューで、電話の連携も一部がプレビュー）</li>
+<li><strong>ネットワークの外に出せない現場</strong>: Foundry LocalでPCやエッジの端末上でモデルを動かす</li>
+</ul>
+<p>社内のQ&amp;Aのように「社員が質問して答える」だけなら、Foundryでなくても作れます。入口の選び方は次の節の早見にまとめました。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">Copilot Studioとどう違う？</h2>
+<p><strong>作るものが社員向けのチャットならCopilot Studio、業務システムを動かすエージェントか自社アプリならFoundryを選ぶのが基本です。</strong> Copilot Studioもコネクタとフローで業務システムを操作できるため、分かれ目は既製のコネクタで足りるか、独自のコード・モデルの選択・評価まで自社で持ちたいかです。Azure OpenAIは別の製品というより、Foundryの中でOpenAIのモデルを使う部分にあたり、Azureの価格ページでも「Azure OpenAI in Foundry Models」と表示されています。</p>
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_02_choose.png" alt="作るもので選ぶ入口。社員がTeamsで聞く社内チャットはCopilot Studio、業務システムを動かすエージェントはMicrosoft Foundry、自社アプリや顧客向けサービスはFoundryのモデルをAPIで使う。迷ったら両方で1〜2週間ずつ試作する" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>作るもの</th>
+<th>選ぶ入口</th>
+<th>決め手</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="作るもの">社員がTeamsで聞く社内チャット</td>
+<td data-label="選ぶ入口">Copilot Studio</td>
+<td data-label="決め手">画面で作り、Microsoft 365のデータとつなぎやすい</td>
+</tr>
+<tr>
+<td data-label="作るもの">業務システムを動かすエージェント</td>
+<td data-label="選ぶ入口">Microsoft Foundry</td>
+<td data-label="決め手">モデルの選択・コード・評価まで自社で制御できる</td>
+</tr>
+<tr>
+<td data-label="作るもの">自社アプリや顧客向けのAI機能</td>
+<td data-label="選ぶ入口">Foundryのモデル（API）</td>
+<td data-label="決め手">Azure OpenAIを含むモデルをアプリから直接呼ぶ</td>
+</tr>
+</tbody>
+</table></div>
+<p>Copilot StudioとFoundryの差が出るのは、作る人・払い方・自由度です。どちらで作ってもTeamsやMicrosoft 365 Copilotに公開でき、Entra IDで社内の人に限って使わせられる点は共通です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>比べる点</th>
+<th>Copilot Studio</th>
+<th>Microsoft Foundry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="比べる点">提供の形</td>
+<td data-label="Copilot Studio">SaaS（画面で作る）</td>
+<td data-label="Microsoft Foundry">PaaS（画面とコードで作る）</td>
+</tr>
+<tr>
+<td data-label="比べる点">主に作る人</td>
+<td data-label="Copilot Studio">業務部門・ローコードの作り手</td>
+<td data-label="Microsoft Foundry">開発者・クラウドの担当</td>
+</tr>
+<tr>
+<td data-label="比べる点">払い方</td>
+<td data-label="Copilot Studio">Copilotクレジット</td>
+<td data-label="Microsoft Foundry">モデルとツールの使った分</td>
+</tr>
+<tr>
+<td data-label="比べる点">自社のコード</td>
+<td data-label="Copilot Studio">コネクタとフローが中心</td>
+<td data-label="Microsoft Foundry">ホスト型エージェントで持ち込める</td>
+</tr>
+</tbody>
+</table></div>
+<p>MicrosoftのCloud Adoption Framework（Azure導入の公式ガイド）も、Copilot Studioは最小限のコーディングで速く作る場面、Foundryは深い統合と独自の処理が必要な場面と分けています。そのうえで、<strong>候補ごとに1〜2週間の試作を作って比べ、ローコードで機能とセキュリティの要件を満たせるならそちらに進む</strong>よう勧めています。</p>
+<p>Copilot StudioとFoundryは組み合わせることもできます。Copilot StudioのエージェントからFoundryのエージェントを呼び出す接続は、2026年11月12日時点でプレビューです。Foundry側でActivityプロトコルのエンドポイントをREST APIかPython SDKで有効にする必要があり、新しいポータルで作ったエージェントだけがつながります。</p>
+<div class="in-link-card"><a href="/media/copilot-studio-agent/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">Copilot Studioのエージェント作成手順</div><div class="in-link-card__desc">Copilot Studioで社内向けのエージェントを作りTeamsに公開するまでの手順を解説しています。</div></div></a></div>
+<h2 id="s4">Microsoft Foundryを使うメリットは？</h2>
+<p><strong>モデルを選び替えられること・評価と監視が最初から付いていること・Azureの権限管理にそのまま乗ることの3つが、Foundryを選ぶ利点です。</strong> どれもPoCで終わらせず本番で動かし続けるときに効果が出ます。</p>
+<h3 id="s4-1">モデルを選び替えられる</h3>
+<p>Foundryのカタログに並ぶのは、OpenAIのGPT系・AnthropicのClaude・MetaのLlama・MicrosoftのPhiなど11,000を超えるモデルです。エージェントのコードを変えずにモデルを差し替えられるため、<strong>安いモデルで試して、足りない所だけ高性能なモデルに替える</strong>運用ができます。要求の内容に応じてモデルを自動で振り分ける機能がモデル ルーターです。</p>
+<h3 id="s4-2">評価と監視が最初から付いている</h3>
+<p>エージェントの1回ごとの動き（どのモデルを呼び、どのツールを使ったか）をトレースで追え、回答が根拠に沿っているか・質問に合っているか・ツールを正しく選んだかを評価できます。<strong>HTTPが正常に返っていても、回答が的外れなら業務では失敗</strong>なので、この評価を本番の会話に継続してかけられる点は、自前で作るより手間が少なくなります。</p>
+<h3 id="s4-3">Azureの権限と統制に乗る</h3>
+<p>エージェントごとにEntra IDのIDが付き、RBAC・仮想ネットワーク・Azure Policy・コンテンツのフィルターで統制する仕組みです。情報システム部門がすでにAzureで管理している権限やネットワークの決まりを、AIエージェントにもそのまま当てられます。</p>
+<h2 id="s5">Microsoft Foundryの注意点は？</h2>
+<p><strong>費用が複数のサービスに分かれて上限で止まらないこと・プレビューの機能が多く変化が速いこと・作る側に開発の知識が必要なことの3つには注意が必要です。</strong></p>
+<h3 id="s5-1">費用が分かれ上限で止まらない</h3>
+<p>Foundryには料金計算ツールの専用ページが無く、モデル・検索・音声などを1つずつ見積もる必要があります。Learnのコスト管理のページは、<strong>OpenAIには予算を超えられないハード上限があるが、Azure OpenAIには無い</strong>と明記しています。予算とアラートを設定し、超えたときの対応を自社で決めておくことが前提です。</p>
+<h3 id="s5-2">プレビューが多く変化が速い</h3>
+<p>マルチエージェントのワークフロー・エージェントのメモリ・Foundryコントロール プレーンはプレビューで、Foundry IQもポータルから使う部分はプレビューです。画面で組むワークフローは2026年12月1日に終了する予定で、Learnは新しく作るならMicrosoft Agent Frameworkを使うよう案内しています。プレビューはサービスレベルの保証が無く、仕様が変わることがあります。本番に使う機能が一般提供（GA）かどうかは、Learnの表示で確認してから選ぶのがおすすめです。</p>
+<h3 id="s5-3">作る側に開発の知識が必要</h3>
+<p>プロンプト エージェントは画面で作れますが、社内システムとの接続・ネットワークの分離・評価の設計まで含めると、Azureと開発の知識が必要です。業務部門だけで作って配りたいなら、Copilot Studioのほうが早く進みます。</p>
+<h2 id="s6">Microsoft Foundryの料金はいくらかかる？</h2>
+<p><strong>Foundryの基盤とプロンプト エージェントには追加料金がかからず、払うのはモデルのトークンと、使ったツール・検索・コンテナーの分です。</strong> 価格ページのFAQは「Foundry プラットフォームは無料でご利用、探索していただけます」と書き、使った個々の機能が通常の料金で請求されるとしています。</p>
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_06_price.png" alt="Microsoft Foundryの価格ページのよくある質問。Foundryプラットフォームは無料で利用でき、使った個々の機能が通常の料金で請求される" loading="lazy"><figcaption>Azure「Microsoft Foundry の価格」</figcaption></figure>
+
+<p>費用の項目は次のとおりです。Agent Serviceの価格ページは、プロンプトとワークフローで作るエージェントの作成と実行に追加料金は無い（ワークフローは12月1日に終了予定）と書いています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>課金のしかた</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">モデル</td>
+<td data-label="課金のしかた">入力と出力のトークン数（モデルと展開の型で単価が違う）</td>
+</tr>
+<tr>
+<td data-label="項目">組み込みツール</td>
+<td data-label="課金のしかた">ファイル検索の保存は1GBまで無料、コード実行はセッションごと、Web検索は1,000回ごと</td>
+</tr>
+<tr>
+<td data-label="項目">社内データの検索</td>
+<td data-label="課金のしかた">Foundry IQ（Azure AI検索）・SharePoint・Logic Appsの接続は各サービスの料金</td>
+</tr>
+<tr>
+<td data-label="項目">ホスト型エージェント</td>
+<td data-label="課金のしかた">コンテナーの時間。東日本は1vCPUで1時間17.3009円、メモリは1GiBで1時間2.0538円（税抜き）</td>
+</tr>
+</tbody>
+</table></div>
+<p>社員100人が社内規程のQ&amp;Aのエージェントを1日5回ずつ使う場合で数えます。プロンプト エージェントで作り、1回の入力が3,000トークン・出力が600トークン、月20日とすると、モデルにGPT-6.1 Terra（グローバル標準、100万トークンあたり入力158.23円・出力791.15円）を選んだときの代金は<strong>月約9,500円（税抜き）</strong>です。ファイル検索の保存が1GBに収まればそこは0円で、SharePointの文書をFoundry IQで検索させる場合はAzure AI検索の料金は別です。</p>
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_03_cost.png" alt="社内規程のQ&Aの月額の内訳。100人が1日5回・月20日の試算で、Foundryの基盤とプロンプト エージェントは0円、モデルの代金はGPT-6.1 Terraで約9,500円、ファイル検索の保存は1GBまで0円、社内データの検索は別料金" loading="lazy"></figure>
+
+<p><strong>この規模なら費用の大半はモデルの代金で、モデルの選び方で桁が変わります。</strong> モデルごとの単価・展開の型・計算式の詳細は次の記事にまとめました。</p>
+<div class="in-link-card"><a href="/media/azure-openai-pricing/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">Azure OpenAIの料金</div><div class="in-link-card__desc">Foundryでの課金の型とモデル別の円単価、社内チャットの月額の計算方法を解説しています。</div></div></a></div>
+<p>使う量が大きい会社向けにはMicrosoft Agentの事前購入プランもあります。1年分のエージェント コミット ユニット（ACU）を前払いすると、20,000 ACUで5%、100,000 ACUで10%、500,000 ACUで15%割り引かれ、FoundryとCopilot Studioのクレジットの両方に使えます。始める前に試すなら、Azureの無料アカウントに付く30日間200ドル分のクレジットが手軽です。</p>
+<p>費用はFoundryのポータルでエージェントかモデルを開き「モニター」タブで期間ごとのトークンと費用を見て、請求額はAzureポータルのCost Managementで確認します。「操作」の概要にある推定コスト（プレビュー）には、プロンプト エージェントの費用は含まれません。複数の部署で1つのFoundryリソースを共有するなら、プロジェクトごとに費用を分けて見る機能（プレビュー）がありますが、対象はAzureが販売するモデルだけです。</p>
+<h2 id="s7">入力したデータはどう扱われる？</h2>
+<p><strong>AzureでOpenAIなどのモデルを使う場合、プロンプトと出力はほかの顧客やOpenAIに渡されず、許可なくモデルの学習にも使われません。</strong> Learnの「Azure が販売するモデルのデータ、プライバシー、セキュリティ」は、Azure OpenAIを含むAzureが販売するモデルについて、この扱いを明記しています。</p>
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_07_privacy.png" alt="Microsoft Learnの重要の欄。プロンプト・出力・埋め込み・トレーニングデータはほかの顧客に利用できず、OpenAIなどに提供されず、許可なく基盤モデルのトレーニングに使われない" loading="lazy"><figcaption>Microsoft Learn「Azure が販売するモデルのデータ、プライバシー、セキュリティ」</figcaption></figure>
+
+<p>情報セキュリティの担当と確認しておきたい点は次の5つです。</p>
+<ul>
+<li><strong>処理の場所</strong>: 既定は指定した地域の中。グローバルやデータゾーンの展開の型を選ぶと、その範囲の別の地域で処理されることがある</li>
+<li><strong>保存されるデータ</strong>: アップロードしたファイルや会話の履歴は同じ地域のFoundryリソースに暗号化して保存され、いつでも削除できる。自社の鍵での暗号化も選べる</li>
+<li><strong>不正利用の監視</strong>: 兆候があるとAIで自動で確認し、必要に応じてMicrosoftの認可された担当者が見る。申請が承認されれば人の確認とそのための保存を止められる</li>
+<li><strong>対象のモデル</strong>: この扱いはAzureが販売するモデルの話。AnthropicのClaudeなどパートナーのモデルは、各モデルの条件の確認が必要</li>
+<li><strong>Teamsに公開したとき</strong>: エージェントの名前や回答の内容は、Microsoft 365とTeamsの条件で処理・保存される。パブリック ネットワークを閉じたプロジェクトはポータルから公開できず、REST APIで設定する</li>
+</ul>
+<p>プレビューの機能では上の条件がすべて満たされない場合があると、Learnにも書かれています。社外秘の文書を扱うエージェントは、一般提供の機能と、仮想ネットワークで閉じる標準のセットアップで組むのが安全です。</p>
+<h2 id="s8">Microsoft Foundryの始め方は？</h2>
+<p><strong>Azureのサブスクリプションを用意し、Foundryのリソースとプロジェクトを作って、プロンプト エージェントを1つ作るところから始めます。</strong> Foundryのポータルを見て回るだけならAzureのアカウントは不要ですが、エージェントを作るにはサブスクリプションが必要です。</p>
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_04_start.png" alt="Microsoft Foundryを始める順番。Azureのサブスクリプション、リソースとプロジェクト、モデルを展開、エージェントを作成してプレイグラウンドで回答を確認、Teamsへ公開して予算アラートを設定" loading="lazy"></figure>
+
+<ol>
+<li>Azureのサブスクリプションを用意する（無料アカウントでも可）</li>
+<li>Azureポータルか<a href="https://ai.azure.com/">Foundryのポータル</a>で、Foundryのリソースとプロジェクトを作る。プロジェクトは用途やチームごとに分けられる</li>
+<li>「ビルド」のカタログからモデルを選んで展開する</li>
+<li>「ビルド」の「エージェント」で新しいエージェントを作り、指示とツールを設定してプレイグラウンドで回答を確認する</li>
+<li>発行してTeamsやMicrosoft 365 Copilotに公開し、Cost Managementで予算とアラートを設定する。社内の全員に公開するにはMicrosoft 365 管理センターでの承認が必要</li>
+</ol>
+<p>作る人にはプロジェクトの範囲でFoundry Userのロール（旧称Azure AI User）が必要です。Responses APIとAgent Serviceはすべての地域で使えるわけではないため、リソースを作る前に使いたい地域が対応しているかを確認します。試作は手軽な基本のセットアップで、社内データを扱う本番は仮想ネットワークや自社のストレージを使う標準のセットアップで組むのが一般的です。</p>
+<p>エージェントの作り方の全体像や、作る前に決めておくことは<a href="/media/ai-agent-build/">AIエージェントの作り方</a>で扱っています。</p>
+<h2 id="s9">まとめ</h2>
+<ul>
+<li><strong>社員がTeamsで規程や手順を聞くだけなら</strong>、Copilot Studioかエージェント ビルダーで足りるかを先に確認する</li>
+<li><strong>業務システムの操作や承認の流れまで任せたいなら</strong>、Foundryのプロンプト エージェントで試作し、必要になったらホスト型エージェントに移る</li>
+<li><strong>自社サービスにAIを組み込むなら</strong>、FoundryのモデルをAPIで使い、モデルの単価から月額を見積もる</li>
+<li><strong>どちらか迷うなら</strong>、両方で1〜2週間ずつ試作して、速さ・機能・連携の手間で比べる</li>
+</ul>
+<p>社内での設計や試作を外部と進めたい場合は、nitoもAIエージェントの構築を支援しています。</p>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">Azure AI Foundryと同じ製品ですか？</h3>
+<p>同じ製品です。Azure AI Studio、Azure AI Foundryと名前が変わり、2025年11月のIgniteでMicrosoft Foundryになりました。ハブベースのプロジェクトなど古い仕組みはクラシックのポータルに残っています。</p>
+<h3 id="s10-2">Microsoft Foundryは無料で使えますか？</h3>
+<p>基盤とポータルは無料で、プロンプト エージェントの作成と実行にも追加料金はかかりません。使ったモデルのトークン、ツール、検索、ホスト型エージェントのコンテナーの分が、Azureの請求に載ります。</p>
+<h3 id="s10-3">Azure OpenAIとの違いは何ですか？</h3>
+<p>Azure OpenAIは、Foundryの中でOpenAIのモデルを使う部分です。FoundryはOpenAI以外のモデル、エージェント、ツール、評価までを含む基盤全体の名前です。既存のAzure OpenAIのリソースは、エンドポイントとAPIキーを保ったままFoundryのリソースにアップグレードできます。</p>
+<h3 id="s10-4">Copilot Studioとどちらを選びますか？</h3>
+<p>社員向けのチャットを画面で早く作るならCopilot Studio、業務システムの操作や自社アプリへの組み込みならMicrosoft Foundryが向いています。Microsoftの導入ガイドの勧めは、両方で1〜2週間ずつ試作して比べることです。</p>
+<h3 id="s10-5">FoundryでClaudeは使えますか？</h3>
+<p>使えます。AnthropicのClaudeはFoundryのモデルカタログにあり、使用量の請求もAzure経由です。ただしAzureの前払いクレジットはMarketplace経由のモデルには使えないとLearnに書かれています。契約の経路の違いは<a href="/media/claude-corporate-contract/">Claudeの法人契約</a>にまとめました。</p>
+<h3 id="s10-6">FoundryのエージェントはTeamsで使えますか？</h3>
+<p>使えます。発行したエージェントをTeamsやMicrosoft 365 Copilotに公開する機能は一般提供されています。Copilot Studioのエージェントから呼び出す接続はプレビューです。</p>
+<h3 id="s10-7">Foundryのデータは学習に使われますか？</h3>
+<p>Azure OpenAIを含むAzureが販売するモデルでは、プロンプトと出力は許可なくモデルの学習に使われず、OpenAIにも渡されません。パートナーのモデルは各モデルの条件を確認する必要があります。</p>
+<h3 id="s10-8">Microsoft Foundryのハブはまだ使えますか？</h3>
+<p>ハブベースのプロジェクトは、クラシックのポータルで引き続き使えます。今のポータルにはFoundryプロジェクトだけが表示され、新しいエージェントの機能もFoundryプロジェクトでしか使えないため、新しく作るならFoundryプロジェクトがおすすめです。</p>
+<h2 id="s11">出典</h2>
+<p>金額と仕様は2026年11月12日に確認した公式ページの表示です。モデルとホスト型エージェントの円単価はAzure Retail Prices API（東日本・円）で取得しました。円の単価は米ドルの単価を毎月の為替で換算したもので（2026年11月は1ドル158.23円）、月ごとに変わります。</p>
+<ul>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/azure/foundry/what-is-foundry">Microsoft Foundry とは</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/azure/foundry/agents/overview">Microsoft Foundry のエージェント</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/azure/foundry/how-to/navigate-from-classic">Foundry (クラシック) ポータルから移行する</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/azure/foundry-classic/what-is-foundry">Microsoft Foundry (クラシック) ポータルとは</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs">Microsoft Foundry のコストを計画および管理する</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/azure/foundry/responsible-ai/openai/data-privacy">Azure が販売するモデルのデータ、プライバシー、セキュリティ</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/azure/cloud-adoption-framework/ai-agents/technology-solutions-plan-strategy">AI エージェントのテクノロジ計画</a>」（Cloud Adoption Framework）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-agent-foundry-agent">Microsoft Foundry エージェントに接続する（プレビュー）</a>」（Copilot Studio）</li>
+<li>Microsoft Azure「<a href="https://azure.microsoft.com/ja-jp/products/ai-foundry">Microsoft Foundry</a>」</li>
+<li>Microsoft Azure「<a href="https://azure.microsoft.com/ja-jp/pricing/details/ai-foundry/">Microsoft Foundry の価格</a>」</li>
+<li>Microsoft Azure「<a href="https://azure.microsoft.com/ja-jp/pricing/details/foundry-agent-service/">Foundry Agent Service の価格</a>」</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/rest/api/cost-management/retail-prices/azure-retail-prices">Azure Retail Prices API</a>」</li>
+<li>Microsoft Azure Blog「<a href="https://azure.microsoft.com/en-us/blog/microsoft-foundry-scale-innovation-on-a-modular-interoperable-and-secure-agent-stack/">Microsoft Foundry: Scale innovation on a modular, interoperable, and secure agent stack</a>」（2025年11月18日）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Microsoft Foundryとは？何ができる？</a><a href="#s2">Microsoft Foundryの活用例は？</a><a href="#s3">Copilot Studioとどう違う？</a><a href="#s4">Microsoft Foundryを使うメリットは？</a><a href="#s5">Microsoft Foundryの注意点は？</a><a href="#s6">Microsoft Foundryの料金はいくらかかる？</a><a href="#s7">入力したデータはどう扱われる？</a><a href="#s8">Microsoft Foundryの始め方は？</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-builder/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Builderとは"><defs><linearGradient id="ecg-4a1bedc9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4a1bedc9)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI Builderとは</text><line x1="296.0" y1="365.9" x2="904.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.12</div>
+                <div class="rel-card__ttl">【2026年11月】AI Builderとは？できること・料金とCopilotクレジットへの移行</div>
+            </a>
+            <a href="/media/felo-ai/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Feloとは"><defs><linearGradient id="ecg-78869b03" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-78869b03)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Feloとは</text><line x1="432.8" y1="365.9" x2="767.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.11</div>
+                <div class="rel-card__ttl">【2026年11月】Feloとは？料金・運営会社・法人プランとデータの扱いを解説</div>
+            </a>
+            <a href="/media/notion-ai/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Notion AIとは"><defs><linearGradient id="ecg-9604139a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-9604139a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Notion AIとは</text><line x1="318.8" y1="365.9" x2="881.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.11</div>
+                <div class="rel-card__ttl">【2026年11月】Notion AIとは？できること・料金・無料の範囲と会社で入れる前に決めること</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'microsoft-foundry',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>

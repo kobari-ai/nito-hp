@@ -207,7 +207,7 @@ CursorはMicrosoftのVS Codeを元に作られたエディタで、拡張機能�
 
 金額はどちらも税別のドルです。Claudeは日本の利用者に10%の消費税が加わり、Proは月$22になります。**Claudeのモデルを中心に使いたい会社なら、Claude Codeは定額の枠の中で使え、CursorではClaudeを使った分がAPIの定価で積み上がる計算です。**一方、エディタの中で補完を受けながら書きたい人や、GPTやGeminiも切り替えて使いたい人にはCursorが向いています。
 
-Claude Code側は[Claude Codeの料金プラン](/media/claude-code-pricing/)、Codexとの比べ方は[CodexとClaude Codeの比較](/media/codex-vs-claude-code/)、GitHub Copilotは[GitHub Copilotの料金](/media/github-copilot-pricing/)にあります。AWSのKiroは[Kiroの料金と使い方](/media/kiro-guide/)で扱っています。
+Claude Code側は[Claude Codeの料金プラン](/media/claude-code-pricing/)、Codexとの比べ方は[CodexとClaude Codeの比較](/media/codex-vs-claude-code/)、GitHub Copilotは[GitHub Copilotの料金](/media/github-copilot-pricing/)にあります。AWSのKiroは[Kiroの料金と使い方](/media/kiro-guide/)で扱っています。クラウドで作業を丸ごと任せるDevinは[Devinとは](/media/devin-ai/)にまとめています。
 
 道具を選んだ後に、社内の業務やデータにつなぐ所まで作りたい場合の相談先は、nitoの[AIエージェントの構築と運用の支援](/ai-agent/)です。
 
