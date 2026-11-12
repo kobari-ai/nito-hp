@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】LangChainとは？できること・LangGraphとの違い・料金と使い方｜株式会社nito</title>
+    <meta name="description" content="LangChainとは何かを公式ドキュメントで解説。RAGやAIエージェントなどできること、LangGraph・LangSmithとの違い、無料の範囲と費用がかかる所、データの保存先、Difyとの使い分けまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/langchain-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】LangChainとは？できること・LangGraphとの違い・料金と使い方">
+    <meta property="og:description" content="LangChainとは何かを公式ドキュメントで解説。RAGやAIエージェントなどできること、LangGraph・LangSmithとの違い、無料の範囲と費用がかかる所、データの保存先、Difyとの使い分けまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/langchain-guide/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/langchain-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/langchain-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】LangChainとは？できること・LangGraphとの違い・料金と使い方", "description": "LangChainとは何かを公式ドキュメントで解説。RAGやAIエージェントなどできること、LangGraph・LangSmithとの違い、無料の範囲と費用がかかる所、データの保存先、Difyとの使い分けまで。", "datePublished": "2026-11-13", "dateModified": "2026-11-13", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/langchain-guide/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/langchain-guide.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】LangChainとは？できること・LangGraphとの違い・料金と使い方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "LangChainは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "LangChain・LangGraph・Deep AgentsはMITライセンスのオープンソースで、無料で使えます。費用がかかるのはモデルのAPI代と、使う場合のLangSmithの利用料、アプリを動かすサーバー代です。"}}, {"@type": "Question", "name": "LangChainは商用利用できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。MITライセンスなので改変や再配布も認められており、配布するときは著作権とライセンスの表示を残す必要があります。つなぐモデルやツールの各社の利用規約の確認は別に必要です。"}}, {"@type": "Question", "name": "LangChainの読み方は？", "acceptedAnswer": {"@type": "Answer", "text": "「ラングチェーン」と読みます。LangGraphは「ラングラフ」、LangSmithは「ラングスミス」です。"}}, {"@type": "Question", "name": "LangChainとLangGraphはどちらを使いますか？", "acceptedAnswer": {"@type": "Answer", "text": "最初はLangChainのcreate_agentで十分です。人の承認を途中に挟む、決まった手順とAIの判断を混ぜる、数時間かかる処理を止めずに続けるといった細かい制御が必要になったらLangGraphを使います。LangChainはLangGraphの上で動いているため、移っても書き直しは一部で済みます。"}}, {"@type": "Question", "name": "LangChainとMCPは何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "MCPはAIと外部のツールをつなぐ規格で、LangChainはそのツールを使ってエージェントの処理を組む部品です。LangChainの「langchain[mcp]」を入れると、MCPサーバーのツールをLangChainのエージェントで使えます。"}}, {"@type": "Question", "name": "LangChainはPython以外でも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "JavaScript/TypeScript版があり、公式のドキュメントもPython版と並べて用意されています。"}}, {"@type": "Question", "name": "LangSmithに送ったデータはAIの学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "使われません。LangSmithは送られた記録・プロンプト・出力をモデルの学習に使わないと料金ページで明言しています。保存先は登録時に選んだ地域で、日本の地域はありません。"}}, {"@type": "Question", "name": "古い記事に出てくるLangServeとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "LangChainで作った処理をAPIとして公開する仕組みとして、以前の解説に出てきた名前です。2024年11月に公式に非推奨になり、GitHubのリポジトリも更新を止めています。後継はLangGraph Platformで、2025年10月にLangSmith Deployment、今はLangSmith Agent Serverという名前です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】LangChainと…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.13</span>
+        </div>
+        <h1 class="post-title">【2026年11月】LangChainとは？できること・LangGraphとの違い・料金と使い方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/langchain-guide.jpg" alt="【2026年11月】LangChainとは？できること・LangGraphとの違い・料金と使い方" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>LangChainは、ChatGPTやClaudeなどの言語モデルを使うアプリやAIエージェントを、コードで組み立てるためのオープンソースのフレームワークです。本体は無料ですが、モデルのAPI代と、実行記録を残すLangSmithを使う場合はその料金が別にかかります。</p>
+<p>この記事ではできることとLangGraph・LangSmithとの違い、費用とデータの流れ、Difyなどとの使い分けを2026年11月13日時点の公式ドキュメントで解説します。コードの実行とLangSmithの契約は試していません。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>LangChainは作る部品、LangGraphは動かす土台、LangSmithは記録と運用のサービス（1人までは無料）</strong>。最初はLangChainだけで始められる</li>
+<li><strong>費用はモデルのAPI代とLangSmithの利用料</strong>。LangSmithのPlusで開発者3人・月5万回の記録なら月317ドル</li>
+<li><strong>LangSmithの保存先に日本は無く、アジア太平洋はシドニー</strong>。社内規程によっては記録を送らない設定か自社に置くプランが必要</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>LangChainとは？</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>LangChainでできることは？</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>社内文書に答えるRAG</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>ツールを使うAIエージェント</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>チャットボット・要約・情報の抽出</a></li>
+                    <li class="toc-h3"><a href="#s2-4"><span class="toc__n">2-4</span>MCPサーバーのツールを使う</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>LangChainの仕組みと主な部品は？</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>LangGraph・LangSmithとの違いは？</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>LangChainを使うメリットは？</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>モデルを差し替えやすい</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>連携先と部品が多い</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>細かい制御をコードで書ける</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>LangChainのデメリットと注意点は？</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>版によって書き方が大きく違う</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>保守とサポートは自社で持つ</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>コードを書ける担当者が必要</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>LangChainの料金は？どこで費用がかかる？</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>データはどこを通りどこに保存される？</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>LangChainの使い方は？最初の1本はどう作る？</a></li>
+                    <li class="toc-h3"><a href="#s9-1"><span class="toc__n">9-1</span>① PythonとAPIキーを用意する</a></li>
+                    <li class="toc-h3"><a href="#s9-2"><span class="toc__n">9-2</span>② LangChainを入れる</a></li>
+                    <li class="toc-h3"><a href="#s9-3"><span class="toc__n">9-3</span>③ ツールを1つ持つエージェントを作る</a></li>
+                    <li class="toc-h3"><a href="#s9-4"><span class="toc__n">9-4</span>④ LangSmithで動きを確認する</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>Dify・n8n・クラウドの基盤とどう使い分ける？</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>会社でLangChainを使う前に決めること</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s13"><span class="toc__n">13</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s14"><span class="toc__n">14</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">LangChainとは？</h2>
+<p><strong>LangChainは言語モデルに社内のデータや外部のシステムをつなぎ、質問に答えたり作業を進めたりするアプリを少ないコードで作るためのライブラリです。</strong> 2022年10月にHarrison Chase氏が公開し、今は米国のLangChain社が開発しています。PythonとJavaScript/TypeScriptで使え、ライセンスはMITです。</p>
+<p>言語モデル単体は会話をまたいだ記憶を持たず、学習していない社内の文書を知らず、在庫の照会やメールの送信のような外部の操作もできません。LangChainはこの3つを補う部品を用意しており、開発者はモデルと社内のデータやシステムの間をつなぐ部分を一から書かずに済みます。</p>
+<p>公式サイトではオープンソースの部品としてLangChain・LangGraph・Deep Agentsの3つを並べ、その上で動きを記録・評価・本番運用する、無料枠のあるLangSmithを提供しています。オープンソースのダウンロードは月3.5億回を超えると公式サイトに書かれています。2025年10月に出たバージョン1.0からはAIエージェントを作るための土台に絞り込まれ、2026年11月13日時点の最新は1.5.0です。</p>
+<div class="in-link-card"><a href="/media/ai-agent-guide/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">AIエージェントとは？生成AI・ChatGPTとの違いと仕組みをわかりやすく解説</div><div class="in-link-card__desc">AIエージェントの定義と仕組み、ワークフローとの違いを解説しています。</div></div></a></div>
+<h2 id="s2">LangChainでできることは？</h2>
+<p><strong>社内の文書に答えるRAG、ツールを選んで作業を進めるAIエージェント、会話を覚えるチャットボットや文書の要約が主な用途です。</strong></p>
+<h3 id="s2-1">社内文書に答えるRAG</h3>
+<p>規程・マニュアル・契約書のような社内の文書を細かく分けて検索できる形で保存し、質問に近い部分を探してモデルに渡して答えさせる仕組みです。LangChainには文書の読み込み・分割・埋め込み・ベクトルデータベースへの保存と検索の部品があり、組み合わせると社内向けの質問応答を作れます。<strong>モデルを学習し直さずに、社内の最新の文書をもとに答えさせられる</strong>のが利点です。</p>
+<h3 id="s2-2">ツールを使うAIエージェント</h3>
+<p>モデルが質問を読み、どのツールをどの順で使うかを自分で決めて作業を進めます。たとえば「先週の問い合わせを集計して担当者に送って」と頼むと、データベースを照会し、集計し、メールを送るツールを順に呼ぶ流れです。ツールは自社のAPIやPythonの関数をそのまま登録できるため、<strong>社内システムの操作をAIに任せる仕組み</strong>の中心になります。</p>
+<h3 id="s2-3">チャットボット・要約・情報の抽出</h3>
+<p>前のやり取りを覚えたまま答えるチャットボット、長い議事録やレポートを分けて読ませてまとめる要約、文書から日付や金額を決まった形で取り出す抽出にも使えます。答えをJSONのような決まった形で返させる構造化出力の機能もv1で強化されました。</p>
+<h3 id="s2-4">MCPサーバーのツールを使う</h3>
+<p>MCPはAIと外部のツールをつなぐための共通の規格で、LangChainに「langchain[mcp]」を入れると、ベータの機能としてMCPサーバーが公開するツールをそのままエージェントに渡せます。<strong>MCPはつなぎ方の規格、LangChainはつないだツールを使って処理の流れを組む部品</strong>で、片方があればもう片方が不要になる関係ではありません。</p>
+<div class="in-link-card"><a href="/media/mcp-guide/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">MCPとは？仕組みとMCPサーバー・会社で使うときに管理者が決めること</div><div class="in-link-card__desc">MCPの仕組みと主なAIの対応、管理者が決めることを解説しています。</div></div></a></div>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">LangChainの仕組みと主な部品は？</h2>
+<p><strong>今のLangChainはモデル・ツール・エージェントの3つを中心に、記憶や検索の部品と、動きを途中で変えるミドルウェアを組み合わせて作ります。</strong> 主な部品は次のとおりです。</p>
+<ul>
+<li><strong>モデル</strong>: OpenAI・Anthropic・Google・AWS・Azureなどのモデルを同じ書き方で呼ぶ部品。init_chat_modelで切り替える</li>
+<li><strong>ツール</strong>: エージェントが呼べる関数やAPI。@toolを付けた関数をそのまま登録できる</li>
+<li><strong>エージェント</strong>: create_agentで作る。モデルを呼び、ツールを使わせ、ツールを呼ばなくなったら終える流れを受け持つ</li>
+<li><strong>ミドルウェア</strong>: 個人情報の伏せ字・長い会話の要約・人の承認など、エージェントの各段階に処理を差し込む仕組み</li>
+<li><strong>記憶</strong>: 1つの会話の中の短期の記憶と、会話をまたぐ長期の記憶</li>
+<li><strong>検索の部品</strong>: 文書の読み込み・分割・埋め込み・ベクトルデータベースとの接続</li>
+</ul>
+<p>以前の解説記事でLangChainの中心として説明される「チェーン」（LLMChainなど）は、v1でlangchain-classicという別のパッケージに移りました。<strong>新しく作るなら、公式が標準とするcreate_agentから始める</strong>のが今の推奨です。</p>
+<div class="in-link-card"><a href="/media/rag-build/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">RAG構築とは？作り方3通りと手順・費用・自社で作るか外注か</div><div class="in-link-card__desc">RAGの作り方の3通りと手順、つまずく所と費用を解説しています。</div></div></a></div>
+<h2 id="s4">LangGraph・LangSmithとの違いは？</h2>
+<p><strong>LangChainはエージェントを作る部品、LangGraphは長く動く処理を止めずに動かす土台、LangSmithは動きを記録して評価し本番で動かす、無料枠のあるサービスです。</strong> 公式は計画やファイル操作まで付いたDeep Agentsも並べています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>名前</th>
+<th>役割</th>
+<th>必要になる場面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="名前">LangChain</td>
+<td data-label="役割">モデル・ツール・エージェントの部品</td>
+<td data-label="必要になる場面">最初の1本・チームの書き方の統一</td>
+</tr>
+<tr>
+<td data-label="名前">LangGraph</td>
+<td data-label="役割">状態の保存・分岐・中断と再開</td>
+<td data-label="必要になる場面">人の承認や長時間の処理を挟む</td>
+</tr>
+<tr>
+<td data-label="名前">Deep Agents</td>
+<td data-label="役割">計画・サブエージェント付きの土台</td>
+<td data-label="必要になる場面">調査など手順の多い作業</td>
+</tr>
+<tr>
+<td data-label="名前">LangSmith</td>
+<td data-label="役割">実行記録・評価・本番運用</td>
+<td data-label="必要になる場面">本番前の品質確認と運用</td>
+</tr>
+</tbody>
+</table></div>
+<p>LangSmith以外の3つはMITライセンスで無料です。</p>
+<p>LangChain 1.0はLangGraphの上に作られているため、<strong>LangGraphを学ばなくても、途中で止めて再開する機能や会話の保存はLangChainのエージェントで使えます。</strong> 逆にLangGraphはLangChainなしでも動き、決まった手順とモデルに任せる手順を1つの流れの中で細かく組みたいときの選択肢です。</p>
+<p>LangSmithはLangChain専用ではなく、OpenAIやAnthropicのSDK、CrewAIなどで作ったアプリの記録にも使えます。まずLangChainだけで1本作り、承認や分岐が増えたらLangGraphで組み直し、社内に公開する前にLangSmithで記録を取り始める順番が無理のない進め方です。</p>
+<h2 id="s5">LangChainを使うメリットは？</h2>
+<p><strong>モデルを替えやすく、連携先の部品が多く、細かい制御をコードで書ける点がLangChainを選ぶ理由になります。</strong></p>
+<h3 id="s5-1">モデルを差し替えやすい</h3>
+<p>公式のクイックスタートはOpenAI・Anthropic・Google・Amazon Bedrock・Azure・Ollamaのうち、ほとんどはモデル名の1行を変えるだけの同じコードで書かれています（Azureは配置名の指定が加わります）。<strong>特定のAI企業に縛られず、値段や精度を比べて後から乗り換えられる</strong>ため、モデルの値下げや新しいモデルの登場に合わせやすいのも利点です。</p>
+<h3 id="s5-2">連携先と部品が多い</h3>
+<p>ベクトルデータベース・ファイル置き場・業務ツールとの接続の部品が公式とコミュニティから出ており、自社で書く部分を減らせます。</p>
+<h3 id="s5-3">細かい制御をコードで書ける</h3>
+<p>ミドルウェアを使うと、モデルに送る前にメールアドレスやカード番号を伏せる、会話が長くなったら要約する、メールの送信だけは人が承認してから実行する、といった制御を数行で入れられます。<strong>社内の規程に合わせた細かい決まりをコードで守らせられる</strong>のは、画面で組み立てる製品との大きな違いです。</p>
+<h2 id="s6">LangChainのデメリットと注意点は？</h2>
+<p><strong>版によって書き方が大きく変わり、保守とサポートを自社で持つ必要があり、Pythonなどを書ける担当者がいないと運用できない点が主な注意点です。</strong></p>
+<h3 id="s6-1">版によって書き方が大きく違う</h3>
+<p>2025年10月のv1で、エージェントの作り方はcreate_agentに統一され、チェーンや一部の検索の部品はlangchain-classicに移りました。2023年ごろの解説にあるLLMChain・initialize_agent・ConversationChainは、今の推奨の書き方ではありません。<strong>検索で見つけたコードをそのまま使うと、古い書き方が混ざる</strong>ため、公式のドキュメントで版を確認してから使う必要があります。</p>
+<p>公式のリリースの方針によると1.0は長期サポートの版で、2.0が出てからも少なくとも1年は保守が続きます。旧版の0.3は保守のみの扱いで、サポートは2026年12月までです。0.3で作ったアプリがある会社は、年内に1.x への移行を計画しておくと安全です。</p>
+<h3 id="s6-2">保守とサポートは自社で持つ</h3>
+<p>LangChain本体はオープンソースのため、不具合が起きても開発元が対応を約束するサポートはありません。更新も頻繁で、依存するモデルの各社のAPIの変更にも追従する必要があります。開発元のSLA付きのサポートは有料のLangSmith Enterpriseに付きます。オープンソースの部分の不具合まで対象になるかは契約で確認が必要で、構築した会社に保守を依頼する方法もあります。</p>
+<h3 id="s6-3">コードを書ける担当者が必要</h3>
+<p>LangChainはPythonかJavaScriptで書く前提のライブラリで、画面で組み立てる機能はありません。部品が抽象化されている分、思いどおりに動かないときに中で何が起きているかを追うのも簡単ではなく、LangSmithのような記録の仕組みがほぼ必須になります。</p>
+<h2 id="s7">LangChainの料金は？どこで費用がかかる？</h2>
+<p><strong>LangChain・LangGraph・Deep Agentsは無料で、費用がかかるのはモデルのAPI代、LangSmithの利用料、アプリを動かすサーバー代の3つです。</strong> MITライセンスなので商用にも使えます。</p>
+<p>モデルのAPI代はOpenAIやAnthropic、Amazon Bedrockなどモデルを提供する各社から、送受信した量に応じて請求される仕組みです。LangChainを通しても金額は変わりません。LangSmithのプランは次のとおりで、支払いは米ドルです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>プラン</th>
+<th>月額（1人あたり）</th>
+<th>含まれる実行記録</th>
+<th>主な違い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="プラン">Developer</td>
+<td data-label="月額（1人あたり）">0ドル</td>
+<td data-label="含まれる実行記録">月5,000件</td>
+<td data-label="主な違い">1人まで</td>
+</tr>
+<tr>
+<td data-label="プラン">Plus</td>
+<td data-label="月額（1人あたり）">39ドル</td>
+<td data-label="含まれる実行記録">月10,000件</td>
+<td data-label="主な違い">人数無制限・Agent Server小1台が無料</td>
+</tr>
+<tr>
+<td data-label="プラン">Enterprise</td>
+<td data-label="月額（1人あたり）">個別見積もり</td>
+<td data-label="含まれる実行記録">個別</td>
+<td data-label="主な違い">自社環境に設置・独自のSSO・SLA</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/langchain-guide/langchain-pricing.png" alt="LangSmithの料金ページのPlusプラン。1人あたり月39ドルで、月10,000件の実行記録を含み、超えた分は使った分だけ支払う" loading="lazy"><figcaption>LangSmithの料金ページのPlusプラン（2026年11月13日）</figcaption></figure>
+
+<p><strong>実行記録（トレース）はアプリが1回動いた分の記録で、含まれる件数を超えると1件0.005 LSU（1 LSUは1ドル）がかかります。</strong> 通常の記録の保存期間は14日で、評価などで残すと180日の長期保存になり、1件につき0.0025 LSUが加わります。</p>
+<p>たとえば開発者3人で、月5万回動く社内エージェントをPlusで記録すると、3人分の39ドルで117ドル、含まれる1万件を超えた4万件で200ドルになり、<strong>月317ドル（税別・モデルのAPI代は別）</strong>です。社員に招待しただけの人も人数に数えられ、月の途中で増やした分は日割りで請求されます。</p>
+<p>まずは無料のDeveloperで1人が記録を取り、1回の実行あたりのモデル代と月の件数の見込みを出してから、Plusに上げるかを決めるのが無駄のない順番です。LangSmithには利用額の上限をワークスペースごと・組織全体で設定する機能もあります。</p>
+<h2 id="s8">データはどこを通りどこに保存される？</h2>
+<p><strong>LangChainは自社のサーバーの中で動くライブラリで、データが外に出るのは、設定したモデルのAPI、使う場合のLangSmith、それにコードでつないだ外部のサービス（クラウドのベクトルデータベース・MCPサーバー・外部のAPIなど）です。</strong></p>
+<figure class="post-figure"><img src="/media/images/langchain-guide/lch_flow.png" alt="LangChainアプリのデータの流れ。社員や顧客の質問は自社のサーバーで動くLangChainのアプリに届き、外部へ送られる先はOpenAIやAnthropicなどのモデルのAPIと、利用する場合のLangSmithの実行記録、コードでつないだツールやデータベースの3つ" loading="lazy"></figure>
+
+<p>LangSmithのクラウドは5つの地域から選べ、<strong>日本の地域はありません。</strong> データは登録したときに選んだ地域に置かれ、今は別の地域への移行に対応していないと公式のよくある質問に書かれています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>地域</th>
+<th>置かれる場所</th>
+<th>ログインの情報</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="地域">GCP US（既定）</td>
+<td data-label="置かれる場所">米国アイオワ</td>
+<td data-label="ログインの情報">米国バージニア</td>
+</tr>
+<tr>
+<td data-label="地域">GCP EU</td>
+<td data-label="置かれる場所">オランダ</td>
+<td data-label="ログインの情報">ドイツ</td>
+</tr>
+<tr>
+<td data-label="地域">GCP APAC</td>
+<td data-label="置かれる場所">オーストラリア・シドニー</td>
+<td data-label="ログインの情報">シドニー</td>
+</tr>
+<tr>
+<td data-label="地域">AWS US</td>
+<td data-label="置かれる場所">米国オハイオ</td>
+<td data-label="ログインの情報">米国オハイオ</td>
+</tr>
+<tr>
+<td data-label="地域">Azure US</td>
+<td data-label="置かれる場所">米国アイオワ</td>
+<td data-label="ログインの情報">米国バージニア</td>
+</tr>
+</tbody>
+</table></div>
+<p>どの地域でも、支払いと請求の情報の置き場所は米国です。料金ページの表は「米国かEU」のままですが、地域のよくある質問には、無料を含むすべてのプランで各地域を選べ、料金も同じと書かれています。</p>
+<p>LangSmithは送られたデータをモデルの学習に使わないと料金ページのよくある質問で明言しています。GDPRへの準拠、SOC 2 Type 2の認証、HIPAAへの対応も公表しており、データ処理の契約（DPA）はサポート窓口で結べます。LangGraphのサーバーの説明では、LangSmithのAPIキーを設定するまで記録は送られない既定です。</p>
+<p>記録を国外に置けない会社には、LangSmithを使わずに別の記録の仕組みを使う、Enterpriseで自社のクラウドに設置する、LangSmithの設定で入力と出力を記録から隠すか、個人情報を伏せてから記録する、の3つの方法があります。</p>
+<h2 id="s9">LangChainの使い方は？最初の1本はどう作る？</h2>
+<p><strong>Pythonとモデルの会社のAPIキーがあれば、公式のクイックスタートどおり十数行でツールを1つ持つエージェントを作れます。</strong> 細かい書き方の参照先は公式の<a href="https://docs.langchain.com/oss/python/langchain/quickstart">LangChainのクイックスタート</a>です。</p>
+<h3 id="s9-1">① PythonとAPIキーを用意する</h3>
+<p>Python 3.11以上を入れ、OpenAI・Anthropic・Googleなど使うモデルの会社でAPIキーを発行します。キーはコードに書かず、環境変数に入れて読ませるのが基本です。会社で使うなら、個人のアカウントでなく会社の契約でキーを発行しておくと、請求と管理が分かれずに済みます。</p>
+<h3 id="s9-2">② LangChainを入れる</h3>
+<p>ターミナルで「pip install -U langchain "langchain[anthropic]"」のように、本体と使うモデルの部品を入れます。OpenAIなら「langchain[openai]」、Amazon Bedrockなら「langchain-aws」です。</p>
+<h3 id="s9-3">③ ツールを1つ持つエージェントを作る</h3>
+<p>次は在庫を答える関数をツールとして渡す例です。公式のクイックスタートの書き方に合わせて作った例で、実行は試していません。</p>
+<pre><code class="language-python">from langchain.agents import create_agent
+
+def get_stock(item: str) -&gt; str:
+    &quot;&quot;&quot;商品名を受け取り在庫数を返す&quot;&quot;&quot;
+    return f&quot;{item}の在庫は12個です&quot;
+
+agent = create_agent(
+    model=&quot;claude-sonnet-4-6&quot;,
+    tools=[get_stock],
+    system_prompt=&quot;社内の在庫の質問に答えるアシスタントです&quot;,
+)
+result = agent.invoke(
+    {&quot;messages&quot;: [{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;A4用紙の在庫は？&quot;}]}
+)
+print(result[&quot;messages&quot;][-1].content)
+</code></pre>
+<p>get_stockの中身を自社の在庫システムへの照会に置き換えれば、そのまま社内向けの試作になります。</p>
+<h3 id="s9-4">④ LangSmithで動きを確認する</h3>
+<p>LangSmithで記録先のエージェントを1つ作り、LANGSMITH_TRACING=true、LANGSMITH_API_KEY、エージェントのIDをLANGSMITH_AGENT_ID、環境（localなど）をLANGSMITH_AGENT_ENVIRONMENTに入れると、モデルを何回呼び、どのツールをどの順で使ったかが画面で見られます。社員に試してもらう前に、意図しないツールを呼んでいないか、1回あたりのモデル代がいくらかをここで確認しておくと安心です。米国以外の地域（シドニーなど）で登録した場合は、地域のAPIのURLをLANGSMITH_ENDPOINTにも入れます。</p>
+<h2 id="s10">Dify・n8n・クラウドの基盤とどう使い分ける？</h2>
+<p><strong>画面で社内向けのAIアプリを作るならDify、システム間の決まった処理の自動化ならn8n、自社のシステムや製品に組み込んで細かく制御するならLangChainが向いています。</strong></p>
+<figure class="post-figure"><img src="/media/images/langchain-guide/lch_choose.png" alt="用途別の開発手段の使い分け。社内文書の質問応答を画面で構築するならDify、システム間の定型処理の自動化ならn8n、自社システムへの組み込みならLangChain、分岐や承認を含む長時間の処理ならLangGraph、利用中のクラウドに統一するなら各社のエージェント基盤" loading="lazy"></figure>
+
+<p>DifyとLangChainの差は、画面で組むかコードで書くかです。Difyは担当者が画面で規程に答えるボットを作って配るまでを短く済ませられ、LangChainは社外向けの製品や既存の業務システムの中に組み込むときに向きます。同じLangChain社のLangSmith Fleetは、テンプレートから始めてコードなしでエージェントを作れるノーコードの製品で、画面で作る用途ならこちらも候補です。システム間の定型処理の自動化に向くn8nは、<a href="/media/n8n-guide/">n8nの解説記事</a>にまとめています。</p>
+<p>AWS・Microsoft・Googleのエージェントの基盤とは、二者択一ではありません。Amazon BedrockのモデルはLangChainから呼べ、<a href="/media/microsoft-foundry/">Microsoft Foundry</a>のホスト型エージェントはLangGraphで作ったものを載せられます。<strong>モデルや本番の置き場所はクラウドに任せ、エージェントの中身をLangChainで書く</strong>組み合わせも一般的です。</p>
+<div class="in-link-card"><a href="/media/dify-guide/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">Difyとは？できること・使い方・クラウドとセルフホストの選び方</div><div class="in-link-card__desc">Difyでできること、アプリの種類の違い、クラウドとセルフホストの選び方を解説しています。</div></div></a></div>
+<h2 id="s11">会社でLangChainを使う前に決めること</h2>
+<p><strong>どれを使うか、費用の上限、データの保存先、誰が保守するかの4つを、作り始める前に決めておくと後戻りが減ります。</strong></p>
+<ul>
+<li><strong>使う範囲</strong>: LangChainだけで始めるか、承認や長時間の処理があってLangGraphまで使うか、本番の記録にLangSmithを契約するか</li>
+<li><strong>費用の上限</strong>: モデルのAPI代の月の上限と、LangSmithの利用額の上限。1回の実行あたりのモデル代を試作で計測してから決める</li>
+<li><strong>データの保存先</strong>: LangSmithの地域（日本は無い）を社内規程で認めるか。認めない場合は記録を送らないか、Enterpriseで自社に置く</li>
+<li><strong>保守の担当</strong>: 版の更新とモデル各社のAPIの変更に誰が追従するか。0.3で作ったアプリがあれば2026年12月までに移行する</li>
+<li><strong>作るか選ぶか</strong>: 画面で作れる範囲ならDifyやCopilot Studioなどの既製の基盤で足りないかを先に確認する</li>
+</ul>
+<p>自社の業務システムにつなぐエージェントを、設計から保守の体制まで含めて作る場合は、nitoの<a href="/ai-agent/">AIエージェント構築支援</a>でも相談を受けています。</p>
+<h2 id="s12">まとめ</h2>
+<ul>
+<li><strong>社内の質問応答を早く配りたいだけ</strong>なら、LangChainより先にDifyや既に契約しているサービスの機能を確認する</li>
+<li><strong>自社システムや製品に組み込みたい</strong>なら、LangChainのcreate_agentで1本作り、承認や分岐が増えたらLangGraphへ広げる</li>
+<li><strong>社員や顧客に公開する前</strong>には、LangSmithの無料枠で記録を取り、1回あたりのモデル代と動きを確認する</li>
+<li><strong>記録を国外に置けない</strong>なら、LangSmithを使わない構成かEnterpriseの自社設置を前提に見積もる</li>
+</ul>
+<h2 id="s13">よくある質問</h2>
+<h3 id="s13-1">LangChainは無料で使えますか？</h3>
+<p>LangChain・LangGraph・Deep AgentsはMITライセンスのオープンソースで、無料で使えます。費用がかかるのはモデルのAPI代と、使う場合のLangSmithの利用料、アプリを動かすサーバー代です。</p>
+<h3 id="s13-2">LangChainは商用利用できますか？</h3>
+<p>できます。MITライセンスなので改変や再配布も認められており、配布するときは著作権とライセンスの表示を残す必要があります。つなぐモデルやツールの各社の利用規約の確認は別に必要です。</p>
+<h3 id="s13-3">LangChainの読み方は？</h3>
+<p>「ラングチェーン」と読みます。LangGraphは「ラングラフ」、LangSmithは「ラングスミス」です。</p>
+<h3 id="s13-4">LangChainとLangGraphはどちらを使いますか？</h3>
+<p>最初はLangChainのcreate_agentで十分です。人の承認を途中に挟む、決まった手順とAIの判断を混ぜる、数時間かかる処理を止めずに続けるといった細かい制御が必要になったらLangGraphを使います。LangChainはLangGraphの上で動いているため、移っても書き直しは一部で済みます。</p>
+<h3 id="s13-5">LangChainとMCPは何が違いますか？</h3>
+<p>MCPはAIと外部のツールをつなぐ規格で、LangChainはそのツールを使ってエージェントの処理を組む部品です。LangChainの「langchain[mcp]」を入れると、MCPサーバーのツールをLangChainのエージェントで使えます。</p>
+<h3 id="s13-6">LangChainはPython以外でも使えますか？</h3>
+<p>JavaScript/TypeScript版があり、公式のドキュメントもPython版と並べて用意されています。</p>
+<h3 id="s13-7">LangSmithに送ったデータはAIの学習に使われますか？</h3>
+<p>使われません。LangSmithは送られた記録・プロンプト・出力をモデルの学習に使わないと料金ページで明言しています。保存先は登録時に選んだ地域で、日本の地域はありません。</p>
+<h3 id="s13-8">古い記事に出てくるLangServeとは何ですか？</h3>
+<p>LangChainで作った処理をAPIとして公開する仕組みとして、以前の解説に出てきた名前です。2024年11月に公式に非推奨になり、GitHubのリポジトリも更新を止めています。後継はLangGraph Platformで、2025年10月にLangSmith Deployment、今はLangSmith Agent Serverという名前です。</p>
+<h2 id="s14">出典</h2>
+<p>すべて2026年11月13日に確認しました。</p>
+<ul>
+<li>LangChain「<a href="https://docs.langchain.com/oss/python/langchain/overview">LangChain overview</a>」「<a href="https://docs.langchain.com/oss/python/releases/langchain-v1">What's new in LangChain v1</a>」「<a href="https://docs.langchain.com/oss/python/release-policy">Release policy</a>」</li>
+<li>LangChain「<a href="https://docs.langchain.com/oss/python/langgraph/overview">LangGraph overview</a>」「<a href="https://docs.langchain.com/oss/python/concepts/products">Runtimes, frameworks, and harnesses</a>」「<a href="https://docs.langchain.com/oss/python/langchain/mcp">Model Context Protocol (MCP)</a>」</li>
+<li>LangChain「<a href="https://www.langchain.com/pricing">LangSmith Plans and Pricing</a>」「<a href="https://docs.langchain.com/langsmith/usage-and-billing">Usage and billing</a>」「<a href="https://docs.langchain.com/langsmith/billing">Billing</a>」</li>
+<li>LangChain「<a href="https://docs.langchain.com/langsmith/cloud">Cloud (SaaS)</a>」「<a href="https://docs.langchain.com/langsmith/regions-faq">Regions FAQ</a>」「<a href="https://docs.langchain.com/langsmith/data-storage-and-privacy">Data storage and privacy</a>」「<a href="https://docs.langchain.com/langsmith/deployment">LangSmith Agent Server</a>」「<a href="https://blog.langchain.com/langgraph-platform-ga">LangGraph Platform GA</a>」「<a href="https://docs.langchain.com/langsmith/mask-inputs-outputs">Mask inputs and outputs</a>」</li>
+<li>LangChain「<a href="https://docs.langchain.com/oss/python/langchain/quickstart">LangChain quickstart</a>」「<a href="https://docs.langchain.com/langsmith/observability-quickstart">Observability quickstart</a>」「<a href="https://docs.langchain.com/langsmith/migrate-to-agent-based-workspaces">Migrate to agent-based workspaces</a>」「<a href="https://docs.langchain.com/langsmith/fleet">LangSmith Fleet</a>」</li>
+<li>LangChain公式サイト「<a href="https://www.langchain.com/">LangChain: the open agent platform</a>」</li>
+<li>GitHub「<a href="https://github.com/langchain-ai/langserve">langchain-ai/langserve</a>」「<a href="https://github.com/langchain-ai/langchain/blob/master/LICENSE">langchain-ai/langchain のライセンス</a>」、PyPI「<a href="https://pypi.org/project/langchain/">langchain</a>」</li>
+<li>AWS「<a href="https://aws.amazon.com/jp/what-is/langchain/">LangChain とは何ですか?</a>」、IBM「<a href="https://www.ibm.com/jp-ja/think/topics/langchain">LangChainとは</a>」</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">LangChainとは？</a><a href="#s2">LangChainでできることは？</a><a href="#s3">LangChainの仕組みと主な部品は？</a><a href="#s4">LangGraph・LangSmithとの違いは？</a><a href="#s5">LangChainを使うメリットは？</a><a href="#s6">LangChainのデメリットと注意点は？</a><a href="#s7">LangChainの料金は？どこで費用がかかる？</a><a href="#s8">データはどこを通りどこに保存される？</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-builder/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Builderとは"><defs><linearGradient id="ecg-4a1bedc9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4a1bedc9)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI Builderとは</text><line x1="296.0" y1="365.9" x2="904.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.12</div>
+                <div class="rel-card__ttl">【2026年11月】AI Builderとは？できること・料金とCopilotクレジットへの移行</div>
+            </a>
+            <a href="/media/microsoft-foundry/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Foundryとは"><defs><linearGradient id="ecg-b168d9c7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b168d9c7)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Microsoft Foundryとは</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.12</div>
+                <div class="rel-card__ttl">【2026年11月】Microsoft Foundryとは？旧Azure AI Foundryの機能・料金・選び方</div>
+            </a>
+            <a href="/media/felo-ai/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Feloとは"><defs><linearGradient id="ecg-78869b03" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-78869b03)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Feloとは</text><line x1="432.8" y1="365.9" x2="767.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.11</div>
+                <div class="rel-card__ttl">【2026年11月】Feloとは？料金・運営会社・法人プランとデータの扱いを解説</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'langchain-guide',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
