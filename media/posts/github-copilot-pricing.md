@@ -33,8 +33,6 @@ GitHub Copilotは2026年6月1日に、プレミアムリクエストの回数で
 | Business | 1人19ドル | 1人1,900を共有 | 組織・企業 |
 | Enterprise | 1人39ドル | 1人3,900を共有 | GitHub Enterprise Cloudの企業 |
 
-<figure class="post-figure"><img src="/media/images/github-copilot-pricing/ghc_01_overview.png" alt="GitHub Copilotの6つのプランの月額とAIクレジット。Free 0ドル、Pro 10ドルで1,500クレジット、Pro+ 39ドルで7,000、Max 100ドルで20,000、Business 1人19ドルで1,900を共有、Enterprise 1人39ドルで3,900を共有" loading="lazy"></figure>
-
 1クレジットは0.01ドルです。料金ページの金額はドル建てで、三菱UFJ銀行の2026年11月6日の仲値（1ドル157.77円）で換算すると、Proは約1,578円、Businessは1人約2,998円、Enterpriseは1人約6,153円になります。GitHubは2024年10月1日から、自分で契約してクレジットカードかPayPalで払う日本の利用者に消費税を課しており、請求書には10%の消費税額（ドルと円）とGitHubの登録番号（T4700150079306）が載ります。上の円の額は税抜きです。
 
 <figure class="post-figure"><img src="/media/images/github-copilot-pricing/ghc_04_plans.png" alt="GitHub Copilotの日本語の料金ページ。Proは月10ドルで毎月合計15ドル分のクレジット、Pro+は39ドルで70ドル分、Maxは100ドルで200ドル分と表示されている" loading="lazy"><figcaption>GitHub Copilotの料金ページ（2026年11月8日）</figcaption></figure>
@@ -103,8 +101,6 @@ Business・Enterpriseでは、1人分の料金と同じ額のクレジットが�
 | 1,750ドル分 | 1,750ドル | 1,950ドル |
 | 3,000ドル分 | 3,000ドル | 3,000ドル |
 
-<figure class="post-figure"><img src="/media/images/github-copilot-pricing/ghc_02_estimate.png" alt="50人で入れたときの月額の試算。使用量500ドルではBusiness 950ドル・Enterprise 1,950ドル、1,750ドルではBusiness 1,750ドル・Enterprise 1,950ドル、3,000ドルではどちらも3,000ドル" loading="lazy"></figure>
-
 使う量が多い会社ほど、2つのプランの差は小さくなり、最後は同じ額になります。**Enterpriseを選ぶ理由は使える量ではなく、新しいモデルを先に使えることと、GitHub Enterprise Cloudの機能です。**Enterpriseのライセンスにも、GitHub Enterprise Cloudの契約が要り、その料金はこの表に入っていません。日本リージョンのデータレジデンシー（GHE.com）で使うとモデルの料金が10%上がるので、日本の法人は見積もりに入れてください。
 
 Copilot アクセスを使える企業なら、Enterprise Cloudを持たない人は1人10ドルに使用量のすべてが乗ります。50人で使用量が1人平均9ドルを下回るなら、Businessより安くなる計算です。Enterprise Cloudのライセンスを持つ人は1人分の料金が0ドルで、使った分だけの請求になります。
@@ -127,8 +123,6 @@ BusinessとEnterpriseでは、プールを使い切った後の利用が初め�
 | コストセンター | 部署の超過分 | 停止の設定がオンのときだけ止まる |
 | 組織 | 組織に請求される超過分 | 同上 |
 | エンタープライズ | 会社全体の超過分 | 同上 |
-
-<figure class="post-figure"><img src="/media/images/github-copilot-pricing/ghc_03_budget.png" alt="Copilotの利用が止まるかの判定の順番。1 ユーザー単位の予算を超えたらすぐ止まる、2 会社の共有プールが残っていれば追加料金なし、3 有料使用のポリシーがオフならプールが尽きた時点で止まる、4 部署・組織・会社の予算は使用を停止する設定がオフなら超えても続く" loading="lazy"></figure>
 
 **「予算の上限に達したときに使用を停止する」は既定でオフです。**オフのままでは予算は知らせるだけで、請求が続いてしまいます。予算を作るときは必ずオンにしてください。
 

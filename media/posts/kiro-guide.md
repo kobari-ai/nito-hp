@@ -34,8 +34,6 @@ KiroはAWSが作って運用しているAI開発ツールです。**指示から
 | Mobile | スマホからセッションの確認と指示 | iOSの早期アクセスのみ |
 | Crew | 手元のPCで動き続ける個人向けのエージェント | 無料から |
 
-<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_01_overview.png" alt="Kiroの5つの入口。IDEはVS Codeベースのエディタ、CLIはターミナルでkiro-cliを使う、Webはブラウザで任せてPRまで、MobileはiOSの早期アクセスのみ、Crewは手元で動き続ける個人エージェント。.kiroの設定とクレジットは共通" loading="lazy"></figure>
-
 どの入口でも、プロジェクトの`.kiro`フォルダに置いた設定とプランのクレジットは共通です。**まずIDEかCLIのどちらか1つから始め、慣れたら任せたい作業だけWebに回す**、という順で十分です。以前「Kiro Autonomous Agent」と呼ばれていたIssueからPRまで自動で進める機能は、今はWeb版の自律モードとして提供されています。
 
 AWSの開発AIには以前からAmazon Q Developerがありました。**Q DeveloperのIDEプラグインと有償サブスクリプションは2027年4月30日にサポートを終え、Kiroが後継になります。**2026年5月15日から新規の申し込みは止まっており、Q Developer CLIもKiro CLIに置き換わりました。AWSコンソールの中やSlack・Teamsで使うQ Developerは終了の対象外です。
@@ -43,8 +41,6 @@ AWSの開発AIには以前からAmazon Q Developerがありました。**Q Devel
 ## Kiroの仕様駆動開発とは
 
 **仕様駆動開発はいきなりコードを書かせず、先に何を作るかを文書にしてから実装させる進め方です。**AIに思いつきで指示を重ねると、どんな前提で作ったのかが後から分からなくなります。Kiroは1つの指示から3つのファイルを順に作り、人が各段で確かめてから次に進みます。
-
-<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_02_spec.png" alt="仕様駆動開発の3つのファイル。requirements.mdは要件と受け入れ基準、design.mdは構成図とデータの設計、tasks.mdは順番つきの実装タスク。各段を人が確認してから次へ進む" loading="lazy"></figure>
 
 - **requirements.md**: ユーザーストーリーと受け入れ基準。EARS（要件を「〜のとき、システムは〜する」の形でそろえる書き方）で書かれる
 - **design.md**: 構成図、データの流れ、APIやデータベースの設計、エラー処理とテストの方針
@@ -139,8 +135,6 @@ Pro以上なら[app.kiro.dev](https://app.kiro.dev/)でGitHubかGitLabをつな�
 
 **会社で使うなら、AWSのIAM Identity CenterかOkta・Microsoft Entra IDで組織としてサインインさせるのが前提です。**同じKiroでも、個人のサインインと組織のサインインでは、データの扱い・保存先・請求・管理の範囲が変わります。
 
-<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_03_team.png" alt="サインイン方法で変わる条件。個人のサインイン（Google・GitHub・AWS Builder ID）は内容が改善に使われうる（停止できる）、保存先は米国東部、カードで1人ずつ支払う。組織のサインイン（IAM Identity Center・Okta・Entra ID）は内容を改善に使わない、保存先は米国東部か欧州、AWSの請求にまとまる、モデルとMCPを管理者が制限" loading="lazy"></figure>
-
 | 確かめること | 個人のサインイン | 組織のサインイン |
 |---|---|---|
 | 方法 | Google・GitHub・AWS Builder ID | IAM Identity Center・Okta・Entra ID |
@@ -153,7 +147,7 @@ Pro以上なら[app.kiro.dev](https://app.kiro.dev/)でGitHubかGitLabをつな�
 
 ### 学習とデータの扱い
 
-公式の書き方は2か所で分かれています。企業向けのページはPro〜Powerの購読では内容を基盤モデルの学習に使わないと書いています。**一方でデータ保護のページは、FreeとGoogle・GitHub・Builder IDで払う個人の購読者の内容は、モデルの学習を含むサービス改善に使われることがある**とし、停止の手順を載せています。AWSのサービス規約（50.3）も、Freeと個人の購読者の内容を改善に使える対象に挙げ、その分は別のリージョンに保存されることもある、という書き方です。
+公式の書き方が分かれているのは次の2か所です。企業向けのページはPro〜Powerの購読では内容を基盤モデルの学習に使わないと書いています。**一方でデータ保護のページは、FreeとGoogle・GitHub・Builder IDで払う個人の購読者の内容は、モデルの学習を含むサービス改善に使われることがある**とし、停止の手順を載せています。AWSのサービス規約（50.3）も、Freeと個人の購読者の内容を改善に使える対象に挙げ、その分は別のリージョンに保存されることもある、という書き方です。
 
 社員が個人のアカウントで会社のコードを開いた場合は、この後者です。IDEなら設定のUser、Application、Telemetry and Contentの順に開き、2つのチェックを外せば止められます。組織のサインインの利用者は、最初から収集の対象外です。ただしFreeでは、停止しても不正利用の検知のために入力が最大60日残ります。
 

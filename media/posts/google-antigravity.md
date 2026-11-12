@@ -25,8 +25,6 @@ Google Antigravityは、AIエージェントにコードの調査・編集・コ
 
 2026年5月19日のGoogle I/Oで出たAntigravity 2.0は、このAgent Managerを**IDEから切り離した単体のデスクトップアプリ**です。公式のブログでも2.0は「IDEのない」アプリと説明されています。開発だけでなく調べものや資料づくりにも使えるよう、IDEとは別の製品にしたという経緯です。
 
-<figure class="post-figure"><img src="/media/images/google-antigravity/agv_01_overview.png" alt="Google Antigravityの5つの入口の図。エージェントを並べて動かすAntigravity App、コードを書くAntigravity IDE、VS CodeやJetBrainsの中で使うIDE拡張機能、ターミナルから動かすAntigravity CLI、Pythonで自社のエージェントを作るAntigravity SDK" loading="lazy"></figure>
-
 | 入口 | 何に使うか | 企業向け（Gemini Enterprise） |
 |---|---|---|
 | Antigravity App（2.0） | 複数のエージェントを並べて動かす・定期実行 | 対応 |
@@ -98,8 +96,6 @@ desc: Google AI Plus・Pro・Ultraの日本の月額と、プランごとに増�
 ## 会社で入れるときの条件は？
 
 **同じAntigravityでも、個人のGoogleアカウントで使うか、Gemini Enterpriseで使うかで、規約・データの扱い・管理の範囲が変わります。**画面と機能はほぼ共通で、違うのは契約の外側です。
-
-<figure class="post-figure"><img src="/media/images/google-antigravity/agv_02_compare.png" alt="Google Antigravityの個人向けと企業向けの違いの図。個人向けは無料かGoogle AIの月額プランで、Googleの利用規約に準じ、学習への提供は本人が設定で切り替え、管理者による制御はない。企業向けはGemini EnterpriseのStandard・Plusに含まれ、Google Cloudの利用規約で動き、コードは基盤モデルの学習に使われず、費用上限と監査ログを管理者が設定でき、単体のAntigravity IDEは対象外" loading="lazy"></figure>
 
 | 確認すること | 個人向け | 企業向け（Gemini Enterprise） |
 |---|---|---|
