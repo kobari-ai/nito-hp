@@ -111,8 +111,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s1">Microsoft Foundryとは？何ができる？</h2>
 <p><strong>Microsoft Foundryは、モデルの選択からエージェントの作成、社内データとの接続、品質の評価と監視までを1つのAzureリソースで扱う基盤です。</strong> Microsoft Learnの「Microsoft Foundry とは」は、エージェント・モデル・ツールを1つの管理単位にまとめ、権限・ネットワーク・ポリシーも同じ場所で管理できると説明しています。</p>
 <p>機能は大きく3つに分かれます。エージェントは指示とツールを組み合わせて質問への回答や業務の処理を行います。モデルはOpenAI・Anthropic・Meta・Microsoftなどの11,000を超えるモデルから用途に合うものを選び、APIで呼び出します。ツールと知識はWeb検索・ファイル検索・コードの実行に加え、SharePointや業務システムの情報をエージェントが参照できるようにします。</p>
-<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_01_overview.png" alt="Microsoft Foundryでできること。モデルを選ぶ、エージェントを作る、社内データとつなぐ、評価と監視、権限で管理の5つ" loading="lazy"></figure>
-
 <p>完成品のAIを使うMicrosoft 365 Copilotと違い、Foundryは自社専用のAIを作る側の製品です。WordやTeamsの作業を楽にしたいだけなら、まずは<a href="/media/copilot-guide/">Microsoft 365 Copilotの使い方</a>で足りるかを確認するのがおすすめです。</p>
 <h3 id="s1-1">名前とポータルはどう変わった？</h3>
 <p><strong>Azure AI Studio、Azure AI Foundry、Microsoft Foundryは同じ製品で、2025年11月のIgniteで今の名前になりました。</strong> 2023年にAzure AI Studioとして始まり、2024年にAzure AI Foundryへ改名され、2025年11月に「Azure」の冠が外れています。Azure AI ServicesもFoundry Toolsに名前が変わりましたが、Azureのリソースの種類は前と同じです。</p>
@@ -175,34 +173,14 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s3">Copilot Studioとどう違う？</h2>
 <p><strong>作るものが社員向けのチャットならCopilot Studio、業務システムを動かすエージェントか自社アプリならFoundryを選ぶのが基本です。</strong> Copilot Studioもコネクタとフローで業務システムを操作できるため、分かれ目は既製のコネクタで足りるか、独自のコード・モデルの選択・評価まで自社で持ちたいかです。Azure OpenAIは別の製品というより、Foundryの中でOpenAIのモデルを使う部分にあたり、Azureの価格ページでも「Azure OpenAI in Foundry Models」と表示されています。</p>
-<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_02_choose.png" alt="作るもので選ぶ入口。社員がTeamsで聞く社内チャットはCopilot Studio、業務システムを動かすエージェントはMicrosoft Foundry、自社アプリや顧客向けサービスはFoundryのモデルをAPIで使う。迷ったら両方で1〜2週間ずつ試作する" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_02_choose.png" alt="用途別の開発ツールの使い分けの図。Teams上の社内チャットボットはCopilot Studio、業務システムの操作はFoundry、自社アプリ・顧客向けサービスはFoundryのモデル（API）。判断に迷う場合は両方を1〜2週間ずつ試作" loading="lazy"></figure>
 
-<div class="tbl"><table class="stack">
-<thead>
-<tr>
-<th>作るもの</th>
-<th>選ぶ入口</th>
-<th>決め手</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td data-label="作るもの">社員がTeamsで聞く社内チャット</td>
-<td data-label="選ぶ入口">Copilot Studio</td>
-<td data-label="決め手">画面で作り、Microsoft 365のデータとつなぎやすい</td>
-</tr>
-<tr>
-<td data-label="作るもの">業務システムを動かすエージェント</td>
-<td data-label="選ぶ入口">Microsoft Foundry</td>
-<td data-label="決め手">モデルの選択・コード・評価まで自社で制御できる</td>
-</tr>
-<tr>
-<td data-label="作るもの">自社アプリや顧客向けのAI機能</td>
-<td data-label="選ぶ入口">Foundryのモデル（API）</td>
-<td data-label="決め手">Azure OpenAIを含むモデルをアプリから直接呼ぶ</td>
-</tr>
-</tbody>
-</table></div>
+<p>それぞれの決め手は次のとおりです。</p>
+<ul>
+<li><strong>Copilot Studio</strong>: 画面で作り、Microsoft 365のデータとつなぎやすい</li>
+<li><strong>Microsoft Foundry</strong>: モデルの選択・コード・評価まで自社で制御できる</li>
+<li><strong>Foundryのモデル（API）</strong>: Azure OpenAIを含むモデルをアプリから直接呼ぶ</li>
+</ul>
 <p>Copilot StudioとFoundryの差が出るのは、作る人・払い方・自由度です。どちらで作ってもTeamsやMicrosoft 365 Copilotに公開でき、Entra IDで社内の人に限って使わせられる点は共通です。</p>
 <div class="tbl"><table class="stack">
 <thead>
@@ -307,8 +285,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>プレビューの機能では上の条件がすべて満たされない場合があると、Learnにも書かれています。社外秘の文書を扱うエージェントは、一般提供の機能と、仮想ネットワークで閉じる標準のセットアップで組むのが安全です。</p>
 <h2 id="s8">Microsoft Foundryの始め方は？</h2>
 <p><strong>Azureのサブスクリプションを用意し、Foundryのリソースとプロジェクトを作って、プロンプト エージェントを1つ作るところから始めます。</strong> Foundryのポータルを見て回るだけならAzureのアカウントは不要ですが、エージェントを作るにはサブスクリプションが必要です。</p>
-<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_04_start.png" alt="Microsoft Foundryを始める順番。Azureのサブスクリプション、リソースとプロジェクト、モデルを展開、エージェントを作成してプレイグラウンドで回答を確認、Teamsへ公開して予算アラートを設定" loading="lazy"></figure>
-
 <ol>
 <li>Azureのサブスクリプションを用意する（無料アカウントでも可）</li>
 <li>Azureポータルか<a href="https://ai.azure.com/">Foundryのポータル</a>で、Foundryのリソースとプロジェクトを作る。プロジェクトは用途やチームごとに分けられる</li>

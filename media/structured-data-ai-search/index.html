@@ -167,8 +167,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tbody>
 </table></div>
 <p>確かめられないのは構造化データとAIの回答での引用の関係です。最適化ガイドは生成AI機能がGoogle検索のコアのランキングと品質のシステムに根差していると書いています。通常の検索でページの理解に使われる以上、間接的な関わりまでは否定できません。ただし<strong>Google自身は、それをAIのために構造化データを足す理由としては挙げていません。</strong>構造化データでE-E-A-Tが上がるという説明も、Googleの文書には見当たりませんでした。</p>
-<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_scope.png" alt="構造化データとAI検索について、Googleの公式の文で確かめられる範囲と確かめられない範囲を分けた図" loading="lazy"></figure>
-
 <h3 id="s2-3">ChatGPT・Perplexity・Bingの公式の記述</h3>
 <p>OpenAIのChatGPT searchのヘルプが載せる条件は、OAI-SearchBotにクロールを許可し、ホストやCDNがOpenAIの公開するIPからのアクセスを通すことです。クローラーの説明にも構造化データの話はありません。商品を出したい販売者向けには、ページのマークアップとは別に商品フィードの仕様があり、ファイルを送る形です。</p>
 <p>Perplexityのクローラーのページも、PerplexityBotを許可するよう勧めるだけでした。Microsoftは2026年2月10日のBing Webmaster Toolsのブログで、見出し・表・FAQの節がAIに正しく参照されやすくすると書いています。これはページの中の作りの話で、FAQPageの構造化データを指してはいません。同じブログが詳しい手引きとして案内するMicrosoft Advertisingのブログ（2025年10月8日）は、スキーマのマークアップは検索エンジンとAIシステムが内容を理解する助けになると書いています。引用が増えるとまでは書いていません。</p>
@@ -268,8 +266,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_pages.png" alt="会社サイトのページごとに入れる構造化データの型。会社概要にOrganization、記事にArticleとBreadcrumbList、拠点にLocalBusiness、商品にProduct" loading="lazy"></figure>
-
 <p>BtoBのサービス会社なら、<strong>Organization・Article・BreadcrumbListの3つで足ります。</strong>組織のガイドはOrganizationに必須プロパティを設けず、ホームページか会社概要の1ページに置けばよく、全ページに入れる必要は無いと書いています。記事のガイドもArticleに必須プロパティを設けていません。パンくずリストの表示はパソコン版の機能とされています。</p>
 <p>LocalBusinessは来店や訪問を受ける拠点があるときだけで、必須はnameとaddressの2つです。同じガイドはreviewとaggregateRatingを他のローカルビジネスのクチコミを集めるサイト向けとしているため、自社の評判を星にするために使うものではありません。店舗と商品の情報は Merchant Centerとビジネスプロフィールを使うとAIの回答と検索結果の両方に表示されやすくなると、最適化ガイドが書いています。</p>
 <p>Articleのauthorに書き手の名前とプロフィールのURLを入れるのは、署名欄と同じ事実を渡す作業です。書き手の経験を伝えるのは本文の側で、詳しくは<a href="/media/eeat-for-ai-search/">E-E-A-Tとは</a>に、社名の表記やsameAsのそろえ方は<a href="/media/entity-seo/">エンティティSEOとは</a>に書いています。</p>
@@ -312,8 +308,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>公開前も公開後もリッチリザルトテストで確かめ、パンくずリストのようにレポートがある型はSearch Consoleでも件数を追います。手順は次の節にまとめました。社名や営業時間を変えるときは、画面・構造化データ・ビジネスプロフィールを同じ日に直す決まりを作っておくと、片方だけ古い状態を防げます。</p>
 <h2 id="s6">入れたあとの確かめ方</h2>
 <p>確かめる道具は3つあり、見えるものがそれぞれ違います。テストが通っても、リッチリザルトやAIの回答に出る約束にはなりません。</p>
-<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_check.png" alt="構造化データを確かめる3つの道具。公開前のリッチリザルトテスト、文法を見るSchema Markup Validator、公開後のSearch Console" loading="lazy"></figure>
-
 <h3 id="s6-1">リッチリザルトテスト</h3>
 <p><a href="https://search.google.com/test/rich-results?hl=ja">リッチリザルト テスト</a>は、URLかコードを入れて、Googleのリッチリザルトの対象になる型とエラーを表示するツールです。ヘルプによれば、既定ではスマートフォンとして読み込みます。JSON-LDの中のコメントはテストでは無視されますが、実際の利用ではエラーになりうるため、公開前に消すよう書かれています。</p>
 <p><strong>テストが対応する型の一覧に、FAQとHowToはもうありません。</strong>FAQPageを残しているページで「アイテムが検出されませんでした」と出ても、書き方の誤りとは限らないということです。エラーが出たときは「無効な JSON ドキュメントです」「解析エラー: 「,」または「}」がありません」のような名前で原因が表示されるので、カンマや括弧の抜けから見ます。</p>

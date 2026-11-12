@@ -113,7 +113,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Agent Builderは、OpenAIの開発者向けの画面（OpenAI Platform）で、AIエージェントの処理の流れを部品をつないで組む道具です。テンプレートから部品（ノード）を置いて入出力を決め、実際のデータで試してから、自社のサイトに埋め込むかコードとして書き出します。</p>
 <p><strong>コードを書かずに組める点が売りで、Difyやn8nのようなノーコードの道具と同じ場所を狙っていました。</strong> 2025年10月6日の開発者向けイベント（DevDay 2025）で、エージェント開発の道具一式であるAgentKitの一部として発表されました。</p>
 <h3 id="s1-1">AgentKitの中での位置</h3>
-<p>AgentKitは3つの部品でできていました。</p>
+<p>AgentKitを構成していたのは3つの部品です。</p>
 <div class="tbl"><table class="stack">
 <thead>
 <tr>
@@ -141,8 +141,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tbody>
 </table></div>
 <h3 id="s1-2">2026年11月30日に終わるもの</h3>
-<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_01_end.png" alt="2026年11月30日に終わるもの。Agent Builder、10月31日から読み取り専用になるEvals、中身をアプリのコードへ移す再利用プロンプトの3つ。ChatKitは残り、自社のサーバーにつなぎ直して使う" loading="lazy"></figure>
-
 <p>OpenAIの廃止予定のページには、2026年6月3日に3つの機能の終了がまとめて載りました。</p>
 <div class="tbl"><table class="stack">
 <thead>
@@ -247,7 +245,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>モデルごとの単価と月額の試算、使いすぎを止める上限の設定は<a href="/media/openai-api-pricing/">OpenAI APIの料金</a>で扱っています。</p>
 <p>移し先では費用の形も別物です。Agents SDKはコードの道具なので、払うのはAPIの代金と自社で動かすサーバー代です。ワークスペースエージェントはChatGPT Business以上の契約が前提で、発表では2026年5月6日まで無料とされ、今はクレジット制です。GPT-5.6で1回動かすと、目安は5〜25クレジットです（ChatGPTのレートカード）。</p>
 <h2 id="s5">移行先の選び方</h2>
-<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_02_move.png" alt="Agent Builderで作ったワークフローの移し先3つ。決まった手順を崩したくないなら自社のアプリでコードとして動かすAgents SDK、Business・Enterpriseで社内に配るならChatGPTの中で言葉で作り直すワークスペースエージェント、他社のモデルや既存の連携を使うならDify・n8n・Copilot Studio" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_02_move.png" alt="要件別のAgent Builderの移行先の図。決まった手順をコードで維持するならAgents SDK、ChatGPT内で社内に配布するならワークスペースエージェント、他社のモデルや既存の連携を活用するならDify・n8n・Copilot Studio" loading="lazy"></figure>
 
 <p>公式の移行ガイドが示す道は2つです。</p>
 <h3 id="s5-1">Agents SDKで続ける</h3>
