@@ -140,7 +140,7 @@ LangChainはPythonかJavaScriptで書く前提のライブラリで、画面で�
 | Plus | 39ドル | 月10,000件 | 人数無制限・Agent Server小1台が無料 |
 | Enterprise | 個別見積もり | 個別 | 自社環境に設置・独自のSSO・SLA |
 
-<!-- SHOT: 画面 https://www.langchain.com/pricing・本文だけにある探す語「$39 / seat per month」・赤枠にする語「Plus」のカードの「$39 / seat per month」と「Up to 10k base traces / mo」・PC・alt「LangSmithの料金ページ。Developerは1人あたり月0ドルで月5,000件、Plusは1人あたり月39ドルで月10,000件の実行記録を含み、超えた分は使った分だけ支払う」・figcaption「LangSmithの料金ページ（2026年11月13日）」 -->
+<figure class="post-figure"><img src="/media/images/langchain-guide/langchain-pricing.png" alt="LangSmithの料金ページ。Developerは1人あたり月0ドルで月5,000件、Plusは1人あたり月39ドルで月10,000件の実行記録を含み、超えた分は使った分だけ支払う" loading="lazy"><figcaption>LangSmithの料金ページ（2026年11月13日）</figcaption></figure>
 
 **実行記録（トレース）はアプリが1回動いた分の記録で、含まれる件数を超えると1件0.005 LSU（1 LSUは1ドル）がかかります。** 通常の記録の保存期間は14日で、評価などで残すと180日の長期保存になり、1件につき0.0025 LSUが加わります。
 
@@ -152,7 +152,7 @@ LangChainはPythonかJavaScriptで書く前提のライブラリで、画面で�
 
 **LangChainは自社のサーバーの中で動くライブラリのため、データが外に出るのは、設定したモデルのAPIと、使う場合のLangSmithの2か所だけです。**
 
-<!-- SHOT: 図 lch_flow.html → lch_flow.png・alt「LangChainアプリのデータの流れ。社員や顧客の質問は自社のサーバーで動くLangChainのアプリに届き、外部へ送られる先はOpenAIやAnthropicなどのモデルのAPIと、利用する場合のLangSmithの実行記録の2つ」 -->
+<figure class="post-figure"><img src="/media/images/langchain-guide/lch_flow.png" alt="LangChainアプリのデータの流れ。社員や顧客の質問は自社のサーバーで動くLangChainのアプリに届き、外部へ送られる先はOpenAIやAnthropicなどのモデルのAPIと、利用する場合のLangSmithの実行記録の2つ" loading="lazy"></figure>
 
 LangSmithのクラウドは5つの地域から選べ、**日本の地域はありません。** データは登録したときに選んだ地域に置かれ、あとから別の地域へ移すことはできないと公式のよくある質問に書かれています。
 
@@ -214,7 +214,7 @@ get_stockの中身を自社の在庫システムへの照会に置き換えれ�
 
 **画面で社内向けのAIアプリを作るならDify、システム間の決まった処理の自動化ならn8n、自社のシステムや製品に組み込んで細かく制御するならLangChainが向いています。**
 
-<!-- SHOT: 図 lch_choose.html → lch_choose.png・alt「用途別の開発手段の使い分け。社内文書の質問応答を画面で構築するならDify、システム間の定型処理の自動化ならn8n、自社システムへの組み込みならLangChain、分岐や承認を含む長時間の処理ならLangGraph、利用中のクラウドに統一するなら各社のエージェント基盤」 -->
+<figure class="post-figure"><img src="/media/images/langchain-guide/lch_choose.png" alt="用途別の開発手段の使い分け。社内文書の質問応答を画面で構築するならDify、システム間の定型処理の自動化ならn8n、自社システムへの組み込みならLangChain、分岐や承認を含む長時間の処理ならLangGraph、利用中のクラウドに統一するなら各社のエージェント基盤" loading="lazy"></figure>
 
 DifyとLangChainの差は、画面で組むかコードで書くかです。Difyは担当者が画面で規程に答えるボットを作って配るまでを短く済ませられ、LangChainは社外向けの製品や既存の業務システムの中に組み込むときに向きます。
 
