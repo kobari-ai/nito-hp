@@ -28,7 +28,7 @@ LLMO・GEO・AEOも指すものはほぼ同じで、呼び名の由来が違う�
 
 ただし「AIO」は、GoogleのAI Overviews（日本語の画面ではAIによる概要）の略として使われる場面もあります。提案書でAIOという言葉を見たら、どのAIを対象にした話なのかを最初に確かめてください。AIによる概要だけに絞った公式の条件は[AI Overview（AIによる概要）対策とは](/media/cited-by-ai-overviews/)にまとめています。
 
-<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_01_what.png" alt="「AIO」の2つの意味と対象範囲の図。主な用法はAI Optimizationの総称で、ChatGPT・Gemini・AIによる概要・AIモードが対象。一部の用法はAI Overviewsの略で、AIによる概要のみが対象" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_01_what.png" alt="「AIO」の2つの意味と対象範囲の図。主な用法はAI Optimizationの総称で、ChatGPT・Gemini・AIによる概要・AIモードが対象。一部の用法はAI Overviewsの略で、AIによる概要のみが対象。提案書では対象のAIを確認" loading="lazy"></figure>
 
 ## AIO対策のやり方5つの手順
 

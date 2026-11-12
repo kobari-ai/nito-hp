@@ -30,7 +30,7 @@ Anthropicは2025年10月16日にAgent Skills（スキル）を発表し、12月1
 
 同じフォルダを規格に対応する他のAIツールで読めるのは、形式がAgent Skillsというオープンな規格に沿っているからです。Claude Codeはこの規格に、呼び出す人の制御・サブエージェントでの実行・コマンド結果の差し込みといった機能を足しています。
 
-<figure class="post-figure"><img src="/media/images/claude-code-skills/01_overview.png" alt="スキルの段階的な読み込みの図。起動時は名前と説明（約100トークン）、会話が説明に合致した時にSKILL.mdの本文、本文で指定した時に参考資料とスクリプトの実行結果" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/claude-code-skills/01_overview.png" alt="スキルの段階的な読み込みの図。起動時は名前と説明（約100トークン）、会話が説明に合致したときにSKILL.mdの本文、作業で必要になったときに参考資料とスクリプトの実行結果" loading="lazy"></figure>
 
 Claude Codeには最初から入っているバンドルスキルもあり、`/code-review`・`/debug`・`/loop`・`/verify` などがあります。
 
