@@ -54,7 +54,7 @@ Difyは文書の切り方と探し方を画面で選べる道具です。[Dify�
 
 自社の業務システムや社外向けの画面に組み込むなら、クラウドの検索の部品を使います。**Amazon Bedrockの[ナレッジベースの概要](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html)によると、Managed Knowledge BaseはS3・SharePoint・Confluence・Googleドライブ・OneDriveにつなぎ、文書ごとの権限で検索結果を絞れます。** 自分で検索の土台を選ぶ従来の型では、外部へのコネクタと文書単位の権限は使えません。Googleのドキュメントでは2026年4月からVertex AI SearchがAgent Searchの名前に変わり、Google Cloud コンソールの画面は今もVertex AI SearchとAI Applicationsの名前のままです。社内データの検索を含む全体は[Gemini Enterprise](/media/gemini-enterprise/)の範囲です。
 
-AWSで検索とモデルとエージェントをまとめて組む場合の全体像と料金は、[Amazon Bedrockとは](/media/amazon-bedrock-guide/)にまとめました。
+AWSで検索とモデルとエージェントをまとめて組む場合の全体像と料金は、[Amazon Bedrockとは](/media/amazon-bedrock-guide/)にまとめました。検索とエージェントの流れをコードで組むときのフレームワークは[LangChainとは](/media/langchain-guide/)で扱っています。
 
 ## RAG構築の手順
 
