@@ -142,11 +142,11 @@ Claudeは作業のためにタブのスクリーンショットを撮り、写�
 
 管理者向けのヘルプには組織で使うときの設定がまとまっています。設定の場所はオーナーかプライマリーオーナーでサインインした「組織設定 > Chrome用Claude」です。決めることを5つに分けると次のようになります。
 
-<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_05_admin_help.png" alt="Claudeの管理者向けヘルプ。Teamプランでは拡張機能が既定で有効、Enterpriseプランも既に無効にしていなければオンと書かれている" loading="lazy"><figcaption>Chrome管理者コントロールのClaude（2026年11月8日）</figcaption></figure>
-
 ### ① 組織で有効にするか
 
 **Teamプランでは拡張機能が最初から有効**で、止めたいときだけ切ります。Enterpriseも、以前に無効にしていなければオンです。ただし、Teamから移行したEnterpriseについては、移行のヘルプがClaude in Chromeを「Enterpriseでは既定でオフ」の機能に挙げています。移行したあとは「組織設定 > Chrome用Claude」で状態を確かめてください。また、EnterpriseでサイドパネルをCoworkのセッションとして使うには、クラウドのCoworkも有効にする必要があり（Enterpriseでは既定でオフ）、それまではクラシックのサイドパネルです。社員から使いたいと言われた時点で、Teamの会社ではもう使える状態にあると考えてください。HIPAAを有効にした組織だけは既定でオフで、オンにしても許可するサイトを決めるまではどのサイトも開けません。その場合もClaude in ChromeはBAA（医療情報の扱いの契約）の対象外です。Enterpriseで有効にしても社員には通知が届かないため、社内の連絡で知らせる必要があります。
+
+<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_05_admin_help.png" alt="Claudeの管理者向けヘルプ。Teamプランでは拡張機能が既定で有効、Enterpriseプランも既に無効にしていなければオンと書かれている" loading="lazy"><figcaption>Chrome管理者コントロールのClaude（2026年11月8日）</figcaption></figure>
 
 ### ② 許可するサイト
 

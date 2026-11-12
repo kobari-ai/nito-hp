@@ -23,7 +23,7 @@ OpenAIのCodexはChatGPTのプランに、AnthropicのClaude CodeはClaudeのプ
 
 開発チームに入れる道具を選ぶ相談で多いのは「性能はどちらが上か」という問いです。ただ両社の最新モデルの発表を読むと、互いに自社が上回る結果を発表しており、性能だけでは決め手になりません。**会社の判断を分けるのはいま全社で契約しているAIのプランと、管理者が求める統制の深さです。**
 
-<figure class="post-figure"><img src="/media/images/codex-vs-claude-code/cvc_01_overview.png" alt="Codex・Claude Codeの使い分けの図。ChatGPT Businessを契約済み、PRレビューの自動化、少額のプランで試用ならCodex。Claude Teamを契約済み、Teamプランでの利用状況の分析ならClaude Code。併用時は実装担当とレビュー担当に分ける" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/codex-vs-claude-code/cvc_01_overview.png" alt="Codex・Claude Codeの使い分けの図。ChatGPT Businessを契約済み、無料プランで試用ならCodex。Claude Teamを契約済み、Teamプランでの利用状況の分析ならClaude Code。併用時は実装担当とレビュー担当に分ける" loading="lazy"></figure>
 
 ChatGPT Businessを全社で入れている会社なら、Codexは追加の契約なしで開発者に開けます。Claude Teamを入れている会社なら、Claude Codeも同じ1人分の契約に含まれます。どちらも契約していない会社は、次の3つで比べると判断が早くなります。
 
