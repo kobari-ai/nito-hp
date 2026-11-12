@@ -120,8 +120,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s1">Claude in Chromeとは</h2>
 <p>Google Chromeに追加して使う、Claudeの拡張機能です。ツールバーのアイコンを押すとページの横にサイドパネルが開き、頼みたいことを書くと、Claudeが見ているページを読んでリンクを押し、文字を入力してフォームを埋めます。<strong>ログインしたまま開いている社内ツールや管理画面でも動くため、APIやエクスポートの無いサイトの作業を任せられるのが特徴です。</strong>公式のページも、社内ツール・古いポータル・管理コンソール・請求書のシステムを例に挙げています。</p>
 <p>ヘルプによると、Claudeは作業中のタブのスクリーンショットを撮ってページを把握し、次に何をするかを決めます。ストアの提供元はAnthropicです。名前の似た拡張機能はほかにもあるので、社員に案内するときはストアのURLごと渡すと取り違えが起きません。</p>
-<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_01_overview.png" alt="Claude in Chromeの全体像を4段で並べた図。Chromeの拡張機能でページを読みクリックと入力をする、Pro・Max・Ultra・Team・Enterpriseの有料プランで使える、入口はサイドパネル・Cowork・Claude Codeの3つ、会社では管理者が有効にするかと許可するサイトを決める" loading="lazy"></figure>
-
 <h3 id="s1-1">チャットやRPAとの違い</h3>
 <p>ふつうのチャットではページの文章をコピーして貼り、返ってきた答えをもとに自分で操作します。Claude in Chromeは開いているタブを直接読み、操作まで進めるところが違います。RPAは決めた手順を正確に繰り返すのが得意な一方、画面の配置が変わると止まりやすい道具です。Claude in Chromeは画面を見てその場で次の手を選ぶため、手順が毎回少しずつ違う作業に向いています。<strong>その代わり毎回同じ結果になる保証は無く、件数の多い定型の転記はRPAのほうが確実です。</strong></p>
 <p>AIを組み込んだ別のブラウザに乗り換える製品とは違い、Claude in Chromeは今のChromeに足す形なので、ブックマークやログインの状態、ほかの拡張機能をそのまま使えます。入れ替えずに試せる反面、社員が普段のログインのまま動くため、許可サイトの設計が大事になります。ChatGPTで同じような作業を頼む方法は<a href="/media/chatgpt-agent-mode/">ChatGPTエージェントモードの記事</a>にまとめています。</p>
@@ -262,8 +260,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Claudeのデスクトップアプリから使うときは、左下のイニシャルから設定、カスタマイズ、コネクタと進み、Chrome用Claudeをオンにします。この接続は既定で無効になっていて、会話ごとにコネクタの一覧から有効にする仕組みです。CoworkにはChrome拡張の要らない組み込みのブラウザもあり、Claude in Chromeを使っていない人にはこちらが既定になります。どちらを使うかを選ぶ場所は「設定 &gt; Cowork &gt; 優先ブラウザ」です。チャットとCoworkが1つになった新しい画面（Pro・Max・Ultraに順次配信中）について、英語の公式ページは、選ぶ場所を機能（Capabilities）の設定の中と書いています。</p>
 <h2 id="s5">権限モードと安全の仕組み</h2>
 <p>Claudeにどこまで任せるかは、サイドパネルの入力欄のメニューで3つのモードから選びます。</p>
-<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_02_modes.png" alt="Claude in Chromeの3つの権限モードの図。手動で承認は操作の前に毎回許可を求める、自動的に承認は安全確認を通った操作だけ進みCoworkのサイドパネルの既定、すべての承認をスキップは確認も自動のチェックも無い。どのモードでも購入や取引は行わない" loading="lazy"></figure>
-
 <div class="tbl"><table class="stack">
 <thead>
 <tr>
@@ -290,7 +286,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>手動で承認は以前の「実行する前に確認」、すべての承認をスキップは以前の「確認なしで実行」にあたります。<strong>Coworkのサイドパネルの既定は自動的に承認で（Coworkの管理者ヘルプでは、Enterpriseは新しい作業を手動で承認から始めるのが既定）、選んだモードは次の作業にも引き継がれます。</strong>社員が一度スキップに切り替えると、そのまま使い続けることになります。お金・本人として送るメッセージ・重要なファイルが関わる作業は、確認するか手動に戻すのがヘルプの勧めです。</p>
+<p>手動で承認は以前の「実行する前に確認」、すべての承認をスキップは以前の「確認なしで実行」にあたる名前です。<strong>Coworkのサイドパネルの既定は自動的に承認で（Coworkの管理者ヘルプでは、Enterpriseは新しい作業を手動で承認から始めるのが既定）、選んだモードは次の作業にも引き継がれます。</strong>社員が一度スキップに切り替えると、そのまま使い続けることになります。お金・本人として送るメッセージ・重要なファイルが関わる作業は、確認するか手動に戻すのがヘルプの勧めです。</p>
 <h3 id="s5-1">モードに関係なく決まっていること</h3>
 <p>権限のガイドにはどのモードでも明示の許可が要る操作と、そもそも行わない操作が書かれています。</p>
 <ul>
@@ -306,12 +302,10 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Claudeは作業のためにタブのスクリーンショットを撮り、写ったものは会話の一部になります。Claudeは見たものから機密を取り除けないため、ヘルプは機密のサイトで使わないことと、機密のアカウントにつながない別のブラウザのプロファイルを使うことを勧めています。<strong>今のサイドパネルでは会話が履歴に残り、ほかの端末からも開けます。</strong>残したくない情報を出しているページではパネルを開かない、という決まりは社員向けの案内にも入れておきたいところです。</p>
 <h2 id="s6">会社で使わせるときに決めること</h2>
 <p>管理者向けのヘルプには組織で使うときの設定がまとまっています。設定の場所はオーナーかプライマリーオーナーでサインインした「組織設定 &gt; Chrome用Claude」です。決めることを5つに分けると次のようになります。</p>
-<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_03_admin.png" alt="会社でClaude in Chromeを使わせる前に決める5つの項目の図。組織で有効にするか（Teamは最初からオン）、許可するサイト（狭い許可リストから始める）、権限モードの決まり（送信や削除の前は人が確かめる）、扱わない業務とデータ（お金・契約・医療・個人情報）、配り方と試験の範囲（少人数で試してから広げる）" loading="lazy"></figure>
-
-<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_05_admin_help.png" alt="Claudeの管理者向けヘルプ。Teamプランでは拡張機能が既定で有効、Enterpriseプランも既に無効にしていなければオンと書かれている" loading="lazy"><figcaption>Chrome管理者コントロールのClaude（2026年11月8日）</figcaption></figure>
-
 <h3 id="s6-1">① 組織で有効にするか</h3>
 <p><strong>Teamプランでは拡張機能が最初から有効</strong>で、止めたいときだけ切ります。Enterpriseも、以前に無効にしていなければオンです。ただし、Teamから移行したEnterpriseについては、移行のヘルプがClaude in Chromeを「Enterpriseでは既定でオフ」の機能に挙げています。移行したあとは「組織設定 &gt; Chrome用Claude」で状態を確かめてください。また、EnterpriseでサイドパネルをCoworkのセッションとして使うには、クラウドのCoworkも有効にする必要があり（Enterpriseでは既定でオフ）、それまではクラシックのサイドパネルです。社員から使いたいと言われた時点で、Teamの会社ではもう使える状態にあると考えてください。HIPAAを有効にした組織だけは既定でオフで、オンにしても許可するサイトを決めるまではどのサイトも開けません。その場合もClaude in ChromeはBAA（医療情報の扱いの契約）の対象外です。Enterpriseで有効にしても社員には通知が届かないため、社内の連絡で知らせる必要があります。</p>
+<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_05_admin_help.png" alt="Claudeの管理者向けヘルプ。Teamプランでは拡張機能が既定で有効、Enterpriseプランも既に無効にしていなければオンと書かれている" loading="lazy"><figcaption>Chrome管理者コントロールのClaude（2026年11月8日）</figcaption></figure>
+
 <h3 id="s6-2">② 許可するサイト</h3>
 <p>許可リストに入れたサイトだけで動かすことも、拒否リストで特定のサイトを止めることもでき、同じリストがCoworkの組み込みブラウザにも効きます。ヘルプの推奨は<strong>狭い許可リストから始めて、慣れてから広げる</strong>ことです。社内のダッシュボードや決まったSaaSだけを入れ、銀行・会計・人事の画面は拒否リストに入れておくと、社員のログインのまま動く拡張機能でも行き先を絞れます。</p>
 <p>トラブルシューティングのヘルプは既定でブロックする種類として金融・銀行・投資・暗号資産取引所・成人向け・海賊版を挙げていますが、安全のヘルプは金融のサイトについて開く前に許可を求めると書いています。ページによって扱いの書き方が違うので、会社の側で金融系を拒否リストに入れておくほうが確実です。</p>

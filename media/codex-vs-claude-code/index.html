@@ -105,7 +105,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">CodexとClaude Codeはどちらを入れるべきか</h2>
 <p>開発チームに入れる道具を選ぶ相談で多いのは「性能はどちらが上か」という問いです。ただ両社の最新モデルの発表を読むと、互いに自社が上回る結果を発表しており、性能だけでは決め手になりません。<strong>会社の判断を分けるのはいま全社で契約しているAIのプランと、管理者が求める統制の深さです。</strong></p>
-<figure class="post-figure"><img src="/media/images/codex-vs-claude-code/cvc_01_overview.png" alt="CodexとClaude Codeの選び方の図。ChatGPT Businessを契約済み・GitHubのPRレビューを任せたい・少額から試したい会社はCodex、Claude Teamを契約済み・利用状況の分析をTeamのプランで見たい会社はClaude Code、両方なら書く側とレビューする側で分けて指示ファイルと権限をそろえる" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/codex-vs-claude-code/cvc_01_overview.png" alt="Codex・Claude Codeの使い分けの図。ChatGPT Businessを契約済み、無料プランで試用ならCodex。Claude Teamを契約済み、Teamプランでの利用状況の分析ならClaude Code。併用時は実装担当とレビュー担当に分ける" loading="lazy"></figure>
 
 <p>ChatGPT Businessを全社で入れている会社なら、Codexは追加の契約なしで開発者に開けます。Claude Teamを入れている会社なら、Claude Codeも同じ1人分の契約に含まれます。どちらも契約していない会社は、次の3つで比べると判断が早くなります。</p>
 <ul>
@@ -350,10 +350,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>コンテキストの長さは Claude Codeの今のモデルが既定で<strong>100万トークン</strong>、CodexのGPT-6.1 Solが既定で<strong>50万トークン</strong>です（どちらも公式のドキュメントによる）。大きなリポジトリを一度に読ませる作業が多い会社では、見落とせない差です。</p>
 <h2 id="s7">使い分けと併用の設計</h2>
 <p>両方を使い分ける開発者もいますが、会社で併用すると、書く側・指示ファイル・権限・費用の上限と決めることが増えます。</p>
-<figure class="post-figure"><img src="/media/images/codex-vs-claude-code/cvc_02_split.png" alt="併用するときの分担の例。①主に書く側を1つ決めて日々の実装を任せる、②もう一方は別のモデルの目で差分を確かめるレビューに使う、③AGENTS.mdに共通の約束を1か所だけ置く（Claude Codeもそのまま読む）、④承認の範囲と月の上限を両方でそろえる" loading="lazy"></figure>
-
 <h3 id="s7-1">書く側とレビューする側を分ける</h3>
-<p>よく使われる分け方は、日々の実装を片方に任せ、もう片方に差分をレビューさせる形です。別のモデルの目で差分を見るためです。CodexはGitHubで@codexと書けばプルリクエストのレビューを頼めるので、レビュー役に置きやすいでしょう。<strong>全員に両方の上位プランを配るのではなく、主に書く側の契約を厚くし、レビュー側は少ない量のプランで足りるかを試すのがおすすめです。</strong></p>
+<p>よく使われる分け方は日々の実装を片方に任せ、もう片方に差分をレビューさせる形です。別のモデルの目で差分を見るためです。CodexはGitHubで@codexと書けばプルリクエストのレビューを頼めるので、レビュー役に置きやすいでしょう。<strong>全員に両方の上位プランを配るのではなく、主に書く側の契約を厚くし、レビュー側は少ない量のプランで足りるかを試すのがおすすめです。</strong></p>
 <h3 id="s7-2">指示ファイルを1つにまとめる</h3>
 <p>CodexはAGENTS.md、Claude CodeはCLAUDE.mdを読みます。両方に同じ規約を書くと、片方だけ直して食い違う元になりがちです。Claude Codeは2026年9月のv2.1.277から、CLAUDE.mdが無いプロジェクトではAGENTS.mdをそのまま読む仕様になりました。規約はAGENTS.mdだけに置き、Claude Code専用の指示が要るときだけCLAUDE.mdを作って@AGENTS.mdで読み込めば、置き場所は1つで済みます。スキルもSKILL.mdの書式がほぼ同じなので、共通の置き場所から両方に配る形が取れます。</p>
 <h3 id="s7-3">移行や試用には /import を使う</h3>

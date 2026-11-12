@@ -139,8 +139,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_01_overview.png" alt="Devinの4つの製品。Devin Cloudはクラウドで作業を任せてPRまで、Devin Desktopは旧Windsurfのエディタ、Devin CLIはターミナルで動くエージェント、Devin Reviewはプルリクエストを自動でレビュー。Cloud・Desktop・CLIは同じプランの利用枠を使う" loading="lazy"></figure>
-
 <p><strong>Cognitionは2025年7月にエディタのWindsurfを買収し、2026年6月2日にWindsurfをDevin Desktopへ改名しました。</strong>エディタ・拡張機能・設定はそのまま引き継がれ、料金も変わっていません。社用PCの管理ツールで「Windsurf」だけを許可していた会社は、アプリ名が「Devin」に変わったため許可リストの更新が必要です。</p>
 <p>コードのリポジトリを読み込んで説明書を自動で作るDeepWikiや、コードについて質問できるAsk Devinも、Devin Cloudの中の機能として使えます。</p>
 <h2 id="s2">Devinは何ができる？</h2>
@@ -210,8 +208,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_04_pricing.png" alt="Devinの日本語の料金ページ。Free $0、Pro $22、Max $220、Teams $88＋フル開発者シート1名あたり$44、Enterpriseはご相談ください。表示価格は10%の消費税込み" loading="lazy"><figcaption>Devinの日本語の料金ページ（2026年11月12日）。表示は消費税込み</figcaption></figure>
 
 <p>有料プランには日ごと・週ごとに戻る利用枠が付き、Cloud・Desktop・CLIで共有します。超えた分は前払いのクレジットを使い、各モデルのAPIの定価で引かれます。クレジットは翌月に繰り越され、期限はありません。個人のChatGPT Plus・Proを契約していれば、GPTのモデルを使った分をChatGPT側の枠に回すこともできます。</p>
-<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_02_plans.png" alt="Devinのプランの選び方。まず触るならFree、1人で毎日使うならPro 月$20で多く使うならMax 月$200、チームならTeams 月$80からで常用者は1人$40、100人超や閉域網ならEnterpriseでACUで契約。金額は税別のドル" loading="lazy"></figure>
-
 <h3 id="s3-1">Teamsはいくらになる？</h3>
 <p><strong>Teamsは毎日使う人をフルシート（1人$40）、たまに使う人をフレックスシート（無料）にして組みます。</strong>フルシートにはProと同じ量の枠が付き、フレックスシートの人はチームで共有するクレジットから使います。</p>
 <p>料金ページの表記は「チームプラン月$80＋フルシート1人$40」です。一方でドキュメントの説明では、$80は最低額で、フルシート2人分で満たされます。フルシートが2人未満のときは、足りない分が共有クレジットとして請求される仕組みです。</p>
@@ -253,9 +249,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_05_security.png" alt="Devinの公式ドキュメントのセキュリティのページ。データは既定で学習に使われることがあり、有料プランではデータ管理の設定でオプトアウトできる。Teamsでは管理者だけが停止できる" loading="lazy"><figcaption>Devinのドキュメント「Cognition におけるセキュリティ」（2026年11月12日）</figcaption></figure>
 
 <h2 id="s7">会社で入れる前に決めること</h2>
-<p><strong>試用を始める前に、プランと人数・利用量の上限・コードとデータの扱い・人が確認する所の4つを、開発と情報システムの担当で決めておきます。</strong></p>
-<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_03_decide.png" alt="Devinを入れる前に決める4つ。プランと人数は毎日使う人だけフルシートに、利用量の上限は1人ごとの上限（3段階）を低めに、コードとデータの扱いは対象リポジトリと学習の停止、人が確認する所はPRレビューと本番ブランチの保護" loading="lazy"></figure>
-
+<p><strong>試用を始める前に、プランと人数・利用量の上限・コードとデータの扱い・人が確認する所を、開発と情報システムの担当で決めておきます。</strong></p>
 <div class="tbl"><table class="stack">
 <thead>
 <tr>
@@ -302,7 +296,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
-<p>図の4項目と表の対応は、プランと人数が表のプランと人数・サインインの行、利用量の上限が上限の行、コードとデータの扱いが学習・対象のリポジトリ・認証情報の行、人が確認する所が人の確認の行です。</p>
 <p>GitHubに入れるDevinのアプリは、コードの読み書き・PR・Issue・Actionsの実行などの権限を求めます。<strong>求める権限に、組織に新しいリポジトリを作る権限（repository creation）も含まれます。試用の段階では「Select repositories」で対象を絞っておくほうが安全です。</strong></p>
 <p>社内のGitLabやArtifactoryにつなぐ場合、IPの許可リストで開けられるならEnterpriseの標準の環境で足ります。開けられない閉じたネットワークなら、専用環境（単一テナントのVPCとAWS PrivateLink）の相談になります。どの専用環境でも、Devinの判断を担う部分はCognitionのクラウドで動き、自社のLLMのAPIキーには切り替えられません。データ処理補遺の委託先の一覧では、処理の拠点（Azure・AWS・Google Cloud、モデルの OpenAI・Anthropic など）はどれも米国です。データの置き場所に社内の決まりがある会社は、契約前に確認しておきます。</p>
 <p>Devinを入口に、社内の業務やデータにつなぐエージェントまで作る場合は、権限と運用の設計が必要です。nitoも<a href="/ai-agent/">AIエージェントの構築と運用の支援</a>を行っています。</p>
