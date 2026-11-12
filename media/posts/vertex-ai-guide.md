@@ -54,8 +54,6 @@ Vertex AIは2021年5月18日に、それまで別々だったAutoMLとAI Platfor
 | 運用 | Pipelines・Model Registry・Feature Store | Vertex AI Pipelines など |
 | 守る・見張る | Agent Identity・Agent Gateway・評価 | （改名と同時に追加） |
 
-<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_overview.png" alt="Agent Platform（旧Vertex AI）の4つの柱。ビルドはModel GardenとAgent StudioとADK、スケーリングはAgent Runtimeとメモリーバンク、管理はAgent IdentityとAgent Gateway、最適化は評価とシミュレーションと監視" loading="lazy"></figure>
-
 ### モデルを選んで試す
 
 Model Gardenには、Gemini 4 ArgonなどのGoogleのモデル、AnthropicのClaude、オープンモデルのGemmaが並び、モデルとツールは200以上です。Agent Studioでは文章・コード・画像・動画を使ってプロンプトを作り、試し、保存できます。モデルを比べる部品はモデル評価サービスです。**最初の検証はコードを書かずにAgent Studioで済ませ、使うモデルを決めてから開発に移るのが向いています。**
@@ -143,7 +141,7 @@ Gemini APIの公式ドキュメントが示す2つのAPIの選び方は次のよ
 
 特定の企業向けの管理が必要でない限り、ほとんどの開発者はGemini Developer APIを使うべき、という意味です。**データの保持や処理する地域を契約と設定で説明する必要がある会社、BigQueryの社内データとつなぐ会社にはAgent Platformが向いています。**
 
-<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_choose.png" alt="Googleの3つの入口の選び方。社員がチャットで使うならWorkspaceのGeminiアプリ、自社のアプリに早く組み込むならGemini API、企業の管理と地域が要るならAgent Platform" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_choose.png" alt="用途別のGoogleの生成AIサービスの図。社員のチャット利用はWorkspaceのGeminiアプリ、自社アプリへの迅速な組み込みはGemini API（AI Studio）、企業向けの管理や処理地域の指定はAgent Platform（旧Vertex AI）" loading="lazy"></figure>
 
 WorkspaceのGeminiの料金と設定は「[Google WorkspaceのGeminiとは](/media/google-workspace-gemini/)」、Gemini APIの無料枠と単価は「[Gemini APIの料金](/media/gemini-api-pricing/)」で詳しく書いています。
 
@@ -191,8 +189,6 @@ Google Cloudのアカウントがあれば、検証は1日で始められます�
 3. プロジェクトを開き、Google Cloudのコンソールで[Agent Platform API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com)（旧Vertex AI API）を有効にする
 4. Agent Studioでプロンプトを試し、使うモデルを決める
 5. Google GenAI SDK（Python・JavaScript・Java・Goなど）で自社のアプリから呼ぶ
-
-<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_start.png" alt="Agent Platformを試すまでの4つの手順。請求先アカウントを作る、プロジェクトを選ぶ、APIを有効にする、Agent Studioで試す" loading="lazy"></figure>
 
 スプレッドシートなどからGeminiを呼びたい場合は、Apps Scriptの高度なサービスが入口です。
 

@@ -57,8 +57,6 @@ AIによる概要とAIモードにリンクとして出る条件は、ページ�
 
 確かめられないのは構造化データとAIの回答での引用の関係です。最適化ガイドは生成AI機能がGoogle検索のコアのランキングと品質のシステムに根差していると書いています。通常の検索でページの理解に使われる以上、間接的な関わりまでは否定できません。ただし**Google自身は、それをAIのために構造化データを足す理由としては挙げていません。**構造化データでE-E-A-Tが上がるという説明も、Googleの文書には見当たりませんでした。
 
-<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_scope.png" alt="構造化データとAI検索について、Googleの公式の文で確かめられる範囲と確かめられない範囲を分けた図" loading="lazy"></figure>
-
 ### ChatGPT・Perplexity・Bingの公式の記述
 
 OpenAIのChatGPT searchのヘルプが載せる条件は、OAI-SearchBotにクロールを許可し、ホストやCDNがOpenAIの公開するIPからのアクセスを通すことです。クローラーの説明にも構造化データの話はありません。商品を出したい販売者向けには、ページのマークアップとは別に商品フィードの仕様があり、ファイルを送る形です。
@@ -97,8 +95,6 @@ Perplexityのクローラーのページも、PerplexityBotを許可するよう
 | 店舗・拠点の案内 | LocalBusiness | 所在地・営業時間・電話番号を伝える |
 | 商品の詳細 | Product | 価格・在庫・評価を検索結果に出す |
 | よくある質問 | FAQPage | Google検索での表示は終了。画面から自動で出せるなら残してよい |
-
-<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_pages.png" alt="会社サイトのページごとに入れる構造化データの型。会社概要にOrganization、記事にArticleとBreadcrumbList、拠点にLocalBusiness、商品にProduct" loading="lazy"></figure>
 
 BtoBのサービス会社なら、**Organization・Article・BreadcrumbListの3つで足ります。**組織のガイドはOrganizationに必須プロパティを設けず、ホームページか会社概要の1ページに置けばよく、全ページに入れる必要は無いと書いています。記事のガイドもArticleに必須プロパティを設けていません。パンくずリストの表示はパソコン版の機能とされています。
 
@@ -164,8 +160,6 @@ scriptタグはheadとbodyのどちらに置いても読まれます。Googleタ
 ## 入れたあとの確かめ方
 
 確かめる道具は3つあり、見えるものがそれぞれ違います。テストが通っても、リッチリザルトやAIの回答に出る約束にはなりません。
-
-<figure class="post-figure"><img src="/media/images/structured-data-ai-search/sdai_check.png" alt="構造化データを確かめる3つの道具。公開前のリッチリザルトテスト、文法を見るSchema Markup Validator、公開後のSearch Console" loading="lazy"></figure>
 
 ### リッチリザルトテスト
 

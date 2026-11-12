@@ -28,7 +28,7 @@ Agent Builderは、OpenAIの開発者向けの画面（OpenAI Platform）で、A
 
 ### AgentKitの中での位置
 
-AgentKitは3つの部品でできていました。
+AgentKitを構成していたのは3つの部品です。
 
 | 部品 | 役割 | 発表時の提供状況 |
 |---|---|---|
@@ -37,8 +37,6 @@ AgentKitは3つの部品でできていました。
 | Connector Registry | Google Drive・SharePoint・Teamsなどへの接続を管理者がまとめて管理する | 一部のAPI・ChatGPT Enterprise・Eduにベータ |
 
 ### 2026年11月30日に終わるもの
-
-<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_01_end.png" alt="2026年11月30日に終わるもの。Agent Builder、10月31日から読み取り専用になるEvals、中身をアプリのコードへ移す再利用プロンプトの3つ。ChatKitは残り、自社のサーバーにつなぎ直して使う" loading="lazy"></figure>
 
 OpenAIの廃止予定のページには、2026年6月3日に3つの機能の終了がまとめて載りました。
 
@@ -102,7 +100,7 @@ Platformの[Agent Builder](https://platform.openai.com/agent-builder)を開き�
 
 ## 移行先の選び方
 
-<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_02_move.png" alt="Agent Builderで作ったワークフローの移し先3つ。決まった手順を崩したくないなら自社のアプリでコードとして動かすAgents SDK、Business・Enterpriseで社内に配るならChatGPTの中で言葉で作り直すワークスペースエージェント、他社のモデルや既存の連携を使うならDify・n8n・Copilot Studio" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_02_move.png" alt="要件別のAgent Builderの移行先の図。決まった手順をコードで維持するならAgents SDK、ChatGPT内で社内に配布するならワークスペースエージェント、他社のモデルや既存の連携を活用するならDify・n8n・Copilot Studio" loading="lazy"></figure>
 
 公式の移行ガイドが示す道は2つです。
 

@@ -26,8 +26,6 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 
 機能は大きく3つに分かれます。エージェントは指示とツールを組み合わせて質問への回答や業務の処理を行います。モデルはOpenAI・Anthropic・Meta・Microsoftなどの11,000を超えるモデルから用途に合うものを選び、APIで呼び出します。ツールと知識はWeb検索・ファイル検索・コードの実行に加え、SharePointや業務システムの情報をエージェントが参照できるようにします。
 
-<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_01_overview.png" alt="Microsoft Foundryでできること。モデルを選ぶ、エージェントを作る、社内データとつなぐ、評価と監視、権限で管理の5つ" loading="lazy"></figure>
-
 完成品のAIを使うMicrosoft 365 Copilotと違い、Foundryは自社専用のAIを作る側の製品です。WordやTeamsの作業を楽にしたいだけなら、まずは[Microsoft 365 Copilotの使い方](/media/copilot-guide/)で足りるかを確認するのがおすすめです。
 
 ### 名前とポータルはどう変わった？
@@ -68,13 +66,13 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 
 **作るものが社員向けのチャットならCopilot Studio、業務システムを動かすエージェントか自社アプリならFoundryを選ぶのが基本です。** Copilot Studioもコネクタとフローで業務システムを操作できるため、分かれ目は既製のコネクタで足りるか、独自のコード・モデルの選択・評価まで自社で持ちたいかです。Azure OpenAIは別の製品というより、Foundryの中でOpenAIのモデルを使う部分にあたり、Azureの価格ページでも「Azure OpenAI in Foundry Models」と表示されています。
 
-<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_02_choose.png" alt="作るもので選ぶ入口。社員がTeamsで聞く社内チャットはCopilot Studio、業務システムを動かすエージェントはMicrosoft Foundry、自社アプリや顧客向けサービスはFoundryのモデルをAPIで使う。迷ったら両方で1〜2週間ずつ試作する" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_02_choose.png" alt="用途別の開発ツールの使い分けの図。Teams上の社内チャットボットはCopilot Studio、業務システムの操作はFoundry、自社アプリ・顧客向けサービスはFoundryのモデル（API）。判断に迷う場合は両方を1〜2週間ずつ試作" loading="lazy"></figure>
 
-| 作るもの | 選ぶ入口 | 決め手 |
-|---|---|---|
-| 社員がTeamsで聞く社内チャット | Copilot Studio | 画面で作り、Microsoft 365のデータとつなぎやすい |
-| 業務システムを動かすエージェント | Microsoft Foundry | モデルの選択・コード・評価まで自社で制御できる |
-| 自社アプリや顧客向けのAI機能 | Foundryのモデル（API） | Azure OpenAIを含むモデルをアプリから直接呼ぶ |
+それぞれの決め手は次のとおりです。
+
+- **Copilot Studio**: 画面で作り、Microsoft 365のデータとつなぎやすい
+- **Microsoft Foundry**: モデルの選択・コード・評価まで自社で制御できる
+- **Foundryのモデル（API）**: Azure OpenAIを含むモデルをアプリから直接呼ぶ
 
 Copilot StudioとFoundryの差が出るのは、作る人・払い方・自由度です。どちらで作ってもTeamsやMicrosoft 365 Copilotに公開でき、Entra IDで社内の人に限って使わせられる点は共通です。
 
@@ -177,8 +175,6 @@ desc: Foundryでの課金の型とモデル別の円単価、社内チャット�
 ## Microsoft Foundryの始め方は？
 
 **Azureのサブスクリプションを用意し、Foundryのリソースとプロジェクトを作って、プロンプト エージェントを1つ作るところから始めます。** Foundryのポータルを見て回るだけならAzureのアカウントは不要ですが、エージェントを作るにはサブスクリプションが必要です。
-
-<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_04_start.png" alt="Microsoft Foundryを始める順番。Azureのサブスクリプション、リソースとプロジェクト、モデルを展開、エージェントを作成してプレイグラウンドで回答を確認、Teamsへ公開して予算アラートを設定" loading="lazy"></figure>
 
 1. Azureのサブスクリプションを用意する（無料アカウントでも可）
 2. Azureポータルか[Foundryのポータル](https://ai.azure.com/)で、Foundryのリソースとプロジェクトを作る。プロジェクトは用途やチームごとに分けられる
