@@ -34,8 +34,6 @@ KiroはAWSが作って運用しているAI開発ツールです。**指示から
 | Mobile | スマホからセッションの確認と指示 | iOSの早期アクセスのみ |
 | Crew | 手元のPCで動き続ける個人向けのエージェント | 無料から |
 
-<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_01_overview.png" alt="Kiroの5つの入口。IDEはVS Codeベースのエディタ、CLIはターミナルでkiro-cliを使う、Webはブラウザで任せてPRまで、MobileはiOSの早期アクセスのみ、Crewは手元で動き続ける個人エージェント。.kiroの設定とクレジットは共通" loading="lazy"></figure>
-
 どの入口でも、プロジェクトの`.kiro`フォルダに置いた設定とプランのクレジットは共通です。**まずIDEかCLIのどちらか1つから始め、慣れたら任せたい作業だけWebに回す**、という順で十分です。以前「Kiro Autonomous Agent」と呼ばれていたIssueからPRまで自動で進める機能は、今はWeb版の自律モードとして提供されています。
 
 AWSの開発AIには以前からAmazon Q Developerがありました。**Q DeveloperのIDEプラグインと有償サブスクリプションは2027年4月30日にサポートを終え、Kiroが後継になります。**2026年5月15日から新規の申し込みは止まっており、Q Developer CLIもKiro CLIに置き換わりました。AWSコンソールの中やSlack・Teamsで使うQ Developerは終了の対象外です。
@@ -43,8 +41,6 @@ AWSの開発AIには以前からAmazon Q Developerがありました。**Q Devel
 ## Kiroの仕様駆動開発とは
 
 **仕様駆動開発はいきなりコードを書かせず、先に何を作るかを文書にしてから実装させる進め方です。**AIに思いつきで指示を重ねると、どんな前提で作ったのかが後から分からなくなります。Kiroは1つの指示から3つのファイルを順に作り、人が各段で確かめてから次に進みます。
-
-<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_02_spec.png" alt="仕様駆動開発の3つのファイル。requirements.mdは要件と受け入れ基準、design.mdは構成図とデータの設計、tasks.mdは順番つきの実装タスク。各段を人が確認してから次へ進む" loading="lazy"></figure>
 
 - **requirements.md**: ユーザーストーリーと受け入れ基準。EARS（要件を「〜のとき、システムは〜する」の形でそろえる書き方）で書かれる
 - **design.md**: 構成図、データの流れ、APIやデータベースの設計、エラー処理とテストの方針
@@ -138,8 +134,6 @@ Pro以上なら[app.kiro.dev](https://app.kiro.dev/)でGitHubかGitLabをつな�
 ## 会社で入れるときの条件は？
 
 **会社で使うなら、AWSのIAM Identity CenterかOkta・Microsoft Entra IDで組織としてサインインさせるのが前提です。**同じKiroでも、個人のサインインと組織のサインインでは、データの扱い・保存先・請求・管理の範囲が変わります。
-
-<figure class="post-figure"><img src="/media/images/kiro-guide/kiro1111_03_team.png" alt="サインイン方法で変わる条件。個人のサインイン（Google・GitHub・AWS Builder ID）は内容が改善に使われうる（停止できる）、保存先は米国東部、カードで1人ずつ支払う。組織のサインイン（IAM Identity Center・Okta・Entra ID）は内容を改善に使わない、保存先は米国東部か欧州、AWSの請求にまとまる、モデルとMCPを管理者が制限" loading="lazy"></figure>
 
 | 確かめること | 個人のサインイン | 組織のサインイン |
 |---|---|---|
