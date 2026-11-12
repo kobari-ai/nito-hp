@@ -28,7 +28,7 @@ Agent Builderは、OpenAIの開発者向けの画面（OpenAI Platform）で、A
 
 ### AgentKitの中での位置
 
-AgentKitは3つの部品でできていました。
+AgentKitを構成していたのは3つの部品です。
 
 | 部品 | 役割 | 発表時の提供状況 |
 |---|---|---|
