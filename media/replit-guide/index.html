@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Replitとは？Agentの料金・使い方と会社で使う前に決めること｜株式会社nito</title>
+    <meta name="description" content="Replitとは何かを公式情報で解説。Replit Agentでできること、Core月$20・Pro月$100の料金とクレジットの仕組み、始め方、社内公開の範囲やデータの置き場所・学習の扱いなど会社で使う前に決めることまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/replit-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Replitとは？Agentの料金・使い方と会社で使う前に決めること">
+    <meta property="og:description" content="Replitとは何かを公式情報で解説。Replit Agentでできること、Core月$20・Pro月$100の料金とクレジットの仕組み、始め方、社内公開の範囲やデータの置き場所・学習の扱いなど会社で使う前に決めることまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/replit-guide/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/replit-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/replit-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Replitとは？Agentの料金・使い方と会社で使う前に決めること", "description": "Replitとは何かを公式情報で解説。Replit Agentでできること、Core月$20・Pro月$100の料金とクレジットの仕組み、始め方、社内公開の範囲やデータの置き場所・学習の扱いなど会社で使う前に決めることまで。", "datePublished": "2026-11-13", "dateModified": "2026-11-13", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/replit-guide/"}, "articleSection": "AIエージェント", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/replit-guide.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Replitとは？Agentの料金・使い方と会社で使う前に決めること"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Replitは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。StarterではAgentを1日の上限の中で使え、アプリを1本公開することも可能です。ただし公開は30日で切れ、Plan Modeやコネクタは使えません。"}}, {"@type": "Question", "name": "Replit AgentはCoreでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。CoreはFree ModeとPower・Maxの全モード、Plan Mode、コネクタが使え、月$20分のクレジット付きです。"}}, {"@type": "Question", "name": "Replitは日本語で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Agentへの依頼は日本語で書けます。ドキュメントには日本語版があり、料金や公開の説明も日本語です。"}}, {"@type": "Question", "name": "Replitで作ったアプリは商用で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。公式はProを商用・本格的な開発向けと位置付けており、Pro・Enterpriseには商用の契約が適用されます。使うライブラリのライセンスは別に確認が必要です。"}}, {"@type": "Question", "name": "Replitは会社のデータを学習に使いますか？", "acceptedAnswer": {"@type": "Answer", "text": "Proは設定で止められ、Enterpriseは学習に使いません。Coreには止める設定がありません。"}}, {"@type": "Question", "name": "Replitのクレジットは繰り越せますか？", "acceptedAnswer": {"@type": "Answer", "text": "Proの月のクレジットは2か月繰り越せます。2026年2月の発表時は1か月で、今のドキュメントは2か月です。Coreの月のクレジットは繰り越されず、買い足したパックは6か月で失効します。"}}, {"@type": "Question", "name": "ReplitのTeamsプランはまだ契約できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できません。Teamsは終了し、契約していた会社は追加料金なしでProに移されました。今のチーム向けはProとEnterpriseです。"}}, {"@type": "Question", "name": "Replitの料金に消費税はかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "料金ページの金額は米ドルで、地域によって税が加わると書かれています。Proの契約は税を顧客の負担と定めています。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=9a4cc305">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Replitとは？A…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AIエージェント</span>
+            <span class="post-date">2026.11.13</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Replitとは？Agentの料金・使い方と会社で使う前に決めること</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/replit-guide.jpg" alt="【2026年11月】Replitとは？Agentの料金・使い方と会社で使う前に決めること" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>Replitは、作りたいアプリを日本語で伝えると、AIのReplit Agentがコードを書き、動作を確認し、そのまま公開まで進めるクラウドのサービスです。データベースやログイン、ホスティングも同じ画面の中にあり、社内ツールや試作を短期間で形にする用途で使われています。</p>
+<p>この記事では今のプランと料金の考え方、始め方、社内だけに公開する方法や学習の扱いなど、会社で使う前に決めておくことを公式のドキュメントをもとに整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>個人の試用はCore（月$20）、部署で使うならPro（月$100・15人まで）</strong>。どちらも月額にクレジットが含まれ、超えた分は従量で払う</li>
+<li>Agentの費用は作業の大きさで決まる。<strong>Free Modeは枠の中なら追加料金なし</strong>、Power・Maxはクレジットから引かれる</li>
+<li>会社で使う前に、<strong>公開範囲・データの置き場所・学習の扱い</strong>を決めておく。学習を止められるのはPro以上</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Replitとは？何ができる？</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>作れるもの</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>Replit Agentの動き</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Replit Agentのモードと仕組み</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>Replitの料金はいくら？</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>Agentの費用の考え方</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>公開とデータベースの費用</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>5人の部署で試すときの見積もり</a></li>
+                    <li class="toc-h3"><a href="#s3-4"><span class="toc__n">3-4</span>使いすぎを防ぐ設定</a></li>
+                    <li class="toc-h3"><a href="#s3-5"><span class="toc__n">3-5</span>Teamsプランを契約していた場合</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>会社で使う前に決めること</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>公開範囲と認証</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>データの置き場所</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>学習に使われるか</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>規約と返金</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Replitの始め方と使い方</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>上級編: 公開前にセキュリティを確認する</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>上級編: 作業を並べて任せる</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>上級編: ルールを全員に配る</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>Replitを使うメリットは？</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>公開と運用まで1か所で済む</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>開発者でない人が試作できる</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>失敗しても前の状態に戻せる</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>Replitのデメリットと注意点は？</a></li>
+                    <li class="toc-h3"><a href="#s7-1"><span class="toc__n">7-1</span>月の費用を読みにくい</a></li>
+                    <li class="toc-h3"><a href="#s7-2"><span class="toc__n">7-2</span>生成したコードの安全性は自社で確認する</a></li>
+                    <li class="toc-h3"><a href="#s7-3"><span class="toc__n">7-3</span>後から変えにくい設定がある</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>LovableやCursorとの使い分けは？</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Replitとは？何ができる？</h2>
+<p><strong>Replitは会話でアプリを作り、同じ場所で公開と運用まで済ませるAIのプラットフォームです。</strong>2016年に生まれたサービスで、以前はブラウザでコードを書いて動かせる開発環境として知られていました。今はAgentとの会話から操作を始める形になり、コードを書かない人でも使える形に変わっています。</p>
+<h3 id="s1-1">作れるもの</h3>
+<p>Agentに頼めるのはWebアプリ・スマホアプリ・データの可視化・スライド・デザイン案・アニメーションなどです。1つのプロジェクトの中にWebアプリとスライドを並べ、同じデータを使わせることもできます。</p>
+<p>社内で多い使い方は次のようなものです。</p>
+<ul>
+<li>申請や進捗を管理する社内ツール</li>
+<li>スプレッドシートや社内のデータから作るダッシュボード</li>
+<li>新しい事業のアイデアを検証する試作品</li>
+</ul>
+<p>Slack・GitHub・Notionなどにはコネクタでつながり、既存のデータを読み込んだうえで作成できます（BigQueryなどデータウェアハウスへの接続はEnterprise）。三井住友ファイナンス＆リースは試作の段階で勤怠管理やプロジェクト管理のツールを作ったと事例記事で紹介しており、Replitは同社を日本で最初の企業顧客と発表しています。</p>
+<h3 id="s1-2">Replit Agentの動き</h3>
+<p><strong>Agentは依頼を受けると、計画を立て、コードを書き、起動して自分で確認するところまで進めます。</strong>仕上がりはプレビューで確認でき、修正したい点を日本語で伝えると修正が続きます。</p>
+<p>大きな作業の前にはPlan Modeが便利です。Plan ModeではAgentがコードを変えずに要件を質問し、作業を並べた計画を出すため、内容を見てから作業を始めさせられます。Coreは1つ、Proは10個までの作業を裏で同時に進められ、チームの依頼をかんばん形式で並べて管理します。</p>
+<p>作業の区切りごとにチェックポイントが残り、ファイル・会話・設定を前の状態に戻せます。データベースを戻すかは選べますが、本番のデータベースはこの操作では戻らない点に注意が必要です。</p>
+<h2 id="s2">Replit Agentのモードと仕組み</h2>
+<p>Agentには3つのモードがあり、使用量と費用のバランスを依頼ごとに選びます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>モード</th>
+<th>向いている作業</th>
+<th>費用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="モード">Free</td>
+<td data-label="向いている作業">相談・計画・小さな作成や修正</td>
+<td data-label="費用">プランの枠の中なら追加なし</td>
+</tr>
+<tr>
+<td data-label="モード">Power</td>
+<td data-label="向いている作業">ふだんの開発の大半</td>
+<td data-label="費用">クレジットから引かれる（少なめ）</td>
+</tr>
+<tr>
+<td data-label="モード">Max</td>
+<td data-label="向いている作業">複雑な機能・大きなコード</td>
+<td data-label="費用">クレジットから引かれる（多め）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Free Modeを基本にして、足りないときだけPowerやMaxに上げる使い方を公式も勧めています。</strong>Free Modeはモデルを選べず、Core・Proの枠は5時間ごとに戻り、週の上限もあります。有料のモードに切り替わる前には確認が出るため、知らないうちに課金が始まることはありません。</p>
+<p>PowerとMaxではReplitにモデルを選ばせるAutoか、自分でモデルと考える深さ（Effort）を選ぶ使い方ができます。以前のEconomy Modeは終了し、同じ価格のPower Modeに置き換わりました。EnterpriseではFree Modeの代わりにモードとモデルを自動で選ぶAuto Modeが1つ用意されています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">Replitの料金はいくら？</h2>
+<p><strong>個人はCore月$20、チームはPro月$100からで、どちらも同額分のクレジットが含まれ、超えた分は従量です。</strong>料金はプランの月額と、その中に含まれるクレジット、超えた分の従量の3つで決まります。金額は米ドルで、地域によって税が加わると料金ページに書かれています。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>プラン</th>
+<th>月額</th>
+<th>共同作業の人数</th>
+<th>主な違い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="プラン">Starter</td>
+<td data-label="月額">無料</td>
+<td data-label="共同作業の人数">なし</td>
+<td data-label="主な違い">Agentは1日の上限つき。公開は1本で30日で切れる</td>
+</tr>
+<tr>
+<td data-label="プラン">Core</td>
+<td data-label="月額">$20（年払い$18）</td>
+<td data-label="共同作業の人数">5人</td>
+<td data-label="主な違い">Agentの全機能・公開は無制限・$20分のクレジット</td>
+</tr>
+<tr>
+<td data-label="プラン">Pro</td>
+<td data-label="月額">$100（年払い$90）から</td>
+<td data-label="共同作業の人数">15人</td>
+<td data-label="主な違い">$100分のクレジット・2か月の繰り越し・優先サポート</td>
+</tr>
+<tr>
+<td data-label="プラン">Enterprise</td>
+<td data-label="月額">個別</td>
+<td data-label="共同作業の人数">上限なし</td>
+<td data-label="主な違い">SSO・SCIM・監査ログ・管理者の統制</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_02_pro.png" alt="Replit Proの日本語ドキュメントの「Proの独自機能」の表。並列タスク実行は最大10、ビルダーは最大15名、クレジットロールオーバーは未使用クレジットの2か月の繰り越し、優先サポート、4倍のデータ保持" loading="lazy"><figcaption>Replit Proの説明（日本語ドキュメント、2026年11月13日）</figcaption></figure>
+
+<p>Proはクレジットの量を段階で選べ、料金ページの年払いの表示では月$90・$215・$425・$825・$2,000の段が並んでいました。上の段ほどクレジットに割引が付き、人ごとの料金はかかりません。<strong>Coreは個人の開発と簡単なアプリ向け、Proは商用の開発やチームでの利用向けと公式は位置付けています。</strong></p>
+<h3 id="s3-1">Agentの費用の考え方</h3>
+<p>Agentの有料の作業は依頼の大きさで値段が決まります。1回の依頼が終わるとチェックポイントが1つでき、そこに費用が付く仕組みです。バグの修正のような小さな依頼は安く、機能をまとめて作る依頼は高くなります。</p>
+<p>Agentが裏でClaudeやChatGPT、Geminiを使う機能では、提供元のAPIの公開価格がクレジットから引かれます。費用は作業ごとにAgentの画面と使用量の画面で確認できますが、反映は最大30分遅れることがある点に注意が必要です。</p>
+<h3 id="s3-2">公開とデータベースの費用</h3>
+<p>作ったアプリを公開すると、その運用費もクレジットから引かれます。社内ツールに多いAutoscaleは、使われたときだけ費用がかかる方式です。</p>
+<ul>
+<li>Autoscale: 基本料と、計算量100万単位あたり$0.60、リクエスト100万回あたり$0.40</li>
+<li>常に動かすReserved VM: 共有の0.5vCPUで月$15、専用の1vCPUで月$35</li>
+<li>本番のデータベース: 動いている1時間あたり$0.16と、保存1GiBあたり月$0.35</li>
+</ul>
+<p>Autoscaleの基本料は、料金の説明ページでは月$2、2026年8月の値下げの案内では月$1と書かれていて、ページによって異なります。開発用のデータベースは無料で、本番のデータベースは5分使われないと止まり、その間は計算の費用がかかりません。</p>
+<h3 id="s3-3">5人の部署で試すときの見積もり</h3>
+<p><strong>情報システムと事業部の5人で社内ツールを1本作り、社内だけに公開するなら、Proの月$100が出発点です。</strong>公式の例だと1日500人が5ページ見るサイトのAutoscaleの費用は月およそ$2.39です。社内ツールならこれより小さく収まり、Free Modeの枠で作業できる間はAgentの追加の費用もありません。本番のデータベースは使われている間だけ1時間$0.16かかり、平日の業務時間（月160時間）ずっと動いても月およそ$26です。公開の費用と合わせても、含まれる$100のクレジットに収まります。</p>
+<p>PowerやMaxを多く使うと、含まれる$100のクレジットを超えることがあります。超えた分の目安は作業の中身で変わるため、最初の1か月は上限をAgentの使いすぎを止める額にし、公開中のアプリが止まらない余裕を残したうえで、使用量の画面で実績を見てから段を決めるのが確実です。</p>
+<h3 id="s3-4">使いすぎを防ぐ設定</h3>
+<p>使用量の上限を決めておくと、達した時点で従量のサービスが止まり、次の請求期間まで追加の請求は出ません。組織の予算は$500単位で決められ、Enterpriseでは1人ごとに上限を変えられます。</p>
+<p>上限に達すると公開の費用も含めて従量のサービスが止まるため、社内で使い始めたアプリも次の請求期間まで止まる見込みです。</p>
+<p>クレジットが足りないときはパックで買い足せます。$300分を$290、$1,000分を$950のように大きいほど割引が付きますが、購入から6か月で失効します。</p>
+<h3 id="s3-5">Teamsプランを契約していた場合</h3>
+<p>Teamsプランは終了し、2026年3月3日からProへ追加料金なしで順に移されました。月払いだった会社は次の更新からProの月$100、年払いだった会社は残りの期間に毎月$100のクレジットを受け取る扱いです。</p>
+<h2 id="s4">会社で使う前に決めること</h2>
+<p><strong>試用を始める前に、プランと人数・使用量の上限・公開範囲・データの置き場所・学習の扱いを、情報システムと事業部で決めておきます。</strong>後から変えにくい項目があるためです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>決めること</th>
+<th>公式の条件</th>
+<th>決め方の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="決めること">プランと人数</td>
+<td data-label="公式の条件">Coreは5人、Proは15人、Enterpriseは上限なし。アプリを使うだけの閲覧者はProで50人まで</td>
+<td data-label="決め方の例">部署の試作はPro、全社はEnterprise</td>
+</tr>
+<tr>
+<td data-label="決めること">使用量の上限</td>
+<td data-label="公式の条件">上限に達すると従量のサービスが止まる</td>
+<td data-label="決め方の例">上限はAgentの使いすぎを止める額にし、公開中のアプリが止まらない余裕を残す</td>
+</tr>
+<tr>
+<td data-label="決めること">公開範囲</td>
+<td data-label="公式の条件">公開・パスワード・ワークスペース内・招待者のみ</td>
+<td data-label="決め方の例">社内ツールは招待者のみで公開</td>
+</tr>
+<tr>
+<td data-label="決めること">データの置き場所</td>
+<td data-label="公式の条件">開発中のデータはワークスペースを作るとき、公開アプリは初めて公開するときに地域が決まり、どちらも後から変えられない（ワークスペースの地域を選べるのはProだけ）</td>
+<td data-label="決め方の例">チームのワークスペースを作るときと初めて公開するときに、アジアを選ぶ</td>
+</tr>
+<tr>
+<td data-label="決めること">学習の扱い</td>
+<td data-label="公式の条件">Proは設定で停止、Enterpriseは使わない</td>
+<td data-label="決め方の例">契約したその日に、メンバー全員が各自の設定でオフにする</td>
+</tr>
+<tr>
+<td data-label="決めること">管理者の統制</td>
+<td data-label="公式の条件">非公開の強制・公開の例外の管理・監査ログはEnterprise</td>
+<td data-label="決め方の例">統制が必要ならEnterpriseを相談</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_01_flow.png" alt="Replitの社内展開の段階とプランの図。個人で試用はStarterとCoreでFree Modeを使い、部署で試作はProで15人まで非公開で公開、全社に展開はEnterpriseでSSOと監査ログと地域固定。次の段階の前に上限と公開範囲を決める" loading="lazy"></figure>
+
+<h3 id="s4-1">公開範囲と認証</h3>
+<p>公開するときは、アクセスできる人を4つから選びます。ワークスペース内と招待者のみの2つを選ぶと、権限のない人はReplitへのサインインを求められ、アプリのコードを書き換える必要はありません。</p>
+<p>ワークスペース内か招待者のみで公開したアプリを開くには、Replitのアカウントでワークスペースに入っている必要があります。アプリを使うだけの人は閲覧者として招待でき、Proには50人分が含まれ、50人を超える場合はEnterpriseの相談です。</p>
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_03_access.png" alt="Replitの日本語ドキュメントのアクセスオプション。公開済みアプリを開ける人をPublic、Password protected、Workspace only、Invite onlyの4つから選ぶ説明" loading="lazy"><figcaption>公開範囲の選択肢（日本語ドキュメント、2026年11月13日）</figcaption></figure>
+
+<p><strong>個人のワークスペースで作ったアプリは、既定で誰でも開ける公開になります。</strong>チームのワークスペースでは既定が非公開です。社内ツールは必ずチームのワークスペースで作り、公開前に範囲を確認するのが安全です。範囲を変えるには一度公開を取り下げてから選び直します。</p>
+<p>アクセスの制御はProとEnterpriseの機能と公開の説明ページに書かれている一方、範囲の選び方のページにはプランの条件が書かれていません。Coreで社内限定の公開を考えているなら、契約前に画面で選べるか確認しておく必要があります。</p>
+<h3 id="s4-2">データの置き場所</h3>
+<p>公開したアプリの計算とデータベースは、北米・EU・アジア・南米・オーストラリアから選んだ地域に置かれます。Core・Pro・Enterpriseが選べ、無料のプランは北米です。<strong>地域は公開した後に変えられません。</strong></p>
+<p>開発中のアプリと開発用のデータベースは、ワークスペースを作るときに決まる地域に置かれます。この地域を選べるのはProだけ（北米・EU・アジア）です。StarterとCoreでは近い地域が自動で選ばれ、作った後は変えられません。また、Agentが使うAIのモデルは、Anthropic・OpenAI・Googleなど米国の委託先の提供です（<a href="https://replit.com/subprocessors">委託先の一覧</a>）。</p>
+<p>公開の概要ページには公開アプリはすべて米国に置かれ、EUはEnterpriseが相談できると古い書き方も残っています。データの所在に社内の決まりがあるなら、実際の選択肢を契約前に画面か営業で確認する必要があります。公開したアプリは顧客ごとに専用のGoogle Cloudのプロジェクトで動き、ほかの顧客とは計算資源と保存先が分かれています。</p>
+<h3 id="s4-3">学習に使われるか</h3>
+<p><strong>Proはプロンプトや生成結果をモデルの改善に使わせない設定ができ、Enterpriseは最初から学習に使われません。</strong>Proでは各自の設定のPersonalizationからModel Improvementをオフにします。対象は自分のアカウントに関連する新しい内容です。オフにしてもプロジェクトの内容が消えることはありません。</p>
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_04_training.png" alt="Replitの日本語ドキュメントのモデルの改善のページ。Proユーザーはオプトアウトでき、Enterpriseのコンテンツはトレーニングに使わないと説明" loading="lazy"><figcaption>学習の扱い（日本語ドキュメント、2026年11月13日）</figcaption></figure>
+
+<p>Coreなどの個人向けの規約には、この設定の記載がありません。プライバシーポリシーはコード生成の精度の向上を利用目的に挙げているため、社外秘の情報を扱う業務はPro以上で設定を確認してから使うのが無難です。</p>
+<h3 id="s4-4">規約と返金</h3>
+<p>Pro・Enterpriseには個人向けの利用規約ではなく商用の契約が適用されます。個人向けの規約は購入から30日以内のサブスクの支払いを全額返金の対象にしていますが、Proの契約は支払いを返金しないと定めています。どちらも、使った分の従量の料金は返金されません。</p>
+<h2 id="s5">Replitの始め方と使い方</h2>
+<p>アカウントはWeb・デスクトップアプリ（macOS・Windows）・スマホアプリ（iOS・Android）のどれからでも作れ、メールアドレスかGoogle・GitHubのアカウントで登録します。最初のアプリは公式の入門が勧める流れで作ると無駄なクレジットを使いません。</p>
+<ol>
+<li>新しいチャットで作成するアプリの種類（Websiteなど）を選び、モードをFreeにする</li>
+<li>何ができればよいかと、今は作らないもの（ログインや決済など）を書いて依頼する</li>
+<li>プレビューで画面を操作し、依頼した条件を満たすか確認する</li>
+<li>修正したい点を1つずつ伝える</li>
+<li>右上のPublishから公開範囲を選んで公開する</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_05_firstapp.png" alt="Replitの日本語ドキュメントの最初のアプリを構築するページ。Free Modeで作り、プレビューで確認して改善する手順" loading="lazy"><figcaption>最初のアプリの作り方（日本語ドキュメント、2026年11月13日）</figcaption></figure>
+
+<p>作業中の変更は、Republishを押すまで公開中のアプリに反映されません。修正した内容をプレビューで確認してから出し直せるため、使っている人の画面が途中で崩れる心配はありません。</p>
+<h3 id="s5-1">上級編: 公開前にセキュリティを確認する</h3>
+<p>公開の画面でDeep security scanを実行すると、コード・依存パッケージ・個人情報の扱いの問題を洗い出せます。重大な問題がある公開を止める設定もあり、AIが書いたコードは認証やデータベースの扱いを人が確認する必要があるというのが公式の注意です。</p>
+<h3 id="s5-2">上級編: 作業を並べて任せる</h3>
+<p>Plan Modeで出た計画は、今の画面で作るか、裏の作業として回すかを選べます。Proなら10個まで同時に進むため、画面の修正とデータの集計のような独立した作業を並べると待ち時間を減らせるのが利点です。</p>
+<h3 id="s5-3">上級編: ルールを全員に配る</h3>
+<p>スキル（作業の手順をまとめた指示）は有料プランならワークスペースで共有でき、ワークスペース全体に常にかかる指示（カスタム指示）はProとEnterpriseで使えます。Enterpriseで作成と編集ができるのは管理者だけです。社内のデザインや命名の決まりを毎回伝えずに済み、人によって仕上がりがばらつくのを防げます。</p>
+<h2 id="s6">Replitを使うメリットは？</h2>
+<h3 id="s6-1">公開と運用まで1か所で済む</h3>
+<p>データベース・ログイン・ホスティング・監視が最初から入っていて、別のクラウドを契約せずに社内に公開できます。<strong>作ったものを使ってもらうまでの距離が短い点が、エディタ型のツールとの一番の違いです。</strong></p>
+<h3 id="s6-2">開発者でない人が試作できる</h3>
+<p>事業部の担当が画面の要件を言葉で伝え、その場で動く形にできます。要件を文書で説明して開発を待つ時間が減り、認識のずれをプロトタイプを見ながら詰められるのが利点です。</p>
+<h3 id="s6-3">失敗しても前の状態に戻せる</h3>
+<p>作業の区切りごとのチェックポイントから戻せるため、試しに大きな変更を頼んでも元に戻せます。Proは本番のデータベースも28日前までの任意の時点に戻せ、Coreなどの7日より長くさかのぼれます。</p>
+<h2 id="s7">Replitのデメリットと注意点は？</h2>
+<h3 id="s7-1">月の費用を読みにくい</h3>
+<p>Agentの有料の作業は依頼の大きさで値段が変わるため、事前に正確な金額は出ません。上限を置き、最初の月の実績から予算を決める進め方が必要です。</p>
+<h3 id="s7-2">生成したコードの安全性は自社で確認する</h3>
+<p>Agentは確率的に動くため、間違ったコードを書くことがあると料金ページにも書かれています。顧客のデータを扱うアプリは、公開前のスキャンと人の確認を決まりにしておくべきです。</p>
+<h3 id="s7-3">後から変えにくい設定がある</h3>
+<p>公開の地域は公開後に変えられず、公開範囲を変えるにも一度取り下げが必要です。最初の公開の前に、管理者が設定を確認する手順を入れておきます。</p>
+<h2 id="s8">LovableやCursorとの使い分けは？</h2>
+<p><strong>ReplitとLovableは開発者でない人が会話で作って公開まで進める型で、Cursor・Claude Code・Devinは開発者がコードを扱う型です。</strong>Replitは同じプロジェクトでWebアプリのほか、スマホアプリやスライドも作れます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>ツール</th>
+<th>主な形</th>
+<th>向いている用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="ツール">Replit</td>
+<td data-label="主な形">ブラウザ・アプリで会話して作り、公開まで</td>
+<td data-label="向いている用途">事業部の社内ツールや試作</td>
+</tr>
+<tr>
+<td data-label="ツール">Lovable</td>
+<td data-label="主な形">ブラウザで会話して作り、組み込みのバックエンド（データベース・認証）と公開まで</td>
+<td data-label="向いている用途">Webアプリの試作と公開</td>
+</tr>
+<tr>
+<td data-label="ツール">Cursor</td>
+<td data-label="主な形">AIを組み込んだコードエディタ</td>
+<td data-label="向いている用途">開発者が既存のコードを書き進める</td>
+</tr>
+<tr>
+<td data-label="ツール">Claude Code</td>
+<td data-label="主な形">ターミナルやIDEで動くエージェント</td>
+<td data-label="向いている用途">開発者がリポジトリ全体を扱う</td>
+</tr>
+<tr>
+<td data-label="ツール">Devin</td>
+<td data-label="主な形">クラウドでチケットからPRまで進める</td>
+<td data-label="向いている用途">切り出せる開発作業をまとめて任せる</td>
+</tr>
+</tbody>
+</table></div>
+<p>事業部が試作をReplitで作り、正式なシステムに組み込む段階で開発者がCursorやClaude Codeで引き継ぐ形なら、2つを無理なく併用できます。Replitはプロジェクトの変更をGitのコミットとして残し、GitHubと同期できる仕組みです。</p>
+<div class="in-link-card"><a href="/media/cursor-guide/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">【2026年11月】Cursorの料金と使い方・月$8〜$200の新プランとTeamsの選び方</div><div class="in-link-card__desc">Cursorの新しい料金体系と、Teamsと企業向けの管理機能の違いを解説しています。</div></div></a></div>
+<div class="in-link-card"><a href="/media/devin-ai/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">【2026年11月】Devinとは？料金・使い方と会社で入れる前に決めること</div><div class="in-link-card__desc">Devinの料金とACU、コードとデータの扱い、会社で入れる前に決めることを解説しています。</div></div></a></div>
+<p>Replitで作った試作を、社内の業務システムやデータにつなぐ所まで広げるには、権限と運用の設計が必要です。nitoも<a href="/ai-agent/">AIエージェントの構築と運用の支援</a>を行っています。</p>
+<h2 id="s9">まとめ</h2>
+<ul>
+<li><strong>1人で試す</strong>なら、Starterか、Free Modeの枠が広いCore（月$20）で小さなツールを1本作る</li>
+<li><strong>部署で試作する</strong>なら、Pro（月$100）のチームのワークスペースで作り、招待者のみで公開し、学習の設定を止める</li>
+<li><strong>全社で使う</strong>なら、SSO・監査ログ・公開の統制が付くEnterpriseを、最初の公開の前に相談する</li>
+</ul>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">Replitは無料で使えますか？</h3>
+<p>使えます。StarterではAgentを1日の上限の中で使え、アプリを1本公開することも可能です。ただし公開は30日で切れ、Plan Modeやコネクタは使えません。</p>
+<h3 id="s10-2">Replit AgentはCoreでも使えますか？</h3>
+<p>使えます。CoreはFree ModeとPower・Maxの全モード、Plan Mode、コネクタが使え、月$20分のクレジット付きです。</p>
+<h3 id="s10-3">Replitは日本語で使えますか？</h3>
+<p>Agentへの依頼は日本語で書けます。ドキュメントには日本語版があり、料金や公開の説明も日本語です。</p>
+<h3 id="s10-4">Replitで作ったアプリは商用で使えますか？</h3>
+<p>使えます。公式はProを商用・本格的な開発向けと位置付けており、Pro・Enterpriseには商用の契約が適用されます。使うライブラリのライセンスは別に確認が必要です。</p>
+<h3 id="s10-5">Replitは会社のデータを学習に使いますか？</h3>
+<p>Proは設定で止められ、Enterpriseは学習に使いません。Coreには止める設定がありません。</p>
+<h3 id="s10-6">Replitのクレジットは繰り越せますか？</h3>
+<p>Proの月のクレジットは2か月繰り越せます。2026年2月の発表時は1か月で、今のドキュメントは2か月です。Coreの月のクレジットは繰り越されず、買い足したパックは6か月で失効します。</p>
+<h3 id="s10-7">ReplitのTeamsプランはまだ契約できますか？</h3>
+<p>できません。Teamsは終了し、契約していた会社は追加料金なしでProに移されました。今のチーム向けはProとEnterpriseです。</p>
+<h3 id="s10-8">Replitの料金に消費税はかかりますか？</h3>
+<p>料金ページの金額は米ドルで、地域によって税が加わると書かれています。Proの契約は税を顧客の負担と定めています。</p>
+<h2 id="s11">出典</h2>
+<p>金額・仕様は2026年11月13日に各ページで確認したものです。</p>
+<ul>
+<li><a href="https://replit.com/pricing">料金プラン</a>（Replit）</li>
+<li><a href="https://blog.replit.com/pro-plan">Replit Pro Is Here — and Core Now Offers Even Better Value</a>（Replit ブログ、2026年2月）</li>
+<li><a href="https://docs.replit.com/ja/billing/plans/replit-pro">Replit Pro</a>（Replit ドキュメント 日本語）</li>
+<li><a href="https://docs.replit.com/billing/plans/replit-core">Replit Core</a>・<a href="https://docs.replit.com/billing/plans/starter-plan">Starter Plan</a>・<a href="https://docs.replit.com/billing/plans/replit-enterprise">Replit Enterprise</a>（Replit ドキュメント）</li>
+<li><a href="https://docs.replit.com/billing/ai-billing">Replit AI Billing</a>・<a href="https://docs.replit.com/billing/managing-spend">Managing Your Spend</a>（Replit ドキュメント）</li>
+<li><a href="https://docs.replit.com/billing/deployment-pricing">Publishing costs</a>・<a href="https://docs.replit.com/billing/aug-cloud-billing-updates">Cloud Aug 2026 Pricing Updates</a>・<a href="https://docs.replit.com/billing/about-usage-based-billing">Publishing and Database Billing</a>（Replit ドキュメント）</li>
+<li><a href="https://docs.replit.com/features/agent/agent-modes">Agent Modes</a>・<a href="https://docs.replit.com/features/agent/overview">Replit Agent</a>・<a href="https://docs.replit.com/learn/plan-vs-build-mode">Plan vs. Build Mode</a>（Replit ドキュメント）</li>
+<li><a href="https://docs.replit.com/features/version-control/checkpoints-and-rollbacks">Checkpoints and Rollbacks</a>（Replit ドキュメント）</li>
+<li><a href="https://docs.replit.com/ja/features/publishing/private-deployments">誰がアプリにアクセスできるか</a>・<a href="https://docs.replit.com/ja/features/publishing/project-geography">プロジェクトの地域</a>（Replit ドキュメント 日本語）</li>
+<li><a href="https://docs.replit.com/learn/projects-and-artifacts/replit-deployments">Publishing</a>・<a href="https://docs.replit.com/build/publish-your-app">Publish your app</a>（Replit ドキュメント）</li>
+<li><a href="https://docs.replit.com/teams/privacy-and-deployment-settings">Privacy and deployment settings</a>・<a href="https://docs.replit.com/category/teams">Replit Pro and Enterprise</a>（Replit ドキュメント）</li>
+<li><a href="https://docs.replit.com/ja/legal-and-security-info/model-improvement">モデルの改善</a>（Replit ドキュメント 日本語）</li>
+<li><a href="https://docs.replit.com/features/security/overview">Security</a>・<a href="https://docs.replit.com/features/security/geography">Geography</a>・<a href="https://replit.com/subprocessors">Subprocessors</a>（Replit）</li>
+<li><a href="https://docs.replit.com/teams/identity-and-access-management/viewer-seats">Viewer seats</a>・<a href="https://docs.replit.com/features/agent/agent-customization">Agent customization</a>・<a href="https://docs.replit.com/connectors/warehouses/overview">Warehouses</a>（Replit ドキュメント）</li>
+<li><a href="https://docs.lovable.dev/features/cloud">Lovable Cloud</a>（Lovable ドキュメント）</li>
+<li><a href="https://docs.replit.com/ja/build/your-first-app">最初のアプリを構築する</a>（Replit ドキュメント 日本語）</li>
+<li><a href="https://replit.com/site/terms">Terms of Service</a>・<a href="https://replit.com/pro-agreement">Pro Agreement</a>・<a href="https://replit.com/privacy-policy">Privacy Policy</a>（Replit）</li>
+<li><a href="https://www.smfg.co.jp/dx_link/article/0214.html">シリコンバレーの技術で切り拓く開発革命。Replit社導入の舞台裏</a>（三井住友フィナンシャルグループ DX-link、2025年11月27日）</li>
+<li><a href="https://kyodonewsprwire.jp/release/202611049444">Replit Opens First Asia Office in Tokyo Expanding Global Footprint</a>（Replit の発表、共同通信PRワイヤー、2026年11月4日）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Replitとは？何ができる？</a><a href="#s2">Replit Agentのモードと仕組み</a><a href="#s3">Replitの料金はいくら？</a><a href="#s4">会社で使う前に決めること</a><a href="#s5">Replitの始め方と使い方</a><a href="#s6">Replitを使うメリットは？</a><a href="#s7">Replitのデメリットと注意点は？</a><a href="#s8">LovableやCursorとの使い分けは？</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/devin-ai/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Devinとは"><defs><linearGradient id="ecg-52b71fb3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-52b71fb3)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Devinとは</text><line x1="410.0" y1="365.9" x2="790.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.12</div>
+                <div class="rel-card__ttl">【2026年11月】Devinとは？料金・使い方と会社で入れる前に決めること</div>
+            </a>
+            <a href="/media/kiro-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kiroとは"><defs><linearGradient id="ecg-d83d663e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-d83d663e)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Kiroとは</text><line x1="432.8" y1="365.9" x2="767.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.11</div>
+                <div class="rel-card__ttl">【2026年11月】Kiroとは？AWSのAI開発ツールの料金・使い方・企業で使う条件</div>
+            </a>
+            <a href="/media/google-antigravity/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Antigravityとは"><defs><linearGradient id="ecg-3332488b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-3332488b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Google Antigravityとは</text><line x1="113.6" y1="365.9" x2="1086.4" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.10</div>
+                <div class="rel-card__ttl">【2026年11月】Google Antigravityとは？料金・使い方・日本語化と企業向けの条件</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'replit-guide',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
