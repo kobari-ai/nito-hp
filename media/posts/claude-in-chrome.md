@@ -26,8 +26,6 @@ Google Chromeに追加して使う、Claudeの拡張機能です。ツールバ�
 
 ヘルプによると、Claudeは作業中のタブのスクリーンショットを撮ってページを把握し、次に何をするかを決めます。ストアの提供元はAnthropicです。名前の似た拡張機能はほかにもあるので、社員に案内するときはストアのURLごと渡すと取り違えが起きません。
 
-<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_01_overview.png" alt="Claude in Chromeの全体像を4段で並べた図。Chromeの拡張機能でページを読みクリックと入力をする、Pro・Max・Ultra・Team・Enterpriseの有料プランで使える、入口はサイドパネル・Cowork・Claude Codeの3つ、会社では管理者が有効にするかと許可するサイトを決める" loading="lazy"></figure>
-
 ### チャットやRPAとの違い
 
 ふつうのチャットではページの文章をコピーして貼り、返ってきた答えをもとに自分で操作します。Claude in Chromeは開いているタブを直接読み、操作まで進めるところが違います。RPAは決めた手順を正確に繰り返すのが得意な一方、画面の配置が変わると止まりやすい道具です。Claude in Chromeは画面を見てその場で次の手を選ぶため、手順が毎回少しずつ違う作業に向いています。**その代わり毎回同じ結果になる保証は無く、件数の多い定型の転記はRPAのほうが確実です。**
@@ -111,8 +109,6 @@ Claudeのデスクトップアプリから使うときは、左下のイニシ�
 
 Claudeにどこまで任せるかは、サイドパネルの入力欄のメニューで3つのモードから選びます。
 
-<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_02_modes.png" alt="Claude in Chromeの3つの権限モードの図。手動で承認は操作の前に毎回許可を求める、自動的に承認は安全確認を通った操作だけ進みCoworkのサイドパネルの既定、すべての承認をスキップは確認も自動のチェックも無い。どのモードでも購入や取引は行わない" loading="lazy"></figure>
-
 | モード | 動き方 | 向く場面 |
 |---|---|---|
 | 手動で承認 | 操作の前に許可を求める。サイトごとにすべてを許可・今回のみ・拒否を選ぶ | 初めてのサイト・送信や削除のある作業 |
@@ -145,8 +141,6 @@ Claudeは作業のためにタブのスクリーンショットを撮り、写�
 ## 会社で使わせるときに決めること
 
 管理者向けのヘルプには組織で使うときの設定がまとまっています。設定の場所はオーナーかプライマリーオーナーでサインインした「組織設定 > Chrome用Claude」です。決めることを5つに分けると次のようになります。
-
-<figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_03_admin.png" alt="会社でClaude in Chromeを使わせる前に決める5つの項目の図。組織で有効にするか（Teamは最初からオン）、許可するサイト（狭い許可リストから始める）、権限モードの決まり（送信や削除の前は人が確かめる）、扱わない業務とデータ（お金・契約・医療・個人情報）、配り方と試験の範囲（少人数で試してから広げる）" loading="lazy"></figure>
 
 <figure class="post-figure"><img src="/media/images/claude-in-chrome/cic_05_admin_help.png" alt="Claudeの管理者向けヘルプ。Teamプランでは拡張機能が既定で有効、Enterpriseプランも既に無効にしていなければオンと書かれている" loading="lazy"><figcaption>Chrome管理者コントロールのClaude（2026年11月8日）</figcaption></figure>
 

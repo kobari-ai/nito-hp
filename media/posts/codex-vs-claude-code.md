@@ -23,7 +23,7 @@ OpenAIのCodexはChatGPTのプランに、AnthropicのClaude CodeはClaudeのプ
 
 開発チームに入れる道具を選ぶ相談で多いのは「性能はどちらが上か」という問いです。ただ両社の最新モデルの発表を読むと、互いに自社が上回る結果を発表しており、性能だけでは決め手になりません。**会社の判断を分けるのはいま全社で契約しているAIのプランと、管理者が求める統制の深さです。**
 
-<figure class="post-figure"><img src="/media/images/codex-vs-claude-code/cvc_01_overview.png" alt="CodexとClaude Codeの選び方の図。ChatGPT Businessを契約済み・GitHubのPRレビューを任せたい・少額から試したい会社はCodex、Claude Teamを契約済み・利用状況の分析をTeamのプランで見たい会社はClaude Code、両方なら書く側とレビューする側で分けて指示ファイルと権限をそろえる" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/codex-vs-claude-code/cvc_01_overview.png" alt="Codex・Claude Codeの使い分けの図。ChatGPT Businessを契約済み、PRレビューの自動化、少額のプランで試用ならCodex。Claude Teamを契約済み、Teamプランでの利用状況の分析ならClaude Code。併用時は実装担当とレビュー担当に分ける" loading="lazy"></figure>
 
 ChatGPT Businessを全社で入れている会社なら、Codexは追加の契約なしで開発者に開けます。Claude Teamを入れている会社なら、Claude Codeも同じ1人分の契約に含まれます。どちらも契約していない会社は、次の3つで比べると判断が早くなります。
 
@@ -122,11 +122,9 @@ OpenAIはGPT-6.1 Solの発表で、業務の自動化を測るAutomationBenchで
 
 両方を使い分ける開発者もいますが、会社で併用すると、書く側・指示ファイル・権限・費用の上限と決めることが増えます。
 
-<figure class="post-figure"><img src="/media/images/codex-vs-claude-code/cvc_02_split.png" alt="併用するときの分担の例。①主に書く側を1つ決めて日々の実装を任せる、②もう一方は別のモデルの目で差分を確かめるレビューに使う、③AGENTS.mdに共通の約束を1か所だけ置く（Claude Codeもそのまま読む）、④承認の範囲と月の上限を両方でそろえる" loading="lazy"></figure>
-
 ### 書く側とレビューする側を分ける
 
-よく使われる分け方は、日々の実装を片方に任せ、もう片方に差分をレビューさせる形です。別のモデルの目で差分を見るためです。CodexはGitHubで@codexと書けばプルリクエストのレビューを頼めるので、レビュー役に置きやすいでしょう。**全員に両方の上位プランを配るのではなく、主に書く側の契約を厚くし、レビュー側は少ない量のプランで足りるかを試すのがおすすめです。**
+よく使われる分け方は日々の実装を片方に任せ、もう片方に差分をレビューさせる形です。別のモデルの目で差分を見るためです。CodexはGitHubで@codexと書けばプルリクエストのレビューを頼めるので、レビュー役に置きやすいでしょう。**全員に両方の上位プランを配るのではなく、主に書く側の契約を厚くし、レビュー側は少ない量のプランで足りるかを試すのがおすすめです。**
 
 ### 指示ファイルを1つにまとめる
 
