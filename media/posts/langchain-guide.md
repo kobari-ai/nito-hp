@@ -12,21 +12,21 @@ cta: ai_agent
 
 LangChainは、ChatGPTやClaudeなどの言語モデルを使うアプリやAIエージェントを、コードで組み立てるためのオープンソースのフレームワークです。本体は無料ですが、モデルのAPI代と、実行記録を残すLangSmithを使う場合はその料金が別にかかります。
 
-この記事ではできることとLangGraph・LangSmithとの違い、費用とデータの通り道、Difyなどとの使い分けを2026年11月13日時点の公式ドキュメントで解説します。コードの実行とLangSmithの契約は試していません。
+この記事ではできることとLangGraph・LangSmithとの違い、費用とデータの流れ、Difyなどとの使い分けを2026年11月13日時点の公式ドキュメントで解説します。コードの実行とLangSmithの契約は試していません。
 
 :::takeaways
-- **LangChainは作る部品、LangGraphは動かす土台、LangSmithは記録と運用の有料サービス**。最初はLangChainだけで始められる
+- **LangChainは作る部品、LangGraphは動かす土台、LangSmithは記録と運用のサービス（1人までは無料）**。最初はLangChainだけで始められる
 - **費用はモデルのAPI代とLangSmithの利用料**。LangSmithのPlusで開発者3人・月5万回の記録なら月317ドル
 - **LangSmithの保存先に日本は無く、アジア太平洋はシドニー**。社内規程によっては記録を送らない設定か自社に置くプランが必要
 :::
 
-## LangChainとは？何ができる？
+## LangChainとは？
 
 **LangChainは言語モデルに社内のデータや外部のシステムをつなぎ、質問に答えたり作業を進めたりするアプリを少ないコードで作るためのライブラリです。** 2022年10月にHarrison Chase氏が公開し、今は米国のLangChain社が開発しています。PythonとJavaScript/TypeScriptで使え、ライセンスはMITです。
 
 言語モデル単体は会話をまたいだ記憶を持たず、学習していない社内の文書を知らず、在庫の照会やメールの送信のような外部の操作もできません。LangChainはこの3つを補う部品を用意しており、開発者はモデルと社内のデータやシステムの間をつなぐ部分を一から書かずに済みます。
 
-公式サイトではオープンソースの部品としてLangChain・LangGraph・Deep Agentsの3つを並べ、その上で動きを記録・評価・本番運用する有料のLangSmithを提供しています。オープンソースのダウンロードは月3.5億回を超えると公式サイトに書かれています。2025年10月に出たバージョン1.0からはAIエージェントを作るための土台に絞り込まれ、2026年11月13日時点の最新は1.5.0です。
+公式サイトではオープンソースの部品としてLangChain・LangGraph・Deep Agentsの3つを並べ、その上で動きを記録・評価・本番運用する、無料枠のあるLangSmithを提供しています。オープンソースのダウンロードは月3.5億回を超えると公式サイトに書かれています。2025年10月に出たバージョン1.0からはAIエージェントを作るための土台に絞り込まれ、2026年11月13日時点の最新は1.5.0です。
 
 :::linkcard
 url: /media/ai-agent-guide/
@@ -52,7 +52,7 @@ desc: AIエージェントの定義と仕組み、ワークフローとの違い
 
 ### MCPサーバーのツールを使う
 
-MCPはAIと外部のツールをつなぐための共通の規格で、LangChainに「langchain[mcp]」を入れるとMCPサーバーが公開するツールをそのままエージェントに渡せます。**MCPはつなぎ方の規格、LangChainはつないだツールを使って処理の流れを組む部品**で、片方があればもう片方が不要になる関係ではありません。
+MCPはAIと外部のツールをつなぐための共通の規格で、LangChainに「langchain[mcp]」を入れると、ベータの機能としてMCPサーバーが公開するツールをそのままエージェントに渡せます。**MCPはつなぎ方の規格、LangChainはつないだツールを使って処理の流れを組む部品**で、片方があればもう片方が不要になる関係ではありません。
 
 :::linkcard
 url: /media/mcp-guide/
@@ -71,7 +71,7 @@ desc: MCPの仕組みと主なAIの対応、管理者が決めることを解説
 - **記憶**: 1つの会話の中の短期の記憶と、会話をまたぐ長期の記憶
 - **検索の部品**: 文書の読み込み・分割・埋め込み・ベクトルデータベースとの接続
 
-上位の解説記事でLangChainの中心として説明される「チェーン」（LLMChainなど）は、v1でlangchain-classicという別のパッケージに移りました。**新しく作るなら、公式が標準とするcreate_agentから始める**のが今の推奨です。
+以前の解説記事でLangChainの中心として説明される「チェーン」（LLMChainなど）は、v1でlangchain-classicという別のパッケージに移りました。**新しく作るなら、公式が標準とするcreate_agentから始める**のが今の推奨です。
 
 :::linkcard
 url: /media/rag-build/
@@ -81,14 +81,16 @@ desc: RAGの作り方の3通りと手順、つまずく所と費用を解説し�
 
 ## LangGraph・LangSmithとの違いは？
 
-**LangChainはエージェントを作る部品、LangGraphは長く動く処理を止めずに動かす土台、LangSmithは動きを記録して評価し本番で動かす有料のサービスです。** 公式は計画やファイル操作まで付いたDeep Agentsも並べています。
+**LangChainはエージェントを作る部品、LangGraphは長く動く処理を止めずに動かす土台、LangSmithは動きを記録して評価し本番で動かす、無料枠のあるサービスです。** 公式は計画やファイル操作まで付いたDeep Agentsも並べています。
 
-| 名前 | 役割 | 料金 | 必要になる場面 |
-|---|---|---|---|
-| LangChain | モデル・ツール・エージェントの部品 | 無料（MIT） | 最初の1本・チームの書き方の統一 |
-| LangGraph | 状態の保存・分岐・中断と再開 | 無料（MIT） | 人の承認や長時間の処理を挟む |
-| Deep Agents | 計画・サブエージェント付きの土台 | 無料 | 調査など手順の多い作業 |
-| LangSmith | 実行記録・評価・本番運用 | 無料枠と有料 | 本番前の品質確認と運用 |
+| 名前 | 役割 | 必要になる場面 |
+|---|---|---|
+| LangChain | モデル・ツール・エージェントの部品 | 最初の1本・チームの書き方の統一 |
+| LangGraph | 状態の保存・分岐・中断と再開 | 人の承認や長時間の処理を挟む |
+| Deep Agents | 計画・サブエージェント付きの土台 | 調査など手順の多い作業 |
+| LangSmith | 実行記録・評価・本番運用 | 本番前の品質確認と運用 |
+
+LangSmith以外の3つはMITライセンスで無料です。
 
 LangChain 1.0はLangGraphの上に作られているため、**LangGraphを学ばなくても、途中で止めて再開する機能や会話の保存はLangChainのエージェントで使えます。** 逆にLangGraphはLangChainなしでも動き、決まった手順とモデルに任せる手順を1つの流れの中で細かく組みたいときの選択肢です。
 
@@ -100,7 +102,7 @@ LangSmithはLangChain専用ではなく、OpenAIやAnthropicのSDK、CrewAIな�
 
 ### モデルを差し替えやすい
 
-公式のクイックスタートはOpenAI・Anthropic・Google・Amazon Bedrock・Azure・Ollamaのどれでも、モデル名の1行を変えるだけの同じコードで書かれています。**特定のAI企業に縛られず、値段や精度を比べて後から乗り換えられる**ため、モデルの値下げや新しいモデルの登場に合わせやすいのも利点です。
+公式のクイックスタートはOpenAI・Anthropic・Google・Amazon Bedrock・Azure・Ollamaのうち、ほとんどはモデル名の1行を変えるだけの同じコードで書かれています（Azureは配置名の指定が加わります）。**特定のAI企業に縛られず、値段や精度を比べて後から乗り換えられる**ため、モデルの値下げや新しいモデルの登場に合わせやすいのも利点です。
 
 ### 連携先と部品が多い
 
@@ -108,7 +110,7 @@ LangSmithはLangChain専用ではなく、OpenAIやAnthropicのSDK、CrewAIな�
 
 ### 細かい制御をコードで書ける
 
-ミドルウェアを使うと、モデルに送る前にメールアドレスや電話番号を伏せる、会話が長くなったら要約する、メールの送信だけは人が承認してから実行する、といった制御を数行で入れられます。**社内の規程に合わせた細かい決まりをコードで守らせられる**のは、画面で組み立てる製品との大きな違いです。
+ミドルウェアを使うと、モデルに送る前にメールアドレスやカード番号を伏せる、会話が長くなったら要約する、メールの送信だけは人が承認してから実行する、といった制御を数行で入れられます。**社内の規程に合わせた細かい決まりをコードで守らせられる**のは、画面で組み立てる製品との大きな違いです。
 
 ## LangChainのデメリットと注意点は？
 
@@ -122,7 +124,7 @@ LangSmithはLangChain専用ではなく、OpenAIやAnthropicのSDK、CrewAIな�
 
 ### 保守とサポートは自社で持つ
 
-LangChain本体はオープンソースのため、不具合が起きても開発元が対応を約束するサポートはありません。更新も頻繁で、依存するモデルの各社のAPIの変更にも追従する必要があります。サポートの約束（SLA）が必要なら、LangSmithのEnterpriseを契約するか、構築した会社に保守を依頼することになります。
+LangChain本体はオープンソースのため、不具合が起きても開発元が対応を約束するサポートはありません。更新も頻繁で、依存するモデルの各社のAPIの変更にも追従する必要があります。開発元のSLA付きのサポートは有料のLangSmith Enterpriseに付きます。オープンソースの部分の不具合まで対象になるかは契約で確認が必要で、構築した会社に保守を依頼する方法もあります。
 
 ### コードを書ける担当者が必要
 
@@ -140,21 +142,21 @@ LangChainはPythonかJavaScriptで書く前提のライブラリで、画面で�
 | Plus | 39ドル | 月10,000件 | 人数無制限・Agent Server小1台が無料 |
 | Enterprise | 個別見積もり | 個別 | 自社環境に設置・独自のSSO・SLA |
 
-<figure class="post-figure"><img src="/media/images/langchain-guide/langchain-pricing.png" alt="LangSmithの料金ページ。Developerは1人あたり月0ドルで月5,000件、Plusは1人あたり月39ドルで月10,000件の実行記録を含み、超えた分は使った分だけ支払う" loading="lazy"><figcaption>LangSmithの料金ページ（2026年11月13日）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/langchain-guide/langchain-pricing.png" alt="LangSmithの料金ページのPlusプラン。1人あたり月39ドルで、月10,000件の実行記録を含み、超えた分は使った分だけ支払う" loading="lazy"><figcaption>LangSmithの料金ページのPlusプラン（2026年11月13日）</figcaption></figure>
 
 **実行記録（トレース）はアプリが1回動いた分の記録で、含まれる件数を超えると1件0.005 LSU（1 LSUは1ドル）がかかります。** 通常の記録の保存期間は14日で、評価などで残すと180日の長期保存になり、1件につき0.0025 LSUが加わります。
 
 たとえば開発者3人で、月5万回動く社内エージェントをPlusで記録すると、3人分の39ドルで117ドル、含まれる1万件を超えた4万件で200ドルになり、**月317ドル（税別・モデルのAPI代は別）**です。社員に招待しただけの人も人数に数えられ、月の途中で増やした分は日割りで請求されます。
 
-まずは無料のDeveloperで1人が記録を取り、1回の実行あたりのモデル代と月の件数の見込みを出してから、Plusに上げるかを決めるのが無駄のない順番です。LangSmithには利用額の上限を作業場ごとに設定する機能もあります。
+まずは無料のDeveloperで1人が記録を取り、1回の実行あたりのモデル代と月の件数の見込みを出してから、Plusに上げるかを決めるのが無駄のない順番です。LangSmithには利用額の上限をワークスペースごと・組織全体で設定する機能もあります。
 
 ## データはどこを通りどこに保存される？
 
-**LangChainは自社のサーバーの中で動くライブラリのため、データが外に出るのは、設定したモデルのAPIと、使う場合のLangSmithの2か所だけです。**
+**LangChainは自社のサーバーの中で動くライブラリで、データが外に出るのは、設定したモデルのAPI、使う場合のLangSmith、それにコードでつないだ外部のサービス（クラウドのベクトルデータベース・MCPサーバー・外部のAPIなど）です。**
 
-<figure class="post-figure"><img src="/media/images/langchain-guide/lch_flow.png" alt="LangChainアプリのデータの流れ。社員や顧客の質問は自社のサーバーで動くLangChainのアプリに届き、外部へ送られる先はOpenAIやAnthropicなどのモデルのAPIと、利用する場合のLangSmithの実行記録の2つ" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/langchain-guide/lch_flow.png" alt="LangChainアプリのデータの流れ。社員や顧客の質問は自社のサーバーで動くLangChainのアプリに届き、外部へ送られる先はOpenAIやAnthropicなどのモデルのAPIと、利用する場合のLangSmithの実行記録、コードでつないだツールやデータベースの3つ" loading="lazy"></figure>
 
-LangSmithのクラウドは5つの地域から選べ、**日本の地域はありません。** データは登録したときに選んだ地域に置かれ、あとから別の地域へ移すことはできないと公式のよくある質問に書かれています。
+LangSmithのクラウドは5つの地域から選べ、**日本の地域はありません。** データは登録したときに選んだ地域に置かれ、今は別の地域への移行に対応していないと公式のよくある質問に書かれています。
 
 | 地域 | 置かれる場所 | ログインの情報 |
 |---|---|---|
@@ -164,19 +166,19 @@ LangSmithのクラウドは5つの地域から選べ、**日本の地域はあ�
 | AWS US | 米国オハイオ | 米国オハイオ |
 | Azure US | 米国アイオワ | 米国バージニア |
 
-どの地域でも支払いと請求の情報は米国に置かれます。料金ページのデータの場所の欄は「米国かEU」とだけ書かれており、ドキュメントの5つの地域の説明と表記が異なるため、契約の前に営業窓口で確認しておくと確実です。
+どの地域でも、支払いと請求の情報の置き場所は米国です。料金ページの表は「米国かEU」のままですが、地域のよくある質問には、無料を含むすべてのプランで各地域を選べ、料金も同じと書かれています。
 
 LangSmithは送られたデータをモデルの学習に使わないと料金ページのよくある質問で明言しています。GDPRへの準拠、SOC 2 Type 2の認証、HIPAAへの対応も公表しており、データ処理の契約（DPA）はサポート窓口で結べます。LangGraphのサーバーの説明では、LangSmithのAPIキーを設定するまで記録は送られない既定です。
 
-記録を国外に置けない会社には、LangSmithを使わずに別の記録の仕組みを使う、Enterpriseで自社のクラウドに設置する、ミドルウェアで個人情報を伏せてから送る、の3つの方法があります。
+記録を国外に置けない会社には、LangSmithを使わずに別の記録の仕組みを使う、Enterpriseで自社のクラウドに設置する、LangSmithの設定で入力と出力を記録から隠すか、個人情報を伏せてから記録する、の3つの方法があります。
 
-## LangChainの使い方は？最初の1本の作り方
+## LangChainの使い方は？最初の1本はどう作る？
 
 **Pythonとモデルの会社のAPIキーがあれば、公式のクイックスタートどおり十数行でツールを1つ持つエージェントを作れます。** 細かい書き方の参照先は公式の[LangChainのクイックスタート](https://docs.langchain.com/oss/python/langchain/quickstart)です。
 
 ### ① PythonとAPIキーを用意する
 
-Pythonを入れ、OpenAI・Anthropic・Googleなど使うモデルの会社でAPIキーを発行します。キーはコードに書かず、環境変数に入れて読ませるのが基本です。会社で使うなら、個人のアカウントでなく会社の契約でキーを発行しておくと、請求と管理が分かれずに済みます。
+Python 3.11以上を入れ、OpenAI・Anthropic・Googleなど使うモデルの会社でAPIキーを発行します。キーはコードに書かず、環境変数に入れて読ませるのが基本です。会社で使うなら、個人のアカウントでなく会社の契約でキーを発行しておくと、請求と管理が分かれずに済みます。
 
 ### ② LangChainを入れる
 
@@ -208,7 +210,7 @@ get_stockの中身を自社の在庫システムへの照会に置き換えれ�
 
 ### ④ LangSmithで動きを確認する
 
-環境変数のLANGSMITH_TRACINGをtrueにし、LangSmithで発行したAPIキーをLANGSMITH_API_KEYに入れると、モデルを何回呼び、どのツールをどの順で使ったかが画面で見られます。社員に試してもらう前に、意図しないツールを呼んでいないか、1回あたりのモデル代がいくらかをここで確認しておくと安心です。
+LangSmithで記録先のエージェントを1つ作り、LANGSMITH_TRACING=true、LANGSMITH_API_KEY、エージェントのIDをLANGSMITH_AGENT_ID、環境（localなど）をLANGSMITH_AGENT_ENVIRONMENTに入れると、モデルを何回呼び、どのツールをどの順で使ったかが画面で見られます。社員に試してもらう前に、意図しないツールを呼んでいないか、1回あたりのモデル代がいくらかをここで確認しておくと安心です。米国以外の地域（シドニーなど）で登録した場合は、地域のAPIのURLをLANGSMITH_ENDPOINTにも入れます。
 
 ## Dify・n8n・クラウドの基盤とどう使い分ける？
 
@@ -216,9 +218,9 @@ get_stockの中身を自社の在庫システムへの照会に置き換えれ�
 
 <figure class="post-figure"><img src="/media/images/langchain-guide/lch_choose.png" alt="用途別の開発手段の使い分け。社内文書の質問応答を画面で構築するならDify、システム間の定型処理の自動化ならn8n、自社システムへの組み込みならLangChain、分岐や承認を含む長時間の処理ならLangGraph、利用中のクラウドに統一するなら各社のエージェント基盤" loading="lazy"></figure>
 
-DifyとLangChainの差は、画面で組むかコードで書くかです。Difyは担当者が画面で規程に答えるボットを作って配るまでを短く済ませられ、LangChainは社外向けの製品や既存の業務システムの中に組み込むときに向きます。
+DifyとLangChainの差は、画面で組むかコードで書くかです。Difyは担当者が画面で規程に答えるボットを作って配るまでを短く済ませられ、LangChainは社外向けの製品や既存の業務システムの中に組み込むときに向きます。同じLangChain社のLangSmith Fleetは、テンプレートから始めてコードなしでエージェントを作れるノーコードの製品で、画面で作る用途ならこちらも候補です。システム間の定型処理の自動化に向くn8nは、[n8nの解説記事](/media/n8n-guide/)にまとめています。
 
-AWS・Microsoft・Googleのエージェントの基盤とは、二者択一ではありません。Amazon BedrockのモデルはLangChainから呼べ、Microsoft Foundryのホスト型エージェントはLangGraphで作ったものを載せられます。**モデルや本番の置き場所はクラウドに任せ、エージェントの中身をLangChainで書く**組み合わせも一般的です。
+AWS・Microsoft・Googleのエージェントの基盤とは、二者択一ではありません。Amazon BedrockのモデルはLangChainから呼べ、[Microsoft Foundry](/media/microsoft-foundry/)のホスト型エージェントはLangGraphで作ったものを載せられます。**モデルや本番の置き場所はクラウドに任せ、エージェントの中身をLangChainで書く**組み合わせも一般的です。
 
 :::linkcard
 url: /media/dify-guide/
@@ -228,11 +230,11 @@ desc: Difyでできること、アプリの種類の違い、クラウドとセ�
 
 ## 会社でLangChainを使う前に決めること
 
-**どれを使うか、費用の上限、データの置き場所、誰が保守するかの4つを、作り始める前に決めておくと後戻りが減ります。**
+**どれを使うか、費用の上限、データの保存先、誰が保守するかの4つを、作り始める前に決めておくと後戻りが減ります。**
 
 - **使う範囲**: LangChainだけで始めるか、承認や長時間の処理があってLangGraphまで使うか、本番の記録にLangSmithを契約するか
 - **費用の上限**: モデルのAPI代の月の上限と、LangSmithの利用額の上限。1回の実行あたりのモデル代を試作で計測してから決める
-- **データの置き場所**: LangSmithの地域（日本は無い）を社内規程で認めるか。認めない場合は記録を送らないか、Enterpriseで自社に置く
+- **データの保存先**: LangSmithの地域（日本は無い）を社内規程で認めるか。認めない場合は記録を送らないか、Enterpriseで自社に置く
 - **保守の担当**: 版の更新とモデル各社のAPIの変更に誰が追従するか。0.3で作ったアプリがあれば2026年12月までに移行する
 - **作るか選ぶか**: 画面で作れる範囲ならDifyやCopilot Studioなどの既製の基盤で足りないかを先に確認する
 
@@ -277,7 +279,7 @@ JavaScript/TypeScript版があり、公式のドキュメントもPython版と�
 
 ### 古い記事に出てくるLangServeとは何ですか？
 
-LangChainで作った処理をAPIとして公開する仕組みとして、以前の解説に出てきた名前です。2026年11月の公式サイトの製品一覧には無く、本番で動かす仕組みはLangSmithのAgent Serverとして案内されています。
+LangChainで作った処理をAPIとして公開する仕組みとして、以前の解説に出てきた名前です。2024年11月に公式に非推奨になり、GitHubのリポジトリも更新を止めています。後継はLangGraph Platformで、2025年10月にLangSmith Deployment、今はLangSmith Agent Serverという名前です。
 
 ## 出典
 
@@ -286,7 +288,8 @@ LangChainで作った処理をAPIとして公開する仕組みとして、以�
 - LangChain「[LangChain overview](https://docs.langchain.com/oss/python/langchain/overview)」「[What's new in LangChain v1](https://docs.langchain.com/oss/python/releases/langchain-v1)」「[Release policy](https://docs.langchain.com/oss/python/release-policy)」
 - LangChain「[LangGraph overview](https://docs.langchain.com/oss/python/langgraph/overview)」「[Runtimes, frameworks, and harnesses](https://docs.langchain.com/oss/python/concepts/products)」「[Model Context Protocol (MCP)](https://docs.langchain.com/oss/python/langchain/mcp)」
 - LangChain「[LangSmith Plans and Pricing](https://www.langchain.com/pricing)」「[Usage and billing](https://docs.langchain.com/langsmith/usage-and-billing)」「[Billing](https://docs.langchain.com/langsmith/billing)」
-- LangChain「[Cloud (SaaS)](https://docs.langchain.com/langsmith/cloud)」「[Regions FAQ](https://docs.langchain.com/langsmith/regions-faq)」「[Data storage and privacy](https://docs.langchain.com/langsmith/data-storage-and-privacy)」「[LangSmith Agent Server](https://docs.langchain.com/langsmith/deployment)」
+- LangChain「[Cloud (SaaS)](https://docs.langchain.com/langsmith/cloud)」「[Regions FAQ](https://docs.langchain.com/langsmith/regions-faq)」「[Data storage and privacy](https://docs.langchain.com/langsmith/data-storage-and-privacy)」「[LangSmith Agent Server](https://docs.langchain.com/langsmith/deployment)」「[LangGraph Platform GA](https://blog.langchain.com/langgraph-platform-ga)」「[Mask inputs and outputs](https://docs.langchain.com/langsmith/mask-inputs-outputs)」
+- LangChain「[LangChain quickstart](https://docs.langchain.com/oss/python/langchain/quickstart)」「[Observability quickstart](https://docs.langchain.com/langsmith/observability-quickstart)」「[Migrate to agent-based workspaces](https://docs.langchain.com/langsmith/migrate-to-agent-based-workspaces)」「[LangSmith Fleet](https://docs.langchain.com/langsmith/fleet)」
 - LangChain公式サイト「[LangChain: the open agent platform](https://www.langchain.com/)」
-- GitHub「[langchain-ai/langchain のライセンス](https://github.com/langchain-ai/langchain/blob/master/LICENSE)」、PyPI「[langchain](https://pypi.org/project/langchain/)」
+- GitHub「[langchain-ai/langserve](https://github.com/langchain-ai/langserve)」「[langchain-ai/langchain のライセンス](https://github.com/langchain-ai/langchain/blob/master/LICENSE)」、PyPI「[langchain](https://pypi.org/project/langchain/)」
 - AWS「[LangChain とは何ですか?](https://aws.amazon.com/jp/what-is/langchain/)」、IBM「[LangChainとは](https://www.ibm.com/jp-ja/think/topics/langchain)」
