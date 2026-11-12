@@ -69,7 +69,7 @@ PowerとMaxではReplitにモデルを選ばせるAutoか、自分でモデル�
 | Pro | $100（年払い$90）から | 15人 | $100分のクレジット・2か月の繰り越し・優先サポート |
 | Enterprise | 個別 | 上限なし | SSO・SCIM・監査ログ・管理者の統制 |
 
-<!-- SHOT: 画面 https://docs.replit.com/ja/billing/plans/replit-pro・探す語「最大15名のビルダー」・赤枠「最大15名のビルダー」の行・PC・alt「Replit Proの日本語ドキュメント。最大15名のビルダー、未使用クレジットの2か月の繰り越し、優先サポートが並ぶ」・figcaption「Replit Proの説明（日本語ドキュメント、2026年11月13日）」 -->
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_02_pro.png" alt="Replit Proの日本語ドキュメント。最大15名のビルダー、未使用クレジットの2か月の繰り越し、優先サポートが並ぶ" loading="lazy"><figcaption>Replit Proの説明（日本語ドキュメント、2026年11月13日）</figcaption></figure>
 
 Proはクレジットの量を段階で選べ、料金ページの年払いの表示では月$90・$215・$425・$825・$2,000の段が並んでいました。上の段ほどクレジットに割引が付き、人ごとの料金はかかりません。**Coreは個人の開発と簡単なアプリ向け、Proは商用の開発やチームでの利用向けと公式は位置付けています。**
 
@@ -118,13 +118,13 @@ Teamsプランは終了し、2026年3月3日からProへ追加料金なしで順
 | 学習の扱い | Proは設定で停止、Enterpriseは使わない | 契約したその日に停止する |
 | 管理者の統制 | 公開の強制・承認・監査ログはEnterprise | 統制が要るならEnterpriseを相談 |
 
-<!-- SHOT: 図 rpl_flow.html → rpl1113_01_flow.png・alt「Replitの社内展開の段階とプランの図。個人で試用はStarterとCoreでFree Modeを使い、部署で試作はProで15人まで非公開で公開、全社に展開はEnterpriseでSSOと監査ログと地域固定。次の段階の前に上限と公開範囲を決める」 -->
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_01_flow.png" alt="Replitの社内展開の段階とプランの図。個人で試用はStarterとCoreでFree Modeを使い、部署で試作はProで15人まで非公開で公開、全社に展開はEnterpriseでSSOと監査ログと地域固定。次の段階の前に上限と公開範囲を決める" loading="lazy"></figure>
 
 ### 公開範囲と認証
 
 公開するときは、アクセスできる人を4つから選びます。ワークスペース内と招待者のみの2つを選ぶと、権限のない人はReplitへのサインインを求められ、アプリのコードを書き換える必要はありません。
 
-<!-- SHOT: 画面 https://docs.replit.com/ja/features/publishing/private-deployments・探す語「Workspace only」・赤枠「Workspace only」と「Invite only」の2行・PC・alt「Replitの日本語ドキュメント。公開済みアプリを開ける人をPublic、Password protected、Workspace only、Invite onlyから選ぶ説明」・figcaption「公開範囲の選択肢（日本語ドキュメント、2026年11月13日）」 -->
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_03_access.png" alt="Replitの日本語ドキュメント。公開済みアプリを開ける人をPublic、Password protected、Workspace only、Invite onlyから選ぶ説明" loading="lazy"><figcaption>公開範囲の選択肢（日本語ドキュメント、2026年11月13日）</figcaption></figure>
 
 **個人のワークスペースで作ったアプリは、既定で誰でも開ける公開になります。**チームのワークスペースでは既定が非公開です。社内ツールは必ずチームのワークスペースで作り、公開前に範囲を確認するのが安全です。範囲を変えるには一度公開を取り下げてから選び直します。
 
@@ -140,7 +140,7 @@ Teamsプランは終了し、2026年3月3日からProへ追加料金なしで順
 
 **Proはプロンプトや生成結果をモデルの改善に使わせない設定ができ、Enterpriseは最初から学習に使われません。**Proでは設定のPersonalizationからModel Improvementをオフにします。止めても、それ以降の新しい内容が対象で、これまでの内容は消えません。
 
-<!-- SHOT: 画面 https://docs.replit.com/ja/legal-and-security-info/model-improvement・探す語「オプトアウト」・赤枠「Enterpriseユーザーについては、Replitはモデルのトレーニングに顧客のコンテンツを使用しません」の文・PC・alt「Replitの日本語ドキュメントのモデルの改善のページ。Proユーザーはオプトアウトでき、Enterpriseのコンテンツはトレーニングに使わないと説明」・figcaption「学習の扱い（日本語ドキュメント、2026年11月13日）」 -->
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_04_training.png" alt="Replitの日本語ドキュメントのモデルの改善のページ。Proユーザーはオプトアウトでき、Enterpriseのコンテンツはトレーニングに使わないと説明" loading="lazy"><figcaption>学習の扱い（日本語ドキュメント、2026年11月13日）</figcaption></figure>
 
 Coreなどの個人向けの規約には、この設定の記載がありません。プライバシーポリシーはコード生成の精度の向上を利用目的に挙げているため、社外秘の情報を扱う業務はPro以上で設定を確認してから使うのが無難です。
 
@@ -158,7 +158,7 @@ Pro・Enterpriseには個人向けの利用規約ではなく商用の契約が�
 4. 直したい点を1つずつ伝える
 5. 右上のPublishから公開範囲を選んで公開する
 
-<!-- SHOT: 画面 https://docs.replit.com/ja/build/your-first-app・探す語「Free Mode」・赤枠 最初の手順の見出しと「Free」を選ぶ説明・スマホ・alt「Replitの日本語ドキュメントの最初のアプリを構築するページ。Free Modeで作り、プレビューで確認して改善する手順」・figcaption「最初のアプリの作り方（日本語ドキュメント、2026年11月13日）」 -->
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_05_firstapp.png" alt="Replitの日本語ドキュメントの最初のアプリを構築するページ。Free Modeで作り、プレビューで確認して改善する手順" loading="lazy"><figcaption>最初のアプリの作り方（日本語ドキュメント、2026年11月13日）</figcaption></figure>
 
 作業中の変更は、Republishを押すまで公開中のアプリに反映されません。直した内容をプレビューで確かめてから出し直せるため、使っている人の画面が途中で崩れる心配はありません。
 
