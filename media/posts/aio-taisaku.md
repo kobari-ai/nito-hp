@@ -28,15 +28,13 @@ LLMO・GEO・AEOも指すものはほぼ同じで、呼び名の由来が違う�
 
 ただし「AIO」は、GoogleのAI Overviews（日本語の画面ではAIによる概要）の略として使われる場面もあります。提案書でAIOという言葉を見たら、どのAIを対象にした話なのかを最初に確かめてください。AIによる概要だけに絞った公式の条件は[AI Overview（AIによる概要）対策とは](/media/cited-by-ai-overviews/)にまとめています。
 
-<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_01_what.png" alt="AIOという言葉の2つの使われ方を縦に並べた図。多くはAI Optimizationの総称で、ChatGPT・GeminiなどのAIとGoogleのAIによる概要・AIモードが対象。AI Overviewsの略として使う場合は、GoogleのAIによる概要だけが対象" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_01_what.png" alt="「AIO」の2つの意味と対象範囲の図。主な用法はAI Optimizationの総称で、ChatGPT・Gemini・AIによる概要・AIモードが対象。一部の用法はAI Overviewsの略で、AIによる概要のみが対象" loading="lazy"></figure>
 
 ## AIO対策のやり方5つの手順
 
 AIO対策で挙がる施策はFAQ・一次情報・構造化データ・社外の言及と幅が広く、どれから手を付けるかで迷いやすいところです。**施策を選ぶ前に今の答えを測り、引用元を読んで直すページを決めると、手を付ける順が決まります。**
 
-<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_02_steps.png" alt="AIO対策を進める5つの手順を縦に並べた図。今の答えを測る、引用元から直すページを決める、ページを直して足す、社外の情報をそろえる、同じ問いで測り直す" loading="lazy"></figure>
-
-各手順では、公式に書いてあることと、支援会社などが言う主張や経験則を分けて並べます。始め方の考え方は[AI検索対策は何から始める？](/media/ai-search-first-steps/)にもあります。
+各手順では公式に書いてあることと、支援会社などが言う主張や経験則を分けて並べます。始め方の考え方は[AI検索対策は何から始める？](/media/ai-search-first-steps/)にもあります。
 
 ### ① 今の答えを測る
 
@@ -67,8 +65,6 @@ AIO対策で挙がる施策はFAQ・一次情報・構造化データ・社外�
 | 引用元が付かない | モデルの知識だけで答えている | すぐには動かしにくい。ほかの問いを先にする |
 
 Googleの最適化ガイドによると、AIによる概要やAIモードは、元の問いに関連する複数の検索（クエリ ファンアウト）を同時に行って結果を集めます。ガイドの例では「雑草だらけの芝生を直す方法」という問いに、「芝生に最適な除草剤」などの検索が加わっていました。**狙った問いそのものではなく周りの問いで拾われたページが引用元に付くこともあるので、引用元のページがどの問いに答えているかまで読みます。**
-
-<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_03_sources.png" alt="引用元の種類ごとに次の手を決める図。自社のページなら古い紹介を直す、競合のサイトなら同じ問いに答えるページを足す、比較サイトや口コミなら社外の情報を確かめる、引用元が無ければほかの問いを先にする" loading="lazy"></figure>
 
 「AIはFAQの形を好む」という説明もよく耳にします。Googleのガイドが勧めるのは形式ではなく、読者の問いに独自の中身で答えることです。自社の問いの引用元を数えた結果をもとに、直す場所を決めてください。
 
@@ -167,8 +163,6 @@ Googleのガイドが扱うのは、Google検索の生成AI機能だけです。
 ## 会社が決めること
 
 AIO対策は担当1人の作業に見えても、決める人は社内に何人も要るのが実情です。始める前に次の3つを決め、よくある失敗を避けると途中で止まりにくくなります。
-
-<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_04_decide.png" alt="AIO対策を始める前に会社が決める3つを縦に並べた図。測る問いと対象のAI、直す担当と権限、何か月目に何を見て判断するか" loading="lazy"></figure>
 
 ### 測る問いと対象のAI
 

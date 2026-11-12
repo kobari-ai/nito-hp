@@ -26,7 +26,7 @@ ChatGPTのエージェントモードは2025年7月17日に始まった機能で
 
 OpenAIの発表では別々の機能だったOperatorのウェブサイトを操作する力と、deep researchの情報をまとめる力、ChatGPTの会話の力を1つにしたものと説明されています。仮想コンピューターには画面を見てクリックや入力をするビジュアルブラウザー、ページの文字を速く読むテキストブラウザー、コマンドを動かすターミナル、APIへの直接のアクセスが入っていて、作業に合わせて使い分けていました。
 
-<figure class="post-figure"><img src="/media/images/chatgpt-agent-mode/cam_01_overview.png" alt="ChatGPTで頼む先の今を4段で並べた図。チャットは質問に答えるだけ、Deep Researchは多くのサイトを読んで出典つきの報告書にする、エージェントモードはヘルプで提供を終了したと案内、ChatGPT Workはクラウドブラウザでサイトを操作し長い作業を資料まで仕上げる" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/chatgpt-agent-mode/cam_01_overview.png" alt="用途別のChatGPTの機能の図。質問への回答はチャット、出典つきの調査報告はDeep Research、サイトの操作と成果物の作成はChatGPT Work。エージェントモードは公式ヘルプで提供終了と案内" loading="lazy"></figure>
 
 発表に載っていた例は「カレンダーを確認して、最近のニュースに基づき今後のクライアントとの会議について説明してほしい」「競合他社3社を分析してスライドショーを作成してほしい」のような依頼です。通常のチャットとの違いは次のとおりでした。
 
