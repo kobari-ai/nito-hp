@@ -30,7 +30,7 @@ Anthropicは2025年10月16日にAgent Skills（スキル）を発表し、12月1
 
 同じフォルダを規格に対応する他のAIツールで読めるのは、形式がAgent Skillsというオープンな規格に沿っているからです。Claude Codeはこの規格に、呼び出す人の制御・サブエージェントでの実行・コマンド結果の差し込みといった機能を足しています。
 
-<figure class="post-figure"><img src="/media/images/claude-code-skills/01_overview.png" alt="Claude Code Skillsの読み込みの3段階。起動時は名前と説明だけ、呼び出し時にSKILL.mdの本文、必要なときだけ参考資料とスクリプトの出力" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/claude-code-skills/01_overview.png" alt="スキルの段階的な読み込みの図。起動時は名前と説明（約100トークン）、会話が説明に合致したときにSKILL.mdの本文、作業で必要になったときに参考資料とスクリプトの実行結果" loading="lazy"></figure>
 
 Claude Codeには最初から入っているバンドルスキルもあり、`/code-review`・`/debug`・`/loop`・`/verify` などがあります。
 
@@ -105,9 +105,7 @@ Claude Codeでは、説明（`description` と `when_to_use` の合計）が1つ
 | プラグイン | プラグインの skills/ | プラグインを入れた人 | 複数のリポジトリで同じセット |
 | 管理設定 | 管理設定ディレクトリの .claude/skills/ | 組織がデプロイしたPCの全ユーザー | 全社で必ず使わせたいもの |
 
-<figure class="post-figure"><img src="/media/images/claude-code-skills/02_where.png" alt="スキルの置き場所と届く範囲。個人は自分のPC、プロジェクトはリポジトリの全員、プラグインは入れた人、管理設定は組織のPC全部" loading="lazy"></figure>
-
-同じ名前が重なったときは、管理設定が個人より、個人がプロジェクトより優先されます。プラグインのスキルは `/プラグイン名:スキル名` と名前空間が付くため、ぶつかりません。
+同じ名前が重なったときは管理設定が個人より、個人がプロジェクトより優先されます。プラグインのスキルは `/プラグイン名:スキル名` と名前空間が付くため、ぶつかりません。
 
 迷ったら、まずプロジェクトに置いてコミットします。公式は「2つ目のリポジトリで同じセットアップが必要になった」ときにプラグインにまとめるよう書いています。プラグインはスキル・フック・MCPサーバーなどを1つにまとめた単位で、社内のGitHubリポジトリに `.claude-plugin/marketplace.json` を置けば社内用のマーケットプレイスになります。
 
@@ -132,9 +130,7 @@ claude.ai側から配る道もあります。TeamとEnterpriseではオーナー
 | 認証情報 | APIキーやパスワードの直書き | 高 |
 | ファイルの範囲 | スキルのフォルダ外や ../ を指すパス | 中 |
 
-<figure class="post-figure"><img src="/media/images/claude-code-skills/03_check.png" alt="スキルを入れる前に確かめる順番。全ファイルを読む、スクリプトを隔離して動かす、外への通信を探す、allowed-toolsを確かめる" loading="lazy"></figure>
-
-Claude Code特有の注意が `allowed-tools` です。この欄は一度も信頼していないフォルダでもプロジェクトのスキルに適用される、というのが公式の記述です。**他人のリポジトリでClaude Codeを動かす前に、そこにコミットされているスキルの `allowed-tools` を先に読んでおくと安全です。** 
+Claude Code特有の注意点として `allowed-tools` があります。この欄は一度も信頼していないフォルダでもプロジェクトのスキルに適用される、というのが公式の記述です。**他人のリポジトリでClaude Codeを動かす前に、そこにコミットされているスキルの `allowed-tools` を先に読んでおくと安全です。** 
 
 `` !`コマンド` `` は、スキルを呼んだ時点で確認の画面を出さずに実行されます。自動モード以外では権限ルールで許可されていないコマンドは止まります。ただしスキルの `allowed-tools` で許可されていれば実行されるため、2つを合わせて読みます。全社で止めたいときは管理設定で `disableSkillShellExecution` をtrueにします（バンドルスキルと管理設定のスキルは対象外）。
 
