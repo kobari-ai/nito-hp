@@ -33,8 +33,6 @@ DevinはCognitionが作る自律型のAIソフトウェアエンジニアです�
 | Devin CLI | ターミナルで動くエージェント。長い作業はクラウドに引き継げる |
 | Devin Review | プルリクエストを読み、不具合の候補を指摘する |
 
-<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_01_overview.png" alt="Devinの4つの製品。Devin Cloudはクラウドで作業を任せてPRまで、Devin Desktopは旧Windsurfのエディタ、Devin CLIはターミナルで動くエージェント、Devin Reviewはプルリクエストを自動でレビュー。Cloud・Desktop・CLIは同じプランの利用枠を使う" loading="lazy"></figure>
-
 **Cognitionは2025年7月にエディタのWindsurfを買収し、2026年6月2日にWindsurfをDevin Desktopへ改名しました。**エディタ・拡張機能・設定はそのまま引き継がれ、料金も変わっていません。社用PCの管理ツールで「Windsurf」だけを許可していた会社は、アプリ名が「Devin」に変わったため許可リストの更新が必要です。
 
 コードのリポジトリを読み込んで説明書を自動で作るDeepWikiや、コードについて質問できるAsk Devinも、Devin Cloudの中の機能として使えます。
@@ -71,8 +69,6 @@ DevinはCognitionが作る自律型のAIソフトウェアエンジニアです�
 <figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_04_pricing.png" alt="Devinの日本語の料金ページ。Free $0、Pro $22、Max $220、Teams $88＋フル開発者シート1名あたり$44、Enterpriseはご相談ください。表示価格は10%の消費税込み" loading="lazy"><figcaption>Devinの日本語の料金ページ（2026年11月12日）。表示は消費税込み</figcaption></figure>
 
 有料プランには日ごと・週ごとに戻る利用枠が付き、Cloud・Desktop・CLIで共有します。超えた分は前払いのクレジットを使い、各モデルのAPIの定価で引かれます。クレジットは翌月に繰り越され、期限はありません。個人のChatGPT Plus・Proを契約していれば、GPTのモデルを使った分をChatGPT側の枠に回すこともできます。
-
-<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_02_plans.png" alt="Devinのプランの選び方。まず触るならFree、1人で毎日使うならPro 月$20で多く使うならMax 月$200、チームならTeams 月$80からで常用者は1人$40、100人超や閉域網ならEnterpriseでACUで契約。金額は税別のドル" loading="lazy"></figure>
 
 ### Teamsはいくらになる？
 
@@ -146,9 +142,7 @@ Cognitionは2026年4月に日本法人を立ち上げました。伊藤忠テク
 
 ## 会社で入れる前に決めること
 
-**試用を始める前に、プランと人数・利用量の上限・コードとデータの扱い・人が確認する所の4つを、開発と情報システムの担当で決めておきます。**
-
-<figure class="post-figure"><img src="/media/images/devin-ai/dvn1112_03_decide.png" alt="Devinを入れる前に決める4つ。プランと人数は毎日使う人だけフルシートに、利用量の上限は1人ごとの上限（3段階）を低めに、コードとデータの扱いは対象リポジトリと学習の停止、人が確認する所はPRレビューと本番ブランチの保護" loading="lazy"></figure>
+**試用を始める前に、プランと人数・利用量の上限・コードとデータの扱い・人が確認する所を、開発と情報システムの担当で決めておきます。**
 
 | 決めること | 公式の条件 | 決め方の例 |
 |---|---|---|
@@ -159,8 +153,6 @@ Cognitionは2026年4月に日本法人を立ち上げました。伊藤忠テク
 | 対象のリポジトリ | GitHubでは全部か選んだものだけを許可 | 試用は1〜2個のリポジトリに限る |
 | 認証情報 | 設定のSecretsに保存して渡す | 本番の鍵は渡さず検証用だけ |
 | 人の確認 | Devinも人と同じブランチ保護の下に入る | マージは必ず人。テストとCIの合格を条件に |
-
-図の4項目と表の対応は、プランと人数が表のプランと人数・サインインの行、利用量の上限が上限の行、コードとデータの扱いが学習・対象のリポジトリ・認証情報の行、人が確認する所が人の確認の行です。
 
 GitHubに入れるDevinのアプリは、コードの読み書き・PR・Issue・Actionsの実行などの権限を求めます。**求める権限に、組織に新しいリポジトリを作る権限（repository creation）も含まれます。試用の段階では「Select repositories」で対象を絞っておくほうが安全です。**
 
