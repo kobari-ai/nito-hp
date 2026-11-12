@@ -114,8 +114,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">AI Builderとは？何ができる？</h2>
 <p><strong>AI BuilderはMicrosoftが用意した学習済みのAIをそのまま使うか、自社の書類やデータで学習させたAIを作って、Power Platformの業務に組み込む機能です。</strong> 使うにはDataverseのあるPower Platformの環境が必要で、Microsoft 365のライセンスだけでは使えません。Power AppsかPower Automateにサインインし、左の「…その他」から「AI ハブ」を開くと、AIモデルとプロンプトの一覧が出ます。</p>
-<figure class="post-figure"><img src="/media/images/ai-builder/aib_01_overview.png" alt="AI Builderの3つの機能。学習済みの事前構築済みモデル、自社のデータで学習させるカスタムモデル、生成AIに指示を書くプロンプト" loading="lazy"></figure>
-
 <p>AI Builderの中身は大きく3つに分かれます。</p>
 <ul>
 <li><strong>事前構築済みモデル</strong>: Microsoftが学習させたもの。請求書・領収書・名刺・パスポートの読み取り、テキスト認識（OCR）、感情分析、言語検出など</li>
@@ -159,7 +157,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>試すなら、まず請求書か領収書の事前構築済みモデルに、自社に届く実物を数枚読ませてみるのがおすすめです。AIモデルのページでのテストはクレジットを使いません。</p>
 <h2 id="s2">Copilot Studioとどうつながる？</h2>
 <p><strong>同じ請求書の読み取りでも、Power Automateのフローで動かすか、Copilot Studioのエージェントから動かすかで、減るクレジットが変わります。</strong> AI Builderで作ったモデルとプロンプトは、Power Apps・Power Automate・Copilot Studioの3つから呼べます。</p>
-<figure class="post-figure"><img src="/media/images/ai-builder/aib_02_where.png" alt="AI Builderを呼ぶ場所と減るクレジット。Power AppsとPower AutomateはAI Builderクレジットが先で次にCopilotクレジット、Copilot Studioのエージェントとエージェントフローは最初からCopilotクレジット" loading="lazy"></figure>
+<figure class="post-figure"><img src="/media/images/ai-builder/aib_02_where.png" alt="利用場所別の消費クレジットの図。Power AppsとPower AutomateはAI Builderクレジットを先に使い、尽きた後はCopilotクレジット。Copilot Studioのエージェントとエージェントフローは最初からCopilotクレジット" loading="lazy"></figure>
 
 <p>Power Automateのクラウドフローでは、メールに付いた請求書を受け取ったら読み取り、結果をSharePointのリストやExcel、Dataverseに書き込む、という流れを組みます。Power Appsならスマホで撮った領収書をその場で読み取る画面を作り、Teamsに置いて社員に配れます。</p>
 <p>Copilot Studioでは、エージェントのトピックやツールの中でプロンプトを使ったり、エージェントフローの中で請求書処理などのモデルを動かしたりできます。<strong>エージェントとエージェントフローは、Copilotクレジットしか使えません。</strong> 今あるPower Automateのクラウドフローをエージェントフローに変えると、その中のプロンプトとモデルもCopilotクレジットだけで動くようになります。</p>
@@ -224,8 +222,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Power Automateのライセンスのページも、Premiumで使える機能にAI Builderを挙げています。見積もりはPremiumを入れた側で組み、窓口に確認するのが確実です（<a href="https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types">Power Automateのライセンスの種類</a>）。</p>
 <h2 id="s4">2026年11月に何が変わった？</h2>
 <p><strong>2026年11月1日から、新しく買ったり更新したりしたPower PlatformとDynamics 365のライセンスには、AI Builderクレジットが付かなくなりました。</strong> AI Builderの機能そのものは終わらず、Copilotクレジットで引き続き使えます。</p>
-<figure class="post-figure"><img src="/media/images/ai-builder/aib_03_timeline.png" alt="AI Builderクレジットの移り変わり。2025年11月1日にアドオンの新規販売が終了、2026年11月1日にアドオンの提供とライセンスに付くクレジットが終了、その後は契約が切れるまで残りを使える" loading="lazy"></figure>
-
 <p>Microsoftが段階的な終了を発表したのは2025年10月です。AI Builderクレジットの入手先は2つあり、終わり方が違います。</p>
 <ul>
 <li><strong>AI Builderの容量アドオン（1つ100万クレジット）</strong>: 2025年11月1日に新規の販売が終わり、持っている会社だけが2026年11月1日まで更新・追加できた。その日で提供が終わり、Microsoft 365管理センターかパートナーセンターで自動更新を切るよう案内されている。今あるアドオンは契約が切れるまで使える</li>
@@ -242,8 +238,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </ul>
 <h2 id="s5">AI Builderの使い方</h2>
 <p><strong>請求書の読み取りなら、事前構築済みモデルを選んでフローに入れるだけで、学習もサンプルの準備も不要です。</strong> メールに届いた請求書のPDFを読んでSharePointのリストに書き込む流れは、次の5つの手順で組めます。</p>
-<figure class="post-figure"><img src="/media/images/ai-builder/aib_04_steps.png" alt="請求書を読み取るフローの5つの手順。AIハブで請求書処理を選ぶ、テストする、フローで使う、トリガーを決める、読み取った項目を書き込む" loading="lazy"></figure>
-
 <h3 id="s5-1">① AIハブで請求書処理を選ぶ</h3>
 <p>Power Automateにサインインし、左の「…その他」から「AI ハブ」、「AI モデル」の順に開きます。一覧から請求書処理の事前構築済みモデルを選ぶところが出発点です。</p>
 <h3 id="s5-2">② 自社の請求書でテストする</h3>
@@ -273,8 +267,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>読み取りと生成AIの結果には揺れがあり、手書きや印影が重なった書類では読み違いも起きます。<strong>金額や支払先のように間違えると困る項目は、人が確認する手順をフローの中に残しておきます。</strong></p>
 <h2 id="s8">入れる前に決めること</h2>
 <p><strong>AI Builderを本番の業務に入れる前に、次の5つを社内で決めておくと、費用と停止の事故を避けられます。</strong></p>
-<figure class="post-figure"><img src="/media/images/ai-builder/aib_05_decide.png" alt="AI Builderを入れる前に決める5つ。対象の業務と月の件数、どこで動かすか、クレジットの払い方と割り当て先、作れる人の範囲、人が確認する所" loading="lazy"></figure>
-
 <ol>
 <li><strong>対象の業務と月の件数</strong>: 請求書なら月何枚・何ページか。費用はページ数で決まる</li>
 <li><strong>どこで動かすか</strong>: Power Automateのフローか、Copilot Studioのエージェントか。減るクレジットと必要なライセンスが変わる</li>
