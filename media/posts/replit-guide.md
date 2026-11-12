@@ -1,0 +1,301 @@
+---
+title: 【2026年11月】Replitとは？Agentの料金・使い方と会社で使う前に決めること
+date: 2026-11-13
+category: AIエージェント
+keyword: replit
+description: Replitとは何かを公式情報で解説。Replit Agentでできること、Core月$20・Pro月$100の料金とクレジットの仕組み、始め方、社内公開の範囲やデータの置き場所・学習の扱いなど会社で使う前に決めることまで。
+cover_tag: 導入担当向け
+cover_headline: Replitとは
+cover_sub: 料金・使い方・会社で使う前に決めること
+cta: ai_agent
+---
+
+Replitは、作りたいアプリを日本語で伝えると、AIのReplit Agentがコードを書き、動作を確認し、そのまま公開まで進めるクラウドのサービスです。データベースやログイン、ホスティングも同じ画面の中にあり、社内ツールや試作を短期間で形にする用途で使われています。
+
+この記事では今のプランと料金の考え方、始め方、社内だけに公開する方法や学習の扱いなど、会社で使う前に決めておくことを公式のドキュメントをもとに整理します。
+
+:::takeaways
+- **個人の試用はCore（月$20）、部署で使うならPro（月$100・15人まで）**。どちらも月額にクレジットが含まれ、超えた分は従量で払う
+- Agentの費用は作業の大きさで決まる。**Free Modeは枠の中なら追加料金なし**、Power・Maxはクレジットから引かれる
+- 会社で使う前に、**公開範囲・データの置き場所・学習の扱い**を決めておく。学習を止められるのはPro以上
+:::
+
+## Replitとは？何ができる？
+
+**Replitは会話でアプリを作り、同じ場所で公開と運用まで済ませるAIのプラットフォームです。**2016年に生まれたサービスで、以前はブラウザでコードを書いて動かせる開発環境として知られていました。今はAgentとの会話から操作を始める形になり、コードを書かない人でも使える形に変わっています。
+
+### 作れるもの
+
+Agentに頼めるのはWebアプリ・スマホアプリ・データの可視化・スライド・デザイン案・アニメーションなどです。1つのプロジェクトの中にWebアプリとスライドを並べ、同じデータを使わせることもできます。
+
+社内で多い使い方は次のようなものです。
+
+- 申請や進捗を管理する社内ツール
+- スプレッドシートや社内のデータから作るダッシュボード
+- 新しい事業のアイデアを検証する試作品
+
+Slack・GitHub・Notionなどにはコネクタでつながり、既存のデータを読み込んだうえで作成できます（BigQueryなどデータウェアハウスへの接続はEnterprise）。三井住友ファイナンス＆リースは試作の段階で勤怠管理やプロジェクト管理のツールを作ったと事例記事で紹介しており、Replitは同社を日本で最初の企業顧客と発表しています。
+
+### Replit Agentの動き
+
+**Agentは依頼を受けると、計画を立て、コードを書き、起動して自分で確認するところまで進めます。**仕上がりはプレビューで確認でき、修正したい点を日本語で伝えると修正が続きます。
+
+大きな作業の前にはPlan Modeが便利です。Plan ModeではAgentがコードを変えずに要件を質問し、作業を並べた計画を出すため、内容を見てから作業を始めさせられます。Coreは1つ、Proは10個までの作業を裏で同時に進められ、チームの依頼をかんばん形式で並べて管理します。
+
+作業の区切りごとにチェックポイントが残り、ファイル・会話・設定を前の状態に戻せます。データベースを戻すかは選べますが、本番のデータベースはこの操作では戻らない点に注意が必要です。
+
+## Replit Agentのモードと仕組み
+
+Agentには3つのモードがあり、使用量と費用のバランスを依頼ごとに選びます。
+
+| モード | 向いている作業 | 費用 |
+|---|---|---|
+| Free | 相談・計画・小さな作成や修正 | プランの枠の中なら追加なし |
+| Power | ふだんの開発の大半 | クレジットから引かれる（少なめ） |
+| Max | 複雑な機能・大きなコード | クレジットから引かれる（多め） |
+
+**Free Modeを基本にして、足りないときだけPowerやMaxに上げる使い方を公式も勧めています。**Free Modeはモデルを選べず、Core・Proの枠は5時間ごとに戻り、週の上限もあります。有料のモードに切り替わる前には確認が出るため、知らないうちに課金が始まることはありません。
+
+PowerとMaxではReplitにモデルを選ばせるAutoか、自分でモデルと考える深さ（Effort）を選ぶ使い方ができます。以前のEconomy Modeは終了し、同じ価格のPower Modeに置き換わりました。EnterpriseではFree Modeの代わりにモードとモデルを自動で選ぶAuto Modeが1つ用意されています。
+
+## Replitの料金はいくら？
+
+**個人はCore月$20、チームはPro月$100からで、どちらも同額分のクレジットが含まれ、超えた分は従量です。**料金はプランの月額と、その中に含まれるクレジット、超えた分の従量の3つで決まります。金額は米ドルで、地域によって税が加わると料金ページに書かれています。
+
+| プラン | 月額 | 共同作業の人数 | 主な違い |
+|---|---|---|---|
+| Starter | 無料 | なし | Agentは1日の上限つき。公開は1本で30日で切れる |
+| Core | $20（年払い$18） | 5人 | Agentの全機能・公開は無制限・$20分のクレジット |
+| Pro | $100（年払い$90）から | 15人 | $100分のクレジット・2か月の繰り越し・優先サポート |
+| Enterprise | 個別 | 上限なし | SSO・SCIM・監査ログ・管理者の統制 |
+
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_02_pro.png" alt="Replit Proの日本語ドキュメントの「Proの独自機能」の表。並列タスク実行は最大10、ビルダーは最大15名、クレジットロールオーバーは未使用クレジットの2か月の繰り越し、優先サポート、4倍のデータ保持" loading="lazy"><figcaption>Replit Proの説明（日本語ドキュメント、2026年11月13日）</figcaption></figure>
+
+Proはクレジットの量を段階で選べ、料金ページの年払いの表示では月$90・$215・$425・$825・$2,000の段が並んでいました。上の段ほどクレジットに割引が付き、人ごとの料金はかかりません。**Coreは個人の開発と簡単なアプリ向け、Proは商用の開発やチームでの利用向けと公式は位置付けています。**
+
+### Agentの費用の考え方
+
+Agentの有料の作業は依頼の大きさで値段が決まります。1回の依頼が終わるとチェックポイントが1つでき、そこに費用が付く仕組みです。バグの修正のような小さな依頼は安く、機能をまとめて作る依頼は高くなります。
+
+Agentが裏でClaudeやChatGPT、Geminiを使う機能では、提供元のAPIの公開価格がクレジットから引かれます。費用は作業ごとにAgentの画面と使用量の画面で確認できますが、反映は最大30分遅れることがある点に注意が必要です。
+
+### 公開とデータベースの費用
+
+作ったアプリを公開すると、その運用費もクレジットから引かれます。社内ツールに多いAutoscaleは、使われたときだけ費用がかかる方式です。
+
+- Autoscale: 基本料と、計算量100万単位あたり$0.60、リクエスト100万回あたり$0.40
+- 常に動かすReserved VM: 共有の0.5vCPUで月$15、専用の1vCPUで月$35
+- 本番のデータベース: 動いている1時間あたり$0.16と、保存1GiBあたり月$0.35
+
+Autoscaleの基本料は、料金の説明ページでは月$2、2026年8月の値下げの案内では月$1と書かれていて、ページによって異なります。開発用のデータベースは無料で、本番のデータベースは5分使われないと止まり、その間は計算の費用がかかりません。
+
+### 5人の部署で試すときの見積もり
+
+**情報システムと事業部の5人で社内ツールを1本作り、社内だけに公開するなら、Proの月$100が出発点です。**公式の例だと1日500人が5ページ見るサイトのAutoscaleの費用は月およそ$2.39です。社内ツールならこれより小さく収まり、Free Modeの枠で作業できる間はAgentの追加の費用もありません。本番のデータベースは使われている間だけ1時間$0.16かかり、平日の業務時間（月160時間）ずっと動いても月およそ$26です。公開の費用と合わせても、含まれる$100のクレジットに収まります。
+
+PowerやMaxを多く使うと、含まれる$100のクレジットを超えることがあります。超えた分の目安は作業の中身で変わるため、最初の1か月は上限をAgentの使いすぎを止める額にし、公開中のアプリが止まらない余裕を残したうえで、使用量の画面で実績を見てから段を決めるのが確実です。
+
+### 使いすぎを防ぐ設定
+
+使用量の上限を決めておくと、達した時点で従量のサービスが止まり、次の請求期間まで追加の請求は出ません。組織の予算は$500単位で決められ、Enterpriseでは1人ごとに上限を変えられます。
+
+上限に達すると公開の費用も含めて従量のサービスが止まるため、社内で使い始めたアプリも次の請求期間まで止まる見込みです。
+
+クレジットが足りないときはパックで買い足せます。$300分を$290、$1,000分を$950のように大きいほど割引が付きますが、購入から6か月で失効します。
+
+### Teamsプランを契約していた場合
+
+Teamsプランは終了し、2026年3月3日からProへ追加料金なしで順に移されました。月払いだった会社は次の更新からProの月$100、年払いだった会社は残りの期間に毎月$100のクレジットを受け取る扱いです。
+
+## 会社で使う前に決めること
+
+**試用を始める前に、プランと人数・使用量の上限・公開範囲・データの置き場所・学習の扱いを、情報システムと事業部で決めておきます。**後から変えにくい項目があるためです。
+
+| 決めること | 公式の条件 | 決め方の例 |
+|---|---|---|
+| プランと人数 | Coreは5人、Proは15人、Enterpriseは上限なし。アプリを使うだけの閲覧者はProで50人まで | 部署の試作はPro、全社はEnterprise |
+| 使用量の上限 | 上限に達すると従量のサービスが止まる | 上限はAgentの使いすぎを止める額にし、公開中のアプリが止まらない余裕を残す |
+| 公開範囲 | 公開・パスワード・ワークスペース内・招待者のみ | 社内ツールは招待者のみで公開 |
+| データの置き場所 | 開発中のデータはワークスペースを作るとき、公開アプリは初めて公開するときに地域が決まり、どちらも後から変えられない（ワークスペースの地域を選べるのはProだけ） | チームのワークスペースを作るときと初めて公開するときに、アジアを選ぶ |
+| 学習の扱い | Proは設定で停止、Enterpriseは使わない | 契約したその日に、メンバー全員が各自の設定でオフにする |
+| 管理者の統制 | 非公開の強制・公開の例外の管理・監査ログはEnterprise | 統制が必要ならEnterpriseを相談 |
+
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_01_flow.png" alt="Replitの社内展開の段階とプランの図。個人で試用はStarterとCoreでFree Modeを使い、部署で試作はProで15人まで非公開で公開、全社に展開はEnterpriseでSSOと監査ログと地域固定。次の段階の前に上限と公開範囲を決める" loading="lazy"></figure>
+
+### 公開範囲と認証
+
+公開するときは、アクセスできる人を4つから選びます。ワークスペース内と招待者のみの2つを選ぶと、権限のない人はReplitへのサインインを求められ、アプリのコードを書き換える必要はありません。
+
+ワークスペース内か招待者のみで公開したアプリを開くには、Replitのアカウントでワークスペースに入っている必要があります。アプリを使うだけの人は閲覧者として招待でき、Proには50人分が含まれ、50人を超える場合はEnterpriseの相談です。
+
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_03_access.png" alt="Replitの日本語ドキュメントのアクセスオプション。公開済みアプリを開ける人をPublic、Password protected、Workspace only、Invite onlyの4つから選ぶ説明" loading="lazy"><figcaption>公開範囲の選択肢（日本語ドキュメント、2026年11月13日）</figcaption></figure>
+
+**個人のワークスペースで作ったアプリは、既定で誰でも開ける公開になります。**チームのワークスペースでは既定が非公開です。社内ツールは必ずチームのワークスペースで作り、公開前に範囲を確認するのが安全です。範囲を変えるには一度公開を取り下げてから選び直します。
+
+アクセスの制御はProとEnterpriseの機能と公開の説明ページに書かれている一方、範囲の選び方のページにはプランの条件が書かれていません。Coreで社内限定の公開を考えているなら、契約前に画面で選べるか確認しておく必要があります。
+
+### データの置き場所
+
+公開したアプリの計算とデータベースは、北米・EU・アジア・南米・オーストラリアから選んだ地域に置かれます。Core・Pro・Enterpriseが選べ、無料のプランは北米です。**地域は公開した後に変えられません。**
+
+開発中のアプリと開発用のデータベースは、ワークスペースを作るときに決まる地域に置かれます。この地域を選べるのはProだけ（北米・EU・アジア）です。StarterとCoreでは近い地域が自動で選ばれ、作った後は変えられません。また、Agentが使うAIのモデルは、Anthropic・OpenAI・Googleなど米国の委託先の提供です（[委託先の一覧](https://replit.com/subprocessors)）。
+
+公開の概要ページには公開アプリはすべて米国に置かれ、EUはEnterpriseが相談できると古い書き方も残っています。データの所在に社内の決まりがあるなら、実際の選択肢を契約前に画面か営業で確認する必要があります。公開したアプリは顧客ごとに専用のGoogle Cloudのプロジェクトで動き、ほかの顧客とは計算資源と保存先が分かれています。
+
+### 学習に使われるか
+
+**Proはプロンプトや生成結果をモデルの改善に使わせない設定ができ、Enterpriseは最初から学習に使われません。**Proでは各自の設定のPersonalizationからModel Improvementをオフにします。対象は自分のアカウントに関連する新しい内容です。オフにしてもプロジェクトの内容が消えることはありません。
+
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_04_training.png" alt="Replitの日本語ドキュメントのモデルの改善のページ。Proユーザーはオプトアウトでき、Enterpriseのコンテンツはトレーニングに使わないと説明" loading="lazy"><figcaption>学習の扱い（日本語ドキュメント、2026年11月13日）</figcaption></figure>
+
+Coreなどの個人向けの規約には、この設定の記載がありません。プライバシーポリシーはコード生成の精度の向上を利用目的に挙げているため、社外秘の情報を扱う業務はPro以上で設定を確認してから使うのが無難です。
+
+### 規約と返金
+
+Pro・Enterpriseには個人向けの利用規約ではなく商用の契約が適用されます。個人向けの規約は購入から30日以内のサブスクの支払いを全額返金の対象にしていますが、Proの契約は支払いを返金しないと定めています。どちらも、使った分の従量の料金は返金されません。
+
+## Replitの始め方と使い方
+
+アカウントはWeb・デスクトップアプリ（macOS・Windows）・スマホアプリ（iOS・Android）のどれからでも作れ、メールアドレスかGoogle・GitHubのアカウントで登録します。最初のアプリは公式の入門が勧める流れで作ると無駄なクレジットを使いません。
+
+1. 新しいチャットで作成するアプリの種類（Websiteなど）を選び、モードをFreeにする
+2. 何ができればよいかと、今は作らないもの（ログインや決済など）を書いて依頼する
+3. プレビューで画面を操作し、依頼した条件を満たすか確認する
+4. 修正したい点を1つずつ伝える
+5. 右上のPublishから公開範囲を選んで公開する
+
+<figure class="post-figure"><img src="/media/images/replit-guide/rpl1113_05_firstapp.png" alt="Replitの日本語ドキュメントの最初のアプリを構築するページ。Free Modeで作り、プレビューで確認して改善する手順" loading="lazy"><figcaption>最初のアプリの作り方（日本語ドキュメント、2026年11月13日）</figcaption></figure>
+
+作業中の変更は、Republishを押すまで公開中のアプリに反映されません。修正した内容をプレビューで確認してから出し直せるため、使っている人の画面が途中で崩れる心配はありません。
+
+### 上級編: 公開前にセキュリティを確認する
+
+公開の画面でDeep security scanを実行すると、コード・依存パッケージ・個人情報の扱いの問題を洗い出せます。重大な問題がある公開を止める設定もあり、AIが書いたコードは認証やデータベースの扱いを人が確認する必要があるというのが公式の注意です。
+
+### 上級編: 作業を並べて任せる
+
+Plan Modeで出た計画は、今の画面で作るか、裏の作業として回すかを選べます。Proなら10個まで同時に進むため、画面の修正とデータの集計のような独立した作業を並べると待ち時間を減らせるのが利点です。
+
+### 上級編: ルールを全員に配る
+
+スキル（作業の手順をまとめた指示）は有料プランならワークスペースで共有でき、ワークスペース全体に常にかかる指示（カスタム指示）はProとEnterpriseで使えます。Enterpriseで作成と編集ができるのは管理者だけです。社内のデザインや命名の決まりを毎回伝えずに済み、人によって仕上がりがばらつくのを防げます。
+
+## Replitを使うメリットは？
+
+### 公開と運用まで1か所で済む
+
+データベース・ログイン・ホスティング・監視が最初から入っていて、別のクラウドを契約せずに社内に公開できます。**作ったものを使ってもらうまでの距離が短い点が、エディタ型のツールとの一番の違いです。**
+
+### 開発者でない人が試作できる
+
+事業部の担当が画面の要件を言葉で伝え、その場で動く形にできます。要件を文書で説明して開発を待つ時間が減り、認識のずれをプロトタイプを見ながら詰められるのが利点です。
+
+### 失敗しても前の状態に戻せる
+
+作業の区切りごとのチェックポイントから戻せるため、試しに大きな変更を頼んでも元に戻せます。Proは本番のデータベースも28日前までの任意の時点に戻せ、Coreなどの7日より長くさかのぼれます。
+
+## Replitのデメリットと注意点は？
+
+### 月の費用を読みにくい
+
+Agentの有料の作業は依頼の大きさで値段が変わるため、事前に正確な金額は出ません。上限を置き、最初の月の実績から予算を決める進め方が必要です。
+
+### 生成したコードの安全性は自社で確認する
+
+Agentは確率的に動くため、間違ったコードを書くことがあると料金ページにも書かれています。顧客のデータを扱うアプリは、公開前のスキャンと人の確認を決まりにしておくべきです。
+
+### 後から変えにくい設定がある
+
+公開の地域は公開後に変えられず、公開範囲を変えるにも一度取り下げが必要です。最初の公開の前に、管理者が設定を確認する手順を入れておきます。
+
+## LovableやCursorとの使い分けは？
+
+**ReplitとLovableは開発者でない人が会話で作って公開まで進める型で、Cursor・Claude Code・Devinは開発者がコードを扱う型です。**Replitは同じプロジェクトでWebアプリのほか、スマホアプリやスライドも作れます。
+
+| ツール | 主な形 | 向いている用途 |
+|---|---|---|
+| Replit | ブラウザ・アプリで会話して作り、公開まで | 事業部の社内ツールや試作 |
+| Lovable | ブラウザで会話して作り、組み込みのバックエンド（データベース・認証）と公開まで | Webアプリの試作と公開 |
+| Cursor | AIを組み込んだコードエディタ | 開発者が既存のコードを書き進める |
+| Claude Code | ターミナルやIDEで動くエージェント | 開発者がリポジトリ全体を扱う |
+| Devin | クラウドでチケットからPRまで進める | 切り出せる開発作業をまとめて任せる |
+
+事業部が試作をReplitで作り、正式なシステムに組み込む段階で開発者がCursorやClaude Codeで引き継ぐ形なら、2つを無理なく併用できます。Replitはプロジェクトの変更をGitのコミットとして残し、GitHubと同期できる仕組みです。
+
+:::linkcard
+url: /media/cursor-guide/
+title: 【2026年11月】Cursorの料金と使い方・月$8〜$200の新プランとTeamsの選び方
+desc: Cursorの新しい料金体系と、Teamsと企業向けの管理機能の違いを解説しています。
+:::
+
+:::linkcard
+url: /media/devin-ai/
+title: 【2026年11月】Devinとは？料金・使い方と会社で入れる前に決めること
+desc: Devinの料金とACU、コードとデータの扱い、会社で入れる前に決めることを解説しています。
+:::
+
+Replitで作った試作を、社内の業務システムやデータにつなぐ所まで広げるには、権限と運用の設計が必要です。nitoも[AIエージェントの構築と運用の支援](/ai-agent/)を行っています。
+
+## まとめ
+
+- **1人で試す**なら、Starterか、Free Modeの枠が広いCore（月$20）で小さなツールを1本作る
+- **部署で試作する**なら、Pro（月$100）のチームのワークスペースで作り、招待者のみで公開し、学習の設定を止める
+- **全社で使う**なら、SSO・監査ログ・公開の統制が付くEnterpriseを、最初の公開の前に相談する
+
+## よくある質問
+
+### Replitは無料で使えますか？
+
+使えます。StarterではAgentを1日の上限の中で使え、アプリを1本公開することも可能です。ただし公開は30日で切れ、Plan Modeやコネクタは使えません。
+
+### Replit AgentはCoreでも使えますか？
+
+使えます。CoreはFree ModeとPower・Maxの全モード、Plan Mode、コネクタが使え、月$20分のクレジット付きです。
+
+### Replitは日本語で使えますか？
+
+Agentへの依頼は日本語で書けます。ドキュメントには日本語版があり、料金や公開の説明も日本語です。
+
+### Replitで作ったアプリは商用で使えますか？
+
+使えます。公式はProを商用・本格的な開発向けと位置付けており、Pro・Enterpriseには商用の契約が適用されます。使うライブラリのライセンスは別に確認が必要です。
+
+### Replitは会社のデータを学習に使いますか？
+
+Proは設定で止められ、Enterpriseは学習に使いません。Coreには止める設定がありません。
+
+### Replitのクレジットは繰り越せますか？
+
+Proの月のクレジットは2か月繰り越せます。2026年2月の発表時は1か月で、今のドキュメントは2か月です。Coreの月のクレジットは繰り越されず、買い足したパックは6か月で失効します。
+
+### ReplitのTeamsプランはまだ契約できますか？
+
+できません。Teamsは終了し、契約していた会社は追加料金なしでProに移されました。今のチーム向けはProとEnterpriseです。
+
+### Replitの料金に消費税はかかりますか？
+
+料金ページの金額は米ドルで、地域によって税が加わると書かれています。Proの契約は税を顧客の負担と定めています。
+
+## 出典
+
+金額・仕様は2026年11月13日に各ページで確認したものです。
+
+- [料金プラン](https://replit.com/pricing)（Replit）
+- [Replit Pro Is Here — and Core Now Offers Even Better Value](https://blog.replit.com/pro-plan)（Replit ブログ、2026年2月）
+- [Replit Pro](https://docs.replit.com/ja/billing/plans/replit-pro)（Replit ドキュメント 日本語）
+- [Replit Core](https://docs.replit.com/billing/plans/replit-core)・[Starter Plan](https://docs.replit.com/billing/plans/starter-plan)・[Replit Enterprise](https://docs.replit.com/billing/plans/replit-enterprise)（Replit ドキュメント）
+- [Replit AI Billing](https://docs.replit.com/billing/ai-billing)・[Managing Your Spend](https://docs.replit.com/billing/managing-spend)（Replit ドキュメント）
+- [Publishing costs](https://docs.replit.com/billing/deployment-pricing)・[Cloud Aug 2026 Pricing Updates](https://docs.replit.com/billing/aug-cloud-billing-updates)・[Publishing and Database Billing](https://docs.replit.com/billing/about-usage-based-billing)（Replit ドキュメント）
+- [Agent Modes](https://docs.replit.com/features/agent/agent-modes)・[Replit Agent](https://docs.replit.com/features/agent/overview)・[Plan vs. Build Mode](https://docs.replit.com/learn/plan-vs-build-mode)（Replit ドキュメント）
+- [Checkpoints and Rollbacks](https://docs.replit.com/features/version-control/checkpoints-and-rollbacks)（Replit ドキュメント）
+- [誰がアプリにアクセスできるか](https://docs.replit.com/ja/features/publishing/private-deployments)・[プロジェクトの地域](https://docs.replit.com/ja/features/publishing/project-geography)（Replit ドキュメント 日本語）
+- [Publishing](https://docs.replit.com/learn/projects-and-artifacts/replit-deployments)・[Publish your app](https://docs.replit.com/build/publish-your-app)（Replit ドキュメント）
+- [Privacy and deployment settings](https://docs.replit.com/teams/privacy-and-deployment-settings)・[Replit Pro and Enterprise](https://docs.replit.com/category/teams)（Replit ドキュメント）
+- [モデルの改善](https://docs.replit.com/ja/legal-and-security-info/model-improvement)（Replit ドキュメント 日本語）
+- [Security](https://docs.replit.com/features/security/overview)・[Geography](https://docs.replit.com/features/security/geography)・[Subprocessors](https://replit.com/subprocessors)（Replit）
+- [Viewer seats](https://docs.replit.com/teams/identity-and-access-management/viewer-seats)・[Agent customization](https://docs.replit.com/features/agent/agent-customization)・[Warehouses](https://docs.replit.com/connectors/warehouses/overview)（Replit ドキュメント）
+- [Lovable Cloud](https://docs.lovable.dev/features/cloud)（Lovable ドキュメント）
+- [最初のアプリを構築する](https://docs.replit.com/ja/build/your-first-app)（Replit ドキュメント 日本語）
+- [Terms of Service](https://replit.com/site/terms)・[Pro Agreement](https://replit.com/pro-agreement)・[Privacy Policy](https://replit.com/privacy-policy)（Replit）
+- [シリコンバレーの技術で切り拓く開発革命。Replit社導入の舞台裏](https://www.smfg.co.jp/dx_link/article/0214.html)（三井住友フィナンシャルグループ DX-link、2025年11月27日）
+- [Replit Opens First Asia Office in Tokyo Expanding Global Footprint](https://kyodonewsprwire.jp/release/202611049444)（Replit の発表、共同通信PRワイヤー、2026年11月4日）
