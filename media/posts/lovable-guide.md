@@ -53,7 +53,7 @@ desc: AIエージェントの定義と仕組み、ワークフローとの違い
 
 **料金は毎月のクレジット量で決まり、Proは100クレジットで月$25、Businessは100クレジットで月$50からです。**料金はワークスペース単位で、メンバーを何人招待しても月額は変わりません。人数が増えて変わるのは共有のクレジットが減る速さだけです。
 
-<!-- SHOT: 画面 https://lovable.dev/ja/pricing・本文だけにある探す語「料金プラン」・赤枠にする語 Free Pro Business Enterpriseの4枚のプランカード・PC・alt「Lovableの日本語の料金ページ。Free・Pro・Business・Enterpriseの4つのプランが並ぶ」・figcaption「Lovableの料金ページ（2026年11月13日）」 -->
+<figure class="post-figure"><img src="/media/images/lovable-guide/lov1113_03_pricing.png" alt="Lovableの日本語の料金ページ。Free・Pro・Business・Enterpriseの4つのプランが並ぶ" loading="lazy"><figcaption>Lovableの料金ページ（2026年11月13日）</figcaption></figure>
 
 ### プランの違い
 
@@ -95,8 +95,6 @@ FreeからBusinessまでは、毎月Cloud用に20クレジット、アプリ内�
 
 **始め方はアカウントを作り、作りたいものを書いて送り、プレビューで確認して公開する4つの手順です。**公式のクイックスタートでは、最初のアプリを公開するまで約10分としています。
 
-<!-- SHOT: 画面 https://lovable.dev/ja・本文だけにある探す語 トップの入力欄・赤枠にする語 中央の入力欄・スマホ・alt「Lovableの日本語のトップ画面。中央の入力欄に作りたいアプリを書いて始める」・figcaption「Lovableのトップ画面（2026年11月13日）」 -->
-
 ### 始め方
 
 1. [Lovable](https://lovable.dev/ja)を開き、Google・GitHub・Apple・メールのいずれかでアカウントを作る
@@ -137,7 +135,7 @@ Buildで目標を決めて長く作業させるGoalもありますが、同じ�
 | 学習の扱い | Free・Proは各自の設定で除外、Business以上は既定で除外 | 顧客の情報を扱うならBusiness以上 |
 | コードの持ち出し | Git同期は全プラン、ZIPは有料。データは別にエクスポート | 最初にGitHubの会社の組織とつなぐ |
 
-<!-- SHOT: 図 lov_plan.html → lov1113_01_plan.png・alt「Lovableの用途別のプランの図。個人で試用はFree、独自ドメインやコード編集はPro、社内限定の公開やSSOはBusiness、監査ログやSCIMはEnterprise」 -->
+<figure class="post-figure"><img src="/media/images/lovable-guide/lov1113_01_plan.png" alt="Lovableの用途別のプランの図。個人で試用はFree、独自ドメインやコード編集はPro、社内限定の公開やSSOはBusiness、監査ログやSCIMはEnterprise" loading="lazy"></figure>
 
 ### 公開範囲と認証
 
@@ -165,7 +163,7 @@ BusinessとEnterpriseのワークスペースのデータは、既定で学習�
 
 **Lovableで作ったアプリ・コード・保存したデータは利用者のものと公式は明記しています。**GitHub・GitLab・BitbucketとのGit同期は全プランで使え、双方向に反映されます。同期は新しいリポジトリを作る形で、既存のリポジトリにはつなげません。
 
-<!-- SHOT: 図 lov_export.html → lov1113_02_export.png・alt「Lovableから持ち出す対象別の方法の図。ソースコードはGit同期で全プラン、コード一式のZIPは有料プラン、データベースと保存ファイルはそれぞれ別にエクスポートする」 -->
+<figure class="post-figure"><img src="/media/images/lovable-guide/lov1113_02_export.png" alt="Lovableから持ち出す対象別の方法の図。ソースコードはGit同期で全プラン、コード一式のZIPは有料プラン、データベースと保存ファイルはそれぞれ別にエクスポートする" loading="lazy"></figure>
 
 コードを持ち出しても、データベースの中身とアップロードされたファイルは含まれません。他のサービスに移すときはデータを別にエクスポートします。Lovableの編集画面とAI自体は自社のサーバーには置けませんが、作ったアプリは他のクラウドでも動かせます。
 
