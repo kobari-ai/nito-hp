@@ -45,7 +45,6 @@ AgentforceはSalesforceが提供するAIエージェントの基盤で、CRMの�
 
 **Atlas推論エンジンが依頼を小さな作業に分け、どのサブAIエージェントとアクションを使うかを決めてから実行します。**公式のFAQでは「最初のプロンプトを小さなタスクに分割し、各ステップで評価し、完全な答えまたはアクションが達成されるまでの進め方の計画を提案します」と説明されています。
 
-<figure class="post-figure"><img src="/media/images/agentforce-guide/agf_01_how.png" alt="Agentforceが依頼を処理する流れ。依頼を受ける、Atlasが担当のサブAIエージェントと使うアクションを選ぶ、レコード更新や検索などのアクションを実行する、回答するか範囲外は担当者に引き継ぐ" loading="lazy"></figure>
 
 ### サブAIエージェント・指示・アクション
 
@@ -190,7 +189,6 @@ Sales Cloudとあわせて営業のコーチングを使い、全営業担当が
 
 **契約・課金方式・データの扱い・最初の業務の4点を決めてから営業担当に見積もりを頼むと、必要なものだけを買えます。**
 
-<figure class="post-figure"><img src="/media/images/agentforce-guide/agf_03_decide.png" alt="Agentforce導入前に決める4点。今のエディションと追加が必要なライセンスの確認、顧客向けか社員向けかと件数で課金方式を選ぶ、参照するデータの置き場所とLLMに渡る範囲、件数を数えられる最初の1業務" loading="lazy"></figure>
 
 ### ① 契約の確認
 
