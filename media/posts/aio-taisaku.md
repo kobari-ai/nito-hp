@@ -24,15 +24,17 @@ cta: llmo
 
 AIOはAI Optimizationの略として使われることが多く、日本の支援会社や解説記事では、生成AIの回答に自社の情報が使われるようにする取り組みの総称として広まりました。ChatGPTやGemini、GoogleのAIによる概要・AIモードなど、利用者の多い主要なAIでの出方を整える取り組みを指します。**目指すのは見込み客がAIに相談したときに社名が候補に挙がり、紹介の中身が正しく、自社のページが引用元に付く状態です。**
 
+<figure class="post-figure post-figure--zu"><img src="/media/images/aio-taisaku/aiot_10_what.jpg" alt="AIO対策とはの図。AIO対策は生成AIの回答に自社の情報が使われるようにする取り組みで、主要なAIの例はChatGPT・Gemini・GoogleのAIによる概要・AIモード。AIOは主にAI Optimizationの略で、AI Overviews（AIによる概要）の略として使われる場面もある" loading="lazy"></figure>
+
 LLMO・GEO・AEOも指すものはほぼ同じで、呼び名の由来が違うだけです。成り立ちの違いは[GEO対策とは？LLMO・AIOとの違い](/media/geo-taisaku/)に書きました。Googleは[生成AI機能向けの最適化ガイド](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)で、AEO・GEOと呼ばれる作業もGoogle検索の観点では「SEO であることに変わりはありません」と書いています。
 
 ただし「AIO」は、GoogleのAI Overviews（日本語の画面ではAIによる概要）の略として使われる場面もあります。提案書でAIOという言葉を見たら、どのAIを対象にした話なのかを最初に確かめてください。AIによる概要だけに絞った公式の条件は[AI Overview（AIによる概要）対策とは](/media/cited-by-ai-overviews/)にまとめています。
 
-<figure class="post-figure"><img src="/media/images/aio-taisaku/aiot_01_what.png" alt="「AIO」の2つの意味と対象範囲の図。主な用法はAI Optimizationの総称で、ChatGPT・Gemini・AIによる概要・AIモードが対象。一部の用法はAI Overviewsの略で、AIによる概要のみが対象。提案書では対象のAIを確認" loading="lazy"></figure>
-
 ## AIO対策のやり方5つの手順
 
 AIO対策で挙がる施策はFAQ・一次情報・構造化データ・社外の言及と幅が広く、どれから手を付けるかで迷いやすいところです。**施策を選ぶ前に今の答えを測り、引用元を読んで直すページを決めると、手を付ける順が決まります。**
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/aio-taisaku/aiot_11_steps.jpg" alt="AIO対策の5つの手順の図。現状の回答を計測、引用元から修正するページを決定、ページの修正・追加、社外の情報の整備、同じ質問で再計測の順。計測ではChatGPT・Gemini・GoogleのAIモードに同じ質問を入力し、日を変えて2回以上聞く" loading="lazy"></figure>
 
 各手順では公式に書いてあることと、支援会社などが言う主張や経験則を分けて並べます。始め方の考え方は[AI検索対策は何から始める？](/media/ai-search-first-steps/)にもあります。
 
@@ -163,6 +165,8 @@ Googleのガイドが扱うのは、Google検索の生成AI機能だけです。
 ## 会社が決めること
 
 AIO対策は担当1人の作業に見えても、決める人は社内に何人も要るのが実情です。始める前に次の3つを決め、よくある失敗を避けると途中で止まりにくくなります。
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/aio-taisaku/aiot_12_decide.jpg" alt="AIO対策を始める前に会社が決める3つの図。計測する質問と対象のAI（途中で変えない）、修正の担当と権限（サイト・Search Console・Googleビジネスプロフィール）、判断の時期（例：3か月目に言及率の推移と、問い合わせでAIと答えた数で判断）" loading="lazy"></figure>
 
 ### 測る問いと対象のAI
 
