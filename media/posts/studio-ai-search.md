@@ -24,7 +24,7 @@ StudioのサイトはSEOに弱いわけではなく、2026年6月11日に公開�
 
 **検索エンジンが読むHTMLの面では、今のStudioはSEOに弱くありません。**弱いと言われてきた理由は主に4つあり、そのうち公開の仕組みに関わる1つが2026年6月に変わりました。
 
-<!-- SHOT: 図 stu_base.html → stu_01_base.png・alt「Studioの公開基盤の違い。旧基盤はSPAとCSRでブラウザが本文を組み立て、生のHTMLに本文が無い。新基盤はMPAとSSRでサーバーが本文入りのHTMLを返す。2026年6月11日以前に作成したサイトは切り替えるまで旧基盤のまま」 -->
+<figure class="post-figure"><img src="/media/images/studio-ai-search/stu_01_base.png" alt="Studioの公開基盤の違い。旧基盤はSPAとCSRでブラウザが本文を組み立て、生のHTMLに本文が無い。新基盤はMPAとSSRでサーバーが本文入りのHTMLを返す。2026年6月11日以前に作成したサイトは切り替えるまで旧基盤のまま" loading="lazy"></figure>
 
 ### 弱いと言われてきた理由
 
@@ -77,7 +77,7 @@ AI検索で社名やサービスを紹介してほしい会社は、旧基盤の
 
 **確認の方法は3つあり、2つ目と3つ目は編集の権限が無くてもブラウザだけで確認できます。**どれも公開中のURLで行い、エディタのライブプレビューでは確認できません。
 
-<!-- SHOT: 図 stu_check.html → stu_02_check.png・alt「新基盤か旧基盤かの確認方法。設定画面の一般で公開サイト基盤を見る、ページのソースを表示して本文の一文が無ければ旧基盤、検証ツールでStudio.Design.HRCが見つかれば新基盤」 -->
+<figure class="post-figure"><img src="/media/images/studio-ai-search/stu_02_check.png" alt="新基盤か旧基盤かの確認方法。設定画面の一般で公開サイト基盤を見る、ページのソースを表示して本文の一文が無ければ旧基盤、検証ツールでStudio.Design.HRCが見つかれば新基盤" loading="lazy"></figure>
 
 ### 設定画面で確認する
 
@@ -107,7 +107,7 @@ JavaScriptを止めて再読み込みする方法でも同じことが分かり�
 4. サイトを更新する（更新するまで公開サイトには反映されず、反映まで5分ほどかかる）
 5. 公開サイトのURLで「Studio.Design.HRC」を確認し、もう一度サイトを更新して初回のキャッシュを作る
 
-<!-- SHOT: 画面 https://help.studio.design/ja/articles/13526256・本文だけにある探す語「公開サイト基盤の変更」・赤枠にする語「公開サイト基盤」の設定ボタンの画像・PC・alt「Studioのヘルプの切り替え手順。ダッシュボードの設定の一般にある公開サイト基盤の設定ボタンから、公開サイト基盤の変更のダイアログを開く」・figcaption「Studioヘルプの公開サイト基盤の切り替え手順（2026年11月13日）」 -->
+<figure class="post-figure"><img src="/media/images/studio-ai-search/stu_04_help.png" alt="Studioのヘルプの切り替え手順。ダッシュボードの設定の一般にある公開サイト基盤の設定ボタンから、公開サイト基盤の変更のダイアログを開く" loading="lazy"><figcaption>Studioヘルプの公開サイト基盤の切り替え手順（2026年11月13日）</figcaption></figure>
 
 「DNSレコードが古いIPアドレスに向いています」と表示されて保存できない場合は、この手順では切り替えられません。独自ドメインを新しいIPアドレスへつなぎ直す別の手順が必要です。
 
@@ -143,7 +143,7 @@ Googleアナリティクスの拡張計測は、旧基盤では「ブラウザ�
 
 **AI検索に関係する項目は本文がHTMLにあること・題と説明文・見出し・構造化データ・サイトマップとrobots.txtの5つです。**本文がHTMLに無い状態では、ほかの設定を整えてもAIに届くのは題と説明文までなので、基盤の確認を最初に置きます。残りの項目は節の最後の表にまとめました。
 
-<!-- SHOT: 図 stu_order.html → stu_03_order.png・alt「AI検索に向けた設定の優先順位。1 新基盤に切り替えて本文をHTMLに含める、2 題・説明文・見出しをページごとに設定する、3 robots.txtとサイトマップでクローラーを止めていないか見る、4 llms.txtは最後でGoogleは使わないと明記」 -->
+<figure class="post-figure"><img src="/media/images/studio-ai-search/stu_03_order.png" alt="AI検索に向けた設定の優先順位。1 新基盤に切り替えて本文をHTMLに含める、2 題・説明文・見出しをページごとに設定する、3 robots.txtとサイトマップでクローラーを止めていないか見る、4 llms.txtは最後でGoogleは使わないと明記" loading="lazy"></figure>
 
 ### 題と説明文
 
@@ -195,7 +195,7 @@ canonical（正規のURLの指定）は自動で付き、手動では指定で�
 
 プロジェクトの設定の「一般」にある.txtのアップロードの欄で「追加」を押し、ファイルを選べば置けます。上限は1ファイル1MB・30ファイルまでで、同じ名前のファイルは確認のうえ上書きされる仕様です。Freeプランでは使えません。Studio公式サイトも`/llms.txt`を置いていて、料金・ヘルプ・規約のページを正しい情報源として案内し、内容が食い違ったら公式のページを優先するよう書いています。
 
-<!-- SHOT: 画面 https://studio.design/ja/whats-new/txt-upload・本文だけにある探す語「.txtアップロード」・赤枠にする語 プロジェクト設定の.txtアップロードの画面の画像・PC・alt「Studioの.txtアップロード機能のお知らせ。プロジェクト設定からllms.txtやrobots.txtをアップロードして管理できる」・figcaption「Studioの.txtアップロード機能のお知らせ（2026年11月13日）」 -->
+<figure class="post-figure"><img src="/media/images/studio-ai-search/stu_05_txt.png" alt="Studioの.txtアップロード機能のお知らせ。プロジェクト設定からllms.txtやrobots.txtをアップロードして管理できる" loading="lazy"><figcaption>Studioの.txtアップロード機能のお知らせ（2026年11月13日）</figcaption></figure>
 
 Googleは生成AI機能向けの最適化ガイドで、llms.txtのような特別なファイルはGoogle検索自体が使わないため作る必要はないとし、ほかのサービスのために置くのは問題ないとしています。OpenAIのクローラーの公式ページにも、llms.txtを読むという記載はありません。**旧基盤のサイトではllms.txtで案内した先のページの本文がHTMLに無いため、置く効果より基盤の切り替えが先に来ます。**
 
