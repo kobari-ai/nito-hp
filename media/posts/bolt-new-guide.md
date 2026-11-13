@@ -58,7 +58,7 @@ bolt.new（ボルト）は、作りたいサイトやアプリを文章で伝え
 | Teams | 1人$30から | メンバーごとに付与 | 一括請求・管理者による制御・組織内での共有 |
 | Enterprise | 個別 | 個別 | SSO・監査ログ・SLA・データ保持の方針 |
 
-<figure class="post-figure"><img src="/media/images/bolt-new-guide/blt1114_03_pricing.png" alt="bolt.newの料金ページ。Freeは$0、Proは月$25で月1,000万トークンから、Teamsは1人月$30、Enterpriseは個別" loading="lazy"><figcaption>bolt.newの料金ページ（2026年11月14日）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/bolt-new-guide/blt1114_03_pricing.png" alt="bolt.newの料金ページのPro列。月$25、月1,000万トークンから" loading="lazy"><figcaption>bolt.newの料金ページ（2026年11月14日）</figcaption></figure>
 
 Proは月のトークンを増やすほど月額が上がる段の形です。公式のヘルプの例では月$50で2,600万、月$100で5,500万トークンになり、段を上げるほど1トークンあたりは安くなります。年払いは1年分を先に払う形で、Proの1,000万トークンの段は年$216（月$18相当）です。
 
