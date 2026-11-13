@@ -26,6 +26,8 @@ Amazon Bedrockは、AWSの上で複数の会社のAIモデルを1つの窓口か
 
 Amazon Bedrockは自社のシステムからAPIでAIモデルを呼ぶための基盤です。2023年9月に一般提供が始まり、サーバーやGPUはAWSが管理するので、呼び出す量に応じて払うだけで済みます。複数の会社のモデルを同じ書き方で呼べるうえ、社内文書を検索させるナレッジベース、入出力を絞るガードレール、エージェントを動かすAgentCoreまでが同じAWSの請求に載ります。**モデルを1社に決め打ちせず、AWSの権限・ログ・請求の中で切り替えられる点が、会社で使うときのいちばんの違いです。**
 
+<figure class="post-figure post-figure--zu"><img src="/media/images/amazon-bedrock-guide/brk_10_what.jpg" alt="Amazon Bedrockとはの図。AWSの上で複数の会社のAIモデルを1つの窓口から呼び出す基盤で、ナレッジベースは社内文書の検索、ガードレールは入出力の制限、AgentCoreはエージェントの実行。モデル・部品ともに同じAWSの請求に計上" loading="lazy"></figure>
+
 すでにAWSでS3やLambdaを使っている会社なら、文書の置き場所や業務の処理とそのままつなげます。
 
 ### SageMakerとの違い
@@ -75,6 +77,8 @@ AgentCoreはAIエージェントを本番で動かすための実行環境と部
 
 AgentCoreはBedrockの中でエージェントを動かす部品の集まりで、モデルを呼ぶBedrock本体とは料金も別に数えます。
 
+<figure class="post-figure post-figure--zu"><img src="/media/images/amazon-bedrock-guide/brk_11_agents.jpg" alt="用途別のエージェント構築サービスの図。新規のエージェント開発はAgentCore、社内文書への回答のみならナレッジベースを単体で利用、既存エージェントの継続利用はAgents Classic。Agents Classicは2026年7月30日に新規登録を終了" loading="lazy"></figure>
+
 AgentCoreの中身は、エージェントを1回のAPI呼び出しで定義して動かすHarness、隔離された環境で動かすRuntime、会話をまたいで覚えるMemory、社内のAPIやLambdaをMCPのツールに変えるGateway、利用者の権限で外部につなぐIdentityなどです。ツールの呼び出しをルールで止めるPolicy、動きを追うObservability、品質を測るEvaluationsもあります。主なフレームワークに対応し、Bedrockの外のモデルとも組めます。
 
 ### 旧Agents（Agents Classic）との関係
@@ -89,8 +93,6 @@ AgentCoreの中身は、エージェントを1回のAPI呼び出しで定義し�
 | 新規の利用 | できる | できない | できる |
 
 ### どれを選ぶか
-
-<figure class="post-figure"><img src="/media/images/amazon-bedrock-guide/brk_02_agents.png" alt="用途別のエージェント構築サービスの図。新規のエージェント開発はAgentCore、社内文書への回答のみならナレッジベースを単体で、既存エージェントの継続利用はAgents Classic。Agents Classicの新規登録は2026年7月30日に終了" loading="lazy"></figure>
 
 **これから作るならAgentCoreを選び、社内文書に答えるだけならナレッジベースを単体で使うのが基本です。**社内システムの更新や申請の代行のように複数の手順を進めさせるときは、AgentCoreが向いています。
 
@@ -119,7 +121,7 @@ AgentCoreの主な部品は東京リージョンで使えます。ただし決�
 
 東京から呼ぶとき処理する場所の決め方は3つあります。東京だけで処理するIn-Region、日本の中（東京と大阪）で振り分けるGeo、世界に振り分けるGlobalです。Globalは標準料金より約10%安く、地域を限る呼び方には10%の割増があります。振り分けの転送料はかからず、料金は呼び出し元のリージョンの単価で数えます。
 
-<figure class="post-figure"><img src="/media/images/amazon-bedrock-guide/brk_03_region.png" alt="取り扱う情報別の処理地域の図。社外に出せない情報はjp.を付けて日本国内に限り約1割高、それ以外の情報はglobal.を付けて全世界で処理し低価格" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/amazon-bedrock-guide/brk_12_region.jpg" alt="東京から呼び出すときの処理地域の図。In-Regionは東京のみで処理、Geoは日本国内（東京と大阪）に分散、Globalは世界に分散。地域を限るIn-RegionとGeoの呼び方はGlobalより10%高い" loading="lazy"></figure>
 
 **社外に出せない情報を扱うならjp.を付けた日本の中の呼び方、そうでなければglobal.を付けた安い呼び方、と用途ごとに分けられます。**
 
