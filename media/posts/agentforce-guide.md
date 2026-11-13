@@ -53,17 +53,15 @@ AgentforceはSalesforceが提供するAIエージェントの基盤で、CRMの�
 
 アクションにはレコードの更新・ナレッジの検索・フロー・Apex・プロンプトテンプレート・MuleSoftのAPIを使えます。**既にSalesforceで作ったフローや連携をそのままエージェントの部品にできる点が、ほかの基盤との大きな違いです。**
 
-### 作る画面と試す画面
+### 構築とテストの画面
 
-設定はローコードのAgent Builderで行い、細かく制御したい部分はAgent Scriptで書きます。公開前にはテスト用の質問をまとめて流して応答とガードレールの効き方を確認でき、公開後は会話ごとの記録で動きを分析します。
+設定はローコードのAgentforce Builderで行い、細かく制御したい部分はAgent Scriptで書きます。公開前にはテスト用の質問をまとめて流して応答とガードレールの効き方を確認でき、公開後は会話ごとの記録で動きを分析します。
 
-ガードレールは利用者が決める制限とSalesforce側の保護の組み合わせです。担当外の話題や不適切な会話を止め、指示から外れた動きを抑えます。これを使う費用は次の節で扱います。
+ガードレールは利用者が決める制限とSalesforce側の保護の組み合わせです。担当外の話題や不適切な会話を止め、指示から外れた動きを抑えます。
 
 ## Agentforceの料金はいくらかかる？
 
 **試すだけなら無料で、本番はアクションごとのFlexクレジット・会話単位・ユーザー単位の定額から選びます。**どれが安いかは顧客向けか社員向けかと月の件数しだいです。
-
-<figure class="post-figure"><img src="/media/images/agentforce-guide/agf_02_price.png" alt="Agentforceの主な払い方。Flexクレジットは1アクション20クレジットで10万クレジット60,000円、会話単位は顧客対応で会話1件240円、ユーザー単位は社員向けのアドオンやMaxエディションで定額" loading="lazy"></figure>
 
 | 払い方 | 公式の表示 | 向く使い方 |
 |---|---|---|
@@ -71,9 +69,10 @@ AgentforceはSalesforceが提供するAIエージェントの基盤で、CRMの�
 | Flexクレジット | 10万クレジット60,000円（1アクション20クレジット） | 顧客向け・社員向けのどちらも |
 | 会話単位 | 会話1件240円 | 顧客対応で件数が読める |
 | Agentforceユーザーライセンス | 1人月600円（別にFlexクレジットが必要） | 全社員に使える状態を配る |
-| Agentforceアドオン | 1人月125ドル（比較表では15,000円） | 営業・サービスの担当者が使い放題 |
-| Maxエディション | 1人月66,000円（550ドル）から | アドオンと年275万Flexクレジット込み |
+| Agentforceアドオン | 1人月125ドル（比較表では15,000円） | 営業・サービスの担当者が無制限に利用 |
+| Maxエディション | 1人月66,000円（550ドル）から | アドオンと組織あたり年275万Flexクレジット込み |
 
+公式の比較表にはヘルプエージェントが解決した件数で払う課金（解決1件2ドル）もありますが、円の価格は出ていません。円の金額は公式ページの表示のままで、税込か税抜かの記載はありません。
 
 Flexクレジットで換算すると1アクションは12円です。**請求は依頼の件数ではなく、1件の依頼でエージェントが何回アクションを実行したかで決まります。**Voiceのアクションは30クレジットを使います。
 
@@ -87,15 +86,15 @@ Flexクレジットで換算すると1アクションは12円です。**請求�
 
 - Flexクレジットと会話単位は、同じ組織では併用できない
 - 使い切らなかったFlexクレジットは次の契約期間に繰り越されない
-- 残高を超えても止まらず、契約の単価で翌月に後払いになる
+- 残高を超えても違約金は無く、契約の単価で毎月後払いになる
 - 会話単位からFlexに移るときは、会話のSKUをすべて切り替える
 - 使用量はDigital Wallet（無料）で見られ、しきい値の通知も出せる
 
 ### Salesforce本体のエディションとの関係
 
-2026年9月3日の発表で、Sales・Serviceのエディションは Core・Advanced・Max の3つに組み直されました。日本の価格ページでは Core が1人月23,400円、Advanced が47,400円、Max が66,000円（年間契約）で、それぞれ組織あたり50万・100万・275万のFlexクレジットが付きます。Maxは前のAgentforce 1 Editionの後継で、Agentforce 1の契約者は追加費用なしで移れると発表されています。
+2026年9月3日の発表で、Sales・Serviceのエディションは Core・Advanced・Max の3つに組み直されました。Sales Cloudの価格ページでは Core が1人月23,400円、Advanced が47,400円、Max が66,000円（年間契約）で、それぞれ組織あたり50万・100万・275万のFlexクレジットが付きます。Maxは前のAgentforce 1 Editionの後継で、Agentforce 1の契約者は追加費用なしで移れると発表されています。
 
-既に契約しているEnterpriseやUnlimitedの価格は変わりません。無料のFoundationsについて、仕組みのページのFAQは「Enterprise Edition以上の無料のアドオン」で、Agentforce for Serviceの会話1,000回分が付くと書いています。一方、営業の価格ページは「AIはCore以上のエディションに追加できます」とあり、新旧の名前が混ざっています。自社の契約で何が使えるかは、営業担当に確認するのが確実です。
+既に契約しているEnterpriseやUnlimitedの価格は変わりません。無料のFoundationsについて、仕組みのページのFAQは「Enterprise Edition以上の無料のアドオン」で、Agentforce for Serviceの会話1,000回分が付くと書いています。一方、Sales Cloudの価格ページはCoreに無料のFoundationsアドオンが含まれ、Foundationsには限られたFlexクレジットとData 360クレジットが付くと書いています。9月の発表でCoreは旧Enterpriseの後継の位置づけなので対象はほぼ同じですが、付くクレジット（会話1,000回分かFlexか）はページによって違います。自社の契約で何が使えるかは、営業担当に確認するのが確実です。
 
 :::linkcard
 url: /media/ai-agent-introduction/
@@ -111,7 +110,7 @@ desc: 既製の製品・ノーコード・作り込みの費用の決まり方�
 
 顧客の履歴・商談・ケースがSalesforceにあれば、エージェントはそこを読んで個別の回答を返し、結果を同じレコードに書き戻します。WAKUWAKUの事例では、Salesforceの上で動くこと、既存のLINEの窓口を変えずに入れられること、同じ画面で人に引き継げることの3つが選定理由でした。
 
-### 既存のフローや連携を使い回せる
+### 既存のフローや連携を再利用できる
 
 Flow・Apex・MuleSoftで作った処理をアクションとして登録できるため、連携をゼロから作り直す必要がありません。社内にSalesforceの管理者がいれば、最初のエージェントまではローコードの範囲です。
 
@@ -125,27 +124,27 @@ Foundationsで作って試し、本番は使った分だけのFlexクレジッ�
 
 ### CRMに無いことは答えられない
 
-エージェントが根拠にするのは、Salesforceや接続したデータにある情報です。商談のメモや訪問の記録がCRMに残っていない会社では、期待した回答が出ません。外部のデータを集めるならData 360の費用と設定も必要になります。
+エージェントが根拠にするのは、Salesforceや接続したデータにある情報です。商談のメモや訪問の記録がCRMに残っていない会社では、期待した回答が出ません。Agentforceの利用にはData 360の有効化が前提で、外部のデータまでつなぐ場合はその分の費用と設定も必要になります。
 
 ### 月の費用が読みにくい
 
-Flexクレジットは1件の依頼で何回アクションが動くかで増えるため、作り方しだいで同じ件数でも費用が変わります。WAKUWAKUは指示文とAgent Scriptを毎週直しながら約4か月かけ、予定していた3月のリリースを延ばしました。**本番の前に1業務で1件あたりのアクション数を測っておくと見積もりが外れにくくなります。**
+Flexクレジットは1件の依頼で何回アクションが動くかで増えるため、作り方しだいで同じ件数でも費用が変わります。**本番の前に1業務で1件あたりのアクション数を測っておくと見積もりが外れにくくなります。**
 
 ### 名前と課金の変更が多い
 
-2025年5月にFlexクレジットが加わり、2026年にはトピックがサブAIエージェントに、Agentforce 1がMaxになりました。料金ページのFAQにも「Agentforce 1 Editions」の旧名が残っています。古い解説記事の金額や名前は、今の公式ページで確認してから使う必要があります。
+2025年5月にFlexクレジットが加わり、トピックは今はサブAIエージェントと呼ばれ、Agentforce 1は2026年9月にMaxになりました。料金ページのFAQにも「Agentforce 1 Editions」の旧名が残っています。古い解説記事の金額や名前は、今の公式ページで確認してから使う必要があります。
 
 ## 入力したデータと権限はどう扱われる？
 
 **LLMに送るプロンプトと応答は外部のLLMに保存されず、その学習にも使われない、というのが公式の説明です。**この仕組みは公式のページによって「Einstein Trust Layer」「Salesforce Trust Layer」と呼ばれています。
 
-公式はゼロデータリテンションを「プロンプトと生成された応答は保存されず、基盤となるサードパーティの大規模言語モデルのトレーニングにも使用されない」と説明しています。あわせて、送る前に個人情報や社外秘のデータを特定できない記号に置き換えるデータマスキング、通信の暗号化、有害な出力を止める検出が入っています。
+公式はゼロデータリテンションを「プロンプトと生成された応答は保存されず、基盤となるサードパーティの大規模言語モデルのトレーニングにも使用されない」と説明しています。あわせて、送る前に個人情報や社外秘のデータを特定できない記号に置き換えるデータマスキング、有害な出力を止める検出が入っています。
 
 
 ### 社内で確認しておくこと
 
 - **データの置き場所**: 参照するデータがSalesforce・Data 360・外部のどこにあるか
-- **AIの委託先**: 使うLLMの提供元。Salesforceは2025年10月に、AnthropicのClaudeをAmazon Bedrock経由で自社の信頼境界の中で動かすと発表している
+- **AIの委託先**: 使うLLMの提供元。Salesforceは2026年8月に、AnthropicのClaudeがAtlas推論エンジンの推論モデルとして働き、Amazon Bedrock経由で自社の信頼境界の中で動くと発表している
 - **記録**: エージェントの操作と出力は監査証跡として追える
 - **権限**: エージェントが読める範囲は、Salesforceの権限とアクセス制御の内側に収まる
 
@@ -161,7 +160,7 @@ Flexクレジットは1件の依頼で何回アクションが動くかで増え
 | Copilot Studio | 社員がTeamsやSharePointで働く | 1パック月29,985円で25,000クレジットなど |
 | 自前の構築 | 連携先が多く業務が独自 | モデルの利用料と構築・運用の費用 |
 
-Copilot Studioは、Microsoft 365 Copilotのライセンスを持つ社員が社内で使うエージェントなら追加費用なしで作れます。AzureのMicrosoft Foundryで作る場合、基盤は無料で、払うのはモデルとツールの使った分です。CRMのレコードを更新させたいのに社内文書の検索が主になる、という食い違いが無いかを先に確認しておくと選びやすくなります。
+Copilot Studioは、Microsoft 365 Copilotのライセンスを持つ社員が社内で使うエージェントなら追加費用なしで作れます。AzureのMicrosoft Foundryで作る場合、基盤は無料で、払うのはモデルとツールの使った分です。主な用途がCRMのレコード更新か社内文書の検索かを先に確認しておくと選びやすくなります。
 
 :::linkcard
 url: /media/copilot-studio-agent/
@@ -175,7 +174,9 @@ desc: 指示・ナレッジ・テスト・Teamsへの公開までの手順とビ
 
 ### WAKUWAKU（合宿免許の紹介）
 
-公式LINEの一次対応をAgentforceに任せ、返信までの時間は中央値で約10秒になりました。2026年6月27日〜8月31日の集計で、コーディネーターの業務は月10時間減り、AIの返信の約4割は営業時間（11〜20時）の外でした。
+公式LINEの一次対応をAgentforceに任せ、稼働開始後の返信までの時間は中央値で約10秒、AIの返信の約4割は営業時間（11〜20時）の外でした。2026年6月27日〜8月31日の集計では、コーディネーターの業務が月10時間減りました。
+
+会話の精度を人と同じ水準に近づけるため、毎週の定例で指示文とAgent Scriptを約4か月改修し、3月の予定だったリリースを延ばしました。
 
 ### 日野出（包装資材の卸）
 
@@ -185,7 +186,7 @@ Sales Cloudとあわせて営業のコーチングを使い、全営業担当が
 
 人事・労務への社内の問い合わせ（月に延べ60件）にエージェントが24時間答える形にし、担当者への問い合わせは90%減りました。
 
-## Agentforceを入れる前に決めることは？
+## Agentforceの導入前に決めることは？
 
 **契約・課金方式・データの扱い・最初の業務の4点を決めてから営業担当に見積もりを頼むと、必要なものだけを買えます。**
 
@@ -193,7 +194,7 @@ Sales Cloudとあわせて営業のコーチングを使い、全営業担当が
 
 ### ① 契約の確認
 
-今のエディション（EnterpriseかCoreなど）と、Agentforceが付いているか、アドオンが要るかを確認します。Data 360を使うかもここで決めます。
+今のエディション（EnterpriseかCoreなど）と、Agentforceが付いているか、アドオンが要るかを確認します。Data 360にどこまでデータをつなぐかもここで決めます。
 
 ### ② 課金方式の選定
 
@@ -205,7 +206,7 @@ Sales Cloudとあわせて営業のコーチングを使い、全営業担当が
 
 ### ④ 最初に任せる業務
 
-最初の1業務には問い合わせの一次回答や社内からの定型の質問のように件数を数えられるものが向いています。1件あたりのアクション数と件数がわかれば、②の課金方式は実測をもとに決め直すことになります。
+最初の1業務には問い合わせの一次回答や社内からの定型の質問のように件数を数えられるものが向いています。1件あたりのアクション数と件数がわかれば、②の課金方式は実測をもとに決め直せます。
 
 試すだけなら無料のFoundationsか開発用のDeveloper Editionでエージェントを作り、プレビューで日本語の応答を確認するのが早い方法です。社内で設計や試作を外部と進めたい場合は、nitoもAIエージェントの構築を支援しています。
 
@@ -220,7 +221,7 @@ Sales Cloudとあわせて営業のコーチングを使い、全営業担当が
 
 ### Agentforceは無料で使えますか？
 
-試すことはできます。料金ページではSalesforce Foundationsが0円で、Agentforce Builderやプロンプトビルダーが含まれています。本番で動かす段階からはFlexクレジットや会話単位などの料金が必要です。
+Salesforceを契約している会社なら試せます。FoundationsはEnterprise Edition以上（新しいエディションではCore以上）に付く無料のアドオンで、Agentforce Builderやプロンプトビルダーが含まれています。本番で動かす段階からはFlexクレジットや会話単位などの料金が必要です。まだSalesforceを使っていない場合は、無料のDeveloper Editionで作って試せます。
 
 ### AgentforceとEinsteinの違いは何ですか？
 
@@ -228,11 +229,11 @@ Einsteinは予測や文章の生成でスコアや下書きを出す機能群で
 
 ### Agentforceは日本語で使えますか？
 
-使えます。国内の事例ではLINEや社内の問い合わせに日本語で答えています。音声のAgentforce Voiceも日本語版が一般提供されています。機能ごとに日本語の提供時期が違うものがあるため、使いたい機能は営業担当に確認してください。
+使えます。国内の事例ではLINEや社内の問い合わせに日本語で答えています。音声のAgentforce Voiceは、2026年8月から日本語版の提供が始まり、順次展開されています。機能ごとに日本語の提供時期が違うものがあるため、使いたい機能は営業担当に確認してください。
 
 ### Agentforceを使うのにData 360は必要ですか？
 
-Salesforceの中のデータだけを参照するなら、無くても始められます。社外のシステムや大量の文書を検索させるときにData 360を使い、その分のクレジットは料金例とは別にかかります。
+Agentforceを使うにはData 360の有効化が前提です。Trust LayerやAgentforceデータライブラリもData 360が無いと動きません。社外のデータまでつなぐかは用途しだいで、その分のData 360クレジットは料金例とは別にかかります。
 
 ### AgentforceのFlexクレジットは繰り越せますか？
 
@@ -248,7 +249,7 @@ Salesforceの中のデータだけを参照するなら、無くても始めら�
 
 ### Agentforceを使うのに必要な権限は何ですか？
 
-管理者はAgentforceの権限セットライセンスと管理用の権限セットを割り当て、設定でAgentforceを有効にします。社員が使うためのアクセスは、作ったエージェントごとに権限セットで付与する決まりです。
+管理者が設定でAgentforceを有効にし、使う人に権限セットを割り当てます。手順はヘルプで確認してください。
 
 ## 出典
 
@@ -259,8 +260,12 @@ Salesforceの中のデータだけを参照するなら、無くても始めら�
 - Salesforce「[Agentforceの価格](https://www.salesforce.com/jp/agentforce/pricing/)」（Flexクレジット・会話・ユーザーライセンス・アドオン・Max・料金例・FAQ）
 - Salesforce「[Sales Cloudの販売価格](https://www.salesforce.com/jp/sales/pricing/)」（Core・Advanced・Maxの円の価格と付くFlexクレジット）
 - Salesforce「[New Salesforce Editions Bundle Everything Businesses Need for Agentic Transformation](https://www.salesforce.com/news/stories/salesforce-simplifies-editions-2026/)」（2026年9月3日、英語）
-- セールスフォース・ジャパン「[新しい柔軟なAgentforceの価格設定を発表](https://www.salesforce.com/jp/news/press-releases/2025/05/15/agentforce-flexible-pricing-news/)」（2025年5月15日）
+- セールスフォース・ジャパン「[新しい柔軟なAgentforceの価格設定を発表](https://www.salesforce.com/jp/news/press-releases/2025/05/15/agentforce-flexible-pricing-news/)」（2025年5月19日）
 - Salesforce「[Salesforceが考える信頼できるAI](https://www.salesforce.com/jp/artificial-intelligence/trusted-ai/)」（ゼロデータリテンション・データマスキング）
+- Salesforce「[Trailhead: Agentforce と Data 360](https://trailhead.salesforce.com/content/learn/modules/data-cloud-powered-agentforce/explore-data-cloud-and-agentforce)」（Data 360の有効化が前提）
+- Salesforce「[Salesforce and Anthropic announce Claudeforce](https://www.salesforce.com/jp/news/press-releases/2026/08/27/salesforce-and-anthropic-announce-claudeforce/)」（2026年8月27日）
+- Salesforce「[Agentforce レガシーガイド](https://www.salesforce.com/jp/agentforce/legacy-guide/)」（トピックとエディション名の変更）
+- セールスフォース・ジャパン「[Agentforce Voice 日本語版](https://www.salesforce.com/jp/news/press-releases/2026/08/07/agentforcevoice-japan-ga/)」（2026年8月7日）
 - セールスフォース・ジャパン「[WAKUWAKU、Agentforceを導入](https://www.salesforce.com/jp/news/press-releases/2026/11/11/wakuwaku-customer-news/)」（2026年11月11日）
 - セールスフォース・ジャパン「[日野出、Agentforceで営業ロールプレイを全員実施](https://www.salesforce.com/jp/news/press-releases/2026/11/10/hinode-customer-news/)」（2026年11月10日）
 - セールスフォース・ジャパン「[KMユナイテッド、Agentforceを導入](https://www.salesforce.com/jp/news/press-releases/2026/09/30/kmu-customer-news/)」（2026年9月30日）
