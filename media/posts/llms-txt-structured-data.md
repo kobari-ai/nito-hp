@@ -133,6 +133,8 @@ AIはリンクや利用者の指示で場所を知ったときに取りに来る
 
 WordPressなら、SEOのプラグインの[Yoast SEO](https://yoast.com/features/llms-txt/)と[AIOSEO](https://aioseo.com/features/llms-txt/)にllms.txtを作る機能があります。Yoast SEOは主なページを自動で選んで作り、更新も自動で続けます。[Wix](https://support.wix.com/en/article/understanding-your-sites-llmstxt-file)はサイトごとに自動で作り、管理画面で中身を見て直せますが、一度直すと自動の更新は止まり、初期の状態に戻すと自動の更新も再開します。
 
+Studioで作ったサイトは、Miniプラン以上の.txtのアップロード機能で置けます。置き方と、公開基盤が古いままのときに優先することは[StudioのSEO対策](/media/studio-ai-search/)にまとめています。
+
 自動で作られたファイルも、公開前に中身を読むようにしてください。終わったサービスや古い料金のページが並んでいれば、それがそのままAIへの案内になります。
 
 ## 置くかどうかの決め方
