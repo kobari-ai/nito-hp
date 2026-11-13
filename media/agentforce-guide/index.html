@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】Agentforceとは？いくらかかる？できることと導入前に決めること｜株式会社nito</title>
+    <meta name="description" content="Agentforceとは何かを、できること・仕組み・料金（Flexクレジット・会話単位・ユーザー単位・Max）から解説。データの扱いとTrust Layer、Copilot Studioとの使い分け、導入前に決める4点も1枚にまとめました。">
+    <link rel="canonical" href="https://nito-0210.com/media/agentforce-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】Agentforceとは？いくらかかる？できることと導入前に決めること">
+    <meta property="og:description" content="Agentforceとは何かを、できること・仕組み・料金（Flexクレジット・会話単位・ユーザー単位・Max）から解説。データの扱いとTrust Layer、Copilot Studioとの使い分け、導入前に決める4点も1枚にまとめました。">
+    <meta property="og:url" content="https://nito-0210.com/media/agentforce-guide/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/agentforce-guide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/agentforce-guide.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】Agentforceとは？いくらかかる？できることと導入前に決めること", "description": "Agentforceとは何かを、できること・仕組み・料金（Flexクレジット・会話単位・ユーザー単位・Max）から解説。データの扱いとTrust Layer、Copilot Studioとの使い分け、導入前に決める4点も1枚にまとめました。", "datePublished": "2026-11-14", "dateModified": "2026-11-14", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/agentforce-guide/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/agentforce-guide.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】Agentforceとは？いくらかかる？できることと導入前に決めること"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Agentforceは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "Salesforceを契約している会社なら試せます。FoundationsはEnterprise Edition以上（新しいエディションではCore以上）に付く無料のアドオンで、Agentforce Builderやプロンプトビルダーが含まれています。本番で動かす段階からはFlexクレジットや会話単位などの料金が必要です。まだSalesforceを使っていない場合は、無料のDeveloper Editionで作って試せます。"}}, {"@type": "Question", "name": "AgentforceとEinsteinの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Einsteinは予測や文章の生成でスコアや下書きを出す機能群で、次の行動は人が決めます。Agentforceはそこから手順を組み立て、レコードの更新などの実行まで行います。従業員向けの旧Einstein CopilotもAgentforceに名前が変わりました。"}}, {"@type": "Question", "name": "Agentforceは日本語で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。国内の事例ではLINEや社内の問い合わせに日本語で答えています。音声のAgentforce Voiceは、2026年8月から日本語版の提供が始まり、順次展開されています。機能ごとに日本語の提供時期が違うものがあるため、使いたい機能は営業担当に確認してください。"}}, {"@type": "Question", "name": "Agentforceを使うのにData 360は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "Agentforceを使うにはData 360の有効化が前提です。Trust LayerやAgentforceデータライブラリもData 360が無いと動きません。社外のデータまでつなぐかは用途しだいで、その分のData 360クレジットは料金例とは別にかかります。"}}, {"@type": "Question", "name": "AgentforceのFlexクレジットは繰り越せますか？", "acceptedAnswer": {"@type": "Answer", "text": "繰り越せません。使い切らなかったFlexクレジットは次の契約期間に持ち越されず、超えた分は契約の単価での後払いです。"}}, {"@type": "Question", "name": "Agentforceは会話単位とFlexのどちらがよい？", "acceptedAnswer": {"@type": "Answer", "text": "顧客対応で会話の件数が読めるなら会話単位、社員向けや複数の用途で使うならFlexクレジットが向いています。公式のFAQはFlexクレジットを「柔軟性と拡張性において最も優れた選択肢」としています。"}}, {"@type": "Question", "name": "Agentforceのデータは学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式の説明ではプロンプトと応答は外部のLLMに保存されず、学習にも使われません。送る前に個人情報などをマスキングする機能もあります。"}}, {"@type": "Question", "name": "Agentforceを使うのに必要な権限は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "管理者が設定でAgentforceを有効にし、使う人に権限セットを割り当てます。手順はヘルプで確認してください。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=c1e3c5ad">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】Agentforce…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.14</span>
+        </div>
+        <h1 class="post-title">【2026年11月】Agentforceとは？いくらかかる？できることと導入前に決めること</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/agentforce-guide.jpg" alt="【2026年11月】Agentforceとは？いくらかかる？できることと導入前に決めること" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>AgentforceはSalesforceが提供するAIエージェントの基盤で、CRMのデータを読み、問い合わせへの回答やレコードの更新まで自分で進めます。料金はアクションごとのFlexクレジット、顧客との会話1件240円、社員1人ごとの定額の3つが軸です。</p>
+<p>この記事ではSalesforceを使っている会社で導入を検討する営業・CSの責任者や情シスに向けて、できること・仕組み・料金・データの扱い・Copilot Studioとの使い分けと、契約の前に決める4点を整理します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>AgentforceはSalesforceの上で動くAIエージェントの基盤</strong>。CRMのデータと権限を使って回答から更新まで進める</li>
+<li><strong>払い方はFlexクレジット・会話単位・ユーザー単位</strong>。同じ組織でFlexと会話単位は併用できない</li>
+<li><strong>契約の前に契約・課金方式・データの扱い・最初の業務の4点を決める</strong>と見積もりがぶれにくい</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>Agentforceとは？何ができる？</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>Agentforceの仕組みは？</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>サブAIエージェント・指示・アクション</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>構築とテストの画面</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>Agentforceの料金はいくらかかる？</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>計算の例</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>契約の前に知っておく決まり</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>Salesforce本体のエディションとの関係</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>Agentforceを導入するメリットは？</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>CRMのデータの上で動く</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>既存のフローや連携を再利用できる</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>小さく試してから増やせる</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>Agentforceのデメリットと注意点は？</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>CRMに無いことは答えられない</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>月の費用が読みにくい</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>名前と課金の変更が多い</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>入力したデータと権限はどう扱われる？</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>社内で確認しておくこと</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>Copilot Studioや自前の構築とどう使い分ける？</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>国内の導入事例は？</a></li>
+                    <li class="toc-h3"><a href="#s8-1"><span class="toc__n">8-1</span>WAKUWAKU（合宿免許の紹介）</a></li>
+                    <li class="toc-h3"><a href="#s8-2"><span class="toc__n">8-2</span>日野出（包装資材の卸）</a></li>
+                    <li class="toc-h3"><a href="#s8-3"><span class="toc__n">8-3</span>KMユナイテッド（建設の人材・業務支援）</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>Agentforceの導入前に決めることは？</a></li>
+                    <li class="toc-h3"><a href="#s9-1"><span class="toc__n">9-1</span>① 契約の確認</a></li>
+                    <li class="toc-h3"><a href="#s9-2"><span class="toc__n">9-2</span>② 課金方式の選定</a></li>
+                    <li class="toc-h3"><a href="#s9-3"><span class="toc__n">9-3</span>③ データの扱い</a></li>
+                    <li class="toc-h3"><a href="#s9-4"><span class="toc__n">9-4</span>④ 最初に任せる業務</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">Agentforceとは？何ができる？</h2>
+<p><strong>AgentforceはSalesforceのCRMの上で、顧客対応や社内の定型業務を24時間こなすAIエージェントを作って動かす基盤です。</strong>公式は「エンタープライズ規模で24時間365日の自律型サポートを提供するAIエージェントプラットフォーム」と説明し、導入企業は18,000社以上としています。</p>
+<p>従来のチャットボットは決めておいた会話の流れから外れると答えられませんでした。Agentforceは依頼の中身から手順を組み立て、商談やケースのレコードを読み書きし、自分の範囲を超えたら担当者に引き継ぎます。従業員の作業を手伝っていた「Einstein Copilot」も、今はAgentforceの名前に入っています。</p>
+<p>公式サイトが挙げる主な使いどころは次の6つです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>領域</th>
+<th>エージェントが行うこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="領域">カスタマーサービス</td>
+<td data-label="エージェントが行うこと">未解決のケースの解決・フォローアップのメール作成・専門担当への引き継ぎ</td>
+</tr>
+<tr>
+<td data-label="領域">コンタクトセンター</td>
+<td data-label="エージェントが行うこと">着信の振り分け・顧客履歴の取得・対応内容の記録</td>
+</tr>
+<tr>
+<td data-label="領域">フィールドサービス</td>
+<td data-label="エージェントが行うこと">技術者の訪問日時の調整・作業指示書の更新・部品在庫の確認</td>
+</tr>
+<tr>
+<td data-label="領域">従業員サービス</td>
+<td data-label="エージェントが行うこと">休暇申請の処理・人事規程の質問への回答・新入社員の受け入れ</td>
+</tr>
+<tr>
+<td data-label="領域">営業</td>
+<td data-label="エージェントが行うこと">見込み客の評価・商談の更新・更新契約の対応</td>
+</tr>
+<tr>
+<td data-label="領域">ITサービス</td>
+<td data-label="エージェントが行うこと">ヘルプデスクのチケット解決・アクセス権のリセット</td>
+</tr>
+</tbody>
+</table></div>
+<p>ここでいうフィールドサービスは設備の保守や修理に技術者を派遣する業務で、外回りの営業を代わりに行う機能ではありません。営業向けには見込み客に返信して商談を予約するSDRや、商談前のロールプレイ相手になるSales Coachがあります。</p>
+<p>周りの製品名も整理しておくと、旧記事が読みやすくなります。データ基盤のData Cloudは今はData 360、マーケットプレイスのAppExchangeはAgentExchange、製品群全体はAgentforce 360という名前です。</p>
+<h2 id="s2">Agentforceの仕組みは？</h2>
+<p><strong>Atlas推論エンジンが依頼を小さな作業に分け、どのサブAIエージェントとアクションを使うかを決めてから実行します。</strong>公式のFAQでは「最初のプロンプトを小さなタスクに分割し、各ステップで評価し、完全な答えまたはアクションが達成されるまでの進め方の計画を提案します」と説明されています。</p>
+<h3 id="s2-1">サブAIエージェント・指示・アクション</h3>
+<p>エージェントを作るときに設定するのは、担当する仕事の単位であるサブAIエージェント、その中で守らせる指示、実行できるアクションの3つです。2025年ごろの解説記事では、サブAIエージェントは「トピック」の名前で説明されています。</p>
+<p>アクションにはレコードの更新・ナレッジの検索・フロー・Apex・プロンプトテンプレート・MuleSoftのAPIを使えます。<strong>既にSalesforceで作ったフローや連携をそのままエージェントの部品にできる点が、ほかの基盤との大きな違いです。</strong></p>
+<h3 id="s2-2">構築とテストの画面</h3>
+<p>設定はローコードのAgentforce Builderで行い、細かく制御したい部分はAgent Scriptで書きます。公開前にはテスト用の質問をまとめて流して応答とガードレールの効き方を確認でき、公開後は会話ごとの記録で動きを分析します。</p>
+<p>ガードレールは利用者が決める制限とSalesforce側の保護の組み合わせです。担当外の話題や不適切な会話を止め、指示から外れた動きを抑えます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">Agentforceの料金はいくらかかる？</h2>
+<p><strong>試すだけなら無料で、本番はアクションごとのFlexクレジット・会話単位・ユーザー単位の定額から選びます。</strong>どれが安いかは顧客向けか社員向けかと月の件数しだいです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>払い方</th>
+<th>公式の表示</th>
+<th>向く使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="払い方">Salesforce Foundations</td>
+<td data-label="公式の表示">0円</td>
+<td data-label="向く使い方">作って試す段階</td>
+</tr>
+<tr>
+<td data-label="払い方">Flexクレジット</td>
+<td data-label="公式の表示">10万クレジット60,000円（1アクション20クレジット）</td>
+<td data-label="向く使い方">顧客向け・社員向けのどちらも</td>
+</tr>
+<tr>
+<td data-label="払い方">会話単位</td>
+<td data-label="公式の表示">会話1件240円</td>
+<td data-label="向く使い方">顧客対応で件数が読める</td>
+</tr>
+<tr>
+<td data-label="払い方">Agentforceユーザーライセンス</td>
+<td data-label="公式の表示">1人月600円（別にFlexクレジットが必要）</td>
+<td data-label="向く使い方">全社員に使える状態を配る</td>
+</tr>
+<tr>
+<td data-label="払い方">Agentforceアドオン</td>
+<td data-label="公式の表示">1人月125ドル（比較表では15,000円）</td>
+<td data-label="向く使い方">営業・サービスの担当者が無制限に利用</td>
+</tr>
+<tr>
+<td data-label="払い方">Maxエディション</td>
+<td data-label="公式の表示">1人月66,000円（550ドル）から</td>
+<td data-label="向く使い方">アドオンと組織あたり年275万Flexクレジット込み</td>
+</tr>
+</tbody>
+</table></div>
+<p>公式の比較表にはヘルプエージェントが解決した件数で払う課金（解決1件2ドル）もありますが、円の価格は出ていません。円の金額は公式ページの表示のままで、税込か税抜かの記載はありません。</p>
+<p>Flexクレジットで換算すると1アクションは12円です。<strong>請求は依頼の件数ではなく、1件の依頼でエージェントが何回アクションを実行したかで決まります。</strong>Voiceのアクションは30クレジットを使います。</p>
+<h3 id="s3-1">計算の例</h3>
+<p>公式の料金ページの例で、100人の担当者が1日3件のケースを月20日エージェントに手伝わせる場合を見ます。顧客の特定・ケースの取得・コメントの追加で1件3アクション（60クレジット）なので、月36万クレジット、ページの表示は1,800ドルです。円の単価に直すと月216,000円になります。</p>
+<p>この金額にはData 360のクレジットなど、ほかの従量課金は入っていません。参照するデータをData 360に集める場合は、その分を別に見積もる必要があります。</p>
+<h3 id="s3-2">契約の前に知っておく決まり</h3>
+<ul>
+<li>Flexクレジットと会話単位は、同じ組織では併用できない</li>
+<li>使い切らなかったFlexクレジットは次の契約期間に繰り越されない</li>
+<li>残高を超えても違約金は無く、契約の単価で毎月後払いになる</li>
+<li>会話単位からFlexに移るときは、会話のSKUをすべて切り替える</li>
+<li>使用量はDigital Wallet（無料）で見られ、しきい値の通知も出せる</li>
+</ul>
+<h3 id="s3-3">Salesforce本体のエディションとの関係</h3>
+<p>2026年9月3日の発表で、Sales・Serviceのエディションは Core・Advanced・Max の3つに組み直されました。Sales Cloudの価格ページでは Core が1人月23,400円、Advanced が47,400円、Max が66,000円（年間契約）で、それぞれ組織あたり50万・100万・275万のFlexクレジットが付きます。Maxは前のAgentforce 1 Editionの後継で、Agentforce 1の契約者は追加費用なしで移れると発表されています。</p>
+<p>既に契約しているEnterpriseやUnlimitedの価格は変わりません。無料のFoundationsについて、仕組みのページのFAQは「Enterprise Edition以上の無料のアドオン」で、Agentforce for Serviceの会話1,000回分が付くと書いています。一方、Sales Cloudの価格ページはCoreに無料のFoundationsアドオンが含まれ、Foundationsには限られたFlexクレジットとData 360クレジットが付くと書いています。9月の発表でCoreは旧Enterpriseの後継の位置づけなので対象はほぼ同じですが、付くクレジット（会話1,000回分かFlexか）はページによって違います。自社の契約で何が使えるかは、営業担当に確認するのが確実です。</p>
+<div class="in-link-card"><a href="/media/ai-agent-introduction/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">AIエージェント導入の進め方と費用</div><div class="in-link-card__desc">既製の製品・ノーコード・作り込みの費用の決まり方と導入の4段階を解説しています。</div></div></a></div>
+<h2 id="s4">Agentforceを導入するメリットは？</h2>
+<p><strong>最大の利点はCRMに入っている顧客データと権限の設定をそのまま使って、回答だけでなく更新まで任せられることです。</strong></p>
+<h3 id="s4-1">CRMのデータの上で動く</h3>
+<p>顧客の履歴・商談・ケースがSalesforceにあれば、エージェントはそこを読んで個別の回答を返し、結果を同じレコードに書き戻します。WAKUWAKUの事例では、Salesforceの上で動くこと、既存のLINEの窓口を変えずに入れられること、同じ画面で人に引き継げることの3つが選定理由でした。</p>
+<h3 id="s4-2">既存のフローや連携を再利用できる</h3>
+<p>Flow・Apex・MuleSoftで作った処理をアクションとして登録できるため、連携をゼロから作り直す必要がありません。社内にSalesforceの管理者がいれば、最初のエージェントまではローコードの範囲です。</p>
+<h3 id="s4-3">小さく試してから増やせる</h3>
+<p>Foundationsで作って試し、本番は使った分だけのFlexクレジットで始められます。件数が増えてきた段階で社員向けの定額に切り替える順番も取れるため、最初の予算は小さく済みます。</p>
+<h2 id="s5">Agentforceのデメリットと注意点は？</h2>
+<p><strong>回答の質と費用はどちらも、CRMに何が入っているかと何回アクションが走るかで決まります。</strong></p>
+<h3 id="s5-1">CRMに無いことは答えられない</h3>
+<p>エージェントが根拠にするのは、Salesforceや接続したデータにある情報です。商談のメモや訪問の記録がCRMに残っていない会社では、期待した回答が出ません。Agentforceの利用にはData 360の有効化が前提で、外部のデータまでつなぐ場合はその分の費用と設定も必要になります。</p>
+<h3 id="s5-2">月の費用が読みにくい</h3>
+<p>Flexクレジットは1件の依頼で何回アクションが動くかで増えるため、作り方しだいで同じ件数でも費用が変わります。<strong>本番の前に1業務で1件あたりのアクション数を測っておくと見積もりが外れにくくなります。</strong></p>
+<h3 id="s5-3">名前と課金の変更が多い</h3>
+<p>2025年5月にFlexクレジットが加わり、トピックは今はサブAIエージェントと呼ばれ、Agentforce 1は2026年9月にMaxになりました。料金ページのFAQにも「Agentforce 1 Editions」の旧名が残っています。古い解説記事の金額や名前は、今の公式ページで確認してから使う必要があります。</p>
+<h2 id="s6">入力したデータと権限はどう扱われる？</h2>
+<p><strong>LLMに送るプロンプトと応答は外部のLLMに保存されず、その学習にも使われない、というのが公式の説明です。</strong>この仕組みは公式のページによって「Einstein Trust Layer」「Salesforce Trust Layer」と呼ばれています。</p>
+<p>公式はゼロデータリテンションを「プロンプトと生成された応答は保存されず、基盤となるサードパーティの大規模言語モデルのトレーニングにも使用されない」と説明しています。あわせて、送る前に個人情報や社外秘のデータを特定できない記号に置き換えるデータマスキング、有害な出力を止める検出が入っています。</p>
+<h3 id="s6-1">社内で確認しておくこと</h3>
+<ul>
+<li><strong>データの置き場所</strong>: 参照するデータがSalesforce・Data 360・外部のどこにあるか</li>
+<li><strong>AIの委託先</strong>: 使うLLMの提供元。Salesforceは2026年8月に、AnthropicのClaudeがAtlas推論エンジンの推論モデルとして働き、Amazon Bedrock経由で自社の信頼境界の中で動くと発表している</li>
+<li><strong>記録</strong>: エージェントの操作と出力は監査証跡として追える</li>
+<li><strong>権限</strong>: エージェントが読める範囲は、Salesforceの権限とアクセス制御の内側に収まる</li>
+</ul>
+<p>社員向けのAgentforceユーザーライセンスは「制限されたSalesforce CRMオブジェクト」にアクセスする形です。どのオブジェクトまで読ませるかは、権限セットで最小に絞ってから広げるのが安全です。</p>
+<h2 id="s7">Copilot Studioや自前の構築とどう使い分ける？</h2>
+<p><strong>業務の中心がSalesforceならAgentforce、Microsoft 365ならCopilot Studio、複数の業務システムを独自につなぐなら自前の構築が向いています。</strong>どれが優れているかではなく、データと利用者がどこにいるかで決まります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>選択肢</th>
+<th>向いている会社</th>
+<th>費用の決まり方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="選択肢">Agentforce</td>
+<td data-label="向いている会社">顧客・商談・ケースがSalesforceにある</td>
+<td data-label="費用の決まり方">アクション・会話・ユーザー単位</td>
+</tr>
+<tr>
+<td data-label="選択肢">Copilot Studio</td>
+<td data-label="向いている会社">社員がTeamsやSharePointで働く</td>
+<td data-label="費用の決まり方">1パック月29,985円で25,000クレジットなど</td>
+</tr>
+<tr>
+<td data-label="選択肢">自前の構築</td>
+<td data-label="向いている会社">連携先が多く業務が独自</td>
+<td data-label="費用の決まり方">モデルの利用料と構築・運用の費用</td>
+</tr>
+</tbody>
+</table></div>
+<p>Copilot Studioは、Microsoft 365 Copilotのライセンスを持つ社員が社内で使うエージェントなら追加費用なしで作れます。AzureのMicrosoft Foundryで作る場合、基盤は無料で、払うのはモデルとツールの使った分です。主な用途がCRMのレコード更新か社内文書の検索かを先に確認しておくと選びやすくなります。</p>
+<div class="in-link-card"><a href="/media/copilot-studio-agent/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">Copilot Studioのエージェント作成手順</div><div class="in-link-card__desc">指示・ナレッジ・テスト・Teamsへの公開までの手順とビルダーの使い分けを解説しています。</div></div></a></div>
+<h2 id="s8">国内の導入事例は？</h2>
+<p><strong>公式に発表された国内の事例は、問い合わせの一次対応・社内の問い合わせ・営業の育成の3種類です。</strong>数字はどれも各社の発表で、条件つきです。</p>
+<h3 id="s8-1">WAKUWAKU（合宿免許の紹介）</h3>
+<p>公式LINEの一次対応をAgentforceに任せ、稼働開始後の返信までの時間は中央値で約10秒、AIの返信の約4割は営業時間（11〜20時）の外でした。2026年6月27日〜8月31日の集計では、コーディネーターの業務が月10時間減りました。</p>
+<p>会話の精度を人と同じ水準に近づけるため、毎週の定例で指示文とAgent Scriptを約4か月改修し、3月の予定だったリリースを延ばしました。</p>
+<h3 id="s8-2">日野出（包装資材の卸）</h3>
+<p>Sales Cloudとあわせて営業のコーチングを使い、全営業担当が商談前にロールプレイをする体制にしました。導入前1年の平均と比べて、新規商談の件数は127%、新規の顧客行動は130%と発表されています。</p>
+<h3 id="s8-3">KMユナイテッド（建設の人材・業務支援）</h3>
+<p>人事・労務への社内の問い合わせ（月に延べ60件）にエージェントが24時間答える形にし、担当者への問い合わせは90%減りました。</p>
+<h2 id="s9">Agentforceの導入前に決めることは？</h2>
+<p><strong>契約・課金方式・データの扱い・最初の業務の4点を決めてから営業担当に見積もりを頼むと、必要なものだけを買えます。</strong></p>
+<h3 id="s9-1">① 契約の確認</h3>
+<p>今のエディション（EnterpriseかCoreなど）と、Agentforceが付いているか、アドオンが要るかを確認します。Data 360にどこまでデータをつなぐかもここで決めます。</p>
+<h3 id="s9-2">② 課金方式の選定</h3>
+<p>顧客の問い合わせが中心で月の件数が読めるなら会話単位、社員が毎日使うならアドオンやユーザー単位、まだ読めないならFlexクレジットが候補です。Flexと会話単位は同じ組織で併用できないため、途中で変えるときは全部の切り替えになります。</p>
+<h3 id="s9-3">③ データの扱い</h3>
+<p>参照させるデータの場所・マスキングする項目・エージェントに渡す権限の範囲は、情シスと決めておく必要があります。社内の規程でLLMの提供元を確認する必要があれば、ここで営業担当に聞いておくと後で止まりません。</p>
+<h3 id="s9-4">④ 最初に任せる業務</h3>
+<p>最初の1業務には問い合わせの一次回答や社内からの定型の質問のように件数を数えられるものが向いています。1件あたりのアクション数と件数がわかれば、②の課金方式は実測をもとに決め直せます。</p>
+<p>試すだけなら無料のFoundationsか開発用のDeveloper Editionでエージェントを作り、プレビューで日本語の応答を確認するのが早い方法です。社内で設計や試作を外部と進めたい場合は、nitoもAIエージェントの構築を支援しています。</p>
+<h2 id="s10">まとめ</h2>
+<ul>
+<li>顧客・商談のデータがSalesforceにある会社は、Agentforceを第一候補に置いてよい</li>
+<li>費用はアクション数で動くので、1業務で1件あたりの回数を測ってから課金方式を決める</li>
+<li>社員が主にTeamsで働くならCopilot Studio、連携先が多く独自ならAPIでの構築と比べる</li>
+<li>古い記事の名前と金額（Agentforce 1・トピック・Data Cloud）は今の公式ページで確認する</li>
+</ul>
+<h2 id="s11">よくある質問</h2>
+<h3 id="s11-1">Agentforceは無料で使えますか？</h3>
+<p>Salesforceを契約している会社なら試せます。FoundationsはEnterprise Edition以上（新しいエディションではCore以上）に付く無料のアドオンで、Agentforce Builderやプロンプトビルダーが含まれています。本番で動かす段階からはFlexクレジットや会話単位などの料金が必要です。まだSalesforceを使っていない場合は、無料のDeveloper Editionで作って試せます。</p>
+<h3 id="s11-2">AgentforceとEinsteinの違いは何ですか？</h3>
+<p>Einsteinは予測や文章の生成でスコアや下書きを出す機能群で、次の行動は人が決めます。Agentforceはそこから手順を組み立て、レコードの更新などの実行まで行います。従業員向けの旧Einstein CopilotもAgentforceに名前が変わりました。</p>
+<h3 id="s11-3">Agentforceは日本語で使えますか？</h3>
+<p>使えます。国内の事例ではLINEや社内の問い合わせに日本語で答えています。音声のAgentforce Voiceは、2026年8月から日本語版の提供が始まり、順次展開されています。機能ごとに日本語の提供時期が違うものがあるため、使いたい機能は営業担当に確認してください。</p>
+<h3 id="s11-4">Agentforceを使うのにData 360は必要ですか？</h3>
+<p>Agentforceを使うにはData 360の有効化が前提です。Trust LayerやAgentforceデータライブラリもData 360が無いと動きません。社外のデータまでつなぐかは用途しだいで、その分のData 360クレジットは料金例とは別にかかります。</p>
+<h3 id="s11-5">AgentforceのFlexクレジットは繰り越せますか？</h3>
+<p>繰り越せません。使い切らなかったFlexクレジットは次の契約期間に持ち越されず、超えた分は契約の単価での後払いです。</p>
+<h3 id="s11-6">Agentforceは会話単位とFlexのどちらがよい？</h3>
+<p>顧客対応で会話の件数が読めるなら会話単位、社員向けや複数の用途で使うならFlexクレジットが向いています。公式のFAQはFlexクレジットを「柔軟性と拡張性において最も優れた選択肢」としています。</p>
+<h3 id="s11-7">Agentforceのデータは学習に使われますか？</h3>
+<p>公式の説明ではプロンプトと応答は外部のLLMに保存されず、学習にも使われません。送る前に個人情報などをマスキングする機能もあります。</p>
+<h3 id="s11-8">Agentforceを使うのに必要な権限は何ですか？</h3>
+<p>管理者が設定でAgentforceを有効にし、使う人に権限セットを割り当てます。手順はヘルプで確認してください。</p>
+<h2 id="s12">出典</h2>
+<p>すべて2026年11月14日に取得しました。</p>
+<ul>
+<li>Salesforce「<a href="https://www.salesforce.com/jp/agentforce/">Agentforce</a>」（定義・領域・よくある質問）</li>
+<li>Salesforce「<a href="https://www.salesforce.com/jp/agentforce/how-it-works/">Agentforceの仕組み</a>」（テスト・ガードレール・Foundations）</li>
+<li>Salesforce「<a href="https://www.salesforce.com/jp/agentforce/pricing/">Agentforceの価格</a>」（Flexクレジット・会話・ユーザーライセンス・アドオン・Max・料金例・FAQ）</li>
+<li>Salesforce「<a href="https://www.salesforce.com/jp/sales/pricing/">Sales Cloudの販売価格</a>」（Core・Advanced・Maxの円の価格と付くFlexクレジット）</li>
+<li>Salesforce「<a href="https://www.salesforce.com/news/stories/salesforce-simplifies-editions-2026/">New Salesforce Editions Bundle Everything Businesses Need for Agentic Transformation</a>」（2026年9月3日、英語）</li>
+<li>セールスフォース・ジャパン「<a href="https://www.salesforce.com/jp/news/press-releases/2025/05/15/agentforce-flexible-pricing-news/">新しい柔軟なAgentforceの価格設定を発表</a>」（2025年5月19日）</li>
+<li>Salesforce「<a href="https://www.salesforce.com/jp/artificial-intelligence/trusted-ai/">Salesforceが考える信頼できるAI</a>」（ゼロデータリテンション・データマスキング）</li>
+<li>Salesforce「<a href="https://trailhead.salesforce.com/content/learn/modules/data-cloud-powered-agentforce/explore-data-cloud-and-agentforce">Trailhead: Agentforce と Data 360</a>」（英語、Data 360の有効化が前提）</li>
+<li>セールスフォース・ジャパン「<a href="https://www.salesforce.com/jp/news/press-releases/2026/08/27/salesforce-and-anthropic-announce-claudeforce/">SalesforceとAnthropic、Claudeforceを発表</a>」（2026年9月1日、8月26日の米国発表の日本語訳）</li>
+<li>Salesforce「<a href="https://www.salesforce.com/jp/agentforce/legacy-guide/">Agentforce レガシーガイド</a>」（トピックからサブエージェントへの名前の変更）</li>
+<li>セールスフォース・ジャパン「<a href="https://www.salesforce.com/jp/news/press-releases/2026/08/07/agentforcevoice-japan-ga/">Agentforce Voice 日本語版</a>」（2026年8月7日）</li>
+<li>セールスフォース・ジャパン「<a href="https://www.salesforce.com/jp/news/press-releases/2026/11/11/wakuwaku-customer-news/">WAKUWAKU、Agentforceを導入</a>」（2026年11月11日）</li>
+<li>セールスフォース・ジャパン「<a href="https://www.salesforce.com/jp/news/press-releases/2026/11/10/hinode-customer-news/">日野出、Agentforceで営業ロールプレイを全員実施</a>」（2026年11月10日）</li>
+<li>セールスフォース・ジャパン「<a href="https://www.salesforce.com/jp/news/press-releases/2026/09/30/kmu-customer-news/">KMユナイテッド、Agentforceを導入</a>」（2026年9月30日）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">Agentforceとは？何ができる？</a><a href="#s2">Agentforceの仕組みは？</a><a href="#s3">Agentforceの料金はいくらかかる？</a><a href="#s4">Agentforceを導入するメリットは？</a><a href="#s5">Agentforceのデメリットと注意点は？</a><a href="#s6">入力したデータと権限はどう扱われる？</a><a href="#s7">Copilot Studioや自前の構築とどう使い分ける？</a><a href="#s8">国内の導入事例は？</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/langchain-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LangChainとは"><defs><linearGradient id="ecg-7d4d6675" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7d4d6675)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LangChainとは</text><line x1="318.8" y1="365.9" x2="881.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.13</div>
+                <div class="rel-card__ttl">【2026年11月】LangChainとは？できること・LangGraphとの違い・料金と使い方</div>
+            </a>
+            <a href="/media/ai-builder/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Builderとは"><defs><linearGradient id="ecg-4a1bedc9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4a1bedc9)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI Builderとは</text><line x1="296.0" y1="365.9" x2="904.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.12</div>
+                <div class="rel-card__ttl">【2026年11月】AI Builderとは？できること・料金とCopilotクレジットへの移行</div>
+            </a>
+            <a href="/media/microsoft-foundry/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Foundryとは"><defs><linearGradient id="ecg-b168d9c7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b168d9c7)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Microsoft Foundryとは</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.12</div>
+                <div class="rel-card__ttl">【2026年11月】Microsoft Foundryとは？旧Azure AI Foundryの機能・料金・選び方</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'agentforce-guide',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
