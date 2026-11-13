@@ -45,8 +45,6 @@ OpenAIの発表では別々の機能だったOperatorのウェブサイトを操
 
 ChatGPTのヘルプにある「ChatGPT エージェント」の記事は、冒頭の概要の節で**「ChatGPT エージェントは提供を終了しました」**と案内しています。続けて、時間のかかる複数の手順の作業や完成した成果物にはChatGPT Workを、ブラウザを使う作業にはクラウドブラウザの使い方の記事を見るよう書かれています。
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/chatgpt-agent-mode/cam_11_uses.jpg" alt="用途別のChatGPTの機能の図。文章の回答は通常のチャット、出典つきの報告書はDeep Research、サイトの操作・成果物の作成はChatGPT Work" loading="lazy"></figure>
-
 同じ記事の下には `/agent` での始め方や月40回・400回の上限が今も残っていますが、これは提供していた当時の説明です。**終了の日付はヘルプに書かれていないため、いつ使えなくなったかは公式からは言い切れません**。OpenAIのコミュニティでは、2026年8月8日に利用者が、エージェントモードが無くなりヘルプがWorkを案内していると投稿しています。9月7日にはOpenAIのサポートが、移行で作業に支障が出たことをわび、Workのクラウドブラウザを案内しています。
 
 この1年の流れを並べると、何が残り何が入れ替わったかが分かります。
@@ -122,6 +120,8 @@ ChatGPTは初めてのサイトにクラウドブラウザでアクセスする�
 ## Deep Researchとの違い
 
 Deep Researchは今も使える機能で、料金ページでは無料版とGoが上限あり、PlusとProは使え、枠はPlusで拡張・Proで最大です。使い方は[Deep Researchの記事](/media/deep-research-guide/)にまとめました。Workとの違いは次のとおりです。
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/chatgpt-agent-mode/cam_11_choose.jpg" alt="Deep ResearchとChatGPT Workの使い分けの図。答えが文章で十分ならDeep Research、サイトの操作・ファイルの作成まで必要ならChatGPT Work" loading="lazy"></figure>
 
 | 観点 | Deep Research | ChatGPT Work |
 |---|---|---|
