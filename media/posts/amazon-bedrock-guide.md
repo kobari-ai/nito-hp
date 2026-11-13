@@ -104,8 +104,6 @@ AgentCoreの主な部品は東京リージョンで使えます。ただし決�
 
 文章のモデルは入力と出力のトークン数に単価をかけて数えます。単価はモデルごとに違い、さらに呼び出すリージョンと、処理する場所を限るかどうかで変わります。ナレッジベースやガードレールなどの部品は、保存量や回数に応じた別の料金です。**ClaudeやGPTのようにAWS Marketplaceで売られるモデルは、請求もAWS Marketplace経由になり、Cost Explorerでは提供元の名前で表示され、Amazon Bedrockの行には含まれません。**
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/amazon-bedrock-guide/brk_12_region.jpg" alt="東京から呼び出すときの処理地域の図。In-Regionは東京のみで処理、Geoは日本国内（東京と大阪）に分散、Globalは全世界に分散。地域を限る呼び方は10%の割増、Globalは標準料金より約10%安い" loading="lazy"></figure>
-
 ### 4つの階層とバッチ
 
 呼び出すたびに4つの階層から選べます。
@@ -122,6 +120,8 @@ AgentCoreの主な部品は東京リージョンで使えます。ただし決�
 ### 地域を限ると約1割高い
 
 東京から呼ぶとき処理する場所の決め方は3つあります。東京だけで処理するIn-Region、日本の中（東京と大阪）で振り分けるGeo、世界に振り分けるGlobalです。Globalは標準料金より約10%安く、地域を限る呼び方には10%の割増があります。振り分けの転送料はかからず、料金は呼び出し元のリージョンの単価で数えます。
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/amazon-bedrock-guide/brk_12_region.jpg" alt="東京から呼び出すときの処理地域の図。In-Regionは東京のみで処理、Geoは日本国内（東京と大阪）に分散、Globalは世界に分散。地域を限るIn-RegionとGeoの呼び方はGlobalより10%高い" loading="lazy"></figure>
 
 **社外に出せない情報を扱うならjp.を付けた日本の中の呼び方、そうでなければglobal.を付けた安い呼び方、と用途ごとに分けられます。**
 
