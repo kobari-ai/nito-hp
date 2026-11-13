@@ -260,9 +260,9 @@ Agentforceを使うにはData 360の有効化が前提です。Trust LayerやAge
 - Salesforce「[New Salesforce Editions Bundle Everything Businesses Need for Agentic Transformation](https://www.salesforce.com/news/stories/salesforce-simplifies-editions-2026/)」（2026年9月3日、英語）
 - セールスフォース・ジャパン「[新しい柔軟なAgentforceの価格設定を発表](https://www.salesforce.com/jp/news/press-releases/2025/05/15/agentforce-flexible-pricing-news/)」（2025年5月19日）
 - Salesforce「[Salesforceが考える信頼できるAI](https://www.salesforce.com/jp/artificial-intelligence/trusted-ai/)」（ゼロデータリテンション・データマスキング）
-- Salesforce「[Trailhead: Agentforce と Data 360](https://trailhead.salesforce.com/content/learn/modules/data-cloud-powered-agentforce/explore-data-cloud-and-agentforce)」（Data 360の有効化が前提）
-- Salesforce「[Salesforce and Anthropic announce Claudeforce](https://www.salesforce.com/jp/news/press-releases/2026/08/27/salesforce-and-anthropic-announce-claudeforce/)」（2026年8月27日）
-- Salesforce「[Agentforce レガシーガイド](https://www.salesforce.com/jp/agentforce/legacy-guide/)」（トピックとエディション名の変更）
+- Salesforce「[Trailhead: Agentforce と Data 360](https://trailhead.salesforce.com/content/learn/modules/data-cloud-powered-agentforce/explore-data-cloud-and-agentforce)」（英語、Data 360の有効化が前提）
+- セールスフォース・ジャパン「[SalesforceとAnthropic、Claudeforceを発表](https://www.salesforce.com/jp/news/press-releases/2026/08/27/salesforce-and-anthropic-announce-claudeforce/)」（2026年9月1日、8月26日の米国発表の日本語訳）
+- Salesforce「[Agentforce レガシーガイド](https://www.salesforce.com/jp/agentforce/legacy-guide/)」（トピックからサブエージェントへの名前の変更）
 - セールスフォース・ジャパン「[Agentforce Voice 日本語版](https://www.salesforce.com/jp/news/press-releases/2026/08/07/agentforcevoice-japan-ga/)」（2026年8月7日）
 - セールスフォース・ジャパン「[WAKUWAKU、Agentforceを導入](https://www.salesforce.com/jp/news/press-releases/2026/11/11/wakuwaku-customer-news/)」（2026年11月11日）
 - セールスフォース・ジャパン「[日野出、Agentforceで営業ロールプレイを全員実施](https://www.salesforce.com/jp/news/press-releases/2026/11/10/hinode-customer-news/)」（2026年11月10日）
