@@ -216,6 +216,8 @@ BusinessとEnterpriseのワークスペースのデータは、既定で学習�
 
 開発者が既存のコードを書き進めるなら、[Cursor](/media/cursor-guide/)や[Devin](/media/devin-ai/)のような開発者向けのツールが向いています。LovableはReplit・Bolt・v0などで作ったコードをZIPで取り込めるため、別のサービスで作った試作をLovableに移して続けることもできます。
 
+Boltの料金・学習の扱い・会社で使う前に決めることは[bolt.newとは？](/media/bolt-new-guide/)で解説しています。
+
 :::linkcard
 url: /media/replit-guide/
 title: Replitとは？Agentの料金・使い方と会社で使う前に決めること
