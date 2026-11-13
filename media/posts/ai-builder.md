@@ -24,7 +24,7 @@ Premiumライセンスに付くAI Builderクレジットと、AI Builderの容�
 
 **AI BuilderはMicrosoftが用意した学習済みのAIをそのまま使うか、自社の書類やデータで学習させたAIを作って、Power Platformの業務に組み込む機能です。** 使うにはDataverseのあるPower Platformの環境が必要で、Microsoft 365のライセンスだけでは使えません。Power AppsかPower Automateにサインインし、左の「…その他」から「AI ハブ」を開くと、AIモデルとプロンプトの一覧が出ます。
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/ai-builder/aib_10_parts.jpg" alt="AI Builderの3つの中身の図。事前構築済みモデルはMicrosoftが学習させたもので請求書・領収書・名刺の読み取りなど、カスタムモデルは自社のサンプルで学習させるもので独自の帳票を読むドキュメント処理など、プロンプトは生成AIへの指示文を部品として保存したもので要約・分類・下書きの作成" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/ai-builder/aib_10_parts.jpg" alt="AI Builderの3つの構成要素の図。事前構築済みモデルはMicrosoftが学習させたもので例は請求書・領収書・名刺の読み取りなど、カスタムモデルは自社のサンプルで学習させるもので例は独自の帳票を読むドキュメント処理など、プロンプトは生成AIへの指示文を部品として保存したもので例は要約・分類・下書きの作成" loading="lazy"></figure>
 
 AI Builderの中身は大きく3つに分かれます。
 
@@ -51,7 +51,7 @@ AI Builderの中身は大きく3つに分かれます。
 
 **同じ請求書の読み取りでも、Power Automateのフローで動かすか、Copilot Studioのエージェントから動かすかで、減るクレジットが変わります。** AI Builderで作ったモデルとプロンプトは、Power Apps・Power Automate・Copilot Studioの3つから呼べます。
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/ai-builder/aib_11_where.jpg" alt="利用場所別の消費クレジットの図。AI BuilderのモデルとプロンプトはPower Apps・Power Automate・Copilot Studioの3つから呼べる。Power AppsとPower AutomateはAI Builderクレジットが残っていれば先に減り、無くなるとCopilotクレジット。Copilot Studioのエージェント・エージェントフローは最初からCopilotクレジットだけ" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/ai-builder/aib_11_where.jpg" alt="利用場所別の消費クレジットの図。Power Apps・Power AutomateはAI Builderクレジットの残高を優先して消費し、残高がなくなるとCopilotクレジットを消費。Copilot Studioのエージェント・エージェントフローはCopilotクレジットのみ消費" loading="lazy"></figure>
 
 Power Automateのクラウドフローでは、メールに付いた請求書を受け取ったら読み取り、結果をSharePointのリストやExcel、Dataverseに書き込む、という流れを組みます。Power Appsならスマホで撮った領収書をその場で読み取る画面を作り、Teamsに置いて社員に配れます。
 
@@ -104,7 +104,7 @@ Power Automateのライセンスのページも、Premiumで使える機能にAI
 
 **2026年11月1日から、新しく買ったり更新したりしたPower PlatformとDynamics 365のライセンスには、AI Builderクレジットが付かなくなりました。** AI Builderの機能そのものは終わらず、Copilotクレジットで引き続き使えます。
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/ai-builder/aib_12_timeline.jpg" alt="AI Builderクレジット終了の時系列の図。2025年11月1日に容量アドオンの新規の販売が終了、2026年11月1日に新しく買ったり更新したりしたライセンスにAI Builderクレジットが付かなくなり容量アドオンの提供も終了、その後もAI Builderの機能は終わらずCopilotクレジットで引き続き使える" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/ai-builder/aib_12_timeline.jpg" alt="AI Builderクレジット終了の時系列の図。2025年11月1日に容量アドオンの新規の販売が終了。2026年11月1日に新規購入・更新したPower Platform・Dynamics 365のライセンスへのAI Builderクレジットの付与が終了し、容量アドオンの提供も終了。既存のアドオン・シードは契約期間の終了まで有効。契約期間の終了後もAI Builderの機能は継続し、Copilotクレジットで利用可能" loading="lazy"></figure>
 
 Microsoftが段階的な終了を発表したのは2025年10月です。AI Builderクレジットの入手先は2つあり、終わり方が違います。
 
