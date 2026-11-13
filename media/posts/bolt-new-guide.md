@@ -24,7 +24,7 @@ bolt.new（ボルト）は、作りたいサイトやアプリを文章で伝え
 
 **bolt.newはブラウザの中で会話しながらWebサイト・Webアプリ・スマホアプリを作り、組み込みのBolt Cloudで公開とデータベースまで済ませるAIのアプリ開発サービスです。**運営はブラウザでNode.jsを動かすWebContainersを開発したStackBlitz社で、2024年10月に公開されました。ソフトのインストールや開発環境の準備は不要で、アカウントやプロジェクトの管理はStackBlitzと共通です。
 
-<!-- SHOT: 図 blt_flow.html → blt1114_01_flow.png・alt「bolt.newの作成から公開までの流れの図。文章やFigma・GitHubから指示を入力し、プレビューで確認して修正し、Bolt Cloudでホスティング・データベース・ドメインを使って公開する」 -->
+<figure class="post-figure"><img src="/media/images/bolt-new-guide/blt1114_01_flow.png" alt="bolt.newの作成から公開までの流れの図。文章やFigma・GitHubから指示を入力し、プレビューで確認して修正し、Bolt Cloudでホスティング・データベース・ドメインを使って公開する" loading="lazy"></figure>
 
 プログラミングの経験は問いません。開発者向けにはコードを直接編集できるCode viewもあり、事業部が試作し、開発者が仕上げる分担にも向いています。
 
@@ -58,7 +58,7 @@ bolt.new（ボルト）は、作りたいサイトやアプリを文章で伝え
 | Teams | 1人$30から | メンバーごとに付与 | 一括請求・管理者による制御・組織内での共有 |
 | Enterprise | 個別 | 個別 | SSO・監査ログ・SLA・データ保持の方針 |
 
-<!-- SHOT: 画面 https://bolt.new/pricing・本文だけにある探す語「Start at 10M tokens per month」・赤枠にする語「$25」と「Start at 10M tokens per month」・PC・alt「bolt.newの料金ページ。Freeは$0、Proは月$25で月1,000万トークンから、Teamsは1人月$30、Enterpriseは個別」・figcaption「bolt.newの料金ページ（2026年11月14日）」 -->
+<figure class="post-figure"><img src="/media/images/bolt-new-guide/blt1114_03_pricing.png" alt="bolt.newの料金ページ。Freeは$0、Proは月$25で月1,000万トークンから、Teamsは1人月$30、Enterpriseは個別" loading="lazy"><figcaption>bolt.newの料金ページ（2026年11月14日）</figcaption></figure>
 
 Proは月のトークンを増やすほど月額が上がる段の形です。公式のヘルプの例では月$50で2,600万、月$100で5,500万トークンになり、段を上げるほど1トークンあたりは安くなります。年払いは1年分を先に払う形で、Proの1,000万トークンの段は年$216（月$18相当）です。
 
@@ -90,7 +90,7 @@ Teamsは1人分ずつの契約です。**トークンはメンバーごとに付
 
 **ブラウザでbolt.newを開き、作りたいものを書いて送れば始められます。**登録はGoogle・GitHub・メールのどれかで、クレジットカードは不要です。画面は英語ですが、指示は日本語で書けます。
 
-<!-- SHOT: 画面 https://bolt.new/・本文だけにある探す語「What will you build today?」・赤枠にする語 入力欄と「Build now」・スマホ・alt「bolt.newのトップ画面。中央の入力欄に作りたいものを書き、Build nowで作成を始める」・figcaption「bolt.newのトップ画面（2026年11月14日）」 -->
+<figure class="post-figure"><img src="/media/images/bolt-new-guide/blt1114_04_top.png" alt="bolt.newのトップ画面。中央の入力欄に作りたいものを書き、Build nowで作成を始める" loading="lazy"><figcaption>bolt.newのトップ画面（2026年11月14日）</figcaption></figure>
 
 1. [bolt.new](https://bolt.new/)を開き、入力欄に作りたいものを書く（例: 社員が備品の貸し出しを申請し、総務が承認する社内アプリ。メールでログインする）
 2. 「Build now」を押し、Google・GitHub・メールのどれかで登録する
@@ -136,7 +136,7 @@ Freeで公開したサイトは誰でも見られ、検索エンジンにも載�
 
 ### 学習の扱い
 
-<!-- SHOT: 図 blt_training.html → blt1114_02_training.png・alt「bolt.newの学習の扱いをプラン別に示した図。個人のFree・Proは既定で学習の対象で設定から止められる、TeamsとEnterpriseのワークスペースは規約で対象外、Forgeの利用中は同意が条件で止められない」 -->
+<figure class="post-figure"><img src="/media/images/bolt-new-guide/blt1114_02_training.png" alt="bolt.newの学習の扱いをプラン別に示した図。個人のFree・Proは既定で学習の対象で設定から止められる、TeamsとEnterpriseのワークスペースは規約で対象外、Forgeの利用中は同意が条件で止められない" loading="lazy"></figure>
 
 **2026年10月7日から、個人のアカウントでBoltに入れた指示・生成されたコード・エラーと修正の記録・プロジェクトのファイルは、StackBlitzのAIの学習と、匿名化したデータの第三者への提供（対価を受け取る場合を含む）に使われることがあります。**設定は既定でオンで、EU・英国・スイスのアカウントだけ既定でオフです。対象は10月7日以降に作った内容とAIに送った内容で、それより前の内容は含まれません。
 
