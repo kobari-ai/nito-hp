@@ -26,7 +26,7 @@ ChatGPTのエージェントモードは2025年7月17日に始まった機能で
 
 OpenAIの発表では別々の機能だったOperatorのウェブサイトを操作する力と、deep researchの情報をまとめる力、ChatGPTの会話の力を1つにしたものと説明されています。仮想コンピューターには画面を見てクリックや入力をするビジュアルブラウザー、ページの文字を速く読むテキストブラウザー、コマンドを動かすターミナル、APIへの直接のアクセスが入っていて、作業に合わせて使い分けていました。
 
-<figure class="post-figure"><img src="/media/images/chatgpt-agent-mode/cam_01_overview.png" alt="用途別のChatGPTの機能の図。質問への回答はチャット、出典つきの調査報告はDeep Research、サイトの操作と成果物の作成はChatGPT Work。エージェントモードは公式ヘルプで提供終了と案内" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/chatgpt-agent-mode/cam_10_origin.jpg" alt="ChatGPTのエージェントモードの成り立ちの図。Operatorのウェブサイトを操作する力、deep researchの情報をまとめる力、ChatGPTの会話の力をまとめたのがエージェントモード（2025年7月17日に開始）。現在は公式ヘルプで提供終了と案内" loading="lazy"></figure>
 
 発表に載っていた例は「カレンダーを確認して、最近のニュースに基づき今後のクライアントとの会議について説明してほしい」「競合他社3社を分析してスライドショーを作成してほしい」のような依頼です。通常のチャットとの違いは次のとおりでした。
 
@@ -44,6 +44,8 @@ OpenAIの発表では別々の機能だったOperatorのウェブサイトを操
 ## エージェントモードは今どうなったか
 
 ChatGPTのヘルプにある「ChatGPT エージェント」の記事は、冒頭の概要の節で**「ChatGPT エージェントは提供を終了しました」**と案内しています。続けて、時間のかかる複数の手順の作業や完成した成果物にはChatGPT Workを、ブラウザを使う作業にはクラウドブラウザの使い方の記事を見るよう書かれています。
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/chatgpt-agent-mode/cam_11_uses.jpg" alt="用途別のChatGPTの機能の図。文章の回答は通常のチャット、出典つきの報告書はDeep Research、サイトの操作・成果物の作成はChatGPT Work" loading="lazy"></figure>
 
 同じ記事の下には `/agent` での始め方や月40回・400回の上限が今も残っていますが、これは提供していた当時の説明です。**終了の日付はヘルプに書かれていないため、いつ使えなくなったかは公式からは言い切れません**。OpenAIのコミュニティでは、2026年8月8日に利用者が、エージェントモードが無くなりヘルプがWorkを案内していると投稿しています。9月7日にはOpenAIのサポートが、移行で作業に支障が出たことをわび、Workのクラウドブラウザを案内しています。
 
