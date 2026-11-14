@@ -44,7 +44,7 @@ Claudeを拡張する手段はスキルのほかにもあり、読み込まれ�
 | サブエージェント | 別の文脈で動き要約を返す | 多くのファイルを読む調査・並列作業 |
 | フック | 決まったイベントで必ず動く | 編集後のlintや危ない操作の拒否 |
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/claude-code-skills/ccs_11_choose.jpg" alt="CLAUDE.md・スキル・フックの使い分けの図。常に必要ならCLAUDE.md、ときどき必要ならスキル、必ず守らせたい決まりはフック" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/claude-code-skills/ccs_13_choose.jpg" alt="CLAUDE.md・スキル・フックの使い分けの図。常に必要ならCLAUDE.md、ときどき必要ならスキル、必ず守らせたい決まりはフック" loading="lazy"></figure>
 
 **常に必要ならCLAUDE.md、ときどき必要ならスキルに書くと分けられます。**
 
@@ -100,7 +100,7 @@ Claude Codeでは、説明（`description` と `when_to_use` の合計）が1つ
 
 **どこに置くかで、スキルが誰に届くかが決まります。**
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/claude-code-skills/ccs_12_placement.jpg" alt="スキルの置き場所の決め方の図。まずプロジェクト（リポジトリの.claude/skills/に置いてコミット）、2つ目のリポジトリで必要になったらプラグイン（スキル・フック・MCPサーバーなどを1つにまとめる）、全社で配るなら管理設定（組織がデプロイしたPCの全ユーザーに届く）" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/claude-code-skills/ccs_14_placement.jpg" alt="スキルの置き場所の決め方の図。迷ったらプロジェクト（リポジトリの.claude/skills/に置いてコミット）、複数のリポジトリならプラグイン（スキル・フック・MCPサーバーなどを1つにまとめる）、全社で配るなら管理設定（組織がデプロイしたPCの全ユーザーに届く）" loading="lazy"></figure>
 
 | 置き場所 | 書く場所 | 届く範囲 | 向いている場面 |
 |---|---|---|---|
