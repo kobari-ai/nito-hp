@@ -30,8 +30,6 @@ Anthropicは2025年10月16日にAgent Skills（スキル）を発表し、12月1
 
 同じフォルダを規格に対応する他のAIツールで読めるのは、形式がAgent Skillsというオープンな規格に沿っているからです。Claude Codeはこの規格に、呼び出す人の制御・サブエージェントでの実行・コマンド結果の差し込みといった機能を足しています。
 
-<figure class="post-figure"><img src="/media/images/claude-code-skills/01_overview.png" alt="スキルの段階的な読み込みの図。起動時は名前と説明（約100トークン）、会話が説明に合致したときにSKILL.mdの本文、作業で必要になったときに参考資料とスクリプトの実行結果" loading="lazy"></figure>
-
 Claude Codeには最初から入っているバンドルスキルもあり、`/code-review`・`/debug`・`/loop`・`/verify` などがあります。
 
 ## CLAUDE.md・MCP・サブエージェント・フックとの違い
@@ -46,6 +44,8 @@ Claudeを拡張する手段はスキルのほかにもあり、読み込まれ�
 | サブエージェント | 別の文脈で動き要約を返す | 多くのファイルを読む調査・並列作業 |
 | フック | 決まったイベントで必ず動く | 編集後のlintや危ない操作の拒否 |
 
+<figure class="post-figure post-figure--zu"><img src="/media/images/claude-code-skills/ccs_11_choose.jpg" alt="CLAUDE.md・スキル・フックの使い分けの図。常に必要ならCLAUDE.md、ときどき必要ならスキル、必ず守らせたい決まりはフック" loading="lazy"></figure>
+
 **常に必要ならCLAUDE.md、ときどき必要ならスキルに書くと分けられます。**
 
 MCPとは競合しません。MCPが接続を受け持ち、スキルがそのスキーマや問い合わせの書き方を教える、という組み合わせを公式は例に挙げています。
@@ -55,6 +55,8 @@ MCPとは競合しません。MCPが接続を受け持ち、スキルがその�
 ## スキルが読み込まれる仕組み
 
 スキルは3段階で読み込まれます。起動時に入るのは各スキルの名前と説明だけで、仕様では1つあたり約100トークンです。会話が説明に合うと `SKILL.md` の本文が読まれ、本文で指したファイルやスクリプトは必要なときだけ使われます。スクリプトで文脈に入るのは実行結果だけです。
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/claude-code-skills/ccs_10_loading.jpg" alt="スキルの段階的な読み込みの図。起動時は各スキルの名前と説明だけ（1つあたり約100トークン）、会話が説明に合致したときにSKILL.mdの本文、作業で必要になったときに本文で指したファイルやスクリプト（スクリプトは実行結果だけ）" loading="lazy"></figure>
 
 Claude Codeでは、説明（`description` と `when_to_use` の合計）が1つあたり1,536文字で切られます。スキルの一覧全体にもコンテキストの1%という枠があり、超えると呼び出しの少ないスキルから説明が削られます。**説明の最初に主な用途を書いておくと、切られても判断に要る語が残ります。**
 
@@ -96,7 +98,9 @@ Claude Codeでは、説明（`description` と `when_to_use` の合計）が1つ
 
 ## チームで配る置き場所と配り方
 
-**どこに置くかで、スキルが誰に届くかが決まります。** 
+**どこに置くかで、スキルが誰に届くかが決まります。**
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/claude-code-skills/ccs_12_placement.jpg" alt="スキルの置き場所の決め方の図。まずプロジェクト（リポジトリの.claude/skills/に置いてコミット）、2つ目のリポジトリで必要になったらプラグイン（スキル・フック・MCPサーバーなどを1つにまとめる）、全社で配るなら管理設定（組織がデプロイしたPCの全ユーザーに届く）" loading="lazy"></figure>
 
 | 置き場所 | 書く場所 | 届く範囲 | 向いている場面 |
 |---|---|---|---|
