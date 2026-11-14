@@ -23,7 +23,7 @@ LLMO対策の会社はAIの回答を計測できるか・記事やページの�
 
 LLMO対策は見込み客がChatGPTやGeminiなどのAIに「おすすめの会社は？」と聞いたとき、自社の名前が挙がり、強みが正しく説明されるようにする取り組みです。LLMOはLarge Language Model Optimizationの略で、日本語では大規模言語モデル最適化と訳されます。大規模言語モデルはChatGPTのように文章で答えるAIの土台になっている仕組みを指します。
 
-【IMG1】
+<figure class="post-figure post-figure--zu"><img src="/media/images/llmo-companies/llmoc_01_shigoto.jpg" alt="LLMO対策会社に頼める3つの仕事。診断と戦略、制作と直し、計測と改善" loading="lazy"></figure>
 
 ### SEOとの違い
 
@@ -138,7 +138,7 @@ LLMO対策会社の仕事は診断と戦略づくり・記事やページの制�
 
 **LLMO対策の費用は簡易な診断なら1回無料〜30万円程度、月額のコンサルは月10万〜50万円程度、記事の制作やサイトの実装まで含むと月30万〜100万円以上が目安です。** 各社の公開料金と比較サイトの相場を並べると、頼む範囲ごとに次のように分かれます。
 
-【IMG2】
+<figure class="post-figure post-figure--zu"><img src="/media/images/llmo-companies/llmoc_02_hiyou.jpg" alt="LLMO対策の費用の目安。診断は1回無料〜30万円程度、月額のコンサルは月10万〜50万円程度、制作・実装までは月30万〜100万円以上" loading="lazy"></figure>
 
 | 頼む範囲 | 費用の目安 | この記事の会社の例 |
 |---|---|---|
