@@ -23,7 +23,7 @@ AIO対策の会社は、診断だけを受けるのか記事の制作やサイ�
 
 AIO対策の会社はChatGPTやGeminiなど主要なAIの回答で自社が紹介・引用されるように、調査から施策まで支援する会社です。多くはSEOの支援から始まった会社で、同じサービスをLLMO対策・GEO対策・AI検索対策と呼ぶ会社もあります。
 
-【IMG1】
+<figure class="post-figure post-figure--zu"><img src="/media/images/aio-taisaku-companies/aioc_01_difference.jpg" alt="AIO・SEO・LLMOの違いの図。SEOは検索結果の順位とクリックを数える。AIOは生成AIの回答で社名が挙がる割合と引用元を数え、GoogleのAIによる概要だけを指す場合もある。LLMO・GEOは呼び名の由来が違うだけで行う作業はAIOとほぼ同じ" loading="lazy"></figure>
 
 ### AIOには2つの意味がある
 
@@ -57,7 +57,7 @@ desc: LLMO対策の会社12社を、比較表と費用相場、選び方で解�
 
 AIO対策の会社に頼めるのは、現状の診断から施策の実行、効果の計測までです。**ただしどこまでを1社が受けるかは会社によって大きく違い、見積もりの金額だけでは比べられません。**
 
-【IMG2】
+<figure class="post-figure post-figure--zu"><img src="/media/images/aio-taisaku-companies/aioc_02_scope.jpg" alt="AIO対策の会社の支援範囲の図。診断・調査だけは現状を計測し課題と優先順位をレポートにする。方針と提案までは質問の設計と施策の提案を受け持ち、制作と実装は社内か制作会社が行う。記事・実装までは記事の制作、既存ページの修正、構造化データの実装まで1社で受ける" loading="lazy"></figure>
 
 ### 支援内容の一覧
 
