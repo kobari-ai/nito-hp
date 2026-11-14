@@ -26,7 +26,7 @@ ChatGPTのエージェントモードは2025年7月17日に始まった機能で
 
 OpenAIの発表では別々の機能だったOperatorのウェブサイトを操作する力と、deep researchの情報をまとめる力、ChatGPTの会話の力を1つにしたものと説明されています。仮想コンピューターには画面を見てクリックや入力をするビジュアルブラウザー、ページの文字を速く読むテキストブラウザー、コマンドを動かすターミナル、APIへの直接のアクセスが入っていて、作業に合わせて使い分けていました。
 
-<figure class="post-figure"><img src="/media/images/chatgpt-agent-mode/cam_01_overview.png" alt="用途別のChatGPTの機能の図。質問への回答はチャット、出典つきの調査報告はDeep Research、サイトの操作と成果物の作成はChatGPT Work。エージェントモードは公式ヘルプで提供終了と案内" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/chatgpt-agent-mode/cam_10_origin.jpg" alt="ChatGPTのエージェントモードの成り立ちの図。Operatorのウェブサイトを操作する力、deep researchの情報をまとめる力、ChatGPTの会話の力をまとめたのがエージェントモード（2025年7月17日に開始）。現在は公式ヘルプで提供終了と案内" loading="lazy"></figure>
 
 発表に載っていた例は「カレンダーを確認して、最近のニュースに基づき今後のクライアントとの会議について説明してほしい」「競合他社3社を分析してスライドショーを作成してほしい」のような依頼です。通常のチャットとの違いは次のとおりでした。
 
@@ -120,6 +120,8 @@ ChatGPTは初めてのサイトにクラウドブラウザでアクセスする�
 ## Deep Researchとの違い
 
 Deep Researchは今も使える機能で、料金ページでは無料版とGoが上限あり、PlusとProは使え、枠はPlusで拡張・Proで最大です。使い方は[Deep Researchの記事](/media/deep-research-guide/)にまとめました。Workとの違いは次のとおりです。
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/chatgpt-agent-mode/cam_11_choose.jpg" alt="Deep ResearchとChatGPT Workの使い分けの図。答えが文章で十分ならDeep Research、サイトの操作・ファイルの作成まで必要ならChatGPT Work" loading="lazy"></figure>
 
 | 観点 | Deep Research | ChatGPT Work |
 |---|---|---|

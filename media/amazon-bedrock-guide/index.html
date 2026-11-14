@@ -126,6 +126,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s1">Amazon Bedrockとは</h2>
 <h3 id="s1-1">何をするサービスか</h3>
 <p>Amazon Bedrockは自社のシステムからAPIでAIモデルを呼ぶための基盤です。2023年9月に一般提供が始まり、サーバーやGPUはAWSが管理するので、呼び出す量に応じて払うだけで済みます。複数の会社のモデルを同じ書き方で呼べるうえ、社内文書を検索させるナレッジベース、入出力を絞るガードレール、エージェントを動かすAgentCoreまでが同じAWSの請求に載ります。<strong>モデルを1社に決め打ちせず、AWSの権限・ログ・請求の中で切り替えられる点が、会社で使うときのいちばんの違いです。</strong></p>
+<figure class="post-figure post-figure--zu"><img src="/media/images/amazon-bedrock-guide/brk_10_what.jpg" alt="Amazon Bedrockとはの図。AWSの上で複数の会社のAIモデルを1つの窓口から呼び出す基盤で、ナレッジベースは社内文書の検索、ガードレールは入出力の制限、AgentCoreはエージェントの実行。モデル・部品ともに同じAWSの請求に計上" loading="lazy"></figure>
+
 <p>すでにAWSでS3やLambdaを使っている会社なら、文書の置き場所や業務の処理とそのままつなげます。</p>
 <h3 id="s1-2">SageMakerとの違い</h3>
 <p>同じAWSのAmazon SageMakerは、機械学習のモデルを自分で作り、学習させ、配備するためのサービスです。Bedrockは各社が作った学習済みのモデルを呼ぶのが基本で、自社のデータで調整する機能も持っています。<strong>自社データで一からモデルを学習させる予定が無いなら、Bedrockから始めるのが近道です。</strong></p>
@@ -187,6 +189,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>AgentCoreはAIエージェントを本番で動かすための実行環境と部品の集まりです。旧来のAgentsとの違いと合わせた詳しい説明は次の節です。</p>
 <h2 id="s4">BedrockとAgentCoreの違い</h2>
 <p>AgentCoreはBedrockの中でエージェントを動かす部品の集まりで、モデルを呼ぶBedrock本体とは料金も別に数えます。</p>
+<figure class="post-figure post-figure--zu"><img src="/media/images/amazon-bedrock-guide/brk_11_agents.jpg" alt="用途別のエージェント構築サービスの図。新規のエージェント開発はAgentCore、社内文書への回答のみならナレッジベースを単体で利用、既存エージェントの継続利用はAgents Classic。Agents Classicは2026年7月30日に新規登録を終了" loading="lazy"></figure>
+
 <p>AgentCoreの中身は、エージェントを1回のAPI呼び出しで定義して動かすHarness、隔離された環境で動かすRuntime、会話をまたいで覚えるMemory、社内のAPIやLambdaをMCPのツールに変えるGateway、利用者の権限で外部につなぐIdentityなどです。ツールの呼び出しをルールで止めるPolicy、動きを追うObservability、品質を測るEvaluationsもあります。主なフレームワークに対応し、Bedrockの外のモデルとも組めます。</p>
 <h3 id="s4-1">旧Agents（Agents Classic）との関係</h3>
 <p>2023年11月に始まったAmazon Bedrock Agentsは、今はAgents Classicという名前になっています。2026年7月30日から新しい利用者は登録できなくなりました。すでに使っている会社はそのまま使い続けられ、似た機能を求める会社にはAgentCoreが案内されています。</p>
@@ -227,8 +231,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tbody>
 </table></div>
 <h3 id="s4-2">どれを選ぶか</h3>
-<figure class="post-figure"><img src="/media/images/amazon-bedrock-guide/brk_02_agents.png" alt="用途別のエージェント構築サービスの図。新規のエージェント開発はAgentCore、社内文書への回答のみならナレッジベースを単体で、既存エージェントの継続利用はAgents Classic。Agents Classicの新規登録は2026年7月30日に終了" loading="lazy"></figure>
-
 <p><strong>これから作るならAgentCoreを選び、社内文書に答えるだけならナレッジベースを単体で使うのが基本です。</strong>社内システムの更新や申請の代行のように複数の手順を進めさせるときは、AgentCoreが向いています。</p>
 <p>AgentCoreの主な部品は東京リージョンで使えます。ただし決済（payments）とWeb Answerは東京で使えません。Web Searchのツールは東京でも使え、1,000回7ドルです。エージェントの設計は<a href="/media/ai-agent-build/">AIエージェントの作り方</a>にまとめています。</p>
 <h2 id="s5">Amazon Bedrockの料金</h2>
@@ -270,7 +272,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>別にバッチ推論があり、対応するモデルはオンデマンドの半額です。ただしバッチは完了が保証されません。<strong>Claudeの5.5の世代は、モデルカードではStandardだけの対応です。</strong></p>
 <h3 id="s5-3">地域を限ると約1割高い</h3>
 <p>東京から呼ぶとき処理する場所の決め方は3つあります。東京だけで処理するIn-Region、日本の中（東京と大阪）で振り分けるGeo、世界に振り分けるGlobalです。Globalは標準料金より約10%安く、地域を限る呼び方には10%の割増があります。振り分けの転送料はかからず、料金は呼び出し元のリージョンの単価で数えます。</p>
-<figure class="post-figure"><img src="/media/images/amazon-bedrock-guide/brk_03_region.png" alt="取り扱う情報別の処理地域の図。社外に出せない情報はjp.を付けて日本国内に限り約1割高、それ以外の情報はglobal.を付けて全世界で処理し低価格" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/amazon-bedrock-guide/brk_12_region.jpg" alt="東京から呼び出すときの処理地域の図。In-Regionは東京のみで処理、Geoは日本国内（東京と大阪）に分散、Globalは世界に分散。地域を限るIn-RegionとGeoの呼び方はGlobalより10%高い" loading="lazy"></figure>
 
 <p><strong>社外に出せない情報を扱うならjp.を付けた日本の中の呼び方、そうでなければglobal.を付けた安い呼び方、と用途ごとに分けられます。</strong></p>
 <h3 id="s5-4">主なモデルの単価</h3>
@@ -501,20 +503,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/agentforce-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agentforceとは"><defs><linearGradient id="ecg-5b396eba" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b396eba)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Agentforceとは</text><line x1="296.0" y1="365.9" x2="904.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.14</div>
+                <div class="rel-card__ttl">【2026年11月】Agentforceとは？いくらかかる？できることと導入前に決めること</div>
+            </a>
+            <a href="/media/chatgpt-custom-instructions/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのカスタム指示"><defs><linearGradient id="ecg-02460172" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-02460172)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのカスタム指示</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.14</div>
+                <div class="rel-card__ttl">【2026年11月】ChatGPTのカスタム指示とは？設定方法・書き方の例・メモリとの違い</div>
+            </a>
             <a href="/media/langchain-guide/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LangChainとは"><defs><linearGradient id="ecg-7d4d6675" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7d4d6675)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LangChainとは</text><line x1="318.8" y1="365.9" x2="881.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.11.13</div>
                 <div class="rel-card__ttl">【2026年11月】LangChainとは？できること・LangGraphとの違い・料金と使い方</div>
-            </a>
-            <a href="/media/ai-builder/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Builderとは"><defs><linearGradient id="ecg-4a1bedc9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4a1bedc9)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI Builderとは</text><line x1="296.0" y1="365.9" x2="904.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.11.12</div>
-                <div class="rel-card__ttl">【2026年11月】AI Builderとは？できること・料金とCopilotクレジットへの移行</div>
-            </a>
-            <a href="/media/microsoft-foundry/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Foundryとは"><defs><linearGradient id="ecg-b168d9c7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b168d9c7)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Microsoft Foundryとは</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.11.12</div>
-                <div class="rel-card__ttl">【2026年11月】Microsoft Foundryとは？旧Azure AI Foundryの機能・料金・選び方</div>
             </a>
         </div>
     </section>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】ChatGPTのカスタム指示とは？設定方法・書き方の例・メモリとの違い｜株式会社nito</title>
+    <meta name="description" content="ChatGPTのカスタム指示の設定場所と、仕事で使える書き方を「自分のこと」と「回答の形式」の例1つで解説。メモリ・プロジェクト・GPTsとの使い分け、プラン別の文字数、会社のプランで管理者が決められる範囲もまとめました。">
+    <link rel="canonical" href="https://nito-0210.com/media/chatgpt-custom-instructions/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】ChatGPTのカスタム指示とは？設定方法・書き方の例・メモリとの違い">
+    <meta property="og:description" content="ChatGPTのカスタム指示の設定場所と、仕事で使える書き方を「自分のこと」と「回答の形式」の例1つで解説。メモリ・プロジェクト・GPTsとの使い分け、プラン別の文字数、会社のプランで管理者が決められる範囲もまとめました。">
+    <meta property="og:url" content="https://nito-0210.com/media/chatgpt-custom-instructions/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/chatgpt-custom-instructions.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/chatgpt-custom-instructions.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】ChatGPTのカスタム指示とは？設定方法・書き方の例・メモリとの違い", "description": "ChatGPTのカスタム指示の設定場所と、仕事で使える書き方を「自分のこと」と「回答の形式」の例1つで解説。メモリ・プロジェクト・GPTsとの使い分け、プラン別の文字数、会社のプランで管理者が決められる範囲もまとめました。", "datePublished": "2026-11-14", "dateModified": "2026-11-14", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/chatgpt-custom-instructions/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/chatgpt-custom-instructions.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】ChatGPTのカスタム指示とは？設定方法・書き方の例・メモリとの違い"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTのカスタム指示は無料版でも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。ウェブ・デスクトップ・iOS・Androidのすべてのプランが対象だとヘルプに書かれています。無料版（Free）とGoの上限は1,500文字です。"}}, {"@type": "Question", "name": "ChatGPTのカスタム指示は何文字まで書けますか？", "acceptedAnswer": {"@type": "Answer", "text": "FreeとGoは1,500文字、Plus・Pro・Business・Enterprise・Eduは5,000文字です。有料プランの上限は2026年7月15日に1,500文字から引き上げられました。"}}, {"@type": "Question", "name": "ChatGPTのカスタム指示は共有リンクの相手に見えますか？", "acceptedAnswer": {"@type": "Answer", "text": "見えません。カスタム指示が共有リンクの閲覧者に共有されることはない、とヘルプに明記されています。回答の下の「ソース」も共有したチャットには表示されません。"}}, {"@type": "Question", "name": "ChatGPTのカスタム指示はGPTsでも使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "使われません。GPTは保存したメモリ・カスタム指示・過去の会話を使わず、毎回まっさらな状態で始まるとGPTsのヘルプにあります。"}}, {"@type": "Question", "name": "ChatGPTのプロジェクトの指示とどちらが優先ですか？", "acceptedAnswer": {"@type": "Answer", "text": "プロジェクトの中ではプロジェクトの指示が優先されます。Enterprise・Eduのプロジェクトの中では、カスタム指示自体が使われず、プロジェクトの指示だけになります。"}}, {"@type": "Question", "name": "ChatGPTのカスタム指示は英語で書いたほうがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "日本語で問題ありません。日本語で仕事をするなら、日本語で条件を具体的に書くほうが、あとから自分や同僚が読み返したときにも修正しやすくなります。"}}, {"@type": "Question", "name": "ChatGPTのカスタム指示はAPIでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えません。カスタム指示のAPIを提供する予定はなく、同じ効果にはChat Completions APIのシステムメッセージを使うようヘルプで案内されています。"}}, {"@type": "Question", "name": "ChatGPTのアカウント削除で指示も消えますか？", "acceptedAnswer": {"@type": "Answer", "text": "消えます。アカウントの削除の手続きの中で、アカウントに紐づくカスタム指示も30日以内に削除されるとヘルプにあります。データのエクスポートにはカスタム指示も含まれるため、残したい場合は削除の前に書き出しておくのが安全です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=c1e3c5ad">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】ChatGPTのカス…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.14</span>
+        </div>
+        <h1 class="post-title">【2026年11月】ChatGPTのカスタム指示とは？設定方法・書き方の例・メモリとの違い</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/chatgpt-custom-instructions.jpg" alt="【2026年11月】ChatGPTのカスタム指示とは？設定方法・書き方の例・メモリとの違い" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>ChatGPTのカスタム指示は、自分の前提と回答の形式を一度書いておくと、すべてのチャットに反映される設定です。無料版を含む全プランで使え、場所は設定の「パーソナライズ」です。</p>
+<p>仕事で使うなら、書く中身は「自分のこと」と「回答の形式」の2つに絞ると迷いません。この記事では設定方法、営業企画の管理職を例にした書き方、メモリ・プロジェクト・GPTsとの使い分け、会社のプランで管理者が決められる範囲を2026年11月14日時点のOpenAIのヘルプで説明します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>カスタム指示は<strong>全チャット共通の前提と回答形式</strong>を書く場所。案件ごとの指示はプロジェクトに分ける</li>
+<li>文字数の上限は<strong>Free・Goが1,500文字、Plus・Pro・Business・Enterprise・Eduが5,000文字</strong></li>
+<li>会社のプランでは、2025年10月のリリースノートに<strong>ワークスペース全体の指示を管理者が設定できる</strong>項目が載っている。今の設定のヘルプには載っていないため、管理画面の「General」で確認する。社員個人のカスタム指示は各自が書く</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社で ChatGPT を使っていて毎日の作業ごと AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>ChatGPTのカスタム指示とは？何が変わる？</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>カスタム指示を使うメリット</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>毎回の前置きが不要になる</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>回答の形式を統一できる</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>途中の会話にも反映される</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>カスタム指示のデメリットと注意点</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>合わない会話にも反映される</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>機密情報は書かない</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>反映されない場所がある</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>カスタム指示の設定方法</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>パソコンでの手順</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>スマホのアプリでの手順</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>消す</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>カスタム指示の書き方は？</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>営業企画の管理職を例にした記入例</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>書くときの3つのコツ</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>気になる回答の傾向を修正する一文</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>メモリ・プロジェクト・GPTsとの使い分けは？</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>メモリとの違い</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>プロジェクトとの違い</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>GPTsとの違い</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>設定したのに反映されないときは？</a></li>
+                    <li class="toc-h3"><a href="#s7-1"><span class="toc__n">7-1</span>会話の場所を確認する</a></li>
+                    <li class="toc-h3"><a href="#s7-2"><span class="toc__n">7-2</span>一時チャットの設定を確認する</a></li>
+                    <li class="toc-h3"><a href="#s7-3"><span class="toc__n">7-3</span>速い回答と書き方を確認する</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>会社のプランで管理者は何を決められる？</a></li>
+                    <li class="toc-h3"><a href="#s8-1"><span class="toc__n">8-1</span>管理者が設定できること</a></li>
+                    <li class="toc-h3"><a href="#s8-2"><span class="toc__n">8-2</span>社内で記入例を配るときの決め方</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">ChatGPTのカスタム指示とは？何が変わる？</h2>
+<p><strong>毎回の会話の冒頭で書いていた前置きを、設定に移せる機能です。</strong>ヘルプは「回答時に考慮してほしいことを ChatGPT に自由に伝えられます」と説明し、内容はすべてのチャットにすぐ適用されます。ウェブ・デスクトップ・iOS・Androidのどれでも、無料版を含む全プランで使えます。</p>
+<p>たとえば「結論を最初に」「社外向けの文はです・ます調で」と毎回打っている人は、それをカスタム指示に書けば、次の会話からは入力不要です。口調だけを変えたいなら、文章を書かずに選べる性格（基本のスタイルとトーン）という設定も別にあります。</p>
+<p>文字数の上限はプランで分かれます。2026年7月15日に有料プランの上限が1,500文字から5,000文字に引き上げられたため、1,500文字と書かれた解説は今の有料プランには当てはまりません。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>プラン</th>
+<th>カスタム指示の上限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="プラン">Free・Go</td>
+<td data-label="カスタム指示の上限">1,500文字</td>
+</tr>
+<tr>
+<td data-label="プラン">Plus・Pro・Business・Enterprise・Edu</td>
+<td data-label="カスタム指示の上限">5,000文字</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>仕事で使うなら、文字数より何を書くかのほうが結果を左右します。</strong>5,000文字まで書けても、書く量は後の節の例くらいを目安にするのがおすすめです。</p>
+<h2 id="s2">カスタム指示を使うメリット</h2>
+<p><strong>同じ前置きを書く手間がなくなり、答えの形が会話ごとにぶれにくくなります。</strong>仕事での利点は次の3つです。</p>
+<h3 id="s2-1">毎回の前置きが不要になる</h3>
+<p>役職・業界・用途のような自分の前提は、会話ごとに変わりません。カスタム指示に書いておけば、新しいチャットでも一行目から本題を入力できます。「この前提で」と書き忘れて一般論が返ってくる失敗も起きにくい設定です。</p>
+<h3 id="s2-2">回答の形式を統一できる</h3>
+<p>結論の位置・箇条書きの量・敬語の有無を決めておくと、議事録の要約もメールの下書きも同じ形で返ってきます。<strong>そのまま資料に貼れる形で受け取れるので、手で整える時間も短くて済むのが利点です。</strong></p>
+<h3 id="s2-3">途中の会話にも反映される</h3>
+<p>2025年11月7日の更新から、カスタム指示と性格の変更は既存の会話を含む全チャットにすぐ反映されます。それ以前は新しい会話にしか反映されませんでした。設定を変えたあと、開いている会話の次の返答から新しい指示が使われます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で ChatGPT を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">カスタム指示のデメリットと注意点</h2>
+<p><strong>全チャットに一律で入るため、合わない場面にも反映される点と、データの扱いに注意が必要です。</strong></p>
+<h3 id="s3-1">合わない会話にも反映される</h3>
+<p>「回答は300文字以内」と書けば、長い報告書の下書きを頼んだときにも短くまとまろうとします。用途ごとに前提が違うなら、カスタム指示は共通の部分だけにし、案件ごとの指示はプロジェクトに分けるほうが混ざりません。会話の中で「今回は表で」と指示すれば、その場では会話の指示に合わせます。</p>
+<h3 id="s3-2">機密情報は書かない</h3>
+<p>ヘルプにはカスタム指示の利用に伴う情報がモデルの性能向上にも使われると書かれています。個人アカウントで「Improve the model for everyone」がオンのときです。BusinessとEnterpriseなど会社のワークスペースの内容は、既定で学習に使われません。また、外部のプラグインを使うと、カスタム指示の関連情報がプラグインの開発者に渡ることがあるとヘルプにあります。<strong>取引先名・案件名・数字は書かず、業界と役職までにとどめるのが安全です。</strong></p>
+<h3 id="s3-3">反映されない場所がある</h3>
+<p>GPTの会話では保存したメモリ・カスタム指示・過去の会話が使われない、とGPTsのヘルプに書かれています。プロジェクトの中での扱いも含め、詳しくは「設定したのに反映されないときは？」の節で説明します。</p>
+<h2 id="s4">カスタム指示の設定方法</h2>
+<p><strong>パソコンは「設定」の「パーソナライズ」、スマホのアプリはヘルプの手順では「設定」の「ChatGPT をカスタマイズ」から入ります。</strong>入力した内容はアカウントに保存されるため、どちらで書いても両方に反映されます。</p>
+<h3 id="s4-1">パソコンでの手順</h3>
+<ol>
+<li><a href="https://chatgpt.com/">ChatGPT</a>を開き、プロフィールのアイコンから「設定」を選ぶ</li>
+<li>「パーソナライズ」を選ぶ</li>
+<li>「カスタム指示」の「ChatGPT」の「Edit」を押す</li>
+<li>開いた「ChatGPT のカスタム指示」の画面に入力する</li>
+</ol>
+<p>この画面には、指示の欄、「ニックネーム」「職業」「あなたのプロフィール詳細」の欄が上から並んでいます。「自分のこと」は職業とプロフィール詳細に、「回答の形式」は指示の欄に書くと画面どおりです。ヘルプの手順にある「カスタマイズを有効にする」のスイッチは、2026年11月に確認したパソコンの画面には見当たりませんでした。</p>
+<figure class="post-figure"><img src="/media/images/chatgpt-custom-instructions/cci_04_personalize.png" alt="ChatGPTのカスタム指示の画面。赤枠の1が指示の欄、2がニックネーム・職業・あなたのプロフィール詳細の3つの欄" loading="lazy"><figcaption>ChatGPT のカスタム指示の画面（2026年11月）</figcaption></figure>
+
+<p>「パーソナライズ」の同じページで性格（基本のスタイルとトーン）を選ぶと口調の土台が変わり、温かさ・熱意・見出しと箇条書き・絵文字の量も個別に調整できます。メモリの設定の場所も同じ「パーソナライズ」の中です。</p>
+<h3 id="s4-2">スマホのアプリでの手順</h3>
+<p>ヘルプのiOS・Android向けの手順は、「設定」で「ChatGPT をカスタマイズ」を開き、「カスタマイズを有効にする」をオンにして、カスタム指示の欄に入力する、です。性格のヘルプではスマホも「Personalization」と書かれていて、アプリの版によって名前が違う場合があります。どちらかの名前で探すと見つかります。</p>
+<h3 id="s4-3">消す</h3>
+<p>完全に消したい場合は欄の文章を削除します。ヘルプによると、すでに書かれた過去の回答は変わらず、古い指示が反映された会話は履歴に残ります。消したい場合の手段はその会話の削除です。</p>
+<h2 id="s5">カスタム指示の書き方は？</h2>
+<p><strong>「自分のこと」と「回答の形式」を分けて、それぞれ3〜5行で書くと効果が出やすくなります。</strong>前者で答えの中身が、後者で答えの形が決まります。</p>
+<h3 id="s5-1">営業企画の管理職を例にした記入例</h3>
+<p>BtoBの会社で営業企画を担当する課長が、会議資料と顧客への提案書の下書きにChatGPTを使う場合の例です。</p>
+<p><strong>自分のこと（「職業」「あなたのプロフィール詳細」の欄）</strong></p>
+<pre><code>BtoB向けソフトウェアの会社で営業企画の課長をしています。
+主な用途は週次の営業会議の資料と顧客への提案書の下書きです。
+読み手は社内の役員と、顧客の部長クラスです。
+</code></pre>
+<p><strong>回答の形式（指示の欄）</strong></p>
+<pre><code>結論を最初の1文で書いてください。
+根拠は3点までの箇条書きにしてください。
+社外向けの文章はです・ます調にしてください。
+数字に出典がない場合は「出典未確認」と書いてください。
+確認の質問は判断できないときだけ1つにしてください。
+</code></pre>
+<p>この例のポイントは<strong>読み手まで書いていること</strong>です。「役員向け」と分かっていれば、前置きの長さや判断材料の順番を読み手に合わせやすくなります。</p>
+<h3 id="s5-2">書くときの3つのコツ</h3>
+<p>1つ目は<strong>抽象的な言葉を条件に置き換えること</strong>です。「分かりやすく」ではなく「根拠は3点まで」「300文字以内」のように、守れたかどうかが判断できる形にします。</p>
+<p>2つ目は<strong>矛盾する条件を同時に書かないこと</strong>です。「簡潔に」と「具体例を多く」が並ぶと、どちらに寄せるかが会話ごとに変わります。</p>
+<p>3つ目は<strong>仕事が変わったら見直すこと</strong>です。異動や担当の変更のあとも古い前提が残っていると、答えが急に合わなくなったように感じます。異動・新しい案件の開始のときに設定画面を開くと決めておくと忘れません。</p>
+<h3 id="s5-3">気になる回答の傾向を修正する一文</h3>
+<p>全体を書き直さなくても、気になる点だけを1行追加すれば修正できます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>気になる回答</th>
+<th>追加する一文の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="気になる回答">毎回最後に質問が付く</td>
+<td data-label="追加する一文の例">確認の質問は判断できないときだけにしてください</td>
+</tr>
+<tr>
+<td data-label="気になる回答">褒め言葉や前置きが長い</td>
+<td data-label="追加する一文の例">前置きと称賛は省き、本題から書いてください</td>
+</tr>
+<tr>
+<td data-label="気になる回答">推測を事実のように書く</td>
+<td data-label="追加する一文の例">推測には「推測」と明記してください</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="s6">メモリ・プロジェクト・GPTsとの使い分けは？</h2>
+<p><strong>全チャット共通の前提はカスタム指示、案件ごとの前提はプロジェクト、会話の中で出てきた情報はメモリ、と分けると重なりません。</strong>GPTsは終了予定（標準は2026年12月11日、FedRAMPと延期が承認されたワークスペースは2027年2月11日）のため、新しく決まった手順を配る場所はプラグインに移ります。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>置き場所</th>
+<th>反映される範囲</th>
+<th>誰が書くか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="置き場所">カスタム指示</td>
+<td data-label="反映される範囲">全チャット（GPTsを除く）</td>
+<td data-label="誰が書くか">自分で書く</td>
+</tr>
+<tr>
+<td data-label="置き場所">プロジェクトの指示</td>
+<td data-label="反映される範囲">そのプロジェクトの中だけ。カスタム指示より優先</td>
+<td data-label="誰が書くか">自分かプロジェクトの共有メンバー</td>
+</tr>
+<tr>
+<td data-label="置き場所">メモリ</td>
+<td data-label="反映される範囲">全チャット（設定でオフにできる）</td>
+<td data-label="誰が書くか">ChatGPTが会話から保存・更新</td>
+</tr>
+<tr>
+<td data-label="置き場所">GPTs</td>
+<td data-label="反映される範囲">そのGPTの中だけ。カスタム指示は使わない</td>
+<td data-label="誰が書くか">GPTの作成者</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s6-1">メモリとの違い</h3>
+<p>メモリのヘルプはカスタム指示を「ChatGPTが知っておくべきことと答え方について自分が直接与える指示」、メモリを会話やほかの情報源から積み上がる情報として分けています。<strong>変わらない前提は自分でカスタム指示に書き、進行中の話題はメモリに任せるのが向いています。</strong></p>
+<p>メモリに逆向きの好み（「くだけた口調が好き」など）が残っていると、カスタム指示や性格の効果が弱まる点には注意が必要です。回答の下に表示される「ソース」で、どのメモリ・過去のチャット・カスタム指示が使われたかを確認できます。</p>
+<div class="in-link-card"><a href="/media/chatgpt-memory-full/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">ChatGPTのメモリがいっぱいの対処</div><div class="in-link-card__desc">保存したメモリが上限に達したときの空け方と、チャットのメモリとの違いを解説しています。</div></div></a></div>
+<h3 id="s6-2">プロジェクトとの違い</h3>
+<p>プロジェクトのヘルプには「プロジェクトの指示はそのプロジェクトの中だけで有効で、全体のカスタム指示より優先される」とあります。部署や顧客ごとに書き方の決まりが違うなら、カスタム指示には共通の形式だけを書き、顧客ごとの前提はプロジェクトに分けるのがおすすめです。共有したプロジェクトではメンバー個人のカスタム指示とメモリは参照されません。</p>
+<h3 id="s6-3">GPTsとの違い</h3>
+<p>GPTsは作成者が決めた指示で動くため、使う人のカスタム指示は参照されません。カスタムGPTの終了は標準が2026年12月11日、FedRAMPと延期が承認されたワークスペースは2027年2月11日の予定で、決まった手順を社内に配る役割はプラグインに移ります。移行の手順と共有のやり直しは<a href="/media/gpts-internal-share/">GPTsを社内だけで共有する方法</a>にまとめています。</p>
+<h2 id="s7">設定したのに反映されないときは？</h2>
+<p><strong>まず指示が保存されているか、次にその会話がプロジェクト・GPT・一時チャットの中でないかを確認します。</strong>多くはこのどちらかです。</p>
+<h3 id="s7-1">会話の場所を確認する</h3>
+<p>GPTの中の会話にはカスタム指示が使われません。Enterprise・Eduのプロジェクトの中のチャットも、使われるのはプロジェクトの指示だけです。BusinessやPlusなどのプロジェクトではカスタム指示とプロジェクトの指示が両方入り、食い違う所はプロジェクトの指示が優先されます。</p>
+<h3 id="s7-2">一時チャットの設定を確認する</h3>
+<p>一時チャットは始める前に「Personalized」か「Unpersonalized」を選び、Unpersonalizedではメモリ・カスタム指示・プラグインを使いません。始めた後は変えられません。既定の扱いはOpenAIの説明で割れていて、2026年8月27日のリリースノートは「既定ではパーソナライズしない」、プロジェクトのヘルプは「既定でオンで、選んだ設定を覚える」と書いています。<strong>始めるときの選択画面で毎回確認するのが確実です。</strong></p>
+<h3 id="s7-3">速い回答と書き方を確認する</h3>
+<p>2026年4月22日から、個人に合わせる必要がない質問には過去のチャットやメモリを参照しない「速い回答」が返ることがあります。常に個人に合わせた回答にしたい場合は、パーソナライズの設定でオフにできます。設定に問題がなければ、指示が抽象的すぎないか、ほかの条件と矛盾していないかを見直します。</p>
+<h2 id="s8">会社のプランで管理者は何を決められる？</h2>
+<p><strong>管理者はメモリの利用可否や社員への利用方針の表示を決められます。ワークスペース全体の指示を設定できる項目も、2025年10月のリリースノートに載っています。</strong>ただし今の設定のヘルプにはその項目が見当たらないため、管理画面の「General」で確認します。社員個人のカスタム指示は各自が書きます。</p>
+<h3 id="s8-1">管理者が設定できること</h3>
+<p>ワークスペース設定を開くと、ワークスペースによっては管理コンソールが開きます。Enterpriseではオーナーと管理者が「General」にAIの利用方針を書け、社員には30日ごとと内容の更新時に表示されます。メモリは「Permissions &amp; roles」で、標準のロールやカスタムのロールごとに共有メモリと改善されたメモリの設定が可能です。Businessでも、プロジェクト専用のメモリを使うにはオーナーがワークスペースのメモリを有効にする必要があります。</p>
+<p>ワークスペース全体の指示については、公式の記載が割れています。BusinessとEnterprise・Eduのリリースノートには、2025年10月16日の「Updated Workspace settings」として、「General」タブに名前・ロゴ・外観・ワークスペース全体の指示がまとまったと書かれています。一方、Enterpriseのワークスペース設定のヘルプの「General」には、名前・画像・識別子・AIポリシーの項目だけで、指示の項目はありません。社員のカスタム指示より優先されるかどうかは、どのページにも書かれていません。</p>
+<p>Business・Enterprise・Eduのワークスペースの内容は既定で学習に使われないため、<strong>社員が個人のアカウントで仕事に使うより、会社のワークスペースに集めるほうがデータの扱いを統一できます。</strong>個人のPlusから会社のワークスペースに移る社員のカスタム指示の扱いは、<a href="/media/chatgpt-business-admin/">ChatGPT Businessのメンバー招待と管理</a>で説明しています。</p>
+<h3 id="s8-2">社内で記入例を配るときの決め方</h3>
+<p>全員に共通の前提はワークスペースの指示（あれば）に入れ、部署ごとの回答の形式は記入例を配る、という線引きが現実的です。社内でChatGPTの導入を進める担当者が決めるのは次の3点です。</p>
+<ol>
+<li>書いてよい情報と書かない情報（業界と役職まで・取引先名と数字は書かない）</li>
+<li>部署ごとの「回答の形式」の記入例（上の例の形）</li>
+<li>案件ごとの前提はプロジェクトに置き、カスタム指示には書かないという線引き</li>
+</ol>
+<p>記入例は社内の手順書に載せ、AIポリシーの表示から案内するのが見落とされにくい方法です。社内向けの指示やエージェントの設計から任せたい場合は、nitoの<a href="/ai-agent/">AIエージェント構築支援</a>でも相談を受けています。</p>
+<div class="in-link-card"><a href="/media/chatgpt-projects/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">ChatGPTのプロジェクトとは？使い方・チームでの共有・GPTsとの違い</div><div class="in-link-card__desc">プロジェクトの作り方と指示の入れ方、共有したときの権限とメモリを解説しています。</div></div></a></div>
+<h2 id="s9">まとめ</h2>
+<ul>
+<li>毎回同じ前置きを書いている人は、「自分のこと」と「回答の形式」を3〜5行ずつカスタム指示に書く</li>
+<li>顧客や案件で前提が変わる人は、共通の形式だけをカスタム指示に残し、案件ごとの前提はプロジェクトに分ける</li>
+<li>書いたのに反映されない人は、保存されているか・プロジェクトやGPTの中か・一時チャットの選択の順に確認する</li>
+<li>社内で統一したい担当者は、管理画面の「General」にワークスペースの指示があるか確認し、共通の前提はそこに、部署ごとの回答の形式は記入例で配り、書かない情報の線引きは手順書に載せる</li>
+</ul>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">ChatGPTのカスタム指示は無料版でも使えますか？</h3>
+<p>使えます。ウェブ・デスクトップ・iOS・Androidのすべてのプランが対象だとヘルプに書かれています。無料版（Free）とGoの上限は1,500文字です。</p>
+<h3 id="s10-2">ChatGPTのカスタム指示は何文字まで書けますか？</h3>
+<p>FreeとGoは1,500文字、Plus・Pro・Business・Enterprise・Eduは5,000文字です。有料プランの上限は2026年7月15日に1,500文字から引き上げられました。</p>
+<h3 id="s10-3">ChatGPTのカスタム指示は共有リンクの相手に見えますか？</h3>
+<p>見えません。カスタム指示が共有リンクの閲覧者に共有されることはない、とヘルプに明記されています。回答の下の「ソース」も共有したチャットには表示されません。</p>
+<h3 id="s10-4">ChatGPTのカスタム指示はGPTsでも使われますか？</h3>
+<p>使われません。GPTは保存したメモリ・カスタム指示・過去の会話を使わず、毎回まっさらな状態で始まるとGPTsのヘルプにあります。</p>
+<h3 id="s10-5">ChatGPTのプロジェクトの指示とどちらが優先ですか？</h3>
+<p>プロジェクトの中ではプロジェクトの指示が優先されます。Enterprise・Eduのプロジェクトの中では、カスタム指示自体が使われず、プロジェクトの指示だけになります。</p>
+<h3 id="s10-6">ChatGPTのカスタム指示は英語で書いたほうがいいですか？</h3>
+<p>日本語で問題ありません。日本語で仕事をするなら、日本語で条件を具体的に書くほうが、あとから自分や同僚が読み返したときにも修正しやすくなります。</p>
+<h3 id="s10-7">ChatGPTのカスタム指示はAPIでも使えますか？</h3>
+<p>使えません。カスタム指示のAPIを提供する予定はなく、同じ効果にはChat Completions APIのシステムメッセージを使うようヘルプで案内されています。</p>
+<h3 id="s10-8">ChatGPTのアカウント削除で指示も消えますか？</h3>
+<p>消えます。アカウントの削除の手続きの中で、アカウントに紐づくカスタム指示も30日以内に削除されるとヘルプにあります。データのエクスポートにはカスタム指示も含まれるため、残したい場合は削除の前に書き出しておくのが安全です。</p>
+<h2 id="s11">出典</h2>
+<ul>
+<li><a href="https://help.openai.com/ja-jp/articles/8096356-chatgpt-custom-instructions">ChatGPT カスタム指示（OpenAI ヘルプ）</a> — 設定の手順・文字数・データの扱い（2026年11月14日取得）</li>
+<li><a href="https://help.openai.com/en/articles/11899719-customizing-your-chatgpt-personality">Customizing Your ChatGPT Personality（OpenAI ヘルプ）</a> — 性格の種類と、メモリ・カスタム指示との関係</li>
+<li><a href="https://help.openai.com/en/articles/8590148-memory-faq">Memory in ChatGPT（OpenAI ヘルプ）</a> — メモリとカスタム指示の違い・一時チャットの選択・学習の扱い</li>
+<li><a href="https://help.openai.com/en/articles/10169521-projects-in-chatgpt">Projects in ChatGPT（OpenAI ヘルプ）</a> — プロジェクトの指示の優先・Enterprise と Edu のプロジェクトでの扱い</li>
+<li><a href="https://help.openai.com/en/articles/8554407-gpts-in-chatgpt">GPTs in ChatGPT（OpenAI ヘルプ）</a> — GPTs がカスタム指示を使わないこと・終了の予定</li>
+<li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes（OpenAI ヘルプ）</a> — 2025年11月7日の即時反映・2026年7月15日の上限変更・8月27日の一時チャット・4月22日の速い回答</li>
+<li><a href="https://help.openai.com/en/articles/8411955-managing-workspace-settings-in-chatgpt-enterprise">Managing workspace settings in ChatGPT Enterprise（OpenAI ヘルプ）</a> — AI ポリシーの表示とロールごとのメモリ設定</li>
+<li><a href="https://help.openai.com/en/articles/20001264-chatgpt-enterprise-admin-quickstart">ChatGPT Enterprise admin quickstart（OpenAI ヘルプ）</a> — ワークスペースの初期設定の項目</li>
+<li><a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes">ChatGPT Enterprise &amp; Edu release notes（OpenAI ヘルプ）</a> — 2025年10月16日のワークスペース設定の更新</li>
+<li><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes">ChatGPT Business release notes（OpenAI ヘルプ）</a> — ワークスペースのメモリとプロジェクト専用メモリ・ワークスペース設定の更新</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">ChatGPT を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">ChatGPTのカスタム指示とは？何が変わる？</a><a href="#s2">カスタム指示を使うメリット</a><a href="#s3">カスタム指示のデメリットと注意点</a><a href="#s4">カスタム指示の設定方法</a><a href="#s5">カスタム指示の書き方は？</a><a href="#s6">メモリ・プロジェクト・GPTsとの使い分けは？</a><a href="#s7">設定したのに反映されないときは？</a><a href="#s8">会社のプランで管理者は何を決められる？</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/agentforce-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agentforceとは"><defs><linearGradient id="ecg-5b396eba" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b396eba)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Agentforceとは</text><line x1="296.0" y1="365.9" x2="904.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.14</div>
+                <div class="rel-card__ttl">【2026年11月】Agentforceとは？いくらかかる？できることと導入前に決めること</div>
+            </a>
+            <a href="/media/langchain-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LangChainとは"><defs><linearGradient id="ecg-7d4d6675" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7d4d6675)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LangChainとは</text><line x1="318.8" y1="365.9" x2="881.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.13</div>
+                <div class="rel-card__ttl">【2026年11月】LangChainとは？できること・LangGraphとの違い・料金と使い方</div>
+            </a>
+            <a href="/media/ai-builder/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Builderとは"><defs><linearGradient id="ecg-4a1bedc9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-4a1bedc9)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI Builderとは</text><line x1="296.0" y1="365.9" x2="904.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.12</div>
+                <div class="rel-card__ttl">【2026年11月】AI Builderとは？できること・料金とCopilotクレジットへの移行</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'chatgpt-custom-instructions',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>

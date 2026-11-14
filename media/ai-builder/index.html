@@ -114,6 +114,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s1">AI Builderとは？何ができる？</h2>
 <p><strong>AI BuilderはMicrosoftが用意した学習済みのAIをそのまま使うか、自社の書類やデータで学習させたAIを作って、Power Platformの業務に組み込む機能です。</strong> 使うにはDataverseのあるPower Platformの環境が必要で、Microsoft 365のライセンスだけでは使えません。Power AppsかPower Automateにサインインし、左の「…その他」から「AI ハブ」を開くと、AIモデルとプロンプトの一覧が出ます。</p>
+<figure class="post-figure post-figure--zu"><img src="/media/images/ai-builder/aib_10_parts.jpg" alt="AI Builderの3つの構成要素の図。事前構築済みモデルはMicrosoftが学習させたもので例は請求書・領収書・名刺の読み取りなど、カスタムモデルは自社のサンプルで学習させるもので例は独自の帳票を読むドキュメント処理など、プロンプトは生成AIへの指示文を部品として保存したもので例は要約・分類・下書きの作成" loading="lazy"></figure>
+
 <p>AI Builderの中身は大きく3つに分かれます。</p>
 <ul>
 <li><strong>事前構築済みモデル</strong>: Microsoftが学習させたもの。請求書・領収書・名刺・パスポートの読み取り、テキスト認識（OCR）、感情分析、言語検出など</li>
@@ -157,7 +159,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>試すなら、まず請求書か領収書の事前構築済みモデルに、自社に届く実物を数枚読ませてみるのがおすすめです。AIモデルのページでのテストはクレジットを使いません。</p>
 <h2 id="s2">Copilot Studioとどうつながる？</h2>
 <p><strong>同じ請求書の読み取りでも、Power Automateのフローで動かすか、Copilot Studioのエージェントから動かすかで、減るクレジットが変わります。</strong> AI Builderで作ったモデルとプロンプトは、Power Apps・Power Automate・Copilot Studioの3つから呼べます。</p>
-<figure class="post-figure"><img src="/media/images/ai-builder/aib_02_where.png" alt="利用場所別の消費クレジットの図。Power AppsとPower AutomateはAI Builderクレジットを先に使い、尽きた後はCopilotクレジット。Copilot Studioのエージェントとエージェントフローは最初からCopilotクレジット" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/ai-builder/aib_11_where.jpg" alt="利用場所別の消費クレジットの図。Power Apps・Power AutomateはAI Builderクレジットの残高を優先して消費し、残高がなくなるとCopilotクレジットを消費。Copilot Studioのエージェント・エージェントフローはCopilotクレジットのみ消費" loading="lazy"></figure>
 
 <p>Power Automateのクラウドフローでは、メールに付いた請求書を受け取ったら読み取り、結果をSharePointのリストやExcel、Dataverseに書き込む、という流れを組みます。Power Appsならスマホで撮った領収書をその場で読み取る画面を作り、Teamsに置いて社員に配れます。</p>
 <p>Copilot Studioでは、エージェントのトピックやツールの中でプロンプトを使ったり、エージェントフローの中で請求書処理などのモデルを動かしたりできます。<strong>エージェントとエージェントフローは、Copilotクレジットしか使えません。</strong> 今あるPower Automateのクラウドフローをエージェントフローに変えると、その中のプロンプトとモデルもCopilotクレジットだけで動くようになります。</p>
@@ -222,6 +224,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Power Automateのライセンスのページも、Premiumで使える機能にAI Builderを挙げています。見積もりはPremiumを入れた側で組み、窓口に確認するのが確実です（<a href="https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types">Power Automateのライセンスの種類</a>）。</p>
 <h2 id="s4">2026年11月に何が変わった？</h2>
 <p><strong>2026年11月1日から、新しく買ったり更新したりしたPower PlatformとDynamics 365のライセンスには、AI Builderクレジットが付かなくなりました。</strong> AI Builderの機能そのものは終わらず、Copilotクレジットで引き続き使えます。</p>
+<figure class="post-figure post-figure--zu"><img src="/media/images/ai-builder/aib_12_timeline.jpg" alt="AI Builderクレジット終了の時系列の図。2025年11月1日に容量アドオンの新規の販売が終了。2026年11月1日に新規購入・更新したPower Platform・Dynamics 365のライセンスへのAI Builderクレジットの付与が終了し、容量アドオンの提供も終了。既存のアドオン・シードは契約期間の終了まで有効。契約期間の終了後もAI Builderの機能は継続し、Copilotクレジットで利用可能" loading="lazy"></figure>
+
 <p>Microsoftが段階的な終了を発表したのは2025年10月です。AI Builderクレジットの入手先は2つあり、終わり方が違います。</p>
 <ul>
 <li><strong>AI Builderの容量アドオン（1つ100万クレジット）</strong>: 2025年11月1日に新規の販売が終わり、持っている会社だけが2026年11月1日まで更新・追加できた。その日で提供が終わり、Microsoft 365管理センターかパートナーセンターで自動更新を切るよう案内されている。今あるアドオンは契約が切れるまで使える</li>
@@ -344,20 +348,20 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <section class="related">
         <h2 class="related__ttl"><span>関連記事</span></h2>
         <div class="related__grid">
+            <a href="/media/agentforce-guide/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agentforceとは"><defs><linearGradient id="ecg-5b396eba" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5b396eba)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Agentforceとは</text><line x1="296.0" y1="365.9" x2="904.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.14</div>
+                <div class="rel-card__ttl">【2026年11月】Agentforceとは？いくらかかる？できることと導入前に決めること</div>
+            </a>
+            <a href="/media/chatgpt-custom-instructions/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTのカスタム指示"><defs><linearGradient id="ecg-02460172" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-02460172)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ChatGPTのカスタム指示</text><line x1="174.4" y1="365.9" x2="1025.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.14</div>
+                <div class="rel-card__ttl">【2026年11月】ChatGPTのカスタム指示とは？設定方法・書き方の例・メモリとの違い</div>
+            </a>
             <a href="/media/langchain-guide/" class="rel-card">
                 <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LangChainとは"><defs><linearGradient id="ecg-7d4d6675" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-7d4d6675)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">LangChainとは</text><line x1="318.8" y1="365.9" x2="881.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
                 <div class="rel-card__date">2026.11.13</div>
                 <div class="rel-card__ttl">【2026年11月】LangChainとは？できること・LangGraphとの違い・料金と使い方</div>
-            </a>
-            <a href="/media/microsoft-foundry/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Foundryとは"><defs><linearGradient id="ecg-b168d9c7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-b168d9c7)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Microsoft Foundryとは</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.11.12</div>
-                <div class="rel-card__ttl">【2026年11月】Microsoft Foundryとは？旧Azure AI Foundryの機能・料金・選び方</div>
-            </a>
-            <a href="/media/felo-ai/" class="rel-card">
-                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Feloとは"><defs><linearGradient id="ecg-78869b03" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-78869b03)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">Feloとは</text><line x1="432.8" y1="365.9" x2="767.2" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
-                <div class="rel-card__date">2026.11.11</div>
-                <div class="rel-card__ttl">【2026年11月】Feloとは？料金・運営会社・法人プランとデータの扱いを解説</div>
             </a>
         </div>
     </section>
