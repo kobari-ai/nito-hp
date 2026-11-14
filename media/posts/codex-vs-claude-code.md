@@ -23,7 +23,7 @@ OpenAIのCodexはChatGPTのプランに、AnthropicのClaude CodeはClaudeのプ
 
 開発チームに入れる道具を選ぶ相談で多いのは「性能はどちらが上か」という問いです。ただ両社の最新モデルの発表を読むと、互いに自社が上回る結果を発表しており、性能だけでは決め手になりません。**会社の判断を分けるのはいま全社で契約しているAIのプランと、管理者が求める統制の深さです。**
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/codex-vs-claude-code/cvc_10_choose.jpg" alt="CodexとClaude Codeの選び方の図。ChatGPT Businessを全社で入れている会社はCodex（追加の契約なしで開発者に開ける）、Claude Teamを入れている会社はClaude Code（同じ1人分の契約に含まれる）、どちらも契約していない会社は監査ログ・SCIMの要否、利用状況の分析、プルリクエストの自動レビューの3つで比べる" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/codex-vs-claude-code/cvc_13_choose.jpg" alt="CodexとClaude Codeの選び方の図。ChatGPT Businessを全社で入れている会社はCodex（追加の契約なしで開発者に開ける）、Claude Teamを入れている会社はClaude Code（同じ1人分の契約に含まれる）、どちらも契約していない会社は監査ログ・SCIMの要否、Business・Teamでの利用状況の分析、プルリクエストの自動レビューの3項目で比較" loading="lazy"></figure>
 
 ChatGPT Businessを全社で入れている会社なら、Codexは追加の契約なしで開発者に開けます。Claude Teamを入れている会社なら、Claude Codeも同じ1人分の契約に含まれます。どちらも契約していない会社は、次の3つで比べると判断が早くなります。
 
@@ -64,8 +64,6 @@ ChatGPT Businessを全社で入れている会社なら、Codexは追加の契�
 | 法人の上位 | Enterprise（営業経由） | Team プレミアム$100（年払い）・月払い$125 |
 | 大企業 | Enterprise・Edu | Enterprise 1人$20（年払い・最低20人）＋API料金での使用量 |
 | APIキー | API料金の従量課金 | API料金の従量課金 |
-
-<figure class="post-figure post-figure--zu"><img src="/media/images/codex-vs-claude-code/cvc_11_plans.jpg" alt="法人プランの分け方の図。Codex（ChatGPT Business）は1種類の契約に管理機能が付く。Claude Code（Claude Team）は使える量の違う2種類（スタンダード・プレミアム）を1人ずつ混ぜて買える。例：開発者だけプレミアム、ほかの社員はスタンダード" loading="lazy"></figure>
 
 入口の額はそろっていますが、中身の分け方が違います。**CodexはBusinessの1種類に管理機能が付き、ClaudeはTeamの中で使える量の違う2種類の契約を1人ずつ混ぜて買えます。**開発者だけ量の多いプレミアムにし、ほかの社員はスタンダードにする、という組み方ができるのはClaude側の特徴です。
 
@@ -124,7 +122,7 @@ OpenAIはGPT-6.1 Solの発表で、業務の自動化を測るAutomationBenchで
 
 両方を使い分ける開発者もいますが、会社で併用すると、書く側・指示ファイル・権限・費用の上限と決めることが増えます。
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/codex-vs-claude-code/cvc_12_heiyou.jpg" alt="CodexとClaude Codeの併用で決めることの図。書く側とレビューする側を分ける（日々の実装を片方に任せ、もう片方に差分をレビューさせる）、指示ファイルを1つにまとめる（規約はAGENTS.mdだけに置く）、権限と費用の基準をそろえる（同じリポジトリでは承認の範囲を同じにし、月の上限を両方で決める）" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/codex-vs-claude-code/cvc_14_heiyou.jpg" alt="CodexとClaude Codeの併用で決めることの図。書く側とレビューする側を分ける（日々の実装を片方に任せ、もう片方に差分をレビューさせる）、指示ファイルを1つにまとめる（規約はAGENTS.mdだけに置く）、権限と費用の基準を統一する（同じリポジトリでは承認の範囲を同じにし、月の上限を両方で決める）" loading="lazy"></figure>
 
 ### 書く側とレビューする側を分ける
 
