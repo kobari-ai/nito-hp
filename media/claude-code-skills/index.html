@@ -105,8 +105,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>公式ドキュメントが挙げるスキルを作る目安は、「同じ指示、チェックリスト、または複数ステップの手順をチャットに何度も貼り付けている場合」です。毎回同じ説明をしている作業が、スキルにする候補です。</p>
 <p>以前からあったカスタムコマンド（<code>.claude/commands/</code> のMarkdown）は、いまはスキルに統合されています。<code>.claude/commands/deploy.md</code> と <code>.claude/skills/deploy/SKILL.md</code> はどちらも <code>/deploy</code> になり、古いコマンドファイルもそのまま動きます。</p>
 <p>同じフォルダを規格に対応する他のAIツールで読めるのは、形式がAgent Skillsというオープンな規格に沿っているからです。Claude Codeはこの規格に、呼び出す人の制御・サブエージェントでの実行・コマンド結果の差し込みといった機能を足しています。</p>
-<figure class="post-figure"><img src="/media/images/claude-code-skills/01_overview.png" alt="スキルの段階的な読み込みの図。起動時は名前と説明（約100トークン）、会話が説明に合致したときにSKILL.mdの本文、作業で必要になったときに参考資料とスクリプトの実行結果" loading="lazy"></figure>
-
 <p>Claude Codeには最初から入っているバンドルスキルもあり、<code>/code-review</code>・<code>/debug</code>・<code>/loop</code>・<code>/verify</code> などがあります。</p>
 <h2 id="s2">CLAUDE.md・MCP・サブエージェント・フックとの違い</h2>
 <p>Claudeを拡張する手段はスキルのほかにもあり、読み込まれ方と向く用途が違います。迷いやすい5つの比較は次の表のとおりです。</p>
@@ -146,6 +144,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </tr>
 </tbody>
 </table></div>
+<figure class="post-figure post-figure--zu"><img src="/media/images/claude-code-skills/ccs_13_choose.jpg" alt="CLAUDE.md・スキル・フックの使い分けの図。常に必要ならCLAUDE.md、ときどき必要ならスキル、必ず守らせたい決まりはフック" loading="lazy"></figure>
+
 <p><strong>常に必要ならCLAUDE.md、ときどき必要ならスキルに書くと分けられます。</strong></p>
 <p>MCPとは競合しません。MCPが接続を受け持ち、スキルがそのスキーマや問い合わせの書き方を教える、という組み合わせを公式は例に挙げています。</p>
 <p>見落としやすいのはフックとの違いです。公式は「<code>.env</code> は決して編集しない」のような指示をCLAUDE.mdやスキルに書いても「要望であり、保証ではありません」としています。<strong>公式は必ず守らせたい決まりをフックに移し、判断しながら当てはめる手順をスキルに残すよう勧めています。</strong></p>
@@ -165,6 +165,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 
 <h2 id="s3">スキルが読み込まれる仕組み</h2>
 <p>スキルは3段階で読み込まれます。起動時に入るのは各スキルの名前と説明だけで、仕様では1つあたり約100トークンです。会話が説明に合うと <code>SKILL.md</code> の本文が読まれ、本文で指したファイルやスクリプトは必要なときだけ使われます。スクリプトで文脈に入るのは実行結果だけです。</p>
+<figure class="post-figure post-figure--zu"><img src="/media/images/claude-code-skills/ccs_10_loading.jpg" alt="スキルの段階的な読み込みの図。起動時は各スキルの名前と説明だけ（1つあたり約100トークン）、会話が説明に合致したときにSKILL.mdの本文、作業で必要になったときに本文で指したファイルやスクリプト（スクリプトは実行結果だけ）" loading="lazy"></figure>
+
 <p>Claude Codeでは、説明（<code>description</code> と <code>when_to_use</code> の合計）が1つあたり1,536文字で切られます。スキルの一覧全体にもコンテキストの1%という枠があり、超えると呼び出しの少ないスキルから説明が削られます。<strong>説明の最初に主な用途を書いておくと、切られても判断に要る語が残ります。</strong></p>
 <p>一度呼んだスキルの本文はその後のターンにも残りますが、ファイルは読み直されません。作業の間ずっと効かせたい指示は、「編集のたびにテストを回す」のように作業全体にかかる書き方にします。会話が自動で圧縮されたときに戻るのは各スキルの先頭5,000トークンまでなので、重要な指示は <code>SKILL.md</code> の上に置きます。</p>
 <h2 id="s4">SKILL.mdの作り方</h2>
@@ -214,7 +216,9 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p><code>allowed-tools</code> は誤解されやすい項目です。呼んだターンの間だけ確認なしで使えるツールを足す設定で、使えるツールを絞るものではありません。絞りたいときは <code>disallowed-tools</code> か権限設定の拒否ルールを使います。</p>
 <p><code>!`コマンド`</code> は、本文がClaudeに渡る前にシェルで実行され、その出力に置き換わります。PRの差分を取り込んでから要約させる、といった使い方です。</p>
 <h2 id="s6">チームで配る置き場所と配り方</h2>
-<p><strong>どこに置くかで、スキルが誰に届くかが決まります。</strong> </p>
+<p><strong>どこに置くかで、スキルが誰に届くかが決まります。</strong></p>
+<figure class="post-figure post-figure--zu"><img src="/media/images/claude-code-skills/ccs_14_placement.jpg" alt="スキルの置き場所の決め方の図。迷ったらプロジェクト（リポジトリの.claude/skills/に置いてコミット）、複数のリポジトリならプラグイン（スキル・フック・MCPサーバーなどを1つにまとめる）、全社で配るなら管理設定（組織がデプロイしたPCの全ユーザーに届く）" loading="lazy"></figure>
+
 <div class="tbl"><table class="stack">
 <thead>
 <tr>
