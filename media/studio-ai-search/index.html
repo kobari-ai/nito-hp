@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】StudioのAI検索対策（AIO）・AIに読まれない原因と確認方法｜株式会社nito</title>
+    <meta name="description" content="StudioのAI検索対策（AIO）を公式ヘルプと実測で解説。2026年6月以前に作ったサイトがChatGPTなどに本文を読まれない原因、新基盤か旧基盤かの確認方法と切り替え手順、AIに読まれる設定とllms.txtまで。">
+    <link rel="canonical" href="https://nito-0210.com/media/studio-ai-search/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】StudioのAI検索対策（AIO）・AIに読まれない原因と確認方法">
+    <meta property="og:description" content="StudioのAI検索対策（AIO）を公式ヘルプと実測で解説。2026年6月以前に作ったサイトがChatGPTなどに本文を読まれない原因、新基盤か旧基盤かの確認方法と切り替え手順、AIに読まれる設定とllms.txtまで。">
+    <meta property="og:url" content="https://nito-0210.com/media/studio-ai-search/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/studio-ai-search.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/studio-ai-search.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】StudioのAI検索対策（AIO）・AIに読まれない原因と確認方法", "description": "StudioのAI検索対策（AIO）を公式ヘルプと実測で解説。2026年6月以前に作ったサイトがChatGPTなどに本文を読まれない原因、新基盤か旧基盤かの確認方法と切り替え手順、AIに読まれる設定とllms.txtまで。", "datePublished": "2026-11-13", "dateModified": "2026-11-13", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/studio-ai-search/"}, "articleSection": "AI検索対策", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/studio-ai-search.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】StudioのAI検索対策（AIO）・AIに読まれない原因と確認方法"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "StudioはWordPressと比べてAI検索で不利ですか？", "acceptedAnswer": {"@type": "Answer", "text": "新基盤のStudioもページごとに本文入りのHTMLを返すため、検索エンジンやAIから見た基本の条件は整っています。差が出るのは設定を広げる方法で、WordPressはSEOのプラグインで機能を増やせ、Yoast SEOやAIOSEOにはllms.txtを作る機能もあります。Studioはプラグインが無い代わりに、構造化データ・robots.txtの置き換え・カスタムコードを設定画面から扱う作りです。記事を大量に運用するなら、CMSの公開アイテム数の上限（Businessプランで5,000、Business Plusプランで15,000）を確認しておくのがおすすめです。"}}, {"@type": "Question", "name": "Studioの無料プランでAI検索対策はできますか？", "acceptedAnswer": {"@type": "Answer", "text": "題や説明文などの基本の設定はできますが、Freeプランは独自ドメインの接続・公開ができません。Search Consoleへのサイトマップの送信・カスタムコード・.txtのアップロードも有料プランの機能のため、会社のサイトとして見つけてもらうならMiniプラン以上が前提です。"}}, {"@type": "Question", "name": "Studioでllms.txtを置くとChatGPTに引用されやすくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "引用が増えるという裏付けはありません。OpenAIのクローラーの公式ページにllms.txtを読むという記載は無く、Googleは検索で使わないと明記しています。旧基盤のサイトなら置く前に新基盤への切り替えを優先します。"}}, {"@type": "Question", "name": "StudioのサイトでAIのクローラーを止めるにはどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "Miniプラン以上で、自動で作られるrobots.txtを自作のファイルに置き換えます。ページ設定のnoindexはAIのクローラーのアクセスを制御しないため、止める手段にはなりません。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=c1e3c5ad">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】StudioのAI検…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.11.13</span>
+        </div>
+        <h1 class="post-title">【2026年11月】StudioのAI検索対策（AIO）・AIに読まれない原因と確認方法</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/studio-ai-search.jpg" alt="【2026年11月】StudioのAI検索対策（AIO）・AIに読まれない原因と確認方法" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>StudioのサイトがChatGPTなどのAIに読まれるかは、公開基盤で大きく変わります。2026年6月11日以降の新基盤は本文を含んだHTMLをサーバーから返しますが、それ以前に作ったサイトは切り替えるまで旧基盤のままで、JavaScriptを実行しないとされるAIには本文が届かないことがあります。</p>
+<p>この記事では新旧の見分け方と切り替えの手順・AIに読まれやすくする設定・llms.txtの置き方を、Studioの公式ヘルプと実際の取得結果をもとに扱います。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>2026年6月11日以降に作ったサイトは新基盤で、本文入りのHTMLを返す</strong>。それ以前のサイトは切り替えるまで旧基盤のまま</li>
+<li><strong>旧基盤のサイトは、最初に返されるHTMLにコンテンツが含まれない</strong>とヘルプは説明し、nitoが取得した1サイトでも本文は0字だった。Googleは読めても、ChatGPTなどには本文が届かないことがある</li>
+<li><strong>AI検索対策は、新基盤への切り替え・題と説明文・見出し・robots.txtの順</strong>。llms.txtはMiniプラン以上で置けるが、Googleは使わないと明記</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>StudioのサイトはAI検索に読まれる？</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>2026年6月に変わった公開の仕組み</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>JavaScriptを実行しない取得の結果</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>自分のサイトが新基盤か見分ける方法</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>設定画面で確認する</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>ソースを表示して本文を探す</a></li>
+                    <li class="toc-h3"><a href="#s2-3"><span class="toc__n">2-3</span>検証ツールでgeneratorを探す</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>新基盤への切り替え手順と注意点</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>切り替えの手順</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>切り替えの前に確認すること</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>戻せる期限と旧基盤のままにする場合</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>StudioのAI検索対策で設定する項目</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>題と説明文と見出し</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>構造化データ</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>AIのクローラーとrobots.txt・サイトマップ</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>llms.txtの置き方</a></li>
+                    <li class="toc-h3"><a href="#s4-5"><span class="toc__n">4-5</span>画像の代替テキスト</a></li>
+                    <li class="toc-h3"><a href="#s4-6"><span class="toc__n">4-6</span>AIが紹介に使える中身を書く</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>ChatGPTとGoogleのAIで読み方は違う？</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">StudioのサイトはAI検索に読まれる？</h2>
+<p><strong>新基盤のサイトなら本文がHTMLに入っていて、ChatGPTなどのAIに読まれる条件が整っています。</strong>2026年6月11日より前に作って切り替えていないサイトは旧基盤のままです。</p>
+<figure class="post-figure"><img src="/media/images/studio-ai-search/stu_01_base.png" alt="Studioの公開基盤の違い。旧基盤はSPAとCSRでブラウザが本文を組み立て、生のHTMLに本文が無い。新基盤はMPAとSSRでサーバーが本文入りのHTMLを返す。2026年6月11日以前に作成したサイトは切り替えるまで旧基盤のまま" loading="lazy"></figure>
+
+<h3 id="s1-1">2026年6月に変わった公開の仕組み</h3>
+<p>Studioは2026年1月にベータ版として出した新しい公開サイト基盤を、6月11日に正式版にしました。旧基盤は1つのHTMLを起点にブラウザのJavaScriptで画面を組み立てるSPA（シングルページアプリケーション）で、新基盤はページごとにサーバーで完成したHTMLを作ってCDNから配信するMPA（マルチページアプリケーション）です。新基盤ではHTMLにあらかじめテキストやメタ情報を含めて出力するため、SEOとAEO（AI検索向けの最適化）の両面で有利だと公式ヘルプは説明しています。</p>
+<p>Studioは自社の記事のページ（Studio Blog）で、旧基盤だった2024年12月〜2025年3月と新基盤の2025年4〜9月を比べ、AIツールからの流入数が増えたと発表の図で示しています（増えた数は出していません）。同じ比較で、検索から来た人の1日あたりの登録数は約84%増えました。どちらも外部要因を完全には除けておらず、すべてのサイトで同じ結果は保証しないとStudio自身が断っています。</p>
+<h3 id="s1-2">JavaScriptを実行しない取得の結果</h3>
+<p>AI検索対策を支援しているnitoが2026年11月13日に、Studioの導入事例に載っているサイトをJavaScriptを実行しない方法（curl）で取得し、生のHTMLに入っている本文を数えた結果が次の表です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>取得したサイト</th>
+<th>生のHTMLの本文</th>
+<th>h1の数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="取得したサイト">旧基盤のサイト</td>
+<td data-label="生のHTMLの本文">0字</td>
+<td data-label="h1の数">0</td>
+</tr>
+<tr>
+<td data-label="取得したサイト">新基盤のサイトA</td>
+<td data-label="生のHTMLの本文">約1,900字</td>
+<td data-label="h1の数">1</td>
+</tr>
+<tr>
+<td data-label="取得したサイト">新基盤のサイトB</td>
+<td data-label="生のHTMLの本文">約2,500字</td>
+<td data-label="h1の数">2</td>
+</tr>
+</tbody>
+</table></div>
+<p>旧基盤のサイトでも、題と説明文と構造化データ（JSON-LD）は生のHTMLに入っていました。<strong>読めるのは題と説明文までで、サービスの中身を書いた本文はHTMLに1字もありません。</strong>GPTBot・ClaudeBot・PerplexityBot・Googlebotの名前で取得しても3サイトとも中身は同じで、本文の有無はボットの種類ではなく基盤で決まっていました。</p>
+<p>ブラウザで見るとどちらの基盤も同じように表示されるため、担当者が気づきにくい差です。AI検索で社名やサービスを紹介してほしい会社は、旧基盤のままかどうかの確認を最初に行うのがおすすめです。</p>
+<h2 id="s2">自分のサイトが新基盤か見分ける方法</h2>
+<p><strong>確認の方法は3つあり、2つ目と3つ目は編集の権限が無くてもブラウザだけで確認できます。</strong>この2つは公開中のURLで行い、エディタのライブプレビューでは確認できません。</p>
+<figure class="post-figure"><img src="/media/images/studio-ai-search/stu_02_check.png" alt="新基盤か旧基盤かの確認方法。設定画面の一般で公開サイト基盤を見る、ページのソースを表示して本文の一文が無ければ旧基盤、検証ツールでStudio.Design.HRCが見つかれば新基盤" loading="lazy"></figure>
+
+<h3 id="s2-1">設定画面で確認する</h3>
+<p>プロジェクトのダッシュボードで「設定」の「一般」を開くと、「公開サイト基盤」の項目があります。今の基盤の確認も切り替えも、この画面から行います。制作会社にサイトを任せていてダッシュボードに入れない場合は、次の2つの方法を使います。</p>
+<h3 id="s2-2">ソースを表示して本文を探す</h3>
+<p>公開中のページで右クリックして「ページのソースを表示」を選び、ページの本文から1文を選んで検索します（MacはCommand＋F、WindowsはCtrl＋F）。<strong>本文の1文が見つかれば新基盤、題と説明文はあるのに本文が見つからなければ旧基盤の可能性が高く、確定は次の検証ツールのgeneratorで行います。</strong>題や説明文と同じ言葉は旧基盤でも見つかるため、本文にしかない文で探すのがこつです。</p>
+<p>JavaScriptを止めて再読み込みする方法でも同じことが分かります。Chromeなら右クリックの「検証」で検証ツールを開き、Command＋Shift＋P（WindowsはCtrl＋Shift＋P）で「Disable JavaScript」を選んでから再読み込みすると、旧基盤のページは本文が表示されません。どちらの方法も、HTMLだけを読むAIのクローラーと同じ条件で本文が読めるかを見るものです。</p>
+<h3 id="s2-3">検証ツールでgeneratorを探す</h3>
+<p>公式ヘルプの手順では公開サイトのURLを開き、検証ツールの「要素」タブで「Studio.Design.HRC」を検索します。<code>&lt;meta name="generator" content="Studio.Design.HRC"&gt;</code>があれば新基盤です。<code>Studio.Design</code>だけだったのは旧基盤のサイトで、これはヘルプの記載ではなくnitoが取得した結果です。nitoが取得した4サイト（Studio公式サイトを含む）では、この表示と生のHTMLの本文の有無は一致していました。</p>
+<p>旧基盤だった場合は次の節の手順で切り替えます。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">AI のおすすめに自社の名前が挙がるか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">新基盤への切り替え手順と注意点</h2>
+<p><strong>切り替えは設定画面から数分で終わり、2027年1月末を目処に旧基盤へ戻すこともできます。</strong>ただし事業上重要なサイト・広告やコンバージョンの計測タグを置いたサイト・アクセスの多いサイトは、テスト用のプロジェクトで新基盤の動きを確認してから本番を切り替えるよう公式が勧めています。</p>
+<h3 id="s3-1">切り替えの手順</h3>
+<ol>
+<li>今の公開サイトの表示を確認し、必要ならスクリーンショットで記録する</li>
+<li>ダッシュボードの「設定」から「一般」を開き、「公開サイト基盤」の「設定」を押す</li>
+<li>「公開サイト基盤の変更」のダイアログで新基盤を選び、注意事項を読んで「保存」を押す</li>
+<li>サイトを更新する（更新するまで公開サイトには反映されず、反映まで5分ほどかかる）</li>
+<li>公開サイトのURLで「Studio.Design.HRC」を確認し、もう一度サイトを更新して初回のキャッシュを作る</li>
+</ol>
+<figure class="post-figure"><img src="/media/images/studio-ai-search/stu_04_help.png" alt="Studioのヘルプの切り替え手順。ダッシュボードの設定の一般にある公開サイト基盤の設定ボタンから、公開サイト基盤の変更のダイアログを開く" loading="lazy"><figcaption>Studioヘルプの公開サイト基盤の切り替え手順（2026年11月13日）</figcaption></figure>
+
+<p>「DNSレコードが古いIPアドレスに向いています」と表示されて保存できない場合は、この手順では切り替えられません。独自ドメインを新しいIPアドレスへつなぎ直す別の手順が必要です。</p>
+<h3 id="s3-2">切り替えの前に確認すること</h3>
+<p>公式ヘルプが影響の出やすい所として挙げる項目のうち、計測と表示に関わるものが次の表です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>確認する所</th>
+<th>新基盤で起きること</th>
+<th>対応</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="確認する所">Embedボックス・カスタムコード</td>
+<td data-label="新基盤で起きること">旧基盤のページ遷移やJavaScriptの再実行を前提にした動きが変わる</td>
+<td data-label="対応">ページ遷移後も含めて動作を確認</td>
+</tr>
+<tr>
+<td data-label="確認する所">GTMやカスタムコードの独自計測</td>
+<td data-label="新基盤で起きること">旧基盤向けの仮想ページビューやHistory Changeが不要になり、二重計測の原因になる</td>
+<td data-label="対応">切り替え前に設定を見直す</td>
+</tr>
+<tr>
+<td data-label="確認する所">Googleアナリティクス（Apps連携）</td>
+<td data-label="新基盤で起きること">基本はそのまま使える</td>
+<td data-label="対応">旧基盤向けに無効にした拡張計測の項目を見直す</td>
+</tr>
+<tr>
+<td data-label="確認する所">旧「API連携（Beta）」のデータ</td>
+<td data-label="新基盤で起きること">ページに出力されない</td>
+<td data-label="対応">Data Connect API（Businessプラン以上）に移す</td>
+</tr>
+<tr>
+<td data-label="確認する所">サイトタイトル・ソーシャルカバーが未設定</td>
+<td data-label="新基盤で起きること">空欄のまま出力される</td>
+<td data-label="対応">サイト設定で入力する</td>
+</tr>
+</tbody>
+</table></div>
+<p>表のほかに、URLクエリフィルター・カルーセル・モーダル内のアンカーリンクなど、表示や操作の仕様変更が合わせて8項目、公式ヘルプにまとまっています。</p>
+<h3 id="s3-3">戻せる期限と旧基盤のままにする場合</h3>
+<p>切り替えたあとも、2027年1月末を目処に旧基盤へ何度でも戻して表示を確認できます。それ以降は戻す機能の提供と、旧基盤に関するサポート窓口の対応を終える予定です。</p>
+<p>旧基盤のままでも公開は続けられ、セキュリティのアップデートも続ける予定と公式は案内しています。<strong>ただし今後の新機能の一部は新基盤だけで提供され、旧基盤のまま更新すると意図しない不具合や表示崩れが起きる場合があります。</strong>切り替えても、検索エンジンでの<a href="https://studio.design/ja/whats-new/site-speed-up-release">評価に反映されるまでには時間がかかる</a>というのが公式の注意です。</p>
+<h2 id="s4">StudioのAI検索対策で設定する項目</h2>
+<p><strong>AI検索に向けて見る順番は、本文がHTMLにあること・題と説明文と見出し・robots.txtとサイトマップ・llms.txtの4つで、基盤の確認が最初です。</strong>構造化データは順番とは別に扱います。</p>
+<h3 id="s4-1">題と説明文と見出し</h3>
+<p>題と説明文はサイト設定とページ設定の両方で入力でき、ページ設定のほうが優先されます。<strong>新基盤ではサイトタイトルが未設定だと空欄のまま出力されるため、切り替えたサイトはここを最初に見直します。</strong>字数の目安は公式ヘルプに載っていて、書き換えたあとはサイトを更新するまで反映されません。</p>
+<p>見出しは文字を大きくしても、HTMLタグを指定しなければ見出しとして扱われません。テキストを選んでh1〜h6を指定し、設定できるタグはボックスの種類で決まっていて自由には書けません。CMSの記事ではタイトルとの重複を避けるため、本文の見出しをh2から始めるよう公式が案内しています。新基盤では生のHTMLに見出しタグが入り、nitoが取得した2サイトにもh1がありました。</p>
+<h3 id="s4-2">構造化データ</h3>
+<p>構造化データ（ページの内容を検索エンジンが読める形で書いたもの）は、ページ設定の一番下の「構造化データ」でマークアップをオンにし、JSON-LDを貼って設定します。最初から既定のJSON-LDが入っていて、モーダルには設定できません。CMSの記事のような動的ページでは、タイトル・本文・カバー画像などのプロパティを差し込めるため、記事ごとに中身の違う構造化データを出せます。よくあるエラーと対処法も公式ヘルプにまとまっています。</p>
+<p>一方でGoogleは、AIによる概要やAIモードに出るために特別な構造化データは不要としています。入れるなら、本文と食い違わない内容にすることが前提です。種類ごとの考え方は<a href="/media/structured-data-ai-search/">構造化データはAI検索に必要？</a>で解説しています。</p>
+<h3 id="s4-3">AIのクローラーとrobots.txt・サイトマップ</h3>
+<p>robots.txtは公開時に全プランで自動で作られ、nitoが取得した新基盤の2サイトではすべてのクローラーを許可する中身でした。自動のファイルは編集も削除もできず、AIのクローラーを個別に止めたいときはMiniプラン以上で自作のrobots.txtに置き換えます。<strong>noindexはAIのクローラーのアクセスを制御しないと公式ヘルプに明記されているため、AIに読ませたくないページはnoindexだけでは止まりません。</strong></p>
+<p>サイトマップは「設定」の「一般」にあるサイトマップをオンにすると<code>/sitemap.xml</code>に作られ、モーダルとnoindexのページは含まれません。Search Consoleへ送れるのは有料プランのプロジェクトです。</p>
+<div class="in-link-card"><a href="/media/ai-crawler-robots/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">GPTBotなどAIクローラーをrobots.txtで止めるかの判断と書き方</div><div class="in-link-card__desc">学習用と検索用のクローラーの違いと、robots.txtの書き方・確認の手順を解説しています。</div></div></a></div>
+<h3 id="s4-4">llms.txtの置き方</h3>
+<p><strong>llms.txtはMiniプラン以上の.txtアップロード機能で、サイトのルートに置けます。</strong>プロジェクトの設定の「一般」にある.txtのアップロードの欄で「追加」を押し、ファイルを選べば置けます。上限は1ファイル1MB・30ファイルまでで、同じ名前のファイルは確認のうえ上書きされる仕様です。Freeプランでは使えません。Studio公式サイトも<code>/llms.txt</code>を置いていて、料金・ヘルプ・規約のページを正しい情報源として案内し、内容が食い違ったら公式のページを優先するよう書いています。</p>
+<p>Googleは生成AI機能向けの最適化ガイドで、llms.txtのような特別なファイルはGoogle検索自体が使わないため作る必要はないとし、ほかのサービスのために置くのは問題ないとしています。OpenAIのクローラーの公式ページにも、llms.txtを読むという記載はありません。<strong>旧基盤のサイトではllms.txtで案内した先のページの本文がHTMLに無いため、置く効果より基盤の切り替えが先に来ます。</strong>置く意味の議論と書き方は<a href="/media/llms-txt-structured-data/">llms.txtとは？</a>で扱っています。</p>
+<h3 id="s4-5">画像の代替テキスト</h3>
+<p>画像の代替テキストは画像ごとに入力します。2026年10月に追加されたサイト診断で、抜けやリンク切れ・HTMLの構造のエラーをサイト全体から探せます。</p>
+<h3 id="s4-6">AIが紹介に使える中身を書く</h3>
+<p>本文がHTMLに入ったら、次はAIが紹介に使える中身です。Googleは生成AI機能向けのガイドで、独自の価値あるコンテンツが、ほかのどの施策よりもAI検索での見え方を長く高めるとしています。サービスの対象・強み・料金をページの本文に書き、詳しい進め方は<a href="/media/aio-taisaku/">AIO対策とは？</a>で解説しています。</p>
+<h2 id="s5">ChatGPTとGoogleのAIで読み方は違う？</h2>
+<p><strong>GoogleのAIはJavaScriptを実行してから読むため基盤の差が出にくく、ChatGPT・Claude・Perplexityのクローラーは実行しないという観測があります。</strong>旧基盤のサイトで差が出やすいのは、後者のAIです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>AI</th>
+<th>JavaScriptの実行</th>
+<th>根拠</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="AI">Googleの検索（AIによる概要・AIモード）</td>
+<td data-label="JavaScriptの実行">実行してから読む</td>
+<td data-label="根拠">Googleの公式</td>
+</tr>
+<tr>
+<td data-label="AI">Gemini</td>
+<td data-label="JavaScriptの実行">描画する</td>
+<td data-label="根拠">Vercelの観測（2024年12月公開）</td>
+</tr>
+<tr>
+<td data-label="AI">ChatGPT・Claude・Perplexity</td>
+<td data-label="JavaScriptの実行">実行しない</td>
+<td data-label="根拠">Vercelの観測（2024年12月公開）。各社の公式に記載なし</td>
+</tr>
+</tbody>
+</table></div>
+<p>OpenAI・Anthropic・Perplexityのクローラーの公式ページには、JavaScriptを実行するかどうかの記載が見当たりません。Vercelが2024年12月に公開した、nextjs.orgと自社のネットワークを数か月見た観測では、3社の主なクローラーはどれもJavaScriptを実行しておらず、GeminiはGooglebotの基盤を使うためJavaScriptまで描画していました。<strong>2年前の観測なので、今も同じとは言い切れません。nitoの取得で分かるのは、旧基盤の生のHTMLに本文が無いところまでです。</strong></p>
+<p>Googleは200を返したページをレンダリングの待ち行列に送り、JavaScriptの実行後の内容を読む仕組みです。そのGoogleも、JavaScriptを実行できないボットがあるとして、サーバー側でのレンダリングを検討するよう案内しています。Studioは旧基盤では読み込みが難しかったNotebookLMなどのAIツールで、新基盤のサイトの内容を読み込めることを自社のサイトで確認したと発表しました。ただし公式ヘルプの表現は「一部のAIツール」で、すべてのAIに読まれると約束してはいません。</p>
+<p>ChatGPTの検索に出るには、検索用のOAI-SearchBotをrobots.txtで許可しておくようOpenAIは勧めています。<strong>ChatGPTなどで社名やサービスを紹介してほしいなら、まず新基盤に切り替えて本文をHTMLに入れます。robots.txtを自作のものに置き換えている場合は、OAI-SearchBotを止めていないかも確認します。</strong></p>
+<h2 id="s6">まとめ</h2>
+<ul>
+<li>2026年6月11日以降に作ったサイト: 新基盤なので、題・説明文・見出しとrobots.txtを整える</li>
+<li>それ以前に作ったサイト: ソースを表示して本文が無ければ旧基盤。計測タグとカスタムコードを確認してから切り替える</li>
+<li>制作会社に任せているサイト: 基盤の確認と切り替えを、計測の確認とあわせて依頼する</li>
+<li>llms.txtを検討しているサイト: 新基盤と基本の設定を済ませてから置く</li>
+</ul>
+<p>AI検索での見え方を会社としてどう整えるかの全体の進め方は、<a href="/media/aio-taisaku/">AIO対策とは？</a>で解説しています。</p>
+<h2 id="s7">よくある質問</h2>
+<h3 id="s7-1">Q. StudioはWordPressと比べてAI検索で不利ですか？</h3>
+<p>新基盤のStudioもページごとに本文入りのHTMLを返すため、検索エンジンやAIから見た基本の条件は整っています。差が出るのは設定を広げる方法で、WordPressはSEOのプラグインで機能を増やせ、Yoast SEOやAIOSEOにはllms.txtを作る機能もあります。Studioはプラグインが無い代わりに、構造化データ・robots.txtの置き換え・カスタムコードを設定画面から扱う作りです。記事を大量に運用するなら、CMSの公開アイテム数の上限（Businessプランで5,000、Business Plusプランで15,000）を確認しておくのがおすすめです。</p>
+<h3 id="s7-2">Q. Studioの無料プランでAI検索対策はできますか？</h3>
+<p>題や説明文などの基本の設定はできますが、Freeプランは独自ドメインの接続・公開ができません。Search Consoleへのサイトマップの送信・カスタムコード・.txtのアップロードも有料プランの機能のため、会社のサイトとして見つけてもらうならMiniプラン以上が前提です。</p>
+<h3 id="s7-3">Q. Studioでllms.txtを置くとChatGPTに引用されやすくなりますか？</h3>
+<p>引用が増えるという裏付けはありません。OpenAIのクローラーの公式ページにllms.txtを読むという記載は無く、Googleは検索で使わないと明記しています。旧基盤のサイトなら置く前に新基盤への切り替えを優先します。</p>
+<h3 id="s7-4">Q. StudioのサイトでAIのクローラーを止めるにはどうしますか？</h3>
+<p>Miniプラン以上で、自動で作られるrobots.txtを自作のファイルに置き換えます。ページ設定のnoindexはAIのクローラーのアクセスを制御しないため、止める手段にはなりません。</p>
+<h2 id="s8">出典</h2>
+<ul>
+<li>Studio 最新情報「<a href="https://studio.design/ja/whats-new/site-speed-up-release">より速く、より伝わりやすく。新しい公開サイト基盤を正式リリース。</a>」2026年6月11日（2026年11月13日取得）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/15444819">Studioの公開サイト基盤</a>」2026年9月18日更新（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/13526256">公開サイト基盤を旧基盤から新基盤へ切り替える</a>」2026年9月29日更新（同）</li>
+<li>Studio 最新情報「<a href="https://studio.design/ja/whats-new/txt-upload">LLMやクローラー向けにサイト情報を伝える.txtファイルを管理する機能が登場</a>」2026年2月9日（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/13627103">.txtファイルをアップロードする</a>」（同）</li>
+<li>Studio「<a href="https://studio.design/ja/pricing">料金プラン</a>」（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/4064972">タイトルと説明文（ディスクリプション）を設定する</a>」（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/4064982">HTMLタグの種類と設定手順</a>」（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/9240731">StudioサイトをSEOチェックツールにかけると、hタグが検出されません</a>」（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/2639106">SEO対策</a>」（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/6549779">構造化データを設定する</a>」（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/9556108">構造化データのよくあるエラーと対処法</a>」（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/4581345">サイトマップファイル</a>」（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/4258184">ページをnoindexに設定する</a>」（同）</li>
+<li>Studio Help「<a href="https://help.studio.design/ja/articles/7890587">サイト・ページにカスタムコードを追加する</a>」（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/appearance/ai-features?hl=ja">AI 機能とウェブサイト</a>」2025年12月31日更新（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索における生成 AI 機能に向けた最適化のための Google ガイド</a>」2026年10月30日更新（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics?hl=ja">JavaScript SEO の基本を理解する</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/bots">Overview of OpenAI Crawlers</a>」（同）</li>
+<li>Vercel「<a href="https://vercel.com/blog/the-rise-of-the-ai-crawler">The rise of the AI crawler</a>」2024年12月17日（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/llmo/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では支援開始3か月でAI経由のコンバージョンを3.8倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">StudioのサイトはAI検索に読まれる？</a><a href="#s2">自分のサイトが新基盤か見分ける方法</a><a href="#s3">新基盤への切り替え手順と注意点</a><a href="#s4">StudioのAI検索対策で設定する項目</a><a href="#s5">ChatGPTとGoogleのAIで読み方は違う？</a><a href="#s6">まとめ</a><a href="#s7">よくある質問</a><a href="#s8">出典</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードなどで自社の名前が挙がるかを数字で出します。</p><a href="/llmo/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/structured-data-ai-search/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="構造化データとAI検索"><defs><linearGradient id="ecg-ff261cdb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ff261cdb)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="176.1" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">解説</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">構造化データとAI検索</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.06</div>
+                <div class="rel-card__ttl">【2026年11月】構造化データはAI検索に必要？公式で確かめた効く範囲と入れ方</div>
+            </a>
+            <a href="/media/ai-overview-check/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Overviewの表示チェック"><defs><linearGradient id="ecg-e5b4521b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-e5b4521b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="545.0" y="125.2" width="110.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">計測</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI Overviewの</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">表示チェック</text><line x1="311.2" y1="416.8" x2="888.8" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.05</div>
+                <div class="rel-card__ttl">【2026年11月】AI Overviewの自社サイト表示チェック方法・表示率と引用率の出し方</div>
+            </a>
+            <a href="/media/meo-ai-search/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MEO対策とAI検索"><defs><linearGradient id="ecg-a90dffc2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a90dffc2)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">MEO対策とAI検索</text><line x1="296.0" y1="365.9" x2="904.0" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.04</div>
+                <div class="rel-card__ttl">【2026年11月】MEO対策へのAI検索の影響とは？続けること・足すこと・AI別の情報源</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'studio-ai-search',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
