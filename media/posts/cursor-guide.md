@@ -71,7 +71,7 @@ Premium・Super・Ultraの機能はほぼ同じで、違うのは使える量と
 
 月の請求額を読めるようにするには、何が枠に入り、何がクレジットから引かれるかを分けて押さえる必要があります。
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/cursor-guide/cur1115_11_credit.jpg" alt="週ごとの枠と前払いのクレジットの図。週ごとの枠はGrokとComposer（Cursor自身のモデル）でGrokのアプリ・Grok Botとも共有、前払いのクレジットはClaudeやGPTなど他社のモデルをAPIの定価で・週の枠を超えた分も、月の追加使用量の上限に達すると追加の利用は翌月まで止まる（週の枠の分はそのまま使える）" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/cursor-guide/cur1115_13_credit.jpg" alt="利用枠と追加料金の仕組みの図。週ごとの枠はGrokとComposer（Cursor自身のモデル）でGrokのアプリ・Grok Botとも共有、前払いのクレジットはClaudeやGPTなど他社のモデルをAPIの定価で・週の枠の超過分（GrokとComposer）も、月の追加使用量の上限に達すると、クレジットが残っていても追加の利用は翌月まで停止（週の枠の分は利用可）" loading="lazy"></figure>
 
 ### 週ごとの枠はGrokと共有
 
@@ -104,6 +104,8 @@ grok.comの請求画面の「Additional usage credits」で、月の追加使用
 
 個人プランを配るのとTeamsにするので何が変わるか、企業向けプランが要るのはどんな会社かを、同じ項目で並べました。
 
+<figure class="post-figure post-figure--zu"><img src="/media/images/cursor-guide/cur1115_12_plan.jpg" alt="Teamsと企業向けプランの境目の図。Teams（1人$30から）は管理者がプライバシーモードを全員に強制できる・SAML・OIDCのSSO、企業向けプランはSCIMでのアカウント管理・監査ログ・請求書払い。退職者のアカウントを自動で止めたい、操作の記録を残したい、カード払いができない、のどれかに当たるなら企業向けプランを営業に相談" loading="lazy"></figure>
+
 | 確かめること | 個人プラン | Teams | 企業向け |
 |---|---|---|---|
 | 料金 | 1人$8〜$200 | 1人$30・$100・$200 | 個別見積もり |
@@ -121,8 +123,6 @@ grok.comの請求画面の「Additional usage credits」で、月の追加使用
 | 契約 | オンラインの規約 | MSAとDPA | MSAとDPA |
 
 **Teamsで足りる会社と企業向けが要る会社の境目は、SCIMでのアカウント管理・監査ログ・請求書払いが要るかどうかです。**退職者のアカウントを自動で止めたい、操作の記録を残したい、カード払いができない、のどれかに当たるなら、最初から営業に相談したほうが早く進みます。
-
-<figure class="post-figure post-figure--zu"><img src="/media/images/cursor-guide/cur1115_12_plan.jpg" alt="Teamsと企業向けプランの境目の図。Teams（1人から）は管理者がプライバシーモードを全員に強制できる・SAML・OIDCのSSO、企業向けプランはSCIMでのアカウント管理・監査ログ・請求書払い。退職者のアカウントを自動で止めたい、操作の記録を残したい、カード払いができない、のどれかに当たるなら企業向けプランを営業に相談" loading="lazy"></figure>
 
 <figure class="post-figure"><img src="/media/images/cursor-guide/cur1108_04_team.png" alt="Cursorの料金ページの比較表のチーム管理の行。TeamsはSSOとチーム全体のプライバシー設定まで、請求書払い・SCIM・監査ログは企業向けにだけ付く" loading="lazy"><figcaption>料金ページの比較表のチーム管理の行（2026年11月8日）</figcaption></figure>
 
