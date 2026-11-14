@@ -23,7 +23,7 @@ AIを組み込んだコードエディタのCursorは、2026年10月12日からG
 
 Cursorを開発するAnysphereは、今はSpaceXSIと同じ会社のグループにあり、10月12日の発表でGrok・Grok Bot・Cursor・X Premiumを1つの契約にまとめました。**月額で払うのは同じでも、使える量の数え方と他社モデルの扱いが変わっています。**
 
-<figure class="post-figure"><img src="/media/images/cursor-guide/cur1108_01_overview.png" alt="Cursorの月額費用の内訳の図。固定費はプランの月額で$8〜$200（Teamsは1人$30〜）、変動費は前払いクレジットで週の枠の超過分と他社のモデルの利用分。金額は税別の米ドル" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/cursor-guide/cur1115_10_change.jpg" alt="Cursorの料金で変わった3つの点の図。使える量の枠は月ごとの2つ（Cursorのモデル・その他のモデル）から週ごとの1つへ、ClaudeやGPTは枠の中から最初の1回からAPIの定価で別料金へ、超えた分の払い方は月末の後払い（オンデマンド）から前払いのクレジットへ" loading="lazy"></figure>
 
 変わった点は3つあります。
 
@@ -70,6 +70,8 @@ Premium・Super・Ultraの機能はほぼ同じで、違うのは使える量と
 ## 使える量と追加料金の仕組み
 
 月の請求額を読めるようにするには、何が枠に入り、何がクレジットから引かれるかを分けて押さえる必要があります。
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/cursor-guide/cur1115_11_credit.jpg" alt="週ごとの枠と前払いのクレジットの図。週ごとの枠はGrokとComposer（Cursor自身のモデル）でGrokのアプリ・Grok Botとも共有、前払いのクレジットはClaudeやGPTなど他社のモデルをAPIの定価で・週の枠を超えた分も、月の追加使用量の上限に達すると追加の利用は翌月まで止まる（週の枠の分はそのまま使える）" loading="lazy"></figure>
 
 ### 週ごとの枠はGrokと共有
 
@@ -120,7 +122,7 @@ grok.comの請求画面の「Additional usage credits」で、月の追加使用
 
 **Teamsで足りる会社と企業向けが要る会社の境目は、SCIMでのアカウント管理・監査ログ・請求書払いが要るかどうかです。**退職者のアカウントを自動で止めたい、操作の記録を残したい、カード払いができない、のどれかに当たるなら、最初から営業に相談したほうが早く進みます。
 
-<figure class="post-figure"><img src="/media/images/cursor-guide/cur1108_02_choose.png" alt="要件別のCursorの契約形態の図。少人数での試用はTeamsのPremium（1人$30）、学習への利用の停止はTeamsでプライバシーモードを強制、利用頻度の高い社員はSuper・Ultraへ変更、請求書払いと監査ログは企業向けプラン" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/cursor-guide/cur1115_12_plan.jpg" alt="Teamsと企業向けプランの境目の図。Teams（1人から）は管理者がプライバシーモードを全員に強制できる・SAML・OIDCのSSO、企業向けプランはSCIMでのアカウント管理・監査ログ・請求書払い。退職者のアカウントを自動で止めたい、操作の記録を残したい、カード払いができない、のどれかに当たるなら企業向けプランを営業に相談" loading="lazy"></figure>
 
 <figure class="post-figure"><img src="/media/images/cursor-guide/cur1108_04_team.png" alt="Cursorの料金ページの比較表のチーム管理の行。TeamsはSSOとチーム全体のプライバシー設定まで、請求書払い・SCIM・監査ログは企業向けにだけ付く" loading="lazy"><figcaption>料金ページの比較表のチーム管理の行（2026年11月8日）</figcaption></figure>
 
