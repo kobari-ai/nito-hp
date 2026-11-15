@@ -106,7 +106,7 @@ Platformの[Agent Builder](https://platform.openai.com/agent-builder)を開き�
 
 公式の移行ガイドが示す道は2つです。
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/openai-agent-builder/oab_12_ikousaki.jpg" alt="公式の移行ガイドが示す2つの移行先の図。Agents SDKで続けるのは条件分岐の順番や出力の形をきっちり守らせたいワークフロー向きで、実行環境・ツール・認証・権限・公開の設定を自分たちで確認する開発の手が必要。ワークスペースエージェントに作り直すのは言葉の指示に向いた用途で、ChatGPT Business・Enterprise・Eduのワークスペースと、エージェントを作る権限が必要。どちらも内容がそのまま移る保証は無い" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/openai-agent-builder/oab_12_ikousaki.jpg" alt="公式の移行ガイドが示す2つの移行先の図。Agents SDKで続けるのは条件分岐の順番や出力の形を厳密に守らせたいワークフロー向きで、開発の体制（実行環境・ツール・認証・権限・公開の設定を自社で確認）が必要。ワークスペースエージェントに作り直すのは自然言語の指示が適した業務向きで、ChatGPT Business・Enterprise・Eduのワークスペースと、エージェントを作る権限が必要。どちらも内容がそのまま移る保証は無い" loading="lazy"></figure>
 
 ### Agents SDKで続ける
 
