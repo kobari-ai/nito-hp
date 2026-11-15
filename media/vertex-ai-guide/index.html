@@ -126,6 +126,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>名前が変わっていない所もあります。Google Apps Scriptから呼ぶ機能は今も「Vertex AI サービス」で、APIのアドレスはaiplatform.googleapis.comのままです。社内文書を検索させる部品は2026年4月からAgent Searchと呼ばれます。<strong>社内の資料にVertex AIとAgent Platformが混ざっていても、同じ基盤を指していると読んでかまいません。</strong> ドキュメントとリリースノートでは「Gemini Enterprise Agent Platform」の名前が使われています。この記事では今の名前のAgent Platformを使い、旧名は必要な所だけ添えます。</p>
 <h3 id="s1-3">これまでの経緯</h3>
 <p>Vertex AIは2021年5月18日に、それまで別々だったAutoMLとAI Platformをまとめた機械学習の基盤として一般提供が始まりました。2023年6月に生成AIの機能が一般提供になり、2024年4月にはエージェントを作るVertex AI Agent Builderが加わっています。<strong>予測や分類のモデルを作る基盤から、生成AIとエージェントの基盤へと中心が移ってきた流れの先に、今回の改名があります。</strong></p>
+<figure class="post-figure post-figure--zu"><img src="/media/images/vertex-ai-guide/vtx_10_keii.jpg" alt="Vertex AIからAgent Platformまでの経緯の図。2021年5月18日にAutoMLとAI Platformをまとめた機械学習の基盤として一般提供、2023年6月に生成AIの機能が一般提供、2026年4月22日（米国時間）にGemini Enterprise Agent Platformとして公開。機能は引き継がれる" loading="lazy"></figure>
+
 <h2 id="s2">Vertex AIでできること</h2>
 <p>今の公式の名前と2026年4月までの名前を、よく使われる機能ごとに並べると次のとおりです。</p>
 <div class="tbl"><table class="stack">
@@ -210,6 +212,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h2 id="s3">Vertex AIの料金</h2>
 <h3 id="s3-1">料金の決まり方</h3>
 <p>費用は使うモデルとインフラの量で決まります。モデルはトークンの量に応じて払い、標準の従量課金のほかに、遅れてもよい処理向けの割安なFlex、優先して処理するPriority、決まった処理量を契約で確保するプロビジョンド スループットがあります。エージェントをAgent Runtimeで動かすと、CPU・メモリ・ストレージの3つの量も料金の対象です。<strong>生成AIの費用はまずモデルのトークン単価で決まり、エージェントを動かす分がその上に乗る</strong>と考えると見積もりやすくなります。</p>
+<figure class="post-figure post-figure--zu"><img src="/media/images/vertex-ai-guide/vtx_11_hiyou.jpg" alt="Agent Platform（旧Vertex AI）の費用の構成の図。土台はモデルのトークン単価（トークン量に応じた課金。標準の従量課金のほかにFlex・Priority・プロビジョンド スループット）、その上にエージェントの実行費用（Agent RuntimeのCPU・メモリ・ストレージ）。処理リージョンの注記として、東京などのリージョンを指定すると、一般提供のGemini 3以降のモデルはグローバルの約1.1倍の単価" loading="lazy"></figure>
+
 <p>もう1つの分かれ目が処理する場所です。料金表は「グローバル」と「非グローバル」に分かれていて、東京などのリージョンを指定すると、一般提供のGemini 3以降のモデルは2026年7月1日から約1.1倍の単価になりました。</p>
 <h3 id="s3-2">主なモデルの単価</h3>
 <p>標準の従量課金の単価です。単位は100万トークンあたりのドルで、左がグローバル、右がリージョン指定の値です。</p>
@@ -294,6 +298,8 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>モデルの費用だけを見ると、この規模なら月200ドル前後です。キャッシュを使えば入力の単価は10分の1になり、毎回同じ規程集を前に付ける使い方ほど下がる計算です。一方でGoogle検索のグラウンディングを毎回使うと、月2万2,000回のうち無料の5,000件を超えた1万7,000件で約238ドルが加わります。1回の質問で検索が何回か走れば、その分だけ増える計算です。<strong>検索を毎回使うと、モデルの費用と同じくらいの額が上乗せされます。</strong></p>
 <h2 id="s4">Gemini アプリ・Gemini APIとの違い</h2>
 <p>GoogleのGeminiを会社で使う入口は大きく3つあり、同じGeminiのモデルでも契約・認証・データの扱いが違います。社員が使うチャットのGemini アプリ、開発者がAI Studioで使うGemini API、Google Cloudの上のAgent Platformです。</p>
+<figure class="post-figure post-figure--zu"><img src="/media/images/vertex-ai-guide/vtx_12_service.jpg" alt="Geminiを会社で使う3つのサービスの図。Gemini アプリ（Workspace）は社員がチャットで使う、Gemini API（AI Studio）は開発者が自社のアプリで使う。特定の企業向けの管理が必要でない限り、公式はAgent Platformよりこちらを推奨。Agent Platform（旧Vertex AI）はデータの保持や処理する地域を契約と設定で説明する必要がある会社、BigQueryの社内データとつなぐ会社に向く。同じGeminiのモデルでも契約・認証・データの扱いが異なる" loading="lazy"></figure>
+
 <div class="tbl"><table class="stack">
 <thead>
 <tr>
@@ -349,8 +355,6 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <p>Most developers should use the Gemini Developer API unless there is a need for specific enterprise controls.</p>
 </blockquote>
 <p>特定の企業向けの管理が必要でない限り、ほとんどの開発者はGemini Developer APIを使うべき、という意味です。<strong>データの保持や処理する地域を契約と設定で説明する必要がある会社、BigQueryの社内データとつなぐ会社にはAgent Platformが向いています。</strong></p>
-<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_choose.png" alt="用途別のGoogleの生成AIサービスの図。社員のチャット利用はWorkspaceのGeminiアプリ、自社アプリへの迅速な組み込みはGemini API（AI Studio）、企業向けの管理や処理地域の指定はAgent Platform（旧Vertex AI）" loading="lazy"></figure>
-
 <p>WorkspaceのGeminiの料金と設定は「<a href="/media/google-workspace-gemini/">Google WorkspaceのGeminiとは</a>」、Gemini APIの無料枠と単価は「<a href="/media/gemini-api-pricing/">Gemini APIの料金</a>」で詳しく書いています。</p>
 <h3 id="s4-2">移るときに変わること</h3>
 <p>Gemini APIからAgent Platformに移る場合も、コードの書き換えは小さく済みます。どちらもGoogle GenAI SDKとInteractions APIで呼べるためで、変わるのは認証と設定の部分です。移行の注意は次のとおりです。</p>
