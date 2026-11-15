@@ -68,7 +68,7 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 
 **作るものが社員向けのチャットならCopilot Studio、業務システムを動かすエージェントか自社アプリならFoundryを選ぶのが基本です。** Copilot Studioもコネクタとフローで業務システムを操作できるため、分かれ目は既製のコネクタで足りるか、独自のコード・モデルの選択・評価まで自社で持ちたいかです。Azure OpenAIは別の製品というより、Foundryの中でOpenAIのモデルを使う部分にあたり、Azureの価格ページでも「Azure OpenAI in Foundry Models」と表示されています。
 
-<figure class="post-figure post-figure--zu"><img src="/media/images/microsoft-foundry/mfd_11_tsukaiwake.jpg" alt="用途別の開発ツールの使い分けの図。社員向けのチャットはCopilot Studio（画面で作り、Microsoft 365のデータとつなぎやすい）、業務システムを動かすエージェントはMicrosoft Foundry（モデルの選択・コード・評価まで自社で制御できる）、自社アプリへの組み込みはFoundryのモデル（API）（Azure OpenAIを含むモデルをアプリから直接呼ぶ）" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/microsoft-foundry/mfd_11_tsukaiwake.jpg" alt="用途別の開発ツールの使い分け（基本）の図。社員向けのチャットはCopilot Studio（画面で作り、Microsoft 365のデータとつなぎやすい）、業務システムを動かすエージェントはMicrosoft Foundry（モデルの選択・コード・評価まで自社で制御できる）、自社アプリへの組み込みはFoundryのモデル（API）（Azure OpenAIを含むモデルをアプリから直接呼ぶ）。既製のコネクタで足りれば、Copilot Studioでも業務システムを操作できる" loading="lazy"></figure>
 
 それぞれの決め手は次のとおりです。
 
