@@ -26,7 +26,7 @@ cta: llmo
 
 顧問先候補の相談の始まり方・無料の公的な窓口の多さ・助成金の扱いの3つで、社労士事務所は他の業界と異なります。**3つを自分の事務所に当てはめておくことが、支援会社の提案を見る前の準備です。**
 
-【IMG1】
+<figure class="post-figure post-figure--zu"><img src="/media/images/sharoushi-aio-companies/shrc_01_difference.jpg" alt="社労士事務所のAI検索対策が他の業界と異なる3つの点（課題の名前から始まる相談・無料の公的な相談窓口と並ぶ・助成金の書き方に重い決まり）" loading="lazy"></figure>
 
 ### 課題の名前から始まる相談
 
@@ -58,7 +58,7 @@ cta: llmo
 
 社労士事務所が支援会社を選ぶときは、目標・質問の組み方・回答を取る画面・制作の範囲の4つを最初の打ち合わせで聞くと、各社の違いが見えてきます。
 
-【IMG2】
+<figure class="post-figure post-figure--zu"><img src="/media/images/sharoushi-aio-companies/shrc_02_kijun.jpg" alt="社労士事務所がAIO対策の支援会社を選ぶ4つの基準（目標・質問の組み方・回答を取る画面・制作の範囲）" loading="lazy"></figure>
 
 | 基準 | 確認する質問 | 社労士事務所で重要な理由 |
 |---|---|---|
