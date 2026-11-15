@@ -38,6 +38,8 @@ Google Cloudは2026年4月22日（米国時間）、Gemini Enterprise Agent Plat
 
 Vertex AIは2021年5月18日に、それまで別々だったAutoMLとAI Platformをまとめた機械学習の基盤として一般提供が始まりました。2023年6月に生成AIの機能が一般提供になり、2024年4月にはエージェントを作るVertex AI Agent Builderが加わっています。**予測や分類のモデルを作る基盤から、生成AIとエージェントの基盤へと中心が移ってきた流れの先に、今回の改名があります。**
 
+<figure class="post-figure post-figure--zu"><img src="/media/images/vertex-ai-guide/vtx_10_keii.jpg" alt="Vertex AIからAgent Platformまでの経緯の図。2021年5月18日にAutoMLとAI Platformをまとめた機械学習の基盤として一般提供、2023年6月に生成AIの機能が一般提供、2026年4月22日（米国時間）にGemini Enterprise Agent Platformとして公開。機能は引き継がれる" loading="lazy"></figure>
+
 ## Vertex AIでできること
 
 今の公式の名前と2026年4月までの名前を、よく使われる機能ごとに並べると次のとおりです。
@@ -77,6 +79,8 @@ ADKは特定のモデルに縛られないエージェントの開発の枠組�
 ### 料金の決まり方
 
 費用は使うモデルとインフラの量で決まります。モデルはトークンの量に応じて払い、標準の従量課金のほかに、遅れてもよい処理向けの割安なFlex、優先して処理するPriority、決まった処理量を契約で確保するプロビジョンド スループットがあります。エージェントをAgent Runtimeで動かすと、CPU・メモリ・ストレージの3つの量も料金の対象です。**生成AIの費用はまずモデルのトークン単価で決まり、エージェントを動かす分がその上に乗る**と考えると見積もりやすくなります。
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/vertex-ai-guide/vtx_11_hiyou.jpg" alt="Agent Platform（旧Vertex AI）の費用の構成の図。土台はモデルのトークン単価（トークン量に応じた課金。標準の従量課金のほかにFlex・Priority・プロビジョンド スループット）、その上にエージェントの実行費用（Agent RuntimeのCPU・メモリ・ストレージ）。処理リージョンの注記として、東京などのリージョンを指定すると、一般提供のGemini 3以降のモデルはグローバルの約1.1倍の単価" loading="lazy"></figure>
 
 もう1つの分かれ目が処理する場所です。料金表は「グローバル」と「非グローバル」に分かれていて、東京などのリージョンを指定すると、一般提供のGemini 3以降のモデルは2026年7月1日から約1.1倍の単価になりました。
 
@@ -122,6 +126,8 @@ Google検索で回答の根拠を取るグラウンディングは、Gemini 3と
 
 GoogleのGeminiを会社で使う入口は大きく3つあり、同じGeminiのモデルでも契約・認証・データの扱いが違います。社員が使うチャットのGemini アプリ、開発者がAI Studioで使うGemini API、Google Cloudの上のAgent Platformです。
 
+<figure class="post-figure post-figure--zu"><img src="/media/images/vertex-ai-guide/vtx_12_service.jpg" alt="Geminiを会社で使う3つのサービスの図。Gemini アプリ（Workspace）は社員がチャットで使う、Gemini API（AI Studio）は開発者が自社のアプリで使う。特定の企業向けの管理が必要でない限り、公式はAgent Platformよりこちらを推奨。Agent Platform（旧Vertex AI）はデータの保持や処理する地域を契約と設定で説明する必要がある会社、BigQueryの社内データとつなぐ会社に向く。同じGeminiのモデルでも契約・認証・データの扱いが異なる" loading="lazy"></figure>
+
 | 項目 | Gemini アプリ（Workspace） | Gemini API（AI Studio） | Agent Platform |
 |---|---|---|---|
 | 使う人 | 社員がチャットで | 開発者が自社のアプリで | 開発者とデータの担当が業務システムで |
@@ -140,8 +146,6 @@ Gemini APIの公式ドキュメントが示す2つのAPIの選び方は次のよ
 > Most developers should use the Gemini Developer API unless there is a need for specific enterprise controls.
 
 特定の企業向けの管理が必要でない限り、ほとんどの開発者はGemini Developer APIを使うべき、という意味です。**データの保持や処理する地域を契約と設定で説明する必要がある会社、BigQueryの社内データとつなぐ会社にはAgent Platformが向いています。**
-
-<figure class="post-figure"><img src="/media/images/vertex-ai-guide/vtx_choose.png" alt="用途別のGoogleの生成AIサービスの図。社員のチャット利用はWorkspaceのGeminiアプリ、自社アプリへの迅速な組み込みはGemini API（AI Studio）、企業向けの管理や処理地域の指定はAgent Platform（旧Vertex AI）" loading="lazy"></figure>
 
 WorkspaceのGeminiの料金と設定は「[Google WorkspaceのGeminiとは](/media/google-workspace-gemini/)」、Gemini APIの無料枠と単価は「[Gemini APIの料金](/media/gemini-api-pricing/)」で詳しく書いています。
 
