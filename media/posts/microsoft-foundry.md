@@ -24,6 +24,8 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 
 **Microsoft Foundryは、モデルの選択からエージェントの作成、社内データとの接続、品質の評価と監視までを1つのAzureリソースで扱う基盤です。** Microsoft Learnの「Microsoft Foundry とは」は、エージェント・モデル・ツールを1つの管理単位にまとめ、権限・ネットワーク・ポリシーも同じ場所で管理できると説明しています。
 
+<figure class="post-figure post-figure--zu"><img src="/media/images/microsoft-foundry/mfd_10_kinou.jpg" alt="Microsoft Foundryの3つの機能の図。エージェントは指示とツールを組み合わせて質問への回答や業務の処理を行う、モデルはOpenAI・Anthropic・Meta・Microsoftなどの11,000を超えるモデルから選びAPIで呼び出す、ツールと知識はWeb検索・ファイル検索・コードの実行に加えSharePointや業務システムの情報を参照する" loading="lazy"></figure>
+
 機能は大きく3つに分かれます。エージェントは指示とツールを組み合わせて質問への回答や業務の処理を行います。モデルはOpenAI・Anthropic・Meta・Microsoftなどの11,000を超えるモデルから用途に合うものを選び、APIで呼び出します。ツールと知識はWeb検索・ファイル検索・コードの実行に加え、SharePointや業務システムの情報をエージェントが参照できるようにします。
 
 完成品のAIを使うMicrosoft 365 Copilotと違い、Foundryは自社専用のAIを作る側の製品です。WordやTeamsの作業を楽にしたいだけなら、まずは[Microsoft 365 Copilotの使い方](/media/copilot-guide/)で足りるかを確認するのがおすすめです。
@@ -66,7 +68,7 @@ Microsoft Foundry（旧Azure AI Foundry）は、Azureの上でAIエージェン�
 
 **作るものが社員向けのチャットならCopilot Studio、業務システムを動かすエージェントか自社アプリならFoundryを選ぶのが基本です。** Copilot Studioもコネクタとフローで業務システムを操作できるため、分かれ目は既製のコネクタで足りるか、独自のコード・モデルの選択・評価まで自社で持ちたいかです。Azure OpenAIは別の製品というより、Foundryの中でOpenAIのモデルを使う部分にあたり、Azureの価格ページでも「Azure OpenAI in Foundry Models」と表示されています。
 
-<figure class="post-figure"><img src="/media/images/microsoft-foundry/mfd_02_choose.png" alt="用途別の開発ツールの使い分けの図。Teams上の社内チャットボットはCopilot Studio、業務システムの操作はFoundry、自社アプリ・顧客向けサービスはFoundryのモデル（API）。判断に迷う場合は両方を1〜2週間ずつ試作" loading="lazy"></figure>
+<figure class="post-figure post-figure--zu"><img src="/media/images/microsoft-foundry/mfd_11_tsukaiwake.jpg" alt="用途別の開発ツールの使い分け（基本）の図。社員向けのチャットはCopilot Studio（画面で作り、Microsoft 365のデータとつなぎやすい）、業務システムを動かすエージェントはMicrosoft Foundry（モデルの選択・コード・評価まで自社で制御できる）、自社アプリへの組み込みはFoundryのモデル（API）（Azure OpenAIを含むモデルをアプリから直接呼ぶ）。既製のコネクタで足りれば、Copilot Studioでも業務システムを操作できる" loading="lazy"></figure>
 
 それぞれの決め手は次のとおりです。
 
@@ -112,6 +114,8 @@ Foundryのカタログに並ぶのは、OpenAIのGPT系・AnthropicのClaude・M
 ## Microsoft Foundryの注意点は？
 
 **費用が複数のサービスに分かれて上限で止まらないこと・プレビューの機能が多く変化が速いこと・作る側に開発の知識が必要なことの3つには注意が必要です。**
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/microsoft-foundry/mfd_12_chuui.jpg" alt="Microsoft Foundryの3つの注意点の図。費用が分かれ上限で止まらない（モデル・検索・音声などを1つずつ見積もる。予算を超えても自動では止まらない）、プレビューが多く変化が速い（本番に使う機能が一般提供（GA）かどうかを確認する）、作る側に開発の知識が必要（社内システムとの接続・ネットワークの分離・評価の設計まで含めると、Azureと開発の知識が必要）" loading="lazy"></figure>
 
 ### 費用が分かれ上限で止まらない
 
