@@ -853,9 +853,9 @@
       "fetch_url": "https://support.claude.com/ja/articles/17728952",
       "auto": true,
       "watch": [
-        "Max 20xプランはUltraプランに名前が変わりました",
-        "Ultraプランは月額$200",
-        "認証済みUltraアカウントには5時間制限がありません"
+        "Max 20x プランは Ultra プランに名称が変更されました",
+        "Ultra プランは月額 $200 で利用できます",
+        "認証済み Ultra アカウントには 5 時間制限がありません"
       ],
       "checked": "2026-11-09"
     }
