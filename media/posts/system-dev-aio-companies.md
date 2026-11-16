@@ -26,7 +26,7 @@ cta: llmo
 
 発注先の探され方・一覧サイトの多さ・開発事例の書きにくさの3つで、システム開発会社は他の業界と異なります。**3つを自社に当てはめておくことが、支援会社の提案を見る前の準備です。**
 
-【IMG1】
+<figure class="post-figure post-figure--zu"><img src="/media/images/system-dev-aio-companies/sdac_01_difference.jpg" alt="システム開発会社のAI検索対策が他の業界と異なる3つの点（技術・業界・規模を重ねた発注先探し・一覧サイトと並べて読まれる会社情報・守秘義務で開発事例を書きにくい）" loading="lazy"></figure>
 
 ### 技術・業界・規模を重ねた発注先探し
 
@@ -58,7 +58,7 @@ Googleは検索のAI機能に表示されるための特別な最適化は必要
 
 システム開発会社が支援会社を選ぶときは、目標・質問の組み方・回答を取る画面・制作の範囲の4つを最初の打ち合わせで聞くと、各社の違いが見えてきます。
 
-【IMG2】
+<figure class="post-figure post-figure--zu"><img src="/media/images/system-dev-aio-companies/sdac_02_kijun.jpg" alt="システム開発会社がAIO対策の支援会社を選ぶ4つの基準（目標・質問の組み方・回答を取る画面・制作の範囲）" loading="lazy"></figure>
 
 | 基準 | 確認する質問 | システム開発会社で重要な理由 |
 |---|---|---|
