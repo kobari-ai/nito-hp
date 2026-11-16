@@ -303,6 +303,7 @@ Google検索については必要ありません。Googleの公式ガイドは�
 - [介護施設・老人ホーム向けのAIO対策会社](/media/kaigo-aio-companies/)
 - [クリニック・病院向けのAIO対策会社](/media/clinic-aio-companies/)
 - [ホテル・旅館向けのAIO対策会社](/media/hotel-aio-companies/)
+- [EC（通販）のAIO対策会社](/media/ec-aio-companies/)
 
 地域で絞るなら、[大阪のAIO対策会社おすすめ9選](/media/osaka-aio-companies/)で大阪に拠点のある会社を比べています。
 
