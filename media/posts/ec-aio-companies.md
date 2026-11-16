@@ -121,7 +121,7 @@ ChatGPTやGeminiなど主要なAIの実際の回答を、利用者と同じチ�
 
 **株式会社セルフプラス**: Shopifyの構築を手がける会社で、ECの情報サイト「Shopi Lab」で無料の「AIO・GEO・LLMO対策診断」を受け付けています。公式サイトにはShopify Plus Partnerの記載と、相談実績1,500件の掲載があります。
 
-自社で対応する範囲は4つで、AIでの言及の計測・コンテンツの改善・構造化データとAIクローラーの許可設定・**Googleマーチャントセンターの設定と商品フィードの最適化**です。計測と施策の提案を行う「EC向けGEO・LLMO対策」は月30万円から（税別、初期費用なし、最低契約3か月）で、AI経由の訪問と注文も毎月のレポートに入ります。Shopifyストアの中の作業は運用代行の「ShopifyサイトAIグロース支援」（月20万円から、初期30万円）が受け持ちます。ecforce・futureshop・MakeShop・カラーミー向けのサービスは今はShopify向けのページに転送されるため、Shopify以外のカートは診断で範囲を確認してから見積もりになります。ShopifyなどのカートでECを運営し、カートの設定から相談したい会社の候補です。
+自社で対応する範囲は4つで、AIでの言及の計測・コンテンツの改善・構造化データとAIクローラーの許可設定・**Googleマーチャントセンターの設定と商品フィードの最適化**です。計測と施策の提案を行う「EC向けGEO・LLMO対策」は月30万円から（税別、初期費用なし、最低契約3か月）で、AI経由の訪問と注文も毎月のレポートに入ります。Shopifyストアの中の作業は運用代行の「ShopifyサイトAIグロース支援」（月20万円から、初期30万円）が受け持ちます。Shopify以外のカート（ecforce・futureshopなど）は、診断で範囲を確認してから見積もりです。ShopifyなどのカートでECを運営し、カートの設定から相談したい会社の候補です。
 
 ### 3. 株式会社シード
 
@@ -202,6 +202,6 @@ Googleの検索セントラルは、AIによる概要やAIモードに表示さ�
 - Google 検索セントラル「[Product の構造化データについて](https://developers.google.com/search/docs/appearance/structured-data/product?hl=ja)」
 - Google 検索セントラル「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」
 - Google Merchant Center ヘルプ「[商品の無料リスティング](https://support.google.com/merchants/answer/13889434?hl=ja)」
-- Shopify ヘルプ「[ChatGPT の Agentic storefronts](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/chatgpt)」
+- Shopify ヘルプ「[Selling on ChatGPT](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/chatgpt)」
 - OpenAI「[Power product discovery in ChatGPT](https://chatgpt.com/merchants/)」
 - 消費者庁「[令和5年10月1日からステルスマーケティングは景品表示法違反となります。](https://www.caa.go.jp/policies/policy/representation/fair_labeling/stealth_marketing/)」
