@@ -27,11 +27,11 @@ ECのAIO対策では会社のサービスページや記事に加えて**商品�
 
 Googleの検索セントラルは、商品の情報をGoogleに渡す方法として、商品ページにProductの構造化データを入れる方法と、Merchant Centerに商品フィードを送る方法の2つを挙げています。**両方を使うと各種の表示を最大限に利用できる**、というのが公式の説明です。購入できるページ向けの「販売者のリスティング」と、レビューなどを載せる「商品スニペット」の2種類があり、色やサイズ違いの商品には別の構造化データもあります。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/appearance/structured-data/product?hl=ja・本文だけにある探す語「両方を利用すると」・赤枠にする語「ウェブページの構造化データと Merchant Center フィードの両方を利用すると」・PC・alt「Googleの検索セントラルのProductの構造化データの説明。ページの構造化データとMerchant Centerのフィードの両方を使うと各種の表示を最大限に利用できると書かれている」・figcaption「Google 検索セントラル「Product の構造化データについて」（2026年11月17日）」 -->
+<figure class="post-figure"><img src="/media/images/ec-aio-companies/eca_01_google_product_sd.png" alt="Googleの検索セントラルのProductの構造化データの説明。ページの構造化データとMerchant Centerのフィードの両方を使うと各種の表示を最大限に利用できると書かれている" loading="lazy"><figcaption>Google 検索セントラル「Product の構造化データについて」（2026年11月17日）</figcaption></figure>
 
 Merchant Centerのヘルプによると、Merchant Centerを使っていなくても、Googleがオンラインショップをクロールして商品を表示することがあります。一方で無料リスティングの設定は表示の許可であって、表示を保証するものではありません。**文章のページだけでなく商品データの整備まで依頼できるかを、ECの対策会社には確認しておく**必要があります。
 
-<!-- SHOT: 画面 https://support.google.com/merchants/answer/13889434?hl=ja・本文だけにある探す語「保証するものではありません」・赤枠にする語「ユーザーに対して商品が表示されることを保証するものではありません」・PC・alt「Merchant Centerのヘルプの無料リスティングの注。無料リスティングのステータスは商品を表示する権限を管理するもので、表示を保証するものではないと書かれている」・figcaption「Google Merchant Center ヘルプ「商品の無料リスティング」（2026年11月17日）」 -->
+<figure class="post-figure"><img src="/media/images/ec-aio-companies/eca_02_mc_free_listing.png" alt="Merchant Centerのヘルプの無料リスティングの注。無料リスティングのステータスは商品を表示する権限を管理するもので、表示を保証するものではないと書かれている" loading="lazy"><figcaption>Google Merchant Center ヘルプ「商品の無料リスティング」（2026年11月17日）</figcaption></figure>
 
 ### ChatGPTとGoogleに買い物の枠がある
 
