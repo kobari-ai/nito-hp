@@ -26,7 +26,7 @@ cta: llmo
 
 用事の名前から始まる相談・期限のある登記の義務・扱える範囲と広告の決まりの3つで、司法書士事務所は他の業界と異なります。**3つを自分の事務所に当てはめておくことが、支援会社の提案を見る前の準備です。**
 
-【IMG1】
+<figure class="post-figure post-figure--zu"><img src="/media/images/shihoshoshi-aio-companies/shsc_01_difference.jpg" alt="司法書士事務所のAI検索対策が他の業界と異なる3つの点（用事の名前から始まる相談・期限のある登記の義務・扱える範囲と広告の決まり）" loading="lazy"></figure>
 
 ### 用事の名前から始まる相談
 
@@ -62,7 +62,7 @@ cta: llmo
 
 司法書士事務所が支援会社を選ぶときは、目標・質問の組み方・回答を取る画面・制作の範囲の4つを最初の打ち合わせで聞くと、各社の違いが見えてきます。
 
-【IMG2】
+<figure class="post-figure post-figure--zu"><img src="/media/images/shihoshoshi-aio-companies/shsc_02_kijun.jpg" alt="司法書士事務所がAIO対策の支援会社を選ぶ4つの基準（目標・質問の組み方・回答を取る画面・制作の範囲）" loading="lazy"></figure>
 
 | 基準 | 確認する質問 | 司法書士事務所で重要な理由 |
 |---|---|---|
