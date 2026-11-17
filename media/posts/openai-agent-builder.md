@@ -24,6 +24,8 @@ OpenAIは2026年6月3日、画面でAIエージェントの流れを組むAgent 
 
 Agent Builderは、OpenAIの開発者向けの画面（OpenAI Platform）で、AIエージェントの処理の流れを部品をつないで組む道具です。テンプレートから部品（ノード）を置いて入出力を決め、実際のデータで試してから、自社のサイトに埋め込むかコードとして書き出します。
 
+<figure class="post-figure post-figure--zu"><img src="/media/images/openai-agent-builder/oab_10_jikeiretsu.jpg" alt="OpenAI Agent Builderの発表から終了までの図。2025年10月6日にDevDay 2025でAgentKitの一部として発表、2026年6月3日にOpenAIが終了を告知、2026年11月30日にAgent Builderが終了予定で、Evalsと再利用プロンプトも同日に終了予定" loading="lazy"></figure>
+
 **コードを書かずに組める点が売りで、Difyやn8nのようなノーコードの道具と同じ場所を狙っていました。** 2025年10月6日の開発者向けイベント（DevDay 2025）で、エージェント開発の道具一式であるAgentKitの一部として発表されました。
 
 ### AgentKitの中での位置
@@ -92,6 +94,8 @@ Platformの[Agent Builder](https://platform.openai.com/agent-builder)を開き�
 
 **Agent Builderそのものに利用料は無く、ワークフローを動かしたときに使ったモデルとツールの分だけAPIの料金がかかります。** プレビューで実際にモデルを呼んだ分も課金の対象です。ファイル検索を使うなら、上げた文書の保存とその検索の呼び出しにも料金が付く仕組みです。
 
+<figure class="post-figure post-figure--zu"><img src="/media/images/openai-agent-builder/oab_11_hiyou.jpg" alt="Agent Builderと移行先の費用の比較の図。Agent Builderは利用料は無く、使ったモデルとツールの分だけAPIの料金、Agents SDKはAPIの代金と自社で動かすサーバー代、ワークスペースエージェントはChatGPT Business以上の契約が前提で、クレジット制" loading="lazy"></figure>
+
 2026年10月28日からは、ChatGPTのProかBusinessを契約していれば、毎月のAPIの無料クレジット（ワークスペースで月500ドルまで）を自分のAPIの組織に付けられ、ワークフローを動かした分に充てられます。Plusは対象外です。
 
 モデルごとの単価と月額の試算、使いすぎを止める上限の設定は[OpenAI APIの料金](/media/openai-api-pricing/)で扱っています。
@@ -100,9 +104,9 @@ Platformの[Agent Builder](https://platform.openai.com/agent-builder)を開き�
 
 ## 移行先の選び方
 
-<figure class="post-figure"><img src="/media/images/openai-agent-builder/oab_02_move.png" alt="要件別のAgent Builderの移行先の図。決まった手順をコードで維持するならAgents SDK、ChatGPT内で社内に配布するならワークスペースエージェント、他社のモデルや既存の連携を活用するならDify・n8n・Copilot Studio" loading="lazy"></figure>
-
 公式の移行ガイドが示す道は2つです。
+
+<figure class="post-figure post-figure--zu"><img src="/media/images/openai-agent-builder/oab_12_ikousaki.jpg" alt="公式の移行ガイドが示す2つの移行先の図。Agents SDKで続けるのは条件分岐の順番や出力の形を厳密に守らせたいワークフロー向きで、開発の体制（実行環境・ツール・認証・権限・公開の設定を自社で確認）が必要。ワークスペースエージェントに作り直すのは自然言語の指示が適した業務向きで、ChatGPT Business・Enterprise・Eduのワークスペースと、エージェントを作る権限が必要。どちらも内容がそのまま移る保証は無い" loading="lazy"></figure>
 
 ### Agents SDKで続ける
 

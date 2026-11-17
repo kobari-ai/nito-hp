@@ -149,6 +149,10 @@ VPNやプロキシを切り、セキュリティのフィルターも切りま�
 
 「Application error: a client-side exception has occurred」という表示は、OpenAIの公式ヘルプの一覧には載っていません。海外のコミュニティフォーラムでの報告によるものです（要一次確認）。ブラウザのキャッシュとCookieの削除で直ることが多く、直らないときは拡張機能を一時的に止めてから開き直してください。
 
+### ChatGPTの送信ボタンが灰色で押せないのはなぜですか？
+
+長く続けた1つのチャットだけで矢印の送信ボタンが押せないなら、その会話で扱える量の上限に達した可能性があります。OpenAIのサポートは同じ症状の報告への返信で、新しいチャットで続けることを勧めています（2026年10月）。どのチャットでも押せないときは、ページの更新、拡張機能を止めてシークレットウィンドウで開く、の順に試し、ステータスページで障害を確認してください。この症状は公式ヘルプのエラー一覧には載っていません。
+
 ### ChatGPTで不審なアクティビティと出たらどうしますか？
 
 VPNを切り、ブラウザか端末を再起動します。アカウントを他の人と共有していないかを確かめ、パスワードを変えてください。自動化のツールを使っていないなら、OpenAIに報告できます。
@@ -178,3 +182,4 @@ OpenAIのヘルプセンターからサポートに問い合わせます。ヘ�
 - OpenAI ヘルプセンター「[ChatGPTのエラーメッセージのトラブルシューティング](https://help.openai.com/ja-jp/articles/7996703)」（2026年9月27日取得）
 - OpenAI ヘルプセンター「[WebとアプリのChatGPTエラーに関するネットワーク推奨事項](https://help.openai.com/ja-jp/articles/9247338)」（2026年9月27日取得）
 - [OpenAIのステータスページ](https://status.openai.com/)（インシデントの件数は2026年9月11日〜27日の日本時間で集計、2026年9月27日取得）
+- OpenAI Developer Community「[Send button is Grey only for my most important chat](https://community.openai.com/t/send-button-is-grey-only-for-my-most-important-chat/1012566)」（OpenAIサポートの2026年10月2日の返信、2026年11月17日取得）
