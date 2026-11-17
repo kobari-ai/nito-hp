@@ -126,7 +126,7 @@ desc: 導入の4段階と費用の型・自社で作るか頼むかの判断を�
 
 **AI開発の費用は、PoCと本開発を合わせて数百万円から1,000万円を超える規模になることが多く、開発対象と連携先の数で変わります**。公式に料金の目安を出している会社は少ないため、目安を公開している会社の数字で計算すると予算の見当がつきます。
 
-<!-- SHOT: 画面 https://weel.co.jp/company/service/ai-development-agents/ ・本文だけにある探す語「料金体系」・赤枠にする語「3,000,000 ~ 4,000,000円」・PC・alt「WEELのAI開発サービスの料金体系。PoCは300万〜400万円で1.5〜2ヶ月、本開発は300万〜700万円で2〜3ヶ月の目安」・figcaption「WEELの公式サイトの料金体系（2026年11月18日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-dev-companies/weel-price.png" alt="WEELのAI開発サービスの料金体系。PoCは300万〜400万円で1.5〜2ヶ月、本開発は300万〜700万円で2〜3ヶ月の目安" loading="lazy"><figcaption>WEELの公式サイトの料金体系（2026年11月18日）</figcaption></figure>
 
 ### PoCと本開発の計算例
 
