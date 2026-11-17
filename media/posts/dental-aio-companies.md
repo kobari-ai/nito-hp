@@ -106,7 +106,7 @@ AIの回答を集める方式はプログラム用の窓口（API）を使うも
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 治療と地域のページを長く育てたい医院 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 院内でツールを使って数字を見たい医院 |
 | 株式会社ニュートラルワークス | 医療クリニック特化のAI検索最適化、サイト改修まで一括 | 医療に絞った支援会社にサイトの作り直しも任せたい医院 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい医院 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい医院 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 制作会社とまとめて付き合いたい医院 |
 
 料金はnitoを含めてどの会社も、測る治療の数や制作するページの量で変わります。各社に見積もりを取って比べてください。
@@ -168,9 +168,9 @@ nitoでは医院が力を入れたい治療の質問をChatGPT・Gemini・AIモ�
 
 ホームページが古く、医療の規制に慣れた会社に作り直しから頼みたい医院に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 運用を任せるかどうかを決める前に、自社の業界でAIがどの会社を挙げているかを知っておきたい医院に合います。
 
@@ -234,5 +234,5 @@ nitoでは医院が力を入れたい治療の質問をChatGPT・Gemini・AIモ�
 - 厚生労働省「[医療広告等ガイドラインに関するQ＆A](https://www.mhlw.go.jp/content/001683595.pdf)」（2026年3月30日最終改正）
 - 国民生活センター「[あなたの歯科インプラントは大丈夫ですか－なくならない歯科インプラントにかかわる相談－](https://www.kokusen.go.jp/news/data/n-20190314_1.html)」（2019年3月14日公表）
 - 国税庁「[No.1128 医療費控除の対象となる歯の治療費の具体例](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1128.htm)」
-- 各社の公式サイト（2026年10月15日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月15日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

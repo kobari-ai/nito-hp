@@ -95,7 +95,7 @@ cover_sub: 企業からの制作相談を増やす選び方
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 動画制作の解説記事を中長期で増やしたい会社 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 自社でツールを触って数字を見たい会社 |
 | 株式会社ニュートラルワークス | 業界別のLLMO対策とサイト改修まで一括 | 実績ページを含めてサイトの作り直しも考えている会社 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | サイト制作とSEOの窓口を一社にまとめたい会社 |
 
 料金はnitoを含めてどの会社も、狙う範囲や制作の量で変わります。頼む範囲をそろえたうえで見積もりを比べてください。
@@ -157,9 +157,9 @@ nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に�
 
 作品の見せ方を含めて、AI検索対策と合わせたサイトの作り直しを考えている会社に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 いきなり運用を任せるより、まず自社の業界のAI検索の状況を知っておきたい会社に向いています。
 
@@ -217,6 +217,6 @@ AIの回答の引用元にYouTubeの動画が入ることもあるため、公�
 
 ## 出典
 
-- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - 就職・採用活動の日程（2027年度卒業・修了予定者）: 内閣官房「[新卒者の就職・採用活動に関する要請](https://www.cas.go.jp/jp/seisaku/shushoku_katsudou_yousei/index.html)」
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

@@ -95,7 +95,7 @@ AIの回答はAPIから集める方式と、利用者と同じチャット画面
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 売却ガイドの記事を育てていきたい会社 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 社内の担当者がツールで数字を見たい会社 |
 | 株式会社ニュートラルワークス | 不動産業界に絞ったサービス、サイト改修まで一括 | サイトの作り直しも考えている会社 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
 | 株式会社いえらぶGROUP | 不動産業界向けの業務支援システムとAIO対策サービス | 業務システムとホームページの集客をまとめて相談したい会社 |
 
 料金はnitoを含めてどの会社も、狙う範囲や制作の量で変わります。2〜3社から見積もりを取り、4つの基準で答えを並べてください。
@@ -157,9 +157,9 @@ nitoでは売主が聞きそうな質問をChatGPT・Gemini・AIモードなど�
 
 自社サイトが古く、売却ページを足すのに合わせてサイト全体の作り直しも考えている会社に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 いきなり運用を頼む前に、まず自社の業界のAI検索の状況を調べておきたい会社に向いています。
 
@@ -219,5 +219,5 @@ nitoでは売主が聞きそうな質問をChatGPT・Gemini・AIモードなど�
 
 - 国土交通省「[空き家等に係る媒介報酬規制の見直し](https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/content/001749923.pdf)」（2024年7月1日施行）
 - 国土交通省「[レインズの機能強化について、物件の売主向けのリーフレットを作成しました](https://www.mlit.go.jp/report/press/content/001853467.pdf)」（2024年12月24日、取引状況の登録義務は2025年1月1日から）
-- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社いえらぶGROUP](https://www.ielove-group.jp/)
+- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社いえらぶGROUP](https://www.ielove-group.jp/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

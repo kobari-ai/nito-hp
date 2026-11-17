@@ -99,7 +99,7 @@ AIが理由として使う情報は、事務所のページに書かれていな
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 手続きの解説記事を増やしていきたい事務所 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 事務所の中でツールを触って数字を見たい事務所 |
 | 株式会社ニュートラルワークス | 業界別のサービス、サイト改修まで一括 | サイトの作り直しも考えている事務所 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい事務所 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい事務所 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 制作会社とまとめて付き合いたい事務所 |
 
 料金はnitoも含めてどの会社も、狙う範囲と制作の量で変わります。見積もりを取って比べてください。
@@ -161,9 +161,9 @@ nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に�
 
 サイトが古く、手続きごとのページを作り直すのに合わせてAI検索対策もまとめたい事務所に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 運用を頼む前に、自社の業界のAI検索でどの会社が挙がっているかを調べておきたい事務所に向いています。
 
@@ -221,7 +221,7 @@ PDFだけだと読まれにくく、紹介サイトや相場の記事の金額�
 
 ## 出典
 
-- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - 相続登記の申請義務化: 法務省「[相続登記の申請義務化について](https://www.moj.go.jp/MINJI/minji05_00599.html)」・「[相続登記の申請義務化に関するQ＆A](https://www.moj.go.jp/MINJI/minji05_00565.html)」
 - 司法書士と行政書士の業務: e-Gov法令検索「[司法書士法](https://laws.e-gov.go.jp/law/325AC1000000197)」第3条・「[行政書士法](https://laws.e-gov.go.jp/law/326AC1000000004)」第1条の3
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

@@ -101,7 +101,7 @@ AIが紹介の理由として使う情報は、自社のページに書かれて
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 葬儀の流れやマナーの記事を増やしていきたい葬儀社 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 社内でツールを触って数字を見たい葬儀社 |
 | 株式会社ニュートラルワークス | 業界別のサービス、サイト改修まで一括 | サイトの作り直しも考えている葬儀社 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい葬儀社 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい葬儀社 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 制作会社とまとめて付き合いたい葬儀社 |
 
 料金はnitoを含めてどの会社も、狙う質問の範囲と制作の量で変わります。何社かに見積もりを頼んで比べてください。
@@ -163,9 +163,9 @@ nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に�
 
 サイトが古く、料金や式場のページを作り直すのに合わせてAI検索対策もまとめたい葬儀社に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 運用を頼む前に、自社の業界のAI検索でどの会社が挙がっているかを調べておきたい葬儀社に向いています。
 
@@ -223,7 +223,7 @@ nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に�
 
 ## 出典
 
-- 各社の公式サイト（2026年10月15日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月15日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - 葬儀サービスの相談: 国民生活センター「[依然として多い葬儀サービスの料金トラブル－「家族葬だから安い」と思っていませんか？－](https://www.kokusen.go.jp/news/data/n-20260603_2.html)」（2026年6月3日公表）・「[墓・葬儀サービス](https://www.kokusen.go.jp/soudan_topics/data/sougi.html)」（2026年7月31日更新）
 - 家族葬の料金表示への措置命令: 消費者庁「[景品表示法に基づく措置命令について](https://www.caa.go.jp/notice/assets/representation_cms209_260918_01.pdf)」（2026年9月18日）
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

@@ -104,7 +104,7 @@ AIの回答を集める方法には、APIを使う方式と、利用者と同じ
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 訳あり物件や相続の解説記事を育てていきたい会社 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 社内の担当者がツールで数字を見たい会社 |
 | 株式会社ニュートラルワークス | 不動産業界に絞ったサービス、サイト改修まで一括 | サイトの作り直しも考えている会社 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
 | 株式会社いえらぶGROUP | 不動産業界向けの業務支援システムとAIO対策サービス | 業務システムとホームページの集客をまとめて相談したい会社 |
 
 料金はnitoを含めてどの会社も、狙う範囲や制作の量で変わります。2〜3社の見積もりを4つの基準への答えと並べて比べてください。
@@ -166,9 +166,9 @@ nitoでは買取を考える売主の質問をChatGPT・Gemini・AIモードな�
 
 自社サイトが古く、買取の条件のページを足すのに合わせてサイトの作り直しも考えている会社に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 いきなり運用を頼む前に、まず自社の業界のAI検索の状況を調べておきたい会社に向いています。
 
@@ -229,5 +229,5 @@ nitoでは買取を考える売主の質問をChatGPT・Gemini・AIモードな�
 - 国土交通省「[空き家の発生を抑制するための特例措置（空き家の譲渡所得の3,000万円特別控除）](https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk2_000030.html)」（拡充は2024年1月1日以降の譲渡から）
 - 国土交通省「[空家等対策の推進に関する特別措置法の一部を改正する法律 概要](https://www.mlit.go.jp/jutakukentiku/house/content/001621960.pdf)」（2023年12月13日施行）
 - 国土交通省「[高齢者の自宅の売却トラブルにご注意ください](https://www.mlit.go.jp/totikensangyo/const/totikensangyo_const_tk3_0053.html)」
-- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社いえらぶGROUP](https://www.ielove-group.jp/)
+- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社いえらぶGROUP](https://www.ielove-group.jp/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

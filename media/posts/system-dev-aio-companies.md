@@ -104,7 +104,7 @@ AIは会社のトップページだけでなく、得意な技術・対応でき
 | 株式会社LANY | SEOとLLMOのコンサルティング、記事とLPの制作 | 技術解説や開発事例の記事を中長期で増やしたい会社 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEOコンサルティング | マーケティングの担当者がツールで数字を見たい会社 |
 | 株式会社ニュートラルワークス | 業界別のLLMO対策、サイト改修まで一括 | コーポレートサイトの作り直しも考えている会社 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくり・LLMO/GEOエージェント・AI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
+| 株式会社PLAN-B | SEOの土台づくり・LLMO/GEOエージェント・AI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
 | 株式会社ジオコード | SEO・Web開発・AI最適化を一社で | 制作とSEOとAI検索対策を1つの窓口で依頼したい会社 |
 
 料金はnitoを含めてどの会社も、対策の範囲や制作の量で変わります。2〜3社から見積もりを取り、4つの基準への答えを並べて比べてください。
@@ -168,9 +168,9 @@ nitoでは発注側の担当者が聞きそうな質問をChatGPTやGeminiなど
 
 コーポレートサイトが古く、AI検索対策と合わせてサイトの作り直しも考えている会社に向いています。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。2026年10月には株式会社PLAN-Bが「SEARCH WRITE」を更新し、AI検索上の自社ブランドの可視化・分析から改善提案までを支援する「LLMO/GEOエージェント」の提供を始めました。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。2026年10月には株式会社PLAN-Bが「SEARCH WRITE」を更新し、AI検索上の自社ブランドの可視化・分析から改善提案までを支援する「LLMO/GEOエージェント」の提供を始めました。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 運用を任せる前に、自社の業界でAIがどの会社をすすめているかを調べておきたい会社に向いています。
 
@@ -239,5 +239,5 @@ Googleは検索のAI機能に表示されるために、AI向けのテキスト�
 - 独立行政法人情報処理推進機構（IPA）「[情報システム・モデル取引・契約書](https://www.ipa.go.jp/digital/model/index.html)」
 - 発注ナビ「[公式サイト](https://hnavi.co.jp/)」・比較ビズ「[公式サイト](https://www.biz.ne.jp/)」（2026年11月17日確認）
 - PLAN-B「[SEARCH WRITEのアップデート（LLMO/GEOエージェント）](https://www.plan-b.co.jp/news/search-write_update_202610/)」（2026年10月19日）
-- 各社の公式サイト（2026年11月17日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年11月17日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

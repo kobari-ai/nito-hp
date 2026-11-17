@@ -109,7 +109,7 @@ AIは代理店をすすめるとき、取扱保険会社の数や相談料、対
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 法人保険や見直しの記事を長く育てたい代理店 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 社内でツールを使って数字を見たい代理店 |
 | 株式会社ニュートラルワークス | 業界別のサービス、サイト改修まで一括 | サイトの作り直しも考えている代理店 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず保険の業界でAIが挙げる会社を知りたい代理店 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず保険の業界でAIが挙げる会社を知りたい代理店 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 制作会社とまとめて付き合いたい代理店 |
 
 料金はnitoを含めてどの会社も、狙う範囲や制作の量で変わります。各社に見積もりを取って比べてください。
@@ -171,9 +171,9 @@ nitoでは代理店が力を入れたい相談の質問をChatGPT・Gemini・AI�
 
 サイトが古く、AI検索対策と合わせて相談予約のページを含めた作り直しも考えている代理店に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、生命保険・医療保険の業界でAIが挙げる会社を調べたレポートも出しています。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、生命保険・医療保険の業界でAIが挙げる会社を調べたレポートも出しています。
 
 いきなり運用を頼む前に、まず保険の業界でAIがどの会社を挙げているかを知っておきたい代理店に向いています。
 
@@ -236,5 +236,5 @@ nitoでは代理店が力を入れたい相談の質問をChatGPT・Gemini・AI�
 - 金融庁「[保険会社向けの総合的な監督指針（Ⅱ－４ 業務の適切性）](https://www.fsa.go.jp/common/law/guide/ins/02d.html)」
 - e-Gov法令検索「[保険業法](https://laws.e-gov.go.jp/law/407AC0000000105)」第300条
 - 国税庁「[No.5364-2 定期保険及び第三分野保険の保険料（保険料に相当多額の前払部分の保険料が含まれる場合）の取扱い](https://www.nta.go.jp/taxes/shiraberu/taxanswer/hojin/5364-2.htm)」
-- 各社の公式サイト（2026年10月15日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月15日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）
