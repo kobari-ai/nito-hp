@@ -300,6 +300,7 @@ Google検索については必要ありません。Googleの公式ガイドは�
 - [BtoB SaaS企業におすすめのAIO対策会社](/media/saas-aio-companies/)
 - [製造業におすすめのAIO対策会社](/media/manufacturing-aio-companies/)
 - [不動産売買・仲介会社におすすめのAIO対策会社](/media/real-estate-aio-companies/)
+- [結婚相談所におすすめのAIO対策会社](/media/marriage-agency-aio-companies/)
 - [介護施設・老人ホーム向けのAIO対策会社](/media/kaigo-aio-companies/)
 - [クリニック・病院向けのAIO対策会社](/media/clinic-aio-companies/)
 - [ホテル・旅館向けのAIO対策会社](/media/hotel-aio-companies/)
