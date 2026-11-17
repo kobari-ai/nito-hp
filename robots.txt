@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Gemini アプリが回答のときにこのサイトを読めるようにする。
+# Cloudflare の自動追加分（AI 学習を許可しない設定）が Google-Extended を Disallow にしているため、
+# 同じ名前で Allow を置く（Google は同じ名前の指定を1つにまとめ、食い違うときは制限の少ない方を使う）。
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://nito-0210.com/sitemap.xml
