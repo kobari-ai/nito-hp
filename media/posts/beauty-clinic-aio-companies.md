@@ -106,7 +106,7 @@ AIの回答を集める仕組みには、プログラム用の窓口（API）か
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 地域と施術のページや記事を長く育てたい院 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 院内でツールを使って数字を見たい院 |
 | 株式会社ニュートラルワークス | 医療クリニックに特化したAI検索最適化、サイト改修まで一括 | 医療に絞った支援会社にサイトの作り直しも任せたい院 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい院 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい院 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 制作会社とまとめて付き合いたい院 |
 
 料金はnitoを含めてどの会社も、狙う施術の数や制作の量で変わります。各社に見積もりを取って比べてください。
@@ -168,9 +168,9 @@ nitoでは院が力を入れたい施術の質問をChatGPT・Gemini・AIモー�
 
 医療に絞った支援会社に、AI検索対策とサイトの作り直しをまとめて任せたい院に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 いきなり運用を頼む前に、まず自社の業界でAI検索がどうなっているかを調べておきたい院に向いています。
 
@@ -233,5 +233,5 @@ nitoでは院が力を入れたい施術の質問をChatGPT・Gemini・AIモー�
 - 厚生労働省「[医療広告等ガイドラインに関するQ＆A](https://www.mhlw.go.jp/content/001683595.pdf)」（2026年3月30日最終改正）
 - 厚生労働省「[医療広告規制におけるウェブサイト等の事例解説書（第6版）](https://www.mhlw.go.jp/content/001683116.pdf)」（2026年3月30日）
 - 国民生活センター「[美容医療サービス](https://www.kokusen.go.jp/soudan_topics/data/biyo.html)」（各種相談の件数や傾向、2026年7月31日更新）
-- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

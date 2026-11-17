@@ -30,7 +30,7 @@ M&A仲介会社におすすめのAIO対策支援会社は次の7社です。各�
 - **株式会社LANY**: 300社以上のSEO支援の知見。生成AIからの推奨率を3か月で59%から85%にした事例を公開
 - **株式会社Faber Company**: 1,900社以上に導入されたミエルカSEOの知見から生まれた「ミエルカGEO」で、言及率・引用率・AI検索からの流入を計測。月4万9,800円（税抜）から
 - **株式会社ニュートラルワークス**: 3,000社以上の支援実績。社内の制作チームでサイト改修と外部対策まで一気通貫、月30万円（税別）から
-- **株式会社PLAN-Bマーケティングパートナーズ**: SEO支援19年以上。ChatGPTとGeminiに各1,000回質問した保険業界の調査を公開し、生成AIのブランド認識調査から始められる
+- **株式会社PLAN-B**: SEO支援19年以上。ChatGPTとGeminiに各1,000回質問した保険業界の調査を公開し、生成AIのブランド認識調査から始められる
 - **株式会社ジオコード**: 21年のSEOノウハウと累計4,743サイトの支援実績。東証スタンダード上場で、SEO・Web制作・AI最適化を一社で
 
 | 会社 | 強み | 料金（公式の表記） | 向いているM&A仲介会社 |
@@ -40,7 +40,7 @@ M&A仲介会社におすすめのAIO対策支援会社は次の7社です。各�
 | 株式会社LANY | プロンプトの設計と選ばれ方の分析、実行のディレクション | 公式に記載なし（個別見積もり） | 比較メディアやPRまで含めて中長期で育てたい会社 |
 | 株式会社Faber Company | ミエルカGEOでの計測とGEOコンサルティング | ミエルカGEO 4万9,800円/月〜（税抜・初期費用別） | 自社でツールを触って数字を見たい会社 |
 | 株式会社ニュートラルワークス | サイト改修・外部対策まで一括 | 30万円（税別）〜、契約6ヶ月〜 | サイトの作り直しも考えている会社 |
-| 株式会社PLAN-Bマーケティングパートナーズ | 生成AIのブランド認識調査とデジタルPR | 調査90万円〜（初月）、コンサル70万円〜/月 | まず業界のAIの見え方を調べたい会社 |
+| 株式会社PLAN-B | 生成AIのブランド認識調査とデジタルPR | 調査90万円〜（初月）、コンサル70万円〜/月 | まず業界のAIの見え方を調べたい会社 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | AIO単体は公式に記載なし（SEO・AIO・コンテンツの組み合わせで月30万円〜） | 制作会社とまとめて付き合いたい会社 |
 
 料金はnitoを含めてどの会社も、狙う範囲や制作の量で変わります。各社の詳しい特徴は後半の「1. 株式会社nito」から同じ形で載せています。
@@ -230,9 +230,9 @@ M&A仲介では社内にWebの担当者がいて、ツールで自社の数字�
 
 M&A仲介ではサイトが古く、AI検索対策と合わせてサイトの作り直しも考えている会社に合います。業界に絞ったプランの6業界にM&A仲介は含まれない点に注意してください。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-### PLAN-Bマーケティングパートナーズの特徴
+### PLAN-Bの特徴
 
 - **生成AIブランド認識調査**で、AIでの言及のシェア・好意度・参照元を点数にする
 - 生命保険とがん・医療保険の会社について、**ChatGPTとGeminiに各1,000回質問した業界調査**を自社で公開している
@@ -316,5 +316,5 @@ PDFは読まれにくく、第三者の比較サイトの数字が代わりに�
 
 ## 出典
 
-- 各社の公式サイトのサービスのページ（2026年10月22日確認）: [ナイル LLMOコンサルティング](https://www.seohacks.net/service/llmo-consulting/)・[LANY LLMOコンサルティング](https://www.lany.co.jp/service/digitalmarketing/llmo)・[Faber Company ミエルカGEO](https://www.fabercompany.co.jp/service/mieruca-geo/)・[ニュートラルワークス LLMO対策](https://n-works.link/ai-sarch-optimization)・[PLAN-Bマーケティングパートナーズ LLMOコンサルティング](https://www.plan-b.co.jp/solution/seo/llmo-consulting/)・[ジオコード SEO・AI最適化](https://www.geo-code.co.jp/seo/)（支援実績は[実績のページ](https://www.geo-code.co.jp/seo/performance/)）
+- 各社の公式サイトのサービスのページ（2026年10月22日確認）: [ナイル LLMOコンサルティング](https://www.seohacks.net/service/llmo-consulting/)・[LANY LLMOコンサルティング](https://www.lany.co.jp/service/digitalmarketing/llmo)・[Faber Company ミエルカGEO](https://www.fabercompany.co.jp/service/mieruca-geo/)・[ニュートラルワークス LLMO対策](https://n-works.link/ai-sarch-optimization)・[PLAN-B LLMOコンサルティング](https://www.plan-b.co.jp/solution/seo/llmo-consulting/)・[ジオコード SEO・AI最適化](https://www.geo-code.co.jp/seo/)（支援実績は[実績のページ](https://www.geo-code.co.jp/seo/performance/)）
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

@@ -108,7 +108,7 @@ AIの回答を集める方法には、プログラム用の窓口（API）から
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 分野ごとの解説記事を長く育てたい事務所 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 所内でツールを使って数字を見たい事務所 |
 | 株式会社ニュートラルワークス | 業界別のサービス、サイト改修まで一括 | サイトの作り直しも考えている事務所 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい事務所 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい事務所 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 制作会社とまとめて付き合いたい事務所 |
 
 料金はnitoを含めてどの会社も、狙う範囲や制作の量で変わります。各社に見積もりを取って比べてください。
@@ -170,9 +170,9 @@ nitoでは事務所が力を入れたい分野の質問をChatGPT・Gemini・AI�
 
 ホームページが古く、AI検索対策と合わせてサイトの作り直しも考えている事務所に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 いきなり運用を頼む前に、まず自社の業界でAI検索がどうなっているかを調べておきたい事務所に向いています。
 
@@ -232,5 +232,5 @@ nitoでは事務所が力を入れたい分野の質問をChatGPT・Gemini・AI�
 
 - 日本弁護士連合会「[弁護士等の業務広告に関する規程](https://www.nichibenren.or.jp/library/pdf/jfba_info/rules/kaiki/kaiki_no_044.pdf)」（会規第44号、2025年12月5日改正）
 - 日本弁護士連合会「[業務広告に関する指針](https://www.nichibenren.or.jp/library/pdf/jfba_info/rules/other/shishin_kaiki_44.pdf)」（2026年2月19日改正）
-- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

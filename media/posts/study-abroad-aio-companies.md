@@ -110,7 +110,7 @@ AIの回答を集める方式はプログラム用の窓口（API）に質問す
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 留学の情報記事を長く積み上げたい会社 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 社内でツールを使って数字を見たい会社 |
 | 株式会社ニュートラルワークス | 業界別のAI検索最適化、サイト改修まで一括 | サイトの作り直しも一緒に考えている会社 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 制作会社とまとめて付き合いたい会社 |
 
 料金はnitoを含めてどの会社も、測る留学の形や国の数、制作するページの量で変わります。各社に見積もりを取って比べてください。
@@ -172,9 +172,9 @@ nitoでは力を入れたい留学の形の質問をChatGPT・Gemini・AIモー�
 
 サイトが古く、料金表や予約フォームまでの流れを作り直すのに合わせてAI検索対策も進めたい会社に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 運用を任せるかを決める前に、自社の業界でAIがどの会社を挙げているかを知っておきたい会社に向いています。
 
@@ -235,5 +235,5 @@ JASSOによると留学あっせんのサービス全体を規制する法律は
 - 日本学生支援機構（JASSO）海外留学情報サイト「[留学あっせん業者（留学エージェント）の利用について](https://ryugaku.jasso.go.jp/oversea_info/basic/agency.html)」（2025年7月31日更新）
 - 日本学生支援機構（JASSO）海外留学情報サイト「[留学までのタイムスケジュール](https://ryugaku.jasso.go.jp/oversea_info/basic/planning.html)」（2026年4月10日更新）
 - 消費者庁「[留学等あっせんサービスをめぐるトラブルと消費者へのアドバイス](https://www.cao.go.jp/consumer/doc/101126_shiryou3-2.pdf)」（2010年7月15日）
-- 各社の公式サイト（2026年10月15日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月15日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

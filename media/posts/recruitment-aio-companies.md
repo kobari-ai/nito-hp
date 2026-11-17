@@ -95,7 +95,7 @@ cover_sub: 求人企業の相談を増やす選び方
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 求職者向けと採用担当者向けのオウンドメディアを育てている会社 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 自社でツールを触って数字を見たい会社 |
 | 株式会社ニュートラルワークス | 業界別のLLMO対策とサイト改修まで一括 | 法人向けページの作り直しも考えている会社 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 制作会社とまとめて付き合いたい会社 |
 
 料金はnitoを含めてどの会社も、狙う範囲や制作の量で変わります。依頼の範囲をそろえて見積もりを比べてください。
@@ -157,9 +157,9 @@ nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に�
 
 AI検索対策と合わせて、法人向けページの作り直しも考えている会社に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 運用を頼む前に、自社の業界のAI検索でどの会社が挙がっているかを調べておきたい会社に向いています。
 
@@ -217,7 +217,7 @@ AI検索対策と合わせて、法人向けページの作り直しも考えて
 
 ## 出典
 
-- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - 手数料と事業所数: 厚生労働省「[令和6年度職業紹介事業報告書の集計結果（速報）](https://www.mhlw.go.jp/content/11600000/001683019.pdf)」（2026年3月31日公表）
 - 手数料率の実績の公開と違約金規約の明示（2025年4月1日から）: 厚生労働省「[雇用仲介事業者は新たなルールへの対応が必要です](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/haken-shoukai/r0604anteisokukaisei1_00002.html)」・[リーフレット](https://www.mhlw.go.jp/content/001328410.pdf)
 - 就職者数・手数料・返戻金の情報提供の義務（2018年1月1日施行）: 人材サービス総合サイト「[平成29年改正職業安定法（職業紹介事業者向け）](https://jinzai.hellowork.mhlw.go.jp/icb_data/StaticContents/29%E5%AE%89%E5%AE%9A%E6%B3%95%E6%94%B9%E6%AD%A3%EF%BC%88%E8%81%B7%E6%A5%AD%E7%B4%B9%E4%BB%8B%E4%BA%8B%E6%A5%AD%E8%80%85%EF%BC%89.pdf)」

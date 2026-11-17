@@ -97,7 +97,7 @@ AIが理由として使う情報は、自社のページに書かれていない
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | オウンドメディアを育てている会社 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 自社でツールを触って数字を見たい会社 |
 | 株式会社ニュートラルワークス | 建設業界に絞ったサービス、サイト改修まで一括 | サイトの作り直しも考えている会社 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 制作会社とまとめて付き合いたい会社 |
 
 料金はnitoを含めてどの会社も、狙う範囲や制作の量で変わります。各社に見積もりを取って比べてください。
@@ -159,9 +159,9 @@ nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に�
 
 施工事例が写真だけで、AI検索対策と合わせてサイトの作り直しも考えている会社に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 運用を頼む前に、自社の業界のAI検索でどの会社が挙がっているかを調べておきたい会社に向いています。
 
@@ -219,6 +219,6 @@ nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に�
 
 ## 出典
 
-- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - 省エネ基準の適合義務の拡大: 国土交通省「[令和4年度改正建築物省エネ法の概要](https://www.mlit.go.jp/jutakukentiku/house/shouenehou_r4.html)」
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

@@ -97,7 +97,7 @@ AIの回答はプログラム用の窓口（API）から集める方式と、利
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | 独立・開業の記事を育てていきたい本部 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | 社内の担当者がツールで数字を見たい本部 |
 | 株式会社ニュートラルワークス | 業界別のAI検索最適化サービス、サイト改修まで一括 | 加盟募集サイトの作り直しも考えている本部 |
-| 株式会社PLAN-Bマーケティングパートナーズ | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい本部 |
+| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい本部 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 会員向けと加盟向けのサイトを一社に任せたい本部 |
 
 料金はnitoを含めてどの会社も、狙う範囲や制作の量で変わります。2〜3社から見積もりを取り、4つの基準への答えを並べてください。
@@ -159,9 +159,9 @@ nitoでは加盟を考える人が聞きそうな質問をChatGPT・Gemini・AI�
 
 加盟募集のサイトが古く、AI検索対策に合わせてサイトの作り直しも考えている本部に合います。
 
-## 6. 株式会社PLAN-Bマーケティングパートナーズ
+## 6. 株式会社PLAN-B
 
-株式会社PLAN-BマーケティングパートナーズはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 いきなり運用を頼む前に、まず自社の業界のAI検索の状況を調べておきたい本部に向いています。
 
@@ -221,5 +221,5 @@ nitoでは加盟を考える人が聞きそうな質問をChatGPT・Gemini・AI�
 
 - 公正取引委員会「[フランチャイズ・システムに関する独占禁止法上の考え方](https://www.jftc.go.jp/dk/guideline/unyoukijun/franchise.html)」（2002年4月24日、最終改正2021年4月28日）
 - 公正取引委員会「[フランチャイズ・システムに関する独占禁止法上の考え方について」の改正](https://www.jftc.go.jp/houdou/pressrelease/2021/apr/210428fcgl.html)（報道発表、2021年4月28日）
-- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-Bマーケティングパートナーズ](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）
