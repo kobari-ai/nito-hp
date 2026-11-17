@@ -98,7 +98,7 @@ AI検索対策（AIO・LLMO・GEO）を独立したサービスとして公式�
 | 株式会社LANY | SEOとLLMOをまとめた中長期のコンサルティング、記事制作 | カテゴリの解説記事を中長期で育てたい会社 |
 | 株式会社Faber Company | ミエルカGEOなどのツールとGEO/LLMO支援 | マーケティングの担当者がツールで数字を見たい会社 |
 | 株式会社ニュートラルワークス | SaaS業界に絞ったサービス、サイト改修まで一括 | 製品サイトの作り直しも考えている会社 |
-| 株式会社PLAN-B | SEOの土台づくりとAI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
+| 株式会社PLAN-B | SEOの土台づくり・LLMO/GEOエージェント・AI×業界の調査レポート | まず自社の業界の状況を調べたい会社 |
 | 株式会社ジオコード | SEO・Web制作・AI最適化を一社で | 制作とSEOとAI検索対策を一つの窓口で頼みたい会社 |
 
 料金はnitoを含めてどの会社も、狙う質問の範囲や制作の量で変わります。2〜3社から見積もりを取り、4つの基準への答えを並べて比べてください。
@@ -170,7 +170,7 @@ nitoでは製品を探す担当者が聞きそうな質問をChatGPT・Gemini・
 
 ## 6. 株式会社PLAN-B
 
-株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
+株式会社PLAN-BはSEOコンサルティングを長く手がけてきた会社です。2026年10月にはSEO実行支援ツール「SEARCH WRITE」を更新し、AI検索上の自社ブランドの可視化・分析から改善提案までを支援する「LLMO/GEOエージェント」の提供を始めました。生成AIが業界ごとにどの会社をすすめるかを調べた「AI×業界調査レポート」を出しており、SEOの土台づくりとあわせてAI検索の状況を調べられます。
 
 運用を任せる前に、自社の製品カテゴリでAIがどの会社をすすめているかを調べておきたい会社に向いています。
 
@@ -231,4 +231,5 @@ nitoでは製品を探す担当者が聞きそうな質問をChatGPT・Gemini・
 - 総務省「[ASP・SaaSの安全・信頼性に係る情報開示指針（ASP・SaaS編）第3版の公表](https://www.soumu.go.jp/menu_news/s-news/01cyber01_02000001_00149.html)」（2022年10月31日）
 - 中小企業庁「[デジタル化・AI導入補助金2026の概要](https://www.chusho.meti.go.jp/koukai/yosan/r8/digital_ai_summary.pdf)」（2026年3月）
 - 各社の公式サイト（2026年10月14日確認）: [ナイル株式会社](https://nyle.co.jp/)・[株式会社LANY](https://www.lany.co.jp/)・[株式会社Faber Company](https://www.fabercompany.co.jp/)・[株式会社ニュートラルワークス](https://n-works.link/)・[株式会社PLAN-B](https://www.plan-b.co.jp/)・[株式会社ジオコード](https://www.geo-code.co.jp/)
+- PLAN-B「[SEARCH WRITEのアップデート（LLMO/GEOエージェント）](https://www.plan-b.co.jp/news/search-write_update_202610/)」（2026年10月19日）
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）
