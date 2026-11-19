@@ -330,20 +330,24 @@ def _ec_text_w(s, fs):
 _KINSOKU_START = set("、。，．・）」』】〉》〕｝）】！？!?：；ーぁぃぅぇぉっゃゅょゎ…")
 
 
-def _ec_wrap(s, fs, max_w):
-    """max_w以内でバランス折り返し。まず必要な行数nを決め、各行の幅が均等に
-    なるように分割する（最後の1文字だけ孤立するのを防ぐ）。さらに禁則処理で
-    句読点・閉じ括弧が行頭に来ないよう前行へ送る。"""
+# 英数字の並び（GPT-6・LLMO・3.5 など）は1語として扱い、途中で改行しない
+_EC_TOKEN = re.compile(r"[A-Za-z0-9][A-Za-z0-9\-\.\+_/']*|.", re.S)
+
+
+def _ec_split(s, fs, n):
+    """s を n 行を目安に、各行の幅が均等になるよう語単位で割る。"""
     total = _ec_text_w(s, fs)
-    if total <= max_w or len(s) <= 1:
-        return [s]
-    n = max(2, math.ceil(total / max_w))
     target = total / n
     lines, cur, cur_w = [], "", 0.0
-    for ch in s:
-        cw = _ec_char_w(ch, fs)
-        cur += ch
-        cur_w += cw
+    for tok in _EC_TOKEN.findall(s):
+        tw = _ec_text_w(tok, fs)
+        # 英数字の語を足すと目標を大きく越えるなら、語の前で改行する
+        if (len(lines) < n - 1 and cur and len(tok) > 1
+                and cur_w + tw > target and (cur_w + tw - target) > (target - cur_w)):
+            lines.append(cur)
+            cur, cur_w = "", 0.0
+        cur += tok
+        cur_w += tw
         # 目標幅に達し、かつ残り文字数が残り行数以上あるうちに改行
         if len(lines) < n - 1 and cur_w >= target:
             lines.append(cur)
@@ -355,7 +359,24 @@ def _ec_wrap(s, fs, max_w):
         while lines[i] and lines[i][0] in _KINSOKU_START:
             lines[i - 1] += lines[i][0]
             lines[i] = lines[i][1:]
-    return [ln for ln in lines if ln]
+    # 行頭・行末の空白は落とす
+    return [ln.strip() for ln in lines if ln.strip()]
+
+
+def _ec_wrap(s, fs, max_w):
+    """max_w以内でバランス折り返し。まず必要な行数nを決め、各行の幅が均等に
+    なるように分割する（最後の1文字だけ孤立するのを防ぐ）。英数字の並びは
+    途中で切らない。禁則処理で句読点・閉じ括弧が行頭に来ないよう前行へ送る。
+    語単位で割った結果 max_w を越える行が出たら、行数を1つ増やして割り直す。"""
+    total = _ec_text_w(s, fs)
+    if total <= max_w or len(s) <= 1:
+        return [s]
+    n = max(2, math.ceil(total / max_w))
+    for k in range(n, n + 3):
+        lines = _ec_split(s, fs, k)
+        if all(_ec_text_w(ln, fs) <= max_w for ln in lines):
+            return lines
+    return lines
 
 
 def eyecatch_svg(headline, sub, tag, uid) -> str:
