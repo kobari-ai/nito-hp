@@ -84,7 +84,7 @@ Rimoは2026年9月30日に「Rimo Voice」から名前を変えた国内の議�
 
 料金はプロプランが月4,950円、チームプランが1アカウント月6,600円（いずれも税込・月払い）で、11アカウント以上は法人プランの見積もりです。法人プランにはIPアドレス制限・SSO・利用ログが付きます。ISO27001とISO27017の認証を持ち、データのAI学習なし・日本国内での保管を公式に掲げている点は、情シスに説明しやすい材料になります。
 
-<!-- SHOT: 画面 https://rimo.app/pricing・本文だけにある探す語「11アカウントよりご利用いただけます」・赤枠にする語「法人プラン」「IPアドレス制限・SSO」・PC・alt「Rimoの料金表。プロプラン月4,950円、チームプラン月6,600円、法人プランは11アカウントから見積もり」・figcaption「Rimoの料金ページ（2026年11月20日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-minutes-comparison/rimo-pricing.png" alt="Rimoの料金表。プロプラン月4,950円、チームプラン月6,600円、法人プランは11アカウントから見積もり" loading="lazy"><figcaption>Rimoの料金ページ（2026年11月20日）</figcaption></figure>
 
 ### Notta
 
@@ -92,7 +92,7 @@ Nottaは無料プランから始められ、有料のプランも年払いで1�
 
 会社で使うならビジネスプラン（年払いで1アカウント月2,508円・税込）が基準で、文字起こし時間が無制限になり、Web会議の録画やCRM・Slackとの連携、IPアドレス制限が加わります。SAML SSOはエンタープライズです。データはAWSの東京リージョンに保存されます。**生成AIの処理データは第三者の基盤モデルの学習に使われない一方、音声認識エンジンの学習にはデータの一部が使われ、これを提供しないのはビジネスPlusとエンタープライズ**と公式で説明されているので、プランを選ぶときの確認点になります。
 
-<!-- SHOT: 画面 https://www.notta.ai/security・本文だけにある探す語「ビジネスPlusプランおよびエンタープライズプランでは」・赤枠にする語「AI学習の安全性はいかがですか？」の回答・PC・alt「Nottaのセキュリティページ。音声認識エンジンの学習にデータを提供しないのはビジネスPlusとエンタープライズと説明している」・figcaption「NottaのTrust Center（2026年11月20日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-minutes-comparison/notta-ai-learning.png" alt="Nottaのセキュリティページ。音声認識エンジンの学習にデータを提供しないのはビジネスPlusとエンタープライズと説明している" loading="lazy"><figcaption>NottaのTrust Center（2026年11月20日）</figcaption></figure>
 
 ### Otolio（旧スマート書記）
 
