@@ -1,6 +1,7 @@
 ---
 title: 【2026年9月】Copilotの使い方を解説｜3つのライセンスとWork IQの違い
 date: 2026-09-23
+modified: 2026-11-20
 category: AI検索対策
 description: Microsoft Copilotは同じ名前でもライセンスで中身が変わります。Copilot Chatとアドオンの違い、Wordなどアプリ内の機能、Work IQをオンにしたときの応答の差を公式ドキュメントで整理します。
 cover_tag: 使い方
@@ -64,7 +65,7 @@ Microsoft 365 Copilot（基本）は、アドオンのライセンスは無い�
 | Teams | 会議の要約と文字起こし、アクションアイテムの記録 |
 | Forms | アンケートや投票の質問の下書き |
 
-Teamsの会議の要約には期間の条件が付いていて、公式の説明では最大30日間です。
+Teamsの会議の要約について、概要のページには「最大30日間」と書かれています。この30日は保存期間ではありません。Teamsのヘルプによると、会議の要約アプリのホームに一覧が出るのが、過去30日間に予定され、録画か文字起こしをした会議です。文字起こしを残さない設定で作ったAIの要約は開催者のOneDriveに保存され、既定で120日後に期限が切れます（管理者が期間を変えられます）。
 
 標準アクセスで注意したいのは安定性のほうです。公式ドキュメントは標準アクセスが**サービス容量の影響を受け、1日を通して変わる**ことがあると明記しています。混雑する時間に使えなかった経験があるなら、設定ではなくライセンスの問題かもしれません。
 
@@ -160,7 +161,7 @@ Microsoft CopilotアプリのChat画面の左上にある［Work IQ］ボタン�
 
 ### Teamsの会議の要約はいつまで見られますか？
 
-公式の説明では会議の要約は最大30日間です。長く残したい内容は会議のあとに別の場所へ書き出しておきます。
+Teamsのヘルプによると、会議の要約アプリの一覧に並ぶのは、過去30日間に予定され、録画か文字起こしをした会議です。文字起こしを残さない設定で作ったAIの要約は、既定で120日後に期限が切れます（管理者が期間を変えられます）。長く残したい内容は会議のあとに別の場所へ書き出しておきます。
 
 ## 出典
 
@@ -168,3 +169,5 @@ Microsoft CopilotアプリのChat画面の左上にある［Work IQ］ボタン�
 
 - [Microsoft Copilot の概要（Microsoft Learn）](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview) — 3つのライセンスの違い、アプリ内の機能、Work IQの挙動、エージェントの課金、管理側の設定
 - [Microsoft Copilot のヘルプとラーニング（Microsoft サポート）](https://support.microsoft.com/ja-jp/copilot) — 入口の案内、エージェントとリサーチツール、プロンプトの書き方
+- [Teams の会議の要約アプリ（Microsoft サポート）](https://support.microsoft.com/ja-jp/teams/meetings/meeting-recap-app-teams) — 一覧に出る会議の範囲（2026年11月20日取得）
+- [文字起こしを保持しないインテリジェント要約（Microsoft Learn）](https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-without-saving-transcripts) — AIの要約の期限（2026年11月20日取得）
