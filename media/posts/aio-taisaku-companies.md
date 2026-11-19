@@ -306,7 +306,7 @@ Google検索については必要ありません。Googleの公式ガイドは�
 - [ホテル・旅館向けのAIO対策会社](/media/hotel-aio-companies/)
 - [EC（通販）のAIO対策会社](/media/ec-aio-companies/)
 
-地域で絞るなら、[大阪のAIO対策会社おすすめ9選](/media/osaka-aio-companies/)で大阪に拠点のある会社を比べています。東京に拠点のある会社は[東京のLLMO対策・AIO対策会社おすすめ9選](/media/tokyo-aio-companies/)で比べています。
+地域で絞るなら、[大阪のAIO対策・LLMO対策会社おすすめ9選](/media/osaka-aio-companies/)で大阪に拠点のある会社を比べています。東京に拠点のある会社は[東京のLLMO対策・AIO対策会社おすすめ9選](/media/tokyo-aio-companies/)で比べています。
 
 ### 無料診断だけで十分ですか？
 
