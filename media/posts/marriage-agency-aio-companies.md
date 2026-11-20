@@ -51,7 +51,7 @@ cover_sub: 無料カウンセリングの予約を増やす選び方
 
 :::linkcard
 url: /media/aio-taisaku-companies/
-title: AIO対策会社おすすめ12選・選び方と費用・SEOとの違い
+title: AIO対策会社おすすめ20選・比較表と費用・選び方
 desc: 業種を問わずAIO対策の会社を支援範囲で比べ、費用の目安と契約前の確認点を解説しています。
 :::
 

@@ -486,13 +486,59 @@ def card_thumb(meta, cls="rel-card__thumb") -> str:
 
 
 
-def related_cards(current_slug, posts) -> str:
-    """関連記事: 同カテゴリ優先で最新3件"""
+_REL_CACHE = {}
+
+
+def _rel_index(posts):
+    """関連記事の選び方の下ごしらえ（語の珍しさと、本文から張られている数）。posts ごとに1回だけ作る"""
+    key = id(posts)
+    if key in _REL_CACHE:
+        return _REL_CACHE[key]
+    import math
+    toks = {}
+    for p in posts:
+        words = set(p["slug"].lower().split("-"))
+        words |= set(str(p["meta"].get("keyword", "")).lower().split())
+        toks[p["slug"]] = {w for w in words if w}
+    df = {}
+    for ws in toks.values():
+        for w in ws:
+            df[w] = df.get(w, 0) + 1
+    n = len(posts)
+    idf = {w: math.log((n + 1) / (c + 0.5)) for w, c in df.items()}
+    inbound = {p["slug"]: 0 for p in posts}
+    for p in posts:
+        for s in set(re.findall(r'href="/media/([a-z0-9-]+)/"', p["body"])):
+            if s in inbound and s != p["slug"]:
+                inbound[s] += 1
+    _REL_CACHE[key] = (toks, idf, inbound)
+    return _REL_CACHE[key]
+
+
+def related_picks(current_slug, posts, k=3):
+    """関連記事: 主題の近い順（2026-11-20 自社AIO。前は同カテゴリの最新3件で、テーマの離れた新着へ送っていた）。
+    点数 = 共通する語（slug と keyword:）の珍しさの合計 ＋ 本文から張られている数（柱ほど高い）＋ 同カテゴリ。同点は新しい順"""
+    import math
+    toks, idf, inbound = _rel_index(posts)
     current = next(p for p in posts if p["slug"] == current_slug)
-    others = [p for p in posts if p["slug"] != current_slug]
-    same_cat = [p for p in others if p["meta"]["category"] == current["meta"]["category"]]
-    rest = [p for p in others if p not in same_cat]
-    picks = (same_cat + rest)[:3]
+    cur = toks[current_slug]
+    scored = []
+    for p in posts:
+        if p["slug"] == current_slug:
+            continue
+        shared = cur & toks[p["slug"]]
+        score = sum(idf[w] for w in shared)
+        score += 0.4 * math.log1p(inbound[p["slug"]])
+        if p["meta"]["category"] == current["meta"]["category"]:
+            score += 0.8
+        scored.append((score, p["meta"]["date"], p))
+    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    return [p for _, _, p in scored[:k]]
+
+
+def related_cards(current_slug, posts) -> str:
+    """関連記事のカード3枚（選び方は related_picks）"""
+    picks = related_picks(current_slug, posts)
     cards = []
     for p in picks:
         m = p["meta"]

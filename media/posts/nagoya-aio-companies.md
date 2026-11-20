@@ -119,8 +119,8 @@ desc: AIO対策の月額の内訳と、見積もりの見方を解説してい�
 
 :::linkcard
 url: /media/aio-taisaku-companies/
-title: AIO対策会社おすすめ12選・選び方と費用・SEOとの違い
-desc: 全国のAIO対策会社12社を、支援範囲と費用で比べています。
+title: AIO対策会社おすすめ20選・比較表と費用・選び方
+desc: 全国のAIO対策会社20社を、支援範囲と費用で比べています。
 :::
 
 ## MEOとAIOをまとめて依頼できる名古屋の会社は？

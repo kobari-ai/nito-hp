@@ -40,7 +40,7 @@ desc: 会社が進めるAIO対策のやり方を5つの手順で解説してい�
 
 :::linkcard
 url: /media/aio-taisaku-companies/
-title: AIO対策会社おすすめ12選・選び方と費用・SEOとの違い
+title: AIO対策会社おすすめ20選・比較表と費用・選び方
 desc: AIO対策の会社を12社比べ、選び方と費用、SEOとの違いを解説しています。
 :::
 
@@ -191,7 +191,7 @@ desc: 戦略コンサル型と実行支援型の月額の目安と、費用が�
 
 :::linkcard
 url: /media/llmo-companies/
-title: LLMO対策の会社おすすめ12選・比較表と費用相場・選び方
+title: LLMO対策の会社おすすめ20選・比較表と費用相場・選び方
 desc: LLMO対策の会社を比較表で並べ、費用相場と選び方を解説しています。
 :::
 

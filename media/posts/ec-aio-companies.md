@@ -141,8 +141,8 @@ ChatGPTやGeminiなど主要なAIの実際の回答を、利用者と同じチ�
 
 :::linkcard
 url: /media/aio-taisaku-companies/
-title: AIO対策会社おすすめ12選・選び方と費用・SEOとの違い
-desc: 業種を問わずAIO対策会社12社を、支援範囲と費用で比べています。
+title: AIO対策会社おすすめ20選・比較表と費用・選び方
+desc: 業種を問わずAIO対策会社20社を、支援範囲と費用で比べています。
 :::
 
 ## 依頼する前に社内で決めておくこと
