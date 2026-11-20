@@ -70,7 +70,7 @@ AI契約書レビューはアップロードした契約書をAIが読み、自�
 
 8製品とも、不利な条項の指摘と修正の検討を支援する機能を持つため、表には差が出る列だけを置いています。
 
-<!-- SHOT: 画面 https://www.cloudsign.jp/review/ ・本文だけにある探す語「ご提供プラン」・赤枠にする語「年間チェック数 無制限」と「ユーザー数 3名込み」・PC・alt「クラウドサイン レビューの公式サイトのご提供プラン。おすすめプランは年間チェック数無制限でユーザー数3名込み、英文対応プランは英文契約書の自動翻訳とチェックが可能」・figcaption「クラウドサイン レビューのご提供プラン（2026年11月21日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-contract-review-comparison/cloudsign-review-plan.png" alt="クラウドサイン レビューの公式サイトのご提供プラン。おすすめプランは年間チェック数無制限でユーザー数3名込み、英文対応プランは英文契約書の自動翻訳とチェックが可能" loading="lazy"><figcaption>クラウドサイン レビューのご提供プラン（2026年11月21日）</figcaption></figure>
 
 ### LegalOn
 
@@ -84,7 +84,7 @@ AI契約書レビューはアップロードした契約書をAIが読み、自�
 
 社内に登録した類似の契約や自社のひな型とも照合して相違点を示し、過去の対応履歴や取引先ごとの方針を前提の情報として使えるとしています。**無料トライアルはクレジットカードが不要で、終了後に自動で課金されない**と明記されているため、稟議の前に試しやすい製品です。料金は問い合わせで確認します。
 
-<!-- SHOT: 画面 https://lisse-law.com/lecheck/ ・本文だけにある探す語「生まれ変わりました」・赤枠にする語「Lisse法務AI Cowork」・PC・alt「LeCHECKの公式ページ。LeCHECKは法務全体の業務を繋ぐLisse法務AI Coworkへ生まれ変わったと案内している」・figcaption「LeCHECKの公式ページの案内（2026年11月21日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-contract-review-comparison/lecheck-notice.png" alt="LeCHECKの公式ページ。LeCHECKは法務全体の業務を繋ぐLisse法務AI Coworkへ生まれ変わったと案内している" loading="lazy"><figcaption>LeCHECKの公式ページの案内（2026年11月21日）</figcaption></figure>
 
 ### マネーフォワード クラウドAI契約書レビュー
 
