@@ -103,7 +103,7 @@ desc: AIO対策の月額の内訳と、見積もりの見方を解説してい�
 
 ### 1. 株式会社nito
 
-**[株式会社nito](/llmo/)**: AIO対策（AI検索対策）の会社で、計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援し、問い合わせや購入につながるまで回し続けます。
+**[株式会社nito](/aio/)**: AIO対策（AI検索対策）の会社で、計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援し、問い合わせや購入につながるまで回し続けます。
 
 ChatGPTやGeminiなど主要なAIの実際の回答を、利用者と同じチャット画面で毎晩記録しています（記録した回答は3万件以上。2026年11月時点）。競合の商品やブランドが挙がっている理由を回答から読み取り、自社サイトのどのページに何を書くかを決めます。お客様にお願いするのはヒアリング・公開前の確認・実装の3点です。
 
@@ -198,7 +198,7 @@ Googleの検索セントラルは、AIによる概要やAIモードに表示さ�
 
 ## 出典
 
-- 各社の公式サイト（2026年11月17日確認）: [セルフプラス（Shopi Lab）AIO・GEO・LLMO対策診断](https://shopi-lab.com/aio-muryo-shindan/)・[セルフプラス EC向けGEO・LLMO対策](https://self-plus.co.jp/services/ec-llmo/)・[セルフプラス ShopifyサイトAIグロース支援](https://self-plus.co.jp/services/shopify-ai-growth/)・[シード AIO対策](https://www.seedinc.jp/aio/)・[オルグロー（ホワイトリンク）LLMOコンサルティング](https://white-link.com/llmo/)
+- 各社の公式サイト（2026年11月17日確認）: [セルフプラス（Shopi Lab）AIO・GEO・LLMO対策診断](https://shopi-lab.com/aio-muryo-shindan/)・[セルフプラス EC向けGEO・LLMO対策](https://self-plus.co.jp/services/ec-llmo/)・[セルフプラス ShopifyサイトAIグロース支援](https://self-plus.co.jp/services/shopify-ai-growth/)・[シード AIO対策](https://www.seedinc.jp/aio/)・[オルグロー（ホワイトリンク）LLMOコンサルティング](https://white-link.com/aio/)
 - Google 検索セントラル「[Product の構造化データについて](https://developers.google.com/search/docs/appearance/structured-data/product?hl=ja)」
 - Google 検索セントラル「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」
 - Google Merchant Center ヘルプ「[商品の無料リスティング](https://support.google.com/merchants/answer/13889434?hl=ja)」

@@ -126,7 +126,7 @@ AIの回答を集める方式には、プログラム用の窓口（API）から
 
 ## 1. 株式会社nito
 
-[株式会社nito](/llmo/)は、AIO対策（AI検索対策）で問い合わせや予約につながるまで実行する会社です。ヒアリングで自社の強みを文章にまとめ、記事の制作と既存ページの修正指示まで受け持ちます。何を書き、どこを修正するかは、ChatGPTやGeminiなど主要なAIの実際の回答を毎晩読み、他社が選ばれている理由から決めます。**AIでの言及率ではなく、問い合わせの数を増やすことを目標にしています。**
+[株式会社nito](/aio/)は、AIO対策（AI検索対策）で問い合わせや予約につながるまで実行する会社です。ヒアリングで自社の強みを文章にまとめ、記事の制作と既存ページの修正指示まで受け持ちます。何を書き、どこを修正するかは、ChatGPTやGeminiなど主要なAIの実際の回答を毎晩読み、他社が選ばれている理由から決めます。**AIでの言及率ではなく、問い合わせの数を増やすことを目標にしています。**
 
 結婚相談所なら、目標は無料カウンセリングの予約数です。名前が挙がる質問をむやみに増やすより、力を入れたい年代や地域の質問で、理由つきで挙がる状態をつくる方が予約に近づきます。
 
@@ -153,7 +153,7 @@ AIの回答を集める方式には、プログラム用の窓口（API）から
 - 料金や成婚実績の説明を整えたいが、社内で書く時間が取れない相談所
 - 言及率のレポートだけでなく、予約の件数で効果を見たい相談所
 
-**nitoでは相談所が狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞き、名前が挙がるか、どう紹介されるか、代わりにどの相談所が挙がっているかをまとめた[現状分析レポート](/llmo/)を無料でお出ししています。**
+**nitoでは相談所が狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞き、名前が挙がるか、どう紹介されるか、代わりにどの相談所が挙がっているかをまとめた[現状分析レポート](/aio/)を無料でお出ししています。**
 
 ## 2. 株式会社Mesut
 
@@ -262,5 +262,5 @@ QRコードで口コミ集めを試せるFreeプランは0円で、有料プラ�
 - 消費者庁「[「No.1表示に関する実態調査報告書」の公表について](https://www.caa.go.jp/notice/entry/039459/)」（2024年9月26日）
 - 日本結婚相手紹介サービス協議会（JMIC）「[結婚相手紹介サービスの上手な利用法](https://www.jmic.gr.jp/gooduse.html)」
 - QUEUE株式会社 LLMOナビ「[結婚相談所のAI検索可視性を100問で分析](https://www.llmo-navi.com/articles/llmo-research-data/marriage-agencies-ai-search-2026-9)」（2026年9月23日）
-- 各社の公式サイトのサービスのページ（2026年11月15日確認）: [Mesut 結婚相談所のLLMO対策](https://mesut.co.jp/service/llmo/matchmaking-agency/)・[umoren.ai](https://umoren.ai/)・[HIIDEL](https://hiidel.com/)・[ミエルカGEO](https://mieru-ca.com/geo/)・[ニュートラルワークス LLMOコンサルティング](https://n-works.link/ai-sarch-optimization)・[ナイル LLMOコンサルティング](https://www.seohacks.net/service/llmo-consulting/)
+- 各社の公式サイトのサービスのページ（2026年11月15日確認）: [Mesut 結婚相談所のLLMO対策](https://mesut.co.jp/service/aio/matchmaking-agency/)・[umoren.ai](https://umoren.ai/)・[HIIDEL](https://hiidel.com/)・[ミエルカGEO](https://mieru-ca.com/geo/)・[ニュートラルワークス LLMOコンサルティング](https://n-works.link/ai-sarch-optimization)・[ナイル LLMOコンサルティング](https://www.seohacks.net/service/llmo-consulting/)
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

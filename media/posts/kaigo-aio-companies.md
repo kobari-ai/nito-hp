@@ -121,7 +121,7 @@ AIO対策の呼び方で依頼先を探す場合は、業種を問わず20社を
 
 ## 1. 株式会社nito
 
-[株式会社nito](/llmo/)は、AIO対策（AI検索対策）で問い合わせや申し込みにつながるまで実行する会社です。ヒアリングで施設の強みを文章にまとめ、サイトの改善と記事の制作から公開後の運用まで支援します。何を書き、どこを直すかは、ChatGPTやGeminiなど主要なAIの実際の回答を毎晩読み、他の施設が選ばれている理由から決めます。
+[株式会社nito](/aio/)は、AIO対策（AI検索対策）で問い合わせや申し込みにつながるまで実行する会社です。ヒアリングで施設の強みを文章にまとめ、サイトの改善と記事の制作から公開後の運用まで支援します。何を書き、どこを直すかは、ChatGPTやGeminiなど主要なAIの実際の回答を毎晩読み、他の施設が選ばれている理由から決めます。
 
 **目標に置くのはAIでの言及率ではなく見学と入居相談の件数です。** 空いた居室が埋まるかは施設の収支に直結するため、家族が条件を添えて聞く質問で理由つきで挙がる状態をつくることを優先します。
 
@@ -150,7 +150,7 @@ AIO対策の呼び方で依頼先を探す場合は、業種を問わず20社を
 - 社内に記事を書く人がおらず、計測から制作まで窓口を1つにしたい運営会社
 - 言及率のレポートより、入居相談の件数で効果を見たい運営会社
 
-nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞き、施設の名前が挙がるか、どう紹介されるか、代わりにどの施設が挙がっているかをまとめた[現状分析レポート](/llmo/)を無料でお出ししています。
+nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞き、施設の名前が挙がるか、どう紹介されるか、代わりにどの施設が挙がっているかをまとめた[現状分析レポート](/aio/)を無料でお出ししています。
 
 ## 2. AIOエージェント
 
@@ -255,7 +255,7 @@ AI対策のプランは税別で、記事月4本からのライトが月5万円�
 ## 出典
 
 - 各社の公式サイト（2026年11月15日確認）: [AIOエージェント（IT-Optimization株式会社）](https://aioagent.jp/nursingcare/)・[株式会社課題解決プラットフォーム](https://0120.co.jp/aio/)・[株式会社創希](https://www.souki-inc.co.jp/ai)・[株式会社Piftee](https://piftee.co.jp/service/seo-aio/)・[株式会社ipe（AKARUMI）](https://akarumi.jp/llmo-consulting/)・[株式会社トリニアス（LLMO prime）](https://media.meo-taisaku.com/llmoprime/)
-- 各社の介護向けの解説記事（2026年11月15日確認）: [株式会社課題解決プラットフォーム](https://0120.co.jp/blog/aio-155/)・[株式会社トリニアス](https://media.meo-taisaku.com/llmo/llmo_nursing_facility/)・[株式会社Piftee](https://piftee.co.jp/blog/kaigo-seo-aio/)
+- 各社の介護向けの解説記事（2026年11月15日確認）: [株式会社課題解決プラットフォーム](https://0120.co.jp/blog/aio-155/)・[株式会社トリニアス](https://media.meo-taisaku.com/aio/llmo_nursing_facility/)・[株式会社Piftee](https://piftee.co.jp/blog/kaigo-seo-aio/)
 - 有料老人ホームの表示: 消費者庁「[有料老人ホームに関する不当な表示](https://www.caa.go.jp/policies/policy/representation/fair_labeling/representation_regulation/case_001)」（平成16年公正取引委員会告示第3号）・「[「有料老人ホームに関する不当な表示」の運用基準](https://www.caa.go.jp/policies/policy/representation/fair_labeling/guideline/pdf/100121premiums_33.pdf)」
 - 募集広告と重要事項説明書: 厚生労働省「[有料老人ホームの設置運営標準指導指針について](https://www.mhlw.go.jp/content/001347957.pdf)」（最終改正 令和6年12月6日）
 - 探す人・入居の経路・情報の公表: 厚生労働省「[有料老人ホームにおける望ましいサービス提供のあり方に関する検討会 とりまとめ](https://www.mhlw.go.jp/content/12300000/001592426.pdf)」（2025年11月）

@@ -92,7 +92,7 @@ Chromeの右上にある「Geminiに相談」は、Chromeに組み込まれたGe
 
 ## AI検索での見え方は別の話
 
-Chromeの中のGeminiを消しても、Geminiが答えの中で自社をどう紹介するかは変わりません。そちらは[AI検索対策](https://nito-0210.com/llmo/)として扱います。
+Chromeの中のGeminiを消しても、Geminiが答えの中で自社をどう紹介するかは変わりません。そちらは[AI検索対策](https://nito-0210.com/aio/)として扱います。
 
 ## よくある質問
 

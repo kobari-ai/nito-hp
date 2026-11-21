@@ -132,7 +132,7 @@ desc: LLMO対策の会社20社を比較表で並べ、費用相場と選び方�
 
 ## 1. 株式会社nito
 
-[株式会社nito](/llmo/)は、AIO対策（AI検索対策）で問い合わせや予約につながるまで実行する会社です。ヒアリングで院の強みを文章にまとめ、サイトの改善と記事の制作から公開後の運用まで支援します。何を書き、どこを直すかは、ChatGPTやGeminiなど主要なAIの実際の回答を毎晩読み、他の院が選ばれている理由から決めます。
+[株式会社nito](/aio/)は、AIO対策（AI検索対策）で問い合わせや予約につながるまで実行する会社です。ヒアリングで院の強みを文章にまとめ、サイトの改善と記事の制作から公開後の運用まで支援します。何を書き、どこを直すかは、ChatGPTやGeminiなど主要なAIの実際の回答を毎晩読み、他の院が選ばれている理由から決めます。
 
 **目標に置くのはAIでの言及率ではなく初診の予約の件数です。** 診療科によっては1人の新患が長く通院することもあるため、患者が地域と条件を添えて聞く質問で、理由つきで挙がる状態をつくることを優先します。
 
@@ -161,7 +161,7 @@ desc: LLMO対策の会社20社を比較表で並べ、費用相場と選び方�
 - 院内に記事を書く人がおらず、計測から制作まで窓口を1つにしたい医療法人
 - 言及率のレポートより、初診の予約の件数で効果を見たい院
 
-nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞き、院の名前が挙がるか、どう紹介されるか、代わりにどの院が挙がっているかをまとめた[現状分析レポート](/llmo/)を無料でお出ししています。
+nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞き、院の名前が挙がるか、どう紹介されるか、代わりにどの院が挙がっているかをまとめた[現状分析レポート](/aio/)を無料でお出ししています。
 
 ## 2. 株式会社船井総合研究所
 
@@ -249,7 +249,7 @@ AIによる概要やAIモードに出るためには必要ありません。Goog
 
 ## 出典
 
-- 各社の公式サイト（2026年11月16日確認）: [株式会社船井総合研究所 内科クリニックのためのAIO対策](https://www.funaisoken.co.jp/solution/hospital_internal-medicine_aio_806_S033)・[株式会社Medical DX 医療特化のLLMO](https://medical-dx.com/service/llmo/)・[株式会社ドクターブリッジ クリニック専門LLMO](https://www.iryoto.jp/llmo/)・[株式会社grits クリニック専門のAI対策](https://medical-grits.jp/aio/)・[エイチリンク株式会社 クリニックのAIO対策](https://h-link-marketing.co.jp/service/llmo-consulting/industry/clinic/)・[株式会社ニュートラルワークス 医療クリニック特化 AI検索最適化](https://n-works.link/llmo-clinic)
+- 各社の公式サイト（2026年11月16日確認）: [株式会社船井総合研究所 内科クリニックのためのAIO対策](https://www.funaisoken.co.jp/solution/hospital_internal-medicine_aio_806_S033)・[株式会社Medical DX 医療特化のLLMO](https://medical-dx.com/service/aio/)・[株式会社ドクターブリッジ クリニック専門LLMO](https://www.iryoto.jp/aio/)・[株式会社grits クリニック専門のAI対策](https://medical-grits.jp/aio/)・[エイチリンク株式会社 クリニックのAIO対策](https://h-link-marketing.co.jp/service/llmo-consulting/industry/clinic/)・[株式会社ニュートラルワークス 医療クリニック特化 AI検索最適化](https://n-works.link/llmo-clinic)
 - 厚生労働省「[医療法における病院等の広告規制について](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/index.html)」
 - 厚生労働省「[医業若しくは歯科医業又は病院若しくは診療所に関する広告等に関する指針（医療広告等ガイドライン）](https://www.mhlw.go.jp/content/001683594.pdf)」（2026年3月30日最終改正）
 - 厚生労働省「[医療広告等ガイドラインに関するQ＆A](https://www.mhlw.go.jp/content/001683595.pdf)」

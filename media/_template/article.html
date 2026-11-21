@@ -39,7 +39,7 @@
             <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
             <nav class="gnav">
                 <a href="/#about">About</a>
-                <a href="/llmo/">サービス</a>
+                <a href="/aio/">サービス</a>
                 <a href="/media/">コラム</a>
                 <a href="/contact.html" class="nav-cta">相談する</a>
             </nav>
@@ -101,7 +101,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
         <nav class="f-nav">
             <a href="/#about">About</a>
-            <a href="/llmo/">サービス</a>
+            <a href="/aio/">サービス</a>
             <a href="/media/">コラム</a>
             <a href="/privacy.html">プライバシーポリシー</a>
         </nav>
@@ -124,7 +124,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
-      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var T={'/aio/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
       var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;

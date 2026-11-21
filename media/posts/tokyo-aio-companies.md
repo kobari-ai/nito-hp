@@ -37,7 +37,7 @@ cover_sub: 依頼できる範囲と料金で選ぶ
 
 ### 1. 株式会社nito
 
-**[株式会社nito](/llmo/)**: 東京都江東区のAIO対策（AI検索対策）の会社です。計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援し、問い合わせや購入につながるまで回し続けます。
+**[株式会社nito](/aio/)**: 東京都江東区のAIO対策（AI検索対策）の会社です。計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援し、問い合わせや購入につながるまで回し続けます。
 
 ChatGPTやGeminiなど主要なAIの実際の回答を、利用者と同じチャット画面で毎晩記録しています（記録した回答は3万件以上。2026年11月時点）。他社が選ばれている理由を回答から読み取り、何を書きどこを改善するかを決めます。お客様にお願いするのはヒアリング・公開前の確認・実装の3点です。
 
@@ -190,5 +190,5 @@ CINCは公式の案内で3〜6カ月ほどで成果が出始めるケースが�
 
 ## 出典
 
-- 各社の公式サイト（2026年11月19日確認）: [nito AI検索対策](/llmo/)・[ナイル LLMOコンサルティング](https://www.seohacks.net/service/llmo-consulting/)（拠点は[会社概要](https://www.seohacks.net/company/)）・[CINC AI検索最適化コンサルティング](https://www.cinc-j.co.jp/service/analytics/geoconsulting/)（拠点は[同社のコラム](https://www.cinc-j.co.jp/service/analytics/column/llmo-consulting-companies/)の会社情報）・[デジマケ LLMO対策](https://digimake.co.jp/service/llmo/)・[東京SEOメーカー LLMOコンサルティング](https://www.switchitmaker2.com/service/llmo-consulting/)・[SEデザイン LLMO診断・伴走支援](https://www.sedesign.co.jp/service/llmo/)・[シンプリック LLMO対策支援](https://simplique.jp/llmo-consulting/)（拠点は[会社情報](https://simplique.jp/company/)）・[アウンコンサルティング AIOコンサルティング](https://www.auncon.co.jp/service/seo/aio-consulting)（拠点は[会社概要](https://www.auncon.co.jp/company/about/)）・[メディアグロース LLMOコンサルティング](https://media-growth.co.jp/llmo-service/)
+- 各社の公式サイト（2026年11月19日確認）: [nito AI検索対策](/aio/)・[ナイル LLMOコンサルティング](https://www.seohacks.net/service/llmo-consulting/)（拠点は[会社概要](https://www.seohacks.net/company/)）・[CINC AI検索最適化コンサルティング](https://www.cinc-j.co.jp/service/analytics/geoconsulting/)（拠点は[同社のコラム](https://www.cinc-j.co.jp/service/analytics/column/llmo-consulting-companies/)の会社情報）・[デジマケ LLMO対策](https://digimake.co.jp/service/aio/)・[東京SEOメーカー LLMOコンサルティング](https://www.switchitmaker2.com/service/llmo-consulting/)・[SEデザイン LLMO診断・伴走支援](https://www.sedesign.co.jp/service/aio/)・[シンプリック LLMO対策支援](https://simplique.jp/llmo-consulting/)（拠点は[会社情報](https://simplique.jp/company/)）・[アウンコンサルティング AIOコンサルティング](https://www.auncon.co.jp/service/seo/aio-consulting)（拠点は[会社概要](https://www.auncon.co.jp/company/about/)）・[メディアグロース LLMOコンサルティング](https://media-growth.co.jp/llmo-service/)
 - Google 検索セントラル「[SEO 業者の利用を検討する](https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=ja)」

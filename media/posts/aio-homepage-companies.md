@@ -166,7 +166,7 @@ NTT東日本のデジタルリード AI検索対策パックは、ホームペ�
 
 ### 株式会社nito
 
-[株式会社nito](/llmo/)は、**AI検索対策で、問い合わせや購入につながるまで実行する**会社です。ヒアリングで自社の強みを文章にまとめ、サイトの改善の指示書と記事の制作から公開後の運用まで支援します。ホームページの制作会社ではないため、サイトの構築と実装は制作会社か社内が受け持ちます。
+[株式会社nito](/aio/)は、**AI検索対策で、問い合わせや購入につながるまで実行する**会社です。ヒアリングで自社の強みを文章にまとめ、サイトの改善の指示書と記事の制作から公開後の運用まで支援します。ホームページの制作会社ではないため、サイトの構築と実装は制作会社か社内が受け持ちます。
 
 - **実際のチャット画面で毎日計測する。** ChatGPTやGemini、GoogleのAIモードなど主要なAIの回答と引用元を記録しています（記録した回答は3万件以上。2026年11月時点）
 - **他社が挙がる理由を回答の本文から抜き出す。** AIが他社をすすめるときに使った理由のうち、自社のサイトに書かれていないものを、原稿に書く中身の候補にします
@@ -182,7 +182,7 @@ NTT東日本のデジタルリード AI検索対策パックは、ホームペ�
 - 作り直しの前に、どの質問で他社に負けているかを知りたい会社
 - 公開後の効果を、言及率だけでなく問い合わせの数で見たい会社
 
-nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞き、名前が挙がるか、どう紹介されるか、代わりにどの会社が挙がっているかをまとめた[現状分析レポート](/llmo/)を無料でお出ししています。
+nitoでは狙いたい質問をChatGPT・Gemini・AIモードなどに実際に聞き、名前が挙がるか、どう紹介されるか、代わりにどの会社が挙がっているかをまとめた[現状分析レポート](/aio/)を無料でお出ししています。
 
 ## 依頼する前に社内でそろえること
 
@@ -245,6 +245,6 @@ desc: AI検索対策を始める順番を、社内の準備から5つの段階�
 
 ## 出典
 
-- 各社の公式サイトのサービスのページ（2026年11月21日確認）: [クーミル AI検索に強いホームページ制作](https://coomil.co.jp/service/aio-website/)・[ソシオラ AI検索対策×ホームページ制作](https://sociola.co.jp/ai-search-web/)・[ピースカンパニー AI検索対策に強いホームページ制作](https://piececompany.com/web-design/)・AtoZ Design の[ホームページ制作](https://atoz-design.jp/service/web/)と[LLMO対策](https://atoz-design.jp/service/llmo/)（料金はどちらのサービスページにも掲載）・[NOREN AI検索に強いホームページ制作](https://noren-world.com/solution/ai-search/)・[NTT東日本 デジタルリード AI検索対策パック](https://business.ntt-east.co.jp/service/hpsupport/homepage-sakusei.html)
+- 各社の公式サイトのサービスのページ（2026年11月21日確認）: [クーミル AI検索に強いホームページ制作](https://coomil.co.jp/service/aio-website/)・[ソシオラ AI検索対策×ホームページ制作](https://sociola.co.jp/ai-search-web/)・[ピースカンパニー AI検索対策に強いホームページ制作](https://piececompany.com/web-design/)・AtoZ Design の[ホームページ制作](https://atoz-design.jp/service/web/)と[LLMO対策](https://atoz-design.jp/service/aio/)（料金はどちらのサービスページにも掲載）・[NOREN AI検索に強いホームページ制作](https://noren-world.com/solution/ai-search/)・[NTT東日本 デジタルリード AI検索対策パック](https://business.ntt-east.co.jp/service/hpsupport/homepage-sakusei.html)
 - Google 検索セントラル「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」（AIによる概要とAIモードに表示されるための追加の要件と最適化について）
 - Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」（llms.txtなどAI向けのテキストファイルの作成についての記載）
