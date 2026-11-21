@@ -84,6 +84,8 @@ IPAが挙げる把握の手段は、通信ログとCASB（クラウドの利用�
 | 違反したときの対応と、誤って入れたときの報告先 | IPA（規程違反時の対応、被害を受けた後の対応） |
 | 出力を確かめてから使う | IPA（ハルシネーション） |
 
+ルール全体の作り方と、下敷きにする公的なひな形の選び方は[企業の生成AIガイドラインの作り方](/media/genai-guideline/)にまとめました。
+
 ### ④ 止める
 
 Defender for Cloud Appsでアプリに非承認のタグを付けるだけでは使用はブロックされない、と[検出されたアプリの管理のページ](https://learn.microsoft.com/ja-jp/defender-cloud-apps/governance-discovery)に書かれています。**Defender for Endpointでクラウド保護とネットワーク保護を有効にしていれば、Defender for Endpointに登録した端末では、非承認にしたアプリが自動でブロックされます。**ブロックはデバイスグループごとに絞れるほか、ブロックの代わりに警告を出す形も選べます。Microsoftの無料のCopilot Chatを止める設定は[Copilot Chatを社内で止める方法](/media/copilot-chat-admin-block/)で扱いました。
