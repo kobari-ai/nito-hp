@@ -805,7 +805,7 @@ def update_top_page(posts):
 
 SITE = "https://nito-0210.com"
 # サイトマップに含める固定ページ（トップ・サービス・コラム一覧・問い合わせ・プライバシー）
-STATIC_PAGES = ["/", "/ai-agent/", "/aio/", "/media/", "/contact.html", "/privacy.html"]
+STATIC_PAGES = ["/", "/ai-agent/", "/aio/", "/aio/insurance-agency/", "/media/", "/contact.html", "/privacy.html"]
 
 
 def post_lastmod(p) -> str:
