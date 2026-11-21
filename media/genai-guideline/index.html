@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】企業の生成AIガイドラインの作り方・盛り込む項目・公的なひな形の選び方｜株式会社nito</title>
+    <meta name="description" content="企業の生成AIガイドラインの作り方を、盛り込む項目と入力してよい情報の区分、公開されているひな形と指針の版と使い分け、企業の公開例、周知と見直しまで公式の資料で解説します。">
+    <link rel="canonical" href="https://nito-0210.com/media/genai-guideline/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】企業の生成AIガイドラインの作り方・盛り込む項目・公的なひな形の選び方">
+    <meta property="og:description" content="企業の生成AIガイドラインの作り方を、盛り込む項目と入力してよい情報の区分、公開されているひな形と指針の版と使い分け、企業の公開例、周知と見直しまで公式の資料で解説します。">
+    <meta property="og:url" content="https://nito-0210.com/media/genai-guideline/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/genai-guideline.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/genai-guideline.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】企業の生成AIガイドラインの作り方・盛り込む項目・公的なひな形の選び方", "description": "企業の生成AIガイドラインの作り方を、盛り込む項目と入力してよい情報の区分、公開されているひな形と指針の版と使い分け、企業の公開例、周知と見直しまで公式の資料で解説します。", "datePublished": "2026-11-22", "dateModified": "2026-11-22", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では、AI経由のコンバージョンを5ヶ月で約6.7倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/genai-guideline/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/genai-guideline.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】企業の生成AIガイドラインの作り方・盛り込む項目・公的なひな形の選び方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "中小企業でも生成AIガイドラインは必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "社員が業務で生成AIを使うなら、規模によらず作るのがおすすめです。令和8年版情報通信白書では、生成AIを活用する方針の中小企業は58.1%まで増えています。最初は4項目の短いものでも構いません。"}}, {"@type": "Question", "name": "JDLAの生成AIの利用ガイドラインは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "無料でダウンロードできます。JDLAの資料室に、条項のみと簡易解説付きのWordファイル（第1.1版・2023年10月）と画像編（第1版・2024年2月）が置かれています。自社の目的に合わせて追加・修正して使う前提です。"}}, {"@type": "Question", "name": "デジタル庁のガイドラインは民間企業も守りますか？", "acceptedAnswer": {"@type": "Answer", "text": "守る義務はありません。デジタル庁のガイドライン（第2.0版・2026年6月12日）は政府の情報システムで守るルールとして決められたものです。民間企業は別紙2の利活用ルールのひな形 Ver2.0 を条文の参考にする使い方になります。"}}, {"@type": "Question", "name": "AI事業者ガイドラインの最新版はどれですか？", "acceptedAnswer": {"@type": "Answer", "text": "2026年11月22日時点の最新版は、2026年3月31日の第1.2版です。経済産業省のページに本編・別添のほか、チェックリストとワークシート（別添7）が置かれています。"}}, {"@type": "Question", "name": "IPAの生成AIガイドラインは今も使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "読み物としては参考になりますが、今の版の指針として下敷きにするのは避けた方が安全です。2024年7月に中核人材育成プログラムの受講者が作ったもので、IPAの意見を代表しないと断っており、本書の有効期限は発行日から2年間と書かれています。IPAの最新の整理としては、[情報セキュリティ10大脅威 2026の解説書（組織編）](https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf)が、社員が個人で使うAIサービスを業務に使うシャドーAIを取り上げています。対策は[シャドーAI対策とは？](/media/shadow-ai/)にまとめています。"}}, {"@type": "Question", "name": "生成AIガイドラインはどのくらいの頻度で見直しますか？", "acceptedAnswer": {"@type": "Answer", "text": "公的な決まりはありません。年1回を目安にし、許可するサービスの追加や事故、公的文書の改定があればその都度見直します。"}}, {"@type": "Question", "name": "ChatGPTの無料版を業務で使ってよいかはどう決めますか？", "acceptedAnswer": {"@type": "Answer", "text": "許可するサービスの表で、会社が契約したものと個人向けのものを分けて書きます。個人向けの設定は社員ごとに変えられ、会社が管理できないため、社内限定の情報を入れてよいのは会社契約のAIだけ、とする書き方が一般的です。個人の設定の切り方は[ChatGPTに学習させない設定](/media/chatgpt-training-off/)にまとめています。"}}, {"@type": "Question", "name": "画像生成AIのルールは別に作るべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "社外に出す画像を作る部署があるなら、文章と分けて書くのがおすすめです。JDLAは画像編のひな形を別に出しており、サイバーエージェントもクリエイター向けに画像生成AIのガイドラインを別に作りました。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=c1e3c5ad">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】企業の生成AIガイド…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.22</span>
+        </div>
+        <h1 class="post-title">【2026年11月】企業の生成AIガイドラインの作り方・盛り込む項目・公的なひな形の選び方</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/genai-guideline.jpg" alt="【2026年11月】企業の生成AIガイドラインの作り方・盛り込む項目・公的なひな形の選び方" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>企業の生成AIガイドラインで最低限決めるのは、使ってよいAIとアカウント、入力してはいけない情報、出力を使う前の確認、迷ったときと誤って入力したときの連絡先の4つです。下敷きには日本ディープラーニング協会（JDLA）のひな形が使いやすく、入力と出力の細則はデジタル庁のひな形 Ver2.0 で補えます。</p>
+<p>この記事では盛り込む項目・公的なひな形の版と使い分け・作る手順・企業の公開例・作った後の運用を順に解説します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>最初の版で決めるのは、使ってよいAI・入力してはいけない情報・出力の確認・連絡先の4つ</li>
+<li>条文の下敷きはJDLAのひな形（第1.1版・2023年10月）、入力と出力の細則はデジタル庁のひな形 Ver2.0（2026年6月）</li>
+<li>IPAのテキスト生成AIの導入・運用ガイドラインは、本書に書かれた有効期限（発行から2年）を過ぎている</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>生成AIガイドラインとは？公的な指針とどう違う？</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>企業の生成AIガイドラインに盛り込む項目は？</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>入力してよい情報の区分</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>出力の確認と責任</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>下敷きにする公的なひな形はどれ？</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>IPAの文書を使うときの注意</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>版と公表日を控える</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>生成AIガイドラインの作り方は？</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>① 利用実態を把握する</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>② 担当を決める</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>③ 使ってよいAIと契約を決める</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>④ ひな形で草案を書く</a></li>
+                    <li class="toc-h3"><a href="#s4-5"><span class="toc__n">4-5</span>⑤ 承認して周知する</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>企業が公開している生成AIガイドラインの例</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>作った後の運用はどうする？</a></li>
+                    <li class="toc-h3"><a href="#s6-1"><span class="toc__n">6-1</span>理解度を確認してから使わせる</a></li>
+                    <li class="toc-h3"><a href="#s6-2"><span class="toc__n">6-2</span>誤って入力したときの報告を決める</a></li>
+                    <li class="toc-h3"><a href="#s6-3"><span class="toc__n">6-3</span>見直しの時期</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>社内の業務にAIエージェントを入れる場合</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">生成AIガイドラインとは？公的な指針とどう違う？</h2>
+<p><strong>生成AIガイドラインは社員が業務で生成AIを使うときの決まりを会社が定めた社内文書です。</strong>国や業界団体も同じような名前の文書を出していますが、そちらは自社のルールを作るときの基準やひな形にあたります。たとえばデジタル庁のガイドラインは政府の情報システムで守るルールとして決められたもので、民間企業がそのまま従う義務を負う文書ではありません。</p>
+<figure class="post-figure"><img src="/media/images/genai-guideline/gl_01_relation.png" alt="社内の生成AIガイドラインと公的な指針の関係。公的な指針とひな形を基準にして、自社の目的・使うAI・情報の区分に合わせて社内ルールを作る" loading="lazy"></figure>
+
+<p>総務省と経済産業省のAI事業者ガイドラインは、AIに関わる事業者をAI開発者・AI提供者・AI利用者の3つに分けています。既製のChatGPTやCopilotを社員に使わせる会社は、第1部・第2部の共通の指針に加えて、第5部のAI利用者の項目と別添を確認します。社内の文書を検索して答える仕組みやAIエージェントを自社で組み込んで社員に配るなら、AI提供者の項目もあわせて読むのがおすすめです。</p>
+<p>ルールが無いまま使い始めると、何を入れてよいかを社員がそれぞれで判断することになります。JIPDECの企業IT利活用動向調査2026（N=399）でAI活用のガバナンス体制を聞いたところ、全社のポリシー・ガイドラインがあると答えたのは36.3%、部門ごとにはあるが統一されたポリシーはないが15.3%、AIの利用は各部門に任されていて全社的な統制はないが8.8%でした。<strong>全社で統一したルールが無い会社が、一定数あります。</strong>禁止だけを出すと、職場に使えるAIが無いまま個人のアカウントで使われる状態（シャドーAI）になりやすいため、使ってよいAIを用意してから決まりを示す順が向いています。</p>
+<div class="in-link-card"><a href="/media/shadow-ai/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">シャドーAI対策とは？会社がやること</div><div class="in-link-card__desc">社員が個人のChatGPTを業務に使う状態への対策と、移行・ブロックでつまずく所を解説しています。</div></div></a></div>
+<h2 id="s2">企業の生成AIガイドラインに盛り込む項目は？</h2>
+<p><strong>盛り込む項目は10個ほどで、最初の版では使ってよいAI・入力してはいけない情報・出力の確認・連絡先の4つを先に固めます。</strong>残りの項目はひな形の条文を自社の体制に合わせて書き換えるだけで埋められるものが大半です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>どのひな形のどこにあるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">目的と基本方針</td>
+<td data-label="どのひな形のどこにあるか">JDLAの1「本ガイドラインの目的」、デジタル庁 別紙2の1「ルールの目的」、X-Tech5の第1条（目的）・第2条（基本方針）</td>
+</tr>
+<tr>
+<td data-label="項目">適用範囲</td>
+<td data-label="どのひな形のどこにあるか">X-Tech5の第3条（役員・従業員と業務委託先）。JDLAには範囲だけを定める項目は無い</td>
+</tr>
+<tr>
+<td data-label="項目">使ってよいAIとアカウント</td>
+<td data-label="どのひな形のどこにあるか">JDLAの2「対象とする生成AI」、X-Tech5の第4条（許可サービスの分類の表）・第5条（会社のドメインのアカウントとシングルサインオン）・第17条（利用申請）</td>
+</tr>
+<tr>
+<td data-label="項目">学習の設定</td>
+<td data-label="どのひな形のどこにあるか">X-Tech5の第6条（オプトアウト設定の義務）。JDLAは5(4)で、入力が学習に使われる前提で個人情報を入れないよう書いている</td>
+</tr>
+<tr>
+<td data-label="項目">入力してはいけない情報</td>
+<td data-label="どのひな形のどこにあるか">JDLAの5（6類型）、デジタル庁 別紙2の2(2)①、X-Tech5の第7条</td>
+</tr>
+<tr>
+<td data-label="項目">出力の確認と責任</td>
+<td data-label="どのひな形のどこにあるか">JDLAの6(1)(2)、デジタル庁 別紙2の2(2)②、X-Tech5の第8条</td>
+</tr>
+<tr>
+<td data-label="項目">用途ごとの決まり</td>
+<td data-label="どのひな形のどこにあるか">JDLAの6(2)（著作権・商標・意匠・虚偽の個人情報）、X-Tech5の第9条（コード生成）・第15条（削除・送信など破壊的操作の確認）</td>
+</tr>
+<tr>
+<td data-label="項目">教育</td>
+<td data-label="どのひな形のどこにあるか">3つの文書には条として無い。運用の節で扱う</td>
+</tr>
+<tr>
+<td data-label="項目">違反と誤入力</td>
+<td data-label="どのひな形のどこにあるか">デジタル庁 別紙2の2(2)②（重大なリスクはAI統括責任者に報告）、X-Tech5の第18条（懲戒）</td>
+</tr>
+<tr>
+<td data-label="項目">窓口と見直し</td>
+<td data-label="どのひな形のどこにあるか">JDLAの2・5(4)（【セキュリティ部門】に問い合わせ）、X-Tech5の第6条（問い合わせ先）と附則（定期的に見直す）</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s2-1">入力してよい情報の区分</h3>
+<p>JDLAのひな形は他社の著作物・登録商標や意匠・著名人の顔写真や氏名・個人情報・秘密保持契約で受け取った情報・自社の機密情報のデータの類型ごとに、入力するときの注意点とその理由を書く作りです。入力の可否の組み立てはX-Tech5の第7条が例です。</p>
+<ul>
+<li>原則：個人情報や機密情報などの固有の情報は、マスキング（匿名化・抽象化）してから使う</li>
+<li>例外：マスキングで回答の精度が著しく落ち、業務に支障が出る場合に限り、オプトアウト設定が有効で学習に使われないこと・入力は業務上必要最小限であること・特別管理情報に当たらないこと、の3つをすべて満たしたときだけ固有の情報を使える</li>
+<li>特別管理情報：氏名・住所・電話番号・メールアドレス・マイナンバー等を一覧にした名簿など。例外は適用されず、原則として入力せず、やむを得ない場合は取締役の承認を得る</li>
+</ul>
+<p>第7条は冒頭で、お客様の業務に関連してAIを使うときはお客様側の規定が優先する、とも定めています。</p>
+<p>個人情報の扱いの根拠は個人情報保護委員会の注意喚起（2023年6月2日）です。この注意喚起は本人の同意なく個人データを含むプロンプトを入力し、それが応答の出力以外の目的で扱われると、個人情報保護法の規定に違反することとなる可能性があると指摘しています。デジタル庁のひな形 Ver2.0 も、規約への同意だけで誰でも使えるクラウド型の生成AIでは、原則として要機密情報を扱わないと定めています。</p>
+<p>条文だけでは社員が迷うため、例を1組添えておくと伝わります。顧客の名刺の一覧をそのまま貼って並べ替えさせるのは不可で、架空の会社名に置き換えた文面の下書きなら可、のような対の例です。</p>
+<h3 id="s2-2">出力の確認と責任</h3>
+<p><strong>出力をそのまま使わず、事実と権利侵害を人が確認してから使う、と書きます。</strong>デジタル庁のひな形は出力に基づいた判断も説明責任の対象に含まれるとし、判断に迷う場合は利活用しないとしています。社外に出す画像やキャッチコピーについて、東京商工会議所の入門ガイドは、プロンプトに既存の著作物・作家名・作品名を入れないこと、公開の前に既存の著作物との類似を調査すること、ロゴや広告に使うなら登録商標・登録意匠も調査することを挙げています。</p>
+<p>確認の深さはデジタル庁のひな形が「正確性や根拠・事実関係を必要な範囲内でリスクに応じて確認すること」と書くように、用途のリスクに応じて決めるのが現実的です。X-Tech5の第8条は生成物をそのままコピー＆ペーストせず下書き・参考として使うこと、正確性は信頼できる情報源で再確認することを求める内容です。</p>
+<div class="in-link-card"><a href="/media/chatgpt-business/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">ChatGPT Businessとは？料金とPlusとの違い</div><div class="in-link-card__desc">会社契約のChatGPTの料金、学習に使われない設定、管理者に会話が見えるかを解説しています。</div></div></a></div>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">下敷きにする公的なひな形はどれ？</h2>
+<p><strong>条文のたたき台はJDLAのひな形、入力と出力の細則はデジタル庁のひな形 Ver2.0、抜け漏れの確認はAI事業者ガイドラインのチェックリストが向いています。</strong>著作権と個人情報の扱いは文化庁と個人情報保護委員会の文書を根拠に置きます。版と公表日は2026年11月22日に各公式ページで確認したものです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>文書（発行元・版）</th>
+<th>向いている使い方</th>
+<th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="文書（発行元・版）">生成AIの利用ガイドライン（JDLA、第1.1版・2023年10月）</td>
+<td data-label="向いている使い方">条文の初版を短期間で作る。Wordで条項のみと簡易解説付き。画像編（第1版・2024年2月）もある</td>
+<td data-label="注意点">第1.1版の後の版は出ていない。【】の中のChatGPTの記述は2023年の規約の内容なので、今の規約と自社の契約で書き直す（Word本文の5(4)・6(4)・6(5)）。AIエージェントなど後から広がった使い方は他の文書で補う</td>
+</tr>
+<tr>
+<td data-label="文書（発行元・版）">生成AIシステム利活用ルール ひな形 Ver2.0（デジタル庁、2026年6月12日のガイドライン第2.0版の別紙2）</td>
+<td data-label="向いている使い方">使う前と使う間（入力・生成物）の細則</td>
+<td data-label="注意点">府省向けの文書なので、省の名前や責任者の役職を自社の体制に置き換える</td>
+</tr>
+<tr>
+<td data-label="文書（発行元・版）">AI事業者ガイドライン 第1.2版（総務省・経済産業省、2026年3月31日）</td>
+<td data-label="向いている使い方">共通の指針に照らした取組の確認（別添7のチェックリストとワークシート）</td>
+<td data-label="注意点">条文のひな形ではない。社内にAIを組み込んで配るならAI提供者の項目も見る</td>
+</tr>
+<tr>
+<td data-label="文書（発行元・版）">AIと著作権に関する考え方について（文化庁 文化審議会 著作権分科会 法制度小委員会、2024年3月15日）とチェックリスト＆ガイダンス（2024年7月31日）</td>
+<td data-label="向いている使い方">生成物を広告や制作物に使う会社の確認手順</td>
+<td data-label="注意点">個別の案件が権利侵害にあたるかは法務や弁護士に相談する</td>
+</tr>
+<tr>
+<td data-label="文書（発行元・版）">生成AIサービスの利用に関する注意喚起等（個人情報保護委員会、2023年6月2日）</td>
+<td data-label="向いている使い方">個人情報を入力するときの条件の根拠</td>
+<td data-label="注意点">入力の前に、提供する会社が機械学習に使わないこと等の確認を求めている</td>
+</tr>
+<tr>
+<td data-label="文書（発行元・版）">中小企業のための生成AI活用入門ガイド（東京商工会議所、第7版・2025年8月1日）</td>
+<td data-label="向いている使い方">社員向けの説明資料</td>
+<td data-label="注意点">規程のひな形ではなく、ひな形としてJDLAを案内している</td>
+</tr>
+</tbody>
+</table></div>
+<p>JDLAのひな形は組織がスムーズに導入できるように作られたもので、活用の目的に照らして追加や修正をして使う前提です。民間企業の条文の構成にそのまま合うのはこちらで、デジタル庁のひな形は条文ごとの書きぶりを借りる使い方になります。</p>
+<figure class="post-figure"><img src="/media/images/genai-guideline/gl_04_jdla.png" alt="JDLAの資料室。生成AIの利用ガイドラインの条項のみと簡易解説付きが第1.1版・2023年10月公開と表示されている" loading="lazy"><figcaption>日本ディープラーニング協会 資料室（2026年11月22日）</figcaption></figure>
+
+<h3 id="s3-1">IPAの文書を使うときの注意</h3>
+<p><strong>IPAのサイトにあるテキスト生成AIの導入・運用ガイドライン（2024年7月）は、今の版の指針として下敷きにしない方が安全です。</strong>作成者はIPAの産業サイバーセキュリティセンター中核人材育成プログラム7期生のプロジェクトで、免責事項に、IPAおよび同センターの意見を代表するものではなく著者の見解に基づく、と書かれています。同じ免責事項は本書の有効期限を発行日から2年間としており、2026年11月の時点で過ぎています。前提にしているAI事業者ガイドラインも第1.0版です。</p>
+<figure class="post-figure"><img src="/media/images/genai-guideline/gl_05_ipa.png" alt="IPAのテキスト生成AIの導入・運用ガイドラインの免責事項。IPAの意見を代表するものではなく、有効期限は発行日から2年間と書かれている" loading="lazy"><figcaption>IPA テキスト生成AIの導入・運用ガイドライン 1.6 免責事項（2026年11月22日）</figcaption></figure>
+
+<p>中身は導入と運用の担当者向けに厚く、利用ルールに書く項目（利用を制限する目的・入力を制限する情報・生成物の注意）や社内検索の仕組みの注意点は、読み物として参考になります。条文や公的な根拠には上の表の文書を使います。</p>
+<h3 id="s3-2">版と公表日を控える</h3>
+<p>公的な文書は改定が続いています。AI事業者ガイドラインは2024年4月の第1.0版から2026年3月の第1.2版まで4回出ており、デジタル庁のガイドラインは初版（2025年5月）から約1年で第2.0版になりました。<strong>自社のガイドラインの末尾に、参照した文書の名前・版・公表日を書いておくと、見直しの日にどこが古くなったかをすぐ確認できます。</strong></p>
+<h2 id="s4">生成AIガイドラインの作り方は？</h2>
+<p><strong>作り方は利用実態の把握・担当の決定・使ってよいAIの決定・草案・承認と周知の5段階です。</strong>ツールが決まらないと許可するサービスの条が書けないため、草案より先に契約を決めます。</p>
+<h3 id="s4-1">① 利用実態を把握する</h3>
+<p>部署ごとに使っているAIのサービス・使う目的・入力しているデータ・出力の行き先の4点をアンケートで集めるところから始まります。サイバーエージェントは画像生成AIのガイドラインを作る前に、全クリエイターを対象にアンケートを行いました。社員がすでに個人のアカウントで使っているなら、その業務を会社契約のAIで置き換えられるかが最初の論点になります。</p>
+<h3 id="s4-2">② 担当を決める</h3>
+<p>情報システムの担当がツール・アカウント・ログを、法務が著作権・個人情報・契約を、人事が就業規則・研修・違反時の扱いを受け持つ形が一般的です。利用部門からも代表を入れ、どの業務で使いたいかを出してもらいます。最終的な承認は経営層が行い、改定を受け持つ部署を1つに決めておくと運用が止まりません。</p>
+<h3 id="s4-3">③ 使ってよいAIと契約を決める</h3>
+<p>入力が学習に使われない法人向けのプランや、会社で管理できる環境から許可するサービスを選びます。X-Tech5の公開しているガイドラインは、許可するサービスを表にし、会社契約のアカウントには学習しない設定を会社でまとめて適用済みと書いています。社員が個人で設定する手間を残さない書き方です。</p>
+<h3 id="s4-4">④ ひな形で草案を書く</h3>
+<p>JDLAのひな形は【（例）会社】【セキュリティ部門】など【】の所を自社の名前と担当に置き換える作りです。対象とする生成AI（2）は例として【ChatGPT】が入っており、禁止する用途（3）は【】が空欄なので、③で決めた一覧を入れます。専門用語を避けて平易に書き、入力の可・不可の例を添えると伝わります。条文に入れきれない一覧（許可するサービス・情報の区分・連絡先）は別紙にすると、一覧の更新のたびに本文を改定せずに済みます。</p>
+<h3 id="s4-5">⑤ 承認して周知する</h3>
+<p>経営層の承認を得たら、説明会や研修でなぜこの決まりにしたかまで伝えましょう。最初は1つの部署で試し、問い合わせの多い所を修正してから全社に広げると、机上では見えなかった判断に迷う点を反映できます。</p>
+<h2 id="s5">企業が公開している生成AIガイドラインの例</h2>
+<p>生成AIの方針・規程そのものか、その策定や利用ルールの中身を自社のサイトで公開している5社を、公開している文書の形がわかるように並べます。</p>
+<ul>
+<li><strong>X-Tech5</strong>: 生成AIサービス利用ガイドラインを全19条で公開。許可するサービスの表、会社ドメインのアカウント、マスキングを原則とした入力の決まり、名簿など特別に管理する情報は取締役の承認、ブラウザ拡張機能の制限まで書いている。2025年7月の初版から2026年8月までに5回改定し、MCPなどの外部連携の規定を統合した</li>
+<li><strong>カナデビア</strong>: 生成AIポリシーを2025年10月1日に制定して公開。人間中心・安全性・公平性・プライバシー・セキュリティ・透明性と説明責任・法令遵守と教育・イノベーションの8原則で、具体の手順は別に定めるガイドラインに従うとしている</li>
+<li><strong>KDDI</strong>: KDDIグループAI開発・利活用原則を公開。人間の尊厳から連携までの9項目で、項目ごとにAI開発者・AI利用者・AIデータ提供者のどの立場で守るかを分けて書いている</li>
+<li><strong>サイバーエージェント</strong>: 2024年2月に社内のクリエイター向けに画像生成AIガイドラインを発表し、策定の経緯を公式メディアで公開。推奨ツール以外は法務とセキュリティの担当が事前に確認し、理解度テストに合格しないと利用申請を受け付けない</li>
+<li><strong>パナソニック ホールディングス</strong>: 2023年4月14日に社内向けのPX-GPTを国内約9万人に提供した際、入力情報の二次利用がされない仕様にしたうえで、社内情報・営業秘密・個人情報などを入力しない利用ルールを整備したと発表した</li>
+</ul>
+<p><strong>公開の形は3つに分かれます。</strong>原則（ポリシー）だけを外に出して運用の手順は社内のガイドラインに分ける形（カナデビア・KDDI）、規程の全文を改訂履歴ごと出す形（X-Tech5）、策定の経緯や導入の発表で、ルールの一部だけを出す形（サイバーエージェント・パナソニック）です。取引先から生成AIの扱いを聞かれる会社なら、原則だけでも公開しておくと、同じ文書で答えられます。</p>
+<h2 id="s6">作った後の運用はどうする？</h2>
+<p><strong>運用で決めるのは理解度の確認・誤って入力したときの報告・見直しの時期の3つです。</strong>作って配っただけのガイドラインは、問い合わせが窓口に集まらず、守られているかもわかりません。</p>
+<h3 id="s6-1">理解度を確認してから使わせる</h3>
+<p>研修のあとに確認テストを置き、合格した人にアカウントを発行する方法があります。サイバーエージェントは解釈が分かれそうな所をテストに出し、不合格なら利用申請を受け付けない仕組みにしました。研修の選び方は<a href="/media/genai-training-companies/">法人向け生成AI研修の比較</a>にまとめています。</p>
+<h3 id="s6-2">誤って入力したときの報告を決める</h3>
+<p>個人情報や機密を誤って入れたときに、入力を止めて窓口に報告する手順を書きます。デジタル庁のひな形は生成AI特有のリスクのうち特に重大なものを検知した場合、迅速にAI統括責任者へ報告するよう定めています。違反への措置はX-Tech5の第18条にあり、就業規則に基づく懲戒処分の対象となることがあるという内容です。報告の手順と懲戒の条は分けて書き、すぐ報告した人の扱いを決めておくと、報告が遅れにくくなります。</p>
+<h3 id="s6-3">見直しの時期</h3>
+<p>見直しは年1回を目安にし、許可するサービスを追加したとき、事故が起きたとき、参照している公的文書が改定されたときにも行います。X-Tech5は初版から約1年2か月で5回改定しており、新しいサービスや外部連携が出るたびに条文を更新してきました。</p>
+<div class="in-link-card"><a href="/media/genai-training-companies/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">法人向け生成AI研修おすすめ7選</div><div class="in-link-card__desc">法人向けの生成AI研修を形式・対応するAIツール・料金で比較し、助成金の改正点まで解説しています。</div></div></a></div>
+<h2 id="s7">社内の業務にAIエージェントを入れる場合</h2>
+<p><strong>AIエージェントのように、メールの送信やファイルの削除をAIが自分で行う使い方を始めるなら、ガイドラインに条を1つ追加します。</strong>X-Tech5は2026年8月の改定で外部連携の規定を設け、権限は業務に必要な最小限にすること、削除・更新・送信・外部公開を伴う操作はその手前で止めて人が確認することを定めました。</p>
+<p>追加する内容はAIに渡す権限の範囲・人が承認する操作・使ってよい外部連携の一覧・止め方とログの残し方です。社内向けにAIを組み込んで配る場合は、AI事業者ガイドラインのAI提供者の項目もあわせて確認します。ルールを作った後に業務へAIエージェントを入れる場合の作り方は<a href="/media/ai-agent-build/">AIエージェントの作り方</a>、進め方と費用は<a href="/media/ai-agent-introduction/">AIエージェント導入の進め方</a>で扱っています。nitoは社内業務に合わせた<a href="/ai-agent/">AIエージェント構築支援</a>として、構築と運用を支援しています。</p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li>まだルールが無い会社は、使ってよいAI・入力してはいけない情報・出力の確認・連絡先の4項目を暫定ルールとして先に出し、JDLAのひな形で正式版を作る</li>
+<li>すでにガイドラインがある会社は、参照している公的文書の版を確認し、IPAの2024年の文書や古い版を根拠にしていれば更新する</li>
+<li>個人のアカウントでの利用が多い会社は、会社契約のAIを用意してから個人の利用を制限する</li>
+<li>社内にAIエージェントや社内検索の仕組みを組み込む会社は、権限と人の確認の条を追加し、AI事業者ガイドラインのAI提供者の項目も見る</li>
+</ul>
+<h2 id="s9">よくある質問</h2>
+<h3 id="s9-1">中小企業でも生成AIガイドラインは必要ですか？</h3>
+<p>社員が業務で生成AIを使うなら、規模によらず作るのがおすすめです。令和8年版情報通信白書では、生成AIを活用する方針の中小企業は58.1%まで増えています。最初は4項目の短いものでも構いません。</p>
+<h3 id="s9-2">JDLAの生成AIの利用ガイドラインは無料で使えますか？</h3>
+<p>無料でダウンロードできます。JDLAの資料室に、条項のみと簡易解説付きのWordファイル（第1.1版・2023年10月）と画像編（第1版・2024年2月）が置かれています。自社の目的に合わせて追加・修正して使う前提です。</p>
+<h3 id="s9-3">デジタル庁のガイドラインは民間企業も守りますか？</h3>
+<p>守る義務はありません。デジタル庁のガイドライン（第2.0版・2026年6月12日）は政府の情報システムで守るルールとして決められたものです。民間企業は別紙2の利活用ルールのひな形 Ver2.0 を条文の参考にする使い方になります。</p>
+<h3 id="s9-4">AI事業者ガイドラインの最新版はどれですか？</h3>
+<p>2026年11月22日時点の最新版は、2026年3月31日の第1.2版です。経済産業省のページに本編・別添のほか、チェックリストとワークシート（別添7）が置かれています。</p>
+<h3 id="s9-5">IPAの生成AIガイドラインは今も使えますか？</h3>
+<p>読み物としては参考になりますが、今の版の指針として下敷きにするのは避けた方が安全です。2024年7月に中核人材育成プログラムの受講者が作ったもので、IPAの意見を代表しないと断っており、本書の有効期限は発行日から2年間と書かれています。IPAの最新の整理としては、<a href="https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf">情報セキュリティ10大脅威 2026の解説書（組織編）</a>が、社員が個人で使うAIサービスを業務に使うシャドーAIを取り上げています。対策は<a href="/media/shadow-ai/">シャドーAI対策とは？</a>にまとめています。</p>
+<h3 id="s9-6">生成AIガイドラインはどのくらいの頻度で見直しますか？</h3>
+<p>公的な決まりはありません。年1回を目安にし、許可するサービスの追加や事故、公的文書の改定があればその都度見直します。</p>
+<h3 id="s9-7">ChatGPTの無料版を業務で使ってよいかはどう決めますか？</h3>
+<p>許可するサービスの表で、会社が契約したものと個人向けのものを分けて書きます。個人向けの設定は社員ごとに変えられ、会社が管理できないため、社内限定の情報を入れてよいのは会社契約のAIだけ、とする書き方が一般的です。個人の設定の切り方は<a href="/media/chatgpt-training-off/">ChatGPTに学習させない設定</a>にまとめています。</p>
+<h3 id="s9-8">画像生成AIのルールは別に作るべきですか？</h3>
+<p>社外に出す画像を作る部署があるなら、文章と分けて書くのがおすすめです。JDLAは画像編のひな形を別に出しており、サイバーエージェントもクリエイター向けに画像生成AIのガイドラインを別に作りました。</p>
+<h2 id="s10">出典</h2>
+<ul>
+<li>日本ディープラーニング協会「<a href="https://www.jdla.org/document/#ai-guideline">資料室 生成AIの利用ガイドライン</a>」（2026年11月22日取得）</li>
+<li>デジタル庁「<a href="https://www.digital.go.jp/news/decb64eb-f26e-41cb-8d37-f3dd173108b8">行政の進化と革新のための生成AIの調達・利活用に係るガイドライン（第2.0版）</a>」（2026年6月12日決定、同日取得）</li>
+<li>総務省・経済産業省「<a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html">AI事業者ガイドライン（第1.2版）</a>」（2026年3月31日、同日取得）</li>
+<li>経済産業省「<a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/index.html">AI事業者ガイドライン検討会</a>」（版の履歴、同日取得）</li>
+<li>文化庁「<a href="https://www.bunka.go.jp/seisaku/chosakuken/aiandcopyright.html">AIと著作権について</a>」（同日取得）</li>
+<li>個人情報保護委員会「<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/">生成AIサービスの利用に関する注意喚起等について</a>」（2023年6月2日公表、同日取得）</li>
+<li>東京商工会議所「<a href="https://www.tokyo-cci.or.jp/file.jsp?id=1204275">中小企業のための生成AI活用入門ガイド（第7版）</a>」（2025年8月1日、同日取得）</li>
+<li>IPA 産業サイバーセキュリティセンター 中核人材育成プログラム7期生「<a href="https://www.ipa.go.jp/jinzai/ics/core_human_resource/final_project/2024/f55m8k0000003spo-att/f55m8k0000003svn.pdf">テキスト生成AIの導入・運用ガイドライン</a>」（2024年7月、同日取得）</li>
+<li>JIPDEC「<a href="https://www.jipdec.or.jp/archives/publications/h2le1c000000bkzt-att/ITresarch2026report.pdf">企業IT利活用動向調査2026</a>」（図20、同日取得）</li>
+<li>IPA「<a href="https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf">情報セキュリティ10大脅威 2026 解説書（組織編）</a>」（2026年1月公表）</li>
+<li>総務省「<a href="https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r08/html/nd121110.html">令和8年版 情報通信白書 生成AIの活用方針等</a>」（同日取得）</li>
+<li>株式会社X-Tech5「<a href="https://x-tech5.co.jp/generative_ai_guideline/">生成AIサービス利用ガイドライン</a>」（同日取得）</li>
+<li>カナデビア株式会社「<a href="https://www.kanadevia.com/ai-policy/">生成AIポリシー</a>」（2025年10月1日制定、同日取得）</li>
+<li>KDDI株式会社「<a href="https://www.kddi.com/corporate/kddi/public/ai_principles/">KDDIグループAI開発・利活用原則</a>」（同日取得）</li>
+<li>サイバーエージェント「<a href="https://www.cyberagent.co.jp/way/list/detail/id=30017">社内のクリエイターに向けて発表した画像生成AIガイドライン策定の裏側</a>」（同日取得）</li>
+<li>パナソニック ホールディングス「<a href="https://news.panasonic.com/jp/press/jn230414-1">AIアシスタントサービスPX-GPTをパナソニックグループ全社員へ拡大</a>」（2023年4月14日、同日取得）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では、AI経由のコンバージョンを5ヶ月で約6.7倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">生成AIガイドラインとは？公的な指針とどう違う？</a><a href="#s2">企業の生成AIガイドラインに盛り込む項目は？</a><a href="#s3">下敷きにする公的なひな形はどれ？</a><a href="#s4">生成AIガイドラインの作り方は？</a><a href="#s5">企業が公開している生成AIガイドラインの例</a><a href="#s6">作った後の運用はどうする？</a><a href="#s7">社内の業務にAIエージェントを入れる場合</a><a href="#s8">まとめ</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/genai-training-companies/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="法人向け生成AI研修"><defs><linearGradient id="ecg-6fd2d959" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6fd2d959)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">法人向け生成AI研修</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.16</div>
+                <div class="rel-card__ttl">【2026年11月】法人向け生成AI研修おすすめ7選｜選び方・費用・助成金</div>
+            </a>
+            <a href="/media/genai-support-companies/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="生成AI導入支援"><defs><linearGradient id="ecg-2e1eb967" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-2e1eb967)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">生成AI導入支援</text><line x1="326.4" y1="365.9" x2="873.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.17</div>
+                <div class="rel-card__ttl">【2026年11月】生成AI導入支援の会社おすすめ10選｜支援範囲別の選び方と費用</div>
+            </a>
+            <a href="/media/ai-subsidy/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="生成AIの補助金"><defs><linearGradient id="ecg-5cdee83f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-5cdee83f)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">生成AIの補助金</text><line x1="326.4" y1="365.9" x2="873.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.15</div>
+                <div class="rel-card__ttl">【2026年11月】生成AIに使える補助金5選｜ChatGPT・Claudeは対象？締切と対象外</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'genai-guideline',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
