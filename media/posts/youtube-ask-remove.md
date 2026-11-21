@@ -118,7 +118,7 @@ Firefoxなら、広く使われている**uBlock Originの要素ピッカー**�
 
 ## AI検索での見え方は別の話
 
-［質問する］の答えにはYouTubeの動画とウェブの情報が使われる、とヘルプにあります。自社の動画や記事がAIの答えの中でどう紹介されるかは、ボタンを消すかどうかとは別の問題で、[AI検索対策](https://nito-0210.com/llmo/)の領域です。
+［質問する］の答えにはYouTubeの動画とウェブの情報が使われる、とヘルプにあります。自社の動画や記事がAIの答えの中でどう紹介されるかは、ボタンを消すかどうかとは別の問題で、[AI検索対策](https://nito-0210.com/aio/)の領域です。
 
 ほかのGoogleのAIの入口を消したいときは、[Chromeの「Geminiに相談」を消す方法](/media/chrome-gemini-remove/)・[Google AIモードを消す方法](/media/ai-mode-remove/)・[GmailのGeminiをオフにする方法](/media/gmail-gemini-off/)も参考になります。
 

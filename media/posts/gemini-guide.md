@@ -197,7 +197,7 @@ Google Workspaceを接続すると、Gmail、ドキュメント、ドライブ�
 
 ## AI検索での見え方は別の話
 
-Geminiを自分で使うことと、自社がGeminiの回答に登場することは別の問題で、後者は[AI検索対策](https://nito-0210.com/llmo/)として扱います。
+Geminiを自分で使うことと、自社がGeminiの回答に登場することは別の問題で、後者は[AI検索対策](https://nito-0210.com/aio/)として扱います。
 
 ## よくある質問
 

@@ -155,7 +155,7 @@ desc: ビジネスプロフィールで整える項目と、AIが店舗情報を
 
 ### 株式会社nito
 
-**[株式会社nito](/llmo/)**: 東京都江東区のAIO対策（AI検索対策）の会社で、福岡に拠点はありません。計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援し、問い合わせや購入につながるまで回し続けます。
+**[株式会社nito](/aio/)**: 東京都江東区のAIO対策（AI検索対策）の会社で、福岡に拠点はありません。計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援し、問い合わせや購入につながるまで回し続けます。
 
 ChatGPTやGeminiなど主要なAIの実際の回答を、利用者と同じチャット画面で毎晩記録しています（記録した回答は3万件以上。2026年11月時点）。他社が選ばれている理由を回答から読み取り、何を書きどこを改善するかを決めます。お客様にお願いするのはヒアリング・公開前の確認・実装の3点です。
 
@@ -230,7 +230,7 @@ Googleの検索で表示されるためには不要です。Googleの生成AI機
 
 ## 出典
 
-- 各社の公式サイト（2026年11月18日確認）: [メディアクロス LLMO対策](https://medi-cro.jp/llmolp/)・[Soelu AIO対策・LLMO対策](https://simple-alpha.com/aio-llmo/)・[ホドック LLMO・AIO対策](https://hodock.jp/service/llmo-aio/)（拠点は[会社情報](https://hodock.jp/company)）・[福岡ECサイト AI検索集客エンジン](https://fukuoka-ecsite.co.jp/business/ai-search-engine/ai-search-engine/)（拠点は[会社概要](https://fukuoka-ecsite.co.jp/company/about/corporate_about/)）・[クリエル LLMO](https://www.creal.co.jp/service/llmo/)・[スゴヨク LLMO対策・AIO対策](https://sugoyoku.com/service/llmo-aio/)・[ウェブココル AI検索対策（LLMO・AIO）コンサルティング](https://challenge-seo.jp/local-llmo/)・[デジタルトレンズ LLMOコンサルティング](https://dgtrends.com/service/seo/llmo-consulting/)（拠点は[会社概要](https://dgtrends.com/company/overview/)）
+- 各社の公式サイト（2026年11月18日確認）: [メディアクロス LLMO対策](https://medi-cro.jp/llmolp/)・[Soelu AIO対策・LLMO対策](https://simple-alpha.com/aio-llmo/)・[ホドック LLMO・AIO対策](https://hodock.jp/service/llmo-aio/)（拠点は[会社情報](https://hodock.jp/company)）・[福岡ECサイト AI検索集客エンジン](https://fukuoka-ecsite.co.jp/business/ai-search-engine/ai-search-engine/)（拠点は[会社概要](https://fukuoka-ecsite.co.jp/company/about/corporate_about/)）・[クリエル LLMO](https://www.creal.co.jp/service/aio/)・[スゴヨク LLMO対策・AIO対策](https://sugoyoku.com/service/llmo-aio/)・[ウェブココル AI検索対策（LLMO・AIO）コンサルティング](https://challenge-seo.jp/local-llmo/)・[デジタルトレンズ LLMOコンサルティング](https://dgtrends.com/service/seo/llmo-consulting/)（拠点は[会社概要](https://dgtrends.com/company/overview/)）
 - 福岡県よろず支援拠点「[これからはじめるLLMO対策セミナー【基礎編】](https://yorozu-fukuoka.go.jp/llmo-kiso/)」
 - Gemini アプリ ヘルプ「[Gemini アプリで場所や経路の検索をする](https://support.google.com/gemini/answer/16622866?hl=ja&co=GENIE.Platform%3DDesktop)」
 - Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」・「[SEO 業者の利用を検討する](https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=ja)」
