@@ -32,7 +32,7 @@ cta: ai_agent
 
 <figure class="post-figure"><img src="/media/images/genai-data-leak/dl_03_gemini_privacy.png" alt="Geminiアプリのプライバシーハブで、レビュアーに見られたくない機密情報は入力しないよう案内している箇所" loading="lazy"><figcaption>Gemini アプリのプライバシー ハブ（2026年11月23日）</figcaption></figure>
 
-個人データが含まれる場合は法律の問題にもつながるため、注意が必要です。個人情報保護委員会の2023年6月2日の注意喚起は、本人の同意なく個人データを含むプロンプトを入力し、それが応答の出力以外の目的で扱われた場合に「個人情報保護法の規定に違反する可能性」があるとしています。そのうえで事業者に求めているのは、提供元が入力を「機械学習に使わないこと等」を事前に確認することです。
+個人データが含まれる場合は法律の問題にもつながるため、注意が必要です。個人情報保護委員会の2023年6月2日の注意喚起は、本人の同意なく個人データを含むプロンプトを入力し、それが応答の出力以外の目的で扱われた場合に「個人情報保護法の規定に違反することとなる可能性がある」としています。そのうえで事業者に求めているのは、提供元が「当該個人データを機械学習に利用しないこと等を十分に確認すること」です。
 
 ### ② アカウントの乗っ取り
 
@@ -84,7 +84,7 @@ ChatGPTのBusiness・Enterprise・Eduでは、回答への高評価・低評価�
 
 ChatGPT BusinessはOpenAIのページどうしで書き方が分かれています。エンタープライズプライバシーのページのBusinessのFAQは、ワークスペース管理者が会話履歴を閲覧・エクスポート・削除できるとしています。一方でヘルプ（データ共有とプライバシーの管理）には、管理者がすべてのユーザーチャットを閲覧できるかとの問いに「いいえ」とあり、各ユーザーの履歴は各自のもので、オーナーがメンバーのデータをエクスポートできるという説明です。Microsoft Copilotの会話は、管理者がPurviewやコンテンツ検索で確認できる記録として保存されます。
 
-Google WorkspaceのGeminiは、ドキュメントなどのサイドパネルでの会話が本人にしか表示されず、共同編集者からは見えません。ただし管理者はVaultで、Geminiアプリのメッセージを保持・検索・書き出しの対象にできる点は別の話です。**会社の契約に切り替えるときは、管理者が会話を確認できるかを社員に先に伝えておくと、私的な相談を業務のアカウントに書き込むことを避けられます。**
+Google WorkspaceのGeminiは、ドキュメントなどのサイドパネルでの会話が本人にしか表示されず、共同編集者からは見えません。ただし管理者は、Vaultを含むエディションならGeminiアプリのメッセージを保持・検索・書き出しできます。**会社の契約に切り替えるときは、管理者が会話を確認できるかを社員に先に伝えておくと、私的な相談を業務のアカウントに書き込むことを避けられます。**
 
 ### Workspaceの約束はエディションが条件
 
@@ -104,7 +104,7 @@ desc: 会社契約のChatGPTの料金と、学習に使われない設定、管�
 
 ### ① 業務で使うAIを会社の契約に寄せる
 
-**個人の設定は会社から確認できないため、業務の利用は管理者のいる契約に寄せます。**個人情報保護委員会が求める「機械学習に使わないこと等の確認」も、会社の契約なら利用規約やデータ処理の補遺（DPA）で示せます。OpenAIはBusiness・EnterpriseとAPIについてDPAを結べると案内しています。次にやることは、使う製品を1〜2個に絞り、契約の種類とGoogle Workspaceならエディションを確認することです。社員が個人のアカウントで使い続けている場合の移し方は[シャドーAI対策](/media/shadow-ai/)で扱っています。
+**個人の設定は会社から確認できないため、業務の利用は管理者のいる契約に寄せます。**個人情報保護委員会が求める「機械学習に利用しないこと等」の確認も、会社の契約なら利用規約やデータ処理の補遺（DPA）で示せます。OpenAIはBusiness・EnterpriseとAPIについてDPAを結べると案内しています。次にやることは、使う製品を1〜2個に絞り、契約の種類とGoogle Workspaceならエディションを確認することです。社員が個人のアカウントで使い続けている場合の移し方は[シャドーAI対策](/media/shadow-ai/)で扱っています。
 
 ### ② 入力してはいけない情報を決める
 
@@ -205,5 +205,5 @@ OpenAIとAnthropicはAPIの入力を既定で学習に使わないとしてい�
 - Microsoft サポート「[個人向け Microsoft Copilot: アクティビティの履歴](https://support.microsoft.com/ja-jp/privacy/microsoft-copilot/activity-history)」
 - Group-IB「[Group-IB Discovers 100K+ Compromised ChatGPT Accounts on Dark Web Marketplaces](https://www.group-ib.com/media-center/press-releases/stealers-chatgpt-credentials/)」（2023年6月20日）
 - Wiz「[38TB of data accidentally exposed by Microsoft AI researchers](https://www.wiz.io/blog/38-terabytes-of-private-data-accidentally-exposed-by-microsoft-ai-researchers)」（2023年9月）
-- Bloomberg「[Samsung Bans ChatGPT and Other Generative AI Use by Staff After Leak](https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak)」（2023年5月2日）
+- Bloomberg「[Samsung Bans Staff’s AI Use After Spotting ChatGPT Data Leak](https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak)」（2023年5月2日）
 - TechCrunch「[Samsung bans use of generative AI tools like ChatGPT after April internal data leak](https://techcrunch.com/2023/05/02/samsung-bans-use-of-generative-ai-tools-like-chatgpt-after-april-internal-data-leak/)」（2023年5月2日）
