@@ -121,7 +121,7 @@ Googleは同じガイドで、Google検索ではコンテンツのチャンク�
 
 **株式会社Mesut**: 「中小企業向けLLMO対策」のページを持つ会社で、無料診断（毎月5社限定）のあと、スポット改善10万円からか、伴走の月5万円から（いずれも税別）を選べます。月5万円はチャット相談だけで、打ち合わせと簡易の改善指示書が付くのは月10万円、改善指示書は月15万円、KPIの管理は月20万円からです。依頼側の担当を対象顧客や料金などの一次情報の提供・公開前の確認・情報の更新と公式に書き分けていて、**社内に何が残るかを契約前に読み取りやすい会社**です。代表が全案件に直接対応するとしています。
 
-<figure class="post-figure"><img src="/media/images/smb-aio-companies/mesut_plan_table.png" alt="Mesutの中小企業向けLLMO対策のプラン別対応範囲の表。月5万円はチャット対応のみ、月10万円でMTG1回と簡易改善指示書、月15万円で改善指示書、月20万円でKPI管理、月30万円でPM代行が加わる" loading="lazy"><figcaption>Mesutの伴走コンサルのプラン別対応範囲（2026年11月23日）</figcaption></figure>
+<figure class="post-figure"><img src="/media/images/smb-aio-companies/mesut_plan_table.png" alt="Mesutの中小企業向けLLMO対策のプラン別対応範囲の表。月5万円はチャット対応のみ、月10万円でMTG1回と簡易改善指示書、月15万円で改善指示書が加わる" loading="lazy"><figcaption>Mesutの伴走コンサルのプラン別対応範囲（一部、2026年11月23日）</figcaption></figure>
 
 ### 4. AtoZ Design
 
