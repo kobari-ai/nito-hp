@@ -135,7 +135,7 @@ Proは標準の上限の4倍で、Plusの2倍です。一度に読める長さ�
 別のものです。Geminiアプリは5時間と週の上限、Google検索のAIモードはProのモデルと画像の作成に1日ごとの上限があります。
 
 ### Geminiの使用制限はAPIでも同じですか？
-別です。この記事で扱っているのはgemini.google.comのGeminiアプリの使用量上限で、5時間と週の2段で区切られます。開発者が使うGemini APIは「レート制限」という別の仕組みで、1分あたりのリクエスト数のように区切り方も単位も違います（[Gemini APIの料金](/media/gemini-api-pricing/)で解説）。GmailやドキュメントのGemini（Google Workspace）もエディションごとに別の上限があり、個人のGeminiアプリの倍率はそのまま当てはまりません（[Google WorkspaceのGemini](/media/google-workspace-gemini/)で解説）。
+別です。この記事で扱っているのはgemini.google.comのGeminiアプリの使用量上限で、5時間と週の2段で区切られます。開発者が使うGemini APIは「レート制限」という別の仕組みで、1分あたりのリクエスト数のように区切り方も単位も違います（[Gemini APIの料金](/media/gemini-api-pricing/)で解説）。会社や学校のGoogle WorkspaceのアカウントのGeminiもエディションごとに別の上限があり（Proモデルは4時間に25件など）、個人のプランの倍率はそのまま当てはまりません（[Google WorkspaceのGemini](/media/google-workspace-gemini/)で解説）。
 
 ## 出典
 
