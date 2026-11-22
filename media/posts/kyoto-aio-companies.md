@@ -131,7 +131,7 @@ desc: ビジネスプロフィールで整える項目と、AIが店舗情報を
 
 ### 株式会社nito
 
-**[株式会社nito](/llmo/)**: 東京都江東区のAIO対策（AI検索対策）の会社で、京都に拠点はありません。計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援し、問い合わせや予約につながるまで回し続けます。
+**[株式会社nito](/aio/)**: 東京都江東区のAIO対策（AI検索対策）の会社で、京都に拠点はありません。計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援し、問い合わせや予約につながるまで回し続けます。
 
 ChatGPTやGeminiなど主要なAIの実際の回答を、利用者と同じチャット画面で毎晩記録しています（記録した回答は3万件以上。2026年11月時点）。他社が選ばれている理由を回答から読み取り、何を書きどこを改善するかを決めます。お客様にお願いするのはヒアリング・公開前の確認・実装の3点です。
 
@@ -198,6 +198,6 @@ MEOで整えたビジネスプロフィールは、GeminiやGoogleのAIモード
 
 ## 出典
 
-- 各社の公式サイト（2026年11月19日確認）: [リードクリエーション](https://leadcreation.co.jp/)（[ホームページ制作](https://leadcreation.co.jp/service/website)）・[HIIDEL](https://hiidel.com/)・[クロスウィッシュ AIO・LLMO・GEO対策](https://www.crosswish.com/aio/)（[MEO対策代行](https://www.crosswish.com/meo/)）・[ブリッジコーポレーション 京都のAIO対策 費用・見積もりガイド](https://web.bridge-net.jp/blog/39976/)・[同 制作料金](https://web.bridge-net.jp/price/)・[同 会社概要](https://web.bridge-net.jp/company/)・[AdMarket LLMOコンサルティング・AIO/GEO対策](https://www.ad-market.jp/service/seo/llmo/)・[同 費用一覧](https://www.ad-market.jp/service/seo/price/)・[ウェブライダー コンサルティング](https://web-rider.jp/service/consulting/)（拠点は[会社概要](https://web-rider.jp/company/overview/)）
+- 各社の公式サイト（2026年11月19日確認）: [リードクリエーション](https://leadcreation.co.jp/)（[ホームページ制作](https://leadcreation.co.jp/service/website)）・[HIIDEL](https://hiidel.com/)・[クロスウィッシュ AIO・LLMO・GEO対策](https://www.crosswish.com/aio/)（[MEO対策代行](https://www.crosswish.com/meo/)）・[ブリッジコーポレーション 京都のAIO対策 費用・見積もりガイド](https://web.bridge-net.jp/blog/39976/)・[同 制作料金](https://web.bridge-net.jp/price/)・[同 会社概要](https://web.bridge-net.jp/company/)・[AdMarket LLMOコンサルティング・AIO/GEO対策](https://www.ad-market.jp/service/seo/aio/)・[同 費用一覧](https://www.ad-market.jp/service/seo/price/)・[ウェブライダー コンサルティング](https://web-rider.jp/service/consulting/)（拠点は[会社概要](https://web-rider.jp/company/overview/)）
 - Gemini アプリ ヘルプ「[Gemini アプリで場所や経路の検索をする](https://support.google.com/gemini/answer/16622866?hl=ja&co=GENIE.Platform%3DDesktop)」
 - Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」

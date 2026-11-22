@@ -1,7 +1,7 @@
 """記事ページの CTA 部品（2026-10-17 希一さん OK。spec は brain の drafts/design/media-cta_spec.md）
 
 記事の主題で文面と行き先を切り替える。**既定は AI 検索対策（AIO）**（2026-10-17 夜 希一さん「本当は aio 側に流したい。aio と関連なさそうなのはエージェントで良い」）
-- llmo: AI 検索対策の記事と、AI ツールの使い方・困りごとの記事。行き先は /llmo/
+- llmo: AI 検索対策の記事と、AI ツールの使い方・困りごとの記事。行き先は /aio/
 - ai_agent: 会社で AI を導入・管理・開発する記事（管理者の設定・法人プラン・請求書・料金・Claude Code・MCP など）。行き先は /ai-agent/
 front matter で上書きできる:
     cta: llmo | ai_agent         主題の判定を上書き
@@ -63,7 +63,7 @@ def fork(meta, slug, theme):
     agent_q = (f"会社で {p} を使っていて毎日の作業ごと AI に任せたい" if p != "AI"
                else "会社の毎日の作業を AI に任せたい")
     agent = f'<a href="/ai-agent/"><span class="fork__q">{_e(agent_q)}</span><span class="fork__go">AIエージェント構築</span></a>'
-    llmo = ('<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span>'
+    llmo = ('<a href="/aio/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span>'
             '<span class="fork__go">AI検索対策</span></a>')
     rows = [first, llmo, agent] if theme == "llmo" else [first, agent, llmo]
     return '<div class="fork">\n<div class="fork__ttl">目的に合わせて読む</div>\n' + "\n".join(rows) + "\n</div>"
@@ -129,7 +129,7 @@ def mid_cta_llmo(meta, slug):
             f'<p class="mcta__eyebrow">{_e(eyebrow)}</p>\n'
             f'<p class="mcta__ttl">{_e(title)}</p>\n'
             f'<p class="mcta__txt">{_e(text)}</p>\n'
-            '<div class="mcta__actions"><a class="mcta__btn" href="/llmo/">無料の現状分析レポートを見る</a>'
+            '<div class="mcta__actions"><a class="mcta__btn" href="/aio/">無料の現状分析レポートを見る</a>'
             '<a class="mcta__link" href="/contact.html">無料で相談する</a></div>\n'
             f'</div>\n{LLMO_UI}\n</div>')
 
@@ -157,7 +157,7 @@ def end_cta(slug, theme):
                 '<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>\n'
                 '<p class="ecta__desc">ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>\n'
                 '<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a>'
-                '<a class="sec" href="/llmo/">支援内容を見る</a></div>\n'
+                '<a class="sec" href="/aio/">支援内容を見る</a></div>\n'
                 '<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>\n</div>')
     p = product_of(slug)
     ttl = f"{p} を会社の業務に組み込む相談を受けています"
@@ -166,7 +166,7 @@ def end_cta(slug, theme):
             '<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>\n'
             '<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a>'
             '<a class="sec" href="/ai-agent/">進め方を見る</a></div>\n'
-            '<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>\n</div>')
+            '<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/aio/">AI検索対策（AIO）</a> をご覧ください。</p>\n</div>')
 
 
 def rail(toc_html, theme):
@@ -175,7 +175,7 @@ def rail(toc_html, theme):
     if theme == "llmo":
         cta = ('<div class="rail__cta"><b>AI での見え方を無料で調べる</b>'
                '<p>ChatGPT・Gemini・AIモードなどで自社の名前が挙がるかを数字で出します。</p>'
-               '<a href="/llmo/">現状分析レポート</a></div>')
+               '<a href="/aio/">現状分析レポート</a></div>')
     else:
         cta = ('<div class="rail__cta"><b>会社での AI 活用の相談</b>'
                '<p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p>'

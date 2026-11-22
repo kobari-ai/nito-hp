@@ -107,7 +107,7 @@ desc: AIO対策の会社を12社比べ、選び方と費用、SEOとの違いを
 
 ### 1. 株式会社nito
 
-**[株式会社nito](/llmo/)**: AI検索対策を、問い合わせや購入につながるまで、計測から記事の制作と公開後の運用まで一気通貫で支援する会社です。**問い合わせや購入まで数えるため、GA4に加えて問い合わせのフォームで「何で知ったか」を聞きます。GA4だけではAI経由がほぼ見えないためです。**
+**[株式会社nito](/aio/)**: AI検索対策を、問い合わせや購入につながるまで、計測から記事の制作と公開後の運用まで一気通貫で支援する会社です。**問い合わせや購入まで数えるため、GA4に加えて問い合わせのフォームで「何で知ったか」を聞きます。GA4だけではAI経由がほぼ見えないためです。**
 
 何を書き、どこを直すかは、ChatGPTやGeminiなど主要なAIの実際の回答を毎晩読み、他社が選ばれている理由から決めます。回答は利用者と同じチャット画面で取り、回答の本文と引用元を記録しています。記録した回答は3万件を超えました。
 
@@ -264,6 +264,6 @@ AIの回答は聞くたびに変わるため、特定の順位や推薦を保証
 ## 出典
 
 - Google検索セントラル「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」
-- 各社の公式サイト（2026年11月14日確認）: [nito AI検索対策](/llmo/)・[ナイル LLMOコンサルティング](https://www.seohacks.net/service/llmo-consulting/)・[LANY LLMOコンサルティング](https://www.lany.co.jp/service/digitalmarketing/llmo)・[Speee AEOコンサルティング](https://webanalytics.speee.jp/aeo/)・[CINC AI検索最適化コンサルティング](https://www.cinc-j.co.jp/service/analytics/geoconsulting)・[Faber Company ミエルカGEO](https://mieru-ca.com/geo/)・[TechSuite AI検索パートナーズ](https://ai-search.techsuite.co.jp/)・[ジオコード SEO・AIO・LLMO](https://www.geo-code.co.jp/seo/)・[NEXER Group AIOコンサルティング](https://nexer.co.jp/marketing/aio)・[ブランディングワークス AI検索対策支援サービス](https://www.branding-works.jp/service/llmo-geo-support/)
+- 各社の公式サイト（2026年11月14日確認）: [nito AI検索対策](/aio/)・[ナイル LLMOコンサルティング](https://www.seohacks.net/service/llmo-consulting/)・[LANY LLMOコンサルティング](https://www.lany.co.jp/service/digitalmarketing/llmo)・[Speee AEOコンサルティング](https://webanalytics.speee.jp/aeo/)・[CINC AI検索最適化コンサルティング](https://www.cinc-j.co.jp/service/analytics/geoconsulting)・[Faber Company ミエルカGEO](https://mieru-ca.com/geo/)・[TechSuite AI検索パートナーズ](https://ai-search.techsuite.co.jp/)・[ジオコード SEO・AIO・LLMO](https://www.geo-code.co.jp/seo/)・[NEXER Group AIOコンサルティング](https://nexer.co.jp/marketing/aio)・[ブランディングワークス AI検索対策支援サービス](https://www.branding-works.jp/service/llmo-geo-support/)
 - AIの回答: nitoがChatGPTやGeminiなど主要なAIに「AI検索対策の会社でおすすめを教えて」と聞いた回答（2026年11月11日〜14日）
 - 支援先の数字: nitoの支援先での実測（言及率は質問単位、AI経由の割合は会員登録時のアンケートとGA4）

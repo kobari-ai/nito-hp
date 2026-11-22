@@ -102,7 +102,7 @@ Workを長く回すなら、効いてくるのはBusinessのプレミアムシ�
 
 ## AI検索での見え方は別の話
 
-ChatGPTを自分で使うことと、自社がChatGPTの回答に登場することは別の問題で、後者は[AI検索対策](https://nito-0210.com/llmo/)として扱います。測り方は[AI検索エンジンの比較記事](https://nito-0210.com/media/ai-search-engine-comparison/)にまとめました。
+ChatGPTを自分で使うことと、自社がChatGPTの回答に登場することは別の問題で、後者は[AI検索対策](https://nito-0210.com/aio/)として扱います。測り方は[AI検索エンジンの比較記事](https://nito-0210.com/media/ai-search-engine-comparison/)にまとめました。
 
 ## よくある質問
 

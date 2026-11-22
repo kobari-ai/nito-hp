@@ -57,7 +57,7 @@ cta_text: nitoの現状分析は、AIの回答を計測する型の診断です�
 
 **自社と競合がAIにどう紹介されているかを、おすすめの理由まで含めて知りたい会社**に向いています。
 
-nitoの[現状分析レポート](/llmo/)は無料です。狙いたい質問をお聞きして、ChatGPT・Gemini・AIモードなどでの結果をまとめてお送りします。
+nitoの[現状分析レポート](/aio/)は無料です。狙いたい質問をお聞きして、ChatGPT・Gemini・AIモードなどでの結果をまとめてお送りします。
 
 ### 2. インハウスプラス（株式会社CALLOSUM）
 
@@ -237,5 +237,5 @@ SEO診断はGoogleの検索順位を上げるための項目を見ます。LLMO�
 
 ## 出典
 
-- 各社の診断のページ（2026年11月22日確認）: [nito AI検索対策](/llmo/)・[インハウスプラス LLMO診断（無料）](https://inhouse-plus.jp/llmo-shindan/)・[umoren.ai LLMO無料診断・AI検索スポット診断レポート](https://umoren.ai/diagnosis)・[umoren.ai AI SEO診断・LLMO診断](https://umoren.ai/free-tools/ai-seo-score)・[LANY LLMO診断（無料）](https://www.lany.co.jp/news/llmo_diagnosis_over100)・[メディアグロース LLMO診断サービス](https://media-growth.co.jp/llmo-check/)・[Faber Company LLMO診断チェックリスト](https://mieru-ca.com/ai-seo/llmo-check/)・[ミエルカGEO](https://mieru-ca.com/geo/)・[TRILIA LLMO診断ツール](https://trilia.co.jp/llmo-tools/)・[EmmaTools LLMO最適化診断](https://emma.tools/llmo-shindan/)・[LLMO対策チェックサイト](https://llmocheck.ai/)・[アドマノ LLMO診断チェックリスト7項目](https://admano.co.jp/contents_dl/llmo-7item/)
+- 各社の診断のページ（2026年11月22日確認）: [nito AI検索対策](/aio/)・[インハウスプラス LLMO診断（無料）](https://inhouse-plus.jp/llmo-shindan/)・[umoren.ai LLMO無料診断・AI検索スポット診断レポート](https://umoren.ai/diagnosis)・[umoren.ai AI SEO診断・LLMO診断](https://umoren.ai/free-tools/ai-seo-score)・[LANY LLMO診断（無料）](https://www.lany.co.jp/news/llmo_diagnosis_over100)・[メディアグロース LLMO診断サービス](https://media-growth.co.jp/llmo-check/)・[Faber Company LLMO診断チェックリスト](https://mieru-ca.com/ai-seo/llmo-check/)・[ミエルカGEO](https://mieru-ca.com/geo/)・[TRILIA LLMO診断ツール](https://trilia.co.jp/llmo-tools/)・[EmmaTools LLMO最適化診断](https://emma.tools/llmo-shindan/)・[LLMO対策チェックサイト](https://llmocheck.ai/)・[アドマノ LLMO診断チェックリスト7項目](https://admano.co.jp/contents_dl/llmo-7item/)
 - AI機能に表示されるための要件: [AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)（Google 検索セントラル）

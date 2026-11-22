@@ -96,7 +96,7 @@ Googleは同じガイドで、Google検索ではコンテンツのチャンク�
 
 ### 1. 株式会社nito
 
-**[株式会社nito](/llmo/)**: AI検索対策を、問い合わせや購入が増えるところまで受け持つ会社です。見込み客がChatGPTやGeminiなど主要なAIに質問したときの回答を実際のチャット画面で毎日記録し、他社が推される理由を回答の本文から読み取ったうえで、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援します。
+**[株式会社nito](/aio/)**: AI検索対策を、問い合わせや購入が増えるところまで受け持つ会社です。見込み客がChatGPTやGeminiなど主要なAIに質問したときの回答を実際のチャット画面で毎日記録し、他社が推される理由を回答の本文から読み取ったうえで、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援します。
 
 - **社内に書く人がいなくても進められる。** 依頼側にお願いするのは、強みを聞き取るヒアリング・公開前の確認・サイトへの反映の3つです
 - **計測の結果を一緒に見られる。** 記録した回答は3万件を超え（2026年11月時点）、推移は専用のダッシュボードで確認できます
@@ -107,7 +107,7 @@ Googleは同じガイドで、Google検索ではコンテンツのチャンク�
 | SaaS企業 | AIでの言及率が3ヶ月で10%から45%に。5ヶ月でAI経由のコンバージョンが約6.7倍に |
 | 士業 | AIでの言及率が0%から20%に。新しいページは公開3日でAIの回答の引用元に |
 
-2026年11月からは注文住宅の会社のAI検索対策も支援しています。料金は狙う質問の数と記事の本数で決める月額制で、狙いたい質問をAIに聞いた結果をまとめた[無料の現状分析レポート](/llmo/)のあとに見積もりをお出しします。
+2026年11月からは注文住宅の会社のAI検索対策も支援しています。料金は狙う質問の数と記事の本数で決める月額制で、狙いたい質問をAIに聞いた結果をまとめた[無料の現状分析レポート](/aio/)のあとに見積もりをお出しします。
 
 - 社内に記事を書く人がおらず、記事の制作と公開後の運用まで任せたい会社
 - AIでの露出の数字より、問い合わせの数で費用に見合うかを判断したい会社
@@ -244,5 +244,5 @@ Google検索に向けては必要ありません。Googleは公式ガイドで�
 
 ## 出典
 
-- 各社の公式サイト（2026年11月23日確認）: [nito AI検索対策](/llmo/)・[DolphinX AIO 料金プラン](https://dolphinx.jp/aio/pricing)・[Mesut 中小企業のLLMO対策](https://mesut.co.jp/service/llmo/small-business/)・[AtoZ Design LLMO・AIO対策コンサルティング](https://atoz-design.jp/service/llmo/)・[エイチリンク 中小企業向け AIOコンサルティング・AIO対策代行](https://h-link-marketing.co.jp/service/llmo-consulting/)・[アムール AIOコンサルティング](https://amour-inc.jp/service/aio-consulting/)・[ウェブココル LLMO月額コンサルティング](https://challenge-seo.jp/local-llmo/)・[GMO AIOブースト](https://koukoku.jp/service/aio)・[フォワードX AIO支援サービス](https://forwardx.net/aio/)
+- 各社の公式サイト（2026年11月23日確認）: [nito AI検索対策](/aio/)・[DolphinX AIO 料金プラン](https://dolphinx.jp/aio/pricing)・[Mesut 中小企業のLLMO対策](https://mesut.co.jp/service/llmo/small-business/)・[AtoZ Design LLMO・AIO対策コンサルティング](https://atoz-design.jp/service/llmo/)・[エイチリンク 中小企業向け AIOコンサルティング・AIO対策代行](https://h-link-marketing.co.jp/service/llmo-consulting/)・[アムール AIOコンサルティング](https://amour-inc.jp/service/aio-consulting/)・[ウェブココル LLMO月額コンサルティング](https://challenge-seo.jp/local-llmo/)・[GMO AIOブースト](https://koukoku.jp/service/aio)・[フォワードX AIO支援サービス](https://forwardx.net/aio/)
 - Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」（2026年11月23日確認）

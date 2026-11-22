@@ -46,7 +46,7 @@ GEO対策の会社は、**どのAIに何をどれだけ聞いて計測するか�
 
 ### 1. 株式会社nito
 
-**[株式会社nito](/llmo/)**: AI検索対策（GEO対策）を、問い合わせや購入につながるまで通しで受ける会社です。見込み客が主要なAIに質問したときの回答を毎日記録し、他社が推薦される理由を回答の本文から抜き出して、サイトの改善と記事の制作、公開後の運用まで担います。
+**[株式会社nito](/aio/)**: AI検索対策（GEO対策）を、問い合わせや購入につながるまで通しで受ける会社です。見込み客が主要なAIに質問したときの回答を毎日記録し、他社が推薦される理由を回答の本文から抜き出して、サイトの改善と記事の制作、公開後の運用まで担います。
 
 - **利用者が使うのと同じチャット画面で毎日計測する。** 記録した回答は3万件超（2026年11月時点）で、結果は専用のダッシュボードで見られます
 - **目標は言及率でなく問い合わせの数。** 問い合わせフォームで何で知ったかを聞き、AIで知った人の数まで追います
@@ -62,7 +62,7 @@ GEO対策の会社は、**どのAIに何をどれだけ聞いて計測するか�
 - 記事を書く人が社内におらず、計測から制作までを1つの窓口に任せたい会社
 - AIでの露出の数字より、問い合わせの数で効果を判断したい会社
 
-nitoでは狙いたい質問を主要なAIに実際に聞き、名前が挙がるか、どう紹介されるか、代わりにどの会社が挙がるかをまとめた[現状分析レポート](/llmo/)を無料でお出ししています。
+nitoでは狙いたい質問を主要なAIに実際に聞き、名前が挙がるか、どう紹介されるか、代わりにどの会社が挙がるかをまとめた[現状分析レポート](/aio/)を無料でお出ししています。
 
 ### 2. TechSuite株式会社
 
@@ -231,5 +231,5 @@ CINC・Speee・TechSuite・クーミルは3〜6ヶ月を目安に挙げ、メデ
 
 ## 出典
 
-- 各社の公式サイト（2026年11月23日確認）: [nito AI検索対策](/llmo/)・[TechSuite AI検索パートナーズ](https://ai-search.techsuite.co.jp/)・[CINC AI検索最適化コンサルティング](https://www.cinc-j.co.jp/service/analytics/geoconsulting/)・[クーミル LLMO・AIO対策コンサルティング](https://coomil.co.jp/service/llmo/)・[ナイル LLMOコンサルティング](https://www.seohacks.net/service/llmo-consulting/)・[デジタルアイデンティティ LLMO/AIO/AI Overviews対策](https://digitalidentity.co.jp/service/seo/llmo/)・[メディアリーチ LLMOコンサルティング・運用代行](https://mediareach.co.jp/seo-consulting/llmo-service)・[LANY LLMOコンサルティング](https://www.lany.co.jp/service/digitalmarketing/llmo)・[Speee AEOコンサルティング](https://webanalytics.speee.jp/aeo/)・[Faber Company GEOコンサルティング](https://www.fabercompany.co.jp/service/geo/)・[ミエルカGEO](https://mieru-ca.com/geo/)
+- 各社の公式サイト（2026年11月23日確認）: [nito AI検索対策](/aio/)・[TechSuite AI検索パートナーズ](https://ai-search.techsuite.co.jp/)・[CINC AI検索最適化コンサルティング](https://www.cinc-j.co.jp/service/analytics/geoconsulting/)・[クーミル LLMO・AIO対策コンサルティング](https://coomil.co.jp/service/llmo/)・[ナイル LLMOコンサルティング](https://www.seohacks.net/service/llmo-consulting/)・[デジタルアイデンティティ LLMO/AIO/AI Overviews対策](https://digitalidentity.co.jp/service/seo/llmo/)・[メディアリーチ LLMOコンサルティング・運用代行](https://mediareach.co.jp/seo-consulting/llmo-service)・[LANY LLMOコンサルティング](https://www.lany.co.jp/service/digitalmarketing/llmo)・[Speee AEOコンサルティング](https://webanalytics.speee.jp/aeo/)・[Faber Company GEOコンサルティング](https://www.fabercompany.co.jp/service/geo/)・[ミエルカGEO](https://mieru-ca.com/geo/)
 - Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」（2026年11月23日確認）
