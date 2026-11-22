@@ -10,19 +10,19 @@ cover_sub: 漏れる経路・事例・法人プランの違い
 cta: ai_agent
 ---
 
-生成AIの情報漏洩対策の中心は、入力が学習に使われず管理者が保存とログを管理できる会社の契約に業務の利用を寄せ、入れてはいけない情報を決め、アカウントと社内データの権限を締めることです。法人プランでも、評価ボタンで送った会話の扱いや保存期間、管理者に見える範囲は製品ごとに違います。
+生成AIの情報漏洩対策の中心は、業務で使うAIを会社の契約にまとめることです。そのうえで入力してはいけない情報を決め、アカウントと社内データの権限を絞ります。法人プランでも、評価ボタンで送った会話の扱いや保存期間、管理者に見える範囲は製品ごとに違います。
 
 この記事では漏れる4つの経路と公表された事例、ChatGPT・Claude・Gemini・Microsoft Copilotの法人プランと個人プランの違い、具体的な対策と誤って入力したときの対応を解説します。
 
 :::takeaways
 - 漏れる経路は入力した内容・アカウント・サービス側の不具合・社内データとの連携の4つ
 - 4製品とも法人向けの契約は既定で学習に使わない。違いが出るのは評価ボタンの扱い・保存期間・管理者の制御
-- ルールで塞げるのは入力の経路の一部。アカウントと権限は設定と契約で塞ぐ
+- ルールで対策できるのは入力の経路の一部。アカウントと権限は設定と契約で対策する
 :::
 
 ## 生成AIで情報漏洩は起こる？
 
-起こります。IPAの情報セキュリティ10大脅威 2026では、組織向けの順位でランサム攻撃・サプライチェーン攻撃に次ぐ3位に、AIの利用をめぐるサイバーリスクが今回初めて選ばれました。**漏れる経路は入力した内容・アカウント・サービス側の不具合・社内データとの連携の4つに分けられます。**どの経路を塞ぐかで打つ手が変わるので、対策の優先順位も経路から決めるのが近道です。
+起こります。IPAの情報セキュリティ10大脅威 2026では、組織向けの順位でランサム攻撃・サプライチェーン攻撃に次ぐ3位に、AIの利用をめぐるサイバーリスクが今回初めて選ばれました。**漏れる経路は入力した内容・アカウント・サービス側の不具合・社内データとの連携の4つに分けられます。**どの経路を対策するかで打つ手が変わるので、対策の優先順位も経路から決めるのが近道です。
 
 <figure class="post-figure"><img src="/media/images/genai-data-leak/dl_01_routes.png" alt="生成AIから情報が漏れる4つの経路。入力した内容、アカウント、サービス側の不具合、社内データとの連携" loading="lazy"></figure>
 
@@ -32,7 +32,7 @@ cta: ai_agent
 
 <figure class="post-figure"><img src="/media/images/genai-data-leak/dl_03_gemini_privacy.png" alt="Geminiアプリのプライバシーハブで、レビュアーに見られたくない機密情報は入力しないよう案内している箇所" loading="lazy"><figcaption>Gemini アプリのプライバシー ハブ（2026年11月23日）</figcaption></figure>
 
-個人データが含まれる場合は法律の問題にもつながるため、注意が必要です。個人情報保護委員会の2023年6月2日の注意喚起は、本人の同意なく個人データを含むプロンプトを入力し、それが応答の出力以外の目的で扱われた場合に、個人情報保護法の規定に違反する可能性があるとしています。そのうえで事業者に求めているのは、提供元が入力を機械学習に使わないこと等を事前に確認することです。
+個人データが含まれる場合は法律の問題にもつながるため、注意が必要です。個人情報保護委員会の2023年6月2日の注意喚起は、本人の同意なく個人データを含むプロンプトを入力し、それが応答の出力以外の目的で扱われた場合に「個人情報保護法の規定に違反する可能性」があるとしています。そのうえで事業者に求めているのは、提供元が入力を「機械学習に使わないこと等」を事前に確認することです。
 
 ### ② アカウントの乗っ取り
 
@@ -55,22 +55,22 @@ cta: ai_agent
 | 公表 | 何が起きたか | 経路 |
 |---|---|---|
 | 2023年3月 OpenAI | ライブラリのバグで、特定の約9時間に利用していたChatGPT Plus会員の約1.2%について、氏名・メールアドレス・支払先住所・カードの種類と下4桁・有効期限が他の会員から見えた可能性がある | ③ 不具合 |
-| 2023年5月 サムスン電子（報道） | 4月に社内のエンジニアがソースコードをChatGPTに入力していたことが分かり、社用端末での生成AIの利用を制限した | ① 入力 |
+| 2023年5月 サムスン電子（報道） | 社員が機密のコードをChatGPTにアップロードしていたことが分かり、社用端末での生成AIの利用を一時的に制限した | ① 入力 |
 | 2023年6月 Group-IB | ChatGPTの認証情報を保存した感染端末が10万1,134台。闇市場のログは2023年5月に2万6,802件で最多だった | ② アカウント |
-| 2023年9月 Wiz | MicrosoftのAI研究チームが学習用のデータを共有するリンクの権限を広く設定し、端末のバックアップやパスワード、Teamsのメッセージを含む約38TBが閲覧できる状態だった | ④ 共有の権限 |
+| 2023年9月 Wiz | MicrosoftのAI研究チームが学習用のデータを共有するリンクの権限を広く設定し、端末のバックアップやパスワード、Teamsのメッセージを含む約38TBが閲覧できる状態だった | ④に近い（共有の権限） |
 
-サムスン電子の件は業務の効率化のための入力で、社員に悪意はありませんでした。OpenAIの件は利用者に落ち度がなく、提供元が原因の特定と影響を受けた可能性のある会員への連絡を行っています。Microsoftの件はAIの回答から漏れたのではなく、AIの開発に使うデータの共有設定から漏れたもので、権限の設定を誤ると被害の規模が大きくなることを示しています。
+サムスン電子の件は社員が誤って入力したものでした。OpenAIの件は利用者に落ち度がなく、提供元が原因の特定と影響を受けた可能性のある会員への連絡を行っています。Microsoftの件はAIの回答から漏れたのではなく、AIの開発に使うデータの共有設定から漏れたもので、権限の設定を誤ると被害の規模が大きくなることを示しています。
 
 ## 法人プランと個人プランで何が変わる？
 
-**大きく変わるのは入力が学習に使われるかの既定と、管理者が持てる制御です。**ChatGPT・Claude・Gemini・Microsoft Copilotの4製品とも、法人向けの契約では入力を既定でモデルの学習に使わないと公式に書いています。個人向けは本人の設定しだいで、会社からは設定が守られているかを確認できません。2026年11月23日に各社の公式ページで確認した違いを並べました。
+**大きく変わるのは入力が学習に使われるかの既定と、管理者が持てる制御です。**ChatGPT・Claude・Gemini・Microsoft Copilotの4製品とも、法人向けの契約では入力を既定でモデルの学習に使わないと公式に書いています。ChatGPT・Claude・Geminiの個人向けは本人の設定しだいで、会社からは設定が守られているかを確認できません。2026年11月23日に各社の公式ページで確認した違いを並べました。
 
 | 製品（法人向けの契約） | 個人向けでの学習と人の確認 | 法人向けの保存期間 | 管理者の制御 |
 |---|---|---|---|
-| ChatGPT（Business・Enterprise） | Free・Plus・Proは設定をオフにしない限り学習に使われることがある | 管理者が保持期間を設定。削除した会話は30日以内に消去 | SAML SSO。Businessは管理者がメンバーの会話を閲覧・書き出し・削除、EnterpriseはCompliance APIで監査ログ |
+| ChatGPT（Business・Enterprise） | Free・Plus・Proは設定をオフにしない限り学習に使われることがある | 管理者が保持期間を設定（カスタムの保持ポリシーはEnterprise）。削除した会話は30日以内に消去 | SAML SSO。Businessは管理者が会話を閲覧・書き出し・削除できるとするページと、全ユーザーのチャットは閲覧できないとするヘルプがあり書き方が分かれる。EnterpriseはCompliance APIで監査ログ |
 | Claude（Team・Enterprise） | Free・Pro・Max・Ultraは本人がオプトアウトを選ぶ | 会話は製品内に保持し、削除すると30日以内にバックエンドから消える。保持期間を独自に決められるのはEnterprise | TeamはSSOとコネクタの管理。Enterpriseは監査ログ・SCIM・IP許可リスト |
-| Gemini（Google Workspaceの対象エディション） | 履歴がオンなら学習に使われ、人のレビューを受けた会話は最長3年残る | Geminiアプリは3・18・36か月から選び既定18か月。Workspaceのアプリ内は90日から無期限 | 監査ログ。生成した文をGmailやドキュメントに入れるとDLPが働く |
-| Microsoft Copilot（Entra IDの組織アカウント） | 個人のMicrosoftアカウントは学習への利用をオプトアウトでき、会話は既定で18か月保存 | Microsoft Purviewの保持ポリシーで管理 | 権限と秘密度ラベルを継承。Purviewとコンテンツ検索で記録を確認 |
+| Gemini（Google Workspaceの対象エディション） | 履歴がオンなら学習に使われ、人のレビューを受けた会話は最長3年残る | Geminiアプリは3・18・36か月から選び既定18か月。Workspaceのアプリ内は90日から無期限 | 監査ログ。Vaultでメッセージの保持・検索・書き出し。生成した文をGmailやドキュメントに入れるとDLPが働く |
+| Microsoft Copilot（Entra IDの組織アカウント） | 個人のMicrosoftアカウントでも、2026年8月18日以降の新しいCopilotアプリはプロンプト・応答・ファイルを基礎モデルの学習に使わない（旧版のアプリはオプトアウト制で、会話は既定で18か月保存） | Microsoft Purviewの保持ポリシーで管理 | 権限と秘密度ラベルを継承。Purviewとコンテンツ検索で記録を確認 |
 
 <figure class="post-figure"><img src="/media/images/genai-data-leak/dl_04_workspace_retention.png" alt="Google Workspaceの生成AIに関するプライバシーハブの保持期間の表。Gemini in Workspaceは90日から無期限、Geminiアプリは最大36か月で、どちらも管理者が設定する" loading="lazy"><figcaption>Google Workspace の生成 AI に関するプライバシー ハブ（2026年11月23日）</figcaption></figure>
 
@@ -78,11 +78,13 @@ cta: ai_agent
 
 ### 評価ボタンを押した会話の扱い
 
-ChatGPTのBusiness・Enterprise・Eduでは、回答への高評価・低評価を送っても会話を学習に使う許可にはならず、管理者は［回答へのフィードバックを許可］でボタンそのものを止められます。ClaudeのTeam・Enterpriseでは、評価ボタンやバグ報告で送った会話は訓練に使われることがあり、5年間保存されます。**Claudeを法人で入れるなら、組織設定の［データとプライバシー］にある［チャットを評価］を無効にするかを最初に決めておくのが安全です。**Google WorkspaceとMicrosoft Copilotは、フィードバックを製品の改善に使うものの生成AIの基盤となるモデルの学習には使わないとしています。
+ChatGPTのBusiness・Enterprise・Eduでは、回答への高評価・低評価を送っても会話を学習に使う許可にはならず、管理者は［回答へのフィードバックを許可］でボタンそのものを止められます。ClaudeのTeam・Enterpriseでは、評価ボタンやバグ報告で送った会話は訓練に使われることがあり、保存期間は5年間です。**Claudeを法人で入れるなら、組織設定の［データとプライバシー］にある［チャットを評価］を無効にするかを最初に決めておくのが安全です。**Google WorkspaceとMicrosoft Copilotは、フィードバックを製品の改善に使うものの生成AIの基盤となるモデルの学習には使わないとしています。ただしWorkspaceでは、送信画面のチェックを外さないと、プロンプトと参照した文書・メール、生成した文もGoogleに送られ、最長18か月保持されることがある点に注意が必要です。
 
 ### 管理者に見える範囲
 
-ChatGPT Businessのワークスペース管理者は、メンバーの会話履歴を閲覧・書き出し・削除できます。Microsoft Copilotの会話も、管理者がPurviewやコンテンツ検索で確認できる記録として保存されます。一方でGoogle WorkspaceのGeminiは、ドキュメントなどのサイドパネルでの会話が本人にしか表示されず、共同編集者からは見えません。**会社の契約に切り替えるときは、管理者が会話を確認できるかを社員に先に伝えておくと、私的な相談を業務のアカウントに書き込むことを避けられます。**
+ChatGPT BusinessはOpenAIのページどうしで書き方が分かれています。エンタープライズプライバシーのページのBusinessのFAQは、ワークスペース管理者が会話履歴を閲覧・エクスポート・削除できるとしています。一方でヘルプ（データ共有とプライバシーの管理）には、管理者がすべてのユーザーチャットを閲覧できるかとの問いに「いいえ」とあり、各ユーザーの履歴は各自のもので、オーナーがメンバーのデータをエクスポートできるという説明です。Microsoft Copilotの会話は、管理者がPurviewやコンテンツ検索で確認できる記録として保存されます。
+
+Google WorkspaceのGeminiは、ドキュメントなどのサイドパネルでの会話が本人にしか表示されず、共同編集者からは見えません。ただし管理者はVaultで、Geminiアプリのメッセージを保持・検索・書き出しの対象にできる点は別の話です。**会社の契約に切り替えるときは、管理者が会話を確認できるかを社員に先に伝えておくと、私的な相談を業務のアカウントに書き込むことを避けられます。**
 
 ### Workspaceの約束はエディションが条件
 
@@ -96,7 +98,7 @@ desc: 会社契約のChatGPTの料金と、学習に使われない設定、管�
 
 ## 生成AIの情報漏洩対策は何をする？
 
-**4つの経路をそれぞれ塞ぐ対策に、記録の残し方を加えた5つが基本です。**社内ルールは土台になりますが、ルールで塞げるのは入力の経路の一部で、アカウント・不具合・社内データの経路は設定と契約の選び方で塞ぎます。ルールの条文の作り方は[企業の生成AIガイドラインの作り方](/media/genai-guideline/)にまとめました。
+**4つの経路をそれぞれ対策する方法に、記録の残し方を加えた5つが基本です。**社内ルールは土台になりますが、ルールで対策できるのは入力の経路の一部で、アカウント・不具合・社内データの経路は設定と契約の選び方で対策します。ルールの条文の作り方は[企業の生成AIガイドラインの作り方](/media/genai-guideline/)にまとめました。
 
 <figure class="post-figure"><img src="/media/images/genai-data-leak/dl_02_measures.png" alt="4つの経路ごとの塞ぎ方と記録の残し方。入力は会社の契約と入力禁止の情報、アカウントはSSOと多要素認証、不具合は提供元の公表と認証、社内データは共有設定の見直し、記録はログと保存期間" loading="lazy"></figure>
 
@@ -110,7 +112,7 @@ desc: 会社契約のChatGPTの料金と、学習に使われない設定、管�
 
 ### ③ アカウントを守る
 
-**会社のIDでログインするSSOと多要素認証で、乗っ取りの経路を塞ぎます。**SSOはChatGPT Business・Claude Team以上で使え、Google WorkspaceとMicrosoft Copilotは会社のアカウントそのものです。Group-IBも乗っ取りの対策として、パスワードの定期的な変更と2段階認証を挙げています。退職や異動のときにAIのアカウントだけ残ると、過去の会話を持ち出せる状態のままです。人事の手続きにアカウントの削除を組み込むか、社員の追加と削除をIDの管理から自動で反映するSCIMを使える契約（ChatGPT Enterprise・Claude Enterprise）を選びます。
+**会社のIDでログインするSSOと多要素認証で、乗っ取りの経路に対策します。**SSOはChatGPT Business・Claude Team以上で使え、Google WorkspaceとMicrosoft Copilotは会社のアカウントそのものです。Group-IBも乗っ取りの対策として、パスワードの定期的な変更と2段階認証を挙げています。退職や異動のときにAIのアカウントだけ残ると、過去の会話を持ち出せる状態のままです。人事の手続きにアカウントの削除を組み込むか、社員の追加と削除をIDの管理から自動で反映するSCIMを使える契約（ChatGPT Enterprise・Claude Enterprise）を選びます。
 
 ### ④ 社内データとつなぐ前に権限を見直す
 
@@ -131,7 +133,7 @@ desc: 会社契約のChatGPTの料金と、学習に使われない設定、管�
 - 不正の目的をもった行為によるおそれがある
 - 本人の数が1,000人を超える
 
-報告は発覚したら速やかに行い、不正の目的によるおそれがある場合の確報は発覚日から60日以内です。**AIへの入力がそもそも漏えい等に当たるかは契約や状況で変わるため、法務と確認し、判断に迷えば専門家に相談します。**報告した社員を責める運用にすると隠されやすくなるため、早く報告した場合の扱いを社内ルールに書いておくと初動が早くなります。
+報告は発覚したら速やかに行います。確報は発覚日から30日以内（不正の目的によるおそれがある場合は60日以内）です。**AIへの入力がそもそも漏えい等に当たるかは契約や状況で変わるため、法務と確認し、判断に迷えば専門家に相談します。**報告した社員を責める運用にすると隠されやすくなるため、早く報告した場合の扱いを社内ルールに書いておくと初動が早くなります。
 
 ## 社内の業務にAIエージェントを入れる場合
 
@@ -154,7 +156,7 @@ desc: ノーコード・既製の基盤・コードの3通りの作り方と、�
 
 ### ChatGPTの法人プランは入力を学習しますか？
 
-既定では学習に使われません。OpenAIはBusiness・Enterprise・Eduの入力と出力をモデルの改善に使わないとしており、回答に評価を送っても学習の許可にはなりません。ただし会話は保存され、Businessではワークスペース管理者がメンバーの会話を閲覧できます。
+既定では学習に使われません。OpenAIはBusiness・Enterprise・Eduの入力と出力をモデルの改善に使わないとしており、回答に評価を送っても学習の許可にはなりません。ただし会話は保存され、Businessでは管理者が見える範囲の書き方がOpenAIのページで分かれています（詳しくは「管理者に見える範囲」の節）。
 
 ### ChatGPTの無料版は学習オフで業務に使えますか？
 
@@ -182,22 +184,26 @@ OpenAIとAnthropicはAPIの入力を既定で学習に使わないとしてい�
 
 ## 出典
 
-- IPA「[情報セキュリティ10大脅威 2026](https://www.ipa.go.jp/security/10threats/10threats2026.html)」（2026年1月29日公開、2026年11月23日取得）
-- 個人情報保護委員会「[生成AIサービスの利用に関する注意喚起等について](https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/)」（2023年6月2日公表、同日取得）
-- 個人情報保護委員会「[漏えい等報告・本人への通知の義務化について](https://www.ppc.go.jp/personalinfo/legal/leakAction/)」（同日取得）
-- 総務省・経済産業省「[AI事業者ガイドライン（第1.2版）](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html)」（2026年3月31日公表）
-- OpenAI「[OpenAI におけるエンタープライズプライバシー](https://openai.com/ja-JP/enterprise-privacy/)」（2026年1月8日更新、同日取得）
-- OpenAI ヘルプセンター「[モデルのパフォーマンスを向上させるためのデータの使用方法](https://help.openai.com/ja-jp/articles/5722486)」（同日取得）
+取得はいずれも2026年11月23日です。
+
+- IPA「[情報セキュリティ10大脅威 2026](https://www.ipa.go.jp/security/10threats/10threats2026.html)」（2026年1月29日公開）
+- 個人情報保護委員会「[生成AIサービスの利用に関する注意喚起等について](https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/)」（2023年6月2日公表）
+- 個人情報保護委員会「[漏えい等報告・本人への通知の義務化について](https://www.ppc.go.jp/personalinfo/legal/leakAction/)」
+- OpenAI「[OpenAI におけるエンタープライズプライバシー](https://openai.com/ja-JP/enterprise-privacy/)」（2026年1月8日更新）
+- OpenAI ヘルプセンター「[ChatGPT Business でのデータ共有とプライバシーの管理](https://help.openai.com/ja-jp/articles/8798634-managing-data-sharing-and-privacy-in-chatgpt-business)」
+- OpenAI ヘルプセンター「[モデルのパフォーマンスを向上させるためのデータの使用方法](https://help.openai.com/ja-jp/articles/5722486)」
 - OpenAI「[March 20 ChatGPT outage: Here's what happened](https://openai.com/index/march-20-chatgpt-outage/)」（2023年3月24日）
-- Anthropic プライバシーセンター「[私のデータはモデルトレーニングに使用されていますか？（商用製品）](https://privacy.claude.com/ja/articles/7996868)」（同日取得）
-- Anthropic プライバシーセンター「[私のデータはモデルトレーニングに使用されていますか？（消費者向け製品）](https://privacy.claude.com/ja/articles/10023580)」（同日取得）
-- Anthropic プライバシーセンター「[組織のデータはどのくらいの期間保存されますか？](https://privacy.claude.com/ja/articles/7996866)」（同日取得）
-- Anthropic「[Claudeの料金プラン](https://claude.com/ja-jp/pricing)」（同日取得）
-- Google「[Google Workspace の生成 AI に関するプライバシー ハブ](https://support.google.com/a/answer/15706919?hl=ja)」（2026年10月6日更新、同日取得）
-- Google「[Gemini アプリのプライバシー ハブ](https://support.google.com/gemini/answer/13594961?hl=ja)」（2026年11月17日更新、同日取得）
-- Microsoft Learn「[Microsoft Copilot および Microsoft Copilot Chat におけるエンタープライズ データ保護](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/enterprise-data-protection)」（2026年11月5日更新、同日取得）
-- Microsoft Learn「[Microsoft Copilot のデータ、プライバシー、セキュリティ](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-privacy)」（同日取得）
-- Microsoft サポート「[Microsoft Copilot のプライバシーに関する FAQ](https://support.microsoft.com/ja-jp/topic/microsoft-copilot-%E3%81%AE%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B-faq-27b3a435-8dc9-4b55-9a4b-58eeb9647a7f)」（同日取得）
+- Anthropic プライバシーセンター「[私のデータはモデルトレーニングに使用されていますか？（商用製品）](https://privacy.claude.com/ja/articles/7996868)」
+- Anthropic プライバシーセンター「[私のデータはモデルトレーニングに使用されていますか？（消費者向け製品）](https://privacy.claude.com/ja/articles/10023580)」
+- Anthropic プライバシーセンター「[組織のデータはどのくらいの期間保存されますか？](https://privacy.claude.com/ja/articles/7996866)」
+- Anthropic「[Claudeの料金プラン](https://claude.com/ja-jp/pricing)」
+- Google「[Google Workspace の生成 AI に関するプライバシー ハブ](https://support.google.com/a/answer/15706919?hl=ja)」（2026年10月6日更新）
+- Google「[Gemini アプリのプライバシー ハブ](https://support.google.com/gemini/answer/13594961?hl=ja)」（2026年11月17日更新）
+- Microsoft Learn「[Microsoft Copilot および Microsoft Copilot Chat におけるエンタープライズ データ保護](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/enterprise-data-protection)」（2026年11月5日更新）
+- Microsoft Learn「[Microsoft Copilot のデータ、プライバシー、セキュリティ](https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-privacy)」
+- Microsoft サポート「[Microsoft Copilot のプライバシーに関する FAQ](https://support.microsoft.com/ja-jp/topic/microsoft-copilot-%E3%81%AE%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B-faq-27b3a435-8dc9-4b55-9a4b-58eeb9647a7f)」
+- Microsoft サポート「[個人向け Microsoft Copilot: アクティビティの履歴](https://support.microsoft.com/ja-jp/privacy/microsoft-copilot/activity-history)」
 - Group-IB「[Group-IB Discovers 100K+ Compromised ChatGPT Accounts on Dark Web Marketplaces](https://www.group-ib.com/media-center/press-releases/stealers-chatgpt-credentials/)」（2023年6月20日）
 - Wiz「[38TB of data accidentally exposed by Microsoft AI researchers](https://www.wiz.io/blog/38-terabytes-of-private-data-accidentally-exposed-by-microsoft-ai-researchers)」（2023年9月）
+- Bloomberg「[Samsung Bans ChatGPT and Other Generative AI Use by Staff After Leak](https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak)」（2023年5月2日）
 - TechCrunch「[Samsung bans use of generative AI tools like ChatGPT after April internal data leak](https://techcrunch.com/2023/05/02/samsung-bans-use-of-generative-ai-tools-like-chatgpt-after-april-internal-data-leak/)」（2023年5月2日）
