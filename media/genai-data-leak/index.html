@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】生成AIの情報漏洩対策・漏れる4つの経路と法人プランで変わる学習と管理｜株式会社nito</title>
+    <meta name="description" content="生成AIの情報漏洩対策を、漏れる4つの経路と公表された事例、ChatGPT・Claude・Gemini・Copilotの法人プランと個人プランで変わる学習・保存・管理者の制御まで各社の公式の記載で解説します。">
+    <link rel="canonical" href="https://nito-0210.com/media/genai-data-leak/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】生成AIの情報漏洩対策・漏れる4つの経路と法人プランで変わる学習と管理">
+    <meta property="og:description" content="生成AIの情報漏洩対策を、漏れる4つの経路と公表された事例、ChatGPT・Claude・Gemini・Copilotの法人プランと個人プランで変わる学習・保存・管理者の制御まで各社の公式の記載で解説します。">
+    <meta property="og:url" content="https://nito-0210.com/media/genai-data-leak/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/genai-data-leak.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/genai-data-leak.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】生成AIの情報漏洩対策・漏れる4つの経路と法人プランで変わる学習と管理", "description": "生成AIの情報漏洩対策を、漏れる4つの経路と公表された事例、ChatGPT・Claude・Gemini・Copilotの法人プランと個人プランで変わる学習・保存・管理者の制御まで各社の公式の記載で解説します。", "datePublished": "2026-11-23", "dateModified": "2026-11-23", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では、AI経由のコンバージョンを5ヶ月で約6.7倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/genai-data-leak/"}, "articleSection": "AI活用", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/genai-data-leak.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】生成AIの情報漏洩対策・漏れる4つの経路と法人プランで変わる学習と管理"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTの法人プランは入力を学習しますか？", "acceptedAnswer": {"@type": "Answer", "text": "既定では学習に使われません。OpenAIはBusiness・Enterprise・Eduの入力と出力をモデルの改善に使わないとしており、回答に評価を送っても学習の許可にはなりません。ただし会話は保存され、Businessでは管理者が見える範囲の書き方がOpenAIのページで分かれています（詳しくは「管理者に見える範囲」の節）。"}}, {"@type": "Question", "name": "ChatGPTの無料版は学習オフで業務に使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "学習は止まりますが、会社から設定を確認する手段はありません。オフにしても、評価ボタンを押した会話は学習に使われることがあります。業務で使うなら、会社の契約に寄せる方が管理の面で確実です。設定の切り方は[ChatGPTに学習させない設定方法](/media/chatgpt-training-off/)で解説しています。"}}, {"@type": "Question", "name": "Claude Teamの評価ボタンは学習に使われますか？", "acceptedAnswer": {"@type": "Answer", "text": "使われることがあります。Anthropicは評価ボタンやバグ報告で送った会話を訓練に使う場合があり、保存期間は5年間です。オーナーは組織設定の［チャットを評価］で、メンバーが評価を送る機能を無効にできます。"}}, {"@type": "Question", "name": "WorkspaceのGeminiの会話は人に見られますか？", "acceptedAnswer": {"@type": "Answer", "text": "対象エディションで使う場合、人によるレビューは行われず、許可なくドメイン外で学習に使われることもありません。個人のGoogleアカウントのGeminiでは、人間のレビュアーが会話の一部を確認し、確認した会話は最長3年保存されます。"}}, {"@type": "Question", "name": "Copilotは社内のどのファイルを読みますか？", "acceptedAnswer": {"@type": "Answer", "text": "利用者が少なくとも表示の権限を持つファイルやメールだけを回答の材料にします。権限のないファイルは使いませんが、全社に公開されたファイルは誰が質問しても使われるため、共有設定の見直しが先に必要です。"}}, {"@type": "Question", "name": "生成AIに入力した内容は削除すればすぐ消えますか？", "acceptedAnswer": {"@type": "Answer", "text": "画面からはすぐ消えても、提供元のシステムから消えるまでには時間がかかります。ChatGPTとClaudeの公式の説明では、削除した会話がシステムから消えるのは30日以内です。個人のGeminiで人のレビューを受けた会話や、Claudeで評価を送った会話はさらに長く残ります。"}}, {"@type": "Question", "name": "APIで使えば情報漏洩は防げますか？", "acceptedAnswer": {"@type": "Answer", "text": "OpenAIとAnthropicはAPIの入力を既定で学習に使わないとしていますが、不正利用の監視のために最大30日保持します。条件を満たせば、データを保持しない契約を相談することも可能です。自社で組んだアプリの権限設定やプロンプトインジェクションへの備えは、組む側の責任になります。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=c1e3c5ad">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/llmo/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】生成AIの情報漏洩対…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI活用</span>
+            <span class="post-date">2026.11.23</span>
+        </div>
+        <h1 class="post-title">【2026年11月】生成AIの情報漏洩対策・漏れる4つの経路と法人プランで変わる学習と管理</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/genai-data-leak.jpg" alt="【2026年11月】生成AIの情報漏洩対策・漏れる4つの経路と法人プランで変わる学習と管理" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>生成AIの情報漏洩対策の中心は、業務で使うAIを会社の契約にまとめることです。そのうえで入力してはいけない情報を決め、アカウントと社内データの権限を絞ります。法人プランでも、評価ボタンで送った会話の扱いや保存期間、管理者に見える範囲は製品ごとに違います。</p>
+<p>この記事では漏れる4つの経路と公表された事例、ChatGPT・Claude・Gemini・Microsoft Copilotの法人プランと個人プランの違い、具体的な対策と誤って入力したときの対応を解説します。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li>漏れる経路は入力した内容・アカウント・サービス側の不具合・社内データとの連携の4つ</li>
+<li>4製品とも法人向けの契約は既定で学習に使わない。違いが出るのは評価ボタンの扱い・保存期間・管理者の制御</li>
+<li>ルールで対策できるのは入力の経路の一部。アカウントと権限は設定と契約で対策する</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>生成AIで情報漏洩は起こる？</a></li>
+                    <li class="toc-h3"><a href="#s1-1"><span class="toc__n">1-1</span>① 入力した内容がサービス側に残る</a></li>
+                    <li class="toc-h3"><a href="#s1-2"><span class="toc__n">1-2</span>② アカウントの乗っ取り</a></li>
+                    <li class="toc-h3"><a href="#s1-3"><span class="toc__n">1-3</span>③ サービス側の不具合</a></li>
+                    <li class="toc-h3"><a href="#s1-4"><span class="toc__n">1-4</span>④ 社内データにつながるAI</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>公表された生成AIの情報漏洩の事例</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>法人プランと個人プランで何が変わる？</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>評価ボタンを押した会話の扱い</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>管理者に見える範囲</a></li>
+                    <li class="toc-h3"><a href="#s3-3"><span class="toc__n">3-3</span>Workspaceの約束はエディションが条件</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>生成AIの情報漏洩対策は何をする？</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>① 業務で使うAIを会社の契約に寄せる</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>② 入力してはいけない情報を決める</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>③ アカウントを守る</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>④ 社内データとつなぐ前に権限を見直す</a></li>
+                    <li class="toc-h3"><a href="#s4-5"><span class="toc__n">4-5</span>⑤ ログと保存期間を決める</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>誤って入力したときはどうする？</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>社内の業務にAIエージェントを入れる場合</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">生成AIで情報漏洩は起こる？</h2>
+<p>起こります。IPAの情報セキュリティ10大脅威 2026では、組織向けの順位でランサム攻撃・サプライチェーン攻撃に次ぐ3位に、AIの利用をめぐるサイバーリスクが今回初めて選ばれました。<strong>漏れる経路は入力した内容・アカウント・サービス側の不具合・社内データとの連携の4つに分けられます。</strong>どの経路を対策するかで打つ手が変わるので、対策の優先順位も経路から決めるのが近道です。</p>
+<figure class="post-figure"><img src="/media/images/genai-data-leak/dl_01_routes.png" alt="生成AIから情報が漏れる4つの経路。入力した内容、アカウント、サービス側の不具合、社内データとの連携" loading="lazy"></figure>
+
+<h3 id="s1-1">① 入力した内容がサービス側に残る</h3>
+<p>チャットに貼った文書は提供元のサーバーに送られ、プランと設定によっては学習や人によるレビューに使われます。個人向けのChatGPTは設定をオフにしない限り会話が学習に使われることがあり、個人のGeminiでは人間のレビュアーが会話の一部を確認し、確認した会話は履歴を消しても最長3年残ります。<strong>社外に出してはいけない情報が会社の管理の外に保存されること自体が問題になります。</strong></p>
+<figure class="post-figure"><img src="/media/images/genai-data-leak/dl_03_gemini_privacy.png" alt="Geminiアプリのプライバシーハブで、レビュアーに見られたくない機密情報は入力しないよう案内している箇所" loading="lazy"><figcaption>Gemini アプリのプライバシー ハブ（2026年11月23日）</figcaption></figure>
+
+<p>個人データが含まれる場合は法律の問題にもつながるため、注意が必要です。個人情報保護委員会の2023年6月2日の注意喚起は、本人の同意なく個人データを含むプロンプトを入力し、それが応答の出力以外の目的で扱われた場合に「個人情報保護法の規定に違反することとなる可能性がある」としています。そのうえで事業者に求めているのは、提供元が「当該個人データを機械学習に利用しないこと等を十分に確認すること」です。</p>
+<h3 id="s1-2">② アカウントの乗っ取り</h3>
+<p>会話の履歴はアカウントに残るので、IDとパスワードを盗まれると過去に入力した内容がまとめて見られます。シンガポールのセキュリティ企業Group-IBは2023年6月、ChatGPTのログイン情報を保存したまま情報窃取型マルウェアに感染した端末を10万1,134台見つけたと発表しました。<strong>提供元が侵害されていなくても、社員の端末とパスワードの管理から漏れる経路です。</strong></p>
+<h3 id="s1-3">③ サービス側の不具合</h3>
+<p>提供元のシステムの不具合で、他の利用者の情報が見えてしまうこともあります。2023年3月のChatGPTでは、オープンソースのライブラリのバグで別の利用者のチャット履歴のタイトルが表示され、有料会員の一部の支払い情報も見える状態になりました。利用する会社の側では防げないため、<strong>提供元が障害をどう公表し、どの第三者認証を受けているかが選ぶときの材料</strong>になります。</p>
+<h3 id="s1-4">④ 社内データにつながるAI</h3>
+<p>社内のファイルやメールにつながるAIは、本人が閲覧できるものを回答の材料に使います。Microsoftの説明では、Copilotは利用者が少なくとも表示の権限を持つ組織のデータだけを表示するため、SharePointなどの権限を適切に設定することが重要だとされています。Google WorkspaceのGeminiも、ユーザーがアクセスできない文書は取得しない仕組みです。<strong>裏を返すと、全社に公開されたままの人事や見積もりのファイルは、AIに質問した社員の画面に出てくる可能性があります。</strong></p>
+<p>外部のWebページや受け取ったファイルに紛れ込ませた指示でAIを操作するプロンプトインジェクションも、この経路で起きます。メールやドライブとつながる範囲が広いほど、引き出される情報の範囲も広くなるのが特徴です。</p>
+<h2 id="s2">公表された生成AIの情報漏洩の事例</h2>
+<p>会社やセキュリティ企業が公表した事例を前の節の経路に当てはめると、4つとも経路が違います。<strong>入力ルールだけ、製品選びだけでは防げなかった事例が混ざっている</strong>点が読み取れます。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>公表</th>
+<th>何が起きたか</th>
+<th>経路</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="公表">2023年3月 OpenAI</td>
+<td data-label="何が起きたか">ライブラリのバグで、特定の約9時間に利用していたChatGPT Plus会員の約1.2%について、氏名・メールアドレス・支払先住所・カードの種類と下4桁・有効期限が他の会員から見えた可能性がある</td>
+<td data-label="経路">③ 不具合</td>
+</tr>
+<tr>
+<td data-label="公表">2023年5月 サムスン電子（報道）</td>
+<td data-label="何が起きたか">社員が機密のコードをChatGPTにアップロードしていたことが分かり、社用端末での生成AIの利用を一時的に制限した</td>
+<td data-label="経路">① 入力</td>
+</tr>
+<tr>
+<td data-label="公表">2023年6月 Group-IB</td>
+<td data-label="何が起きたか">ChatGPTの認証情報を保存した感染端末が10万1,134台。闇市場のログは2023年5月に2万6,802件で最多だった</td>
+<td data-label="経路">② アカウント</td>
+</tr>
+<tr>
+<td data-label="公表">2023年9月 Wiz</td>
+<td data-label="何が起きたか">MicrosoftのAI研究チームが学習用のデータを共有するリンクの権限を広く設定し、端末のバックアップやパスワード、Teamsのメッセージを含む約38TBが閲覧できる状態だった</td>
+<td data-label="経路">④に近い（共有の権限）</td>
+</tr>
+</tbody>
+</table></div>
+<p>サムスン電子の件は社員が誤って入力したものでした。OpenAIの件は利用者に落ち度がなく、提供元が原因の特定と影響を受けた可能性のある会員への連絡を行っています。Microsoftの件はAIの回答から漏れたのではなく、AIの開発に使うデータの共有設定から漏れたもので、権限の設定を誤ると被害の規模が大きくなることを示しています。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社で AI を使っている方へ</p>
+<p class="mcta__ttl">毎日くり返す作業を毎回チャットで頼んでいませんか</p>
+<p class="mcta__txt">日報の集計や議事録の整理のように毎日くり返す作業は、チャットで頼まなくても動く AI エージェントにできます。nito は業務の棚卸しから構築・運用まで一緒に進めます。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/ai-agent/">AIエージェント構築の進め方を見る</a><a class="mcta__link" href="/contact.html">無料で業務棚卸しを相談</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-msg"><div class="ui-av">田</div><div><div class="ui-name">田中<span>9:12</span></div>A社との商談メモ、Driveに上げました。次回は来週火曜です。</div></div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div><div class="ui-name">nito AI<span>22:00</span></div>提案1枚と想定質問を仕上げました。朝に確認だけお願いします。
+<div class="ui-card"><b>次回商談の準備（自動作成）</b>前回の宿題3件の進捗<br>物流部門向けの提案1枚<br>想定質問と回答</div></div></div>
+</div>
+</div>
+
+<h2 id="s3">法人プランと個人プランで何が変わる？</h2>
+<p><strong>大きく変わるのは入力が学習に使われるかの既定と、管理者が持てる制御です。</strong>ChatGPT・Claude・Gemini・Microsoft Copilotの4製品とも、法人向けの契約では入力を既定でモデルの学習に使わないと公式に書いています。ChatGPT・Claude・Geminiの個人向けは本人の設定しだいで、会社からは設定が守られているかを確認できません。2026年11月23日に各社の公式ページで確認した違いを並べました。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>製品（法人向けの契約）</th>
+<th>個人向けでの学習と人の確認</th>
+<th>法人向けの保存期間</th>
+<th>管理者の制御</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="製品（法人向けの契約）">ChatGPT（Business・Enterprise）</td>
+<td data-label="個人向けでの学習と人の確認">Free・Plus・Proは設定をオフにしない限り学習に使われることがある</td>
+<td data-label="法人向けの保存期間">管理者が保持期間を設定（カスタムの保持ポリシーはEnterprise）。削除した会話は30日以内に消去</td>
+<td data-label="管理者の制御">SAML SSO。Businessは管理者が会話を閲覧・書き出し・削除できるとするページと、全ユーザーのチャットは閲覧できないとするヘルプがあり書き方が分かれる。EnterpriseはCompliance APIで監査ログ</td>
+</tr>
+<tr>
+<td data-label="製品（法人向けの契約）">Claude（Team・Enterprise）</td>
+<td data-label="個人向けでの学習と人の確認">Free・Pro・Max・Ultraは本人がオプトアウトを選ぶ</td>
+<td data-label="法人向けの保存期間">会話は製品内に保持し、削除すると30日以内にバックエンドから消える。保持期間を独自に決められるのはEnterprise</td>
+<td data-label="管理者の制御">TeamはSSOとコネクタの管理。Enterpriseは監査ログ・SCIM・IP許可リスト</td>
+</tr>
+<tr>
+<td data-label="製品（法人向けの契約）">Gemini（Google Workspaceの対象エディション）</td>
+<td data-label="個人向けでの学習と人の確認">履歴がオンなら学習に使われ、人のレビューを受けた会話は最長3年残る</td>
+<td data-label="法人向けの保存期間">Geminiアプリは3・18・36か月から選び既定18か月。Workspaceのアプリ内は90日から無期限</td>
+<td data-label="管理者の制御">監査ログ。Vaultでメッセージの保持・検索・書き出し。生成した文をGmailやドキュメントに入れるとDLPが働く</td>
+</tr>
+<tr>
+<td data-label="製品（法人向けの契約）">Microsoft Copilot（Entra IDの組織アカウント）</td>
+<td data-label="個人向けでの学習と人の確認">個人のMicrosoftアカウントでも、2026年8月18日以降の新しいCopilotアプリはプロンプト・応答・ファイルを基礎モデルの学習に使わない（旧版のアプリはオプトアウト制で、会話は既定で18か月保存）</td>
+<td data-label="法人向けの保存期間">Microsoft Purviewの保持ポリシーで管理</td>
+<td data-label="管理者の制御">権限と秘密度ラベルを継承。Purviewとコンテンツ検索で記録を確認</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="post-figure"><img src="/media/images/genai-data-leak/dl_04_workspace_retention.png" alt="Google Workspaceの生成AIに関するプライバシーハブの保持期間の表。Gemini in Workspaceは90日から無期限、Geminiアプリは最大36か月で、どちらも管理者が設定する" loading="lazy"><figcaption>Google Workspace の生成 AI に関するプライバシー ハブ（2026年11月23日）</figcaption></figure>
+
+<p>表の4製品はどれも、保存時と通信時の暗号化とSOC 2などの第三者認証を公表しているため、ここでは差がつきません。<strong>選ぶときに差が出るのは例外の扱いと、管理者がどこまで記録を握れるかです。</strong></p>
+<h3 id="s3-1">評価ボタンを押した会話の扱い</h3>
+<p>ChatGPTのBusiness・Enterprise・Eduでは、回答への高評価・低評価を送っても会話を学習に使う許可にはならず、管理者は［回答へのフィードバックを許可］でボタンそのものを止められます。ClaudeのTeam・Enterpriseでは、評価ボタンやバグ報告で送った会話は訓練に使われることがあり、保存期間は5年間です。<strong>Claudeを法人で入れるなら、組織設定の［データとプライバシー］にある［チャットを評価］を無効にするかを最初に決めておくのが安全です。</strong>Google WorkspaceとMicrosoft Copilotは、フィードバックを製品の改善に使うものの生成AIの基盤となるモデルの学習には使わないとしています。ただしWorkspaceでは、送信画面のチェックを外さないと、プロンプトと参照した文書・メール、生成した文もGoogleに送られ、最長18か月保持されることがある点に注意が必要です。</p>
+<h3 id="s3-2">管理者に見える範囲</h3>
+<p>ChatGPT BusinessはOpenAIのページどうしで書き方が分かれています。エンタープライズプライバシーのページのBusinessのFAQは、ワークスペース管理者が会話履歴を閲覧・エクスポート・削除できるとしています。一方でヘルプ（データ共有とプライバシーの管理）には、管理者がすべてのユーザーチャットを閲覧できるかとの問いに「いいえ」とあり、各ユーザーの履歴は各自のもので、オーナーがメンバーのデータをエクスポートできるという説明です。Microsoft Copilotの会話は、管理者がPurviewやコンテンツ検索で確認できる記録として保存されます。</p>
+<p>Google WorkspaceのGeminiは、ドキュメントなどのサイドパネルでの会話が本人にしか表示されず、共同編集者からは見えません。ただし管理者は、Vaultを含むエディションならGeminiアプリのメッセージを保持・検索・書き出しできます。<strong>会社の契約に切り替えるときは、管理者が会話を確認できるかを社員に先に伝えておくと、私的な相談を業務のアカウントに書き込むことを避けられます。</strong></p>
+<h3 id="s3-3">Workspaceの約束はエディションが条件</h3>
+<p>Googleのプライバシーハブにある「人によるレビューをしない」「許可なく学習に使わない」は、Google Workspaceの対象エディションでGeminiを使う場合に限った約束です。仕事用のアカウントでも対象外のエディションでは別の規約になるため、契約中のエディションを管理コンソールで確認してから社員に開放します。エディションごとの条件は<a href="/media/google-workspace-gemini/">Google WorkspaceのGemini</a>で解説しています。</p>
+<div class="in-link-card"><a href="/media/chatgpt-business/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">ChatGPT Businessとは？料金とPlusとの違い</div><div class="in-link-card__desc">会社契約のChatGPTの料金と、学習に使われない設定、管理者の権限を解説しています。</div></div></a></div>
+<h2 id="s4">生成AIの情報漏洩対策は何をする？</h2>
+<p><strong>4つの経路をそれぞれ対策する方法に、記録の残し方を加えた5つが基本です。</strong>社内ルールは土台になりますが、ルールで対策できるのは入力の経路の一部で、アカウント・不具合・社内データの経路は設定と契約の選び方で対策します。ルールの条文の作り方は<a href="/media/genai-guideline/">企業の生成AIガイドラインの作り方</a>にまとめました。</p>
+<figure class="post-figure"><img src="/media/images/genai-data-leak/dl_02_measures.png" alt="4つの経路ごとの塞ぎ方と記録の残し方。入力は会社の契約と入力禁止の情報、アカウントはSSOと多要素認証、不具合は提供元の公表と認証、社内データは共有設定の見直し、記録はログと保存期間" loading="lazy"></figure>
+
+<h3 id="s4-1">① 業務で使うAIを会社の契約に寄せる</h3>
+<p><strong>個人の設定は会社から確認できないため、業務の利用は管理者のいる契約に寄せます。</strong>個人情報保護委員会が求める「機械学習に利用しないこと等」の確認も、会社の契約なら利用規約やデータ処理の補遺（DPA）で示せます。OpenAIはBusiness・EnterpriseとAPIについてDPAを結べると案内しています。次にやることは、使う製品を1〜2個に絞り、契約の種類とGoogle Workspaceならエディションを確認することです。社員が個人のアカウントで使い続けている場合の移し方は<a href="/media/shadow-ai/">シャドーAI対策</a>で扱っています。</p>
+<h3 id="s4-2">② 入力してはいけない情報を決める</h3>
+<p>会社の契約にしても、入力した内容は提供元のサーバーに保存され、管理者からも見える場合があります。そのため<strong>学習されないことと、何を入れてもよいことは別に扱います。</strong>入力を禁じる対象として多いのは、顧客や社員の個人データ（特に病歴などの要配慮個人情報）、取引先から秘密保持契約で受け取った情報、パスワードやAPIキーなどの認証情報、公表前の決算やM&amp;Aの情報です。名前を記号に置き換えれば使える文書も多いので、置き換えの例を1つ添えると現場で迷いません。周知の方法として研修を使う場合は、<a href="/media/genai-training-companies/">法人向け生成AI研修の比較</a>が参考になります。</p>
+<h3 id="s4-3">③ アカウントを守る</h3>
+<p><strong>会社のIDでログインするSSOと多要素認証で、乗っ取りの経路に対策します。</strong>SSOはChatGPT Business・Claude Team以上で使え、Google WorkspaceとMicrosoft Copilotは会社のアカウントそのものです。Group-IBも乗っ取りの対策として、パスワードの定期的な変更と2段階認証を挙げています。退職や異動のときにAIのアカウントだけ残ると、過去の会話を持ち出せる状態のままです。人事の手続きにアカウントの削除を組み込むか、社員の追加と削除をIDの管理から自動で反映するSCIMを使える契約（ChatGPT Enterprise・Claude Enterprise）を選びます。</p>
+<h3 id="s4-4">④ 社内データとつなぐ前に権限を見直す</h3>
+<p><strong>AIを社内のファイルやメールにつなぐ前に、共有設定が広すぎるファイルを洗い出します。</strong>「リンクを知っている全員」や全社公開のままの人事資料・見積もり・契約書は、AIに質問した社員の回答に出てくる可能性があるためです。Google WorkspaceではIRM（ダウンロードやコピーの禁止）やクライアントサイド暗号化をかけた文書をGeminiが取得しないようにでき、Microsoft 365では秘密度ラベルでCopilotの扱いを制限できます。ChatGPTのアプリ連携も既存の権限に従い、どのアプリをつなげるかを決めるのは管理者です。次にやることは、接続を許可するアプリを管理者が一覧にして、それ以外を止めることです。</p>
+<h3 id="s4-5">⑤ ログと保存期間を決める</h3>
+<p><strong>どのログを誰がどの頻度で確認するかまで決めておくと、事故に早く気づけます。</strong>監査ログはChatGPT EnterpriseのCompliance API、Claude Enterprise、Google Workspace、Microsoft Purviewで取得でき、ChatGPT Businessと Claude Teamでは取れる記録が限られます。保存期間は短いほど漏れたときの範囲が小さくなる一方、OpenAIは期間を短くすると会話履歴などの使い勝手が落ちると注意しています。業務の性質に合わせて期間を決め、決めた期間を社内ルールにも書き込んでおくのがおすすめです。</p>
+<h2 id="s5">誤って入力したときはどうする？</h2>
+<p><strong>入力に気づいたら会話を削除して社内の窓口に報告し、個人データが含まれていれば漏えい等報告の対象になるかを確認します。</strong>削除してもすぐに提供元から消えるわけではありません。ChatGPTとClaudeは削除した会話を30日以内にシステムから消すとしており、個人のGeminiで人のレビューを受けた会話や、Claudeで評価ボタンを押して送った会話は、それぞれ最長3年・5年残ります。</p>
+<p>個人情報保護委員会は次のどれかに当たる個人データの漏えい等（そのおそれを含む）を、報告の義務がある事態としています。</p>
+<ul>
+<li>要配慮個人情報が含まれる</li>
+<li>不正に利用されると財産的な被害が出るおそれがある（クレジットカード番号、送金機能のあるサービスのIDとパスワードなど）</li>
+<li>不正の目的をもった行為によるおそれがある</li>
+<li>本人の数が1,000人を超える</li>
+</ul>
+<p>報告は発覚したら速やかに行います。確報は発覚日から30日以内（不正の目的によるおそれがある場合は60日以内）です。<strong>AIへの入力がそもそも漏えい等に当たるかは契約や状況で変わるため、法務と確認し、判断に迷えば専門家に相談します。</strong>報告した社員を責める運用にすると隠されやすくなるため、早く報告した場合の扱いを社内ルールに書いておくと初動が早くなります。</p>
+<h2 id="s6">社内の業務にAIエージェントを入れる場合</h2>
+<p>メールの送信やファイルの編集をAIに任せるAIエージェントでは、④の経路がさらに広くなるため注意が必要です。Geminiアプリのプライバシーハブも、タスクを任せたAIが誤った判断をして予期しない購入や第三者とのデータ共有につながる可能性があるとして、操作を見守るよう注意しています。<strong>エージェントには業務に必要な範囲だけの権限を渡し、外部への送信や削除の手前で人が確認する設計にします。</strong>作り方と設計の考え方は<a href="/media/ai-agent-build/">AIエージェントの作り方</a>で解説しています。</p>
+<div class="in-link-card"><a href="/media/ai-agent-build/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">AIエージェントの作り方を解説</div><div class="in-link-card__desc">ノーコード・既製の基盤・コードの3通りの作り方と、動かし続けるための設計を解説しています。</div></div></a></div>
+<h2 id="s7">まとめ</h2>
+<ul>
+<li>社員が個人のアカウントで使っている会社：会社の契約を1つ用意し、個人の利用はそこへ移す</li>
+<li>法人プランをすでに契約している会社：評価ボタン・保存期間・管理者に見える範囲の3点を設定で確認し、社員に伝える</li>
+<li>Copilotや Geminiを社内データにつなぐ会社：接続の前に共有設定の広いファイルを洗い出す</li>
+<li>個人データを扱う部署：入力を禁じる情報と置き換えの例を決め、誤って入れたときの報告先を書く</li>
+</ul>
+<h2 id="s8">よくある質問</h2>
+<h3 id="s8-1">ChatGPTの法人プランは入力を学習しますか？</h3>
+<p>既定では学習に使われません。OpenAIはBusiness・Enterprise・Eduの入力と出力をモデルの改善に使わないとしており、回答に評価を送っても学習の許可にはなりません。ただし会話は保存され、Businessでは管理者が見える範囲の書き方がOpenAIのページで分かれています（詳しくは「管理者に見える範囲」の節）。</p>
+<h3 id="s8-2">ChatGPTの無料版は学習オフで業務に使えますか？</h3>
+<p>学習は止まりますが、会社から設定を確認する手段はありません。オフにしても、評価ボタンを押した会話は学習に使われることがあります。業務で使うなら、会社の契約に寄せる方が管理の面で確実です。設定の切り方は<a href="/media/chatgpt-training-off/">ChatGPTに学習させない設定方法</a>で解説しています。</p>
+<h3 id="s8-3">Claude Teamの評価ボタンは学習に使われますか？</h3>
+<p>使われることがあります。Anthropicは評価ボタンやバグ報告で送った会話を訓練に使う場合があり、保存期間は5年間です。オーナーは組織設定の［チャットを評価］で、メンバーが評価を送る機能を無効にできます。</p>
+<h3 id="s8-4">WorkspaceのGeminiの会話は人に見られますか？</h3>
+<p>対象エディションで使う場合、人によるレビューは行われず、許可なくドメイン外で学習に使われることもありません。個人のGoogleアカウントのGeminiでは、人間のレビュアーが会話の一部を確認し、確認した会話は最長3年保存されます。</p>
+<h3 id="s8-5">Copilotは社内のどのファイルを読みますか？</h3>
+<p>利用者が少なくとも表示の権限を持つファイルやメールだけを回答の材料にします。権限のないファイルは使いませんが、全社に公開されたファイルは誰が質問しても使われるため、共有設定の見直しが先に必要です。</p>
+<h3 id="s8-6">生成AIに入力した内容は削除すればすぐ消えますか？</h3>
+<p>画面からはすぐ消えても、提供元のシステムから消えるまでには時間がかかります。ChatGPTとClaudeの公式の説明では、削除した会話がシステムから消えるのは30日以内です。個人のGeminiで人のレビューを受けた会話や、Claudeで評価を送った会話はさらに長く残ります。</p>
+<h3 id="s8-7">APIで使えば情報漏洩は防げますか？</h3>
+<p>OpenAIとAnthropicはAPIの入力を既定で学習に使わないとしていますが、不正利用の監視のために最大30日保持します。条件を満たせば、データを保持しない契約を相談することも可能です。自社で組んだアプリの権限設定やプロンプトインジェクションへの備えは、組む側の責任になります。</p>
+<h2 id="s9">出典</h2>
+<p>取得はいずれも2026年11月23日です。</p>
+<ul>
+<li>IPA「<a href="https://www.ipa.go.jp/security/10threats/10threats2026.html">情報セキュリティ10大脅威 2026</a>」（2026年1月29日公開）</li>
+<li>個人情報保護委員会「<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/">生成AIサービスの利用に関する注意喚起等について</a>」（2023年6月2日公表）</li>
+<li>個人情報保護委員会「<a href="https://www.ppc.go.jp/personalinfo/legal/leakAction/">漏えい等報告・本人への通知の義務化について</a>」</li>
+<li>OpenAI「<a href="https://openai.com/ja-JP/enterprise-privacy/">OpenAI におけるエンタープライズプライバシー</a>」（2026年1月8日更新）</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/8798634-managing-data-sharing-and-privacy-in-chatgpt-business">ChatGPT Business でのデータ共有とプライバシーの管理</a>」</li>
+<li>OpenAI ヘルプセンター「<a href="https://help.openai.com/ja-jp/articles/5722486">モデルのパフォーマンスを向上させるためのデータの使用方法</a>」</li>
+<li>OpenAI「<a href="https://openai.com/index/march-20-chatgpt-outage/">March 20 ChatGPT outage: Here's what happened</a>」（2023年3月24日）</li>
+<li>Anthropic プライバシーセンター「<a href="https://privacy.claude.com/ja/articles/7996868">私のデータはモデルトレーニングに使用されていますか？（商用製品）</a>」</li>
+<li>Anthropic プライバシーセンター「<a href="https://privacy.claude.com/ja/articles/10023580">私のデータはモデルトレーニングに使用されていますか？（消費者向け製品）</a>」</li>
+<li>Anthropic プライバシーセンター「<a href="https://privacy.claude.com/ja/articles/7996866">組織のデータはどのくらいの期間保存されますか？</a>」</li>
+<li>Anthropic「<a href="https://claude.com/ja-jp/pricing">Claudeの料金プラン</a>」</li>
+<li>Google「<a href="https://support.google.com/a/answer/15706919?hl=ja">Google Workspace の生成 AI に関するプライバシー ハブ</a>」（2026年10月6日更新）</li>
+<li>Google「<a href="https://support.google.com/gemini/answer/13594961?hl=ja">Gemini アプリのプライバシー ハブ</a>」（2026年11月17日更新）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/enterprise-data-protection">Microsoft Copilot および Microsoft Copilot Chat におけるエンタープライズ データ保護</a>」（2026年11月5日更新）</li>
+<li>Microsoft Learn「<a href="https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-privacy">Microsoft Copilot のデータ、プライバシー、セキュリティ</a>」</li>
+<li>Microsoft サポート「<a href="https://support.microsoft.com/ja-jp/topic/microsoft-copilot-%E3%81%AE%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B-faq-27b3a435-8dc9-4b55-9a4b-58eeb9647a7f">Microsoft Copilot のプライバシーに関する FAQ</a>」</li>
+<li>Microsoft サポート「<a href="https://support.microsoft.com/ja-jp/privacy/microsoft-copilot/activity-history">個人向け Microsoft Copilot: アクティビティの履歴</a>」</li>
+<li>Group-IB「<a href="https://www.group-ib.com/media-center/press-releases/stealers-chatgpt-credentials/">Group-IB Discovers 100K+ Compromised ChatGPT Accounts on Dark Web Marketplaces</a>」（2023年6月20日）</li>
+<li>Wiz「<a href="https://www.wiz.io/blog/38-terabytes-of-private-data-accidentally-exposed-by-microsoft-ai-researchers">38TB of data accidentally exposed by Microsoft AI researchers</a>」（2023年9月）</li>
+<li>Bloomberg「<a href="https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak">Samsung Bans Staff’s AI Use After Spotting ChatGPT Data Leak</a>」（2023年5月2日）</li>
+<li>TechCrunch「<a href="https://techcrunch.com/2023/05/02/samsung-bans-use-of-generative-ai-tools-like-chatgpt-after-april-internal-data-leak/">Samsung bans use of generative AI tools like ChatGPT after April internal data leak</a>」（2023年5月2日）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
+<p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では、AI経由のコンバージョンを5ヶ月で約6.7倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">生成AIで情報漏洩は起こる？</a><a href="#s2">公表された生成AIの情報漏洩の事例</a><a href="#s3">法人プランと個人プランで何が変わる？</a><a href="#s4">生成AIの情報漏洩対策は何をする？</a><a href="#s5">誤って入力したときはどうする？</a><a href="#s6">社内の業務にAIエージェントを入れる場合</a><a href="#s7">まとめ</a><a href="#s8">よくある質問</a></div><div class="rail__cta"><b>会社での AI 活用の相談</b><p>どの作業を AI に任せるかの棚卸しから一緒に進めます。</p><a href="/contact.html">無料で相談する</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/genai-training-companies/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="法人向け生成AI研修"><defs><linearGradient id="ecg-6fd2d959" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-6fd2d959)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">法人向け生成AI研修</text><line x1="250.4" y1="365.9" x2="949.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.16</div>
+                <div class="rel-card__ttl">【2026年11月】法人向け生成AI研修おすすめ7選｜選び方・費用・助成金</div>
+            </a>
+            <a href="/media/genai-guideline/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="企業の生成AIガイドラインの作り方"><defs><linearGradient id="ecg-82172784" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-82172784)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="125.2" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">管理者向け</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">企業の生成AIガイ</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ドラインの作り方</text><line x1="288.4" y1="416.8" x2="911.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.22</div>
+                <div class="rel-card__ttl">【2026年11月】企業の生成AIガイドラインの作り方・盛り込む項目・公的なひな形の選び方</div>
+            </a>
+            <a href="/media/genai-support-companies/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="生成AI導入支援"><defs><linearGradient id="ecg-2e1eb967" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-2e1eb967)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="491.0" y="176.1" width="218.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">導入担当向け</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">生成AI導入支援</text><line x1="326.4" y1="365.9" x2="873.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.11.17</div>
+                <div class="rel-card__ttl">【2026年11月】生成AI導入支援の会社おすすめ10選｜支援範囲別の選び方と費用</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/llmo/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'genai-data-leak',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
