@@ -123,7 +123,7 @@ AIの説明に使われる情報は、どこかに書かれていなければ増
 | 支援の範囲 | 質問の設計・計測・原因の分析・サイトの改善と記事の制作・公開後の運用 |
 | 料金 | 無料の現状分析のあと、狙う質問と制作の量で見積もり |
 
-[株式会社nito](/llmo/)は、計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援するAI検索対策の会社です。**AIで名前が挙がることではなく、その先の応募や問い合わせが増えることを目標にしています。** 採用専用のメニューはありません。
+[株式会社nito](/aio/)は、計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援するAI検索対策の会社です。**AIで名前が挙がることではなく、その先の応募や問い合わせが増えることを目標にしています。** 採用専用のメニューはありません。
 
 ### 採用で合う使い方
 
@@ -143,7 +143,7 @@ AIの説明に使われる情報は、どこかに書かれていなければ増
 - 採用サイトはあるが、AIで自社を知った人の応募がどれだけあるか分からない会社
 - 名前が挙がるかだけでなく、応募の数で効果を判断したい会社
 
-nitoでは採用で狙いたい質問をChatGPTやGeminiなどに実際に聞き、自社が挙がるか、どう説明されるか、代わりにどの会社が挙がるかを[現状分析レポート](/llmo/)として無料でお出ししています。
+nitoでは採用で狙いたい質問をChatGPTやGeminiなどに実際に聞き、自社が挙がるか、どう説明されるか、代わりにどの会社が挙がるかを[現状分析レポート](/aio/)として無料でお出ししています。
 
 ## 2. 株式会社デジタルアイデンティティ
 
@@ -297,7 +297,7 @@ desc: AIが誤った情報を答える原因と、参照元を整える直し方
 
 ## 出典
 
-- 各社の公式サイト（2026年11月20日確認）: [デジタルアイデンティティ LLMO/AIO/AI Overviews対策](https://digitalidentity.co.jp/service/llmo/)・[同 採用LLMO・採用AIOとは](https://digitalidentity.co.jp/blog/llmo/recruitment-llmo-guide.html)・[LANY LLMOコンサルティング](https://www.lany.co.jp/service/digitalmarketing/llmo)・[同 採用LLMOとは](https://www.lany.co.jp/blog/llmo-recruit)・[Smacie AI Growth サービス](https://smacieai.com/service/)・[同 自社採用向けAI検索最適化サービス](https://smacieai.com/solution-cat/in-house-recruitment/)・[TaTap 採用支援](https://tatap.jp/service/saiyo/)・[同 AI検索×SNS 指名獲得パッケージ](https://tatap.jp/service/ai-search-sns/)・[THANX CREATE 採用LLMO対策](https://thanx-create.com/recruit-llmo/)・[SPC AI時代の採用サイト](https://spc-jpn.co.jp/saiyou/ai-recruitment/)・[SPC 採用サイト制作](https://spc-jpn.co.jp/saiyou/)
+- 各社の公式サイト（2026年11月20日確認）: [デジタルアイデンティティ LLMO/AIO/AI Overviews対策](https://digitalidentity.co.jp/service/aio/)・[同 採用LLMO・採用AIOとは](https://digitalidentity.co.jp/blog/aio/recruitment-llmo-guide.html)・[LANY LLMOコンサルティング](https://www.lany.co.jp/service/digitalmarketing/llmo)・[同 採用LLMOとは](https://www.lany.co.jp/blog/llmo-recruit)・[Smacie AI Growth サービス](https://smacieai.com/service/)・[同 自社採用向けAI検索最適化サービス](https://smacieai.com/solution-cat/in-house-recruitment/)・[TaTap 採用支援](https://tatap.jp/service/saiyo/)・[同 AI検索×SNS 指名獲得パッケージ](https://tatap.jp/service/ai-search-sns/)・[THANX CREATE 採用LLMO対策](https://thanx-create.com/recruit-llmo/)・[SPC AI時代の採用サイト](https://spc-jpn.co.jp/saiyou/ai-recruitment/)・[SPC 採用サイト制作](https://spc-jpn.co.jp/saiyou/)
 - 求人の構造化データ: Google 検索セントラル「[求人情報（JobPosting）の構造化データ](https://developers.google.com/search/docs/appearance/structured-data/job-posting?hl=ja)」
 - 生成AIの機能と構造化データ: Google 検索セントラル「[AI 機能とウェブサイト](https://developers.google.com/search/docs/appearance/ai-features?hl=ja)」
 - APIとチャット画面の出典の重なり: Uberti-Bona Marin ほか「[Auditing AI-Generated Product Recommendations](https://arxiv.org/abs/2609.18729)」（arXiv、2026年9月）

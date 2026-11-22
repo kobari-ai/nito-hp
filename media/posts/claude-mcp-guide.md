@@ -199,7 +199,7 @@ claude mcp add-from-claude-desktop
 
 ## AI検索での見え方は別の話
 
-MCPで自社のデータをAIにつなぐことと、自社がAIの回答に登場することは別の問題で、後者は[AI検索対策](https://nito-0210.com/llmo/)として扱います。
+MCPで自社のデータをAIにつなぐことと、自社がAIの回答に登場することは別の問題で、後者は[AI検索対策](https://nito-0210.com/aio/)として扱います。
 
 ## よくある質問
 

@@ -158,7 +158,7 @@ Gyro-n SEOの料金表の機能の欄にAIによる概要の計測の行は無�
 
 20語のうち一度も出典に入らないなら、先に確かめることがあります。Search Consoleの[検索の生成 AI 設定](https://search.google.com/search-console/settings/search-gen-ai)でサイトが除外になっていないか、ページがインデックスに登録されているか、スニペットの表示を止めていないかの3点です。Googleが挙げる条件と直し方は[AI Overview（AIによる概要）対策とは](/media/cited-by-ai-overviews/)、進め方の全体は[AIO対策とは](/media/aio-taisaku/)にまとめました。
 
-語のリストづくりから、AIによる概要とChatGPTなどの回答を同じ質問で定期的に測る作業まで外に任せたい場合は、nitoの[AI検索対策（LLMO）の支援](/llmo/)でも相談を受けています。
+語のリストづくりから、AIによる概要とChatGPTなどの回答を同じ質問で定期的に測る作業まで外に任せたい場合は、nitoの[AI検索対策（LLMO）の支援](/aio/)でも相談を受けています。
 
 ## まとめ
 
@@ -213,6 +213,6 @@ Search Consoleの検索の生成 AI 設定でサイトを除外していない�
 - yoriai「[AI Overviewの計測ツールならyoriaiSEO](https://yori-ai.com/ai_overview_keisoku_tool/)」（同）
 - OtterlyAI「[Pricing](https://otterly.ai/pricing)」（同）
 - ディーボ「[AIOチェッカー](https://devo.jp/free-seo-tools/aio-check-tool/)」（同）
-- Uravation「[AI Overviewの計測方法](https://uravation.com/llmo/ai-overview-hyoji-check-measurement/)」「[AI Overview対策（AIO対策）のやり方](https://uravation.com/llmo/aio-taisaku/)」（同）
+- Uravation「[AI Overviewの計測方法](https://uravation.com/aio/ai-overview-hyoji-check-measurement/)」「[AI Overview対策（AIO対策）のやり方](https://uravation.com/aio/aio-taisaku/)」（同）
 - VicMe「[AI Overviewに自社サイトが表示されるかチェックする方法](https://vicme.jp/media/aio-complete-manual/)」（同）
 - AI検索パートナーズ「[AI Overview確認ツールおすすめ9選](https://ai-search.techsuite.co.jp/13461/)」（同）
