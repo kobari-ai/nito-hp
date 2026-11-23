@@ -28,7 +28,7 @@ LLMO対策はChatGPT・Gemini・GoogleのAIによる概要などの回答に、�
 
 Googleの「AI 機能とウェブサイト」は、AIによる概要やAIモードに表示されるための追加の要件や特別な最適化は無いとしたうえで、インデックス登録と配信は保証されていないと書いています。同じページには、AIによる概要が表示される検索結果ページからのクリックは質が高いという記載もあり、理由はユーザーがサイトに長く滞在する傾向があるためです。効果を判断するときはAIに社名が挙がった回数だけでなく、そこから来た人が問い合わせまで進んだかを見る必要があります。
 
-<!-- SHOT: 画面 https://developers.google.com/search/docs/appearance/ai-features?hl=ja・本文だけにある探す語「より質が高いことが確認されています」・赤枠にする語「AI による概要が表示される検索結果ページからのクリックは、より質が高いことが確認されています。」・PC・alt「Googleの検索セントラルのAI機能とウェブサイトのページ。AIによる概要が表示される検索結果ページからのクリックは、より質が高いことが確認されていると書かれている」・figcaption「AI 機能とウェブサイト（Google 検索セントラル、2026年11月24日）」 -->
+<figure class="post-figure"><img src="/media/images/llmo-effect/google-ai-features.png" alt="Googleの検索セントラルのAI機能とウェブサイトのページ。AIによる概要が表示される検索結果ページからのクリックは、より質が高いことが確認されていると書かれている" loading="lazy"><figcaption>AI 機能とウェブサイト（Google 検索セントラル、2026年11月24日）</figcaption></figure>
 
 ## LLMO対策の効果は3つの段階で表れる
 
@@ -54,7 +54,7 @@ LLMO対策の効果は、AIの回答の中で起きる変化と、自社のサ�
 
 GoogleのAIによる概要とAIモードについては、Search Consoleの生成AIパフォーマンスレポートで、自社ページへのリンクが表示された回数をページ・国・デバイス・日付ごとに確認できます。2026年8月31日に全サイトに公開されたレポートで、クリック数と検索語は出ません。ChatGPTやGeminiの出典は、1段目と同じ質問の記録で数えます。
 
-<!-- SHOT: 画面 https://support.google.com/webmasters/answer/16984139?hl=ja・本文だけにある探す語「2026 年 8 月 31 日付けで世界中のすべてのウェブサイトにリリースされました」・赤枠にする語「インプレッション数とは、Google 検索の生成 AI 機能でユーザーにサイトへのリンクが表示された回数です。」・PC・alt「Search Consoleヘルプの生成AIパフォーマンスレポートのページ。AIによる概要とAIモードのインプレッションが含まれ、インプレッション数はサイトへのリンクが表示された回数と書かれている」・figcaption「生成 AI パフォーマンス レポート（検索）（Search Console ヘルプ、2026年11月24日）」 -->
+<figure class="post-figure"><img src="/media/images/llmo-effect/sc-genai-report.png" alt="Search Consoleヘルプの生成AIパフォーマンスレポートのページ。インプレッション数はGoogle検索の生成AI機能でサイトへのリンクが表示された回数と書かれている" loading="lazy"><figcaption>生成 AI パフォーマンス レポート（検索）（Search Console ヘルプ、2026年11月24日）</figcaption></figure>
 
 出典に付くページが採用情報や会社概要に偏っていると、引用の数が増えても問い合わせは増えません。何回付いたかだけでなく、どのページが付いたかまで見ておきます。
 
@@ -78,7 +78,7 @@ GA4のAI経由の訪問が全体の1%に届かなくても、LLMO対策に効果
 
 GA4の「AI アシスタント」チャネルは、ChatGPT・Gemini・Deepseek・Copilot・Grokなどからの訪問を分けて数えます。ただしGoogleのAIによる概要とAIモードからの訪問は対象外で、通常の自然検索に入ります。
 
-<!-- SHOT: 画面 https://support.google.com/analytics/answer/9756891?hl=ja・本文だけにある探す語「Google の AI による概要と AI モード は除外されます」・赤枠にする語「AI アシスタントは、ChatGPT、Gemini、Deepseek、Copilot、Grok などのソースからユーザーがサイトにアクセスする際のチャネルです。Google の AI による概要と AI モード は除外されます。」・PC・alt「Googleアナリティクスヘルプのデフォルトチャネルグループのページ。AIアシスタントはChatGPTやGeminiなどからの訪問のチャネルで、GoogleのAIによる概要とAIモードは除外されると書かれている」・figcaption「デフォルト チャネル グループ（アナリティクス ヘルプ、2026年11月24日）」 -->
+<figure class="post-figure"><img src="/media/images/llmo-effect/ga4-ai-assistant.png" alt="Googleアナリティクスヘルプのデフォルトチャネルグループのページ。AIアシスタントはChatGPTやGeminiなどからの訪問のチャネルで、GoogleのAIによる概要とAIモードは除外されると書かれている" loading="lazy"><figcaption>デフォルト チャネル グループ（アナリティクス ヘルプ、2026年11月24日）</figcaption></figure>
 
 この差を自社の数字で公開しているのがLANYです。2026年1〜7月を合わせると、GA4でAI検索から来たセッションは全体の約0.91%、AI経由のコンバージョンは約1.19%でした。同じ期間の問い合わせ・資料ダウンロードで知った経緯を聞くと、生成AIと答えた人は約21.3%で、月ごとでは5月24.6%、6月26.9%、7月28.1%と上がっています。LANYは2つの数字について、集計の対象が違うので単純に比べられず、自己申告なので因果の証明でもないと断ったうえで、GA4の数字は影響の下限として扱う必要があると書いています。
 
