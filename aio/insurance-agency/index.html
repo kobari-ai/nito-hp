@@ -15,15 +15,15 @@
     <title>保険代理店向けのAI検索対策（AIO・LLMO）｜募集のルールに沿ったページ制作と相談予約の計測</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="canonical" href="https://nito-0210.com/aio/insurance-agency/">
-    <meta name="description" content="株式会社nitoの保険代理店向けAI検索対策（AIO）支援。法人保険と保障の見直しの質問でAIの回答を毎日計測し、保険業法と監督指針に沿ってページを作り、相談予約の数まで追います。無料の現状分析から始められます。">
+    <meta name="description" content="株式会社nitoの保険代理店向けAI検索対策（AIO）支援。法人保険と個人の保険の見直しの質問でAIの回答を毎日計測し、保険業法と監督指針に沿ってページを作り、相談予約の数まで追います。無料の現状分析から始められます。">
     <meta property="og:site_name" content="株式会社nito">
     <meta property="og:type" content="website">
     <meta property="og:title" content="保険代理店向けのAI検索対策（AIO・LLMO）｜募集のルールに沿ったページ制作と相談予約の計測">
-    <meta property="og:description" content="株式会社nitoの保険代理店向けAI検索対策（AIO）支援。法人保険と保障の見直しの質問でAIの回答を毎日計測し、保険業法と監督指針に沿ってページを作り、相談予約の数まで追います。無料の現状分析から始められます。">
+    <meta property="og:description" content="株式会社nitoの保険代理店向けAI検索対策（AIO）支援。法人保険と個人の保険の見直しの質問でAIの回答を毎日計測し、保険業法と監督指針に沿ってページを作り、相談予約の数まで追います。無料の現状分析から始められます。">
     <script type="application/ld+json">
     {"@context":"https://schema.org","@graph":[
       {"@type":"Service","@id":"https://nito-0210.com/aio/insurance-agency/#service","name":"保険代理店向けAI検索対策（AIO）支援","alternateName":["保険代理店向けAIO対策","保険代理店向けLLMO対策"],"serviceType":"AI検索対策",
-       "description":"法人保険と保障の見直しの質問でAIの回答を毎日計測し、保険業法と監督指針に沿ってページを作り、相談予約の数まで追います。",
+       "description":"法人保険と個人の保険の見直しの質問でAIの回答を毎日計測し、保険業法と監督指針に沿ってページを作り、相談予約の数まで追います。",
        "audience":{"@type":"BusinessAudience","audienceType":"保険代理店"},
        "url":"https://nito-0210.com/aio/insurance-agency/","areaServed":{"@type":"Country","name":"日本"},
        "provider":{"@type":"Organization","@id":"https://nito-0210.com/#organization","name":"株式会社nito","url":"https://nito-0210.com/"}},
@@ -1734,12 +1734,39 @@
         .prep-list li::before { content: counter(prep, decimal-leading-zero); position: absolute; left: 20px; top: 18px; font-family: var(--font-heading-en); font-weight: 700; color: var(--color-primary-deep); }
         .prep-list b { display: block; font-size: 15.5px; margin-bottom: 4px; }
         .prep-list span { color: var(--color-text-light); font-size: 14px; line-height: 1.8; }
-        .hero-visual .rcase-note { margin-top: 10px; text-align: right; }
+        .hero-visual .rcase-note { margin-top: 10px; }
         .sample-wrap { margin-top: 40px; max-width: 720px; }
         .sample-wrap .board-kind { margin-bottom: 12px; }
         .sample-doc p { font-size: 13.5px; line-height: 1.9; margin: 0 0 10px; color: #333; }
         .sample-doc .sample-note { font-size: 12px; color: #777; margin: 0; }
         #questions .mech-conclusion, #case .rcase-note { margin-top: 24px; }
+        .ask-boxes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .ask-box { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 20px 22px; }
+        .ask-kind { font-size: 13px; font-weight: 700; color: var(--color-primary-deep); margin: 0 0 10px; }
+        .ask-box ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+        .ask-box li { font-size: 15px; line-height: 1.8; padding-left: 1.1em; text-indent: -1.1em; }
+        .ask-box li::before { content: '「'; } .ask-box li::after { content: '」'; }
+        .ask-box li b { color: var(--color-primary-deep); }
+        .problem-list.two { grid-template-columns: repeat(2, 1fr); }
+        .step-detail { padding: 30px 0 30px 42px; border-top: 1px solid #ececec; }
+        .step-detail-title { font-size: 17px; font-weight: 700; font-family: var(--font-heading-jp); margin: 0 0 8px; }
+        .step-detail-lead { font-size: 14.5px; color: var(--color-text-light); line-height: 1.9; margin: 0 0 16px; max-width: 760px; }
+        .step-detail .sample-wrap { margin-top: 28px; }
+        .step-detail + .step { border-top: 1px solid #ececec; }
+        .case-more { margin-top: 12px; }
+        .measure-block { margin-top: 40px; background: #fff; border-radius: 12px; padding: 24px 26px; max-width: 860px; }
+        .measure-block-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); margin: 0 0 10px; }
+        .measure-block p { font-size: 14.5px; line-height: 1.95; color: var(--color-text); margin: 0 0 10px; }
+        .measure-block p:last-child { margin-bottom: 0; }
+        .faq-cta { margin: 36px 0 8px; text-align: center; }
+        .hero-visual .mock-label { font-size: 13px; color: var(--color-text-light); margin: 0 0 10px; }
+        .hero-visual .mock-label b { display: inline-block; background: var(--color-primary-deep); color: #fff; font-size: 11.5px; border-radius: 4px; padding: 1px 8px; margin-right: 8px; }
+        .hero-visual .rcase-note { text-align: left; }
+        .step-out { margin-top: 10px; font-size: 14px; line-height: 1.7; }
+        .step-out b { display: inline-block; font-size: 12px; color: var(--color-primary-deep); border: 1px solid #f0b27a; border-radius: 4px; padding: 0 8px; margin-right: 8px; }
+        .mock-legend { font-size: 11px; color: #777; line-height: 1.7; padding: 8px 12px; margin: 0; border-top: 1px solid #eee; }
+        .mock-legend .pick-key { background: #fff4e6; padding: 0 4px; }
+        .sample-lead { font-size: 14px; color: var(--color-text-light); line-height: 1.8; margin: 0 0 12px; }
         @media (max-width: 768px) {
             .qtable { font-size: 13px; }
             .qtable th, .qtable td { padding: 12px; }
@@ -1753,10 +1780,17 @@
             .review-table td:nth-child(2)::before { content: '担当：'; }
             .review-table td:nth-child(3)::before { content: '見るもの：'; }
             .prep-list li { padding: 16px 16px 16px 52px; }
+            .ask-boxes, .problem-list.two { grid-template-columns: 1fr; }
+            .mock-sheet th + th, .mock-sheet td + td { padding-left: 10px; }
+            .mock-sheet th:first-child { width: 38%; }
+            .mock-sheet th { font-size: 10.5px; }
+            .ask-box { padding: 16px 18px; }
+            .step-detail { padding: 24px 0 24px 24px; }
+            .measure-block { padding: 20px 18px; }
             .prep-list li::before { left: 16px; top: 16px; }
         }
     </style>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AI検索対策でも保険業法は関係しますか？", "acceptedAnswer": {"@type": "Answer", "text": "関係します。AIが回答の材料にする代理店のサイトも、監督指針では保険契約に関する表示の一つです。誤解させるおそれのある比較を禁じた保険業法第300条第1項第6号に沿って、比較表や推奨の理由を書きます。"}}, {"@type": "Question", "name": "所属保険会社の確認はどう進めますか？", "acceptedAnswer": {"@type": "Answer", "text": "保障の内容や保険料に触れるページは、代理店と所属保険会社の確認の手順に合わせて原稿をお出しします。確認にかかる日数を先に伺い、公開の予定に組み込みます。公開するかどうかは代理店の判断です。"}}, {"@type": "Question", "name": "法人保険と個人の見直しのどちらからでも始められますか？", "acceptedAnswer": {"@type": "Answer", "text": "始められます。力を入れたい相談の種類を1つ決め、その相談で添えられる事情を入れた質問で、いまどう紹介されているかを測るところから始めます。"}}, {"@type": "Question", "name": "言及率が上がれば相談予約も増えますか？", "acceptedAnswer": {"@type": "Answer", "text": "増えるとは限りません。保険の仕組みを尋ねる質問で名前が挙がっても、その人が相談先を探しているとは言えないからです。nitoは相談先を探す質問で挙がることを狙い、予約フォームで「AIで知った」と答えた人の数と並べて確かめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "士業の支援では新しいページが公開から3日でAIの回答の引用元に入り、SaaS企業の支援では3ヶ月で言及率が10%から45%に上がりました。地域の競合の多さと力を入れる相談の種類で変わるので、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "AIに必ず名前が挙がるようにできますか？", "acceptedAnswer": {"@type": "Answer", "text": "お約束はできません。AIの回答は質問のたびに変わり、どの相談先を挙げるかはAIを提供する会社が決めています。nitoはAIが理由として使える事実を代理店のページに書き、回答の変化を毎日測って直し続けます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をご確認ください。"}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AI検索対策でも保険業法は関係しますか？", "acceptedAnswer": {"@type": "Answer", "text": "関係します。AIが回答の材料にする代理店のサイトも、監督指針では保険契約に関する表示の一つです。誤解させるおそれのある比較を禁じた保険業法第300条第1項第6号に沿って、比較表や推奨の理由を書きます。"}}, {"@type": "Question", "name": "所属保険会社の確認はどう進めますか？", "acceptedAnswer": {"@type": "Answer", "text": "保障の内容や保険料に触れるページは、代理店と所属保険会社の確認の手順に合わせて原稿をお出しします。確認にかかる日数を先に伺い、公開の予定に組み込みます。公開するかどうかは代理店の判断です。"}}, {"@type": "Question", "name": "法人保険と個人の見直しのどちらからでも始められますか？", "acceptedAnswer": {"@type": "Answer", "text": "始められます。力を入れたい相談の種類を1つ決め、その相談で添えられる事情を入れた質問で、いまどう紹介されているかを測るところから始めます。"}}, {"@type": "Question", "name": "AIに名前が挙がれば相談予約も増えますか？", "acceptedAnswer": {"@type": "Answer", "text": "増えるとは限りません。保険の仕組みを尋ねる質問で名前が挙がっても、その人が相談先を探しているとは言えないからです。nitoは相談先を探す質問で挙がることを狙い、予約フォームで「AIで知った」と答えた人の数と並べて確かめます。"}}, {"@type": "Question", "name": "効果が出るまでどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "士業の支援では新しいページが公開から3日でAIの回答の引用元に入り、SaaS企業の支援では3ヶ月で、ある質問での言及率が10%から45%に上がりました。地域の競合の多さと力を入れる相談の種類で変わるので、見通しは現状分析のあとにお伝えします。"}}, {"@type": "Question", "name": "AIに必ず名前が挙がるようにできますか？", "acceptedAnswer": {"@type": "Answer", "text": "お約束はできません。AIの回答は質問のたびに変わり、どの相談先を挙げるかはAIを提供する会社が決めています。nitoはAIが理由として使える事実を代理店のページに書き、回答の変化を毎日測って直し続けます。"}}, {"@type": "Question", "name": "費用はどのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "月額で、対策するサービスの数と制作する記事の本数で決まります。まずは無料の現状分析レポートで、いまの状況をご確認ください。"}}]}</script>
 
 </head>
 
@@ -1790,15 +1824,16 @@
         <section class="hero">
         <div class="container hero-wrap" style="display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center">
             <div>
-                <h1 class="hero-title"><span class="hero-kicker">保険代理店向けのAI検索対策（AIO・LLMO）</span><span class="line"><span class="grad">AIが挙げる相談先に</span></span><span class="line">代理店の名前が入る</span></h1>
-                <p class="hero-do"><span>法人保険と保障の見直しの質問で、AIの回答を毎日計測。</span><span>募集のルールに沿ってページを作り、相談予約の数まで追います。</span></p>
+                <h1 class="hero-title"><span class="hero-kicker">保険代理店向けのAI検索対策（AIO・LLMO）</span><span class="line"><span class="grad">AIが挙げる相談先に</span></span><span class="line">自社の名前が入る</span></h1>
+                <p class="hero-do"><span>ChatGPTやGeminiに「法人保険を相談できる代理店は？」と聞かれたとき、代理店の名前が挙がるように、ホームページのページを作って直します。</span><span>保険募集のルールに沿って書き、相談予約の数まで追います。</span></p>
                 <div class="hero-btns">
                     <a href="https://nito-0210.com/contact.html" class="btn-primary">無料で現状分析レポートを申し込む</a>
                     <a href="#flow" class="btn-text">進め方を見る</a>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="aimock" aria-label="AIの回答画面のイメージ">
+                <p class="mock-label"><b>例</b>AIに相談先を聞いたときの回答（架空の代理店）</p>
+                <div class="aimock" aria-label="AIの回答画面の例">
                     <div class="aimock-head"><div class="chatmock-tabs"><span class="on">ChatGPT</span><span>Gemini</span><span>AIモード</span></div></div>
                     <div class="aimock-body">
                         <div class="aq">社員20人の会社の経営者です。事業保障の保険を相談できる代理店を教えてください。</div>
@@ -1810,7 +1845,7 @@
                         </ol>
                     </div>
                 </div>
-                <p class="rcase-note">回答画面のイメージ（架空の代理店）</p>
+                <p class="rcase-note">相談の流れをページで説明している代理店が、その理由つきで1番目に挙がります。</p>
             </div>
         </div>
     </section>
@@ -1819,63 +1854,48 @@
     <section class="section" id="questions">
         <div class="container">
             <div class="section-head">
-                <h2 class="section-title">保険代理店がAIに聞かれていること</h2>
-                <p class="measure-lead">相談する人は自分の事情を添えて、保険の相談先をAIに聞きます。法人と個人では添える事情が違い、挙がる相談先も変わります。</p>
+                <h2 class="section-title">保険の相談先をAIに聞く人の質問</h2>
+                <p class="measure-lead">相談する人は自分の事情を添えて相談先をAIに聞きます。たとえば次のような聞き方です。</p>
             </div>
-            <div class="qtable-wrap">
-                <table class="qtable stack">
-                    <tr><th>相談の種類</th><th>AIへの聞き方の例</th><th>添えられやすい事情</th></tr>
-                    <tr><td>地域で探す</td><td>さいたま市で法人保険も個人の保険も相談できる代理店は？</td><td>市区町村・駅・オンライン相談の可否</td></tr>
-                    <tr><td>法人の事業保障</td><td>経営者に万一があったときに備える保険を相談できる代理店は？</td><td>借入の額・資金繰り・業種</td></tr>
-                    <tr><td>役員の退職金の準備</td><td>役員の退職金を保険で準備したい。相談先のおすすめは？</td><td>役員の年齢・退任の時期・税の扱い</td></tr>
-                    <tr><td>事業承継</td><td>事業承継と相続税の納税資金を保険で相談できるところは？</td><td>後継者の有無・自社株の評価</td></tr>
-                    <tr><td>個人の保障の見直し</td><td>子どもが生まれたので保険を見直したい。近くで相談できる代理店は？</td><td>出産・住宅の購入・今の保険料</td></tr>
-                    <tr><td>損害保険</td><td>火災保険の更新で相談できる代理店を教えて</td><td>更新の時期・事業で負う賠償</td></tr>
-                </table>
+            <div class="ask-boxes">
+                <div class="ask-box">
+                    <p class="ask-kind">法人の相談</p>
+                    <ul>
+                        <li>社員20人の製造業の経営者です。<b>借入が1億円ある</b>ので、万一のときの返済に備える保険を相談できる代理店は？</li>
+                        <li><b>役員の退職金</b>を保険で準備したい。相談先のおすすめは？</li>
+                        <li><b>事業承継に備えて</b>、保険を相談できるところは？</li>
+                    </ul>
+                </div>
+                <div class="ask-box">
+                    <p class="ask-kind">個人の相談</p>
+                    <ul>
+                        <li><b>子どもが生まれた</b>ので保険を見直したい。<b>大宮駅の近くで</b>相談できる代理店は？</li>
+                        <li><b>火災保険の更新</b>で相談できる代理店を教えて</li>
+                        <li><b>今の保険料が高い</b>ので見直したい。<b>オンラインで</b>相談できるところは？</li>
+                    </ul>
+                </div>
             </div>
-            <p class="mech-conclusion">AIは聞き方ごとに検索をかけ直し、<em>その事情に答えているページを持つ相談先</em>を理由つきで挙げます。</p>
+            <p class="mech-conclusion">AIは、質問に添えられた<em>事情に答えているページ</em>を持つ相談先を、理由をつけて挙げます。</p>
         </div>
     </section>
 
-    <!-- Problem -->
+    <!-- Points -->
     <section class="section section--gray">
         <div class="container">
             <div class="section-head">
-                <h2 class="section-title">保険代理店のAI検索対策で難しいこと</h2>
+                <h2 class="section-title">保険代理店のAI検索対策で気をつけること</h2>
             </div>
-            <div class="problem-list">
+            <div class="problem-list two">
                 <div class="problem">
-                    <div class="problem-fig"><div class="mini">
-                        <div class="mini-q">がん保険はどこがいい？</div>
-                        <div class="mini-row">1. 保険会社の商品</div>
-                        <div class="mini-row">2. 公的な解説</div>
-                        <div class="mini-row empty">代理店の名前はない</div>
-                    </div></div>
                     <div class="problem-body">
-                        <h3 class="problem-title">保険会社の商品や公的な解説が先に挙がる</h3>
-                        <p class="problem-desc">商品や保障の額から聞く質問には、保険会社の商品や公的な解説が答えになりやすく、代理店は入りにくい。地域や事情を添えて相談先を聞き直す質問が、名前が挙がるかの分かれ目です。</p>
+                        <h3 class="problem-title">商品の質問と相談先の質問の違い</h3>
+                        <p class="problem-desc">「がん保険はどこがいい？」のように商品を聞く質問では、保険会社の商品ページや公的な解説が答えの中心になりやすく、代理店の名前は出にくくなります。代理店が挙がるのは地域や事情を添えて相談先を聞く質問です。nitoはこの相談先の質問に絞って測り、ページを作ります。</p>
                     </div>
                 </div>
                 <div class="problem">
-                    <div class="problem-fig"><div class="mini">
-                        <div class="mini-q">比較表を載せたい</div>
-                        <div class="mini-text">注意書きと<span class="old">契約概要の案内</span>が無い</div>
-                        <div class="mini-chip">保険業法に触れるおそれ</div>
-                    </div></div>
                     <div class="problem-body">
-                        <h3 class="problem-title">比較と推奨の書き方に決まりがある</h3>
-                        <p class="problem-desc">保険業法第300条と金融庁の監督指針は、代理店のサイトの表示も対象にしています。他の業種と同じ書き方で比較表や長所だけの説明を載せると、法令に触れるおそれがあります。</p>
-                    </div>
-                </div>
-                <div class="problem">
-                    <div class="problem-fig"><div class="mini">
-                        <div class="mini-q">AI経由の相談予約は？</div>
-                        <div class="mini-row strong">合計 月◯件<small>法人と個人の内訳は不明</small></div>
-                        <div class="mini-row">どの質問が効いたか<small>分からない</small></div>
-                    </div></div>
-                    <div class="problem-body">
-                        <h3 class="problem-title">合計の数では効き目が分からない</h3>
-                        <p class="problem-desc">経営者の法人保険の相談と、家族の見直しの相談では、聞く人も契約1件の価値も違います。言及率や予約の合計だけでは、力を入れたい相談に効いたかを確かめられません。</p>
+                        <h3 class="problem-title">比較表と推奨の理由の書き方</h3>
+                        <p class="problem-desc">保険業法第300条第1項第6号と金融庁の監督指針は、ホームページの比較表や推奨の説明にも及びます。監督指針は比較表に「参考情報である旨」と「契約概要で確かめる旨」を添え、長所だけを強調しない書き方を示しています。nitoは原稿を書く段階でこの点を点検します。</p>
                     </div>
                 </div>
             </div>
@@ -1893,16 +1913,17 @@
                     <span class="step-num">01</span>
                     <div class="step-main">
                         <h3 class="step-title">法人と個人で分けた現状分析<span class="step-tag inline">無料</span></h3>
-                        <p class="step-desc">力を入れたい相談の種類ごとに、事情を添えた質問を組みます。ChatGPT・Gemini・AIモードなどに実際に聞き、代理店の名前が挙がるか、代わりにどの相談先が挙がっているかをまとめます。</p>
+                        <p class="step-desc">力を入れたい相談の種類ごとに、事情を添えた質問を組みます。ChatGPTやGeminiなど主要なAIに実際に聞き、代理店の名前が挙がるか、代わりにどの相談先が挙がっているかをまとめます。</p>
+                        <p class="step-out"><b>お渡しするもの</b>現状分析レポート</p>
                     </div>
                     <div class="step-visual"><div class="mock mock-sheet">
-                        <div class="mock-sheet-title">現状分析レポート（例） <span>質問ごとの結果</span></div>
+                        <div class="mock-sheet-title">現状分析レポート（例） <span>代理店の名前が挙がった順番（なし＝挙がらず）</span></div>
                         <table>
                             <tr><th>質問</th><th>ChatGPT</th><th>Gemini</th><th>AIモード</th></tr>
-                            <tr><td>事業保障を相談できる代理店</td><td class="no">なし</td><td class="no">なし</td><td>3番目</td></tr>
-                            <tr><td>役員の退職金の相談先</td><td class="no">なし</td><td class="no">なし</td><td class="no">なし</td></tr>
-                            <tr><td>出産を機にした保険の見直し</td><td>2番目</td><td class="no">なし</td><td class="no">なし</td></tr>
-                            <tr><td>火災保険の更新の相談</td><td class="no">なし</td><td>1番目</td><td class="no">なし</td></tr>
+                            <tr><td>万一のときの返済に備える保険を相談できる代理店は？</td><td class="no">なし</td><td class="no">なし</td><td>3番目</td></tr>
+                            <tr><td>役員の退職金を保険で準備したい。相談先のおすすめは？</td><td class="no">なし</td><td class="no">なし</td><td class="no">なし</td></tr>
+                            <tr><td>保険を見直したい。大宮駅の近くで相談できる代理店は？</td><td>2番目</td><td class="no">なし</td><td class="no">なし</td></tr>
+                            <tr><td>火災保険の更新で相談できる代理店を教えて</td><td class="no">なし</td><td>1番目</td><td class="no">なし</td></tr>
                         </table>
                     </div></div>
                 </div>
@@ -1910,41 +1931,69 @@
                     <span class="step-num">02</span>
                     <div class="step-main">
                         <h3 class="step-title">他の相談先が挙がる理由の分析</h3>
-                        <p class="step-desc">AIの回答本文から、他の代理店がすすめられている理由を抜き出します。自社にも当てはまるのにページに書いていないものが、新しく書く内容の候補です。</p>
+                        <p class="step-desc">AIの回答本文から、他の代理店がすすめられている理由を抜き出します。真似をするのではなく、自社にも当てはまるのにページに書いていない事実を見つけ、新しく書く内容の候補にします。</p>
+                        <p class="step-out"><b>お渡しするもの</b>ページに書き足す内容の一覧</p>
                     </div>
                     <div class="step-visual"><div class="mock mock-sheet">
-                        <div class="mock-sheet-title">すすめられた理由（例） <span>回答本文から・自社に無いものが候補</span></div>
+                        <div class="mock-sheet-title">他社がすすめられた理由（例）</div>
                         <table>
-                            <tr><th>AIが挙げた理由</th><th>B社</th><th>C社</th><th>自社</th></tr>
-                            <tr class="pick"><td>法人保険の相談の流れを説明している</td><td>あり</td><td class="no">なし</td><td class="no">なし</td></tr>
-                            <tr><td>取扱保険会社が多い</td><td>あり</td><td>あり</td><td>あり</td></tr>
-                            <tr class="pick"><td>相談料と手数料の受け取り方を書いている</td><td>あり</td><td>あり</td><td class="no">なし</td></tr>
-                            <tr><td>オンラインで相談できる</td><td class="no">なし</td><td>あり</td><td>あり</td></tr>
+                            <tr><th>AIが挙げた理由</th><th>代理店</th><th>自社のページ</th></tr>
+                            <tr class="pick"><td>法人保険の相談の流れを説明している</td><td>A保険事務所</td><td class="no">書いていない</td></tr>
+                            <tr><td>取扱保険会社が多い</td><td>B保険ショップ</td><td>書いてある</td></tr>
+                            <tr class="pick"><td>相談が無料の理由（保険会社から手数料を受け取る仕組み）を書いている</td><td>B保険ショップ</td><td class="no">書いていない</td></tr>
+                            <tr><td>オンラインで相談できる</td><td>C保険サービス</td><td>書いてある</td></tr>
                         </table>
+                        <p class="mock-legend"><span class="pick-key">色の付いた行</span>＝自社のページに無く、新しく書く候補</p>
                     </div></div>
                 </div>
                 <div class="step">
                     <span class="step-num">03</span>
                     <div class="step-main">
-                        <h3 class="step-title">募集のルールに沿ったページの制作と改善</h3>
-                        <p class="step-desc">足りない情報を載せたページを作り、いまあるページも直します。比較表の注意書きと契約概要の案内、商品を絞り込む基準、見直しで伝える不利益も本文に入れます。公開前の確認は代理店と所属保険会社の手順に合わせ、公開するかどうかは代理店に決めていただく形です。</p>
+                        <h3 class="step-title">ページを作って直す</h3>
+                        <p class="step-desc">足りない内容を載せたページを作り、いまあるページも直します。比較表の注意書き、契約概要の案内、商品を絞り込む基準など、保険募集のルールで求められる説明も本文に入れます。</p>
+                        <p class="step-out"><b>お渡しするもの</b>そのまま載せられる原稿（ページの追加・修正）</p>
                     </div>
                     <div class="step-visual"><div class="mock"><div class="mock-doc">
-                        <div class="mock-doc-title">法人保険の相談ページ <span>追加する内容</span></div>
+                        <div class="mock-doc-title">法人保険の相談ページ <span>直す内容</span></div>
                         <h5>追加する</h5>
-                        <ul><li class="todo">借入・事業承継など相談の種類ごとの流れ</li><li class="todo">相談料と手数料の受け取り方</li><li class="todo">商品を絞り込む基準と推奨の理由の説明</li></ul>
+                        <ul><li class="todo">借入・事業承継など相談の種類ごとの流れ</li><li class="todo">相談が無料の理由（手数料を受け取る仕組み）</li><li class="todo">商品を絞り込む基準と推奨の理由の説明</li></ul>
                         <h5>書き方を直す</h5>
                         <ul><li>比較表に参考情報である旨と契約概要の案内を添える</li><li>保険料の税の扱いを国税庁の区分に合わせる</li></ul>
                     </div></div></div>
+                </div>
+                <div class="step-detail" id="review">
+                    <h4 class="step-detail-title">03 の公開までの確認の段取り</h4>
+                    <p class="step-detail-lead">保険代理店のページは、代理店と所属保険会社の確認を通してから公開します。誰が何を見るかを最初に決め、保険会社の審査にかかる日数も公開の予定に入れます。</p>
+                    <div class="qtable-wrap">
+                        <table class="qtable stack review-table">
+                            <tr><th>工程</th><th>担当</th><th>見るもの</th></tr>
+                            <tr><td>1. 原稿の作成</td><td>nito</td><td>相談の種類ごとの質問への答えと、他の相談先が挙がる理由に合わせた本文</td></tr>
+                            <tr><td>2. 保険募集のルールの点検</td><td>nito</td><td>比較表の注意書き・契約概要の案内・見直しの不利益の説明・推奨の理由の書き方</td></tr>
+                            <tr><td>3. 代理店の確認</td><td>代理店</td><td>取扱商品・相談の流れ・手数料の受け取り方が実態と合っているか</td></tr>
+                            <tr><td>4. 所属保険会社の審査</td><td>代理店が提出・保険会社が審査</td><td>保障の内容や保険料に触れる箇所。各社の審査の手順に沿って出します</td></tr>
+                            <tr><td>5. 公開と計測</td><td>代理店が公開・nitoが計測</td><td>公開の翌日から、狙った質問でAIの回答がどう変わるか</td></tr>
+                        </table>
+                    </div>
+                    <div class="sample-wrap">
+                        <p class="board-kind">お渡しする原稿の例（架空の代理店）</p>
+                        <p class="sample-lead">代理店のホームページの「法人保険のご相談の流れ」のページに載せる原稿の一部です。</p>
+                        <div class="mock"><div class="mock-doc sample-doc">
+                            <div class="mock-doc-title">法人保険のご相談の流れ <span>原稿の一部</span></div>
+                            <p>借入のある会社の経営者さまには、万一のときに返済と運転資金がいくら要るかを先に一緒に計算し、そのうえで保険で備える額を決めます。役員の退職金や事業承継のご相談も、同じ面談でお受けしています。</p>
+                            <p>保障の目的・保険料の予算・解約返戻金の要否の3つの基準で商品を絞り込み、おすすめする理由を面談でご説明します。</p>
+                            <p class="sample-note">比較表に添える注意書きの例：この表は各商品の内容をすべて載せたものではありません。参考情報としてご利用いただき、保障の内容や条件は各商品の契約概要とパンフレットで必ずご確認ください。</p>
+                        </div></div>
+                    </div>
                 </div>
                 <div class="step">
                     <span class="step-num">04</span>
                     <div class="step-main">
                         <h3 class="step-title">相談予約まで数える運用</h3>
-                        <p class="step-desc">公開後の回答の変化を毎日追い、効いた書き方は他のページにも広げます。予約フォームで「何で知ったか」を聞き、AIで知った人からの予約を法人と個人に分けて数えます。</p>
+                        <p class="step-desc">公開後の回答の変化を毎日追い、効いた書き方は他のページにも広げます。予約フォームに「何で知ったか」の項目を足し、AIで知った人からの予約を数えます。合計だけでは法人保険の相談が増えたのか家族の見直しが増えたのか分からず、契約1件あたりの収入も違うので、相談の種類ごとに分けて数えます。</p>
+                        <p class="step-out"><b>お渡しするもの</b>毎月の数字（AIでの挙がり方と相談予約）</p>
                     </div>
                     <div class="step-visual"><div class="mock mock-sheet">
-                        <div class="mock-sheet-title">相談予約の集計（例） <span>AIで知った人</span></div>
+                        <div class="mock-sheet-title">AIで知ったと答えた人の相談予約（例） <span>その月の件数</span></div>
                         <table>
                             <tr><th>相談の種類</th><th>1ヶ月目</th><th>3ヶ月目</th><th>6ヶ月目</th></tr>
                             <tr><td>法人の事業保障</td><td>0件</td><td>1件</td><td>3件</td></tr>
@@ -1954,57 +2003,7 @@
                     </div></div>
                 </div>
             </div>
-            <p class="rcase-note">※ 表の数字は説明のための例です</p>
-        </div>
-    </section>
-
-    <!-- Review -->
-    <section class="section section--gray" id="review">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-title">公開までの確認の段取り</h2>
-                <p class="measure-lead">保険代理店のページは、代理店と所属保険会社の確認を通してから公開します。誰が何を見るかを最初に決め、所属保険会社の審査の日数も公開の予定に組み込みます。</p>
-            </div>
-            <div class="qtable-wrap">
-                <table class="qtable stack review-table">
-                    <tr><th>工程</th><th>担当</th><th>見るもの</th></tr>
-                    <tr><td>1. 原稿の作成</td><td>nito</td><td>相談の種類ごとの質問への答えと、他の相談先が挙がる理由に合わせた本文</td></tr>
-                    <tr><td>2. 募集のルールの点検</td><td>nito</td><td>比較表の注意書き・契約概要の案内・見直しの不利益の説明・推奨の理由の書き方</td></tr>
-                    <tr><td>3. 代理店の確認</td><td>代理店</td><td>取扱商品・相談の流れ・手数料の受け取り方が実態と合っているか</td></tr>
-                    <tr><td>4. 所属保険会社の確認</td><td>代理店から所属保険会社へ</td><td>保障の内容や保険料に触れる箇所。各社の募集文書の審査の手順に沿って出します</td></tr>
-                    <tr><td>5. 公開と計測</td><td>代理店が公開を判断・nitoが計測</td><td>公開の翌日から、狙った質問で回答と引用元がどう変わるか</td></tr>
-                </table>
-            </div>
-            <div class="sample-wrap">
-                <p class="board-kind">お渡しする原稿の例（架空の代理店）</p>
-                <div class="mock"><div class="mock-doc sample-doc">
-                    <div class="mock-doc-title">法人保険のご相談の流れ <span>原稿の一部</span></div>
-                    <p>借入のある会社の経営者さまには、万一のときに返済と運転資金がいくら要るかを先に一緒に計算し、そのうえで保険で備える額を決めます。役員の退職金や事業承継のご相談も、同じ面談でお受けしています。</p>
-                    <p>保障の目的・保険料の予算・解約返戻金の要否の3つの基準で商品を絞り込み、おすすめする理由を面談でご説明します。</p>
-                    <p class="sample-note">比較表に添える注意書きの例：この表は取り扱う商品の一部を比べた参考情報です。保障の内容や条件は各商品の契約概要とパンフレットで必ずご確認ください。</p>
-                </div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Measure -->
-    <section class="section" id="measure">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-title">実際のチャット画面での毎日の計測</h2>
-                <p class="measure-lead">相談する人が見る回答のまま、回答本文と引用元を毎日記録しています。これまでに記録したAIの回答は3万件を超えます（2026年11月時点）。</p>
-            </div>
-            <div class="board-row">
-                <div class="board-text">
-                    <p class="board-kind">API ではなくチャット画面で測る理由</p>
-                    <p>ChatGPTでAPI（プログラム用の窓口）とチャット画面に同じ質問をしたとき、出典が重なったのは平均で12.0%でした。nitoは実際のチャット画面で回答を集めるシステムを自社で作り、結果は専用のダッシュボードで確認できます。</p>
-                </div>
-                <figure class="measure-shot">
-                    <img src="/aio/img/board-demo.jpg" alt="ダッシュボードの画面。言及率・平均順位・Top3率などを毎日表示する" width="1280" height="800" loading="lazy">
-                    <figcaption>ダッシュボード（架空の歯科医院のデモ画面）</figcaption>
-                </figure>
-            </div>
-            <p class="src">出典: <a href="https://arxiv.org/abs/2609.18729" target="_blank" rel="noopener">Uberti-Bona Marin ほか「Auditing AI-Generated Product Recommendations」</a>（arXiv、2026年9月）</p>
+            <p class="rcase-note">※ 進め方の表と原稿は、説明のための例です</p>
         </div>
     </section>
 
@@ -2013,31 +2012,22 @@
         <div class="container">
             <div class="section-head">
                 <h2 class="section-title">これまでの成果</h2>
+                <p class="measure-lead">保険代理店以外の業種での成果です。</p>
             </div>
             <div class="qtable-wrap">
                 <table class="qtable">
                     <tr><th>支援先</th><th>成果</th></tr>
-                    <tr><td>SaaS企業</td><td>取り組み3ヶ月で、AIでの言及率が10%から45%に。AI経由のコンバージョンは5ヶ月で約6.7倍</td></tr>
-                    <tr><td>士業</td><td>AIでの言及率が0%から20%に。新しいページは公開3日でAIの回答の引用元に</td></tr>
+                    <tr><td>SaaS企業</td><td>取り組み3ヶ月で、ある質問での言及率（その質問に対して名前が挙がった回答の割合）が10%から45%に。AI経由の申し込みは5ヶ月で約6.7倍</td></tr>
+                    <tr><td>士業</td><td>ある質問での言及率が0%から20%に。新しいページは公開3日でAIが回答に使うページに</td></tr>
                 </table>
             </div>
-            <p class="rcase-note">※ AI経由のコンバージョンは、開始時を1.0とした相対値です　※ 成果は事業・体制・地域の競合により異なります。どの相談のどの質問でどこまで狙えるかは、無料の現状分析のあとにお伝えします　<a href="https://nito-0210.com/aio/#case">導入事例を見る</a></p>
-        </div>
-    </section>
-
-    <!-- Prepare -->
-    <section class="section" id="prepare">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-title">ご相談の前にそろえておくと進めやすいこと</h2>
+            <p class="rcase-note">※ AI経由の申し込みは開始時を1.0とした相対値です　※ 成果は事業・体制・地域の競合により異なります。どの相談のどの質問でどこまで狙えるかは、無料の現状分析のあとにお伝えします</p>
+            <p class="case-more"><a href="https://nito-0210.com/aio/#case" class="btn-text">導入事例を見る</a></p>
+            <div class="measure-block" id="measure">
+                <h3 class="measure-block-title">成果を支える毎日の計測</h3>
+                <p>ChatGPTやGeminiに、相談する人と同じ画面から質問し、回答の本文と、AIが読んだページを毎日記録しています。nitoがこれまでに記録したAIの回答は3万件を超えます（2026年11月時点）。</p>
+                <p>AIにはプログラムから質問する方法もありますが、相談する人が見る回答とは中身がずれます。ある研究ではChatGPTに同じ質問をしたとき、プログラムからの回答と画面の回答とで、示された出典が重なったのは平均12.0%でした（<a href="https://arxiv.org/abs/2609.18729" target="_blank" rel="noopener">Uberti-Bona Marin ほか、arXiv、2026年9月</a>）。nitoは画面の回答を集める仕組みを自社で作り、結果は専用の画面でいつでも確認できます。</p>
             </div>
-            <ol class="prep-list">
-                <li><b>ウェブ経由の相談予約の月の件数と、法人・個人の内訳</b><span>増えたかどうかを比べる起点になります</span></li>
-                <li><b>契約1件の価値</b><span>面談の何件に1件が契約に進むか、法人と個人で1件あたりの収入がどう違うか</span></li>
-                <li><b>力を入れる相談と、受けない相談</b><span>生命保険と損害保険、法人と個人のどこに力を入れるかで、測る質問を絞ります</span></li>
-                <li><b>ページを更新できる人と、所属保険会社の確認の窓口</b><span>誰がどの順で確かめるかを先に決めると、公開が止まりにくくなります</span></li>
-                <li><b>比較推奨の方針と推奨の基準</b><span>2028年3月から適用される監督指針の考え方に、ページの内容もそろえておくと安心です</span></li>
-            </ol>
         </div>
     </section>
 
@@ -2047,10 +2037,27 @@
             <a href="https://nito-0210.com/contact.html" class="cta-banner">
                 <div class="cta-banner-text">
                     <span class="cta-banner-label">無料の現状分析レポート</span>
-                    <p class="cta-banner-title">法人保険と見直しの質問で、いまAIにどう紹介されているかをまとめます。</p>
+                    <p class="cta-banner-title">法人保険と個人の保険の見直しの質問で、いまAIにどう紹介されているかを調べてお送りします。</p>
                 </div>
                 <div class="cta-banner-arrow">→</div>
             </a>
+        </div>
+    </section>
+
+    <!-- Prepare -->
+    <section class="section" id="prepare">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">ご相談の前に手元にあると話が早いこと</h2>
+                <p class="measure-lead">そろっていなくても始められます。</p>
+            </div>
+            <ol class="prep-list">
+                <li><b>ウェブ経由の相談予約の月の件数と、法人・個人の内訳</b><span>増えたかどうかを比べる起点になります</span></li>
+                <li><b>契約1件あたりの収入</b><span>面談の何件に1件が契約に進むか、法人と個人で1件あたりの収入がどう違うか。どの相談に力を入れるかを決める材料になります</span></li>
+                <li><b>力を入れたい相談と、受けていない相談</b><span>生命保険と損害保険、法人と個人のどこに力を入れるかで、測る質問を絞ります</span></li>
+                <li><b>ページを更新できる人と、確認の窓口</b><span>誰がどの順で確かめるかを先に決めると、公開が止まりにくくなります</span></li>
+                <li><b>比較推奨の方針と推奨の基準</b><span>乗合代理店は、2028年3月1日から施行される改正内閣府令と監督指針で、推奨の基準と理由の説明が細かく決まります。ページの説明もそれにそろえます</span></li>
+            </ol>
         </div>
     </section>
 
@@ -2074,12 +2081,12 @@
                     <div class="faq-answer"><div class="faq-answer-inner">始められます。力を入れたい相談の種類を1つ決め、その相談で添えられる事情を入れた質問で、いまどう紹介されているかを測るところから始めます。</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question"><span>言及率が上がれば相談予約も増えますか？</span><span class="faq-icon">+</span></button>
+                    <button class="faq-question"><span>AIに名前が挙がれば相談予約も増えますか？</span><span class="faq-icon">+</span></button>
                     <div class="faq-answer"><div class="faq-answer-inner">増えるとは限りません。保険の仕組みを尋ねる質問で名前が挙がっても、その人が相談先を探しているとは言えないからです。nitoは相談先を探す質問で挙がることを狙い、予約フォームで「AIで知った」と答えた人の数と並べて確かめます。</div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question"><span>効果が出るまでどのくらいかかりますか？</span><span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">士業の支援では新しいページが公開から3日でAIの回答の引用元に入り、SaaS企業の支援では3ヶ月で言及率が10%から45%に上がりました。地域の競合の多さと力を入れる相談の種類で変わるので、見通しは現状分析のあとにお伝えします。</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner">士業の支援では新しいページが公開から3日でAIの回答の引用元に入り、SaaS企業の支援では3ヶ月で、ある質問での言及率が10%から45%に上がりました。地域の競合の多さと力を入れる相談の種類で変わるので、見通しは現状分析のあとにお伝えします。</div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question"><span>AIに必ず名前が挙がるようにできますか？</span><span class="faq-icon">+</span></button>
@@ -2087,9 +2094,10 @@
                 </div>
                 <div class="faq-item">
                     <button class="faq-question"><span>費用はどのくらいかかりますか？</span><span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">月額で、狙う質問の数と、制作するページ・記事の量で決めます。まずは無料の現状分析レポートで、いまの状況をご確認ください。</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner">月額で、対策するサービスの数と制作する記事の本数で決まります。まずは無料の現状分析レポートで、いまの状況をご確認ください。</div></div>
                 </div>
             </div>
+            <div class="faq-cta"><a href="https://nito-0210.com/contact.html" class="btn-primary">無料で現状分析レポートを申し込む</a></div>
             <p class="src">保険代理店がAI検索対策の支援会社を選ぶときの基準は「<a href="https://nito-0210.com/media/insurance-agency-aio-companies/">保険代理店におすすめのAIO対策会社・選び方</a>」で比べています。AI検索対策の支援の全体は<a href="https://nito-0210.com/aio/">AI検索対策（AIO・LLMO）の支援</a>をご覧ください。</p>
         </div>
     </section>
