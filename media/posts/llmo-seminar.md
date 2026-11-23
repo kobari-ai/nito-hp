@@ -74,7 +74,7 @@ LLMOセミナー（AIO対策セミナー）は、聞きたい中身が入門か�
 
 参加費は無料で定員は100名、同業者の参加は不可です。アンケートに答えるとLLMOチェックリストが届き、LLMO無料診断として悩みを相談する会にも招かれます。過去には不動産・ファッション・人材の業界向けや、LLMOコンサルの選び方の回もありました。
 
-<!-- SHOT: 画面 https://ipeinc.jp/media/seminar/20261127/・本文だけにある探す語「開催概要」・赤枠にする語「参加費」「無料」「同業者の方のご参加はご遠慮頂いております」・PC・alt「ipeのBtoB×LLMO入門編の開催概要。参加費は無料で、同業者の参加は断ると書かれている」・figcaption「ipeのセミナーの開催概要（2026年11月24日）」 -->
+<figure class="post-figure"><img src="/media/images/llmo-seminar/ipe-seminar-overview.png" alt="ipeのBtoB×LLMO入門編の開催概要。参加費は無料で、同業者の参加は断ると書かれている" loading="lazy"><figcaption>ipeのセミナーの開催概要（2026年11月24日）</figcaption></figure>
 
 ### 6. 株式会社メディアリーチ
 
