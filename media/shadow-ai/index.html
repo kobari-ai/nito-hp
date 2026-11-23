@@ -41,7 +41,7 @@
             <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
             <nav class="gnav">
                 <a href="/#about">About</a>
-                <a href="/llmo/">サービス</a>
+                <a href="/aio/">サービス</a>
                 <a href="/media/">コラム</a>
                 <a href="/contact.html" class="nav-cta">相談する</a>
             </nav>
@@ -77,7 +77,7 @@
 <div class="fork__ttl">目的に合わせて読む</div>
 <a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
 <a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
-<a href="/llmo/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/aio/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
 </div>
             <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
@@ -138,6 +138,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 </table></div>
 <p>ChatGPTの個人向けの学習の設定は<a href="https://help.openai.com/en/articles/7730893">データコントロールのヘルプ</a>、会社向けは<a href="https://openai.com/enterprise-privacy/">OpenAIのEnterprise privacy</a>（2026年1月8日更新）によります。個人の設定の切り方は<a href="/media/chatgpt-training-off/">ChatGPTに学習させない設定</a>にまとめました。Geminiは<a href="https://support.google.com/gemini/answer/13594961?hl=ja">Geminiアプリのプライバシー ハブ</a>に、人間のレビュアーが確認したチャットはアクティビティを消しても消えず最長3年保存されるとあります。Workspaceの<a href="https://support.google.com/a/answer/15706919?hl=ja">Google Workspaceの生成AIに関するプライバシー ハブ</a>には、人によるレビューも許可のない学習も無いと書かれていました。</p>
 <p>個人情報が絡む場面について、<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/">個人情報保護委員会の注意喚起</a>（2023年6月2日）は、個人情報取扱事業者が本人の同意なく個人データを含むプロンプトを入力し、それが応答の出力以外の目的で扱われれば、個人情報保護法の規定に違反する可能性があるとしています。<strong>そのため、入力する前にサービスの会社が個人データを機械学習に使わないこと等を確かめるよう求めています。</strong>社員の個人アカウントについてこの確認を会社が担保する手段はありません。</p>
+<p>法人プランと個人プランで入力の扱いや管理者の制御がどう違うかは、<a href="/media/genai-data-leak/">生成AIの情報漏洩対策</a>で製品ごとに並べています。</p>
 <div class="mcta">
 <div class="mcta__body">
 <p class="mcta__eyebrow">会社で AI を使っている方へ</p>
@@ -334,7 +335,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <div class="ecta__ttl">AI を会社の業務に組み込む相談を受けています</div>
 <p class="ecta__desc">どの作業を AI に任せるかの棚卸しから一緒に進めます。相談は無料です。</p>
 <div class="ecta__btns"><a class="pri" href="/contact.html">無料で業務棚卸しを相談</a><a class="sec" href="/ai-agent/">進め方を見る</a></div>
-<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/llmo/">AI検索対策（AIO）</a> をご覧ください。</p>
+<p class="ecta__sub">AI 検索で自社がどう紹介されているかを知りたい方は <a href="/aio/">AI検索対策（AIO）</a> をご覧ください。</p>
 </div>
 
         <div class="author">
@@ -376,7 +377,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
         <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
         <nav class="f-nav">
             <a href="/#about">About</a>
-            <a href="/llmo/">サービス</a>
+            <a href="/aio/">サービス</a>
             <a href="/media/">コラム</a>
             <a href="/privacy.html">プライバシーポリシー</a>
         </nav>
@@ -399,7 +400,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
     <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
     <script>
     (function(){
-      var T={'/llmo/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var T={'/aio/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
       var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
       document.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
