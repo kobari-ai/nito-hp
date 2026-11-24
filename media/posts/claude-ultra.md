@@ -40,7 +40,7 @@ Claudeの個人向けプランは、2026年10月31日からFree・Pro・Max・Ul
 
 ## Claude UltraとMaxの違い
 
-料金ページの比較表で、MaxとUltraの列が違うのは使用量とAPIクレジットの行だけです。Claude Code・Claude in Chrome・Researchなど機能の欄は、どちらも「はい」が並びます。
+料金ページの比較表で、MaxとUltraの列が違うのは使用量とAPIクレジットの行だけです。Claude Code・[Claude in Chrome](/media/claude-in-chrome/)・Researchなど機能の欄は、どちらも「はい」が並びます。
 
 | 項目 | Max | Ultra |
 |---|---|---|

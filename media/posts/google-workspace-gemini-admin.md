@@ -32,13 +32,13 @@ Google Workspaceの管理コンソールには、Geminiを止めるスイッチ�
 | Gmail・ドキュメント・Meetなどの中のGemini | ［生成AI］［Gemini for Workspace］［機能へのアクセス］ | オン | Enterprise Standard・Enterprise Plusなど |
 | GeminiアプリからGmailやドライブを読む連携 | ［生成AI］［Geminiアプリ］［アプリ］ | オン | Geminiアプリを使えるエディション |
 
-このほか、旧NotebookLMのGemini Notebookは［生成AI］［Gemini Notebook］、MeetのAIによるメモ作成は［アプリ］［Google Workspace］［Google Meet］の［Gemini の設定］と、それぞれ別の場所です。Geminiのベータ版の機能は既定でオフで、管理者がオンにしない限り組織では使えません。
+このほか、旧NotebookLMの[Gemini Notebook](/media/gemini-notebook-guide/)は［生成AI］［Gemini Notebook］、MeetのAIによるメモ作成は［アプリ］［Google Workspace］［Google Meet］の［Gemini の設定］と、それぞれ別の場所です。Geminiのベータ版の機能は既定でオフで、管理者がオンにしない限り組織では使えません。
 
 Gemini Notebookをオンにする手順と使えないときの確かめ方は[WorkspaceでNotebookLMを有効にする方法](/media/notebooklm-workspace-admin/)にまとめました。
 
 ## Geminiアプリをオンまたはオフにする手順
 
-Geminiアプリに含まれるのはgemini.google.comのウェブアプリ・AndroidとiOSのGeminiアプリ・Gemini in Chrome・MacのGeminiです。管理者ヘルプ「[Gemini アプリをオンまたはオフにする](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/turn-the-gemini-app-on-or-off?hl=ja)」によると、ライセンスが割り当てられた18歳以上のユーザーは**最初からGeminiアプリを使える状態**です。この設定を変えるにはGeminiの「設定」の管理者権限が要ります。
+Geminiアプリに含まれるのはgemini.google.comのウェブアプリ・AndroidとiOSのGeminiアプリ・[Gemini in Chrome](/media/chrome-gemini-remove/)・MacのGeminiです。管理者ヘルプ「[Gemini アプリをオンまたはオフにする](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/turn-the-gemini-app-on-or-off?hl=ja)」によると、ライセンスが割り当てられた18歳以上のユーザーは**最初からGeminiアプリを使える状態**です。この設定を変えるにはGeminiの「設定」の管理者権限が要ります。
 
 1. [Google管理コンソール](https://admin.google.com/)のメニューから［生成AI］［Geminiアプリ］に進む
 2. ［サービスのステータス］を押す

@@ -77,7 +77,7 @@ Enterpriseのシートのヘルプ「[エンタープライズプランでシー
 
 ## Teamとの違い
 
-料金ページの「プラン間の機能を比較」には、Team・Enterprise（セルフサービス）・Enterprise（営業担当経由）の3列が並んでいます。チャットやClaude Code、Claude in Chromeなどの使える機能は3列ともほぼ同じです。違いが集まっているのはセキュリティと管理の行です。
+料金ページの「プラン間の機能を比較」には、Team・Enterprise（セルフサービス）・Enterprise（営業担当経由）の3列が並んでいます。チャットやClaude Code、[Claude in Chrome](/media/claude-in-chrome/)などの使える機能は3列ともほぼ同じです。違いが集まっているのはセキュリティと管理の行です。
 
 <figure class="post-figure"><img src="/media/images/claude-enterprise/cent_04_compare.jpg" alt="Claudeの料金ページのプラン比較表のセキュリティと管理の部分。シングルサインオン、ドメイン確認、組織の作成を制限、一元的な請求と管理などは3列とも黒丸で、ドメインキャプチャ、ロールベースのアクセス制御、SCIM、監査ログ、コンプライアンスAPI、カスタムデータ保持コントロール、HIPAA対応オプションはTeamの列だけがバツになっている。ただしドメインキャプチャとロールベースの権限は、Teamのヘルプにも項目がある" loading="lazy"><figcaption>比較表のセキュリティと管理（2026年10月13日）</figcaption></figure>
 

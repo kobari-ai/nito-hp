@@ -46,7 +46,7 @@ Codexを調べると「ターミナルにインストールして使うツール
 
 Businessは2人以上で年額課金のときの金額で、月額課金なら1人$25になります。APIキーで使う道もあり、この場合はCLIとSDKとIDE拡張が対象です。GitHubの自動コードレビューやSlack連携といったクラウド側の機能は付かず、料金はAPIの従量課金になります。
 
-ChatGPT WorkとCodexは利用量を共有します。料金ページの説明はコーディングの作業を前提にしているので、Workで文書や資料を作る場合の消費は作業ごとに変わります。
+[ChatGPT Work](/media/chatgpt-work-plans/)とCodexは利用量を共有します。料金ページの説明はコーディングの作業を前提にしているので、Workで文書や資料を作る場合の消費は作業ごとに変わります。
 
 Claude Codeと比べて会社でどちらを入れるかは、[CodexとClaude Codeの比較](/media/codex-vs-claude-code/)にまとめました。
 

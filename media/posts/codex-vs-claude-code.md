@@ -25,7 +25,7 @@ OpenAIのCodexはChatGPTのプランに、AnthropicのClaude CodeはClaudeのプ
 
 <figure class="post-figure post-figure--zu"><img src="/media/images/codex-vs-claude-code/cvc_13_choose.jpg" alt="CodexとClaude Codeの選び方の図。ChatGPT Businessを全社で入れている会社はCodex（追加の契約なしで開発者に開ける）、Claude Teamを入れている会社はClaude Code（同じ1人分の契約に含まれる）、どちらも契約していない会社は監査ログ・SCIMの要否、Business・Teamでの利用状況の分析、プルリクエストの自動レビューの3項目で比較" loading="lazy"></figure>
 
-ChatGPT Businessを全社で入れている会社なら、Codexは追加の契約なしで開発者に開けます。Claude Teamを入れている会社なら、Claude Codeも同じ1人分の契約に含まれます。どちらも契約していない会社は、次の3つで比べると判断が早くなります。
+[ChatGPT Business](/media/chatgpt-business/)を全社で入れている会社なら、Codexは追加の契約なしで開発者に開けます。Claude Teamを入れている会社なら、Claude Codeも同じ1人分の契約に含まれます。どちらも契約していない会社は、次の3つで比べると判断が早くなります。
 
 - 監査ログやSCIMが必要か（必要なら両社ともEnterprise）
 - 利用状況の分析をBusiness・Teamの段階で見たいか（CodexはEnterpriseから）

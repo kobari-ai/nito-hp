@@ -65,7 +65,7 @@ Teamは料金ページの「Team plan を申し込む」から始めます。[�
 
 ### BedrockとAgent PlatformとFoundry
 
-Amazon Bedrock・Google CloudのAgent Platform（旧Vertex AI）・Microsoft Foundryは、モデルをAPIで使った分を各クラウドの請求書で払う経路です。[Microsoft Foundryのページ](https://claude.com/ja/partners/microsoft-foundry)は、使用量がAzureの請求書に載り、Azureの利用コミットメント（MACC）にも数えられると書いています。Claude Codeは[Bedrock](https://code.claude.com/docs/ja/amazon-bedrock)や[Agent Platform](https://code.claude.com/docs/ja/google-vertex-ai)の認証でも動き、ログイン画面で3rd-party platformを選んで設定します。データを置く地域で選ぶなら、[地域別コンプライアンスのページ](https://claude.com/ja/regional-compliance)の表ではアジア太平洋にBedrockとVertexが「含まれる」、Foundryは「含まれない」でした（10月23日）。
+Amazon Bedrock・Google CloudのAgent Platform（旧[Vertex AI](/media/vertex-ai-guide/)）・Microsoft Foundryは、モデルをAPIで使った分を各クラウドの請求書で払う経路です。[Microsoft Foundryのページ](https://claude.com/ja/partners/microsoft-foundry)は、使用量がAzureの請求書に載り、Azureの利用コミットメント（MACC）にも数えられると書いています。Claude Codeは[Bedrock](https://code.claude.com/docs/ja/amazon-bedrock)や[Agent Platform](https://code.claude.com/docs/ja/google-vertex-ai)の認証でも動き、ログイン画面で3rd-party platformを選んで設定します。データを置く地域で選ぶなら、[地域別コンプライアンスのページ](https://claude.com/ja/regional-compliance)の表ではアジア太平洋にBedrockとVertexが「含まれる」、Foundryは「含まれない」でした（10月23日）。
 
 ## 国内の代理店とパートナー
 

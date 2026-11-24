@@ -23,7 +23,7 @@ ChatGPT Businessは、会社やチームで1つのワークスペースを共有
 
 ## ChatGPT Businessとは
 
-[ChatGPT Business の概要](https://help.openai.com/ja-jp/articles/8792828-chatgpt-business-overview)によると、Businessはチームで共有するワークスペースが要る組織向けの、自分で申し込めるプランです。ワークスペースには一元的な請求、メンバーとロールの管理、利用状況の確認がまとまっていて、どちらの席でもChatGPT、ChatGPT Work、Codexを使えます。
+[ChatGPT Business の概要](https://help.openai.com/ja-jp/articles/8792828-chatgpt-business-overview)によると、Businessはチームで共有するワークスペースが要る組織向けの、自分で申し込めるプランです。ワークスペースには一元的な請求、メンバーとロールの管理、利用状況の確認がまとまっていて、どちらの席でもChatGPT、[ChatGPT Work](/media/chatgpt-work-plans/)、Codexを使えます。
 
 名前は2025年8月29日にChatGPT Teamから変わりました。[ChatGPT Business の一般FAQ](https://help.openai.com/ja-jp/articles/8542115-chatgpt-business-general-faq)では、改名でワークスペースを作り直したりデータを移したりする必要はなく、改名そのものでは機能・料金・上限は変わらなかったと説明されています。請求書や領収書の表記がChatGPT Businessになっただけです。
 

@@ -125,7 +125,7 @@ cover_sub: 一時チャットのやり方・72時間・出ないとき
 
 ### Gemini in ChromeとGoogleメッセージ
 
-Chromeに組み込まれたGemini in ChromeとGoogleメッセージのGeminiでは一時チャットを使えない、と英語版のヘルプにあります。Chromeの右上やメッセージのアプリから開いているなら、[gemini.google.com](https://gemini.google.com/)かGeminiアプリで開き直します。そもそもGeminiにログインできないときは、[Geminiの年齢制限](/media/gemini-age-limit/)の条件に当たっていないかも見てください。
+Chromeに組み込まれたGemini in Chromeと[GoogleメッセージのGemini](/media/google-messages-gemini/)では一時チャットを使えない、と英語版のヘルプにあります。Chromeの右上やメッセージのアプリから開いているなら、[gemini.google.com](https://gemini.google.com/)かGeminiアプリで開き直します。そもそもGeminiにログインできないときは、[Geminiの年齢制限](/media/gemini-age-limit/)の条件に当たっていないかも見てください。
 
 ## アクティビティの保存をオフにする設定との違い
 
