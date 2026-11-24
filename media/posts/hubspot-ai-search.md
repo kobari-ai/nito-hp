@@ -38,7 +38,7 @@ desc: AI検索対策の考え方と、会社として進める手順を解説し
 
 **AI Search Graderは無料で現状をつかむツール、HubSpot AEOは毎日追跡して推奨事項まで出す有料のツールです。**どちらも自社の改善に使えますが、直すところまで自動で進めるわけではありません。
 
-<!-- SHOT: 図 hub_overview.html → hub_01_overview.png・alt「HubSpotのAIO対策の役割分担。AI Search Graderは無料で一回の分析、HubSpot AEOは毎日の追跡と推奨事項、サイトの修正と外部での言及は自社が行う」 -->
+<figure class="post-figure"><img src="/media/images/hubspot-ai-search/hub_01_overview.png" alt="HubSpotのAIO対策の役割分担。AI Search Graderは無料で一回の分析、HubSpot AEOは毎日の追跡と推奨事項、サイトの修正と外部での言及は自社が行う" loading="lazy"></figure>
 
 | 観点 | AI Search Grader | HubSpot AEO |
 |---|---|---|
@@ -76,8 +76,6 @@ HubSpot AEOは追跡する質問（プロンプト）をChatGPT・Gemini・Perpl
 
 対象のAIは3つとも共通で、質問は追加購入でいつでも増やせます。複数のブランドを別々に計測するときは、1ブランドにつき月額6,000円の追加です。**Marketing Hub Professionalを既に契約しているなら、単体のAEOを別に買う必要はありません。**これから契約する場合、Professionalは月800ドルからで、必須の導入支援3,000ドルが別にかかると料金ページにあります。計測だけが目的なら単体、記事の作成や顧客データとの連携まで1つの画面で進めたいならMarketing Hubを検討するのが一般的な分け方です。
 
-<!-- SHOT: 画面 https://www.hubspot.jp/products/aeo・本文だけにある探す語「年間払いの場合」・赤枠にする語「月額6,000円」・PC・alt「HubSpot AEOの製品ページの料金欄。月額6,000円、年間払いの場合は月5,400円」・figcaption「HubSpot AEOの製品ページの料金欄（2026年11月25日）」 -->
-
 ## HubSpot AEOだけでは足りないところ
 
 **HubSpot AEOが計測するのは決めた質問と決めたAIの範囲で、問い合わせが増えたかや推奨事項の実行までは受け持ちません。**導入前に知っておきたい点は4つあります。
@@ -110,7 +108,7 @@ AIでの言及が問い合わせや商談につながったかは、HubSpot AEO�
 
 **AIに読まれる前提として、ページのタイトルと説明文・本文の結論・構造化データ・robots.txtの4つを整えます。**どれもHubSpotの設定画面に場所があり、権限があれば社内で修正が可能です。
 
-<!-- SHOT: 図 hub_site.html → hub_02_site.png・alt「HubSpotのサイトで整える4か所。ページの設定のタイトルと説明文、本文の結論と見出し、ヘッダーHTMLの構造化データ、SEOおよびクローラーのrobots.txt」 -->
+<figure class="post-figure"><img src="/media/images/hubspot-ai-search/hub_02_site.png" alt="HubSpotのサイトで整える4か所。ページの設定のタイトルと説明文、本文の結論と見出し、ヘッダーHTMLの構造化データ、SEOおよびクローラーのrobots.txt" loading="lazy"></figure>
 
 ### タイトルとメタディスクリプション
 
