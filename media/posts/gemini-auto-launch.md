@@ -111,7 +111,7 @@ Googleマップのナビ中やマップに相談のGeminiで、止められる�
 
 検索で見つかる止め方にはGeminiアプリのメニューから「Googleアシスタントに切り替える」を選ぶものがあります。Googleのヘルプも、2026年10月2日の時点でこの手順を載せたままです。
 
-ところが、[ITmedia Mobileの2026年8月6日の記事](https://www.itmedia.co.jp/mobile/articles/2608/06/news064.html)によると、Googleは8月4日から「モバイルデバイスにおけるGoogleアシスタントのサービス提供終了について」というメールを日本の利用者にも送り、9月4日からアクセスの削除を始めました。**削除が適用された端末ではGoogleアシスタントを使うことも、Geminiから切り替え直すこともできません。**対象はスマホ・タブレットと、ペアのスマートウォッチ・イヤホン・Android Autoです。
+ところが、[ITmedia Mobileの2026年8月6日の記事](https://www.itmedia.co.jp/mobile/articles/2608/06/news064.html)によると、Googleは8月4日から「モバイルデバイスにおけるGoogleアシスタントのサービス提供終了について」というメールを日本の利用者にも送り、9月4日からアクセスの削除を始めました。**削除が適用された端末ではGoogleアシスタントを使うことも、Geminiから切り替え直すこともできません。**対象はスマホ・タブレットと、ペアのスマートウォッチ・イヤホン・[Android Auto](/media/android-auto-gemini/)です。
 
 <figure class="post-figure"><img src="/media/images/gemini-auto-launch/08_fig_timeline.png" alt="スマホのGoogleアシスタントがGeminiに置き換わるまでの図。2025年3月に移行を予告し、2025年12月に2026年へ延期。2026年8月4日に終了の告知メールが日本でも配信され、対象はスマホ・タブレット・ペアの機器。2026年9月4日にアクセスの削除が始まり、削除されるとGeminiからアシスタントに切り替え直せない" loading="lazy"><figcaption>Googleアシスタントのスマホでの提供は2026年9月4日から順に終わっている</figcaption></figure>
 

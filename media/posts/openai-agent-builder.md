@@ -100,7 +100,7 @@ Platformの[Agent Builder](https://platform.openai.com/agent-builder)を開き�
 
 モデルごとの単価と月額の試算、使いすぎを止める上限の設定は[OpenAI APIの料金](/media/openai-api-pricing/)で扱っています。
 
-移し先では費用の形も別物です。Agents SDKはコードの道具なので、払うのはAPIの代金と自社で動かすサーバー代です。ワークスペースエージェントはChatGPT Business以上の契約が前提で、発表では2026年5月6日まで無料とされ、今はクレジット制です。GPT-5.6で1回動かすと、目安は5〜25クレジットです（ChatGPTのレートカード）。
+移し先では費用の形も別物です。Agents SDKはコードの道具なので、払うのはAPIの代金と自社で動かすサーバー代です。ワークスペースエージェントは[ChatGPT Business](/media/chatgpt-business/)以上の契約が前提で、発表では2026年5月6日まで無料とされ、今はクレジット制です。GPT-5.6で1回動かすと、目安は5〜25クレジットです（ChatGPTのレートカード）。
 
 ## 移行先の選び方
 

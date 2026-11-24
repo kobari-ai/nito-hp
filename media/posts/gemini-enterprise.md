@@ -47,7 +47,7 @@ GmailやドキュメントのGeminiをもう使っている会社では、別の
 
 ### Agent Platformとの違い
 
-名前の似た[Gemini Enterprise Agent Platform](https://cloud.google.com/products/gemini-enterprise-agent-platform?hl=ja)は旧Vertex AIの新しい名前で、開発者がエージェントを組んで動かす場所です。コードで組んだエージェントは、管理者がGemini Enterpriseに登録すると社員の画面に並びます。作り方の選び方は「[AIエージェントの作り方](/media/ai-agent-build/)」にまとめました。
+名前の似た[Gemini Enterprise Agent Platform](https://cloud.google.com/products/gemini-enterprise-agent-platform?hl=ja)は旧[Vertex AI](/media/vertex-ai-guide/)の新しい名前で、開発者がエージェントを組んで動かす場所です。コードで組んだエージェントは、管理者がGemini Enterpriseに登録すると社員の画面に並びます。作り方の選び方は「[AIエージェントの作り方](/media/ai-agent-build/)」にまとめました。
 
 ## エディションと料金
 

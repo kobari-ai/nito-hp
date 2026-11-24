@@ -129,7 +129,7 @@ Anthropicが挙げるワークフローの型は5つです。
 | [GeminiのDeep Research](https://gemini.google/overview/deep-research/) | 調査計画を立て、何十ものサイトを回って読み、出典つきのレポートにまとめる | Geminiアプリの「Deep Research」 |
 | Microsoft 365 Copilotのエージェント | メール・Teams・ファイルを横断して、定型の業務（議事録作成・タスク整理など）を代行する | Microsoft 365のCopilot |
 
-このほか、Perplexityやその他の検索サービスにもDeep Research型の機能があり、Googleの検索結果に出るAIモードも、複数の検索を裏で回して答えを組み立てる点ではエージェントの仕組みを使っています（[AIモードの記事](https://nito-0210.com/media/google-ai-mode-guide/)）。「AIエージェント」と名乗っていなくても、裏で観測と行動のループを回している製品は増えています。調べ物からスライド・表の作成、電話の代行までを1つの画面にまとめた製品もあり、会社で使う前に確かめたい点は[Gensparkの記事](/media/genspark-guide/)で整理しています。
+このほか、Perplexityやその他の検索サービスにも[Deep Research](/media/deep-research-guide/)型の機能があり、Googleの検索結果に出るAIモードも、複数の検索を裏で回して答えを組み立てる点ではエージェントの仕組みを使っています（[AIモードの記事](https://nito-0210.com/media/google-ai-mode-guide/)）。「AIエージェント」と名乗っていなくても、裏で観測と行動のループを回している製品は増えています。調べ物からスライド・表の作成、電話の代行までを1つの画面にまとめた製品もあり、会社で使う前に確かめたい点は[Gensparkの記事](/media/genspark-guide/)で整理しています。
 
 単体のサービスとして提供されている汎用のAIエージェントには[Manus](/media/manus-ai/)もあり、別の記事で料金や運営会社、データの扱いまで説明しています。社内ツールや試作のアプリを会話から作って公開まで進めるエージェントには[Replit](/media/replit-guide/)があり、料金と会社で使う条件は別の記事で解説しました。
 

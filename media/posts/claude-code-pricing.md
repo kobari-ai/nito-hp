@@ -48,7 +48,7 @@ Claude CodeはターミナルやVS Codeなどのエディタから使うAnthropi
 
 ### Pro（月$22）で使えること
 
-ProはClaude Codeが使える最も安いプランです。Claude Codeのほかに、Claude Design・Slides・Docs、プロジェクト、Claude in Chrome、Microsoft 365向けのClaudeが付きます。使えるモデルはOpus・Sonnet・Haikuで、Fableは「使用クレジット」経由になります。5時間あたりの使用量はFreeの5倍以上と書かれていますが、**固定のメッセージ数は公開されていません**。会話の長さ、選ぶモデル、使う機能で消費が変わるためです。
+ProはClaude Codeが使える最も安いプランです。Claude Codeのほかに、Claude Design・Slides・Docs、プロジェクト、[Claude in Chrome](/media/claude-in-chrome/)、Microsoft 365向けのClaudeが付きます。使えるモデルはOpus・Sonnet・Haikuで、Fableは「使用クレジット」経由になります。5時間あたりの使用量はFreeの5倍以上と書かれていますが、**固定のメッセージ数は公開されていません**。会話の長さ、選ぶモデル、使う機能で消費が変わるためです。
 
 ### Max（$110）とUltra（$220）で増えるもの
 

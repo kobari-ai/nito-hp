@@ -53,7 +53,7 @@ OpenAIのサイトに来るボットは用途ごとに名前が分かれてい�
 | GPTBot | 基盤モデルの学習に使う内容を集める | 学習に使わない合図になる。検索の表示とは別 |
 | ChatGPT-User | 利用者の質問やGPTの操作でページを読みに行く | 利用者の操作なので効かない場合がある。検索に出すかの判断には使わない |
 
-このほかに、ChatGPTの広告として入稿したページだけを確かめに来るOAI-AdsBotがあります。**検索に出すかの設定はOAI-SearchBotで行い、ChatGPT-Userは使いません。** 公式ページはChatGPT-Userを検索の止め方に使わないよう書いています。
+このほかに、[ChatGPTの広告](/media/chatgpt-ads/)として入稿したページだけを確かめに来るOAI-AdsBotがあります。**検索に出すかの設定はOAI-SearchBotで行い、ChatGPT-Userは使いません。** 公式ページはChatGPT-Userを検索の止め方に使わないよう書いています。
 
 <figure class="post-figure"><img src="/media/images/chatgpt-search-citation/cscit_02_bots.png" alt="OpenAIのクローラーは3つ。OAI-SearchBotはChatGPTの検索に出すため、GPTBotはモデルの学習のため、ChatGPT-Userは利用者の操作でページを読むため" loading="lazy"></figure>
 

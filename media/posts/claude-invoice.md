@@ -138,7 +138,7 @@ JCTのお知らせは「請求通貨は変わりますか？」という問い�
 | API（前払い） | カードでクレジットを購入 | ヘルプに記載なし |
 | API（請求契約） | 月末にStripeから請求書 | 可（振込の注意がヘルプにある） |
 
-出典は[有料プラン請求のFAQ](https://support.claude.com/ja/articles/8325618)・[チームプラン請求FAQ](https://support.claude.com/ja/articles/12997503)・[Enterpriseの請求方法](https://support.claude.com/ja/articles/11526368)・[APIの使用料金の支払い](https://support.claude.com/ja/articles/8977456)です。ACHは米国の銀行間で使われる振込の仕組みです。**日本の会社が請求書払いと振込を使いたい場合は、営業経由のEnterpriseかAPIの請求契約を営業チームに相談する流れになります。**
+出典は[有料プラン請求のFAQ](https://support.claude.com/ja/articles/8325618)・[チームプラン請求FAQ](https://support.claude.com/ja/articles/12997503)・[Enterpriseの請求方法](https://support.claude.com/ja/articles/11526368)・[APIの使用料金の支払い](https://support.claude.com/ja/articles/8977456)です。ACHは米国の銀行間で使われる振込の仕組みです。**日本の会社が[請求書払い](/media/claude-corporate-contract/)と振込を使いたい場合は、営業経由のEnterpriseかAPIの請求契約を営業チームに相談する流れになります。**
 
 ## 請求書の行と月の締め
 

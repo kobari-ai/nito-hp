@@ -112,7 +112,7 @@ desc: 会社契約のChatGPTの料金と、学習に使われない設定、管�
 
 ### ③ アカウントを守る
 
-**会社のIDでログインするSSOと多要素認証で、乗っ取りの経路に対策します。**SSOはChatGPT Business・Claude Team以上で使え、Google WorkspaceとMicrosoft Copilotは会社のアカウントそのものです。Group-IBも乗っ取りの対策として、パスワードの定期的な変更と2段階認証を挙げています。退職や異動のときにAIのアカウントだけ残ると、過去の会話を持ち出せる状態のままです。人事の手続きにアカウントの削除を組み込むか、社員の追加と削除をIDの管理から自動で反映するSCIMを使える契約（ChatGPT Enterprise・Claude Enterprise）を選びます。
+**会社のIDでログインするSSOと多要素認証で、乗っ取りの経路に対策します。**SSOはChatGPT Business・[Claude Team](/media/claude-team/)以上で使え、Google WorkspaceとMicrosoft Copilotは会社のアカウントそのものです。Group-IBも乗っ取りの対策として、パスワードの定期的な変更と2段階認証を挙げています。退職や異動のときにAIのアカウントだけ残ると、過去の会話を持ち出せる状態のままです。人事の手続きにアカウントの削除を組み込むか、社員の追加と削除をIDの管理から自動で反映するSCIMを使える契約（ChatGPT Enterprise・Claude Enterprise）を選びます。
 
 ### ④ 社内データとつなぐ前に権限を見直す
 
