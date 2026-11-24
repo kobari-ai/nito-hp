@@ -232,7 +232,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
 <h3 id="s4-2">② 入力してはいけない情報を決める</h3>
 <p>会社の契約にしても、入力した内容は提供元のサーバーに保存され、管理者からも見える場合があります。そのため<strong>学習されないことと、何を入れてもよいことは別に扱います。</strong>入力を禁じる対象として多いのは、顧客や社員の個人データ（特に病歴などの要配慮個人情報）、取引先から秘密保持契約で受け取った情報、パスワードやAPIキーなどの認証情報、公表前の決算やM&amp;Aの情報です。名前を記号に置き換えれば使える文書も多いので、置き換えの例を1つ添えると現場で迷いません。周知の方法として研修を使う場合は、<a href="/media/genai-training-companies/">法人向け生成AI研修の比較</a>が参考になります。</p>
 <h3 id="s4-3">③ アカウントを守る</h3>
-<p><strong>会社のIDでログインするSSOと多要素認証で、乗っ取りの経路に対策します。</strong>SSOはChatGPT Business・Claude Team以上で使え、Google WorkspaceとMicrosoft Copilotは会社のアカウントそのものです。Group-IBも乗っ取りの対策として、パスワードの定期的な変更と2段階認証を挙げています。退職や異動のときにAIのアカウントだけ残ると、過去の会話を持ち出せる状態のままです。人事の手続きにアカウントの削除を組み込むか、社員の追加と削除をIDの管理から自動で反映するSCIMを使える契約（ChatGPT Enterprise・Claude Enterprise）を選びます。</p>
+<p><strong>会社のIDでログインするSSOと多要素認証で、乗っ取りの経路に対策します。</strong>SSOはChatGPT Business・<a href="/media/claude-team/">Claude Team</a>以上で使え、Google WorkspaceとMicrosoft Copilotは会社のアカウントそのものです。Group-IBも乗っ取りの対策として、パスワードの定期的な変更と2段階認証を挙げています。退職や異動のときにAIのアカウントだけ残ると、過去の会話を持ち出せる状態のままです。人事の手続きにアカウントの削除を組み込むか、社員の追加と削除をIDの管理から自動で反映するSCIMを使える契約（ChatGPT Enterprise・Claude Enterprise）を選びます。</p>
 <h3 id="s4-4">④ 社内データとつなぐ前に権限を見直す</h3>
 <p><strong>AIを社内のファイルやメールにつなぐ前に、共有設定が広すぎるファイルを洗い出します。</strong>「リンクを知っている全員」や全社公開のままの人事資料・見積もり・契約書は、AIに質問した社員の回答に出てくる可能性があるためです。Google WorkspaceではIRM（ダウンロードやコピーの禁止）やクライアントサイド暗号化をかけた文書をGeminiが取得しないようにでき、Microsoft 365では秘密度ラベルでCopilotの扱いを制限できます。ChatGPTのアプリ連携も既存の権限に従い、どのアプリをつなげるかを決めるのは管理者です。次にやることは、接続を許可するアプリを管理者が一覧にして、それ以外を止めることです。</p>
 <h3 id="s4-5">⑤ ログと保存期間を決める</h3>
