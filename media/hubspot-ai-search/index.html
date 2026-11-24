@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTJW13T70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LTJW13T70');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026年11月】HubSpotのAIO対策とは？AEOツールで足りる範囲とサイトの設定｜株式会社nito</title>
+    <meta name="description" content="HubSpotのAIO対策（AEO・LLMO）を公式の情報で解説。HubSpot AEOとAI Search Graderで測れること・測れないこと・料金を1表にし、足りない所をHubSpotのサイトで設定する場所と手順まで。">
+    <link rel="canonical" href="https://nito-0210.com/media/hubspot-ai-search/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="【2026年11月】HubSpotのAIO対策とは？AEOツールで足りる範囲とサイトの設定">
+    <meta property="og:description" content="HubSpotのAIO対策（AEO・LLMO）を公式の情報で解説。HubSpot AEOとAI Search Graderで測れること・測れないこと・料金を1表にし、足りない所をHubSpotのサイトで設定する場所と手順まで。">
+    <meta property="og:url" content="https://nito-0210.com/media/hubspot-ai-search/">
+    <meta property="og:site_name" content="株式会社nito">
+    <meta property="og:image" content="https://nito-0210.com/media/images/og/hubspot-ai-search.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nito-0210.com/media/images/og/hubspot-ai-search.jpg">
+    <link rel="icon" href="/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】HubSpotのAIO対策とは？AEOツールで足りる範囲とサイトの設定", "description": "HubSpotのAIO対策（AEO・LLMO）を公式の情報で解説。HubSpot AEOとAI Search Graderで測れること・測れないこと・料金を1表にし、足りない所をHubSpotのサイトで設定する場所と手順まで。", "datePublished": "2026-11-25", "dateModified": "2026-11-25", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では、AI経由のコンバージョンを5ヶ月で約6.7倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/hubspot-ai-search/"}, "articleSection": "AI検索対策", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/hubspot-ai-search.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】HubSpotのAIO対策とは？AEOツールで足りる範囲とサイトの設定"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "HubSpot AEOはHubSpotのCMSを使っていなくても使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えます。ホスト先を問わず利用できるのが公式の説明です。単体で契約する場合、HubSpotのほかの製品の契約も不要です。"}}, {"@type": "Question", "name": "AI Search Graderは無料で何が分かりますか？", "acceptedAnswer": {"@type": "Answer", "text": "会社名・所在地・製品・業種を入れると、GPT-4o・Perplexity・GeminiでのAIの言及の頻度、競合との立ち位置、センチメント、情報源の評価をまとめたレポートが無料で届きます。GraderのChatGPTとGeminiは学習データからの回答で、Web検索の結果を反映するのはPerplexityだけです。決めた質問を毎日追跡する機能は無いため、施策の前後を比べるならHubSpot AEOを使います。"}}, {"@type": "Question", "name": "HubSpot AEOでClaudeやGoogleのAIモードは計測できますか？", "acceptedAnswer": {"@type": "Answer", "text": "既定では計測しません。ClaudeとGoogleのAIモード・AI OverviewsはAEO Multi-Engineのベータ版で追加エンジンを有効にすると対象になり、1つの質問で使う回答数が既定の2倍になります。"}}, {"@type": "Question", "name": "HubSpot AEOは日本語の質問で計測できますか？", "acceptedAnswer": {"@type": "Answer", "text": "顧客が実際にAIで使う言葉で質問を作るのが基本で、日本の買い手が相手なら日本語で作ります。ヘルプの日本語版は自動翻訳で、正確な最新情報は英語版を見るようにとの注記付きです。"}}, {"@type": "Question", "name": "Marketing Hub Professionalを契約していればHubSpot AEOを別に買う必要はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "ありません。AEOはMarketing Hub ProfessionalとEnterpriseに標準搭載され、Professionalは毎日25〜50件、Enterpriseは毎日50件の質問を追跡できます（ナレッジベースではProfessionalが25件、料金ページの比較表では50件）。単体のAEOに無いブログ記事の生成とCRMに基づく質問の提案も使えます。"}}, {"@type": "Question", "name": "HubSpot AEOの推奨事項どおりにすればAIに出るようになりますか？", "acceptedAnswer": {"@type": "Answer", "text": "出ることを保証するものではありません。推奨事項は追跡した質問の引用の傾向から作られ、改善がすぐには表示されない場合もあります。実行した後は同じ質問の数日から数週間の推移で効果を見ます。"}}, {"@type": "Question", "name": "HubSpotのサイトに構造化データを入れるとAIに引用されやすくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "HubSpotのヘルプは引用される可能性が高まると説明していますが、Googleは生成AI機能のために特別な構造化データは不要という立場です。入れる場合はページのヘッダーHTMLにJSON-LDを置き、本文と同じ事実だけを書くのが前提です。"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/_template/media.css?v=c1e3c5ad">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+            <nav class="gnav">
+                <a href="/#about">About</a>
+                <a href="/aio/">サービス</a>
+                <a href="/media/">コラム</a>
+                <a href="/contact.html" class="nav-cta">相談する</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】HubSpotのAI…
+    </nav>
+
+    <div class="page-wrap">
+    <main class="article">
+        <div class="post-meta">
+            <span class="post-cat">AI検索対策</span>
+            <span class="post-date">2026.11.25</span>
+        </div>
+        <h1 class="post-title">【2026年11月】HubSpotのAIO対策とは？AEOツールで足りる範囲とサイトの設定</h1>
+        <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
+
+        <div class="post-eyecatch"><img src="/media/images/og/hubspot-ai-search.jpg" alt="【2026年11月】HubSpotのAIO対策とは？AEOツールで足りる範囲とサイトの設定" width="1200" height="628" fetchpriority="high"></div>
+
+        <div class="post-content">
+<p>HubSpotのAIO対策は、HubSpot AEOで表示状況を計測し、足りない所を自社サイトと外部の言及で補う進め方が基本です。HubSpot AEOは月額6,000円（税別）の単体製品で、Marketing Hub Professional以上には標準で入っています。ChatGPT・Gemini・Perplexityでの言及と引用元、推奨事項まで確認できる製品です。</p>
+<p>ただし推奨事項を実行するのは自社で、既定で計測しないAIもあります。この記事ではHubSpot AEOとAI Search Graderの違いを1表にし、料金とプラン、サイトで設定する場所、外部に依頼するときの線引きを順に説明した記事です。</p>
+<div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
+<li><strong>HubSpot AEOは計測と推奨事項まで</strong>。ブログ記事の下書きの生成はMarketing Hub Professional以上だけで、公開と外部への働きかけは自社の作業</li>
+<li><strong>AI Search Graderは無料の一回の分析</strong>で、毎日の追跡はHubSpot AEO側</li>
+<li><strong>サイトで整えるのはタイトルと説明文・本文の結論・構造化データ・robots.txt</strong>。HubSpotで公開しているサイトなら、どれもHubSpotの設定画面に場所がある</li>
+</ul></div></div>
+
+<div class="fork">
+<div class="fork__ttl">目的に合わせて読む</div>
+<a href="#s1"><span class="fork__q">このまま手順を読みたい</span><span class="fork__go">本文へ</span></a>
+<a href="/aio/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
+<a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
+</div>
+            <nav class="toc toc--long">
+                <div class="toc__ttl">目次</div>
+                <ol>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>HubSpotのAIO対策で何をする？</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>HubSpot AEOとGraderの違い</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>AI Search Graderで分かること</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>HubSpot AEOで分かること</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>HubSpot AEOの料金と使えるプラン</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>HubSpot AEOだけでは足りないところ</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>既定では計測しないAI</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>社名の表記ゆれ</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>回答の揺れと判断の時期</a></li>
+                    <li class="toc-h3"><a href="#s4-4"><span class="toc__n">4-4</span>推奨事項の実行と問い合わせの計測</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>HubSpotのサイトで優先する設定</a></li>
+                    <li class="toc-h3"><a href="#s5-1"><span class="toc__n">5-1</span>タイトルとメタディスクリプション</a></li>
+                    <li class="toc-h3"><a href="#s5-2"><span class="toc__n">5-2</span>本文の結論と見出し</a></li>
+                    <li class="toc-h3"><a href="#s5-3"><span class="toc__n">5-3</span>構造化データはヘッダーHTMLに</a></li>
+                    <li class="toc-h3"><a href="#s5-4"><span class="toc__n">5-4</span>robots.txtでAIのクローラーを止めていないか</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>HubSpot AEOの始め方</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>外部に依頼するときの線引き</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>AIの回答を計測しながら改善したい場合</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>出典</a></li>
+                </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
+            </nav>
+<script>
+(function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
+b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+
+<h2 id="s1">HubSpotのAIO対策で何をする？</h2>
+<p><strong>計測・サイトの修正・外部での言及の3つを回すのが、HubSpotでのAIO対策の全体像です。</strong>AIO（AI検索対策）はLLMO・GEO・AEOとも呼ばれ、HubSpotは自社の製品と記事で「AEO（回答エンジン最適化）」と呼んでいます。どの呼び方でも、ChatGPTやGeminiなどのAIが答えを作るときに自社の名前を挙げ、自社のページを引用してもらうための取り組みを指します。</p>
+<p>HubSpotにはこの3つのうち計測を受け持つ製品があり、推奨事項として次にやることも示す点が特徴です。一方で、ページの中身を書き換えるのも、比較サイトや業界メディアに載るよう働きかけるのも、実行するのは自社です。HubSpotのCMS（Content Hub）で作ったサイトかどうかは計測の条件に関係なく、HubSpot AEOはほかのCMSのサイトでも使えます。</p>
+<p>SEOとの関係も押さえておきます。HubSpotのブログはAEOをSEOの代わりではなく補う取り組みと位置づけており、Googleも生成AI機能向けのガイドで、AIの答えに出るために特別な最適化は不要としています。<strong>検索で読まれるページを整えることが、AIの答えに出る土台です。</strong></p>
+<div class="in-link-card"><a href="/media/aio-taisaku/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">AIO対策とは？</div><div class="in-link-card__desc">AI検索対策の考え方と、会社として進める手順を解説しています。</div></div></a></div>
+<h2 id="s2">HubSpot AEOとGraderの違い</h2>
+<p><strong>AI Search Graderは無料で現状をつかむツール、HubSpot AEOは毎日追跡して推奨事項まで出す有料のツールです。</strong>どちらも自社の改善に使えますが、直すところまで自動で進めるわけではありません。</p>
+<figure class="post-figure"><img src="/media/images/hubspot-ai-search/hub_01_overview.png" alt="HubSpotのAIO対策の役割分担。AI Search Graderは無料で一回の分析、HubSpot AEOは毎日の追跡と推奨事項、サイトの修正と外部での言及は自社が行う" loading="lazy"></figure>
+
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>観点</th>
+<th>AI Search Grader</th>
+<th>HubSpot AEO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="観点">料金</td>
+<td data-label="AI Search Grader">無料</td>
+<td data-label="HubSpot AEO">月額6,000円（年間払いは月5,400円）。Marketing Hub Professional・Enterpriseには標準搭載</td>
+</tr>
+<tr>
+<td data-label="観点">測れること</td>
+<td data-label="AI Search Grader">GPT-4o・Perplexity・Geminiでの言及の頻度・競合との立ち位置・センチメント・情報源の評価を、入力した時点で1回分析（ChatGPTとGeminiは学習データからの回答で、Web検索を反映するのはPerplexityだけ）</td>
+<td data-label="HubSpot AEO">ChatGPT・Gemini・Perplexityで毎日、追跡する質問ごとの言及率・シェア・オブ・ボイス・センチメント・引用元のドメインとページ</td>
+</tr>
+<tr>
+<td data-label="観点">既定で測れないこと</td>
+<td data-label="AI Search Grader">自社で選んだ質問の継続した追跡</td>
+<td data-label="HubSpot AEO">Claude・GoogleのAIモード・AI Overviews（ベータの追加エンジンで対応）</td>
+</tr>
+<tr>
+<td data-label="観点">改善の実行</td>
+<td data-label="AI Search Grader">レポートで改善の方向を提案</td>
+<td data-label="HubSpot AEO">優先度付きの推奨事項とサイト監査。ブログ記事の下書き生成はMarketing Hub Professional以上だけ</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>表のとおり、どちらも直すべき所を示すまでで、ページの公開や外部への働きかけは自社の作業として残ります。</strong></p>
+<h3 id="s2-1">AI Search Graderで分かること</h3>
+<p>AI Search Graderは会社名・所在地・製品やサービス・業種を入力すると、顧客が業界の情報収集に使う質問をバックグラウンドで実行し、総合スコアを出す仕組みです。フォームを送ると、AIが自社をどう位置づけているか、競合をリーダー・チャレンジャー・ニッチプレイヤーに分けた立ち位置、関連付けられやすい話題、強みと伸びしろをまとめたレポートが届きます。自社だけでなく競合の名前を入れて分析することも可能です。</p>
+<p><strong>質問を自分で選んで毎日追う機能は無いため、施策の前後を比べる用途にはHubSpot AEOを使います。</strong>GraderのChatGPTとGeminiは学習データからの回答で、Web検索の結果を反映するのはPerplexityだけです。Graderは無料で全体の傾向をつかむ目安として使い、決めた質問の推移はHubSpot AEOで追います。</p>
+<h3 id="s2-2">HubSpot AEOで分かること</h3>
+<p>HubSpot AEOは追跡する質問（プロンプト）をChatGPT・Gemini・Perplexityで毎日実行し、回答を集めて集計します。ダッシュボードで見られるのは、質問のうち自社が1回以上出た割合、競合を含む言及の中で自社が占める割合（シェア・オブ・ボイス）、-100から+100で表すセンチメントです。</p>
+<p>引用分析では回答にリンクやドメイン名が出たページを数え、自社サイト・競合・比較記事・ユーザーレビュー・SNSなどの種類別に集計します。ヘルプは引用と言及を別のものとして扱っていて、<strong>自社の名前が出ていなくても自社のページが引用されることがあります。</strong>どの種類のページが引用されているかは、自社で書くべきページの形を決める材料です。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">AI のおすすめに自社の名前が挙がるか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/aio/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
+</div>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">HubSpot AEOの料金と使えるプラン</h2>
+<p><strong>HubSpot AEOは単体なら月額6,000円（税別）で、Marketing Hub Professional・Enterpriseには追加料金なしで入っています。</strong>単体で使う場合、HubSpotのほかの製品の契約は必要ありません。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>契約</th>
+<th>料金</th>
+<th>毎日の質問数・月の回答数</th>
+<th>単体との違い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="契約">HubSpot AEO（単体）</td>
+<td data-label="料金">月額6,000円（税別。年間払いは月5,400円）。28日間の無料トライアルあり</td>
+<td data-label="毎日の質問数・月の回答数">25件・2,500回答</td>
+<td data-label="単体との違い">基準</td>
+</tr>
+<tr>
+<td data-label="契約">Marketing Hub Professional</td>
+<td data-label="料金">Marketing Hubの料金に含む</td>
+<td data-label="毎日の質問数・月の回答数">25件・2,500回答（料金ページの比較表は50件・5,000回答）</td>
+<td data-label="単体との違い">ブログ記事の生成とCRMに基づく質問の提案が加わる</td>
+</tr>
+<tr>
+<td data-label="契約">Marketing Hub Enterprise</td>
+<td data-label="料金">Marketing Hubの料金に含む</td>
+<td data-label="毎日の質問数・月の回答数">50件・5,000回答</td>
+<td data-label="単体との違い">同上</td>
+</tr>
+<tr>
+<td data-label="契約">AI Search Grader</td>
+<td data-label="料金">無料</td>
+<td data-label="毎日の質問数・月の回答数">一回の分析</td>
+<td data-label="単体との違い">毎日の追跡は無い</td>
+</tr>
+</tbody>
+</table></div>
+<p>料金は2026年11月25日時点の公式の製品ページの表示です。料金ページでは米ドルで月50ドル（年間払いは月45ドル）と表示され、製品ページのメニューと料金ページではAEOに「ベータ」の印が付いています。無料トライアルは3つのAIで25件の質問を28日間追跡でき、クレジットカードの入力は不要です。</p>
+<p>対象のAIは3つとも共通で、質問は追加購入でいつでも増やせます。複数のブランドを別々に計測するときは、1ブランドにつき月額6,000円の追加です。<strong>Marketing Hub Professionalを既に契約しているなら、単体のAEOを別に買う必要はありません。</strong>これから契約する場合、Professionalは月800ドルからで、必須の導入支援3,000ドルが別にかかると料金ページにあります。計測だけが目的なら単体、記事の作成や顧客データとの連携まで1つの画面で進めたいならMarketing Hubを検討するのが一般的な分け方です。</p>
+<h2 id="s4">HubSpot AEOだけでは足りないところ</h2>
+<p><strong>HubSpot AEOが計測するのは決めた質問と決めたAIの範囲で、問い合わせが増えたかや推奨事項の実行までは受け持ちません。</strong>導入前に知っておきたい点は4つあります。</p>
+<h3 id="s4-1">既定では計測しないAI</h3>
+<p>既定の対象はChatGPT・Gemini・Perplexityの3つです。Claude・GoogleのAIモード・AI Overviewsも計測するには、スーパー管理者がAEO Multi-Engineのベータ版に登録して追加エンジンを有効にします。追加エンジンでは1つの質問で使う回答数が2倍になり、容量が足りないと実行されないため、回答数の上限を引き上げるオプションの購入が必要になることがあります。AI Overviewsは、表示されない質問でも容量を使うのが注意点です。</p>
+<div class="in-link-card"><a href="/media/ai-overview-check/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">AI Overviewの自社サイト表示チェック方法</div><div class="in-link-card__desc">GoogleのAIによる概要に自社が出ているかを手で確認する方法を解説しています。</div></div></a></div>
+<h3 id="s4-2">社名の表記ゆれ</h3>
+<p><strong>HubSpot AEOが言及として数えるのは、登録したブランド名のバリエーションと一致したときだけです。</strong>バリエーションは大文字と小文字を区別するため、日本の会社は英字の社名・カタカナの社名・「株式会社」の有無・略称を全部登録しておく必要があります。登録していない表記で紹介されても言及に数えられないため、言及率が実際より低く出ます。</p>
+<h3 id="s4-3">回答の揺れと判断の時期</h3>
+<p>AIの回答は日によって変わるため、数日から数週間の推移で判断するのが前提です。推奨事項の効果も、すぐには出ないことがあります。<strong>1日の数字で施策の良し悪しを決めず、同じ質問の推移で見るのが前提です。</strong></p>
+<h3 id="s4-4">推奨事項の実行と問い合わせの計測</h3>
+<p>推奨事項は引用されやすいページの種類・よく引用されるドメイン・競合の出方から作られ、新しく作る記事・更新するページ・SNSでの発信・第三者のサイトへの働きかけに分かれます。ブログ記事の下書きを生成する機能はMarketing Hub Professional以上だけで、HubSpotクレジットを使います。生成した下書きの事実確認と公開、第三者のサイトへの連絡は人の作業です。</p>
+<p>AIでの言及が問い合わせや商談につながったかは、HubSpot AEOの指標とは別に見る必要があります。AEOの指標は言及・引用・センチメントまでで、問い合わせの数は含まれません。HubSpotのCRMでは、ChatGPTなどのリンクから来た訪問者に流入元「AI Referrals」（chatgpt.com などのドメイン付き）が自動で付くため、この流入元からの問い合わせの数で成果を見ます。</p>
+<h2 id="s5">HubSpotのサイトで優先する設定</h2>
+<p><strong>AIに読まれる前提として、ページのタイトルと説明文・本文の結論・構造化データ・robots.txtの4つを整えます。</strong>HubSpotのCMS（Content Hub）でサイトを公開している場合は、4つともHubSpotの画面で修正でき、権限があれば社内で行えるのが利点です。HubSpot AEOの推奨事項の［サイト監査］は構造化データ・canonical・クローラーの巡回しやすさを検出するため、監査で挙がったページから修正するのが効率的です。ほかのCMSのサイトも、同じ4つをそのCMSの設定で修正する流れです。</p>
+<figure class="post-figure"><img src="/media/images/hubspot-ai-search/hub_02_site.png" alt="HubSpotのサイトで整える4か所。ページの設定のタイトルと説明文、本文の結論と見出し、ヘッダーHTMLの構造化データ、SEOおよびクローラーのrobots.txt" loading="lazy"></figure>
+
+<h3 id="s5-1">タイトルとメタディスクリプション</h3>
+<p>ページのタイトルとメタディスクリプションは、コンテンツエディターの［設定］で入力する項目です。AIの回答の引用元にはページのタイトルがそのまま出ることが多く、<strong>何のページかが題だけで分かる書き方が欠かせません。</strong>「サービス」「事例」のような短い題のページは、サービス名と対象の業種や課題を入れた題に修正します。</p>
+<h3 id="s5-2">本文の結論と見出し</h3>
+<p>HubSpotのヘルプはAI向けの書き方として見出しをH2・H3で予測しやすい構造にすること、手順は番号付き、比較は表にすること、画像だけで情報を伝えないことを挙げています。会社サイトで特に効果があるのは、サービスページの冒頭で「誰の何を解決するサービスか」を1〜2文で言い切ることです。料金の目安・対応範囲・ほかの方法との違いは、画像やPDFでなく本文のテキストで書くのが基本です。</p>
+<p>比べる章もAIに読まれる材料になります。AEOの引用分析では比較記事とトップリストが種類として数えられ、<strong>買い手が他社と比べるときの質問に答える章が自社サイトに無いと、比較記事を書いた第三者のページが引用されます。</strong>サービスページか記事に、自社が向く会社と向かない会社を書く章を設けておくのがおすすめです。</p>
+<h3 id="s5-3">構造化データはヘッダーHTMLに</h3>
+<p>構造化データ（JSON-LD）は、ページごとならコンテンツエディターの［設定］の［詳細］にある［追加のコードスニペット］の［ヘッダーHTML］に貼り、［公開］か［更新］で反映します。サイト全体に入れるなら、設定の［コンテンツ］＞［ページ］でドメインを選び、［サイトのヘッダーHTML］に入れます。ページ単位の作業には編集と公開の権限、サイト全体にはウェブサイト設定の権限が必要です。</p>
+<p>HubSpotのヘルプはスキーマを入れると引用される可能性が高まると説明していますが、Googleは生成AI機能のために特別な構造化データは不要という立場です。<strong>入れるなら会社概要（Organization）や記事（Article）など、本文と同じ事実を書く種類から始めます。</strong>種類ごとの考え方は<a href="/media/structured-data-ai-search/">構造化データはAI検索に必要？</a>で解説しています。</p>
+<h3 id="s5-4">robots.txtでAIのクローラーを止めていないか</h3>
+<p>robots.txtは設定の［コンテンツ］＞［ページ］でドメインを選び、［SEOおよびクローラー］タブの［Robots.txt］で編集する設定です。編集できるのはHubSpotに接続したドメインのコンテンツだけです。過去にAIの学習を止める目的で書いた行が、ChatGPTの検索用のクローラー（OAI-SearchBot）まで止めていないかを確認します。</p>
+<div class="in-link-card"><a href="/media/ai-crawler-robots/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">GPTBotなどAIクローラーをrobots.txtで止めるかの判断と書き方</div><div class="in-link-card__desc">学習用と検索用のクローラーの違いと、robots.txtの書き方・確認の手順を解説しています。</div></div></a></div>
+<h2 id="s6">HubSpot AEOの始め方</h2>
+<p><strong>設定はブランド・競合・製品と顧客像・質問の4段階で、質問は日本の買い手が実際に打つ日本語で作ります。</strong>HubSpotのメニューの［マーケティング］＞［AEO］から［開始する］を押して進めます。</p>
+<ol>
+<li>ブランド名・ドメイン・ブランド名のバリエーション（コンマ区切り）・法人タイプ（B2Bなど）を入力する</li>
+<li>比べる競合の名前・ドメイン・表記のバリエーションを確認し、足りない会社を追加する</li>
+<li>追跡する製品と理想の顧客像（ICP）を選ぶか追加する</li>
+<li>提案された質問を確認し、AIで8〜15個を追加生成するか手動で追加して、追跡を始める</li>
+</ol>
+<p>ヘルプは製品と顧客像の組み合わせごとに10個の質問を勧めており、3製品×5つの顧客像なら150個です。単体の契約は25件までなので、<strong>最初は問い合わせに近い組み合わせを2つ程度に絞り、「［条件］の会社に合う［サービス］は？」の形で作るのが現実的です。</strong>表現が違うだけで同じことを聞く質問は、1つに絞ります。</p>
+<div class="in-link-card"><a href="/media/geo-aio-tools/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">GEO対策ツール・AIO対策ツール10製品の比較</div><div class="in-link-card__desc">国産と海外の計測ツールの料金・対象のAI・無料トライアルを比較しています。</div></div></a></div>
+<h2 id="s7">外部に依頼するときの線引き</h2>
+<p><strong>HubSpotの設定は社内かHubSpotのパートナー、AIの答えでの出方を変える中身と外部での言及はAI検索対策の支援会社、という分け方が目安です。</strong></p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>作業</th>
+<th>社内で行える範囲</th>
+<th>外部に依頼する先</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="作業">HubSpot AEOの設定と質問の管理</td>
+<td data-label="社内で行える範囲">設定画面から行える</td>
+<td data-label="外部に依頼する先">社内で回らないならHubSpotのパートナー</td>
+</tr>
+<tr>
+<td data-label="作業">タイトル・説明文・robots.txt</td>
+<td data-label="社内で行える範囲">編集と公開の権限があれば行える</td>
+<td data-label="外部に依頼する先">テンプレートの改修はHubSpotのパートナー・制作会社</td>
+</tr>
+<tr>
+<td data-label="作業">推奨事項に沿った記事とページの中身</td>
+<td data-label="社内で行える範囲">書き手と事実確認の担当がいれば行える</td>
+<td data-label="外部に依頼する先">AI検索対策の支援会社</td>
+</tr>
+<tr>
+<td data-label="作業">比較サイト・業界メディアでの言及</td>
+<td data-label="社内で行える範囲">窓口が決まっていれば行える</td>
+<td data-label="外部に依頼する先">AI検索対策の支援会社・PR会社</td>
+</tr>
+</tbody>
+</table></div>
+<p>HubSpotのパートナーはHubSpotの構築と運用の設計に詳しく、AEOを含めた設定の支援を受けられます。AI検索対策の支援会社が強みを持つのは、どの質問でどの他社が挙がっているかを回答の本文から読み、ページの中身と外部での言及を修正する所です。会社ごとの違いと費用の目安は<a href="/media/btob-llmo-companies/">BtoBのLLMO対策会社おすすめ6選</a>で比較しています。</p>
+<h2 id="s8">AIの回答を計測しながら改善したい場合</h2>
+<p>AI検索対策を支援するnitoは、計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援しています。ChatGPTやGeminiなど主要なAIの実際の回答を毎日計測し、他社が挙がる理由を回答の本文から抜き出して、修正するページと中身を決める進め方です。目標に置くのは問い合わせや商談の数です。HubSpot AEOで数字を見ているものの、推奨事項をどの順に実行すればよいか決めきれない段階でも相談を受けています。<strong>まず無料診断で、今の見え方を数字にするところから始められます。</strong></p>
+<h2 id="s9">まとめ</h2>
+<ul>
+<li>これから始める会社: AI Search Graderで現状をつかみ、問い合わせに近い質問が決まったらHubSpot AEOの無料トライアルで28日間追跡する</li>
+<li>Marketing Hub Professional以上を契約している会社: 追加費用なしでAEOを使えるため、ブランド名のバリエーションに日本語の表記を登録してから追跡を始める</li>
+<li>推奨事項が溜まっている会社: タイトル・本文の結論・比べる章を先に修正し、外部での言及は窓口を決めて進める</li>
+<li>社内に書き手や時間が無い会社: HubSpotの設定はパートナー、中身と外部での言及はAI検索対策の支援会社に分けて依頼する</li>
+</ul>
+<h2 id="s10">よくある質問</h2>
+<h3 id="s10-1">Q. HubSpot AEOはHubSpotのCMSを使っていなくても使えますか？</h3>
+<p>使えます。ホスト先を問わず利用できるのが公式の説明です。単体で契約する場合、HubSpotのほかの製品の契約も不要です。</p>
+<h3 id="s10-2">Q. AI Search Graderは無料で何が分かりますか？</h3>
+<p>会社名・所在地・製品・業種を入れると、GPT-4o・Perplexity・GeminiでのAIの言及の頻度、競合との立ち位置、センチメント、情報源の評価をまとめたレポートが無料で届きます。GraderのChatGPTとGeminiは学習データからの回答で、Web検索の結果を反映するのはPerplexityだけです。決めた質問を毎日追跡する機能は無いため、施策の前後を比べるならHubSpot AEOを使います。</p>
+<h3 id="s10-3">Q. HubSpot AEOでClaudeやGoogleのAIモードは計測できますか？</h3>
+<p>既定では計測しません。ClaudeとGoogleのAIモード・AI OverviewsはAEO Multi-Engineのベータ版で追加エンジンを有効にすると対象になり、1つの質問で使う回答数が既定の2倍になります。</p>
+<h3 id="s10-4">Q. HubSpot AEOは日本語の質問で計測できますか？</h3>
+<p>顧客が実際にAIで使う言葉で質問を作るのが基本で、日本の買い手が相手なら日本語で作ります。ヘルプの日本語版は自動翻訳で、正確な最新情報は英語版を見るようにとの注記付きです。</p>
+<h3 id="s10-5">Q. Marketing Hub Professionalを契約していればHubSpot AEOを別に買う必要はありますか？</h3>
+<p>ありません。AEOはMarketing Hub ProfessionalとEnterpriseに標準搭載され、Professionalは毎日25〜50件、Enterpriseは毎日50件の質問を追跡できます（ナレッジベースではProfessionalが25件、料金ページの比較表では50件）。単体のAEOに無いブログ記事の生成とCRMに基づく質問の提案も使えます。</p>
+<h3 id="s10-6">Q. HubSpot AEOの推奨事項どおりにすればAIに出るようになりますか？</h3>
+<p>出ることを保証するものではありません。推奨事項は追跡した質問の引用の傾向から作られ、改善がすぐには表示されない場合もあります。実行した後は同じ質問の数日から数週間の推移で効果を見ます。</p>
+<h3 id="s10-7">Q. HubSpotのサイトに構造化データを入れるとAIに引用されやすくなりますか？</h3>
+<p>HubSpotのヘルプは引用される可能性が高まると説明していますが、Googleは生成AI機能のために特別な構造化データは不要という立場です。入れる場合はページのヘッダーHTMLにJSON-LDを置き、本文と同じ事実だけを書くのが前提です。</p>
+<h2 id="s11">出典</h2>
+<ul>
+<li>HubSpot「<a href="https://www.hubspot.jp/products/aeo">HubSpot AEO（回答エンジン最適化）</a>」（2026年11月25日取得）</li>
+<li>HubSpot「<a href="https://www.hubspot.jp/products/aeo/ai-search">AI検索モニタリング（AEO）</a>」（同）</li>
+<li>HubSpot「<a href="https://www.hubspot.jp/ai-search-grader">AI Search Grader</a>」（同）</li>
+<li>HubSpot「<a href="https://www.hubspot.jp/pricing/marketing">Marketing Hubの料金</a>」（同。取得時は米ドル表示）</li>
+<li>HubSpotナレッジベース「<a href="https://knowledge.hubspot.com/ja/seo/set-up-and-analyze-ai-visibility">AEOの設定と分析</a>」2026年11月10日更新（同）</li>
+<li>HubSpotナレッジベース「<a href="https://knowledge.hubspot.com/ja/seo/review-and-manage-aeo-prompts">AEOのプロンプトを確認・管理する</a>」2026年11月21日更新（同）</li>
+<li>HubSpotナレッジベース「<a href="https://knowledge.hubspot.com/ja/seo/manage-aeo-settings">AEO設定の管理</a>」2026年10月27日更新（同）</li>
+<li>HubSpotナレッジベース「<a href="https://knowledge.hubspot.com/ja/seo/review-and-manage-aeo-recommendations">AEOに関する提言の確認と管理</a>」2026年10月14日更新（同）</li>
+<li>HubSpotナレッジベース「<a href="https://knowledge.hubspot.com/ja/ai/optimize-content-and-improve-brand-visibility-for-ai">AIを活用してコンテンツを最適化し、ブランドの可視性を向上</a>」2026年9月10日更新（同）</li>
+<li>HubSpotナレッジベース「<a href="https://knowledge.hubspot.com/ja/website-and-landing-pages/use-code-snippets-with-hubspot-content">HubSpotコンテンツでコードスニペットを使用</a>」（同）</li>
+<li>HubSpotナレッジベース「<a href="https://knowledge.hubspot.com/ja/website-and-landing-pages/create-and-customize-pages">ページを作成し、カスタマイズする</a>」（同）</li>
+<li>HubSpotナレッジベース「<a href="https://knowledge.hubspot.com/ja/seo/prevent-content-from-appearing-in-search-results">検索結果にコンテンツが表示されないようにする</a>」（同）</li>
+<li>HubSpot Japan「<a href="https://blog.hubspot.jp/marketing/whats-aeo">AEOとは？AI検索時代のAnswer Engine Optimization完全ガイド</a>」2026年8月7日更新（同）</li>
+<li>Google 検索セントラル「<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja">Google 検索における生成 AI 機能に向けた最適化のための Google ガイド</a>」（同）</li>
+<li>OpenAI「<a href="https://developers.openai.com/api/docs/bots">Overview of OpenAI Crawlers</a>」（同）</li>
+</ul>
+        </div>
+
+        <div class="ecta">
+<div class="ecta__label">CONTACT</div>
+<div class="ecta__ttl">AI のおすすめに自社の名前が挙がるかを無料で調べます</div>
+<p class="ecta__desc">ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、いまの見え方を数字で出します。</p>
+<div class="ecta__btns"><a class="pri" href="/contact.html">無料で現状分析レポートを申し込む</a><a class="sec" href="/aio/">支援内容を見る</a></div>
+<p class="ecta__sub">会社の業務に AI を組み込みたい方は <a href="/ai-agent/">AIエージェント構築支援</a> をご覧ください。</p>
+</div>
+
+        <div class="author">
+            <div class="author__avatar" style="background-image:url('/profile_okamura.jpg');"></div>
+            <div>
+                <div class="author__label">この記事を書いた人</div>
+                <div class="author__name">岡村 希一</div>
+                <div class="author__role">nito代表</div>
+                <p class="author__bio">サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では、AI経由のコンバージョンを5ヶ月で約6.7倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。</p>
+                <a class="author__ask" href="/contact.html">この人に相談する</a>
+            </div>
+        </div>
+    </main>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">HubSpotのAIO対策で何をする？</a><a href="#s2">HubSpot AEOとGraderの違い</a><a href="#s3">HubSpot AEOの料金と使えるプラン</a><a href="#s4">HubSpot AEOだけでは足りないところ</a><a href="#s5">HubSpotのサイトで優先する設定</a><a href="#s6">HubSpot AEOの始め方</a><a href="#s7">外部に依頼するときの線引き</a><a href="#s8">AIの回答を計測しながら改善したい場合</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードなどで自社の名前が挙がるかを数字で出します。</p><a href="/aio/">現状分析レポート</a></div></aside>
+    </div>
+
+    <section class="related">
+        <h2 class="related__ttl"><span>関連記事</span></h2>
+        <div class="related__grid">
+            <a href="/media/ai-search-measurement/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI検索対策の効果測定"><defs><linearGradient id="ecg-ed28c29b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-ed28c29b)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="176.1" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">効果測定</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI検索対策の効果測定</text><line x1="212.4" y1="365.9" x2="987.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.07</div>
+                <div class="rel-card__ttl">AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】</div>
+            </a>
+            <a href="/media/ai-search-first-steps/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI検索対策は何から始める？"><defs><linearGradient id="ecg-a96a7956" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-a96a7956)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="518.0" y="125.2" width="164.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="161.6" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">徹底解説</text><text x="600" y="271.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">AI検索対策は何</text><text x="600" y="373.3" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">から始める？</text><line x1="326.4" y1="416.8" x2="873.6" y2="416.8" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="496.7" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.07.07</div>
+                <div class="rel-card__ttl">AI検索対策は何から始める？企業が取り組むべき5ステップ【2026年最新版】</div>
+            </a>
+            <a href="/media/gbp-ai-search/" class="rel-card">
+                <div class="rel-card__thumb card-thumb--svg"><svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ビジネスプロフィールとAI"><defs><linearGradient id="ecg-f25ce86a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43"/><stop offset="0.55" stop-color="#e67e22"/><stop offset="1" stop-color="#cf6a12"/></linearGradient></defs><rect width="1200" height="628" fill="url(#ecg-f25ce86a)"/><rect x="40" y="40" width="1120" height="548" rx="8" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/><rect x="504.5" y="176.1" width="191.0" height="54" rx="27.0" fill="#333333"/><text x="600" y="212.5" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="27" fill="#ffffff">店舗の対策</text><text x="600" y="322.4" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="76" fill="#ffffff">ビジネスプロフィールとAI</text><line x1="136.4" y1="365.9" x2="1063.6" y2="365.9" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4"/><text x="600" y="445.8" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="700" font-size="34" fill="#ffffff" opacity="0.92" letter-spacing="3">nito</text></svg></div>
+                <div class="rel-card__date">2026.10.19</div>
+                <div class="rel-card__ttl">【2026年10月】GoogleビジネスプロフィールのAI対策とは？AIモード・口コミ要約・Gemini連携</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <a href="/" class="f-logo"><img src="/nito-logo-black.png" alt="nito"></a>
+        <nav class="f-nav">
+            <a href="/#about">About</a>
+            <a href="/aio/">サービス</a>
+            <a href="/media/">コラム</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+        </nav>
+        <p class="f-copy">© 2026 nito. All rights reserved.</p>
+    </footer>
+    <!-- 図をタップすると原寸で開く（2026-10-17 スマホで横長の図の文字が小さい。指で拡大・横に動かして読める） -->
+    <div class="zoom" hidden><button type="button" class="zoom__close" aria-label="閉じる">閉じる</button><div class="zoom__body"><img alt=""></div></div>
+    <script>
+    (function(){
+      var z=document.querySelector('.zoom'); if(!z)return; var zi=z.querySelector('img');
+      document.querySelectorAll('.post-content .post-figure:not(.post-figure--sp) img').forEach(function(im){
+        im.classList.add('is-zoomable');
+        im.addEventListener('click',function(){ if(window.innerWidth>820)return; zi.src=im.currentSrc||im.src; zi.alt=im.alt; z.hidden=false; document.body.style.overflow='hidden'; });
+      });
+      function close(){ z.hidden=true; zi.src=''; document.body.style.overflow=''; }
+      z.querySelector('.zoom__close').addEventListener('click',close);
+      z.addEventListener('click',function(e){ if(e.target===z)close(); });
+    })();
+    </script>
+    <!-- GA4: 記事から LP・お問い合わせへのクリックを cta_click で送る（キーイベント） -->
+    <script>
+    (function(){
+      var T={'/aio/':'llmo','/ai-agent/':'ai_agent','/contact.html':'contact'};
+      var L=[['.bp-cta','bp_cta'],['.mcta','mid'],['.ecta','end'],['.fork','fork'],['.rail','rail'],['.author','author'],['.post-cta','post_cta'],['.site-header','header'],['.site-footer','footer'],['.post-content','body']];
+      document.addEventListener('click',function(e){
+        var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+        var u; try{u=new URL(a.href,location.href);}catch(_){return;}
+        if(u.host!==location.host)return;
+        var path=u.pathname.replace(/\/index\.html$/,'/'); if(path==='/llmo'||path==='/ai-agent')path+='/';
+        var t=T[path]; if(!t)return;
+        var loc='other'; for(var i=0;i<L.length;i++){if(a.closest(L[i][0])){loc=L[i][1];break;}}
+        gtag('event','cta_click',{article_slug:'hubspot-ai-search',cta_location:loc,cta_target:t,link_text:(a.textContent||'').trim().slice(0,40)});
+      },true);
+    })();
+    </script>
+</body>
+
+</html>
