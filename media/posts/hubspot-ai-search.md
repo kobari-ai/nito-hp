@@ -1,0 +1,226 @@
+---
+title: 【2026年11月】HubSpotのAIO対策とは？AEOツールで足りる範囲とサイトの設定
+date: 2026-11-25
+category: AI検索対策
+description: HubSpotのAIO対策（AEO・LLMO）を公式の情報で解説。HubSpot AEOとAI Search Graderで測れること・測れないこと・料金を1表にし、足りない所をHubSpotのサイトで設定する場所と手順まで。
+keyword: hubspot aio
+cover_tag: 設定
+cover_headline: HubSpotのAIO対策
+cover_sub: AEOツールで足りる範囲とサイトの設定
+cta: llmo
+---
+
+HubSpotのAIO対策は、HubSpot AEOで表示状況を計測し、足りない所を自社サイトと外部の言及で補う進め方が基本です。HubSpot AEOは月額6,000円（税別）の単体製品で、Marketing Hub Professional以上には標準で入っています。ChatGPT・Gemini・Perplexityでの言及と引用元、推奨事項まで確認できる製品です。
+
+ただし推奨事項を実行するのは自社で、既定で計測しないAIもあります。この記事ではHubSpot AEOとAI Search Graderの違いを1表にし、料金とプラン、サイトで設定する場所、外部に依頼するときの線引きを順に説明した記事です。
+
+:::takeaways
+- **HubSpot AEOは計測と推奨事項まで**。ブログ記事の下書きの生成はMarketing Hub Professional以上だけで、公開と外部への働きかけは自社の作業
+- **AI Search Graderは無料の一回の分析**で、毎日の追跡はHubSpot AEO側
+- **サイトで整えるのはタイトルと説明文・本文の結論・構造化データ・robots.txt**。HubSpotで公開しているサイトなら、どれもHubSpotの設定画面に場所がある
+:::
+
+## HubSpotのAIO対策で何をする？
+
+**計測・サイトの修正・外部での言及の3つを回すのが、HubSpotでのAIO対策の全体像です。**AIO（AI検索対策）はLLMO・GEO・AEOとも呼ばれ、HubSpotは自社の製品と記事で「AEO（回答エンジン最適化）」と呼んでいます。どの呼び方でも、ChatGPTやGeminiなどのAIが答えを作るときに自社の名前を挙げ、自社のページを引用してもらうための取り組みを指します。
+
+HubSpotにはこの3つのうち計測を受け持つ製品があり、推奨事項として次にやることも示す点が特徴です。一方で、ページの中身を書き換えるのも、比較サイトや業界メディアに載るよう働きかけるのも、実行するのは自社です。HubSpotのCMS（Content Hub）で作ったサイトかどうかは計測の条件に関係なく、HubSpot AEOはほかのCMSのサイトでも使えます。
+
+SEOとの関係も押さえておきます。HubSpotのブログはAEOをSEOの代わりではなく補う取り組みと位置づけており、Googleも生成AI機能向けのガイドで、AIの答えに出るために特別な最適化は不要としています。**検索で読まれるページを整えることが、AIの答えに出る土台です。**
+
+:::linkcard
+url: /media/aio-taisaku/
+title: AIO対策とは？
+desc: AI検索対策の考え方と、会社として進める手順を解説しています。
+:::
+
+## HubSpot AEOとGraderの違い
+
+**AI Search Graderは無料で現状をつかむツール、HubSpot AEOは毎日追跡して推奨事項まで出す有料のツールです。**どちらも自社の改善に使えますが、直すところまで自動で進めるわけではありません。
+
+<figure class="post-figure"><img src="/media/images/hubspot-ai-search/hub_01_overview.png" alt="HubSpotのAIO対策の役割分担。AI Search Graderは無料で一回の分析、HubSpot AEOは毎日の追跡と推奨事項、サイトの修正と外部での言及は自社が行う" loading="lazy"></figure>
+
+| 観点 | AI Search Grader | HubSpot AEO |
+|---|---|---|
+| 料金 | 無料 | 月額6,000円（年間払いは月5,400円）。Marketing Hub Professional・Enterpriseには標準搭載 |
+| 測れること | GPT-4o・Perplexity・Geminiでの言及の頻度・競合との立ち位置・センチメント・情報源の評価を、入力した時点で1回分析（ChatGPTとGeminiは学習データからの回答で、Web検索を反映するのはPerplexityだけ） | ChatGPT・Gemini・Perplexityで毎日、追跡する質問ごとの言及率・シェア・オブ・ボイス・センチメント・引用元のドメインとページ |
+| 既定で測れないこと | 自社で選んだ質問の継続した追跡 | Claude・GoogleのAIモード・AI Overviews（ベータの追加エンジンで対応） |
+| 改善の実行 | レポートで改善の方向を提案 | 優先度付きの推奨事項とサイト監査。ブログ記事の下書き生成はMarketing Hub Professional以上だけ |
+
+**表のとおり、どちらも直すべき所を示すまでで、ページの公開や外部への働きかけは自社の作業として残ります。**
+
+### AI Search Graderで分かること
+
+AI Search Graderは会社名・所在地・製品やサービス・業種を入力すると、顧客が業界の情報収集に使う質問をバックグラウンドで実行し、総合スコアを出す仕組みです。フォームを送ると、AIが自社をどう位置づけているか、競合をリーダー・チャレンジャー・ニッチプレイヤーに分けた立ち位置、関連付けられやすい話題、強みと伸びしろをまとめたレポートが届きます。自社だけでなく競合の名前を入れて分析することも可能です。
+
+**質問を自分で選んで毎日追う機能は無いため、施策の前後を比べる用途にはHubSpot AEOを使います。**GraderのChatGPTとGeminiは学習データからの回答で、Web検索の結果を反映するのはPerplexityだけです。Graderは無料で全体の傾向をつかむ目安として使い、決めた質問の推移はHubSpot AEOで追います。
+
+### HubSpot AEOで分かること
+
+HubSpot AEOは追跡する質問（プロンプト）をChatGPT・Gemini・Perplexityで毎日実行し、回答を集めて集計します。ダッシュボードで見られるのは、質問のうち自社が1回以上出た割合、競合を含む言及の中で自社が占める割合（シェア・オブ・ボイス）、-100から+100で表すセンチメントです。
+
+引用分析では回答にリンクやドメイン名が出たページを数え、自社サイト・競合・比較記事・ユーザーレビュー・SNSなどの種類別に集計します。ヘルプは引用と言及を別のものとして扱っていて、**自社の名前が出ていなくても自社のページが引用されることがあります。**どの種類のページが引用されているかは、自社で書くべきページの形を決める材料です。
+
+## HubSpot AEOの料金と使えるプラン
+
+**HubSpot AEOは単体なら月額6,000円（税別）で、Marketing Hub Professional・Enterpriseには追加料金なしで入っています。**単体で使う場合、HubSpotのほかの製品の契約は必要ありません。
+
+| 契約 | 料金 | 毎日の質問数・月の回答数 | 単体との違い |
+|---|---|---|---|
+| HubSpot AEO（単体） | 月額6,000円（税別。年間払いは月5,400円）。28日間の無料トライアルあり | 25件・2,500回答 | 基準 |
+| Marketing Hub Professional | Marketing Hubの料金に含む | 25件・2,500回答（料金ページの比較表は50件・5,000回答） | ブログ記事の生成とCRMに基づく質問の提案が加わる |
+| Marketing Hub Enterprise | Marketing Hubの料金に含む | 50件・5,000回答 | 同上 |
+| AI Search Grader | 無料 | 一回の分析 | 毎日の追跡は無い |
+
+料金は2026年11月25日時点の公式の製品ページの表示です。料金ページでは米ドルで月50ドル（年間払いは月45ドル）と表示され、製品ページのメニューと料金ページではAEOに「ベータ」の印が付いています。無料トライアルは3つのAIで25件の質問を28日間追跡でき、クレジットカードの入力は不要です。
+
+対象のAIは3つとも共通で、質問は追加購入でいつでも増やせます。複数のブランドを別々に計測するときは、1ブランドにつき月額6,000円の追加です。**Marketing Hub Professionalを既に契約しているなら、単体のAEOを別に買う必要はありません。**これから契約する場合、Professionalは月800ドルからで、必須の導入支援3,000ドルが別にかかると料金ページにあります。計測だけが目的なら単体、記事の作成や顧客データとの連携まで1つの画面で進めたいならMarketing Hubを検討するのが一般的な分け方です。
+
+## HubSpot AEOだけでは足りないところ
+
+**HubSpot AEOが計測するのは決めた質問と決めたAIの範囲で、問い合わせが増えたかや推奨事項の実行までは受け持ちません。**導入前に知っておきたい点は4つあります。
+
+### 既定では計測しないAI
+
+既定の対象はChatGPT・Gemini・Perplexityの3つです。Claude・GoogleのAIモード・AI Overviewsも計測するには、スーパー管理者がAEO Multi-Engineのベータ版に登録して追加エンジンを有効にします。追加エンジンでは1つの質問で使う回答数が2倍になり、容量が足りないと実行されないため、回答数の上限を引き上げるオプションの購入が必要になることがあります。AI Overviewsは、表示されない質問でも容量を使うのが注意点です。
+
+:::linkcard
+url: /media/ai-overview-check/
+title: AI Overviewの自社サイト表示チェック方法
+desc: GoogleのAIによる概要に自社が出ているかを手で確認する方法を解説しています。
+:::
+
+### 社名の表記ゆれ
+
+**HubSpot AEOが言及として数えるのは、登録したブランド名のバリエーションと一致したときだけです。**バリエーションは大文字と小文字を区別するため、日本の会社は英字の社名・カタカナの社名・「株式会社」の有無・略称を全部登録しておく必要があります。登録していない表記で紹介されても言及に数えられないため、言及率が実際より低く出ます。
+
+### 回答の揺れと判断の時期
+
+AIの回答は日によって変わるため、数日から数週間の推移で判断するのが前提です。推奨事項の効果も、すぐには出ないことがあります。**1日の数字で施策の良し悪しを決めず、同じ質問の推移で見るのが前提です。**
+
+### 推奨事項の実行と問い合わせの計測
+
+推奨事項は引用されやすいページの種類・よく引用されるドメイン・競合の出方から作られ、新しく作る記事・更新するページ・SNSでの発信・第三者のサイトへの働きかけに分かれます。ブログ記事の下書きを生成する機能はMarketing Hub Professional以上だけで、HubSpotクレジットを使います。生成した下書きの事実確認と公開、第三者のサイトへの連絡は人の作業です。
+
+AIでの言及が問い合わせや商談につながったかは、HubSpot AEOの指標とは別に見る必要があります。AEOの指標は言及・引用・センチメントまでで、問い合わせの数は含まれません。HubSpotのCRMでは、ChatGPTなどのリンクから来た訪問者に流入元「AI Referrals」（chatgpt.com などのドメイン付き）が自動で付くため、この流入元からの問い合わせの数で成果を見ます。
+
+## HubSpotのサイトで優先する設定
+
+**AIに読まれる前提として、ページのタイトルと説明文・本文の結論・構造化データ・robots.txtの4つを整えます。**HubSpotのCMS（Content Hub）でサイトを公開している場合は、4つともHubSpotの画面で修正でき、権限があれば社内で行えるのが利点です。HubSpot AEOの推奨事項の［サイト監査］は構造化データ・canonical・クローラーの巡回しやすさを検出するため、監査で挙がったページから修正するのが効率的です。ほかのCMSのサイトも、同じ4つをそのCMSの設定で修正する流れです。
+
+<figure class="post-figure"><img src="/media/images/hubspot-ai-search/hub_02_site.png" alt="HubSpotのサイトで整える4か所。ページの設定のタイトルと説明文、本文の結論と見出し、ヘッダーHTMLの構造化データ、SEOおよびクローラーのrobots.txt" loading="lazy"></figure>
+
+### タイトルとメタディスクリプション
+
+ページのタイトルとメタディスクリプションは、コンテンツエディターの［設定］で入力する項目です。AIの回答の引用元にはページのタイトルがそのまま出ることが多く、**何のページかが題だけで分かる書き方が欠かせません。**「サービス」「事例」のような短い題のページは、サービス名と対象の業種や課題を入れた題に修正します。
+
+### 本文の結論と見出し
+
+HubSpotのヘルプはAI向けの書き方として見出しをH2・H3で予測しやすい構造にすること、手順は番号付き、比較は表にすること、画像だけで情報を伝えないことを挙げています。会社サイトで特に効果があるのは、サービスページの冒頭で「誰の何を解決するサービスか」を1〜2文で言い切ることです。料金の目安・対応範囲・ほかの方法との違いは、画像やPDFでなく本文のテキストで書くのが基本です。
+
+比べる章もAIに読まれる材料になります。AEOの引用分析では比較記事とトップリストが種類として数えられ、**買い手が他社と比べるときの質問に答える章が自社サイトに無いと、比較記事を書いた第三者のページが引用されます。**サービスページか記事に、自社が向く会社と向かない会社を書く章を設けておくのがおすすめです。
+
+### 構造化データはヘッダーHTMLに
+
+構造化データ（JSON-LD）は、ページごとならコンテンツエディターの［設定］の［詳細］にある［追加のコードスニペット］の［ヘッダーHTML］に貼り、［公開］か［更新］で反映します。サイト全体に入れるなら、設定の［コンテンツ］＞［ページ］でドメインを選び、［サイトのヘッダーHTML］に入れます。ページ単位の作業には編集と公開の権限、サイト全体にはウェブサイト設定の権限が必要です。
+
+HubSpotのヘルプはスキーマを入れると引用される可能性が高まると説明していますが、Googleは生成AI機能のために特別な構造化データは不要という立場です。**入れるなら会社概要（Organization）や記事（Article）など、本文と同じ事実を書く種類から始めます。**種類ごとの考え方は[構造化データはAI検索に必要？](/media/structured-data-ai-search/)で解説しています。
+
+### robots.txtでAIのクローラーを止めていないか
+
+robots.txtは設定の［コンテンツ］＞［ページ］でドメインを選び、［SEOおよびクローラー］タブの［Robots.txt］で編集する設定です。編集できるのはHubSpotに接続したドメインのコンテンツだけです。過去にAIの学習を止める目的で書いた行が、ChatGPTの検索用のクローラー（OAI-SearchBot）まで止めていないかを確認します。
+
+:::linkcard
+url: /media/ai-crawler-robots/
+title: GPTBotなどAIクローラーをrobots.txtで止めるかの判断と書き方
+desc: 学習用と検索用のクローラーの違いと、robots.txtの書き方・確認の手順を解説しています。
+:::
+
+## HubSpot AEOの始め方
+
+**設定はブランド・競合・製品と顧客像・質問の4段階で、質問は日本の買い手が実際に打つ日本語で作ります。**HubSpotのメニューの［マーケティング］＞［AEO］から［開始する］を押して進めます。
+
+1. ブランド名・ドメイン・ブランド名のバリエーション（コンマ区切り）・法人タイプ（B2Bなど）を入力する
+2. 比べる競合の名前・ドメイン・表記のバリエーションを確認し、足りない会社を追加する
+3. 追跡する製品と理想の顧客像（ICP）を選ぶか追加する
+4. 提案された質問を確認し、AIで8〜15個を追加生成するか手動で追加して、追跡を始める
+
+ヘルプは製品と顧客像の組み合わせごとに10個の質問を勧めており、3製品×5つの顧客像なら150個です。単体の契約は25件までなので、**最初は問い合わせに近い組み合わせを2つ程度に絞り、「［条件］の会社に合う［サービス］は？」の形で作るのが現実的です。**表現が違うだけで同じことを聞く質問は、1つに絞ります。
+
+:::linkcard
+url: /media/geo-aio-tools/
+title: GEO対策ツール・AIO対策ツール10製品の比較
+desc: 国産と海外の計測ツールの料金・対象のAI・無料トライアルを比較しています。
+:::
+
+## 外部に依頼するときの線引き
+
+**HubSpotの設定は社内かHubSpotのパートナー、AIの答えでの出方を変える中身と外部での言及はAI検索対策の支援会社、という分け方が目安です。**
+
+| 作業 | 社内で行える範囲 | 外部に依頼する先 |
+|---|---|---|
+| HubSpot AEOの設定と質問の管理 | 設定画面から行える | 社内で回らないならHubSpotのパートナー |
+| タイトル・説明文・robots.txt | 編集と公開の権限があれば行える | テンプレートの改修はHubSpotのパートナー・制作会社 |
+| 推奨事項に沿った記事とページの中身 | 書き手と事実確認の担当がいれば行える | AI検索対策の支援会社 |
+| 比較サイト・業界メディアでの言及 | 窓口が決まっていれば行える | AI検索対策の支援会社・PR会社 |
+
+HubSpotのパートナーはHubSpotの構築と運用の設計に詳しく、AEOを含めた設定の支援を受けられます。AI検索対策の支援会社が強みを持つのは、どの質問でどの他社が挙がっているかを回答の本文から読み、ページの中身と外部での言及を修正する所です。会社ごとの違いと費用の目安は[BtoBのLLMO対策会社おすすめ6選](/media/btob-llmo-companies/)で比較しています。
+
+## AIの回答を計測しながら改善したい場合
+
+AI検索対策を支援するnitoは、計測から分析、サイトの改善と記事の制作、公開後の運用までを一気通貫で支援しています。ChatGPTやGeminiなど主要なAIの実際の回答を毎日計測し、他社が挙がる理由を回答の本文から抜き出して、修正するページと中身を決める進め方です。目標に置くのは問い合わせや商談の数です。HubSpot AEOで数字を見ているものの、推奨事項をどの順に実行すればよいか決めきれない段階でも相談を受けています。**まず無料診断で、今の見え方を数字にするところから始められます。**
+
+## まとめ
+
+- これから始める会社: AI Search Graderで現状をつかみ、問い合わせに近い質問が決まったらHubSpot AEOの無料トライアルで28日間追跡する
+- Marketing Hub Professional以上を契約している会社: 追加費用なしでAEOを使えるため、ブランド名のバリエーションに日本語の表記を登録してから追跡を始める
+- 推奨事項が溜まっている会社: タイトル・本文の結論・比べる章を先に修正し、外部での言及は窓口を決めて進める
+- 社内に書き手や時間が無い会社: HubSpotの設定はパートナー、中身と外部での言及はAI検索対策の支援会社に分けて依頼する
+
+## よくある質問
+
+### Q. HubSpot AEOはHubSpotのCMSを使っていなくても使えますか？
+
+使えます。ホスト先を問わず利用できるのが公式の説明です。単体で契約する場合、HubSpotのほかの製品の契約も不要です。
+
+### Q. AI Search Graderは無料で何が分かりますか？
+
+会社名・所在地・製品・業種を入れると、GPT-4o・Perplexity・GeminiでのAIの言及の頻度、競合との立ち位置、センチメント、情報源の評価をまとめたレポートが無料で届きます。GraderのChatGPTとGeminiは学習データからの回答で、Web検索の結果を反映するのはPerplexityだけです。決めた質問を毎日追跡する機能は無いため、施策の前後を比べるならHubSpot AEOを使います。
+
+### Q. HubSpot AEOでClaudeやGoogleのAIモードは計測できますか？
+
+既定では計測しません。ClaudeとGoogleのAIモード・AI OverviewsはAEO Multi-Engineのベータ版で追加エンジンを有効にすると対象になり、1つの質問で使う回答数が既定の2倍になります。
+
+### Q. HubSpot AEOは日本語の質問で計測できますか？
+
+顧客が実際にAIで使う言葉で質問を作るのが基本で、日本の買い手が相手なら日本語で作ります。ヘルプの日本語版は自動翻訳で、正確な最新情報は英語版を見るようにとの注記付きです。
+
+### Q. Marketing Hub Professionalを契約していればHubSpot AEOを別に買う必要はありますか？
+
+ありません。AEOはMarketing Hub ProfessionalとEnterpriseに標準搭載され、Professionalは毎日25〜50件、Enterpriseは毎日50件の質問を追跡できます（ナレッジベースではProfessionalが25件、料金ページの比較表では50件）。単体のAEOに無いブログ記事の生成とCRMに基づく質問の提案も使えます。
+
+### Q. HubSpot AEOの推奨事項どおりにすればAIに出るようになりますか？
+
+出ることを保証するものではありません。推奨事項は追跡した質問の引用の傾向から作られ、改善がすぐには表示されない場合もあります。実行した後は同じ質問の数日から数週間の推移で効果を見ます。
+
+### Q. HubSpotのサイトに構造化データを入れるとAIに引用されやすくなりますか？
+
+HubSpotのヘルプは引用される可能性が高まると説明していますが、Googleは生成AI機能のために特別な構造化データは不要という立場です。入れる場合はページのヘッダーHTMLにJSON-LDを置き、本文と同じ事実だけを書くのが前提です。
+
+## 出典
+
+- HubSpot「[HubSpot AEO（回答エンジン最適化）](https://www.hubspot.jp/products/aeo)」（2026年11月25日取得）
+- HubSpot「[AI検索モニタリング（AEO）](https://www.hubspot.jp/products/aeo/ai-search)」（同）
+- HubSpot「[AI Search Grader](https://www.hubspot.jp/ai-search-grader)」（同）
+- HubSpot「[Marketing Hubの料金](https://www.hubspot.jp/pricing/marketing)」（同。取得時は米ドル表示）
+- HubSpotナレッジベース「[AEOの設定と分析](https://knowledge.hubspot.com/ja/seo/set-up-and-analyze-ai-visibility)」2026年11月10日更新（同）
+- HubSpotナレッジベース「[AEOのプロンプトを確認・管理する](https://knowledge.hubspot.com/ja/seo/review-and-manage-aeo-prompts)」2026年11月21日更新（同）
+- HubSpotナレッジベース「[AEO設定の管理](https://knowledge.hubspot.com/ja/seo/manage-aeo-settings)」2026年10月27日更新（同）
+- HubSpotナレッジベース「[AEOに関する提言の確認と管理](https://knowledge.hubspot.com/ja/seo/review-and-manage-aeo-recommendations)」2026年10月14日更新（同）
+- HubSpotナレッジベース「[AIを活用してコンテンツを最適化し、ブランドの可視性を向上](https://knowledge.hubspot.com/ja/ai/optimize-content-and-improve-brand-visibility-for-ai)」2026年9月10日更新（同）
+- HubSpotナレッジベース「[HubSpotコンテンツでコードスニペットを使用](https://knowledge.hubspot.com/ja/website-and-landing-pages/use-code-snippets-with-hubspot-content)」（同）
+- HubSpotナレッジベース「[ページを作成し、カスタマイズする](https://knowledge.hubspot.com/ja/website-and-landing-pages/create-and-customize-pages)」（同）
+- HubSpotナレッジベース「[検索結果にコンテンツが表示されないようにする](https://knowledge.hubspot.com/ja/seo/prevent-content-from-appearing-in-search-results)」（同）
+- HubSpot Japan「[AEOとは？AI検索時代のAnswer Engine Optimization完全ガイド](https://blog.hubspot.jp/marketing/whats-aeo)」2026年8月7日更新（同）
+- Google 検索セントラル「[Google 検索における生成 AI 機能に向けた最適化のための Google ガイド](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」（同）
+- OpenAI「[Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots)」（同）
