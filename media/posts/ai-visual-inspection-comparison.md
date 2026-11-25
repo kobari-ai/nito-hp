@@ -128,7 +128,7 @@ AIは学習した画像に無い状況の判断が苦手で、キーエンスも
 
 **StellaController 2.0**: PhoxterのAIとルールベースを1台で使える画像処理コントローラーです。良品と不良品のフォルダに画像を入れるだけで学習でき、不良箇所を囲む作業（アノテーション）は必要ありません。東京・大阪・名古屋・福岡のラボで実物を使ったPoCができます。
 
-<!-- SHOT: 画面 https://www.phoxter.co.jp/visual-inspection/faq・探す語「実現性検証（PoC）は約1か月」・赤枠「実現性検証（PoC）は約1か月、本番導入までは約3か月が一般的な目安です」・PC・alt「PhoxterのFAQに書かれたPoCは約1か月・本番導入までは約3か月という目安」・figcaption「PhoxterのFAQの導入期間の目安（2026年11月26日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-visual-inspection-comparison/phoxter-faq-poc.png" alt="PhoxterのFAQに書かれたPoCは約1か月・本番導入までは約3か月という目安" loading="lazy"><figcaption>PhoxterのFAQの導入期間の目安（2026年11月26日）</figcaption></figure>
 
 ### ④ AI外観検査ソリューション（アプライド）
 
@@ -150,7 +150,7 @@ AIは学習した画像に無い状況の判断が苦手で、キーエンスも
 
 **TDSE Eye**: 正常画像だけで異常検知のAIを作るSaaS型のサービスで、価格はタクトタイムで変わり、買取も選べます。判定はGPU不要のWindows 10のPCでオフライン実行できますが、画像は長辺384ピクセルに縮小されるため、微細な欠陥は検証で確認が必要です。
 
-<!-- SHOT: 画面 https://www.eye.tdse.jp/・探す語「月 10 万円から利用可能」・赤枠「月 10 万円から利用可能」と「精度検証は 無償対応 いたします」・PC・alt「TDSE Eyeの公式サイトに書かれた月10万円から利用可能・精度検証は無償の表示」・figcaption「TDSE Eyeの料金と精度検証の表示（2026年11月26日）」 -->
+<figure class="post-figure"><img src="/media/images/ai-visual-inspection-comparison/tdse-eye-price.png" alt="TDSE Eyeの公式サイトに書かれた月10万円から利用可能・精度検証は無償の表示" loading="lazy"><figcaption>TDSE Eyeの料金と精度検証の表示（2026年11月26日）</figcaption></figure>
 
 ### ⑨ Deeptector（NTTドコモソリューションズ）
 
