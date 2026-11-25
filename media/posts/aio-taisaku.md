@@ -4,7 +4,7 @@ date: 2026-10-30
 modified: 2026-11-26
 category: AI検索対策
 description: AIO対策（LLMO対策）のやり方を、現状の回答の計測から再計測までの5手順とチェックリストで解説。Google・OpenAIの公式の記述とよく見る説明の違い、効果のない施策、費用の目安、効果の計測方法まで。
-keyword: aio対策 やり方
+keyword: aio対策
 cover_tag: 解説
 cover_headline: AIO対策とは
 cover_sub: 会社が進める5つの手順
