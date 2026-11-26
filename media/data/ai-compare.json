@@ -92,7 +92,7 @@
               ]
             },
             "ai_mode": {
-              "text": "Gemini 4 Hydrogen（使える人の条件は記載なし）。Gemini 4 CarbonはGoogle AI Ultraのみ",
+              "text": "Gemini 4 Hydrogen（使える人の条件は記載なし）。Gemini 4 Carbonは有料プラン向け（ヘルプはUltraのみ、プランのページはProにも記載）",
               "src": [
                 "m1"
               ]
