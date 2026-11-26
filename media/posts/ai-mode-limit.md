@@ -44,7 +44,7 @@ Gemini 4 Carbonは質問欄のメニューから選んで使う上位のモデ�
 
 <figure class="post-figure"><img src="/media/images/ai-mode-limit/04_help_pro.jpg" alt="Google 検索ヘルプのAIモードのGemini 3 Proの提供状況。英語で、対応している国のユーザーと18歳以上のGoogle AI Plus、Pro、Ultraの定期購入者に提供。赤い枠の中に、AIモードのGemini 3 Proには1日ごとの使用量制限があり、上限に達した場合はリセットを待つかGoogle AIのプランにアップグレードするよう書かれている" loading="lazy"><figcaption>上位のモデルの上限は「1日ごと」。数は書かれていない（Google 検索ヘルプ。画像は2026年10月2日時点の画面で、当時の名前はGemini 3 Pro）</figcaption></figure>
 
-使える人の条件も狭く、2026年11月27日時点のヘルプでは**18歳以上のGoogle AI Ultraの定期購入者**に限られます。10月25日時点（名前はGemini 4 Argon）に入っていたProは対象から外れ、10月2日の取得時に入っていたPlusも対象ではありません。「英語だけ」の条件は書かれていません。対応国の一覧に日本は入っていて、自分で管理する個人のGoogleアカウントでのログインも必要です。
+使える人の条件も狭く、2026年11月27日時点のヘルプでは**18歳以上のGoogle AI Ultraの定期購入者**に限られます。10月25日時点（名前はGemini 4 Argon）に入っていたProは対象から外れ、10月2日の取得時に入っていたPlusも対象ではありません。「英語だけ」の条件は書かれていません。対応国の一覧に日本は入っていて、自分で管理する個人のGoogleアカウントでのログインも必要です。なお同じ日のGoogle AIのプランのページは、Proの欄にも「AI モードで Gemini 4 Carbon モデルを利用可能」と書いていて、ヘルプの「Ultraだけ」と食い違っています。
 
 ### 画像の作成は24時間ごとの枚数
 
@@ -130,7 +130,7 @@ Yahoo!知恵袋には2026年3月から6月にかけて、AIモードで会話を
 別のものです。Geminiアプリには使った量で決まる上限があり、週ごとの上限に達するまで5時間ごとにリセットされます。AIモードのヘルプには5時間や週の区切りはありません。
 
 ### プランに入るとAIモードは無制限になりますか？
-なりません。プランのページにはAIモードのProのモデルへのアクセスの拡大とDeep Searchなどの機能が挙がっていて、画像の作成の枚数も増えます。ただしヘルプは、プランに入っていても上位のモデル（Gemini 4 Carbon、Ultraだけが対象）と画像の作成に1日の上限があるとしています。
+なりません。2026年11月27日時点のプランのページは、Google AI Proの欄に「AI モードで Gemini 4 Carbon モデルを利用可能」、Google AI Ultraの欄に「AI モードでの Gemini 4 Carbon モデルへのアクセスがさらに拡大」と書いていて、画像の作成の枚数も増えます。ただしヘルプは、プランに入っていても上位のモデルと画像の作成に1日の上限があるとしています。
 
 ### AIモードで新しい検索が始まるのは上限ですか？
 「次の質問をすると、新しい検索が開始します。」の説明はヘルプになく、上限の表示とは書かれていません。続きを聞くときは必要な回答をコピーして新しい質問に貼ってから聞き直してください。
@@ -142,6 +142,6 @@ Yahoo!知恵袋には2026年3月から6月にかけて、AIモードで会話を
 - [Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)（Google 検索ヘルプ。Gemini 4 Hydrogen、Gemini 4 Carbonの提供状況と1日ごとの使用量上限。Gemini 4 Hydrogen・Carbonの表記は2026年11月27日取得）
 - [Google 検索で画像を作成、編集する](https://support.google.com/websearch/answer/16649374?hl=ja)（Google 検索ヘルプ。画像の作成の24時間あたりの上限、Nano Banana 2.1の1日ごとの上限。Nano Banana 2.1の表記は2026年10月27日取得）
 - [Google AI のサブスクリプション プランに応じた Gemini アプリの使用量上限とアップグレード](https://support.google.com/gemini/answer/16275805?hl=ja)（Geminiアプリ ヘルプ。5時間ごと・週ごとの上限）
-- [Google AI のプラン](https://one.google.com/about/google-ai-plans/?hl=ja)（Google One。プランごとのAIモードとDeep Searchの扱い）
+- [Google AI のプラン](https://one.google.com/about/google-ai-plans/?hl=ja)（Google One。プランごとのAIモードとDeep Searchの扱い。Gemini 4 Carbonの欄は2026年11月27日取得）
 - [Googleのaiモードで会話をしていたら急に、エラーが発生したため…](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10326493840)（Yahoo!知恵袋、2026年3月22日）
 - [GoogleのAIモードでチャットしていたら、「次の質問をすると、新しい検索が開始します。」というのが出てきて…](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12328933547)（Yahoo!知恵袋、2026年6月15日）
