@@ -26,11 +26,11 @@
     "chatgpt": "2026-10-27",
     "gemini": "2026-11-27",
     "claude": "2026-11-27",
-    "ai_mode": "2026-11-26"
+    "ai_mode": "2026-11-27"
   },
   "last_changed": {
-    "date": "2026-10-31",
-    "text": "ClaudeのMax 20xがUltraに名前が変わった。Ultraは月$220で、週の使用量がProの10倍、認証済みのアカウントは5時間の上限なし。Maxは月$110でProの5倍"
+    "date": "2026-11-27",
+    "text": "AIモードで選べる上位モデルが、ヘルプの表記でGemini 4 ArgonからGemini 4 Carbonに。使えるのは18歳以上のGoogle AI Ultraの加入者だけになり、Google AI Proは対象から外れた。幅広い質問に速く答えるモデルとしてGemini 4 Hydrogenの名前が載った。1日の上限があり、上限に達したらリセット待ちかGoogle AIプランへ、は同じ"
   },
   "tables": [
     {
@@ -59,7 +59,7 @@
               ]
             },
             "ai_mode": {
-              "text": "通常の質問は記載なし。Gemini 4 Argon・画像に1日の上限",
+              "text": "通常の質問は記載なし。Gemini 4 Carbon・画像に1日の上限",
               "src": [
                 "m1",
                 "m2"
@@ -92,7 +92,7 @@
               ]
             },
             "ai_mode": {
-              "text": "高速モード（Gemini 4 ArgonはGoogle AI Pro・Ultraのみ）",
+              "text": "Gemini 4 Hydrogen（使える人の条件は記載なし）。Gemini 4 CarbonはGoogle AI Ultraのみ",
               "src": [
                 "m1"
               ]
@@ -730,11 +730,12 @@
       "fetch_url": "https://support.google.com/websearch/answer/16011537?hl=ja",
       "auto": true,
       "watch": [
-        "Gemini 4 Argon には 1 日ごとの使用量上限",
-        "Google AI Ultra 定期購入者",
+        "Gemini 4 Carbon には 1 日ごとの使用量上限",
+        "18 歳以上の Google AI Ultra 定期購入者",
+        "AI モードの Gemini 4 Hydrogen は",
         "PDF などのファイルを使用して質問する"
       ],
-      "checked": "2026-11-26"
+      "checked": "2026-11-27"
     },
     {
       "id": "m2",
@@ -750,7 +751,7 @@
         "Ultra: 24 時間あたり最大 1,000 枚",
         "AI モードで Nano Banana"
       ],
-      "checked": "2026-11-26"
+      "checked": "2026-11-27"
     },
     {
       "id": "m3",
@@ -763,7 +764,7 @@
         "Feb 26, 2026",
         "In AI Mode and Lens"
       ],
-      "checked": "2026-11-26"
+      "checked": "2026-11-27"
     },
     {
       "id": "a1",
@@ -861,6 +862,14 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-11-27",
+      "ai": "ai_mode",
+      "text": "AIモードで選べる上位モデルが、ヘルプの表記でGemini 4 ArgonからGemini 4 Carbonに。使えるのは18歳以上のGoogle AI Ultraの加入者だけになり、Google AI Proは対象から外れた。幅広い質問に速く答えるモデルとしてGemini 4 Hydrogenの名前が載った。1日の上限があり、上限に達したらリセット待ちかGoogle AIプランへ、は同じ",
+      "src": [
+        "m1"
+      ]
+    },
     {
       "date": "2026-10-31",
       "ai": "claude",
