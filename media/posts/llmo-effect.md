@@ -66,8 +66,8 @@ GoogleのAIによる概要とAIモードについては、Search Consoleの生�
 
 :::linkcard
 url: /media/ai-search-measurement/
-title: AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法
-desc: GA4の探索レポートでAI経由の訪問を見る設定と、言及率と流入を並べて見る方法を解説しています。
+title: 【2026年11月】LLMO・AIO対策の効果測定のやり方・5つの指標と質問数・GA4の見方
+desc: 5つの指標・質問数と回数・GA4の見方・外注先の月次報告で確認する点を解説しています。
 :::
 
 ## AI経由の訪問が少なくても効果がないとは限らない
