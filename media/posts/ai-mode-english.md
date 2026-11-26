@@ -1,7 +1,7 @@
 ---
 title: 【2026年10月】Google AIモードが英語になる原因と日本語に戻す方法｜回答が英語・表示が英語・出典が英語
 date: 2026-09-28
-modified: 2026-10-27
+modified: 2026-11-27
 category: AI検索対策
 description: Google AIモードの回答や画面が英語になる原因を、条件を変えた実測とGoogleのヘルプで整理。質問の言語、表示言語の設定、英語でだけ提供される機能の3つに分けて、日本語に戻す手順をまとめました。
 cover_tag: 使い方
@@ -96,11 +96,11 @@ iPhoneのGoogleアプリは、端末の言語に合わせて表示が決まり�
 | ファイルの生成（PDFなど） | 18歳以上の利用者に英語で提供 |
 | AIで料金を確認・AIモードからの購入 | 米国の18歳以上に英語で提供 |
 
-AIモードの上位のモデルは、9月28日の取得時はGemini 3 Proとして英語での提供と書かれていました。2026年10月25日時点のヘルプでは名前がGemini 4 Argonに変わり、使える人は18歳以上のGoogle AI Pro・Ultraの定期購入者で、言語の条件は書かれていません。
+AIモードの上位のモデルは、9月28日の取得時はGemini 3 Proとして英語での提供と書かれていました。10月25日時点で名前がGemini 4 Argon（Pro・Ultraが対象）に変わり、2026年11月27日時点のヘルプでは名前がGemini 4 Carbonに、使える人は18歳以上のGoogle AI Ultraの定期購入者だけになりました。言語の条件は書かれていません。
 
 Nano Banana 2.1の使える人は、2026年10月27日時点のヘルプの英語版が「users over 18 in the US and Google AI Pro and Ultra subscribers」（米国の18歳以上の利用者と、Google AI Pro・Ultraの加入者）、日本語版が「米国にお住まいで18歳以上のGoogle AI ProまたはGoogle AI Ultraのユーザー」と書いています。以前あった対象の国と地域の一覧は消えていて、日本のPro・Ultraの加入者が対象かは読み方で分かれます。日本からは試していません。
 
-**上位のモデル（メニューの「4 Argon」）を選んだあとに回答が英語になったなら、メニューで高速モードに戻してから聞き直してください。**ヘルプでも、高速モードでほとんどの質問に対応できるとされています。画像を作るときの日本語の手順は[AIモードで画像を生成する方法](/media/ai-mode-image-generation/)で確かめてください。
+**上位のモデル（Gemini 4 Carbon）を選んだあとに回答が英語になったなら、メニューで上位のモデル以外に選び直してから聞き直してください。**ヘルプでも、幅広い質問にはGemini 4 Hydrogenで対応できるとされています。画像を作るときの日本語の手順は[AIモードで画像を生成する方法](/media/ai-mode-image-generation/)で確かめてください。
 
 ## 出典のページが英語のとき
 
@@ -134,7 +134,7 @@ AIモードが開かない、入口が出ないといった別の困りごとは
 
 ### AIモードのProは日本語で使えますか？
 
-2026年10月25日時点のヘルプでは、AIモードの上位のモデルはGemini 4 Argonで、18歳以上のGoogle AI Pro・Ultraの定期購入者が対象です。以前あった英語での提供という条件は書かれていません。プランに入っていないなら、メニューで高速モードを選んでください。
+2026年11月27日時点のヘルプでは、AIモードの上位のモデルはGemini 4 Carbonで、18歳以上のGoogle AI Ultraの定期購入者だけが対象です。以前あった英語での提供という条件は書かれていません。Ultraに入っていないなら、上位のモデルを選ばずにそのまま質問してください。
 
 ### AIによる概要が英語で表示されるのはなぜですか？
 
@@ -146,7 +146,7 @@ AIによる概要も、日本語に対応しています。英語で検索する
 
 ## 出典
 
-- Google 検索ヘルプ「[Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)」（2026年9月28日取得。Gemini 4 Argonの提供状況は10月25日取得）
+- Google 検索ヘルプ「[Google 検索の AI モードで AI による回答を取得する](https://support.google.com/websearch/answer/16011537?hl=ja)」（2026年9月28日取得。Gemini 4 Carbonの提供状況は11月27日取得）
 - Google 検索ヘルプ「[Google が検索結果に表示する言語を判断する方法](https://support.google.com/websearch/answer/13511324?hl=ja)」（2026年9月28日取得）
 - Google 検索ヘルプ「[Google の表示言語を変更する](https://support.google.com/websearch/answer/3333234?hl=ja)」（パソコン・Android・iPhone、2026年9月28日取得）
 - Google 検索ヘルプ「[Google 検索の AI による概要で、情報をすばやく簡単に見つける](https://support.google.com/websearch/answer/14901683?hl=ja)」（2026年9月28日取得）
