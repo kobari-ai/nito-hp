@@ -12,12 +12,12 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】｜株式会社nito</title>
-    <meta name="description" content="AI検索対策（LLMO）の効果測定を、GA4での具体的な設定手順とあわせて解説します。ChatGPT・Perplexityからの流入を見る正規表現、GA4だけでは測れない理由、言及率とセットで見るコツまで実務目線でまとめました。">
+    <title>【2026年11月】LLMO・AIO対策の効果測定のやり方・5つの指標と質問数・GA4の見方｜株式会社nito</title>
+    <meta name="description" content="LLMO・AIO対策の効果測定のやり方を、AIの回答に名前が出るか・引用元・GA4のAI経由の流入・指名検索・問い合わせの5つの指標で解説。何問をどのAIで何回聞くか、外注先の月次報告で確認する点もまとめました。">
     <link rel="canonical" href="https://nito-0210.com/media/ai-search-measurement/">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】">
-    <meta property="og:description" content="AI検索対策（LLMO）の効果測定を、GA4での具体的な設定手順とあわせて解説します。ChatGPT・Perplexityからの流入を見る正規表現、GA4だけでは測れない理由、言及率とセットで見るコツまで実務目線でまとめました。">
+    <meta property="og:title" content="【2026年11月】LLMO・AIO対策の効果測定のやり方・5つの指標と質問数・GA4の見方">
+    <meta property="og:description" content="LLMO・AIO対策の効果測定のやり方を、AIの回答に名前が出るか・引用元・GA4のAI経由の流入・指名検索・問い合わせの5つの指標で解説。何問をどのAIで何回聞くか、外注先の月次報告で確認する点もまとめました。">
     <meta property="og:url" content="https://nito-0210.com/media/ai-search-measurement/">
     <meta property="og:site_name" content="株式会社nito">
     <meta property="og:image" content="https://nito-0210.com/media/images/og/ai-search-measurement.jpg">
@@ -26,9 +26,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://nito-0210.com/media/images/og/ai-search-measurement.jpg">
     <link rel="icon" href="/favicon.png">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】", "description": "AI検索対策（LLMO）の効果測定を、GA4での具体的な設定手順とあわせて解説します。ChatGPT・Perplexityからの流入を見る正規表現、GA4だけでは測れない理由、言及率とセットで見るコツまで実務目線でまとめました。", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では、AI経由のコンバージョンを5ヶ月で約6.7倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-search-measurement/"}, "articleSection": "AI検索対策", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/ai-search-measurement.jpg"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTからの流入はGA4でどの参照元になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "主にchatgpt.comです。過去データには旧ドメインのchat.openai.comが残る場合があるため、正規表現には両方を入れておくと安全です。"}}, {"@type": "Question", "name": "GoogleのAI Overviews経由の流入は計測できますか？", "acceptedAnswer": {"@type": "Answer", "text": "現状は分離できません。AI Overviewsからのクリックは通常のGoogle検索（Organic Search）に含まれるため、検索側はSearch Consoleとあわせて見るのが現実的です。 AIによる概要とAIモードに出た表示回数は、Search Consoleの生成AIパフォーマンスレポートで見られます（[サーチコンソールでAIモードの表示を見る方法](/media/gsc-ai-mode/)）。"}}, {"@type": "Question", "name": "AI経由の流入がほぼゼロでした。対策する意味はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "あります。まずAIの回答に自社が出ているか（言及率）を確認してください。出ていなければ流入は発生しようがなく、優先すべきはコンテンツ整備とポジショニングの側です。"}}, {"@type": "Question", "name": "GA4の数字が小さくても効果はあると言えますか？", "acceptedAnswer": {"@type": "Answer", "text": "言えます。AI経由はリファラ欠落や指名検索での流入により過小評価されがちで、実際の影響はGA4の数字より大きいのが一般的です。伸び率と言及率をあわせて評価します。"}}, {"@type": "Question", "name": "言及率は何で測ればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "専用ツールもありますが、実際のチャット画面で対象の質問を投げて記録する方法が確実です。回答にゆらぎがあるため、同じ質問を一定間隔で繰り返し、傾向で判断します。"}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "【2026年11月】LLMO・AIO対策の効果測定のやり方・5つの指標と質問数・GA4の見方", "description": "LLMO・AIO対策の効果測定のやり方を、AIの回答に名前が出るか・引用元・GA4のAI経由の流入・指名検索・問い合わせの5つの指標で解説。何問をどのAIで何回聞くか、外注先の月次報告で確認する点もまとめました。", "datePublished": "2026-07-07", "dateModified": "2026-11-27", "author": {"@type": "Person", "name": "岡村 希一", "jobTitle": "nito代表", "description": "サイバーエージェントで広告の新規事業開発、株式会社刀の選抜型マーケティングプログラムを経て nito を設立。累計300本以上のWeb記事の企画・執筆・効果測定を担当し、AI検索対策では、AI経由のコンバージョンを5ヶ月で約6.7倍にした実績を持つ。自社の運営にAIエージェントを組み込んでおり、その仕組みを他社に移植するAIエージェント構築支援も行う。", "worksFor": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}}, "publisher": {"@type": "Organization", "@id": "https://nito-0210.com/#organization", "name": "株式会社nito", "alternateName": "nito", "url": "https://nito-0210.com/", "logo": {"@type": "ImageObject", "url": "https://nito-0210.com/nito-logo-black.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nito-0210.com/media/ai-search-measurement/"}, "articleSection": "AI検索対策", "inLanguage": "ja", "image": "https://nito-0210.com/media/images/og/ai-search-measurement.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nito-0210.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://nito-0210.com/media/"}, {"@type": "ListItem", "position": 3, "name": "【2026年11月】LLMO・AIO対策の効果測定のやり方・5つの指標と質問数・GA4の見方"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "LLMOの効果測定では何を計測しますか？", "acceptedAnswer": {"@type": "Answer", "text": "AIの回答に名前が出るか（言及率・推奨の順位）、引用元に自社ページが付くか、GA4のAI経由の流入、Search Consoleの指名検索、問い合わせ時の認知経路の5つです。それぞれ計測するツールが違うため、1つの点数にまとめず別々に記録します。"}}, {"@type": "Question", "name": "LLMO・AIO対策の言及率は何問で計測すればよいですか？", "acceptedAnswer": {"@type": "Answer", "text": "決まった基準はありませんが、公開されている目安では10問を下回ると月ごとの数字が大きく振れ、20〜30問で推移が安定したという例があります。手作業なら20問ほどが上限という目安もあるため、10〜20問から始めるのが現実的です。"}}, {"@type": "Question", "name": "ChatGPTからの流入はGA4でどの参照元になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "chatgpt.com / ai-assistantのほか、openai / organicとしても記録されます。nito-0210.comのGA4（2026年11月）ではopenai / organicの方が多く、こちらはオーガニック検索のチャネルに入っていました。探索レポートの正規表現に「openai」も入れておくと数え漏れを減らせます。"}}, {"@type": "Question", "name": "GA4のAIアシスタントにPerplexityは入りますか？", "acceptedAnswer": {"@type": "Answer", "text": "GA4のヘルプのチャネルの説明に挙がっている例はChatGPT・Gemini・Deepseek・Copilot・Grokで、Perplexityは例に入っていません。nito-0210.comのGA4（2026年11月）では、perplexity.ai / ai-assistantとしてAIアシスタントのチャネルに入っていました。自社のGA4で参照元のperplexity.aiがどのチャネルに入っているかを確認し、入っていなければ探索レポートの正規表現で拾います。"}}, {"@type": "Question", "name": "GA4でAIによる概要からの流入は分けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "GA4のヘルプではGoogleのAIによる概要とAIモードからの訪問はオーガニック検索のチャネルに含まれると書かれていて、通常の検索結果と分ける方法は書かれていません。リンクが表示された回数はSearch Consoleの生成AIパフォーマンスレポートで確認します。"}}, {"@type": "Question", "name": "AIの回答を1回で判断しないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "同じ質問でも聞くたびに回答が変わり、AIによっても結果が分かれるためです。公開されている例では13問のうち10問で、同じ質問でもAIによって推奨の有無が分かれました。1問を複数回、AIごとに分けて聞き、月の合計で判断します。"}}, {"@type": "Question", "name": "AI経由の流入がほぼゼロでもLLMO対策の効果はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "詳しくは[LLMO対策に効果はある？](/media/llmo-effect/)で解説しています。"}}, {"@type": "Question", "name": "LLMO対策の月次報告では何を確認しますか？", "acceptedAnswer": {"@type": "Answer", "text": "質問の数と文面、対象のAI、1問を何回聞いたか、先月から条件を変えていないかの4点です。条件が違う月の数字を並べても、上がった・下がったは比べられません。"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@
     </header>
 
     <nav class="breadcrumb">
-        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>AI検索対策の効果はどう測る？GA4でA…
+        <a href="/">ホーム</a><span class="sep">›</span><a href="/media/">コラム</a><span class="sep">›</span>【2026年11月】LLMO・AIO対策…
     </nav>
 
     <div class="page-wrap">
@@ -58,19 +58,18 @@
             <span class="post-cat">AI検索対策</span>
             <span class="post-date">2026.07.07</span>
         </div>
-        <h1 class="post-title">AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】</h1>
+        <h1 class="post-title">【2026年11月】LLMO・AIO対策の効果測定のやり方・5つの指標と質問数・GA4の見方</h1>
         <div class="byline"><img src="/profile_okamura.jpg" alt="" width="32" height="32"><span>執筆 <b>岡村 希一</b>（nito代表）</span></div>
 
-        <div class="post-eyecatch"><img src="/media/images/og/ai-search-measurement.jpg" alt="AI検索対策の効果はどう測る？GA4でAI経由の流入を見る方法【2026年最新版】" width="1200" height="628" fetchpriority="high"></div>
+        <div class="post-eyecatch"><img src="/media/images/og/ai-search-measurement.jpg" alt="【2026年11月】LLMO・AIO対策の効果測定のやり方・5つの指標と質問数・GA4の見方" width="1200" height="628" fetchpriority="high"></div>
 
         <div class="post-content">
-<p>AI検索対策の効果は、GA4の探索レポートでchatgpt.comなどの参照元を絞り込めば把握できます。ただし<strong>GA4に映るのは「結果」の最低ライン</strong>で、AIにどれだけ言及されたかという「原因」は別で測り、セットで見るのが正確です。</p>
+<p>LLMO・AIO対策の効果測定は、AIの回答に名前が出るか、引用元に自社ページが付くか、AI経由の流入、指名検索、問い合わせの5つを分けて計測します。AIの回答は同じ質問でも聞くたびに変わるため、<strong>決めた質問を同じ条件で複数回聞き、判断は月単位で行う</strong>のが基本です。</p>
+<p>LLMO・AIO対策を外部に依頼している会社や、依頼を検討している会社の担当者に向けて、指標ごとの計測ツールと頻度、GA4でAI経由の流入を確認する手順、外注先の月次報告で確認する点をまとめました。この記事は株式会社nitoが書いています。</p>
 <div class="takeaways"><div class="takeaways__ttl">この記事のポイント</div><div class="takeaways__body"><ul>
-<li>GA4は「探索レポート＋参照元の正規表現」で<strong>ChatGPT・Perplexity等からの流入</strong>を可視化できる</li>
-<li>2026年5月、GA4に<strong>「AIアシスタント」チャネル</strong>が追加され自動分類が進んだ</li>
-<li>ただしアプリ経由はリファラが欠落し<strong>Directに混ざる</strong>ため、GA4の数字は過小評価になる</li>
-<li>nitoの事例では、GA4計測0.007%のAI経由CVが、アンケートでは<strong>約27%</strong>だった</li>
-<li>「原因＝言及率」と「結果＝流入・CV」を<strong>両方測る</strong>のが効果検証の型</li>
+<li>指標は<strong>名前が出る・引用元に付く・AI経由の流入・指名検索・問い合わせ</strong>の5つに分け、1つの点数にまとめない</li>
+<li>何問・何回の目安は公開している会社ごとに幅があるが、<strong>1回の確認で判断しない点はどの会社も共通</strong></li>
+<li>外注先の報告は、率の高さより先に<strong>質問・AI・回数・条件が先月と同じか</strong>を確認する</li>
 </ul></div></div>
 
 <div class="fork">
@@ -79,95 +78,244 @@
 <a href="/aio/"><span class="fork__q">AI に自社がどう紹介されているか知りたい</span><span class="fork__go">AI検索対策</span></a>
 <a href="/ai-agent/"><span class="fork__q">会社の毎日の作業を AI に任せたい</span><span class="fork__go">AIエージェント構築</span></a>
 </div>
-            <nav class="toc">
+            <nav class="toc toc--long">
                 <div class="toc__ttl">目次</div>
                 <ol>
-                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>AI検索対策で見るべき2つの指標</a></li>
-                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>GA4でAI経由の流入を見る方法</a></li>
-                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>GA4だけでは効果を測れない理由</a></li>
-                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>nitoの推奨：コンバージョン地点で「認知経路」を聞く</a></li>
-                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>言及率×流入のセット運用</a></li>
-                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>経営層に「効果」をどう説明するか</a></li>
-                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>効果測定まで含めて伴走するなら</a></li>
-                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>まとめ</a></li>
-                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s1"><span class="toc__n">1</span>LLMO・AIO対策の効果測定で見る5つの指標</a></li>
+                    <li class="toc-h2"><a href="#s2"><span class="toc__n">2</span>AIの回答に名前が出るかを計測する</a></li>
+                    <li class="toc-h3"><a href="#s2-1"><span class="toc__n">2-1</span>言及率と推奨の順位の出し方</a></li>
+                    <li class="toc-h3"><a href="#s2-2"><span class="toc__n">2-2</span>質問の種類で見る指標を変える</a></li>
+                    <li class="toc-h2"><a href="#s3"><span class="toc__n">3</span>引用元に自社ページが付くかを計測する</a></li>
+                    <li class="toc-h3"><a href="#s3-1"><span class="toc__n">3-1</span>Search Consoleの生成AIパフォーマンスレポート</a></li>
+                    <li class="toc-h3"><a href="#s3-2"><span class="toc__n">3-2</span>Bing Webmaster ToolsのAIパフォーマンス</a></li>
+                    <li class="toc-h2"><a href="#s4"><span class="toc__n">4</span>GA4でAI経由の流入を見る方法</a></li>
+                    <li class="toc-h3"><a href="#s4-1"><span class="toc__n">4-1</span>既定のAIアシスタントのチャネル</a></li>
+                    <li class="toc-h3"><a href="#s4-2"><span class="toc__n">4-2</span>探索レポートで参照元を絞り込む</a></li>
+                    <li class="toc-h3"><a href="#s4-3"><span class="toc__n">4-3</span>GA4だけでは計測できない部分</a></li>
+                    <li class="toc-h2"><a href="#s5"><span class="toc__n">5</span>指名検索をSearch Consoleで計測する</a></li>
+                    <li class="toc-h2"><a href="#s6"><span class="toc__n">6</span>問い合わせ時に認知経路を聞く</a></li>
+                    <li class="toc-h2"><a href="#s7"><span class="toc__n">7</span>何問をどのAIで何回計測するか</a></li>
+                    <li class="toc-h3"><a href="#s7-1"><span class="toc__n">7-1</span>条件を統一する</a></li>
+                    <li class="toc-h3"><a href="#s7-2"><span class="toc__n">7-2</span>対象にするAI</a></li>
+                    <li class="toc-h2"><a href="#s8"><span class="toc__n">8</span>外注先の月次報告で確認すること</a></li>
+                    <li class="toc-h2"><a href="#s9"><span class="toc__n">9</span>効果測定まで含めて任せるなら</a></li>
+                    <li class="toc-h2"><a href="#s10"><span class="toc__n">10</span>まとめ</a></li>
+                    <li class="toc-h2"><a href="#s11"><span class="toc__n">11</span>よくある質問</a></li>
+                    <li class="toc-h2"><a href="#s12"><span class="toc__n">12</span>出典</a></li>
                 </ol>
+                <button type="button" class="toc__more" aria-expanded="false">もっと見る</button>
             </nav>
 <script>
 (function(){var t=document.querySelector('.toc--long');if(!t)return;var b=t.querySelector('.toc__more');if(!b)return;
 b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.textContent=o?'閉じる':'もっと見る';b.setAttribute('aria-expanded',o?'true':'false');});})();
 </script>
 
-<h2 id="s1">AI検索対策で見るべき2つの指標</h2>
-<p>効果測定では、指標を「原因」と「結果」に分けて考えると迷いません。<strong>原因はAIの回答でどれだけ言及・推薦されたか、結果はそこから生まれた流入やコンバージョン</strong>です。</p>
-<p>原因側の指標は、言及率（回答に自社が登場した割合）、引用率（引用ページに自社が含まれた割合）、そして言及の内容です。結果側の指標は、AI経由の流入数とCV数になります。片方だけを見ると判断を誤ります。流入が少なくても、そもそも言及されていないのか、言及はされているがクリックされていないのかで、打つ手がまったく変わるからです。</p>
-<h2 id="s2">GA4でAI経由の流入を見る方法</h2>
-<p>GA4では、ChatGPTやPerplexityの回答内リンクがクリックされると、参照元付きのセッションとして記録されます。標準レポートではReferralにまとめられて埋もれるため、<strong>探索レポートで専用ビューをつくる</strong>のが確実です。</p>
-<p>手順はシンプルです。</p>
-<ol>
-<li>GA4左メニューの「探索」から「自由形式」を新規作成する</li>
-<li>ディメンションに「セッションの参照元」、指標に「セッション」「エンゲージメント率」を追加する</li>
-<li>フィルタで「セッションの参照元」→「正規表現に一致」を選ぶ</li>
-<li>下の正規表現を貼り付け、「AI経由流入」として保存する</li>
-</ol>
-<p>主なAIサービスの参照元をまとめた正規表現は次のとおりです。新しいサービスが増えたら「|ドメイン名」を足すだけで拡張できます。</p>
-<pre><code>chatgpt.com|chat.openai.com|perplexity.ai|gemini.google.com|copilot.microsoft.com|claude.ai
-</code></pre>
-<p>なお<strong>2026年5月、GoogleはGA4のデフォルトチャネルグループに「AIアシスタント」チャネルを追加</strong>しました（<a href="https://support.google.com/analytics/answer/9756891">GA4ヘルプ：デフォルトチャネルグループ</a>）。ChatGPTやGemini、Claudeなどからの流入が専用チャネルへ自動分類されるようになっています。ただし<strong>この自動分類は参照元（リファラー）が頼り</strong>で、参照元を渡さないアプリ経由や、Perplexityのように対象外のサービスは拾いきれません。取りこぼしを防ぐには、上記の探索レポート＋正規表現をあわせて使うのが確実です。</p>
-<h2 id="s3">GA4だけでは効果を測れない理由</h2>
-<p>GA4の数字は、AI経由の実態より小さく出ます。理由は2つあります。<strong>リンクがクリックされた分しか記録されない</strong>ことと、<strong>参照元が欠落してDirectに混ざる</strong>ことです。</p>
-<p>ChatGPTのアプリ内ブラウザなどは参照元を渡さないため、AI経由の流入が直接流入として計上されます。さらに、AIで比較・検討したユーザーの多くは、最後に社名を直接検索して訪れるため、GA4上は指名検索や直接流入に見えます。</p>
-<p>この差は小さくありません。nitoの支援事例では、GA4の直接計測でAI経由CVが0.007%だったのに対し、CV前後のアンケートで測ると<strong>全体の約27%</strong>がAIで認知・検討していました。GoogleのAI Overviews経由のクリックも、通常のGoogle検索（Organic）に含まれGA4では分離できません。<strong>GA4は「AI経由の最低ライン」</strong>と捉えるのが正確です。</p>
-<p>クリックされなかった引用の回数は、CopilotとBingのAI回答なら<a href="/media/bing-ai-performance/">Bing Webmaster ToolsのAIパフォーマンス</a>で見られます。</p>
-<h2 id="s4">nitoの推奨：コンバージョン地点で「認知経路」を聞く</h2>
-<p>GA4の弱点を補ううえで、nitoが最も重視するのは<strong>問い合わせや購入といったコンバージョン地点で、認知経路を直接たずねる</strong>ことです。フォームや商談の冒頭に「当社をどこで知りましたか」「検討時に何を参考にしましたか」といった質問を1つ加えるだけで、GA4では消えてしまうAI経由の認知を拾えます。</p>
-<p>この方法が優れているのは、<strong>収益に一番近い地点で効果を測れる</strong>点です。言及率や引用率は定点観測しやすい指標ですが、それ自体が上がっても売上につながらなければ意味がありません。nitoは、言及率のような手前の指標で満足せず、実際にCVした人のうちどれだけがAI検索で認知・検討したかを見て、<strong>収益へのインパクト</strong>で評価します。前述の「約27%」も、この認知経路アンケートから見えた数字です。</p>
-<p>導入は難しくありません。既存の問い合わせフォームに選択式の設問を1つ足し、AI検索（ChatGPTやGeminiなど）を選択肢に入れておくだけです。CVデータと突き合わせれば、AI経由の認知が実際の受注や売上にどれだけ寄与しているかまで追えます。</p>
-<h2 id="s5">言及率×流入のセット運用</h2>
-<p>正確に効果を測るには、GA4（結果）に加えて、AIでの言及率（原因）を定点で観測します。<strong>原因と結果を並べて初めて、施策が効いているかを判断できる</strong>からです。</p>
-<p>言及率は、実際のチャット画面で対象の質問を投げ、自社が回答に登場するか、どの文脈で紹介されるかを記録して測ります。パーソナライズや回答のゆらぎがあるため、思いつきで数回試すのではなく、同じ質問を一定間隔で繰り返すことが大切です。nitoでは、この観測を全営業日ベースで行い、CV地点での認知経路の割合とあわせて一覧化しています。</p>
-<div class="box-point"><span class="box-point__ttl">POINT</span><div class="box-point__body"><p>効果検証の型は「言及率（原因）→ 流入（GA4・結果）→ 問い合わせ（CV）」の3段で並べること。数字が小さくても、伸び率で語れるのがこの領域の強みです。</p></div></div>
-<h2 id="s6">経営層に「効果」をどう説明するか</h2>
-<p>AI検索対策は数字が小さく見えやすいため、報告では見せ方が重要になります。<strong>絶対値ではなく、言及率と流入の「伸び率」で語る</strong>のが基本です。</p>
-<p>「言及率が3か月で何%上がったか」「AI経由CVが何倍になったか」を、GA4のAI経由セッションと言及率のデータを並べて示します。AI経由のCVは、比較・検討を経て流入するためCVR（転換率）が高い傾向があり、量が少なくても質で語れます。効果測定の仕組み化そのものが、投資判断を通しやすくする土台になります。</p>
-<p>まだ着手していない場合は、まず「<a href="/media/ai-search-first-steps/">AI検索対策は何から始める？企業が最初に取り組む5ステップ</a>」で全体像を押さえるのがおすすめです。</p>
-<h2 id="s7">効果測定まで含めて伴走するなら</h2>
-<p>「計測基盤をどう組むか」「言及率をどう測り続けるか」は、独力だと手が止まりやすいところです。</p>
-<p>nitoは、GA4やSearch Consoleの計測環境の整備から、言及率の定点モニタリングまで含めて、収益に直結するAI検索対策を伴走支援します。</p>
-<!-- 固定PRパート（ブログパーツ）: llmo-cta
-     このファイルを更新すると、埋め込んだ全記事に反映される。
-     記事ごとに変えるのは見出しと導入文だけ（記事md側に書く）。この下の定型は共通。 -->
-<div class="bp-cta">
-    <div class="bp-cta__body">
-        <p class="bp-cta__eyebrow">nito の <span class="accent">AI検索対策</span>（AIO）</p>
-        <p class="bp-cta__lead">nitoは、AI検索（AIO）での見え方を計測するだけ・提案するだけで終わらせません。<strong>効く施策に絞って、記事の制作と改善まで実行</strong>します。まず無料診断で、いまの見え方を数字にします。</p>
-        <ul class="bp-cta__points">
-            <li><strong>本当に効く施策を、ピンポイントで</strong>：AI経由の問い合わせ・購入まで毎日追ってきたから、効く施策を切り分けられる</li>
-            <li><strong>提案で終わらせず、実行まで</strong>：記事の制作・既存記事の改善まで手を動かす</li>
-            <li><strong>主要AIでの見え方を毎日計測</strong>：ChatGPT・Geminiなどでの言及・引用を自社基盤で毎日計測し、次に直す場所を数字で決める</li>
-        </ul>
-        <p class="bp-cta__lead">実際にあるSaaS企業では、ある質問でのAIの言及率を10%から45%へ引き上げ、AI経由のコンバージョンは5ヶ月で約6.7倍になりました。</p>
-        <div class="bp-cta__actions">
-            <a href="/contact.html" class="bp-cta__btn">無料で相談する</a>
-            <a href="/aio/" class="bp-cta__link">サービス詳細を見る →</a>
-        </div>
-    </div>
+<h2 id="s1">LLMO・AIO対策の効果測定で見る5つの指標</h2>
+<p>LLMO・AIO対策の効果測定では、AIの回答の中で起きる変化と、自社のサイトや営業の窓口で起きる変化を5つの指標に分け、指標ごとに別のツールで計測します。<strong>5つを1つの総合点に合算すると、数字が動いたときにどこで止まっているかが分からなくなる</strong>ため、別々に記録するのがおすすめです。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>指標</th>
+<th>計測するツール</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="指標">① AIの回答に名前が出る（言及率・推奨の順位）</td>
+<td data-label="計測するツール">決めた質問をAIに聞いた記録</td>
+</tr>
+<tr>
+<td data-label="指標">② 引用元に自社ページが付く（引用率）</td>
+<td data-label="計測するツール">同じ記録の出典欄・Search Console・Bing Webmaster Tools</td>
+</tr>
+<tr>
+<td data-label="指標">③ AI経由の流入</td>
+<td data-label="計測するツール">GA4のAIアシスタントのチャネルと参照元</td>
+</tr>
+<tr>
+<td data-label="指標">④ 指名検索</td>
+<td data-label="計測するツール">Search Consoleの社名を含む検索語</td>
+</tr>
+<tr>
+<td data-label="指標">⑤ 問い合わせと認知経路</td>
+<td data-label="計測するツール">フォームと商談の設問</td>
+</tr>
+</tbody>
+</table></div>
+<p>頻度は①の記録だけ週〜月で、判断はどれも月単位です。</p>
+<p>①と②はAIの回答の中の変化で、GA4には出てきません。③〜⑤はサイトと営業の窓口で起きる変化で、⑤が売上に最も近い数字です。①が動いても⑤が動かないときは、名前は出ているのに選ばれていないのか、選ばれているのに計測が漏れているのかを、②〜④の数字で切り分けます。</p>
+<p>LLMO対策に効果があるか、何か月で表れるか、費用に見合うかの判断は別の記事にまとめ、この記事では計測の方法に絞ります。</p>
+<div class="in-link-card"><a href="/media/llmo-effect/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">【2026年11月】LLMO対策に効果はある？3つの段階と期間の目安・費用対効果</div><div class="in-link-card__desc">効果の3つの段階と、効果が出るまでの期間・費用に見合うかの判断を解説しています。</div></div></a></div>
+<h2 id="s2">AIの回答に名前が出るかを計測する</h2>
+<p>名前が出るかどうかは買い手が実際にしそうな質問を決めて文面を固定し、AIに聞いた結果を表に記録して計測します。<strong>記録するのは自社名が出たかだけでなく、何番目に挙がったかと、代わりにどの会社が挙がったかまで</strong>です。</p>
+<p>記録の表には計測日・AI・質問文・自社名の有無・挙がった順番・挙がった他社・出典のURLを列として並べ、回答の画面のスクリーンショットも残します。後から回答の文面を読み返せるようにしておくと、数字が動いた理由を確認できます。</p>
+<h3 id="s2-1">言及率と推奨の順位の出し方</h3>
+<p>言及率は「自社名が出た回答の数÷聞いた回数×100」で出します。たとえば10問を3回ずつ聞いた30回答のうち、9回に自社名が出れば言及率は30%です。</p>
+<p>比較の質問では名前が出たかに加えて何番目に推奨されたかも記録します。株式会社Coneは1番目に推奨された回数を聞いた回数で割った値を第1推奨率として、推奨率と並べて見ています。<strong>自社の言及率が横ばいでも、同じ質問で競合の名前が増えていれば相対的には後退している</strong>ため、挙がった他社の名前とAIが挙げた理由も同じ行に残しておくのがおすすめです。</p>
+<h3 id="s2-2">質問の種類で見る指標を変える</h3>
+<p>質問の種類によって、見るべき指標が変わります。</p>
+<ul>
+<li>比較・おすすめの質問（「〇〇でおすすめの会社は？」）: 言及率と推奨の順位</li>
+<li>課題・解説の質問（「〇〇のやり方は？」）: 引用元に自社の記事が付くか・AI経由の流入</li>
+<li>社名を入れた質問（「〇〇社の料金は？」「〇〇社の評判は？」）: 料金やサービス内容の説明が事実と合っているか</li>
+</ul>
+<p>社名を入れた質問は名前が出て当然なので、言及率の分母には混ぜません。料金・サービス内容・契約条件をAIが誤って説明していないかを確認する質問として、別に記録します。</p>
+<div class="mcta">
+<div class="mcta__body">
+<p class="mcta__eyebrow">会社のサイトを担当している方へ</p>
+<p class="mcta__ttl">AI のおすすめに自社の名前が挙がるか調べてみませんか</p>
+<p class="mcta__txt">調べものに ChatGPT などの AI 検索を使う人は、1年3か月で21.3%から52.3%に増えました（サイバーエージェント GEOラボ調べ）。nito は ChatGPT・Gemini・AIモードなどの回答を実際のチャット画面で集め、自社の名前が挙がるかを無料の現状分析レポートで数字にします。</p>
+<div class="mcta__actions"><a class="mcta__btn" href="/aio/">無料の現状分析レポートを見る</a><a class="mcta__link" href="/contact.html">無料で相談する</a></div>
 </div>
-<h2 id="s8">まとめ</h2>
-<p>AI検索対策の効果は、GA4の探索レポートでAI経由の流入を可視化しつつ、AIでの言及率をあわせて測るのが正確です。<strong>GA4に映るのは結果の最低ライン</strong>であり、原因側の言及率と並べて初めて施策の良し悪しが判断できます。</p>
-<p>まずはGA4に専用ビューをつくり、同時に主要なAIでの言及状況を記録し始めましょう。原因と結果の両方を残すことが、AI時代の成果を語る土台になります。</p>
-<h2 id="s9">よくある質問</h2>
-<h3 id="s9-1">Q. ChatGPTからの流入はGA4でどの参照元になりますか？</h3>
-<p>主にchatgpt.comです。過去データには旧ドメインのchat.openai.comが残る場合があるため、正規表現には両方を入れておくと安全です。</p>
-<h3 id="s9-2">Q. GoogleのAI Overviews経由の流入は計測できますか？</h3>
-<p>現状は分離できません。AI Overviewsからのクリックは通常のGoogle検索（Organic Search）に含まれるため、検索側はSearch Consoleとあわせて見るのが現実的です。</p>
-<p>AIによる概要とAIモードに出た表示回数は、Search Consoleの生成AIパフォーマンスレポートで見られます（<a href="/media/gsc-ai-mode/">サーチコンソールでAIモードの表示を見る方法</a>）。</p>
-<h3 id="s9-3">Q. AI経由の流入がほぼゼロでした。対策する意味はありますか？</h3>
-<p>あります。まずAIの回答に自社が出ているか（言及率）を確認してください。出ていなければ流入は発生しようがなく、優先すべきはコンテンツ整備とポジショニングの側です。</p>
-<h3 id="s9-4">Q. GA4の数字が小さくても効果はあると言えますか？</h3>
-<p>言えます。AI経由はリファラ欠落や指名検索での流入により過小評価されがちで、実際の影響はGA4の数字より大きいのが一般的です。伸び率と言及率をあわせて評価します。</p>
-<h3 id="s9-5">Q. 言及率は何で測ればいいですか？</h3>
-<p>専用ツールもありますが、実際のチャット画面で対象の質問を投げて記録する方法が確実です。回答にゆらぎがあるため、同じ質問を一定間隔で繰り返し、傾向で判断します。</p>
+<div class="mcta__ui" aria-hidden="true">
+<div class="ui-q">従業員50人の会社に合う勤怠管理システムのおすすめは？</div>
+<div class="ui-msg"><div class="ui-av ui-av--ai">AI</div><div>条件に合いそうなのは次の3つです。
+<div class="ui-card"><b>A社の勤怠クラウド</b>人数別の料金が公開されていて比べやすい</div>
+<div class="ui-card"><b>B勤怠</b>機能が多く、拠点が多い会社向け</div>
+<div class="ui-card ui-card--none"><b>自社の名前はない</b></div></div></div>
+</div>
+</div>
+
+<h2 id="s3">引用元に自社ページが付くかを計測する</h2>
+<p>引用元は①と同じ記録の出典欄で数え、GoogleのAIはSearch Console、CopilotとBingのAIはBing Webmaster Toolsで補います。<strong>名前が出ても出典に自社ページが無いことも、その逆もあるため、言及と引用は別の列に記録します。</strong> 名前だけが挙がってリンクが付かない回答は、言及率を上げても流入にはつながりません。</p>
+<p>どのページが出典に付いたかも記録しておきます。採用情報や会社概要ばかりが付いているなら、引用の数が増えても問い合わせにはつながりにくいためです。</p>
+<h3 id="s3-1">Search Consoleの生成AIパフォーマンスレポート</h3>
+<p>GoogleのAIによる概要とAIモードについては、Search Consoleの生成AIパフォーマンスレポートで、生成AI機能にサイトへのリンクが表示された回数を確認できます。2026年8月31日に全サイトに公開されたレポートで、ページ・国・日付・デバイスごとに見られます。ヘルプの項目一覧にあるのは表示回数で、クリック数・掲載順位・検索語はありません。</p>
+<p>日付は太平洋時間で区切られるため、GA4の日別の数字とは日付の境目がずれます。生成AI機能での表示が少ないサイトでは、レポート自体が表示されないこともある点に注意が必要です。</p>
+<div class="in-link-card"><a href="/media/gsc-ai-mode/"><div class="in-link-card__body"><div class="in-link-card__eyebrow">✓ あわせて読みたい</div><div class="in-link-card__ttl">【2026年10月】サーチコンソールでAIモード・AIによる概要の表示を見る方法と分からないこと</div><div class="in-link-card__desc">生成AIパフォーマンスレポートの開き方と、見られること・見られないことを解説しています。</div></div></a></div>
+<h3 id="s3-2">Bing Webmaster ToolsのAIパフォーマンス</h3>
+<p>CopilotとBingのAIによる要約で自社ページが引用された数は、2026年2月に公開プレビューとして始まったBing Webmaster ToolsのAIパフォーマンスで見られます。引用の総数（Total Citations）は回答の中の位置や見せ方を示さず、グラウンディングクエリ（Grounding queries）は利用者が入力した質問ではなく、AIが引用したページを取りに行くときに使った語句で、引用全体から抜き出した標本です。指標ごとの読み方は<a href="/media/bing-ai-performance/">Bing Webmaster ToolsのAIパフォーマンス</a>にまとめています。</p>
+<h2 id="s4">GA4でAI経由の流入を見る方法</h2>
+<p>GA4でAI経由の流入を確認するときは、<strong>既定のAIアシスタントのチャネルを先に見て、足りない参照元を探索レポートで補います。</strong> GA4にはAIからの訪問を自動で分けるチャネルがあるため、最初から正規表現を組む必要はありません。</p>
+<h3 id="s4-1">既定のAIアシスタントのチャネル</h3>
+<p>Googleは2026年5月13日、GA4のデフォルトチャネルグループにAIアシスタントのチャネルを加えました。ヘルプではChatGPT・Gemini・Deepseek・Copilot・Grokなどから来た訪問のチャネルと説明され、GoogleのAIによる概要とAIモードは除外されています。参照元が対象のAIと一致した訪問には、メディアに「ai-assistant」が自動で付く仕組みです。</p>
+<p>確認するには「レポート」の「集客」から「トラフィック獲得」を開き、表の項目を「セッションのデフォルト チャネル グループ」にしてAIアシスタントの行を見ます。PerplexityとClaudeはヘルプのチャネルの説明の例に挙がっていません（Claudeはリリースノートの例にだけ登場）。nito-0210.comのGA4（2026年11月）では、perplexity.ai / ai-assistantとしてAIアシスタントのチャネルに入っていました。<strong>自社のデータで、各AIの参照元がどのチャネルに入っているかを一度確認しておく</strong>と、数え漏れに気づけます。</p>
+<h3 id="s4-2">探索レポートで参照元を絞り込む</h3>
+<p>AI経由の流入をAIごとに比べたいときや、AIアシスタントのチャネルに入らない訪問を拾いたいときは、探索レポートを使います。</p>
+<ol>
+<li>GA4の左のメニューの「探索」から「自由形式」を新しく作る</li>
+<li>ディメンションに「セッションの参照元」、指標に「セッション」「エンゲージメント率」を追加する</li>
+<li>フィルタで「セッションの参照元」の「正規表現に一致」を選ぶ</li>
+<li>下の正規表現を貼り付け、「AI経由流入」の名前で保存する</li>
+</ol>
+<pre><code>chatgpt\.com|openai|perplexity\.ai|gemini\.google\.com|copilot\.com|copilot\.microsoft\.com|claude\.ai
+</code></pre>
+<p>「openai」を入れているのは、ChatGPTからの訪問がchatgpt.com以外の参照元で記録されることがあるためです。nito-0210.comのGA4（2026年11月）では、ほとんどの日で「openai / organic」が「chatgpt.com / ai-assistant」より多く記録されていました。メディアがorganicのため、「openai / organic」はオーガニック検索のチャネルに入ります。新しいAIのサービスが増えたら「|ドメイン名」を末尾に追加します。</p>
+<h3 id="s4-3">GA4だけでは計測できない部分</h3>
+<p>GA4の数字に映るのはAIの影響の一部です。AIで社名を知った人が回答のリンクを押さずに、後から社名を検索したりURLを直接入力したりして訪れると、GA4では指名検索や直接流入として数えられます。参照元が残らない訪問はdirect / noneに入るため、AIから来たかどうかを区別できません。</p>
+<p>GoogleのAIによる概要とAIモードからの訪問は、AIアシスタントではなくオーガニック検索のチャネルに含まれます。GA4で通常の検索結果からの訪問と分ける方法はヘルプに書かれていないため、その影響はSearch Consoleの生成AIパフォーマンスレポートの表示回数で見ます。<strong>GA4のAI経由の数字は影響の下限として扱い、④と⑤の数字と並べて読む</strong>のが安全です。</p>
+<h2 id="s5">指名検索をSearch Consoleで計測する</h2>
+<p>指名検索はSearch Consoleの検索パフォーマンスで社名・サービス名を含む検索語に絞り込み、表示回数とクリック数を月ごとに記録して計測します。直近3か月とその前の3か月を並べると、AIでの露出が増えた時期と重なっているかを確認できます。「社名 評判」「社名 トラブル」のような語が増えていないかも、同じ画面で確認するのがおすすめです。</p>
+<p>Search Consoleには、ブランドを含む検索語を自動で分けるフィルタもあります。2026年3月11日の更新で対象となるすべてのサイトで使えるようになり、ブランド名の各言語の表記や誤字も含めて、GoogleのAIの仕組みで判定します。ただし使えるのはトップレベルのプロパティだけで、URLのパス（example.com/path など）やサブドメイン（developers.google.com など）のプロパティでは使えません。検索語と表示回数が十分にあるサイトに限られ、一部の語は誤って分類されることがあるとGoogleは書いています。フィルタが出ない場合の代わりは、社名を含む検索語のフィルタです。</p>
+<p><strong>指名検索は広告や展示会でも増えるため、⑤の認知経路の数字と並べて読みます。</strong> AIで知った人が後から社名で検索する動きは、<a href="/media/branded-search-signal/">AI経由の認知と指名検索</a>で解説しています。</p>
+<h2 id="s6">問い合わせ時に認知経路を聞く</h2>
+<p>⑤の認知経路は問い合わせのフォームと商談の最初に何で自社を知ったかを聞いて計測します。フォームには選択式の設問を1つ置き、選択肢には「ChatGPTなどの生成AI」が必要です。商談で聞いた答えは顧客管理のツールに同じ区分で記録し、フォームの数字と合計できるようにしておきます。</p>
+<p>問い合わせの件数として数えるのはフォームの送信完了だけです。ボタンのクリックやフォームの入力開始まで含めると、件数が実際より多く出てしまうためです。</p>
+<p><strong>GA4の数字と設問の数字には、大きな差が出ることがあります。</strong> nitoが支援するSaaS企業の例では、会員登録時の設問でAIで知った・検討したと答えた人が26.7%いた期間に、GA4でAI経由と記録されたコンバージョンは0.007%でした。設問は施策を始める前に置いておくと、始めた後の数字と比べる起点になります。</p>
+<h2 id="s7">何問をどのAIで何回計測するか</h2>
+<p><strong>AIの回答は同じ質問でも聞くたびに変わるため、1つの質問を1回聞いた結果では判断しません。</strong> 何問を何回聞くかは各社が自社の運用から決めた目安で、数字には幅があります。下の表は計測の数字を自社のページで公開している会社の目安と、外注先の報告でそれに対応して確認する点です。</p>
+<div class="tbl"><table class="stack">
+<thead>
+<tr>
+<th>項目</th>
+<th>公開されている目安</th>
+<th>報告で確認すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="項目">質問の数</td>
+<td data-label="公開されている目安">10問を下回ると月ごとの数字が大きく振れ、20〜30問では言及率がなめらかに推移する傾向があった（Grill、支援先6社）／手作業で回せるのは20問ほどまで（課題解決プラットフォーム）</td>
+<td data-label="報告で確認すること">質問の数と文面が書かれているか</td>
+</tr>
+<tr>
+<td data-label="項目">対象のAI</td>
+<td data-label="公開されている目安">13問のうち10問で、同じ質問でもAIによって推奨の有無が分かれた（Cone）</td>
+<td data-label="報告で確認すること">AIごとに分けた数字があるか</td>
+</tr>
+<tr>
+<td data-label="項目">1問の回数</td>
+<td data-label="公開されている目安">3回を基準にし、結果が割れた質問だけ5回（Grill）</td>
+<td data-label="報告で確認すること">1問を何回聞いた結果か</td>
+</tr>
+<tr>
+<td data-label="項目">判断の頻度</td>
+<td data-label="公開されている目安">週は記録だけ、判断は月、方針の見直しは四半期（Grill）</td>
+<td data-label="報告で確認すること">1か月の上下だけで結論を出していないか</td>
+</tr>
+<tr>
+<td data-label="項目">欠測の扱い</td>
+<td data-label="公開されている目安">取得できなかった回を言及なしの0にすると、取得の失敗が増えただけで言及率が下がる（giftx）</td>
+<td data-label="報告で確認すること">取得できなかった回と言及なしを分けているか</td>
+</tr>
+</tbody>
+</table></div>
+<p>数字は会社ごとに違いますが、1回の確認で判断しない点はどの会社も同じです。<strong>これから始めるなら、10問以上の質問を決めて1問を複数回聞き、AIごとに分けて記録し、判断は月の合計で行う</strong>のがおすすめです。判断の幅についてはGrillが言及率の前月比10ポイント未満を様子見、10ポイント以上を原因を調べる線にしています。</p>
+<h3 id="s7-1">条件を統一する</h3>
+<p>同じ質問でも聞く条件が変わると回答が変わるため、次の条件を統一して記録するのが基本です。</p>
+<ul>
+<li>1問ごとに新しいチャットで聞く</li>
+<li>ログインしない状態か、メモリ（過去の会話を回答に反映する機能）をオフにした状態で聞く</li>
+<li>質問の文面を一字一句変えない</li>
+<li>計測する日とAIの組み合わせを固定する</li>
+<li>AIの名前・モデル・Web検索の有無を記録する</li>
+</ul>
+<p>画面で確認できない設定は推測で埋めず、「不明」と記録します。Grillは担当者の個人のアカウントで計測していた企業ほど言及率が実態より高く出る傾向があったと書いています。</p>
+<h3 id="s7-2">対象にするAI</h3>
+<p>対象はChatGPT・Gemini・GoogleのAIによる概要とAIモードのように、利用者の多い主要なAIから選びます。<strong>結果はAIごとに分けて記録し、1つの平均にまとめない</strong>のがおすすめです。平均にすると、どのAIで名前が出なくなったのかが見えなくなります。</p>
+<h2 id="s8">外注先の月次報告で確認すること</h2>
+<p>外注先の月次報告を受けたら、<strong>率が上がったか下がったかを見る前に、その数字が先月と同じ条件で計測されたか</strong>を確認します。質問やAIの組み合わせが違う月の数字を並べると、上がった・下がったを読み違えるためです。上の表の「報告で確認すること」に加えて、次の点を確認します。</p>
+<ul>
+<li>質問やAIの組み合わせを変えた月に、そのことが報告に書かれているか</li>
+<li>言及と引用が別の数字になっているか</li>
+<li>料金やサービス内容をAIが誤って説明した回答の件数が書かれているか</li>
+<li>測れていない範囲が書かれているか（AIによる概要経由の訪問はGA4ではオーガニック検索に含まれる・生成AIパフォーマンスレポートは表示回数だけ）</li>
+<li>問い合わせの件数と、認知経路の設問の結果が載っているか</li>
+<li>指名検索の増加を、SEOとLLMO対策の両方の成果として二重に数えていないか</li>
+</ul>
+<p><strong>測れていない範囲が0と書かれた報告は、効果が無いと読み違える原因になります。</strong> 計測できない部分は空欄か「計測外」と書いてもらうよう、契約の最初に取り決めておくのがおすすめです。数字が動かない月が続いたときの切り分けは<a href="/media/llmo-not-working-checklist/">効果が出ないときのチェックリスト</a>に、計測を自社で行うかツールを入れるかの比べ方は<a href="/media/llmo-tools/">LLMOツールの選び方</a>にまとめています。</p>
+<h2 id="s9">効果測定まで含めて任せるなら</h2>
+<p>nitoのLLMO・AIO対策の目標は、AIでの言及率ではなく問い合わせや購入の数です。支援では決めた質問をChatGPTやGemini、GoogleのAIモードなどに毎日聞き、自社の名前が挙がったかと、代わりに挙がった会社とその理由を回答から読み取ります。そのうえでサイトの改善や記事の制作、公開後の運用まで実行し、GA4・Search Console・問い合わせ時の設問の数字まで追います。</p>
+<p>今の回答の状態を先に確認したい場合は、<a href="/aio/">無料の現状分析</a>で、狙いたい質問に対して自社の名前が挙がるかと、どの会社がどんな理由で勧められているかをまとめてお送りします。</p>
+<h2 id="s10">まとめ</h2>
+<ul>
+<li>これから計測を始める会社は、10問以上の質問を決め、問い合わせのフォームに何で知ったかの設問を置いてから着手する</li>
+<li>GA4のAI経由が少ない会社は、AIアシスタントのチャネルと参照元を確認したうえで、設問の割合と並べて社内に報告する</li>
+<li>外注先の報告を受けている会社は、率より先に質問・AI・回数・条件が先月と同じかを確認する</li>
+<li>数字が月ごとに大きく上下する会社は、質問の数と1問の回数を増やし、判断を月の合計に切り替える</li>
+</ul>
+<h2 id="s11">よくある質問</h2>
+<h3 id="s11-1">LLMOの効果測定では何を計測しますか？</h3>
+<p>AIの回答に名前が出るか（言及率・推奨の順位）、引用元に自社ページが付くか、GA4のAI経由の流入、Search Consoleの指名検索、問い合わせ時の認知経路の5つです。それぞれ計測するツールが違うため、1つの点数にまとめず別々に記録します。</p>
+<h3 id="s11-2">LLMO・AIO対策の言及率は何問で計測すればよいですか？</h3>
+<p>決まった基準はありませんが、公開されている目安では10問を下回ると月ごとの数字が大きく振れ、20〜30問で推移が安定したという例があります。手作業なら20問ほどが上限という目安もあるため、10〜20問から始めるのが現実的です。</p>
+<h3 id="s11-3">ChatGPTからの流入はGA4でどの参照元になりますか？</h3>
+<p>chatgpt.com / ai-assistantのほか、openai / organicとしても記録されます。nito-0210.comのGA4（2026年11月）ではopenai / organicの方が多く、こちらはオーガニック検索のチャネルに入っていました。探索レポートの正規表現に「openai」も入れておくと数え漏れを減らせます。</p>
+<h3 id="s11-4">GA4のAIアシスタントにPerplexityは入りますか？</h3>
+<p>GA4のヘルプのチャネルの説明に挙がっている例はChatGPT・Gemini・Deepseek・Copilot・Grokで、Perplexityは例に入っていません。nito-0210.comのGA4（2026年11月）では、perplexity.ai / ai-assistantとしてAIアシスタントのチャネルに入っていました。自社のGA4で参照元のperplexity.aiがどのチャネルに入っているかを確認し、入っていなければ探索レポートの正規表現で拾います。</p>
+<h3 id="s11-5">GA4でAIによる概要からの流入は分けられますか？</h3>
+<p>GA4のヘルプではGoogleのAIによる概要とAIモードからの訪問はオーガニック検索のチャネルに含まれると書かれていて、通常の検索結果と分ける方法は書かれていません。リンクが表示された回数はSearch Consoleの生成AIパフォーマンスレポートで確認します。</p>
+<h3 id="s11-6">AIの回答を1回で判断しないのはなぜですか？</h3>
+<p>同じ質問でも聞くたびに回答が変わり、AIによっても結果が分かれるためです。公開されている例では13問のうち10問で、同じ質問でもAIによって推奨の有無が分かれました。1問を複数回、AIごとに分けて聞き、月の合計で判断します。</p>
+<h3 id="s11-7">AI経由の流入がほぼゼロでもLLMO対策の効果はありますか？</h3>
+<p>詳しくは<a href="/media/llmo-effect/">LLMO対策に効果はある？</a>で解説しています。</p>
+<h3 id="s11-8">LLMO対策の月次報告では何を確認しますか？</h3>
+<p>質問の数と文面、対象のAI、1問を何回聞いたか、先月から条件を変えていないかの4点です。条件が違う月の数字を並べても、上がった・下がったは比べられません。</p>
+<h2 id="s12">出典</h2>
+<ul>
+<li>アナリティクス ヘルプ「<a href="https://support.google.com/analytics/answer/9756891?hl=ja">[GA4] デフォルト チャネル グループ</a>」（2026年11月27日取得）</li>
+<li>アナリティクス ヘルプ「<a href="https://support.google.com/analytics/answer/9164320?hl=ja">What's new in Google Analytics</a>」2026年5月13日「New AI Assistant traffic measurement」（同）</li>
+<li>Search Console ヘルプ「<a href="https://support.google.com/webmasters/answer/16984139?hl=ja">生成 AI パフォーマンス レポート（検索）</a>」（同）</li>
+<li>Google 検索セントラル ブログ「<a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports">生成 AI パフォーマンス レポート</a>」2026年6月3日（同）</li>
+<li>Google 検索セントラル ブログ「<a href="https://developers.google.com/search/blog/2025/11/search-console-branded-filter">Search Console のブランド クエリ フィルタ</a>」2025年11月20日（同）</li>
+<li>Bing Webmaster Blog「<a href="https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview">Introducing AI Performance in Bing Webmaster Tools Public Preview</a>」2026年2月10日（同）</li>
+<li>株式会社Grill「<a href="https://grill.co.jp/marketing-log/16889/">LLMO対策の効果測定で追うべき指標とGA4の計測手順</a>」2026年9月25日：質問の数・1問の回数・判断の頻度と幅・個人アカウントでの計測の傾向（同）</li>
+<li>株式会社Cone「<a href="https://cone-c-slide.com/see-sla/blog/llmo-measurement/">LLMOの効果測定のやり方。推奨率の出し方と月1回の計測シートの型</a>」2026年11月11日：第1推奨率・AIによる推奨の分かれ方（同）</li>
+<li>株式会社課題解決プラットフォーム「<a href="https://0120.co.jp/blog/aio-103/">AIO対策の効果測定｜5つのKPIと月次レポートの型</a>」：手作業で回せる質問の数・問い合わせの数え方（同）</li>
+<li>giftx「<a href="https://ai.giftx.co.jp/blog/llmo-measurement/">LLMOの効果測定は何を見る？KPIの記録方法と月次の改善判断</a>」2026年11月20日：欠測と言及なしの扱い・確認できない設定の記録（同）</li>
+<li>株式会社cantik「<a href="https://cantik.co.jp/column-aio/aio%E3%81%AE%E5%8A%B9%E6%9E%9C%E6%B8%AC%E5%AE%9A%EF%BD%9Cai%E6%A4%9C%E7%B4%A2%E3%81%A7%E3%81%AE%E9%9C%B2%E5%87%BA%E3%82%92%E3%81%A9%E3%81%86%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B/">AIOの効果測定｜測る項目とレポート雛形</a>」：ログインしない状態での計測・記録の列（同）</li>
+<li>nito-0210.com の GA4（2026年11月、nito の実測）：AI経由の参照元とメディアの組み合わせ</li>
+</ul>
         </div>
 
         <div class="ecta">
@@ -189,7 +337,7 @@ b.addEventListener('click',function(){var o=t.classList.toggle('is-open');b.text
             </div>
         </div>
     </main>
-    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">AI検索対策で見るべき2つの指標</a><a href="#s2">GA4でAI経由の流入を見る方法</a><a href="#s3">GA4だけでは効果を測れない理由</a><a href="#s4">nitoの推奨：コンバージョン地点で「認知経路」を聞く</a><a href="#s5">言及率×流入のセット運用</a><a href="#s6">経営層に「効果」をどう説明するか</a><a href="#s7">効果測定まで含めて伴走するなら</a><a href="#s8">まとめ</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードなどで自社の名前が挙がるかを数字で出します。</p><a href="/aio/">現状分析レポート</a></div></aside>
+    <aside class="rail"><div class="rail__toc"><p>目次</p><a href="#s1">LLMO・AIO対策の効果測定で見る5つの指標</a><a href="#s2">AIの回答に名前が出るかを計測する</a><a href="#s3">引用元に自社ページが付くかを計測する</a><a href="#s4">GA4でAI経由の流入を見る方法</a><a href="#s5">指名検索をSearch Consoleで計測する</a><a href="#s6">問い合わせ時に認知経路を聞く</a><a href="#s7">何問をどのAIで何回計測するか</a><a href="#s8">外注先の月次報告で確認すること</a></div><div class="rail__cta"><b>AI での見え方を無料で調べる</b><p>ChatGPT・Gemini・AIモードなどで自社の名前が挙がるかを数字で出します。</p><a href="/aio/">現状分析レポート</a></div></aside>
     </div>
 
     <section class="related">
