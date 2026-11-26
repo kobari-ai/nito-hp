@@ -158,7 +158,7 @@ Gyro-n SEOの料金表の機能の欄にAIによる概要の計測の行は無�
 
 20語のうち一度も出典に入らないなら、先に確かめることがあります。Search Consoleの[検索の生成 AI 設定](https://search.google.com/search-console/settings/search-gen-ai)でサイトが除外になっていないか、ページがインデックスに登録されているか、スニペットの表示を止めていないかの3点です。Googleが挙げる条件と直し方は[AI Overview（AIによる概要）対策とは](/media/cited-by-ai-overviews/)、進め方の全体は[AIO対策とは](/media/aio-taisaku/)にまとめました。
 
-語のリストづくりから、AIによる概要とChatGPTなどの回答を同じ質問で定期的に測る作業まで外に任せたい場合は、nitoの[AI検索対策（LLMO）の支援](/aio/)でも相談を受けています。
+語のリストづくりから、AIによる概要とChatGPTなどの回答を同じ質問で定期的に測る作業まで外に任せたい場合は、nitoの[AIO対策・LLMO対策のコンサルティングと実行支援](/aio/)でも相談を受けています。
 
 ## まとめ
 

@@ -244,5 +244,5 @@ Google検索に向けては必要ありません。Googleは公式ガイドで�
 
 ## 出典
 
-- 各社の公式サイト（2026年11月23日確認）: [nito AI検索対策](/aio/)・[DolphinX AIO 料金プラン](https://dolphinx.jp/aio/pricing)・[Mesut 中小企業のLLMO対策](https://mesut.co.jp/service/llmo/small-business/)・[AtoZ Design LLMO・AIO対策コンサルティング](https://atoz-design.jp/service/llmo/)・[エイチリンク 中小企業向け AIOコンサルティング・AIO対策代行](https://h-link-marketing.co.jp/service/llmo-consulting/)・[アムール AIOコンサルティング](https://amour-inc.jp/service/aio-consulting/)・[ウェブココル LLMO月額コンサルティング](https://challenge-seo.jp/local-llmo/)・[GMO AIOブースト](https://koukoku.jp/service/aio)・[フォワードX AIO支援サービス](https://forwardx.net/aio/)
+- 各社の公式サイト（2026年11月23日確認）: [nito AIO対策・LLMO対策のコンサルティングと実行支援](/aio/)・[DolphinX AIO 料金プラン](https://dolphinx.jp/aio/pricing)・[Mesut 中小企業のLLMO対策](https://mesut.co.jp/service/llmo/small-business/)・[AtoZ Design LLMO・AIO対策コンサルティング](https://atoz-design.jp/service/llmo/)・[エイチリンク 中小企業向け AIOコンサルティング・AIO対策代行](https://h-link-marketing.co.jp/service/llmo-consulting/)・[アムール AIOコンサルティング](https://amour-inc.jp/service/aio-consulting/)・[ウェブココル LLMO月額コンサルティング](https://challenge-seo.jp/local-llmo/)・[GMO AIOブースト](https://koukoku.jp/service/aio)・[フォワードX AIO支援サービス](https://forwardx.net/aio/)
 - Google 検索セントラル「[Google 検索の生成 AI 機能向けにウェブサイトを最適化する](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja)」（2026年11月23日確認）
