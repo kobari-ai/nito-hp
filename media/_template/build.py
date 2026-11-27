@@ -31,6 +31,7 @@ mdファイルの形式:
 
 import hashlib
 import html
+import json
 import math
 import re
 import sys
@@ -219,6 +220,43 @@ def expand_blogparts(body_html: str) -> str:
     # パーツ内に別トークンがあっても二重展開されない）。任意で <p> ラッパを飲み込む。
     pattern = r"(?:<p>\s*)?\[blogparts:([a-z0-9\-_]+)\](?:\s*</p>)?"
     return re.sub(pattern, repl, body_html)
+
+
+def company_cards(body_html: str, slug: str) -> str:
+    """比較記事の各社の節をカードにする（2026-11-27 希一さん「各社の画面は入れてみる」）。
+    h3「1. 会社名」の直後が「**向いている会社**: …」の段落と小さな表のときだけ組む。md の書き方は変えない。
+    公式サイトの画面は media/images/<slug>/companies.json（n・name・url）と co_NN.jpg がそろう社だけ載せる。
+    文字は画像にせず HTML のまま残すので、検索や AI の読み取りは今までと同じ"""
+    shots = {}
+    meta_path = ROOT / "images" / slug / "companies.json"
+    if meta_path.exists():
+        for c in json.loads(meta_path.read_text(encoding="utf-8")):
+            if (ROOT / "images" / slug / f"co_{int(c['n']):02d}.jpg").exists():
+                shots[int(c["n"])] = c
+    pat = re.compile(
+        r'(<h3[^>]*>(\d+)\. .*?</h3>)\s*'
+        r'<p><strong>向いている会社</strong>[:：]\s*(.*?)</p>\s*'
+        r'<div class="tbl"><table class="stack">(.*?)</table></div>'
+        r'(.*?)(?=<h[23][ >]|$)', re.S)
+
+    def repl(m):
+        h3, n, fit, tbl, rest = m.groups()
+        heads = [re.sub(r"<[^>]+>", "", x).strip() for x in re.findall(r"<th[^>]*>(.*?)</th>", tbl, re.S)]
+        cells = re.findall(r"<td[^>]*>(.*?)</td>", tbl, re.S)
+        spec = "".join(f"<dt>{h}</dt><dd>{c}</dd>" for h, c in zip(heads, cells))
+        shot = ""
+        c = shots.get(int(n))
+        if c:
+            name = html.escape(c["name"], quote=True)
+            shot = (f'<figure class="post-figure co-shot"><img src="/media/images/{slug}/co_{int(n):02d}.jpg" '
+                    f'alt="{name}の公式サイトのサービスページ" width="800" height="500" loading="lazy">'
+                    f'<figcaption>出典: <a href="{html.escape(c["url"], quote=True)}" target="_blank" rel="noopener">{name}の公式サイト</a></figcaption></figure>')
+        cls = "co-top" if shot else "co-top co-top--noshot"
+        return (f'<section class="co-card">{h3}<div class="{cls}"><div class="co-info">'
+                f'<div class="co-fit"><b>向いている会社</b>{fit}</div><dl class="co-spec">{spec}</dl></div>{shot}</div>'
+                f'{rest.strip()}</section>\n')
+
+    return pat.sub(repl, body_html)
 
 
 def stack_tables(body_html: str) -> str:
@@ -697,7 +735,8 @@ def build_article(post, posts, template: str) -> str:
         body = article_cta.insert_mid(body, article_cta.mid_cta_llmo(meta, post["slug"]))
     replacements["{{BODY}}"] = body
     replacements["{{BYLINE}}"] = article_cta.byline(author, profile.get("role", DEFAULT_AUTHOR_ROLE), profile["image"])
-    replacements["{{FORK}}"] = article_cta.fork(meta, post["slug"], theme) if post["toc"] else ""
+    # 比較記事は会社を探す読者なので「目的に合わせて読む」を出さない（2026-11-27 希一さん。90日で比較記事からの押下は1回）
+    replacements["{{FORK}}"] = article_cta.fork(meta, post["slug"], theme) if post["toc"] and not post["slug"].endswith("-companies") else ""
     replacements["{{END_CTA}}"] = article_cta.end_cta(post["slug"], theme)
     replacements["{{RAIL}}"] = article_cta.rail(post["toc"], theme)
     for key, val in replacements.items():
@@ -955,6 +994,7 @@ def main():
         body_html = expand_blogparts(body_html)
         body_html = stack_tables(body_html)
         body_html, toc = add_heading_ids_and_toc(body_html)
+        body_html = company_cards(body_html, f.stem)
         lead, body_html = split_lead(body_html)
         posts.append({
             "slug": f.stem,
