@@ -365,6 +365,7 @@ Google検索については必要ありません。Googleの公式ガイドは�
 - [BtoB SaaS企業におすすめのAIO対策会社](/media/saas-aio-companies/)
 - [製造業におすすめのAIO対策会社](/media/manufacturing-aio-companies/)
 - [食品・飲料メーカーにおすすめのAIO対策会社](/media/food-maker-aio-companies/)
+- [建設会社におすすめのAIO対策会社](/media/construction-aio-companies/)
 - [工務店・注文住宅会社におすすめのAIO対策会社](/media/koumuten-aio-companies/)
 - [リフォーム会社におすすめのAIO対策会社](/media/reform-aio-companies/)
 - [人材紹介会社におすすめのAIO対策会社](/media/recruitment-aio-companies/)
