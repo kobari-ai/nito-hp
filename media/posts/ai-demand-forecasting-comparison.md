@@ -100,9 +100,13 @@ AIは過去の実績から規則を学ぶため、季節の動きを1回も含�
 
 [サキミル](https://www.softbank.jp/business/service/iot/sakimiru/)はソフトバンクの飲食・小売向けの需要予測サービスです。店舗の実績データに、携帯電話の基地局から得た商圏の人流統計と気象データを組み合わせ、店舗ごとの来店客数か売上を14日先まで予測します。料金は税抜で、Webダッシュボード版が1店舗月7,900円、API連携版が1店舗月4,900円、初期費用は1店舗3,000円です。AI自動発注は1企業月100,000円と1店舗月25,000円で、発注推奨値を7日先まで出します。バローホールディングスの事例では、平均93%の客数予測を実現したとしています。
 
+<figure class="post-figure"><img src="/media/images/ai-demand-forecasting-comparison/sakimiru-price.png" alt="サキミルの料金表。来店・売上予測はWebダッシュボード版が1店舗月7,900円、API連携版が1店舗月4,900円、AI自動発注は1企業月100,000円と1店舗月25,000円（税抜）" loading="lazy"><figcaption>サキミルの料金の表示（2026年11月28日）</figcaption></figure>
+
 ### ② sinops-CLOUD
 
 [sinops-CLOUD](https://www.cloud.sinops.jp/)はシノプスの流通業向けの需要予測型自動発注サービスで、1店舗・1機能から導入できます。POSデータをもとに1時間ごとの在庫を把握し、乳製品・パン・豆腐のような賞味期限の短い日配品、グロサリー、惣菜の発注数を自動で出します。客数予測は45日先まで出せて、予測精度94.7%以上と掲げています。最低発注数や発注単位も設定できるため、少量ずつの発注を防げます。食品メーカー向けには別にsinops-CLOUD Mがあります。料金は公開しておらず、導入の相談は無料です。
+
+<figure class="post-figure"><img src="/media/images/ai-demand-forecasting-comparison/sinops-effect.png" alt="sinops-CLOUDの日配の導入効果。廃棄・値引ロス15%削減、1,500SKU程度で発注業務は1日30分程度に短縮（複数社導入事例の平均）" loading="lazy"><figcaption>sinops-CLOUD 日配の導入効果の表示（2026年11月28日）</figcaption></figure>
 
 ### ③ Vestory
 
