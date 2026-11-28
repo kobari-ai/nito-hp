@@ -1164,8 +1164,8 @@
         .panel-kv dd { margin: 0; color: var(--color-text); }
 
         /* 仕組みの中身: ベント型 */
-        .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
-        .bento-item { background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+        .bento { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; }
+        .bento-item { background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
         .bento-item.w3 { grid-column: span 3; } .bento-item.w2 { grid-column: span 2; } .bento-item.w4 { grid-column: span 4; }
         .bento-title { font-size: 18px; font-weight: 700; font-family: var(--font-heading-jp); line-height: 1.5; }
         .bento-desc { font-size: 14px; color: var(--color-text-light); line-height: 1.85; }
@@ -1200,7 +1200,7 @@
         .price-note { margin-top: 26px; font-size: 15px; color: var(--color-text-light); line-height: 1.9; }
 
         @media (max-width: 1000px) {
-            .bento { grid-template-columns: repeat(2, 1fr); } .bento-item.w3, .bento-item.w2, .bento-item.w4 { grid-column: span 1; }
+            .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bento-item.w3, .bento-item.w2, .bento-item.w4 { grid-column: span 1; }
             .steps { grid-template-columns: repeat(2, 1fr); } .step::after { display: none; }
         }
         @media (max-width: 768px) {
@@ -1215,7 +1215,7 @@
             .problem-list { grid-template-columns: 1fr; }
             .problem + .problem { padding-left: 0; border-left: none; }
             .panel { grid-template-columns: 1fr; padding: 22px; }
-            .bento { grid-template-columns: 1fr; }
+            .bento { grid-template-columns: minmax(0, 1fr); }
             .steps { grid-template-columns: 1fr; }
             .points { grid-template-columns: 1fr; gap: 24px; }
             .price-cols { grid-template-columns: 1fr; gap: 28px; }
@@ -1346,7 +1346,7 @@
         .step-main { padding-top: 6px; }
         .step-num { position: static; font-size: 40px; color: var(--color-secondary); line-height: 1; align-self: start; padding-top: 4px; }
         .step-main { padding-top: 0; padding-left: 0; }
-        @media (max-width: 900px) { .step { grid-template-columns: 56px 1fr; } .step-visual { grid-column: 2; } .step-num { font-size: 32px; } .hero::before { right: -300px; top: -330px; width: 460px; height: 460px; } .hero { padding-top: 140px; } }
+        @media (max-width: 900px) { .step { grid-template-columns: 56px minmax(0, 1fr); } .step-visual { grid-column: 2; } .step-num { font-size: 32px; } .hero::before { right: -300px; top: -330px; width: 460px; height: 460px; } .hero { padding-top: 140px; } }
 
         /* ── 構築サービスのモック（実物風。架空データ） ── */
         .mock { background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(120,60,0,0.10), 0 1px 4px rgba(0,0,0,0.06); overflow: hidden; font-family: var(--font-body); }
@@ -1399,6 +1399,17 @@
         .price-list { gap: 0; border-top: 1px solid #ededed; }
         .price-list li { padding: 12px 0; padding-left: 0; border-bottom: 1px solid #ededed; font-size: 15px; line-height: 1.75; }
         .price-list li::before, .price-list li::after { content: none; display: none; }
+
+        /* ── 2026-11-28 スマホで横にはみ出す所（列が中身の幅まで広がっていた） ── */
+        .step-main, .step-visual { min-width: 0; }
+        @media (max-width: 768px) {
+            .sl-hub { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 1fr); gap: 8px; }
+            .sl-hub .sl-col .sl-box, .sl-box { min-width: 0; padding: 8px 6px; font-size: 12px; }
+            .step-visual { grid-column: 1 / -1; }
+            .mock-sheet { overflow-x: auto; }
+            .mock-sheet th, .mock-sheet td { white-space: normal; padding: 7px 6px; }
+            .mock-sheet .tag { white-space: nowrap; }
+        }
     </style>
 </head>
 
